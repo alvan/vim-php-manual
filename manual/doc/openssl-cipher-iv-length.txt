@@ -1,0 +1,26 @@
+openssl_cipher_iv_length -- Gets the cipher iv length
+
+  int openssl_cipher_iv_length(string method)~
+
+Gets the cipher iv length.
+
+The method.
+
+Returns the cipher length on success, or FALSE on failure.
+
+Emits an E_WARNING level error when the cipher algorithm is unknown.
+
+|openssl_cipher_iv_length| example
+
+<?php >
+  $method = 'AES-128-CBC';
+  $ivlen = openssl_cipher_iv_length($method);
+  
+  echo $ivlen;
+?>
+
+The above example will output something similar to:
+
+  16
+
+vim:ft=help:

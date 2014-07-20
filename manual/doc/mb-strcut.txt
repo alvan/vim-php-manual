@@ -1,0 +1,26 @@
+mb_strcut -- Get part of string
+
+  string mb_strcut(string str, int start [, int length [, string encoding]])~
+
+|mb_strcut| extracts a substring from a string similarly to |mb_substr|, but
+operates on bytes instead of characters. If the cut position happens to be
+between two bytes of a multi-byte character, the cut is performed starting
+from the first byte of that character. This is also the difference to the
+|substr| function, which would simply cut the string between the bytes and
+thus result in a malformed byte sequence.
+
+{str} The string being cut.
+
+{start} Starting position in bytes.
+
+{length} Length in bytes.
+
+{encoding} The {encoding} parameter is the character encoding. If it is
+omitted, the internal character encoding value will be used.
+
+|mb_strcut| returns the portion of {str} specified by the {start} and {length}
+parameters.
+
+|mb_substr| |mb_internal_encoding|
+
+vim:ft=help:

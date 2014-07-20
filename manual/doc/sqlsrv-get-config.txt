@@ -1,0 +1,15 @@
+sqlsrv_get_config -- Returns the value of the specified configuration setting
+
+  mixed sqlsrv_get_config(string setting)~
+
+Returns the value of the specified configuration setting.
+
+{setting} The name of the setting for which the value is returned. For a list
+of configurable settings, see |sqlsrv_configure|.
+
+Returns the value of the specified setting. If an invalid setting is
+specified, FALSE is returned.
+
+|sqlsrv_configure|
+
+vim:ft=help:

@@ -1,0 +1,19 @@
+cubrid_get_autocommit -- Get auto-commit mode of the connection
+
+  bool cubrid_get_autocommit(resource conn_identifier)~
+
+The |cubrid_get_autocommit| function is used to get the status of CUBRID
+database connection auto-commit mode.
+
+In CUBRID PHP, an auto-commit mode is disabled by default for transaction
+management.
+
+{conn_identifier} Connection identifier.
+
+TRUE, when process is successful.
+
+FALSE, when process is unsuccessful.
+
+|cubrid_set_autocommit| |cubrid_commit|
+
+vim:ft=help:

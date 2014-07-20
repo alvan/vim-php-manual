@@ -1,0 +1,32 @@
+cubrid_get_charset -- Return the current CUBRID connection charset
+
+  string cubrid_get_charset(resource conn_identifier)~
+
+This function returns the current CUBRID connection charset and is similar to
+the CUBRID MySQL compatible function |cubrid_client_encoding|.
+
+{conn_identifier} The CUBRID connection.
+
+A string that represents the CUBRID connection charset; on success.
+
+FALSE on failure.
+
+|cubrid_get_charset| example
+
+<?php >
+  $con = cubrid_connect("localhost", 33000, "demodb");
+  if (!$con)
+  {
+      die('Could not connect.');
+  }
+  
+  printf("CUBRID current charset: %s\n", cubrid_client_encoding($con));
+?>
+
+The above example will output:
+
+  CUBRID current charset: iso8859-1
+
+|cubrid_client_encoding|
+
+vim:ft=help:

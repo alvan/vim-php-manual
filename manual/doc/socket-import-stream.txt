@@ -1,0 +1,24 @@
+socket_import_stream -- Import a stream
+
+  void socket_import_stream(resource stream)~
+
+Imports a stream that encapsulates a socket into a socket extension resource.
+
+{stream} The stream resource to import.
+
+Returns FALSE or NULL on failure.
+
+|socket_import_stream| example
+
+<?php >
+  $stream = stream_socket_server("udp://0.0.0.0:58380", $errno, $errstr, STREAM_SERVER_BIND); 
+  $sock   = socket_import_stream($stream);
+?>
+
+
+
+
+
+|stream_socket_server|
+
+vim:ft=help:

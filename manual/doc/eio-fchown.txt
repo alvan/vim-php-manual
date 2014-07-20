@@ -1,0 +1,27 @@
+eio_fchown -- Change file ownership
+
+  resource eio_fchown(int fd, int uid [, int gid [, int pri [, callable callback [, mixed data]]]])~
+
+|eio_fchown| changes ownership of the file specified by {fd} file descriptor.
+
+The file descriptor.
+
+User ID. Is ignored when equal to -1.
+
+Group ID. Is ignored when equal to -1.
+
+The request priority: EIO_PRI_DEFAULT, EIO_PRI_MIN, EIO_PRI_MAX, or NULL. If
+NULL passed, {pri} internally is set to EIO_PRI_DEFAULT.
+
+{callback} function is called when the request is done. It should match the
+following prototype:
+
+  void callback($data, $result);
+
+{$data} is custom data passed to the request. {$result} contains
+request-specific result value; basically, the value returned by corresponding
+system call.
+
+Arbitrary variable passed to {callback}.
+
+vim:ft=help:

@@ -1,0 +1,90 @@
+cubrid_pconnect -- Open a persistent connection to a CUBRID server
+
+  resource cubrid_pconnect(string host, int port, string dbname [, string userid [, string passwd]])~
+
+Establishes a persistent connection to a CUBRID server.
+
+|cubrid_pconnect| acts very much like |cubrid_connect| with two major
+differences.
+
+First, when connecting, the function would first try to find a (persistent)
+link that's already open with the same host, port, dbname and userid. If one
+is found, an identifier for it will be returned instead of opening a new
+connection.
+
+Second, the connection to the SQL server will not be closed when the execution
+of the script ends. Instead, the link will remain open for future use
+(|cubrid_close| or |cubrid_disconnect| will not close links established by
+|cubrid_pconnect|).
+
+This type of link is therefore called 'persistent'.
+
+{host} Host name or IP address of CUBRID CAS server.
+
+{port} Port number of CUBRID CAS server (BROKER_PORT configured in
+$CUBRID/conf/cubrid_broker.conf).
+
+{dbname} Name of database.
+
+{userid} User name for the database.
+
+{passwd} User password.
+
+Connection identifier, when process is successful.
+
+FALSE, when process is unsuccessful.
+
+|cubrid_connect| example
+
+<?php >
+  printf("%-30s %s\n", "CUBRID PHP Version:", cubrid_version());
+  
+  printf("\n");
+  
+  $conn = cubrid_pconnect("localhost", 33000, "demodb");
+  
+  if (!$conn) {
+      die('Connect Error ('. cubrid_error_code() .')' . cubrid_error_msg());
+  }
+  
+  $db_params = cubrid_get_db_parameter($conn);
+  
+  while (list($param_name, $param_value) = each($db_params)) {
+      printf("%-30s %s\n", $param_name, $param_value);
+  }
+  
+  printf("\n");
+  
+  $server_info = cubrid_get_server_info($conn);
+  $client_info = cubrid_get_client_info();
+  
+  printf("%-30s %s\n", "Server Info:", $server_info);
+  printf("%-30s %s\n", "Client Info:", $client_info);
+  
+  printf("\n");
+  
+  $charset = cubrid_get_charset($conn);
+  
+  printf("%-30s %s\n", "CUBRID Charset:", $charset);
+  
+  cubrid_disconnect($conn);
+?>
+
+The above example will output:
+
+  CUBRID PHP Version:            8.4.1.0001
+  
+  PARAM_ISOLATION_LEVEL          3
+  LOCK_TIMEOUT                   0 
+  MAX_STRING_LENGTH              1073741823
+  PARAM_AUTO_COMMIT              0
+  
+  Server Info:                   8.4.1.0508
+  Client Info:                   8.4.1
+  
+  CUBRID Charset:                iso8859-1
+
+|cubrid_connect| |cubrid_connect_with_url| |cubrid_pconnect_with_url|
+|cubrid_disconnect| |cubrid_close|
+
+vim:ft=help:

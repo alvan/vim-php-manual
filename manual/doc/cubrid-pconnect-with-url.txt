@@ -1,0 +1,22 @@
+cubrid_pconnect_with_url -- Open a persistent connection to CUBRID server
+
+  resource cubrid_pconnect_with_url(string conn_url [, string userid [, string passwd]])~
+
+Establishes a persistent connection to a CUBRID server.
+
+|cubrid_pconnect_with_url| acts very much like |cubrid_connect_with_url| with
+two major differences.
+
+First, when connecting, the function would first try to find a (persistent)
+link that's already open with the same host, port, dbname and userid. If one
+is found, an identifier for it will be returned instead of opening a new
+connection.
+
+Second, the connection to the SQL server will not be closed when the execution
+of the script ends. Instead, the link will remain open for future use
+(|cubrid_close| or |cubrid_disconnect| will not close links established by
+|cubrid_pconnect_with_url|).
+
+This type of link is therefore called 'persistent'.
+
+vim:ft=help:

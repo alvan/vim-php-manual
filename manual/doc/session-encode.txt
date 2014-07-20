@@ -1,0 +1,16 @@
+session_encode -- Encodes the current session data as a session encoded string
+
+  string session_encode()~
+
+|session_encode| returns a serialized string of the contents of the current
+session data stored in the $_SESSION superglobal.
+
+Please note the serialization method is not the same as |serialize|. The
+serialization method is internal to PHP can can be set using
+session.serialize_handler.
+
+Returns the contents of the current session encoded.
+
+|session_decode| session.serialize_handler
+
+vim:ft=help:

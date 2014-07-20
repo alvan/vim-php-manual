@@ -1,0 +1,13 @@
+trait_exists -- Checks if the trait exists
+
+  bool trait_exists(string traitname [, bool autoload])~
+
+
+
+Name of the trait to check
+
+Whether to autoload if not already loaded.
+
+Returns TRUE if trait exists, FALSE if not, NULL in case of an error.
+
+vim:ft=help:

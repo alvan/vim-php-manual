@@ -1,0 +1,50 @@
+eio_cancel -- Cancels a request
+
+  void eio_cancel(resource req)~
+
+|eio_cancel| cancels a request specified by {req}
+
+The request resource
+
+The request priority: EIO_PRI_DEFAULT, EIO_PRI_MIN, EIO_PRI_MAX, or NULL. If
+NULL passed, {pri} internally is set to EIO_PRI_DEFAULT.
+
+{callback} function is called when the request is done. It should match the
+following prototype:
+
+  void callback($data, $result);
+
+{$data} is custom data passed to the request. {$result} contains
+request-specific result value; basically, the value returned by corresponding
+system call.
+
+Arbitrary variable passed to {callback}.
+
+No value is returned.
+
+|eio_cancel| example
+
+<?php >
+   /* Is called when eio_nop() finished */
+   function my_nop_cb($data, $result) {
+    echo "my_nop ", $data, "\n";
+   }
+  
+  // This eio_nop() call will be cancelled
+  $req = eio_nop(EIO_PRI_DEFAULT, "my_nop_cb", "1");
+  var_dump($req);
+  eio_cancel($req);
+  
+  // This time eio_nop() will be processed
+  eio_nop(EIO_PRI_DEFAULT, "my_nop_cb", "2");
+  
+  // Process requests
+  eio_event_loop();
+?>
+
+The above example will output something similar to:
+
+  resource(4) of type (EIO Request Descriptor)
+  my_nop 2
+
+vim:ft=help:

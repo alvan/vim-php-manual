@@ -1,0 +1,20 @@
+eio_busy -- Artificially increase load. Could be useful in tests,
+benchmarking.
+
+  resource eio_busy(int delay [, int pri [, callable callback [, mixed data]]])~
+
+|eio_busy| artificially increases load taking {delay} seconds to execute. May
+be used for debugging, or benchmarking.
+
+Delay in seconds
+
+The request priority: EIO_PRI_DEFAULT, EIO_PRI_MIN, EIO_PRI_MAX, or NULL. If
+NULL passed, {pri} internally is set to EIO_PRI_DEFAULT.
+
+This callback is called when all the group requests are done.
+
+Arbitrary variable passed to {callback}.
+
+|eio_busy| returns request resource on success or FALSE on error.
+
+vim:ft=help:

@@ -1,0 +1,13 @@
+session_register_shutdown -- Session shutdown function
+
+  void session_register_shutdown()~
+
+Registers |session_write_close| as a shutdown function.
+
+This function has no parameters.
+
+Returns TRUE on success or &false; on failure.
+
+Emits E_WARNING if registering the shutdown function fails.
+
+vim:ft=help:

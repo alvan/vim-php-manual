@@ -1,0 +1,24 @@
+hex2bin -- Convert hex to binary
+
+  string hex2bin(string data)~
+
+Converts the hex representation of data to binary
+
+Hexadecimal representation of data.
+
+Returns the binary representation of the given data.
+
+|hex2bin| example
+
+<?php >
+  $hex = hex2bin("6578616d706c65206865782064617461");
+  var_dump($hex);
+?>
+
+The above example will output something similar to:
+
+  string(16) "example hex data"
+
+|bin2hex| |unpack|
+
+vim:ft=help:

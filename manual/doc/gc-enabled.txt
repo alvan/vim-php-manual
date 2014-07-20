@@ -1,0 +1,23 @@
+gc_enabled -- Returns status of the circular reference collector
+
+  bool gc_enabled()~
+
+Returns status of the circular reference collector.
+
+This function has no parameters.
+
+Returns TRUE if the garbage collector is enabled, FALSE otherwise.
+
+A |gc_enabled| example
+
+<?php >
+  if(gc_enabled()) gc_collect_cycles();
+?>
+
+
+
+
+
+Garbage Collection
+
+vim:ft=help:

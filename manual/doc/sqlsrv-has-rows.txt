@@ -1,0 +1,36 @@
+sqlsrv_has_rows -- Indicates whether the specified statement has rows
+
+  bool sqlsrv_has_rows(resource stmt)~
+
+Indicates whether the specified statement has rows.
+
+{stmt} A statement resource returned by |sqlsrv_query| or |sqlsrv_execute|.
+
+Returns TRUE if the specified statement has rows and FALSE if the statement
+does not have rows or if an error occured.
+
+|sqlsrv_has_rows| example
+
+<?php >
+  $server = "serverName\sqlexpress";
+  $connectionInfo = array( "Database"=>"dbName", "UID"=>"username", "PWD"=>"password" )
+  $conn = sqlsrv_connect( $server, $connectionInfo );
+  
+  $stmt = sqlsrv_query( $conn, "SELECT * FROM Table_1");
+  
+  if ($stmt) {
+     $rows = sqlsrv_has_rows( $stmt );
+     if ($rows === true)
+        echo "There are rows. <br />";
+     else 
+        echo "There are no rows. <br />";
+  }
+?>
+
+
+
+
+
+|sqlsrv_num_rows| |sqlsrv_query|
+
+vim:ft=help:

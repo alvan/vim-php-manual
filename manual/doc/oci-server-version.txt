@@ -1,0 +1,33 @@
+oci_server_version -- Returns the Oracle Database version
+
+  string oci_server_version(resource connection)~
+
+Returns a string with the Oracle Database version and available options
+
+{connection}
+
+Returns the version information as a string or FALSE on error.
+
+|oci_server_version| example
+
+<?php >
+      $conn = oci_connect("scott", "tiger");
+      echo "Server Version: " . oci_server_version($conn);
+  
+      // Displays:
+      // Server Version: Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production
+      // With the Partitioning, OLAP, Data Mining and Real Application Testing option
+  
+      oci_close($conn);
+?>
+
+
+
+
+
+In PHP versions before 5.0.0 you must use |ociserverversion| instead. This old
+name still can be used. However it is deprecated and not recommended.
+
+|oci_client_version|
+
+vim:ft=help:

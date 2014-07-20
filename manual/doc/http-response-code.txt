@@ -1,0 +1,37 @@
+http_response_code -- Get or Set the HTTP response code
+
+  int http_response_code([int response_code])~
+
+If you pass no parameters then http_response_code will get the current status
+code. If you pass a parameter it will set the response code.
+
+{response_code} The optional {response_code} will set the response code.
+
+<?php >
+  http_response_code(404);
+?>
+
+The current response code. By default the return value is int(200).
+
+Examples using |headers_list|
+
+<?php >
+  // Get the current default response code
+  var_dump(http_response_code()); // int(200)
+  
+  // Set our response code
+  http_response_code(404);
+  
+  // Get our new response code
+  var_dump(http_response_code()); // int(404)
+?>
+
+The above example will output:
+
+
+
+
+
+|header| |headers_list|
+
+vim:ft=help:

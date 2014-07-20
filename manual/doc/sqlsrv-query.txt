@@ -1,0 +1,68 @@
+sqlsrv_query -- Prepares and executes a query.
+
+  mixed sqlsrv_query(resource conn, string sql [, array params [, array options]])~
+
+Prepares and executes a query.
+
+{conn} A connection resource returned by |sqlsrv_connect|.
+
+{sql} The string that defines the query to be prepared and executed.
+
+{params} An array specifying parameter information when executing a
+parameterized query. Array elements can be any of the following: A literal
+value A PHP variable An array with this structure: array($value [, $direction
+[, $phpType [, $sqlType]]]) The following table describes the elements in the
+array structure above:
+
+Array structure Element Description $value A literal value, a PHP variable, or
+a PHP by-reference variable. $direction (optional) One of the following SQLSRV
+constants used to indicate the parameter direction: SQLSRV_PARAM_IN,
+SQLSRV_PARAM_OUT, SQLSRV_PARAM_INOUT. The default value is SQLSRV_PARAM_IN.
+$phpType (optional) A SQLSRV_PHPTYPE_* constant that specifies PHP data type
+of the returned value. $sqlType (optional) A SQLSRV_SQLTYPE_* constant that
+specifies the SQL Server data type of the input value. {options} An array
+specifing query property options. The supported keys are described in the
+following table:
+
+Query Options Key Values Description QueryTimeout A positive integer value.
+Sets the query timeout in seconds. By default, the driver will wait
+indefinitely for results. SendStreamParamsAtExec TRUE or FALSE (the default is
+TRUE) Configures the driver to send all stream data at execution (TRUE), or to
+send stream data in chunks (FALSE). By default, the value is set to TRUE. For
+more information, see |sqlsrv_send_stream_data|. Scrollable
+SQLSRV_CURSOR_FORWARD, SQLSRV_CURSOR_STATIC, SQLSRV_CURSOR_DYNAMIC, or
+SQLSRV_CURSOR_KEYSET See Specifying a Cursor Type and Selecting Rows in the
+Microsoft SQLSRV documentation.
+
+Returns a statement resource on success and FALSE if an error occurred.
+
+|sqlsrv_query| example
+
+<?php >
+  $serverName = "serverName\sqlexpress";
+  $connectionInfo = array( "Database"=>"dbName", "UID"=>"username", "PWD"=>"password" );
+  $conn = sqlsrv_connect( $serverName, $connectionInfo);
+  if( $conn === false ) {
+       die( print_r( sqlsrv_errors(), true));
+  }
+  
+  $sql = "INSERT INTO Table_1 (id, data) VALUES (?, ?)";
+  $params = array(1, "some data");
+  
+  $stmt = sqlsrv_query( $conn, $sql, $params);
+  if( $stmt === false ) {
+       die( print_r( sqlsrv_errors(), true));
+  }
+?>
+
+
+
+
+
+For statements that you plan to execute only once, use |sqlsrv_query|. If you
+intend to re-execute a statement with different parameter values, use the
+combination of |sqlsrv_prepare| and |sqlsrv_execute|.
+
+|sqlsrv_prepare| |sqlsrv_execute|
+
+vim:ft=help:

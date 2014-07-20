@@ -1,0 +1,20 @@
+mysqlnd_ms_set_qos -- Sets the quality of service needed from the cluster
+
+  bool mysqlnd_ms_set_qos(mixed connection, int service_level [, int service_level_option [, mixed option_value]])~
+
+Sets the quality of service needed from the cluster. A database cluster
+delivers a certain quality of service to the user depending on its
+architecture. A major aspect of the quality of service is the consistency
+level the cluster can offer. An asynchronous MySQL replication cluster
+defaults to eventual consistency for slave reads: a slave may serve stale
+data, current data, or it may have not the requested data at all, because it
+is not synchronous to the master. In a MySQL replication cluster, only master
+accesses can give strong consistency, which promises that all clients see each
+others changes.
+
+PECL/mysqlnd_ms hides the complexity of choosing appropriate nodes to achieve
+a certain level of service from the cluster. The "Quality of Service" filter
+implements the necessary logic. The filter can either be configured in the
+plugins configuration file, or at runtime using |mysqlnd_ms_set_qos|.
+
+vim:ft=help:

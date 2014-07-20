@@ -1,0 +1,38 @@
+xhprof_sample_disable -- Stops xhprof sample profiler
+
+  array xhprof_sample_disable()~
+
+Stops the sample mode xhprof profiler, and
+
+This function is currently not documented; only its argument list is
+available.
+
+This function has no parameters.
+
+An array of xhprof sample data, from the run.
+
+|xhprof_sample_disable| example
+
+<?php >
+  xhprof_sample_enable();
+  
+  for ($i = 0; $i <= 10000; $i++) {
+      $a = strlen($i);
+      $b = $i * $a;
+      $c = rand();
+  }
+  
+  $xhprof_data = xhprof_sample_disable();
+  
+  print_r($xhprof_data);
+?>
+
+The above example will output something similar to:
+
+  Array
+  (
+      [1272935300.800000] => main()
+      [1272935300.900000] => main()
+  )
+
+vim:ft=help:

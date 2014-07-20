@@ -1,0 +1,20 @@
+mysqlnd_uh_convert_to_mysqlnd -- Converts a MySQL connection handle into a
+mysqlnd connection handle
+
+  resource mysqlnd_uh_convert_to_mysqlnd(mysqli mysql_connection)~
+
+Converts a MySQL connection handle into a mysqlnd connection handle. After
+conversion you can execute mysqlnd library calls on the connection handle.
+This can be used to access mysqlnd functionality not made available through
+user space API calls.
+
+The function can be disabled with mysqlnd_uh.enable. If mysqlnd_uh.enable is
+set to FALSE the function will not install the proxy and always return TRUE.
+Additionally, an error of the type E_WARNING may be emitted. The error message
+may read like PHP Warning: mysqlnd_uh_convert_to_mysqlnd(): (Mysqlnd User
+Handler) The plugin has been disabled by setting the configuration parameter
+mysqlnd_uh.enable = false. You are not allowed to call this function [...].
+
+A MySQL connection handle of type mysql, mysqli or PDO_MySQL.
+
+vim:ft=help:

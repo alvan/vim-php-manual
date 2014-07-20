@@ -1,0 +1,22 @@
+xmlwriter_open_memory -- Create new xmlwriter using memory for string output
+
+Object oriented style
+
+  bool XMLWriter::openMemory()~
+
+Procedural style
+
+  resource xmlwriter_open_memory()~
+
+Creates a new XMLWriter using memory for string output.
+
+
+
+Object oriented style: Returns TRUE on success or &false; on failure.
+
+Procedural style: Returns a new xmlwriter resource for later use with the
+xmlwriter functions on success, FALSE on error.
+
+XMLWriter::openURI
+
+vim:ft=help:

@@ -1,0 +1,18 @@
+sha256 -- Calculate the sha256 hash of a string
+
+  string sha256(string str [, bool raw_output])~
+
+
+
+{str} The string.
+
+{raw_output} Whether to return raw binary format (32 bytes).
+
+Returns the hash or FALSE on failure.
+
+This function is available only with Suhosin extension. You can also use
+|hash| function with "sha256" algorithm.
+
+|sha256_file| |hash|
+
+vim:ft=help:

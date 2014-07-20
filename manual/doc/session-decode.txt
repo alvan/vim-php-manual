@@ -1,0 +1,18 @@
+session_decode -- Decodes session data from a session encoded string
+
+  bool session_decode(string data)~
+
+|session_decode| decodes the serialized session data provided in {$data}, and
+populates the $_SESSION superglobal with the result.
+
+Please note the unserialization method is not the same as |unserialize|. The
+serialization method is internal to PHP can can be set using
+session.serialize_handler.
+
+{data} The encoded data to be stored.
+
+Returns TRUE on success or &false; on failure.
+
+|session_encode| session.serialize_handler
+
+vim:ft=help:

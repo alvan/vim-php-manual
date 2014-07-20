@@ -1,0 +1,18 @@
+cubrid_set_query_timeout -- Set the timeout time of query execution
+
+  bool cubrid_set_autocommit(resource req_identifier, int timeout)~
+
+The |cubrid_set_query_timeout| function is used to set the timeout time of
+query execution.
+
+{req_identifier} Request identifier.
+
+{timeout} Timeout time, unit of msec.
+
+TRUE, when process is successful.
+
+FALSE, when process is unsuccessful.
+
+|cubrid_get_query_timeout|
+
+vim:ft=help:

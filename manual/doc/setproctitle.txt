@@ -1,0 +1,24 @@
+setproctitle -- Set the process title
+
+  void setproctitle(string title)~
+
+Sets the process title of the current process.
+
+{title} The title to use as the process title.
+
+No value is returned.
+
+|setproctitle| example Running the example below will change the process title
+(visible with ps a for example).
+
+<?php >
+  setproctitle("myscript");
+?>
+
+The above example will output something similar to:
+
+  $ ps a
+    PID TTY      STAT   TIME COMMAND
+   1168 pts/3    S      0:00 myscript
+
+vim:ft=help:

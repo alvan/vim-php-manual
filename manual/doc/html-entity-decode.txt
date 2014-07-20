@@ -1,0 +1,56 @@
+html_entity_decode -- Convert all HTML entities to their applicable characters
+
+  string html_entity_decode(string string [, int flags [, string encoding]])~
+
+|html_entity_decode| is the opposite of |htmlentities| in that it converts all
+HTML entities in the {string} to their applicable characters.
+
+{string} The input string.
+
+{flags} A bitmask of one or more of the following flags, which specify how to
+handle quotes and which document type to use. The default is ENT_COMPAT |
+ENT_HTML401. Available {flags} constants Constant Name Description ENT_COMPAT
+Will convert double-quotes and leave single-quotes alone. ENT_QUOTES Will
+convert both double and single quotes. ENT_NOQUOTES Will leave both double and
+single quotes unconverted. ENT_HTML401 Handle code as HTML 4.01. ENT_XML1
+Handle code as XML 1. ENT_XHTML Handle code as XHTML. ENT_HTML5 Handle code as
+HTML 5.
+
+{encoding} Encoding to use. If omitted, the default value for this argument is
+ISO-8859-1 in versions of PHP prior to 5.4.0, and UTF-8 from PHP 5.4.0
+onwards.
+
+&reference.strings.charsets;
+
+Returns the decoded string.
+
+Version Description 5.4.0 Default encoding changed from ISO-8859-1 to UTF-8.
+5.4.0 The constants ENT_HTML401, ENT_XML1, ENT_XHTML and ENT_HTML5 were added.
+5.0.0 Support for multi-byte encodings was added.
+
+Decoding HTML entities
+
+<?php >
+  $orig = "I'll \"walk\" the <b>dog</b> now";
+  
+  $a = htmlentities($orig);
+  
+  $b = html_entity_decode($a);
+  
+  echo $a; // I'll "walk" the <b>dog</b> now
+  
+  echo $b; // I'll "walk" the <b>dog</b> now
+?>
+
+
+
+
+
+You might wonder why trim(html_entity_decode('&nbsp;')); doesn't reduce the
+string to an empty string, that's because the '&nbsp;' entity is not ASCII
+code 32 (which is stripped by |trim|) but ASCII code 160 (0xa0) in the default
+ISO 8859-1 encoding.
+
+|htmlentities| |htmlspecialchars| |get_html_translation_table| |urldecode|
+
+vim:ft=help:

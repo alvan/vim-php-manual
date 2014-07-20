@@ -1,0 +1,49 @@
+mysqlnd_ms_set_user_pick_server -- Sets a callback for user-defined read/write
+splitting
+
+  bool mysqlnd_ms_set_user_pick_server(string function)~
+
+Sets a callback for user-defined read/write splitting. The plugin will call
+the callback only if pick[]=user is the default rule for server picking in the
+relevant section of the plugins configuration file.
+
+The plugins built-in read/write query split mechanism decisions can be
+overwritten in two ways. The easiest way is to prepend the query string with
+the SQL hints MYSQLND_MS_MASTER_SWITCH, MYSQLND_MS_SLAVE_SWITCH or
+MYSQLND_MS_LAST_USED_SWITCH. Using SQL hints one can control, for example,
+whether a query shall be send to the MySQL replication master server or one of
+the slave servers. By help of SQL hints it is not possible to pick a certain
+slave server for query execution.
+
+Full control on server selection can be gained using a callback function. Use
+of a callback is recommended to expert users only because the callback has to
+cover all cases otherwise handled by the plugin.
+
+The plugin will invoke the callback function for selecting a server from the
+lists of configured master and slave servers. The callback function inspects
+the query to run and picks a server for query execution by returning the hosts
+URI, as found in the master and slave list.
+
+If the lazy connections are enabled and the callback choses a slave server for
+which no connection has been established so far and establishing the
+connection to the slave fails, the plugin will return an error upon the next
+action on the failed connection, for example, when running a query. It is the
+responsibility of the application developer to handle the error. For example,
+the application can re-run the query to trigger a new server selection and
+callback invocation. If so, the callback must make sure to select a different
+slave, or check slave availability, before returning to the plugin to prevent
+an endless loop.
+
+The function to be called. Class methods may also be invoked statically using
+this function by passing array($classname, $methodname) to this parameter.
+Additionally class methods of an object instance may be called by passing
+array($objectinstance, $methodname) to this parameter.
+
+Host to run the query on. The host URI is to be taken from the master and
+slave connection lists passed to the callback function. If callback returns a
+value neither found in the master nor in the slave connection lists the plugin
+will fallback to the second pick method configured via the pick[] setting in
+the plugin configuration file. If not second pick method is given, the plugin
+falls back to the build-in default pick method for server selection.
+
+vim:ft=help:

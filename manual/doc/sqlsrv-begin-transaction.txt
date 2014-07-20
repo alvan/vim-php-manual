@@ -1,0 +1,68 @@
+sqlsrv_begin_transaction -- Begins a database transaction
+
+  bool sqlsrv_begin_transaction(resource conn)~
+
+The transaction begun by |sqlsrv_begin_transaction| includes all statements
+that were executed after the call to |sqlsrv_begin_transaction| and before
+calls to |sqlsrv_rollback| or |sqlsrv_commit|. Explicit transactions should be
+started and committed or rolled back using these functions instead of
+executing SQL statements that begin and committ/roll back transactions. For
+more information, see SQLSRV Transactions.
+
+{conn} The connection resource returned by a call to |sqlsrv_connect|.
+
+Returns TRUE on success or &false; on failure.
+
+|sqlsrv_begin_transaction| example The following example demonstrates how to
+use |sqlsrv_begin_transaction| together with |sqlsrv_commit| and
+|sqlsrv_rollback|.
+
+<?php >
+  $serverName = "serverName\sqlexpress";
+  $connectionInfo = array( "Database"=>"dbName", "UID"=>"userName", "PWD"=>"password");
+  $conn = sqlsrv_connect( $serverName, $connectionInfo);
+  if( $conn === false ) {
+      die( print_r( sqlsrv_errors(), true ));
+  }
+  
+  /* Begin the transaction. */
+  if ( sqlsrv_begin_transaction( $conn ) === false ) {
+       die( print_r( sqlsrv_errors(), true ));
+  }
+  
+  /* Initialize parameter values. */
+  $orderId = 1; $qty = 10; $productId = 100;
+  
+  /* Set up and execute the first query. */
+  $sql1 = "INSERT INTO OrdersTable (ID, Quantity, ProductID)
+            VALUES (?, ?, ?)";
+  $params1 = array( $orderId, $qty, $productId );
+  $stmt1 = sqlsrv_query( $conn, $sql1, $params1 );
+  
+  /* Set up and execute the second query. */
+  $sql2 = "UPDATE InventoryTable 
+            SET Quantity = (Quantity - ?) 
+            WHERE ProductID = ?";
+  $params2 = array($qty, $productId);
+  $stmt2 = sqlsrv_query( $conn, $sql2, $params2 );
+  
+  /* If both queries were successful, commit the transaction. */
+  /* Otherwise, rollback the transaction. */
+  if( $stmt1 &amp;& $stmt2 ) {
+       sqlsrv_commit( $conn );
+       echo "Transaction committed.<br />";
+  } else {
+       sqlsrv_rollback( $conn );
+       echo "Transaction rolled back.<br />";
+  }
+?>
+
+The above example will output something similar to:
+
+
+
+
+
+|sqlsrv_commit| |sqlsrv_rollback|
+
+vim:ft=help:

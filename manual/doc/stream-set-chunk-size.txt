@@ -1,0 +1,18 @@
+stream_set_chunk_size -- Set the stream chunk size
+
+  int stream_set_chunk_size(resource fp, int chunk_size)~
+
+Set the stream chunk size.
+
+The target stream.
+
+The desired new chunk size.
+
+Returns the previous chunk size on success.
+
+Will return FALSE if {chunk_size} is less than 1 or greater than PHP_INT_MAX.
+
+Will emit an E_WARNING level error if {chunk_size} is less than 1 or greater
+than PHP_INT_MAX.
+
+vim:ft=help:

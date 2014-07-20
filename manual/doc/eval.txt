@@ -1,0 +1,15 @@
+eval -- Evaluate a string as PHP code
+
+  mixed eval(string code)~
+
+Evaluates the given {code} as PHP.
+
+The |eval| language construct is very dangerous because it allows execution of
+arbitrary PHP code. Its use thus is discouraged. If you have carefully
+verified that there is no other option than to use this construct, pay special
+attention not to pass any user provided data into it without properly
+validating it beforehand.
+
+{code} Valid PHP code to be evaluated.
+
+vim:ft=help:

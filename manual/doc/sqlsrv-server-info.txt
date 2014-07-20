@@ -1,0 +1,39 @@
+sqlsrv_server_info -- Returns information about the server
+
+  array sqlsrv_server_info(resource conn)~
+
+Returns information about the server.
+
+{conn} The connection resource that connects the client and the server.
+
+Returns an array as described in the following table: Returned Array
+CurrentDatabase The connected-to database. SQLServerVersion The SQL Server
+version. SQLServerName The name of the server.
+
+|sqlsrv_server_info| example
+
+<?php >
+  $serverName = "serverName\sqlexpress";
+  $conn = sqlsrv_connect( $serverName);
+  if( $conn === false ) {
+       die( print_r( sqlsrv_errors(), true));
+  }
+  
+  $server_info = sqlsrv_server_info( $conn);
+  if( $server_info )
+  {
+      foreach( $server_info as $key => $value) {
+         echo $key.": ".$value."<br />";
+      }
+  } else {
+        die( print_r( sqlsrv_errors(), true));
+  }
+?>
+
+
+
+
+
+|sqlsrv_client_info|
+
+vim:ft=help:

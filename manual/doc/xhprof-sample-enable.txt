@@ -1,0 +1,17 @@
+xhprof_sample_enable -- Description
+
+  void xhprof_sample_enable()~
+
+Starts profiling in sample mode, which is a lighter weight version of
+|xhprof_enable|. The sampling interval is 0.1 seconds, and samples record the
+full function call stack. The main use case is when lower overhead is required
+when doing performance monitoring and diagnostics.
+
+This function is currently not documented; only its argument list is
+available.
+
+This function has no parameters.
+
+NULL
+
+vim:ft=help:

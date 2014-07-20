@@ -1,0 +1,34 @@
+xmlrpc_get_type -- Gets xmlrpc type for a PHP value
+
+  string xmlrpc_get_type(mixed value)~
+
+This function is EXPERIMENTAL. The behaviour of this function, its name, and
+surrounding documentation may change without notice in a future release of
+PHP. This function should be used at your own risk.
+
+This function is especially useful for base64 and datetime strings.
+
+{value} PHP value
+
+Returns the XML-RPC type.
+
+XML-RPC type example
+
+<?php >
+  echo xmlrpc_get_type(null) . "\n"; // base64
+  echo xmlrpc_get_type(false) . "\n"; // boolean
+  echo xmlrpc_get_type(1) . "\n"; // int
+  echo xmlrpc_get_type(1.0) . "\n"; // double
+  echo xmlrpc_get_type("") . "\n"; // string
+  echo xmlrpc_get_type(array()) . "\n"; // array
+  echo xmlrpc_get_type(new stdClass) . "\n"; // array
+  echo xmlrpc_get_type(STDIN) . "\n"; // int
+?>
+
+
+
+
+
+|xmlrpc_set_type|
+
+vim:ft=help:

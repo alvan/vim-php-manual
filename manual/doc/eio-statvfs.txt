@@ -1,0 +1,72 @@
+eio_statvfs -- Get file system statistics
+
+  resource eio_statvfs(string path, int pri, callable callback [, mixed data])~
+
+|eio_statvfs| returns file system statistics information in {result} argument
+of {callback}
+
+Pathname of any file within the mounted file system
+
+The request priority: EIO_PRI_DEFAULT, EIO_PRI_MIN, EIO_PRI_MAX, or NULL. If
+NULL passed, {pri} internally is set to EIO_PRI_DEFAULT.
+
+{callback} function is called when the request is done. It should match the
+following prototype:
+
+  void callback($data, $result);
+
+{$data} is custom data passed to the request. {$result} contains
+request-specific result value; basically, the value returned by corresponding
+system call.
+
+Arbitrary variable passed to {callback}.
+
+|eio_statvfs| returns request resource on success or FALSE on error. On
+success assigns {result} argument of {callback} to an array.
+
+|eio_statvfs| example
+
+<?php >
+  $tmp_filename = '/tmp/eio-file.tmp';
+  touch($tmp_filename);
+  
+  function my_statvfs_callback($data, $result) {
+      var_dump($data);
+      var_dump($result);
+  
+   @unlink($data);
+  }
+  
+  eio_statvfs($tmp_filename, EIO_PRI_DEFAULT, "my_statvfs_callback", $tmp_filename);
+  eio_event_loop();
+?>
+
+The above example will output something similar to:
+
+  string(17) "/tmp/eio-file.tmp"
+  array(11) {
+    ["f_bsize"]=>
+    int(4096)
+    ["f_frsize"]=>
+    int(4096)
+    ["f_blocks"]=>
+    int(262144)
+    ["f_bfree"]=>
+    int(262111)
+    ["f_bavail"]=>
+    int(262111)
+    ["f_files"]=>
+    int(1540815)
+    ["f_ffree"]=>
+    int(1540743)
+    ["f_favail"]=>
+    int(1540743)
+    ["f_fsid"]=>
+    int(0)
+    ["f_flag"]=>
+    int(4102)
+    ["f_namemax"]=>
+    int(255)
+  }
+
+vim:ft=help:

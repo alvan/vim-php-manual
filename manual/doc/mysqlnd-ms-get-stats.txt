@@ -1,0 +1,141 @@
+mysqlnd_ms_get_stats -- Returns query distribution and connection statistics
+
+  array mysqlnd_ms_get_stats()~
+
+Returns an array of statistics collected by the replication and load balancing
+plugin.
+
+The PHP configuration setting mysqlnd_ms.collect_statistics controls the
+collection of statistics. The collection of statistics is disabled by default
+for performance reasons.
+
+The scope of the statistics is the PHP process. Depending on your deployment
+model a PHP process may handle one or multiple requests.
+
+Statistics are aggregated for all connections and all storage handler. It is
+not possible to tell how much queries originating from mysqli, PDO_MySQL or
+mysql API calls have contributed to the aggregated data values.
+
+This function has no parameters.
+
+Returns NULL if the PHP configuration directive mysqlnd_ms.enable has disabled
+the plugin. Otherwise, returns array of statistics.
+
+Array of statistics
+
+The semantics of this statistic has changed between 1.0.1 - 1.1.0.
+
+The meaning for version 1.0.1 is as follows. Number of statements considered
+as read-only by the built-in query analyzer. Neither statements which begin
+with a SQL hint to force use of slave nor statements directed to a slave by an
+user-defined callback are included. The total number of statements sent to the
+slaves is use_slave + use_slave_sql_hint + use_slave_callback.
+
+PECL/mysqlnd_ms 1.1.0 introduces a new concept of chained filters. The
+statictics is now set by the internal load balancing filter. With version
+1.1.0 the load balancing filter is always the last in the filter chain, if
+used. In future versions a load balancing filter may be followed by other
+filters causing another change in the meaning of the statistic. If, in the
+future, a load balancing filter is followed by another filter it is no longer
+guaranteed that the satement, whichs increments use_slave, will be executed on
+the slaves.
+
+The meaning for version 1.1.0 is as follows. Number of statements sent to the
+slaves. Statements directed to a slave by the user filter (an user-defined
+callback) are not included. The latter are counted by use_slave_callback.
+
+The semantics of this statistic has changed between 1.0.1 - 1.1.0.
+
+The meaning for version 1.0.1 is as follows. Number of statements not
+considered as read-only by the built-in query analyzer. Neither statements
+which begin with a SQL hint to force use of master nor statements directed to
+a master by an user-defined callback are included. The total number of
+statements sent to the master is use_master + use_master_sql_hint +
+use_master_callback.
+
+PECL/mysqlnd_ms 1.1.0 introduces a new concept of chained filters. The
+statictics is now set by the internal load balancing filter. With version
+1.1.0 the load balancing filter is always the last in the filter chain, if
+used. In future versions a load balancing filter may be followed by other
+filters causing another change in the meaning of the statistic. If, in the
+future, a load balancing filter is followed by another filter it is no longer
+guaranteed that the satement, whichs increments use_master, will be executed
+on the slaves.
+
+The meaning for version 1.1.0 is as follows. Number of statements sent to the
+masters. Statements directed to a master by the user filter (an user-defined
+callback) are not included. The latter are counted by use_master_callback.
+
+|mysqlnd_ms_get_stats| example
+
+<?php >
+  printf("mysqlnd_ms.enable = %d\n", ini_get("mysqlnd_ms.enable"));
+  printf("mysqlnd_ms.collect_statistics = %d\n", ini_get("mysqlnd_ms.collect_statistics"));
+  var_dump(mysqlnd_ms_get_stats());
+?>
+
+The above example will output:
+
+  mysqlnd_ms.enable = 1
+  mysqlnd_ms.collect_statistics = 1
+  array(26) {
+    ["use_slave"]=>
+    string(1) "0"
+    ["use_master"]=>
+    string(1) "0"
+    ["use_slave_guess"]=>
+    string(1) "0"
+    ["use_master_guess"]=>
+    string(1) "0"
+    ["use_slave_sql_hint"]=>
+    string(1) "0"
+    ["use_master_sql_hint"]=>
+    string(1) "0"
+    ["use_last_used_sql_hint"]=>
+    string(1) "0"
+    ["use_slave_callback"]=>
+    string(1) "0"
+    ["use_master_callback"]=>
+    string(1) "0"
+    ["non_lazy_connections_slave_success"]=>
+    string(1) "0"
+    ["non_lazy_connections_slave_failure"]=>
+    string(1) "0"
+    ["non_lazy_connections_master_success"]=>
+    string(1) "0"
+    ["non_lazy_connections_master_failure"]=>
+    string(1) "0"
+    ["lazy_connections_slave_success"]=>
+    string(1) "0"
+    ["lazy_connections_slave_failure"]=>
+    string(1) "0"
+    ["lazy_connections_master_success"]=>
+    string(1) "0"
+    ["lazy_connections_master_failure"]=>
+    string(1) "0"
+    ["trx_autocommit_on"]=>
+    string(1) "0"
+    ["trx_autocommit_off"]=>
+    string(1) "0"
+    ["trx_master_forced"]=>
+    string(1) "0"
+    ["gtid_autocommit_injections_success"]=>
+    string(1) "0"
+    ["gtid_autocommit_injections_failure"]=>
+    string(1) "0"
+    ["gtid_commit_injections_success"]=>
+    string(1) "0"
+    ["gtid_commit_injections_failure"]=>
+    string(1) "0"
+    ["gtid_implicit_commit_injections_success"]=>
+    string(1) "0"
+    ["gtid_implicit_commit_injections_failure"]=>
+    string(1) "0"
+  }
+
+
+
+Runtime configuration mysqlnd_ms.collect_statistics mysqlnd_ms.enable
+Monitoring
+
+vim:ft=help:

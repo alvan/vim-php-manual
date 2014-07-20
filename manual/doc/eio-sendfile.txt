@@ -1,0 +1,32 @@
+eio_sendfile -- Transfer data between file descriptors
+
+  resource eio_sendfile(int out_fd, int in_fd, int offset, int length [, int pri [, callable callback [, string data]]])~
+
+|eio_sendfile| copies data between one file descriptor and another. See
+SENDFILE(2) man page for details.
+
+Output file descriptor. Should be opened for writing.
+
+Input file descriptor. Should be opened for reading.
+
+Offset within the source file.
+
+Number of bytes to copy.
+
+The request priority: EIO_PRI_DEFAULT, EIO_PRI_MIN, EIO_PRI_MAX, or NULL. If
+NULL passed, {pri} internally is set to EIO_PRI_DEFAULT.
+
+{callback} function is called when the request is done. It should match the
+following prototype:
+
+  void callback($data, $result);
+
+{$data} is custom data passed to the request. {$result} contains
+request-specific result value; basically, the value returned by corresponding
+system call.
+
+Arbitrary variable passed to {callback}.
+
+|eio_sendfile| returns request resource on success or FALSE on error.
+
+vim:ft=help:

@@ -1,0 +1,24 @@
+cubrid_set_autocommit -- Set autocommit mode of the connection
+
+  bool cubrid_set_autocommit(resource conn_identifier, bool mode)~
+
+The |cubrid_set_autocommit| function is used to set the CUBRID database
+auto-commit mode of the current database connection.
+
+In CUBRID PHP, an auto-commit mode is disabled by default for transaction
+management. When auto-commit mode is truned from off to on, any pending work
+is automatically committed.
+
+{conn_identifier} Connection identifier.
+
+{mode} Auto-commit mode. The following constants can be used:
+
+CUBRID_AUTOCOMMIT_FALSE CUBRID_AUTOCOMMIT_TRUE
+
+TRUE, when process is successful.
+
+FALSE, when process is unsuccessful.
+
+|cubrid_get_autocommit| |cubrid_commit|
+
+vim:ft=help:

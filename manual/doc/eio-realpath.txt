@@ -1,0 +1,36 @@
+eio_realpath -- Get the canonicalized absolute pathname.
+
+  resource eio_realpath(string path, int pri, callable callback [, string data])~
+
+|eio_realpath| returns the canonicalized absolute pathname in {result}
+argument of {callback} function.
+
+Short pathname
+
+
+
+
+
+
+
+
+
+|eio_realpath| example
+
+<?php >
+  var_dump(getcwd());
+  
+  function my_realpath_allback($data, $result) {
+      var_dump($result);
+  }
+  
+  eio_realpath("../", EIO_PRI_DEFAULT, "my_realpath_allback");
+  eio_event_loop();
+?>
+
+The above example will output something similar to:
+
+  string(12) "/home/ruslan"
+  string(5) "/home"
+
+vim:ft=help:

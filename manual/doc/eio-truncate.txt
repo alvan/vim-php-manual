@@ -1,0 +1,28 @@
+eio_truncate -- Truncate a file
+
+  resource eio_truncate(string path [, int offset [, int pri [, callable callback [, mixed data]]]])~
+
+|eio_truncate| causes the regular file named by {path} to be truncated to a
+size of precisely {length} bytes
+
+File path
+
+Offset from beginning of the file.
+
+The request priority: EIO_PRI_DEFAULT, EIO_PRI_MIN, EIO_PRI_MAX, or NULL. If
+NULL passed, {pri} internally is set to EIO_PRI_DEFAULT.
+
+{callback} function is called when the request is done. It should match the
+following prototype:
+
+  void callback($data, $result);
+
+{$data} is custom data passed to the request. {$result} contains
+request-specific result value; basically, the value returned by corresponding
+system call.
+
+Arbitrary variable passed to {callback}.
+
+|eio_busy| returns request resource on success or FALSE on error.
+
+vim:ft=help:

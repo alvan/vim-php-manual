@@ -1,0 +1,13 @@
+session_status -- Returns the current session status
+
+  int session_status()~
+
+|session_status| is used to return the current session status.
+
+PHP_SESSION_DISABLED if sessions are disabled.
+
+PHP_SESSION_NONE if sessions are enabled, but none exists.
+
+PHP_SESSION_ACTIVE if sessions are enabled, and one exists.
+
+vim:ft=help:

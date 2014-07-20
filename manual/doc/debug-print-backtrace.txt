@@ -1,0 +1,59 @@
+debug_print_backtrace -- Prints a backtrace
+
+  void debug_print_backtrace([int options [, int limit]])~
+
+|debug_print_backtrace| prints a PHP backtrace. It prints the function calls,
+included/required files and |eval|ed stuff.
+
+{options} As of 5.3.6, this parameter is a bitmask for the following options:
+|debug_print_backtrace| options DEBUG_BACKTRACE_IGNORE_ARGS Whether or not to
+omit the "args" index, and thus all the function/method arguments, to save
+memory.
+
+{limit} As of 5.4.0, this parameter can be used to limit the number of stack
+frames printed. By default ({limit}=0) it prints all stack frames.
+
+No value is returned.
+
+Version Description 5.4.0 Added the optional parameter {limit}. 5.3.6 Added
+the optional parameter {options}.
+
+|debug_print_backtrace| example
+
+<?php >
+  // include.php file
+  
+  function a() {
+      b();
+  }
+  
+  function b() {
+      c();
+  }
+  
+  function c(){
+      debug_print_backtrace();
+  }
+  
+  a();
+?>
+
+<?php >
+  // test.php file
+  // this is the file you should run
+  
+  include 'include.php';
+?>
+
+The above example will output something similar to:
+
+  #0  c() called at [/tmp/include.php:10]
+  #1  b() called at [/tmp/include.php:6]
+  #2  a() called at [/tmp/include.php:17]
+  #3  include(/tmp/include.php) called at [/tmp/test.php:3]
+
+
+
+|debug_backtrace|
+
+vim:ft=help:

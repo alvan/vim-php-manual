@@ -1,0 +1,42 @@
+sqlsrv_client_info -- Returns information about the client and specified
+connection
+
+  array sqlsrv_client_info(resource conn)~
+
+Returns information about the client and specified connection
+
+{conn} The connection about which information is returned.
+
+Returns an associative array with keys described in the table below. Returns
+FALSE otherwise. Array returned by sqlsrv_client_info Key Description
+DriverDllName SQLNCLI10.DLL DriverODBCVer ODBC version (xx.yy) DriverVer SQL
+Server Native Client DLL version (10.5.xxx) ExtensionVer php_sqlsrv.dll
+version (2.0.xxx.x)
+
+|sqlsrv_client_info| example
+
+<?php >
+  $serverName = "serverName\sqlexpress";
+  $connOptions = array("UID"=>"username", "PWD"=>"password");
+  $conn = sqlsrv_connect( $serverName, $connOptions );
+  
+  if( $conn === false ) {
+      die( print_r( sqlsrv_errors(), true));
+  }
+  
+  if( $client_info = sqlsrv_client_info( $conn)) {
+      foreach( $client_info as $key => $value) {
+          echo $key.": ".$value."<br />";
+      }
+  } else {
+      echo "Error in retrieving client info.<br />";
+  }
+?>
+
+
+
+
+
+|sqlsrv_server_info|
+
+vim:ft=help:

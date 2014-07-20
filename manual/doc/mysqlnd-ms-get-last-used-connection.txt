@@ -1,0 +1,65 @@
+mysqlnd_ms_get_last_used_connection -- Returns an array which describes the
+last used connection
+
+  array mysqlnd_ms_get_last_used_connection(mixed connection)~
+
+Returns an array which describes the last used connection from the plugins
+connection pool currently pointed to by the user connection handle. If using
+the plugin, a user connection handle represents a pool of database
+connections. It is not possible to tell from the user connection handles
+properties to which database server from the pool the user connection handle
+points.
+
+The function can be used to debug or monitor PECL mysqlnd_ms.
+
+A MySQL connection handle obtained from any of the connect functions of the
+mysqli, mysql or PDO_MYSQL extensions.
+
+FALSE on error. Otherwise, an array which describes the connection used to
+execute the last statement on.
+
+Array which describes the connection.
+
+|mysqlnd_ms_get_last_used_connection| requires PHP >= 5.4.0 and PECL
+mysqlnd_ms >> 1.1.0. Internally, it is using a mysqlnd library C call not
+available with PHP 5.3.
+
+The example assumes that myapp refers to a plugin configuration file section
+and represents a connection pool.
+
+|mysqlnd_ms_get_last_used_connection| example
+
+<?php >
+  $link = new mysqli("myapp", "user", "password", "database");
+  $res = $link->query("SELECT 1 FROM DUAL");
+  var_dump(mysqlnd_ms_get_last_used_connection($link));
+?>
+
+The above example will output:
+
+  array(10) {
+    ["scheme"]=>
+    string(22) "unix:///tmp/mysql.sock"
+    ["host_info"]=>
+    string(25) "Localhost via UNIX socket"
+    ["host"]=>
+    string(0) ""
+    ["port"]=>
+    int(3306)
+    ["socket_or_pipe"]=>
+    string(15) "/tmp/mysql.sock"
+    ["thread_id"]=>
+    int(46253)
+    ["last_message"]=>
+    string(0) ""
+    ["errno"]=>
+    int(0)
+    ["error"]=>
+    string(0) ""
+    ["sqlstate"]=>
+    string(5) "00000"
+  }
+
+
+
+vim:ft=help:

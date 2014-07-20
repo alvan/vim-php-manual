@@ -1,0 +1,37 @@
+xhprof_enable -- Start xhprof profiler
+
+  void xhprof_enable([int flags [, array options]])~
+
+Start xhprof profiling.
+
+{flags} Optional flags to add additional information to the profiling. See the
+XHprof constants for further information about these flags, e.g.,
+XHPROF_FLAGS_MEMORY to enable memory profiling.
+
+{options} An array of optional options, namely, the 'ignored_functions' option
+to pass in functions to be ignored during profiling.
+
+NULL
+
+|xhprof_enable| examples
+
+<?php >
+  // 1. elapsed time + memory + CPU profiling; and ignore built-in (internal) functions
+  xhprof_enable(XHPROF_FLAGS_NO_BUILTINS | XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY);
+  
+  // 2. elapsed time profiling; ignore call_user_func* during profiling
+  xhprof_enable(
+      0,
+      array('ignored_functions' =>  array('call_user_func',
+                                          'call_user_func_array')));
+                                         
+  // 3. elapsed time + memory profiling; ignore call_user_func* during profiling
+  xhprof_enable(
+      XHPROF_FLAGS_MEMORY,
+      array('ignored_functions' =>  array('call_user_func',
+                                          'call_user_func_array')));
+?>
+
+
+
+vim:ft=help:

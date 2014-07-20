@@ -1,0 +1,28 @@
+get_html_translation_table -- Returns the translation table used by
+htmlspecialchars and htmlentities
+
+  array get_html_translation_table([int table [, int flags [, string encoding]]])~
+
+|get_html_translation_table| will return the translation table that is used
+internally for |htmlspecialchars| and |htmlentities|.
+
+Special characters can be encoded in several ways. E.g. " can be encoded as ",
+&#34; or &#x22. |get_html_translation_table| returns only the form used by
+|htmlspecialchars| and |htmlentities|.
+
+{table} Which table to return. Either HTML_ENTITIES or HTML_SPECIALCHARS.
+
+{flags} A bitmask of one or more of the following flags, which specify which
+quotes the table will contain as well as which document type the table is for.
+The default is ENT_COMPAT | ENT_HTML401. Available {flags} constants Constant
+Name Description ENT_COMPAT Table will contain entities for double-quotes, but
+not for single-quotes. ENT_QUOTES Table will contain entities for both double
+and single quotes. ENT_NOQUOTES Table will neither contain entities for single
+quotes nor for double quotes. ENT_HTML401 Table for HTML 4.01. ENT_XML1 Table
+for XML 1. ENT_XHTML Table for XHTML. ENT_HTML5 Table for HTML 5.
+
+{encoding} Encoding to use. If omitted, the default value for this argument is
+ISO-8859-1 in versions of PHP prior to 5.4.0, and UTF-8 from PHP 5.4.0
+onwards.
+
+vim:ft=help:

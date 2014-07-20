@@ -1,0 +1,12 @@
+rrd_lastupdate -- Gets information about last updated data.
+
+  array rrd_lastupdate(string filename)~
+
+Gets array of the UNIX timestamp and the values stored for each date in the
+most recent update of the RRD database file.
+
+RRD database file name.
+
+Array of information about last update, FALSE when error occurs.
+
+vim:ft=help:
