@@ -1,7 +1,19 @@
-PHP-manual
+PHP manual
 ==========
 
-This is php manual(en) for vim with help keyword doc. You can press <kbd>SHIFT-K</kbd> to view the Explanation of the function under the cursor.
+This is php manual plugin for vim with help keyword doc.
+
+You can do these with this plugin:
+
+_in normal mode,_
+
+* press <kbd>SHIFT-k</kbd> to view the Explanation of the keyword under the cursor
+* press <kbd>CTRL-ALT-k</kbd> to see the online manual of the keyword under the cursor
+
+_in visual mode,_
+
+* select content, and then press <kbd>SHIFT-k</kbd> to view the Explanation of the content
+* select content, and then press <kbd>CTRL-ALT-k</kbd> to see the online manual of the content
 
 Install
 -------
@@ -10,6 +22,6 @@ a. Copy these files to runtimepath.(~/.vim,..)
 
 b. Use vundle:
 
-        Plugin 'alvan/vim-php-manual'
+        Plugin 'alvan/phpmanual.vim'
 
 c. Use other package manager.
