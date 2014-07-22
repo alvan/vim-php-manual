@@ -22,6 +22,6 @@ a. Copy these files to runtimepath.(~/.vim,..)
 
 b. Use vundle:
 
-        Plugin 'alvan/phpmanual.vim'
+        Plugin 'alvan/vim-phpmanual'
 
 c. Use other package manager.
