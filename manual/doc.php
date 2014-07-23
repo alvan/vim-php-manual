@@ -2,17 +2,18 @@
 /*=============================================================================
 #     FileName: doc.php
 #         Desc: generate vim php doc from php docs source.
-#       Author: Jörn Horstmann<http://blog.planetxml.de/archives/16-PHP-Manual-in-VIM-einbinden.html>
 #
-#       Modified: Alvan
-#   LastChange: 2014-07-23
-#         Desc: Add reference and default value support of function parameters.
+#       Author: Jörn Horstmann<http://blog.planetxml.de/archives/16-PHP-Manual-in-VIM-einbinden.html>
 #
 #       Modified:荒野无灯,Gasol
 #        Email: admin@ihacklog.com
 #     HomePage: http://ihacklog.com/?p=5298
 #      URL: http://blog.planetxml.de/uploads/source/php/phpdoc/parser2.php.txt
 #   LastChange: 2012-01-07 14:23:40
+#
+#       Modified: Alvan
+#   LastChange: 2014-07-23
+#         Desc: Add reference and default value support of function parameters.
 #
 #      Usage:
 #		sudo pear install XML_Parser
