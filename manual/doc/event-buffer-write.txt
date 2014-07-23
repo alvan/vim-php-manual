@@ -1,6 +1,6 @@
 event_buffer_write -- Write data to a buffered event
 
-  bool event_buffer_write(resource bevent, string data [, int data_size])~
+  bool event_buffer_write(resource bevent, string data [, int data_size = -1])~
 
 Writes data to the specified buffered event. The data is appended to the
 output buffer and written to the descriptor when it becomes available for

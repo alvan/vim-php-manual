@@ -1,6 +1,6 @@
 preg_replace -- Perform a regular expression search and replace
 
-  mixed preg_replace(mixed pattern, mixed replacement, mixed subject [, int limit [, int count]])~
+  mixed preg_replace(mixed pattern, mixed replacement, mixed subject [, int limit = -1 [, int &count = -1]])~
 
 Searches {subject} for matches to {pattern} and replaces them with
 {replacement}.
@@ -8,8 +8,8 @@ Searches {subject} for matches to {pattern} and replaces them with
 {pattern} The pattern to search for. It can be either a string or an array
 with strings.
 
-Several PCRE modifiers are also available, including 'e' (PREG_REPLACE_EVAL),
-which is specific to this function.
+Several PCRE modifiers are also available, including the deprecated 'e'
+(PREG_REPLACE_EVAL), which is specific to this function.
 
 {replacement} The string or an array with strings to replace. If this
 parameter is a string and the {pattern} parameter is an array, all patterns
@@ -35,11 +35,12 @@ the \\11 backreference followed by nothing. In this case the solution is to
 use \${1}1. This creates an isolated $1 backreference, leaving the 1 as a
 literal.
 
-When using the e modifier, this function escapes some characters (namely ', ",
-\ and NULL) in the strings that replace the backreferences. This is done to
-ensure that no syntax errors arise from backreference usage with either single
-or double quotes (e.g. 'strlen(\'$1\')+strlen("$2")'). Make sure you are aware
-of PHP's string syntax to know exactly how the interpreted string will look.
+When using the deprecated e modifier, this function escapes some characters
+(namely ', ", \ and NULL) in the strings that replace the backreferences. This
+is done to ensure that no syntax errors arise from backreference usage with
+either single or double quotes (e.g. 'strlen(\'$1\')+strlen("$2")'). Make sure
+you are aware of PHP's string syntax to know exactly how the interpreted
+string will look.
 
 {subject} The string or an array with strings to search and replace.
 
@@ -58,8 +59,13 @@ string otherwise.
 If matches are found, the new {subject} will be returned, otherwise {subject}
 will be returned unchanged or NULL if an error occurred.
 
-Version Description 5.1.0 Added the {count} parameter 4.0.4 Added the '$n'
-form for the {replacement} parameter 4.0.2 Added the {limit} parameter
+An E_DEPRECATED level error is emitted when passing in the "\e" modifier.
+
+Version Description 5.5.0 The /e modifier is deprecated. Use
+|preg_replace_callback| instead. See the PREG_REPLACE_EVAL documentation for
+additional information about security risks. 5.1.0 Added the {count} parameter
+4.0.4 Added the '$n' form for the {replacement} parameter 4.0.2 Added the
+{limit} parameter
 
 Using backreferences followed by numeric literals
 

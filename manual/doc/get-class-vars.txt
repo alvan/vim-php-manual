@@ -15,8 +15,8 @@ return the properties that can be accessed from the current scope. 5.0.2
 Calling |get_class_vars| will now expose all the properties as an array,
 unlike previous behaviour where protected and private properties were prefixed
 with nul bytes. 5.0.1 Calling |get_class_vars| will expose all properties, as
-when converting an object to a class. Prior to 4.2.0 Uninitialized class
-variables will not be reported by |get_class_vars|
+when converting an object to a class. 4.2.0 Uninitialized class variables are
+now also reported by |get_class_vars|.
 
 |get_class_vars| example
 

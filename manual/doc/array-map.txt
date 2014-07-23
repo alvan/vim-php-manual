@@ -1,20 +1,19 @@
 array_map -- Applies the callback to the elements of the given arrays
 
-  array array_map(callable callback, array arr1 [, array ...])~
+  array array_map(callable callback, array array1 [, array ...])~
 
-|array_map| returns an array containing all the elements of {arr1} after
+|array_map| returns an array containing all the elements of {array1} after
 applying the {callback} function to each one. The number of parameters that
 the {callback} function accepts should match the number of arrays passed to
 the |array_map|
 
 {callback} Callback function to run for each element in each array.
 
-{arr1} An array to run through the {callback} function.
+{array1} An array to run through the {callback} function.
 
-{array} Variable list of array arguments to run through the {callback}
-function.
+{...} Variable list of array arguments to run through the {callback} function.
 
-Returns an array containing all the elements of {arr1} after applying the
+Returns an array containing all the elements of {array1} after applying the
 {callback} function to each one.
 
 |array_map| example
@@ -133,8 +132,8 @@ The above example will output:
 
 Usually when using two or more arrays, they should be of equal length because
 the callback function is applied in parallel to the corresponding elements. If
-the arrays are of unequal length, the shortest one will be extended with empty
-elements.
+the arrays are of unequal length, shorter ones will be extended with empty
+elements to match the length of the longest.
 
 An interesting use of this function is to construct an array of arrays, which
 can be easily performed by using NULL as the name of the callback function
@@ -247,7 +246,6 @@ The above example will output:
 
 
 
-|array_filter| |array_reduce| |array_walk| |create_function| information about
-the callback type
+|array_filter| |array_reduce| |array_walk| information about the callback type
 
 vim:ft=help:

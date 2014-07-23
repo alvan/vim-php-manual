@@ -1,0 +1,35 @@
+cli_set_process_title -- Sets the process title
+
+  bool cli_set_process_title(string title)~
+
+Sets the process title visible in tools such as top and ps. This function is
+available only in CLI mode.
+
+The new title.
+
+Returns TRUE on success or &false; on failure.
+
+An E_WARNING will be generated if the operating system is unsupported.
+
+|cli_set_process_title| example
+
+<?php >
+  $title = "My Amazing PHP Script";
+  $pid = getmypid(); // you can use this to see your process title in ps
+  
+  if (!cli_set_process_title($title)) {
+      echo "Unable to set process title for PID $pid...\n";
+      exit(1);
+  } else {
+      echo "The process title '$title' for PID $pid has been set for your process!\n";
+      sleep(5);
+  }
+?>
+
+
+
+
+
+|cli_get_process_title|
+
+vim:ft=help:

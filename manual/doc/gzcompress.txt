@@ -1,8 +1,8 @@
 gzcompress -- Compress a string
 
-  string gzcompress(string data [, int level])~
+  string gzcompress(string data [, int level = -1 [, int encoding = ZLIB_ENCODING_DEFLATE]])~
 
-This function compress the given string using the ZLIB data format.
+This function compresses the given string using the ZLIB data format.
 
 For details on the ZLIB compression algorithm see the document "ZLIB
 Compressed Data Format Specification version 3.3" (RFC 1950).
@@ -17,6 +17,8 @@ for maximum compression.
 
 If -1 is used, the default compression of the zlib library is used which is 6.
 
+{encoding} One of ZLIB_ENCODING_* constants.
+
 The compressed string or FALSE if an error occurred.
 
 |gzcompress| example
@@ -29,6 +31,8 @@ The compressed string or FALSE if an error occurred.
 
 
 
+
+Version Description 5.4.0 Added {encoding} parameter.
 
 |gzdeflate| |gzinflate| |gzuncompress| |gzencode|
 

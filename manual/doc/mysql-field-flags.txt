@@ -1,6 +1,11 @@
 mysql_field_flags -- Get the flags associated with the specified field in a
 result
 
+This extension is deprecated as of PHP 5.5.0, and will be removed in the
+future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
+MySQL: choosing an API guide and related FAQ for more information.
+Alternatives to this function include:
+
   string mysql_field_flags(resource result, int field_offset)~
 
 |mysql_field_flags| returns the field flags of the specified field. The flags

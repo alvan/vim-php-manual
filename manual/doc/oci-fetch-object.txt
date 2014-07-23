@@ -26,7 +26,7 @@ command.
 Oracle's default, non-case sensitive column names will have uppercase
 attribute names. Case-sensitive column names will have attribute names using
 the exact column case. Use |var_dump| on the result object to verify the
-appropriate case to use for each query.
+appropriate case for attribute access.
 
 Attribute values will be NULL for any NULL data fields.
 
@@ -49,7 +49,7 @@ Attribute values will be NULL for any NULL data fields.
   $stid = oci_parse($conn, 'SELECT id, description FROM mytab');
   oci_execute($stid);
   
-  while (($row = oci_fetch_object($stid))) {
+  while (($row = oci_fetch_object($stid)) != false) {
       // Use upper case attribute names for each standard Oracle column
       echo $row->ID . "<br>\n";
       echo $row->DESCRIPTION . "<br>\n"; 
@@ -86,7 +86,7 @@ Attribute values will be NULL for any NULL data fields.
   $stid = oci_parse($conn, 'SELECT id, "MyDescription" FROM mytab');
   oci_execute($stid);
   
-  while (($row = oci_fetch_object($stid))) {
+  while (($row = oci_fetch_object($stid)) != false) {
       // Use upper case attribute names for each standard Oracle column
       echo $row->ID . "<br>\n";
       // Use the exact case for the case sensitive column name
@@ -124,7 +124,7 @@ Attribute values will be NULL for any NULL data fields.
   $stid = oci_parse($conn, 'SELECT id, description FROM mytab');
   oci_execute($stid);
   
-  while (($row = oci_fetch_object($stid))) {
+  while (($row = oci_fetch_object($stid)) != false) {
       echo $row->ID . "<br>\n";
       // The following will output the first 11 bytes from DESCRIPTION
       echo $row->DESCRIPTION->read(11) . "<br>\n"; 

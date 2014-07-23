@@ -1,13 +1,13 @@
 SQLiteDatabase::query -- Executes a query against a given database and returns
 a result handle
 
-  resource sqlite_query(resource dbhandle, string query [, int result_type [, string error_msg]])~
+  resource sqlite_query(resource dbhandle, string query [, int result_type = SQLITE_BOTH [, string &error_msg = SQLITE_BOTH]])~
 
-  resource sqlite_query(resource dbhandle, string query [, int result_type [, string error_msg, string query, resource dbhandle [, int result_type [, string error_msg]]]])~
+  resource sqlite_query(resource dbhandle, string query [, int result_type = SQLITE_BOTH [, string &error_msg = SQLITE_BOTH, string query = SQLITE_BOTH, resource dbhandle = SQLITE_BOTH [, int result_type = SQLITE_BOTH [, string &error_msg = SQLITE_BOTH]]]])~
 
 Object oriented style (method):
 
-  SQLiteResult SQLiteDatabase::query(resource dbhandle, string query [, int result_type [, string error_msg, string query, resource dbhandle [, int result_type [, string error_msg, string query [, int result_type [, string error_msg]]]]]])~
+  SQLiteResult SQLiteDatabase::query(resource dbhandle, string query [, int result_type = SQLITE_BOTH [, string &error_msg = SQLITE_BOTH, string query = SQLITE_BOTH, resource dbhandle = SQLITE_BOTH [, int result_type = SQLITE_BOTH [, string &error_msg = SQLITE_BOTH, string query = SQLITE_BOTH [, int result_type = SQLITE_BOTH [, string &error_msg = SQLITE_BOTH]]]]]])~
 
 Executes an SQL statement given by the {query} against a given database
 handle.

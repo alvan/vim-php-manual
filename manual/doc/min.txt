@@ -2,7 +2,7 @@ min -- Find lowest value
 
   mixed min(array values)~
 
-  mixed min(array values, mixed value1, mixed value2 [, mixed value3...])~
+  mixed min(array values, mixed value1, mixed value2 [, mixed ...])~
 
 If the first and only parameter is an array, |min| returns the lowest value in
 that array. If at least two parameters are provided, |min| returns the
@@ -14,6 +14,12 @@ arguments evaluate to 0, |min| will return the lowest alphanumerical string
 value if any strings are given, else a numeric 0 is returned.
 
 {values} An array containing the values.
+
+{value1} Any comparable value.
+
+{value2} Any comparable value.
+
+{...} Any comparable value.
 
 |min| returns the numerically lowest of the parameter values.
 
@@ -34,6 +40,18 @@ Example uses of |min|
   // If both an array and non-array are given, the array
   // is never returned as it's considered the largest
   $val = min('string', array(2, 5, 7), 42);   // string
+?>
+
+
+
+
+
+Example of NULL/FALSE value with |min|
+
+<?php >
+  // PHP compares variable as boolean when one of operand is boolean.
+  var_dump(min(-100,-10, NULL, 10, 100));  // NULL  - (bool)NULL  < (bool)-100 is FALSE < TRUE
+  var_dump(min(-100,-10, FALSE, 10, 100)); // FALSE - (bool)FALSE < (bool)-100 is FALSE < TRUE
 ?>
 
 

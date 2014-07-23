@@ -1,32 +1,65 @@
 gmp_setbit -- Set bit
 
-  void gmp_setbit(resource a, int index [, bool set_clear])~
+  void gmp_setbit(GMP &a, int index [, bool bit_on = true])~
 
 Sets bit {index} in {a}.
 
-{a} The number being set to.
+{a} The value to modify.
 
-It can be either a GMP number resource, or a numeric string given that it is
-possible to convert the latter to a number.
+Either a GMP number resource in PHP 5.5 and earlier, a GMP object in PHP 5.6
+and later, or a numeric string provided that it is possible to convert the
+latter to a number.
 
-{index} The set bit.
+{index} The index of the bit to set. Index 0 represents the least significant
+bit.
 
-{set_clear} Defines if the bit is set to 0 or 1. By default the bit is set to
-1. Index starts at 0.
+{bit_on} True to set the bit (set it to 1/on); false to clear the bit (set it
+to 0/off).
 
-A GMP number resource.
+A GMP number resource in PHP 5.5 and earlier, or a GMP object in PHP 5.6 and
+later.
 
-|gmp_setbit| example
+|gmp_setbit| example - 0 index
 
 <?php >
-  $a = gmp_init("0xfd");
-  gmp_setbit($a, 1); // index starts at 0
-  echo gmp_strval($a) . "\n";
+  $a = gmp_init("2"); //
+  echo gmp_strval($a), ' -> 0b', gmp_strval($a, 2), "\n";
+  gmp_setbit($a, 0); // 0b10 now becomes 0b11
+  echo gmp_strval($a), ' -> 0b', gmp_strval($a, 2), "\n";
 ?>
 
 The above example will output:
 
-  255
+  2 -> 0b10
+  3 -> 0b11
+
+|gmp_setbit| example - 1 index
+
+<?php >
+  $a = gmp_init("0xfd");
+  echo gmp_strval($a), ' -> 0b', gmp_strval($a, 2), "\n";
+  gmp_setbit($a, 1); // index starts at 0
+  echo gmp_strval($a), ' -> 0b', gmp_strval($a, 2), "\n";
+?>
+
+The above example will output:
+
+  253 -> 0b11111101
+  255 -> 0b11111111
+
+|gmp_setbit| example - clearing a bit
+
+<?php >
+  $a = gmp_init("0xff");
+  echo gmp_strval($a), ' -> 0b', gmp_strval($a, 2), "\n";
+  gmp_setbit($a, 0, false); // clear bit at index 0
+  echo gmp_strval($a), ' -> 0b', gmp_strval($a, 2), "\n";
+?>
+
+The above example will output:
+
+  255 -> 0b11111111
+  254 -> 0b11111110
 
 
 

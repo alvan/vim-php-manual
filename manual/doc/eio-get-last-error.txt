@@ -1,0 +1,18 @@
+eio_get_last_error -- Returns string describing the last error associated with
+a request resource
+
+  string eio_get_last_error(resource req)~
+
+|eio_get_last_error| returns string describing the last error associated with
+{req}.
+
+The request resource
+
+|eio_get_last_error| returns string describing the last error associated with
+the request resource specified by {req}.
+
+This function is EXPERIMENTAL. The behaviour of this function, its name, and
+surrounding documentation may change without notice in a future release of
+PHP. This function should be used at your own risk.
+
+vim:ft=help:

@@ -1,0 +1,20 @@
+fann_set_input_scaling_params -- Calculate input scaling parameters for future
+use based on training data
+
+  bool fann_set_input_scaling_params(resource ann, resource train_data, float new_input_min, float new_input_max)~
+
+Calculate input scaling parameters for future use based on training data.
+
+Neural network resource.
+
+Neural network training data resource.
+
+The desired lower bound in input data after scaling (not strictly followed)
+
+The desired upper bound in input data after scaling (not strictly followed)
+
+Returns TRUE on success, or FALSE otherwise.
+
+|fann_set_output_scaling_params|
+
+vim:ft=help:

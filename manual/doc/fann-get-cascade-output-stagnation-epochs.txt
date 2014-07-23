@@ -1,0 +1,22 @@
+fann_get_cascade_output_stagnation_epochs -- Returns the number of cascade
+output stagnation epochs
+
+  int fann_get_cascade_output_stagnation_epochs(resource ann)~
+
+The number of cascade output stagnation epochs determines the number of epochs
+training is allowed to continue without changing the MSE by a fraction of
+|fann_get_cascade_output_change_fraction|.
+
+See more info about this parameter in
+|fann_get_cascade_output_change_fraction|.
+
+The default number of cascade output stagnation epochs is 12.
+
+Neural network resource.
+
+The number of cascade output stagnation epochs, or FALSE on error.
+
+|fann_set_cascade_output_stagnation_epochs|
+|fann_get_cascade_output_change_fraction|
+
+vim:ft=help:

@@ -1,7 +1,7 @@
 mysqlnd_uh_convert_to_mysqlnd -- Converts a MySQL connection handle into a
 mysqlnd connection handle
 
-  resource mysqlnd_uh_convert_to_mysqlnd(mysqli mysql_connection)~
+  resource mysqlnd_uh_convert_to_mysqlnd(mysqli &mysql_connection)~
 
 Converts a MySQL connection handle into a mysqlnd connection handle. After
 conversion you can execute mysqlnd library calls on the connection handle.
@@ -16,5 +16,45 @@ Handler) The plugin has been disabled by setting the configuration parameter
 mysqlnd_uh.enable = false. You are not allowed to call this function [...].
 
 A MySQL connection handle of type mysql, mysqli or PDO_MySQL.
+
+A mysqlnd connection handle.
+
+Version Description 5.4.0 The {mysql_connection} parameter can now be of type
+mysql, PDO_MySQL, or mysqli. Before, only the mysqli type was allowed.
+
+|mysqlnd_uh_convert_to_mysqlnd| example
+
+<?php >
+  /* PDO user API gives no access to connection thread id */
+  $mysql_connection = new PDO("mysql:host=localhost;dbname=test", "root", "");
+  
+  /* Convert PDO MySQL handle to mysqlnd handle */
+  $mysqlnd = mysqlnd_uh_convert_to_mysqlnd($mysql_connection);
+  
+  /* Create Proxy to call mysqlnd connection class methods */
+  $obj = new MySQLndUHConnection();
+  /* Call mysqlnd_conn::get_thread_id */
+  var_dump($obj->getThreadId($mysqlnd));
+  
+  /* Use SQL to fetch connection thread id */
+  var_dump($mysql_connection->query("SELECT CONNECTION_ID()")->fetchAll());
+?>
+
+The above example will output:
+
+  int(27054)
+  array(1) {
+    [0]=>
+    array(2) {
+      ["CONNECTION_ID()"]=>
+      string(5) "27054"
+      [0]=>
+      string(5) "27054"
+    }
+  }
+
+
+
+mysqlnd_uh.enable
 
 vim:ft=help:

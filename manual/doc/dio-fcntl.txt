@@ -26,13 +26,13 @@ which can be O_APPEND, O_NONBLOCK or O_ASYNC. To use O_ASYNC you will need to
 use the PCNTL extension.
 
 {args} {args} is an associative array, when {cmd} is F_SETLK or F_SETLLW, with
-the following keys: "start" - offset where lock begins
+the following keys: start - offset where lock begins
 
-"length" - size of locked area. zero means to end of file
+length - size of locked area. zero means to end of file
 
-"wenth" - Where l_start is relative to: can be SEEK_SET, SEEK_END and SEEK_CUR
+whence - Where l_start is relative to: can be SEEK_SET, SEEK_END and SEEK_CUR
 
-"type" - type of lock: can be F_RDLCK (read lock), F_WRLCK (write lock) or
+type - type of lock: can be F_RDLCK (read lock), F_WRLCK (write lock) or
 F_UNLCK (unlock)
 
 Returns the result of the C call.
@@ -46,7 +46,7 @@ Setting and clearing a lock
      // the file descriptor appears locked
      echo "The lock can not be cleared. It is held by someone else.";
   } else {
-     echo "Lock succesfully set/cleared";
+     echo "Lock successfully set/cleared";
   }
   
   dio_close($fd);

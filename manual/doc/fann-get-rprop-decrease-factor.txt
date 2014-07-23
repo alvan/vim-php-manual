@@ -1,0 +1,17 @@
+fann_get_rprop_decrease_factor -- Returns the increase factor used during
+RPROP training
+
+  float fann_get_rprop_decrease_factor(resource ann)~
+
+The decrease factor is a value smaller than 1, which is used to decrease the
+step-size during RPROP training.
+
+The default decrease factor is 0.5.
+
+Neural network resource.
+
+The decrease factor, or FALSE on error.
+
+|fann_set_rprop_decrease_factor|
+
+vim:ft=help:

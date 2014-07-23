@@ -1,7 +1,7 @@
 array_uintersect_assoc -- Computes the intersection of arrays with additional
 index check, compares data by a callback function
 
-  array array_uintersect_assoc(array array1, array array2 [, array ..., callable data_compare_func])~
+  array array_uintersect_assoc(array array1, array array2 [, array ..., callable value_compare_func])~
 
 Computes the intersection of arrays with additional index check, compares data
 by a callback function.
@@ -13,11 +13,11 @@ The data is compared by using a callback function.
 
 {array2} The second array.
 
-{data_compare_func} The comparison function must return an integer less than,
+{value_compare_func} The comparison function must return an integer less than,
 equal to, or greater than zero if the first argument is considered to be
 respectively less than, equal to, or greater than the second.
 
-  int (array array1, array array2 [, array ..., callable data_compare_func, mixed a, mixed b])~
+  int (array array1, array array2 [, array ..., callable value_compare_func, mixed a, mixed b])~
 
 Returns an array containing all the values of {array1} that are present in all
 the arguments.

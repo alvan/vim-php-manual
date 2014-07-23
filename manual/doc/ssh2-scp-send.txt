@@ -1,6 +1,6 @@
 ssh2_scp_send -- Send a file via SCP
 
-  bool ssh2_scp_send(resource session, string local_file, string remote_file [, int create_mode])~
+  bool ssh2_scp_send(resource session, string local_file, string remote_file [, int create_mode = 0644])~
 
 Copy a file from the local filesystem to the remote server using the SCP
 protocol.

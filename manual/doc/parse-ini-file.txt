@@ -1,6 +1,6 @@
 parse_ini_file -- Parse a configuration file
 
-  array parse_ini_file(string filename [, bool process_sections [, int scanner_mode]])~
+  array parse_ini_file(string filename [, bool process_sections = false [, int scanner_mode = INI_SCANNER_NORMAL]])~
 
 |parse_ini_file| loads in the ini file specified in {filename}, and returns
 the settings in it in an associative array.

@@ -1,6 +1,6 @@
 id3_set_tag -- Update information stored in an ID3 tag
 
-  bool id3_set_tag(string filename, array tag [, int version])~
+  bool id3_set_tag(string filename, array tag [, int version = ID3_V1_0])~
 
 |id3_set_tag| is used to change the information stored of an ID3 tag. If no
 tag has been present, it will be added to the file.
@@ -35,13 +35,13 @@ Returns TRUE on success or &false; on failure.
                );
   $result = id3_set_tag( "path/to/example.mp3", $data, ID3_V1_0 );
   if ($result === true) {
-      echo "Tag succesfully updated\n";
+      echo "Tag successfully updated\n";
   }
 ?>
 
 If the file is writable, this will output:
 
-  Tag succesfully updated
+  Tag successfully updated
 
 
 

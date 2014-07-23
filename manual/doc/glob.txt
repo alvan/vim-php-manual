@@ -1,6 +1,6 @@
 glob -- Find pathnames matching a pattern
 
-  array glob(string pattern [, int flags])~
+  array glob(string pattern [, int flags = 0])~
 
 The |glob| function searches for all the pathnames matching {pattern}
 according to the rules used by the libc glob() function, which is similar to
@@ -10,7 +10,8 @@ the rules used by common shells.
 
 {flags} Valid flags: GLOB_MARK - Adds a slash to each directory returned
 
-GLOB_NOSORT - Return files as they appear in the directory (no sorting)
+GLOB_NOSORT - Return files as they appear in the directory (no sorting). When
+this flag is not used, the pathnames are sorted alphabetically
 
 GLOB_NOCHECK - Return the search pattern if no files matching it were found
 

@@ -1,0 +1,18 @@
+fann_get_cascade_weight_multiplier -- Returns the weight multiplier
+
+  float fann_get_cascade_weight_multiplier(resource ann)~
+
+The weight multiplier is a parameter which is used to multiply the weights
+from the candidate neuron before adding the neuron to the neural network. This
+parameter is usually between 0 and 1, and is used to make the training a bit
+less aggressive.
+
+The default weight multiplier is 0.4.
+
+Neural network resource.
+
+The weight multiplier, or FALSE on error.
+
+|fann_set_cascade_weight_multiplier|
+
+vim:ft=help:

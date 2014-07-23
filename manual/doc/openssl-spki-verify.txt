@@ -1,0 +1,28 @@
+openssl_spki_verify -- Verifies a signed public key and challenge
+
+  string openssl_spki_verify(string &spkac)~
+
+Validates the supplied signed public key and challenge
+
+Expects a valid signed public key and challenge
+
+Returns a boolean on success or failure.
+
+Emits an E_WARNING level error if an invalid argument is passed via the
+{spkac} parameter.
+
+|openssl_spki_verify| example Validates an existing signed public key and
+challenge
+
+<?php >
+  $pkey = openssl_pkey_new('secret password');
+  $spkac = openssl_spki_new($pkey, 'challenge string');
+  
+  if (openssl_spki_verify(preg_replace('/SPKAC=/', '', $spkac))) {
+      echo $spkac;
+  } else {
+      echo "SPKAC validation failed";
+  }
+?>
+
+vim:ft=help:

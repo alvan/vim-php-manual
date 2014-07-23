@@ -1,6 +1,6 @@
 ob_start -- Turn on output buffering
 
-  bool ob_start([callable output_callback [, int chunk_size [, bool erase]]])~
+  bool ob_start([callable output_callback =  [, int chunk_size = 0 [, int flags = ]]])~
 
 This function will turn output buffering on. While output buffering is active
 no output is sent from the script (other than headers), instead the output is
@@ -28,11 +28,13 @@ flushed to the browser at the end of the request. When {output_callback} is
 called, it will receive the contents of the output buffer as its parameter and
 is expected to return a new output buffer as a result, which will be sent to
 the browser. If the {output_callback} is not a callable function, this
-function will return FALSE.
+function will return FALSE. This is the callback signature:
 
-If the callback function has two parameters, the second parameter is filled
-with a bit-field consisting of PHP_OUTPUT_HANDLER_START,
-PHP_OUTPUT_HANDLER_CONT and PHP_OUTPUT_HANDLER_END.
+  string ([callable output_callback =  [, int chunk_size = 0 [, int flags = , string buffer =  [, int phase = ]]]])~
+
+{buffer} Contents of the output buffer.
+
+{phase} Bitmask of PHP_OUTPUT_HANDLER_* constants.
 
 If {output_callback} returns FALSE original input is sent to the browser.
 
@@ -58,16 +60,30 @@ only be called when the output buffer is closed.
 Prior to PHP 5.4.0, the value 1 was a special case value that set the chunk
 size to 4096 bytes.
 
-{erase} If the optional parameter {erase} is set to FALSE, the buffer will not
-be deleted until the script finishes. This causes that flushing and cleaning
-functions would issue a notice and return FALSE if called.
+{flags} The {flags} parameter is a bitmask that controls the operations that
+can be performed on the output buffer. The default is to allow output buffers
+to be cleaned, flushed and removed, which can be set explicitly via
+PHP_OUTPUT_HANDLER_CLEANABLE | PHP_OUTPUT_HANDLER_FLUSHABLE |
+PHP_OUTPUT_HANDLER_REMOVABLE, or PHP_OUTPUT_HANDLER_STDFLAGS as shorthand.
+
+Each flag controls access to a set of functions, as described below: Constant
+Functions PHP_OUTPUT_HANDLER_CLEANABLE |ob_clean|, |ob_end_clean|, and
+|ob_get_clean|. PHP_OUTPUT_HANDLER_FLUSHABLE |ob_end_flush|, |ob_flush|, and
+|ob_get_flush|. PHP_OUTPUT_HANDLER_REMOVABLE |ob_end_clean|, |ob_end_flush|,
+and |ob_get_flush|.
 
 Returns TRUE on success or &false; on failure.
 
-Version Description 5.4.0 A chunk size of 1 now results in chunks of 1 byte
-being sent to the output buffer. 4.3.2 This function was changed to return
-FALSE in case the passed {output_callback} can not be executed. 4.2.0 Added
-the {erase} parameter.
+Version Description 5.4.0 The third parameter of |ob_start| changed from a
+boolean parameter called {erase} (which, if set to FALSE, would prevent the
+output buffer from being deleted until the script finished executing) to an
+integer parameter called {flags}. Unfortunately, this results in an API
+compatibility break for code written prior to PHP 5.4.0 that uses the third
+parameter. See the flags example for an example of how to handle this with
+code that needs to be compatible with both. 5.4.0 A chunk size of 1 now
+results in chunks of 1 byte being sent to the output buffer. 4.3.2 This
+function was changed to return FALSE in case the passed {output_callback} can
+not be executed. 4.2.0 Added the {erase} parameter.
 
 User defined callback function example
 
@@ -96,6 +112,22 @@ The above example will output:
   <p>It's like comparing oranges to oranges.</p>
   </body>
   </html>
+
+
+
+Creating an uneraseable output buffer in a way compatible with both PHP 5.3
+and 5.4
+
+<?php >
+  if (version_compare(PHP_VERSION, '5.4.0', '>=')) {
+    ob_start(null, 0, PHP_OUTPUT_HANDLER_STDFLAGS ^
+      PHP_OUTPUT_HANDLER_REMOVABLE);
+  } else {
+    ob_start(null, 0, false);
+  }
+?>
+
+
 
 
 

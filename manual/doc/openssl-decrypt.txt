@@ -1,6 +1,6 @@
 openssl_decrypt -- Decrypts data
 
-  string openssl_decrypt(string data, string method, string password [, bool raw_input [, string iv]])~
+  string openssl_decrypt(string data, string method, string password [, int options = 0 [, string iv = ""]])~
 
 Takes a raw or base64 encoded string and decrypts it using a given method and
 key.
@@ -14,8 +14,7 @@ available.
 
 {password} The password.
 
-{raw_input} Setting to TRUE will take a raw encoded string, otherwise a base64
-string is assumed for the {data} parameter.
+{options} {options} can be one of OPENSSL_RAW_DATA, OPENSSL_ZERO_PADDING.
 
 {iv} A non-NULL Initialization Vector.
 

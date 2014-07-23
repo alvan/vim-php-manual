@@ -65,6 +65,9 @@ arithmetic functions on these values will not have otherwise expected results.
 The example above shows one way to convert shorthand notation into bytes, much
 like how the PHP source does it.
 
+Version Description 5.3.0 Previously, the empty string was returned if the
+configuration option didn't exist. now, FALSE is returned instead.
+
 |get_cfg_var| |ini_get_all| |ini_restore| |ini_set|
 
 vim:ft=help:

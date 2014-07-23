@@ -1,15 +1,20 @@
 htmlspecialchars -- Convert special characters to HTML entities
 
-  string htmlspecialchars(string string [, int flags [, string encoding [, bool double_encode]]])~
+  string htmlspecialchars(string string [, int flags = ENT_COMPAT | ENT_HTML401 [, string encoding = "UTF-8" [, bool double_encode = true]]])~
 
 Certain characters have special significance in HTML, and should be
 represented by HTML entities if they are to preserve their meanings. This
-function returns a string with some of these conversions made; the
-translations made are those most useful for everyday web programming. If you
-require all HTML character entities to be translated, use |htmlentities|
-instead.
+function returns a string with these conversions made. If you require all
+input substrings that have associated named entities to be translated, use
+|htmlentities| instead.
 
-This function is useful in preventing user-supplied text from containing HTML
-markup, such as in a message board or guest book application.
+If the input string passed to this function and the final document share the
+same character set, this function is sufficient to prepare input for inclusion
+in most contexts of an HTML document. If, however, the input can represent
+characters that are not coded in the final document character set and you wish
+to retain those characters (as numeric or named entities), both this function
+and |htmlentities| (which only encodes substrings that have named entity
+equivalents) may be insufficient. You may have to use
+|mb_encode_numericentity| instead.
 
 vim:ft=help:

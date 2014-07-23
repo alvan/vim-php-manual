@@ -41,7 +41,7 @@ FALSE, when process is unsuccessful.
   
   printf("\n");
   
-  $conn = cubrid_pconnect("localhost", 33000, "demodb");
+  $conn = cubrid_pconnect("localhost", 33000, "demodb", "dba");
   
   if (!$conn) {
       die('Connect Error ('. cubrid_error_code() .')' . cubrid_error_msg());
@@ -72,15 +72,15 @@ FALSE, when process is unsuccessful.
 
 The above example will output:
 
-  CUBRID PHP Version:            8.4.1.0001
+  CUBRID PHP Version:            9.1.0.0001
   
   PARAM_ISOLATION_LEVEL          3
-  LOCK_TIMEOUT                   0 
+  LOCK_TIMEOUT                   -1
   MAX_STRING_LENGTH              1073741823
-  PARAM_AUTO_COMMIT              0
+  PARAM_AUTO_COMMIT              1
   
-  Server Info:                   8.4.1.0508
-  Client Info:                   8.4.1
+  Server Info:                   9.1.0.0212
+  Client Info:                   9.1.0
   
   CUBRID Charset:                iso8859-1
 

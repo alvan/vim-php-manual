@@ -1,6 +1,6 @@
 mb_substitute_character -- Set/Get substitution character
 
-  mixed mb_substitute_character([mixed substrchar])~
+  mixed mb_substitute_character([mixed substrchar = mb_substitute_character()])~
 
 Specifies a substitution character when input character encoding is invalid or
 character code does not exist in output character encoding. Invalid characters
@@ -11,14 +11,14 @@ This setting affects |mb_convert_encoding|, |mb_convert_variables|,
 |mb_output_handler|, and |mb_send_mail|.
 
 {substrchar} Specify the Unicode value as an integer, or as one of the
-following strings: "none" : no output
+following strings: "none": no output
 
-"long" : Output character code value (Example: U+3000, JIS+7E7E)
+"long": Output character code value (Example: U+3000, JIS+7E7E)
 
-"entity" : Output character entity (Example: &#x200;)
+"entity": Output character entity (Example: &#x200;)
 
 If {substchar} is set, it returns TRUE for success, otherwise returns FALSE.
-If {substchar} is not set, it returns the Unicode value, or "none" or "long".
+If {substchar} is not set, it returns the current setting.
 
 |mb_substitute_character| example
 

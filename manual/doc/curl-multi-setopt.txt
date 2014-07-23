@@ -1,0 +1,29 @@
+curl_multi_setopt -- Set an option for the cURL multi handle
+
+  bool curl_multi_setopt(resource mh, int option, mixed value)~
+
+
+
+This function is currently not documented; only its argument list is
+available.
+
+
+
+One of the CURLMOPT_* constants.
+
+The value to be set on {option}.
+
+{value} should be an int for the following values of the {option} parameter:
+Option Set {value} to CURLMOPT_PIPELINING Pass 1 to enable or 0 to disable.
+Enabling pipelining on a multi handle will make it attempt to perform HTTP
+Pipelining as far as possible for transfers using this handle. This means that
+if you add a second request that can use an already existing connection, the
+second request will be "piped" on the same connection rather than being
+executed in parallel. CURLMOPT_MAXCONNECTS Pass a number that will be used as
+the maximum amount of simultaneously open connections that libcurl may cache.
+Default is 10. When the cache is full, curl closes the oldest one in the cache
+to prevent the number of open connections from increasing.
+
+Returns TRUE on success or &false; on failure.
+
+vim:ft=help:

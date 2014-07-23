@@ -1,7 +1,7 @@
 get_defined_constants -- Returns an associative array with the names of all
 the constants and their values
 
-  array get_defined_constants([bool categorize])~
+  array get_defined_constants([bool categorize = false])~
 
 Returns the names and values of all the constants currently defined. This
 includes those created by extensions as well as those created with the
@@ -55,7 +55,8 @@ The above example will output something similar to:
   
   )
 
-
+Returns an array of constant name => constant value array, optionally groupped
+by extension name registering the constant.
 
 Version Description 5.3.1 Windows only: Core constants are categorized under
 Core, previously mhash. 5.3.0 Core constants are categorized under Core,

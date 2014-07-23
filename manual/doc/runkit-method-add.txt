@@ -1,6 +1,6 @@
 runkit_method_add -- Dynamically adds a new method to a given class
 
-  bool runkit_method_add(string classname, string methodname, string args, string code [, int flags])~
+  bool runkit_method_add(string classname, string methodname, string args, string code [, int flags = RUNKIT_ACC_PUBLIC])~
 
 This function is EXPERIMENTAL. The behaviour of this function, its name, and
 surrounding documentation may change without notice in a future release of

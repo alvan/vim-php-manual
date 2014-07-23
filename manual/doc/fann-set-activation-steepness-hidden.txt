@@ -1,0 +1,19 @@
+fann_set_activation_steepness_hidden -- Sets the steepness of the activation
+steepness for all neurons in the all hidden layers
+
+  bool fann_set_activation_steepness_hidden(resource ann, float activation_steepness)~
+
+Sets the steepness of the activation steepness for all neurons in the all
+hidden layers.
+
+Neural network resource.
+
+The activation steepness.
+
+Returns TRUE on success, or FALSE otherwise.
+
+|fann_set_activation_steepness| |fann_set_activation_steepness_layer|
+|fann_set_activation_steepness_output| |fann_get_activation_steepness|
+|fann_set_activation_function|
+
+vim:ft=help:

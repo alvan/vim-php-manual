@@ -1,7 +1,7 @@
 oci_fetch_all -- Fetches multiple rows from a query into a two-dimensional
 array
 
-  int oci_fetch_all(resource statement, array output [, int skip [, int maxrows [, int flags]]])~
+  int oci_fetch_all(resource statement, array &output [, int skip = 0 [, int maxrows = -1 [, int flags = ]]])~
 
 Fetches multiple rows from a query into a two-dimensional array. By default,
 all rows are returned.
@@ -30,10 +30,10 @@ Constant Description OCI_FETCHSTATEMENT_BY_ROW The outer array will contain
 one sub-array per query row. OCI_FETCHSTATEMENT_BY_COLUMN The outer array will
 contain one sub-array per query column. This is the default.
 
-Arrays can be indexed by column heading or numerically. |oci_fetch_all| Array
-Index Modes Constant Description OCI_NUM Numeric indexes are used for each
-column's array. OCI_ASSOC Associative indexes are used for each column's
-array. This is the default.
+Arrays can be indexed either by column heading or numerically. Only one index
+mode will be returned. |oci_fetch_all| Array Index Modes Constant Description
+OCI_NUM Numeric indexes are used for each column's array. OCI_ASSOC
+Associative indexes are used for each column's array. This is the default.
 
 Use the addition operator "+" to choose a combination of array structure and
 index modes.
@@ -204,9 +204,8 @@ single-row fetching function like |oci_fetch_array| is used.
 For queries returning a large number of rows, performance can be significantly
 improved by increasing oci8.default_prefetch or using |oci_set_prefetch|.
 
-In PHP versions before 5.0.0 you must use |ocifetchstatement| instead. The old
-function name can still be used in current versions, however it is deprecated
-and not recommended.
+Will not return rows from Oracle Database 12c Implicit Result Sets. Use
+|oci_fetch_array| instead.
 
 |oci_fetch| |oci_fetch_array| |oci_fetch_assoc| |oci_fetch_object|
 |oci_fetch_row| |oci_set_prefetch|

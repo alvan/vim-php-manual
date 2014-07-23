@@ -1,6 +1,6 @@
 iconv_mime_decode -- Decodes a MIME header field
 
-  string iconv_mime_decode(string encoded_header [, int mode [, string charset]])~
+  string iconv_mime_decode(string encoded_header [, int mode = 0 [, string charset = ini_get("iconv.internal_encoding")]])~
 
 Decodes a MIME header field.
 

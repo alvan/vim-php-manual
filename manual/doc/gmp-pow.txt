@@ -1,13 +1,14 @@
 gmp_pow -- Raise number into power
 
-  resource gmp_pow(resource base, int exp)~
+  GMP gmp_pow(GMP base, int exp)~
 
 Raise {base} into power {exp}.
 
 {base} The base number.
 
-It can be either a GMP number resource, or a numeric string given that it is
-possible to convert the latter to a number.
+Either a GMP number resource in PHP 5.5 and earlier, a GMP object in PHP 5.6
+and later, or a numeric string provided that it is possible to convert the
+latter to a number.
 
 {exp} The positive power to raise the {base}.
 

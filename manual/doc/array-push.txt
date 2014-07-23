@@ -1,6 +1,6 @@
 array_push -- Push one or more elements onto the end of array
 
-  int array_push(array array, mixed var [, mixed ...])~
+  int array_push(array &array, mixed value1 [, mixed ...])~
 
 |array_push| treats {array} as a stack, and pushes the passed variables onto
 the end of {array}. The length of {array} increases by the number of variables
@@ -10,7 +10,7 @@ pushed. Has the same effect as:
   $array[] = $var;
 ?>
 
-repeated for each {var}.
+repeated for each passed value.
 
 If you use |array_push| to add one element to the array it's better to use
 $array[] = because in that way there is no overhead of calling a function.
@@ -20,7 +20,7 @@ differs from the $var[] behaviour where a new array is created.
 
 {array} The input array.
 
-{var} The pushed value.
+{value1} The first value to push onto the end of the {array}.
 
 Returns the new number of elements in the array.
 

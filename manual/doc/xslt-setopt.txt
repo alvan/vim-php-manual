@@ -5,7 +5,7 @@ xslt_setopt -- Set options on a given XSLT processor
 |xslt_setopt| sets the options specified by {newmask} on the given
 {processor}.
 
-{processor} The XSLT processor link identifier, created with |xslt_create|.
+{ processor}The XSLT processor link identifier, created with |xslt_create|.
 
 {newmask} {newmask} is a bitmask constructed with the following constants:
 XSLT_SABOPT_PARSE_PUBLIC_ENTITIES - Tell the processor to parse public
@@ -31,7 +31,7 @@ of an error.
   // Tell Sablotron to process public entities
   xslt_setopt($xh, XSLT_SABOPT_PARSE_PUBLIC_ENTITIES);
   
-  // Let's also ask him to suppress whitespace stripping
+  // Let's also ask it to suppress whitespace stripping
   xslt_setopt($xh, xslt_getopt($xh) | XSLT_SABOPT_DISABLE_STRIPPING);
 ?>
 

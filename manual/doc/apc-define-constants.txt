@@ -1,7 +1,7 @@
 apc_define_constants -- Defines a set of constants for retrieval and
 mass-definition
 
-  bool apc_define_constants(string key, array constants [, bool case_sensitive])~
+  bool apc_define_constants(string key, array constants [, bool case_sensitive = true])~
 
 |define| is notoriously slow. Since the main benefit of APC is to increase the
 performance of scripts/applications, this mechanism is provided to streamline

@@ -1,10 +1,11 @@
 eio_futime -- Change file last access and modification times
 
-  resource eio_futime(int fd, float atime, float mtime [, int pri [, callable callback [, mixed data]]])~
+  resource eio_futime(mixed fd, float atime, float mtime [, int pri = EIO_PRI_DEFAULT [, callable callback = NULL [, mixed data = NULL]]])~
 
 |eio_futime| changes file last access and modification times.
 
-The file descriptor, e.g. returned by |eio_open|
+Stream, Socket resource, or numeric file descriptor, e.g. returned by
+|eio_open|
 
 Access time
 
@@ -16,11 +17,15 @@ NULL passed, {pri} internally is set to EIO_PRI_DEFAULT.
 {callback} function is called when the request is done. It should match the
 following prototype:
 
-  void callback($data, $result);
+  void callback(mixed $data, int $result[, resource $req]);
 
-{$data} is custom data passed to the request. {$result} contains
-request-specific result value; basically, the value returned by corresponding
-system call.
+{data} is custom data passed to the request.
+
+{result} request-specific result value; basically, the value returned by
+corresponding system call.
+
+{req} is optional request resource which can be used with functions like
+|eio_get_last_error|
 
 Arbitrary variable passed to {callback}.
 

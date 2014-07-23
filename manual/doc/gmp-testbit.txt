@@ -1,17 +1,19 @@
 gmp_testbit -- Tests if a bit is set
 
-  bool gmp_testbit(resource a, int index)~
+  bool gmp_testbit(GMP a, int index)~
 
 Tests if the specified bit is set.
 
-{a} It can be either a GMP number resource, or a numeric string given that it
-is possible to convert the latter to a number.
+{a} Either a GMP number resource in PHP 5.5 and earlier, a GMP object in PHP
+5.6 and later, or a numeric string provided that it is possible to convert the
+latter to a number.
 
 {index} The bit to test
 
-Returns TRUE on success or &false; on failure.
+Returns TRUE if the bit is set in resource {$a}, otherwise FALSE.
 
-E_WARNING is issued when {index} is less than zero.
+An E_WARNING level error is issued when {index} is less than zero, and FALSE
+is returned.
 
 |gmp_testbit| example
 

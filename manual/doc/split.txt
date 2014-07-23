@@ -1,6 +1,6 @@
 split -- Split string into array by regular expression
 
-  array split(string pattern, string string [, int limit])~
+  array split(string pattern, string string [, int limit = -1])~
 
 Splits a {string} into array by regular expression.
 
@@ -56,8 +56,8 @@ As of PHP 5.3.0, the regex extension is deprecated in favor of the PCRE
 extension. Calling this function will issue an E_DEPRECATED notice. See the
 list of differences for help on converting to PCRE.
 
-|preg_split|, which uses a Perl-compatible regular expression syntax, is often
-a faster alternative to |split|. If you don't require the power of regular
+|split| is deprecated as of PHP 5.3.0. |preg_split| is the suggested
+alternative to this function. If you don't require the power of regular
 expressions, it is faster to use |explode|, which doesn't incur the overhead
 of the regular expression engine.
 

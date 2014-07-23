@@ -1,6 +1,6 @@
 parse_str -- Parses the string into variables
 
-  void parse_str(string str [, array arr])~
+  void parse_str(string str [, array &arr])~
 
 Parses {str} as if it were the query string passed via a URL and sets
 variables in the current scope.

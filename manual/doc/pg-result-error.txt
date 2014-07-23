@@ -15,8 +15,8 @@ Because |pg_query| returns FALSE if the query fails, you must use
 {result} PostgreSQL query result resource, returned by |pg_query|,
 |pg_query_params| or |pg_execute| (among others).
 
-Returns a string if there is an error associated with the {result} parameter,
-FALSE otherwise.
+Returns a string. Returns empty string if there is no error. If there is an
+error associated with the {result} parameter, returns FALSE.
 
 |pg_result_error| example
 

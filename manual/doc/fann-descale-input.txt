@@ -1,0 +1,17 @@
+fann_descale_input -- Scale data in input vector after get it from ann based
+on previously calculated parameters
+
+  bool fann_descale_input(resource ann, array input_vector)~
+
+Scale data in input vector after get it from ann based on previously
+calculated parameters.
+
+Neural network resource.
+
+Input vector that will be descaled
+
+Returns TRUE on success, or FALSE otherwise.
+
+|fann_scale_input| |fann_descale_output|
+
+vim:ft=help:

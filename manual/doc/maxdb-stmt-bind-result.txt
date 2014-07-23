@@ -3,11 +3,11 @@ storage
 
 Procedural style
 
-  bool maxdb_stmt_bind_result(resource stmt, mixed var1 [, mixed ...])~
+  bool maxdb_stmt_bind_result(resource stmt, mixed &var1 [, mixed &...])~
 
 Object oriented style
 
-  bool maxdb_stmt::bind_result(resource stmt, mixed var1 [, mixed ..., mixed var1 [, mixed ...]])~
+  bool maxdb_stmt::bind_result(resource stmt, mixed &var1 [, mixed &..., mixed &var1 [, mixed &...]])~
 
 |maxdb_stmt_bind_result| is used to associate (bind) columns in the result set
 to variables. When |maxdb_stmt_fetch| is called to fetch data, the MaxDB

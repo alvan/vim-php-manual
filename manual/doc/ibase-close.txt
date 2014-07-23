@@ -1,6 +1,6 @@
 ibase_close -- Close a connection to an InterBase database
 
-  bool ibase_close([resource connection_id])~
+  bool ibase_close([resource connection_id = ])~
 
 Closes the link to an InterBase database that's associated with a connection
 id returned from |ibase_connect|. Default transaction on link is committed,

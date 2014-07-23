@@ -1,6 +1,6 @@
 openssl_encrypt -- Encrypts data
 
-  string openssl_encrypt(string data, string method, string password [, bool raw_output [, string iv]])~
+  string openssl_encrypt(string data, string method, string password [, int options = 0 [, string iv = ""]])~
 
 Encrypts given data with given method and key, returns a raw or base64 encoded
 string
@@ -14,8 +14,7 @@ available.
 
 {password} The password.
 
-{raw_output} Setting to TRUE will return as raw output data, otherwise the
-return value is base64 encoded.
+{options} {options} can be one of OPENSSL_RAW_DATA, OPENSSL_ZERO_PADDING.
 
 {iv} A non-NULL Initialization Vector.
 

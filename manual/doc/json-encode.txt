@@ -1,23 +1,30 @@
 json_encode -- Returns the JSON representation of a value
 
-  string json_encode(mixed value [, int options])~
+  string json_encode(mixed value [, int options = 0 [, int depth = 512]])~
 
 Returns a string containing the JSON representation of {value}.
 
 {value} The {value} being encoded. Can be any type except a resource.
 
-This function only works with UTF-8 encoded data.
+All string data must be UTF-8 encoded.
+
+PHP implements a superset of JSON - it will also encode and decode scalar
+types and NULL. The JSON standard only supports these values when they are
+nested inside an array or an object.
 
 {options} Bitmask consisting of JSON_HEX_QUOT, JSON_HEX_TAG, JSON_HEX_AMP,
-JSON_HEX_APOS, JSON_NUMERIC_CHECK, JSON_BIGINT_AS_STRING, JSON_PRETTY_PRINT,
-JSON_UNESCAPED_SLASHES, JSON_FORCE_OBJECT, JSON_UNESCAPED_UNICODE.
+JSON_HEX_APOS, JSON_NUMERIC_CHECK, JSON_PRETTY_PRINT, JSON_UNESCAPED_SLASHES,
+JSON_FORCE_OBJECT, JSON_UNESCAPED_UNICODE. The behaviour of these constants is
+described on the JSON constants page.
 
-Returns a JSON encoded string on success.
+{depth} Set the maximum depth. Must be greater than zero.
 
-Version Description 5.4.0 JSON_BIGINT_AS_STRING, JSON_PRETTY_PRINT,
-JSON_UNESCAPED_SLASHES, and JSON_UNESCAPED_UNICODE {options} were added. 5.3.3
-JSON_NUMERIC_CHECK {option} was added. 5.3.0 The {options} parameter was
-added.
+Returns a JSON encoded string on success or FALSE on failure.
+
+Version Description 5.5.0 {depth} parameter was added. 5.4.0
+JSON_PRETTY_PRINT, JSON_UNESCAPED_SLASHES, and JSON_UNESCAPED_UNICODE
+{options} were added. 5.3.3 JSON_NUMERIC_CHECK {option} was added. 5.3.0 The
+{options} parameter was added.
 
 A |json_encode| example
 
@@ -31,7 +38,7 @@ The above example will output:
 
   {"a":1,"b":2,"c":3,"d":4,"e":5}
 
-A |json_encode| example showing all the options in action
+A |json_encode| example showing some options in use
 
 <?php >
   $a = array('<foo>',"'bar'",'"baz"','&amp;blong&', "\xc3\xa9");
@@ -152,6 +159,15 @@ When encoding an array, if the keys are not a continuous numeric sequence
 starting from 0, all keys are encoded as strings, and specified explicitly for
 each key-value pair.
 
-JsonSerializable |json_decode| |json_last_error|
+Like the reference JSON encoder, |json_encode| will generate JSON that is a
+simple value (that is, neither an object nor an array) if given a string,
+integer, float or boolean as an input {value}. While most decoders will accept
+these values as valid JSON, some may not, as the specification is ambiguous on
+this point.
+
+To summarise, always test that your JSON decoder can handle the output you
+generate from |json_encode|.
+
+JsonSerializable |json_decode| |json_last_error| |serialize|
 
 vim:ft=help:

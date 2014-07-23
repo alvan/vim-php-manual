@@ -1,6 +1,6 @@
 ps_findfont -- Loads a font
 
-  int ps_findfont(resource psdoc, string fontname, string encoding [, bool embed])~
+  int ps_findfont(resource psdoc, string fontname, string encoding [, bool embed = false])~
 
 Loads a font for later use. Before text is output with a loaded font it must
 be set with |ps_setfont|. This function needs the adobe font metric file in

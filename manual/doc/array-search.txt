@@ -1,7 +1,7 @@
 array_search -- Searches the array for a given value and returns the
 corresponding key if successful
 
-  mixed array_search(mixed needle, array haystack [, bool strict])~
+  mixed array_search(mixed needle, array haystack [, bool strict = false])~
 
 Searches {haystack} for {needle}.
 
@@ -27,8 +27,9 @@ value which evaluates to FALSE. Please read the section on Booleans for more
 information. Use the === operator for testing the return value of this
 function.
 
-Version Description 4.2.0 Prior to PHP 4.2.0, |array_search| returns NULL on
-failure instead of FALSE.
+Version Description 5.3.0 As with all internal PHP functions as of 5.3.0,
+|array_search| returns NULL if invalid parameters are passed to it. 4.2.0
+Prior to PHP 4.2.0, |array_search| returns NULL on failure instead of FALSE.
 
 |array_search| example
 

@@ -1,6 +1,6 @@
 ps_add_bookmark -- Add bookmark to current page
 
-  int ps_add_bookmark(resource psdoc, string text [, int parent [, int open]])~
+  int ps_add_bookmark(resource psdoc, string text [, int parent = 0 [, int open = 0]])~
 
 Adds a bookmark for the current page. Bookmarks usually appear in PDF-Viewers
 left of the page in a hierarchical tree. Clicking on a bookmark will jump to

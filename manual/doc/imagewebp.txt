@@ -1,0 +1,35 @@
+imagewebp -- Output an WebP image to browser or file
+
+  bool imagewebp(resource image, string filename)~
+
+Outputs or save an WebP version of the given {image}.
+
+{ image}An image resource, returned by one of the image creation functions,
+such as |imagecreatetruecolor|.
+
+{filename} The path to save the file to. If not set or NULL, the raw image
+stream will be outputted directly.
+
+Returns TRUE on success or &false; on failure.
+
+Saving an WebP file
+
+<?php >
+  // Create a blank image and add some text
+  $im = imagecreatetruecolor(120, 20);
+  $text_color = imagecolorallocate($im, 233, 14, 91);
+  
+  imagestring($im, 1, 5, 5,  'WebP with PHP', $text_color);
+  
+  // Save the image
+  imagewebp($im, 'php.webp');
+  
+  // Free up memory
+  imagedestroy($im);
+?>
+
+
+
+
+
+vim:ft=help:

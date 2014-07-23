@@ -2,12 +2,12 @@ mssql_fetch_batch -- Returns the next batch of records
 
   int mssql_fetch_batch(resource result)~
 
-Returns the next batch of records
+Returns the next batch of records.
 
 {result} The result resource that is being evaluated. This result comes from a
 call to |mssql_query|.
 
-Returns the batch number as an integer.
+Returns the number of rows in the returned batch.
 
 |mssql_fetch_batch| example
 

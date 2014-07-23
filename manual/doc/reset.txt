@@ -1,6 +1,6 @@
 reset -- Set the internal pointer of an array to its first element
 
-  mixed reset(array array)~
+  mixed reset(array &array)~
 
 |reset| rewinds {array}'s internal pointer to the first element and returns
 the value of the first array element.

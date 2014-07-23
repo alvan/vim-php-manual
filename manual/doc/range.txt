@@ -1,18 +1,18 @@
 range -- Create an array containing a range of elements
 
-  array range(mixed start, mixed limit [, number step])~
+  array range(mixed start, mixed end [, number step = 1])~
 
 Create an array containing a range of elements.
 
 {start} First value of the sequence.
 
-{limit} The sequence is ended upon reaching the {limit} value.
+{end} The sequence is ended upon reaching the {end} value.
 
 {step} If a {step} value is given, it will be used as the increment between
 elements in the sequence. {step} should be given as a positive number. If not
 specified, {step} will default to 1.
 
-Returns an array of elements from {start} to {limit}, inclusive.
+Returns an array of elements from {start} to {end}, inclusive.
 
 Version Description 5.0.0 The optional {step} parameter was added. 4.1.0 to
 4.3.2 In PHP versions 4.1.0 through 4.3.2, |range| sees numeric strings as

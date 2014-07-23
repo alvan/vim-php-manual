@@ -1,6 +1,6 @@
 ps_makespotcolor -- Create spot color
 
-  int ps_makespotcolor(resource psdoc, string name [, int reserved])~
+  int ps_makespotcolor(resource psdoc, string name [, int reserved = 0])~
 
 Creates a spot color from the current fill color. The fill color must be
 defined in rgb, cmyk or gray colorspace. The spot color name can be an

@@ -1,6 +1,6 @@
 iconv_mime_decode_headers -- Decodes multiple MIME header fields at once
 
-  array iconv_mime_decode_headers(string encoded_headers [, int mode [, string charset]])~
+  array iconv_mime_decode_headers(string encoded_headers [, int mode = 0 [, string charset = ini_get("iconv.internal_encoding")]])~
 
 Decodes multiple MIME header fields at once.
 

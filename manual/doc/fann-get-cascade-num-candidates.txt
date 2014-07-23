@@ -1,0 +1,35 @@
+fann_get_cascade_num_candidates -- Returns the number of candidates used
+during training
+
+  int fann_get_cascade_num_candidates(resource ann)~
+
+The number of candidates used during training (calculated by multiplying
+|fann_get_cascade_activation_functions_count|,
+|fann_get_cascade_activation_steepnesses_count| and
+|fann_get_cascade_num_candidate_groups|).
+
+The actual candidates is defined by the
+|fann_get_cascade_activation_functions| and
+|fann_get_cascade_activation_steepnesses| arrays. These arrays define the
+activation functions and activation steepnesses used for the candidate
+neurons. If there are 2 activation functions in the activation function array
+and 3 steepnesses in the steepness array, then there will be 2x3=6 different
+candidates which will be trained. These 6 different candidates can be copied
+into several candidate groups, where the only difference between these groups
+is the initial weights. If the number of groups is set to 2, then the number
+of candidate neurons will be 2x3x2=12. The number of candidate groups is
+defined by |fann_set_cascade_num_candidate_groups|.
+
+The default number of candidates is 6x4x2 = 48
+
+Neural network resource.
+
+The number of candidates used during training, or FALSE on error.
+
+|fann_get_cascade_activation_functions|
+|fann_get_cascade_activation_functions_count|
+|fann_get_cascade_activation_steepnesses|
+|fann_get_cascade_activation_steepnesses_count|
+|fann_get_cascade_num_candidate_groups|
+
+vim:ft=help:

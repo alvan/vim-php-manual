@@ -1,7 +1,12 @@
 mysql_fetch_field -- Get column information from a result and return as an
 object
 
-  object mysql_fetch_field(resource result [, int field_offset])~
+This extension is deprecated as of PHP 5.5.0, and will be removed in the
+future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
+MySQL: choosing an API guide and related FAQ for more information.
+Alternatives to this function include:
+
+  object mysql_fetch_field(resource result [, int field_offset = 0])~
 
 Returns an object containing field information. This function can be used to
 obtain information about fields in the provided query result.
@@ -18,7 +23,8 @@ are:
 
 name - column name
 
-table - name of the table the column belongs to
+table - name of the table the column belongs to, which is the alias name if
+one is defined
 
 max_length - maximum length of the column
 
@@ -84,6 +90,10 @@ zerofill - 1 if the column is zero-filled
 
 
 Field names returned by this function are case-sensitive.
+
+If field or tablenames are aliased in the SQL query the aliased name will be
+returned. The original name can be retrieved for instance by using
+mysqli_result::fetch_field.
 
 |mysql_field_seek|
 

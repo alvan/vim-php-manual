@@ -1,6 +1,6 @@
 dbplus_prev -- Get previous tuple from relation
 
-  int dbplus_prev(resource relation, array tuple)~
+  int dbplus_prev(resource relation, array &tuple)~
 
 Reads the data for the previous tuple for the given {relation}, makes it the
 current tuple and will pass it back as an associative array in {tuple}.

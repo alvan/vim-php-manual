@@ -1,6 +1,6 @@
 ps_string_geometry -- Gets geometry of a string
 
-  array ps_string_geometry(resource psdoc, string text [, int fontid [, float size]])~
+  array ps_string_geometry(resource psdoc, string text [, int fontid = 0 [, float size = 0.0]])~
 
 This function is similar to |ps_stringwidth| but returns an array of
 dimensions containing the width, ascender, and descender of the text.

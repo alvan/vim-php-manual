@@ -12,10 +12,11 @@ the resource returned by |mcrypt_module_open|.
 as string.
 
 {mode} One of the MCRYPT_MODE_modename constants, or one of the following
-strings: "ecb", "cbc", "cfb", "ofb", "nofb" or "stream". The IV is ignored in
-ECB mode as this mode does not require it. You will need to have the same IV
-(think: starting point) both at encryption and decryption stages, otherwise
-your encryption will fail.
+strings: "ecb", "cbc", "cfb", "ofb", "nofb" or "stream".
+
+The IV is ignored in ECB mode as this mode does not require it. You will need
+to have the same IV (think: starting point) both at encryption and decryption
+stages, otherwise your encryption will fail.
 
 Returns the size of the Initialization Vector (IV) in bytes. On error the
 function returns FALSE. If the IV is ignored in the specified cipher/mode

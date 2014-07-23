@@ -1,6 +1,6 @@
 gzseek -- Seek on a gz-file pointer
 
-  int gzseek(resource zp, int offset [, int whence])~
+  int gzseek(resource zp, int offset [, int whence = SEEK_SET])~
 
 Sets the file position indicator for the given file pointer to the given
 offset byte into the file stream. Equivalent to calling (in C) gzseek(zp,

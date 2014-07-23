@@ -1,6 +1,6 @@
 phpcredits -- Prints out the credits for PHP
 
-  bool phpcredits([int flag])~
+  bool phpcredits([int flag = CREDITS_ALL])~
 
 This function prints out the credits listing the PHP developers, modules, etc.
 It generates the appropriate HTML codes to insert the information in a page.
@@ -60,6 +60,8 @@ Printing all the credits
 
 
 
+
+|phpcredits| outputs plain text instead of HTML when using the CLI mode.
 
 |phpversion| |php_logo_guid| |phpinfo|
 

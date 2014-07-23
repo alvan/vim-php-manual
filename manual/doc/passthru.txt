@@ -1,6 +1,6 @@
 passthru -- Execute an external program and display raw output
 
-  void passthru(string command [, int return_var])~
+  void passthru(string command [, int &return_var])~
 
 The |passthru| function is similar to the |exec| function in that it executes
 a {command}. This function should be used in place of |exec| or |system| when

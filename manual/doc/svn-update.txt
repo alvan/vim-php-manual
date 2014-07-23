@@ -1,6 +1,6 @@
 svn_update -- Update working copy
 
-  int svn_update(string path [, int revno [, bool recurse]])~
+  int svn_update(string path [, int revno = SVN_REVISION_HEAD [, bool recurse = true]])~
 
 Update working copy at {path} to revision {revno}. If {recurse} is true,
 directories will be recursively updated.

@@ -1,0 +1,18 @@
+fann_scale_input_train_data -- Scales the inputs in the training data to the
+specified range
+
+  bool fann_scale_input_train_data(resource train_data, float new_min, float new_max)~
+
+Scales the inputs in the training data to the specified range.
+
+Neural network training data resource.
+
+New minimum after scaling inputs in training data.
+
+New maximum after scaling inputs in training data.
+
+Returns TRUE on success, or FALSE otherwise.
+
+|fann_scale_output_train_data| |fann_scale_train_data|
+
+vim:ft=help:

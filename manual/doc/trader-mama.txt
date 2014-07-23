@@ -1,0 +1,15 @@
+trader_mama -- MESA Adaptive Moving Average
+
+  array trader_mama(array real [, float fastLimit [, float slowLimit]])~
+
+
+
+Array of real values.
+
+Upper limit use in the adaptive algorithm. Valid range from 0.01 to 0.99.
+
+Lower limit use in the adaptive algorithm. Valid range from 0.01 to 0.99.
+
+Returns an array with calculated data or false on failure.
+
+vim:ft=help:

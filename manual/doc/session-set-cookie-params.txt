@@ -1,6 +1,6 @@
 session_set_cookie_params -- Set the session cookie parameters
 
-  void session_set_cookie_params(int lifetime [, string path [, string domain [, bool secure [, bool httponly]]]])~
+  void session_set_cookie_params(int lifetime [, string path [, string domain [, bool secure = false [, bool httponly = false]]]])~
 
 Set cookie parameters defined in the php.ini file. The effect of this function
 only lasts for the duration of the script. Thus, you need to call

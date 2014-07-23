@@ -1,6 +1,6 @@
 xml_parse -- Start parsing an XML document
 
-  int xml_parse(resource parser, string data [, bool is_final])~
+  int xml_parse(resource parser, string data [, bool is_final = false])~
 
 |xml_parse| parses an XML document. The handlers for the configured events are
 called as many times as necessary.

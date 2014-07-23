@@ -1,6 +1,6 @@
 yaz_ccl_parse -- Invoke CCL Parser
 
-  bool yaz_ccl_parse(resource id, string query, array result)~
+  bool yaz_ccl_parse(resource id, string query, array &result)~
 
 This function invokes a CCL parser. It converts a given CCL FIND query to an
 RPN query which may be passed to the |yaz_search| function to perform a

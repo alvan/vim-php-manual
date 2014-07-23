@@ -1,6 +1,6 @@
 ssh2_sftp_mkdir -- Create a directory
 
-  bool ssh2_sftp_mkdir(resource sftp, string dirname [, int mode [, bool recursive]])~
+  bool ssh2_sftp_mkdir(resource sftp, string dirname [, int mode = 0777 [, bool recursive = false]])~
 
 Creates a directory on the remote file server with permissions set to {mode}.
 

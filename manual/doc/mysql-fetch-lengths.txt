@@ -1,5 +1,10 @@
 mysql_fetch_lengths -- Get the length of each output in a result
 
+This extension is deprecated as of PHP 5.5.0, and will be removed in the
+future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
+MySQL: choosing an API guide and related FAQ for more information.
+Alternatives to this function include:
+
   array mysql_fetch_lengths(resource result)~
 
 Returns an array that corresponds to the lengths of each field in the last row

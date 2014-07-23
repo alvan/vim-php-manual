@@ -6,6 +6,9 @@ This function discards the contents of the output buffer.
 
 This function does not destroy the output buffer like |ob_end_clean| does.
 
+The output buffer must be started by |ob_start| with
+PHP_OUTPUT_HANDLER_CLEANABLE flag. Otherwise |ob_clean| will not work.
+
 No value is returned.
 
 |ob_flush| |ob_end_flush| |ob_end_clean|

@@ -1,7 +1,7 @@
 openssl_x509_parse -- Parse an X509 certificate and return the information as
 an array
 
-  array openssl_x509_parse(mixed x509cert [, bool shortnames])~
+  array openssl_x509_parse(mixed x509cert [, bool shortnames = true])~
 
 |openssl_x509_parse| returns information about the supplied {x509cert},
 including fields such as subject name, issuer name, purposes, valid from and

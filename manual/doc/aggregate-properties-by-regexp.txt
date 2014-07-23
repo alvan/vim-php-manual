@@ -1,7 +1,7 @@
 aggregate_properties_by_regexp -- Selective class properties aggregation to an
 object using a regular expression
 
-  void aggregate_properties_by_regexp(object object, string class_name, string regexp [, bool exclude])~
+  void aggregate_properties_by_regexp(object object, string class_name, string regexp [, bool exclude = false])~
 
 Aggregates properties from a class to an existing object using a regular
 expression to match their names.

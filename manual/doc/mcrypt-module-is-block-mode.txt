@@ -6,7 +6,8 @@ not
 This function returns TRUE if the mode outputs blocks of bytes or FALSE if it
 outputs just bytes. (e.g. TRUE for cbc and ecb, and FALSE for cfb and stream).
 
-{mode} The mode to check.
+{mode} One of the MCRYPT_MODE_modename constants, or one of the following
+strings: "ecb", "cbc", "cfb", "ofb", "nofb" or "stream".
 
 {lib_dir} The optional {lib_dir} parameter can contain the location where the
 algorithm module is on the system.

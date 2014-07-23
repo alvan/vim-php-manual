@@ -1,6 +1,6 @@
 ftp_alloc -- Allocates space for a file to be uploaded
 
-  bool ftp_alloc(resource ftp_stream, int filesize [, string result])~
+  bool ftp_alloc(resource ftp_stream, int filesize [, string &result])~
 
 Sends an ALLO command to the remote FTP server to allocate space for a file to
 be uploaded.

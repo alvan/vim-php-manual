@@ -2,7 +2,8 @@ rename -- Renames a file or directory
 
   bool rename(string oldname, string newname [, resource context])~
 
-Attempts to rename {oldname} to {newname}.
+Attempts to rename {oldname} to {newname}, moving it between directories if
+necessary. If {newname} exists, it will be overwritten.
 
 {oldname}
 

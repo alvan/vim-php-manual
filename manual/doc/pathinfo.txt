@@ -1,6 +1,6 @@
 pathinfo -- Returns information about a file path
 
-  mixed pathinfo(string path [, int options])~
+  mixed pathinfo(string path [, int options = PATHINFO_DIRNAME | PATHINFO_BASENAME | PATHINFO_EXTENSION | PATHINFO_FILENAME])~
 
 |pathinfo| returns information about {path}: either an associative array or a
 string, depending on {options}.
@@ -15,6 +15,10 @@ If {options} is not specified, returns all available elements.
 If the {options} parameter is not passed, an associative array containing the
 following elements is returned: dirname, basename, extension (if any), and
 filename.
+
+If the {path} has more than one extension, PATHINFO_EXTENSION returns only the
+last one and PATHINFO_FILENAME only strips the last one. (see first example
+below).
 
 If the {path} does not have an extension, no extension element will be
 returned (see second example below).

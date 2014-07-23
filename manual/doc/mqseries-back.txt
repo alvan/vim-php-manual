@@ -1,6 +1,6 @@
 mqseries_back -- MQSeries MQBACK
 
-  void mqseries_back(resource hconn, resource compCode, resource reason)~
+  void mqseries_back(resource hconn, resource &compCode, resource &reason)~
 
 The |mqseries_back| (MQBACK) call indicates to the queue manager that all the
 message gets and puts that have occurred since the last syncpoint are to be

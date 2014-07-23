@@ -19,7 +19,7 @@ IMG_FILTER_CONTRAST: Changes the contrast of the image. Use {arg1} to set the
 level of contrast.
 
 IMG_FILTER_COLORIZE: Like IMG_FILTER_GRAYSCALE, except you can specify the
-color. Use {arg1}, {arg2} and {arg3} in the form of {red}, {blue}, {green} and
+color. Use {arg1}, {arg2} and {arg3} in the form of {red}, {green}, {blue} and
 {arg4} for the {alpha} channel. The range for each color is 0 to 255.
 
 IMG_FILTER_EDGEDETECT: Uses edge detection to highlight the edges in the
@@ -212,9 +212,6 @@ The above example will output something similar to:
 Output of example : imagefilter() pixelate
 
 
-
-This function is only available if PHP is compiled with the bundled version of
-the GD library.
 
 |imageconvolution|
 

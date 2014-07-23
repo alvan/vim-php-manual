@@ -1,0 +1,19 @@
+opcache_invalidate -- Invalidates a cached script
+
+  boolean opcache_invalidate(string script [, boolean force = ])~
+
+This function invalidates a particular script from the opcode cache. If
+{force} is unset or FALSE, the script will only be invalidated if the
+modification time of the script is newer than the cached opcodes.
+
+The path to the script being invalidated.
+
+If set to TRUE, the script will be invalidated regardless of whether
+invalidation is necessary.
+
+Returns TRUE if the opcode cache for {script} was invalidated or if there was
+nothing to invalidate, or FALSE if the opcode cache is disabled.
+
+|opcache_compile_file| |opcache_reset|
+
+vim:ft=help:

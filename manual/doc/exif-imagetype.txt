@@ -15,6 +15,9 @@ returned otherwise the return value is FALSE. The return value is the same
 value that |getimagesize| returns in index 2 but |exif_imagetype| is much
 faster.
 
+|exif_imagetype| will emit an E_NOTICE and return FALSE if it is unable to
+read enough bytes from the file to determine the image type.
+
 Version Description 5.3.0 Added icon support. 4.3.2 Support for JPC, JP2, JPX,
 JB2, XBM, and WBMP 4.3.0 Support for SWC
 

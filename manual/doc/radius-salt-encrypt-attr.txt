@@ -1,0 +1,17 @@
+radius_salt_encrypt_attr -- Salt-encrypts a value
+
+  string radius_salt_encrypt_attr(resource radius_handle, string data)~
+
+Applies the RADIUS salt-encryption algorithm to the given value.
+
+In general, this is achieved automatically by providing the RADIUS_OPTION_SALT
+option to an attribute setter function, but this function can be used if
+low-level request construction is required.
+
+{data} The data to be salt-encrypted.
+
+Returns the salt-encrypted data or FALSE on failure.
+
+|radius_put_addr| |radius_put_attr| |radius_put_int| |radius_put_string|
+
+vim:ft=help:

@@ -1,0 +1,14 @@
+fann_run -- Will run input through the neural network
+
+  array fann_run(resource ann, array input)~
+
+Will run input through the neural network, returning an array of outputs, the
+number of which being equal to the number of neurons in the output layer.
+
+Neural network resource.
+
+Array of input values
+
+Array of output values, or FALSE on error
+
+vim:ft=help:

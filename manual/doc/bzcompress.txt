@@ -1,6 +1,6 @@
 bzcompress -- Compress a string into bzip2 encoded data
 
-  mixed bzcompress(string source [, int blocksize [, int workfactor]])~
+  mixed bzcompress(string source [, int blocksize = 4 [, int workfactor = 0]])~
 
 |bzcompress| compresses the given string and returns it as bzip2 encoded data.
 

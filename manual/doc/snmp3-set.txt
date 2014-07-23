@@ -1,6 +1,6 @@
 snmp3_set -- Set the value of an SNMP object
 
-  bool snmp3_set(string host, string sec_name, string sec_level, string auth_protocol, string auth_passphrase, string priv_protocol, string priv_passphrase, string object_id, string type, string value [, int timeout [, int retries]])~
+  bool snmp3_set(string host, string sec_name, string sec_level, string auth_protocol, string auth_passphrase, string priv_protocol, string priv_passphrase, string object_id, string type, string value [, int timeout = 1000000 [, int retries = 5]])~
 
 |snmp3_set| is used to set the value of an SNMP object specified by the
 {object_id}.

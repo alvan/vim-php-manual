@@ -1,0 +1,17 @@
+fann_scale_output -- Scale data in output vector before feed it to ann based
+on previously calculated parameters
+
+  bool fann_scale_output(resource ann, array output_vector)~
+
+Scale data in output vector before feed it to ann based on previously
+calculated parameters.
+
+Neural network resource.
+
+Output vector that will be scaled
+
+Returns TRUE on success, or FALSE otherwise.
+
+|fann_descale_output| |fann_scale_input|
+
+vim:ft=help:

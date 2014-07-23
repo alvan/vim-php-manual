@@ -1,7 +1,7 @@
 parsekit_compile_string -- Compile a string of PHP code and return the
 resulting op array
 
-  array parsekit_compile_string(string phpcode [, array errors [, int options]])~
+  array parsekit_compile_string(string phpcode [, array &errors [, int options = PARSEKIT_QUIET]])~
 
 This function is EXPERIMENTAL. The behaviour of this function, its name, and
 surrounding documentation may change without notice in a future release of

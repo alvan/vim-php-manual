@@ -13,10 +13,10 @@ administration views such as V$SESSION.
 
 The value may be retained across persistent connections.
 
-{} An Oracle connection identifier, returned by |oci_connect|, |oci_pconnect|,
-or |oci_new_connect|.
+{connection} An Oracle connection identifier, returned by |oci_connect|,
+|oci_pconnect|, or |oci_new_connect|.
 
-{} User chosen string up to 64 bytes long.
+{client_info} User chosen string up to 64 bytes long.
 
 Returns TRUE on success or &false; on failure.
 

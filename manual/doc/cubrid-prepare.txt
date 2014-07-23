@@ -1,6 +1,6 @@
-cubrid_prepare -- Prepare an SQL statement for execution
+cubrid_prepare -- Prepare a SQL statement for execution
 
-  resource cubrid_prepare(resource conn_identifier, string prepare_stmt [, int option])~
+  resource cubrid_prepare(resource conn_identifier, string prepare_stmt [, int option = 0])~
 
 The |cubrid_prepare| function is a sort of API which represents SQL statements
 compiled previously to a given connection handle. This pre-compiled SQL
@@ -11,7 +11,7 @@ repeatedly or to process long data. Only a single statement can be used and a
 parameter may put a question mark (?) to appropriate area in the SQL
 statement. Add a parameter when you bind a value in the VALUES clause of
 INSERT statement or in the WHERE clause. Note that it is allowed to bind a
-value to a MARK(?) by the |cubrid_bind| only.
+value to a MARK(?) by using the |cubrid_bind| function only.
 
 {conn_identifier} Connection identifier.
 

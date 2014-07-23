@@ -27,7 +27,7 @@ separator.
 
 The format for the {options} and {longopts} is almost the same, the only
 difference is that {longopts} takes an array of options (where each element is
-the option) where as {options} takes a string (where each character is the
+the option) whereas {options} takes a string (where each character is the
 option).
 
 This function will return an array of option / argument pairs or FALSE on
@@ -41,14 +41,17 @@ Version Description 5.3.0 Added support for "=" as argument/value separator.
 {longopts} is available on all systems. 5.3.0 This function is no longer
 system dependent, and now works on Windows, too.
 
-|getopt| example
+|getopt| example: The basics
 
 <?php >
+  // Script example.php
   $options = getopt("f:hp:");
   var_dump($options);
 ?>
 
-Running the above script with php script.php -fvalue -h will output:
+  shell> php example.php -fvalue -h
+
+The above example will output:
 
   array(2) {
     ["f"]=>
@@ -59,9 +62,10 @@ Running the above script with php script.php -fvalue -h will output:
 
 
 
-|getopt| example#2
+|getopt| example: Introducing long options
 
 <?php >
+  // Script example.php
   $shortopts  = "";
   $shortopts .= "f:";  // Required value
   $shortopts .= "v::"; // Optional value
@@ -77,8 +81,9 @@ Running the above script with php script.php -fvalue -h will output:
   var_dump($options);
 ?>
 
-Running the above script with php script.php -f "value for f" -v -a --required
-value --optional="optional value" --option will output:
+  shell> php example.php -f "value for f" -v -a --required value --optional="optional value" --option
+
+The above example will output:
 
   array(6) {
     ["f"]=>
@@ -97,14 +102,17 @@ value --optional="optional value" --option will output:
 
 
 
-|getopt| example#3 Passing multiple options as one
+|getopt| example: Passing multiple options as one
 
 <?php >
+  // Script example.php
   $options = getopt("abc");
   var_dump($options);
 ?>
 
-Running the above script with php script.php -aaac will output:
+  shell> php example.php -aaac
+
+The above example will output:
 
   array(2) {
     ["a"]=>

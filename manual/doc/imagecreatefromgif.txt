@@ -55,6 +55,9 @@ Output of example : Example to handle an error during loading of a GIF
 GIF support was removed from the GD library in Version 1.6, and added back in
 Version 2.0.28. This function is not available between these versions.
 
+When reading animated GIF files into memory, only the first frame is returned
+in the image resource pointer.
+
 Windows versions of PHP prior to PHP 4.3.0 do not support access of remote
 files via this function, even if allow_url_fopen is enabled.
 

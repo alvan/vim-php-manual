@@ -1,6 +1,6 @@
 socket_recv -- Receives data from a connected socket
 
-  int socket_recv(resource socket, string buf, int len, int flags)~
+  int socket_recv(resource socket, string &buf, int len, int flags)~
 
 The |socket_recv| function receives {len} bytes of data in {buf} from
 {socket}. |socket_recv| can be used to gather data from connected sockets.
@@ -95,7 +95,7 @@ The above example will produce something like:
   Sending HTTP HEAD request...OK.
   Reading response:
   
-  Closing socket...HTTP/1.1 200 OK
+  Read 123 bytes from socket_recv(). Closing socket...HTTP/1.1 200 OK
   Date: Mon, 14 Sep 2009 08:56:36 GMT
   Server: Apache/2.2.3 (Red Hat)
   Last-Modified: Tue, 15 Nov 2005 13:24:10 GMT

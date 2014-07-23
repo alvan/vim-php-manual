@@ -1,6 +1,6 @@
 touch -- Sets access and modification time of file
 
-  bool touch(string filename [, int time [, int atime]])~
+  bool touch(string filename [, int time = time() [, int atime = time()]])~
 
 Attempts to set the access and modification times of the file named in the
 {filename} parameter to the value given in {time}. Note that the access time

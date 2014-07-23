@@ -1,8 +1,8 @@
 apc_add -- Cache a new variable in the data store
 
-  bool apc_add(string key [, mixed var [, int ttl]])~
+  bool apc_add(string key, mixed var [, int ttl = 0])~
 
-  array apc_add(string key [, mixed var [, int ttl, array values [, mixed unused [, int ttl]]]])~
+  array apc_add(string key, mixed var [, int ttl = 0, array values = 0 [, mixed unused = NULL [, int ttl = 0]]])~
 
 Caches a variable in the data store, only if it's not already stored.
 
@@ -24,8 +24,8 @@ exist in the cache (clear, restart, etc.).
 
 {values} Names in key, variables in value.
 
-Returns TRUE on success or &false; on failure. Second syntax returns array
-with error keys.
+Returns TRUE if something has effectively been added into the cache, FALSE
+otherwise. Second syntax returns array with error keys.
 
 A |apc_add| example
 

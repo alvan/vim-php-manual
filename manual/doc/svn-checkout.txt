@@ -1,6 +1,6 @@
 svn_checkout -- Checks out a working copy from the repository
 
-  bool svn_checkout(string repos, string targetpath [, int revision [, int flags]])~
+  bool svn_checkout(string repos, string targetpath [, int revision [, int flags = 0]])~
 
 Checks out a working copy from the repository at {repos} to {targetpath} at
 revision {revision}.

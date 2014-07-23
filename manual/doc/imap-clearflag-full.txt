@@ -1,6 +1,6 @@
 imap_clearflag_full -- Clears flags on messages
 
-  bool imap_clearflag_full(resource imap_stream, string sequence, string flag [, int options])~
+  bool imap_clearflag_full(resource imap_stream, string sequence, string flag [, int options = 0])~
 
 This function causes a store to delete the specified {flag} to the flags set
 for the messages in the specified {sequence}.

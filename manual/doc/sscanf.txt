@@ -1,6 +1,6 @@
 sscanf -- Parses input from a string according to a format
 
-  mixed sscanf(string str, string format [, mixed ...])~
+  mixed sscanf(string str, string format [, mixed &...])~
 
 The function |sscanf| is the input analog of |printf|. |sscanf| reads from the
 string {str} and interprets it according to the specified {format}, which is
@@ -25,6 +25,9 @@ If only two parameters were passed to this function, the values parsed will be
 returned as an array. Otherwise, if optional parameters are passed, the
 function will return the number of assigned values. The optional parameters
 must be passed by reference.
+
+If there are more substrings expected in the {format} than there are available
+within {str}, -1 will be returned.
 
 |sscanf| Example
 

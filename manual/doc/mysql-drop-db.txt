@@ -1,6 +1,11 @@
 mysql_drop_db -- Drop (delete) a MySQL database
 
-  bool mysql_drop_db(string database_name [, resource link_identifier])~
+This extension is deprecated as of PHP 5.5.0, and will be removed in the
+future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
+MySQL: choosing an API guide and related FAQ for more information.
+Alternatives to this function include:
+
+  bool mysql_drop_db(string database_name [, resource link_identifier = NULL])~
 
 |mysql_drop_db| attempts to drop (remove) an entire database from the server
 associated with the specified link identifier. This function is deprecated, it

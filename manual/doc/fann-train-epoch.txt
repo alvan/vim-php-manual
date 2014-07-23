@@ -1,0 +1,26 @@
+fann_train_epoch -- Train one epoch with a set of training data
+
+  float fann_train_epoch(resource ann, resource data)~
+
+Train one epoch with the training data stored in data. One epoch is where all
+of the training data is considered exactly once.
+
+This function returns the MSE error as it is calculated either before or
+during the actual training. This is not the actual MSE after the training
+epoch, but since calculating this will require to go through the entire
+training set once more. It is more than adequate to use this value during
+training.
+
+The training algorithm used by this function is chosen by
+|fann_set_training_algorithm| function.
+
+Neural network resource.
+
+Neural network training data resource.
+
+The MSE, or FALSE on error.
+
+|fann_train_on_data| |fann_test_data| |fann_get_MSE|
+|fann_set_training_algorithm|
+
+vim:ft=help:

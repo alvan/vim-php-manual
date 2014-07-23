@@ -1,0 +1,17 @@
+fann_set_activation_function_hidden -- Sets the activation function for all of
+the hidden layers
+
+  bool fann_set_activation_function_hidden(resource ann, int activation_function)~
+
+Sets the activation function for all of the hidden layers.
+
+Neural network resource.
+
+The activation functions constant.
+
+Returns TRUE on success, or FALSE otherwise.
+
+|fann_set_activation_function| |fann_set_activation_function_layer|
+|fann_set_activation_function_output| |fann_set_activation_steepness|
+
+vim:ft=help:

@@ -1,6 +1,6 @@
 assert -- Checks if assertion is FALSE
 
-  bool assert(mixed assertion)~
+  bool assert(mixed assertion [, string description])~
 
 |assert| will check the given {assertion} and take appropriate action if its
 result is FALSE.
@@ -39,12 +39,21 @@ easier!
 The callback function should accept three arguments. The first argument will
 contain the file the assertion failed in. The second argument will contain the
 line the assertion failed on and the third argument will contain the
-expression that failed (if any - literal values such as 1 or "two" will not be
-passed via this argument)
+expression that failed (if any &#x2014; literal values such as 1 or "two" will
+not be passed via this argument). Users of PHP 5.4.8 and later may also
+provide a fourth optional argument, which will contain the {description} given
+to |assert|, if it was set.
 
 {assertion} The assertion.
 
+{description} An optional description that will be included in the failure
+message if the {assertion} fails.
+
 FALSE if the assertion is false, TRUE otherwise.
+
+Version Description 5.4.8 The {description} parameter was added. The
+{description} is also now provided to a callback function in ASSERT_CALLBACK
+mode as the fourth argument.
 
 Handle a failed assertion with a custom handler
 
@@ -71,6 +80,39 @@ Handle a failed assertion with a custom handler
 ?>
 
 
+
+
+
+Using a custom handler to print a description
+
+<?php >
+  // Active assert and make it quiet
+  assert_options(ASSERT_ACTIVE, 1);
+  assert_options(ASSERT_WARNING, 0);
+  assert_options(ASSERT_QUIET_EVAL, 1);
+  
+  // Create a handler function
+  function my_assert_handler($file, $line, $code, $desc = null)
+  {
+      echo "Assertion failed at $file:$line: $code";
+      if ($desc) {
+          echo ": $desc";
+      }
+      echo "\n";
+  }
+  
+  // Set up the callback
+  assert_options(ASSERT_CALLBACK, 'my_assert_handler');
+  
+  // Make an assertion that should fail
+  assert('2 < 1');
+  assert('2 < 1', 'Two is less than one');
+?>
+
+The above example will output:
+
+  Assertion failed at test.php:21: 2 < 1
+  Assertion failed at test.php:22: 2 < 1: Two is less than one
 
 
 

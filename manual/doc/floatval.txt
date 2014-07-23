@@ -10,6 +10,9 @@ doing so will emit an E_NOTICE level error and return 1.
 The float value of the given variable. Empty arrays return 0, non-empty arrays
 return 1.
 
+Strings will most likely return 0 although this depends on the leftmost
+characters of the string. The common rules of float casting apply.
+
 |floatval| Example
 
 <?php >
@@ -22,6 +25,18 @@ return 1.
 
 
 
-|intval| |strval| |settype| Type juggling
+|floatval| non-numeric leftmost characters Example
+
+<?php >
+  $var = 'The122.34343';
+  $float_value_of_var = floatval($var);
+  echo $float_value_of_var; // 0
+?>
+
+
+
+
+
+|boolval| |intval| |strval| |settype| Type juggling
 
 vim:ft=help:

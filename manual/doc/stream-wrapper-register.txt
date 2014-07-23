@@ -1,6 +1,6 @@
 stream_wrapper_register -- Register a URL wrapper implemented as a PHP class
 
-  bool stream_wrapper_register(string protocol, string classname [, int flags])~
+  bool stream_wrapper_register(string protocol, string classname [, int flags = 0])~
 
 Allows you to implement your own protocol handlers and streams for use with
 all the other filesystem functions (such as |fopen|, |fread| etc.).

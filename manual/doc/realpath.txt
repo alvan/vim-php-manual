@@ -3,7 +3,7 @@ realpath -- Returns canonicalized absolute pathname
   string realpath(string path)~
 
 |realpath| expands all symbolic links and resolves references to '/./', '/../'
-and extra '/' characters in the input {path} and return the canonicalized
+and extra '/' characters in the input {path} and returns the canonicalized
 absolute pathname.
 
 {path} The path being checked. Whilst a path must be supplied, the value can

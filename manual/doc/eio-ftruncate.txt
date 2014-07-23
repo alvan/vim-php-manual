@@ -1,11 +1,11 @@
 eio_ftruncate -- Truncate a file
 
-  resource eio_ftruncate(int fd [, int offset [, int pri [, callable callback [, mixed data]]]])~
+  resource eio_ftruncate(mixed fd [, int offset = 0 [, int pri = EIO_PRI_DEFAULT [, callable callback = NULL [, mixed data = NULL]]]])~
 
 |eio_ftruncate| causes a regular file referenced by {fd} file descriptor to be
 truncated to precisely {length} bytes.
 
-The file descriptor.
+Stream, Socket resource, or numeric file descriptor.
 
 Offset from beginning of the file
 
@@ -15,11 +15,15 @@ NULL passed, {pri} internally is set to EIO_PRI_DEFAULT.
 {callback} function is called when the request is done. It should match the
 following prototype:
 
-  void callback($data, $result);
+  void callback(mixed $data, int $result[, resource $req]);
 
-{$data} is custom data passed to the request. {$result} contains
-request-specific result value; basically, the value returned by corresponding
-system call.
+{data} is custom data passed to the request.
+
+{result} request-specific result value; basically, the value returned by
+corresponding system call.
+
+{req} is optional request resource which can be used with functions like
+|eio_get_last_error|
 
 Arbitrary variable passed to {callback}.
 

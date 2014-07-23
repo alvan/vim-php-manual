@@ -5,7 +5,10 @@ exit -- Output a message and terminate the current script
   void exit([string status, int status])~
 
 Terminates execution of the script. Shutdown functions and object destructors
-will always be executed even if |exit| is called.
+will always be executed even if exit is called.
+
+exit is a language construct and it can be called without parentheses if no
+{status} is passed.
 
 {status} If {status} is a string, this function prints the {status} just
 before exiting.
@@ -19,7 +22,7 @@ PHP >= 4.2.0 does NOT print the {status} if it is an integer.
 
 No value is returned.
 
-|exit| example
+exit example
 
 <?php >
   $filename = '/path/to/data-file';
@@ -31,7 +34,7 @@ No value is returned.
 
 
 
-|exit| status example
+exit status example
 
 <?php >
   //exit program normally
@@ -79,7 +82,7 @@ The above example will output:
 
 
 Because this is a language construct and not a function, it cannot be called
-using variable functions
+using variable functions.
 
 This language construct is equivalent to |die|.
 

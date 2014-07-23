@@ -1,6 +1,6 @@
 sort -- Sort an array
 
-  bool sort(array array [, int sort_flags])~
+  bool sort(array &array [, int sort_flags = SORT_REGULAR])~
 
 This function sorts an array. Elements will be arranged from lowest to highest
 when this function has completed.
@@ -16,15 +16,14 @@ SORT_NUMERIC - compare items numerically
 
 SORT_STRING - compare items as strings
 
-SORT_LOCALE_STRING - compare items as strings, based on the current locale.
-Added in PHP 4.4.0 and 5.0.2, it uses the locale, which can be changed using
-|setlocale|.
+SORT_LOCALE_STRING - compare items as strings, based on the current locale. It
+uses the locale, which can be changed using |setlocale|
 
 SORT_NATURAL - compare items as strings using "natural ordering" like
-|natsort|. Added in PHP 5.4.0.
+|natsort|
 
 SORT_FLAG_CASE - can be combined (bitwise OR) with SORT_STRING or SORT_NATURAL
-to sort strings case-insensitively. Added in PHP 5.4.0.
+to sort strings case-insensitively
 
 Returns TRUE on success or &false; on failure.
 
@@ -53,7 +52,7 @@ The fruits have been sorted in alphabetical order.
 
 <?php >
   $fruits = array(
-  	"Orange1", "orange2", "Orange3", "orange20"
+      "Orange1", "orange2", "Orange3", "orange20"
   );
   sort($fruits, SORT_NATURAL | SORT_FLAG_CASE);
   foreach ($fruits as $key => $val) {
@@ -77,6 +76,9 @@ existing keys that may have been assigned, rather than just reordering the
 keys.
 
 Like most PHP sorting functions, |sort| uses an implementation of Quicksort.
+The pivot is chosen in the middle of the partition resulting in an optimal
+time for already sorted arrays. This is however an implementation detail you
+shouldn't rely on.
 
 Be careful when sorting arrays with mixed types values because |sort| can
 produce unpredictable results.

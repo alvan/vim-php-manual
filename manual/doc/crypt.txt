@@ -5,6 +5,14 @@ crypt -- One-way string hashing
 |crypt| will return a hashed string using the standard Unix DES-based
 algorithm or alternative algorithms that may be available on the system.
 
+The {salt} parameter is optional. However, |crypt| creates weak password
+without {salt}. PHP 5.6 or later raise E_NOTICE error without it. Make sure
+specify strong enough salt for better security.
+
+|password_hash| uses strong hash, generates strong salt, applies proper rounds
+automatically. |password_hash| is simple |crypt| wrapper and compatible with
+existing password hashes. Use of |password_hash| is encouraged.
+
 Some operating systems support more than one type of hash. In fact, sometimes
 the standard DES-based algorithm is replaced by an MD5-based algorithm. The
 hash type is triggered by the salt argument. Prior to 5.3, PHP would determine
@@ -36,12 +44,16 @@ fail.
 
 CRYPT_MD5 - MD5 hashing with a twelve character salt starting with $1$
 
-CRYPT_BLOWFISH - Blowfish hashing with a salt as follows: "$2a$", a two digit
-cost parameter, "$", and 22 digits from the alphabet "./0-9A-Za-z". Using
-characters outside of this range in the salt will cause crypt() to return a
-zero-length string. The two digit cost parameter is the base-2 logarithm of
-the iteration count for the underlying Blowfish-based hashing algorithmeter
-and must be in range 04-31, values outside this range will cause crypt() to
-fail.
+CRYPT_BLOWFISH - Blowfish hashing with a salt as follows: "$2a$", "$2x$" or
+"$2y$", a two digit cost parameter, "$", and 22 characters from the alphabet
+"./0-9A-Za-z". Using characters outside of this range in the salt will cause
+crypt() to return a zero-length string. The two digit cost parameter is the
+base-2 logarithm of the iteration count for the underlying Blowfish-based
+hashing algorithmeter and must be in range 04-31, values outside this range
+will cause crypt() to fail. Versions of PHP before 5.3.7 only support "$2a$"
+as the salt prefix: PHP 5.3.7 introduced the new prefixes to fix a security
+weakness in the Blowfish implementation. Please refer to this document for
+full details of the security fix, but to summarise, developers targeting only
+PHP 5.3.7 and later should use "$2y$" in preference to "$2a$".
 
 vim:ft=help:

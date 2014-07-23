@@ -1,6 +1,6 @@
 socket_listen -- Listens for a connection on a socket
 
-  bool socket_listen(resource socket [, int backlog])~
+  bool socket_listen(resource socket [, int backlog = 0])~
 
 After the socket {socket} has been created using |socket_create| and bound to
 a name with |socket_bind|, it may be told to listen for incoming connections

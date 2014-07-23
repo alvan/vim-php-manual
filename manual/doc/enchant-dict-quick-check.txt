@@ -1,7 +1,7 @@
 enchant_dict_quick_check -- Check the word is correctly spelled and provide
 suggestions
 
-  bool enchant_dict_quick_check(resource dict, string word [, array suggestions])~
+  bool enchant_dict_quick_check(resource dict, string word [, array &suggestions])~
 
 If the word is correctly spelled return TRUE, otherwise return FALSE, if
 suggestions variable is provided, fill it with spelling alternatives.

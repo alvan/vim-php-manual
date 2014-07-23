@@ -1,18 +1,18 @@
-array_change_key_case -- Changes all keys in an array
+array_change_key_case -- Changes the case of all keys in an array
 
-  array array_change_key_case(array input [, int case])~
+  array array_change_key_case(array array [, int case = CASE_LOWER])~
 
-Returns an array with all keys from {input} lowercased or uppercased. Numbered
+Returns an array with all keys from {array} lowercased or uppercased. Numbered
 indices are left as is.
 
-{input} The array to work on
+{array} The array to work on
 
 {case} Either CASE_UPPER or CASE_LOWER (default)
 
-Returns an array with its keys lower or uppercased, or FALSE if {input} is not
+Returns an array with its keys lower or uppercased, or FALSE if {array} is not
 an array.
 
-Throws E_WARNING if {input} is not an array.
+Throws E_WARNING if {array} is not an array.
 
 |array_change_key_case| example
 

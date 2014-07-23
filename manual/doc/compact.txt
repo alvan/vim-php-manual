@@ -1,6 +1,6 @@
 compact -- Create array containing variables and their values
 
-  array compact(mixed varname [, mixed ...])~
+  array compact(mixed varname1 [, mixed ...])~
 
 Creates an array containing variables and their values.
 
@@ -11,7 +11,7 @@ that key. In short, it does the opposite of |extract|.
 
 Any strings that are not set will simply be skipped.
 
-{varname} |compact| takes a variable number of parameters. Each parameter can
+{varname1} |compact| takes a variable number of parameters. Each parameter can
 be either a string containing the name of the variable, or an array of
 variable names. The array can contain other arrays of variable names inside
 it; |compact| handles it recursively.

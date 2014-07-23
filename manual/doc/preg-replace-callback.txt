@@ -1,7 +1,7 @@
 preg_replace_callback -- Perform a regular expression search and replace using
 a callback
 
-  mixed preg_replace_callback(mixed pattern, callable callback, mixed subject [, int limit [, int count]])~
+  mixed preg_replace_callback(mixed pattern, callable callback, mixed subject [, int limit = -1 [, int &count = -1]])~
 
 The behavior of this function is almost identical to |preg_replace|, except
 for the fact that instead of {replacement} parameter, one should specify a
@@ -12,16 +12,17 @@ with strings.
 
 {callback} A callback that will be called and passed an array of matched
 elements in the {subject} string. The callback should return the replacement
-string.
+string. This is the callback signature:
+
+  string (mixed pattern, callable callback, mixed subject [, int limit = -1 [, int &count = -1, array matches = -1]])~
 
 You'll often need the {callback} function for a |preg_replace_callback| in
-just one place. In this case you can use an anonymous function (since PHP
-5.3.0) or |create_function| to declare an anonymous function as callback
-within the call to |preg_replace_callback|. By doing it this way you have all
-information for the call in one place and do not clutter the function
+just one place. In this case you can use an anonymous function to declare the
+callback within the call to |preg_replace_callback|. By doing it this way you
+have all information for the call in one place and do not clutter the function
 namespace with a callback function's name not used anywhere else.
 
-|preg_replace_callback| and |create_function|
+|preg_replace_callback| and anonymous function
 
 <?php >
   /* a unix-style command line filter to convert uppercase
@@ -31,12 +32,9 @@ namespace with a callback function's name not used anywhere else.
       $line = fgets($fp);
       $line = preg_replace_callback(
           '|<p>\s*\w|',
-          create_function(
-              // single quotes are essential here,
-              // or alternative escape all $ as \$
-              '$matches',
-              'return strtolower($matches[0]);'
-          ),
+          function ($matches) {
+              return strtolower($matches[0]);
+          },
           $line
       );
       echo $line;
@@ -119,7 +117,7 @@ code
 
 
 
-PCRE Patterns |preg_replace| |preg_last_error| |create_function| Anonymous
-functions information about the callback type
+PCRE Patterns |preg_replace| |preg_last_error| Anonymous functions information
+about the callback type
 
 vim:ft=help:

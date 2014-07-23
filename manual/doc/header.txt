@@ -1,6 +1,6 @@
 header -- Send a raw HTTP header
 
-  void header(string string [, bool replace [, int http_response_code]])~
+  void header(string string [, bool replace = true [, int http_response_code = true]])~
 
 |header| is used to send a raw HTTP header. See the HTTP/1.1 specification for
 more information on HTTP headers.
@@ -16,6 +16,7 @@ access function, and have spaces or empty lines that are output before
   /* This will give an error. Note the output
    * above, which is before the header() call */
   header('Location: http://www.example.com/');
+  exit;
 ?>
 
 {string} The header string.
@@ -29,12 +30,6 @@ the proper status code.
 
 <?php >
   header("HTTP/1.0 404 Not Found");
-?>
-
-For FastCGI you must use the following for a 404 response:
-
-<?php >
-  header("Status: 404 Not Found");
 ?>
 
 The second special case is the "Location:" header. Not only does it send this
@@ -150,6 +145,7 @@ make an absolute URI from a relative one yourself:
 Session ID is not passed with Location header even if session.use_trans_sid is
 enabled. It must by passed manually using SID constant.
 
-|headers_sent| |setcookie| The section on HTTP authentication
+|headers_sent| |setcookie| |http_response_code| The section on HTTP
+authentication
 
 vim:ft=help:

@@ -1,6 +1,6 @@
 mb_decode_numericentity -- Decode HTML numeric string reference to character
 
-  string mb_decode_numericentity(string str, array convmap, string encoding)~
+  string mb_decode_numericentity(string str, array convmap [, string encoding = mb_internal_encoding()])~
 
 Convert numeric string reference of string {str} in a specified block to
 character.

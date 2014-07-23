@@ -3,19 +3,19 @@ parameters
 
 Procedural style
 
-  bool maxdb_stmt_bind_param(resource stmt, string types, mixed var1 [, mixed ...])~
+  bool maxdb_stmt_bind_param(resource stmt, string types, mixed &var1 [, mixed &...])~
 
 Object oriented style
 
-  bool maxdb_stmt::bind_param(resource stmt, string types, mixed var1 [, mixed ..., string types, mixed var1 [, mixed ...]])~
+  bool maxdb_stmt::bind_param(resource stmt, string types, mixed &var1 [, mixed &..., string types, mixed &var1 [, mixed &...]])~
 
 Procedural style (extended syntax):
 
-  bool maxdb_stmt_bind_param(resource stmt, string types, mixed var1 [, mixed ..., string types, mixed var1 [, mixed ..., resource stmt, string types, array var]])~
+  bool maxdb_stmt_bind_param(resource stmt, string types, mixed &var1 [, mixed &..., string types, mixed &var1 [, mixed &..., resource stmt, string types, array &var]])~
 
 Object oriented style (extended syntax):
 
-  bool maxdb_stmt::bind_param(resource stmt, string types, mixed var1 [, mixed ..., string types, mixed var1 [, mixed ..., resource stmt, string types, array var, string types, array var]])~
+  bool maxdb_stmt::bind_param(resource stmt, string types, mixed &var1 [, mixed &..., string types, mixed &var1 [, mixed &..., resource stmt, string types, array &var, string types, array &var]])~
 
 |maxdb_stmt_bind_param| is used to bind variables for the parameter markers in
 the SQL statement that was passed to |maxdb_prepare|. The string {types}

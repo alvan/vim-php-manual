@@ -1,9 +1,9 @@
 wincache_ucache_add -- Adds a variable in user cache only if variable does not
 already exist in the cache
 
-  bool wincache_ucache_add(string key, mixed value [, int ttl])~
+  bool wincache_ucache_add(string key, mixed value [, int ttl = 0])~
 
-  bool wincache_ucache_add(string key, mixed value [, int ttl, array values [, mixed unused [, int ttl]]])~
+  bool wincache_ucache_add(string key, mixed value [, int ttl = 0, array values = 0 [, mixed unused = 0 [, int ttl = 0]]])~
 
 Adds a variable in user cache, only if this variable doesn't already exist in
 the cache. The added variable remains in the user cache unless its time to

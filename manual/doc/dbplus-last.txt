@@ -1,6 +1,6 @@
 dbplus_last -- Get last tuple from relation
 
-  int dbplus_last(resource relation, array tuple)~
+  int dbplus_last(resource relation, array &tuple)~
 
 Reads the data for the last tuple for the given {relation}, makes it the
 current tuple and pass it back as an associative array in {tuple}.

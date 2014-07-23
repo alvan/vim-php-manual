@@ -1,0 +1,18 @@
+fann_get_learning_rate -- Returns the learning rate
+
+  float fann_get_learning_rate(resource ann)~
+
+The learning rate is used to determine how aggressive training should be for
+some of the training algorithms (FANN_TRAIN_INCREMENTAL, FANN_TRAIN_BATCH,
+FANN_TRAIN_QUICKPROP). Do however note that it is not used in
+FANN_TRAIN_RPROP.
+
+The default learning rate is 0.7.
+
+Neural network resource.
+
+The learning rate, or FALSE on error.
+
+|fann_set_learning_rate| |fann_set_training_algorithm|
+
+vim:ft=help:

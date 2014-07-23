@@ -1,6 +1,6 @@
 mqseries_inq -- MQSeries MQINQ
 
-  void mqseries_inq(resource hconn, resource hobj, int selectorCount, array selectors, int intAttrCount, resource intAttr, int charAttrLength, resource charAttr, resource compCode, resource reason)~
+  void mqseries_inq(resource hconn, resource hobj, int selectorCount, array selectors, int intAttrCount, resource &intAttr, int charAttrLength, resource &charAttr, resource &compCode, resource &reason)~
 
 The |mqseries_inq| (MQINQ) call returns an array of integers and a set of
 character strings containing the attributes of an object.

@@ -1,0 +1,17 @@
+cubrid_lob2_size -- Get a lob object's size.
+
+  int cubrid_lob2_size(resource lob_identifier)~
+
+The |cubrid_lob2_size| function is used to get the size of a lob object.
+
+{lob_identifier} Lob identifier as a result of |cubrid_lob2_new| or get from
+the result set.
+
+It will return the size of the LOB object when it processes successfully.
+
+FALSE on failure.
+
+|cubrid_lob2_read| |cubrid_lob2_write| |cubrid_lob2_seek| |cubrid_lob2_seek64|
+|cubrid_lob2_tell| |cubrid_lob2_tell64| |cubrid_lob2_size64|
+
+vim:ft=help:

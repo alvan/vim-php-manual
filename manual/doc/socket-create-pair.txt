@@ -1,7 +1,7 @@
 socket_create_pair -- Creates a pair of indistinguishable sockets and stores
 them in an array
 
-  bool socket_create_pair(int domain, int type, int protocol, array fd)~
+  bool socket_create_pair(int domain, int type, int protocol, array &fd)~
 
 |socket_create_pair| creates two connected and indistinguishable sockets, and
 stores them in {fd}. This function is commonly used in IPC (InterProcess

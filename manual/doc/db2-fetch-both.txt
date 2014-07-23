@@ -1,7 +1,7 @@
 db2_fetch_both -- Returns an array, indexed by both column name and position,
 representing a row in a result set
 
-  array db2_fetch_both(resource stmt [, int row_number])~
+  array db2_fetch_both(resource stmt [, int row_number = -1])~
 
 Returns an array, indexed by both column name and position, representing a row
 in a result set. Note that the row returned by |db2_fetch_both| requires more

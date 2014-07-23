@@ -1,7 +1,7 @@
 mb_convert_kana -- Convert "kana" one from another ("zen-kaku", "han-kaku" and
 more)
 
-  string mb_convert_kana(string str [, string option [, string encoding]])~
+  string mb_convert_kana(string str [, string option = "KV" [, string encoding = mb_internal_encoding()]])~
 
 Performs a "han-kaku" - "zen-kaku" conversion for string {str}. This function
 is only useful for Japanese.

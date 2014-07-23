@@ -38,6 +38,9 @@ to to determine which wrappers support |stat| family of functionality.
 
 The check is done using the real UID/GID instead of the effective one.
 
+This function may return TRUE for directories. Use |is_dir| to distinguish
+file and directory.
+
 |is_writable| |file_exists| |fgets|
 
 vim:ft=help:

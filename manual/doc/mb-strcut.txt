@@ -1,6 +1,6 @@
 mb_strcut -- Get part of string
 
-  string mb_strcut(string str, int start [, int length [, string encoding]])~
+  string mb_strcut(string str, int start [, int length = NULL [, string encoding = mb_internal_encoding()]])~
 
 |mb_strcut| extracts a substring from a string similarly to |mb_substr|, but
 operates on bytes instead of characters. If the cut position happens to be
@@ -13,7 +13,8 @@ thus result in a malformed byte sequence.
 
 {start} Starting position in bytes.
 
-{length} Length in bytes.
+{length} Length in bytes. If omitted or NULL is passed, extract all bytes to
+the end of the string.
 
 {encoding} The {encoding} parameter is the character encoding. If it is
 omitted, the internal character encoding value will be used.

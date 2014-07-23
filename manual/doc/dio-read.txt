@@ -1,6 +1,6 @@
 dio_read -- Reads bytes from a file descriptor
 
-  string dio_read(resource fd [, int len])~
+  string dio_read(resource fd [, int len = 1024])~
 
 The function |dio_read| reads and returns {len} bytes from file with
 descriptor {fd}.

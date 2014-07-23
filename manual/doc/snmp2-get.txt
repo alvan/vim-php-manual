@@ -1,6 +1,6 @@
 snmp2_get -- Fetch an SNMP object
 
-  string snmp2_get(string host, string community, string object_id [, string timeout [, string retries]])~
+  string snmp2_get(string host, string community, string object_id [, string timeout = 1000000 [, string retries = 5]])~
 
 The |snmp2_get| function is used to read the value of an SNMP object specified
 by the {object_id}.

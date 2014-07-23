@@ -1,6 +1,6 @@
 mqseries_disc -- MQSeries MQDISC
 
-  void mqseries_disc(resource hconn, resource compCode, resource reason)~
+  void mqseries_disc(resource hconn, resource &compCode, resource &reason)~
 
 The |mqseries_disc| (MQDISC) call breaks the connection between the queue
 manager and the application program, and is the inverse of the |mqseries_conn|

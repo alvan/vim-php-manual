@@ -1,7 +1,7 @@
 runkit_import -- Process a PHP file importing function and class definitions,
 overwriting where appropriate
 
-  bool runkit_import(string filename [, int flags])~
+  bool runkit_import(string filename [, int flags = RUNKIT_IMPORT_CLASS_METHODS])~
 
 Similar to |include| however any code residing outside of a function or class
 is simply ignored. Additionally, depending on the value of {flags}, any

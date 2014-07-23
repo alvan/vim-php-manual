@@ -1,6 +1,6 @@
 localtime -- Get the local time
 
-  array localtime([int timestamp [, bool is_associative]])~
+  array localtime([int timestamp = time() [, bool is_associative = false]])~
 
 The |localtime| function returns an array identical to that of the structure
 returned by the C function call.

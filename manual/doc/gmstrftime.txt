@@ -1,6 +1,6 @@
 gmstrftime -- Format a GMT/UTC time/date according to locale settings
 
-  string gmstrftime(string format [, int timestamp])~
+  string gmstrftime(string format [, int timestamp = time()])~
 
 Behaves the same as |strftime| except that the time returned is Greenwich Mean
 Time (GMT). For example, when run in Eastern Standard Time (GMT -0500), the

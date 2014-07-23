@@ -1,0 +1,16 @@
+fann_save_train -- Save the training structure to a file
+
+  bool fann_save_train(resource data, string file_name)~
+
+Save the training data to a file, with the format as specified in
+|fann_read_train_from_file|.
+
+Neural network training data resource.
+
+The file name of the file where training data is saved to.
+
+Returns TRUE on success, or FALSE otherwise.
+
+|fann_read_train_from_file|
+
+vim:ft=help:

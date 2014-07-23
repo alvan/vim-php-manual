@@ -1,0 +1,12 @@
+fann_shuffle_train_data -- Shuffles training data, randomizing the order
+
+  bool fann_shuffle_train_data(resource train_data)~
+
+Shuffles training data, randomizing the order. This is recommended for
+incremental training, while it have no influence during batch training.
+
+Neural network training data resource.
+
+Returns TRUE on success, or FALSE otherwise.
+
+vim:ft=help:

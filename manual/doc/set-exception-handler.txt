@@ -6,15 +6,18 @@ Sets the default exception handler if an exception is not caught within a
 try/catch block. Execution will stop after the {exception_handler} is called.
 
 {exception_handler} Name of the function to be called when an uncaught
-exception occurs. This function must be defined before calling
-|set_exception_handler|. This handler function needs to accept one parameter,
-which will be the exception object that was thrown.
+exception occurs. This handler function needs to accept one parameter, which
+will be the exception object that was thrown. This is the handler signature:
+
+  void (callable exception_handler, Exception ex)~
 
 NULL may be passed instead, to reset this handler to its default state.
 
 Returns the name of the previously defined exception handler, or NULL on
-error. If no previous handler was defined, NULL is also returned. If NULL is
-passed, resetting the handler to its default state, TRUE is returned.
+error. If no previous handler was defined, NULL is also returned.
+
+Version Description 5.5.0 Previously, if NULL was passed then this function
+returned TRUE. It returns the previous handler since PHP 5.5.0.
 
 |set_exception_handler| example
 

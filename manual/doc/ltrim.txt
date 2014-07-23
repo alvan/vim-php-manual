@@ -1,14 +1,14 @@
 ltrim -- Strip whitespace (or other characters) from the beginning of a string
 
-  string ltrim(string str [, string charlist])~
+  string ltrim(string str [, string character_mask])~
 
 Strip whitespace (or other characters) from the beginning of a string.
 
 {str} The input string.
 
-{charlist} You can also specify the characters you want to strip, by means of
-the {charlist} parameter. Simply list all characters that you want to be
-stripped. With .. you can specify a range of characters.
+{character_mask} You can also specify the characters you want to strip, by
+means of the {character_mask} parameter. Simply list all characters that you
+want to be stripped. With .. you can specify a range of characters.
 
 This function returns a string with whitespace stripped from the beginning of
 {str}. Without the second parameter, |ltrim| will strip these characters: " "
@@ -24,7 +24,7 @@ This function returns a string with whitespace stripped from the beginning of
 
 "\x0B" (ASCII 11 (0x0B)), a vertical tab.
 
-Version Description 4.1.0 The {charlist} parameter was added.
+Version Description 4.1.0 The {character_mask} parameter was added.
 
 Usage example of |ltrim|
 

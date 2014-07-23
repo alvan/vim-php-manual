@@ -1,6 +1,6 @@
 xdiff_string_diff -- Make unified diff of two strings
 
-  string xdiff_string_diff(string old_data, string new_data [, int context [, bool minimal]])~
+  string xdiff_string_diff(string old_data, string new_data [, int context = 3 [, bool minimal = false]])~
 
 Makes an unified diff containing differences between {old_data} string and
 {new_data} string and returns it. The resulting diff is human-readable. An

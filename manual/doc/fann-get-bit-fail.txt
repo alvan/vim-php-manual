@@ -1,0 +1,20 @@
+fann_get_bit_fail -- The number of fail bits
+
+  int fann_get_bit_fail(resource ann)~
+
+The number of fail bits; means the number of output neurons which differ more
+than the bit fail limit (see |fann_get_bit_fail_limit|,
+|fann_set_bit_fail_limit|). The bits are counted in all of the training data,
+so this number can be higher than the number of training data.
+
+This value is reset by |fann_reset_MSE| and updated by all the same functions
+which also updates the MSE value (e.g. |fann_test_data|, |fann_train_epoch|)
+
+Neural network resource.
+
+The number of bits fail, or FALSE on error.
+
+|fann_get_MSE| |fann_reset_MSE| |fann_test_data| |fann_train_epoch|
+|fann_get_bit_fail_limit| |fann_set_bit_fail_limit|
+
+vim:ft=help:

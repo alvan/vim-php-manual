@@ -1,0 +1,36 @@
+fann_set_activation_function -- Sets the activation function for supplied
+neuron and layer
+
+  bool fann_set_activation_function(resource ann, int activation_function, int layer, int neuron)~
+
+Set the activation function for neuron number neuron in layer number layer,
+counting the input layer as layer 0.
+
+It is not possible to set activation functions for the neurons in the input
+layer.
+
+When choosing an activation function it is important to note that the
+activation functions have different range. FANN_SIGMOID is e.g. in the 0 - 1
+range while FANN_SIGMOID_SYMMETRIC is in the -1 - 1 range and FANN_LINEAR is
+unbound.
+
+The supplied activation_function value must be one of the activation functions
+constants.
+
+The return value is one of the activation functions constants.
+
+Neural network resource.
+
+The activation functions constant.
+
+Layer number.
+
+Neuron number.
+
+Returns TRUE on success, or FALSE otherwise.
+
+|fann_set_activation_function_layer| |fann_set_activation_function_hidden|
+|fann_set_activation_function_output| |fann_set_activation_steepness|
+|fann_get_activation_function|
+
+vim:ft=help:

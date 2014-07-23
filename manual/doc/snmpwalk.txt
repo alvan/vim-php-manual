@@ -1,6 +1,6 @@
 snmpwalk -- Fetch all the SNMP objects from an agent
 
-  array snmpwalk(string hostname, string community, string object_id [, int timeout [, int retries]])~
+  array snmpwalk(string hostname, string community, string object_id [, int timeout = 1000000 [, int retries = 5]])~
 
 |snmpwalk| function is used to read all the values from an SNMP agent
 specified by the {hostname}.

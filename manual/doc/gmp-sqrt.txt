@@ -1,11 +1,12 @@
 gmp_sqrt -- Calculate square root
 
-  resource gmp_sqrt(resource a)~
+  GMP gmp_sqrt(GMP a)~
 
 Calculates square root of {a}.
 
-{a} It can be either a GMP number resource, or a numeric string given that it
-is possible to convert the latter to a number.
+{a} Either a GMP number resource in PHP 5.5 and earlier, a GMP object in PHP
+5.6 and later, or a numeric string provided that it is possible to convert the
+latter to a number.
 
 The integer portion of the square root, as a GMP number.
 

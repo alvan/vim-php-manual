@@ -1,6 +1,6 @@
 str_getcsv -- Parse a CSV string into an array
 
-  array str_getcsv(string input [, string delimiter [, string enclosure [, string escape]]])~
+  array str_getcsv(string input [, string delimiter = "," [, string enclosure = '"' [, string escape = "\\"]]])~
 
 Parses a string input for fields in CSV format and returns an array containing
 the fields read.

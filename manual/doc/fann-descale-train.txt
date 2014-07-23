@@ -1,0 +1,16 @@
+fann_descale_train -- Descale input and output data based on previously
+calculated parameters
+
+  bool fann_descale_train(resource ann, resource train_data)~
+
+Descale input and output data based on previously calculated parameters.
+
+Neural network resource.
+
+Neural network training data resource.
+
+Returns TRUE on success, or FALSE otherwise.
+
+|fann_scale_train| |fann_set_scaling_params|
+
+vim:ft=help:

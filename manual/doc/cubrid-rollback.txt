@@ -17,7 +17,8 @@ FALSE, when process is unsuccessful.
 |cubrid_rollback| example
 
 <?php >
-  $conn = cubrid_connect("127.0.0.1", 33000, "demodb");
+  $conn = cubrid_connect("127.0.0.1", 33000, "demodb", "dba");
+  cubrid_set_autocommit($conn,false);
   
   @cubrid_execute($conn, "DROP TABLE publishers");
   

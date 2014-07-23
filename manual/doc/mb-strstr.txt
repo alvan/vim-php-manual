@@ -1,6 +1,6 @@
 mb_strstr -- Finds first occurrence of a string within another
 
-  string mb_strstr(string haystack, string needle [, bool before_needle [, string encoding]])~
+  string mb_strstr(string haystack, string needle [, bool before_needle = false [, string encoding = mb_internal_encoding()]])~
 
 |mb_strstr| finds the first occurrence of {needle} in {haystack} and returns
 the portion of {haystack}. If {needle} is not found, it returns FALSE.

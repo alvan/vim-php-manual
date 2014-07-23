@@ -1,7 +1,7 @@
 get_html_translation_table -- Returns the translation table used by
 htmlspecialchars and htmlentities
 
-  array get_html_translation_table([int table [, int flags [, string encoding]]])~
+  array get_html_translation_table([int table = HTML_SPECIALCHARS [, int flags = ENT_COMPAT | ENT_HTML401 [, string encoding = "UTF-8"]]])~
 
 |get_html_translation_table| will return the translation table that is used
 internally for |htmlspecialchars| and |htmlentities|.

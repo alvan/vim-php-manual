@@ -1,0 +1,21 @@
+trader_mavp -- Moving average with variable period
+
+  array trader_mavp(array real, array periods [, integer minPeriod [, integer maxPeriod [, integer mAType]]])~
+
+
+
+Array of real values.
+
+Array of real values.
+
+Value less than minimum will be changed to Minimum period. Valid range from 2
+to 100000
+
+Value higher than minimum will be changed to Maximum period. Valid range from
+2 to 100000
+
+Type of Moving Average. TRADER_MA_TYPE_* series of constants should be used.
+
+Returns an array with calculated data or false on failure.
+
+vim:ft=help:

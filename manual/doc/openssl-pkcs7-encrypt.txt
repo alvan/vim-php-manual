@@ -1,6 +1,6 @@
 openssl_pkcs7_encrypt -- Encrypt an S/MIME message
 
-  bool openssl_pkcs7_encrypt(string infile, string outfile, mixed recipcerts, array headers [, int flags [, int cipherid]])~
+  bool openssl_pkcs7_encrypt(string infile, string outfile, mixed recipcerts, array headers [, int flags = 0 [, int cipherid = OPENSSL_CIPHER_RC2_40]])~
 
 |openssl_pkcs7_encrypt| takes the contents of the file named {infile} and
 encrypts them using an RC2 40-bit cipher so that they can only be read by the

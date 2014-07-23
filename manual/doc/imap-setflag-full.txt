@@ -1,6 +1,6 @@
 imap_setflag_full -- Sets flags on messages
 
-  bool imap_setflag_full(resource imap_stream, string sequence, string flag [, int options])~
+  bool imap_setflag_full(resource imap_stream, string sequence, string flag [, int options = NIL])~
 
 Causes a store to add the specified {flag} to the flags set for the messages
 in the specified {sequence}.

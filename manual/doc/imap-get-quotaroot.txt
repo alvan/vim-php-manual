@@ -26,11 +26,11 @@ information about the connection upon an un-parsable response from the server.
   
   $quota = imap_get_quotaroot($mbox, "INBOX");
   if (is_array($quota)) {
-     $storage = $quota_values['STORAGE'];
+     $storage = $quota['STORAGE'];
      echo "STORAGE usage level is: " .  $storage['usage'];
      echo "STORAGE limit level is: " .  $storage['limit'];
   
-     $message = $quota_values['MESSAGE'];
+     $message = $quota['MESSAGE'];
      echo "MESSAGE usage level is: " .  $message['usage'];
      echo "MESSAGE limit level is: " .  $message['limit'];
   

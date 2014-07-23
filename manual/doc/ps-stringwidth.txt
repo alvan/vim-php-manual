@@ -1,6 +1,6 @@
 ps_stringwidth -- Gets width of a string
 
-  float ps_stringwidth(resource psdoc, string text [, int fontid [, float size]])~
+  float ps_stringwidth(resource psdoc, string text [, int fontid = 0 [, float size = 0.0]])~
 
 Calculates the width of a string in points if it was output in the given font
 and font size. This function needs an Adobe font metrics file to calculate the

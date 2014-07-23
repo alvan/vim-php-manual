@@ -1,7 +1,7 @@
 apc_bin_dumpfile -- Output a binary dump of cached files and user variables to
 a file
 
-  int apc_bin_dumpfile(array files, array user_vars, string filename [, int flags [, resource context]])~
+  int apc_bin_dumpfile(array files, array user_vars, string filename [, int flags = 0 [, resource context = NULL]])~
 
 Outputs a binary dump of the given files and user variables from the APC cache
 to the named file.

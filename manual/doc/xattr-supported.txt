@@ -1,6 +1,6 @@
 xattr_supported -- Check if filesystem supports extended attributes
 
-  bool xattr_supported(string filename [, int flags])~
+  bool xattr_supported(string filename [, int flags = 0])~
 
 This functions checks if the filesystem holding the given file supports
 extended attributes. Read access to the file is required.

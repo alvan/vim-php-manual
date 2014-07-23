@@ -1,0 +1,19 @@
+fann_test -- Test with a set of inputs, and a set of desired outputs
+
+  bool fann_test(resource ann, array input, array desired_output)~
+
+Test with a set of inputs, and a set of desired outputs. This operation
+updates the mean square error, but does not change the network in any way.
+
+Neural network resource.
+
+An array of inputs. This array must be exactly |fann_get_num_input| long.
+
+An array of desired outputs. This array must be exactly |fann_get_num_output|
+long.
+
+Returns TRUE on success, or FALSE otherwise.
+
+|fann_test_data| |fann_train| |fann_get_num_input| |fann_get_num_output|
+
+vim:ft=help:

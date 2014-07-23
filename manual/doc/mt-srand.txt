@@ -12,12 +12,12 @@ As of PHP 4.2.0, there is no need to seed the random number generator with
 
 No value is returned.
 
-Version Description Since 4.2.0 The {seed} becomes optional and defaults to a
-random value if omitted. Since 5.2.1 The Mersenne Twister implementation in
-PHP now uses a new seeding algorithm by Richard Wagner. Identical seeds no
-longer produce the same sequence of values they did in previous versions. This
-behavior is not expected to change again, but it is considered unsafe to rely
-upon it nonetheless.
+Version Description 4.2.0 The {seed} becomes optional and defaults to a random
+value if omitted. 5.2.1 The Mersenne Twister implementation in PHP now uses a
+new seeding algorithm by Richard Wagner. Identical seeds no longer produce the
+same sequence of values they did in previous versions. This behavior is not
+expected to change again, but it is considered unsafe to rely upon it
+nonetheless.
 
 |mt_srand| example
 

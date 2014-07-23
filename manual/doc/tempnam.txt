@@ -4,8 +4,8 @@ tempnam -- Create file with unique file name
 
 Creates a file with a unique filename, with access permission set to 0600, in
 the specified directory. If the directory does not exist, |tempnam| may
-generate a file in the system's temporary directory, and return the name of
-that.
+generate a file in the system's temporary directory, and return the full path
+to that file, including its name.
 
 {dir} The directory where the temporary filename will be created.
 
@@ -13,7 +13,7 @@ that.
 
 Windows uses only the first three characters of prefix.
 
-Returns the new temporary filename, or FALSE on failure.
+Returns the new temporary filename (with path), or FALSE on failure.
 
 Version Description 4.0.6 Prior to PHP 4.0.6, the behaviour of the |tempnam|
 function was system dependent. On Windows the TMP environment variable will

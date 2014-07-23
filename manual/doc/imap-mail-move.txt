@@ -1,6 +1,6 @@
 imap_mail_move -- Move specified messages to a mailbox
 
-  bool imap_mail_move(resource imap_stream, string msglist, string mailbox [, int options])~
+  bool imap_mail_move(resource imap_stream, string msglist, string mailbox [, int options = 0])~
 
 Moves mail messages specified by {msglist} to the specified {mailbox}.
 

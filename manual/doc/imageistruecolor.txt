@@ -20,11 +20,14 @@ Simple detection of true color image instances using |imageistruecolor|
       // Create a new true color image instance
       $tc = imagecreatetruecolor(imagesx($im), imagesy($im));
   
+      // Copy over the pixels
       imagecopy($tc, $im, 0, 0, 0, 0, imagesx($im), imagesy($im));
       imagedestroy($im);
   
       $im = $tc;
       $tc = NULL;
+  
+      // OR use imagepalettetotruecolor()
   }
   
   // Continue working with image instance
@@ -36,6 +39,6 @@ Simple detection of true color image instances using |imageistruecolor|
 
 This function requires GD 2.0.1 or later (2.0.28 or later is recommended).
 
-|imagecreatetruecolor|
+|imagecreatetruecolor| |imagepalettetotruecolor|
 
 vim:ft=help:

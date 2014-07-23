@@ -1,0 +1,11 @@
+fastcgi_finish_request -- Flushes all response data to the client
+
+  boolean fastcgi_finish_request()~
+
+This function flushes all response data to the client and finishes the
+request. This allows for time consuming tasks to be performed without leaving
+the connection to the client open.
+
+Returns TRUE on success or &false; on failure.
+
+vim:ft=help:

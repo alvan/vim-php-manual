@@ -1,0 +1,18 @@
+trader_sar -- Parabolic SAR
+
+  array trader_sar(array high, array low [, float acceleration [, float maximum]])~
+
+
+
+High price, array of real values.
+
+Low price, array of real values.
+
+Acceleration Factor used up to the Maximum value. Valid range from 0 to
+TRADER_REAL_MAX.
+
+Acceleration Factor Maximum value. Valid range from 0 to TRADER_REAL_MAX.
+
+Returns an array with calculated data or false on failure.
+
+vim:ft=help:

@@ -1,6 +1,6 @@
 proc_open -- Execute a command and open file pointers for input/output
 
-  resource proc_open(string cmd, array descriptorspec, array pipes [, string cwd [, array env [, array other_options]]])~
+  resource proc_open(string cmd, array descriptorspec, array &pipes [, string cwd [, array env [, array other_options]]])~
 
 |proc_open| is similar to |popen| but provides a much greater degree of
 control over the program execution.
@@ -39,8 +39,7 @@ run, or NULL to use the same environment as the current PHP process
 {other_options} Allows you to specify additional options. Currently supported
 options include: suppress_errors (windows only): suppresses errors generated
 by this function when it's set to TRUE bypass_shell (windows only): bypass
-cmd.exe shell when set to TRUE context: stream context used when opening files
-(created with |stream_context_create|)
+cmd.exe shell when set to TRUE
 
 Returns a resource representing the process, which should be freed using
 |proc_close| when you are finished with it. On failure returns FALSE.

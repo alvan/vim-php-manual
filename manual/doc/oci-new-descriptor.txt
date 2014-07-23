@@ -1,6 +1,6 @@
 oci_new_descriptor -- Initializes a new empty LOB or FILE descriptor
 
-  OCI-Lob oci_new_descriptor(resource connection [, int type])~
+  OCI-Lob oci_new_descriptor(resource connection [, int type = OCI_DTYPE_LOB])~
 
 Allocates resources to hold descriptor or LOB locator.
 
@@ -75,7 +75,7 @@ Returns a new LOB or FILE descriptor on success, FALSE on error.
        }else{
           echo "Couldn't upload Blob\n";
        }
-       oci_free_descriptor($lob);
+       $lob->free();
        oci_free_statement($stmt);
        oci_close($conn);
     }

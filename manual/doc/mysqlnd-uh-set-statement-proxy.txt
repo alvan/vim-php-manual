@@ -1,6 +1,6 @@
 mysqlnd_uh_set_statement_proxy -- Installs a proxy for mysqlnd statements
 
-  bool mysqlnd_uh_set_statement_proxy(MysqlndUhStatement statement_proxy)~
+  bool mysqlnd_uh_set_statement_proxy(MysqlndUhStatement &statement_proxy)~
 
 Installs a proxy for mysqlnd statements. The proxy object will be used for all
 mysqlnd prepared statement objects, regardless which PHP MySQL extension

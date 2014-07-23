@@ -78,6 +78,12 @@ FALSE is returned both in the case of an error and if unserializing the
 serialized FALSE value. It is possible to catch this special case by comparing
 {str} with serialize(false) or by catching the issued E_NOTICE.
 
+Do not pass untrusted user input to |unserialize|. Unserialization can result
+in code being loaded and executed due to object instantiation and autoloading,
+and a malicious user may be able to exploit this. Use a safe, standard data
+interchange format such as JSON (via |json_decode| and |json_encode|) if you
+need to pass serialized data to the user.
+
 |serialize| Autoloading Objects unserialize_callback_func __wakeup()
 
 vim:ft=help:

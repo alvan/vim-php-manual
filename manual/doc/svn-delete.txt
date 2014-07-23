@@ -1,6 +1,6 @@
 svn_delete -- Delete items from a working copy or repository.
 
-  bool svn_delete(string path [, bool force])~
+  bool svn_delete(string path [, bool force = false])~
 
 Deletes the file, directory or symbolic link at {path} from the working
 directory. The item will be deleted from the repository the next time you call

@@ -1,0 +1,18 @@
+fann_get_training_algorithm -- Returns the training algorithm
+
+  int fann_get_training_algorithm(resource ann)~
+
+Returns the training algorithm. This training algorithm is used by
+|fann_train_on_data| and associated functions.
+
+Note that this algorithm is also used during |fann_cascadetrain_on_data|,
+although only FANN_TRAIN_RPROP and FANN_TRAIN_QUICKPROP is allowed during
+cascade training.
+
+Neural network resource.
+
+Training algorithm constant, or FALSE on error.
+
+|fann_set_training_algorithm|
+
+vim:ft=help:

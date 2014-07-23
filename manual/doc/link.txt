@@ -10,9 +10,6 @@ link -- Create a hard link
 
 Returns TRUE on success or &false; on failure.
 
-For Windows only: This function requires PHP to run in an elevated mode or
-with the UAC disabled.
-
 Version Description 5.3.0 This function is now available on Windows platforms
 (Vista, Server 2008 or greater).
 
@@ -31,6 +28,9 @@ Creating a simple hard link
 
 This function will not work on remote files as the file to be examined must be
 accessible via the server"s filesystem.
+
+For Windows only: This function requires PHP to run in an elevated mode or
+with the UAC disabled.
 
 |symlink| |readlink| |linkinfo|
 

@@ -1,6 +1,6 @@
 imap_delete -- Mark a message for deletion from current mailbox
 
-  bool imap_delete(resource imap_stream, int msg_number [, int options])~
+  bool imap_delete(resource imap_stream, int msg_number [, int options = 0])~
 
 Marks messages listed in {msg_number} for deletion. Messages marked for
 deletion will stay in the mailbox until either |imap_expunge| is called or
@@ -41,9 +41,9 @@ Returns TRUE.
 
 
 
-IMAP mailboxes do not have their message flags saved between connections, so
-|imap_expunge| must be called during the same connection in order for messages
-marked for deletion to actually be purged.
+IMAP mailboxes may not have their message flags saved between connections, so
+|imap_expunge| should be called during the same connection in order to
+guarantee that messages marked for deletion will actually be purged.
 
 |imap_undelete| |imap_expunge| |imap_close|
 

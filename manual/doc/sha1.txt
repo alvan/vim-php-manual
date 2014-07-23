@@ -1,6 +1,6 @@
 sha1 -- Calculate the sha1 hash of a string
 
-  string sha1(string str [, bool raw_output])~
+  string sha1(string str [, bool raw_output = false])~
 
 Calculates the sha1 hash of {str} using the US Secure Hash Algorithm 1.
 
@@ -31,6 +31,6 @@ A |sha1| example
 It is not recommended to use this function to secure passwords, due to the
 fast nature of this hashing algorithm. See here for details.
 
-|sha1_file| |crc32| |md5| |hash|
+|sha1_file| |crc32| |md5| |hash| |crypt| |password_hash|
 
 vim:ft=help:

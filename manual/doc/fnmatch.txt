@@ -1,6 +1,6 @@
 fnmatch -- Match filename against a pattern
 
-  bool fnmatch(string pattern, string string [, int flags])~
+  bool fnmatch(string pattern, string string [, int flags = 0])~
 
 |fnmatch| checks if the passed {string} would match the given shell wildcard
 {pattern}.
@@ -38,7 +38,8 @@ Checking a color name against a shell wildcard pattern
 
 
 
-For now this function is not available on non-POSIX compliant systems.
+For now, this function is not available on non-POSIX compliant systems except
+Windows.
 
 |glob| |preg_match| |sscanf| |printf| |sprintf|
 

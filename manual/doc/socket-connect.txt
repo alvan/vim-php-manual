@@ -1,6 +1,6 @@
 socket_connect -- Initiates a connection on a socket
 
-  bool socket_connect(resource socket, string address [, int port])~
+  bool socket_connect(resource socket, string address [, int port = 0])~
 
 Initiate a connection to {address} using the socket resource {socket}, which
 must be a valid socket resource created with |socket_create|.

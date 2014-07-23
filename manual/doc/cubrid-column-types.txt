@@ -7,14 +7,15 @@ The |cubrid_column_types| function gets column types of query results by using
 
 {req_identifier} Request identifier.
 
-Array of string which containing column types, when process is successful.
+Array of string values containing the column names, when process is
+successful.
 
 FALSE, when process is unsuccessful.
 
 |cubrid_column_types| example
 
 <?php >
-  $conn = cubrid_connect("localhost", 33000, "demodb");
+  $conn = cubrid_connect("localhost", 33000, "demodb", "dba");
   $result = cubrid_execute($conn, "SELECT * FROM game WHERE host_year=2004 AND nation_code='AUS' AND medal='G'");
   
   $column_names = cubrid_column_names($result);
@@ -36,8 +37,8 @@ The above example will output:
   event_code                     integer                        11             
   athlete_code                   integer                        11             
   stadium_code                   integer                        11             
-  nation_code                    char(3)                        3              
-  medal                          char(1)                        1              
+  nation_code                    char                           3              
+  medal                          char                           1              
   game_date                      date                           10
 
 |cubrid_column_names| |cubrid_prepare| |cubrid_execute|

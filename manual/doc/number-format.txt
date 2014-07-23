@@ -1,8 +1,8 @@
 number_format -- Format a number with grouped thousands
 
-  string number_format(float number [, int decimals])~
+  string number_format(float number [, int decimals = 0])~
 
-  string number_format(float number [, int decimals, float number, int decimals, string dec_point, string thousands_sep])~
+  string number_format(float number [, int decimals = 0, float number = 0, int decimals = 0, string dec_point = ".", string thousands_sep = ","])~
 
 This function accepts either one, two, or four parameters (not three):
 

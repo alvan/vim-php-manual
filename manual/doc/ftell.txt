@@ -13,6 +13,10 @@ i.e., its offset into the file stream.
 
 If an error occurs, returns FALSE.
 
+Because PHP"s integer type is signed and many platforms use 32bit integers,
+some filesystem functions may return unexpected results for files which are
+larger than 2GB.
+
 |ftell| example
 
 <?php >

@@ -1,6 +1,6 @@
 openssl_open -- Open sealed data
 
-  bool openssl_open(string sealed_data, string open_data, string env_key, mixed priv_key_id [, string method])~
+  bool openssl_open(string sealed_data, string &open_data, string env_key, mixed priv_key_id [, string method])~
 
 |openssl_open| opens (decrypts) {sealed_data} using the private key associated
 with the key identifier {priv_key_id} and the envelope key {env_key}, and

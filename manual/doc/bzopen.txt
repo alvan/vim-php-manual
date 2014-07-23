@@ -4,7 +4,7 @@ bzopen -- Opens a bzip2 compressed file
 
 |bzopen| opens a bzip2 (.bz2) file for reading or writing.
 
-{filename} The name of the file to open.
+{filename} The name of the file to open, or an existing stream resource.
 
 {mode} Similar to the |fopen| function, only 'r' (read) and 'w' (write) are
 supported. Everything else will cause bzopen to return FALSE.

@@ -1,6 +1,6 @@
 gzfile -- Read entire gz-file into an array
 
-  array gzfile(string filename [, int use_include_path])~
+  array gzfile(string filename [, int use_include_path = 0])~
 
 This function is identical to |readgzfile|, except that it returns the file in
 an array.

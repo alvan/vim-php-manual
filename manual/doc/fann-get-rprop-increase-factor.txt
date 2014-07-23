@@ -1,0 +1,17 @@
+fann_get_rprop_increase_factor -- Returns the increase factor used during
+RPROP training
+
+  float fann_get_rprop_increase_factor(resource ann)~
+
+The increase factor is a value larger than 1, which is used to increase the
+step-size during RPROP training.
+
+The default increase factor is 1.2.
+
+Neural network resource.
+
+The increase factor, or FALSE on error.
+
+|fann_set_rprop_increase_factor|
+
+vim:ft=help:

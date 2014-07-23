@@ -1,6 +1,6 @@
 db2_bind_param -- Binds a PHP variable to an SQL statement parameter
 
-  bool db2_bind_param(resource stmt, int parameter-number, string variable-name [, int parameter-type [, int data-type [, int precision [, int scale]]]])~
+  bool db2_bind_param(resource stmt, int parameter-number, string variable-name [, int parameter-type [, int data-type = 0 [, int precision = -1 [, int scale = 0]]]])~
 
 Binds a PHP variable to an SQL statement parameter in a statement resource
 returned by |db2_prepare|. This function gives you more control over the

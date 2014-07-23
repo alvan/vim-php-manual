@@ -1,6 +1,6 @@
 apc_bin_dump -- Get a binary dump of the given files and user variables
 
-  string apc_bin_dump([array files [, array user_vars]])~
+  string apc_bin_dump([array files = NULL [, array user_vars = NULL]])~
 
 Returns a binary dump of the given files and user variables from the APC
 cache. A NULL for files or user_vars signals a dump of every entry, whereas

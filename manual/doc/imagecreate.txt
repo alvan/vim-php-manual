@@ -5,7 +5,11 @@ imagecreate -- Create a new palette based image
 |imagecreate| returns an image identifier representing a blank image of
 specified size.
 
-We recommend the use of |imagecreatetruecolor|.
+In general, we recommend the use of |imagecreatetruecolor| instead of
+|imagecreate| so that image processing occurs on the highest quality image
+possible. If you want to output a palette image, then
+|imagetruecolortopalette| should be called immediately before saving the image
+with |imagepng| or |imagegif|.
 
 {width} The image width.
 

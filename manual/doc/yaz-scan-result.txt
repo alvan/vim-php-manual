@@ -1,6 +1,6 @@
 yaz_scan_result -- Returns Scan Response result
 
-  array yaz_scan_result(resource id [, array result])~
+  array yaz_scan_result(resource id [, array &result])~
 
 |yaz_scan_result| returns terms and associated information as received from
 the server in the last performed |yaz_scan|.

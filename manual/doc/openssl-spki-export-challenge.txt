@@ -1,0 +1,24 @@
+openssl_spki_export_challenge -- Exports the challenge assoicated with a
+signed public key and challenge
+
+  string openssl_spki_export_challenge(string &spkac)~
+
+Exports challenge from encoded signed public key and challenge
+
+Expects a valid signed public key and challenge
+
+Returns the associated challenge string or NULL on failure.
+
+Emits an E_WARNING level error if an invalid argument is passed via the
+{spkac} parameter.
+
+|openssl_spki_export_challenge| example Extracts the associated challenge
+string or NULL on failure.
+
+<?php >
+  $pkey = openssl_pkey_new('secret password');
+  $spkac = openssl_spki_new($pkey, 'challenge string');
+  $challenge = openssl_spki_export_challenge(preg_replace('/SPKAC=/', '', $spkac));
+?>
+
+vim:ft=help:

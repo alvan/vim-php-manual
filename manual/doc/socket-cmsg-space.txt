@@ -1,0 +1,19 @@
+socket_cmsg_space -- Calculate message buffer size
+
+  int socket_cmsg_space(int level, int type)~
+
+Calculates the size of the buffer that should be allocated for receiving the
+ancillary data.
+
+This function is currently not documented; only its argument list is
+available.
+
+{level}
+
+{type}
+
+
+
+|socket_recvmsg| |socket_sendmsg|
+
+vim:ft=help:

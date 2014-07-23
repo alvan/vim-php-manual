@@ -1,5 +1,10 @@
 mysql_data_seek -- Move internal result pointer
 
+This extension is deprecated as of PHP 5.5.0, and will be removed in the
+future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
+MySQL: choosing an API guide and related FAQ for more information.
+Alternatives to this function include:
+
   bool mysql_data_seek(resource result, int row_number)~
 
 |mysql_data_seek| moves the internal row pointer of the MySQL result

@@ -1,6 +1,6 @@
 pg_fetch_array -- Fetch a row as an array
 
-  array pg_fetch_array(resource result [, int row [, int result_type]])~
+  array pg_fetch_array(resource result [, int row [, int result_type = PGSQL_BOTH]])~
 
 |pg_fetch_array| returns an array that corresponds to the fetched row
 (record).
@@ -42,13 +42,13 @@ Version Description 4.1.0 The {row} parameter became optional.
 <?php >
   $conn = pg_pconnect("dbname=publisher");
   if (!$conn) {
-    echo "An error occured.\n";
+    echo "An error occurred.\n";
     exit;
   }
   
   $result = pg_query($conn, "SELECT author, email FROM authors");
   if (!$result) {
-    echo "An error occured.\n";
+    echo "An error occurred.\n";
     exit;
   }
   

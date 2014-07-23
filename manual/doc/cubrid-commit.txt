@@ -3,12 +3,12 @@ cubrid_commit -- Commit a transaction
   bool cubrid_commit(resource conn_identifier)~
 
 The |cubrid_commit| function is used to execute commit on the transaction
-pointed by {conn_identifier}, currently on progress. Connection to the server
-is closed after the |cubrid_commit| function is called; the connection handle
-is still valid, however.
+pointed by {conn_identifier}, currently in progress. Connection to the server
+is closed after the |cubrid_commit| function is called; However, the
+connection handle is still valid.
 
-In CUBRID PHP, an auto-commit mode is disabled by default for transaction
-management, and you can set it by using |cubrid_set_autocommit|, and get its
+In CUBRID PHP, auto-commit mode is disabled by default for transaction
+management. You can set it by using |cubrid_set_autocommit|. You can get its
 status by using |cubrid_get_autocommit|. Before you start a transaction,
 remember to disable the auto-commit mode.
 
@@ -21,7 +21,7 @@ FALSE, when process is unsuccessful.
 |cubrid_commit| example
 
 <?php >
-  $conn = cubrid_connect("localhost", 33000, "demodb");
+  $conn = cubrid_connect("localhost", 33000, "demodb", "dba");
   
   @cubrid_execute($conn, "DROP TABLE publishers");
   
@@ -34,7 +34,7 @@ FALSE, when process is unsuccessful.
   country VARCHAR(15)
   )
   EOD;
-  
+  cubrid_set_autocommit($conn,false);
   if (!cubrid_execute($conn, $sql)) {
       printf("Error facility: %d\nError code: %d\nError msg: %s\n", cubrid_error_code_facility(), cubrid_error_code(), cubrid_error_msg());
   

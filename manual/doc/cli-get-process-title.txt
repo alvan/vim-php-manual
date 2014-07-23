@@ -1,0 +1,29 @@
+cli_get_process_title -- Returns the current process title
+
+  string cli_get_process_title()~
+
+Returns the current process title, as set by |cli_set_process_title|. Note
+that this may not exactly match what is shown in ps or top, depending on your
+operating system.
+
+This function is available only in CLI mode.
+
+This function has no parameters.
+
+Return a string with the current process title or NULL on error.
+
+An E_WARNING will be generated if the operating system is unsupported.
+
+|cli_get_process_title| example
+
+<?php >
+  echo "Process title: " . cli_get_process_title() . "\n";
+?>
+
+
+
+
+
+|cli_set_process_title|
+
+vim:ft=help:

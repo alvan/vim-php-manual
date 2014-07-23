@@ -1,0 +1,29 @@
+uopz_backup -- Backup a function
+
+  void uopz_backup(string class, string function)~
+
+  void uopz_backup(string class, string function, string function)~
+
+Backup a function at runtime, to be restored on shutdown
+
+The name of the class containing the function to backup
+
+The name of the function
+
+
+
+|uopz_backup| example
+
+<?php >
+  uopz_backup("fgets");
+  uopz_function("fgets", function(){
+      return true;
+  });
+  var_dump(fgets());
+?>
+
+The above example will output something similar to:
+
+  bool(true)
+
+vim:ft=help:

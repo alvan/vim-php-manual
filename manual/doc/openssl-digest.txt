@@ -1,6 +1,6 @@
 openssl_digest -- Computes a digest
 
-  string openssl_digest(string data, string method [, bool raw_output])~
+  string openssl_digest(string data, string method [, bool raw_output = false])~
 
 Computes a digest hash value for the given data using a given method, and
 returns a raw or binhex encoded string.

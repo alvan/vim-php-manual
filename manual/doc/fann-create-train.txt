@@ -1,0 +1,18 @@
+fann_create_train -- Creates an empty training data struct
+
+  resource fann_create_train(int num_data, int num_input, int num_output)~
+
+Creates an empty training data struct.
+
+The number of training data
+
+The number of inputs per training data
+
+The number of ouputs per training data
+
+Returns a train data resource on success, or FALSE on error.
+
+|fann_read_train_from_file| |fann_train_on_data| |fann_destroy_train|
+|fann_save_train|
+
+vim:ft=help:

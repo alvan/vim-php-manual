@@ -1,6 +1,6 @@
 socket_create_listen -- Opens a socket on port to accept connections
 
-  resource socket_create_listen(int port [, int backlog])~
+  resource socket_create_listen(int port [, int backlog = 128])~
 
 |socket_create_listen| creates a new socket resource of type AF_INET listening
 on all local interfaces on the given port waiting for new connections.

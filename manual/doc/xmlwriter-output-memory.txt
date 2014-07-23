@@ -2,11 +2,11 @@ xmlwriter_output_memory -- Returns current buffer
 
 Object oriented style
 
-  string XMLWriter::outputMemory([bool flush])~
+  string XMLWriter::outputMemory([bool flush = true])~
 
 Procedural style
 
-  string xmlwriter_output_memory([bool flush, resource xmlwriter [, bool flush]])~
+  string xmlwriter_output_memory([bool flush = true, resource xmlwriter = true [, bool flush = true]])~
 
 Returns the current buffer.
 

@@ -1,6 +1,6 @@
 snmp3_walk -- Fetch all the SNMP objects from an agent
 
-  array snmp3_walk(string host, string sec_name, string sec_level, string auth_protocol, string auth_passphrase, string priv_protocol, string priv_passphrase, string object_id [, string timeout [, string retries]])~
+  array snmp3_walk(string host, string sec_name, string sec_level, string auth_protocol, string auth_passphrase, string priv_protocol, string priv_passphrase, string object_id [, string timeout = 1000000 [, string retries = 5]])~
 
 |snmp3_walk| function is used to read all the values from an SNMP agent
 specified by the {hostname}.

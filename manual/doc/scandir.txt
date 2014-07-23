@@ -1,6 +1,6 @@
 scandir -- List files and directories inside the specified path
 
-  array scandir(string directory [, int sorting_order [, resource context]])~
+  array scandir(string directory [, int sorting_order = SCANDIR_SORT_ASCENDING [, resource context = SCANDIR_SORT_ASCENDING]])~
 
 Returns an array of files and directories from the {directory}.
 
@@ -18,8 +18,10 @@ Returns an array of filenames on success, or FALSE on failure. If {directory}
 is not a directory, then boolean FALSE is returned, and an error of level
 E_WARNING is generated.
 
-Version Description 5.4.0 {sorting_order} now accepts constants. Any nonzero
-value caused descending order in previous versions.
+Version Description 5.4.0 {sorting_order} constants were added. Any nonzero
+value caused descending order in previous versions. So for all PHP versions,
+use 0 for ascending order, and 1 for descending order. An option for
+SCANDIR_SORT_NONE behavior did not exist prior to PHP 5.4.0.
 
 A simple |scandir| example
 

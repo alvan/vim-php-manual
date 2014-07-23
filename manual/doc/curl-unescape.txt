@@ -1,0 +1,44 @@
+curl_unescape -- Decodes the given URL encoded string
+
+  string curl_unescape(resource ch, string str)~
+
+This function decodes the given URL encoded string.
+
+A cURL handle returned by |curl_init|.
+
+The URL encoded string to be decoded.
+
+Returns decoded string or FALSE on failure.
+
+|curl_escape| example
+
+<?php >
+  // Create a curl handle
+  $ch = curl_init('http://example.com/redirect.php');
+  
+  // Send HTTP request and follow redirections
+  curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+  curl_exec($ch);
+  
+  // Get the last effective URL
+  $effective_url = curl_getinfo($ch, CURLINFO_EFFECTIVE_URL);
+  // ie. "http://example.com/show_location.php?loc=M%C3%BCnchen"
+  
+  // Decode the URL
+  $effective_url_decoded = curl_unescape($ch, $effective_url);
+  // "http://example.com/show_location.php?loc=München"
+  
+  // Close the handle
+  curl_close($ch);
+?>
+
+
+
+
+
+|curl_unescape| does not decode plus symbols (+) into spaces. |urldecode|
+does.
+
+|curl_escape| |urlencode| |urldecode| |rawurlencode| |rawurldecode|
+
+vim:ft=help:

@@ -1,6 +1,6 @@
 gnupg_verify -- Verifies a signed text
 
-  array gnupg_verify(resource identifier, string signed_text, string signature [, string plaintext])~
+  array gnupg_verify(resource identifier, string signed_text, string signature [, string &plaintext])~
 
 Verifies the given {signed_text} and returns information about the signature.
 

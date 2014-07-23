@@ -7,8 +7,8 @@ Attempts to change the mode of the specified file to that given in {mode}.
 {filename} Path to the file.
 
 {mode} Note that {mode} is not automatically assumed to be an octal value, so
-strings (such as "g+w") will not work properly. To ensure the expected
-operation, you need to prefix {mode} with a zero (0):
+to ensure the expected operation, you need to prefix {mode} with a zero (0).
+Strings such as "g+w" will not work properly.
 
 <?php >
   chmod("/somedir/somefile", 755);   // decimal; probably incorrect

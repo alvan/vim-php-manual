@@ -1,6 +1,6 @@
 ps_symbol_width -- Gets width of a glyph
 
-  float ps_symbol_width(resource psdoc, int ord [, int fontid [, float size]])~
+  float ps_symbol_width(resource psdoc, int ord [, int fontid = 0 [, float size = 0.0]])~
 
 Calculates the width of a glyph in points if it was output in the given font
 and font size. This function needs an Adobe font metrics file to calculate the

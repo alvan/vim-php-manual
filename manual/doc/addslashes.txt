@@ -2,25 +2,33 @@ addslashes -- Quote string with slashes
 
   string addslashes(string str)~
 
-Returns a string with backslashes before characters that need to be quoted in
-database queries etc. These characters are single quote ('), double quote ("),
-backslash (\) and NUL (the NULL byte).
+Returns a string with backslashes before characters that need to be escaped.
+These characters are single quote ('), double quote ("), backslash (\) and NUL
+(the NULL byte).
 
-An example use of |addslashes| is when you're entering data into a database.
-For example, to insert the name O'reilly into a database, you will need to
-escape it. It's highly recommended to use DBMS specific escape function (e.g.
-|mysqli_real_escape_string| for MySQL or |pg_escape_string| for PostgreSQL),
-but if the DBMS you're using doesn't have an escape function and the DBMS uses
-\ to escape special chars, you can use this function. This would only be to
-get the data into the database, the extra \ will not be inserted. Having the
-PHP directive magic_quotes_sybase set to on will mean ' is instead escaped
-with another '.
+An example use of |addslashes| is when you're entering data into string that
+is evaluated by PHP. For example, O'reilly is stored in $str, you need to
+escape $str. (e.g. eval("echo '".addslashes($str)."';"); )
 
-The PHP directive magic_quotes_gpc is on by default, and it essentially runs
-|addslashes| on all GET, POST, and COOKIE data. Do not use |addslashes| on
-strings that have already been escaped with magic_quotes_gpc as you'll then do
-double escaping. The function |get_magic_quotes_gpc| may come in handy for
-checking this.
+To escape database parameters, DBMS specific escape function (e.g.
+|mysqli_real_escape_string| for MySQL or |pg_escape_literal|,
+|pg_escape_string| for PostgreSQL) should be used for security reasons. DBMSes
+have differect escape specification for identifiers (e.g. Table name, field
+name) than parameters. Some DBMS such as PostgreSQL provides identifier escape
+function, |pg_escape_identifier|, but not all DBMS provides identifier escape
+API. If this is the case, refer to your database system manual for proper
+escaping method.
+
+If your DBMS doesn't have an escape function and the DBMS uses \ to escape
+special chars, you might be able to use this function only when this escape
+method is adequate for your database. Please note that use of |addslashes| for
+database parameter escaping can be cause of security issues on most databases.
+
+The PHP directive magic_quotes_gpc was on by default before PHP 5.4, and it
+essentially ran |addslashes| on all GET, POST, and COOKIE data. Do not use
+|addslashes| on strings that have already been escaped with magic_quotes_gpc
+as you'll then do double escaping. The function |get_magic_quotes_gpc| may
+come in handy for checking this.
 
 {str} The string to be escaped.
 

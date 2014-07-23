@@ -1,7 +1,7 @@
 checkdnsrr -- Check DNS records corresponding to a given Internet host name or
 IP address
 
-  bool checkdnsrr(string host [, string type])~
+  bool checkdnsrr(string host [, string type = "MX"])~
 
 Searches DNS for records of type {type} corresponding to {host}.
 

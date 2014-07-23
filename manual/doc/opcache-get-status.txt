@@ -1,0 +1,17 @@
+opcache_get_status -- Get status information about the cache
+
+  array opcache_get_status([boolean get_scripts = ])~
+
+This function returns state information about the cache instance
+
+Include script specific state information
+
+Returns an array of information, optionally containing script specific state
+information
+
+If opcache.restrict_api is in use and the current path is in violation of the
+rule, an E_WARNING will be raised; no status information will be returned.
+
+|opcache_get_configuration|
+
+vim:ft=help:

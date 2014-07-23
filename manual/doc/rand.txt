@@ -38,6 +38,10 @@ The above example will output something similar to:
 
 
 
-|srand| |getrandmax| |mt_rand|
+This function does not generate cryptographically secure values, and should
+not be used for cryptographic purposes. If you need a cryptographically secure
+value, consider using |openssl_random_pseudo_bytes| instead.
+
+|srand| |getrandmax| |mt_rand| |openssl_random_pseudo_bytes|
 
 vim:ft=help:

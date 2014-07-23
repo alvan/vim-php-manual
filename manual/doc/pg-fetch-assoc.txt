@@ -33,13 +33,13 @@ Version Description 4.1.0 The parameter {row} became optional.
 <?php >
   $conn = pg_connect("dbname=publisher");
   if (!$conn) {
-    echo "An error occured.\n";
+    echo "An error occurred.\n";
     exit;
   }
   
   $result = pg_query($conn, "SELECT id, author, email FROM authors");
   if (!$result) {
-    echo "An error occured.\n";
+    echo "An error occurred.\n";
     exit;
   }
   

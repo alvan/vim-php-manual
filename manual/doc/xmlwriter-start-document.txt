@@ -2,11 +2,11 @@ xmlwriter_start_document -- Create document tag
 
 Object oriented style
 
-  bool XMLWriter::startDocument([string version [, string encoding [, string standalone]]])~
+  bool XMLWriter::startDocument([string version = 1.0 [, string encoding =  [, string standalone = ]]])~
 
 Procedural style
 
-  bool xmlwriter_start_document([string version [, string encoding [, string standalone, resource xmlwriter [, string version [, string encoding [, string standalone]]]]]])~
+  bool xmlwriter_start_document([string version = 1.0 [, string encoding =  [, string standalone = , resource xmlwriter =  [, string version = 1.0 [, string encoding =  [, string standalone = ]]]]]])~
 
 Starts a document.
 
@@ -15,10 +15,8 @@ modified. This resource comes from a call to |xmlwriter_open_uri| or
 |xmlwriter_open_memory|.
 
 {version} The version number of the document as part of the XML declaration.
-Defaults to 1.0.
 
-{encoding} The encoding of the document as part of the XML declaration. NULL
-by default.
+{encoding} The encoding of the document as part of the XML declaration.
 
 {standalone} yes or no.
 

@@ -1,7 +1,7 @@
 is_a -- Checks if the object is of this class or has this class as one of its
 parents
 
-  bool is_a(object object, string class_name [, bool allow_string])~
+  bool is_a(object object, string class_name [, bool allow_string = ])~
 
 Checks if the given {object} is of this class or has this class as one of its
 parents.
@@ -10,7 +10,9 @@ parents.
 
 {class_name} The class name
 
-{allow_string} Whether to call autoloader if the class doesn't exist.
+{allow_string} If this parameter set to FALSE, string class name as {object}
+is not allowed. This also prevents from calling autoloader if the class
+doesn't exist.
 
 Returns TRUE if the object is of this class or has this class as one of its
 parents, FALSE otherwise.

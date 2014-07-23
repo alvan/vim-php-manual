@@ -1,0 +1,31 @@
+uopz_extend -- Extend a class at runtime
+
+  void uopz_extend(string class, string parent)~
+
+Makes {class} extend {parent}
+
+The name of the class to extend
+
+The name of the class to inherit
+
+
+
+|uopz_extend| example
+
+<?php >
+  class A {}
+  class B {}
+  
+  uopz_extend(A::class, B::class);
+  
+  var_dump(class_parents(A::class));
+?>
+
+The above example will output something similar to:
+
+  array(1) {
+    ["B"]=>
+    string(1) "B"
+  }
+
+vim:ft=help:

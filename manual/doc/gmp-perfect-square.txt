@@ -1,13 +1,14 @@
 gmp_perfect_square -- Perfect square check
 
-  bool gmp_perfect_square(resource a)~
+  bool gmp_perfect_square(GMP a)~
 
 Check if a number is a perfect square.
 
 {a} The number being checked as a perfect square.
 
-It can be either a GMP number resource, or a numeric string given that it is
-possible to convert the latter to a number.
+Either a GMP number resource in PHP 5.5 and earlier, a GMP object in PHP 5.6
+and later, or a numeric string provided that it is possible to convert the
+latter to a number.
 
 Returns TRUE if {a} is a perfect square, FALSE otherwise.
 

@@ -1,0 +1,60 @@
+uopz_compose -- Compose a class
+
+  void uopz_compose(string name, array classes [, array methods [, array properties [, int flags]]])~
+
+Creates a new class of the given name that implements, extends, or uses all of
+the provided classes
+
+A legal class name
+
+An array of class, interface and trait names
+
+An associative array of methods, values are either closures or [modifiers =>
+closure]
+
+An associative array of properties, keys are names, values are modifiers
+
+Entry type, by default ZEND_ACC_CLASS
+
+
+
+|uopz_compose| example
+
+<?php >
+  class myClass {}
+  trait myTrait {}
+  interface myInterface {}
+  
+  uopz_compose(
+      Composed::class, [
+          myClass::class, 
+          myTrait::class, 
+          myInterface::class
+      ], [
+      "__construct" => function() {
+          /* ... */
+      }
+  ]);
+  
+  var_dump(
+   class_uses(Composed::class),
+   class_parents(Composed::class),
+   class_implements(Composed::class));
+?>
+
+The above example will output something similar to:
+
+  array(1) {
+    ["myTrait"]=>
+    string(7) "myTrait"
+  }
+  array(1) {
+    ["myClass"]=>
+    string(7) "myClass"
+  }
+  array(1) {
+    ["myInterface"]=>
+    string(11) "myInterface"
+  }
+
+vim:ft=help:

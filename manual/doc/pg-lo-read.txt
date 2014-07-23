@@ -1,6 +1,6 @@
 pg_lo_read -- Read a large object
 
-  string pg_lo_read(resource large_object [, int len])~
+  string pg_lo_read(resource large_object [, int len = 8192])~
 
 |pg_lo_read| reads at most {len} bytes from a large object and returns it as a
 string.

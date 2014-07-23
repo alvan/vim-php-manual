@@ -2,7 +2,7 @@ serialize -- Generates a storable representation of a value
 
   string serialize(mixed value)~
 
-Generates a storable representation of a value
+Generates a storable representation of a value.
 
 This is useful for storing or passing PHP values around without losing their
 type and structure.
@@ -25,6 +25,11 @@ values have null bytes on either side.
 
 Returns a string containing a byte-stream representation of {value} that can
 be stored anywhere.
+
+Note that this is a binary string which may include null bytes, and needs to
+be stored and handled as such. For example, |serialize| output should
+generally be stored in a BLOB field in a database, rather than a CHAR or TEXT
+field.
 
 |serialize| example
 
@@ -61,6 +66,10 @@ There are some historical exceptions to the above rule, where some internal
 objects could be serialized without implementing the interface or exposing the
 methods. Notably, the ArrayObject prior to PHP 5.2.0.
 
-|unserialize| Serializing Objects __sleep() __wakeup()
+When |serialize| serializes objects, the leading slash is not included in the
+class name of namespaced classes for maximum compatibility.
+
+|unserialize| |var_export| |json_encode| Serializing Objects __sleep()
+__wakeup()
 
 vim:ft=help:

@@ -1,6 +1,6 @@
 socket_write -- Write to a socket
 
-  int socket_write(resource socket, string buffer [, int length])~
+  int socket_write(resource socket, string buffer [, int length = 0])~
 
 The function |socket_write| writes to the {socket} from the given {buffer}.
 
@@ -9,7 +9,7 @@ The function |socket_write| writes to the {socket} from the given {buffer}.
 {buffer} The buffer to be written.
 
 {length} The optional parameter {length} can specify an alternate length of
-bytes written to the socket. If this length is greater then the buffer length,
+bytes written to the socket. If this length is greater than the buffer length,
 it is silently truncated to the length of the buffer.
 
 Returns the number of bytes successfully written to the socket or FALSE on

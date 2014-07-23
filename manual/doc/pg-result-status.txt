@@ -1,6 +1,6 @@
 pg_result_status -- Get status of query result
 
-  mixed pg_result_status(resource result [, int type])~
+  mixed pg_result_status(resource result [, int type = PGSQL_STATUS_LONG])~
 
 |pg_result_status| returns the status of a result resource, or the PostgreSQL
 command completion tag associated with the result

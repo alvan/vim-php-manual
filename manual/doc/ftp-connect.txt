@@ -1,6 +1,6 @@
 ftp_connect -- Opens an FTP connection
 
-  resource ftp_connect(string host [, int port [, int timeout]])~
+  resource ftp_connect(string host [, int port = 21 [, int timeout = 90]])~
 
 |ftp_connect| opens an FTP connection to the specified {host}.
 

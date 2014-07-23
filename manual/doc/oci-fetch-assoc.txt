@@ -16,7 +16,31 @@ executed by |oci_execute|, or a REF CURSOR statement identifier.
 Returns an associative array. If there are no more rows in the {statement}
 then FALSE is returned.
 
-See |oci_fetch_array| for examples of fetching rows.
+|oci_fetch_assoc| Example
+
+<?php >
+  $conn = oci_connect('hr', 'welcome', 'localhost/XE');
+  if (!$conn) {
+      $e = oci_error();
+      trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+  }
+  
+  $stid = oci_parse($conn, 'SELECT department_id, department_name FROM departments');
+  oci_execute($stid);
+  
+  while (($row = oci_fetch_assoc($stid)) != false) {
+      echo $row['DEPARTMENT_ID'] . " " . $row['DEPARTMENT_NAME'] . "<br>\n";
+  }
+  
+  oci_free_statement($stid);
+  oci_close($conn);
+?>
+
+
+
+
+
+See |oci_fetch_array| for more examples of fetching rows.
 
 |oci_fetch| |oci_fetch_all| |oci_fetch_array| |oci_fetch_object|
 |oci_fetch_row|

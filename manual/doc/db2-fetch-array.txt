@@ -1,7 +1,7 @@
 db2_fetch_array -- Returns an array, indexed by column position, representing
 a row in a result set
 
-  array db2_fetch_array(resource stmt [, int row_number])~
+  array db2_fetch_array(resource stmt [, int row_number = -1])~
 
 Returns an array, indexed by column position, representing a row in a result
 set. The columns are 0-indexed.

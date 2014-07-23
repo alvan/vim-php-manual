@@ -1,6 +1,6 @@
 htmlentities -- Convert all applicable characters to HTML entities
 
-  string htmlentities(string string [, int flags [, string encoding [, bool double_encode]]])~
+  string htmlentities(string string [, int flags = ENT_COMPAT | ENT_HTML401 [, string encoding = "UTF-8" [, bool double_encode = true]]])~
 
 This function is identical to |htmlspecialchars| in all ways, except with
 |htmlentities|, all characters which have HTML character entity equivalents
@@ -28,11 +28,11 @@ Handle code as HTML 4.01. ENT_XML1 Handle code as XML 1. ENT_XHTML Handle code
 as XHTML. ENT_HTML5 Handle code as HTML 5.
 
 {encoding} Like |htmlspecialchars|, |htmlentities| takes an optional third
-argument {encoding} which defines encoding used in conversion. If omitted, the
-default value for this argument is ISO-8859-1 in versions of PHP prior to
-5.4.0, and UTF-8 from PHP 5.4.0 onwards. Although this argument is technically
-optional, you are highly encouraged to specify the correct value for your
-code.
+argument {encoding} which defines encoding used in conversion. From PHP 5.6.0,
+default_charset value is used as default. From PHP 5.4.0, UTF-8 is the
+default. PHP prior to 5.4.0, ISO-8859-1 is used as the default. Although this
+argument is technically optional, you are highly encouraged to specify the
+correct value for your code.
 
 &reference.strings.charsets; {double_encode} When {double_encode} is turned
 off PHP will not encode existing html entities. The default is to convert

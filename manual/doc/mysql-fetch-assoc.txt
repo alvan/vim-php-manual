@@ -1,5 +1,10 @@
 mysql_fetch_assoc -- Fetch a result row as an associative array
 
+This extension is deprecated as of PHP 5.5.0, and will be removed in the
+future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
+MySQL: choosing an API guide and related FAQ for more information.
+Alternatives to this function include:
+
   array mysql_fetch_assoc(resource result)~
 
 Returns an associative array that corresponds to the fetched row and moves the
@@ -28,13 +33,13 @@ An expanded |mysql_fetch_assoc| example
       echo "Unable to connect to DB: " . mysql_error();
       exit;
   }
-    
+  
   if (!mysql_select_db("mydbname")) {
       echo "Unable to select mydbname: " . mysql_error();
       exit;
   }
   
-  $sql = "SELECT id as userid, fullname, userstatus 
+  $sql = "SELECT id as userid, fullname, userstatus
           FROM   sometable
           WHERE  userstatus = 1";
   

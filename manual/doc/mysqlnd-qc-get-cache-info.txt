@@ -13,7 +13,7 @@ entries is subject to the active storage handler. Storage handler are free to
 return any data. Storage handler are recommended to return at least the data
 provided by the default handler, if technically possible.
 
-The scope of the information is the PHP process. Dependng on the PHP
+The scope of the information is the PHP process. Depending on the PHP
 deployment model a process may serve one or more web requests.
 
 Values are aggregated for all cache activities on a per storage handler basis.
@@ -58,7 +58,7 @@ The following information is provided by the default storage handler for the
 data property.
 
 The data property holds a hash. The hash is indexed by the internal cache
-entry itentifier of the storage handler. The cache entry identifier is
+entry identifier of the storage handler. The cache entry identifier is
 human-readable and contains the query string leading to the cache entry.
 Please, see also the example below. The following data is given for every
 cache entry.
@@ -69,7 +69,7 @@ Since 1.0.0.
 
 Property Description Version rows Number of rows of the cached result set.
 Since 1.0.0. stored_size The size of the cached result set in bytes. This is
-the size of the payload. The value is not suited for caclculating the total
+the size of the payload. The value is not suited for calculating the total
 memory consumption of all cache entries including the administrative overhead
 of the cache entries. Since 1.0.0. cache_hits How often the cached entry has
 been returned. Since 1.0.0. run_time Run time of the statement to which the
@@ -79,9 +79,9 @@ time saved by using the query cache plugin can be calculated like this:
 cache_hits * ((run_time - avg_run_time) + (store_time - avg_store_time)).
 Since 1.0.0. store_time Store time of the statements result set to which the
 cache entry belongs. This is the time it took to fetch and store the results
-of the uncached statement. Since 1.0.0. min_run_time Minimun run time of the
+of the uncached statement. Since 1.0.0. min_run_time Minimum run time of the
 cached statement. How long it took to find the statement in the cache. Since
-1.0.0. min_store_time Minimun store time of the cached statement. The time
+1.0.0. min_store_time Minimum store time of the cached statement. The time
 taken for fetching the cached result set from the storage medium and decoding
 Since 1.0.0. avg_run_time Average run time of the cached statement. Since
 1.0.0. avg_store_time Average store time of the cached statement. Since 1.0.0.
@@ -120,8 +120,9 @@ not available on a per cache entry basis with the MEMCACHE storage handler.
 
 A user defined storage handler is free to provide any data.
 
-The example shows the output from the built-in default storage handler. Other
-storage handler may report different data.
+|mysqlnd_qc_get_cache_info| example The example shows the output from the
+built-in default storage handler. Other storage handler may report different
+data.
 
 <?php >
   /* Populate the cache, e.g. using mysqli */

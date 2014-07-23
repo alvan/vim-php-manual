@@ -1,6 +1,6 @@
 snmp2_walk -- Fetch all the SNMP objects from an agent
 
-  array snmp2_walk(string host, string community, string object_id [, string timeout [, string retries]])~
+  array snmp2_walk(string host, string community, string object_id [, string timeout = 1000000 [, string retries = 5]])~
 
 |snmp2_walk| function is used to read all the values from an SNMP agent
 specified by the {hostname}.

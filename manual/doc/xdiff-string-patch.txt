@@ -1,6 +1,6 @@
 xdiff_string_patch -- Patch a string with an unified diff
 
-  string xdiff_string_patch(string str, string patch [, int flags [, string error]])~
+  string xdiff_string_patch(string str, string patch [, int flags [, string &error]])~
 
 Patches a {str} string with an unified patch in {patch} parameter and returns
 the result. {patch} has to be an unified diff created by

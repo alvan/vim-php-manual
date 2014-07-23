@@ -1,6 +1,6 @@
 xdiff_file_patch -- Patch a file with an unified diff
 
-  mixed xdiff_file_patch(string file, string patch, string dest [, int flags])~
+  mixed xdiff_file_patch(string file, string patch, string dest [, int flags = DIFF_PATCH_NORMAL])~
 
 Patches a {file} with a {patch} and stores the result in a file. {patch} has
 to be an unified diff created by |xdiff_file_diff|/|xdiff_string_diff|

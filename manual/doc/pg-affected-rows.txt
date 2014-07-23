@@ -5,6 +5,9 @@ pg_affected_rows -- Returns number of affected records (tuples)
 |pg_affected_rows| returns the number of tuples (instances/records/rows)
 affected by INSERT, UPDATE, and DELETE queries.
 
+Since PostgreSQL 9.0 and above, the server returns the number of SELECTed
+rows. Older PostgreSQL return 0 for SELECT.
+
 This function used to be called |pg_cmdtuples|.
 
 {result} PostgreSQL query result resource, returned by |pg_query|,

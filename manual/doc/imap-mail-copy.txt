@@ -1,6 +1,6 @@
 imap_mail_copy -- Copy specified messages to a mailbox
 
-  bool imap_mail_copy(resource imap_stream, string msglist, string mailbox [, int options])~
+  bool imap_mail_copy(resource imap_stream, string msglist, string mailbox [, int options = 0])~
 
 Copies mail messages specified by {msglist} to specified mailbox.
 

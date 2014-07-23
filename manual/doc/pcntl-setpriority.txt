@@ -1,6 +1,6 @@
 pcntl_setpriority -- Change the priority of any process
 
-  bool pcntl_setpriority(int priority [, int pid [, int process_identifier]])~
+  bool pcntl_setpriority(int priority [, int pid = getmypid() [, int process_identifier = PRIO_PROCESS]])~
 
 |pcntl_setpriority| sets the priority of {pid}.
 

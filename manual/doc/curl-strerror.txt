@@ -1,0 +1,39 @@
+curl_strerror -- Return string describing the given error code
+
+  string curl_strerror(int errornum)~
+
+Returns a text error message describing the given error code.
+
+One of the cURL error codes constants.
+
+Returns error description or NULL for invalid error code.
+
+|curl_errno| example
+
+<?php >
+  // Create a curl handle with a mispelled protocol in URL
+  $ch = curl_init("htp://example.com/");
+  
+  // Send request
+  curl_exec($ch);
+  
+  // Check for errors and display the error message
+  if($errno = curl_errno($ch)) {
+      $error_message = curl_strerror($errno);
+      echo "cURL error ({$errno}):\n {$error_message}";
+  }
+  
+  // Close the handle
+  curl_close($ch);
+?>
+
+The above example will output:
+
+  cURL error (1):
+   Unsupported protocol
+
+
+
+|curl_errno| |curl_error| Curl error codes
+
+vim:ft=help:

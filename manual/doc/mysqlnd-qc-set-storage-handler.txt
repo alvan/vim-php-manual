@@ -18,8 +18,9 @@ If changing the storage handler fails a catchable fatal error will be thrown.
 The query cache cannot operate if the previous storage handler has been
 shutdown but no new storage handler has been installed.
 
-The example shows the output from the built-in default storage handler. Other
-storage handler may report different data.
+|mysqlnd_qc_set_storage_handler| example The example shows the output from the
+built-in default storage handler. Other storage handler may report different
+data.
 
 <?php >
   var_dump(mysqlnd_qc_set_storage_handler("memcache"));

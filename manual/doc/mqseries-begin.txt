@@ -1,6 +1,6 @@
 mqseries_begin -- MQseries MQBEGIN
 
-  void mqseries_begin(resource hconn, array beginOptions, resource compCode, resource reason)~
+  void mqseries_begin(resource hconn, array beginOptions, resource &compCode, resource &reason)~
 
 The |mqseries_begin| (MQBEGIN) call begins a unit of work that is coordinated
 by the queue manager, and that may involve external resource managers.

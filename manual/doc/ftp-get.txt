@@ -1,6 +1,6 @@
 ftp_get -- Downloads a file from the FTP server
 
-  bool ftp_get(resource ftp_stream, string local_file, string remote_file, int mode [, int resumepos])~
+  bool ftp_get(resource ftp_stream, string local_file, string remote_file, int mode [, int resumepos = 0])~
 
 |ftp_get| retrieves a remote file from the FTP server, and saves it into a
 local file.

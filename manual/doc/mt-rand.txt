@@ -20,30 +20,6 @@ between 5 and 15 (inclusive), for example, use mt_rand(5, 15).
 {max} Optional highest value to be returned (default: |mt_getrandmax|)
 
 A random integer value between {min} (or 0) and {max} (or |mt_getrandmax|,
-inclusive)
-
-Version Description 4.2.0The random number generator is seeded automatically.
-
-|mt_rand| example
-
-<?php >
-  echo mt_rand() . "\n";
-  echo mt_rand() . "\n";
-  
-  echo mt_rand(5, 15);
-?>
-
-The above example will output something similar to:
-
-  1604716014
-  1478613278
-  6
-
-
-
-The distribution of |mt_rand| return values is biased towards even numbers on
-64-bit builds of PHP when {max} is beyond 2^32.
-
-|mt_srand| |mt_getrandmax| |rand|
+inclusive), or FALSE if {max} is less than {min}.
 
 vim:ft=help:

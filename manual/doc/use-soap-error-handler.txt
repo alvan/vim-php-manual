@@ -1,11 +1,12 @@
 use_soap_error_handler -- Set whether to use the SOAP error handler
 
-  bool use_soap_error_handler([bool handler])~
+  bool use_soap_error_handler([bool handler = true])~
 
 This function sets whether or not to use the SOAP error handler in the SOAP
 server. It will return the previous value. If set to TRUE, details of errors
-in a SoapServer application will be sent to the clients. If FALSE, no
-information will be sent.
+in a SoapServer application will be sent to the client as a SOAP fault
+message. If FALSE, the standard PHP error handler is used. The default is to
+use the standard PHP error handler.
 
 {handler} Set to TRUE to send error details to clients.
 

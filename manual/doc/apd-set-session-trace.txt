@@ -1,6 +1,6 @@
 apd_set_session_trace -- Starts the session debugging
 
-  void apd_set_session_trace(int debug_level [, string dump_directory])~
+  void apd_set_session_trace(int debug_level [, string dump_directory = ini_get("apd.dumpdir")])~
 
 Starts debugging to apd_dump_{process_id} in the dump directory.
 

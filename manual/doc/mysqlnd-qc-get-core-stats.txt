@@ -39,6 +39,8 @@ Array of core statistics
 
 ... and meta data shows at least one column in the result set
 
+|mysqlnd_qc_get_core_stats| example
+
 <?php >
   /* Enable collection of statistics - default: disabled */
   ini_set("mysqlnd_qc.collect_statistics", 1);
@@ -55,7 +57,7 @@ Array of core statistics
   /* Cache hit */
   $mysqli->query("/*qc=on*/SELECT id FROM test");
   
-  /* Display core statstics */
+  /* Display core statistics */
   var_dump(mysqlnd_qc_get_core_stats());
 ?>
 

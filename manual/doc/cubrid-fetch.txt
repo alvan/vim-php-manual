@@ -1,6 +1,6 @@
 cubrid_fetch -- Fetch the next row from a result set
 
-  mixed cubrid_fetch(resource result [, int type])~
+  mixed cubrid_fetch(resource result [, int type = CUBRID_BOTH])~
 
 The |cubrid_fetch| function is used to get a single row from the query result.
 The cursor automatically moves to the next row after getting the result.
@@ -8,7 +8,7 @@ The cursor automatically moves to the next row after getting the result.
 {result} {result} comes from a call to |cubrid_execute|
 
 {type} Array type of the fetched result CUBRID_NUM, CUBRID_ASSOC, CUBRID_BOTH,
-CUBRID_OBJECT.
+CUBRID_OBJECT. If you want to operate the lob object, you can use CUBRID_LOB.
 
 Result array or object, when process is successful.
 
@@ -27,7 +27,7 @@ type.
 |cubrid_fetch| example
 
 <?php >
-  $conn = cubrid_connect("localhost", 33088, "demodb");
+  $conn = cubrid_connect("localhost", 33000, "demodb");
   $req = cubrid_execute($conn, "SELECT * FROM stadium WHERE nation_code='GRE' AND seats > 10000");
   
   printf("%-40s %-10s %-6s %-20s\n", "name", "area", "seats", "address");
@@ -35,6 +35,8 @@ type.
       printf("%-40s %-10s %-6s %-20s\n", 
           $row["name"], $row["area"], $row["seats"], $row["address"]);
   }
+  
+  // if you want to operate lob object, you can use cubrid_fetch($req, CUBRID_LOB)
   
   cubrid_close_request($req);
   
@@ -54,6 +56,7 @@ The above example will output:
   Athens Olympic Stadium                   120400.00  71030  Maroussi, Athens, Greece 
   Ano Liossia                              34000.00   12000  Ano Liosia, Athens, Greece
 
-|cubrid_execute|
+|cubrid_execute| |cubrid_fetch_array| |cubrid_fetch_row| |cubrid_fetch_assoc|
+|cubrid_fetch_object|
 
 vim:ft=help:

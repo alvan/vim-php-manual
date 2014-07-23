@@ -1,6 +1,6 @@
 tcpwrap_check -- Performs a tcpwrap check
 
-  bool tcpwrap_check(string daemon, string address [, string user [, bool nodns]])~
+  bool tcpwrap_check(string daemon, string address [, string user [, bool nodns = false]])~
 
 This function consults the /etc/hosts.allow and /etc/hosts.deny files to check
 if access to service {daemon} should be granted or denied for a client.

@@ -1,7 +1,7 @@
 stripos -- Find the position of the first occurrence of a case-insensitive
 substring in a string
 
-  int stripos(string haystack, string needle [, int offset])~
+  int stripos(string haystack, string needle [, int offset = 0])~
 
 Find the numeric position of the first occurrence of {needle} in the
 {haystack} string.
@@ -58,6 +58,6 @@ function.
 
 This function is binary-safe.
 
-|strpos| |strrpos| |strripos| |stristr| |substr| |str_ireplace|
+|mb_stripos| |strpos| |strrpos| |strripos| |stristr| |substr| |str_ireplace|
 
 vim:ft=help:

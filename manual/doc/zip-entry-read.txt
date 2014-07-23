@@ -1,17 +1,16 @@
 zip_entry_read -- Read from an open directory entry
 
-  string zip_entry_read(resource zip_entry [, int length])~
+  string zip_entry_read(resource zip_entry [, int length = 1024])~
 
 Reads from an open directory entry.
 
 {zip_entry} A directory entry returned by |zip_read|.
 
-{length} The number of bytes to return. If not specified, this function will
-attempt to read 1024 bytes.
+{length} The number of bytes to return.
 
 This should be the uncompressed length you wish to read.
 
-Returns the data read, or FALSE if the end of the file is reached.
+Returns the data read, empty string on end of a file, or FALSE on error.
 
 |zip_entry_open| |zip_entry_close| |zip_entry_filesize|
 

@@ -1,6 +1,11 @@
 mysql_client_encoding -- Returns the name of the character set
 
-  string mysql_client_encoding([resource link_identifier])~
+This extension is deprecated as of PHP 5.5.0, and will be removed in the
+future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
+MySQL: choosing an API guide and related FAQ for more information.
+Alternatives to this function include:
+
+  string mysql_client_encoding([resource link_identifier = NULL])~
 
 Retrieves the character_set variable from MySQL.
 

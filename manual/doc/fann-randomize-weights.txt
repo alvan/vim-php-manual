@@ -1,0 +1,20 @@
+fann_randomize_weights -- Give each connection a random weight between
+min_weight and max_weight
+
+  bool fann_randomize_weights(resource ann, float min_weight, float max_weight)~
+
+Give each connection a random weight between {min_weight} and {max_weight}
+
+From the beginning the weights are random between -0.1 and 0.1.
+
+Neural network resource.
+
+Minimum weight value
+
+Maximum weight value
+
+Returns TRUE on success, or FALSE otherwise.
+
+|fann_init_weights|
+
+vim:ft=help:

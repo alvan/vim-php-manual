@@ -1,6 +1,6 @@
 idn_to_ascii -- Convert UTF-8 encoded domain name to ASCII
 
-  string idn_to_ascii(string utf8_domain [, int errorcode])~
+  string idn_to_ascii(string utf8_domain [, int &errorcode])~
 
 This function converts a UTF-8 encoded domain name to ASCII according to the
 IDNA toUnicode() specification. If the input has non-ASCII characters, the

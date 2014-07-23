@@ -1,0 +1,26 @@
+fann_get_activation_function -- Returns the activation function
+
+  int fann_get_activation_function(resource ann, int layer, int neuron)~
+
+Get the activation function for neuron number neuron in layer number layer,
+counting the input layer as layer 0.
+
+It is not possible to get activation functions for the neurons in the input
+layer.
+
+The return value is one of the activation functions constants.
+
+Neural network resource.
+
+Layer number.
+
+Neuron number.
+
+Learning functions constant or -1 if the neuron is not defined in the neural
+network, or FALSE on error.
+
+|fann_set_activation_function_layer| |fann_set_activation_function_hidden|
+|fann_set_activation_function_output| |fann_set_activation_steepness|
+|fann_set_activation_function|
+
+vim:ft=help:

@@ -1,0 +1,21 @@
+fann_train -- Train one iteration with a set of inputs, and a set of desired
+outputs
+
+  bool fann_train(resource ann, array input, array desired_output)~
+
+Train one iteration with a set of inputs, and a set of desired outputs. This
+training is always incremental training, since only one pattern is presented.
+
+Neural network resource.
+
+An array of inputs. This array must be exactly |fann_get_num_input| long.
+
+An array of desired outputs. This array must be exactly |fann_get_num_output|
+long.
+
+Returns TRUE on success, or FALSE otherwise.
+
+|fann_train_on_data| |fann_train_epoch| |fann_get_num_input|
+|fann_get_num_output|
+
+vim:ft=help:

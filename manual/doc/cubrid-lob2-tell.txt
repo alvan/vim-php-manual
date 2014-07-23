@@ -1,0 +1,19 @@
+cubrid_lob2_tell -- Tell the cursor position of the LOB object.
+
+  int cubrid_lob2_tell(resource lob_identifier)~
+
+The |cubrid_lob2_tell| function is used to tell the cursor position of the LOB
+object.
+
+{lob_identifier} Lob identifier as a result of |cubrid_lob2_new| or get from
+the result set.
+
+It will return the cursor position on the LOB object when it processes
+successfully.
+
+FALSE on failure.
+
+|cubrid_lob2_read| |cubrid_lob2_write| |cubrid_lob2_seek| |cubrid_lob2_seek64|
+|cubrid_lob2_tell64| |cubrid_lob2_size| |cubrid_lob2_size64|
+
+vim:ft=help:

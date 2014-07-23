@@ -1,7 +1,7 @@
 iconv_strpos -- Finds position of first occurrence of a needle within a
 haystack
 
-  int iconv_strpos(string haystack, string needle [, int offset [, string charset]])~
+  int iconv_strpos(string haystack, string needle [, int offset = 0 [, string charset = ini_get("iconv.internal_encoding")]])~
 
 Finds position of first occurrence of a {needle} within a {haystack}.
 

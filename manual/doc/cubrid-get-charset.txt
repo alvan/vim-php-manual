@@ -20,7 +20,7 @@ FALSE on failure.
       die('Could not connect.');
   }
   
-  printf("CUBRID current charset: %s\n", cubrid_client_encoding($con));
+  printf("CUBRID current charset: %s\n", cubrid_get_charset($con));
 ?>
 
 The above example will output:

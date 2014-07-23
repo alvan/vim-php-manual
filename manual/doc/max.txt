@@ -2,7 +2,7 @@ max -- Find highest value
 
   mixed max(array values)~
 
-  mixed max(array values, mixed value1, mixed value2 [, mixed value3...])~
+  mixed max(array values, mixed value1, mixed value2 [, mixed ...])~
 
 If the first and only parameter is an array, |max| returns the highest value
 in that array. If at least two parameters are provided, |max| returns the
@@ -14,6 +14,12 @@ arguments evaluate to 0, |max| will return a numeric 0 if given, else the
 alphabetical highest string value will be returned.
 
 {values} An array containing the values.
+
+{value1} Any comparable value.
+
+{value2} Any comparable value.
+
+{...} Any comparable value.
 
 |max| returns the numerically highest of the parameter values. If multiple
 values can be considered of the same size, the one that is listed first will

@@ -1,16 +1,18 @@
 gmp_clrbit -- Clear bit
 
-  void gmp_clrbit(resource a, int index)~
+  void gmp_clrbit(GMP a, int index)~
 
 Clears (sets to 0) bit {index} in {a}. The index starts at 0.
 
-{a} It can be either a GMP number resource, or a numeric string given that it
-is possible to convert the latter to a number.
+{a} Either a GMP number resource in PHP 5.5 and earlier, a GMP object in PHP
+5.6 and later, or a numeric string provided that it is possible to convert the
+latter to a number.
 
-{index} It can be either a GMP number resource, or a numeric string given that
-it is possible to convert the latter to a number.
+{index} The index of the bit to clear. Index 0 represents the least
+significant bit.
 
-A GMP number resource.
+A GMP number resource in PHP 5.5 and earlier, or a GMP object in PHP 5.6 and
+later.
 
 |gmp_clrbit| example
 

@@ -1,6 +1,6 @@
 date_sunrise -- Returns time of sunrise for a given day and location
 
-  mixed date_sunrise(int timestamp [, int format [, float latitude [, float longitude [, float zenith [, float gmt_offset]]]]])~
+  mixed date_sunrise(int timestamp [, int format = SUNFUNCS_RET_STRING [, float latitude = ini_get("date.default_latitude") [, float longitude = ini_get("date.default_longitude") [, float zenith = ini_get("date.sunrise_zenith") [, float gmt_offset = 0]]]]])~
 
 |date_sunrise| returns the sunrise time for a given day (specified as a
 {timestamp}) and location.

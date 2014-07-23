@@ -1,6 +1,6 @@
 fbsql_connect -- Open a connection to a FrontBase Server
 
-  resource fbsql_connect([string hostname [, string username [, string password]]])~
+  resource fbsql_connect([string hostname = ini_get("fbsql.default_host") [, string username = ini_get("fbsql.default_user") [, string password = ini_get("fbsql.default_password")]]])~
 
 |fbsql_connect| establishes a connection to a FrontBase server.
 

@@ -1,6 +1,6 @@
 oci_bind_by_name -- Binds a PHP variable to an Oracle placeholder
 
-  bool oci_bind_by_name(resource statement, string bv_name, mixed variable [, int maxlength [, int type]])~
+  bool oci_bind_by_name(resource statement, string bv_name, mixed &variable [, int maxlength = -1 [, int type = SQLT_CHR]])~
 
 Binds a PHP variable {variable} to the Oracle bind variable placeholder
 {bv_name}. Binding is important for Oracle database performance and also as a
@@ -88,7 +88,10 @@ SQLT_LNG - for LONG columns;
 
 SQLT_LBI - for LONG RAW columns;
 
-SQLT_RSET - for cursors created with |oci_new_cursor|.
+SQLT_RSET - for cursors created with |oci_new_cursor|;
+
+SQLT_BOL or OCI_B_BOL - for PL/SQL BOOLEANs (Requires OCI8 2.0.7 and Oracle
+Database 12c)
 
 Returns TRUE on success or &false; on failure.
 
@@ -195,16 +198,21 @@ Binding in a WHERE clause
       trigger_error(htmlentities($m['message']), E_USER_ERROR);
   }
   
-  $sql = 'SELECT last_name FROM employees WHERE employee_id = :eidbv';
+  $sql = 'SELECT last_name FROM employees WHERE department_id = :didbv ORDER BY last_name';
   $stid = oci_parse($conn, $sql);
-  $myeid = 101;
-  oci_bind_by_name($stid, ':eidbv', $myeid);
+  $didbv = 60;
+  oci_bind_by_name($stid, ':didbv', $didbv);
   oci_execute($stid);
-  $row = oci_fetch_array($stid, OCI_ASSOC);
-  echo $row['LAST_NAME'] ."<br>\n";
+  while (($row = oci_fetch_array($stid, OCI_ASSOC)) != false) {
+      echo $row['LAST_NAME'] ."<br>\n";
+  }
   
   // Output is
-  //    Kochhar
+  //    Austin
+  //    Ernst
+  //    Hunold
+  //    Lorentz
+  //    Pataballa
   
   oci_free_statement($stid);
   oci_close($conn);
@@ -533,11 +541,39 @@ Binding a CLOB column
   oci_execute($stid);
   
   print '<table border="1">';
-  while ($row = oci_fetch_array($stid, OCI_ASSOC)) {
-    $result = $row['MYCLOB']->load();
-    print '<tr><td>'.$result.'</td></tr>';
+  while ($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_LOBS)) {
+      print '<tr><td>'.$row['MYCLOB'].'</td></tr>';
+      // In a loop, freeing the large variable before the 2nd fetch reduces PHP's peak memory usage
+      unset($row);  
   }
   print '</table>';
+?>
+
+
+
+
+
+Binding a PL/SQL BOOLEAN
+
+<?php >
+  $conn = oci_connect('hr', 'welcome', 'localhost/XE');
+  if (!$conn) {
+      $e = oci_error();
+      trigger_error(htmlentities($e['message']), E_USER_ERROR);
+  }
+  
+  $plsql = 
+    "begin
+      :output1 := true;
+      :output2 := false;
+     end;";
+  
+  $s = oci_parse($c, $plsql);
+  oci_bind_by_name($s, ':output1', $output1, -1, OCI_B_BOL);
+  oci_bind_by_name($s, ':output2', $output2, -1, OCI_B_BOL);
+  oci_execute($s);
+  var_dump($output1);  // true
+  var_dump($output2);  // false
 ?>
 
 
@@ -577,10 +613,6 @@ pointing to the last loop iteration's value. Instead use the following:
       oci_bind_by_name($stid, $key, $myarray[$key]);
   }
 ?>
-
-In PHP versions before 5.0.0 you must use |ocibindbyname| instead. The old
-function name can still be used in current versions, however it is deprecated
-and not recommended.
 
 |oci_bind_array_by_name| |oci_parse|
 

@@ -1,6 +1,6 @@
 openssl_public_encrypt -- Encrypts data with public key
 
-  bool openssl_public_encrypt(string data, string crypted, mixed key [, int padding])~
+  bool openssl_public_encrypt(string data, string &crypted, mixed key [, int padding = OPENSSL_PKCS1_PADDING])~
 
 |openssl_public_encrypt| encrypts {data} with public {key} and stores the
 result into {crypted}. Encrypted data can be decrypted via

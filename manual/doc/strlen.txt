@@ -22,9 +22,12 @@ A |strlen| example
 
 
 
+|strlen| returns the number of bytes rather than the number of characters in a
+string.
+
 |strlen| returns NULL when executed on arrays, and an E_WARNING level error is
 emitted.
 
-|count| |mb_strlen|
+|count| |grapheme_strlen| |iconv_strlen| |mb_strlen|
 
 vim:ft=help:

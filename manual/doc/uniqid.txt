@@ -1,8 +1,13 @@
 uniqid -- Generate a unique ID
 
-  string uniqid([string prefix [, bool more_entropy]])~
+  string uniqid([string prefix = "" [, bool more_entropy = false]])~
 
 Gets a prefixed unique identifier based on the current time in microseconds.
+
+This function does not create random nor unpredictable strings. This function
+must not be used for security purposes. Use a cryptographically secure random
+function/generator and cryptographically secure hash functions to create
+unpredictable secure IDs.
 
 {prefix} Can be useful, for instance, if you generate identifiers
 simultaneously on several hosts that might happen to generate the identifier
@@ -13,7 +18,7 @@ With an empty {prefix}, the returned string will be 13 characters long. If
 
 {more_entropy} If set to TRUE, |uniqid| will add additional entropy (using the
 combined linear congruential generator) at the end of the return value, which
-should make the results more unique.
+increases the likelihood that the result will be unique.
 
 Returns the unique identifier, as a string.
 
@@ -44,6 +49,11 @@ Returns the unique identifier, as a string.
 
 Version Description 5.0.0 The {prefix} parameter was made optional. 4.3.1 The
 limit of 114 characters long for {prefix} was raised.
+
+This function does not generate cryptographically secure tokens, in fact
+without being passed any additional parameters the return value is little
+different from |microtime|. If you need to generate cryptographically secure
+tokens use |openssl_random_pseudo_bytes|.
 
 Under Cygwin, the {more_entropy} must be set to TRUE for this function to
 work.

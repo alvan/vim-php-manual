@@ -1,6 +1,6 @@
 snmp2_set -- Set the value of an SNMP object
 
-  bool snmp2_set(string host, string community, string object_id, string type, string value [, string timeout [, string retries]])~
+  bool snmp2_set(string host, string community, string object_id, string type, string value [, string timeout = 1000000 [, string retries = 5]])~
 
 |snmp2_set| is used to set the value of an SNMP object specified by the
 {object_id}.

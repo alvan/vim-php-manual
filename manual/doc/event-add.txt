@@ -1,6 +1,6 @@
 event_add -- Add an event to the set of monitored events
 
-  bool event_add(resource event [, int timeout])~
+  bool event_add(resource event [, int timeout = -1])~
 
 |event_add| schedules the execution of the {event} when the event specified in
 |event_set| occurs or in at least the time specified by the {timeout}

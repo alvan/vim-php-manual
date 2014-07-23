@@ -17,10 +17,17 @@ FALSE, when process is unsuccessful.
 |cubrid_lob_send| example
 
 <?php >
-  $lobs = cubrid_lob_get($con, "SELECT image FROM person WHERE id=1");
-  Header("Content-type: image/jpeg");
+  $conn = cubrid_connect ("localhost", 33000, "demodb", "dba");
+  
+  cubrid_execute($conn,"DROP TABLE if exists doc");
+  cubrid_execute($conn,"CREATE TABLE doc (id INT, doc_content CLOB)");
+  cubrid_execute($conn,"INSERT INTO doc VALUES (5,'hello,cubrid')");
+  
+  $lobs = cubrid_lob_get($conn, "SELECT doc_content FROM doc WHERE id=5");
+  
   cubrid_lob_send($conn, $lobs[0]);
   cubrid_lob_close($lobs);
+  cubrid_disconnect($conn);
 ?>
 
 

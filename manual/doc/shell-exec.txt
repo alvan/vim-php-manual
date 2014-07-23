@@ -7,7 +7,13 @@ This function is identical to the backtick operator.
 
 {cmd} The command that will be executed.
 
-The output from the executed command or NULL if an error occurred.
+The output from the executed command or NULL if an error occurred or the
+command produces no output.
+
+This function can return NULL both when an error occurs or the program
+produces no output. It is not possible to detect execution failures using this
+function. |exec| should be used when access to the program exit code is
+required.
 
 A |shell_exec| example
 

@@ -1,6 +1,6 @@
 dbplus_tremove -- Remove tuple and return new current tuple
 
-  int dbplus_tremove(resource relation, array tuple [, array current])~
+  int dbplus_tremove(resource relation, array tuple [, array &current])~
 
 |dbplus_tremove| removes {tuple} from {relation} if it perfectly matches a
 tuple within the relation. {current}, if given, will contain the data of the

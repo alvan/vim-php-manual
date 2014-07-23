@@ -2,7 +2,38 @@ stream_bucket_prepend -- Prepend bucket to brigade
 
   void stream_bucket_prepend(resource brigade, resource bucket)~
 
-This function is currently not documented; only its argument list is
-available.
+This function can be called to prepend a bucket to a bucket brigade. It is
+typically called from php_user_filter::filter.
+
+{brigade} is a resource pointing to a bucket brigade which contains one or
+more bucket objects.
+
+A bucket object.
+
+No value is returned.
+
+|stream_bucket_prepend| examples
+
+<?php >
+  class foo extends php_user_filter {
+    protected $calls = 0;
+    public function filter($in, $out, &amp;$consumed, $closing) {
+      while ($bucket = stream_bucket_make_writeable($in)) {
+        $consumed += $bucket->datalen;
+        if ($this->calls++ == 2) {
+          // This bucket will appear again before any other bucket.
+          stream_bucket_prepend($in, $bucket);
+        }
+      }
+      return PSFS_FEED_ME;
+    }
+  }
+  stream_filter_register('test', 'foo');
+  print  file_get_contents('php://filter/read=test/resource=foo');
+?>
+
+
+
+
 
 vim:ft=help:

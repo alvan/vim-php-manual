@@ -20,7 +20,7 @@ will be tried first. Once a substring has been replaced, its new value will
 not be searched again.
 
 In this case, the keys and the values may have any length, provided that there
-is no empty key; additionaly, the length of the return value may differ from
+is no empty key; additionally, the length of the return value may differ from
 that of {str}. However, this function will be the most efficient when all the
 keys have the same size.
 
@@ -36,7 +36,8 @@ keys have the same size.
 Returns the translated string.
 
 If {replace_pairs} contains a key which is an empty string (""), FALSE will be
-returned.
+returned. If the {str} is not a scalar then it is not typecasted into a
+string, instead a warning is raised and NULL is returned.
 
 |strtr| example
 

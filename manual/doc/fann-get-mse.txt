@@ -1,0 +1,17 @@
+fann_get_MSE -- Reads the mean square error from the network
+
+  float fann_get_MSE(resource ann)~
+
+Reads the mean square error from the network.
+
+Reads the mean square error from the network. This value is calculated during
+training or testing and can therefore sometimes be a bit off if the weights
+have been changed since the last calculation of the value.
+
+Neural network resource.
+
+The mean square error, or FALSE on error.
+
+|fann_test_data|
+
+vim:ft=help:

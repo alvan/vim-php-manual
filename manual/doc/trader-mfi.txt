@@ -1,0 +1,19 @@
+trader_mfi -- Money Flow Index
+
+  array trader_mfi(array high, array low, array close, array volume [, integer timePeriod])~
+
+
+
+High price, array of real values.
+
+Low price, array of real values.
+
+Closing price, array of real values.
+
+Volume traded, array of real values.
+
+Number of period. Valid range from 2 to 100000.
+
+Returns an array with calculated data or false on failure.
+
+vim:ft=help:

@@ -1,6 +1,6 @@
 stream_copy_to_stream -- Copies data from one stream to another
 
-  int stream_copy_to_stream(resource source, resource dest [, int maxlength [, int offset]])~
+  int stream_copy_to_stream(resource source, resource dest [, int maxlength = -1 [, int offset = 0]])~
 
 Makes a copy of up to {maxlength} bytes of data from the current position (or
 from the {offset} position, if specified) in {source} to {dest}. If

@@ -1,6 +1,6 @@
 log -- Natural logarithm
 
-  float log(float arg [, float base])~
+  float log(float arg [, float base = M_E])~
 
 If the optional {base} parameter is specified, |log| returns logbase {arg},
 otherwise |log| returns the natural logarithm of {arg}.
@@ -12,10 +12,10 @@ natural logarithm).
 
 The logarithm of {arg} to {base}, if given, or the natural logarithm.
 
-Version Description Since 4.3.0 The optional parameter {base} became
-available. For older versions you can calculate the logarithm in base b of a
-number n, but using the mathematical identity: logb(n) = log(n)/log(b), where
-log is the neperian (or natural) logarithm.
+Version Description 4.3.0 The optional parameter {base} became available. For
+older versions you can calculate the logarithm in base b of a number n, but
+using the mathematical identity: logb(n) = log(n)/log(b), where log is the
+neperian (or natural) logarithm.
 
 |log10| |exp| |pow|
 

@@ -1,0 +1,13 @@
+fann_get_errno -- Returns the last error number
+
+  int fann_get_errno(resource errdat)~
+
+Returns the last error number.
+
+Either neural network resource or neural network trainining data resource.
+
+The error number, or FALSE on error.
+
+|fann_reset_errno| |fann_get_errstr|
+
+vim:ft=help:

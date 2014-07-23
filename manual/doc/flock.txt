@@ -1,6 +1,6 @@
 flock -- Portable advisory file locking
 
-  bool flock(resource handle, int operation [, int wouldblock])~
+  bool flock(resource handle, int operation [, int &wouldblock])~
 
 |flock| allows you to perform a simple reader/writer model which can be used
 on virtually every platform (including most Unix derivatives and even
@@ -28,8 +28,8 @@ LOCK_UN to release a lock (shared or exclusive).
 It is also possible to add LOCK_NB as a bitmask to one of the above operations
 if you don't want |flock| to block while locking. (not supported on Windows)
 
-{wouldblock} The optional third argument is set to TRUE if the lock would
-block (EWOULDBLOCK errno condition). (not supported on Windows)
+{wouldblock} The optional third argument is set to 1 if the lock would block
+(EWOULDBLOCK errno condition). (not supported on Windows)
 
 Returns TRUE on success or &false; on failure.
 
@@ -43,10 +43,11 @@ LOCK_SH, 2 for LOCK_EX, 3 for LOCK_UN and 4 for LOCK_NB
 <?php >
   $fp = fopen("/tmp/lock.txt", "r+");
   
-  if (flock($fp, LOCK_EX)) { // do an exclusive lock
-      ftruncate($fp, 0); // truncate file
+  if (flock($fp, LOCK_EX)) {  // acquire an exclusive lock
+      ftruncate($fp, 0);      // truncate file
       fwrite($fp, "Write something here\n");
-      flock($fp, LOCK_UN); // release the lock
+      fflush($fp);            // flush output before releasing the lock
+      flock($fp, LOCK_UN);    // release the lock
   } else {
       echo "Couldn't get the lock!";
   }

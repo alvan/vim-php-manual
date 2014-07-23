@@ -1,6 +1,6 @@
 oci_lob_copy -- Copies large object
 
-  bool oci_lob_copy(OCI-Lob lob_to, OCI-Lob lob_from [, int length])~
+  bool oci_lob_copy(OCI-Lob lob_to, OCI-Lob lob_from [, int length = 0])~
 
 Copies a large object or a part of a large object to another large object. Old
 LOB-recipient data will be overwritten.

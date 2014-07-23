@@ -1,6 +1,6 @@
 file_put_contents -- Write a string to a file
 
-  int file_put_contents(string filename, mixed data [, int flags [, resource context]])~
+  int file_put_contents(string filename, mixed data [, int flags = 0 [, resource context = 0]])~
 
 This function is identical to calling |fopen|, |fwrite| and |fclose|
 successively to write data to a file.
@@ -31,7 +31,7 @@ to the writing.
 
 {context} A valid context resource created with |stream_context_create|.
 
-The function returns the number of bytes that were written to the file, or
+This function returns the number of bytes that were written to the file, or
 FALSE on failure.
 
 This function may return Boolean FALSE, but may also return a non-Boolean

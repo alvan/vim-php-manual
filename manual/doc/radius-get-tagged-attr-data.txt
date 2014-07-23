@@ -1,0 +1,37 @@
+radius_get_tagged_attr_data -- Extracts the data from a tagged attribute
+
+  string radius_get_tagged_attr_data(string data)~
+
+If a tagged attribute has been returned from |radius_get_attr|,
+|radius_get_tagged_attr_data| will return the data from the attribute.
+
+{data} The tagged attribute to be decoded.
+
+Returns the data from the tagged attribute or FALSE on failure.
+
+|radius_get_tagged_attr_data| example
+
+<?php >
+  while ($resa = radius_get_attr($res)) {
+      if (!is_array($resa)) {
+          printf ("Error getting attribute: %s\n",  radius_strerror($res));
+          exit;
+      }
+  
+      $attr = $resa['attr'];
+      $data = $resa['data'];
+  
+      $tag = radius_get_tagged_attr_tag($data);
+      $value = radius_get_tagged_attr_data($data);
+  
+      printf("Got tagged attribute with tag %d and value %s\n", $tag, $value);
+  }
+?>
+
+
+
+
+
+|radius_get_attr| |radius_get_tagged_attr_tag|
+
+vim:ft=help:

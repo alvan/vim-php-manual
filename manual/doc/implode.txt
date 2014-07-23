@@ -10,9 +10,7 @@ Join array elements with a {glue} string.
 For consistency with |explode|, however, it may be less confusing to use the
 documented order of arguments.
 
-{glue} Defaults to an empty string. This is not the preferred usage of
-|implode| as {glue} would be the second parameter and thus, the bad prototype
-would be used.
+{glue} Defaults to an empty string.
 
 {pieces} The array of strings to implode.
 
@@ -39,6 +37,6 @@ Version Description 4.3.0 The {glue} parameter became optional.
 
 This function is binary-safe.
 
-|explode| |preg_split|
+|explode| |preg_split| |http_build_query|
 
 vim:ft=help:

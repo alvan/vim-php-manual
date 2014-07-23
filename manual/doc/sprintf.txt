@@ -42,16 +42,23 @@ a (signed) decimal number. e - the argument is treated as scientific notation
 (e.g. 1.2e+2). The precision specifier stands for the number of digits after
 the decimal point since PHP 5.2.1. In earlier versions, it was taken as number
 of significant digits (one less). E - like %e but uses uppercase letter (e.g.
-1.2E+2). u - the argument is treated as an integer, and presented as an
-unsigned decimal number. f - the argument is treated as a float, and presented
-as a floating-point number (locale aware). F - the argument is treated as a
-float, and presented as a floating-point number (non-locale aware). Available
-since PHP 4.3.10 and PHP 5.0.3. g - shorter of %e and %f. G - shorter of %E
-and %f. o - the argument is treated as an integer, and presented as an octal
-number. s - the argument is treated as and presented as a string. x - the
+1.2E+2). f - the argument is treated as a float, and presented as a
+floating-point number (locale aware). F - the argument is treated as a float,
+and presented as a floating-point number (non-locale aware). Available since
+PHP 4.3.10 and PHP 5.0.3. g - shorter of %e and %f. G - shorter of %E and %f.
+o - the argument is treated as an integer, and presented as an octal number. s
+- the argument is treated as and presented as a string. u - the argument is
+treated as an integer, and presented as an unsigned decimal number. x - the
 argument is treated as an integer and presented as a hexadecimal number (with
 lowercase letters). X - the argument is treated as an integer and presented as
 a hexadecimal number (with uppercase letters).
+
+Variables will be co-erced to a suitable type for the specifier: Type Handling
+Type Specifiers string s integer d, u, c, o, x, X, b double g, G, e, E, f, F
+
+Attempting to use a combination of the string and width specifiers with
+character sets that require more than one byte per character may result in
+unexpected results
 
 The format string supports argument numbering/swapping. Here is an example:
 Argument swapping
@@ -61,7 +68,7 @@ Argument swapping
   $location = 'tree';
   
   $format = 'There are %d monkeys in the %s';
-  printf($format, $num, $location);
+  echo sprintf($format, $num, $location);
 ?>
 
 
@@ -72,7 +79,7 @@ internationalize it and we rewrite it as: Argument swapping
 
 <?php >
   $format = 'The %s contains %d monkeys';
-  printf($format, $num, $location);
+  echo sprintf($format, $num, $location);
 ?>
 
 
@@ -85,7 +92,7 @@ Argument swapping
 
 <?php >
   $format = 'The %2$s contains %1$d monkeys';
-  printf($format, $num, $location);
+  echo sprintf($format, $num, $location);
 ?>
 
 
@@ -96,7 +103,7 @@ more arguments in the code. For example: Argument swapping
 <?php >
   $format = 'The %2$s contains %1$d monkeys.
              That\'s a nice %2$s full of %1$d monkeys.';
-  printf($format, $num, $location);
+  echo sprintf($format, $num, $location);
 ?>
 
 
@@ -106,8 +113,8 @@ after the percent sign (%), before any other specifiers, as shown in the
 example below. Position specifier with other specifiers
 
 <?php >
-  $format= 'The %2$s contains %1$04d monkeys';
-  printf($format, $num, $location);
+  $format = 'The %2$s contains %1$04d monkeys';
+  echo sprintf($format, $num, $location);
 ?>
 
 The above example will output:
@@ -115,6 +122,11 @@ The above example will output:
   The tree contains 0005 monkeys
 
 
+
+Attempting to use a position specifier greater than PHP_INT_MAX will result in
+|sprintf| generating warnings.
+
+The c type specifier ignores padding and width
 
 {args}
 

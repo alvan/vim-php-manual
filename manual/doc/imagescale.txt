@@ -1,0 +1,22 @@
+imagescale -- Scale an image using the given new width and height
+
+  resource imagescale(resource image, int new_width [, int new_height = -1 [, int mode = IMG_BILINEAR_FIXED]])~
+
+
+
+This function is currently not documented; only its argument list is
+available.
+
+An image resource, returned by one of the image creation functions, such as
+|imagecreatetruecolor|.
+
+
+
+
+
+One of IMG_NEAREST_NEIGHBOUR, IMG_BILINEAR_FIXED, IMG_BICUBIC,
+IMG_BICUBIC_FIXED or anything else (will use two pass).
+
+Return scaled image resource on success or FALSE on failure.
+
+vim:ft=help:

@@ -1,7 +1,7 @@
 openssl_pkcs12_export -- Exports a PKCS#12 Compatible Certificate Store File
 to variable.
 
-  bool openssl_pkcs12_export(mixed x509, string out, mixed priv_key, string pass [, array args])~
+  bool openssl_pkcs12_export(mixed x509, string &out, mixed priv_key, string pass [, array args])~
 
 |openssl_pkcs12_export| stores {x509} into a string named by {out} in a
 PKCS#12 file format.

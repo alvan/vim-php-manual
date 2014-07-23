@@ -1,6 +1,6 @@
 fsockopen -- Open Internet or Unix domain socket connection
 
-  resource fsockopen(string hostname [, int port [, int errno [, string errstr [, float timeout]]]])~
+  resource fsockopen(string hostname [, int port = -1 [, int &errno = -1 [, string &errstr = -1 [, float timeout = ini_get("default_socket_timeout")]]]])~
 
 Initiates a socket connection to the resource specified by {hostname}.
 
@@ -18,7 +18,8 @@ context.
 either ssl:// or tls:// to use an SSL or TLS client connection over TCP/IP to
 connect to the remote host.
 
-{port} The port number.
+{port} The port number. This can be omitted and skipped with -1 for transports
+that do not use ports, such as unix://.
 
 {errno} If provided, holds the system level error number that occurred in the
 system-level connect() call.

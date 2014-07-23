@@ -1,6 +1,6 @@
 filter_input_array -- Gets external variables and optionally filters them
 
-  mixed filter_input_array(int type [, mixed definition])~
+  mixed filter_input_array(int type [, mixed definition [, bool add_empty = true]])~
 
 This function is useful for retrieving many values without repetitively
 calling |filter_input|.
@@ -17,6 +17,8 @@ understanding.
 
 This parameter can be also an integer holding a filter constant. Then all
 values in the input array are filtered by this filter.
+
+{add_empty} Add missing keys as NULL to the return value.
 
 An array containing the values of the requested variables on success, or FALSE
 on failure. An array value will be FALSE if the filter fails, or NULL if the
@@ -92,6 +94,8 @@ The above example will output:
   }
 
 
+
+Version Description 5.4.0 Added {add_empty} parameter.
 
 There is no REQUEST_TIME key in INPUT_SERVER array because it is inserted into
 the $_SERVER later.

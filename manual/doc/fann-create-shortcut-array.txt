@@ -1,0 +1,20 @@
+fann_create_shortcut_array -- Creates a standard backpropagation neural
+network which is not fully connectected and has shortcut connections
+
+  resource fann_create_shortcut_array(int num_layers, array layers)~
+
+Creates a standard backpropagation neural network which is not fully
+connectected and has shortcut connections using an array of layers sizes.
+
+This function is currently not documented; only its argument list is
+available.
+
+The total number of layers including the input and the output layer.
+
+An array of layers sizes.
+
+Returns a neural network resource on success, or FALSE on error.
+
+|fann_create_shortcut| |fann_create_sparse| |fann_create_standard|
+
+vim:ft=help:

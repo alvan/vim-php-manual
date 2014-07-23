@@ -1,6 +1,6 @@
 curl_multi_info_read -- Get information about the current transfers
 
-  array curl_multi_info_read(resource mh [, int msgs_in_queue])~
+  array curl_multi_info_read(resource mh [, int &msgs_in_queue = ])~
 
 Ask the multi handle if there are any messages or information from the
 individual transfers. Messages may include information such as an error code

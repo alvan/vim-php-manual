@@ -1,0 +1,30 @@
+fann_train_on_file -- Trains on an entire dataset, which is read from file,
+for a period of time
+
+  bool fann_train_on_file(resource ann, string filename, int max_epochs, int epochs_between_reports, float desired_error)~
+
+Trains on an entire dataset, which is read from file, for a period of time.
+
+This training uses the training algorithm chosen by
+|fann_set_training_algorithm| and the parameters set for these training
+algorithms.
+
+Neural network resource.
+
+The file containing train data
+
+The maximum number of epochs the training should continue
+
+The number of epochs between calling a user function. A value of zero means
+that user function is not called.
+
+The desired |fann_get_MSE| or |fann_get_bit_fail|, depending on the stop
+function chosen by |fann_set_train_stop_function|
+
+Returns TRUE on success, or FALSE otherwise.
+
+|fann_train_on_data| |fann_train_epoch| |fann_get_bit_fail| |fann_get_MSE|
+|fann_set_train_stop_function| |fann_set_training_algorithm|
+|fann_set_callback|
+
+vim:ft=help:

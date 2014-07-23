@@ -1,6 +1,6 @@
 set_error_handler -- Sets a user-defined error handler function
 
-  mixed set_error_handler(callable error_handler [, int error_types])~
+  mixed set_error_handler(callable error_handler [, int error_types = E_ALL | E_STRICT])~
 
 Sets a user function ({error_handler}) to handle errors in a script.
 
@@ -29,14 +29,10 @@ E_COMPILE_WARNING, and most of E_STRICT raised in the file where
 If errors occur before the script is executed (e.g. on file uploads) the
 custom error handler cannot be called since it is not registered at that time.
 
-{error_handler} The user function needs to accept two parameters: the error
-code, and a string describing the error. Then there are three optional
-parameters that may be supplied: the filename in which the error occurred, the
-line number in which the error occurred, and the context in which the error
-occurred (an array that points to the active symbol table at the point the
-error occurred). The function can be shown as:
+{error_handler} A callback with the following signature. NULL may be passed
+instead, to reset this handler to its default state.
 
-  mixed (callable error_handler [, int error_types, int errno, string errstr [, string errfile [, int errline [, array errcontext]]]])~
+  bool (callable error_handler [, int error_types = E_ALL | E_STRICT, int errno = E_ALL | E_STRICT, string errstr = E_ALL | E_STRICT [, string errfile = E_ALL | E_STRICT [, int errline = E_ALL | E_STRICT [, array errcontext = E_ALL | E_STRICT]]]])~
 
 {errno} The first parameter, {errno}, contains the level of the error raised,
 as an integer.
@@ -69,12 +65,13 @@ case of an error such as an invalid callback. If the previous error handler
 was a class method, this function will return an indexed array with the class
 and the method name.
 
-Version Description 5.2.0 The error handler must return FALSE to populate
-$php_errormsg. 5.0.0 The {error_types} parameter was introduced. 4.3.0 Instead
-of a function name, an array containing an object reference and a method name
-can also be supplied as the {error_handler}. 4.0.2 Three optional parameters
-for the {error_handler} user function was introduced. These are the filename,
-the line number, and the context.
+Version Description 5.5.0 {error_handler} now accepts NULL. 5.2.0 The error
+handler must return FALSE to populate $php_errormsg. 5.0.0 The {error_types}
+parameter was introduced. 4.3.0 Instead of a function name, an array
+containing an object reference and a method name can also be supplied as the
+{error_handler}. 4.0.2 Three optional parameters for the {error_handler} user
+function was introduced. These are the filename, the line number, and the
+context.
 
 Error handling with |set_error_handler| and |trigger_error| The example below
 shows the handling of internal exceptions by triggering errors and handling

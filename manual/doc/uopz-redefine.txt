@@ -1,0 +1,31 @@
+uopz_redefine -- Redefine a constant
+
+  void uopz_redefine(string class, string constant, mixed value)~
+
+  void uopz_redefine(string class, string constant, mixed value, string constant, mixed value)~
+
+Redefines the given {constant} as {value}
+
+The name of the class containing the constant
+
+The name of the constant
+
+The new value for the constant, must be a valid type for a constant variable
+
+
+
+|uopz_redefine| example
+
+<?php >
+  define("MY", 100);
+  
+  uopz_redefine("MY", 1000);
+  
+  echo MY;
+?>
+
+The above example will output something similar to:
+
+  1000
+
+vim:ft=help:

@@ -1,6 +1,6 @@
 parse_ini_string -- Parse a configuration string
 
-  array parse_ini_string(string ini [, bool process_sections [, int scanner_mode]])~
+  array parse_ini_string(string ini [, bool process_sections = false [, int scanner_mode = INI_SCANNER_NORMAL]])~
 
 |parse_ini_string| returns the settings in string {ini} in an associative
 array.

@@ -1,7 +1,7 @@
 socket_select -- Runs the select() system call on the given arrays of sockets
 with a specified timeout
 
-  int socket_select(array read, array write, array except, int tv_sec [, int tv_usec])~
+  int socket_select(array &read, array &write, array &except, int tv_sec [, int tv_usec = 0])~
 
 |socket_select| accepts arrays of sockets and waits for them to change status.
 Those coming with BSD sockets background will recognize that those socket

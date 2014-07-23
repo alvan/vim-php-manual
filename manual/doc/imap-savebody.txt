@@ -1,6 +1,6 @@
 imap_savebody -- Save a specific body section to a file
 
-  bool imap_savebody(resource imap_stream, mixed file, int msg_number [, string part_number [, int options]])~
+  bool imap_savebody(resource imap_stream, mixed file, int msg_number [, string part_number = "" [, int options = 0]])~
 
 Saves a part or the whole body of the specified message.
 

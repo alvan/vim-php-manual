@@ -1,6 +1,6 @@
 ncurses_color_content -- Retrieves RGB components of a color
 
-  int ncurses_color_content(int color, int r, int g, int b)~
+  int ncurses_color_content(int color, int &r, int &g, int &b)~
 
 Retrieves the red, green, and blue components for the given color definition.
 Terminal color capabilities must be initialized with |ncurses_start_color|

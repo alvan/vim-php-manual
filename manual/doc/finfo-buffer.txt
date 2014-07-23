@@ -2,11 +2,11 @@ finfo::buffer -- Return information about a string buffer
 
 Procedural style
 
-  string finfo_buffer(resource finfo, string string [, int options [, resource context]])~
+  string finfo_buffer(resource finfo, string string =  [, int options = FILEINFO_NONE [, resource context = ]])~
 
 Object oriented style
 
-  string finfo::buffer(resource finfo, string string [, int options [, resource context, string string [, int options [, resource context]]]])~
+  string finfo::buffer(resource finfo, string string =  [, int options = FILEINFO_NONE [, resource context = , string string =  [, int options = FILEINFO_NONE [, resource context = ]]]])~
 
 This function is used to get information about binary data in a string.
 

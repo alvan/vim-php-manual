@@ -1,6 +1,6 @@
 mysqlnd_uh_set_connection_proxy -- Installs a proxy for mysqlnd connections
 
-  bool mysqlnd_uh_set_connection_proxy(MysqlndUhConnection connection_proxy [, mysqli mysqli_connection])~
+  bool mysqlnd_uh_set_connection_proxy(MysqlndUhConnection &connection_proxy [, mysqli &mysqli_connection])~
 
 Installs a proxy object to hook mysqlnd's connection objects methods. Once
 installed, the proxy will be used for all MySQL connections opened with

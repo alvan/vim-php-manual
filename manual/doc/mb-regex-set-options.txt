@@ -1,10 +1,10 @@
 mb_regex_set_options -- Set/Get the default options for mbregex functions
 
-  string mb_regex_set_options([string options])~
+  string mb_regex_set_options([string options = mb_regex_set_options()])~
 
 Sets the default options described by {options} for multibyte regex functions.
 
-{options} The options to set. This is a a string where each character is an
+{options} The options to set. This is a string where each character is an
 option. To set a mode, the mode character must be the last one set, however
 there can only be set one mode but multiple options.
 

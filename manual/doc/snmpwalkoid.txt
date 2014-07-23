@@ -1,6 +1,6 @@
 snmpwalkoid -- Query for a tree of information about a network entity
 
-  array snmpwalkoid(string hostname, string community, string object_id [, int timeout [, int retries]])~
+  array snmpwalkoid(string hostname, string community, string object_id [, int timeout = 1000000 [, int retries = 5]])~
 
 |snmpwalkoid| function is used to read all object ids and their respective
 values from an SNMP agent specified by {hostname}.

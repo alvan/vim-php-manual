@@ -15,7 +15,7 @@ feature, which sets the waiting time (in seconds) for the lock until the
 transaction lock setting is allowed. The default value of the
 lock_timeout_in_secs parameter is -1, which means the application client will
 wait indefinitely until the transaction lock is allowed. PARAM_AUTO_COMMIT In
-CUBRID PHP, an auto-commit mode is disabled by default for transaction
+CUBRID PHP, auto-commit mode is disabled by default for transaction
 management. It can be set by using |cubrid_set_autocommit|.
 
 The following table shows the isolation levels from 1 to 6. It consists of
@@ -95,15 +95,15 @@ MAX_STRING_LENGTH to PARAM_MAX_STRING_LENGTH in result.
 
 The above example will output:
 
-  CUBRID PHP Version:            8.3.1.0005
+  CUBRID PHP Version:            9.1.0.0001
   
   PARAM_ISOLATION_LEVEL          3
-  PARAM_LOCK_TIMEOUT             -1
-  PARAM_MAX_STRING_LENGTH        1073741823
-  PARAM_AUTO_COMMIT              0
+  LOCK_TIMEOUT                   -1
+  MAX_STRING_LENGTH              1073741823
+  PARAM_AUTO_COMMIT              1
   
-  Server Info:                   8.3.1.0173
-  Client Info:                   8.3.1
+  Server Info:                   9.1.0.0212
+  Client Info:                   9.1.0
   
   CUBRID Charset:                iso8859-1
 

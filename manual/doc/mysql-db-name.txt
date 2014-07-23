@@ -1,6 +1,11 @@
 mysql_db_name -- Retrieves database name from the call to mysql_list_dbs
 
-  string mysql_db_name(resource result, int row [, mixed field])~
+This extension is deprecated as of PHP 5.5.0, and will be removed in the
+future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
+MySQL: choosing an API guide and related FAQ for more information.
+Alternatives to this function include:
+
+  string mysql_db_name(resource result, int row [, mixed field = NULL])~
 
 Retrieve the database name from a call to |mysql_list_dbs|.
 
@@ -12,6 +17,9 @@ Retrieve the database name from a call to |mysql_list_dbs|.
 
 Returns the database name on success, and FALSE on failure. If FALSE is
 returned, use |mysql_error| to determine the nature of the error.
+
+Version Description 5.5.0 The |mysql_list_dbs| function is deprecated, and
+emits an E_DEPRECATED level error.
 
 |mysql_db_name| example
 

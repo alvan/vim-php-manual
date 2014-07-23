@@ -1,6 +1,6 @@
 proc_terminate -- Kills a process opened by proc_open
 
-  bool proc_terminate(resource process [, int signal])~
+  bool proc_terminate(resource process [, int signal = 15])~
 
 Signals a {process} (created using |proc_open|) that it should terminate.
 |proc_terminate| returns immediately and does not wait for the process to

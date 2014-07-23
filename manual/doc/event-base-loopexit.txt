@@ -1,6 +1,6 @@
 event_base_loopexit -- Exit loop after a time
 
-  bool event_base_loopexit(resource event_base [, int timeout])~
+  bool event_base_loopexit(resource event_base [, int timeout = -1])~
 
 The next event loop iteration after the given timer expires will complete
 normally, then exit without blocking for events again.

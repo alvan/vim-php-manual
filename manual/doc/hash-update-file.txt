@@ -1,13 +1,13 @@
 hash_update_file -- Pump data into an active hashing context from a file
 
-  bool hash_update_file(resource context, string filename [, resource context])~
+  bool hash_update_file(resource hcontext, string filename [, resource scontext = ])~
 
-{context} Hashing context returned by |hash_init|.
+{hcontext} Hashing context returned by |hash_init|.
 
 {filename} URL describing location of file to be hashed; Supports fopen
 wrappers.
 
-{context} Stream context as returned by |stream_context_create|.
+{scontext} Stream context as returned by |stream_context_create|.
 
 Returns TRUE on success or &false; on failure.
 

@@ -1,7 +1,7 @@
 openssl_pkey_export -- Gets an exportable representation of a key into a
 string
 
-  bool openssl_pkey_export(mixed key, string out [, string passphrase [, array configargs]])~
+  bool openssl_pkey_export(mixed key, string &out [, string passphrase [, array configargs]])~
 
 |openssl_pkey_export| exports {key} as a PEM encoded string and stores it into
 {out} (which is passed by reference).

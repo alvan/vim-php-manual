@@ -1,14 +1,15 @@
 gmp_scan1 -- Scan for 1
 
-  int gmp_scan1(resource a, int start)~
+  int gmp_scan1(GMP a, int start)~
 
 Scans {a}, starting with bit {start}, towards more significant bits, until the
 first set bit is found.
 
 {a} The number to scan.
 
-It can be either a GMP number resource, or a numeric string given that it is
-possible to convert the latter to a number.
+Either a GMP number resource in PHP 5.5 and earlier, a GMP object in PHP 5.6
+and later, or a numeric string provided that it is possible to convert the
+latter to a number.
 
 {start} The starting bit.
 

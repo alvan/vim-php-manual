@@ -1,7 +1,7 @@
 svn_ls -- Returns list of directory contents in repository URL, optionally at
 revision number
 
-  array svn_ls(string repos_url [, int revision_no [, bool recurse [, bool peg]]])~
+  array svn_ls(string repos_url [, int revision_no = SVN_REVISION_HEAD [, bool recurse = false [, bool peg = false]]])~
 
 This function queries the repository URL and returns a list of files and
 directories, optionally from a specific revision. This is equivalent to svn

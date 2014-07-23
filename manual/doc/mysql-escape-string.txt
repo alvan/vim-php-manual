@@ -1,5 +1,10 @@
 mysql_escape_string -- Escapes a string for use in a mysql_query
 
+This extension is deprecated as of PHP 5.5.0, and will be removed in the
+future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
+MySQL: choosing an API guide and related FAQ for more information.
+Alternatives to this function include:
+
   string mysql_escape_string(string unescaped_string)~
 
 This function will escape the {unescaped_string}, so that it is safe to place

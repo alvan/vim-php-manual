@@ -84,10 +84,6 @@ Returns a statement handle on success, or FALSE on error.
 This function does not validate {sql_text}. The only way to find out if
 {sql_text} is a valid SQL or PL/SQL statement is to execute it.
 
-In PHP versions before 5.0.0 use |ociparse| instead. The old function name can
-still be used in current versions, however it is deprecated and not
-recommended.
-
 |oci_execute| |oci_free_statement|
 
 vim:ft=help:

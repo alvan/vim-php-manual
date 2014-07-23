@@ -1,6 +1,6 @@
 pg_trace -- Enable tracing a PostgreSQL connection
 
-  bool pg_trace(string pathname [, string mode [, resource connection]])~
+  bool pg_trace(string pathname [, string mode = "w" [, resource connection = "w"]])~
 
 |pg_trace| enables tracing of the PostgreSQL frontend/backend communication to
 a file. To fully understand the results, one needs to be familiar with the
@@ -14,7 +14,7 @@ information, refer to the PostgreSQL Documentation.
 {pathname} The full path and file name of the file in which to write the trace
 log. Same as in |fopen|.
 
-{pathname} An optional file access mode, same as for |fopen|.
+{mode} An optional file access mode, same as for |fopen|.
 
 {connection} PostgreSQL database connection resource. When {connection} is not
 present, the default connection is used. The default connection is the last

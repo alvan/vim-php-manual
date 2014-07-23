@@ -1,13 +1,13 @@
 array_keys -- Return all the keys or a subset of the keys of an array
 
-  array array_keys(array input [, mixed search_value [, bool strict]])~
+  array array_keys(array array [, mixed search_value [, bool strict = false]])~
 
-|array_keys| returns the keys, numeric and string, from the {input} array.
+|array_keys| returns the keys, numeric and string, from the {array}.
 
 If the optional {search_value} is specified, then only the keys for that value
-are returned. Otherwise, all the keys from the {input} are returned.
+are returned. Otherwise, all the keys from the {array} are returned.
 
-{input} An array containing keys to return.
+{array} An array containing keys to return.
 
 {search_value} If specified, then only keys containing these values are
 returned.
@@ -15,7 +15,7 @@ returned.
 {strict} Determines if strict comparison (===) should be used during the
 search.
 
-Returns an array of all the keys in {input}.
+Returns an array of all the keys in {array}.
 
 Version Description 5.0.0 Added the {strict} parameter.
 

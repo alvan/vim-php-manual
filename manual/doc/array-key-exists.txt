@@ -1,18 +1,15 @@
 array_key_exists -- Checks if the given key or index exists in the array
 
-  bool array_key_exists(mixed key, array search)~
+  bool array_key_exists(mixed key, array array)~
 
 |array_key_exists| returns TRUE if the given {key} is set in the array. {key}
 can be any value possible for an array index.
 
 {key} Value to check.
 
-{search} An array with keys to check.
+{array} An array with keys to check.
 
 Returns TRUE on success or &false; on failure.
-
-Version Description 5.3.0 This function doesn't work with objects anymore,
-|property_exists| should be used in this case.
 
 |array_key_exists| example
 
@@ -42,6 +39,13 @@ correspond to a NULL value, while |array_key_exists| does.
 
 For backward compatibility, the following deprecated alias may be used:
 |key_exists|
+
+For backward compatibility reasons, |array_key_exists| will also return TRUE
+if {key} is a property defined within an object given as {array}. This
+behaviour should not be relied upon, and care should be taken to ensure that
+{array} is an array.
+
+To check whether a property exists in an object, use |property_exists|.
 
 |isset| |array_keys| |in_array| |property_exists|
 

@@ -1,11 +1,9 @@
 array_slice -- Extract a slice of the array
 
-  array array_slice(array array, int offset [, int length [, bool preserve_keys]])~
+  array array_slice(array array, int offset [, int length =  [, bool preserve_keys = false]])~
 
 |array_slice| returns the sequence of elements from the array {array} as
 specified by the {offset} and {length} parameters.
-
-This function will |reset| the array pointer of the input array after use.
 
 {array} The input array.
 
@@ -26,7 +24,11 @@ array indices by default. You can change this behaviour by setting
 
 Returns the slice.
 
-Version Description 5.0.2 The optional {preserve_keys} parameter was added.
+Version Description 5.2.4 The default value of the {length} parameter was
+changed to NULL. A NULL {length} now tells the function to use the length of
+{array}. Prior to this version, a NULL {length} was taken to mean a zero
+length (nothing will be returned). 5.0.2 The optional {preserve_keys}
+parameter was added.
 
 |array_slice| examples
 

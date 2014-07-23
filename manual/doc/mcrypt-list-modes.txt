@@ -1,6 +1,6 @@
 mcrypt_list_modes -- Gets an array of all supported modes
 
-  array mcrypt_list_modes([string lib_dir])~
+  array mcrypt_list_modes([string lib_dir = ini_get("mcrypt.modes_dir")])~
 
 Gets the list of all supported modes in the {lib_dir} parameter.
 

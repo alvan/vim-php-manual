@@ -21,9 +21,8 @@ error then -1 is returned.
 
 
 
-|proc_close| is internally implemented using the waitpid(3) system call. To
-obtain the real exit status code the |pcntl_wexitstatus| function should be
-used.
+|pclose| is internally implemented using the waitpid(3) system call. To obtain
+the real exit status code the |pcntl_wexitstatus| function should be used.
 
 |popen|
 

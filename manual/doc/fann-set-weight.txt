@@ -1,0 +1,17 @@
+fann_set_weight -- Set a connection in the network
+
+  bool fann_set_weight(resource ann, int from_neuron, int to_neuron, float weight)~
+
+Set a connections in the network.
+
+Neural network resource.
+
+The neuron where the connection starts
+
+The neuron where the connection ends
+
+Connection weight
+
+Returns TRUE on success, or FALSE otherwise.
+
+vim:ft=help:

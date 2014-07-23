@@ -1,6 +1,6 @@
 pcntl_sigwaitinfo -- Waits for signals
 
-  int pcntl_sigwaitinfo(array set [, array siginfo])~
+  int pcntl_sigwaitinfo(array set [, array &siginfo])~
 
 The |pcntl_sigwaitinfo| function suspends execution of the calling script
 until one of the signals given in {set} are delivered. If one of the signal is

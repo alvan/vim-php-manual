@@ -1,7 +1,7 @@
 mb_stripos -- Finds position of first occurrence of a string within another,
 case insensitive
 
-  int mb_stripos(string haystack, string needle [, int offset [, string encoding]])~
+  int mb_stripos(string haystack, string needle [, int offset = 0 [, string encoding = mb_internal_encoding()]])~
 
 |mb_stripos| returns the numeric position of the first occurrence of {needle}
 in the {haystack} string. Unlike |mb_strpos|, |mb_stripos| is

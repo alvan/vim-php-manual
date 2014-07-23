@@ -1,6 +1,6 @@
 file_get_contents -- Reads entire file into a string
 
-  string file_get_contents(string filename [, bool use_include_path [, resource context [, int offset [, int maxlen]]]])~
+  string file_get_contents(string filename [, bool use_include_path = false [, resource context = false [, int offset = -1 [, int maxlen = -1]]]])~
 
 This function is similar to |file|, except that |file_get_contents| returns
 the file in a string, starting at the specified {offset} up to {maxlen} bytes.
@@ -15,8 +15,8 @@ encode the URI with |urlencode|.
 
 {filename} Name of the file to read.
 
-{use_include_path} As of PHP 5 the FILE_USE_INCLUDE_PATH can be used to
-trigger include path search.
+{use_include_path} As of PHP 5 the FILE_USE_INCLUDE_PATH constant can be used
+to trigger include path search.
 
 {context} A valid context resource created with |stream_context_create|. If
 you don't need to use a custom context, you can skip this parameter by NULL.
@@ -33,8 +33,14 @@ filters.
 
 The function returns the read data or FALSE on failure.
 
-An E_WARNING level error is generated if either {maxlength} is less than zero,
-or if {offset} exceeds the length of the stream.
+This function may return Boolean FALSE, but may also return a non-Boolean
+value which evaluates to FALSE. Please read the section on Booleans for more
+information. Use the === operator for testing the return value of this
+function.
+
+An E_WARNING level error is generated if {filename} cannot be found,
+{maxlength} is less than zero, or if seeking to the specified {offset} in the
+stream fails.
 
 Get and output the source of the homepage of a website
 

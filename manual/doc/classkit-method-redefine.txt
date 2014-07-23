@@ -1,6 +1,6 @@
 classkit_method_redefine -- Dynamically changes the code of the given method
 
-  bool classkit_method_redefine(string classname, string methodname, string args, string code [, int flags])~
+  bool classkit_method_redefine(string classname, string methodname, string args, string code [, int flags = CLASSKIT_ACC_PUBLIC])~
 
 This function cannot be used to manipulate the currently running (or chained)
 method.

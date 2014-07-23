@@ -1,7 +1,7 @@
 mssql_bind -- Adds a parameter to a stored procedure or a remote stored
 procedure
 
-  bool mssql_bind(resource stmt, string param_name, mixed var, int type [, bool is_output [, bool is_null [, int maxlen]]])~
+  bool mssql_bind(resource stmt, string param_name, mixed &var, int type [, bool is_output = false [, bool is_null = false [, int maxlen = -1]]])~
 
 Binds a parameter to a stored procedure or a remote stored procedure.
 

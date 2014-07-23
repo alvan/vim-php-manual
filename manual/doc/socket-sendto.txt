@@ -1,6 +1,6 @@
 socket_sendto -- Sends a message to a socket, whether it is connected or not
 
-  int socket_sendto(resource socket, string buf, int len, int flags, string addr [, int port])~
+  int socket_sendto(resource socket, string buf, int len, int flags, string addr [, int port = 0])~
 
 The function |socket_sendto| sends {len} bytes from {buf} through the socket
 {socket} to the {port} at the address {addr}.

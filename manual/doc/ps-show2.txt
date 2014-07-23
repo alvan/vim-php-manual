@@ -2,16 +2,13 @@ ps_show2 -- Output a text at current position
 
   bool ps_show2(resource psdoc, string text, int len)~
 
-This function is currently not documented; only its argument list is
-available.
-
-
+Output text at the current position. Do not print more than {len} characters.
 
 {psdoc} Resource identifier of the postscript file as returned by |ps_new|.
 
-{text}
+{text} The text to be output.
 
-{len}
+{len} The maximum number of characters to print.
 
 Returns TRUE on success or &false; on failure.
 

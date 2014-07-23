@@ -1,7 +1,7 @@
 snmp_set_valueretrieval -- Specify the method how the SNMP values will be
 returned
 
-  bool snmp_set_valueretrieval(int method)~
+  bool snmp_set_valueretrieval(int method = SNMP_VALUE_LIBRARY)~
 
 {method} types SNMP_VALUE_LIBRARY The return values will be as returned by the
 Net-SNMP library. SNMP_VALUE_PLAIN The return values will be the plain value

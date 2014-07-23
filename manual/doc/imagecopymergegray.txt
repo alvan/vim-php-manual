@@ -29,8 +29,8 @@ scale before the copy operation.
 
 {pct} The {src_im} will be changed to grayscale according to {pct} where 0 is
 fully grayscale and 100 is unchanged. When {pct} = 100 this function behaves
-identically to |imagecopy| for pallete images, while it implements alpha
-transparency for true colour images.
+identically to |imagecopy| for pallete images, except for ignoring alpha
+components, while it implements alpha transparency for true colour images.
 
 Returns TRUE on success or &false; on failure.
 

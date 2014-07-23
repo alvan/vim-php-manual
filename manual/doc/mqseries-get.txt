@@ -1,6 +1,6 @@
 mqseries_get -- MQSeries MQGET
 
-  void mqseries_get(resource hConn, resource hObj, array md, array gmo, int bufferLength, string msg, int data_length, resource compCode, resource reason)~
+  void mqseries_get(resource hConn, resource hObj, array &md, array &gmo, int &bufferLength, string &msg, int &data_length, resource &compCode, resource &reason)~
 
 The |mqseries_get| (MQGET) call retrieves a message from a local queue that
 has been opened using the |mqseries_open| (MQOPEN) call

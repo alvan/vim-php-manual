@@ -32,12 +32,12 @@ user-defined callback are included. The total number of statements sent to the
 slaves is use_slave + use_slave_sql_hint + use_slave_callback.
 
 PECL/mysqlnd_ms 1.1.0 introduces a new concept of chained filters. The
-statictics is now set by the internal load balancing filter. With version
+statistics is now set by the internal load balancing filter. With version
 1.1.0 the load balancing filter is always the last in the filter chain, if
 used. In future versions a load balancing filter may be followed by other
 filters causing another change in the meaning of the statistic. If, in the
 future, a load balancing filter is followed by another filter it is no longer
-guaranteed that the satement, whichs increments use_slave, will be executed on
+guaranteed that the statement, which increments use_slave, will be executed on
 the slaves.
 
 The meaning for version 1.1.0 is as follows. Number of statements sent to the
@@ -59,7 +59,7 @@ statictics is now set by the internal load balancing filter. With version
 used. In future versions a load balancing filter may be followed by other
 filters causing another change in the meaning of the statistic. If, in the
 future, a load balancing filter is followed by another filter it is no longer
-guaranteed that the satement, whichs increments use_master, will be executed
+guaranteed that the statement, which increments use_master, will be executed
 on the slaves.
 
 The meaning for version 1.1.0 is as follows. Number of statements sent to the
@@ -130,6 +130,8 @@ The above example will output:
     ["gtid_implicit_commit_injections_success"]=>
     string(1) "0"
     ["gtid_implicit_commit_injections_failure"]=>
+    string(1) "0"
+    ["transient_error_retries"]=>
     string(1) "0"
   }
 

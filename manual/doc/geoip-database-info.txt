@@ -1,6 +1,6 @@
 geoip_database_info -- Get GeoIP Database information
 
-  string geoip_database_info([int database])~
+  string geoip_database_info([int database = GEOIP_COUNTRY_EDITION])~
 
 The |geoip_database_info| function returns the corresponding GeoIP Database
 version as it is defined inside the binary file.
@@ -13,8 +13,8 @@ defined with this extension (ie: GEOIP_*_EDITION).
 
 Returns the corresponding database version, or NULL on error.
 
-A |geoip_region_by_name| example This will output the current database version
-string.
+A |geoip_database_info| example This will output information regarding the
+database.
 
 <?php >
   print geoip_database_info(GEOIP_COUNTRY_EDITION);

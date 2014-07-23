@@ -1,6 +1,6 @@
 curl_multi_select -- Wait for activity on any curl_multi connection
 
-  int curl_multi_select(resource mh [, float timeout])~
+  int curl_multi_select(resource mh [, float timeout = 1.0])~
 
 Blocks until there is activity on any of the curl_multi connections.
 

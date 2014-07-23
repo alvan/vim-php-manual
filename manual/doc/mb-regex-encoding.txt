@@ -1,13 +1,19 @@
-mb_regex_encoding -- Returns current encoding for multibyte regex as string
+mb_regex_encoding -- Set/Get character encoding for multibyte regex
 
-  mixed mb_regex_encoding([string encoding])~
+  mixed mb_regex_encoding([string encoding = mb_regex_encoding()])~
 
-Returns the current encoding for a multibyte regex as a string.
+Set/Get character encoding for a multibyte regex.
 
 {encoding} The {encoding} parameter is the character encoding. If it is
 omitted, the internal character encoding value will be used.
 
-Returns the character encoding used by multibyte regex functions.
+If {encoding} is set, then Returns TRUE on success or &false; on failure. In
+this case, the internal character encoding is NOT changed. If {encoding} is
+omitted, then the current character encoding name for a multibyte regex is
+returned.
+
+Version Description 5.6.0 Default encoding is changed to UTF-8. It was EUC-JP
+Previously.
 
 |mb_internal_encoding| |mb_ereg|
 

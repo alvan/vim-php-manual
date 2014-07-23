@@ -1,7 +1,7 @@
 hash_update_stream -- Pump data into an active hashing context from an open
 stream
 
-  int hash_update_stream(resource context, resource handle [, int length])~
+  int hash_update_stream(resource context, resource handle [, int length = -1])~
 
 {context} Hashing context returned by |hash_init|.
 

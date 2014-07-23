@@ -1,6 +1,6 @@
 cubrid_move_cursor -- Move the cursor in the result
 
-  int cubrid_move_cursor(resource req_identifier, int offset [, int origin])~
+  int cubrid_move_cursor(resource req_identifier, int offset [, int origin = CUBRID_CURSOR_CURRENT])~
 
 The |cubrid_move_cursor| function is used to move the current cursor location
 of {req_identifier} by the value set in the {offset} argument, to the
@@ -30,7 +30,7 @@ FALSE, when process is unsucceful.
 |cubrid_move_cursor| example
 
 <?php >
-  $conn = cubrid_connect("127.0.0.1", 33000, "demodb");
+  $conn = cubrid_connect("127.0.0.1", 33000, "demodb", "dba");
   
   $req = cubrid_execute($conn, "SELECT * FROM code");
   cubrid_move_cursor($req, 1, CUBRID_CURSOR_LAST);

@@ -1,6 +1,6 @@
 pcntl_sigprocmask -- Sets and retrieves blocked signals
 
-  bool pcntl_sigprocmask(int how, array set [, array oldset])~
+  bool pcntl_sigprocmask(int how, array set [, array &oldset])~
 
 The |pcntl_sigprocmask| function adds, removes or sets blocked signals,
 depending on the {how} parameter.

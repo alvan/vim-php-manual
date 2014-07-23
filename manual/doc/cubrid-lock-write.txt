@@ -16,7 +16,7 @@ FALSE, when process is unsuccessful.
 |cubrid_lock_write| example
 
 <?php >
-  $conn = cubrid_connect("localhost", 33000, "demodb");
+  $conn = cubrid_connect("localhost", 33000, "demodb", "dba");
   
   @cubrid_execute($conn, "DROP TABLE foo");
   cubrid_execute($conn, "CREATE TABLE foo(a int AUTO_INCREMENT, b set(int), c list(int), d char(10))");

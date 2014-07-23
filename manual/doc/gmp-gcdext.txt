@@ -1,6 +1,6 @@
 gmp_gcdext -- Calculate GCD and multipliers
 
-  array gmp_gcdext(resource a, resource b)~
+  array gmp_gcdext(GMP a, GMP b)~
 
 Calculates g, s, and t, such that a*s + b*t = g = gcd(a,b), where gcd is the
 greatest common divisor. Returns an array with respective elements g, s and t.
@@ -10,11 +10,13 @@ variables. These are equations that allow only integer solutions and have the
 form: a*x + b*y = c. For more information, go to the "Diophantine Equation"
 page at MathWorld
 
-{a} It can be either a GMP number resource, or a numeric string given that it
-is possible to convert the latter to a number.
+{a} Either a GMP number resource in PHP 5.5 and earlier, a GMP object in PHP
+5.6 and later, or a numeric string provided that it is possible to convert the
+latter to a number.
 
-{b} It can be either a GMP number resource, or a numeric string given that it
-is possible to convert the latter to a number.
+{b} Either a GMP number resource in PHP 5.5 and earlier, a GMP object in PHP
+5.6 and later, or a numeric string provided that it is possible to convert the
+latter to a number.
 
 An array of GMP numbers.
 

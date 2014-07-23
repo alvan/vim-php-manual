@@ -1,6 +1,6 @@
 socket_bind -- Binds a name to a socket
 
-  bool socket_bind(resource socket, string address [, int port])~
+  bool socket_bind(resource socket, string address [, int port = 0])~
 
 Binds the name given in {address} to the socket described by {socket}. This
 has to be done before a connection is be established using |socket_connect| or

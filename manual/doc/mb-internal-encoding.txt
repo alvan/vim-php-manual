@@ -1,15 +1,17 @@
 mb_internal_encoding -- Set/Get internal character encoding
 
-  mixed mb_internal_encoding([string encoding])~
+  mixed mb_internal_encoding([string encoding = mb_internal_encoding()])~
 
 Set/Get the internal character encoding
 
 {encoding} {encoding} is the character encoding name used for the HTTP input
 character encoding conversion, HTTP output character encoding conversion, and
 the default character encoding for string functions defined by the mbstring
-module.
+module. You should notice that the internal encoding is totally different from
+the one for multibyte regex.
 
-If {encoding} is set, then Returns TRUE on success or &false; on failure. If
+If {encoding} is set, then Returns TRUE on success or &false; on failure. In
+this case, the character encoding for multibyte regex is NOT changed. If
 {encoding} is omitted, then the current character encoding name is returned.
 
 |mb_internal_encoding| example
@@ -26,6 +28,6 @@ If {encoding} is set, then Returns TRUE on success or &false; on failure. If
 
 
 
-|mb_http_input| |mb_http_output| |mb_detect_order|
+|mb_http_input| |mb_http_output| |mb_detect_order| |mb_regex_encoding|
 
 vim:ft=help:

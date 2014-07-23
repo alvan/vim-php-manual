@@ -1,7 +1,7 @@
 oci_define_by_name -- Associates a PHP variable with a column for query
 fetches
 
-  bool oci_define_by_name(resource statement, string column_name, mixed variable [, int type])~
+  bool oci_define_by_name(resource statement, string column_name, mixed &variable [, int type = SQLT_CHR])~
 
 Associates a PHP variable with a column for query fetches using |oci_fetch|.
 
@@ -187,10 +187,6 @@ Returns TRUE on success or &false; on failure.
 
 
 
-
-In PHP versions before 5.0.0 use |ocidefinebyname| instead. The old function
-name can still be used in current versions, however it is deprecated and not
-recommended.
 
 |oci_fetch| |oci_new_descriptor|
 

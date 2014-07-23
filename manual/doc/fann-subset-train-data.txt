@@ -1,0 +1,21 @@
+fann_subset_train_data -- Returns an copy of a subset of the train data
+
+  resource fann_subset_train_data(resource data, int pos, int length)~
+
+Returns an copy of a subset of the train data resource, starting at position
+pos and length elements forward.
+
+The fann_subset_train_data(train_data, 0, fann_length_train_data(train_data))
+do the same as |fann_duplicate_train_data|
+
+Neural network training data resource.
+
+Starting position.
+
+The number of copied elements.
+
+Returns a train data resource on success, or FALSE on error.
+
+|fann_duplicate_train_data|
+
+vim:ft=help:

@@ -1,12 +1,12 @@
 SQLiteUnbuffered::fetch -- Fetches the next row from a result set as an array
 
-  array sqlite_fetch_array(resource result [, int result_type [, bool decode_binary]])~
+  array sqlite_fetch_array(resource result [, int result_type = SQLITE_BOTH [, bool decode_binary = true]])~
 
 Object oriented style (method):
 
-  array SQLiteResult::fetch(resource result [, int result_type [, bool decode_binary [, int result_type [, bool decode_binary]]]])~
+  array SQLiteResult::fetch(resource result [, int result_type = SQLITE_BOTH [, bool decode_binary = true [, int result_type = SQLITE_BOTH [, bool decode_binary = true]]]])~
 
-  array SQLiteUnbuffered::fetch(resource result [, int result_type [, bool decode_binary [, int result_type [, bool decode_binary [, int result_type [, bool decode_binary]]]]]])~
+  array SQLiteUnbuffered::fetch(resource result [, int result_type = SQLITE_BOTH [, bool decode_binary = true [, int result_type = SQLITE_BOTH [, bool decode_binary = true [, int result_type = SQLITE_BOTH [, bool decode_binary = true]]]]]])~
 
 Fetches the next row from the given {result} handle. If there are no more
 rows, returns FALSE, otherwise returns an associative array representing the

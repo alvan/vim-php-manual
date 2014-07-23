@@ -1,6 +1,6 @@
 mb_encode_mimeheader -- Encode string for MIME header
 
-  string mb_encode_mimeheader(string str [, string charset [, string transfer_encoding [, string linefeed [, int indent]]]])~
+  string mb_encode_mimeheader(string str [, string charset = mb_internal_encoding() [, string transfer_encoding = "B" [, string linefeed = "\r\n" [, int indent = 0]]]])~
 
 Encodes a given string {str} by the MIME header encoding scheme.
 

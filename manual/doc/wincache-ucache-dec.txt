@@ -1,6 +1,6 @@
 wincache_ucache_dec -- Decrements the value associated with the key
 
-  mixed wincache_ucache_dec(string key [, int dec_by [, bool success]])~
+  mixed wincache_ucache_dec(string key [, int dec_by = 1 [, bool &success = 1]])~
 
 Decrements the value associated with the {key} by 1 or as specified by
 {dec_by}.

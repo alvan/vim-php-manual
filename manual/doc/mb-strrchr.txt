@@ -1,7 +1,7 @@
 mb_strrchr -- Finds the last occurrence of a character in a string within
 another
 
-  string mb_strrchr(string haystack, string needle [, bool part [, string encoding]])~
+  string mb_strrchr(string haystack, string needle [, bool part = false [, string encoding = mb_internal_encoding()]])~
 
 |mb_strrchr| finds the last occurrence of {needle} in {haystack} and returns
 the portion of {haystack}. If {needle} is not found, it returns FALSE.

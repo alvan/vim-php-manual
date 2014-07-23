@@ -1,13 +1,13 @@
 SQLiteUnbuffered::fetchAll -- Fetches all rows from a result set as an array
 of arrays
 
-  array sqlite_fetch_all(resource result [, int result_type [, bool decode_binary]])~
+  array sqlite_fetch_all(resource result [, int result_type = SQLITE_BOTH [, bool decode_binary = true]])~
 
 Object oriented style (method):
 
-  array SQLiteResult::fetchAll(resource result [, int result_type [, bool decode_binary [, int result_type [, bool decode_binary]]]])~
+  array SQLiteResult::fetchAll(resource result [, int result_type = SQLITE_BOTH [, bool decode_binary = true [, int result_type = SQLITE_BOTH [, bool decode_binary = true]]]])~
 
-  array SQLiteUnbuffered::fetchAll(resource result [, int result_type [, bool decode_binary [, int result_type [, bool decode_binary [, int result_type [, bool decode_binary]]]]]])~
+  array SQLiteUnbuffered::fetchAll(resource result [, int result_type = SQLITE_BOTH [, bool decode_binary = true [, int result_type = SQLITE_BOTH [, bool decode_binary = true [, int result_type = SQLITE_BOTH [, bool decode_binary = true]]]]]])~
 
 |sqlite_fetch_all| returns an array of the entire result set from the {result}
 resource. It is similar to calling |sqlite_query| (or

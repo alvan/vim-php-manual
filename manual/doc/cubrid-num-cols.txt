@@ -15,7 +15,7 @@ FALSE, if SQL statement is not SELECT.
 |cubrid_num_cols| example
 
 <?php >
-  $conn = cubrid_connect("localhost", 33000, "demodb");
+  $conn = cubrid_connect("localhost", 33000, "demodb", "dba");
   
   $req = cubrid_execute($conn, "SELECT * FROM code");
   

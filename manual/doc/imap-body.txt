@@ -1,6 +1,6 @@
 imap_body -- Read the message body
 
-  string imap_body(resource imap_stream, int msg_number [, int options])~
+  string imap_body(resource imap_stream, int msg_number [, int options = 0])~
 
 |imap_body| returns the body of the message, numbered {msg_number} in the
 current mailbox.

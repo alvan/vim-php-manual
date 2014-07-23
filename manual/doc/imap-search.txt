@@ -1,7 +1,7 @@
 imap_search -- This function returns an array of messages matching the given
 search criteria
 
-  array imap_search(resource imap_stream, string criteria [, int options [, string charset]])~
+  array imap_search(resource imap_stream, string criteria [, int options = SE_FREE [, string charset = NIL]])~
 
 This function performs a search on the mailbox currently opened in the given
 IMAP stream.

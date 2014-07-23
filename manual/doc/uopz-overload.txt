@@ -1,0 +1,26 @@
+uopz_overload -- Overload a VM opcode
+
+  void uopz_overload(int opcode, Callable callable)~
+
+Overloads the specified {opcode} with the user defined function
+
+A valid opcode, see constants for details of supported codes
+
+
+
+
+
+|uopz_overload| example
+
+<?php >
+  uopz_overload(ZEND_EXIT, function(){});
+  
+  exit();
+  echo "Hello World";
+?>
+
+The above example will output something similar to:
+
+  Hello World
+
+vim:ft=help:

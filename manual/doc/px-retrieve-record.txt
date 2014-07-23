@@ -1,6 +1,6 @@
 px_retrieve_record -- Returns record of paradox database
 
-  array px_retrieve_record(resource pxdoc, int num [, int mode])~
+  array px_retrieve_record(resource pxdoc, int num [, int mode = 0])~
 
 This function is very similar to |px_get_record| but uses internally a
 different approach to retrieve the data. It relies on pxlib for reading each

@@ -3,6 +3,8 @@ cubrid_get_class_name -- Get the class name using OID
   string cubrid_get_class_name(resource conn_identifier, string oid)~
 
 The |cubrid_get_class_name| function is used to get the class name from {oid}.
+It doesn't work when selecting data from the system tables, for example
+db_class.
 
 {conn_identifier} Connection identifier.
 
@@ -15,7 +17,7 @@ FALSE, when process is unsuccessful.
 |cubrid_get_class_name| example
 
 <?php >
-  $conn = cubrid_connect("localhost", 33088, "demodb");
+  $conn = cubrid_connect("localhost", 33000, "demodb", "dba");
   
   $req = cubrid_execute($conn, "SELECT * FROM code", CUBRID_INCLUDE_OID);
   $oid = cubrid_current_oid($req);

@@ -1,0 +1,18 @@
+fann_get_quickprop_decay -- Returns the decay which is a factor that weights
+should decrease in each iteration during quickprop training
+
+  float fann_get_quickprop_decay(resource ann)~
+
+The decay is a small negative valued number which is a factor that the weights
+should decrease in each iteration during quickprop training. This is used to
+make sure that the weights do not become too high during training.
+
+The default decay is -0.0001.
+
+Neural network resource.
+
+The decay, or FALSE on error.
+
+|fann_set_quickprop_decay|
+
+vim:ft=help:

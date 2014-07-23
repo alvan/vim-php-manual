@@ -1,6 +1,6 @@
 mqseries_conn -- MQSeries MQCONN
 
-  void mqseries_conn(string qManagerName, resource hconn, resource compCode, resource reason)~
+  void mqseries_conn(string qManagerName, resource &hconn, resource &compCode, resource &reason)~
 
 The |mqseries_conn| (MQCONN) call connects an application program to a queue
 manager. It provides a queue manager connection handle, which is used by the

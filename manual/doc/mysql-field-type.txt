@@ -1,5 +1,10 @@
 mysql_field_type -- Get the type of the specified field in a result
 
+This extension is deprecated as of PHP 5.5.0, and will be removed in the
+future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
+MySQL: choosing an API guide and related FAQ for more information.
+Alternatives to this function include:
+
   string mysql_field_type(resource result, int field_offset)~
 
 |mysql_field_type| is similar to the |mysql_field_name| function. The

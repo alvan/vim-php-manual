@@ -1,7 +1,7 @@
 openssl_csr_sign -- Sign a CSR with another certificate (or itself) and
 generate a certificate
 
-  resource openssl_csr_sign(mixed csr, mixed cacert, mixed priv_key, int days [, array configargs [, int serial]])~
+  resource openssl_csr_sign(mixed csr, mixed cacert, mixed priv_key, int days [, array configargs [, int serial = 0]])~
 
 |openssl_csr_sign| generates an x509 certificate resource from the given CSR.
 

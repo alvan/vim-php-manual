@@ -24,7 +24,7 @@ connect to.
 
 To use the Easy Connect naming method, PHP must be linked with Oracle 10g or
 greater Client libraries. The Easy Connect string for Oracle 10g is of the
-form: [//]host_name[:port][/service_name]. With Oracle 11g, the syntax is:
+form: [//]host_name[:port][/service_name]. From Oracle 11g, the syntax is:
 [//]host_name[:port][/service_name][:server_type][/instance_name]. Service
 names can be found by running the Oracle utility lsnrctl status on the
 database server machine.
@@ -43,7 +43,7 @@ not give usable results. Conversion also adds some time overhead.
 If not specified, the Oracle Client libraries determine a character set from
 the NLS_LANG environment variable.
 
-Passing this parameter can reduce connection time.
+Passing this parameter can reduce the time taken to connect.
 
 {session_mode} This parameter is available since version PHP 5 (PECL OCI8 1.1)
 and accepts the following values: OCI_DEFAULT, OCI_SYSOPER and OCI_SYSDBA. If
@@ -63,14 +63,40 @@ OCI_CRED_EXT is not supported on Windows for security reasons.
 
 Returns a connection identifier or FALSE on error.
 
-Starting with PHP 5.1.2 and PECL oci8 1.1, the lifetime and maximum number of
-persistent Oracle connections can be tuned by setting the following
-configuration values: oci8.persistent_timeout, oci8.ping_interval and
-oci8.max_persistent.
+Basic |oci_pconnect| Example using Easy Connect syntax
 
-In PHP versions before 5.0.0 you must use |ociplogon| instead. The old
-function name can still be used in current versions, however it is deprecated
-and not recommended.
+<?php >
+  // Connects to the XE service (i.e. database) on the "localhost" machine
+  $conn = oci_pconnect('hr', 'welcome', 'localhost/XE');
+  if (!$conn) {
+      $e = oci_error();
+      trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+  }
+  
+  $stid = oci_parse($conn, 'SELECT * FROM employees');
+  oci_execute($stid);
+  
+  echo "<table border='1'>\n";
+  while ($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)) {
+      echo "<tr>\n";
+      foreach ($row as $item) {
+          echo "    <td>" . ($item !== null ? htmlentities($item, ENT_QUOTES) : "&amp;nbsp;") . "</td>\n";
+      }
+      echo "</tr>\n";
+  }
+  echo "</table>\n";
+?>
+
+
+
+
+
+See |oci_connect| for further examples of parameter usage.
+
+Starting with PHP 5.1.2 and PECL OCI8 1.1, the lifetime and maximum number of
+persistent Oracle connections per PHP process can be tuned by setting the
+following configuration values: oci8.persistent_timeout, oci8.ping_interval
+and oci8.max_persistent.
 
 |oci_connect| |oci_new_connect|
 

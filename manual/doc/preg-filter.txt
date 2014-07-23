@@ -1,6 +1,6 @@
 preg_filter -- Perform a regular expression search and replace
 
-  mixed preg_filter(mixed pattern, mixed replacement, mixed subject [, int limit [, int count]])~
+  mixed preg_filter(mixed pattern, mixed replacement, mixed subject [, int limit = -1 [, int &count = -1]])~
 
 |preg_filter| is identical to |preg_replace| except it only returns the
 (possibly transformed) subjects where there was a match. For details about how

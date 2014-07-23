@@ -1,0 +1,14 @@
+opcache_get_configuration -- Get configuration information about the cache
+
+  array opcache_get_configuration()~
+
+This function returns configuration information about the cache instance
+
+Returns an array of information, including ini, blacklist and version
+
+If opcache.restrict_api is in use and the current path is in violation of the
+rule, an E_WARNING will be raised; no status information will be returned.
+
+|opcache_get_status|
+
+vim:ft=help:

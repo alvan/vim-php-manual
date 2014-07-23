@@ -2,7 +2,7 @@ pack -- Pack data into binary string
 
   string pack(string format [, mixed args [, mixed ...]])~
 
-Pack given arguments into binary string according to {format}.
+Pack given arguments into a binary string according to {format}.
 
 The idea for this function was taken from Perl and all formatting codes work
 the same as in Perl. However, there are some formatting codes that are missing
@@ -31,12 +31,15 @@ byte order) l signed long (always 32 bit, machine byte order) L unsigned long
 (always 32 bit, machine byte order) N unsigned long (always 32 bit, big endian
 byte order) V unsigned long (always 32 bit, little endian byte order) f float
 (machine dependent size and representation) d double (machine dependent size
-and representation) x NUL byte X Back up one byte @ NUL-fill to absolute
-position
+and representation) x NUL byte X Back up one byte Z NUL-padded string (new in
+PHP 5.5) @ NUL-fill to absolute position
 
 {args}
 
 Returns a binary string containing data.
+
+Version Description 5.5.0 The "Z" code was added with equivalent functionality
+to "a" for Perl compatibility.
 
 |pack| example
 

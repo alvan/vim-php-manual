@@ -1,0 +1,32 @@
+uopz_copy -- Copy a function
+
+  Closure uopz_copy(string class, string function)~
+
+  Closure uopz_copy(string class, string function, string function)~
+
+Copy a function by name
+
+The name of the class containing the function to copy
+
+The name of the function
+
+A Closure for the specified function
+
+|uopz_copy| example
+
+<?php >
+  $strtotime = uopz_copy('strtotime');
+  
+  uopz_function("strtotime", function($arg1, $arg2) use($strtotime) {
+      /* can call original strtotime from here */
+      var_dump($arg1);
+  });
+  
+  var_dump(strtotime('dummy'));
+?>
+
+The above example will output something similar to:
+
+  string(5) "dummy"
+
+vim:ft=help:

@@ -1,6 +1,6 @@
 chunk_split -- Split a string into smaller chunks
 
-  string chunk_split(string body [, int chunklen [, string end]])~
+  string chunk_split(string body [, int chunklen = 76 [, string end = "\r\n"]])~
 
 Can be used to split a string into smaller chunks which is useful for e.g.
 converting |base64_encode| output to match RFC 2045 semantics. It inserts

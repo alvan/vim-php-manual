@@ -1,7 +1,7 @@
 snmprealwalk -- Return all objects including their respective object ID within
 the specified one
 
-  array snmprealwalk(string host, string community, string object_id [, int timeout [, int retries]])~
+  array snmprealwalk(string host, string community, string object_id [, int timeout = 1000000 [, int retries = 5]])~
 
 The |snmprealwalk| function is used to traverse over a number of SNMP objects
 starting from {object_id} and return not only their values but also their

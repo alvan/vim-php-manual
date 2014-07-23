@@ -1,6 +1,6 @@
 stream_set_timeout -- Set timeout period on a stream
 
-  bool stream_set_timeout(resource stream, int seconds [, int microseconds])~
+  bool stream_set_timeout(resource stream, int seconds [, int microseconds = 0])~
 
 Sets the timeout value on {stream}, expressed in the sum of {seconds} and
 {microseconds}.

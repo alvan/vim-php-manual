@@ -1,6 +1,6 @@
 parse_url -- Parse a URL and return its components
 
-  mixed parse_url(string url [, int component])~
+  mixed parse_url(string url [, int component = -1])~
 
 This function parses a URL and returns an associative array containing any of
 the various components of the URL that are present.
@@ -40,8 +40,9 @@ If the {component} parameter is specified, |parse_url| returns a string (or an
 integer, in the case of PHP_URL_PORT) instead of an array. If the requested
 component doesn't exist within the given URL, NULL will be returned.
 
-Version Description 5.3.3 Removed the E_WARNING that was emitted when URL
-parsing failed. 5.1.2 Added the {component} parameter.
+Version Description 5.4.7 Fixed host recognition when scheme is omitted and a
+leading component separator is present. 5.3.3 Removed the E_WARNING that was
+emitted when URL parsing failed. 5.1.2 Added the {component} parameter.
 
 A |parse_url| example
 
@@ -66,6 +67,28 @@ The above example will output:
       [fragment] => anchor
   )
   /path
+
+
+
+A |parse_url| example with missing scheme
+
+<?php >
+  $url = '//www.example.com/path?googleguy=googley';
+  
+  // Prior to 5.4.7 this would show the path as "//www.example.com/path"
+  var_dump(parse_url($url));
+?>
+
+The above example will output:
+
+  array(3) {
+    ["host"]=>
+    string(15) "www.example.com"
+    ["path"]=>
+    string(5) "/path"
+    ["query"]=>
+    string(17) "googleguy=googley"
+  }
 
 
 

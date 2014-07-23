@@ -4,15 +4,15 @@ echo -- Output one or more strings
 
 Outputs all parameters.
 
-|echo| is not actually a function (it is a language construct), so you are not
-required to use parentheses with it. |echo| (unlike some other language
+echo is not actually a function (it is a language construct), so you are not
+required to use parentheses with it. echo (unlike some other language
 constructs) does not behave like a function, so it cannot always be used in
 the context of a function. Additionally, if you want to pass more than one
-parameter to |echo|, the parameters must not be enclosed within parentheses.
+parameter to echo, the parameters must not be enclosed within parentheses.
 
-|echo| also has a shortcut syntax, where you can immediately follow the
-opening tag with an equals sign. This short syntax only works with the
-short_open_tag configuration setting enabled.
+echo also has a shortcut syntax, where you can immediately follow the opening
+tag with an equals sign. Prior to PHP 5.4.0, this short syntax only works with
+the short_open_tag configuration setting enabled.
 
   I have <?=$foo?> foo.
 
@@ -22,7 +22,7 @@ short_open_tag configuration setting enabled.
 
 No value is returned.
 
-|echo| examples
+echo examples
 
 <?php >
   echo "Hello World";
@@ -79,7 +79,7 @@ No value is returned.
 
 
 Because this is a language construct and not a function, it cannot be called
-using variable functions
+using variable functions.
 
 |print| |printf| |flush| Heredoc syntax
 

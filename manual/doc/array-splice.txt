@@ -1,7 +1,7 @@
 array_splice -- Remove a portion of the array and replace it with something
 else
 
-  array array_splice(array input, int offset [, int length [, mixed replacement]])~
+  array array_splice(array &input, int offset [, int length [, mixed replacement = array()]])~
 
 Removes the elements designated by {offset} and {length} from the {input}
 array, and replaces them with the elements of the {replacement} array, if

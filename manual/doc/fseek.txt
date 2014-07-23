@@ -1,6 +1,6 @@
 fseek -- Seeks on a file pointer
 
-  int fseek(resource handle, int offset [, int whence])~
+  int fseek(resource handle, int offset [, int whence = SEEK_SET])~
 
 Sets the file position indicator for the file referenced by {handle}. The new
 position, measured in bytes from the beginning of the file, is obtained by

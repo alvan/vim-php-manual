@@ -1,6 +1,6 @@
 px_put_record -- Stores record into paradox database
 
-  bool px_put_record(resource pxdoc, array record [, int recpos])~
+  bool px_put_record(resource pxdoc, array record [, int recpos = -1])~
 
 Stores a record into a paradox database. The record is always added at the end
 of the database, regardless of any free slots. Use |px_insert_record| to add a

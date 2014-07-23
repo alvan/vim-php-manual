@@ -1,7 +1,7 @@
 socket_recvfrom -- Receives data from a socket whether or not it is
 connection-oriented
 
-  int socket_recvfrom(resource socket, string buf, int len, int flags, string name [, int port])~
+  int socket_recvfrom(resource socket, string &buf, int len, int flags, string &name [, int &port])~
 
 The |socket_recvfrom| function receives {len} bytes of data in {buf} from
 {name} on port {port} (if the socket is not of type AF_UNIX) using {socket}.

@@ -1,7 +1,7 @@
 trim -- Strip whitespace (or other characters) from the beginning and end of a
 string
 
-  string trim(string str [, string charlist])~
+  string trim(string str [, string character_mask = " \t\n\r\0\x0B"])~
 
 This function returns a string with whitespace stripped from the beginning and
 end of {str}. Without the second parameter, |trim| will strip these
@@ -19,13 +19,13 @@ characters: " " (ASCII 32 (0x20)), an ordinary space.
 
 {str} The string that will be trimmed.
 
-{charlist} Optionally, the stripped characters can also be specified using the
-{charlist} parameter. Simply list all characters that you want to be stripped.
-With .. you can specify a range of characters.
+{character_mask} Optionally, the stripped characters can also be specified
+using the {character_mask} parameter. Simply list all characters that you want
+to be stripped. With .. you can specify a range of characters.
 
 The trimmed string.
 
-Version Description 4.1.0 The optional {charlist} parameter was added.
+Version Description 4.1.0 The optional {character_mask} parameter was added.
 
 Usage example of |trim|
 

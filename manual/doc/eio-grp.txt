@@ -1,17 +1,21 @@
 eio_grp -- Createsa request group.
 
-  resource eio_grp(callable callback [, string data])~
+  resource eio_grp(callable callback [, string data = NULL])~
 
 |eio_grp| creates a request group.
 
 {callback} function is called when the request is done. It should match the
 following prototype:
 
-  void callback($data, $result);
+  void callback(mixed $data, int $result[, resource $req]);
 
-{$data} is custom data passed to the request. {$result} contains
-request-specific result value; basically, the value returned by corresponding
-system call.
+{data} is custom data passed to the request.
+
+{result} request-specific result value; basically, the value returned by
+corresponding system call.
+
+{req} is optional request resource which can be used with functions like
+|eio_get_last_error|
 
 Arbitrary variable passed to {callback}.
 

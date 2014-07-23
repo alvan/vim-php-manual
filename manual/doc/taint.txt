@@ -1,14 +1,14 @@
 taint -- Taint a string
 
-  ReturnType taint(string string [, string ...])~
+  bool taint(string &string [, string ...])~
 
-Make a string tainted. this is used for testing purpose only.
-
-
+Make a string tainted. This is used for testing purpose only.
 
 
 
-Return TURE if the transform done. and always Return TRUE if the taint
+
+
+Return TRUE if the transformation is done. Always return TRUE if the taint
 extension is not enabled.
 
 vim:ft=help:

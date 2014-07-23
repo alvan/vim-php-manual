@@ -1,11 +1,10 @@
 cubrid_disconnect -- Close a database connection
 
-  bool cubrid_disconnect(resource conn_identifier)~
+  bool cubrid_disconnect([resource conn_identifier])~
 
 The |cubrid_disconnect| function closes the connection handle and disconnects
-from server. If there exists any request handle not closed yet at this point,
-it will be closed. It is similar to the CUBRID MySQL compatible function
-|cubrid_close|.
+from server. If any request handle is not closed at this point, it will be
+closed. It is similar to the CUBRID MySQL compatible function |cubrid_close|.
 
 {conn_identifier} Connection identifier.
 
@@ -16,9 +15,18 @@ FALSE, when process is unsuccessful.
 |cubrid_disconnect| example
 
 <?php >
-  $con = cubrid_connect ("210.211.133.100", 12345, "demodb");
+  $con = cubrid_connect ("localhost", 33000, "demodb");
   if ($con) {
      echo "connected successfully";
+     
+     $req = cubrid_execute( $con, "create table person(id int,name char(10))");
+     if ($req) {
+        cubrid_close_request($req);
+        cubrid_commit($con);
+     } else {
+        cubrid_rollback($con);
+     }
+     
      $req = cubrid_execute( $con, "insert into person values(1,'James')");
      if ($req) {
         cubrid_close_request($req);

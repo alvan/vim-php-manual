@@ -1,7 +1,7 @@
 var_export -- Outputs or returns a parsable string representation of a
 variable
 
-  mixed var_export(mixed expression [, bool return])~
+  mixed var_export(mixed expression [, bool return = false])~
 
 |var_export| gets structured information about the given variable. It is
 similar to |var_dump| with one exception: the returned representation is valid
@@ -10,13 +10,13 @@ PHP code.
 {expression} The variable you want to export.
 
 {return} If used and set to TRUE, |var_export| will return the variable
-representation instead of outputing it.
+representation instead of outputting it.
 
 Returns the variable representation when the {return} parameter is used and
 evaluates to TRUE. Otherwise, this function will return NULL.
 
 When the {return} parameter is used, this function uses internal output
-buffering so it can not be used inside an |ob_start| callback function.
+buffering so it cannot be used inside an |ob_start| callback function.
 
 Version Description 5.1.0 Possibility to export classes and arrays containing
 classes using the __set_state() magic method.
@@ -114,6 +114,9 @@ Variables of type resource couldn't be exported by this function.
 |var_export| does not handle circular references as it would be close to
 impossible to generate parsable PHP code for that. If you want to do something
 with the full representation of an array or object, use |serialize|.
+
+When |var_export| exports objects, the leading slash is not included in the
+class name of namespaced classes for maximum compatibility.
 
 |print_r| |serialize| |var_dump|
 

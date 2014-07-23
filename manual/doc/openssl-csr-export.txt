@@ -1,6 +1,6 @@
 openssl_csr_export -- Exports a CSR as a string
 
-  bool openssl_csr_export(resource csr, string out [, bool notext])~
+  bool openssl_csr_export(resource csr, string &out [, bool notext = true])~
 
 |openssl_csr_export| takes the Certificate Signing Request represented by
 {csr} and stores it as ascii-armoured text into {out}, which is passed by

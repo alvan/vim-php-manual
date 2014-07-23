@@ -1,13 +1,13 @@
 SQLiteUnbuffered::current -- Fetches the current row from a result set as an
 array
 
-  array sqlite_current(resource result [, int result_type [, bool decode_binary]])~
+  array sqlite_current(resource result [, int result_type = SQLITE_BOTH [, bool decode_binary = true]])~
 
 Object oriented style (method):
 
-  array SQLiteResult::current(resource result [, int result_type [, bool decode_binary [, int result_type [, bool decode_binary]]]])~
+  array SQLiteResult::current(resource result [, int result_type = SQLITE_BOTH [, bool decode_binary = true [, int result_type = SQLITE_BOTH [, bool decode_binary = true]]]])~
 
-  array SQLiteUnbuffered::current(resource result [, int result_type [, bool decode_binary [, int result_type [, bool decode_binary [, int result_type [, bool decode_binary]]]]]])~
+  array SQLiteUnbuffered::current(resource result [, int result_type = SQLITE_BOTH [, bool decode_binary = true [, int result_type = SQLITE_BOTH [, bool decode_binary = true [, int result_type = SQLITE_BOTH [, bool decode_binary = true]]]]]])~
 
 |sqlite_current| is identical to |sqlite_fetch_array| except that it does not
 advance to the next row prior to returning the data; it returns the data from

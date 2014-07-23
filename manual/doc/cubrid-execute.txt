@@ -21,12 +21,11 @@ CUBRID_EXEC_QUERY_ALL is set, a synchronous mode (sync_mode) is used to
 retrieve query results, and in such cases the following rules are applied:
 
 The return value is the result of the first query. If an error occurs in any
-query, the execution is processed as a failure. For a query composed of in a
-query composed of q1 q2 q3 if an error occurs in q2 after q1 succeeds the
-execution, the result of q1 remains valid. That is, the previous successful
-query executions are not rolled back when an error occurs. If a query is
-executed successfully, the result of the second query can be obtained using
-|cubrid_next_result|.
+query, the execution is processed as a failure. In a query composed of q1 q2
+q3, if an error occurs in q2 after q1 succeeds the execution, the result of q1
+remains valid. That is, the previous successful query executions are not
+rolled back when an error occurs. If a query is executed successfully, the
+result of the second query can be obtained using |cubrid_next_result|.
 
 If the first argument is {request_identifier} to execute the |cubrid_prepare|
 function, you can specify an option, CUBRID_ASYNC only.

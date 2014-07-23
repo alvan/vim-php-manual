@@ -1,6 +1,6 @@
 ftp_rawlist -- Returns a detailed list of files in the given directory
 
-  array ftp_rawlist(resource ftp_stream, string directory [, bool recursive])~
+  mixed ftp_rawlist(resource ftp_stream, string directory [, bool recursive = false])~
 
 |ftp_rawlist| executes the FTP LIST command, and returns the result as an
 array.
@@ -11,7 +11,8 @@ array.
 
 {recursive} If set to TRUE, the issued command will be LIST -R.
 
-Returns an array where each element corresponds to one line of text.
+Returns an array where each element corresponds to one line of text. Returns
+FALSE when passed {directory} is invalid.
 
 The output is not parsed in any way. The system type identifier returned by
 |ftp_systype| can be used to determine how the results should be interpreted.

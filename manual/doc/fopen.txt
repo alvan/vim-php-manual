@@ -1,6 +1,6 @@
 fopen -- Opens file or URL
 
-  resource fopen(string filename, string mode [, bool use_include_path [, resource context]])~
+  resource fopen(string filename, string mode [, bool use_include_path = false [, resource context = false]])~
 
 |fopen| binds a named resource, specified by {filename}, to a stream.
 
@@ -105,12 +105,12 @@ Returns a file pointer resource on success, or FALSE on error.
 If the open fails, an error of level E_WARNING is generated. You may use @ to
 suppress this warning.
 
-Version Description 4.3.2 As of PHP 4.3.2, the default mode is set to binary
-for all platforms that distinguish between binary and text mode. If you are
-having problems with your scripts after upgrading, try using the 't' flag as a
-workaround until you have made your script more portable as mentioned before
-4.3.2 The 'x' and 'x+' options were added 5.2.6 The 'c' and 'c+' options were
-added
+Version Description 5.2.6 The 'c' and 'c+' options were added 4.3.2 As of PHP
+4.3.2, the default mode is set to binary for all platforms that distinguish
+between binary and text mode. If you are having problems with your scripts
+after upgrading, try using the 't' flag as a workaround until you have made
+your script more portable as mentioned before 4.3.2 The 'x' and 'x+' options
+were added
 
 |fopen| examples
 
@@ -141,6 +141,10 @@ executed.
 If you are experiencing problems with reading and writing to files and you're
 using the server module version of PHP, remember to make sure that the files
 and directories you're using are accessible to the server process.
+
+This function may also succeed when {filename} is a directory. If you are
+unsure whether {filename} is a file or a directory, you may need to use the
+|is_dir| function before calling |fopen|.
 
 |fclose| |fgets| |fread| |fwrite| |fsockopen| |file| |file_exists|
 |is_readable| |stream_set_timeout| |popen| |stream_context_create| |umask|

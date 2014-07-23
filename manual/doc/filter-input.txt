@@ -1,7 +1,7 @@
 filter_input -- Gets a specific external variable by name and optionally
 filters it
 
-  mixed filter_input(int type, string variable_name [, int filter [, mixed options]])~
+  mixed filter_input(int type, string variable_name [, int filter = FILTER_DEFAULT [, mixed options = FILTER_DEFAULT]])~
 
 {type} One of INPUT_GET, INPUT_POST, INPUT_COOKIE, INPUT_SERVER, or INPUT_ENV.
 

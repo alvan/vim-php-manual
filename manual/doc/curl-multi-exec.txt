@@ -1,6 +1,6 @@
 curl_multi_exec -- Run the sub-connections of the current cURL handle
 
-  int curl_multi_exec(resource mh, int still_running)~
+  int curl_multi_exec(resource mh, int &still_running)~
 
 Processes each of the handles in the stack. This method can be called whether
 or not a handle needs to read or write data.

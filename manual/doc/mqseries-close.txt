@@ -1,6 +1,6 @@
 mqseries_close -- MQSeries MQCLOSE
 
-  void mqseries_close(resource hconn, resource hobj, int options, resource compCode, resource reason)~
+  void mqseries_close(resource hconn, resource hobj, int options, resource &compCode, resource &reason)~
 
 The |mqseries_close| (MQCLOSE) call relinquishes access to an object, and is
 the inverse of the |mqseries_open| (MQOPEN) call.

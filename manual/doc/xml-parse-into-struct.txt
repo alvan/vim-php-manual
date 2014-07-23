@@ -1,6 +1,6 @@
 xml_parse_into_struct -- Parse XML data into an array structure
 
-  int xml_parse_into_struct(resource parser, string data, array values [, array index])~
+  int xml_parse_into_struct(resource parser, string data, array &values [, array &index])~
 
 This function parses an XML string into 2 parallel array structures, one
 ({index}) containing pointers to the location of the appropriate values in the

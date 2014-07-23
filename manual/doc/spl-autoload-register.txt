@@ -1,15 +1,15 @@
 spl_autoload_register -- Register given function as __autoload()
 implementation
 
-  bool spl_autoload_register([callable autoload_function [, bool throw [, bool prepend]]])~
+  bool spl_autoload_register([callable autoload_function [, bool throw = true [, bool prepend = false]]])~
 
 Register a function with the spl provided __autoload stack. If the stack is
 not yet activated it will be activated.
 
-If your code has an existing __autoload function then this function must be
+If your code has an existing |__autoload| function then this function must be
 explicitly registered on the __autoload stack. This is because
-spl_autoload_register() will effectively replace the engine cache for the
-__autoload function by either spl_autoload() or spl_autoload_call().
+|spl_autoload_register| will effectively replace the engine cache for the
+|__autoload| function by either |spl_autoload| or |spl_autoload_call|.
 
 If there must be multiple autoload functions, |spl_autoload_register| allows
 for this. It effectively creates a queue of autoload functions, and runs
@@ -31,7 +31,28 @@ Returns TRUE on success or &false; on failure.
 Version Description 5.3.0 Namespaces support was introduced. 5.3.0 The
 {prepend} parameter was added.
 
-|spl_autoload_register| example
+|spl_autoload_register| as a replacement for an |__autoload| function
+
+<?php >
+  // function __autoload($class) {
+  //     include 'classes/' . $class . '.class.php';
+  // }
+  
+  function my_autoloader($class) {
+      include 'classes/' . $class . '.class.php';
+  }
+  
+  spl_autoload_register('my_autoloader');
+  
+  // Or, using an anonymous function as of PHP 5.3.0
+  spl_autoload_register(function ($class) {
+      include 'classes/' . $class . '.class.php';
+  });
+?>
+
+
+
+|spl_autoload_register| example where the class is not loaded
 
 <?php >
   namespace Foobar;

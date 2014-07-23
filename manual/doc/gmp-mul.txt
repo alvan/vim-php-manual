@@ -1,20 +1,23 @@
 gmp_mul -- Multiply numbers
 
-  resource gmp_mul(resource a, resource b)~
+  GMP gmp_mul(GMP a, GMP b)~
 
 Multiplies {a} by {b} and returns the result.
 
 {a} A number that will be multiplied by {b}.
 
-It can be either a GMP number resource, or a numeric string given that it is
-possible to convert the latter to a number.
+Either a GMP number resource in PHP 5.5 and earlier, a GMP object in PHP 5.6
+and later, or a numeric string provided that it is possible to convert the
+latter to a number.
 
 {b} A number that will be multiplied by {a}.
 
-It can be either a GMP number resource, or a numeric string given that it is
-possible to convert the latter to a number.
+Either a GMP number resource in PHP 5.5 and earlier, a GMP object in PHP 5.6
+and later, or a numeric string provided that it is possible to convert the
+latter to a number.
 
-A GMP number resource.
+A GMP number resource in PHP 5.5 and earlier, or a GMP object in PHP 5.6 and
+later.
 
 |gmp_mul| example
 

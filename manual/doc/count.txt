@@ -1,6 +1,6 @@
 count -- Count all elements in an array, or something in an object
 
-  int count(mixed var [, int mode])~
+  int count(mixed array_or_countable [, int mode = COUNT_NORMAL])~
 
 Counts all elements in an array, or something in an object.
 
@@ -11,16 +11,20 @@ Countable::count, which returns the return value for the |count| function.
 Please see the Array section of the manual for a detailed explanation of how
 arrays are implemented and used in PHP.
 
-{var} The array or the object.
+{array_or_countable} An array or Countable object.
 
 {mode} If the optional {mode} parameter is set to COUNT_RECURSIVE (or 1),
 |count| will recursively count the array. This is particularly useful for
-counting all the elements of a multidimensional array. |count| does not detect
-infinite recursion.
+counting all the elements of a multidimensional array.
 
-Returns the number of elements in {var}. If {var} is not an array or an object
-with implemented Countable interface, 1 will be returned. There is one
-exception, if {var} is NULL, 0 will be returned.
+|count| can detect recursion to avoid an infinite loop, but will emit an
+E_WARNING every time it does (in case the array contains itself more than
+once) and return a count higher than may be expected.
+
+Returns the number of elements in {array_or_countable}. If the parameter is
+not an array or not an object with implemented Countable interface, 1 will be
+returned. There is one exception, if {array_or_countable} is NULL, 0 will be
+returned.
 
 |count| may return 0 for a variable that isn't set, but it may also return 0
 for a variable that has been initialized with an empty array. Use |isset| to

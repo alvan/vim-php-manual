@@ -49,10 +49,10 @@ important to know since in such cases locking is simply ignored on the
 resource and other solutions have to be found. 4.3.0 Locking and the {mode}
 modifiers "l", "d", "-" and "t" were added. In previous PHP versions, you must
 use semaphores to guard against simultaneous database access for any database
-handler with the exception of GDBM. See System V semaphore support. before
-4.3.5 open mode 'c' is broken for several internal handlers and truncates the
+handler with the exception of GDBM. See System V semaphore support. 4.3.5 The
+open mode "c" was broken for several internal handlers and truncated the
 database instead of appending data to an existent database. Also dbm and ndbm
-fail on mode 'c' in typical configurations (this cannot be fixed).
+failed on mode "c" in typical configurations (this cannot be fixed).
 
 |dba_popen| |dba_close|
 

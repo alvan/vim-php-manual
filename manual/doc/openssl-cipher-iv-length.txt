@@ -2,9 +2,10 @@ openssl_cipher_iv_length -- Gets the cipher iv length
 
   int openssl_cipher_iv_length(string method)~
 
-Gets the cipher iv length.
+Gets the cipher initialization vector (iv) length.
 
-The method.
+The cipher method, see |openssl_get_cipher_methods| for a list of potential
+values.
 
 Returns the cipher length on success, or FALSE on failure.
 

@@ -1,6 +1,6 @@
 win32_set_service_status -- Update the service status
 
-  bool win32_set_service_status(int status [, int checkpoint])~
+  bool win32_set_service_status(int status [, int checkpoint = 0])~
 
 Informs the SCM of the current status of a running service. This call is only
 valid for a running service process.

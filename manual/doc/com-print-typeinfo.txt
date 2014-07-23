@@ -1,7 +1,7 @@
 com_print_typeinfo -- Print out a PHP class definition for a dispatchable
 interface
 
-  bool com_print_typeinfo(object comobject [, string dispinterface [, bool wantsink]])~
+  bool com_print_typeinfo(object comobject [, string dispinterface [, bool wantsink = false]])~
 
 The purpose of this function is to help generate a skeleton class for use as
 an event sink. You may also use it to generate a dump of any COM object,

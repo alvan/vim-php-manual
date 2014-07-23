@@ -1,6 +1,6 @@
 com_load_typelib -- Loads a Typelib
 
-  bool com_load_typelib(string typelib_name [, bool case_insensitive])~
+  bool com_load_typelib(string typelib_name [, bool case_insensitive = true])~
 
 Loads a type-library and registers its constants in the engine, as though they
 were defined using |define|.

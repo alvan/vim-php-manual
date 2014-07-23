@@ -1,6 +1,6 @@
 dbplus_next -- Get next tuple from relation
 
-  int dbplus_next(resource relation, array tuple)~
+  int dbplus_next(resource relation, array &tuple)~
 
 Reads the data for the next tuple for the given {relation}, makes it the
 current tuple and will pass it back as an associative array in {tuple}.

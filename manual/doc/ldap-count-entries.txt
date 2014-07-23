@@ -11,4 +11,22 @@ operations.
 
 Returns number of entries in the result or FALSE on error.
 
+|ldap-count-entries| example Retrieve number of entries in the result.
+
+  // $ds is a valid link identifier (see ldap_connect)
+  
+       $dn        = 'ou=example,dc=org';
+       $filter    = '(|(sn=Doe*)(givenname=John*))';
+       $justthese = array('ou', 'sn', 'givenname', 'mail');
+  
+       $sr = ldap_search($ds, $dn, $filter, $justthese);
+  
+       var_dump(ldap_count_entries($ds, $sr));
+
+The above example will output something similar to:
+
+  int(1)
+
+
+
 vim:ft=help:

@@ -1,24 +1,27 @@
 gmp_powm -- Raise number into power with modulo
 
-  resource gmp_powm(resource base, resource exp, resource mod)~
+  GMP gmp_powm(GMP base, GMP exp, GMP mod)~
 
 Calculate ({base} raised into power {exp}) modulo {mod}. If {exp} is negative,
 result is undefined.
 
 {base} The base number.
 
-It can be either a GMP number resource, or a numeric string given that it is
-possible to convert the latter to a number.
+Either a GMP number resource in PHP 5.5 and earlier, a GMP object in PHP 5.6
+and later, or a numeric string provided that it is possible to convert the
+latter to a number.
 
 {exp} The positive power to raise the {base}.
 
-It can be either a GMP number resource, or a numeric string given that it is
-possible to convert the latter to a number.
+Either a GMP number resource in PHP 5.5 and earlier, a GMP object in PHP 5.6
+and later, or a numeric string provided that it is possible to convert the
+latter to a number.
 
 {mod} The modulo.
 
-It can be either a GMP number resource, or a numeric string given that it is
-possible to convert the latter to a number.
+Either a GMP number resource in PHP 5.5 and earlier, a GMP object in PHP 5.6
+and later, or a numeric string provided that it is possible to convert the
+latter to a number.
 
 The new (raised) number, as a GMP number.
 

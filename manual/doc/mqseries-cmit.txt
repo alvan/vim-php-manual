@@ -1,6 +1,6 @@
 mqseries_cmit -- MQSeries MQCMIT
 
-  void mqseries_cmit(resource hconn, resource compCode, resource reason)~
+  void mqseries_cmit(resource hconn, resource &compCode, resource &reason)~
 
 The |mqseries_cmit| (MQCMIT) call indicates to the queue manager that the
 application has reached a syncpoint, and that all of the message gets and puts

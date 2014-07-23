@@ -1,6 +1,6 @@
 mb_convert_encoding -- Convert character encoding
 
-  string mb_convert_encoding(string str, string to_encoding [, mixed from_encoding])~
+  string mb_convert_encoding(string str, string to_encoding [, mixed from_encoding = mb_internal_encoding()])~
 
 Converts the character encoding of string {str} to {to_encoding} from
 optionally {from_encoding}.

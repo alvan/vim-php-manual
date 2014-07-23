@@ -24,6 +24,10 @@ The function may be called after the GTID has been incremented.
 Internally, it is using a mysqlnd library C functionality not available with
 PHP 5.3.
 
+Please note, all MySQL 5.6 production versions do not provide clients with
+enough information to use GTIDs for enforcing session consistency. In the
+worst case, the plugin will choose the master only.
+
 |mysqlnd_ms_get_last_gtid| example
 
 <?php >

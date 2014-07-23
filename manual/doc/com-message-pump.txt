@@ -1,7 +1,7 @@
 com_message_pump -- Process COM messages, sleeping for up to timeoutms
 milliseconds
 
-  bool com_message_pump([int timeoutms])~
+  bool com_message_pump([int timeoutms = 0])~
 
 This function will sleep for up to {timeoutms} milliseconds, or until a
 message arrives in the queue.

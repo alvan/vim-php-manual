@@ -1,6 +1,6 @@
 posix_access -- Determine accessibility of a file
 
-  bool posix_access(string file [, int mode])~
+  bool posix_access(string file [, int mode = POSIX_F_OK])~
 
 |posix_access| checks the user's permission of a file.
 

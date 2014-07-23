@@ -1,6 +1,6 @@
 mqseries_put -- MQSeries MQPUT
 
-  void mqseries_put(resource hConn, resource hObj, array md, array pmo, string message, resource compCode, resource reason)~
+  void mqseries_put(resource hConn, resource hObj, array &md, array &pmo, string message, resource &compCode, resource &reason)~
 
 The |mqseries_put| (MQPUT) call puts a message on a queue or distribution
 list. The queue or distribution list must already be open.

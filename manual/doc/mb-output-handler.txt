@@ -16,7 +16,7 @@ The converted string.
 Version Description 4.1.0 This handler now adds the charset HTTP header when
 the following conditions are met:
 
-Does not set Content-Type, using |header|.
+Content-Type has not been set, using |header|.
 
 The default MIME type begins with text/.
 
@@ -33,19 +33,16 @@ The mbstring.http_input setting is something other than pass.
 
 
 
-If you want to output some binary data such as image from PHP script with PHP
-4.3.0 or later, Content-Type: header must be send using |header| before any
-binary data was send to client (e.g. header("Content-Type: image/png")). If
-Content-Type: header was send, output character encoding conversion will not
-be performed.
+If you want to output binary data, such as an image, using PHP 4.3.0 or later,
+a Content-Type: header must be set using |header| before any binary data is
+sent to the client (e.g. header("Content-Type: image/png")). If Content-Type:
+header is sent, output character encoding conversion will not be performed.
 
-Note that if 'Content-Type: text/*' was send using |header|, the sending data
-is regarded as text, encoding conversion will be performed using character
-encoding settings.
+Note that if 'Content-Type: text/*' is sent, the content body is regarded as
+text; conversion will take place.
 
-If you want to output some binary data such as image from PHP script with PHP
-4.2.x or earlier, you must set output encoding to "pass" using
-|mb_http_output|.
+If you want to output binary data, such as an image, using PHP 4.2.x or
+earlier, you must set output encoding to "pass" using |mb_http_output|.
 
 |ob_start|
 

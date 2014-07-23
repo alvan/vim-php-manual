@@ -6,6 +6,9 @@ Gets the current buffer contents and delete current output buffer.
 
 |ob_get_clean| essentially executes both |ob_get_contents| and |ob_end_clean|.
 
+The output buffer must be started by |ob_start| with
+PHP_OUTPUT_HANDLER_CLEANABLE flag. Otherwise |ob_get_clean| will not work.
+
 Returns the contents of the output buffer and end output buffering. If output
 buffering isn't active then FALSE is returned.
 

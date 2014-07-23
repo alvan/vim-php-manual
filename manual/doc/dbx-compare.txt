@@ -1,6 +1,6 @@
 dbx_compare -- Compare two rows for sorting purposes
 
-  int dbx_compare(array row_a, array row_b, string column_key [, int flags])~
+  int dbx_compare(array row_a, array row_b, string column_key [, int flags = DBX_CMP_ASC | DBX_CMP_NATIVE])~
 
 |dbx_compare| is a helper function for |dbx_sort| to ease the make and use of
 the custom sorting function.

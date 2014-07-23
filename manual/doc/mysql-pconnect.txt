@@ -1,6 +1,11 @@
 mysql_pconnect -- Open a persistent connection to a MySQL server
 
-  resource mysql_pconnect([string server [, string username [, string password [, int client_flags]]]])~
+This extension is deprecated as of PHP 5.5.0, and will be removed in the
+future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
+MySQL: choosing an API guide and related FAQ for more information.
+Alternatives to this function include:
+
+  resource mysql_pconnect([string server = ini_get("mysql.default_host") [, string username = ini_get("mysql.default_user") [, string password = ini_get("mysql.default_password") [, int client_flags = 0]]]])~
 
 Establishes a persistent connection to a MySQL server.
 
@@ -36,7 +41,8 @@ MYSQL_CLIENT_COMPRESS, MYSQL_CLIENT_IGNORE_SPACE or MYSQL_CLIENT_INTERACTIVE.
 
 Returns a MySQL persistent link identifier on success, or FALSE on failure.
 
-Version Description 4.3.0 Added the {client_flags} parameter.
+Version Description 5.5.0 This function will generate an E_DEPRECATED error.
+4.3.0 Added the {client_flags} parameter.
 
 Note, that these kind of links only work if you are using a module version of
 PHP. See the Persistent Database Connections section for more information.

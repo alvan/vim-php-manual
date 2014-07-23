@@ -1,6 +1,6 @@
 ssh2_fingerprint -- Retrieve fingerprint of remote server
 
-  string ssh2_fingerprint(resource session [, int flags])~
+  string ssh2_fingerprint(resource session [, int flags = SSH2_FINGERPRINT_MD5 | SSH2_FINGERPRINT_HEX])~
 
 Returns a server hostkey hash from an active session.
 

@@ -1,0 +1,15 @@
+fann_create_from_file -- Constructs a backpropagation neural network from a
+configuration file
+
+  resource fann_create_from_file(string configuration_file)~
+
+Constructs a backpropagation neural network from a configuration file, which
+have been saved by |fann_save|.
+
+The configuration file path.
+
+Returns a neural network resource on success, or FALSE on error.
+
+|fann_save|
+
+vim:ft=help:

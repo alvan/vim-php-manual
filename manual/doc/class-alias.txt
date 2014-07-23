@@ -1,13 +1,15 @@
 class_alias -- Creates an alias for a class
 
-  bool class_alias([string original [, string alias]])~
+  bool class_alias(string original, string alias [, bool autoload = ])~
 
-Creates an alias named {alias} based on the defined class {original}. The
+Creates an alias named {alias} based on the user defined class {original}. The
 aliased class is exactly the same as the original class.
 
 {original} The original class.
 
 {alias} The alias name for the class.
+
+{autoload} Whether to autoload if the original class is not found.
 
 Returns TRUE on success or &false; on failure.
 

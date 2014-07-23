@@ -1,6 +1,6 @@
 highlight_file -- Syntax highlighting of a file
 
-  mixed highlight_file(string filename [, bool return])~
+  mixed highlight_file(string filename [, bool return = false])~
 
 Prints out or returns a syntax highlighted version of the code contained in
 {filename} using the colors defined in the built-in syntax highlighter for
@@ -32,8 +32,8 @@ that you do not inadvertently reveal sensitive information such as passwords
 or any other type of information that might create a potential security risk.
 
 When the {return} parameter is used, this function uses internal output
-buffering so it can not be used inside an |ob_start| callback function.
+buffering so it cannot be used inside an |ob_start| callback function.
 
-|highlight_string|
+|highlight_string| Highlighting INI directives
 
 vim:ft=help:

@@ -1,6 +1,11 @@
 mysql_affected_rows -- Get number of affected rows in previous MySQL operation
 
-  int mysql_affected_rows([resource link_identifier])~
+This extension is deprecated as of PHP 5.5.0, and will be removed in the
+future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
+MySQL: choosing an API guide and related FAQ for more information.
+Alternatives to this function include:
+
+  int mysql_affected_rows([resource link_identifier = NULL])~
 
 Get the number of affected rows by the last INSERT, UPDATE, REPLACE or DELETE
 query associated with {link_identifier}.
@@ -26,6 +31,9 @@ that were literally affected by the query.
 The REPLACE statement first deletes the record with the same primary key and
 then inserts the new record. This function returns the number of deleted
 records plus the number of inserted records.
+
+In the case of "INSERT ... ON DUPLICATE KEY UPDATE" queries, the return value
+will be 1 if an insert was performed, or 2 for an update of an existing row.
 
 |mysql_affected_rows| example
 

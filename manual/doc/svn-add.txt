@@ -1,6 +1,6 @@
 svn_add -- Schedules the addition of an item in a working directory
 
-  bool svn_add(string path [, bool recursive [, bool force]])~
+  bool svn_add(string path [, bool recursive = true [, bool force = false]])~
 
 Adds the file, directory or symbolic link at {path} to the working directory.
 The item will be added to the repository the next time you call |svn_commit|

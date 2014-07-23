@@ -1,6 +1,6 @@
 apd_set_pprof_trace -- Starts the session debugging
 
-  string apd_set_pprof_trace([string dump_directory [, string fragment]])~
+  string apd_set_pprof_trace([string dump_directory = ini_get("apd.dumpdir") [, string fragment = "pprof"]])~
 
 Starts debugging to pprof_{process_id} in the dump directory.
 

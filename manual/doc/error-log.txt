@@ -1,6 +1,6 @@
-error_log -- Send an error message somewhere
+error_log -- Send an error message to the defined error handling routines
 
-  bool error_log(string message [, int message_type [, string destination [, string extra_headers]]])~
+  bool error_log(string message [, int message_type = 0 [, string destination = 0 [, string extra_headers = 0]]])~
 
 Sends an error message to the web server's error log or to a file.
 
@@ -26,7 +26,11 @@ is set to 1. This message type uses the same internal function as |mail| does.
 
 Returns TRUE on success or &false; on failure.
 
-Version Description 5.2.7 The possible value of 4 was added to {message_type}.
+|error_log| is not binary safe. {message} will be truncated by null character.
+
+{message} should not contain null character. Note that {message} may be sent
+to file, mail, syslog, etc. Use appropriate conversion/escape function,
+|base64_encode|, |rawurlencode| or |addslashes| before calling |error_log|.
 
 |error_log| examples
 
@@ -50,5 +54,7 @@ Version Description 5.2.7 The possible value of 4 was added to {message_type}.
 
 
 
+
+Version Description 5.2.7 The possible value of 4 was added to {message_type}.
 
 vim:ft=help:

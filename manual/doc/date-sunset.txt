@@ -1,6 +1,6 @@
 date_sunset -- Returns time of sunset for a given day and location
 
-  mixed date_sunset(int timestamp [, int format [, float latitude [, float longitude [, float zenith [, float gmt_offset]]]]])~
+  mixed date_sunset(int timestamp [, int format = SUNFUNCS_RET_STRING [, float latitude = ini_get("date.default_latitude") [, float longitude = ini_get("date.default_longitude") [, float zenith = ini_get("date.sunset_zenith") [, float gmt_offset = 0]]]]])~
 
 |date_sunset| returns the sunset time for a given day (specified as a
 {timestamp}) and location.

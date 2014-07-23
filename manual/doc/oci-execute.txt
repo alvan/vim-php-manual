@@ -1,6 +1,6 @@
 oci_execute -- Executes a statement
 
-  bool oci_execute(resource statement [, int mode])~
+  bool oci_execute(resource statement [, int mode = OCI_COMMIT_ON_SUCCESS])~
 
 Executes a {statement} previously returned from |oci_parse|.
 
@@ -18,18 +18,16 @@ with |oci_bind_by_name|.
 {mode} An optional second parameter can be one of the following constants:
 Execution Modes Constant Description OCI_COMMIT_ON_SUCCESS Automatically
 commit all outstanding changes for this connection when the statement has
-succeeded. This is the default. OCI_DEFAULT Obsolete as of PHP 5.3.2 (PECL
-OCI8 1.4) but still available for backward compatibility. Use the equivalent
-OCI_NO_AUTO_COMMIT in new code. OCI_DESCRIBE_ONLY Make query meta data
+succeeded. This is the default. OCI_DESCRIBE_ONLY Make query meta data
 available to functions like |oci_field_name| but do not create a result set.
 Any subsequent fetch call such as |oci_fetch_array| will fail.
 OCI_NO_AUTO_COMMIT Do not automatically commit changes. Prior to PHP 5.3.2
-(PECL OCI8 1.4) use OCI_DEFAULT which is an alias for OCI_NO_AUTO_COMMIT.
+(PECL OCI8 1.4) use OCI_DEFAULT which is equivalent to OCI_NO_AUTO_COMMIT.
 
-Using OCI_NO_AUTO_COMMIT mode starts a transaction. Transactions are
-automatically rolled back when the connection is closed, or when the script
-ends. Explicitly call |oci_commit| to commit a transaction, or |oci_rollback|
-to abort it.
+Using OCI_NO_AUTO_COMMIT mode starts or continues a transaction. Transactions
+are automatically rolled back when the connection is closed, or when the
+script ends. Explicitly call |oci_commit| to commit a transaction, or
+|oci_rollback| to abort it.
 
 When inserting or updating data, using transactions is recommended for
 relational data consistency and for performance reasons.
@@ -152,10 +150,6 @@ uncommitted transaction.
 Because the |oci_execute| function generally sends the statement to the
 database, |oci_execute| can identify some statement syntax errors that the
 lightweight, local |oci_parse| function does not.
-
-In PHP versions before 5.0.0 use |ociexecute| instead. The old function name
-can still be used in current versions, however it is deprecated and not
-recommended.
 
 |oci_parse|
 

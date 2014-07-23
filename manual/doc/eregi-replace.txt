@@ -11,8 +11,8 @@ highly discouraged.
 {pattern} A POSIX extended regular expression.
 
 {replacement} If {pattern} contains parenthesized substrings, {replacement}
-may contain substrings of the form \\digit, which will be replaced by the text
-matching the digit'th parenthesized substring; \\0 will produce the entire
+may contain substrings of the form \digit, which will be replaced by the text
+matching the digit'th parenthesized substring; \0 will produce the entire
 contents of string. Up to nine substrings may be used. Parentheses may be
 nested, in which case they are counted by the opening parenthesis.
 
@@ -37,6 +37,9 @@ As of PHP 5.3.0, the regex extension is deprecated in favor of the PCRE
 extension. Calling this function will issue an E_DEPRECATED notice. See the
 list of differences for help on converting to PCRE.
 
-|ereg| |eregi| |ereg_replace| |preg_replace|
+|eregi_replace| is deprecated as of PHP 5.3.0. |preg_replace| with the i
+(PCRE_CASELESS) modifier is the suggested alternative.
+
+|ereg| |eregi| |ereg_replace| |preg_replace| |quotemeta|
 
 vim:ft=help:

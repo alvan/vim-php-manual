@@ -1,6 +1,6 @@
 getmxrr -- Get MX records corresponding to a given Internet host name
 
-  bool getmxrr(string hostname, array mxhosts [, array weight])~
+  bool getmxrr(string hostname, array &mxhosts [, array &weight])~
 
 Searches DNS for MX records corresponding to {hostname}.
 

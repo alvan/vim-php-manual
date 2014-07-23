@@ -5,7 +5,7 @@ sqlsrv_fetch_array -- Returns a row as an array
 Returns the next available row of data as an associative array, a numeric
 array, or both (the default).
 
-{stmt} A statement resource returned by sqlsrv_query or sqlsrv_execute.
+{stmt} A statement resource returned by sqlsrv_query or sqlsrv_prepare.
 
 {fetchType} A predefined constant specifying the type of array to return.
 Possible values are SQLSRV_FETCH_ASSOC, SQLSRV_FETCH_NUMERIC, and
@@ -19,6 +19,10 @@ cursor. Possible values are SQLSRV_SCROLL_NEXT, SQLSRV_SCROLL_PRIOR,
 SQLSRV_SCROLL_FIRST, SQLSRV_SCROLL_LAST, SQLSRV_SCROLL_ABSOLUTE and,
 SQLSRV_SCROLL_RELATIVE (the default). When this parameter is specified, the
 {fetchType} must be explicitly defined.
+
+{offset} Specifies the row to be accessed if the row parameter is set to
+SQLSRV_SCROLL_ABSOLUTE or SQLSRV_SCROLL_RELATIVE. Note that the first row in a
+result set has index 0.
 
 Returns an array on success, NULL if there are no more rows to return, and
 FALSE if an error occurs.

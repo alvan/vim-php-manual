@@ -1,6 +1,6 @@
 clearstatcache -- Clears file status cache
 
-  void clearstatcache([bool clear_realpath_cache [, string filename]])~
+  void clearstatcache([bool clear_realpath_cache = false [, string filename = false]])~
 
 When you use |stat|, |lstat|, or any of the other functions listed in the
 affected functions list (below), PHP caches the information those functions
@@ -30,8 +30,8 @@ Affected functions include |stat|, |lstat|, |file_exists|, |is_writable|,
 
 {clear_realpath_cache} Whether to clear the realpath cache or not.
 
-{filename} Clear the realpath cache for a specific filename; only used if
-{clear_realpath_cache} is TRUE.
+{filename} Clear the realpath and the stat cache for a specific filename only;
+only used if {clear_realpath_cache} is TRUE.
 
 No value is returned.
 

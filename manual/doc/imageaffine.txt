@@ -1,0 +1,20 @@
+imageaffine -- Return an image containing the affine transformed src image,
+using an optional clipping area
+
+  resource imageaffine(resource image, array affine [, array clip])~
+
+
+
+This function is currently not documented; only its argument list is
+available.
+
+An image resource, returned by one of the image creation functions, such as
+|imagecreatetruecolor|.
+
+Array with keys 0 to 5.
+
+Array with keys "x", "y", "width" and "height".
+
+Return affined image resource on success or FALSE on failure.
+
+vim:ft=help:

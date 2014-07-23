@@ -1,0 +1,13 @@
+oci_free_descriptor -- Frees a descriptor
+
+  bool oci_free_descriptor(resource descriptor)~
+
+Frees a descriptor allocated by |oci_new_descriptor|.
+
+Returns TRUE on success or &false; on failure.
+
+This function is commonly used as a method OCI-LOB::free.
+
+OCI-LOB::free
+
+vim:ft=help:

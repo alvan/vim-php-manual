@@ -1,6 +1,6 @@
 msg_get_queue -- Create or attach to a message queue
 
-  resource msg_get_queue(int key [, int perms])~
+  resource msg_get_queue(int key [, int perms = 0666])~
 
 |msg_get_queue| returns an id that can be used to access the System V message
 queue with the given {key}. The first call creates the message queue with the

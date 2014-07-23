@@ -1,6 +1,6 @@
 stream_get_contents -- Reads remainder of a stream into a string
 
-  string stream_get_contents(resource handle [, int maxlength [, int offset]])~
+  string stream_get_contents(resource handle [, int maxlength = -1 [, int offset = -1]])~
 
 Identical to |file_get_contents|, except that |stream_get_contents| operates
 on an already open stream resource and returns the remaining contents in a

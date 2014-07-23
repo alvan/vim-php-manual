@@ -1,0 +1,16 @@
+curl_pause -- Pause and unpause a connection
+
+  int curl_pause(resource ch, int bitmask)~
+
+
+
+This function is currently not documented; only its argument list is
+available.
+
+A cURL handle returned by |curl_init|.
+
+One of CURLPAUSE_* constants.
+
+Returns an error code (CURLE_OK for no error).
+
+vim:ft=help:

@@ -28,7 +28,7 @@ Returns 0 on success or -1 on error.
 <?php >
   $conn = pg_pconnect("dbname=publisher");
   if (!$conn) {
-    echo "An error occured.\n";
+    echo "An error occurred.\n";
     exit;
   }
   
@@ -38,7 +38,7 @@ Returns 0 on success or -1 on error.
   
   $result = pg_query($conn, "SELECT author, email FROM authors");
   if (!$result) {
-    echo "An error occured.\n";
+    echo "An error occurred.\n";
     exit;
   }
   

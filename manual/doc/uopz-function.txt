@@ -1,0 +1,48 @@
+uopz_function -- Creates a function at runtime
+
+  void uopz_function(string class, string function, Closure handler [, int modifiers])~
+
+  void uopz_function(string class, string function, Closure handler [, int modifiers, string function, Closure handler [, int modifiers]])~
+
+Creates a function at runtime
+
+The name of the class to receive the new function
+
+The name of the function
+
+The Closure for the function
+
+The modifiers for the function, by default copied or ZEND_ACC_PUBLIC
+
+
+
+|uopz_function| example
+
+<?php >
+  uopz_function("my_strlen", function($arg) {
+      return strlen($arg);
+  });
+  echo my_strlen("Hello World");
+?>
+
+The above example will output something similar to:
+
+  11
+
+|uopz_function| class example
+
+<?php >
+  class My {}
+  
+  uopz_function(My::class, "strlen", function($arg) {
+      return strlen($arg);
+  }, ZEND_ACC_STATIC);
+  
+  echo My::strlen("Hello World");
+?>
+
+The above example will output something similar to:
+
+  11
+
+vim:ft=help:

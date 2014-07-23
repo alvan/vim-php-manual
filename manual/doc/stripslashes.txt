@@ -8,9 +8,9 @@ If magic_quotes_sybase is on, no backslashes are stripped off but two
 apostrophes are replaced by one instead.
 
 An example use of |stripslashes| is when the PHP directive magic_quotes_gpc is
-on (it's on by default), and you aren't inserting this data into a place (such
-as a database) that requires escaping. For example, if you're simply
-outputting data straight from an HTML form.
+on (it was on by default before PHP 5.4), and you aren't inserting this data
+into a place (such as a database) that requires escaping. For example, if
+you're simply outputting data straight from an HTML form.
 
 {str} The input string.
 

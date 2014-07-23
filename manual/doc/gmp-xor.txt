@@ -1,16 +1,19 @@
 gmp_xor -- Bitwise XOR
 
-  resource gmp_xor(resource a, resource b)~
+  GMP gmp_xor(GMP a, GMP b)~
 
 Calculates bitwise exclusive OR (XOR) of two GMP numbers.
 
-{a} It can be either a GMP number resource, or a numeric string given that it
-is possible to convert the latter to a number.
+{a} Either a GMP number resource in PHP 5.5 and earlier, a GMP object in PHP
+5.6 and later, or a numeric string provided that it is possible to convert the
+latter to a number.
 
-{b} It can be either a GMP number resource, or a numeric string given that it
-is possible to convert the latter to a number.
+{b} Either a GMP number resource in PHP 5.5 and earlier, a GMP object in PHP
+5.6 and later, or a numeric string provided that it is possible to convert the
+latter to a number.
 
-A GMP number resource.
+A GMP number resource in PHP 5.5 and earlier, or a GMP object in PHP 5.6 and
+later.
 
 |gmp_xor| example
 

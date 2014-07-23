@@ -4,7 +4,7 @@ check
   array array_diff_assoc(array array1, array array2 [, array ...])~
 
 Compares {array1} against {array2} and returns the difference. Unlike
-|array_diff| the array keys are used in the comparison.
+|array_diff| the array keys are also used in the comparison.
 
 {array1} The array to compare from
 
@@ -62,6 +62,9 @@ The above example will output:
 This function only checks one dimension of a n-dimensional array. Of course
 you can check deeper dimensions by using, for example,
 array_diff_assoc($array1[0], $array2[0]);.
+
+Ensure you pass arguments in the correct order when comparing similar arrays
+with more keys. The new array should be the first in the list.
 
 |array_diff| |array_intersect| |array_intersect_assoc|
 

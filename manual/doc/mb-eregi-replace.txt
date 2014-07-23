@@ -1,7 +1,7 @@
 mb_eregi_replace -- Replace regular expression with multibyte support ignoring
 case
 
-  string mb_eregi_replace(string pattern, string replace, string string [, string option])~
+  string mb_eregi_replace(string pattern, string replace, string string [, string option = "msri"])~
 
 Scans {string} for matches to {pattern}, then replaces the matched text with
 {replacement}.

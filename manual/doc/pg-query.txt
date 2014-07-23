@@ -3,6 +3,7 @@ pg_query -- Execute a query
   resource pg_query([resource connection, string query])~
 
 |pg_query| executes the {query} on the specified database {connection}.
+|pg_query_params| should be preferred in most cases.
 
 If an error occurs, and FALSE is returned, details of the error can be
 retrieved using the |pg_last_error| function if the connection is valid.
@@ -23,7 +24,13 @@ transaction, unless there are explicit BEGIN/COMMIT commands included in the
 query string. However, using multiple transactions in one function call is not
 recommended.
 
-Data inside the query should be properly escaped.
+String interpolation of user-supplied data is extremely dangerous and is
+likely to lead to SQL injection vulnerabilities. In most cases
+|pg_query_params| should be preferred, passing user-supplied values as
+parameters rather than substituting them into the query string.
+
+Any user-supplied data substituted directly into a query string should be
+properly escaped.
 
 A query result resource on success or FALSE on failure.
 
@@ -32,13 +39,13 @@ A query result resource on success or FALSE on failure.
 <?php >
   $conn = pg_pconnect("dbname=publisher");
   if (!$conn) {
-    echo "An error occured.\n";
+    echo "An error occurred.\n";
     exit;
   }
   
   $result = pg_query($conn, "SELECT author, email FROM authors");
   if (!$result) {
-    echo "An error occured.\n";
+    echo "An error occurred.\n";
     exit;
   }
   

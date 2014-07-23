@@ -1,6 +1,6 @@
 socket_read -- Reads a maximum of length bytes from a socket
 
-  string socket_read(resource socket, int length [, int type])~
+  string socket_read(resource socket, int length [, int type = PHP_BINARY_READ])~
 
 The function |socket_read| reads from the socket resource {socket} created by
 the |socket_create| or |socket_accept| functions.

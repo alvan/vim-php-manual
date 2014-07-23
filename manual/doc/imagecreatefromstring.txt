@@ -1,10 +1,10 @@
 imagecreatefromstring -- Create a new image from the image stream in the
 string
 
-  resource imagecreatefromstring(string data)~
+  resource imagecreatefromstring(string image)~
 
 |imagecreatefromstring| returns an image identifier representing the image
-obtained from the given {data}. These types will be automatically detected if
+obtained from the given {image}. These types will be automatically detected if
 your build of PHP supports them: JPEG, PNG, GIF, WBMP, and GD2.
 
 {image} A string containing the image data.

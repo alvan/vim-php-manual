@@ -1,6 +1,6 @@
 ob_implicit_flush -- Turn implicit flush on/off
 
-  void ob_implicit_flush([int flag])~
+  void ob_implicit_flush([int flag = true])~
 
 |ob_implicit_flush| will turn implicit flushing on or off. Implicit flushing
 will result in a flush operation after every output call, so that explicit

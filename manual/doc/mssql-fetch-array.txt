@@ -1,7 +1,7 @@
 mssql_fetch_array -- Fetch a result row as an associative array, a numeric
 array, or both
 
-  array mssql_fetch_array(resource result [, int result_type])~
+  array mssql_fetch_array(resource result [, int result_type = MSSQL_BOTH])~
 
 |mssql_fetch_array| is an extended version of |mssql_fetch_row|. In addition
 to storing the data in the numeric indices of the result array, it also stores

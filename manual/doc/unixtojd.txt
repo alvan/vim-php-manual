@@ -1,6 +1,6 @@
 unixtojd -- Convert Unix timestamp to Julian Day
 
-  int unixtojd([int timestamp])~
+  int unixtojd([int timestamp = time()])~
 
 Return the Julian Day for a Unix {timestamp} (seconds since 1.1.1970), or for
 the current day if no {timestamp} is given.

@@ -1,0 +1,18 @@
+fann_set_activation_steepness_output -- Sets the steepness of the activation
+steepness in the output layer
+
+  bool fann_set_activation_steepness_output(resource ann, float activation_steepness)~
+
+Sets the steepness of the activation steepness in the output layer.
+
+Neural network resource.
+
+The activation steepness.
+
+Returns TRUE on success, or FALSE otherwise.
+
+|fann_set_activation_steepness| |fann_set_activation_steepness_layer|
+|fann_set_activation_steepness_hidden| |fann_get_activation_steepness|
+|fann_set_activation_function|
+
+vim:ft=help:

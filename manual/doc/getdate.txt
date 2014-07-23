@@ -1,6 +1,6 @@
 getdate -- Get date/time information
 
-  array getdate([int timestamp])~
+  array getdate([int timestamp = time()])~
 
 Returns an associative array containing the date information of the
 {timestamp}, or the current local time if no {timestamp} is given.

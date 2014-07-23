@@ -11,6 +11,8 @@ Types array, object and resource are not scalar.
 are abstract datatypes which are currently based on integers. This
 implementation detail should not be relied upon, as it may change.
 
+|is_scalar| does not consider NULL to be scalar.
+
 {var} The variable being evaluated.
 
 Returns TRUE if {var} is a scalar FALSE otherwise.

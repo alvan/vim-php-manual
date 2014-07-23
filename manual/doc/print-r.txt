@@ -1,15 +1,12 @@
 print_r -- Prints human-readable information about a variable
 
-  mixed print_r(mixed expression [, bool return])~
+  mixed print_r(mixed expression [, bool return = false])~
 
 |print_r| displays information about a variable in a way that's readable by
 humans.
 
 |print_r|, |var_dump| and |var_export| will also show protected and private
 properties of objects with PHP 5. Static class members will not be shown.
-
-Remember that |print_r| will move the array pointer to the end. Use |reset| to
-bring it back to beginning.
 
 {expression} The expression to be printed.
 
@@ -25,7 +22,7 @@ When the {return} parameter is TRUE, this function will return a string.
 Otherwise, the return value is TRUE.
 
 When the {return} parameter is used, this function uses internal output
-buffering so it can not be used inside an |ob_start| callback function.
+buffering so it cannot be used inside an |ob_start| callback function.
 
 Version Description 4.3.0 The {return} parameter was added. If you need to
 capture the output of |print_r| with an older version of PHP prior, use the

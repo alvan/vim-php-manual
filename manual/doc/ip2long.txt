@@ -50,19 +50,6 @@ address with the |printf| function in both PHP 4 and PHP 5:
 
 
 
-IP validation |ip2long| should not be used as the sole form of IP validation.
-Combine it with |long2ip|:
-
-<?php >
-  // make sure IPs are valid. also converts a non-complete IP into
-  // a proper dotted quad as explained below.
-  $ip = long2ip(ip2long("127.0.0.1")); // "127.0.0.1"
-  $ip = long2ip(ip2long("10.0.0")); // "10.0.0.0"
-  $ip = long2ip(ip2long("10.0.256")); // "10.0.1.0"
-?>
-
-
-
 Because PHP's integer type is signed, and many IP addresses will result in
 negative integers on 32-bit architectures, you need to use the "%u" formatter
 of |sprintf| or |printf| to get the string representation of the unsigned IP

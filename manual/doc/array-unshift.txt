@@ -1,6 +1,6 @@
 array_unshift -- Prepend one or more elements to the beginning of an array
 
-  int array_unshift(array array, mixed var [, mixed ...])~
+  int array_unshift(array &array, mixed value1 [, mixed ...])~
 
 |array_unshift| prepends passed elements to the front of the {array}. Note
 that the list of elements is prepended as a whole, so that the prepended
@@ -9,7 +9,7 @@ start counting from zero while literal keys won't be touched.
 
 {array} The input array.
 
-{var} The prepended variable.
+{value1} First value to prepend.
 
 Returns the new number of elements in the {array}.
 

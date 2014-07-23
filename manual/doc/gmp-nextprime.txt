@@ -1,11 +1,12 @@
 gmp_nextprime -- Find next prime number
 
-  resource gmp_nextprime(int a)~
+  GMP gmp_nextprime(int a)~
 
 Find next prime number
 
-{a} It can be either a GMP number resource, or a numeric string given that it
-is possible to convert the latter to a number.
+{a} Either a GMP number resource in PHP 5.5 and earlier, a GMP object in PHP
+5.6 and later, or a numeric string provided that it is possible to convert the
+latter to a number.
 
 Return the next prime number greater than {a}, as a GMP number.
 

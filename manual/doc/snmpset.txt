@@ -1,6 +1,6 @@
 snmpset -- Set the value of an SNMP object
 
-  bool snmpset(string host, string community, string object_id, string type, mixed value [, int timeout [, int retries]])~
+  bool snmpset(string host, string community, string object_id, string type, mixed value [, int timeout = 1000000 [, int retries = 5]])~
 
 |snmpset| is used to set the value of an SNMP object specified by the
 {object_id}.

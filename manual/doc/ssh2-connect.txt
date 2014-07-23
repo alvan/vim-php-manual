@@ -1,6 +1,6 @@
 ssh2_connect -- Connect to an SSH server
 
-  resource ssh2_connect(string host [, int port [, array methods [, array callbacks]]])~
+  resource ssh2_connect(string host [, int port = 22 [, array methods = 22 [, array callbacks = 22]]])~
 
 Establish a connection to a remote SSH server.
 
@@ -19,7 +19,7 @@ parameters. Index Meaning Supported Values* kex List of key exchange methods
 to advertise, comma separated in order of preference.
 diffie-hellman-group1-sha1, diffie-hellman-group14-sha1, and
 diffie-hellman-group-exchange-sha1 hostkey List of hostkey methods to
-advertise, come separated in order of preference. ssh-rsa and ssh-dss
+advertise, comma separated in order of preference. ssh-rsa and ssh-dss
 client_to_server Associative array containing crypt, compression, and message
 authentication code (MAC) method preferences for messages sent from client to
 server. server_to_client Associative array containing crypt, compression, and
@@ -35,7 +35,7 @@ of crypto methods to advertise, comma separated in order of preference.
 rijndael-cbc@lysator.liu.se, aes256-cbc, aes192-cbc, aes128-cbc, 3des-cbc,
 blowfish-cbc, cast128-cbc, arcfour, and none** comp List of compression
 methods to advertise, comma separated in order of preference. zlib and none
-mac List of MAC methods to advertise, come separated in order of preference.
+mac List of MAC methods to advertise, comma separated in order of preference.
 hmac-sha1, hmac-sha1-96, hmac-ripemd160, hmac-ripemd160@openssh.com, and
 none**
 

@@ -1,9 +1,9 @@
 wincache_ucache_set -- Adds a variable in user cache and overwrites a variable
 if it already exists in the cache
 
-  bool wincache_ucache_set(mixed key, mixed value [, int ttl])~
+  bool wincache_ucache_set(mixed key, mixed value [, int ttl = 0])~
 
-  bool wincache_ucache_set(mixed key, mixed value [, int ttl, array values [, mixed unused [, int ttl]]])~
+  bool wincache_ucache_set(mixed key, mixed value [, int ttl = 0, array values = 0 [, mixed unused = 0 [, int ttl = 0]]])~
 
 Adds a variable in user cache. Overwrites a variable if it already exists in
 the cache. The added or updated variable remains in the user cache unless its

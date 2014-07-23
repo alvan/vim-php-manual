@@ -1,6 +1,6 @@
 class_uses -- Return the traits used by the given class
 
-  array class_uses(mixed class [, bool autoload])~
+  array class_uses(mixed class [, bool autoload = true])~
 
 This function returns an array with the names of the traits that the given
 {class} uses. This does however not include any traits used by a parent class.
@@ -24,13 +24,12 @@ An array on success, or FALSE on error.
   
   print_r(class_uses('bar'));
   
-  
   function __autoload($class_name) {
      require_once $class_name . '.php';
   }
   
   // use __autoload to load the 'not_loaded' class
-  print_r(class_implements('not_loaded', true));
+  print_r(class_uses('not_loaded', true));
 ?>
 
 The above example will output something similar to:

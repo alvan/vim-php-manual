@@ -8,7 +8,8 @@ name of the algorithm is specified in algorithm, e.g. "twofish" or is one of
 the MCRYPT_ciphername constants. The module is closed by calling
 |mcrypt_module_close|.
 
-{algorithm} The algorithm to be used.
+{algorithm} One of the MCRYPT_ciphername constants, or the name of the
+algorithm as string.
 
 {algorithm_directory} The {algorithm_directory} parameter is used to locate
 the encryption module. When you supply a directory name, it is used. When you
@@ -17,7 +18,8 @@ php.ini directive is used. When it is not set, the default directory that is
 used is the one that was compiled into libmcrypt (usually
 /usr/local/lib/libmcrypt).
 
-{mode} The mode to be used.
+{mode} One of the MCRYPT_MODE_modename constants, or one of the following
+strings: "ecb", "cbc", "cfb", "ofb", "nofb" or "stream".
 
 {mode_directory} The {mode_directory} parameter is used to locate the
 encryption module. When you supply a directory name, it is used. When you set
@@ -42,7 +44,7 @@ Normally it returns an encryption descriptor, or FALSE on error.
 
 
 The first line in the example above will try to open the DES cipher from the
-default directory and the EBC mode from the directory /usr/lib/mcrypt-modes.
+default directory and the ECB mode from the directory /usr/lib/mcrypt-modes.
 The second example uses strings as name for the cipher and mode, this only
 works when the extension is linked against libmcrypt 2.4.x or 2.5.x.
 

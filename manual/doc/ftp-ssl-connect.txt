@@ -1,6 +1,6 @@
 ftp_ssl_connect -- Opens an Secure SSL-FTP connection
 
-  resource ftp_ssl_connect(string host [, int port [, int timeout]])~
+  resource ftp_ssl_connect(string host [, int port = 21 [, int timeout = 90]])~
 
 |ftp_ssl_connect| opens an explicit SSL-FTP connection to the specified
 {host}.

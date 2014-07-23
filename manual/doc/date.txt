@@ -1,6 +1,6 @@
 date -- Format a local time/date
 
-  string date(string format [, int timestamp])~
+  string date(string format [, int timestamp = time()])~
 
 Returns a string formatted according to the given format string using the
 given integer {timestamp} or the current time if no timestamp is given. In
@@ -38,18 +38,20 @@ through 999 g 12-hour format of an hour without leading zeros 1 through 12 G
 24-hour format of an hour without leading zeros 0 through 23 h 12-hour format
 of an hour with leading zeros 01 through 12 H 24-hour format of an hour with
 leading zeros 00 through 23 i Minutes with leading zeros 00 to 59 s Seconds,
-with leading zeros 00 through 59 u Microseconds (added in PHP 5.2.2) Example:
-654321 Timezone --- --- e Timezone identifier (added in PHP 5.1.0) Examples:
-UTC, GMT, Atlantic/Azores I (capital i) Whether or not the date is in daylight
-saving time 1 if Daylight Saving Time, 0 otherwise. O Difference to Greenwich
-time (GMT) in hours Example: +0200 P Difference to Greenwich time (GMT) with
-colon between hours and minutes (added in PHP 5.1.3) Example: +02:00 T
-Timezone abbreviation Examples: EST, MDT ... Z Timezone offset in seconds. The
-offset for timezones west of UTC is always negative, and for those east of UTC
-is always positive. -43200 through 50400 Full Date/Time --- --- c ISO 8601
-date (added in PHP 5) 2004-02-12T15:19:21+00:00 r RFC 2822 formatted date
-Example: Thu, 21 Dec 2000 16:01:07 +0200 U Seconds since the Unix Epoch
-(January 1 1970 00:00:00 GMT) See also |time|
+with leading zeros 00 through 59 u Microseconds (added in PHP 5.2.2). Note
+that |date| will always generate 000000 since it takes an integer parameter,
+whereas DateTime::format does support microseconds. Example: 654321 Timezone
+--- --- e Timezone identifier (added in PHP 5.1.0) Examples: UTC, GMT,
+Atlantic/Azores I (capital i) Whether or not the date is in daylight saving
+time 1 if Daylight Saving Time, 0 otherwise. O Difference to Greenwich time
+(GMT) in hours Example: +0200 P Difference to Greenwich time (GMT) with colon
+between hours and minutes (added in PHP 5.1.3) Example: +02:00 T Timezone
+abbreviation Examples: EST, MDT ... Z Timezone offset in seconds. The offset
+for timezones west of UTC is always negative, and for those east of UTC is
+always positive. -43200 through 50400 Full Date/Time --- --- c ISO 8601 date
+(added in PHP 5) 2004-02-12T15:19:21+00:00 r RFC 2822 formatted date Example:
+Thu, 21 Dec 2000 16:01:07 +0200 U Seconds since the Unix Epoch (January 1 1970
+00:00:00 GMT) See also |time|
 
 Unrecognized characters in the format string will be printed as-is. The Z
 format will always return 0 when using |gmdate|.
@@ -96,8 +98,8 @@ used to specify the {format} parameter.
   echo "July 1, 2000 is on a " . date("l", mktime(0, 0, 0, 7, 1, 2000));
   
   /* use the constants in the format parameter */
-  // prints something like: Mon, 15 Aug 2005 15:12:46 UTC
-  echo date(DATE_RFC822);
+  // prints something like: Wed, 25 Sep 2013 15:28:57 -0700
+  echo date(DATE_RFC2822);
   
   // prints something like: 2000-07-01T00:00:00+00:00
   echo date(DATE_ATOM, mktime(0, 0, 0, 7, 1, 2000));
@@ -154,6 +156,7 @@ characters like \n from becoming newlines. |date| Formatting
   $today = date("D M j G:i:s T Y");               // Sat Mar 10 17:16:18 MST 2001
   $today = date('H:m:s \m \i\s\ \m\o\n\t\h');     // 17:03:18 m is month
   $today = date("H:i:s");                         // 17:16:18
+  $today = date("Y-m-d H:i:s");                   // 2001-03-10 17:16:18 (the MySQL DATETIME format)
 ?>
 
 

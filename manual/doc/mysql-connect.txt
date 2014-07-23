@@ -1,6 +1,11 @@
 mysql_connect -- Open a connection to a MySQL Server
 
-  resource mysql_connect([string server [, string username [, string password [, bool new_link [, int client_flags]]]]])~
+This extension is deprecated as of PHP 5.5.0, and will be removed in the
+future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
+MySQL: choosing an API guide and related FAQ for more information.
+Alternatives to this function include:
+
+  resource mysql_connect([string server = ini_get("mysql.default_host") [, string username = ini_get("mysql.default_user") [, string password = ini_get("mysql.default_password") [, bool new_link = false [, int client_flags = 0]]]]])~
 
 Opens or reuses a connection to a MySQL server.
 
@@ -34,8 +39,9 @@ parameter is ignored.
 
 Returns a MySQL link identifier on success or FALSE on failure.
 
-Version Description 4.3.0 Added the {client_flags} parameter. 4.2.0 Added the
-{new_link} parameter.
+Version Description 5.5.0 This function will generate an E_DEPRECATED error.
+4.3.0 Added the {client_flags} parameter. 4.2.0 Added the {new_link}
+parameter.
 
 |mysql_connect| example
 

@@ -1,6 +1,11 @@
 mysql_create_db -- Create a MySQL database
 
-  bool mysql_create_db(string database_name [, resource link_identifier])~
+This extension is deprecated as of PHP 5.5.0, and will be removed in the
+future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
+MySQL: choosing an API guide and related FAQ for more information.
+Alternatives to this function include:
+
+  bool mysql_create_db(string database_name [, resource link_identifier = NULL])~
 
 |mysql_create_db| attempts to create a new database on the server associated
 with the specified link identifier.

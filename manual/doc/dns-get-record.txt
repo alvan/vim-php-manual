@@ -1,6 +1,6 @@
 dns_get_record -- Fetch DNS Resource Records associated with a hostname
 
-  array dns_get_record(string hostname [, int type [, array authns [, array addtl]]])~
+  array dns_get_record(string hostname [, int type = DNS_ANY [, array &authns = DNS_ANY [, array &addtl = DNS_ANY [, bool &raw = false]]]])~
 
 Fetch DNS Resource Records associated with the given {hostname}.
 
@@ -29,6 +29,9 @@ Records for the Authoritative Name Servers.
 
 {addtl} Passed by reference and, if given, will be populated with any
 Additional Records.
+
+{raw} In case of raw mode, we query only the requestd type instead of looping
+type by type before going with the additional info stuff.
 
 This function returns an array of associative arrays, or FALSE on failure.
 Each associative array contains at minimum the following keys: Basic DNS
@@ -72,9 +75,9 @@ additional information see: RFC 2782 NAPTR order and pref: Equivalent to {pri}
 and {weight} above. flags, services, regex, and replacement: Parameters as
 defined by RFC 2915.
 
-Version Description 5.3.0 This function is now available on Windows platforms.
-5.3.0 Prior to this release, if the {authns} parameter was given, the {addtl}
-parameter was also required.
+Version Description 5.4.0 Added {raw} parameter. 5.3.0 This function is now
+available on Windows platforms. 5.3.0 Prior to this release, if the {authns}
+parameter was given, the {addtl} parameter was also required.
 
 Using |dns_get_record|
 

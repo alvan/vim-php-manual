@@ -1,0 +1,17 @@
+fann_get_cascade_max_cand_epochs -- Returns the maximum candidate epochs
+
+  int fann_get_cascade_max_cand_epochs(resource ann)~
+
+The maximum candidate epochs determines the maximum number of epochs the input
+connections to the candidates may be trained before adding a new candidate
+neuron.
+
+The default max candidate epochs is 150.
+
+Neural network resource.
+
+The maximum candidate epochs, or FALSE on error.
+
+|fann_set_cascade_max_cand_epochs|
+
+vim:ft=help:

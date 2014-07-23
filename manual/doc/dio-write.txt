@@ -1,6 +1,6 @@
 dio_write -- Writes data to fd with optional truncation at length
 
-  int dio_write(resource fd, string data [, int len])~
+  int dio_write(resource fd, string data [, int len = 0])~
 
 |dio_write| writes up to {len} bytes from {data} to file {fd}.
 

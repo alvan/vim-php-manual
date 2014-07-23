@@ -1,0 +1,17 @@
+fann_set_train_stop_function -- Sets the stop function used during training
+
+  bool fann_set_train_stop_function(resource ann, int stop_function)~
+
+Sets the stop function used during training.
+
+The stop functions are described further in stop functions constants.
+
+Neural network resource.
+
+The stop function constant.
+
+Returns TRUE on success, or FALSE otherwise.
+
+|fann_get_train_stop_function|
+
+vim:ft=help:

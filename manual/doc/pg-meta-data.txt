@@ -1,16 +1,14 @@
 pg_meta_data -- Get meta data for table
 
-  array pg_meta_data(resource connection, string table_name)~
+  array pg_meta_data(resource connection, string table_name [, bool extended])~
 
 |pg_meta_data| returns table definition for table_name as an array.
-
-This function is EXPERIMENTAL. The behaviour of this function, its name, and
-surrounding documentation may change without notice in a future release of
-PHP. This function should be used at your own risk.
 
 {connection} PostgreSQL database connection resource.
 
 {table_name} The name of the table.
+
+{extended} Flag for returning extended meta data. Default to FALSE.
 
 An array of the table definition, or FALSE on error.
 
@@ -72,6 +70,9 @@ The above example will output:
   }
 
 
+
+Version Description 5.6.0 No longer experimental. Added "is enum" as default
+attribute. {extended} flag is added.
 
 |pg_convert|
 

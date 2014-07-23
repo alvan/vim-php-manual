@@ -1,0 +1,15 @@
+fann_reset_MSE -- Resets the mean square error from the network
+
+  bool fann_reset_MSE(string ann)~
+
+Resets the mean square error from the network.
+
+This function also resets the number of bits that fail.
+
+Neural network resource.
+
+Returns TRUE on success, or FALSE otherwise.
+
+|fann_get_MSE| |fann_get_bit_fail| |fann_get_bit_fail_limit|
+
+vim:ft=help:

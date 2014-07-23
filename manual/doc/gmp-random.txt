@@ -1,6 +1,6 @@
 gmp_random -- Random number
 
-  resource gmp_random([int limiter])~
+  GMP gmp_random([int limiter = 20])~
 
 Generate a random number. The number will be between zero and the number of
 bits per limb multiplied by {limiter}. If {limiter} is negative, negative
@@ -12,8 +12,9 @@ limb is either 16 or 32, but this is not guaranteed.
 
 {limiter} The limiter.
 
-It can be either a GMP number resource, or a numeric string given that it is
-possible to convert the latter to a number.
+Either a GMP number resource in PHP 5.5 and earlier, a GMP object in PHP 5.6
+and later, or a numeric string provided that it is possible to convert the
+latter to a number.
 
 A random GMP number.
 

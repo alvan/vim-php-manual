@@ -1,6 +1,6 @@
 pcntl_getpriority -- Get the priority of any process
 
-  int pcntl_getpriority([int pid [, int process_identifier]])~
+  int pcntl_getpriority([int pid = getmypid() [, int process_identifier = PRIO_PROCESS]])~
 
 |pcntl_getpriority| gets the priority of {pid}. Because priority levels can
 differ between system types and kernel versions, please see your system's

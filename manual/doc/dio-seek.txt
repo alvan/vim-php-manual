@@ -1,6 +1,6 @@
 dio_seek -- Seeks to pos on fd from whence
 
-  int dio_seek(resource fd, int pos [, int whence])~
+  int dio_seek(resource fd, int pos [, int whence = SEEK_SET])~
 
 The function |dio_seek| is used to change the file position of the given file
 descriptor.

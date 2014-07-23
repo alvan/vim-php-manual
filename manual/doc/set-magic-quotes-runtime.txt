@@ -8,6 +8,10 @@ Set the current active configuration setting of magic_quotes_runtime.
 This function has been DEPRECATED as of PHP 5.3.0. Relying on this feature is
 highly discouraged.
 
+Since PHP 5.3 this function has been deprecated and will raise an E_DEPRECATED
+warning upon execution. Since PHP 5.4 this function will also raise an
+E_CORE_ERROR on trying to enable magic quotes.
+
 {new_setting} FALSE for off, TRUE for on.
 
 Returns TRUE on success or &false; on failure.

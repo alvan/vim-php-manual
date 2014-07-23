@@ -1,7 +1,7 @@
 db2_fetch_object -- Returns an object with properties representing columns in
 the fetched row
 
-  object db2_fetch_object(resource stmt [, int row_number])~
+  object db2_fetch_object(resource stmt [, int row_number = -1])~
 
 Returns an object in which each property represents a column returned in the
 row fetched from a result set.

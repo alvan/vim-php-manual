@@ -1,0 +1,32 @@
+ssh2_sftp_chmod -- Changes file mode
+
+  bool ssh2_sftp_chmod(resource sftp, string filename, int mode)~
+
+Attempts to change the mode of the specified file to that given in {mode}.
+
+{sftp} An SSH2 SFTP resource opened by |ssh2_sftp|.
+
+{filename} Path to the file.
+
+{mode} Permissions on the file. See the |chmod| for more details on this
+parameter.
+
+Returns TRUE on success or &false; on failure.
+
+Creating a directory on a remote server
+
+<?php >
+  $connection = ssh2_connect('shell.example.com', 22);
+  ssh2_auth_password($connection, 'username', 'password');
+  $sftp = ssh2_sftp($connection);
+  
+  ssh2_sftp_chmod($sftp, '/somedir/somefile', 0755);
+?>
+
+
+
+
+
+|chmod| |ssh2_sftp| |ssh2_connect|
+
+vim:ft=help:

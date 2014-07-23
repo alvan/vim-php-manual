@@ -1,6 +1,6 @@
 pg_field_table -- Returns the name or oid of the tables field
 
-  mixed pg_field_table(resource result, int field_number [, bool oid_only])~
+  mixed pg_field_table(resource result, int field_number [, bool oid_only = false])~
 
 |pg_field_table| returns the name of the table that field belongs to, or the
 table's oid if {oid_only} is TRUE.

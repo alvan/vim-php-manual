@@ -1,6 +1,6 @@
 id3_remove_tag -- Remove an existing ID3 tag
 
-  bool id3_remove_tag(string filename [, int version])~
+  bool id3_remove_tag(string filename [, int version = ID3_V1_0])~
 
 |id3_remove_tag| is used to remove the information stored of an ID3 tag.
 
@@ -18,13 +18,13 @@ Returns TRUE on success or &false; on failure.
 <?php >
   $result = id3_remove_tag( "path/to/example.mp3", ID3_V1_0 );
   if ($result === true) {
-      echo "Tag succesfully removed\n";
+      echo "Tag successfully removed\n";
   }
 ?>
 
 If the file is writable and contained a 1.0 tag, this will output:
 
-  Tag succesfully removed
+  Tag successfully removed
 
 
 

@@ -7,6 +7,10 @@ this output buffering. If you want to further process the buffer's contents
 you have to call |ob_get_contents| before |ob_end_clean| as the buffer
 contents are discarded when |ob_end_clean| is called.
 
+The output buffer must be started by |ob_start| with
+PHP_OUTPUT_HANDLER_CLEANABLE and PHP_OUTPUT_HANDLER_REMOVABLE flags. Otherwise
+|ob_end_clean| will not work.
+
 Returns TRUE on success or &false; on failure. Reasons for failure are first
 that you called the function without an active buffer or that for some reason
 a buffer could not be deleted (possible for special buffer).

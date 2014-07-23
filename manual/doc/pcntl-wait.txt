@@ -1,6 +1,6 @@
 pcntl_wait -- Waits on or returns the status of a forked child
 
-  int pcntl_wait(int status [, int options])~
+  int pcntl_wait(int &status [, int options = 0])~
 
 The wait function suspends execution of the current process until a child has
 exited, or until a signal is delivered whose action is to terminate the

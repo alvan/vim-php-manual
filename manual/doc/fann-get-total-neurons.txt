@@ -1,0 +1,13 @@
+fann_get_total_neurons -- Get the total number of neurons in the entire
+network
+
+  int fann_get_total_neurons(resource ann)~
+
+Get the total number of neurons in the entire network. This number does also
+include the bias neurons, so a 2-4-2 network has 2+4+2 +2(bias) = 10 neurons.
+
+Neural network resource.
+
+Total number of neurons in the entire network, or FALSE on error.
+
+vim:ft=help:

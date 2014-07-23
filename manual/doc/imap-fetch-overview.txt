@@ -1,7 +1,7 @@
 imap_fetch_overview -- Read an overview of the information in the headers of
 the given message
 
-  array imap_fetch_overview(resource imap_stream, string sequence [, int options])~
+  array imap_fetch_overview(resource imap_stream, string sequence [, int options = 0])~
 
 This function fetches mail headers for the given {sequence} and returns an
 overview of their contents.

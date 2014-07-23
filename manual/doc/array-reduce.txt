@@ -1,16 +1,19 @@
 array_reduce -- Iteratively reduce the array to a single value using a
 callback function
 
-  mixed array_reduce(array input, callable function [, mixed initial])~
+  mixed array_reduce(array array, callable callback [, mixed initial = ])~
 
-|array_reduce| applies iteratively the {function} function to the elements of
-the array {input}, so as to reduce the array to a single value.
+|array_reduce| applies iteratively the {callback} function to the elements of
+the {array}, so as to reduce the array to a single value.
 
-{input} The input array.
+{array} The input array.
 
-{function} The callback function.
+  mixed (array array, callable callback [, mixed initial = , mixed carry = , mixed item = ])~
 
-  mixed (array input, callable function [, mixed initial, mixed result, mixed item])~
+{callback} {carry} Holds the return value of the previous iteration; in the
+case of the first iteration it instead holds the value of {initial}.
+
+{item} Holds the value of the current iteration.
 
 {initial} If the optional {initial} is available, it will be used at the
 beginning of the process, or as a final result in case the array is empty.
@@ -26,27 +29,25 @@ integer.
 |array_reduce| example
 
 <?php >
-  function rsum($v, $w)
+  function sum($carry, $item)
   {
-      $v += $w;
-      return $v;
+      $carry += $item;
+      return $carry;
   }
   
-  function rmul($v, $w)
+  function multiplication($carry, $item)
   {
-      $v *= $w;
-      return $v;
+      $carry *= $item;
+      return $carry;
   }
   
   $a = array(1, 2, 3, 4, 5);
   $x = array();
-  $b = array_reduce($a, "rsum");
-  $c = array_reduce($a, "rmul", 10);
-  $d = array_reduce($x, "rsum", "No data to reduce");
+  
+  var_dump(array_reduce($a, "sum")); // int(15)
+  var_dump(array_reduce($a, "multiplication", 10)); // int(1200), because: 10*1*2*3*4*5
+  var_dump(array_reduce($x, "sum", "No data to reduce")); // string(17) "No data to reduce"
 ?>
-
-This will result in $b containing 15, $c containing 1200 (= 10*1*2*3*4*5), and
-$d containing No data to reduce.
 
 
 

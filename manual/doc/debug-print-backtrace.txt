@@ -1,6 +1,6 @@
 debug_print_backtrace -- Prints a backtrace
 
-  void debug_print_backtrace([int options [, int limit]])~
+  void debug_print_backtrace([int options = 0 [, int limit = 0]])~
 
 |debug_print_backtrace| prints a PHP backtrace. It prints the function calls,
 included/required files and |eval|ed stuff.

@@ -1,7 +1,7 @@
 eio_busy -- Artificially increase load. Could be useful in tests,
 benchmarking.
 
-  resource eio_busy(int delay [, int pri [, callable callback [, mixed data]]])~
+  resource eio_busy(int delay [, int pri = EIO_PRI_DEFAULT [, callable callback = NULL [, mixed data = NULL]]])~
 
 |eio_busy| artificially increases load taking {delay} seconds to execute. May
 be used for debugging, or benchmarking.

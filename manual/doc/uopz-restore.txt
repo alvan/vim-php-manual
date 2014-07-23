@@ -1,0 +1,31 @@
+uopz_restore -- Restore a previously backed up function
+
+  void uopz_restore(string class, string function)~
+
+  void uopz_restore(string class, string function, string function)~
+
+Restore a previously backed up function
+
+The name of the class containing the function to restore
+
+The name of the function
+
+
+
+|uopz_restore| example
+
+<?php >
+  uopz_backup("fgets");
+  uopz_function("fgets", function(){
+      return true;
+  });
+  var_dump(fgets());
+  uopz_restore('fgets');
+  fgets();
+?>
+
+The above example will output something similar to:
+
+  Warning: fgets() expects at least 1 parameter, 0 given in /path/to/script.php on line 8
+
+vim:ft=help:

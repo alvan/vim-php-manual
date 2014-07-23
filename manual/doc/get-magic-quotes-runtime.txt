@@ -1,11 +1,15 @@
 get_magic_quotes_runtime -- Gets the current active configuration setting of
 magic_quotes_runtime
 
-  int get_magic_quotes_runtime()~
+  bool get_magic_quotes_runtime()~
 
 Returns the current active configuration setting of magic_quotes_runtime.
 
-Returns 0 if magic_quotes_runtime is off, 1 otherwise.
+Returns 0 if magic_quotes_runtime is off, 1 otherwise. Or always returns FALSE
+as of PHP 5.4.0.
+
+Version Description 5.4.0 Always returns FALSE because the magic quotes
+feature was removed from PHP.
 
 |get_magic_quotes_runtime| example
 

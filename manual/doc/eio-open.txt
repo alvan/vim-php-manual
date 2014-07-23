@@ -1,6 +1,6 @@
 eio_open -- Opens a file
 
-  resource eio_open(string path, int flags, int mode, int pri, callable callback [, mixed data])~
+  resource eio_open(string path, int flags, int mode, int pri, callable callback [, mixed data = NULL])~
 
 |eio_open| opens file specified by {path} in access mode {mode} with
 
@@ -23,11 +23,15 @@ NULL passed, {pri} internally is set to EIO_PRI_DEFAULT.
 {callback} function is called when the request is done. It should match the
 following prototype:
 
-  void callback($data, $result);
+  void callback(mixed $data, int $result[, resource $req]);
 
-{$data} is custom data passed to the request. {$result} contains
-request-specific result value; basically, the value returned by corresponding
-system call.
+{data} is custom data passed to the request.
+
+{result} request-specific result value; basically, the value returned by
+corresponding system call.
+
+{req} is optional request resource which can be used with functions like
+|eio_get_last_error|
 
 Arbitrary variable passed to {callback}.
 

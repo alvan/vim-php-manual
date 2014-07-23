@@ -1,6 +1,6 @@
 filter_var_array -- Gets multiple variables and optionally filters them
 
-  mixed filter_var_array(array data [, mixed definition])~
+  mixed filter_var_array(array data [, mixed definition [, bool add_empty = true]])~
 
 This function is useful for retrieving many values without repetitively
 calling |filter_var|.
@@ -17,6 +17,8 @@ understanding.
 
 This parameter can be also an integer holding a filter constant. Then all
 values in the input array are filtered by this filter.
+
+{add_empty} Add missing keys as NULL to the return value.
 
 An array containing the values of the requested variables on success, or FALSE
 on failure. An array value will be FALSE if the filter fails, or NULL if the
@@ -89,6 +91,8 @@ The above example will output:
   }
 
 
+
+Version Description 5.4.0 Added {add_empty} parameter.
 
 |filter_input_array| |filter_var| |filter_input|
 

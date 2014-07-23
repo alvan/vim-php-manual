@@ -1,7 +1,12 @@
 mysql_fetch_array -- Fetch a result row as an associative array, a numeric
 array, or both
 
-  array mysql_fetch_array(resource result [, int result_type])~
+This extension is deprecated as of PHP 5.5.0, and will be removed in the
+future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
+MySQL: choosing an API guide and related FAQ for more information.
+Alternatives to this function include:
+
+  array mysql_fetch_array(resource result [, int result_type = MYSQL_BOTH])~
 
 Returns an array that corresponds to the fetched row and moves the internal
 data pointer ahead.

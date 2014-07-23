@@ -1,11 +1,12 @@
 gmp_com -- Calculates one's complement
 
-  resource gmp_com(resource a)~
+  GMP gmp_com(GMP a)~
 
 Returns the one's complement of {a}.
 
-{a} It can be either a GMP number resource, or a numeric string given that it
-is possible to convert the latter to a number.
+{a} Either a GMP number resource in PHP 5.5 and earlier, a GMP object in PHP
+5.6 and later, or a numeric string provided that it is possible to convert the
+latter to a number.
 
 Returns the one's complement of {a}, as a GMP number.
 

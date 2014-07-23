@@ -1,0 +1,32 @@
+uopz_implement -- Implements an interface at runtime
+
+  void uopz_implement(string class, string interface)~
+
+Makes {class} implement {interface}
+
+
+
+
+
+
+
+|uopz_implement| example
+
+<?php >
+  interface myInterface {}
+  
+  class myClass {}
+  
+  uopz_implement(myClass::class, myInterface::class);
+  
+  var_dump(class_implements(myClass::class));
+?>
+
+The above example will output something similar to:
+
+  array(1) {
+    ["myInterface"]=>
+    string(11) "myInterface"
+  }
+
+vim:ft=help:

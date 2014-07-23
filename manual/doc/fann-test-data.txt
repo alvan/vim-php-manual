@@ -1,0 +1,19 @@
+fann_test_data -- Test a set of training data and calculates the MSE for the
+training data
+
+  float fann_test_data(resource ann, resource data)~
+
+Test a set of training data and calculates the MSE for the training data.
+
+This function updates the MSE and the bit fail values.
+
+Neural network resource.
+
+Neural network training data resource.
+
+The updated MSE, or FALSE on error.
+
+|fann_train_on_data| |fann_train_epoch| |fann_get_bit_fail| |fann_get_MSE|
+|fann_set_training_algorithm|
+
+vim:ft=help:

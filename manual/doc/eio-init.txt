@@ -1,0 +1,19 @@
+eio_init -- (Re-)initialize Eio
+
+  void eio_init()~
+
+|eio_init| (re-)initializes Eio. It allocates memory for internal structures
+of libeio and Eio itself. You may call |eio_init| before using Eio functions.
+Otherwise it will be called internally first time you invoke an Eio function
+in a process.
+
+This deprecated feature will certainly be removed in the future. Since Eio
+1.1.0 |eio_init| is deprecated. In Eio 1.0.0 because of libeio's restrictions
+you must call |eio_init| in child process, if you fork one by any means. You
+have to avoid using Eio in parent process, if you use it in childs.
+
+This function has no parameters.
+
+No value is returned.
+
+vim:ft=help:

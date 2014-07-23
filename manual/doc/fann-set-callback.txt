@@ -1,0 +1,25 @@
+fann_set_callback -- Sets the callback function for use during training
+
+  bool fann_set_callback(resource ann, collable callback)~
+
+Sets the callback function for use during training. It means that it is called
+from |fann_train_on_data| or |fann_train_on_file|.
+
+Neural network resource.
+
+The supplied callback function takes following parameters: ann - The neural
+network resource train - The train data resource or NULL if called from
+|fann_train_on_file| max_epochs - The maximum number of epochs the training
+should continue epochs_between_reports - The number of epochs between calling
+this function desired_error - The desired |fann_get_MSE| or
+|fann_get_bit_fail|, depending on the stop function chosen by
+|fann_set_train_stop_function| epochs - The current epoch
+
+The callback should return TRUE. If it returns FALSE, the training will
+terminate.
+
+Returns TRUE on success, or FALSE otherwise.
+
+|fann_train_on_data| |fann_train_on_file|
+
+vim:ft=help:

@@ -1,6 +1,6 @@
 mb_split -- Split multibyte string using regular expression
 
-  array mb_split(string pattern, string string [, int limit])~
+  array mb_split(string pattern, string string [, int limit = -1])~
 
 Split a multibyte {string} using regular expression {pattern} and returns the
 result as an array.
@@ -14,8 +14,8 @@ result as an array.
 
 The result as an array.
 
-The internal encoding or the character encoding specified by
-|mb_regex_encoding| will be used as the character encoding for this function.
+The character encoding specified by |mb_regex_encoding| will be used as the
+character encoding for this function by default.
 
 |mb_regex_encoding| |mb_ereg|
 

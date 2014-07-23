@@ -1,6 +1,6 @@
 idate -- Format a local time/date as integer
 
-  int idate(string format [, int timestamp])~
+  int idate(string format [, int timestamp = time()])~
 
 Returns a number formatted according to the given format string using the
 given integer {timestamp} or the current local time if no timestamp is given.

@@ -1,7 +1,7 @@
 mb_stristr -- Finds first occurrence of a string within another, case
 insensitive
 
-  string mb_stristr(string haystack, string needle [, bool before_needle [, string encoding]])~
+  string mb_stristr(string haystack, string needle [, bool before_needle = false [, string encoding = mb_internal_encoding()]])~
 
 |mb_stristr| finds the first occurrence of {needle} in {haystack} and returns
 the portion of {haystack}. Unlike |mb_strstr|, |mb_stristr| is
@@ -13,8 +13,8 @@ case-insensitive. If {needle} is not found, it returns FALSE.
 
 {before_needle} Determines which portion of {haystack} this function returns.
 If set to TRUE, it returns all of {haystack} from the beginning to the first
-occurrence of {needle} (including needle). If set to FALSE, it returns all of
-{haystack} from the first occurrence of {needle} to the end (excluding
+occurrence of {needle} (excluding needle). If set to FALSE, it returns all of
+{haystack} from the first occurrence of {needle} to the end (including
 needle).
 
 {encoding} Character encoding name to use. If it is omitted, internal

@@ -1,0 +1,16 @@
+fann_set_weight_array -- Set connections in the network
+
+  bool fann_set_weight_array(resource ann, array connections)~
+
+Set connections in the network.
+
+Only the weights can be changed, connections and weights are ignored if they
+do not already exist in the network.
+
+Neural network resource.
+
+An array of FANNConnection objects
+
+Returns TRUE on success, or FALSE otherwise.
+
+vim:ft=help:

@@ -54,6 +54,11 @@ using |echo| or |print|, or retrieve the contents of any output buffers using
 Working directory of the script can change inside the shutdown function under
 some web servers, e.g. Apache.
 
+Shutdown functions will not be executed if the process is killed with a
+SIGTERM or SIGKILL signal. While you cannot intercept a SIGKILL, you can use
+|pcntl_signal| to install a handler for a SIGTERM which uses |exit| to end
+cleanly.
+
 auto_append_file |exit| The section on connection handling
 
 vim:ft=help:

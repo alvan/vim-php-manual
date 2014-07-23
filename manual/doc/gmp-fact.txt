@@ -1,15 +1,17 @@
 gmp_fact -- Factorial
 
-  resource gmp_fact(mixed a)~
+  GMP gmp_fact(mixed a)~
 
 Calculates factorial (a!) of {a}.
 
 {a} The factorial number.
 
-It can be either a GMP number resource, or a numeric string given that it is
-possible to convert the latter to a number.
+Either a GMP number resource in PHP 5.5 and earlier, a GMP object in PHP 5.6
+and later, or a numeric string provided that it is possible to convert the
+latter to a number.
 
-A GMP number resource.
+A GMP number resource in PHP 5.5 and earlier, or a GMP object in PHP 5.6 and
+later.
 
 |gmp_fact| example
 

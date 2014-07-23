@@ -1,11 +1,11 @@
 SQLiteDatabase::createAggregate -- Register an aggregating UDF for use in SQL
 statements
 
-  void sqlite_create_aggregate(resource dbhandle, string function_name, callable step_func, callable finalize_func [, int num_args])~
+  void sqlite_create_aggregate(resource dbhandle, string function_name, callable step_func, callable finalize_func [, int num_args = -1])~
 
 Object oriented style (method):
 
-  void SQLiteDatabase::createAggregate(resource dbhandle, string function_name, callable step_func, callable finalize_func [, int num_args, string function_name, callable step_func, callable finalize_func [, int num_args]])~
+  void SQLiteDatabase::createAggregate(resource dbhandle, string function_name, callable step_func, callable finalize_func [, int num_args = -1, string function_name = -1, callable step_func = -1, callable finalize_func = -1 [, int num_args = -1]])~
 
 |sqlite_create_aggregate| is similar to |sqlite_create_function| except that
 it registers functions that can be used to calculate a result aggregated

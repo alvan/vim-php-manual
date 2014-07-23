@@ -1,6 +1,6 @@
 dbplus_first -- Get first tuple from relation
 
-  int dbplus_first(resource relation, array tuple)~
+  int dbplus_first(resource relation, array &tuple)~
 
 Reads the data for the first tuple for the given {relation}, makes it the
 current tuple and pass it back as an associative array in {tuple}.

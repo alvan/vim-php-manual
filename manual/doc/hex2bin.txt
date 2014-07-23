@@ -1,12 +1,23 @@
-hex2bin -- Convert hex to binary
+hex2bin -- Decodes a hexadecimally encoded binary string
 
   string hex2bin(string data)~
 
-Converts the hex representation of data to binary
+Decodes a hexadecimally encoded binary string.
+
+This function does NOT convert a hexadecimal number to a binary number. This
+can be done using the |base_convert| function.
 
 Hexadecimal representation of data.
 
-Returns the binary representation of the given data.
+Returns the binary representation of the given data or FALSE on failure.
+
+If the hexadecimal input string is of odd length or invalid hexadecimal string
+an E_WARNING level error is thrown.
+
+Version Description 5.5.1 A warning is thrown if the input string is invalid
+hexadecimal string. 5.4.1 A warning is thrown if the input string is of odd
+length. In PHP 5.4.0 the string was silently accepted, but the last byte was
+truncated.
 
 |hex2bin| example
 

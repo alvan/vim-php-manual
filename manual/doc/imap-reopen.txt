@@ -1,6 +1,6 @@
 imap_reopen -- Reopen IMAP stream to new mailbox
 
-  bool imap_reopen(resource imap_stream, string mailbox [, int options [, int n_retries]])~
+  bool imap_reopen(resource imap_stream, string mailbox [, int options = 0 [, int n_retries = 0]])~
 
 Reopens the specified stream to a new {mailbox} on an IMAP or NNTP server.
 

@@ -1,6 +1,6 @@
 gmmktime -- Get Unix timestamp for a GMT date
 
-  int gmmktime([int hour [, int minute [, int second [, int month [, int day [, int year [, int is_dst]]]]]]])~
+  int gmmktime([int hour = gmdate("H") [, int minute = gmdate("i") [, int second = gmdate("s") [, int month = gmdate("n") [, int day = gmdate("j") [, int year = gmdate("Y") [, int is_dst = -1]]]]]]])~
 
 Identical to |mktime| except the passed parameters represents a GMT date.
 |gmmktime| internally uses |mktime| so only times valid in derived local time
@@ -49,7 +49,7 @@ instead.
 |gmmktime| basic example
 
 <?php >
-  // Prints: July 1, 2000 is on a Friday
+  // Prints: July 1, 2000 is on a Saturday
   echo "July 1, 2000 is on a " . date("l", gmmktime(0, 0, 0, 7, 1, 2000));
 ?>
 

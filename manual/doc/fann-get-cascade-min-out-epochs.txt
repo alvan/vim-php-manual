@@ -1,0 +1,16 @@
+fann_get_cascade_min_out_epochs -- Returns the minimum out epochs
+
+  int fann_get_cascade_min_out_epochs(resource ann)~
+
+The minimum out epochs determines the minimum number of epochs the output
+connections must be trained after adding a new candidate neuron.
+
+The default min out epochs is 50.
+
+Neural network resource.
+
+The minimum out epochs, or FALSE on error.
+
+|fann_set_cascade_min_out_epochs|
+
+vim:ft=help:

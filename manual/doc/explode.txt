@@ -53,6 +53,33 @@ Version Description 5.1.0 Support for negative {limit}s was added 4.0.1 The
 
 
 
+|explode| return examples
+
+<?php >
+  /* 
+     A string that doesn't contain the delimiter will simply
+     return a one-length array of the original string.
+  */
+  $input1 = "hello";
+  $input2 = "hello,there";
+  var_dump( explode( ',', $input1 ) );
+  var_dump( explode( ',', $input2 ) );
+?>
+
+The above example will output:
+
+  array(1)
+  (
+      [0] => string(5) "hello"
+  )
+  array(2)
+  (
+      [0] => string(5) "hello"
+      [1] => string(5) "there"
+  )
+
+
+
 {limit} parameter examples
 
 <?php >

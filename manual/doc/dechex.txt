@@ -2,13 +2,19 @@ dechex -- Decimal to hexadecimal
 
   string dechex(int number)~
 
-Returns a string containing a hexadecimal representation of the given {number}
-argument. The largest number that can be converted is 4294967295 in decimal
-resulting to "ffffffff".
+Returns a string containing a hexadecimal representation of the given unsigned
+{number} argument.
 
-{number} Decimal value to convert
+The largest number that can be converted is PHP_INT_MAX * 2 + 1 (or -1): on
+32-bit platforms, this will be 4294967295 in decimal, which results in
+|dechex| returning ffffffff.
 
-Hexadecimal string representation of {number}
+{number} The decimal value to convert.
+
+As PHP's integer type is signed, but |dechex| deals with unsigned integers,
+negative integers will be treated as though they were unsigned.
+
+Hexadecimal string representation of {number}.
 
 |dechex| example
 
@@ -21,6 +27,24 @@ The above example will output:
 
   a
   2f
+
+
+
+|dechex| example with large integers
+
+<?php >
+  // The output below assumes a 32-bit platform.
+  // Note that the output is the same for all values.
+  echo dechex(-1)."\n";
+  echo dechex(PHP_INT_MAX * 2 + 1)."\n";
+  echo dechex(pow(2, 32) - 1)."\n";
+?>
+
+The above example will output:
+
+  ffffffff
+  ffffffff
+  ffffffff
 
 
 

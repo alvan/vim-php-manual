@@ -1,6 +1,6 @@
 openssl_csr_new -- Generates a CSR
 
-  mixed openssl_csr_new(array dn, resource privkey [, array configargs [, array extraattribs]])~
+  mixed openssl_csr_new(array dn, resource &privkey [, array configargs [, array extraattribs]])~
 
 |openssl_csr_new| generates a new CSR (Certificate Signing Request) based on
 the information provided by {dn}, which represents the Distinguished Name to

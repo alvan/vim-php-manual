@@ -1,7 +1,12 @@
 mysql_real_escape_string -- Escapes special characters in a string for use in
 an SQL statement
 
-  string mysql_real_escape_string(string unescaped_string [, resource link_identifier])~
+This extension is deprecated as of PHP 5.5.0, and will be removed in the
+future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
+MySQL: choosing an API guide and related FAQ for more information.
+Alternatives to this function include:
+
+  string mysql_real_escape_string(string unescaped_string [, resource link_identifier = NULL])~
 
 Escapes special characters in the {unescaped_string}, taking into account the
 current character set of the connection so that it is safe to place it in a
@@ -13,6 +18,10 @@ characters: \x00, \n, \r, \, ', " and \x1a.
 
 This function must always (with few exceptions) be used to make data safe
 before sending a query to MySQL.
+
+The character set must be set either at the server level, or with the API
+function |mysql_set_charset| for it to affect |mysql_real_escape_string|. See
+the concepts section on character sets for more information.
 
 {unescaped_string} The string that is to be escaped.
 
@@ -80,7 +89,7 @@ Injection Attacks.
 |mysql_real_escape_string| does not escape % and _. These are wildcards in
 MySQL if combined with LIKE, GRANT, or REVOKE.
 
-|mysql_client_encoding| |addslashes| |stripslashes| The magic_quotes_gpc
-directive The magic_quotes_runtime directive
+|mysql_set_charset| |mysql_client_encoding| |addslashes| |stripslashes| The
+magic_quotes_gpc directive The magic_quotes_runtime directive
 
 vim:ft=help:

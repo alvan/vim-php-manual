@@ -1,0 +1,14 @@
+event_priority_set -- Assign a priority to an event.
+
+  bool event_priority_set(resource event, int priority)~
+
+Assign a priority to the {event}.
+
+{event} Valid event resource.
+
+{priority} Priority level. Cannot be less than zero and cannot exceed maximum
+priority level of the event base (see |event_base_priority_init|).
+
+Returns TRUE on success or &false; on failure.
+
+vim:ft=help:

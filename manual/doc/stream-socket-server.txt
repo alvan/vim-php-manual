@@ -1,6 +1,6 @@
 stream_socket_server -- Create an Internet or Unix domain server socket
 
-  resource stream_socket_server(string local_socket [, int errno [, string errstr [, int flags [, resource context]]]])~
+  resource stream_socket_server(string local_socket [, int &errno [, string &errstr [, int flags = STREAM_SERVER_BIND | STREAM_SERVER_LISTEN [, resource context = STREAM_SERVER_BIND | STREAM_SERVER_LISTEN]]]])~
 
 Creates a stream or datagram socket on the specified {local_socket}.
 

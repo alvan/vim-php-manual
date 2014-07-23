@@ -1,21 +1,24 @@
 gmp_hamdist -- Hamming distance
 
-  int gmp_hamdist(resource a, resource b)~
+  int gmp_hamdist(GMP a, GMP b)~
 
 Returns the hamming distance between {a} and {b}. Both operands should be
 non-negative.
 
-{a} It can be either a GMP number resource, or a numeric string given that it
-is possible to convert the latter to a number.
+{a} Either a GMP number resource in PHP 5.5 and earlier, a GMP object in PHP
+5.6 and later, or a numeric string provided that it is possible to convert the
+latter to a number.
 
 It should be positive.
 
-{b} It can be either a GMP number resource, or a numeric string given that it
-is possible to convert the latter to a number.
+{b} Either a GMP number resource in PHP 5.5 and earlier, a GMP object in PHP
+5.6 and later, or a numeric string provided that it is possible to convert the
+latter to a number.
 
 It should be positive.
 
-A GMP number resource.
+A GMP number resource in PHP 5.5 and earlier, or a GMP object in PHP 5.6 and
+later.
 
 |gmp_hamdist| example
 
@@ -24,7 +27,7 @@ A GMP number resource.
   $ham2 = gmp_init("1011111100", 2);
   echo gmp_hamdist($ham1, $ham2) . "\n";
   
-  /* hamdist is equivilent to: */
+  /* hamdist is equivalent to: */
   echo gmp_popcount(gmp_xor($ham1, $ham2)) . "\n";
 ?>
 

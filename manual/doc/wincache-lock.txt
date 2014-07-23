@@ -1,6 +1,6 @@
 wincache_lock -- Acquires an exclusive lock on a given key
 
-  bool wincache_lock(string key [, bool isglobal])~
+  bool wincache_lock(string key [, bool isglobal = false])~
 
 Obtains an exclusive lock on a given key. The execution of the current script
 will be blocked until the lock can be obtained. Once the lock is obtained, the

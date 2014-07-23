@@ -1,20 +1,23 @@
 gmp_sub -- Subtract numbers
 
-  resource gmp_sub(resource a, resource b)~
+  GMP gmp_sub(GMP a, GMP b)~
 
 Subtracts {b} from {a} and returns the result.
 
 {a} The number being subtracted from.
 
-It can be either a GMP number resource, or a numeric string given that it is
-possible to convert the latter to a number.
+Either a GMP number resource in PHP 5.5 and earlier, a GMP object in PHP 5.6
+and later, or a numeric string provided that it is possible to convert the
+latter to a number.
 
 {b} The number subtracted from {a}.
 
-It can be either a GMP number resource, or a numeric string given that it is
-possible to convert the latter to a number.
+Either a GMP number resource in PHP 5.5 and earlier, a GMP object in PHP 5.6
+and later, or a numeric string provided that it is possible to convert the
+latter to a number.
 
-A GMP number resource.
+A GMP number resource in PHP 5.5 and earlier, or a GMP object in PHP 5.6 and
+later.
 
 |gmp_sub| example
 

@@ -1,0 +1,45 @@
+uopz_flags -- Get or set flags on function or class
+
+  int uopz_flags(string class, string function, int flags)~
+
+  int uopz_flags(string class, string function, int flags, string function, int flags)~
+
+Get or set the flags on a class or function entry at runtime
+
+The name of a class
+
+The name of the function
+
+A valid set of ZEND_ACC_ flags, ZEND_ACC_FETCH to read flags
+
+If setting, returns old flags, else returns flags
+
+|uopz_flags| example
+
+<?php >
+  class Test {
+      public function method() {
+          return __CLASS__;
+      }
+  }
+  
+  $flags = uopz_flags("Test", "method", ZEND_ACC_FETCH);
+  
+  var_dump((bool) (uopz_flags("Test", "method", ZEND_ACC_FETCH) &amp; ZEND_ACC_PRIVATE));
+  var_dump((bool) (uopz_flags("Test", "method", ZEND_ACC_FETCH) &amp; ZEND_ACC_STATIC));
+  
+  var_dump(uopz_flags("Test", "method", $flags|ZEND_ACC_STATIC|ZEND_ACC_PRIVATE));
+  
+  var_dump((bool) (uopz_flags("Test", "method", ZEND_ACC_FETCH) &amp; ZEND_ACC_PRIVATE));
+  var_dump((bool) (uopz_flags("Test", "method", ZEND_ACC_FETCH) &amp; ZEND_ACC_STATIC));
+?>
+
+The above example will output something similar to:
+
+  bool(false)
+  bool(false)
+  int(1234567890)
+  bool(true)
+  bool(true)
+
+vim:ft=help:

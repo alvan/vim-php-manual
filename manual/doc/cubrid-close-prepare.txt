@@ -1,21 +1,19 @@
 cubrid_close_prepare -- Close the request handle
 
-  int cubrid_close_prepare(resource req_identifier)~
+  bool cubrid_close_prepare(resource req_identifier)~
 
 The |cubrid_close_prepare| function closes the request handle given by the
 {req_identifier} argument, and releases the memory region related to the
-handle. It is a alias of |cubrid_close_request|.
+handle. It is an alias of |cubrid_close_request|.
 
 {req_identifier} Request identifier.
 
-TRUE, when process is successful.
-
-FALSE, when process is unsuccessful.
+Return TRUE on success.
 
 |cubrid_close_prepare| example
 
 <?php >
-  $con = cubrid_connect ("dbsvr.cubrid.com", 12345, "demodb");
+  $con = cubrid_connect ("localhost", 33000, "demodb", "dba", "");
   if ($con) {
      echo "connected successfully";
      $req = cubrid_execute ( $con, "select * from members", 

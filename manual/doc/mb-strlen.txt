@@ -1,6 +1,6 @@
 mb_strlen -- Get string length
 
-  int mb_strlen(string str [, string encoding])~
+  mixed mb_strlen(string str [, string encoding = mb_internal_encoding()])~
 
 Gets the length of a string.
 
@@ -12,6 +12,13 @@ omitted, the internal character encoding value will be used.
 Returns the number of characters in string {str} having character encoding
 {encoding}. A multi-byte character is counted as 1.
 
-|mb_internal_encoding| |strlen|
+Returns FALSE if the given {encoding} is invalid.
+
+This function may return Boolean FALSE, but may also return a non-Boolean
+value which evaluates to FALSE. Please read the section on Booleans for more
+information. Use the === operator for testing the return value of this
+function.
+
+|mb_internal_encoding| |grapheme_strlen| |iconv_strlen| |strlen|
 
 vim:ft=help:

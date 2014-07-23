@@ -1,6 +1,6 @@
 mqseries_put1 -- MQSeries MQPUT1
 
-  void mqseries_put1(resource hconn, resource objDesc, resource msgDesc, resource pmo, string buffer, resource compCode, resource reason)~
+  void mqseries_put1(resource hconn, resource &objDesc, resource &msgDesc, resource &pmo, string buffer, resource &compCode, resource &reason)~
 
 The |mqseries_put1| (MQPUT1) call puts one message on a queue. The queue need
 not be open.

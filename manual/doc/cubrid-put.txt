@@ -6,7 +6,7 @@ The |cubrid_put| function is used to update an attribute of the instance of
 the given {oid}.
 
 You can update single attribute by using string data type to set {attr}. In
-such case, you can use integer, float-point, or string type data for the
+such case, you can use integer, floating point or string type data for the
 {value} argument. To update multiple number of attributes, you can disregard
 the {attr} argument, and set {value} argument with associative array data
 type.
@@ -26,7 +26,7 @@ FALSE, when process is unsuccessful.
 |cubrid_put| example
 
 <?php >
-  $conn = cubrid_connect("localhost", 33000, "demodb");
+  $conn = cubrid_connect("localhost", 33000, "demodb", "dba");
   
   @cubrid_execute($conn, "DROP TABLE foo");
   cubrid_execute($conn, "CREATE TABLE foo(a int AUTO_INCREMENT, b set(int), c list(int), d char(10))");

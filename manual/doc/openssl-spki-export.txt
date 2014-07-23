@@ -1,0 +1,28 @@
+openssl_spki_export -- Exports a valid PEM formatted public key signed public
+key and challenge
+
+  string openssl_spki_export(string &spkac)~
+
+Exports PEM formatted public key from encoded signed public key and challenge
+
+Expects a valid signed public key and challenge
+
+Returns the associated PEM formatted public key or NULL on failure.
+
+Emits an E_WARNING level error if an invalid argument is passed via the
+{spkac} parameter.
+
+|openssl_spki_export| example Extracts the associated PEM formatted public key
+or NULL on failure.
+
+<?php >
+  $pkey = openssl_pkey_new('secret password');
+  $spkac = openssl_spki_new($pkey, 'challenge string');
+  $pubKey = openssl_spki_export(preg_replace('/SPKAC=/', '', $spkac));
+  
+  if ($pubKey) {
+      echo $pubKey;
+  }
+?>
+
+vim:ft=help:

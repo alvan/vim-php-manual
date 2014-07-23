@@ -1,6 +1,6 @@
 pg_lo_seek -- Seeks position within a large object
 
-  bool pg_lo_seek(resource large_object, int offset [, int whence])~
+  bool pg_lo_seek(resource large_object, int offset [, int whence = PGSQL_SEEK_CUR])~
 
 |pg_lo_seek| seeks a position within a large object resource.
 
@@ -36,6 +36,10 @@ Returns TRUE on success or &false; on failure.
 
 
 
+
+Version Description 5.6.0 Added PostgreSQL 9.3's 64bit large object support.
+Both client and server must support PostgreSQL 9.3 and PHP must be 64bit build
+to use 64bit large object.
 
 |pg_lo_tell|
 

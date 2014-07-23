@@ -2,7 +2,7 @@ strip_tags -- Strip HTML and PHP tags from a string
 
   string strip_tags(string str [, string allowable_tags])~
 
-This function tries to return a string with all NUL bytes, HTML and PHP tags
+This function tries to return a string with all NULL bytes, HTML and PHP tags
 stripped from a given {str}. It uses the same tag stripping state machine as
 the |fgetss| function.
 
