@@ -25,3 +25,9 @@ b. Use vundle:
         Plugin 'alvan/vim-phpmanual'
 
 c. Use other package manager.
+
+Screenshots
+-----------
+
+GVim PHP help doc:
+![doc.png](/screenshots/20140723/doc.png)
