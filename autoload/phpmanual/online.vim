@@ -10,7 +10,7 @@
 " --}}}
 
 func! phpmanual#online#open(...)
-    let url = ''
+    let key = ''
 
     if a:0 < 1
         let mcs = '[a-zA-Z0-9_]'
@@ -42,26 +42,16 @@ func! phpmanual#online#open(...)
         endw
 
         let key = strpart(str, l, r-l+1)
-
-        if key != ''
-            if key =~ '^[A-Z]'
-                let url = 'http://php.net/manual/class.'.tolower(key).'.php'
-            else
-                let url = 'http://php.net/manual/function.'.substitute(tolower(key), '_', '-', 'g').'.php'
-            endif
-        endif
     el
-        if a:1 !~ '^\s*$'
-            let url = 'http://php.net/results.php?q='.a:1.'&p=all'
-        endif
+        let key = a:1
     en
 
-    if url == ''
+    if key == ''
         echo 'manual.ERR: no online manual URL.'
         return
     en
 
-    call system('xdg-open '.shellescape(url).' &')
+    call system('xdg-open '.shellescape('http://php.net/' . key).' &')
 endf
 
 " vim:ft=vim:ff=unix:tabstop=4:shiftwidth=4:softtabstop=4:expandtab
