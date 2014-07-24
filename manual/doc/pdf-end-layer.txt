@@ -1,9 +1,17 @@
-PDF_end_layer -- Deactivate all active layers
+PDF_end_layer
 
-  bool PDF_end_layer(resource pdfdoc)~
+(PECL pdflib >= 2.0.0)
 
-Deactivates all active layers. Returns TRUE on success or &false; on failure.
+PDF_end_layer — Deactivate all active layers
+
+===============================================================================
+*Description*
+
+    bool PDF_end_layer ( resource $pdfdoc )~
+
+Deactivates all active layers. Returns TRUE on success or FALSE on failure.
 
 This function requires PDF 1.5.
+
 
 vim:ft=help:

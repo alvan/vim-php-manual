@@ -1,15 +1,34 @@
-trader_t3 -- Triple Exponential Moving Average (T3)
+trader_t3
 
-  array trader_t3(array real [, integer timePeriod [, float vFactor]])~
+(PECL trader >= 0.2.0)
 
+trader_t3 — Triple Exponential Moving Average (T3)
 
+===============================================================================
+*Description*
 
-Array of real values.
+    array trader_t3 ( array $real [, integer $timePeriod [, float $vFactor ]]~
+)~
 
-Number of period. Valid range from 2 to 100000.
+===============================================================================
+*Parameters*
 
-Volume Factor. Valid range from 1 to 0.
+{real}
+
+    Array of real values.
+
+{timePeriod}
+
+    Number of period. Valid range from 2 to 100000.
+
+{vFactor}
+
+    Volume Factor. Valid range from 1 to 0.
+
+===============================================================================
+*Return* *Values*
 
 Returns an array with calculated data or false on failure.
+
 
 vim:ft=help:

@@ -1,14 +1,34 @@
-utf8_decode -- Converts a string with ISO-8859-1 characters encoded with UTF-8
+utf8_decode
+
+(PHP 4, PHP 5)
+
+utf8_decode — Converts a string with ISO-8859-1 characters encoded with UTF-8
 to single-byte ISO-8859-1
 
-  string utf8_decode(string data)~
+===============================================================================
+*Description*
+
+    string utf8_decode ( string $data )~
 
 This function decodes {data}, assumed to be UTF-8 encoded, to ISO-8859-1.
 
-{data} An UTF-8 encoded string.
+===============================================================================
+*Parameters*
+
+{data}
+
+    An UTF-8 encoded string.
+
+===============================================================================
+*Return* *Values*
 
 Returns the ISO-8859-1 translation of {data}.
 
-|utf8_encode| (contains an explanation of UTF-8 encoding)
+===============================================================================
+*See* *Also*
+
+  * |utf8_encode| - Encodes an ISO-8859-1 string to UTF-8 (contains an
+    explanation of UTF-8 encoding)
+
 
 vim:ft=help:

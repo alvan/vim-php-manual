@@ -1,14 +1,33 @@
-dba_sync -- Synchronize database
+dba_sync
 
-  bool dba_sync(resource handle)~
+(PHP 4, PHP 5)
 
-|dba_sync| synchronizes the database. This will probably trigger a physical
+dba_sync — Synchronize database
+
+===============================================================================
+*Description*
+
+    bool dba_sync ( resource $handle )~
+
+dba_sync() synchronizes the database. This will probably trigger a physical
 write to the disk, if supported.
 
-{handle} The database handler, returned by |dba_open| or |dba_popen|.
+===============================================================================
+*Parameters*
 
-Returns TRUE on success or &false; on failure.
+{handle}
 
-|dba_optimize|
+    The database handler, returned by |dba_open| or |dba_popen|.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*See* *Also*
+
+  * |dba_optimize| - Optimize database
+
 
 vim:ft=help:

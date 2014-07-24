@@ -1,22 +1,49 @@
-log -- Natural logarithm
+log
 
-  float log(float arg [, float base = M_E])~
+(PHP 4, PHP 5)
 
-If the optional {base} parameter is specified, |log| returns logbase {arg},
-otherwise |log| returns the natural logarithm of {arg}.
+log — Natural logarithm
 
-{arg} The value to calculate the logarithm for
+===============================================================================
+*Description*
 
-{base} The optional logarithmic base to use (defaults to 'e' and so to the
-natural logarithm).
+    float log ( float $arg [, float $base = M_E ] )~
+
+If the optional {base} parameter is specified, log() returns log[base] {arg},
+otherwise log() returns the natural logarithm of {arg}.
+
+===============================================================================
+*Parameters*
+
+{arg}
+
+    The value to calculate the logarithm for
+
+{base}
+
+    The optional logarithmic base to use (defaults to 'e' and so to the natural
+    logarithm).
+
+===============================================================================
+*Return* *Values*
 
 The logarithm of {arg} to {base}, if given, or the natural logarithm.
 
-Version Description 4.3.0 The optional parameter {base} became available. For
-older versions you can calculate the logarithm in base b of a number n, but
-using the mathematical identity: logb(n) = log(n)/log(b), where log is the
-neperian (or natural) logarithm.
+===============================================================================
+*Changelog*
 
-|log10| |exp| |pow|
+Version                               Description
+        The optional parameter {base} became available. For older versions you
+4.3.0   can calculate the logarithm in base b of a number n, but using the
+        mathematical identity: log[b](n) = log(n)/log(b), where log is the
+        neperian (or natural) logarithm.
+
+===============================================================================
+*See* *Also*
+
+  * |log10| - Base-10 logarithm
+  * |exp| - Calculates the exponent of e
+  * |pow| - Exponential expression
+
 
 vim:ft=help:

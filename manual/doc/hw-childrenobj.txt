@@ -1,15 +1,33 @@
-hw_ChildrenObj -- Object records of children
+hw_ChildrenObj
 
-  array hw_childrenobj(int connection, int objectID)~
+(PHP 4)
+
+hw_ChildrenObj — Object records of children
+
+===============================================================================
+*Description*
+
+    array hw_childrenobj ( int $connection , int $objectID )~
 
 Returns the object records of the collection children.
 
-{connection} The connection identifier.
+===============================================================================
+*Parameters*
 
-{objectID} The object identifier.
+{connection}
+
+    The connection identifier.
+
+{objectID}
+
+    The object identifier.
+
+===============================================================================
+*Return* *Values*
 
 Returns an array of object records. Each object record belongs to a child of
 the collection with ID {objectID}. The array contains all children both
 documents and collections.
+
 
 vim:ft=help:

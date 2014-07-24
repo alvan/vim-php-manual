@@ -1,26 +1,46 @@
-spl_object_hash -- Return hash id for given object
+spl_object_hash
 
-  string spl_object_hash(object obj)~
+(PHP 5 >= 5.2.0)
+
+spl_object_hash — Return hash id for given object
+
+===============================================================================
+*Description*
+
+    string spl_object_hash ( object $obj )~
 
 This function returns a unique identifier for the object. This id can be used
 as a hash key for storing objects or for identifying an object.
 
-{object} Any object.
+===============================================================================
+*Parameters*
+
+{object}
+
+    Any object.
+
+===============================================================================
+*Return* *Values*
 
 A string that is unique for each currently existing object and is always the
 same for each object.
 
-A |spl_object_hash| example
+===============================================================================
+*Examples*
+
+Example #1 A spl_object_hash() example
 
 <?php >
-  $id = spl_object_hash($object);
-  $storage[$id] = $object;
-?>
+    $id = spl_object_hash($object);
+    $storage[$id] = $object;
+<?>
 
+===============================================================================
+*Notes*
 
+    Note:
 
+    When an object is destroyed, its hash may be reused for other objects.
 
-
-When an object is destroyed, its hash may be reused for other objects.
 
 vim:ft=help:

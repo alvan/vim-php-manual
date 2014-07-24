@@ -1,9 +1,28 @@
-hw_Info -- Info about connection
+hw_Info
 
-  string hw_info(int connection)~
+(PHP 4)
+
+hw_Info — Info about connection
+
+===============================================================================
+*Description*
+
+    string hw_info ( int $connection )~
 
 Returns information about the current connection.
 
-{connection} The connection identifier.
+===============================================================================
+*Parameters*
+
+{connection}
+
+    The connection identifier.
+
+===============================================================================
+*Return* *Values*
+
+The returned string has the following format: <Serverstring>, <Host>, <Port>,
+<Username>, <Port of Client>, <Byte swapping>
+
 
 vim:ft=help:

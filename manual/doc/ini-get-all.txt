@@ -1,14 +1,31 @@
-ini_get_all -- Gets all configuration options
+ini_get_all
 
-  array ini_get_all([string extension [, bool details = true]])~
+(PHP 4 >= 4.2.0, PHP 5)
+
+ini_get_all — Gets all configuration options
+
+===============================================================================
+*Description*
+
+    array ini_get_all ([ string $extension [, bool $details = true ]] )~
 
 Returns all the registered configuration options.
 
-{extension} An optional extension name. If set, the function return only
-options specific for that extension.
+===============================================================================
+*Parameters*
 
-{details} Retrieve details settings or only the current value for each
-setting. Default is TRUE (retrieve details).
+{extension}
+
+    An optional extension name. If set, the function return only options
+    specific for that extension.
+
+{details}
+
+    Retrieve details settings or only the current value for each setting.
+    Default is TRUE (retrieve details).
+
+===============================================================================
+*Return* *Values*
 
 Returns an associative array with directive name as the array key.
 
@@ -20,81 +37,98 @@ When {details} is FALSE the value will be the current value of the option.
 
 See the manual section for information on what access levels mean.
 
-It's possible for a directive to have multiple access levels, which is why
-access shows the appropriate bitmask values.
+    Note:
 
-Version Description 5.3.0 Added {details}.
+    It's possible for a directive to have multiple access levels, which is why
+    access shows the appropriate bitmask values.
 
-|ini_get_all| examples
+===============================================================================
+*Changelog*
+
+Version    Description
+5.3.0   Added {details}.
+
+===============================================================================
+*Examples*
+
+Example #1 ini_get_all() examples
 
 <?php >
-  print_r(ini_get_all("pcre"));
-  print_r(ini_get_all());
-?>
+    print_r(ini_get_all("pcre"));
+    print_r(ini_get_all());
+<?>
 
 The above example will output something similar to:
 
-  Array
-  (
-      [pcre.backtrack_limit] => Array
-          (
-              [global_value] => 100000
-              [local_value] => 100000
-              [access] => 7
-          )
-  
-      [pcre.recursion_limit] => Array
-          (
-              [global_value] => 100000
-              [local_value] => 100000
-              [access] => 7
-          )
-  
-  )
-  Array
-  (
-      [allow_call_time_pass_reference] => Array
-          (
-              [global_value] => 0
-              [local_value] => 0
-              [access] => 6
-          )
-  
-      [allow_url_fopen] => Array
-          (
-              [global_value] => 1
-              [local_value] => 1
-              [access] => 4
-          )
-  
-      ...
-  
-  )
+Array
+(
+    [pcre.backtrack_limit] => Array
+        (
+            [global_value] => 100000
+            [local_value] => 100000
+            [access] => 7
+        )
 
-Disabling {details}
+    [pcre.recursion_limit] => Array
+        (
+            [global_value] => 100000
+            [local_value] => 100000
+            [access] => 7
+        )
+
+)
+Array
+(
+    [allow_call_time_pass_reference] => Array
+        (
+            [global_value] => 0
+            [local_value] => 0
+            [access] => 6
+        )
+
+    [allow_url_fopen] => Array
+        (
+            [global_value] => 1
+            [local_value] => 1
+            [access] => 4
+        )
+
+    ...
+
+)
+
+Example #2 Disabling {details}
 
 <?php >
-  print_r(ini_get_all("pcre", false)); // Added in PHP 5.3.0
-  print_r(ini_get_all(null, false)); // Added in PHP 5.3.0
-?>
+    print_r(ini_get_all("pcre", false)); // Added in PHP 5.3.0
+    print_r(ini_get_all(null, false)); // Added in PHP 5.3.0
+<?>
 
 The above example will output something similar to:
 
-  Array
-  (
-      [pcre.backtrack_limit] => 100000
-      [pcre.recursion_limit] => 100000
-  )
-  Array
-  (
-      [allow_call_time_pass_reference] => 0
-      [allow_url_fopen] => 1
-      ...
-  )
+Array
+(
+    [pcre.backtrack_limit] => 100000
+    [pcre.recursion_limit] => 100000
+)
+Array
+(
+    [allow_call_time_pass_reference] => 0
+    [allow_url_fopen] => 1
+    ...
+)
 
+===============================================================================
+*See* *Also*
 
+  * How to change configuration settings
+  * |ini_get| - Gets the value of a configuration option
+  * |ini_restore| - Restores the value of a configuration option
+  * |ini_set| - Sets the value of a configuration option
+  * |get_loaded_extensions| - Returns an array with the names of all modules
+    compiled and loaded
+  * |phpinfo| - Outputs information about PHP's configuration
+  * ReflectionExtension::getINIEntries() - Gets extension ini entries
 
-|ini_get| |ini_restore| |ini_set| |get_loaded_extensions| |phpinfo|
-ReflectionExtension::getINIEntries
 
 vim:ft=help:

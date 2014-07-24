@@ -1,11 +1,29 @@
-filter_has_var -- Checks if variable of specified type exists
+filter_has_var
 
-  bool filter_has_var(int type, string variable_name)~
+(PHP 5 >= 5.2.0)
 
-{type} One of INPUT_GET, INPUT_POST, INPUT_COOKIE, INPUT_SERVER, or INPUT_ENV.
+filter_has_var — Checks if variable of specified type exists
 
-{variable_name} Name of a variable to check.
+===============================================================================
+*Description*
 
-Returns TRUE on success or &false; on failure.
+    bool filter_has_var ( int $type , string $variable_name )~
+
+===============================================================================
+*Parameters*
+
+{type}
+
+    One of INPUT_GET, INPUT_POST, INPUT_COOKIE, INPUT_SERVER, or INPUT_ENV.
+
+{variable_name}
+
+    Name of a variable to check.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
 
 vim:ft=help:

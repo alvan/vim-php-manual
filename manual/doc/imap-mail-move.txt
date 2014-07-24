@@ -1,24 +1,54 @@
-imap_mail_move -- Move specified messages to a mailbox
+imap_mail_move
 
-  bool imap_mail_move(resource imap_stream, string msglist, string mailbox [, int options = 0])~
+(PHP 4, PHP 5)
+
+imap_mail_move — Move specified messages to a mailbox
+
+===============================================================================
+*Description*
+
+    bool imap_mail_move ( resource $imap_stream , string $msglist , string~
+    $mailbox [, int $options = 0 ] )~
 
 Moves mail messages specified by {msglist} to the specified {mailbox}.
 
-{ imap_stream}An IMAP stream returned by |imap_open|.
+===============================================================================
+*Parameters*
 
-{msglist} {msglist} is a range not just message numbers (as described in
-RFC2060).
+{ imap_stream}
 
-{mailbox} The mailbox name, see |imap_open| for more information
+    An IMAP stream returned by |imap_open|.
 
-{options} {options} is a bitmask and may contain the single option: CP_UID -
-the sequence numbers contain UIDS
+{msglist}
 
-Returns TRUE on success or &false; on failure.
+    {msglist} is a range not just message numbers (as described in » RFC2060).
 
-|imap_mail_move| will flag the original mail with a delete flag, to
-successfully delete it a call to the |imap_expunge| function must be made.
+{mailbox}
 
-|imap_mail_copy|
+    The mailbox name, see |imap_open| for more information
+
+{options}
+
+    {options} is a bitmask and may contain the single option:
+      + CP_UID - the sequence numbers contain UIDS
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*Notes*
+
+    Note:
+
+    imap_mail_move() will flag the original mail with a delete flag, to
+    successfully delete it a call to the |imap_expunge| function must be made.
+
+===============================================================================
+*See* *Also*
+
+  * |imap_mail_copy| - Copy specified messages to a mailbox
+
 
 vim:ft=help:

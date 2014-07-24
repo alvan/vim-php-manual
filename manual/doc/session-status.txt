@@ -1,13 +1,27 @@
-session_status -- Returns the current session status
+session_status
 
-  int session_status()~
+(PHP >=5.4.0)
 
-|session_status| is used to return the current session status.
+session_status — Returns the current session status
 
-PHP_SESSION_DISABLED if sessions are disabled.
+===============================================================================
+*Description*
 
-PHP_SESSION_NONE if sessions are enabled, but none exists.
+    int session_status ( void )~
 
-PHP_SESSION_ACTIVE if sessions are enabled, and one exists.
+session_status() is used to return the current session status.
+
+===============================================================================
+*Return* *Values*
+
+  * PHP_SESSION_DISABLED if sessions are disabled.
+  * PHP_SESSION_NONE if sessions are enabled, but none exists.
+  * PHP_SESSION_ACTIVE if sessions are enabled, and one exists.
+
+===============================================================================
+*See* *Also*
+
+  * |session_start| - Start new or resume existing session
+
 
 vim:ft=help:

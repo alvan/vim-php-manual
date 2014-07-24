@@ -1,21 +1,46 @@
-swf_perspective -- Define a perspective projection transformation
+swf_perspective
 
-  void swf_perspective(float fovy, float aspect, float near, float far)~
+(PHP 4)
+
+swf_perspective — Define a perspective projection transformation
+
+===============================================================================
+*Description*
+
+    void swf_perspective ( float $fovy , float $aspect , float $near , float~
+    $far )~
 
 Defines a perspective projection transformation.
 
-Various distortion artifacts may appear when performing a perspective
-projection, this is because Flash players only have a two dimensional matrix.
-Some are not to pretty.
+    Note:
 
-{fovy} A field-of-view angle in the y direction.
+    Various distortion artifacts may appear when performing a perspective
+    projection, this is because Flash players only have a two dimensional
+    matrix. Some are not to pretty.
 
-{aspect} The aspect ratio of the viewport that is being drawn onto.
+===============================================================================
+*Parameters*
 
-{near} The near clipping plane.
+{fovy}
 
-{far} The far clipping plane.
+    A field-of-view angle in the y direction.
+
+{aspect}
+
+    The aspect ratio of the viewport that is being drawn onto.
+
+{near}
+
+    The near clipping plane.
+
+{far}
+
+    The far clipping plane.
+
+===============================================================================
+*Return* *Values*
 
 No value is returned.
+
 
 vim:ft=help:

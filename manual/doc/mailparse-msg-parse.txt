@@ -1,16 +1,32 @@
-mailparse_msg_parse -- Incrementally parse data into buffer
+mailparse_msg_parse
 
-  bool mailparse_msg_parse(resource mimemail, string data)~
+(PECL mailparse >= 0.9.0)
+
+mailparse_msg_parse — Incrementally parse data into buffer
+
+===============================================================================
+*Description*
+
+    bool mailparse_msg_parse ( resource $mimemail , string $data )~
 
 Incrementally parse data into the supplied mime mail resource.
 
 This function allow you to stream portions of a file at a time, rather than
 read and parse the whole thing.
 
-{mimemail} A valid MIME resource.
+===============================================================================
+*Parameters*
+
+{mimemail}
+
+    A valid MIME resource.
 
 {data}
 
-Returns TRUE on success or &false; on failure.
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
 
 vim:ft=help:

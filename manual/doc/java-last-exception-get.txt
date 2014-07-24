@@ -1,42 +1,59 @@
-java_last_exception_get -- Get last Java exception
+java_last_exception_get
 
-  object java_last_exception_get()~
+(PHP 4 >= 4.0.2)
+
+java_last_exception_get — Get last Java exception
+
+===============================================================================
+*Description*
+
+    object java_last_exception_get ( void )~
 
 Gets last Java exception.
 
+===============================================================================
+*Return* *Values*
+
 Returns an exception object.
 
+===============================================================================
+*Examples*
+
 The following example demonstrates the usage of Java's exception handler from
-within PHP: Java exception handler
+within PHP:
+
+Example #1 Java exception handler
 
 <?php >
-  $stack = new Java('java.util.Stack');
-  $stack->push(1);
-  
-  // This should succeed
-  $result = $stack->pop();
-  $ex = java_last_exception_get();
-  if (!$ex) {
-    echo "$result\n";
-  }
-  
-  // This should fail (error suppressed by @)
-  $result = @$stack->pop();
-  $ex = java_last_exception_get();
-  if ($ex) {
-    echo $ex->toString();
-  }
-  
-  // Clear last exception
-  java_last_exception_clear();
-?>
+    $stack = new Java('java.util.Stack');
+    $stack->push(1);
 
+    // This should succeed
+    $result = $stack->pop();
+    $ex = java_last_exception_get();
+    if (!$ex) {
+      echo "$result\n";
+    }
 
+    // This should fail (error suppressed by @)
+    $result = @$stack->pop();
+    $ex = java_last_exception_get();
+    if ($ex) {
+      echo $ex->toString();
+    }
 
+    // Clear last exception
+    java_last_exception_clear();
+<?>
 
+===============================================================================
+*Notes*
+
+Warning
 
 This function is EXPERIMENTAL. The behaviour of this function, its name, and
-surrounding documentation may change without notice in a future release of
-PHP. This function should be used at your own risk.
+surrounding documentation may change without notice in a future release of PHP.
+This function should be used at your own risk.
+
 
 vim:ft=help:

@@ -1,44 +1,67 @@
-imagecreatefromgd2 -- Create a new image from GD2 file or URL
+imagecreatefromgd2
 
-  resource imagecreatefromgd2(string filename)~
+(PHP 4 >= 4.0.7, PHP 5)
+
+imagecreatefromgd2 — Create a new image from GD2 file or URL
+
+===============================================================================
+*Description*
+
+    resource imagecreatefromgd2 ( string $filename )~
 
 Create a new image from GD2 file or URL.
 
+Tip
+
 A URL can be used as a filename with this function if the fopen wrappers have
 been enabled. See |fopen| for more details on how to specify the filename. See
-the for links to information about what abilities the various wrappers have,
-notes on their usage, and information on any predefined variables they may
-provide.
+the Supported Protocols and Wrappers for links to information about what
+abilities the various wrappers have, notes on their usage, and information on
+any predefined variables they may provide.
 
-{filename} Path to the GD2 image.
+===============================================================================
+*Parameters*
+
+{filename}
+
+    Path to the GD2 image.
+
+===============================================================================
+*Return* *Values*
 
 Returns an image resource identifier on success, FALSE on errors.
 
-|imagecreatefromgd2| example
+===============================================================================
+*Examples*
+
+Example #1 imagecreatefromgd2() example
 
 <?php >
-  // Load the gd2 image
-  $im = imagecreatefromgd2('./test.gd2');
-  
-  // Apply an effect on the image, in this 
-  // case negate the image if PHP 5+
-  if(function_exists('imagefilter'))
-  {
-      imagefilter($im, IMG_FILTER_NEGATE);
-  }
-  
-  // Save the image
-  imagegd2($im, './test_updated.gd2');
-  imagedestroy($im);
-?>
+    // Load the gd2 image
+    $im = imagecreatefromgd2('./test.gd2');
 
+    // Apply an effect on the image, in this 
+    // case negate the image if PHP 5+
+    if(function_exists('imagefilter'))
+    {
+        imagefilter($im, IMG_FILTER_NEGATE);
+    }
 
+    // Save the image
+    imagegd2($im, './test_updated.gd2');
+    imagedestroy($im);
+<?>
 
+===============================================================================
+*Notes*
 
+    Note: This function requires GD 2.0.1 or later (2.0.28 or later is
+    recommended).
 
-This function requires GD 2.0.1 or later (2.0.28 or later is recommended).
+Warning
 
 Windows versions of PHP prior to PHP 4.3.0 do not support access of remote
 files via this function, even if allow_url_fopen is enabled.
+
 
 vim:ft=help:

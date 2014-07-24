@@ -1,29 +1,46 @@
-gmp_popcount -- Population count
+gmp_popcount
 
-  int gmp_popcount(GMP a)~
+(PHP 4 >= 4.0.4, PHP 5)
+
+gmp_popcount — Population count
+
+===============================================================================
+*Description*
+
+    int gmp_popcount ( GMP $a )~
 
 Get the population count.
 
-{a} Either a GMP number resource in PHP 5.5 and earlier, a GMP object in PHP
-5.6 and later, or a numeric string provided that it is possible to convert the
-latter to a number.
+===============================================================================
+*Parameters*
+
+{a}
+
+    Either a GMP number resource in PHP 5.5 and earlier, a GMP object in PHP
+    5.6 and later, or a numeric string provided that it is possible to convert
+    the latter to a number.
+
+===============================================================================
+*Return* *Values*
 
 The population count of {a}, as an integer.
 
-|gmp_popcount| example
+===============================================================================
+*Examples*
+
+Example #1 gmp_popcount() example
 
 <?php >
-  $pop1 = gmp_init("10000101", 2); // 3 1's
-  echo gmp_popcount($pop1) . "\n";
-  $pop2 = gmp_init("11111110", 2); // 7 1's
-  echo gmp_popcount($pop2) . "\n";
-?>
+    $pop1 = gmp_init("10000101", 2); // 3 1's
+    echo gmp_popcount($pop1) . "\n";
+    $pop2 = gmp_init("11111110", 2); // 7 1's
+    echo gmp_popcount($pop2) . "\n";
+<?>
 
 The above example will output:
 
-  3
-  7
-
+3
+7
 
 
 vim:ft=help:

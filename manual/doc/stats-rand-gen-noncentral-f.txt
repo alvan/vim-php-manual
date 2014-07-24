@@ -1,13 +1,24 @@
-stats_rand_gen_noncentral_f -- Generates a random deviate from the noncentral
-F (variance ratio) distribution with "dfn" degrees of freedom in the
-numerator, and "dfd" degrees of freedom in the denominator, and noncentrality
-parameter "xnonc". Method : directly generates ratio of noncentral numerator
-chisquare variate to central denominator chisquare variate.
+stats_rand_gen_noncentral_f
 
-  float stats_rand_gen_noncentral_f(float dfn, float dfd, float xnonc)~
+(PECL stats >= 1.0.0)
 
-This function is currently not documented; only its argument list is
-available.
+stats_rand_gen_noncentral_f — Generates a random deviate from the noncentral F
+(variance ratio) distribution with "dfn" degrees of freedom in the numerator,
+and "dfd" degrees of freedom in the denominator, and noncentrality parameter
+"xnonc". Method : directly generates ratio of noncentral numerator chisquare
+variate to central denominator chisquare variate.
+
+===============================================================================
+*Description*
+
+    float stats_rand_gen_noncentral_f ( float $dfn , float $dfd , float $xnonc~
+)~
+Warning
+
+This function is currently not documented; only its argument list is available.
+
+===============================================================================
+*Parameters*
 
 {dfn}
 
@@ -15,6 +26,8 @@ available.
 
 {xnonc}
 
+===============================================================================
+*Return* *Values*
 
 
 vim:ft=help:

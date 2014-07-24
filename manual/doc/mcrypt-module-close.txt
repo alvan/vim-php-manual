@@ -1,13 +1,33 @@
-mcrypt_module_close -- Closes the mcrypt module
+mcrypt_module_close
 
-  bool mcrypt_module_close(resource td)~
+(PHP 4 >= 4.0.2, PHP 5)
+
+mcrypt_module_close — Closes the mcrypt module
+
+===============================================================================
+*Description*
+
+    bool mcrypt_module_close ( resource $td )~
 
 Closes the specified encryption handle.
 
-{td} The encryption descriptor.
+===============================================================================
+*Parameters*
 
-Returns TRUE on success or &false; on failure.
+{td}
 
-|mcrypt_module_open|
+    The encryption descriptor.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*See* *Also*
+
+  * |mcrypt_module_open| - Opens the module of the algorithm and the mode to be
+    used
+
 
 vim:ft=help:

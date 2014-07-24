@@ -1,16 +1,35 @@
-dbplus_undoprepare -- Prepare undo
+dbplus_undoprepare
 
-  int dbplus_undoprepare(resource relation)~
+(PHP 4 <= 4.1.0, PECL dbplus >= 0.9)
 
-This function is currently not documented; only its argument list is
-available.
+dbplus_undoprepare — Prepare undo
 
-{relation} A relation opened by |dbplus_open|.
+===============================================================================
+*Description*
 
+    int dbplus_undoprepare ( resource $relation )~
+Warning
 
+This function is currently not documented; only its argument list is available.
+
+===============================================================================
+*Parameters*
+
+{relation}
+
+    A relation opened by |dbplus_open|.
+
+===============================================================================
+*Return* *Values*
+
+===============================================================================
+*Notes*
+
+Warning
 
 This function is EXPERIMENTAL. The behaviour of this function, its name, and
-surrounding documentation may change without notice in a future release of
-PHP. This function should be used at your own risk.
+surrounding documentation may change without notice in a future release of PHP.
+This function should be used at your own risk.
+
 
 vim:ft=help:

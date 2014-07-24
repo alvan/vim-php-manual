@@ -1,47 +1,77 @@
-svn_add -- Schedules the addition of an item in a working directory
+svn_add
 
-  bool svn_add(string path [, bool recursive = true [, bool force = false]])~
+(PECL svn >= 0.1.0)
+
+svn_add — Schedules the addition of an item in a working directory
+
+===============================================================================
+*Description*
+
+    bool svn_add ( string $path [, bool $recursive = true [, bool $force =~
+    false ]] )~
 
 Adds the file, directory or symbolic link at {path} to the working directory.
-The item will be added to the repository the next time you call |svn_commit|
-on the working copy.
+The item will be added to the repository the next time you call |svn_commit| on
+the working copy.
 
-{path} Path of item to add.
+===============================================================================
+*Parameters*
 
-Relative paths will be resolved as if the current working directory was the
-one that contains the PHP binary. To use the calling script"s working
-directory, use |realpath| or dirname(__FILE__).
+{path}
 
-{recursive} If item is directory, whether or not to recursively add all of its
-contents. Default is TRUE
+    Path of item to add.
 
-{force} If true, Subversion will recurse into already versioned directories in
-order to add unversioned files that may be hiding in those directories.
-Default is FALSE
+        Note: Relative paths will be resolved as if the current working
+        directory was the one that contains the PHP binary. To use the calling
+        script's working directory, use |realpath| or dirname(__FILE__).
 
-Returns TRUE on success or &false; on failure.
+{recursive}
+
+    If item is directory, whether or not to recursively add all of its
+    contents. Default is TRUE
+
+{force}
+
+    If true, Subversion will recurse into already versioned directories in
+    order to add unversioned files that may be hiding in those directories.
+    Default is FALSE
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*Notes*
+
+Warning
 
 This function is EXPERIMENTAL. The behaviour of this function, its name, and
-surrounding documentation may change without notice in a future release of
-PHP. This function should be used at your own risk.
+surrounding documentation may change without notice in a future release of PHP.
+This function should be used at your own risk.
 
-|svn_add| example In a working directory where svn status returns:
+===============================================================================
+*Examples*
 
-  $ svn status
-  ?      foobar.txt
+Example #1 svn_add() example
+
+In a working directory where svn status returns:
+
+$ svn status
+?      foobar.txt
 
 ...this code:
 
 <?php >
-  svn_add('foobar.txt');
-?>
+    svn_add('foobar.txt');
+<?>
 
 ...will schedule foobar.txt for addition into the repository.
 
+===============================================================================
+*See* *Also*
 
+  * » SVN documentation on svn add
 
-
-
-SVN documentation on svn add
 
 vim:ft=help:

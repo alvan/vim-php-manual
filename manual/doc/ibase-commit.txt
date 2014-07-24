@@ -1,15 +1,31 @@
-ibase_commit -- Commit a transaction
+ibase_commit
 
-  bool ibase_commit([resource link_or_trans_identifier = NULL])~
+(PHP 5)
+
+ibase_commit — Commit a transaction
+
+===============================================================================
+*Description*
+
+    bool ibase_commit ([ resource $link_or_trans_identifier = NULL ] )~
 
 Commits a transaction.
 
-{link_or_trans_identifier} If called without an argument, this function
-commits the default transaction of the default link. If the argument is a
-connection identifier, the default transaction of the corresponding connection
-will be committed. If the argument is a transaction identifier, the
-corresponding transaction will be committed.
+===============================================================================
+*Parameters*
 
-Returns TRUE on success or &false; on failure.
+{link_or_trans_identifier}
+
+    If called without an argument, this function commits the default
+    transaction of the default link. If the argument is a connection
+    identifier, the default transaction of the corresponding connection will be
+    committed. If the argument is a transaction identifier, the corresponding
+    transaction will be committed.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
 
 vim:ft=help:

@@ -1,18 +1,41 @@
-imap_undelete -- Unmark the message which is marked deleted
+imap_undelete
 
-  bool imap_undelete(resource imap_stream, int msg_number [, int flags = 0])~
+(PHP 4, PHP 5)
 
-Removes the deletion flag for a specified message, which is set by
-|imap_delete| or |imap_mail_move|.
+imap_undelete — Unmark the message which is marked deleted
 
-{ imap_stream}An IMAP stream returned by |imap_open|.
+===============================================================================
+*Description*
 
-{msg_number} The message number
+    bool imap_undelete ( resource $imap_stream , int $msg_number [, int $flags~
+    = 0 ] )~
+
+Removes the deletion flag for a specified message, which is set by |imap_delete
+| or |imap_mail_move|.
+
+===============================================================================
+*Parameters*
+
+{ imap_stream}
+
+    An IMAP stream returned by |imap_open|.
+
+{msg_number}
+
+    The message number
 
 {flags}
 
-Returns TRUE on success or &false; on failure.
+===============================================================================
+*Return* *Values*
 
-|imap_delete| |imap_mail_move|
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*See* *Also*
+
+  * |imap_delete| - Mark a message for deletion from current mailbox
+  * |imap_mail_move| - Move specified messages to a mailbox
+
 
 vim:ft=help:

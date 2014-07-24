@@ -1,26 +1,41 @@
-snmp_get_valueretrieval -- Return the method how the SNMP values will be
+snmp_get_valueretrieval
+
+(PHP 4 >= 4.3.3, PHP 5)
+
+snmp_get_valueretrieval — Return the method how the SNMP values will be
 returned
 
-  int snmp_get_valueretrieval()~
+===============================================================================
+*Description*
 
-OR-ed combitantion of constants ( SNMP_VALUE_LIBRARY or SNMP_VALUE_PLAIN )
-with possible SNMP_VALUE_OBJECT set.
+    int snmp_get_valueretrieval ( void )~
 
-Using snmp_get_valueretrieval
+===============================================================================
+*Return* *Values*
+
+OR-ed combitantion of constants ( SNMP_VALUE_LIBRARY or SNMP_VALUE_PLAIN ) with
+possible SNMP_VALUE_OBJECT set.
+
+===============================================================================
+*Examples*
+
+Example #1 Using snmp_get_valueretrieval
 
 <?php >
-   $ret = snmpget('localhost', 'public', 'IF-MIB::ifName.1');
-   if (snmp_get_valueretrieval() &amp; SNMP_VALUE_OBJECT) {
-     echo $ret->value;
-   } else {
-     echo $ret;
-   }
-?>
+     $ret = snmpget('localhost', 'public', 'IF-MIB::ifName.1');
+     if (snmp_get_valueretrieval() & SNMP_VALUE_OBJECT) {
+       echo $ret->value;
+     } else {
+       echo $ret;
+     }
+<?>
 
+===============================================================================
+*See* *Also*
 
+  * |snmp_set_valueretrieval| - Specify the method how the SNMP values will be
+    returned
+  * Predefined Constants
 
-
-
-|snmp_set_valueretrieval|
 
 vim:ft=help:

@@ -1,9 +1,22 @@
-event_buffer_free -- Destroy buffered event
+event_buffer_free
 
-  void event_buffer_free(resource bevent)~
+(PECL libevent >= 0.0.1)
+
+event_buffer_free — Destroy buffered event
+
+===============================================================================
+*Description*
+
+    void event_buffer_free ( resource $bevent )~
 
 Destroys the specified buffered event and frees all the resources associated.
 
-{bevent} Valid buffered event resource.
+===============================================================================
+*Parameters*
+
+{bevent}
+
+    Valid buffered event resource.
+
 
 vim:ft=help:

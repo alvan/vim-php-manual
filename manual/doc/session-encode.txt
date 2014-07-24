@@ -1,18 +1,38 @@
-session_encode -- Encodes the current session data as a session encoded string
+session_encode
 
-  string session_encode()~
+(PHP 4, PHP 5)
 
-|session_encode| returns a serialized string of the contents of the current
+session_encode — Encodes the current session data as a session encoded string
+
+===============================================================================
+*Description*
+
+    string session_encode ( void )~
+
+session_encode() returns a serialized string of the contents of the current
 session data stored in the $_SESSION superglobal.
 
 Please note, the serialization method is not the same as |serialize|. The
 serialization method is internal to PHP and can be set using
 session.serialize_handler.
 
+===============================================================================
+*Return* *Values*
+
 Returns the contents of the current session encoded.
+
+===============================================================================
+*Notes*
+
+Warning
 
 Must call |session_start| before using |session_decode|.
 
-|session_decode| session.serialize_handler
+===============================================================================
+*See* *Also*
+
+  * |session_decode| - Decodes session data from a session encoded string
+  * session.serialize_handler
+
 
 vim:ft=help:

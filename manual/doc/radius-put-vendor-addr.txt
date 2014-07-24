@@ -1,30 +1,61 @@
-radius_put_vendor_addr -- Attaches a vendor specific IP address attribute
+radius_put_vendor_addr
 
-  bool radius_put_vendor_addr(resource radius_handle, int vendor, int type, string addr)~
+(PECL radius >= 1.1.0)
 
-Attaches an IP address vendor specific attribute to the current RADIUS
-request.
+radius_put_vendor_addr — Attaches a vendor specific IP address attribute
 
-A request must be created via |radius_create_request| before this function can
-be called.
+===============================================================================
+*Description*
 
-{radius_handle}The RADIUS resource.
+    bool radius_put_vendor_addr ( resource $radius_handle , int $vendor , int~
+    $type , string $addr )~
 
-{vendor}The vendor ID.
+Attaches an IP address vendor specific attribute to the current RADIUS request.
 
-{type}The attribute type.
+    Note:
 
-{addr} An IPv4 address in string form, such as 10.0.0.1.
+    A request must be created via |radius_create_request| before this function
+    can be called.
 
-{options}A bitmask of the attribute options. The available options include
-RADIUS_OPTION_TAGGED and RADIUS_OPTION_SALT.
+===============================================================================
+*Parameters*
 
-{tag}The attribute tag. This parameter is ignored unless the
-RADIUS_OPTION_TAGGED option is set.
+{radius_handle}
 
-Returns TRUE on success or &false; on failure.
+    The RADIUS resource.
 
-Version Description PECL radius 1.3.0 The {options} and {tag} parameters were
-added.
+{vendor}
+
+    The vendor ID.
+
+{type}
+
+    The attribute type.
+
+{addr}
+
+    An IPv4 address in string form, such as 10.0.0.1.
+
+{options}
+
+    A bitmask of the attribute options. The available options include
+    RADIUS_OPTION_TAGGED and RADIUS_OPTION_SALT.
+
+{tag}
+
+    The attribute tag. This parameter is ignored unless the
+    RADIUS_OPTION_TAGGED option is set.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*Changelog*
+
+     Version                       Description
+PECL radius 1.3.0 The {options} and {tag} parameters were added.
+
 
 vim:ft=help:

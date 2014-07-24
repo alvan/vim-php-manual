@@ -1,7 +1,16 @@
-PDF_create_annotation -- Create rectangular annotation
+PDF_create_annotation
 
-  bool PDF_create_annotation(resource pdfdoc, float llx, float lly, float urx, float ury, string type, string optlist)~
+(PECL pdflib >= 2.0.0)
+
+PDF_create_annotation — Create rectangular annotation
+
+===============================================================================
+*Description*
+
+    bool PDF_create_annotation ( resource $pdfdoc , float $llx , float $lly ,~
+    float $urx , float $ury , string $type , string $optlist )~
 
 Creates a rectangular annotation on the current page.
+
 
 vim:ft=help:

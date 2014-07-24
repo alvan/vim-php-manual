@@ -1,17 +1,39 @@
-ps_symbol -- Output a glyph
+ps_symbol
 
-  bool ps_symbol(resource psdoc, int ord)~
+(PECL ps >= 1.2.0)
+
+ps_symbol — Output a glyph
+
+===============================================================================
+*Description*
+
+    bool ps_symbol ( resource $psdoc , int $ord )~
 
 Output the glyph at position {ord} in the font encoding vector of the current
-font. The font encoding for a font can be set when loading the font with
-|ps_findfont|.
+font. The font encoding for a font can be set when loading the font with |
+ps_findfont|.
 
-{psdoc} Resource identifier of the postscript file as returned by |ps_new|.
+===============================================================================
+*Parameters*
 
-{ord} The position of the glyph in the font encoding vector.
+{psdoc}
 
-Returns TRUE on success or &false; on failure.
+    Resource identifier of the postscript file as returned by |ps_new|.
 
-|ps_symbol_name| |ps_symbol_width|
+{ord}
+
+    The position of the glyph in the font encoding vector.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*See* *Also*
+
+  * |ps_symbol_name| - Gets name of a glyph
+  * |ps_symbol_width| - Gets width of a glyph
+
 
 vim:ft=help:

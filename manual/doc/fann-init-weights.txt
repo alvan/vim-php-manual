@@ -1,7 +1,13 @@
-fann_init_weights -- Initialize the weights using Widrow + Nguyen’s
-algorithm
+fann_init_weights
 
-  bool fann_init_weights(resource ann, resource train_data)~
+(PECL fann >= 1.0.0)
+
+fann_init_weights — Initialize the weights using Widrow + Nguyen’s algorithm
+
+===============================================================================
+*Description*
+
+    bool fann_init_weights ( resource $ann , resource $train_data )~
 
 Initialize the weights using Widrow + Nguyen’s algorithm.
 
@@ -14,12 +20,28 @@ The algorithm requires access to the range of the input data (for example
 largest and smallest input), and therefore accepts a second argument, data,
 which is the training data that will be used to train the network.
 
-Neural network resource.
+===============================================================================
+*Parameters*
 
-Neural network training data resource.
+{ann}
+
+    Neural network resource.
+
+{train_data}
+
+    Neural network training data resource.
+
+===============================================================================
+*Return* *Values*
 
 Returns TRUE on success, or FALSE otherwise.
 
-|fann_randomize_weights| |fann_read_train_from_file|
+===============================================================================
+*See* *Also*
+
+  * |fann_randomize_weights| - Give each connection a random weight between
+    min_weight and max_weight
+  * |fann_read_train_from_file| - Reads a file that stores training data
+
 
 vim:ft=help:

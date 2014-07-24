@@ -1,21 +1,36 @@
-apd_echo -- Echo to the debugging socket
+apd_echo
 
-  bool apd_echo(string output)~
+(PECL apd >= 0.2)
+
+apd_echo — Echo to the debugging socket
+
+===============================================================================
+*Description*
+
+    bool apd_echo ( string $output )~
 
 Usually sent via the socket to request information about the running script.
 
-{output} The debugged variable.
+===============================================================================
+*Parameters*
 
-Returns TRUE on success or &false; on failure.
+{output}
 
-|apd_echo| example
+    The debugged variable.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*Examples*
+
+Example #1 apd_echo() example
 
 <?php >
-  apd_echo($i);
-?>
-
-
-
+    apd_echo($i);
+<?>
 
 
 vim:ft=help:

@@ -1,24 +1,42 @@
-convert_uudecode -- Decode a uuencoded string
+convert_uudecode
 
-  string convert_uudecode(string data)~
+(PHP 5)
 
-|convert_uudecode| decodes a uuencoded string.
+convert_uudecode — Decode a uuencoded string
 
-{data} The uuencoded data.
+===============================================================================
+*Description*
+
+    string convert_uudecode ( string $data )~
+
+convert_uudecode() decodes a uuencoded string.
+
+===============================================================================
+*Parameters*
+
+{data}
+
+    The uuencoded data.
+
+===============================================================================
+*Return* *Values*
 
 Returns the decoded data as a string or FALSE on failure.
 
-|convert_uudecode| example
+===============================================================================
+*Examples*
+
+Example #1 convert_uudecode() example
 
 <?php >
-  /* Can you imagine what this will print? :) */
-  echo convert_uudecode("+22!L;W9E(%!(4\"$`\n`");
-?>
+    /* Can you imagine what this will print? :) */
+    echo convert_uudecode("+22!L;W9E(%!(4\"$`\n`");
+<?>
 
+===============================================================================
+*See* *Also*
 
+  * |convert_uuencode| - Uuencode a string
 
-
-
-|convert_uuencode|
 
 vim:ft=help:

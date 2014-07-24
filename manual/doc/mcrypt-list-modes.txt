@@ -1,31 +1,47 @@
-mcrypt_list_modes -- Gets an array of all supported modes
+mcrypt_list_modes
 
-  array mcrypt_list_modes([string lib_dir = ini_get("mcrypt.modes_dir")])~
+(PHP 4 >= 4.0.2, PHP 5)
+
+mcrypt_list_modes — Gets an array of all supported modes
+
+===============================================================================
+*Description*
+
+    array mcrypt_list_modes ([ string $lib_dir =~
+    ini_get("mcrypt.modes_dir") ] )~
 
 Gets the list of all supported modes in the {lib_dir} parameter.
 
-{lib_dir} Specifies the directory where all modes are located. If not
-specified, the value of the mcrypt.modes_dir php.ini directive is used.
+===============================================================================
+*Parameters*
+
+{lib_dir}
+
+    Specifies the directory where all modes are located. If not specified, the
+    value of the mcrypt.modes_dir php.ini directive is used.
+
+===============================================================================
+*Return* *Values*
 
 Returns an array with all the supported modes.
 
-|mcrypt_list_modes| Example
+===============================================================================
+*Examples*
+
+Example #1 mcrypt_list_modes() Example
 
 <?php >
-      $modes = mcrypt_list_modes();
-  
-      foreach ($modes as $mode) {
-          echo "$mode <br />\n";
-      }
-?>
+        $modes = mcrypt_list_modes();
+
+        foreach ($modes as $mode) {
+            echo "$mode <br />\n";
+        }
+<?>
 
 The example above will produce a list with all supported algorithms in the
 default mode directory. If it is not set with the mcrypt.modes_dir php.ini
-directive, the default directory of mcrypt is used (which is
-/usr/local/lib/libmcrypt).
-
-
-
+directive, the default directory of mcrypt is used (which is /usr/local/lib/
+libmcrypt).
 
 
 vim:ft=help:

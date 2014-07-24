@@ -1,35 +1,60 @@
-pg_field_num -- Returns the field number of the named field
+pg_field_num
 
-  int pg_field_num(resource result, string field_name)~
+(PHP 4 >= 4.2.0, PHP 5)
 
-|pg_field_num| will return the number of the field number that corresponds to
+pg_field_num — Returns the field number of the named field
+
+===============================================================================
+*Description*
+
+    int pg_field_num ( resource $result , string $field_name )~
+
+pg_field_num() will return the number of the field number that corresponds to
 the {field_name} in the given PostgreSQL {result} resource.
 
-This function used to be called |pg_fieldnum|.
+    Note:
 
-{result} PostgreSQL query result resource, returned by |pg_query|,
-|pg_query_params| or |pg_execute| (among others).
+    This function used to be called pg_fieldnum().
 
-{field_name} The name of the field.
+===============================================================================
+*Parameters*
+
+{result}
+
+    PostgreSQL query result resource, returned by |pg_query|, |pg_query_params|
+    or |pg_execute| (among others).
+
+{field_name}
+
+    The name of the field.
+
+===============================================================================
+*Return* *Values*
 
 The field number (numbered from 0), or -1 on error.
 
-Getting information about fields
+===============================================================================
+*Examples*
+
+Example #1 Getting information about fields
 
 <?php >
-    $dbconn = pg_connect("dbname=publisher") or die("Could not connect");
-  
-    $res = pg_query($dbconn, "select author, year, title from authors where author = 'Orwell'");
-    
-    echo "Column 'title' is field number: ", pg_field_num($res, 'title');
-?>
+      $dbconn = pg_connect("dbname=publisher") or die("Could not connect");
+
+      $res = pg_query($dbconn, 
+    "select author, year, title from authors where author = 'Orwell'");
+      
+      echo "Column 'title' is field number: ", pg_field_num($res, 'title');
+<?>
 
 The above example will output:
 
-  Column 'title' is field number: 2
+Column 'title' is field number: 2
 
+===============================================================================
+*See* *Also*
 
+  * |pg_field_name| - Returns the name of a field
 
-|pg_field_name|
 
 vim:ft=help:

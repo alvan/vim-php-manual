@@ -1,12 +1,26 @@
-newt_init -- Initialize newt
+newt_init
 
-  int newt_init()~
+(PECL newt >= 0.1)
+
+newt_init — Initialize newt
+
+===============================================================================
+*Description*
+
+    int newt_init ( void )~
 
 Initializes the newt interface. This function must be called before any other
 newt function.
 
+===============================================================================
+*Return* *Values*
+
 Returns 1 on success, 0 on failure.
 
-|newt_finished|
+===============================================================================
+*See* *Also*
+
+  * |newt_finished| - Uninitializes newt interface
+
 
 vim:ft=help:

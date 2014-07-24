@@ -1,13 +1,32 @@
-xslt_getopt -- Get options on a given xsl processor
+xslt_getopt
 
-  int xslt_getopt(resource processor)~
+(PHP 4 >= 4.3.0)
 
-|xslt_getopt| returns the options on the given {processor}.
+xslt_getopt — Get options on a given xsl processor
 
-{ processor}The XSLT processor link identifier, created with |xslt_create|.
+===============================================================================
+*Description*
+
+    int xslt_getopt ( resource $processor )~
+
+xslt_getopt() returns the options on the given {processor}.
+
+===============================================================================
+*Parameters*
+
+{ processor}
+
+    The XSLT processor link identifier, created with |xslt_create|.
+
+===============================================================================
+*Return* *Values*
 
 Returns the options, a bitmask constructed with the XSLT_SABOPT_XXX constants.
 
-|xslt_setopt|
+===============================================================================
+*See* *Also*
+
+  * |xslt_setopt| - Set options on a given XSLT processor
+
 
 vim:ft=help:

@@ -1,12 +1,28 @@
-imap_headers -- Returns headers for all messages in a mailbox
+imap_headers
 
-  array imap_headers(resource imap_stream)~
+(PHP 4, PHP 5)
+
+imap_headers — Returns headers for all messages in a mailbox
+
+===============================================================================
+*Description*
+
+    array imap_headers ( resource $imap_stream )~
 
 Returns headers for all messages in a mailbox.
 
-{ imap_stream}An IMAP stream returned by |imap_open|.
+===============================================================================
+*Parameters*
+
+{ imap_stream}
+
+    An IMAP stream returned by |imap_open|.
+
+===============================================================================
+*Return* *Values*
 
 Returns an array of string formatted with header info. One element per mail
 message.
+
 
 vim:ft=help:

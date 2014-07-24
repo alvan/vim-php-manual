@@ -1,14 +1,27 @@
-maxdb::ssl_set -- Used for establishing secure connections using SSL
+maxdb_ssl_set
+
+maxdb::ssl_set
+
+(PECL maxdb >= 1.0)
+
+maxdb_ssl_set -- maxdb::ssl_set — Used for establishing secure connections
+using SSL
+
+===============================================================================
+*Description*
 
 Procedural style
 
-  bool maxdb_ssl_set(resource link, string key, string cert, string ca, string capath, string cipher)~
+    bool maxdb_ssl_set ( resource $link , string $key , string $cert , string~
+    $ca , string $capath , string $cipher )~
 
 Object oriented style
 
-  bool maxdb::ssl_set(string key, string cert, string ca, string capath, string cipher)~
+    bool maxdb::ssl_set ( string $key , string $cert , string $ca , string~
+    $capath , string $cipher )~
+Warning
 
-This function is currently not documented; only its argument list is
-available.
+This function is currently not documented; only its argument list is available.
+
 
 vim:ft=help:

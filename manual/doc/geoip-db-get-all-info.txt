@@ -1,9 +1,16 @@
-geoip_db_get_all_info -- Returns detailed information about all GeoIP database
+geoip_db_get_all_info
+
+(PECL geoip >= 1.0.1)
+
+geoip_db_get_all_info — Returns detailed information about all GeoIP database
 types
 
-  array geoip_db_get_all_info()~
+===============================================================================
+*Description*
 
-The |geoip_db_get_all_info| function will return detailed information as a
+    array geoip_db_get_all_info ( void )~
+
+The geoip_db_get_all_info() function will return detailed information as a
 multi-dimensional array about all the GeoIP database types.
 
 This function is available even if no databases are installed. It will simply
@@ -12,66 +19,69 @@ list them as non-available.
 The names of the different keys of the returning associative array are as
 follows:
 
-"available" -- Boolean, indicate if DB is available (see |geoip_db_avail|)
+  * "available" -- Boolean, indicate if DB is available (see |geoip_db_avail|)
+  * "description" -- The database description
+  * "filename" -- The database filename on disk (see |geoip_db_filename|)
 
-"description" -- The database description
-
-"filename" -- The database filename on disk (see |geoip_db_filename|)
+===============================================================================
+*Return* *Values*
 
 Returns the associative array.
 
-A |geoip_db_get_all_info| example This will print the array containing all the
-information.
+===============================================================================
+*Examples*
+
+Example #1 A geoip_db_get_all_info() example
+
+This will print the array containing all the information.
 
 <?php >
-  $infos = geoip_db_get_all_info();
-  if (is_array($infos)) {
-      var_dump($infos);
-  }
-?>
+    $infos = geoip_db_get_all_info();
+    if (is_array($infos)) {
+        var_dump($infos);
+    }
+<?>
 
 The above example will output:
 
-  array(11) {
-    [1]=>
-    array(3) {
-      ["available"]=>
-      bool(true)
-      ["description"]=>
-      string(21) "GeoIP Country Edition"
-      ["filename"]=>
-      string(32) "/usr/share/GeoIP/GeoIP.dat"
-    }
-  
-  [ ... ]
-  
-    [11]=>
-    array(3) {
-      ["available"]=>
-      bool(false)
-      ["description"]=>
-      string(25) "GeoIP Domain Name Edition"
-      ["filename"]=>
-      string(38) "/usr/share/GeoIP/GeoIPDomain.dat"
-    }
+array(11) {
+  [1]=>
+  array(3) {
+    ["available"]=>
+    bool(true)
+    ["description"]=>
+    string(21) "GeoIP Country Edition"
+    ["filename"]=>
+    string(32) "/usr/share/GeoIP/GeoIP.dat"
   }
 
+[ ... ]
 
+  [11]=>
+  array(3) {
+    ["available"]=>
+    bool(false)
+    ["description"]=>
+    string(25) "GeoIP Domain Name Edition"
+    ["filename"]=>
+    string(38) "/usr/share/GeoIP/GeoIPDomain.dat"
+  }
+}
 
-A |geoip_db_get_all_info| example You can use the various constants as keys to
-get only parts of the information.
+Example #2 A geoip_db_get_all_info() example
+
+You can use the various constants as keys to get only parts of the information.
 
 <?php >
-  $infos = geoip_db_get_all_info();
-  if ($infos[GEOIP_COUNTRY_EDITION]['available']) {
-      echo $infos[GEOIP_COUNTRY_EDITION]['description'];
-  }
-?>
+    $infos = geoip_db_get_all_info();
+    if ($infos[GEOIP_COUNTRY_EDITION]['available']) {
+        echo $infos[GEOIP_COUNTRY_EDITION]['description'];
+    }
+<?>
 
 The above example will output:
 
-  GeoIP Country Edition
-
+GeoIP Country Edition
 
 
 vim:ft=help:

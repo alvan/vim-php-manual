@@ -1,33 +1,54 @@
-apache_response_headers -- Fetch all HTTP response headers
+apache_response_headers
 
-  array apache_response_headers()~
+(PHP 4 >= 4.3.0, PHP 5)
+
+apache_response_headers — Fetch all HTTP response headers
+
+===============================================================================
+*Description*
+
+    array apache_response_headers ( void )~
 
 Fetch all HTTP response headers.
 
+===============================================================================
+*Return* *Values*
+
 An array of all Apache response headers on success or FALSE on failure.
 
-Version Description 5.5.7 This function became available in the CLI server.
-5.4.0 This function became available under FastCGI. Previously, it was
-supported only when PHP was installed as an Apache module. 4.3.3 As of PHP
-4.3.3 you can use this function with the NSAPI server module in
-Netscape/iPlanet/SunONE webservers, too.
+===============================================================================
+*Changelog*
 
-|apache_response_headers| example
+Version                               Description
+5.5.7   This function became available in the CLI server.
+5.4.0   This function became available under FastCGI. Previously, it was
+        supported only when PHP was installed as an Apache module.
+4.3.3   As of PHP 4.3.3 you can use this function with the NSAPI server module
+        in Netscape/iPlanet/SunONE webservers, too.
+
+===============================================================================
+*Examples*
+
+Example #1 apache_response_headers() example
 
 <?php >
-  print_r(apache_response_headers());
-?>
+    print_r(apache_response_headers());
+<?>
 
 The above example will output something similar to:
 
-  Array
-  (
-      [Accept-Ranges] => bytes
-      [X-Powered-By] => PHP/4.3.8
-  )
+Array
+(
+    [Accept-Ranges] => bytes
+    [X-Powered-By] => PHP/4.3.8
+)
 
+===============================================================================
+*See* *Also*
 
+  * |apache_request_headers| - Fetch all HTTP request headers
+  * |headers_sent| - Checks if or where headers have been sent
+  * |headers_list| - Returns a list of response headers sent (or ready to send)
 
-|apache_request_headers| |headers_sent| |headers_list|
 
 vim:ft=help:

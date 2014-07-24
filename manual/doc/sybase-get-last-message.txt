@@ -1,11 +1,25 @@
-sybase_get_last_message -- Returns the last message from the server
+sybase_get_last_message
 
-  string sybase_get_last_message()~
+(PHP 4, PHP 5)
 
-|sybase_get_last_message| returns the last message reported by the server.
+sybase_get_last_message — Returns the last message from the server
+
+===============================================================================
+*Description*
+
+    string sybase_get_last_message ( void )~
+
+sybase_get_last_message() returns the last message reported by the server.
+
+===============================================================================
+*Return* *Values*
 
 Returns the message as a string.
 
-|sybase_min_message_severity|
+===============================================================================
+*See* *Also*
+
+  * |sybase_min_message_severity| - Sets minimum message severity
+
 
 vim:ft=help:

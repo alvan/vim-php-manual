@@ -1,13 +1,32 @@
-mb_decode_mimeheader -- Decode string in MIME header field
+mb_decode_mimeheader
 
-  string mb_decode_mimeheader(string str)~
+(PHP 4 >= 4.0.6, PHP 5)
+
+mb_decode_mimeheader — Decode string in MIME header field
+
+===============================================================================
+*Description*
+
+    string mb_decode_mimeheader ( string $str )~
 
 Decodes encoded-word string {str} in MIME header.
 
-{str} The string being decoded.
+===============================================================================
+*Parameters*
+
+{str}
+
+    The string being decoded.
+
+===============================================================================
+*Return* *Values*
 
 The decoded string in internal character encoding.
 
-|mb_encode_mimeheader|
+===============================================================================
+*See* *Also*
+
+  * |mb_encode_mimeheader| - Encode string for MIME header
+
 
 vim:ft=help:

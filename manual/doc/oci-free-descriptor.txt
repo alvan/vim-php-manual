@@ -1,13 +1,32 @@
-oci_free_descriptor -- Frees a descriptor
+oci_free_descriptor
 
-  bool oci_free_descriptor(resource descriptor)~
+(PHP 5, PECL OCI8 >= 1.1.0)
+
+oci_free_descriptor — Frees a descriptor
+
+===============================================================================
+*Description*
+
+    bool oci_free_descriptor ( resource $descriptor )~
 
 Frees a descriptor allocated by |oci_new_descriptor|.
 
-Returns TRUE on success or &false; on failure.
+===============================================================================
+*Return* *Values*
 
-This function is commonly used as a method OCI-LOB::free.
+Returns TRUE on success or FALSE on failure.
 
-OCI-LOB::free
+===============================================================================
+*Notes*
+
+    Note:
+
+    This function is commonly used as a method OCI-LOB::free.
+
+===============================================================================
+*See* *Also*
+
+  * OCI-LOB::free
+
 
 vim:ft=help:

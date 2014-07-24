@@ -1,10 +1,23 @@
-ldap_bind -- Bind to LDAP directory
+ldap_bind
 
-  bool ldap_bind(resource link_identifier [, string bind_rdn = NULL [, string bind_password = NULL]])~
+(PHP 4, PHP 5)
+
+ldap_bind — Bind to LDAP directory
+
+===============================================================================
+*Description*
+
+    bool ldap_bind ( resource $link_identifier [, string $bind_rdn = NULL [,~
+    string $bind_password = NULL ]] )~
 
 Binds to the LDAP directory with specified RDN and password.
 
-{link_identifier} An LDAP link identifier, returned by |ldap_connect|.
+===============================================================================
+*Parameters*
+
+{link_identifier}
+
+    An LDAP link identifier, returned by |ldap_connect|.
 
 {bind_rdn}
 
@@ -13,63 +26,71 @@ Binds to the LDAP directory with specified RDN and password.
 If {bind_rdn} and {bind_password} are not specified, an anonymous bind is
 attempted.
 
-Returns TRUE on success or &false; on failure.
+===============================================================================
+*Return* *Values*
 
-Using LDAP Bind
+Returns TRUE on success or FALSE on failure.
 
-<?php >
-  // using ldap bind
-  $ldaprdn  = 'uname';     // ldap rdn or dn
-  $ldappass = 'password';  // associated password
-  
-  // connect to ldap server
-  $ldapconn = ldap_connect("ldap.example.com")
-      or die("Could not connect to LDAP server.");
-  
-  if ($ldapconn) {
-  
-      // binding to ldap server
-      $ldapbind = ldap_bind($ldapconn, $ldaprdn, $ldappass);
-  
-      // verify binding
-      if ($ldapbind) {
-          echo "LDAP bind successful...";
-      } else {
-          echo "LDAP bind failed...";
-      }
-  
-  }
-?>
+===============================================================================
+*Examples*
 
-
-
-Using LDAP Bind Anonymously
+Example #1 Using LDAP Bind
 
 <?php >
-  //using ldap bind anonymously
-  
-  // connect to ldap server
-  $ldapconn = ldap_connect("ldap.example.com")
-      or die("Could not connect to LDAP server.");
-  
-  if ($ldapconn) {
-  
-      // binding anonymously
-      $ldapbind = ldap_bind($ldapconn);
-  
-      if ($ldapbind) {
-          echo "LDAP bind anonymous successful...";
-      } else {
-          echo "LDAP bind anonymous failed...";
-      }
-  
-  }
-?>
 
+    // using ldap bind
+    $ldaprdn  = 'uname';     // ldap rdn or dn
+    $ldappass = 'password';  // associated password
 
+    // connect to ldap server
+    $ldapconn = ldap_connect("ldap.example.com")
+        or die("Could not connect to LDAP server.");
 
+    if ($ldapconn) {
 
+        // binding to ldap server
+        $ldapbind = ldap_bind($ldapconn, $ldaprdn, $ldappass);
 
-|ldap_unbind|
+        // verify binding
+        if ($ldapbind) {
+            echo "LDAP bind successful...";
+        } else {
+            echo "LDAP bind failed...";
+        }
+
+    }
+
+<?>
+
+Example #2 Using LDAP Bind Anonymously
+
+<?php >
+
+    //using ldap bind anonymously
+
+    // connect to ldap server
+    $ldapconn = ldap_connect("ldap.example.com")
+        or die("Could not connect to LDAP server.");
+
+    if ($ldapconn) {
+
+        // binding anonymously
+        $ldapbind = ldap_bind($ldapconn);
+
+        if ($ldapbind) {
+            echo "LDAP bind anonymous successful...";
+        } else {
+            echo "LDAP bind anonymous failed...";
+        }
+
+    }
+
+<?>
+
+===============================================================================
+*See* *Also*
+
+  * |ldap_unbind| - Unbind from LDAP directory
+
 
 vim:ft=help:

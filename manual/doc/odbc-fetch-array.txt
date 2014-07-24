@@ -1,21 +1,48 @@
-odbc_fetch_array -- Fetch a result row as an associative array
+odbc_fetch_array
 
-  array odbc_fetch_array(resource result [, int rownumber])~
+(PHP 4 >= 4.0.2, PHP 5)
 
-Fetch an associative array from an ODBC query. See the changelog below for
-when this function is available.
+odbc_fetch_array — Fetch a result row as an associative array
 
-{result} The result resource from |odbc_exec|.
+===============================================================================
+*Description*
 
-{rownumber} Optionally choose which row number to retrieve.
+    array odbc_fetch_array ( resource $result [, int $rownumber ] )~
+
+Fetch an associative array from an ODBC query. See the changelog below for when
+this function is available.
+
+===============================================================================
+*Parameters*
+
+{result}
+
+    The result resource from |odbc_exec|.
+
+{rownumber}
+
+    Optionally choose which row number to retrieve.
+
+===============================================================================
+*Return* *Values*
 
 Returns an array that corresponds to the fetched row, or FALSE if there are no
 more rows.
 
-Version Description 4.3.3 This function exists when compiled with IBM DB2 or
-UnixODBC support. 4.3.2 This function exists when compiled for Windows. 4.0.2
-This function exists when compiled with DBMaker support.
+===============================================================================
+*Changelog*
 
-|odbc_fetch_row| |odbc_fetch_object| |odbc_num_rows|
+Version                             Description
+4.3.3   This function exists when compiled with IBM DB2 or UnixODBC support.
+4.3.2   This function exists when compiled for Windows.
+4.0.2   This function exists when compiled with DBMaker support.
+
+===============================================================================
+*See* *Also*
+
+  * |odbc_fetch_row| - Fetch a row
+  * |odbc_fetch_object| - Fetch a result row as an object
+  * |odbc_num_rows| - Number of rows in a result
+
 
 vim:ft=help:

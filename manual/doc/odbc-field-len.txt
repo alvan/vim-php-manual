@@ -1,16 +1,38 @@
-odbc_field_len -- Get the length (precision) of a field
+odbc_field_len
 
-  int odbc_field_len(resource result_id, int field_number)~
+(PHP 4, PHP 5)
+
+odbc_field_len — Get the length (precision) of a field
+
+===============================================================================
+*Description*
+
+    int odbc_field_len ( resource $result_id , int $field_number )~
 
 Gets the length of the field referenced by number in the given result
 identifier.
 
-{result_id} The result identifier.
+===============================================================================
+*Parameters*
 
-{field_number} The field number. Field numbering starts at 1.
+{result_id}
+
+    The result identifier.
+
+{field_number}
+
+    The field number. Field numbering starts at 1.
+
+===============================================================================
+*Return* *Values*
 
 Returns the field name as a string, or FALSE on error.
 
-|odbc_field_scale| to get the scale of a floating point number
+===============================================================================
+*See* *Also*
+
+  * |odbc_field_scale| - Get the scale of a field to get the scale of a
+    floating point number
+
 
 vim:ft=help:

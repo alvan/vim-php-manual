@@ -1,20 +1,46 @@
-mqseries_set -- MQSeries MQSET
+mqseries_set
 
-  void mqseries_set(resource hconn, resource hobj, int selectorcount, array selectors, int intattrcount, array intattrs, int charattrlength, array charattrs, resource &compCode, resource &reason)~
+(PECL mqseries >= 0.10.0)
 
-The |mqseries_set| (MQSET) call is used to change the attributes of an object
+mqseries_set — MQSeries MQSET
+
+===============================================================================
+*Description*
+
+    void mqseries_set ( resource $hconn , resource $hobj , int $selectorcount~
+    , array $selectors , int $intattrcount , array $intattrs , int~
+    $charattrlength , array $charattrs , resource &$compCode , resource~
+    &$reason )~
+
+The mqseries_set() (MQSET) call is used to change the attributes of an object
 represented by a handle. The object must be a queue.
 
-{hConn} Connection handle.
+===============================================================================
+*Parameters*
 
-This handle represents the connection to the queue manager.
+{hConn}
 
-{compCode} Completion code.
+    Connection handle.
 
-{reason} Reason code qualifying the compCode.
+    This handle represents the connection to the queue manager.
+
+{compCode}
+
+    Completion code.
+
+{reason}
+
+    Reason code qualifying the compCode.
+
+===============================================================================
+*Return* *Values*
 
 No value is returned.
 
-|mqseries_inq|
+===============================================================================
+*See* *Also*
+
+  * |mqseries_inq| - MQSeries MQINQ
+
 
 vim:ft=help:

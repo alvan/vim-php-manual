@@ -1,21 +1,28 @@
-com_set -- Assigns a value to a COM component's property
+com_set
+
+(PHP 4)
+
+com_set — Assigns a value to a COM component's property
+
+===============================================================================
+*Description*
 
 Deprecated, use the OO syntax instead.
 
-OO syntax
+Example #1 OO syntax
 
 <?php >
-  // do this
-  $obj->property = $value;
-  // instead of this:
-  com_set($obj, 'property', $value);
-?>
+    // do this
+    $obj->property = $value;
+    // instead of this:
+    com_set($obj, 'property', $value);
+<?>
 
+===============================================================================
+*Notes*
 
+    Note: This function does not exist in PHP 5; instead, you should use the
+    regular and more natural OO syntax to access properties or call methods.
 
-
-
-This function does not exist in PHP 5; instead, you should use the regular and
-more natural OO syntax to access properties or call methods.
 
 vim:ft=help:

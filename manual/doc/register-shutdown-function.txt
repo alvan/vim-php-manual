@@ -1,64 +1,101 @@
-register_shutdown_function -- Register a function for execution on shutdown
+register_shutdown_function
 
-  void register_shutdown_function(callable callback [, mixed parameter [, mixed ...]])~
+(PHP 4, PHP 5)
 
-Registers a {callback} to be executed after script execution finishes or
-|exit| is called.
+register_shutdown_function — Register a function for execution on shutdown
 
-Multiple calls to |register_shutdown_function| can be made, and each will be
-called in the same order as they were registered. If you call |exit| within
-one registered shutdown function, processing will stop completely and no other
+===============================================================================
+*Description*
+
+    void register_shutdown_function ( callable $callback [, mixed $parameter~
+    [, mixed $... ]] )~
+
+Registers a {callback} to be executed after script execution finishes or |exit|
+is called.
+
+Multiple calls to register_shutdown_function() can be made, and each will be
+called in the same order as they were registered. If you call |exit| within one
+registered shutdown function, processing will stop completely and no other
 registered shutdown functions will be called.
 
-{callback} The shutdown callback to register.
+===============================================================================
+*Parameters*
 
-The shutdown callbacks are executed as the part of the request, so it's
-possible to send output from them and access output buffers.
+{callback}
 
-{parameter} It is possible to pass parameters to the shutdown function by
-passing additional parameters.
+    The shutdown callback to register.
+
+    The shutdown callbacks are executed as the part of the request, so it's
+    possible to send output from them and access output buffers.
+
+{parameter}
+
+    It is possible to pass parameters to the shutdown function by passing
+    additional parameters.
 
 {...}
 
+===============================================================================
+*Return* *Values*
+
 No value is returned.
+
+===============================================================================
+*Errors/Exceptions*
 
 If the passed callback is not callable a E_WARNING level error will be
 generated.
 
-Version Description 4.1.0 The shutdown functions are now called as a part of
-the request. In earlier versions under Apache, the registered shutdown
-functions were called after the request has been completed (including sending
-any output buffers), so it was not possible to send output to the browser
-using |echo| or |print|, or retrieve the contents of any output buffers using
-|ob_get_contents|. Headers were also always already sent.
+===============================================================================
+*Changelog*
 
-|register_shutdown_function| example
+Version                               Description
+        The shutdown functions are now called as a part of the request. In
+        earlier versions under Apache, the registered shutdown functions were
+4.1.0   called after the request has been completed (including sending any
+        output buffers), so it was not possible to send output to the browser
+        using |echo| or |print|, or retrieve the contents of any output buffers
+        using |ob_get_contents|. Headers were also always already sent.
+
+===============================================================================
+*Examples*
+
+Example #1 register_shutdown_function() example
 
 <?php >
-  function shutdown()
-  {
-      // This is our shutdown function, in 
-      // here we can do any last operations
-      // before the script is complete.
-  
-      echo 'Script executed with success', PHP_EOL;
-  }
-  
-  register_shutdown_function('shutdown');
-?>
+    function shutdown()
+    {
+        // This is our shutdown function, in 
+        // here we can do any last operations
+        // before the script is complete.
 
+        echo 'Script executed with success', PHP_EOL;
+    }
 
+    register_shutdown_function('shutdown');
+<?>
 
+===============================================================================
+*Notes*
 
+    Note:
 
-Working directory of the script can change inside the shutdown function under
-some web servers, e.g. Apache.
+    Working directory of the script can change inside the shutdown function
+    under some web servers, e.g. Apache.
 
-Shutdown functions will not be executed if the process is killed with a
-SIGTERM or SIGKILL signal. While you cannot intercept a SIGKILL, you can use
-|pcntl_signal| to install a handler for a SIGTERM which uses |exit| to end
-cleanly.
+    Note:
 
-auto_append_file |exit| The section on connection handling
+    Shutdown functions will not be executed if the process is killed with a
+    SIGTERM or SIGKILL signal. While you cannot intercept a SIGKILL, you can
+    use |pcntl_signal| to install a handler for a SIGTERM which uses |exit| to
+    end cleanly.
+
+===============================================================================
+*See* *Also*
+
+  * auto_append_file
+  * |exit| - Output a message and terminate the current script
+  * The section on connection handling
+
 
 vim:ft=help:

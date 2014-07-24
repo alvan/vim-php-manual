@@ -1,19 +1,35 @@
-ibase_blob_info -- Return blob length and other useful info
+ibase_blob_info
 
-  array ibase_blob_info(resource link_identifier, string blob_id)~
+(PHP 5)
 
-  array ibase_blob_info(string blob_id)~
+ibase_blob_info — Return blob length and other useful info
+
+===============================================================================
+*Description*
+
+    array ibase_blob_info ( resource $link_identifier , string $blob_id )~
+    array ibase_blob_info ( string $blob_id )~
 
 Returns the BLOB length and other useful information.
 
-{link_identifier} An InterBase link identifier. If omitted, the last opened
-link is assumed.
+===============================================================================
+*Parameters*
 
-{blob_id} A BLOB id.
+{link_identifier}
+
+    An InterBase link identifier. If omitted, the last opened link is assumed.
+
+{blob_id}
+
+    A BLOB id.
+
+===============================================================================
+*Return* *Values*
 
 Returns an array containing information about a BLOB. The information returned
 consists of the length of the BLOB, the number of segments it contains, the
 size of the largest segment, and whether it is a stream BLOB or a segmented
 BLOB.
+
 
 vim:ft=help:

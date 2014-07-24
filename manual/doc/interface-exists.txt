@@ -1,32 +1,57 @@
-interface_exists -- Checks if the interface has been defined
+interface_exists
 
-  bool interface_exists(string interface_name [, bool autoload = true])~
+(PHP 5 >= 5.0.2)
+
+interface_exists — Checks if the interface has been defined
+
+===============================================================================
+*Description*
+
+    bool interface_exists ( string $interface_name [, bool $autoload = true ]~
+)~
 
 Checks if the given interface has been defined.
 
-{interface_name} The interface name
+===============================================================================
+*Parameters*
 
-{autoload} Whether to call __autoload or not by default.
+{interface_name}
 
-Returns TRUE if the interface given by {interface_name} has been defined,
-FALSE otherwise.
+    The interface name
 
-|interface_exists| example
+{autoload}
+
+    Whether to call __autoload or not by default.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE if the interface given by {interface_name} has been defined, FALSE
+otherwise.
+
+===============================================================================
+*Examples*
+
+Example #1 interface_exists() example
 
 <?php >
-  // Check the interface exists before trying to use it
-  if (interface_exists('MyInterface')) {
-      class MyClass implements MyInterface
-      {
-          // Methods
-      }
-  }
-?>
+    // Check the interface exists before trying to use it
+    if (interface_exists('MyInterface')) {
+        class MyClass implements MyInterface
+        {
+            // Methods
+        }
+    }
 
+<?>
 
+===============================================================================
+*See* *Also*
 
+  * |get_declared_interfaces| - Returns an array of all declared interfaces
+  * |class_implements| - Return the interfaces which are implemented by the
+    given class
+  * |class_exists| - Checks if the class has been defined
 
-
-|get_declared_interfaces| |class_implements| |class_exists|
 
 vim:ft=help:

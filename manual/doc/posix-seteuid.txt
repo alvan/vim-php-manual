@@ -1,15 +1,34 @@
-posix_seteuid -- Set the effective UID of the current process
+posix_seteuid
 
-  bool posix_seteuid(int uid)~
+(PHP 4 >= 4.0.2, PHP 5)
+
+posix_seteuid — Set the effective UID of the current process
+
+===============================================================================
+*Description*
+
+    bool posix_seteuid ( int $uid )~
 
 Set the real user ID of the current process. This is a privileged function and
-needs appropriate privileges (usually root) on the system to be able to
-perform this function.
+needs appropriate privileges (usually root) on the system to be able to perform
+this function.
 
-{uid} The user id.
+===============================================================================
+*Parameters*
 
-Returns TRUE on success or &false; on failure.
+{uid}
 
-|posix_setgid|
+    The user id.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*See* *Also*
+
+  * |posix_setgid| - Set the GID of the current process
+
 
 vim:ft=help:

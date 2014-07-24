@@ -1,11 +1,24 @@
-dcngettext -- Plural version of dcgettext
+dcngettext
 
-  string dcngettext(string domain, string msgid1, string msgid2, int n, int category)~
+(PHP 4 >= 4.2.0, PHP 5)
+
+dcngettext — Plural version of dcgettext
+
+===============================================================================
+*Description*
+
+    string dcngettext ( string $domain , string $msgid1 , string $msgid2 , int~
+    $n , int $category )~
 
 This function allows you to override the current domain for a single plural
 message lookup.
 
-{domain} The domain
+===============================================================================
+*Parameters*
+
+{domain}
+
+    The domain
 
 {msgid1}
 
@@ -15,8 +28,15 @@ message lookup.
 
 {category}
 
+===============================================================================
+*Return* *Values*
+
 A string on success.
 
-|ngettext|
+===============================================================================
+*See* *Also*
+
+  * |ngettext| - Plural version of gettext
+
 
 vim:ft=help:

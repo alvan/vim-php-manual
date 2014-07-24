@@ -1,15 +1,36 @@
-hw_Unlock -- Unlock object
+hw_Unlock
 
-  bool hw_unlock(int connection, int objectID)~
+(PHP 4)
+
+hw_Unlock — Unlock object
+
+===============================================================================
+*Description*
+
+    bool hw_unlock ( int $connection , int $objectID )~
 
 Unlocks a document, so other users regain access.
 
-{connection} The connection identifier.
+===============================================================================
+*Parameters*
 
-{objectID} The document object identifier.
+{connection}
 
-Returns TRUE on success or &false; on failure.
+    The connection identifier.
 
-|hw_getandlock|
+{objectID}
+
+    The document object identifier.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*See* *Also*
+
+  * |hw_getandlock| - Return object record and lock object
+
 
 vim:ft=help:

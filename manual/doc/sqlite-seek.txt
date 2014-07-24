@@ -1,25 +1,55 @@
-SQLiteResult::seek -- Seek to a particular row number of a buffered result set
+sqlite_seek
 
-  bool sqlite_seek(resource result, int rownum)~
+SQLiteResult::seek
+
+(PHP 5 < 5.4.0, PECL sqlite >= 1.0.0)
+
+sqlite_seek -- SQLiteResult::seek — Seek to a particular row number of a
+buffered result set
+
+===============================================================================
+*Description*
+
+    bool sqlite_seek ( resource $result , int $rownum )~
 
 Object oriented style (method):
 
-  bool SQLiteResult::seek(int rownum)~
+    bool SQLiteResult::seek ( int $rownum )~
 
-|sqlite_seek| seeks to the row given by the parameter {rownum}.
+sqlite_seek() seeks to the row given by the parameter {rownum}.
 
-{result} The SQLite result resource. This parameter is not required when using
-the object-oriented method.
+===============================================================================
+*Parameters*
 
-This function cannot be used with unbuffered result handles.
+{result}
 
-{rownum} The ordinal row number to seek to. The row number is zero-based (0 is
-the first row).
+    The SQLite result resource. This parameter is not required when using the
+    object-oriented method.
 
-This function cannot be used with unbuffered result handles.
+        Note:
+
+        This function cannot be used with unbuffered result handles.
+
+{rownum}
+
+    The ordinal row number to seek to. The row number is zero-based (0 is the
+    first row).
+
+        Note:
+
+        This function cannot be used with unbuffered result handles.
+
+===============================================================================
+*Return* *Values*
 
 Returns FALSE if the row does not exist, TRUE otherwise.
 
-|sqlite_next| |sqlite_current| |sqlite_rewind|
+===============================================================================
+*See* *Also*
+
+  * |sqlite_next| - Seek to the next row number
+  * |sqlite_current| - Fetches the current row from a result set as an array
+  * |sqlite_rewind| - Seek to the first row number
+
 
 vim:ft=help:

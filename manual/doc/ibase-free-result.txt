@@ -1,11 +1,27 @@
-ibase_free_result -- Free a result set
+ibase_free_result
 
-  bool ibase_free_result(resource result_identifier)~
+(PHP 5)
+
+ibase_free_result — Free a result set
+
+===============================================================================
+*Description*
+
+    bool ibase_free_result ( resource $result_identifier )~
 
 Frees a result set.
 
-{result_identifier} A result set created by |ibase_query| or |ibase_execute|.
+===============================================================================
+*Parameters*
 
-Returns TRUE on success or &false; on failure.
+{result_identifier}
+
+    A result set created by |ibase_query| or |ibase_execute|.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
 
 vim:ft=help:

@@ -1,13 +1,31 @@
-oci_lob_is_equal -- Compares two LOB/FILE locators for equality
+oci_lob_is_equal
 
-  bool oci_lob_is_equal(OCI-Lob lob1, OCI-Lob lob2)~
+(PHP 5, PECL OCI8 >= 1.1.0)
+
+oci_lob_is_equal — Compares two LOB/FILE locators for equality
+
+===============================================================================
+*Description*
+
+    bool oci_lob_is_equal ( OCI-Lob $lob1 , OCI-Lob $lob2 )~
 
 Compares two LOB/FILE locators.
 
-{lob1} A LOB identifier.
+===============================================================================
+*Parameters*
 
-{lob2} A LOB identifier.
+{lob1}
+
+    A LOB identifier.
+
+{lob2}
+
+    A LOB identifier.
+
+===============================================================================
+*Return* *Values*
 
 Returns TRUE if these objects are equal, FALSE otherwise.
+
 
 vim:ft=help:

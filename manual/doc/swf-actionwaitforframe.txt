@@ -1,16 +1,34 @@
-swf_actionwaitforframe -- Skip actions if a frame has not been loaded
+swf_actionwaitforframe
 
-  void swf_actionwaitforframe(int framenumber, int skipcount)~
+(PHP 4)
 
-The |swf_actionwaitforframe| function will check to see if the frame,
-specified by the {framenumber} parameter has been loaded, if not it will skip
-the number of actions specified by the {skipcount} parameter. This can be
-useful for "Loading..." type animations.
+swf_actionwaitforframe — Skip actions if a frame has not been loaded
 
-{framenumber} The frame number.
+===============================================================================
+*Description*
 
-{skipcount} The number of actions to skip.
+    void swf_actionwaitforframe ( int $framenumber , int $skipcount )~
+
+The swf_actionwaitforframe() function will check to see if the frame, specified
+by the {framenumber} parameter has been loaded, if not it will skip the number
+of actions specified by the {skipcount} parameter. This can be useful for
+"Loading..." type animations.
+
+===============================================================================
+*Parameters*
+
+{framenumber}
+
+    The frame number.
+
+{skipcount}
+
+    The number of actions to skip.
+
+===============================================================================
+*Return* *Values*
 
 No value is returned.
+
 
 vim:ft=help:

@@ -1,25 +1,55 @@
-mb_eregi -- Regular expression match ignoring case with multibyte support
+mb_eregi
 
-  int mb_eregi(string pattern, string string [, array regs])~
+(PHP 4 >= 4.2.0, PHP 5)
+
+mb_eregi — Regular expression match ignoring case with multibyte support
+
+===============================================================================
+*Description*
+
+    int mb_eregi ( string $pattern , string $string [, array $regs ] )~
 
 Executes the case insensitive regular expression match with multibyte support.
 
-{pattern} The regular expression pattern.
+===============================================================================
+*Parameters*
 
-{string} The string being searched.
+{pattern}
 
-{regs} Contains a substring of the matched string.
+    The regular expression pattern.
+
+{string}
+
+    The string being searched.
+
+{regs}
+
+    Contains a substring of the matched string.
+
+===============================================================================
+*Return* *Values*
 
 Executes the regular expression match with multibyte support, and returns 1 if
-matches are found. If the optional {regs} parameter was specified, the
-function returns the byte length of matched part, and the array {regs} will
-contain the substring of matched string. The function returns 1 if it matches
-with the empty string. If no matches are found or an error happens, FALSE will
-be returned.
+matches are found. If the optional {regs} parameter was specified, the function
+returns the byte length of matched part, and the array {regs} will contain the
+substring of matched string. The function returns 1 if it matches with the
+empty string. If no matches are found or an error happens, FALSE will be
+returned.
 
-The internal encoding or the character encoding specified by
-|mb_regex_encoding| will be used as the character encoding for this function.
+===============================================================================
+*Notes*
 
-|mb_regex_encoding| |mb_ereg|
+    Note:
+
+    The internal encoding or the character encoding specified by |
+    mb_regex_encoding| will be used as the character encoding for this
+    function.
+
+===============================================================================
+*See* *Also*
+
+  * |mb_regex_encoding| - Set/Get character encoding for multibyte regex
+  * |mb_ereg| - Regular expression match with multibyte support
+
 
 vim:ft=help:

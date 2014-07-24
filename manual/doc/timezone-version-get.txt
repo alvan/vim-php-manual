@@ -1,23 +1,38 @@
-timezone_version_get -- Gets the version of the timezonedb
+timezone_version_get
 
-  string timezone_version_get()~
+(PHP 5 >= 5.3.0)
+
+timezone_version_get — Gets the version of the timezonedb
+
+===============================================================================
+*Description*
+
+    string timezone_version_get ( void )~
 
 Returns the current version of the timezonedb.
 
+===============================================================================
+*Return* *Values*
+
 Returns a string.
 
-Getting the timezonedb version
+===============================================================================
+*Examples*
+
+Example #1 Getting the timezonedb version
 
 <?php >
-  echo timezone_version_get();
-?>
+    echo timezone_version_get();
+<?>
 
 The above example will output something similar to:
 
-  2009.7
+2009.7
 
+===============================================================================
+*See* *Also*
 
+  * List of Supported Timezones
 
-List of Supported Timezones
 
 vim:ft=help:

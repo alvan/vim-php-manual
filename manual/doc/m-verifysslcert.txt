@@ -1,14 +1,28 @@
-m_verifysslcert -- Set whether or not to verify the server ssl certificate
+m_verifysslcert
 
-  bool m_verifysslcert(resource conn, int tf)~
+(PHP 4 >= 4.3.9, PHP 5 <= 5.0.5, PECL mcve >= 1.0.0)
 
-This function is currently not documented; only its argument list is
-available.
+m_verifysslcert — Set whether or not to verify the server ssl certificate
 
-{ conn}An MCVE_CONN resource returned by |m_initengine|.
+===============================================================================
+*Description*
+
+    bool m_verifysslcert ( resource $conn , int $tf )~
+Warning
+
+This function is currently not documented; only its argument list is available.
+
+===============================================================================
+*Parameters*
+
+{ conn}
+
+    An MCVE_CONN resource returned by |m_initengine|.
 
 {tf}
 
+===============================================================================
+*Return* *Values*
 
 
 vim:ft=help:

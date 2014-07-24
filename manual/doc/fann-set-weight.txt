@@ -1,17 +1,40 @@
-fann_set_weight -- Set a connection in the network
+fann_set_weight
 
-  bool fann_set_weight(resource ann, int from_neuron, int to_neuron, float weight)~
+(PECL fann >= 1.0.0)
+
+fann_set_weight — Set a connection in the network
+
+===============================================================================
+*Description*
+
+    bool fann_set_weight ( resource $ann , int $from_neuron , int $to_neuron ,~
+    float $weight )~
 
 Set a connections in the network.
 
-Neural network resource.
+===============================================================================
+*Parameters*
 
-The neuron where the connection starts
+{ann}
 
-The neuron where the connection ends
+    Neural network resource.
 
-Connection weight
+{from_neuron}
+
+    The neuron where the connection starts
+
+{to_neuron}
+
+    The neuron where the connection ends
+
+{weight}
+
+    Connection weight
+
+===============================================================================
+*Return* *Values*
 
 Returns TRUE on success, or FALSE otherwise.
+
 
 vim:ft=help:

@@ -1,24 +1,52 @@
-openssl_encrypt -- Encrypts data
+openssl_encrypt
 
-  string openssl_encrypt(string data, string method, string password [, int options = 0 [, string iv = ""]])~
+(PHP 5 >= 5.3.0)
+
+openssl_encrypt — Encrypts data
+
+===============================================================================
+*Description*
+
+    string openssl_encrypt ( string $data , string $method , string $password~
+    [, int $options = 0 [, string $iv = "" ]] )~
 
 Encrypts given data with given method and key, returns a raw or base64 encoded
 string
 
-This function is currently not documented; only its argument list is
-available.
+Warning
 
-{data} The data.
+This function is currently not documented; only its argument list is available.
 
-{method} The cipher method.
+===============================================================================
+*Parameters*
 
-{password} The password.
+{data}
 
-{options} {options} can be one of OPENSSL_RAW_DATA, OPENSSL_ZERO_PADDING.
+    The data.
 
-{iv} A non-NULL Initialization Vector.
+{method}
+
+    The cipher method.
+
+{password}
+
+    The password.
+
+{options}
+
+    {options} can be one of OPENSSL_RAW_DATA, OPENSSL_ZERO_PADDING.
+
+{iv}
+
+    A non-NULL Initialization Vector.
+
+===============================================================================
+*Return* *Values*
 
 Returns the encrypted string on success or FALSE on failure.
+
+===============================================================================
+*Errors/Exceptions*
 
 Emits an E_WARNING level error if an unknown cipher algorithm is passed in via
 the {method} parameter.
@@ -26,6 +54,17 @@ the {method} parameter.
 Emits an E_WARNING level error if an empty value is passed in via the {iv}
 parameter.
 
-|openssl_decrypt|
+===============================================================================
+*Changelog*
+
+Version                Description
+5.3.3   The {iv} parameter was added.
+5.4.0   The {raw_output} was changed to {options}.
+
+===============================================================================
+*See* *Also*
+
+  * |openssl_decrypt| - Decrypts data
+
 
 vim:ft=help:

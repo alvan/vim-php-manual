@@ -1,24 +1,49 @@
-tan -- Tangent
+tan
 
-  float tan(float arg)~
+(PHP 4, PHP 5)
 
-|tan| returns the tangent of the {arg} parameter. The {arg} parameter is in
+tan — Tangent
+
+===============================================================================
+*Description*
+
+    float tan ( float $arg )~
+
+tan() returns the tangent of the {arg} parameter. The {arg} parameter is in
 radians.
 
-{arg} The argument to process in radians
+===============================================================================
+*Parameters*
+
+{arg}
+
+    The argument to process in radians
+
+===============================================================================
+*Return* *Values*
 
 The tangent of {arg}
 
-|tan| example
+===============================================================================
+*Examples*
+
+Example #1 tan() example
 
 <?php >
-  echo tan(M_PI_4); // 1
-?>
 
+    echo tan(M_PI_4); // 1
 
+<?>
 
+===============================================================================
+*See* *Also*
 
+  * |atan| - Arc tangent
+  * |atan2| - Arc tangent of two variables
+  * |sin| - Sine
+  * |cos| - Cosine
+  * |tanh| - Hyperbolic tangent
+  * |deg2rad| - Converts the number in degrees to the radian equivalent
 
-|atan| |atan2| |sin| |cos| |tanh| |deg2rad|
 
 vim:ft=help:

@@ -1,19 +1,43 @@
-iconv_strlen -- Returns the character count of string
+iconv_strlen
 
-  int iconv_strlen(string str [, string charset = ini_get("iconv.internal_encoding")])~
+(PHP 5)
 
-In contrast to |strlen|, |iconv_strlen| counts the occurrences of characters
-in the given byte sequence {str} on the basis of the specified character set,
-the result of which is not necessarily identical to the length of the string
-in byte.
+iconv_strlen — Returns the character count of string
 
-{str} The string.
+===============================================================================
+*Description*
 
-{charset} If {charset} parameter is omitted, {str} is assumed to be encoded in
-iconv.internal_encoding.
+    int iconv_strlen ( string $str [, string $charset =~
+    ini_get("iconv.internal_encoding") ] )~
+
+In contrast to |strlen|, iconv_strlen() counts the occurrences of characters in
+the given byte sequence {str} on the basis of the specified character set, the
+result of which is not necessarily identical to the length of the string in
+byte.
+
+===============================================================================
+*Parameters*
+
+{str}
+
+    The string.
+
+{charset}
+
+    If {charset} parameter is omitted, {str} is assumed to be encoded in
+    iconv.internal_encoding.
+
+===============================================================================
+*Return* *Values*
 
 Returns the character count of {str}, as an integer.
 
-|grapheme_strlen| |mb_strlen| |strlen|
+===============================================================================
+*See* *Also*
+
+  * |grapheme_strlen| - Get string length in grapheme units
+  * |mb_strlen| - Get string length
+  * |strlen| - Get string length
+
 
 vim:ft=help:

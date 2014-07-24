@@ -1,21 +1,43 @@
-stream_context_set_option -- Sets an option for a stream/wrapper/context
+stream_context_set_option
 
-  bool stream_context_set_option(resource stream_or_context, string wrapper, string option, mixed value)~
+(PHP 4 >= 4.3.0, PHP 5)
 
-  bool stream_context_set_option(resource stream_or_context, array options)~
+stream_context_set_option — Sets an option for a stream/wrapper/context
+
+===============================================================================
+*Description*
+
+    bool stream_context_set_option ( resource $stream_or_context , string~
+    $wrapper , string $option , mixed $value )~
+    bool stream_context_set_option ( resource $stream_or_context , array~
+    $options )~
 
 Sets an option on the specified context. {value} is set to {option} for
 {wrapper}
 
-{stream_or_context} The stream or context resource to apply the options to.
+===============================================================================
+*Parameters*
 
-{options} The options to set for the default context.
+{stream_or_context}
 
-{options} must be an associative array of associative arrays in the format
-$arr['wrapper']['option'] = $value.
+    The stream or context resource to apply the options to.
 
-Refer to context options and parameters for a listing of stream options.
+{options}
 
-Returns TRUE on success or &false; on failure.
+    The options to set for the default context.
+
+        Note:
+
+        {options} must be an associative array of associative arrays in the
+        format $arr['wrapper']['option'] = $value.
+
+        Refer to context options and parameters for a listing of stream
+        options.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
 
 vim:ft=help:

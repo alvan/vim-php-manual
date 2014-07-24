@@ -1,16 +1,34 @@
-session_pgsql_add_error -- Increments error counts and sets last error message
+session_pgsql_add_error
 
-  bool session_pgsql_add_error(int error_level [, string error_message])~
+(PECL session_pgsql SVN)
 
-This function is currently not documented; only its argument list is
-available.
+session_pgsql_add_error — Increments error counts and sets last error message
+
+===============================================================================
+*Description*
+
+    bool session_pgsql_add_error ( int $error_level [, string $error_message ]~
+)~
+Warning
+
+This function is currently not documented; only its argument list is available.
+
+===============================================================================
+*Parameters*
 
 {error_level}
 
 {error_message}
 
-Returns TRUE on success or &false; on failure.
+===============================================================================
+*Return* *Values*
 
-|session_pgsql_get_error|
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*See* *Also*
+
+  * |session_pgsql_get_error| - Returns number of errors and last error message
+
 
 vim:ft=help:

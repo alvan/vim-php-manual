@@ -1,34 +1,55 @@
-imagepsslantfont -- Slant a font
+imagepsslantfont
 
-  bool imagepsslantfont(resource font_index, float slant)~
+(PHP 4, PHP 5)
+
+imagepsslantfont — Slant a font
+
+===============================================================================
+*Description*
+
+    bool imagepsslantfont ( resource $font_index , float $slant )~
 
 Slant a given font given.
 
-{font_index} A font resource, returned by |imagepsloadfont|.
+===============================================================================
+*Parameters*
 
-{slant} Slant level.
+{font_index}
 
-Returns TRUE on success or &false; on failure.
+    A font resource, returned by |imagepsloadfont|.
 
-|imagepsslantfont| example
+{slant}
+
+    Slant level.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*Examples*
+
+Example #1 imagepsslantfont() example
 
 <?php >
-  // Load a .pfb font file
-  $font = imagepsloadfont('./px3l.pfb');
-  
-  // Slant the font by 22.5
-  imagepsslantfont($font, 22.5);
-  
-  // Do any operations with the font here
-  
-  // Free the font from memory
-  imagepsfreefont($font);
-?>
+    // Load a .pfb font file
+    $font = imagepsloadfont('./px3l.pfb');
 
+    // Slant the font by 22.5
+    imagepsslantfont($font, 22.5);
 
+    // Do any operations with the font here
 
+    // Free the font from memory
+    imagepsfreefont($font);
+<?>
 
+===============================================================================
+*Notes*
 
-This function is only available if PHP is compiled using --with-t1lib[=DIR].
+    Note: This function is only available if PHP is compiled using --with-t1lib
+    [=DIR] .
+
 
 vim:ft=help:

@@ -1,25 +1,55 @@
-ps_rect -- Draws a rectangle
+ps_rect
 
-  bool ps_rect(resource psdoc, float x, float y, float width, float height)~
+(PECL ps >= 1.1.0)
+
+ps_rect — Draws a rectangle
+
+===============================================================================
+*Description*
+
+    bool ps_rect ( resource $psdoc , float $x , float $y , float $width ,~
+    float $height )~
 
 Draws a rectangle with its lower left corner at ({x}, {y}). The rectangle
 starts and ends in its lower left corner. If this function is called outside a
 path it will start a new path. If it is called within a path it will add the
-rectangle as a subpath. If the last drawing operation does not end in the
-lower left corner then there will be a gap in the path.
+rectangle as a subpath. If the last drawing operation does not end in the lower
+left corner then there will be a gap in the path.
 
-{psdoc} Resource identifier of the postscript file as returned by |ps_new|.
+===============================================================================
+*Parameters*
 
-{x} x-coordinate of the lower left corner of the rectangle.
+{psdoc}
 
-{y} y-coordinate of the lower left corner of the rectangle.
+    Resource identifier of the postscript file as returned by |ps_new|.
 
-{width} The width of the image.
+{x}
 
-{height} The height of the image.
+    x-coordinate of the lower left corner of the rectangle.
 
-Returns TRUE on success or &false; on failure.
+{y}
 
-|ps_arc| |ps_cirle| |ps_lineto|
+    y-coordinate of the lower left corner of the rectangle.
+
+{width}
+
+    The width of the image.
+
+{height}
+
+    The height of the image.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*See* *Also*
+
+  * |ps_arc| - Draws an arc counterclockwise
+  * ps_cirle()
+  * |ps_lineto| - Draws a line
+
 
 vim:ft=help:

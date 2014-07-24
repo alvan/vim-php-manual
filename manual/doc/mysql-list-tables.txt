@@ -1,65 +1,100 @@
-mysql_list_tables -- List tables in a MySQL database
+mysql_list_tables
+
+(PHP 4, PHP 5)
+
+mysql_list_tables — List tables in a MySQL database
+
+Warning
 
 This extension is deprecated as of PHP 5.5.0, and will be removed in the
 future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
-MySQL: choosing an API guide and related FAQ for more information.
-Alternatives to this function include:
+MySQL: choosing an API guide and related FAQ for more information. Alternatives
+to this function include:
 
-  resource mysql_list_tables(string database [, resource link_identifier = NULL])~
+  * SQL Query: SHOW TABLES FROM sometable
+
+===============================================================================
+*Description*
+
+    resource mysql_list_tables ( string $database [, resource $link_identifier~
+    = NULL ] )~
 
 Retrieves a list of table names from a MySQL database.
 
 This function is deprecated. It is preferable to use |mysql_query| to issue an
 SQL SHOW TABLES [FROM db_name] [LIKE 'pattern'] statement instead.
 
-{database} The name of the database
+===============================================================================
+*Parameters*
 
-{ link_identifier}The MySQL connection. If the link identifier is not
-specified, the last link opened by |mysql_connect| is assumed. If no such link
-is found, it will try to create one as if |mysql_connect| was called with no
-arguments. If no connection is found or established, an E_WARNING level error
-is generated.
+{database}
+
+    The name of the database
+
+{ link_identifier}
+
+    The MySQL connection. If the link identifier is not specified, the last
+    link opened by |mysql_connect| is assumed. If no such link is found, it
+    will try to create one as if |mysql_connect| was called with no arguments.
+    If no connection is found or established, an E_WARNING level error is
+    generated.
+
+===============================================================================
+*Return* *Values*
 
 A result pointer resource on success or FALSE on failure.
 
 Use the |mysql_tablename| function to traverse this result pointer, or any
 function for result tables, such as |mysql_fetch_array|.
 
-Version Description 4.3.7 This function became deprecated.
+===============================================================================
+*Changelog*
 
-|mysql_list_tables| alternative example
+Version           Description
+4.3.7   This function became deprecated.
+
+===============================================================================
+*Examples*
+
+Example #1 mysql_list_tables() alternative example
 
 <?php >
-  $dbname = 'mysql_dbname';
-  
-  if (!mysql_connect('mysql_host', 'mysql_user', 'mysql_password')) {
-      echo 'Could not connect to mysql';
-      exit;
-  }
-  
-  $sql = "SHOW TABLES FROM $dbname";
-  $result = mysql_query($sql);
-  
-  if (!$result) {
-      echo "DB Error, could not list tables\n";
-      echo 'MySQL Error: ' . mysql_error();
-      exit;
-  }
-  
-  while ($row = mysql_fetch_row($result)) {
-      echo "Table: {$row[0]}\n";
-  }
-  
-  mysql_free_result($result);
-?>
+    $dbname = 'mysql_dbname';
 
+    if (!mysql_connect('mysql_host', 'mysql_user', 'mysql_password')) {
+        echo 'Could not connect to mysql';
+        exit;
+    }
 
+    $sql = "SHOW TABLES FROM $dbname";
+    $result = mysql_query($sql);
 
+    if (!$result) {
+        echo "DB Error, could not list tables\n";
+        echo 'MySQL Error: ' . mysql_error();
+        exit;
+    }
 
+    while ($row = mysql_fetch_row($result)) {
+        echo "Table: {$row[0]}\n";
+    }
 
-For backward compatibility, the following deprecated alias may be used:
-|mysql_listtables|
+    mysql_free_result($result);
+<?>
 
-|mysql_list_dbs| |mysql_tablename|
+===============================================================================
+*Notes*
+
+    Note:
+
+    For backward compatibility, the following deprecated alias may be used: 
+    mysql_listtables()
+
+===============================================================================
+*See* *Also*
+
+  * |mysql_list_dbs| - List databases available on a MySQL server
+  * |mysql_tablename| - Get table name of field
+
 
 vim:ft=help:

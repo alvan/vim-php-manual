@@ -1,14 +1,33 @@
-kadm5_destroy -- Closes the connection to the admin server and releases all
+kadm5_destroy
+
+(PECL kadm5 >= 0.2.3)
+
+kadm5_destroy — Closes the connection to the admin server and releases all
 related resources
 
-  bool kadm5_destroy(resource handle)~
+===============================================================================
+*Description*
+
+    bool kadm5_destroy ( resource $handle )~
 
 Closes the connection to the admin server and releases all related resources.
 
-{handle} A KADM5 handle.
+===============================================================================
+*Parameters*
 
-Returns TRUE on success or &false; on failure.
+{handle}
 
-|kadm5_init_with_password|
+    A KADM5 handle.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*See* *Also*
+
+  * |kadm5_init_with_password| - Opens a connection to the KADM5 library
+
 
 vim:ft=help:

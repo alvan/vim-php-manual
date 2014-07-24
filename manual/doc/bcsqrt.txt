@@ -1,25 +1,49 @@
-bcsqrt -- Get the square root of an arbitrary precision number
+bcsqrt
 
-  string bcsqrt(string operand [, int scale])~
+(PHP 4, PHP 5)
+
+bcsqrt — Get the square root of an arbitrary precision number
+
+===============================================================================
+*Description*
+
+    string bcsqrt ( string $operand [, int $scale ] )~
 
 Return the square root of the {operand}.
 
-{operand} The operand, as a string.
+===============================================================================
+*Parameters*
 
-{ scale}This optional parameter is used to set the number of digits after the
-decimal place in the result. You can also set the global default scale for all
-functions by using |bcscale|.
+{operand}
+
+    The operand, as a string.
+
+{ scale}
+
+    This optional parameter is used to set the number of digits after the
+    decimal place in the result. You can also set the global default scale for
+    all functions by using |bcscale|.
+
+===============================================================================
+*Return* *Values*
 
 Returns the square root as a string, or NULL if {operand} is negative.
 
-|bcsqrt| example
+===============================================================================
+*Examples*
+
+Example #1 bcsqrt() example
 
 <?php >
-  echo bcsqrt('2', 3); // 1.414
-?>
 
+    echo bcsqrt('2', 3); // 1.414
 
+<?>
 
-|bcpow|
+===============================================================================
+*See* *Also*
+
+  * |bcpow| - Raise an arbitrary precision number to another
+
 
 vim:ft=help:

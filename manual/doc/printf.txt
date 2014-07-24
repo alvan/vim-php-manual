@@ -1,17 +1,41 @@
-printf -- Output a formatted string
+printf
 
-  int printf(string format [, mixed args [, mixed ...]])~
+(PHP 4, PHP 5)
+
+printf — Output a formatted string
+
+===============================================================================
+*Description*
+
+    int printf ( string $format [, mixed $args [, mixed $... ]] )~
 
 Produces output according to {format}.
 
-{format} See |sprintf| for a description of {format}.
+===============================================================================
+*Parameters*
+
+{format}
+
+    See |sprintf| for a description of {format}.
 
 {args}
 
 {...}
 
+===============================================================================
+*Return* *Values*
+
 Returns the length of the outputted string.
 
-|print| |sprintf| |vprintf| |sscanf| |fscanf| |flush|
+===============================================================================
+*See* *Also*
+
+  * |print| - Output a string
+  * |sprintf| - Return a formatted string
+  * |vprintf| - Output a formatted string
+  * |sscanf| - Parses input from a string according to a format
+  * |fscanf| - Parses input from a file according to a format
+  * |flush| - Flush system output buffer
+
 
 vim:ft=help:

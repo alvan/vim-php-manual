@@ -1,33 +1,68 @@
-sem_get -- Get a semaphore id
+sem_get
 
-  resource sem_get(int key [, int max_acquire = 1 [, int perm = 0666 [, int auto_release = 1]]])~
+(PHP 4, PHP 5)
 
-|sem_get| returns an id that can be used to access the System V semaphore with
+sem_get — Get a semaphore id
+
+===============================================================================
+*Description*
+
+    resource sem_get ( int $key [, int $max_acquire = 1 [, int $perm = 0666 [,~
+    int $auto_release = 1 ]]] )~
+
+sem_get() returns an id that can be used to access the System V semaphore with
 the given {key}.
 
-A second call to |sem_get| for the same key will return a different semaphore
+A second call to sem_get() for the same key will return a different semaphore
 identifier, but both identifiers access the same underlying semaphore.
+
+===============================================================================
+*Parameters*
 
 {key}
 
-{max_acquire} The number of processes that can acquire the semaphore
-simultaneously is set to {max_acquire}.
+{max_acquire}
 
-{perm} The semaphore permissions. Actually this value is set only if the
-process finds it is the only process currently attached to the semaphore.
+    The number of processes that can acquire the semaphore simultaneously is
+    set to {max_acquire}.
 
-{auto_release} Specifies if the semaphore should be automatically released on
-request shutdown.
+{perm}
+
+    The semaphore permissions. Actually this value is set only if the process
+    finds it is the only process currently attached to the semaphore.
+
+{auto_release}
+
+    Specifies if the semaphore should be automatically released on request
+    shutdown.
+
+===============================================================================
+*Return* *Values*
 
 Returns a positive semaphore identifier on success, or FALSE on error.
 
-Version Description 4.3.0 The {auto_release} parameter was added.
+===============================================================================
+*Changelog*
 
-When using |sem_get| to access a semaphore created outside PHP, note that the
+Version               Description
+4.3.0   The {auto_release} parameter was added.
+
+===============================================================================
+*Notes*
+
+Warning
+
+When using sem_get() to access a semaphore created outside PHP, note that the
 semaphore must have been created as a set of 3 semaphores (for example, by
 specifying 3 as the nsems parameter when calling the C semget() function),
 otherwise PHP will be unable to access the semaphore.
 
-|sem_acquire| |sem_release| |ftok|
+===============================================================================
+*See* *Also*
+
+  * |sem_acquire| - Acquire a semaphore
+  * |sem_release| - Release a semaphore
+  * |ftok| - Convert a pathname and a project identifier to a System V IPC key
+
 
 vim:ft=help:

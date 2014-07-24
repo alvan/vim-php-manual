@@ -1,11 +1,20 @@
-PDF_attach_file -- Add file attachment for current page [deprecated]
+PDF_attach_file
 
-  bool PDF_attach_file(resource pdfdoc, float llx, float lly, float urx, float ury, string filename, string description, string author, string mimetype, string icon)~
+(PHP 4 >= 4.0.5, PECL pdflib >= 1.0.0)
 
-Adds a file attachment annotation. Returns TRUE on success or &false; on
-failure.
+PDF_attach_file — Add file attachment for current page [deprecated]
 
-This function is deprecated since PDFlib version 6, use
-|PDF_create_annotation| with {type=FileAttachment} instead.
+===============================================================================
+*Description*
+
+    bool PDF_attach_file ( resource $pdfdoc , float $llx , float $lly , float~
+    $urx , float $ury , string $filename , string $description , string~
+    $author , string $mimetype , string $icon )~
+
+Adds a file attachment annotation. Returns TRUE on success or FALSE on failure.
+
+This function is deprecated since PDFlib version 6, use |PDF_create_annotation|
+with {type=FileAttachment} instead.
+
 
 vim:ft=help:

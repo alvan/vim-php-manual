@@ -1,25 +1,43 @@
-sqrt -- Square root
+sqrt
 
-  float sqrt(float arg)~
+(PHP 4, PHP 5)
+
+sqrt — Square root
+
+===============================================================================
+*Description*
+
+    float sqrt ( float $arg )~
 
 Returns the square root of {arg}.
 
-{arg} The argument to process
+===============================================================================
+*Parameters*
+
+{arg}
+
+    The argument to process
+
+===============================================================================
+*Return* *Values*
 
 The square root of {arg} or the special value NAN for negative numbers.
 
-|sqrt| example
+===============================================================================
+*Examples*
+
+Example #1 sqrt() example
 
 <?php >
-  // Precision depends on your precision directive
-  echo sqrt(9); // 3
-  echo sqrt(10); // 3.16227766 ...
-?>
+    // Precision depends on your precision directive
+    echo sqrt(9); // 3
+    echo sqrt(10); // 3.16227766 ...
+<?>
 
+===============================================================================
+*See* *Also*
 
+  * |pow| - Exponential expression
 
-
-
-|pow|
 
 vim:ft=help:

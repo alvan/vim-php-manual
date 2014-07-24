@@ -1,35 +1,55 @@
-getimagesizefromstring -- Get the size of an image from a string
+getimagesizefromstring
 
-  array getimagesizefromstring(string imagedata [, array &imageinfo])~
+(PHP 5 >= 5.4.0)
 
-Identical to |getimagesize| except that |getimagesizefromstring| accepts a
+getimagesizefromstring — Get the size of an image from a string
+
+===============================================================================
+*Description*
+
+    array getimagesizefromstring ( string $imagedata [, array &$imageinfo ] )~
+
+Identical to |getimagesize| except that getimagesizefromstring() accepts a
 string instead of a file name as the first parameter.
 
 See the |getimagesize| documentation for details on how this function works.
 
-The image data, as a string.
+===============================================================================
+*Parameters*
+
+{imagedata}
+
+    The image data, as a string.
+
+{imageinfo}
+
+    See |getimagesize|.
+
+===============================================================================
+*Return* *Values*
 
 See |getimagesize|.
 
-See |getimagesize|.
+===============================================================================
+*Examples*
 
-|getimagesizefromstring| example
+Example #1 getimagesizefromstring() example
 
 <?php >
-  $img = '/path/to/test.png';
-  
-  // Open as a file
-  $size_info1 = getimagesize($img);
-  
-  // Or open as a string
-  $data       = file_get_contents($img);
-  $size_info2 = getimagesizefromstring($data);
-?>
+    $img = '/path/to/test.png';
 
+    // Open as a file
+    $size_info1 = getimagesize($img);
 
+    // Or open as a string
+    $data       = file_get_contents($img);
+    $size_info2 = getimagesizefromstring($data);
+<?>
 
+===============================================================================
+*See* *Also*
 
+  * |getimagesize| - Get the size of an image
 
-|getimagesize|
 
 vim:ft=help:

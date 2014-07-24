@@ -1,18 +1,41 @@
-dio_write -- Writes data to fd with optional truncation at length
+dio_write
 
-  int dio_write(resource fd, string data [, int len = 0])~
+(PHP 4 >= 4.2.0, PHP 5 <= 5.0.5)
 
-|dio_write| writes up to {len} bytes from {data} to file {fd}.
+dio_write — Writes data to fd with optional truncation at length
 
-{fd} The file descriptor returned by |dio_open|.
+===============================================================================
+*Description*
 
-{data} The written data.
+    int dio_write ( resource $fd , string $data [, int $len = 0 ] )~
 
-{len} The length of data to write in bytes. If not specified, the function
-writes all the data to the specified file.
+dio_write() writes up to {len} bytes from {data} to file {fd}.
+
+===============================================================================
+*Parameters*
+
+{fd}
+
+    The file descriptor returned by |dio_open|.
+
+{data}
+
+    The written data.
+
+{len}
+
+    The length of data to write in bytes. If not specified, the function writes
+    all the data to the specified file.
+
+===============================================================================
+*Return* *Values*
 
 Returns the number of bytes written to {fd}.
 
-|dio_read|
+===============================================================================
+*See* *Also*
+
+  * |dio_read| - Reads bytes from a file descriptor
+
 
 vim:ft=help:

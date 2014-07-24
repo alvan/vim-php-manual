@@ -1,35 +1,59 @@
-ucwords -- Uppercase the first character of each word in a string
+ucwords
 
-  string ucwords(string str)~
+(PHP 4, PHP 5)
 
-Returns a string with the first character of each word in {str} capitalized,
-if that character is alphabetic.
+ucwords — Uppercase the first character of each word in a string
+
+===============================================================================
+*Description*
+
+    string ucwords ( string $str )~
+
+Returns a string with the first character of each word in {str} capitalized, if
+that character is alphabetic.
 
 The definition of a word is any string of characters that is immediately after
-a whitespace (These are: space, form-feed, newline, carriage return,
-horizontal tab, and vertical tab).
+a whitespace (These are: space, form-feed, newline, carriage return, horizontal
+tab, and vertical tab).
 
-{str} The input string.
+===============================================================================
+*Parameters*
+
+{str}
+
+    The input string.
+
+===============================================================================
+*Return* *Values*
 
 Returns the modified string.
 
-|ucwords| example
+===============================================================================
+*Examples*
+
+Example #1 ucwords() example
 
 <?php >
-  $foo = 'hello world!';
-  $foo = ucwords($foo);             // Hello World!
-  
-  $bar = 'HELLO WORLD!';
-  $bar = ucwords($bar);             // HELLO WORLD!
-  $bar = ucwords(strtolower($bar)); // Hello World!
-?>
+    $foo = 'hello world!';
+    $foo = ucwords($foo);             // Hello World!
 
+    $bar = 'HELLO WORLD!';
+    $bar = ucwords($bar);             // HELLO WORLD!
+    $bar = ucwords(strtolower($bar)); // Hello World!
+<?>
 
+===============================================================================
+*Notes*
 
+    Note: This function is binary-safe.
 
+===============================================================================
+*See* *Also*
 
-This function is binary-safe.
+  * |strtoupper| - Make a string uppercase
+  * |strtolower| - Make a string lowercase
+  * |ucfirst| - Make a string's first character uppercase
+  * |mb_convert_case| - Perform case folding on a string
 
-|strtoupper| |strtolower| |ucfirst| |mb_convert_case|
 
 vim:ft=help:

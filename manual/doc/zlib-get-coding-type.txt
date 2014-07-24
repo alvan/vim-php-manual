@@ -1,11 +1,25 @@
-zlib_get_coding_type -- Returns the coding type used for output compression
+zlib_get_coding_type
 
-  string zlib_get_coding_type()~
+(PHP 4 >= 4.3.2, PHP 5)
+
+zlib_get_coding_type — Returns the coding type used for output compression
+
+===============================================================================
+*Description*
+
+    string zlib_get_coding_type ( void )~
 
 Returns the coding type used for output compression.
 
+===============================================================================
+*Return* *Values*
+
 Possible return values are gzip, deflate, or FALSE.
 
-The zlib.output_compression directive
+===============================================================================
+*See* *Also*
+
+  * The zlib.output_compression directive
+
 
 vim:ft=help:

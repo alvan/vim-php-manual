@@ -1,15 +1,36 @@
-hw_Document_Content -- Returns content of hw_document
+hw_Document_Content
 
-  string hw_document_content(int hw_document)~
+(PHP 4)
+
+hw_Document_Content — Returns content of hw_document
+
+===============================================================================
+*Description*
+
+    string hw_document_content ( int $hw_document )~
 
 Gets the content of the document.
 
-{hw_document} The document identifier.
+===============================================================================
+*Parameters*
+
+{hw_document}
+
+    The document identifier.
+
+===============================================================================
+*Return* *Values*
 
 Returns the content of the document. If the document is an HTML document the
 content is everything after the BODY tag. Information from the HEAD and BODY
 tag is in the stored in the object record.
 
-|hw_document_attributes| |hw_document_size| |hw_document_setcontent|
+===============================================================================
+*See* *Also*
+
+  * |hw_document_attributes| - Object record of hw_document
+  * |hw_document_size| - Size of hw_document
+  * |hw_document_setcontent| - Sets/replaces content of hw_document
+
 
 vim:ft=help:

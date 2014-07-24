@@ -1,49 +1,76 @@
-dbase_replace_record -- Replaces a record in a database
+dbase_replace_record
 
-  bool dbase_replace_record(int dbase_identifier, array record, int record_number)~
+(PHP 4, PHP 5)
+
+dbase_replace_record — Replaces a record in a database
+
+===============================================================================
+*Description*
+
+    bool dbase_replace_record ( int $dbase_identifier , array $record , int~
+    $record_number )~
 
 Replaces the given record in the database with the given data.
 
-{dbase_identifier} The database link identifier, returned by |dbase_open| or
-|dbase_create|.
+===============================================================================
+*Parameters*
 
-{record} An indexed array of data. The number of items must be equal to the
-number of fields in the database, otherwise |dbase_replace_record| will fail.
+{dbase_identifier}
 
-If you're using |dbase_get_record| return value for this parameter, remember
-to reset the key named deleted.
+    The database link identifier, returned by |dbase_open| or |dbase_create|.
 
-{record_number} An integer which spans from 1 to the number of records in the
-database (as returned by |dbase_numrecords|).
+{record}
 
-Returns TRUE on success or &false; on failure.
+    An indexed array of data. The number of items must be equal to the number
+    of fields in the database, otherwise dbase_replace_record() will fail.
 
-Updating a record in the database
+        Note:
+
+        If you're using |dbase_get_record| return value for this parameter,
+        remember to reset the key named deleted.
+
+{record_number}
+
+    An integer which spans from 1 to the number of records in the database (as
+    returned by |dbase_numrecords|).
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*Examples*
+
+Example #1 Updating a record in the database
 
 <?php >
-  // open in read-write mode
-  $db = dbase_open('/tmp/test.dbf', 2);
-  
-  if ($db) {
-    // gets the old row
-    $row = dbase_get_record_with_names($db, 1);
-    
-    // remove the 'deleted' entry
-    unset($row['deleted']);
-    
-    // Update the date field with the current timestamp
-    $row['date'] = date('Ymd');
-    
-    // Replace the record
-    dbase_replace_record($db, $row, 1);
-    dbase_close($db);
-  }
-?>
 
+    // open in read-write mode
+    $db = dbase_open('/tmp/test.dbf', 2);
 
+    if ($db) {
+      // gets the old row
+      $row = dbase_get_record_with_names($db, 1);
+      
+      // remove the 'deleted' entry
+      unset($row['deleted']);
+      
+      // Update the date field with the current timestamp
+      $row['date'] = date('Ymd');
+      
+      // Replace the record
+      dbase_replace_record($db, $row, 1);
+      dbase_close($db);
+    }
 
+<?>
 
+===============================================================================
+*See* *Also*
 
-|dbase_add_record| |dbase_delete_record|
+  * |dbase_add_record| - Adds a record to a database
+  * |dbase_delete_record| - Deletes a record from a database
+
 
 vim:ft=help:

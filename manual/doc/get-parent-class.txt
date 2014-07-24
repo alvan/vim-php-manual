@@ -1,60 +1,90 @@
-get_parent_class -- Retrieves the parent class name for object or class
+get_parent_class
 
-  string get_parent_class([mixed object])~
+(PHP 4, PHP 5)
+
+get_parent_class — Retrieves the parent class name for object or class
+
+===============================================================================
+*Description*
+
+    string get_parent_class ([ mixed $object ] )~
 
 Retrieves the parent class name for object or class.
 
-{object} The tested object or class name
+===============================================================================
+*Parameters*
+
+{object}
+
+    The tested object or class name
+
+===============================================================================
+*Return* *Values*
 
 Returns the name of the parent class of the class of which {object} is an
 instance or the name.
 
-If the object does not have a parent or the class given does not exist FALSE
-will be returned.
+    Note:
+
+    If the object does not have a parent or the class given does not exist
+    FALSE will be returned.
 
 If called without parameter outside object, this function returns FALSE.
 
-Version Description 5.1.0 If called without parameter outside object, this
-function would have returned NULL with a warning, but now returns FALSE. 5.0.0
-The {object} parameter is optional if called from the object's method. 4.0.5
-If {object} is a string, returns the name of the parent class of the class
-with that name.
+===============================================================================
+*Changelog*
 
-Using |get_parent_class|
+Version                               Description
+5.1.0   If called without parameter outside object, this function would have
+        returned NULL with a warning, but now returns FALSE.
+5.0.0   The {object} parameter is optional if called from the object's method.
+4.0.5   If {object} is a string, returns the name of the parent class of the
+        class with that name.
+
+===============================================================================
+*Examples*
+
+Example #1 Using get_parent_class()
 
 <?php >
-  class dad {
-      function dad()
-      {
-      // implements some logic
-      }
-  }
-  
-  class child extends dad {
-      function child()
-      {
-          echo "I'm " , get_parent_class($this) , "'s son\n";
-      }
-  }
-  
-  class child2 extends dad {
-      function child2()
-      {
-          echo "I'm " , get_parent_class('child2') , "'s son too\n";
-      }
-  }
-  
-  $foo = new child();
-  $bar = new child2();
-?>
+
+    class dad {
+        function dad()
+        {
+        // implements some logic
+        }
+    }
+
+    class child extends dad {
+        function child()
+        {
+            echo "I'm " , get_parent_class($this) , "'s son\n";
+        }
+    }
+
+    class child2 extends dad {
+        function child2()
+        {
+            echo "I'm " , get_parent_class('child2') , "'s son too\n";
+        }
+    }
+
+    $foo = new child();
+    $bar = new child2();
+
+<?>
 
 The above example will output:
 
-  I'm dad's son
-  I'm dad's son too
+I'm dad's son
+I'm dad's son too
 
+===============================================================================
+*See* *Also*
 
+  * |get_class| - Returns the name of the class of an object
+  * |is_subclass_of| - Checks if the object has this class as one of its
+    parents
 
-|get_class| |is_subclass_of|
 
 vim:ft=help:

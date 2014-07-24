@@ -1,13 +1,32 @@
-udm_clear_search_limits -- Clear all mnoGoSearch search restrictions
+udm_clear_search_limits
 
-  bool udm_clear_search_limits(resource agent)~
+(PHP 4 >= 4.0.5, PHP 5 <= 5.0.5, PECL mnogosearch >= 1.0.0)
 
-|udm_clear_search_limits| resets defined search limitations.
+udm_clear_search_limits — Clear all mnoGoSearch search restrictions
 
-{agent} A link to Agent, received after call to |udm_alloc_agent|.
+===============================================================================
+*Description*
+
+    bool udm_clear_search_limits ( resource $agent )~
+
+udm_clear_search_limits() resets defined search limitations.
+
+===============================================================================
+*Parameters*
+
+{agent}
+
+    A link to Agent, received after call to |udm_alloc_agent|.
+
+===============================================================================
+*Return* *Values*
 
 Returns TRUE.
 
-|udm_add_search_limit|
+===============================================================================
+*See* *Also*
+
+  * |udm_add_search_limit| - Add various search limits
+
 
 vim:ft=help:

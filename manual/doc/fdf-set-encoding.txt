@@ -1,18 +1,36 @@
-fdf_set_encoding -- Sets FDF character encoding
+fdf_set_encoding
 
-  bool fdf_set_encoding(resource fdf_document, string encoding)~
+(PHP 4 >= 4.0.7, PHP 5)
+
+fdf_set_encoding — Sets FDF character encoding
+
+===============================================================================
+*Description*
+
+    bool fdf_set_encoding ( resource $fdf_document , string $encoding )~
 
 Sets the character encoding for the FDF document.
 
-{fdf_document} The FDF document handle, returned by |fdf_create|, |fdf_open|
-or |fdf_open_string|.
+===============================================================================
+*Parameters*
 
-{encoding} The encoding name. The following values are supported: "Shift-JIS",
-"UHC", "GBK" and "BigFive".
+{fdf_document}
 
-An empty string resets the encoding to the default PDFDocEncoding/Unicode
-scheme.
+    The FDF document handle, returned by |fdf_create|, |fdf_open| or |
+    fdf_open_string|.
 
-Returns TRUE on success or &false; on failure.
+{encoding}
+
+    The encoding name. The following values are supported: "Shift-JIS", "UHC",
+    "GBK" and "BigFive".
+
+    An empty string resets the encoding to the default PDFDocEncoding/Unicode
+    scheme.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
 
 vim:ft=help:

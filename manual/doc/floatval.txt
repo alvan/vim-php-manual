@@ -1,11 +1,26 @@
-floatval -- Get float value of a variable
+floatval
 
-  float floatval(mixed var)~
+(PHP 4 >= 4.2.0, PHP 5)
+
+floatval — Get float value of a variable
+
+===============================================================================
+*Description*
+
+    float floatval ( mixed $var )~
 
 Gets the float value of {var}.
 
-{var} May be any scalar type. |floatval| should not be used on objects, as
-doing so will emit an E_NOTICE level error and return 1.
+===============================================================================
+*Parameters*
+
+{var}
+
+    May be any scalar type. floatval() should not be used on objects, as doing
+    so will emit an E_NOTICE level error and return 1.
+
+===============================================================================
+*Return* *Values*
 
 The float value of the given variable. Empty arrays return 0, non-empty arrays
 return 1.
@@ -13,30 +28,33 @@ return 1.
 Strings will most likely return 0 although this depends on the leftmost
 characters of the string. The common rules of float casting apply.
 
-|floatval| Example
+===============================================================================
+*Examples*
+
+Example #1 floatval() Example
 
 <?php >
-  $var = '122.34343The';
-  $float_value_of_var = floatval($var);
-  echo $float_value_of_var; // 122.34343
-?>
+    $var = '122.34343The';
+    $float_value_of_var = floatval($var);
+    echo $float_value_of_var; // 122.34343
+<?>
 
-
-
-
-
-|floatval| non-numeric leftmost characters Example
+Example #2 floatval() non-numeric leftmost characters Example
 
 <?php >
-  $var = 'The122.34343';
-  $float_value_of_var = floatval($var);
-  echo $float_value_of_var; // 0
-?>
+    $var = 'The122.34343';
+    $float_value_of_var = floatval($var);
+    echo $float_value_of_var; // 0
+<?>
 
+===============================================================================
+*See* *Also*
 
+  * |boolval| - Get the boolean value of a variable
+  * |intval| - Get the integer value of a variable
+  * |strval| - Get string value of a variable
+  * |settype| - Set the type of a variable
+  * Type juggling
 
-
-
-|boolval| |intval| |strval| |settype| Type juggling
 
 vim:ft=help:

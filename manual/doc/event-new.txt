@@ -1,9 +1,20 @@
-event_new -- Create new event
+event_new
 
-  resource event_new()~
+(PECL libevent >= 0.0.1)
+
+event_new — Create new event
+
+===============================================================================
+*Description*
+
+    resource event_new ( void )~
 
 Creates and returns a new event resource.
 
-|event_new| returns a new event resource on success or FALSE on error.
+===============================================================================
+*Return* *Values*
+
+event_new() returns a new event resource on success or FALSE on error.
+
 
 vim:ft=help:

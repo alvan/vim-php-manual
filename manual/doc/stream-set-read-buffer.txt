@@ -1,16 +1,39 @@
-stream_set_read_buffer -- Set read file buffering on the given stream
+stream_set_read_buffer
 
-  int stream_set_read_buffer(resource stream, int buffer)~
+(PHP 5 >= 5.3.3)
 
-Sets the read buffer. It's the equivalent of |stream_set_write_buffer|, but
-for read operations.
+stream_set_read_buffer — Set read file buffering on the given stream
 
-The file pointer.
+===============================================================================
+*Description*
 
-The number of bytes to buffer. If {buffer} is 0 then read operations are
-unbuffered. This ensures that all reads with |fread| are completed before
-other processes are allowed to read from that input stream.
+    int stream_set_read_buffer ( resource $stream , int $buffer )~
+
+Sets the read buffer. It's the equivalent of |stream_set_write_buffer|, but for
+read operations.
+
+===============================================================================
+*Parameters*
+
+{stream}
+
+    The file pointer.
+
+{buffer}
+
+    The number of bytes to buffer. If {buffer} is 0 then read operations are
+    unbuffered. This ensures that all reads with |fread| are completed before
+    other processes are allowed to read from that input stream.
+
+===============================================================================
+*Return* *Values*
 
 Returns 0 on success, or EOF if the request cannot be honored.
+
+===============================================================================
+*See* *Also*
+
+  * |stream_set_write_buffer| - Sets write file buffering on the given stream
+
 
 vim:ft=help:

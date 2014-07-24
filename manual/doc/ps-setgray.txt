@@ -1,15 +1,36 @@
-ps_setgray -- Sets gray value
+ps_setgray
 
-  bool ps_setgray(resource psdoc, float gray)~
+(PECL ps >= 1.1.0)
+
+ps_setgray — Sets gray value
+
+===============================================================================
+*Description*
+
+    bool ps_setgray ( resource $psdoc , float $gray )~
 
 Sets the gray value for all following drawing operations.
 
-{psdoc} Resource identifier of the postscript file as returned by |ps_new|.
+===============================================================================
+*Parameters*
 
-{gray} The value must be between 0 (white) and 1 (black).
+{psdoc}
 
-Returns TRUE on success or &false; on failure.
+    Resource identifier of the postscript file as returned by |ps_new|.
 
-|ps_setcolor|
+{gray}
+
+    The value must be between 0 (white) and 1 (black).
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*See* *Also*
+
+  * |ps_setcolor| - Sets current color
+
 
 vim:ft=help:

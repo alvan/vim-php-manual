@@ -1,14 +1,27 @@
-stream_wrapper_unregister -- Unregister a URL wrapper
+stream_wrapper_unregister
 
-  bool stream_wrapper_unregister(string protocol)~
+(PHP 5 >= 5.1.0)
+
+stream_wrapper_unregister — Unregister a URL wrapper
+
+===============================================================================
+*Description*
+
+    bool stream_wrapper_unregister ( string $protocol )~
 
 Allows you to disable an already defined stream wrapper. Once the wrapper has
-been disabled you may override it with a user-defined wrapper using
-|stream_wrapper_register| or reenable it later on with
-|stream_wrapper_restore|.
+been disabled you may override it with a user-defined wrapper using |
+stream_wrapper_register| or reenable it later on with |stream_wrapper_restore|.
+
+===============================================================================
+*Parameters*
 
 {protocol}
 
-Returns TRUE on success or &false; on failure.
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
 
 vim:ft=help:

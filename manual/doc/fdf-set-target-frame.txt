@@ -1,16 +1,37 @@
-fdf_set_target_frame -- Set target frame for form display
+fdf_set_target_frame
 
-  bool fdf_set_target_frame(resource fdf_document, string frame_name)~
+(PHP 4 >= 4.3.0, PHP 5)
 
-Sets the target frame to display a result PDF defined with |fdf_save_file| in.
+fdf_set_target_frame — Set target frame for form display
 
-{fdf_document} The FDF document handle, returned by |fdf_create|, |fdf_open|
-or |fdf_open_string|.
+===============================================================================
+*Description*
 
-{frame_name} The frame name, as a string.
+    bool fdf_set_target_frame ( resource $fdf_document , string $frame_name )~
 
-Returns TRUE on success or &false; on failure.
+Sets the target frame to display a result PDF defined with fdf_save_file() in.
 
-|fdf_save_file|
+===============================================================================
+*Parameters*
+
+{fdf_document}
+
+    The FDF document handle, returned by |fdf_create|, |fdf_open| or |
+    fdf_open_string|.
+
+{frame_name}
+
+    The frame name, as a string.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*See* *Also*
+
+  * fdf_save_file()
+
 
 vim:ft=help:

@@ -1,15 +1,36 @@
-ifxus_read_slob -- Reads nbytes of the slob object
+ifxus_read_slob
 
-  string ifxus_read_slob(int bid, int nbytes)~
+(PHP 4, PHP <=5.2.0)
+
+ifxus_read_slob — Reads nbytes of the slob object
+
+===============================================================================
+*Description*
+
+    string ifxus_read_slob ( int $bid , int $nbytes )~
 
 Reads {nbytes} of the slob object.
 
-{bid} An existing slob id.
+===============================================================================
+*Parameters*
 
-{nbytes} The number of bytes to read.
+{bid}
+
+    An existing slob id.
+
+{nbytes}
+
+    The number of bytes to read.
+
+===============================================================================
+*Return* *Values*
 
 Returns the slob contents as a string, or FALSE on errors.
 
-|ifxus_write_slob|
+===============================================================================
+*See* *Also*
+
+  * |ifxus_write_slob| - Writes a string into the slob object
+
 
 vim:ft=help:

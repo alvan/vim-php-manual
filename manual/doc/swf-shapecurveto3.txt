@@ -1,25 +1,55 @@
-swf_shapecurveto3 -- Draw a cubic bezier curve
+swf_shapecurveto3
 
-  void swf_shapecurveto3(float x1, float y1, float x2, float y2, float x3, float y3)~
+(PHP 4)
+
+swf_shapecurveto3 — Draw a cubic bezier curve
+
+===============================================================================
+*Description*
+
+    void swf_shapecurveto3 ( float $x1 , float $y1 , float $x2 , float $y2 ,~
+    float $x3 , float $y3 )~
 
 Draw a cubic bezier curve using the given coordinates.
 
 The current position is then set to the {x3},{y3} coordinate.
 
-{x1} x-coordinate of the first off curve control point.
+===============================================================================
+*Parameters*
 
-{y1} y-coordinate of the first off curve control point.
+{x1}
 
-{x2} x-coordinate of the second off curve control point.
+    x-coordinate of the first off curve control point.
 
-{y2} y-coordinate of the second off curve control point.
+{y1}
 
-{x3} x-coordinate of the endpoint.
+    y-coordinate of the first off curve control point.
 
-{y3} y-coordinate of the endpoint.
+{x2}
+
+    x-coordinate of the second off curve control point.
+
+{y2}
+
+    y-coordinate of the second off curve control point.
+
+{x3}
+
+    x-coordinate of the endpoint.
+
+{y3}
+
+    y-coordinate of the endpoint.
+
+===============================================================================
+*Return* *Values*
 
 No value is returned.
 
-|swf_shapecurveto|
+===============================================================================
+*See* *Also*
+
+  * |swf_shapecurveto| - Draw a quadratic bezier curve between two points
+
 
 vim:ft=help:

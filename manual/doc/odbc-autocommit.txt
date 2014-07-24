@@ -1,17 +1,33 @@
-odbc_autocommit -- Toggle autocommit behaviour
+odbc_autocommit
 
-  mixed odbc_autocommit(resource connection_id [, bool OnOff = false])~
+(PHP 4, PHP 5)
+
+odbc_autocommit — Toggle autocommit behaviour
+
+===============================================================================
+*Description*
+
+    mixed odbc_autocommit ( resource $connection_id [, bool $OnOff = false ] )~
 
 Toggles autocommit behaviour.
 
 By default, auto-commit is on for a connection. Disabling auto-commit is
 equivalent with starting a transaction.
 
-{connection_id} The ODBC connection identifier, see |odbc_connect| for
-details.
+===============================================================================
+*Parameters*
 
-{OnOff} If {OnOff} is TRUE, auto-commit is enabled, if it is FALSE auto-commit
-is disabled.
+{connection_id}
+
+    The ODBC connection identifier, see |odbc_connect| for details.
+
+{OnOff}
+
+    If {OnOff} is TRUE, auto-commit is enabled, if it is FALSE auto-commit is
+    disabled.
+
+===============================================================================
+*Return* *Values*
 
 Without the {OnOff} parameter, this function returns auto-commit status for
 {connection_id}. Non-zero is returned if auto-commit is on, 0 if it is off, or
@@ -19,6 +35,11 @@ FALSE if an error occurs.
 
 If {OnOff} is set, this function returns TRUE on success and FALSE on failure.
 
-|odbc_commit| |odbc_rollback|
+===============================================================================
+*See* *Also*
+
+  * |odbc_commit| - Commit an ODBC transaction
+  * |odbc_rollback| - Rollback a transaction
+
 
 vim:ft=help:

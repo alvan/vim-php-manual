@@ -1,14 +1,28 @@
-m_setblocking -- Set blocking/non-blocking mode for connection
+m_setblocking
 
-  int m_setblocking(resource conn, int tf)~
+(PHP 4 >= 4.3.9, PHP 5 <= 5.0.5, PECL mcve >= 1.0.0)
 
-This function is currently not documented; only its argument list is
-available.
+m_setblocking — Set blocking/non-blocking mode for connection
 
-{ conn}An MCVE_CONN resource returned by |m_initengine|.
+===============================================================================
+*Description*
+
+    int m_setblocking ( resource $conn , int $tf )~
+Warning
+
+This function is currently not documented; only its argument list is available.
+
+===============================================================================
+*Parameters*
+
+{ conn}
+
+    An MCVE_CONN resource returned by |m_initengine|.
 
 {tf}
 
+===============================================================================
+*Return* *Values*
 
 
 vim:ft=help:

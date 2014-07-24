@@ -1,33 +1,52 @@
-pg_ping -- Ping database connection
+pg_ping
 
-  bool pg_ping([resource connection])~
+(PHP 4 >= 4.3.0, PHP 5)
 
-|pg_ping| pings a database connection and tries to reconnect it if it is
+pg_ping — Ping database connection
+
+===============================================================================
+*Description*
+
+    bool pg_ping ([ resource $connection ] )~
+
+pg_ping() pings a database connection and tries to reconnect it if it is
 broken.
 
-{connection} PostgreSQL database connection resource. When {connection} is not
-present, the default connection is used. The default connection is the last
-connection made by |pg_connect| or |pg_pconnect|.
+===============================================================================
+*Parameters*
 
-Returns TRUE on success or &false; on failure.
+{connection}
 
-|pg_ping| example
+    PostgreSQL database connection resource. When {connection} is not present,
+    the default connection is used. The default connection is the last
+    connection made by |pg_connect| or |pg_pconnect|.
 
-<?php >
-  $conn = pg_pconnect("dbname=publisher");
-  if (!$conn) {
-    echo "An error occurred.\n";
-    exit;
-  }
-  
-  if (!pg_ping($conn))
-    die("Connection is broken\n");
-?>
+===============================================================================
+*Return* *Values*
 
+Returns TRUE on success or FALSE on failure.
 
+===============================================================================
+*Examples*
 
+Example #1 pg_ping() example
 
+<?php  >
+    $conn = pg_pconnect("dbname=publisher");
+    if (!$conn) {
+      echo "An error occurred.\n";
+      exit;
+    }
 
-|pg_connection_status| |pg_connection_reset|
+    if (!pg_ping($conn))
+      die("Connection is broken\n");
+<?>
+
+===============================================================================
+*See* *Also*
+
+  * |pg_connection_status| - Get connection status
+  * |pg_connection_reset| - Reset connection (reconnect)
+
 
 vim:ft=help:

@@ -1,59 +1,85 @@
-fscanf -- Parses input from a file according to a format
+fscanf
 
-  mixed fscanf(resource handle, string format [, mixed &...])~
+(PHP 4 >= 4.0.1, PHP 5)
 
-The function |fscanf| is similar to |sscanf|, but it takes its input from a
+fscanf — Parses input from a file according to a format
+
+===============================================================================
+*Description*
+
+    mixed fscanf ( resource $handle , string $format [, mixed &$... ] )~
+
+The function fscanf() is similar to |sscanf|, but it takes its input from a
 file associated with {handle} and interprets the input according to the
 specified {format}, which is described in the documentation for |sprintf|.
 
-Any whitespace in the format string matches any whitespace in the input
-stream. This means that even a tab \t in the format string can match a single
-space character in the input stream.
+Any whitespace in the format string matches any whitespace in the input stream.
+This means that even a tab \t in the format string can match a single space
+character in the input stream.
 
-Each call to |fscanf| reads one line from the file.
+Each call to fscanf() reads one line from the file.
 
-{handle} A file system pointer resource that is typically created using
-|fopen|.
+===============================================================================
+*Parameters*
 
-{format} The specified format as described in the |sprintf| documentation.
+{handle}
 
-{...} The optional assigned values.
+    A file system pointer resource that is typically created using |fopen|.
+
+{format}
+
+    The specified format as described in the |sprintf| documentation.
+
+{...}
+
+    The optional assigned values.
+
+===============================================================================
+*Return* *Values*
 
 If only two parameters were passed to this function, the values parsed will be
 returned as an array. Otherwise, if optional parameters are passed, the
 function will return the number of assigned values. The optional parameters
 must be passed by reference.
 
-Version Description 4.3.0 Before this time, the maximum number of characters
-read from the file was 512 (or up to the first \n, whichever came first). But
-now, arbitrarily long lines will be read and scanned.
+===============================================================================
+*Changelog*
 
-|fscanf| Example
+Version                               Description
+        Before this time, the maximum number of characters read from the file
+4.3.0   was 512 (or up to the first \n, whichever came first). But now,
+        arbitrarily long lines will be read and scanned.
+
+===============================================================================
+*Examples*
+
+Example #1 fscanf() Example
 
 <?php >
-  $handle = fopen("users.txt", "r");
-  while ($userinfo = fscanf($handle, "%s\t%s\t%s\n")) {
-      list ($name, $profession, $countrycode) = $userinfo;
-      //... do something with the values
-  }
-  fclose($handle);
-?>
+    $handle = fopen("users.txt", "r");
+    while ($userinfo = fscanf($handle, "%s\t%s\t%s\n")) {
+        list ($name, $profession, $countrycode) = $userinfo;
+        //... do something with the values
+    }
+    fclose($handle);
+<?>
 
+Example #2 Contents of users.txt
 
+javier  argonaut        pe
+hiroshi sculptor        jp
+robert  slacker us
+luigi   florist it
 
+===============================================================================
+*See* *Also*
 
+  * |fread| - Binary-safe file read
+  * |fgets| - Gets line from file pointer
+  * |fgetss| - Gets line from file pointer and strip HTML tags
+  * |sscanf| - Parses input from a string according to a format
+  * |printf| - Output a formatted string
+  * |sprintf| - Return a formatted string
 
-Contents of users.txt
-
-  javier  argonaut        pe
-  hiroshi sculptor        jp
-  robert  slacker us
-  luigi   florist it
-
-
-
-
-
-|fread| |fgets| |fgetss| |sscanf| |printf| |sprintf|
 
 vim:ft=help:

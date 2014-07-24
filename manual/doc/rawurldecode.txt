@@ -1,27 +1,55 @@
-rawurldecode -- Decode URL-encoded strings
+rawurldecode
 
-  string rawurldecode(string str)~
+(PHP 4, PHP 5)
+
+rawurldecode — Decode URL-encoded strings
+
+===============================================================================
+*Description*
+
+    string rawurldecode ( string $str )~
 
 Returns a string in which the sequences with percent (%) signs followed by two
 hex digits have been replaced with literal characters.
 
-{str} The URL to be decoded.
+===============================================================================
+*Parameters*
+
+{str}
+
+    The URL to be decoded.
+
+===============================================================================
+*Return* *Values*
 
 Returns the decoded URL, as a string.
 
-|rawurldecode| example
+===============================================================================
+*Examples*
+
+Example #1 rawurldecode() example
 
 <?php >
-  echo rawurldecode('foo%20bar%40baz'); // foo bar@baz
-?>
 
+    echo rawurldecode('foo%20bar%40baz'); // foo bar@baz
 
+<?>
 
+===============================================================================
+*Notes*
 
+    Note:
 
-|rawurldecode| does not decode plus symbols ('+') into spaces. |urldecode|
-does.
+    rawurldecode() does not decode plus symbols ('+') into spaces. |urldecode|
+    does.
 
-|rawurlencode| |urldecode| |urlencode| RFC 3986
+===============================================================================
+*See* *Also*
+
+  * |rawurlencode| - URL-encode according to RFC 3986
+  * |urldecode| - Decodes URL-encoded string
+  * |urlencode| - URL-encodes string
+  * » RFC 3986
+
 
 vim:ft=help:

@@ -1,15 +1,36 @@
-gzdecode -- Decodes a gzip compressed string
+gzdecode
 
-  string gzdecode(string data [, int length])~
+(PHP 5 >= 5.4.0)
+
+gzdecode — Decodes a gzip compressed string
+
+===============================================================================
+*Description*
+
+    string gzdecode ( string $data [, int $length ] )~
 
 This function returns a decoded version of the input {data}.
 
-{data} The data to decode, encoded by |gzencode|.
+===============================================================================
+*Parameters*
 
-{length} The maximum length of data to decode.
+{data}
+
+    The data to decode, encoded by |gzencode|.
+
+{length}
+
+    The maximum length of data to decode.
+
+===============================================================================
+*Return* *Values*
 
 The decoded string, or FALSE if an error occurred.
 
-|gzencode|
+===============================================================================
+*See* *Also*
+
+  * |gzencode| - Create a gzip compressed string
+
 
 vim:ft=help:

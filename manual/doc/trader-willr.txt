@@ -1,17 +1,38 @@
-trader_willr -- Williams' %R
+trader_willr
 
-  array trader_willr(array high, array low, array close [, integer timePeriod])~
+(PECL trader >= 0.2.0)
 
+trader_willr — Williams' %R
 
+===============================================================================
+*Description*
 
-High price, array of real values.
+    array trader_willr ( array $high , array $low , array $close [, integer~
+    $timePeriod ] )~
 
-Low price, array of real values.
+===============================================================================
+*Parameters*
 
-Closing price, array of real values.
+{high}
 
-Number of period. Valid range from 2 to 100000.
+    High price, array of real values.
+
+{low}
+
+    Low price, array of real values.
+
+{close}
+
+    Closing price, array of real values.
+
+{timePeriod}
+
+    Number of period. Valid range from 2 to 100000.
+
+===============================================================================
+*Return* *Values*
 
 Returns an array with calculated data or false on failure.
+
 
 vim:ft=help:

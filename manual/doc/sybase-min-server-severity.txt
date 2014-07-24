@@ -1,16 +1,36 @@
-sybase_min_server_severity -- Sets minimum server severity
+sybase_min_server_severity
 
-  void sybase_min_server_severity(int severity)~
+(PHP 4, PHP 5)
 
-|sybase_min_server_severity| sets the minimum server severity level.
+sybase_min_server_severity — Sets minimum server severity
+
+===============================================================================
+*Description*
+
+    void sybase_min_server_severity ( int $severity )~
+
+sybase_min_server_severity() sets the minimum server severity level.
+
+===============================================================================
+*Parameters*
 
 {severity}
 
+===============================================================================
+*Return* *Values*
+
 No value is returned.
 
-This function is only available when using the CT library interface to Sybase,
-and not with the DB library.
+===============================================================================
+*Notes*
 
-|sybase_min_client_severity|
+    Note: This function is only available when using the CT library interface
+    to Sybase, and not with the DB library.
+
+===============================================================================
+*See* *Also*
+
+  * |sybase_min_client_severity| - Sets minimum client severity
+
 
 vim:ft=help:

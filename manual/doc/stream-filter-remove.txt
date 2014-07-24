@@ -1,38 +1,61 @@
-stream_filter_remove -- Remove a filter from a stream
+stream_filter_remove
 
-  bool stream_filter_remove(resource stream_filter)~
+(PHP 5 >= 5.1.0)
 
-Removes a stream filter previously added to a stream with
-|stream_filter_prepend| or |stream_filter_append|. Any data remaining in the
+stream_filter_remove — Remove a filter from a stream
+
+===============================================================================
+*Description*
+
+    bool stream_filter_remove ( resource $stream_filter )~
+
+Removes a stream filter previously added to a stream with |
+stream_filter_prepend| or |stream_filter_append|. Any data remaining in the
 filter's internal buffer will be flushed through to the next filter before
 removing it.
 
-{stream_filter} The stream filter to be removed.
+===============================================================================
+*Parameters*
 
-Returns TRUE on success or &false; on failure.
+{stream_filter}
 
-Dynamicly refiltering a stream
+    The stream filter to be removed.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*Examples*
+
+Example #1 Dynamicly refiltering a stream
 
 <?php >
-  /* Open a test file for reading and writing */
-  $fp = fopen("test.txt", "rw");
-  
-  $rot13_filter = stream_filter_append($fp, "string.rot13", STREAM_FILTER_WRITE);
-  fwrite($fp, "This is ");
-  stream_filter_remove($rot13_filter);
-  fwrite($fp, "a test\n");
-  
-  rewind($fp);
-  fpassthru($fp);
-  fclose($fp);
-?>
+    /* Open a test file for reading and writing */
+    $fp = fopen("test.txt", "rw");
+
+    $rot13_filter = stream_filter_append($fp, "string.rot13", STREAM_FILTER_WRITE);
+    fwrite($fp, "This is ");
+    stream_filter_remove($rot13_filter);
+    fwrite($fp, "a test\n");
+
+    rewind($fp);
+    fpassthru($fp);
+    fclose($fp);
+
+<?>
 
 The above example will output:
 
-  Guvf vf a test
+Guvf vf a test
 
+===============================================================================
+*See* *Also*
 
+  * |stream_filter_register| - Register a user defined stream filter
+  * |stream_filter_append| - Attach a filter to a stream
+  * |stream_filter_prepend| - Attach a filter to a stream
 
-|stream_filter_register| |stream_filter_append| |stream_filter_prepend|
 
 vim:ft=help:

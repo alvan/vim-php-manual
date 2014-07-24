@@ -1,11 +1,27 @@
-fann_get_num_input -- Get the number of input neurons
+fann_get_num_input
 
-  int fann_get_num_input(resource ann)~
+(PECL fann >= 1.0.0)
+
+fann_get_num_input — Get the number of input neurons
+
+===============================================================================
+*Description*
+
+    int fann_get_num_input ( resource $ann )~
 
 Get the number of input neurons.
 
-Neural network resource.
+===============================================================================
+*Parameters*
+
+{ann}
+
+    Neural network resource.
+
+===============================================================================
+*Return* *Values*
 
 Number of input neurons, or FALSE on error
+
 
 vim:ft=help:

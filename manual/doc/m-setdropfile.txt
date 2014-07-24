@@ -1,14 +1,28 @@
-m_setdropfile -- Set the connection method to Drop-File
+m_setdropfile
 
-  int m_setdropfile(resource conn, string directory)~
+(PHP 4 >= 4.3.9, PHP 5 <= 5.0.5, PECL mcve >= 1.0.0)
 
-This function is currently not documented; only its argument list is
-available.
+m_setdropfile — Set the connection method to Drop-File
 
-{ conn}An MCVE_CONN resource returned by |m_initengine|.
+===============================================================================
+*Description*
+
+    int m_setdropfile ( resource $conn , string $directory )~
+Warning
+
+This function is currently not documented; only its argument list is available.
+
+===============================================================================
+*Parameters*
+
+{ conn}
+
+    An MCVE_CONN resource returned by |m_initengine|.
 
 {directory}
 
+===============================================================================
+*Return* *Values*
 
 
 vim:ft=help:

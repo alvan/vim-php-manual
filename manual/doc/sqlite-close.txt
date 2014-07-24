@@ -1,26 +1,47 @@
-sqlite_close -- Closes an open SQLite database
+sqlite_close
 
-  void sqlite_close(resource dbhandle)~
+(PHP 5 < 5.4.0, PECL sqlite >= 1.0.0)
+
+sqlite_close — Closes an open SQLite database
+
+===============================================================================
+*Description*
+
+    void sqlite_close ( resource $dbhandle )~
 
 Closes the given {db_handle} database handle. If the database was persistent,
 it will be closed and removed from the persistent list.
 
-{dbhandle} The SQLite Database resource; returned from |sqlite_open| when used
-procedurally.
+===============================================================================
+*Parameters*
+
+{dbhandle}
+
+    The SQLite Database resource; returned from |sqlite_open| when used
+    procedurally.
+
+===============================================================================
+*Return* *Values*
 
 No value is returned.
 
-|sqlite_close| example
+===============================================================================
+*Examples*
+
+Example #1 sqlite_close() example
 
 <?php >
-  $dbhandle = sqlite_open('sqlitedb');
-  sqlite_close($dbhandle);
-?>
+    $dbhandle = sqlite_open('sqlitedb');
+    sqlite_close($dbhandle);
+<?>
 
+===============================================================================
+*See* *Also*
 
+  * |sqlite_open| - Opens an SQLite database and create the database if it does
+    not exist
+  * |sqlite_popen| - Opens a persistent handle to an SQLite database and create
+    the database if it does not exist
 
-
-
-|sqlite_open| |sqlite_popen|
 
 vim:ft=help:

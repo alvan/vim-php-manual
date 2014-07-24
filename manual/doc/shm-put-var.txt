@@ -1,23 +1,48 @@
-shm_put_var -- Inserts or updates a variable in shared memory
+shm_put_var
 
-  bool shm_put_var(resource shm_identifier, int variable_key, mixed variable)~
+(PHP 4, PHP 5)
 
-|shm_put_var| inserts or updates the {variable} with the given {variable_key}.
+shm_put_var — Inserts or updates a variable in shared memory
+
+===============================================================================
+*Description*
+
+    bool shm_put_var ( resource $shm_identifier , int $variable_key , mixed~
+    $variable )~
+
+shm_put_var() inserts or updates the {variable} with the given {variable_key}.
 
 Warnings (E_WARNING level) will be issued if {shm_identifier} is not a valid
 SysV shared memory index or if there was not enough shared memory remaining to
 complete your request.
 
-{shm_identifier} A shared memory resource handle as returned by |shm_attach|
+===============================================================================
+*Parameters*
 
-{variable_key} The variable key.
+{shm_identifier}
 
-{variable} The variable. All variable types that |serialize| supports may be
-used: generally this means all types except for resources and some internal
-objects that cannot be serialized.
+    A shared memory resource handle as returned by |shm_attach|
 
-Returns TRUE on success or &false; on failure.
+{variable_key}
 
-|shm_get_var| |shm_has_var|
+    The variable key.
+
+{variable}
+
+    The variable. All variable types that |serialize| supports may be used:
+    generally this means all types except for resources and some internal
+    objects that cannot be serialized.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*See* *Also*
+
+  * |shm_get_var| - Returns a variable from shared memory
+  * |shm_has_var| - Check whether a specific entry exists
+
 
 vim:ft=help:

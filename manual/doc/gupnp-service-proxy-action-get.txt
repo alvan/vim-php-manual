@@ -1,34 +1,68 @@
-gupnp_service_proxy_action_get -- Send action to the service and get value
+gupnp_service_proxy_action_get
 
-  mixed gupnp_service_proxy_action_get(resource proxy, string action, string name, int type)~
+(PECL gupnp >= 0.1.0)
+
+gupnp_service_proxy_action_get — Send action to the service and get value
+
+===============================================================================
+*Description*
+
+    mixed gupnp_service_proxy_action_get ( resource $proxy , string $action ,~
+    string $name , int $type )~
 
 Send action with parameters to the service exposed by proxy synchronously and
 get value.
 
-{proxy} A service proxy identifier.
+===============================================================================
+*Parameters*
 
-{action} An action.
+{proxy}
 
-{name} The action name.
+    A service proxy identifier.
 
-{type} The type of the variable to retrieve. Type can be one of the following
-values: GUPNP_TYPE_BOOLEAN Type of the variable is boolean.
+{action}
 
-GUPNP_TYPE_INT Type of the variable is integer.
+    An action.
 
-GUPNP_TYPE_LONG Type of the variable is long.
+{name}
 
-GUPNP_TYPE_DOUBLE Type of the variable is double.
+    The action name.
 
-GUPNP_TYPE_FLOAT Type of the variable is float.
+{type}
 
-GUPNP_TYPE_STRING Type of the variable is string.
+    The type of the variable to retrieve. Type can be one of the following
+    values:
+
+    GUPNP_TYPE_BOOLEAN
+        Type of the variable is boolean.
+    GUPNP_TYPE_INT
+        Type of the variable is integer.
+    GUPNP_TYPE_LONG
+        Type of the variable is long.
+    GUPNP_TYPE_DOUBLE
+        Type of the variable is double.
+    GUPNP_TYPE_FLOAT
+        Type of the variable is float.
+    GUPNP_TYPE_STRING
+        Type of the variable is string.
+
+===============================================================================
+*Return* *Values*
 
 Return value of the action.
 
-Issues E_WARNING with either not correctly defined type of the action or
-unable to send action.
+===============================================================================
+*Errors/Exceptions*
 
-|gupnp_service_proxy_action_set| |gupnp_service_proxy_send_action|
+Issues E_WARNING with either not correctly defined type of the action or unable
+to send action.
+
+===============================================================================
+*See* *Also*
+
+  * |gupnp_service_proxy_action_set| - Send action to the service and set value
+  * gupnp_service_proxy_send_action() - Send action with multiple parameters
+    synchronously
+
 
 vim:ft=help:

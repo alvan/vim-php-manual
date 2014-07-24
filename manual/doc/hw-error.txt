@@ -1,13 +1,32 @@
-hw_Error -- Error number
+hw_Error
 
-  int hw_error(int connection)~
+(PHP 4)
+
+hw_Error — Error number
+
+===============================================================================
+*Description*
+
+    int hw_error ( int $connection )~
 
 Returns the last error number, for the last command.
 
-{connection} The connection identifier.
+===============================================================================
+*Parameters*
+
+{connection}
+
+    The connection identifier.
+
+===============================================================================
+*Return* *Values*
 
 Returns the last error number or 0 if no error occurred.
 
-|hw_errormsg|
+===============================================================================
+*See* *Also*
+
+  * |hw_errormsg| - Returns error message
+
 
 vim:ft=help:

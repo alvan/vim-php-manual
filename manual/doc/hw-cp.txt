@@ -1,18 +1,42 @@
-hw_cp -- Copies objects
+hw_cp
 
-  int hw_cp(int connection, array object_id_array, int destination_id)~
+(PHP 4)
+
+hw_cp — Copies objects
+
+===============================================================================
+*Description*
+
+    int hw_cp ( int $connection , array $object_id_array , int $destination_id~
+)~
 
 Copies the objects with object ids as specified in the second parameter to the
 collection with the id {destination id}.
 
-{connection} The connection identifier.
+===============================================================================
+*Parameters*
 
-{object_id_array} An array of object ids.
+{connection}
 
-{destination_id} The target collection id.
+    The connection identifier.
+
+{object_id_array}
+
+    An array of object ids.
+
+{destination_id}
+
+    The target collection id.
+
+===============================================================================
+*Return* *Values*
 
 Returns the number of copied objects.
 
-|hw_mv|
+===============================================================================
+*See* *Also*
+
+  * |hw_mv| - Moves objects
+
 
 vim:ft=help:

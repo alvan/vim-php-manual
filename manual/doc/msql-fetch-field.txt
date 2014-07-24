@@ -1,27 +1,50 @@
-msql_fetch_field -- Get field information
+msql_fetch_field
 
-  object msql_fetch_field(resource result [, int field_offset = 0])~
+(PHP 4, PHP 5)
 
-|msql_fetch_field| can be used in order to obtain information about fields in
-a certain query result.
+msql_fetch_field — Get field information
 
-{ result}The result resource that is being evaluated. This result comes from a
-call to |msql_query|.
+===============================================================================
+*Description*
 
-{field_offset} The field offset. If not specified, the next field that wasn't
-yet retrieved by |msql_fetch_field| is retrieved.
+    object msql_fetch_field ( resource $result [, int $field_offset = 0 ] )~
+
+msql_fetch_field() can be used in order to obtain information about fields in a
+certain query result.
+
+===============================================================================
+*Parameters*
+
+{ result}
+
+    The result resource that is being evaluated. This result comes from a call
+    to |msql_query|.
+
+{field_offset}
+
+    The field offset. If not specified, the next field that wasn't yet
+    retrieved by msql_fetch_field() is retrieved.
+
+===============================================================================
+*Return* *Values*
 
 Returns an object containing field information. The properties of the object
-are: name - column name
+are:
 
-table - name of the table the column belongs to
+  * name - column name
 
-not_null - 1 if the column cannot be NULL
+  * table - name of the table the column belongs to
 
-unique - 1 if the column is a unique key
+  * not_null - 1 if the column cannot be NULL
 
-type - the type of the column
+  * unique - 1 if the column is a unique key
 
-|msql_field_seek|
+  * type - the type of the column
+
+===============================================================================
+*See* *Also*
+
+  * |msql_field_seek| - Set field offset
+
 
 vim:ft=help:

@@ -1,15 +1,37 @@
-fann_set_cascade_candidate_limit -- Sets the candidate limit
+fann_set_cascade_candidate_limit
 
-  bool fann_set_cascade_candidate_limit(resource ann, float cascade_candidate_limit)~
+(PECL fann >= 1.0.0)
+
+fann_set_cascade_candidate_limit — Sets the candidate limit
+
+===============================================================================
+*Description*
+
+    bool fann_set_cascade_candidate_limit ( resource $ann , float~
+    $cascade_candidate_limit )~
 
 Sets the candidate limit.
 
-Neural network resource.
+===============================================================================
+*Parameters*
 
-The candidate limit.
+{ann}
+
+    Neural network resource.
+
+{cascade_candidate_limit}
+
+    The candidate limit.
+
+===============================================================================
+*Return* *Values*
 
 Returns TRUE on success, or FALSE otherwise.
 
-|fann_get_cascade_candidate_limit|
+===============================================================================
+*See* *Also*
+
+  * |fann_get_cascade_candidate_limit| - Return the candidate limit
+
 
 vim:ft=help:

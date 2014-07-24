@@ -1,47 +1,86 @@
-mysql_escape_string -- Escapes a string for use in a mysql_query
+mysql_escape_string
+
+(PHP 4 >= 4.0.3, PHP 5)
+
+mysql_escape_string — Escapes a string for use in a mysql_query
+
+Warning
 
 This extension is deprecated as of PHP 5.5.0, and will be removed in the
 future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
-MySQL: choosing an API guide and related FAQ for more information.
-Alternatives to this function include:
+MySQL: choosing an API guide and related FAQ for more information. Alternatives
+to this function include:
 
-  string mysql_escape_string(string unescaped_string)~
+  * |mysqli_escape_string|
+  * PDO::quote()
+
+===============================================================================
+*Description*
+
+    string mysql_escape_string ( string $unescaped_string )~
 
 This function will escape the {unescaped_string}, so that it is safe to place
 it in a |mysql_query|. This function is deprecated.
 
-This function is identical to |mysql_real_escape_string| except that
-|mysql_real_escape_string| takes a connection handler and escapes the string
-according to the current character set. |mysql_escape_string| does not take a
+This function is identical to |mysql_real_escape_string| except that |
+mysql_real_escape_string| takes a connection handler and escapes the string
+according to the current character set. mysql_escape_string() does not take a
 connection argument and does not respect the current charset setting.
+
+Warning
 
 This function has been DEPRECATED as of PHP 5.3.0. Relying on this feature is
 highly discouraged.
 
-{unescaped_string} The string that is to be escaped.
+===============================================================================
+*Parameters*
+
+{unescaped_string}
+
+    The string that is to be escaped.
+
+===============================================================================
+*Return* *Values*
 
 Returns the escaped string.
 
-Version Description 5.3.0 This function now throws an E_DEPRECATED notice.
-4.3.0 This function became deprecated, do not use this function. Instead, use
-|mysql_real_escape_string|.
+===============================================================================
+*Changelog*
 
-|mysql_escape_string| example
+Version                               Description
+5.3.0   This function now throws an E_DEPRECATED notice.
+4.3.0   This function became deprecated, do not use this function. Instead, use
+        |mysql_real_escape_string|.
+
+===============================================================================
+*Examples*
+
+Example #1 mysql_escape_string() example
 
 <?php >
-  $item = "Zak's Laptop";
-  $escaped_item = mysql_escape_string($item);
-  printf("Escaped string: %s\n", $escaped_item);
-?>
+    $item = "Zak's Laptop";
+    $escaped_item = mysql_escape_string($item);
+    printf("Escaped string: %s\n", $escaped_item);
+<?>
 
 The above example will output:
 
-  Escaped string: Zak\'s Laptop
+Escaped string: Zak\'s Laptop
 
+===============================================================================
+*Notes*
 
+    Note:
 
-|mysql_escape_string| does not escape % and _.
+    mysql_escape_string() does not escape % and _.
 
-|mysql_real_escape_string| |addslashes| The magic_quotes_gpc directive.
+===============================================================================
+*See* *Also*
+
+  * |mysql_real_escape_string| - Escapes special characters in a string for use
+    in an SQL statement
+  * |addslashes| - Quote string with slashes
+  * The magic_quotes_gpc directive.
+
 
 vim:ft=help:

@@ -1,16 +1,30 @@
-m_responseparam -- Get a custom response parameter
+m_responseparam
 
-  string m_responseparam(resource conn, int identifier, string key)~
+(PHP 4 >= 4.3.9, PHP 5 <= 5.0.5, PECL mcve >= 1.0.0)
 
-This function is currently not documented; only its argument list is
-available.
+m_responseparam — Get a custom response parameter
 
-{ conn}An MCVE_CONN resource returned by |m_initengine|.
+===============================================================================
+*Description*
+
+    string m_responseparam ( resource $conn , int $identifier , string $key )~
+Warning
+
+This function is currently not documented; only its argument list is available.
+
+===============================================================================
+*Parameters*
+
+{ conn}
+
+    An MCVE_CONN resource returned by |m_initengine|.
 
 {identifier}
 
 {key}
 
+===============================================================================
+*Return* *Values*
 
 
 vim:ft=help:

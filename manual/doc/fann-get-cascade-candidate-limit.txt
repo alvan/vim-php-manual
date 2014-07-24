@@ -1,6 +1,13 @@
-fann_get_cascade_candidate_limit -- Return the candidate limit
+fann_get_cascade_candidate_limit
 
-  float fann_get_cascade_candidate_limit(resource ann)~
+(PECL fann >= 1.0.0)
+
+fann_get_cascade_candidate_limit — Return the candidate limit
+
+===============================================================================
+*Description*
+
+    float fann_get_cascade_candidate_limit ( resource $ann )~
 
 The candidate limit is a limit for how much the candidate neuron may be
 trained. The limit is a limit on the proportion between the MSE and candidate
@@ -11,10 +18,22 @@ is not a problem.
 
 The default candidate limit is 1000.0.
 
-Neural network resource.
+===============================================================================
+*Parameters*
+
+{ann}
+
+    Neural network resource.
+
+===============================================================================
+*Return* *Values*
 
 The candidate limit, or FALSE on error.
 
-|fann_set_cascade_candidate_limit|
+===============================================================================
+*See* *Also*
+
+  * |fann_set_cascade_candidate_limit| - Sets the candidate limit
+
 
 vim:ft=help:

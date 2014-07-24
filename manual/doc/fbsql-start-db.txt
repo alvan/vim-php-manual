@@ -1,22 +1,45 @@
-fbsql_start_db -- Start a database on local or remote server
+fbsql_start_db
 
-  bool fbsql_start_db(string database_name [, resource link_identifier [, string database_options]])~
+(PHP 4 >= 4.0.6, PHP 5)
+
+fbsql_start_db — Start a database on local or remote server
+
+===============================================================================
+*Description*
+
+    bool fbsql_start_db ( string $database_name [, resource $link_identifier~
+    [, string $database_options ]] )~
 
 Start a database on local or remote server.
 
-{database_name} The database name.
+===============================================================================
+*Parameters*
 
-{ link_identifier}A FrontBase link identifier returned by |fbsql_connect| or
-|fbsql_pconnect|.
+{database_name}
 
-If optional and not specified, the function will try to find an open link to
-the FrontBase server and if no such link is found it will try to create one as
-if |fbsql_connect| was called with no arguments.
+    The database name.
+
+{ link_identifier}
+
+    A FrontBase link identifier returned by |fbsql_connect| or |fbsql_pconnect|
+    .
+
+    If optional and not specified, the function will try to find an open link
+    to the FrontBase server and if no such link is found it will try to create
+    one as if |fbsql_connect| was called with no arguments.
 
 {database_options}
 
-Returns TRUE on success or &false; on failure.
+===============================================================================
+*Return* *Values*
 
-|fbsql_db_status| |fbsql_stop_db|
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*See* *Also*
+
+  * |fbsql_db_status| - Get the status for a given database
+  * |fbsql_stop_db| - Stop a database on local or remote server
+
 
 vim:ft=help:

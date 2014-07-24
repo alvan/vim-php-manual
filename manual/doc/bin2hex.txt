@@ -1,14 +1,34 @@
-bin2hex -- Convert binary data into hexadecimal representation
+bin2hex
 
-  string bin2hex(string str)~
+(PHP 4, PHP 5)
 
-Returns an ASCII string containing the hexadecimal representation of {str}.
-The conversion is done byte-wise with the high-nibble first.
+bin2hex — Convert binary data into hexadecimal representation
 
-{str} A string.
+===============================================================================
+*Description*
+
+    string bin2hex ( string $str )~
+
+Returns an ASCII string containing the hexadecimal representation of {str}. The
+conversion is done byte-wise with the high-nibble first.
+
+===============================================================================
+*Parameters*
+
+{str}
+
+    A string.
+
+===============================================================================
+*Return* *Values*
 
 Returns the hexadecimal representation of the given string.
 
-|hex2bin| |pack|
+===============================================================================
+*See* *Also*
+
+  * |hex2bin| - Decodes a hexadecimally encoded binary string
+  * |pack| - Pack data into binary string
+
 
 vim:ft=help:

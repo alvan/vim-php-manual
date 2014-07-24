@@ -1,15 +1,34 @@
-bzerrno -- Returns a bzip2 error number
+bzerrno
 
-  int bzerrno(resource bz)~
+(PHP 4 >= 4.0.4, PHP 5)
 
-Returns the error number of any bzip2 error returned by the given file
-pointer.
+bzerrno — Returns a bzip2 error number
 
-{bz} The file pointer. It must be valid and must point to a file successfully
-opened by |bzopen|.
+===============================================================================
+*Description*
+
+    int bzerrno ( resource $bz )~
+
+Returns the error number of any bzip2 error returned by the given file pointer.
+
+===============================================================================
+*Parameters*
+
+{bz}
+
+    The file pointer. It must be valid and must point to a file successfully
+    opened by |bzopen|.
+
+===============================================================================
+*Return* *Values*
 
 Returns the error number as an integer.
 
-|bzerror| |bzerrstr|
+===============================================================================
+*See* *Also*
+
+  * |bzerror| - Returns the bzip2 error number and error string in an array
+  * |bzerrstr| - Returns a bzip2 error string
+
 
 vim:ft=help:

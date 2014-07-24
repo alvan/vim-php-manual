@@ -1,14 +1,33 @@
-posix_isatty -- Determine if a file descriptor is an interactive terminal
+posix_isatty
 
-  bool posix_isatty(int fd)~
+(PHP 4, PHP 5)
+
+posix_isatty — Determine if a file descriptor is an interactive terminal
+
+===============================================================================
+*Description*
+
+    bool posix_isatty ( int $fd )~
 
 Determines if the file descriptor {fd} refers to a valid terminal type device.
 
-{fd} The file descriptor.
+===============================================================================
+*Parameters*
+
+{fd}
+
+    The file descriptor.
+
+===============================================================================
+*Return* *Values*
 
 Returns TRUE if {fd} is an open descriptor connected to a terminal and FALSE
 otherwise.
 
-|posix_ttyname|
+===============================================================================
+*See* *Also*
+
+  * |posix_ttyname| - Determine terminal device name
+
 
 vim:ft=help:

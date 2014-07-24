@@ -1,25 +1,89 @@
-mt_rand -- Generate a better random value
+mt_rand
 
-  int mt_rand()~
+(PHP 4, PHP 5)
 
-  int mt_rand(int min, int max)~
+mt_rand — Generate a better random value
+
+===============================================================================
+*Description*
+
+    int mt_rand ( void )~
+    int mt_rand ( int $min , int $max )~
 
 Many random number generators of older libcs have dubious or unknown
 characteristics and are slow. By default, PHP uses the libc random number
-generator with the |rand| function. The |mt_rand| function is a drop-in
+generator with the |rand| function. The mt_rand() function is a drop-in
 replacement for this. It uses a random number generator with known
-characteristics using the Mersenne Twister, which will produce random numbers
-four times faster than what the average libc rand() provides.
+characteristics using the »  Mersenne Twister, which will produce random
+numbers four times faster than what the average libc rand() provides.
 
-If called without the optional {min}, {max} arguments |mt_rand| returns a
+If called without the optional {min}, {max} arguments mt_rand() returns a
 pseudo-random value between 0 and |mt_getrandmax|. If you want a random number
 between 5 and 15 (inclusive), for example, use mt_rand(5, 15).
 
-{min} Optional lowest value to be returned (default: 0)
+===============================================================================
+*Parameters*
 
-{max} Optional highest value to be returned (default: |mt_getrandmax|)
+{min}
+
+    Optional lowest value to be returned (default: 0)
+
+{max}
+
+    Optional highest value to be returned (default: |mt_getrandmax|)
+
+===============================================================================
+*Return* *Values*
 
 A random integer value between {min} (or 0) and {max} (or |mt_getrandmax|,
 inclusive), or FALSE if {max} is less than {min}.
+
+===============================================================================
+*Changelog*
+
+Version                       Description
+5.3.4   Issues an E_WARNING and returns FALSE if {max} < {min}.
+4.2.0   The random number generator is seeded automatically.
+
+===============================================================================
+*Examples*
+
+Example #1 mt_rand() example
+
+<?php >
+    echo mt_rand() . "\n";
+    echo mt_rand() . "\n";
+
+    echo mt_rand(5, 15);
+<?>
+
+The above example will output something similar to:
+
+1604716014
+1478613278
+6
+
+===============================================================================
+*Notes*
+
+Caution
+
+This function does not generate cryptographically secure values, and should not
+be used for cryptographic purposes. If you need a cryptographically secure
+value, consider using |openssl_random_pseudo_bytes| instead.
+
+Caution
+
+The distribution of mt_rand() return values is biased towards even numbers on
+64-bit builds of PHP when {max} is beyond 2^32.
+
+===============================================================================
+*See* *Also*
+
+  * |mt_srand| - Seed the better random number generator
+  * |mt_getrandmax| - Show largest possible random value
+  * |openssl_random_pseudo_bytes| - Generate a pseudo-random string of bytes
+  * |rand| - Generate a random integer
+
 
 vim:ft=help:

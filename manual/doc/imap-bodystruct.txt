@@ -1,19 +1,43 @@
-imap_bodystruct -- Read the structure of a specified body section of a
-specific message
+imap_bodystruct
 
-  object imap_bodystruct(resource imap_stream, int msg_number, string section)~
+(PHP 4, PHP 5)
+
+imap_bodystruct — Read the structure of a specified body section of a specific
+message
+
+===============================================================================
+*Description*
+
+    object imap_bodystruct ( resource $imap_stream , int $msg_number , string~
+    $section )~
 
 Read the structure of a specified body section of a specific message.
 
-{ imap_stream}An IMAP stream returned by |imap_open|.
+===============================================================================
+*Parameters*
 
-{msg_number} The message number
+{ imap_stream}
 
-{section} The body section to read
+    An IMAP stream returned by |imap_open|.
+
+{msg_number}
+
+    The message number
+
+{section}
+
+    The body section to read
+
+===============================================================================
+*Return* *Values*
 
 Returns the information in an object, for a detailed description of the object
 structure and properties see |imap_fetchstructure|.
 
-|imap_fetchstructure|
+===============================================================================
+*See* *Also*
+
+  * |imap_fetchstructure| - Read the structure of a particular message
+
 
 vim:ft=help:

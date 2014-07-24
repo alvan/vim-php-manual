@@ -1,21 +1,28 @@
-com_load -- Creates a new reference to a COM component [deprecated]
+com_load
+
+(PHP 4)
+
+com_load — Creates a new reference to a COM component [deprecated]
+
+===============================================================================
+*Description*
 
 Deprecated, use the OO syntax instead.
 
-OO syntax
+Example #1 OO syntax
 
 <?php >
-  // do this
-  $obj = new COM($module);
-  // instead of this:
-  $obj = com_load($module);
-?>
+    // do this
+    $obj = new COM($module);
+    // instead of this:
+    $obj = com_load($module);
+<?>
 
+===============================================================================
+*Notes*
 
+    Note: This function does not exist in PHP 5; instead, you should use the
+    regular and more natural OO syntax to access properties or call methods.
 
-
-
-This function does not exist in PHP 5; instead, you should use the regular and
-more natural OO syntax to access properties or call methods.
 
 vim:ft=help:

@@ -1,36 +1,73 @@
-image_type_to_mime_type -- Get Mime-Type for image-type returned by
+image_type_to_mime_type
+
+(PHP 4 >= 4.3.0, PHP 5)
+
+image_type_to_mime_type — Get Mime-Type for image-type returned by
 getimagesize, exif_read_data, exif_thumbnail, exif_imagetype
 
-  string image_type_to_mime_type(int imagetype)~
+===============================================================================
+*Description*
 
-The |image_type_to_mime_type| function will determine the Mime-Type for an
+    string image_type_to_mime_type ( int $imagetype )~
+
+The image_type_to_mime_type() function will determine the Mime-Type for an
 IMAGETYPE constant.
 
-{imagetype} One of the IMAGETYPE_XXX constants.
+===============================================================================
+*Parameters*
 
-The returned values are as follows Returned values Constants {imagetype}
-Returned value IMAGETYPE_GIF image/gif IMAGETYPE_JPEG image/jpeg IMAGETYPE_PNG
-image/png IMAGETYPE_SWF application/x-shockwave-flash IMAGETYPE_PSD image/psd
-IMAGETYPE_BMP image/bmp IMAGETYPE_TIFF_II (intel byte order) image/tiff
-IMAGETYPE_TIFF_MM (motorola byte order) image/tiff IMAGETYPE_JPC
-application/octet-stream IMAGETYPE_JP2 image/jp2 IMAGETYPE_JPX
-application/octet-stream IMAGETYPE_JB2 application/octet-stream IMAGETYPE_SWC
-application/x-shockwave-flash IMAGETYPE_IFF image/iff IMAGETYPE_WBMP
-image/vnd.wap.wbmp IMAGETYPE_XBM image/xbm IMAGETYPE_ICO
-image/vnd.microsoft.icon
+{imagetype}
 
-|image_type_to_mime_type| example
+    One of the IMAGETYPE_XXX constants.
+
+===============================================================================
+*Return* *Values*
+
+The returned values are as follows
+
+                      Returned values Constants
+              {imagetype}                      Returned value
+IMAGETYPE_GIF                           image/gif
+IMAGETYPE_JPEG                          image/jpeg
+IMAGETYPE_PNG                           image/png
+IMAGETYPE_SWF                           application/x-shockwave-flash
+IMAGETYPE_PSD                           image/psd
+IMAGETYPE_BMP                           image/bmp
+IMAGETYPE_TIFF_II (intel byte order)    image/tiff
+IMAGETYPE_TIFF_MM (motorola byte order) image/tiff
+IMAGETYPE_JPC                           application/octet-stream
+IMAGETYPE_JP2                           image/jp2
+IMAGETYPE_JPX                           application/octet-stream
+IMAGETYPE_JB2                           application/octet-stream
+IMAGETYPE_SWC                           application/x-shockwave-flash
+IMAGETYPE_IFF                           image/iff
+IMAGETYPE_WBMP                          image/vnd.wap.wbmp
+IMAGETYPE_XBM                           image/xbm
+IMAGETYPE_ICO                           image/vnd.microsoft.icon
+
+===============================================================================
+*Examples*
+
+Example #1 image_type_to_mime_type() example
 
 <?php >
-  header("Content-type: " . image_type_to_mime_type(IMAGETYPE_PNG));
-?>
+    header("Content-type: " . image_type_to_mime_type(IMAGETYPE_PNG));
+<?>
 
+===============================================================================
+*Notes*
 
+    Note:
 
+    This function does not require the GD image library.
 
+===============================================================================
+*See* *Also*
 
-This function does not require the GD image library.
+  * |getimagesize| - Get the size of an image
+  * |exif_imagetype| - Determine the type of an image
+  * |exif_read_data| - Reads the EXIF headers from JPEG or TIFF
+  * |exif_thumbnail| - Retrieve the embedded thumbnail of a TIFF or JPEG image
 
-|getimagesize| |exif_imagetype| |exif_read_data| |exif_thumbnail|
 
 vim:ft=help:

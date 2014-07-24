@@ -1,6 +1,13 @@
-unpack -- Unpack data from binary string
+unpack
 
-  array unpack(string format, string data)~
+(PHP 4, PHP 5)
+
+unpack — Unpack data from binary string
+
+===============================================================================
+*Description*
+
+    array unpack ( string $format , string $data )~
 
 Unpacks from a binary string into an array according to the given {format}.
 
@@ -9,75 +16,90 @@ have to name the different format codes and separate them by a slash /. If a
 repeater argument is present, then each of the array keys will have a sequence
 number behind the given name.
 
-{format} See |pack| for an explanation of the format codes.
+===============================================================================
+*Parameters*
 
-{data} The packed data.
+{format}
+
+    See |pack| for an explanation of the format codes.
+
+{data}
+
+    The packed data.
+
+===============================================================================
+*Return* *Values*
 
 Returns an associative array containing unpacked elements of binary string.
 
-Version Description 5.5.0 Changes were made to bring this function into line
-with Perl:
+===============================================================================
+*Changelog*
 
-The "a" code now retains trailing NULL bytes.
+Version                               Description
+        Changes were made to bring this function into line with Perl:
 
-The "A" code now strips all trailing ASCII whitespace (spaces, tabs, newlines,
-carriage returns, and NULL bytes).
+        The "a" code now retains trailing NULL bytes.
 
-The "Z" code was added for NULL-padded strings, and removes trailing NULL
-bytes.
+5.5.0   The "A" code now strips all trailing ASCII whitespace (spaces, tabs,
+        newlines, carriage returns, and NULL bytes).
 
-|unpack| example
+        The "Z" code was added for NULL-padded strings, and removes trailing
+        NULL bytes.
+
+===============================================================================
+*Examples*
+
+Example #1 unpack() example
 
 <?php >
-  $binarydata = "\x04\x00\xa0\x00";
-  $array = unpack("cchars/nint", $binarydata);
-?>
+    $binarydata = "\x04\x00\xa0\x00";
+    $array = unpack("cchars/nint", $binarydata);
+<?>
 
 The resulting array will contain the entries "chars" with value 4 and "int"
 with 160.
 
-
-
-
-
-|unpack| example with a repeater
+Example #2 unpack() example with a repeater
 
 <?php >
-  $binarydata = "\x04\x00\xa0\x00";
-  $array = unpack("c2chars/nint", $binarydata);
-?>
+    $binarydata = "\x04\x00\xa0\x00";
+    $array = unpack("c2chars/nint", $binarydata);
+<?>
 
 The resulting array will contain the entries "chars1", "chars2" and "int".
 
+===============================================================================
+*Notes*
 
-
-
+Caution
 
 Note that PHP internally stores integral values as signed. If you unpack a
 large unsigned long and it is of the same size as PHP internally stored values
 the result will be a negative number even though unsigned unpacking was
 specified.
 
-Be aware that if you do not name an element, an empty string is used. If you
-do not name more than one element, this means that some data is overwritten as
-the keys are the same such as in:
+Caution
 
-|unpack| example with unnamed keys
+Be aware that if you do not name an element, an empty string is used. If you do
+not name more than one element, this means that some data is overwritten as the
+keys are the same such as in:
+
+Example #3 unpack() example with unnamed keys
 
 <?php >
-  $binarydata = "\x32\x42\x00\xa0";
-  $array = unpack("c2/n", $binarydata);
-  var_dump($array);
-?>
+    $binarydata = "\x32\x42\x00\xa0";
+    $array = unpack("c2/n", $binarydata);
+    var_dump($array);
+<?>
 
-The resulting array will contain the entries "1" with value 160 and "2" with
-66. The first value from the c specifier is overwritten by the first value
-from the n specifier.
+The resulting array will contain the entries "1" with value 160 and "2" with 66
+. The first value from the c specifier is overwritten by the first value from
+the n specifier.
 
+===============================================================================
+*See* *Also*
 
+  * |pack| - Pack data into binary string
 
-
-
-|pack|
 
 vim:ft=help:

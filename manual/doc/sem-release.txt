@@ -1,16 +1,36 @@
-sem_release -- Release a semaphore
+sem_release
 
-  bool sem_release(resource sem_identifier)~
+(PHP 4, PHP 5)
 
-|sem_release| releases the semaphore if it is currently acquired by the
-calling process, otherwise a warning is generated.
+sem_release — Release a semaphore
+
+===============================================================================
+*Description*
+
+    bool sem_release ( resource $sem_identifier )~
+
+sem_release() releases the semaphore if it is currently acquired by the calling
+process, otherwise a warning is generated.
 
 After releasing the semaphore, |sem_acquire| may be called to re-acquire it.
 
-{sem_identifier} A Semaphore resource handle as returned by |sem_get|.
+===============================================================================
+*Parameters*
 
-Returns TRUE on success or &false; on failure.
+{sem_identifier}
 
-|sem_get| |sem_acquire|
+    A Semaphore resource handle as returned by |sem_get|.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*See* *Also*
+
+  * |sem_get| - Get a semaphore id
+  * |sem_acquire| - Acquire a semaphore
+
 
 vim:ft=help:

@@ -1,13 +1,35 @@
-openal_buffer_loadwav -- Load a .wav file into a buffer
+openal_buffer_loadwav
 
-  bool openal_buffer_loadwav(resource buffer, string wavfile)~
+(PECL openal >= 0.1.0)
 
-An Open AL(Buffer) resource (previously created by |openal_buffer_create|).
+openal_buffer_loadwav — Load a .wav file into a buffer
 
-Path to .wav file on local file system.
+===============================================================================
+*Description*
 
-Returns TRUE on success or &false; on failure.
+    bool openal_buffer_loadwav ( resource $buffer , string $wavfile )~
 
-|openal_buffer_data| |openal_stream|
+===============================================================================
+*Parameters*
+
+{buffer}
+
+    An Open AL(Buffer) resource (previously created by |openal_buffer_create|).
+
+{wavfile}
+
+    Path to .wav file on local file system.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*See* *Also*
+
+  * |openal_buffer_data| - Load a buffer with data
+  * |openal_stream| - Begin streaming on a source
+
 
 vim:ft=help:

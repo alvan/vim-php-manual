@@ -1,47 +1,69 @@
-ftp_chdir -- Changes the current directory on a FTP server
+ftp_chdir
 
-  bool ftp_chdir(resource ftp_stream, string directory)~
+(PHP 4, PHP 5)
+
+ftp_chdir — Changes the current directory on a FTP server
+
+===============================================================================
+*Description*
+
+    bool ftp_chdir ( resource $ftp_stream , string $directory )~
 
 Changes the current directory to the specified one.
 
-{ftp_stream} The link identifier of the FTP connection.
+===============================================================================
+*Parameters*
 
-{directory} The target directory.
+{ftp_stream}
 
-Returns TRUE on success or &false; on failure. If changing directory fails,
-PHP will also throw a warning.
+    The link identifier of the FTP connection.
 
-|ftp_chdir| example
+{directory}
+
+    The target directory.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure. If changing directory fails, PHP
+will also throw a warning.
+
+===============================================================================
+*Examples*
+
+Example #1 ftp_chdir() example
 
 <?php >
-  // set up basic connection
-  $conn_id = ftp_connect($ftp_server); 
-  
-  // login with username and password
-  $login_result = ftp_login($conn_id, $ftp_user_name, $ftp_user_pass); 
-  
-  // check connection
-  if ((!$conn_id) || (!$login_result)) {
-      die("FTP connection has failed !");
-  }
-  
-  echo "Current directory: " . ftp_pwd($conn_id) . "\n";
-  
-  // try to change the directory to somedir
-  if (ftp_chdir($conn_id, "somedir")) {
-      echo "Current directory is now: " . ftp_pwd($conn_id) . "\n";
-  } else { 
-      echo "Couldn't change directory\n";
-  }
-  
-  // close the connection
-  ftp_close($conn_id);
-?>
 
+    // set up basic connection
+    $conn_id = ftp_connect($ftp_server); 
 
+    // login with username and password
+    $login_result = ftp_login($conn_id, $ftp_user_name, $ftp_user_pass); 
 
+    // check connection
+    if ((!$conn_id) || (!$login_result)) {
+        die("FTP connection has failed !");
+    }
 
+    echo "Current directory: " . ftp_pwd($conn_id) . "\n";
 
-|ftp_cdup| |ftp_pwd|
+    // try to change the directory to somedir
+    if (ftp_chdir($conn_id, "somedir")) {
+        echo "Current directory is now: " . ftp_pwd($conn_id) . "\n";
+    } else { 
+        echo "Couldn't change directory\n";
+    }
+
+    // close the connection
+    ftp_close($conn_id);
+<?>
+
+===============================================================================
+*See* *Also*
+
+  * |ftp_cdup| - Changes to the parent directory
+  * |ftp_pwd| - Returns the current directory name
+
 
 vim:ft=help:

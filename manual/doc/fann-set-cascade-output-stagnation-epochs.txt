@@ -1,16 +1,39 @@
-fann_set_cascade_output_stagnation_epochs -- Sets the number of cascade output
+fann_set_cascade_output_stagnation_epochs
+
+(PECL fann >= 1.0.0)
+
+fann_set_cascade_output_stagnation_epochs — Sets the number of cascade output
 stagnation epochs
 
-  bool fann_set_cascade_output_stagnation_epochs(resource ann, int cascade_output_stagnation_epochs)~
+===============================================================================
+*Description*
+
+    bool fann_set_cascade_output_stagnation_epochs ( resource $ann , int~
+    $cascade_output_stagnation_epochs )~
 
 Sets the number of cascade output stagnation epochs.
 
-Neural network resource.
+===============================================================================
+*Parameters*
 
-The number of cascade output stagnation epochs.
+{ann}
+
+    Neural network resource.
+
+{cascade_output_stagnation_epochs}
+
+    The number of cascade output stagnation epochs.
+
+===============================================================================
+*Return* *Values*
 
 Returns TRUE on success, or FALSE otherwise.
 
-|fann_get_cascade_output_stagnation_epochs|
+===============================================================================
+*See* *Also*
+
+  * |fann_get_cascade_output_stagnation_epochs| - Returns the number of cascade
+    output stagnation epochs
+
 
 vim:ft=help:

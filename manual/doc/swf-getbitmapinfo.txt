@@ -1,16 +1,31 @@
-swf_getbitmapinfo -- Get information about a bitmap
+swf_getbitmapinfo
 
-  array swf_getbitmapinfo(int bitmapid)~
+(PHP 4)
+
+swf_getbitmapinfo — Get information about a bitmap
+
+===============================================================================
+*Description*
+
+    array swf_getbitmapinfo ( int $bitmapid )~
 
 Returns information about a bitmap.
 
-{bitmapid} The bitmap id.
+===============================================================================
+*Parameters*
 
-Returns an array with the following elements: "size" - The size in bytes of
-the bitmap.
+{bitmapid}
 
-"width" - The width in pixels of the bitmap.
+    The bitmap id.
 
-"height" - The height in pixels of the bitmap.
+===============================================================================
+*Return* *Values*
+
+Returns an array with the following elements:
+
+  * "size" - The size in bytes of the bitmap.
+  * "width" - The width in pixels of the bitmap.
+  * "height" - The height in pixels of the bitmap.
+
 
 vim:ft=help:

@@ -1,26 +1,45 @@
-apc_delete -- Removes a stored variable from the cache
+apc_delete
 
-  mixed apc_delete(string key)~
+(PECL apc >= 3.0.0)
+
+apc_delete — Removes a stored variable from the cache
+
+===============================================================================
+*Description*
+
+    mixed apc_delete ( string $key )~
 
 Removes a stored variable from the cache.
 
-{key} The {key} used to store the value (with |apc_store|).
+===============================================================================
+*Parameters*
 
-Returns TRUE on success or &false; on failure.
+{key}
 
-A |apc_delete| example
+    The {key} used to store the value (with |apc_store|).
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*Examples*
+
+Example #1 A apc_delete() example
 
 <?php >
-  $bar = 'BAR';
-  apc_store('foo', $bar);
-  apc_delete('foo');
-  // this is obviously useless in this form
-?>
+    $bar = 'BAR';
+    apc_store('foo', $bar);
+    apc_delete('foo');
+    // this is obviously useless in this form
+<?>
 
+===============================================================================
+*See* *Also*
 
+  * |apc_store| - Cache a variable in the data store
+  * |apc_fetch| - Fetch a stored variable from the cache
 
-
-
-|apc_store| |apc_fetch|
 
 vim:ft=help:

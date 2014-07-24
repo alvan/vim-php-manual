@@ -1,34 +1,52 @@
-ldap_sort -- Sort LDAP result entries
+ldap_sort
 
-  bool ldap_sort(resource link, resource result, string sortfilter)~
+(PHP 4 >= 4.2.0, PHP 5)
+
+ldap_sort — Sort LDAP result entries
+
+===============================================================================
+*Description*
+
+    bool ldap_sort ( resource $link , resource $result , string $sortfilter )~
 
 Sort the result of a LDAP search, returned by |ldap_search|.
 
-{link} An LDAP link identifier, returned by |ldap_connect|.
+===============================================================================
+*Parameters*
 
-{result} An search result identifier, returned by |ldap_search|.
+{link}
 
-{sortfilter} The attribute to use as a key in the sort.
+    An LDAP link identifier, returned by |ldap_connect|.
 
-Sorting the result of a search. LDAP sort
+{result}
+
+    An search result identifier, returned by |ldap_search|.
+
+{sortfilter}
+
+    The attribute to use as a key in the sort.
+
+===============================================================================
+*Examples*
+
+Sorting the result of a search.
+
+Example #1 LDAP sort
 
 <?php >
-       // $ds is a valid link identifier (see ldap_connect)
-  
-       $dn        = 'ou=example,dc=org';
-       $filter    = '(|(sn=Doe*)(givenname=John*))';
-       $justthese = array('ou', 'sn', 'givenname', 'mail');
-  
-       $sr = ldap_search($ds, $dn, $filter, $justthese);
-  
-       // Sort
-       ldap_sort($ds, $sr, 'sn');
-  
-       // Retrieving the data
-       $info = ldap_get_entries($ds, $sr);
+     // $ds is a valid link identifier (see ldap_connect)
 
+     $dn        = 'ou=example,dc=org';
+     $filter    = '(|(sn=Doe*)(givenname=John*))';
+     $justthese = array('ou', 'sn', 'givenname', 'mail');
 
+     $sr = ldap_search($ds, $dn, $filter, $justthese);
 
+     // Sort
+     ldap_sort($ds, $sr, 'sn');
+
+     // Retrieving the data
+     $info = ldap_get_entries($ds, $sr);
 
 
 vim:ft=help:

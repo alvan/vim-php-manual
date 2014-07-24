@@ -1,18 +1,40 @@
-hebrev -- Convert logical Hebrew text to visual text
+hebrev
 
-  string hebrev(string hebrew_text [, int max_chars_per_line = 0])~
+(PHP 4, PHP 5)
+
+hebrev — Convert logical Hebrew text to visual text
+
+===============================================================================
+*Description*
+
+    string hebrev ( string $hebrew_text [, int $max_chars_per_line = 0 ] )~
 
 Converts logical Hebrew text to visual text.
 
 The function tries to avoid breaking words.
 
-{hebrew_text} A Hebrew input string.
+===============================================================================
+*Parameters*
 
-{max_chars_per_line} This optional parameter indicates maximum number of
-characters per line that will be returned.
+{hebrew_text}
+
+    A Hebrew input string.
+
+{max_chars_per_line}
+
+    This optional parameter indicates maximum number of characters per line
+    that will be returned.
+
+===============================================================================
+*Return* *Values*
 
 Returns the visual string.
 
-|hebrevc|
+===============================================================================
+*See* *Also*
+
+  * |hebrevc| - Convert logical Hebrew text to visual text with newline
+    conversion
+
 
 vim:ft=help:

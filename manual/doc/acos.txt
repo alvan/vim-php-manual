@@ -1,15 +1,37 @@
-acos -- Arc cosine
+acos
 
-  float acos(float arg)~
+(PHP 4, PHP 5)
 
-Returns the arc cosine of {arg} in radians. |acos| is the complementary
+acos — Arc cosine
+
+===============================================================================
+*Description*
+
+    float acos ( float $arg )~
+
+Returns the arc cosine of {arg} in radians. acos() is the complementary
 function of |cos|, which means that a==cos(acos(a)) for every value of a that
-is within |acos|' range.
+is within acos()' range.
 
-{arg} The argument to process
+===============================================================================
+*Parameters*
+
+{arg}
+
+    The argument to process
+
+===============================================================================
+*Return* *Values*
 
 The arc cosine of {arg} in radians.
 
-|cos| |acosh| |asin| |atan|
+===============================================================================
+*See* *Also*
+
+  * |cos| - Cosine
+  * |acosh| - Inverse hyperbolic cosine
+  * |asin| - Arc sine
+  * |atan| - Arc tangent
+
 
 vim:ft=help:

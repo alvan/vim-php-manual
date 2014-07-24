@@ -1,15 +1,37 @@
-hw_GetChildDocColl -- Object ids of child documents of collection
+hw_GetChildDocColl
 
-  array hw_getchilddoccoll(int connection, int objectID)~
+(PHP 4)
+
+hw_GetChildDocColl — Object ids of child documents of collection
+
+===============================================================================
+*Description*
+
+    array hw_getchilddoccoll ( int $connection , int $objectID )~
 
 Returns array of object ids for child documents of a collection.
 
-{connection} The connection identifier.
+===============================================================================
+*Parameters*
 
-{objectID} The object identifier.
+{connection}
+
+    The connection identifier.
+
+{objectID}
+
+    The object identifier.
+
+===============================================================================
+*Return* *Values*
 
 Returns an array of object ids.
 
-|hw_children| |hw_getchildcoll|
+===============================================================================
+*See* *Also*
+
+  * |hw_children| - Object ids of children
+  * |hw_getchildcoll| - Object ids of child collections
+
 
 vim:ft=help:

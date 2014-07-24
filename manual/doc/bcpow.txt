@@ -1,40 +1,71 @@
-bcpow -- Raise an arbitrary precision number to another
+bcpow
 
-  string bcpow(string left_operand, string right_operand [, int scale])~
+(PHP 4, PHP 5)
+
+bcpow — Raise an arbitrary precision number to another
+
+===============================================================================
+*Description*
+
+    string bcpow ( string $left_operand , string $right_operand [, int $scale~
+    ] )~
 
 Raise {left_operand} to the power {right_operand}.
 
-{left_operand} The left operand, as a string.
+===============================================================================
+*Parameters*
 
-{right_operand} The right operand, as a string.
+{left_operand}
 
-{ scale}This optional parameter is used to set the number of digits after the
-decimal place in the result. You can also set the global default scale for all
-functions by using |bcscale|.
+    The left operand, as a string.
+
+{right_operand}
+
+    The right operand, as a string.
+
+{ scale}
+
+    This optional parameter is used to set the number of digits after the
+    decimal place in the result. You can also set the global default scale for
+    all functions by using |bcscale|.
+
+===============================================================================
+*Return* *Values*
 
 Returns the result as a string.
 
-|bcpow| example
+===============================================================================
+*Examples*
+
+Example #1 bcpow() example
 
 <?php >
-  echo bcpow('4.2', '3', 2); // 74.08
-?>
 
+    echo bcpow('4.2', '3', 2); // 74.08
 
+<?>
 
-|bcpow| may return a result with fewer digits after the decimal point than the
-{scale} parameter would indicate. This only occurs when the result doesn't
-require all of the precision allowed by the {scale}. For example: |bcpow|
-scale example
+===============================================================================
+*Notes*
 
-<?php >
-  echo bcpow('5', '2', 2);     // prints "25", not "25.00"
-?>
+    Note:
 
+    bcpow() may return a result with fewer digits after the decimal point than
+    the {scale} parameter would indicate. This only occurs when the result
+    doesn't require all of the precision allowed by the {scale}. For example:
+   
+    Example #2 bcpow() scale example
 
+    <?php >
+    echo bcpow('5', '2', 2);     // prints "25", not "25.00"
+<    ?>
 
+===============================================================================
+*See* *Also*
 
+  * |bcpowmod| - Raise an arbitrary precision number to another, reduced by a
+    specified modulus
+  * |bcsqrt| - Get the square root of an arbitrary precision number
 
-|bcpowmod| |bcsqrt|
 
 vim:ft=help:

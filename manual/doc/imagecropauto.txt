@@ -1,21 +1,43 @@
-imagecropauto -- Crop an image automatically using one of the available modes
+imagecropauto
 
-  resource imagecropauto(resource image [, int mode = -1 [, float threshold = .5 [, int color = -1]]])~
+(PHP 5 >= 5.5.0)
 
+imagecropauto — Crop an image automatically using one of the available modes
 
+===============================================================================
+*Description*
 
-This function is currently not documented; only its argument list is
-available.
+    resource imagecropauto ( resource $image [, int $mode = -1 [, float~
+    $threshold = .5 [, int $color = -1 ]]] )~
 
-An image resource, returned by one of the image creation functions, such as
-|imagecreatetruecolor|.
+Warning
 
-One of IMG_CROP_* constants.
+This function is currently not documented; only its argument list is available.
 
-Used in IMG_CROP_THRESHOLD mode.
+===============================================================================
+*Parameters*
 
-Used in IMG_CROP_THRESHOLD mode.
+{ image}
+
+    An image resource, returned by one of the image creation functions, such as
+    |imagecreatetruecolor|.
+
+{mode}
+
+    One of IMG_CROP_* constants.
+
+{threshold}
+
+    Used in IMG_CROP_THRESHOLD mode.
+
+{color}
+
+    Used in IMG_CROP_THRESHOLD mode.
+
+===============================================================================
+*Return* *Values*
 
 Return cropped image resource on success or FALSE on failure.
+
 
 vim:ft=help:

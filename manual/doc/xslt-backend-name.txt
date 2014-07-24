@@ -1,21 +1,38 @@
-xslt_backend_name -- Returns the name of the backend
+xslt_backend_name
 
-  string xslt_backend_name()~
+(PHP 4 >= 4.3.0)
 
-|xslt_backend_name| gets the name of the backend.
+xslt_backend_name — Returns the name of the backend
+
+===============================================================================
+*Description*
+
+    string xslt_backend_name ( void )~
+
+xslt_backend_name() gets the name of the backend.
+
+===============================================================================
+*Return* *Values*
 
 Returns Sablotron.
 
-|xslt_backend_name| example
+===============================================================================
+*Examples*
+
+Example #1 xslt_backend_name() example
 
 <?php >
-  echo xslt_backend_name(); // Sablotron
-?>
 
+    echo xslt_backend_name(); // Sablotron
 
+<?>
 
+===============================================================================
+*See* *Also*
 
+  * |xslt_backend_info| - Returns the information on the compilation settings
+    of the backend
+  * |xslt_backend_version| - Returns the version number of Sablotron
 
-|xslt_backend_info| |xslt_backend_version|
 
 vim:ft=help:

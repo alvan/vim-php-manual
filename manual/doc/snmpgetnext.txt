@@ -1,33 +1,62 @@
-snmpgetnext -- Fetch the SNMP object which follows the given object id
+snmpgetnext
 
-  string snmpgetnext(string host, string community, string object_id [, int timeout = 1000000 [, int retries = 5]])~
+(PHP 5)
 
-The |snmpgetnext| function is used to read the value of the SNMP object that
+snmpgetnext — Fetch the SNMP object which follows the given object id
+
+===============================================================================
+*Description*
+
+    string snmpgetnext ( string $host , string $community , string $object_id~
+    [, int $timeout = 1000000 [, int $retries = 5 ]] )~
+
+The snmpgetnext() function is used to read the value of the SNMP object that
 follows the specified {object_id}.
 
-{host} The hostname of the SNMP agent (server).
+===============================================================================
+*Parameters*
 
-{community} The read community.
+{host}
 
-{object_id} The SNMP object id which precedes the wanted one.
+    The hostname of the SNMP agent (server).
 
-{timeout} The number of microseconds until the first timeout.
+{community}
 
-{retries} The number of times to retry if timeouts occur.
+    The read community.
 
-Returns SNMP object value on success or FALSE on error. In case of an error,
-an E_WARNING message is shown.
+{object_id}
 
-Using |snmpgetnext|
+    The SNMP object id which precedes the wanted one.
+
+{timeout}
+
+    The number of microseconds until the first timeout.
+
+{retries}
+
+    The number of times to retry if timeouts occur.
+
+===============================================================================
+*Return* *Values*
+
+Returns SNMP object value on success or FALSE on error. In case of an error, an
+E_WARNING message is shown.
+
+===============================================================================
+*Examples*
+
+Example #1 Using snmpgetnext()
 
 <?php >
-  $nameOfSecondInterface = snmpgetnetxt('localhost', 'public', 'IF-MIB::ifName.1';
-?>
+    $nameOfSecondInterface = snmpgetnetxt('localhost', 'public', 'IF-MIB::ifName.1'
+    ;
+<?>
 
+===============================================================================
+*See* *Also*
 
+  * |snmpget| - Fetch an SNMP object
+  * |snmpwalk| - Fetch all the SNMP objects from an agent
 
-
-
-|snmpget| |snmpwalk|
 
 vim:ft=help:

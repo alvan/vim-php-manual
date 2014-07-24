@@ -1,41 +1,76 @@
-eio_sync_file_range -- Sync a file segment with disk
+eio_sync_file_range
 
-  resource eio_sync_file_range(mixed fd, int offset, int nbytes, int flags [, int pri = EIO_PRI_DEFAULT [, callable callback = NULL [, mixed data = NULL]]])~
+(PECL eio >= 0.0.1dev)
 
-|eio_sync_file_range| permits fine control when synchronizing the open file
+eio_sync_file_range — Sync a file segment with disk
+
+===============================================================================
+*Description*
+
+    resource eio_sync_file_range ( mixed $fd , int $offset , int $nbytes , int~
+    $flags [, int $pri = EIO_PRI_DEFAULT [, callable $callback = NULL [, mixed~
+    $data = NULL ]]] )~
+
+eio_sync_file_range() permits fine control when synchronizing the open file
 referred to by the file descriptor {fd} with disk.
 
-File descriptor
+===============================================================================
+*Parameters*
 
-The starting byte of the file range to be synchronized
+{fd}
 
-Specifies the length of the range to be synchronized, in bytes. If {nbytes} is
-zero, then all bytes from {offset} through to the end of file are
-synchronized.
+    File descriptor
 
-A bit-mask. Can include any of the following values:
-EIO_SYNC_FILE_RANGE_WAIT_BEFORE, EIO_SYNC_FILE_RANGE_WRITE,
-EIO_SYNC_FILE_RANGE_WAIT_AFTER. These flags have the same meaning as their
-SYNC_FILE_RANGE_* counterparts(see SYNC_FILE_RANGE(2) man page).
+{offset}
 
-The request priority: EIO_PRI_DEFAULT, EIO_PRI_MIN, EIO_PRI_MAX, or NULL. If
-NULL passed, {pri} internally is set to EIO_PRI_DEFAULT.
+    The starting byte of the file range to be synchronized
 
-{callback} function is called when the request is done. It should match the
-following prototype:
+{nbytes}
 
-  void callback(mixed $data, int $result[, resource $req]);
+    Specifies the length of the range to be synchronized, in bytes. If {nbytes}
+    is zero, then all bytes from {offset} through to the end of file are
+    synchronized.
 
-{data} is custom data passed to the request.
+{flags}
 
-{result} request-specific result value; basically, the value returned by
-corresponding system call.
+    A bit-mask. Can include any of the following values:
+    EIO_SYNC_FILE_RANGE_WAIT_BEFORE, EIO_SYNC_FILE_RANGE_WRITE,
+    EIO_SYNC_FILE_RANGE_WAIT_AFTER. These flags have the same meaning as their
+    SYNC_FILE_RANGE_* counterparts(see SYNC_FILE_RANGE(2) man page).
 
-{req} is optional request resource which can be used with functions like
-|eio_get_last_error|
+{pri}
 
-Arbitrary variable passed to {callback}.
+    The request priority: EIO_PRI_DEFAULT, EIO_PRI_MIN, EIO_PRI_MAX, or NULL.
+    If NULL passed, {pri} internally is set to EIO_PRI_DEFAULT.
 
-|eio_sync_file_range| returns request resource on success or FALSE on error.
+{callback}
+
+    {callback} function is called when the request is done. It should match the
+    following prototype:
+    void callback(mixed $data, int $result[, resource $req]);
+
+    {data}
+
+        is custom data passed to the request.
+
+    {result}
+
+        request-specific result value; basically, the value returned by
+        corresponding system call.
+
+    {req}
+
+        is optional request resource which can be used with functions like |
+        eio_get_last_error|
+
+{data}
+
+    Arbitrary variable passed to {callback}.
+
+===============================================================================
+*Return* *Values*
+
+eio_sync_file_range() returns request resource on success or FALSE on error.
+
 
 vim:ft=help:

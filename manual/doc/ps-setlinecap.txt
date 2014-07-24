@@ -1,16 +1,39 @@
-ps_setlinecap -- Sets appearance of line ends
+ps_setlinecap
 
-  bool ps_setlinecap(resource psdoc, int type)~
+(PECL ps >= 1.1.0)
+
+ps_setlinecap — Sets appearance of line ends
+
+===============================================================================
+*Description*
+
+    bool ps_setlinecap ( resource $psdoc , int $type )~
 
 Sets how line ends look like.
 
-{psdoc} Resource identifier of the postscript file as returned by |ps_new|.
+===============================================================================
+*Parameters*
 
-{type} The type of line ends. Possible values are PS_LINECAP_BUTT,
-PS_LINECAP_ROUND, or PS_LINECAP_SQUARED.
+{psdoc}
 
-Returns TRUE on success or &false; on failure.
+    Resource identifier of the postscript file as returned by |ps_new|.
 
-|ps_setlinejoin| |ps_setlinewidth| |ps_setmiterlimit|
+{type}
+
+    The type of line ends. Possible values are PS_LINECAP_BUTT,
+    PS_LINECAP_ROUND, or PS_LINECAP_SQUARED.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*See* *Also*
+
+  * |ps_setlinejoin| - Sets how contected lines are joined
+  * |ps_setlinewidth| - Sets width of a line
+  * |ps_setmiterlimit| - Sets the miter limit
+
 
 vim:ft=help:

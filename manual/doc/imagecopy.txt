@@ -1,51 +1,83 @@
-imagecopy -- Copy part of an image
+imagecopy
 
-  bool imagecopy(resource dst_im, resource src_im, int dst_x, int dst_y, int src_x, int src_y, int src_w, int src_h)~
+(PHP 4, PHP 5)
+
+imagecopy — Copy part of an image
+
+===============================================================================
+*Description*
+
+    bool imagecopy ( resource $dst_im , resource $src_im , int $dst_x , int~
+    $dst_y , int $src_x , int $src_y , int $src_w , int $src_h )~
 
 Copy a part of {src_im} onto {dst_im} starting at the x,y coordinates {src_x},
 {src_y } with a width of {src_w} and a height of {src_h}. The portion defined
 will be copied onto the x,y coordinates, {dst_x} and {dst_y}.
 
-{dst_im} Destination image link resource.
+===============================================================================
+*Parameters*
 
-{src_im} Source image link resource.
+{dst_im}
 
-{dst_x} x-coordinate of destination point.
+    Destination image link resource.
 
-{dst_y} y-coordinate of destination point.
+{src_im}
 
-{src_x} x-coordinate of source point.
+    Source image link resource.
 
-{src_y} y-coordinate of source point.
+{dst_x}
 
-{src_w} Source width.
+    x-coordinate of destination point.
 
-{src_h} Source height.
+{dst_y}
 
-Returns TRUE on success or &false; on failure.
+    y-coordinate of destination point.
 
-Cropping the PHP.net logo
+{src_x}
+
+    x-coordinate of source point.
+
+{src_y}
+
+    y-coordinate of source point.
+
+{src_w}
+
+    Source width.
+
+{src_h}
+
+    Source height.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*Examples*
+
+Example #1 Cropping the PHP.net logo
 
 <?php >
-  // Create image instances
-  $src = imagecreatefromgif('php.gif');
-  $dest = imagecreatetruecolor(80, 40);
-  
-  // Copy
-  imagecopy($dest, $src, 0, 0, 20, 13, 80, 40);
-  
-  // Output and free from memory
-  header('Content-Type: image/gif');
-  imagegif($dest);
-  
-  imagedestroy($dest);
-  imagedestroy($src);
-?>
+    // Create image instances
+    $src = imagecreatefromgif('php.gif');
+    $dest = imagecreatetruecolor(80, 40);
+
+    // Copy
+    imagecopy($dest, $src, 0, 0, 20, 13, 80, 40);
+
+    // Output and free from memory
+    header('Content-Type: image/gif');
+    imagegif($dest);
+
+    imagedestroy($dest);
+    imagedestroy($src);
+<?>
 
 The above example will output something similar to:
 
 Output of example : Cropping the PHP.net logo
-
 
 
 vim:ft=help:

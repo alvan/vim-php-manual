@@ -1,24 +1,51 @@
-mb_substr -- Get part of string
+mb_substr
 
-  string mb_substr(string str, int start [, int length = NULL [, string encoding = mb_internal_encoding()]])~
+(PHP 4 >= 4.0.6, PHP 5)
+
+mb_substr — Get part of string
+
+===============================================================================
+*Description*
+
+    string mb_substr ( string $str , int $start [, int $length = NULL [,~
+    string $encoding = mb_internal_encoding() ]] )~
 
 Performs a multi-byte safe |substr| operation based on number of characters.
 Position is counted from the beginning of {str}. First character's position is
 0. Second character position is 1, and so on.
 
-{str} The string to extract the substring from.
+===============================================================================
+*Parameters*
 
-{start} Position of first character to use from {str}.
+{str}
 
-{length} Maximum number of characters to use from {str}. If omitted or NULL is
-passed, extract all characters to the end of the string.
+    The string to extract the substring from.
 
-{encoding} The {encoding} parameter is the character encoding. If it is
-omitted, the internal character encoding value will be used.
+{start}
 
-|mb_substr| returns the portion of {str} specified by the {start} and {length}
+    Position of first character to use from {str}.
+
+{length}
+
+    Maximum number of characters to use from {str}. If omitted or NULL is
+    passed, extract all characters to the end of the string.
+
+{encoding}
+
+    The {encoding} parameter is the character encoding. If it is omitted, the
+    internal character encoding value will be used.
+
+===============================================================================
+*Return* *Values*
+
+mb_substr() returns the portion of {str} specified by the {start} and {length}
 parameters.
 
-|mb_strcut| |mb_internal_encoding|
+===============================================================================
+*See* *Also*
+
+  * |mb_strcut| - Get part of string
+  * |mb_internal_encoding| - Set/Get internal character encoding
+
 
 vim:ft=help:

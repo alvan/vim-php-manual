@@ -1,31 +1,52 @@
-shmop_write -- Write data into shared memory block
+shmop_write
 
-  int shmop_write(int shmid, string data, int offset)~
+(PHP 4 >= 4.0.4, PHP 5)
 
-|shmop_write| will write a string into shared memory block.
+shmop_write — Write data into shared memory block
 
-{shmid} The shared memory block identifier created by |shmop_open|
+===============================================================================
+*Description*
 
-{data} A string to write into shared memory block
+    int shmop_write ( int $shmid , string $data , int $offset )~
 
-{offset} Specifies where to start writing data inside the shared memory
-segment.
+shmop_write() will write a string into shared memory block.
+
+===============================================================================
+*Parameters*
+
+{shmid}
+
+    The shared memory block identifier created by |shmop_open|
+
+{data}
+
+    A string to write into shared memory block
+
+{offset}
+
+    Specifies where to start writing data inside the shared memory segment.
+
+===============================================================================
+*Return* *Values*
 
 The size of the written {data}, or FALSE on failure.
 
-Writing to shared memory block
+===============================================================================
+*Examples*
+
+Example #1 Writing to shared memory block
 
 <?php >
-  $shm_bytes_written = shmop_write($shm_id, $my_string, 0);
-?>
-
-
-
-
+    $shm_bytes_written = shmop_write($shm_id, $my_string, 0);
+<?>
 
 This example will write data inside $my_string into shared memory block,
 $shm_bytes_written will contain the number of bytes written.
 
-|shmop_read|
+===============================================================================
+*See* *Also*
+
+  * |shmop_read| - Read data from shared memory block
+
 
 vim:ft=help:

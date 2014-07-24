@@ -1,12 +1,26 @@
-ibase_errmsg -- Return error messages
+ibase_errmsg
 
-  string ibase_errmsg()~
+(PHP 5)
 
-Returns the error message that resulted from the most recent InterBase
-function call.
+ibase_errmsg — Return error messages
+
+===============================================================================
+*Description*
+
+    string ibase_errmsg ( void )~
+
+Returns the error message that resulted from the most recent InterBase function
+call.
+
+===============================================================================
+*Return* *Values*
 
 Returns the error message as a string, or FALSE if no error occurred.
 
-|ibase_errcode|
+===============================================================================
+*See* *Also*
+
+  * |ibase_errcode| - Return an error code
+
 
 vim:ft=help:

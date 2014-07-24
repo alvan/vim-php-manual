@@ -1,13 +1,32 @@
-ifxus_tell_slob -- Returns the current file or seek position
+ifxus_tell_slob
 
-  int ifxus_tell_slob(int bid)~
+(PHP 4, PHP <=5.2.0)
+
+ifxus_tell_slob — Returns the current file or seek position
+
+===============================================================================
+*Description*
+
+    int ifxus_tell_slob ( int $bid )~
 
 Returns the current file or seek position of an open slob object
 
-{bid} An existing slob id.
+===============================================================================
+*Parameters*
+
+{bid}
+
+    An existing slob id.
+
+===============================================================================
+*Return* *Values*
 
 Returns the seek position as an integer, or FALSE on errors.
 
-|ifxus_seek_slob|
+===============================================================================
+*See* *Also*
+
+  * |ifxus_seek_slob| - Sets the current file or seek position
+
 
 vim:ft=help:

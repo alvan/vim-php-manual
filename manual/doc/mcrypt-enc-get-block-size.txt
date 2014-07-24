@@ -1,11 +1,27 @@
-mcrypt_enc_get_block_size -- Returns the blocksize of the opened algorithm
+mcrypt_enc_get_block_size
 
-  int mcrypt_enc_get_block_size(resource td)~
+(PHP 4 >= 4.0.2, PHP 5)
+
+mcrypt_enc_get_block_size — Returns the blocksize of the opened algorithm
+
+===============================================================================
+*Description*
+
+    int mcrypt_enc_get_block_size ( resource $td )~
 
 Gets the blocksize of the opened algorithm.
 
-{td} The encryption descriptor.
+===============================================================================
+*Parameters*
+
+{td}
+
+    The encryption descriptor.
+
+===============================================================================
+*Return* *Values*
 
 Returns the block size of the specified algorithm in bytes.
+
 
 vim:ft=help:

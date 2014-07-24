@@ -1,44 +1,73 @@
-ob_gzhandler -- ob_start callback function to gzip output buffer
+ob_gzhandler
 
-  string ob_gzhandler(string buffer, int mode)~
+(PHP 4 >= 4.0.4, PHP 5)
 
-|ob_gzhandler| is intended to be used as a callback function for |ob_start| to
-help facilitate sending gz-encoded data to web browsers that support
-compressed web pages. Before |ob_gzhandler| actually sends compressed data, it
-determines what type of content encoding the browser will accept ("gzip",
-"deflate" or none at all) and will return its output accordingly. All browsers
-are supported since it's up to the browser to send the correct header saying
-that it accepts compressed web pages. If a browser doesn't support compressed
-pages this function returns FALSE.
+ob_gzhandler — ob_start callback function to gzip output buffer
+
+===============================================================================
+*Description*
+
+    string ob_gzhandler ( string $buffer , int $mode )~
+
+ob_gzhandler() is intended to be used as a callback function for |ob_start| to
+help facilitate sending gz-encoded data to web browsers that support compressed
+web pages. Before ob_gzhandler() actually sends compressed data, it determines
+what type of content encoding the browser will accept ("gzip", "deflate" or
+none at all) and will return its output accordingly. All browsers are supported
+since it's up to the browser to send the correct header saying that it accepts
+compressed web pages. If a browser doesn't support compressed pages this
+function returns FALSE.
+
+===============================================================================
+*Parameters*
 
 {buffer}
 
 {mode}
 
+===============================================================================
+*Return* *Values*
 
+===============================================================================
+*Changelog*
 
-Version Description 4.0.5 The {mode} parameter was added.
+Version           Description
+4.0.5   The {mode} parameter was added.
 
-|ob_gzhandler| example
+===============================================================================
+*Examples*
+
+Example #1 ob_gzhandler() example
 
 <?php >
-  ob_start("ob_gzhandler");
-?>
-  <html>
-  <body>
-  <p>This should be a compressed page.</p>
-  </body>
-  </html>
 
+    ob_start("ob_gzhandler");
 
+<?>
+<html>
+<body>
+<p>This should be a compressed page.</p>
+</body>
+</html>
 
+===============================================================================
+*Notes*
 
+    Note:
 
-|ob_gzhandler| requires the zlib extension.
+    ob_gzhandler() requires the zlib extension.
 
-You cannot use both |ob_gzhandler| and zlib.output_compression. Also note that
-using zlib.output_compression is preferred over |ob_gzhandler|.
+    Note:
 
-|ob_start| |ob_end_flush|
+    You cannot use both ob_gzhandler() and zlib.output_compression. Also note
+    that using zlib.output_compression is preferred over ob_gzhandler().
+
+===============================================================================
+*See* *Also*
+
+  * |ob_start| - Turn on output buffering
+  * |ob_end_flush| - Flush (send) the output buffer and turn off output
+    buffering
+
 
 vim:ft=help:

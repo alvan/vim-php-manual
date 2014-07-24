@@ -1,11 +1,27 @@
-filepro_fieldwidth -- Gets the width of a field
+filepro_fieldwidth
 
-  int filepro_fieldwidth(int field_number)~
+(PHP 4, PHP 5 <= 5.1.6)
+
+filepro_fieldwidth — Gets the width of a field
+
+===============================================================================
+*Description*
+
+    int filepro_fieldwidth ( int $field_number )~
 
 Returns the width of the field corresponding to {field_number}.
 
-{field_number} The field number.
+===============================================================================
+*Parameters*
+
+{field_number}
+
+    The field number.
+
+===============================================================================
+*Return* *Values*
 
 Returns the width of the field as a integer, or FALSE on errors.
+
 
 vim:ft=help:

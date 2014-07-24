@@ -1,16 +1,39 @@
-fann_set_sarprop_step_error_threshold_factor -- Sets the sarprop step error
+fann_set_sarprop_step_error_threshold_factor
+
+(PECL fann >= 1.0.0)
+
+fann_set_sarprop_step_error_threshold_factor — Sets the sarprop step error
 threshold factor
 
-  bool fann_set_sarprop_step_error_threshold_factor(resource ann, float sarprop_step_error_threshold_factor)~
+===============================================================================
+*Description*
+
+    bool fann_set_sarprop_step_error_threshold_factor ( resource $ann , float~
+    $sarprop_step_error_threshold_factor )~
 
 Sets the sarprop step error threshold factor.
 
-Neural network resource.
+===============================================================================
+*Parameters*
 
-The sarprop step error threshold factor.
+{ann}
+
+    Neural network resource.
+
+{sarprop_step_error_threshold_factor}
+
+    The sarprop step error threshold factor.
+
+===============================================================================
+*Return* *Values*
 
 Returns TRUE on success, or FALSE otherwise.
 
-|fann_get_sarprop_step_error_threshold_factor|
+===============================================================================
+*See* *Also*
+
+  * |fann_get_sarprop_step_error_threshold_factor| - Returns the sarprop step
+    error threshold factor
+
 
 vim:ft=help:

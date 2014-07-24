@@ -1,17 +1,38 @@
-enchant_dict_store_replacement -- Add a correction for a word
+enchant_dict_store_replacement
 
-  void enchant_dict_store_replacement(resource dict, string mis, string cor)~
+(PHP 5 >= 5.3.0, PECL enchant >= 0.1.0 )
 
-Add a correction for 'mis' using 'cor'. Notes that you replaced @mis with
-@cor, so it's possibly more likely that future occurrences of @mis will be
-replaced with @cor. So it might bump @cor up in the suggestion list.
+enchant_dict_store_replacement — Add a correction for a word
 
-{dict} Dictionary resource
+===============================================================================
+*Description*
 
-{mis} The work to fix
+    void enchant_dict_store_replacement ( resource $dict , string $mis ,~
+    string $cor )~
 
-{cor} The correct word
+Add a correction for 'mis' using 'cor'. Notes that you replaced @mis with @cor,
+so it's possibly more likely that future occurrences of @mis will be replaced
+with @cor. So it might bump @cor up in the suggestion list.
 
-Returns TRUE on success or &false; on failure.
+===============================================================================
+*Parameters*
+
+{dict}
+
+    Dictionary resource
+
+{mis}
+
+    The work to fix
+
+{cor}
+
+    The correct word
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
 
 vim:ft=help:

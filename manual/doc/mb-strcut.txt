@@ -1,27 +1,54 @@
-mb_strcut -- Get part of string
+mb_strcut
 
-  string mb_strcut(string str, int start [, int length = NULL [, string encoding = mb_internal_encoding()]])~
+(PHP 4 >= 4.0.6, PHP 5)
 
-|mb_strcut| extracts a substring from a string similarly to |mb_substr|, but
+mb_strcut — Get part of string
+
+===============================================================================
+*Description*
+
+    string mb_strcut ( string $str , int $start [, int $length = NULL [,~
+    string $encoding = mb_internal_encoding() ]] )~
+
+mb_strcut() extracts a substring from a string similarly to |mb_substr|, but
 operates on bytes instead of characters. If the cut position happens to be
-between two bytes of a multi-byte character, the cut is performed starting
-from the first byte of that character. This is also the difference to the
-|substr| function, which would simply cut the string between the bytes and
-thus result in a malformed byte sequence.
+between two bytes of a multi-byte character, the cut is performed starting from
+the first byte of that character. This is also the difference to the |substr|
+function, which would simply cut the string between the bytes and thus result
+in a malformed byte sequence.
 
-{str} The string being cut.
+===============================================================================
+*Parameters*
 
-{start} Starting position in bytes.
+{str}
 
-{length} Length in bytes. If omitted or NULL is passed, extract all bytes to
-the end of the string.
+    The string being cut.
 
-{encoding} The {encoding} parameter is the character encoding. If it is
-omitted, the internal character encoding value will be used.
+{start}
 
-|mb_strcut| returns the portion of {str} specified by the {start} and {length}
+    Starting position in bytes.
+
+{length}
+
+    Length in bytes. If omitted or NULL is passed, extract all bytes to the end
+    of the string.
+
+{encoding}
+
+    The {encoding} parameter is the character encoding. If it is omitted, the
+    internal character encoding value will be used.
+
+===============================================================================
+*Return* *Values*
+
+mb_strcut() returns the portion of {str} specified by the {start} and {length}
 parameters.
 
-|mb_substr| |mb_internal_encoding|
+===============================================================================
+*See* *Also*
+
+  * |mb_substr| - Get part of string
+  * |mb_internal_encoding| - Set/Get internal character encoding
+
 
 vim:ft=help:

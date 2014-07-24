@@ -1,12 +1,28 @@
-oci_cancel -- Cancels reading from cursor
+oci_cancel
 
-  bool oci_cancel(resource statement)~
+(PHP 5, PECL OCI8 >= 1.1.0)
+
+oci_cancel — Cancels reading from cursor
+
+===============================================================================
+*Description*
+
+    bool oci_cancel ( resource $statement )~
 
 Invalidates a cursor, freeing all associated resources and cancels the ability
 to read from it.
 
-{statement} An OCI statement.
+===============================================================================
+*Parameters*
 
-Returns TRUE on success or &false; on failure.
+{statement}
+
+    An OCI statement.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
 
 vim:ft=help:

@@ -1,14 +1,33 @@
-stripcslashes -- Un-quote string quoted with addcslashes
+stripcslashes
 
-  string stripcslashes(string str)~
+(PHP 4, PHP 5)
+
+stripcslashes — Un-quote string quoted with |addcslashes|
+
+===============================================================================
+*Description*
+
+    string stripcslashes ( string $str )~
 
 Returns a string with backslashes stripped off. Recognizes C-like \n, \r ...,
 octal and hexadecimal representation.
 
-{str} The string to be unescaped.
+===============================================================================
+*Parameters*
+
+{str}
+
+    The string to be unescaped.
+
+===============================================================================
+*Return* *Values*
 
 Returns the unescaped string.
 
-|addcslashes|
+===============================================================================
+*See* *Also*
+
+  * |addcslashes| - Quote string with slashes in a C style
+
 
 vim:ft=help:

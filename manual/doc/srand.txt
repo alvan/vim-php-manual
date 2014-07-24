@@ -1,37 +1,60 @@
-srand -- Seed the random number generator
+srand
 
-  void srand([int seed])~
+(PHP 4, PHP 5)
+
+srand — Seed the random number generator
+
+===============================================================================
+*Description*
+
+    void srand ([ int $seed ] )~
 
 Seeds the random number generator with {seed} or with a random value if no
 {seed} is given.
 
-As of PHP 4.2.0, there is no need to seed the random number generator with
-|srand| or |mt_srand| as this is now done automatically.
+    Note: As of PHP 4.2.0, there is no need to seed the random number generator
+    with srand() or |mt_srand| as this is now done automatically.
 
-{seed} Optional seed value
+===============================================================================
+*Parameters*
+
+{seed}
+
+    Optional seed value
+
+===============================================================================
+*Return* *Values*
 
 No value is returned.
 
-Version Description 4.2.0 The {seed} becomes optional and defaults to a random
-value if omitted.
+===============================================================================
+*Changelog*
 
-|srand| example
+Version                              Description
+4.2.0   The {seed} becomes optional and defaults to a random value if omitted.
+
+===============================================================================
+*Examples*
+
+Example #1 srand() example
 
 <?php >
-  // seed with microseconds
-  function make_seed()
-  {
-    list($usec, $sec) = explode(' ', microtime());
-    return (float) $sec + ((float) $usec * 100000);
-  }
-  srand(make_seed());
-  $randval = rand();
-?>
+    // seed with microseconds
+    function make_seed()
+    {
+      list($usec, $sec) = explode(' ', microtime());
+      return (float) $sec + ((float) $usec * 100000);
+    }
+    srand(make_seed());
+    $randval = rand();
+<?>
 
+===============================================================================
+*See* *Also*
 
+  * |rand| - Generate a random integer
+  * |getrandmax| - Show largest possible random value
+  * |mt_srand| - Seed the better random number generator
 
-
-
-|rand| |getrandmax| |mt_srand|
 
 vim:ft=help:

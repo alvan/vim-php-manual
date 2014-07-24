@@ -1,50 +1,88 @@
-mb_encode_mimeheader -- Encode string for MIME header
+mb_encode_mimeheader
 
-  string mb_encode_mimeheader(string str [, string charset = mb_internal_encoding() [, string transfer_encoding = "B" [, string linefeed = "\r\n" [, int indent = 0]]]])~
+(PHP 4 >= 4.0.6, PHP 5)
+
+mb_encode_mimeheader — Encode string for MIME header
+
+===============================================================================
+*Description*
+
+    string mb_encode_mimeheader ( string $str [, string $charset =~
+    mb_internal_encoding() [, string $transfer_encoding = "B" [,~
+    string $linefeed = "\r\n" [, int $indent = 0 ]]]] )~
 
 Encodes a given string {str} by the MIME header encoding scheme.
 
-{str} The string being encoded.
+===============================================================================
+*Parameters*
 
-{charset} {charset} specifies the name of the character set in which {str} is
-represented in. The default value is determined by the current NLS setting
-(mbstring.language). |mb_internal_encoding| should be set to same encoding.
+{str}
 
-{transfer_encoding} {transfer_encoding} specifies the scheme of MIME encoding.
-It should be either "B" (Base64) or "Q" (Quoted-Printable). Falls back to "B"
-if not given.
+    The string being encoded.
 
-{linefeed} {linefeed} specifies the EOL (end-of-line) marker with which
-|mb_encode_mimeheader| performs line-folding (a RFC term, the act of breaking
-a line longer than a certain length into multiple lines. The length is
-currently hard-coded to 74 characters). Falls back to "\r\n" (CRLF) if not
-given.
+{charset}
 
-{indent} Indentation of the first line (number of characters in the header
-before {str}).
+    {charset} specifies the name of the character set in which {str} is
+    represented in. The default value is determined by the current NLS setting
+    (mbstring.language). |mb_internal_encoding| should be set to same encoding.
+
+{transfer_encoding}
+
+    {transfer_encoding} specifies the scheme of MIME encoding. It should be
+    either "B" (Base64) or "Q" (Quoted-Printable). Falls back to "B" if not
+    given.
+
+{linefeed}
+
+    {linefeed} specifies the EOL (end-of-line) marker with which 
+    mb_encode_mimeheader() performs line-folding (a » RFC term, the act of
+    breaking a line longer than a certain length into multiple lines. The
+    length is currently hard-coded to 74 characters). Falls back to "\r\n"
+    (CRLF) if not given.
+
+{indent}
+
+    Indentation of the first line (number of characters in the header before
+    {str}).
+
+===============================================================================
+*Return* *Values*
 
 A converted version of the string represented in ASCII.
 
-Version Description 5.0.0 The {indent} parameter was added.
+===============================================================================
+*Changelog*
 
-|mb_encode_mimeheader| example
+Version            Description
+5.0.0   The {indent} parameter was added.
+
+===============================================================================
+*Examples*
+
+Example #1 mb_encode_mimeheader() example
 
 <?php >
-  $name = ""; // kanji
-  $mbox = "kru";
-  $doma = "gtinn.mon";
-  $addr = mb_encode_mimeheader($name, "UTF-7", "Q") . " <" . $mbox . "@" . $doma . ">";
-  echo $addr;
-?>
+    $name = ""; // kanji
+    $mbox = "kru";
+    $doma = "gtinn.mon";
+    $addr = mb_encode_mimeheader($name, "UTF-7", "Q") . " <" . $mbox . "@" . $doma 
+    . ">";
+    echo $addr;
+<?>
 
+===============================================================================
+*Notes*
 
+    Note:
 
+    This function isn't designed to break lines at higher-level contextual
+    break points (word boundaries, etc.). This behaviour may clutter up the
+    original string with unexpected spaces.
 
+===============================================================================
+*See* *Also*
 
-This function isn't designed to break lines at higher-level contextual break
-points (word boundaries, etc.). This behaviour may clutter up the original
-string with unexpected spaces.
+  * |mb_decode_mimeheader| - Decode string in MIME header field
 
-|mb_decode_mimeheader|
 
 vim:ft=help:

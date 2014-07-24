@@ -1,11 +1,27 @@
-finfo_close -- Close fileinfo resource
+finfo_close
 
-  bool finfo_close(resource finfo)~
+(PHP >= 5.3.0, PECL fileinfo >= 0.1.0)
+
+finfo_close — Close fileinfo resource
+
+===============================================================================
+*Description*
+
+    bool finfo_close ( resource $finfo )~
 
 This function closes the resource opened by |finfo_open|.
 
-{finfo} Fileinfo resource returned by |finfo_open|.
+===============================================================================
+*Parameters*
 
-Returns TRUE on success or &false; on failure.
+{finfo}
+
+    Fileinfo resource returned by |finfo_open|.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
 
 vim:ft=help:

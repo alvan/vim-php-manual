@@ -1,48 +1,82 @@
-mysql_select_db -- Select a MySQL database
+mysql_select_db
+
+(PHP 4, PHP 5)
+
+mysql_select_db — Select a MySQL database
+
+Warning
 
 This extension is deprecated as of PHP 5.5.0, and will be removed in the
 future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
-MySQL: choosing an API guide and related FAQ for more information.
-Alternatives to this function include:
+MySQL: choosing an API guide and related FAQ for more information. Alternatives
+to this function include:
 
-  bool mysql_select_db(string database_name [, resource link_identifier = NULL])~
+  * mysqli_select_db()
+  * PDO::__construct() (part of dsn)
+
+===============================================================================
+*Description*
+
+    bool mysql_select_db ( string $database_name [, resource $link_identifier~
+    = NULL ] )~
 
 Sets the current active database on the server that's associated with the
 specified link identifier. Every subsequent call to |mysql_query| will be made
 on the active database.
 
-{database_name} The name of the database that is to be selected.
+===============================================================================
+*Parameters*
 
-{ link_identifier}The MySQL connection. If the link identifier is not
-specified, the last link opened by |mysql_connect| is assumed. If no such link
-is found, it will try to create one as if |mysql_connect| was called with no
-arguments. If no connection is found or established, an E_WARNING level error
-is generated.
+{database_name}
 
-Returns TRUE on success or &false; on failure.
+    The name of the database that is to be selected.
 
-|mysql_select_db| example
+{ link_identifier}
+
+    The MySQL connection. If the link identifier is not specified, the last
+    link opened by |mysql_connect| is assumed. If no such link is found, it
+    will try to create one as if |mysql_connect| was called with no arguments.
+    If no connection is found or established, an E_WARNING level error is
+    generated.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*Examples*
+
+Example #1 mysql_select_db() example
 
 <?php >
-  $link = mysql_connect('localhost', 'mysql_user', 'mysql_password');
-  if (!$link) {
-      die('Not connected : ' . mysql_error());
-  }
-  
-  // make foo the current db
-  $db_selected = mysql_select_db('foo', $link);
-  if (!$db_selected) {
-      die ('Can\'t use foo : ' . mysql_error());
-  }
-?>
 
+    $link = mysql_connect('localhost', 'mysql_user', 'mysql_password');
+    if (!$link) {
+        die('Not connected : ' . mysql_error());
+    }
 
+    // make foo the current db
+    $db_selected = mysql_select_db('foo', $link);
+    if (!$db_selected) {
+        die ('Can\'t use foo : ' . mysql_error());
+    }
+<?>
 
+===============================================================================
+*Notes*
 
+    Note:
 
-For backward compatibility, the following deprecated alias may be used:
-|mysql_selectdb|
+    For backward compatibility, the following deprecated alias may be used: 
+    mysql_selectdb()
 
-|mysql_connect| |mysql_pconnect| |mysql_query|
+===============================================================================
+*See* *Also*
+
+  * |mysql_connect| - Open a connection to a MySQL Server
+  * |mysql_pconnect| - Open a persistent connection to a MySQL server
+  * |mysql_query| - Send a MySQL query
+
 
 vim:ft=help:

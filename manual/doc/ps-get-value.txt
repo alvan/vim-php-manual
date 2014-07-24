@@ -1,84 +1,156 @@
-ps_get_value -- Gets certain values
+ps_get_value
 
-  float ps_get_value(resource psdoc, string name [, float modifier])~
+(PECL ps >= 1.1.0)
+
+ps_get_value — Gets certain values
+
+===============================================================================
+*Description*
+
+    float ps_get_value ( resource $psdoc , string $name [, float $modifier ] )~
 
 Gets several values which were set by |ps_set_value|. Values are by definition
 float values.
 
 The parameter {name} can have the following values.
 
-fontsize The size of the currently active font or the font whose identifier is
-passed in parameter {modifier}.
+fontsize
 
-font The currently active font itself.
+    The size of the currently active font or the font whose identifier is
+    passed in parameter {modifier}.
 
-imagewidth The width of the image whose id is passed in the parameter
-{modifier}.
+font
 
-imageheight The height of the image whose id is passed in the parameter
-{modifier}.
+    The currently active font itself.
 
-capheight The height of a capital M in the currently active font or the font
-whose identifier is passed in parameter {modifier}.
+imagewidth
 
-ascender The ascender of the currently active font or the font whose
-identifier is passed in parameter {modifier}.
+    The width of the image whose id is passed in the parameter {modifier}.
 
-descender The descender of the currently active font or the font whose
-identifier is passed in parameter {modifier}.
+imageheight
 
-italicangle The italicangle of the currently active font or the font whose
-identifier is passed in parameter {modifier}.
+    The height of the image whose id is passed in the parameter {modifier}.
 
-underlineposition The underlineposition of the currently active font or the
-font whose identifier is passed in parameter {modifier}.
+capheight
 
-underlinethickness The underlinethickness of the currently active font or the
-font whose identifier is passed in parameter {modifier}.
+    The height of a capital M in the currently active font or the font whose
+    identifier is passed in parameter {modifier}.
 
-textx The current x-position for text output.
+ascender
 
-texty The current y-position for text output.
+    The ascender of the currently active font or the font whose identifier is
+    passed in parameter {modifier}.
 
-textrendering The current mode for text rendering.
+descender
 
-textrise The space by which text is risen above the base line.
+    The descender of the currently active font or the font whose identifier is
+    passed in parameter {modifier}.
 
-leading The distance between text lines in points.
+italicangle
 
-wordspacing The space between words as a multiple of the width of a space
-char.
+    The italicangle of the currently active font or the font whose identifier
+    is passed in parameter {modifier}.
 
-charspacing The space between chars. If charspacing is != 0.0 ligatures will
-always be dissolved.
+underlineposition
 
-hyphenminchars Minimum number of chars hyphenated at the end of a word.
+    The underlineposition of the currently active font or the font whose
+    identifier is passed in parameter {modifier}.
 
-parindent Indention of the first n line in a paragraph.
+underlinethickness
 
-numindentlines Number of line in a paragraph to indent if parindent != 0.0.
+    The underlinethickness of the currently active font or the font whose
+    identifier is passed in parameter {modifier}.
 
-parskip Distance between paragraphs.
+textx
 
-linenumberspace Overall space in front of each line for the line number.
+    The current x-position for text output.
 
-linenumbersep Space between the line and the line number.
+texty
 
-major The major version number of pslib.
+    The current y-position for text output.
 
-minor The minor version number of pslib.
+textrendering
 
-subminor, revision The subminor version number of pslib.
+    The current mode for text rendering.
 
-{psdoc} Resource identifier of the postscript file as returned by |ps_new|.
+textrise
 
-{name} Name of the value.
+    The space by which text is risen above the base line.
 
-{modifier} The parameter {modifier} specifies the resource for which the value
-is to be retrieved. This can be the id of a font or an image.
+leading
+
+    The distance between text lines in points.
+
+wordspacing
+
+    The space between words as a multiple of the width of a space char.
+
+charspacing
+
+    The space between chars. If charspacing is != 0.0 ligatures will always be
+    dissolved.
+
+hyphenminchars
+
+    Minimum number of chars hyphenated at the end of a word.
+
+parindent
+
+    Indention of the first n line in a paragraph.
+
+numindentlines
+
+    Number of line in a paragraph to indent if parindent != 0.0.
+
+parskip
+
+    Distance between paragraphs.
+
+linenumberspace
+
+    Overall space in front of each line for the line number.
+
+linenumbersep
+
+    Space between the line and the line number.
+
+major
+
+    The major version number of pslib.
+
+minor
+
+    The minor version number of pslib.
+
+subminor, revision
+
+    The subminor version number of pslib.
+
+===============================================================================
+*Parameters*
+
+{psdoc}
+
+    Resource identifier of the postscript file as returned by |ps_new|.
+
+{name}
+
+    Name of the value.
+
+{modifier}
+
+    The parameter {modifier} specifies the resource for which the value is to
+    be retrieved. This can be the id of a font or an image.
+
+===============================================================================
+*Return* *Values*
 
 Returns the value of the parameter or FALSE.
 
-|ps_set_value|
+===============================================================================
+*See* *Also*
+
+  * |ps_set_value| - Sets certain values
+
 
 vim:ft=help:

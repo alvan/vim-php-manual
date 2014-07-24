@@ -1,12 +1,28 @@
-wddx_deserialize -- Unserializes a WDDX packet
+wddx_deserialize
 
-  mixed wddx_deserialize(string packet)~
+(PHP 4, PHP 5)
+
+wddx_deserialize — Unserializes a WDDX packet
+
+===============================================================================
+*Description*
+
+    mixed wddx_deserialize ( string $packet )~
 
 Unserializes a WDDX {packet}.
 
-{packet} A WDDX packet, as a string or stream.
+===============================================================================
+*Parameters*
+
+{packet}
+
+    A WDDX packet, as a string or stream.
+
+===============================================================================
+*Return* *Values*
 
 Returns the deserialized value which can be a string, a number or an array.
 Note that structures are deserialized into associative arrays.
+
 
 vim:ft=help:

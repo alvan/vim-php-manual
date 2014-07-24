@@ -1,45 +1,69 @@
-ftp_size -- Returns the size of the given file
+ftp_size
 
-  int ftp_size(resource ftp_stream, string remote_file)~
+(PHP 4, PHP 5)
 
-|ftp_size| returns the size of the given file in bytes.
+ftp_size — Returns the size of the given file
 
-Not all servers support this feature.
+===============================================================================
+*Description*
 
-{ftp_stream} The link identifier of the FTP connection.
+    int ftp_size ( resource $ftp_stream , string $remote_file )~
 
-{remote_file} The remote file.
+ftp_size() returns the size of the given file in bytes.
+
+    Note:
+
+    Not all servers support this feature.
+
+===============================================================================
+*Parameters*
+
+{ftp_stream}
+
+    The link identifier of the FTP connection.
+
+{remote_file}
+
+    The remote file.
+
+===============================================================================
+*Return* *Values*
 
 Returns the file size on success, or -1 on error.
 
-|ftp_size| example
+===============================================================================
+*Examples*
+
+Example #1 ftp_size() example
 
 <?php >
-  $file = 'somefile.txt';
-  
-  // set up basic connection
-  $conn_id = ftp_connect($ftp_server);
-  
-  // login with username and password
-  $login_result = ftp_login($conn_id, $ftp_user_name, $ftp_user_pass);
-  
-  // get the size of $file
-  $res = ftp_size($conn_id, $file);
-  
-  if ($res != -1) {
-      echo "size of $file is $res bytes";
-  } else {
-      echo "couldn't get the size";
-  }
-  
-  // close the connection
-  ftp_close($conn_id);
-?>
 
+    $file = 'somefile.txt';
 
+    // set up basic connection
+    $conn_id = ftp_connect($ftp_server);
 
+    // login with username and password
+    $login_result = ftp_login($conn_id, $ftp_user_name, $ftp_user_pass);
 
+    // get the size of $file
+    $res = ftp_size($conn_id, $file);
 
-|ftp_rawlist|
+    if ($res != -1) {
+        echo "size of $file is $res bytes";
+    } else {
+        echo "couldn't get the size";
+    }
+
+    // close the connection
+    ftp_close($conn_id);
+
+<?>
+
+===============================================================================
+*See* *Also*
+
+  * |ftp_rawlist| - Returns a detailed list of files in the given directory
+
 
 vim:ft=help:

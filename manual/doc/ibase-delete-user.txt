@@ -1,12 +1,27 @@
-ibase_delete_user -- Delete a user from a security database
+ibase_delete_user
 
-  bool ibase_delete_user(resource service_handle, string user_name)~
+(PHP 5)
 
-This function is currently not documented; only its argument list is
-available.
+ibase_delete_user — Delete a user from a security database
 
-Returns TRUE on success or &false; on failure.
+===============================================================================
+*Description*
 
-|ibase_add_user| |ibase_modify_user|
+    bool ibase_delete_user ( resource $service_handle , string $user_name )~
+Warning
+
+This function is currently not documented; only its argument list is available.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*See* *Also*
+
+  * |ibase_add_user| - Add a user to a security database
+  * |ibase_modify_user| - Modify a user to a security database
+
 
 vim:ft=help:

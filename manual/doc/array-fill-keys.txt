@@ -1,37 +1,61 @@
-array_fill_keys -- Fill an array with values, specifying keys
+array_fill_keys
 
-  array array_fill_keys(array keys, mixed value)~
+(PHP 5 >= 5.2.0)
 
-Fills an array with the value of the {value} parameter, using the values of
-the {keys} array as keys.
+array_fill_keys — Fill an array with values, specifying keys
 
-{keys} Array of values that will be used as keys. Illegal values for key will
-be converted to string.
+===============================================================================
+*Description*
 
-{value} Value to use for filling
+    array array_fill_keys ( array $keys , mixed $value )~
+
+Fills an array with the value of the {value} parameter, using the values of the
+{keys} array as keys.
+
+===============================================================================
+*Parameters*
+
+{keys}
+
+    Array of values that will be used as keys. Illegal values for key will be
+    converted to string.
+
+{value}
+
+    Value to use for filling
+
+===============================================================================
+*Return* *Values*
 
 Returns the filled array
 
-|array_fill_keys| example
+===============================================================================
+*Examples*
+
+Example #1 array_fill_keys() example
 
 <?php >
-  $keys = array('foo', 5, 10, 'bar');
-  $a = array_fill_keys($keys, 'banana');
-  print_r($a);
-?>
+    $keys = array('foo', 5, 10, 'bar');
+    $a = array_fill_keys($keys, 'banana');
+    print_r($a);
+<?>
 
 The above example will output:
 
-  Array
-  (
-      [foo] => banana
-      [5] => banana
-      [10] => banana
-      [bar] => banana
-  )
+Array
+(
+    [foo] => banana
+    [5] => banana
+    [10] => banana
+    [bar] => banana
+)
 
+===============================================================================
+*See* *Also*
 
+  * |array_fill| - Fill an array with values
+  * |array_combine| - Creates an array by using one array for keys and another
+    for its values
 
-|array_fill| |array_combine|
 
 vim:ft=help:

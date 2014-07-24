@@ -1,20 +1,44 @@
-ldap_modify -- Modify an LDAP entry
+ldap_modify
 
-  bool ldap_modify(resource link_identifier, string dn, array entry)~
+(PHP 4, PHP 5)
+
+ldap_modify — Modify an LDAP entry
+
+===============================================================================
+*Description*
+
+    bool ldap_modify ( resource $link_identifier , string $dn , array $entry )~
 
 Modify the existing entries in the LDAP directory. The structure of the entry
 is same as in |ldap_add|.
 
-{link_identifier} An LDAP link identifier, returned by |ldap_connect|.
+===============================================================================
+*Parameters*
 
-{dn} The distinguished name of an LDAP entity.
+{link_identifier}
+
+    An LDAP link identifier, returned by |ldap_connect|.
+
+{dn}
+
+    The distinguished name of an LDAP entity.
 
 {entry}
 
-Returns TRUE on success or &false; on failure.
+===============================================================================
+*Return* *Values*
 
-This function is binary-safe.
+Returns TRUE on success or FALSE on failure.
 
-|ldap_rename|
+===============================================================================
+*Notes*
+
+    Note: This function is binary-safe.
+
+===============================================================================
+*See* *Also*
+
+  * |ldap_rename| - Modify the name of an entry
+
 
 vim:ft=help:

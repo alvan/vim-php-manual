@@ -1,14 +1,34 @@
-JDToGregorian -- Converts Julian Day Count to Gregorian date
+JDToGregorian
 
-  string jdtogregorian(int julianday)~
+(PHP 4, PHP 5)
+
+JDToGregorian — Converts Julian Day Count to Gregorian date
+
+===============================================================================
+*Description*
+
+    string jdtogregorian ( int $julianday )~
 
 Converts Julian Day Count to a string containing the Gregorian date in the
 format of "month/day/year".
 
-{julianday} A julian day number as integer
+===============================================================================
+*Parameters*
+
+{julianday}
+
+    A julian day number as integer
+
+===============================================================================
+*Return* *Values*
 
 The gregorian date as a string in the form "month/day/year"
 
-|gregoriantojd| |cal_from_jd|
+===============================================================================
+*See* *Also*
+
+  * |gregoriantojd| - Converts a Gregorian date to Julian Day Count
+  * |cal_from_jd| - Converts from Julian Day Count to a supported calendar
+
 
 vim:ft=help:

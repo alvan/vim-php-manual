@@ -1,13 +1,33 @@
-__autoload -- Attempt to load undefined class
+__autoload
 
-  void __autoload(string class)~
+(PHP 5)
+
+__autoload — Attempt to load undefined class
+
+===============================================================================
+*Description*
+
+    void __autoload ( string $class )~
 
 You can define this function to enable classes autoloading.
 
-Name of the class to load
+===============================================================================
+*Parameters*
+
+{class}
+
+    Name of the class to load
+
+===============================================================================
+*Return* *Values*
 
 No value is returned.
 
-|spl_autoload_register|
+===============================================================================
+*See* *Also*
+
+  * |spl_autoload_register| - Register given function as __autoload()
+    implementation
+
 
 vim:ft=help:

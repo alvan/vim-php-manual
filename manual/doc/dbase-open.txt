@@ -1,43 +1,72 @@
-dbase_open -- Opens a database
+dbase_open
 
-  int dbase_open(string filename, int mode)~
+(PHP 4, PHP 5)
 
-|dbase_open| opens a dBase database with the given access mode.
+dbase_open — Opens a database
 
-When safe mode is enabled, PHP checks whether the files or directories being
-operated upon have the same UID (owner) as the script that is being executed.
+===============================================================================
+*Description*
 
-This function is affected by open_basedir.
+    int dbase_open ( string $filename , int $mode )~
 
-{filename} The name of the database. It can be a relative or absolute path to
-the file where dBase will store your data.
+dbase_open() opens a dBase database with the given access mode.
 
-{mode} An integer which correspond to those for the open() system call
-(Typically 0 means read-only, 1 means write-only, and 2 means read and write).
+    Note: When safe mode is enabled, PHP checks whether the files or
+    directories being operated upon have the same UID (owner) as the script
+    that is being executed.
 
-You can't open a dBase file in write-only mode as the function will fail to
-read the headers information and thus you can't use 1 as {mode}.
+    Note:
 
-Opening a dBase database file
+    This function is affected by open_basedir.
+
+===============================================================================
+*Parameters*
+
+{filename}
+
+    The name of the database. It can be a relative or absolute path to the file
+    where dBase will store your data.
+
+{mode}
+
+    An integer which correspond to those for the open() system call (Typically
+    0 means read-only, 1 means write-only, and 2 means read and write).
+
+        Note:
+
+        You can't open a dBase file in write-only mode as the function will
+        fail to read the headers information and thus you can't use 1 as
+        {mode}.
+
+===============================================================================
+*Examples*
+
+Example #1 Opening a dBase database file
 
 <?php >
-  // open in read-only mode
-  $db = dbase_open('/tmp/test.dbf', 0);
-  
-  if ($db) {
-    // read some data ..
-    
-    dbase_close($db);
-  }
-?>
 
+    // open in read-only mode
+    $db = dbase_open('/tmp/test.dbf', 0);
 
+    if ($db) {
+      // read some data ..
+      
+      dbase_close($db);
+    }
 
+<?>
 
+===============================================================================
+*Return* *Values*
 
 Returns a database link identifier if the database is successfully opened, or
 FALSE if an error occurred.
 
-|dbase_create| |dbase_close|
+===============================================================================
+*See* *Also*
+
+  * |dbase_create| - Creates a database
+  * |dbase_close| - Closes a database
+
 
 vim:ft=help:

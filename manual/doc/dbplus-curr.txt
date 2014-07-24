@@ -1,21 +1,50 @@
-dbplus_curr -- Get current tuple from relation
+dbplus_curr
 
-  int dbplus_curr(resource relation, array &tuple)~
+(PHP 4 <= 4.1.0, PECL dbplus >= 0.9)
+
+dbplus_curr — Get current tuple from relation
+
+===============================================================================
+*Description*
+
+    int dbplus_curr ( resource $relation , array &$tuple )~
 
 Reads the data for the current tuple for the given {relation}.
 
-{relation} A relation opened by |dbplus_open|.
+===============================================================================
+*Parameters*
 
-{tuple} The data will be passed back in this parameter, as an associative
-array.
+{relation}
+
+    A relation opened by |dbplus_open|.
+
+{tuple}
+
+    The data will be passed back in this parameter, as an associative array.
+
+===============================================================================
+*Return* *Values*
 
 The function will return zero (aka. DBPLUS_ERR_NOERR) on success or a db++
 error code on failure.
 
-This function is EXPERIMENTAL. The behaviour of this function, its name, and
-surrounding documentation may change without notice in a future release of
-PHP. This function should be used at your own risk.
+===============================================================================
+*Notes*
 
-|dbplus_first| |dbplus_prev| |dbplus_next| |dbplus_last| |dbplus_errcode|
+Warning
+
+This function is EXPERIMENTAL. The behaviour of this function, its name, and
+surrounding documentation may change without notice in a future release of PHP.
+This function should be used at your own risk.
+
+===============================================================================
+*See* *Also*
+
+  * |dbplus_first| - Get first tuple from relation
+  * |dbplus_prev| - Get previous tuple from relation
+  * |dbplus_next| - Get next tuple from relation
+  * |dbplus_last| - Get last tuple from relation
+  * |dbplus_errcode| - Get error string for given errorcode or last error
+
 
 vim:ft=help:

@@ -1,14 +1,33 @@
-imap_utf8 -- Converts MIME-encoded text to UTF-8
+imap_utf8
 
-  string imap_utf8(string mime_encoded_text)~
+(PHP 4, PHP 5)
+
+imap_utf8 — Converts MIME-encoded text to UTF-8
+
+===============================================================================
+*Description*
+
+    string imap_utf8 ( string $mime_encoded_text )~
 
 Converts the given {mime_encoded_text} to UTF-8.
 
-{mime_encoded_text} A MIME encoded string. MIME encoding method and the UTF-8
-specification are described in RFC2047 and RFC2044 respectively.
+===============================================================================
+*Parameters*
+
+{mime_encoded_text}
+
+    A MIME encoded string. MIME encoding method and the UTF-8 specification are
+    described in » RFC2047 and » RFC2044 respectively.
+
+===============================================================================
+*Return* *Values*
 
 Returns an UTF-8 encoded string.
 
-|imap_mime_header_decode|
+===============================================================================
+*See* *Also*
+
+  * |imap_mime_header_decode| - Decode MIME header elements
+
 
 vim:ft=help:

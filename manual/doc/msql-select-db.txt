@@ -1,20 +1,44 @@
-msql_select_db -- Select mSQL database
+msql_select_db
 
-  bool msql_select_db(string database_name [, resource link_identifier])~
+(PHP 4, PHP 5)
 
-|msql_select_db| sets the current active database on the server that's
+msql_select_db — Select mSQL database
+
+===============================================================================
+*Description*
+
+    bool msql_select_db ( string $database_name [, resource $link_identifier ]~
+)~
+
+msql_select_db() sets the current active database on the server that's
 associated with the specified {link_identifier}.
 
 Subsequent calls to |msql_query| will be made on the active database.
 
-{database_name} The database name.
+===============================================================================
+*Parameters*
 
-{ link_identifier}The mSQL connection. If not specified, the last link opened
-by |msql_connect| is assumed. If no such link is found, the function will try
-to establish a link as if |msql_connect| was called, and use it.
+{database_name}
 
-Returns TRUE on success or &false; on failure.
+    The database name.
 
-|msql_connect| |msql_pconnect| |msql_query|
+{ link_identifier}
+
+    The mSQL connection. If not specified, the last link opened by |
+    msql_connect| is assumed. If no such link is found, the function will try
+    to establish a link as if |msql_connect| was called, and use it.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*See* *Also*
+
+  * |msql_connect| - Open mSQL connection
+  * |msql_pconnect| - Open persistent mSQL connection
+  * |msql_query| - Send mSQL query
+
 
 vim:ft=help:

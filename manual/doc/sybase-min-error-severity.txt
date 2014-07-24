@@ -1,16 +1,36 @@
-sybase_min_error_severity -- Sets minimum error severity
+sybase_min_error_severity
 
-  void sybase_min_error_severity(int severity)~
+(PHP 4, PHP 5)
 
-|sybase_min_error_severity| sets the minimum error severity level.
+sybase_min_error_severity — Sets minimum error severity
+
+===============================================================================
+*Description*
+
+    void sybase_min_error_severity ( int $severity )~
+
+sybase_min_error_severity() sets the minimum error severity level.
+
+===============================================================================
+*Parameters*
 
 {severity}
 
+===============================================================================
+*Return* *Values*
+
 No value is returned.
 
-This function is only available when using the CT library interface to Sybase,
-and not with the DB library.
+===============================================================================
+*Notes*
 
-|sybase_min_message_severity|
+    Note: This function is only available when using the CT library interface
+    to Sybase, and not with the DB library.
+
+===============================================================================
+*See* *Also*
+
+  * |sybase_min_message_severity| - Sets minimum message severity
+
 
 vim:ft=help:

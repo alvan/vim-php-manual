@@ -1,16 +1,34 @@
-openssl_pkcs12_read -- Parse a PKCS#12 Certificate Store into an array
+openssl_pkcs12_read
 
-  bool openssl_pkcs12_read(string pkcs12, array &certs, string pass)~
+(PHP 5 >= 5.2.2)
 
-|openssl_pkcs12_read| parses the PKCS#12 certificate store supplied by
-{pkcs12} into a array named {certs}.
+openssl_pkcs12_read — Parse a PKCS#12 Certificate Store into an array
+
+===============================================================================
+*Description*
+
+    bool openssl_pkcs12_read ( string $pkcs12 , array &$certs , string $pass )~
+
+openssl_pkcs12_read() parses the PKCS#12 certificate store supplied by {pkcs12}
+into a array named {certs}.
+
+===============================================================================
+*Parameters*
 
 {pkcs12}
 
-{certs} On success, this will hold the Certificate Store Data.
+{certs}
 
-{pass} Encryption password for unlocking the PKCS#12 file.
+    On success, this will hold the Certificate Store Data.
 
-Returns TRUE on success or &false; on failure.
+{pass}
+
+    Encryption password for unlocking the PKCS#12 file.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
 
 vim:ft=help:

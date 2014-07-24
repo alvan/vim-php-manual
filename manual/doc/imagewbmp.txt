@@ -1,90 +1,114 @@
-imagewbmp -- Output image to browser or file
+imagewbmp
 
-  bool imagewbmp(resource image [, string filename [, int foreground]])~
+(PHP 4 >= 4.0.1, PHP 5)
 
-|imagewbmp| outputs or save a WBMP version of the given {image}.
+imagewbmp — Output image to browser or file
 
-{ image}An image resource, returned by one of the image creation functions,
-such as |imagecreatetruecolor|.
+===============================================================================
+*Description*
 
-{filename} The path to save the file to. If not set or NULL, the raw image
-stream will be outputted directly.
+    bool imagewbmp ( resource $image [, string $filename [, int $foreground ]]~
+)~
 
-{foreground} You can set the foreground color with this parameter by setting
-an identifier obtained from |imagecolorallocate|. The default foreground color
-is black.
+imagewbmp() outputs or save a WBMP version of the given {image}.
 
-Returns TRUE on success or &false; on failure.
+===============================================================================
+*Parameters*
 
-Outputting a WBMP image
+{ image}
 
-<?php >
-  // Create a blank image and add some text
-  $im = imagecreatetruecolor(120, 20);
-  $text_color = imagecolorallocate($im, 233, 14, 91);
-  imagestring($im, 1, 5, 5,  'A Simple Text String', $text_color);
-  
-  // Set the content type header - in this case image/vnd.wap.wbmp
-  // Hint: see image_type_to_mime_type() for content-types
-  header('Content-Type: image/vnd.wap.wbmp');
-  
-  // Output the image
-  imagewbmp($im);
-  
-  // Free up memory
-  imagedestroy($im);
-?>
+    An image resource, returned by one of the image creation functions, such as
+    |imagecreatetruecolor|.
 
+{filename}
 
+    The path to save the file to. If not set or NULL, the raw image stream will
+    be outputted directly.
 
+{foreground}
 
+    You can set the foreground color with this parameter by setting an
+    identifier obtained from |imagecolorallocate|. The default foreground color
+    is black.
 
-Saving the WBMP image
+===============================================================================
+*Return* *Values*
 
-<?php >
-  // Create a blank image and add some text
-  $im = imagecreatetruecolor(120, 20);
-  $text_color = imagecolorallocate($im, 233, 14, 91);
-  imagestring($im, 1, 5, 5,  'A Simple Text String', $text_color);
-  
-  // Save the image
-  imagewbmp($im, 'simpletext.wbmp');
-  
-  // Free up memory
-  imagedestroy($im);
-?>
+Returns TRUE on success or FALSE on failure.
 
+===============================================================================
+*Examples*
 
-
-
-
-Outputting the image with a different foreground
+Example #1 Outputting a WBMP image
 
 <?php >
-  // Create a blank image and add some text
-  $im = imagecreatetruecolor(120, 20);
-  $text_color = imagecolorallocate($im, 233, 14, 91);
-  imagestring($im, 1, 5, 5,  'A Simple Text String', $text_color);
-  
-  // Set the content type header - in this case image/vnd.wap.wbmp
-  // Hint: see image_type_to_mime_type() for content-types
-  header('Content-Type: image/vnd.wap.wbmp');
-  
-  // Set a replacement foreground color
-  $foreground_color = imagecolorallocate($im, 255, 0, 0);
-  
-  imagewbmp($im, NULL, $foreground_color);
-  
-  // Free up memory
-  imagedestroy($im);
-?>
+    // Create a blank image and add some text
+    $im = imagecreatetruecolor(120, 20);
+    $text_color = imagecolorallocate($im, 233, 14, 91);
+    imagestring($im, 1, 5, 5,  'A Simple Text String', $text_color);
 
+    // Set the content type header - in this case image/vnd.wap.wbmp
+    // Hint: see image_type_to_mime_type() for content-types
+    header('Content-Type: image/vnd.wap.wbmp');
 
+    // Output the image
+    imagewbmp($im);
 
+    // Free up memory
+    imagedestroy($im);
+<?>
 
+Example #2 Saving the WBMP image
 
-WBMP support is only available if PHP was compiled against GD-1.8 or later.
+<?php >
+    // Create a blank image and add some text
+    $im = imagecreatetruecolor(120, 20);
+    $text_color = imagecolorallocate($im, 233, 14, 91);
+    imagestring($im, 1, 5, 5,  'A Simple Text String', $text_color);
 
-|image2wbmp| |imagepng| |imagegif| |imagejpeg| |imagetypes|
+    // Save the image
+    imagewbmp($im, 'simpletext.wbmp');
+
+    // Free up memory
+    imagedestroy($im);
+<?>
+
+Example #3 Outputting the image with a different foreground
+
+<?php >
+    // Create a blank image and add some text
+    $im = imagecreatetruecolor(120, 20);
+    $text_color = imagecolorallocate($im, 233, 14, 91);
+    imagestring($im, 1, 5, 5,  'A Simple Text String', $text_color);
+
+    // Set the content type header - in this case image/vnd.wap.wbmp
+    // Hint: see image_type_to_mime_type() for content-types
+    header('Content-Type: image/vnd.wap.wbmp');
+
+    // Set a replacement foreground color
+    $foreground_color = imagecolorallocate($im, 255, 0, 0);
+
+    imagewbmp($im, NULL, $foreground_color);
+
+    // Free up memory
+    imagedestroy($im);
+<?>
+
+===============================================================================
+*Notes*
+
+    Note:
+
+    WBMP support is only available if PHP was compiled against GD-1.8 or later.
+
+===============================================================================
+*See* *Also*
+
+  * |image2wbmp| - Output image to browser or file
+  * |imagepng| - Output a PNG image to either the browser or a file
+  * |imagegif| - Output image to browser or file
+  * |imagejpeg| - Output image to browser or file
+  * |imagetypes| - Return the image types supported by this PHP build
+
 
 vim:ft=help:

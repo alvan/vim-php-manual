@@ -1,88 +1,111 @@
-array_column -- Return the values from a single column in the input array
+array_column
 
-  array array_column(array array, mixed column_key [, mixed index_key = null])~
+(PHP 5 >= 5.5.0)
 
-|array_column| returns the values from a single column of the {array},
+array_column — Return the values from a single column in the input array
+
+===============================================================================
+*Description*
+
+    array array_column ( array $array , mixed $column_key [, mixed $index_key~
+    = null ] )~
+
+array_column() returns the values from a single column of the {array},
 identified by the {column_key}. Optionally, you may provide an {index_key} to
 index the values in the returned array by the values from the {index_key}
 column in the input array.
 
-{array} A multi-dimensional array (record set) from which to pull a column of
-values.
+===============================================================================
+*Parameters*
 
-{column_key} The column of values to return. This value may be the integer key
-of the column you wish to retrieve, or it may be the string key name for an
-associative array. It may also be NULL to return complete arrays (useful
-together with {index_key} to reindex the array).
+{array}
 
-{index_key} The column to use as the index/keys for the returned array. This
-value may be the integer key of the column, or it may be the string key name.
+    A multi-dimensional array (record set) from which to pull a column of
+    values.
+
+{column_key}
+
+    The column of values to return. This value may be the integer key of the
+    column you wish to retrieve, or it may be the string key name for an
+    associative array. It may also be NULL to return complete arrays (useful
+    together with {index_key} to reindex the array).
+
+{index_key}
+
+    The column to use as the index/keys for the returned array. This value may
+    be the integer key of the column, or it may be the string key name.
+
+===============================================================================
+*Return* *Values*
 
 Returns an array of values representing a single column from the input array.
 
-Get column of first names from recordset
+===============================================================================
+*Examples*
+
+Example #1 Get column of first names from recordset
 
 <?php >
-  // Array representing a possible record set returned from a database
-  $records = array(
-      array(
-          'id' => 2135,
-          'first_name' => 'John',
-          'last_name' => 'Doe',
-      ),
-      array(
-          'id' => 3245,
-          'first_name' => 'Sally',
-          'last_name' => 'Smith',
-      ),
-      array(
-          'id' => 5342,
-          'first_name' => 'Jane',
-          'last_name' => 'Jones',
-      ),
-      array(
-          'id' => 5623,
-          'first_name' => 'Peter',
-          'last_name' => 'Doe',
-      )
-  );
-   
-  $first_names = array_column($records, 'first_name');
-  print_r($first_names);
-?>
+    // Array representing a possible record set returned from a database
+    $records = array(
+        array(
+            'id' => 2135,
+            'first_name' => 'John',
+            'last_name' => 'Doe',
+        ),
+        array(
+            'id' => 3245,
+            'first_name' => 'Sally',
+            'last_name' => 'Smith',
+        ),
+        array(
+            'id' => 5342,
+            'first_name' => 'Jane',
+            'last_name' => 'Jones',
+        ),
+        array(
+            'id' => 5623,
+            'first_name' => 'Peter',
+            'last_name' => 'Doe',
+        )
+    );
+     
+    $first_names = array_column($records, 'first_name');
+    print_r($first_names);
+<?>
 
 The above example will output:
 
-  Array
-  (
-      [0] => John
-      [1] => Sally
-      [2] => Jane
-      [3] => Peter
-  )
+Array
+(
+    [0] => John
+    [1] => Sally
+    [2] => Jane
+    [3] => Peter
+)
 
-
-
-Get column of last names from recordset, indexed by the "id" column
+Example #2 Get column of last names from recordset, indexed by the "id" column
 
 <?php >
-  // Using the $records array from Example #1
-  $last_names = array_column($records, 'last_name', 'id');
-  print_r($last_names);
-?>
+    // Using the $records array from Example #1
+    $last_names = array_column($records, 'last_name', 'id');
+    print_r($last_names);
+<?>
 
 The above example will output:
 
-  Array
-  (
-      [2135] => Doe
-      [3245] => Smith
-      [5342] => Jones
-      [5623] => Doe
-  )
+Array
+(
+    [2135] => Doe
+    [3245] => Smith
+    [5342] => Jones
+    [5623] => Doe
+)
 
+===============================================================================
+*See* *Also*
 
+  * » Recommended userland implementation for PHP lower than 5.5
 
-Recommended userland implementation for PHP lower than 5.5
 
 vim:ft=help:

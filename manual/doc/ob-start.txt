@@ -1,137 +1,190 @@
-ob_start -- Turn on output buffering
+ob_start
 
-  bool ob_start([callable output_callback = NULL [, int chunk_size = 0 [, int flags = NULL]]])~
+(PHP 4, PHP 5)
+
+ob_start — Turn on output buffering
+
+===============================================================================
+*Description*
+
+    bool ob_start ([ callable $output_callback = NULL [, int $chunk_size = 0~
+    [, int $flags = PHP_OUTPUT_HANDLER_STDFLAGS ]]] )~
 
 This function will turn output buffering on. While output buffering is active
 no output is sent from the script (other than headers), instead the output is
 stored in an internal buffer.
 
-The contents of this internal buffer may be copied into a string variable
-using |ob_get_contents|. To output what is stored in the internal buffer, use
-|ob_end_flush|. Alternatively, |ob_end_clean| will silently discard the buffer
+The contents of this internal buffer may be copied into a string variable using
+|ob_get_contents|. To output what is stored in the internal buffer, use |
+ob_end_flush|. Alternatively, |ob_end_clean| will silently discard the buffer
 contents.
 
-Some web servers (e.g. Apache) change the working directory of a script when
-calling the callback function. You can change it back by e.g.
-chdir(dirname($_SERVER['SCRIPT_FILENAME'])) in the callback function.
+Warning
 
-Output buffers are stackable, that is, you may call |ob_start| while another
-|ob_start| is active. Just make sure that you call |ob_end_flush| the
+Some web servers (e.g. Apache) change the working directory of a script when
+calling the callback function. You can change it back by e.g. chdir(dirname
+($_SERVER['SCRIPT_FILENAME'])) in the callback function.
+
+Output buffers are stackable, that is, you may call ob_start() while another 
+ob_start() is active. Just make sure that you call |ob_end_flush| the
 appropriate number of times. If multiple output callback functions are active,
 output is being filtered sequentially through each of them in nesting order.
 
-{output_callback} An optional {output_callback} function may be specified.
-This function takes a string as a parameter and should return a string. The
-function will be called when the output buffer is flushed (sent) or cleaned
-(with |ob_flush|, |ob_clean| or similar function) or when the output buffer is
-flushed to the browser at the end of the request. When {output_callback} is
-called, it will receive the contents of the output buffer as its parameter and
-is expected to return a new output buffer as a result, which will be sent to
-the browser. If the {output_callback} is not a callable function, this
-function will return FALSE. This is the callback signature:
+===============================================================================
+*Parameters*
 
-  string handler(string buffer [, int phase])~
+{output_callback}
 
-{buffer} Contents of the output buffer.
+    An optional {output_callback} function may be specified. This function
+    takes a string as a parameter and should return a string. The function will
+    be called when the output buffer is flushed (sent) or cleaned (with |
+    ob_flush|, |ob_clean| or similar function) or when the output buffer is
+    flushed to the browser at the end of the request. When {output_callback} is
+    called, it will receive the contents of the output buffer as its parameter
+    and is expected to return a new output buffer as a result, which will be
+    sent to the browser. If the {output_callback} is not a callable function,
+    this function will return FALSE. This is the callback signature:
 
-{phase} Bitmask of PHP_OUTPUT_HANDLER_* constants.
 
-If {output_callback} returns FALSE original input is sent to the browser.
+    string handler ( string $buffer [, int $phase ] )~
 
-The {output_callback} parameter may be bypassed by passing a NULL value.
+    {buffer}
+        Contents of the output buffer.
+    {phase}
+        Bitmask of PHP_OUTPUT_HANDLER_* constants.
 
-|ob_end_clean|, |ob_end_flush|, |ob_clean|, |ob_flush| and |ob_start| may not
-be called from a callback function. If you call them from callback function,
-the behavior is undefined. If you would like to delete the contents of a
-buffer, return "" (a null string) from callback function. You can't even call
-functions using the output buffering functions like print_r($expression, true)
-or highlight_file($filename, true) from a callback function.
+    If {output_callback} returns FALSE original input is sent to the browser.
 
-In PHP 4.0.4, |ob_gzhandler| was introduced to facilitate sending gz-encoded
-data to web browsers that support compressed web pages. |ob_gzhandler|
-determines what type of content encoding the browser will accept and will
-return its output accordingly.
+    The {output_callback} parameter may be bypassed by passing a NULL value.
 
-{chunk_size} If the optional parameter {chunk_size} is passed, the buffer will
-be flushed after any output call which causes the buffer's length to equal or
-exceed {chunk_size}. The default value 0 means that the output function will
-only be called when the output buffer is closed.
+    |ob_end_clean|, |ob_end_flush|, |ob_clean|, |ob_flush| and ob_start() may
+    not be called from a callback function. If you call them from callback
+    function, the behavior is undefined. If you would like to delete the
+    contents of a buffer, return "" (a null string) from callback function. You
+    can't even call functions using the output buffering functions like print_r
+    ($expression, true) or highlight_file($filename, true) from a callback
+    function.
 
-Prior to PHP 5.4.0, the value 1 was a special case value that set the chunk
-size to 4096 bytes.
+        Note:
 
-{flags} The {flags} parameter is a bitmask that controls the operations that
-can be performed on the output buffer. The default is to allow output buffers
-to be cleaned, flushed and removed, which can be set explicitly via
-PHP_OUTPUT_HANDLER_CLEANABLE | PHP_OUTPUT_HANDLER_FLUSHABLE |
-PHP_OUTPUT_HANDLER_REMOVABLE, or PHP_OUTPUT_HANDLER_STDFLAGS as shorthand.
+        In PHP 4.0.4, |ob_gzhandler| was introduced to facilitate sending
+        gz-encoded data to web browsers that support compressed web pages. |
+        ob_gzhandler| determines what type of content encoding the browser will
+        accept and will return its output accordingly.
 
-Each flag controls access to a set of functions, as described below: Constant
-Functions PHP_OUTPUT_HANDLER_CLEANABLE |ob_clean|, |ob_end_clean|, and
-|ob_get_clean|. PHP_OUTPUT_HANDLER_FLUSHABLE |ob_end_flush|, |ob_flush|, and
-|ob_get_flush|. PHP_OUTPUT_HANDLER_REMOVABLE |ob_end_clean|, |ob_end_flush|,
-and |ob_get_flush|.
+{chunk_size}
 
-Returns TRUE on success or &false; on failure.
+    If the optional parameter {chunk_size} is passed, the buffer will be
+    flushed after any output call which causes the buffer's length to equal or
+    exceed {chunk_size}. The default value 0 means that the output function
+    will only be called when the output buffer is closed.
 
-Version Description 5.4.0 The third parameter of |ob_start| changed from a
-boolean parameter called {erase} (which, if set to FALSE, would prevent the
-output buffer from being deleted until the script finished executing) to an
-integer parameter called {flags}. Unfortunately, this results in an API
-compatibility break for code written prior to PHP 5.4.0 that uses the third
-parameter. See the flags example for an example of how to handle this with
-code that needs to be compatible with both. 5.4.0 A chunk size of 1 now
-results in chunks of 1 byte being sent to the output buffer. 4.3.2 This
-function was changed to return FALSE in case the passed {output_callback} can
-not be executed. 4.2.0 Added the {erase} parameter.
+    Prior to PHP 5.4.0, the value 1 was a special case value that set the chunk
+    size to 4096 bytes.
 
-User defined callback function example
+{flags}
+
+    The {flags} parameter is a bitmask that controls the operations that can be
+    performed on the output buffer. The default is to allow output buffers to
+    be cleaned, flushed and removed, which can be set explicitly via
+    PHP_OUTPUT_HANDLER_CLEANABLE | PHP_OUTPUT_HANDLER_FLUSHABLE |
+    PHP_OUTPUT_HANDLER_REMOVABLE, or PHP_OUTPUT_HANDLER_STDFLAGS as shorthand.
+
+    Each flag controls access to a set of functions, as described below:
+
+              Constant                             Functions
+    PHP_OUTPUT_HANDLER_CLEANABLE |ob_clean|, |ob_end_clean|, and |ob_get_clean|
+                                 .
+    PHP_OUTPUT_HANDLER_FLUSHABLE |ob_end_flush|, |ob_flush|, and |ob_get_flush|
+                                 .
+    PHP_OUTPUT_HANDLER_REMOVABLE |ob_end_clean|, |ob_end_flush|, and |
+                                 ob_get_flush|.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*Changelog*
+
+Version                               Description
+        The third parameter of ob_start() changed from a boolean parameter
+        called {erase} (which, if set to FALSE, would prevent the output buffer
+        from being deleted until the script finished executing) to an integer
+5.4.0   parameter called {flags}. Unfortunately, this results in an API
+        compatibility break for code written prior to PHP 5.4.0 that uses the
+        third parameter. See the flags example for an example of how to handle
+        this with code that needs to be compatible with both.
+5.4.0   A chunk size of 1 now results in chunks of 1 byte being sent to the
+        output buffer.
+4.3.2   This function was changed to return FALSE in case the passed
+        {output_callback} can not be executed.
+4.2.0   Added the {erase} parameter.
+
+===============================================================================
+*Examples*
+
+Example #1 User defined callback function example
 
 <?php >
-  function callback($buffer)
-  {
-    // replace all the apples with oranges
-    return (str_replace("apples", "oranges", $buffer));
-  }
-  
-  ob_start("callback");
-?>
-  <html>
-  <body>
-  <p>It's like comparing apples to oranges.</p>
-  </body>
-  </html>
+
+    function callback($buffer)
+    {
+      // replace all the apples with oranges
+      return (str_replace("apples", "oranges", $buffer));
+    }
+
+    ob_start("callback");
+
+<?>
+<html>
+<body>
+<p>It's like comparing apples to oranges.</p>
+</body>
+</html>
 <?php >
-  ob_end_flush();
-?>
+
+    ob_end_flush();
+
+<?>
 
 The above example will output:
 
-  <html>
-  <body>
-  <p>It's like comparing oranges to oranges.</p>
-  </body>
-  </html>
+<html>
+<body>
+<p>It's like comparing oranges to oranges.</p>
+</body>
+</html>
 
-
-
-Creating an uneraseable output buffer in a way compatible with both PHP 5.3
-and 5.4
+Example #2 Creating an uneraseable output buffer in a way compatible with both
+PHP 5.3 and 5.4
 
 <?php >
-  if (version_compare(PHP_VERSION, '5.4.0', '>=')) {
-    ob_start(null, 0, PHP_OUTPUT_HANDLER_STDFLAGS ^
-      PHP_OUTPUT_HANDLER_REMOVABLE);
-  } else {
-    ob_start(null, 0, false);
-  }
-?>
 
+    if (version_compare(PHP_VERSION, '5.4.0', '>=')) {
+      ob_start(null, 0, PHP_OUTPUT_HANDLER_STDFLAGS ^
+        PHP_OUTPUT_HANDLER_REMOVABLE);
+    } else {
+      ob_start(null, 0, false);
+    }
 
+<?>
 
+===============================================================================
+*See* *Also*
 
+  * |ob_get_contents| - Return the contents of the output buffer
+  * |ob_end_clean| - Clean (erase) the output buffer and turn off output
+    buffering
+  * |ob_end_flush| - Flush (send) the output buffer and turn off output
+    buffering
+  * |ob_implicit_flush| - Turn implicit flush on/off
+  * |ob_gzhandler| - ob_start callback function to gzip output buffer
+  * |ob_iconv_handler| - Convert character encoding as output buffer handler
+  * |mb_output_handler| - Callback function converts character encoding in
+    output buffer
+  * |ob_tidyhandler| - ob_start callback function to repair the buffer
 
-|ob_get_contents| |ob_end_clean| |ob_end_flush| |ob_implicit_flush|
-|ob_gzhandler| |ob_iconv_handler| |mb_output_handler| |ob_tidyhandler|
 
 vim:ft=help:

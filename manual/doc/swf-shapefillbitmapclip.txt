@@ -1,13 +1,32 @@
-swf_shapefillbitmapclip -- Set current fill mode to clipped bitmap
+swf_shapefillbitmapclip
 
-  void swf_shapefillbitmapclip(int bitmapid)~
+(PHP 4)
+
+swf_shapefillbitmapclip — Set current fill mode to clipped bitmap
+
+===============================================================================
+*Description*
+
+    void swf_shapefillbitmapclip ( int $bitmapid )~
 
 Sets the fill to bitmap clipped, empty spaces will be filled by the bitmap.
 
-{bitmapid} The bitmap id.
+===============================================================================
+*Parameters*
+
+{bitmapid}
+
+    The bitmap id.
+
+===============================================================================
+*Return* *Values*
 
 No value is returned.
 
-|swf_shapefillbitmaptile|
+===============================================================================
+*See* *Also*
+
+  * |swf_shapefillbitmaptile| - Set current fill mode to tiled bitmap
+
 
 vim:ft=help:

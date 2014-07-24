@@ -1,23 +1,39 @@
-realpath_cache_size -- Get realpath cache size
+realpath_cache_size
 
-  int realpath_cache_size()~
+(PHP 5 >= 5.3.2)
+
+realpath_cache_size — Get realpath cache size
+
+===============================================================================
+*Description*
+
+    int realpath_cache_size ( void )~
 
 Get the amount of memory used by the realpath cache.
 
+===============================================================================
+*Return* *Values*
+
 Returns how much memory realpath cache is using.
 
-|realpath_cache_size| example
+===============================================================================
+*Examples*
+
+Example #1 realpath_cache_size() example
 
 <?php >
-  var_dump(realpath_cache_size());
-?>
+    var_dump(realpath_cache_size());
+<?>
 
 The above example will output something similar to:
 
-  int(412)
+int(412)
 
+===============================================================================
+*See* *Also*
 
+  * |realpath_cache_get| - Get realpath cache entries
+  * The realpath_cache_size configuration option
 
-|realpath_cache_get| The realpath_cache_size configuration option
 
 vim:ft=help:

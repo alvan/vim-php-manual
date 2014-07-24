@@ -1,63 +1,140 @@
-html_entity_decode -- Convert all HTML entities to their applicable characters
+html_entity_decode
 
-  string html_entity_decode(string string [, int flags = ENT_COMPAT | ENT_HTML401 [, string encoding = "UTF-8"]])~
+(PHP 4 >= 4.3.0, PHP 5)
 
-|html_entity_decode| is the opposite of |htmlentities| in that it converts all
+html_entity_decode — Convert all HTML entities to their applicable characters
+
+===============================================================================
+*Description*
+
+    string html_entity_decode ( string $string [, int $flags = ENT_COMPAT |~
+    ENT_HTML401 [, string $encoding = "UTF-8" ]] )~
+
+html_entity_decode() is the opposite of |htmlentities| in that it converts all
 HTML entities in the {string} to their applicable characters.
 
 More precisely, this function decodes all the entities (including all numeric
 entities) that a) are necessarily valid for the chosen document type — i.e.,
 for XML, this function does not decode named entities that might be defined in
-some DTD — and b) whose character or characters are in the coded character
-set associated with the chosen encoding and are permitted in the chosen
-document type. All other entities are left as is.
+some DTD — and b) whose character or characters are in the coded character set
+associated with the chosen encoding and are permitted in the chosen document
+type. All other entities are left as is.
 
-{string} The input string.
+===============================================================================
+*Parameters*
 
-{flags} A bitmask of one or more of the following flags, which specify how to
-handle quotes and which document type to use. The default is ENT_COMPAT |
-ENT_HTML401. Available {flags} constants Constant Name Description ENT_COMPAT
-Will convert double-quotes and leave single-quotes alone. ENT_QUOTES Will
-convert both double and single quotes. ENT_NOQUOTES Will leave both double and
-single quotes unconverted. ENT_HTML401 Handle code as HTML 4.01. ENT_XML1
-Handle code as XML 1. ENT_XHTML Handle code as XHTML. ENT_HTML5 Handle code as
-HTML 5.
+{string}
 
-{encoding} Encoding to use. If omitted, the default value for this argument is
-ISO-8859-1 in versions of PHP prior to 5.4.0, and UTF-8 from PHP 5.4.0
-onwards.
+    The input string.
 
-&reference.strings.charsets;
+{flags}
+
+    A bitmask of one or more of the following flags, which specify how to
+    handle quotes and which document type to use. The default is ENT_COMPAT |
+    ENT_HTML401.
+
+                        Available {flags} constants
+    Constant Name                        Description
+    ENT_COMPAT    Will convert double-quotes and leave single-quotes alone.
+    ENT_QUOTES    Will convert both double and single quotes.
+    ENT_NOQUOTES  Will leave both double and single quotes unconverted.
+    ENT_HTML401   Handle code as HTML 4.01.
+    ENT_XML1      Handle code as XML 1.
+    ENT_XHTML     Handle code as XHTML.
+    ENT_HTML5     Handle code as HTML 5.
+
+{encoding}
+
+    Encoding to use. If omitted, the default value for this argument is
+    ISO-8859-1 in versions of PHP prior to 5.4.0, and UTF-8 from PHP 5.4.0
+    onwards.
+
+    The following character sets are supported:
+
+                              Supported charsets
+      Charset      Aliases                       Description
+    ISO-8859-1  ISO8859-1     Western European, Latin-1.
+    ISO-8859-5  ISO8859-5     Little used cyrillic charset (Latin/Cyrillic).
+                              Western European, Latin-9. Adds the Euro sign,
+    ISO-8859-15 ISO8859-15    French and Finnish letters missing in Latin-1
+                              (ISO-8859-1).
+    UTF-8                     ASCII compatible multi-byte 8-bit Unicode.
+    cp866       ibm866, 866   DOS-specific Cyrillic charset.
+                Windows-1251,
+    cp1251      win-1251,     Windows-specific Cyrillic charset.
+                1251
+    cp1252      Windows-1252, Windows specific charset for Western European.
+                1252
+    KOI8-R      koi8-ru,      Russian.
+                koi8r
+    BIG5        950           Traditional Chinese, mainly used in Taiwan.
+    GB2312      936           Simplified Chinese, national standard character
+                              set.
+    BIG5-HKSCS                Big5 with Hong Kong extensions, Traditional
+                              Chinese.
+                SJIS,
+    Shift_JIS   SJIS-win,     Japanese
+                cp932, 932
+    EUC-JP      EUCJP,        Japanese
+                eucJP-win
+    MacRoman                  Charset that was used by Mac OS.
+                              An empty string activates detection from script
+    ''                        encoding (Zend multibyte), default_charset and
+                              current locale (see |nl_langinfo| and |setlocale|
+                              ), in this order. Not recommended.
+
+        Note: Any other character sets are not recognized. The default encoding
+        will be used instead and a warning will be emitted.
+
+===============================================================================
+*Return* *Values*
 
 Returns the decoded string.
 
-Version Description 5.4.0 Default encoding changed from ISO-8859-1 to UTF-8.
-5.4.0 The constants ENT_HTML401, ENT_XML1, ENT_XHTML and ENT_HTML5 were added.
-5.0.0 Support for multi-byte encodings was added.
+===============================================================================
+*Changelog*
 
-Decoding HTML entities
+Version                               Description
+5.4.0   Default encoding changed from ISO-8859-1 to UTF-8.
+5.4.0   The constants ENT_HTML401, ENT_XML1, ENT_XHTML and ENT_HTML5 were
+        added.
+5.0.0   Support for multi-byte encodings was added.
+
+===============================================================================
+*Examples*
+
+Example #1 Decoding HTML entities
 
 <?php >
-  $orig = "I'll \"walk\" the <b>dog</b> now";
-  
-  $a = htmlentities($orig);
-  
-  $b = html_entity_decode($a);
-  
-  echo $a; // I'll "walk" the <b>dog</b> now
-  
-  echo $b; // I'll "walk" the <b>dog</b> now
-?>
+    $orig = "I'll \"walk\" the <b>dog</b> now";
 
+    $a = htmlentities($orig);
 
+    $b = html_entity_decode($a);
 
+    echo $a; // I'll &quot;walk&quot; the &lt;b&gt;dog&lt;/b&gt; now
 
+    echo $b; // I'll "walk" the <b>dog</b> now
+<?>
 
-You might wonder why trim(html_entity_decode('&nbsp;')); doesn't reduce the
-string to an empty string, that's because the '&nbsp;' entity is not ASCII
-code 32 (which is stripped by |trim|) but ASCII code 160 (0xa0) in the default
-ISO 8859-1 encoding.
+===============================================================================
+*Notes*
 
-|htmlentities| |htmlspecialchars| |get_html_translation_table| |urldecode|
+    Note:
+
+    You might wonder why trim(html_entity_decode('&nbsp;')); doesn't reduce the
+    string to an empty string, that's because the '&nbsp;' entity is not ASCII
+    code 32 (which is stripped by |trim|) but ASCII code 160 (0xa0) in the
+    default ISO 8859-1 encoding.
+
+===============================================================================
+*See* *Also*
+
+  * |htmlentities| - Convert all applicable characters to HTML entities
+  * |htmlspecialchars| - Convert special characters to HTML entities
+  * |get_html_translation_table| - Returns the translation table used by
+    htmlspecialchars and htmlentities
+  * |urldecode| - Decodes URL-encoded string
+
 
 vim:ft=help:

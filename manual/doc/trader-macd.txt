@@ -1,17 +1,38 @@
-trader_macd -- Moving Average Convergence/Divergence
+trader_macd
 
-  array trader_macd(array real [, integer fastPeriod [, integer slowPeriod [, integer signalPeriod]]])~
+(PECL trader >= 0.2.0)
 
+trader_macd — Moving Average Convergence/Divergence
 
+===============================================================================
+*Description*
 
-Array of real values.
+    array trader_macd ( array $real [, integer $fastPeriod [, integer~
+    $slowPeriod [, integer $signalPeriod ]]] )~
 
-Number of period for the fast MA. Valid range from 2 to 100000.
+===============================================================================
+*Parameters*
 
-Number of period for the slow MA. Valid range from 2 to 100000.
+{real}
 
-Smoothing for the signal line (nb of period). Valid range from 1 to 100000.
+    Array of real values.
+
+{fastPeriod}
+
+    Number of period for the fast MA. Valid range from 2 to 100000.
+
+{slowPeriod}
+
+    Number of period for the slow MA. Valid range from 2 to 100000.
+
+{signalPeriod}
+
+    Smoothing for the signal line (nb of period). Valid range from 1 to 100000.
+
+===============================================================================
+*Return* *Values*
 
 Returns an array with calculated data or false on failure.
+
 
 vim:ft=help:

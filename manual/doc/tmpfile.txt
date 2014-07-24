@@ -1,36 +1,52 @@
-tmpfile -- Creates a temporary file
+tmpfile
 
-  resource tmpfile()~
+(PHP 4, PHP 5)
 
-Creates a temporary file with a unique name in read-write (w+) mode and
-returns a file handle .
+tmpfile — Creates a temporary file
 
-The file is automatically removed when closed (for example, by calling
-|fclose|, or when there are no remaining references to the file handle
-returned by |tmpfile|), or when the script ends.
+===============================================================================
+*Description*
+
+    resource tmpfile ( void )~
+
+Creates a temporary file with a unique name in read-write (w+) mode and returns
+a file handle .
+
+The file is automatically removed when closed (for example, by calling |fclose|
+, or when there are no remaining references to the file handle returned by 
+tmpfile()), or when the script ends.
 
 For details, consult your system documentation on the tmpfile(3) function, as
 well as the stdio.h header file.
 
-Returns a file handle, similar to the one returned by |fopen|, for the new
-file or FALSE on failure.
+===============================================================================
+*Return* *Values*
 
-|tmpfile| example
+Returns a file handle, similar to the one returned by |fopen|, for the new file
+or FALSE on failure.
+
+===============================================================================
+*Examples*
+
+Example #1 tmpfile() example
 
 <?php >
-  $temp = tmpfile();
-  fwrite($temp, "writing to tempfile");
-  fseek($temp, 0);
-  echo fread($temp, 1024);
-  fclose($temp); // this removes the file
-?>
+    $temp = tmpfile();
+    fwrite($temp, "writing to tempfile");
+    fseek($temp, 0);
+    echo fread($temp, 1024);
+    fclose($temp); // this removes the file
+<?>
 
 The above example will output:
 
-  writing to tempfile
+writing to tempfile
 
+===============================================================================
+*See* *Also*
 
+  * |tempnam| - Create file with unique file name
+  * |sys_get_temp_dir| - Returns directory path used for temporary files
 
-|tempnam| |sys_get_temp_dir|
 
 vim:ft=help:

@@ -1,13 +1,32 @@
-stream_supports_lock -- Tells whether the stream supports locking.
+stream_supports_lock
 
-  bool stream_supports_lock(resource stream)~
+(PHP 5 >= 5.3.0)
+
+stream_supports_lock — Tells whether the stream supports locking.
+
+===============================================================================
+*Description*
+
+    bool stream_supports_lock ( resource $stream )~
 
 Tells whether the stream supports locking through |flock|.
 
-{stream} The stream to check.
+===============================================================================
+*Parameters*
 
-Returns TRUE on success or &false; on failure.
+{stream}
 
-|flock|
+    The stream to check.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*See* *Also*
+
+  * |flock| - Portable advisory file locking
+
 
 vim:ft=help:

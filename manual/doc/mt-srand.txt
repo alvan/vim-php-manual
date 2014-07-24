@@ -1,41 +1,65 @@
-mt_srand -- Seed the better random number generator
+mt_srand
 
-  void mt_srand([int seed])~
+(PHP 4, PHP 5)
+
+mt_srand — Seed the better random number generator
+
+===============================================================================
+*Description*
+
+    void mt_srand ([ int $seed ] )~
 
 Seeds the random number generator with {seed} or with a random value if no
 {seed} is given.
 
-As of PHP 4.2.0, there is no need to seed the random number generator with
-|srand| or |mt_srand| as this is now done automatically.
+    Note: As of PHP 4.2.0, there is no need to seed the random number generator
+    with |srand| or mt_srand() as this is now done automatically.
 
-{seed} An optional seed value
+===============================================================================
+*Parameters*
+
+{seed}
+
+    An optional seed value
+
+===============================================================================
+*Return* *Values*
 
 No value is returned.
 
-Version Description 4.2.0 The {seed} becomes optional and defaults to a random
-value if omitted. 5.2.1 The Mersenne Twister implementation in PHP now uses a
-new seeding algorithm by Richard Wagner. Identical seeds no longer produce the
-same sequence of values they did in previous versions. This behavior is not
-expected to change again, but it is considered unsafe to rely upon it
-nonetheless.
+===============================================================================
+*Changelog*
 
-|mt_srand| example
+Version                               Description
+4.2.0   The {seed} becomes optional and defaults to a random value if omitted.
+        The Mersenne Twister implementation in PHP now uses a new seeding
+        algorithm by Richard Wagner. Identical seeds no longer produce the same
+5.2.1   sequence of values they did in previous versions. This behavior is not
+        expected to change again, but it is considered unsafe to rely upon it
+        nonetheless.
+
+===============================================================================
+*Examples*
+
+Example #1 mt_srand() example
 
 <?php >
-  // seed with microseconds
-  function make_seed()
-  {
-    list($usec, $sec) = explode(' ', microtime());
-    return (float) $sec + ((float) $usec * 100000);
-  }
-  mt_srand(make_seed());
-  $randval = mt_rand();
-?>
+    // seed with microseconds
+    function make_seed()
+    {
+      list($usec, $sec) = explode(' ', microtime());
+      return (float) $sec + ((float) $usec * 100000);
+    }
+    mt_srand(make_seed());
+    $randval = mt_rand();
+<?>
 
+===============================================================================
+*See* *Also*
 
+  * |mt_rand| - Generate a better random value
+  * |mt_getrandmax| - Show largest possible random value
+  * |srand| - Seed the random number generator
 
-
-
-|mt_rand| |mt_getrandmax| |srand|
 
 vim:ft=help:

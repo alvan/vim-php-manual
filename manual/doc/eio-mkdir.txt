@@ -1,58 +1,97 @@
-eio_mkdir -- Create directory
+eio_mkdir
 
-  resource eio_mkdir(string path, int mode [, int pri = EIO_PRI_DEFAULT [, callable callback = NULL [, mixed data = NULL]]])~
+(PECL eio >= 0.0.1dev)
 
-|eio_mkdir| creates directory with specified access {mode}.
+eio_mkdir — Create directory
 
-Path for the new directory.
+===============================================================================
+*Description*
 
-Access mode, e.g. 0755
+    resource eio_mkdir ( string $path , int $mode [, int $pri =~
+    EIO_PRI_DEFAULT [, callable $callback = NULL [, mixed $data = NULL ]]] )~
 
-The request priority: EIO_PRI_DEFAULT, EIO_PRI_MIN, EIO_PRI_MAX, or NULL. If
-NULL passed, {pri} internally is set to EIO_PRI_DEFAULT.
+eio_mkdir() creates directory with specified access {mode}.
 
-{callback} function is called when the request is done. It should match the
-following prototype:
+===============================================================================
+*Parameters*
 
-  void callback(mixed $data, int $result[, resource $req]);
+{path}
 
-{data} is custom data passed to the request.
+    Path for the new directory.
 
-{result} request-specific result value; basically, the value returned by
-corresponding system call.
+{mode}
 
-{req} is optional request resource which can be used with functions like
-|eio_get_last_error|
+    Access mode, e.g. 0755
 
-Arbitrary variable passed to {callback}.
+{pri}
 
-|eio_mkdir| returns request resource on success or FALSE on error.
+    The request priority: EIO_PRI_DEFAULT, EIO_PRI_MIN, EIO_PRI_MAX, or NULL.
+    If NULL passed, {pri} internally is set to EIO_PRI_DEFAULT.
 
-|eio_mkdir| example
+{callback}
+
+    {callback} function is called when the request is done. It should match the
+    following prototype:
+    void callback(mixed $data, int $result[, resource $req]);
+
+    {data}
+
+        is custom data passed to the request.
+
+    {result}
+
+        request-specific result value; basically, the value returned by
+        corresponding system call.
+
+    {req}
+
+        is optional request resource which can be used with functions like |
+        eio_get_last_error|
+
+{data}
+
+    Arbitrary variable passed to {callback}.
+
+===============================================================================
+*Return* *Values*
+
+eio_mkdir() returns request resource on success or FALSE on error.
+
+===============================================================================
+*Examples*
+
+Example #1 eio_mkdir() example
 
 <?php >
-  $temp_dirname = "eio-temp-dir";
-  
-  /* Is called when eio_mkdir() finishes */
-  function my_mkdir_callback($data, $result) {
-   if ($result == 0 &amp;& is_dir($temp_dirname)
-     && !is_readable($temp_dirname)
-     && is_writable($temp_dirname)) {
-    echo "eio_mkdir_ok";
-   }
-  
-   // Remove directory
-      if (file_exists($data))
-          rmdir($temp_dirname);
-  }
-  
-  // Create directory with access mode 0300
-  eio_mkdir($temp_dirname, 0300, EIO_PRI_DEFAULT, "my_mkdir_callback", $temp_dirname);
-  eio_event_loop();
-?>
+    $temp_dirname = "eio-temp-dir";
+
+    /* Is called when eio_mkdir() finishes */
+    function my_mkdir_callback($data, $result) {
+     if ($result == 0 && is_dir($temp_dirname)
+       && !is_readable($temp_dirname)
+       && is_writable($temp_dirname)) {
+      echo "eio_mkdir_ok";
+     }
+
+     // Remove directory
+        if (file_exists($data))
+            rmdir($temp_dirname);
+    }
+
+    // Create directory with access mode 0300
+    eio_mkdir($temp_dirname, 0300, EIO_PRI_DEFAULT, "my_mkdir_callback", 
+    $temp_dirname);
+    eio_event_loop();
+<?>
 
 The above example will output something similar to:
 
-  eio_mkdir_ok
+eio_mkdir_ok
+
+===============================================================================
+*See* *Also*
+
+  * eio_rmdir
+
 
 vim:ft=help:

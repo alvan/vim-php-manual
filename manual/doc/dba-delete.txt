@@ -1,15 +1,39 @@
-dba_delete -- Delete DBA entry specified by key
+dba_delete
 
-  bool dba_delete(string key, resource handle)~
+(PHP 4, PHP 5)
 
-|dba_delete| deletes the specified entry from the database.
+dba_delete — Delete DBA entry specified by key
 
-{key} The key of the entry which is deleted.
+===============================================================================
+*Description*
 
-{handle} The database handler, returned by |dba_open| or |dba_popen|.
+    bool dba_delete ( string $key , resource $handle )~
 
-Returns TRUE on success or &false; on failure.
+dba_delete() deletes the specified entry from the database.
 
-|dba_exists| |dba_fetch| |dba_insert| |dba_replace|
+===============================================================================
+*Parameters*
+
+{key}
+
+    The key of the entry which is deleted.
+
+{handle}
+
+    The database handler, returned by |dba_open| or |dba_popen|.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*See* *Also*
+
+  * |dba_exists| - Check whether key exists
+  * |dba_fetch| - Fetch data specified by key
+  * |dba_insert| - Insert entry
+  * |dba_replace| - Replace or insert entry
+
 
 vim:ft=help:

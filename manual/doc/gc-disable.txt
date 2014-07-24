@@ -1,13 +1,30 @@
-gc_disable -- Deactivates the circular reference collector
+gc_disable
 
-  void gc_disable()~
+(PHP 5 >= 5.3.0)
+
+gc_disable — Deactivates the circular reference collector
+
+===============================================================================
+*Description*
+
+    void gc_disable ( void )~
 
 Deactivates the circular reference collector, setting zend.enable_gc to 0.
 
+===============================================================================
+*Parameters*
+
 This function has no parameters.
+
+===============================================================================
+*Return* *Values*
 
 No value is returned.
 
-Garbage Collection
+===============================================================================
+*See* *Also*
+
+  * Garbage Collection
+
 
 vim:ft=help:

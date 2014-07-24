@@ -1,33 +1,58 @@
-bzcompress -- Compress a string into bzip2 encoded data
+bzcompress
 
-  mixed bzcompress(string source [, int blocksize = 4 [, int workfactor = 0]])~
+(PHP 4 >= 4.0.4, PHP 5)
 
-|bzcompress| compresses the given string and returns it as bzip2 encoded data.
+bzcompress — Compress a string into bzip2 encoded data
 
-{source} The string to compress.
+===============================================================================
+*Description*
 
-{blocksize} Specifies the blocksize used during compression and should be a
-number from 1 to 9 with 9 giving the best compression, but using more
-resources to do so.
+    mixed bzcompress ( string $source [, int $blocksize = 4 [, int $workfactor~
+    = 0 ]] )~
 
-{workfactor} Controls how the compression phase behaves when presented with
-worst case, highly repetitive, input data. The value can be between 0 and 250
-with 0 being a special case.
+bzcompress() compresses the given string and returns it as bzip2 encoded data.
 
-Regardless of the {workfactor}, the generated output is the same.
+===============================================================================
+*Parameters*
+
+{source}
+
+    The string to compress.
+
+{blocksize}
+
+    Specifies the blocksize used during compression and should be a number from
+    1 to 9 with 9 giving the best compression, but using more resources to do
+    so.
+
+{workfactor}
+
+    Controls how the compression phase behaves when presented with worst case,
+    highly repetitive, input data. The value can be between 0 and 250 with 0
+    being a special case.
+
+    Regardless of the {workfactor}, the generated output is the same.
+
+===============================================================================
+*Return* *Values*
 
 The compressed string, or an error number if an error occurred.
 
-Compressing data
+===============================================================================
+*Examples*
+
+Example #1 Compressing data
 
 <?php >
-  $str = "sample data";
-  $bzstr = bzcompress($str, 9);
-  echo $bzstr;
-?>
+    $str = "sample data";
+    $bzstr = bzcompress($str, 9);
+    echo $bzstr;
+<?>
 
+===============================================================================
+*See* *Also*
 
+  * |bzdecompress| - Decompresses bzip2 encoded data
 
-|bzdecompress|
 
 vim:ft=help:

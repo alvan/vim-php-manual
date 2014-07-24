@@ -1,12 +1,26 @@
-ibase_errcode -- Return an error code
+ibase_errcode
 
-  int ibase_errcode()~
+(PHP 5)
+
+ibase_errcode — Return an error code
+
+===============================================================================
+*Description*
+
+    int ibase_errcode ( void )~
 
 Returns the error code that resulted from the most recent InterBase function
 call.
 
+===============================================================================
+*Return* *Values*
+
 Returns the error code as an integer, or FALSE if no error occurred.
 
-|ibase_errmsg|
+===============================================================================
+*See* *Also*
+
+  * |ibase_errmsg| - Return error messages
+
 
 vim:ft=help:

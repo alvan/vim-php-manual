@@ -1,56 +1,82 @@
-is_numeric -- Finds whether a variable is a number or a numeric string
+is_numeric
 
-  bool is_numeric(mixed var)~
+(PHP 4, PHP 5)
+
+is_numeric — Finds whether a variable is a number or a numeric string
+
+===============================================================================
+*Description*
+
+    bool is_numeric ( mixed $var )~
 
 Finds whether the given variable is numeric. Numeric strings consist of
 optional sign, any number of digits, optional decimal part and optional
 exponential part. Thus +0123.45e6 is a valid numeric value. Hexadecimal (e.g.
-0xf4c3b00c), Binary (e.g. 0b10100111001), Octal (e.g. 0777) notation is
-allowed too but only without sign, decimal and exponential part.
+0xf4c3b00c), Binary (e.g. 0b10100111001), Octal (e.g. 0777) notation is allowed
+too but only without sign, decimal and exponential part.
 
-{var} The variable being evaluated.
+===============================================================================
+*Parameters*
+
+{var}
+
+    The variable being evaluated.
+
+===============================================================================
+*Return* *Values*
 
 Returns TRUE if {var} is a number or a numeric string, FALSE otherwise.
 
-|is_numeric| examples
+===============================================================================
+*Examples*
+
+Example #1 is_numeric() examples
 
 <?php >
-  $tests = array(
-      "42",
-      1337,
-      0x539,
-      02471,
-      0b10100111001,
-      1337e0,
-      "not numeric",
-      array(),
-      9.1
-  );
-  
-  foreach ($tests as $element) {
-      if (is_numeric($element)) {
-          echo "'{$element}' is numeric", PHP_EOL;
-      } else {
-          echo "'{$element}' is NOT numeric", PHP_EOL;
-      }
-  }
-?>
+    $tests = array(
+        "42",
+        1337,
+        0x539,
+        02471,
+        0b10100111001,
+        1337e0,
+        "not numeric",
+        array(),
+        9.1
+    );
+
+    foreach ($tests as $element) {
+        if (is_numeric($element)) {
+            echo "'{$element}' is numeric", PHP_EOL;
+        } else {
+            echo "'{$element}' is NOT numeric", PHP_EOL;
+        }
+    }
+<?>
 
 The above example will output:
 
-  '42' is numeric
-  '1337' is numeric
-  '1337' is numeric
-  '1337' is numeric
-  '1337' is numeric
-  '1337' is numeric
-  'not numeric' is NOT numeric
-  'Array' is NOT numeric
-  '9.1' is numeric
+'42' is numeric
+'1337' is numeric
+'1337' is numeric
+'1337' is numeric
+'1337' is numeric
+'1337' is numeric
+'not numeric' is NOT numeric
+'Array' is NOT numeric
+'9.1' is numeric
 
+===============================================================================
+*See* *Also*
 
+  * |ctype_digit| - Check for numeric character(s)
+  * |is_bool| - Finds out whether a variable is a boolean
+  * |is_null| - Finds whether a variable is NULL
+  * |is_float| - Finds whether the type of a variable is float
+  * |is_int| - Find whether the type of a variable is integer
+  * |is_string| - Find whether the type of a variable is string
+  * |is_object| - Finds whether a variable is an object
+  * |is_array| - Finds whether a variable is an array
 
-|ctype_digit| |is_bool| |is_null| |is_float| |is_int| |is_string| |is_object|
-|is_array|
 
 vim:ft=help:

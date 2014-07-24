@@ -1,26 +1,47 @@
-id3_get_genre_id -- Get the id for a genre
+id3_get_genre_id
 
-  int id3_get_genre_id(string genre)~
+(PECL id3 >= 0.1)
 
-|id3_get_genre_id| returns the id for a genre.
+id3_get_genre_id — Get the id for a genre
 
-{genre} Genre name as string.
+===============================================================================
+*Description*
+
+    int id3_get_genre_id ( string $genre )~
+
+id3_get_genre_id() returns the id for a genre.
+
+===============================================================================
+*Parameters*
+
+{genre}
+
+    Genre name as string.
+
+===============================================================================
+*Return* *Values*
 
 The genre id or FALSE on errors.
 
-|id3_get_genre_id| example
+===============================================================================
+*Examples*
+
+Example #1 id3_get_genre_id() example
 
 <?php >
-  $id = id3_get_genre_id("Alternative");
-  echo $id;
-?>
+    $id = id3_get_genre_id("Alternative");
+    echo $id;
+<?>
 
 The above example will output:
 
-  20
+20
 
+===============================================================================
+*See* *Also*
 
+  * |id3_get_genre_name| - Get the name for a genre id
+  * |id3_get_genre_list| - Get all possible genre values
 
-|id3_get_genre_name| |id3_get_genre_list|
 
 vim:ft=help:

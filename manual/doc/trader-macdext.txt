@@ -1,26 +1,54 @@
-trader_macdext -- MACD with controllable MA type
+trader_macdext
 
-  array trader_macdext(array real [, integer fastPeriod [, integer fastMAType [, integer slowPeriod [, integer slowMAType [, integer signalPeriod [, integer signalMAType]]]]]])~
+(PECL trader >= 0.2.0)
 
+trader_macdext — MACD with controllable MA type
 
+===============================================================================
+*Description*
 
-Array of real values.
+    array trader_macdext ( array $real [, integer $fastPeriod [, integer~
+    $fastMAType [, integer $slowPeriod [, integer $slowMAType [, integer~
+    $signalPeriod [, integer $signalMAType ]]]]]] )~
 
-Number of period for the fast MA. Valid range from 2 to 100000.
+===============================================================================
+*Parameters*
 
-Type of Moving Average for fast MA. TRADER_MA_TYPE_* series of constants
-should be used.
+{real}
 
-Number of period for the slow MA. Valid range from 2 to 100000.
+    Array of real values.
 
-Type of Moving Average for slow MA. TRADER_MA_TYPE_* series of constants
-should be used.
+{fastPeriod}
 
-Smoothing for the signal line (nb of period). Valid range from 1 to 100000.
+    Number of period for the fast MA. Valid range from 2 to 100000.
 
-Type of Moving Average for signal line. TRADER_MA_TYPE_* series of constants
-should be used.
+{fastMAType}
+
+    Type of Moving Average for fast MA. TRADER_MA_TYPE_* series of constants
+    should be used.
+
+{slowPeriod}
+
+    Number of period for the slow MA. Valid range from 2 to 100000.
+
+{slowMAType}
+
+    Type of Moving Average for slow MA. TRADER_MA_TYPE_* series of constants
+    should be used.
+
+{signalPeriod}
+
+    Smoothing for the signal line (nb of period). Valid range from 1 to 100000.
+
+{signalMAType}
+
+    Type of Moving Average for signal line. TRADER_MA_TYPE_* series of
+    constants should be used.
+
+===============================================================================
+*Return* *Values*
 
 Returns an array with calculated data or false on failure.
+
 
 vim:ft=help:

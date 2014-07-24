@@ -1,15 +1,36 @@
-posix_initgroups -- Calculate the group access list
+posix_initgroups
 
-  bool posix_initgroups(string name, int base_group_id)~
+(PHP 5 >= 5.2.0)
+
+posix_initgroups — Calculate the group access list
+
+===============================================================================
+*Description*
+
+    bool posix_initgroups ( string $name , int $base_group_id )~
 
 Calculates the group access list for the user specified in name.
 
-{name} The user to calculate the list for.
+===============================================================================
+*Parameters*
 
-{base_group_id} Typically the group number from the password file.
+{name}
 
-Returns TRUE on success or &false; on failure.
+    The user to calculate the list for.
 
-The Unix manual page for initgroups(3).
+{base_group_id}
+
+    Typically the group number from the password file.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*See* *Also*
+
+  * The Unix manual page for initgroups(3).
+
 
 vim:ft=help:

@@ -1,10 +1,22 @@
-ibase_maintain_db -- Execute a maintenance command on the database server
+ibase_maintain_db
 
-  bool ibase_maintain_db(resource service_handle, string db, int action [, int argument = 0])~
+(PHP 5)
 
-This function is currently not documented; only its argument list is
-available.
+ibase_maintain_db — Execute a maintenance command on the database server
 
-Returns TRUE on success or &false; on failure.
+===============================================================================
+*Description*
+
+    bool ibase_maintain_db ( resource $service_handle , string $db , int~
+    $action [, int $argument = 0 ] )~
+Warning
+
+This function is currently not documented; only its argument list is available.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
 
 vim:ft=help:

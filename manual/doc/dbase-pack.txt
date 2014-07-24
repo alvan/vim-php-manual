@@ -1,35 +1,54 @@
-dbase_pack -- Packs a database
+dbase_pack
 
-  bool dbase_pack(int dbase_identifier)~
+(PHP 4, PHP 5)
+
+dbase_pack — Packs a database
+
+===============================================================================
+*Description*
+
+    bool dbase_pack ( int $dbase_identifier )~
 
 Packs the specified database by permanently deleting all records marked for
 deletion using |dbase_delete_record|.
 
-{dbase_identifier} The database link identifier, returned by |dbase_open| or
-|dbase_create|.
+===============================================================================
+*Parameters*
 
-Returns TRUE on success or &false; on failure.
+{dbase_identifier}
 
-Emptying a dBase database
+    The database link identifier, returned by |dbase_open| or |dbase_create|.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*Examples*
+
+Example #1 Emptying a dBase database
 
 <?php >
-  // open in read-write mode
-  $db = dbase_open('/tmp/test.dbf', 2);
-  
-  if ($db) {
-    $record_numbers = dbase_numrecords($db);
-    for ($i = 1; $i <= $record_numbers; $i++) {
-        dbase_delete_record($db, $i);
+
+    // open in read-write mode
+    $db = dbase_open('/tmp/test.dbf', 2);
+
+    if ($db) {
+      $record_numbers = dbase_numrecords($db);
+      for ($i = 1; $i <= $record_numbers; $i++) {
+          dbase_delete_record($db, $i);
+      }
+      // expunge the database
+      dbase_pack($db);
     }
-    // expunge the database
-    dbase_pack($db);
-  }
-?>
 
+<?>
 
+===============================================================================
+*See* *Also*
 
+  * |dbase_delete_record| - Deletes a record from a database
 
-
-|dbase_delete_record|
 
 vim:ft=help:

@@ -1,28 +1,59 @@
-eio_nop -- Does nothing, except go through the whole request cycle.
+eio_nop
 
-  resource eio_nop([int pri = EIO_PRI_DEFAULT [, callable callback = NULL [, mixed data = NULL]]])~
+(PECL eio >= 0.0.1dev)
 
-|eio_nop| does nothing, except go through the whole request cycle. Could be
+eio_nop — Does nothing, except go through the whole request cycle.
+
+===============================================================================
+*Description*
+
+    resource eio_nop ([ int $pri = EIO_PRI_DEFAULT [, callable $callback =~
+    NULL [, mixed $data = NULL ]]] )~
+
+eio_nop() does nothing, except go through the whole request cycle. Could be
 useful in debugging.
 
-The request priority: EIO_PRI_DEFAULT, EIO_PRI_MIN, EIO_PRI_MAX, or NULL. If
-NULL passed, {pri} internally is set to EIO_PRI_DEFAULT.
+===============================================================================
+*Parameters*
 
-{callback} function is called when the request is done. It should match the
-following prototype:
+{pri}
 
-  void callback(mixed $data, int $result[, resource $req]);
+    The request priority: EIO_PRI_DEFAULT, EIO_PRI_MIN, EIO_PRI_MAX, or NULL.
+    If NULL passed, {pri} internally is set to EIO_PRI_DEFAULT.
 
-{data} is custom data passed to the request.
+{callback}
 
-{result} request-specific result value; basically, the value returned by
-corresponding system call.
+    {callback} function is called when the request is done. It should match the
+    following prototype:
+    void callback(mixed $data, int $result[, resource $req]);
 
-{req} is optional request resource which can be used with functions like
-|eio_get_last_error|
+    {data}
 
-Arbitrary variable passed to {callback}.
+        is custom data passed to the request.
 
-|eio_nop| returns request resource on success or FALSE on error.
+    {result}
+
+        request-specific result value; basically, the value returned by
+        corresponding system call.
+
+    {req}
+
+        is optional request resource which can be used with functions like |
+        eio_get_last_error|
+
+{data}
+
+    Arbitrary variable passed to {callback}.
+
+===============================================================================
+*Return* *Values*
+
+eio_nop() returns request resource on success or FALSE on error.
+
+===============================================================================
+*See* *Also*
+
+  * eio_busy
+
 
 vim:ft=help:

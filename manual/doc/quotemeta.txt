@@ -1,22 +1,48 @@
-quotemeta -- Quote meta characters
+quotemeta
 
-  string quotemeta(string str)~
+(PHP 4, PHP 5)
+
+quotemeta — Quote meta characters
+
+===============================================================================
+*Description*
+
+    string quotemeta ( string $str )~
 
 Returns a version of str with a backslash character (\) before every character
 that is among these:
+. \ + * ? [ ^ ] ( $ )
 
-  . \ + * ? [ ^ ] ( $ )
+===============================================================================
+*Parameters*
 
+{str}
 
+    The input string.
 
-{str} The input string.
+===============================================================================
+*Return* *Values*
 
 Returns the string with meta characters quoted, or FALSE if an empty string is
 given as {str}.
 
-This function is binary-safe.
+===============================================================================
+*Notes*
 
-|addslashes| |addcslashes| |htmlentities| |htmlspecialchars| |nl2br|
-|stripslashes| |stripcslashes| |ereg| |preg_quote|
+    Note: This function is binary-safe.
+
+===============================================================================
+*See* *Also*
+
+  * |addslashes| - Quote string with slashes
+  * |addcslashes| - Quote string with slashes in a C style
+  * |htmlentities| - Convert all applicable characters to HTML entities
+  * |htmlspecialchars| - Convert special characters to HTML entities
+  * |nl2br| - Inserts HTML line breaks before all newlines in a string
+  * |stripslashes| - Un-quotes a quoted string
+  * |stripcslashes| - Un-quote string quoted with addcslashes
+  * |ereg| - Regular expression match
+  * |preg_quote| - Quote regular expression characters
+
 
 vim:ft=help:

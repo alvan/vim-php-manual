@@ -1,13 +1,31 @@
-fbsql_field_len -- Returns the length of the specified field
+fbsql_field_len
 
-  int fbsql_field_len(resource result [, int field_offset])~
+(PHP 4 >= 4.0.6, PHP 5)
+
+fbsql_field_len — Returns the length of the specified field
+
+===============================================================================
+*Description*
+
+    int fbsql_field_len ( resource $result [, int $field_offset ] )~
 
 Returns the length of the specified field.
 
-{result} A result pointer returned by |fbsql_list_fields|.
+===============================================================================
+*Parameters*
 
-{field_offset} The numerical offset of the field. The field index starts at 0.
+{result}
+
+    A result pointer returned by |fbsql_list_fields|.
+
+{field_offset}
+
+    The numerical offset of the field. The field index starts at 0.
+
+===============================================================================
+*Return* *Values*
 
 Returns the length of the specified field.
+
 
 vim:ft=help:

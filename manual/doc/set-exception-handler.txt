@@ -1,44 +1,69 @@
-set_exception_handler -- Sets a user-defined exception handler function
+set_exception_handler
 
-  callable set_exception_handler(callable exception_handler)~
+(PHP 5)
 
-Sets the default exception handler if an exception is not caught within a
-try/catch block. Execution will stop after the {exception_handler} is called.
+set_exception_handler — Sets a user-defined exception handler function
 
-{exception_handler} Name of the function to be called when an uncaught
-exception occurs. This handler function needs to accept one parameter, which
-will be the exception object that was thrown. This is the handler signature:
+===============================================================================
+*Description*
 
-  void handler(Exception ex)~
+    callable set_exception_handler ( callable $exception_handler )~
+
+Sets the default exception handler if an exception is not caught within a try/
+catch block. Execution will stop after the {exception_handler} is called.
+
+===============================================================================
+*Parameters*
+
+{exception_handler}
+
+    Name of the function to be called when an uncaught exception occurs. This
+    handler function needs to accept one parameter, which will be the exception
+    object that was thrown. This is the handler signature:
 
 
+    void handler ( Exception $ex )~
 
-NULL may be passed instead, to reset this handler to its default state.
+    NULL may be passed instead, to reset this handler to its default state.
 
-Returns the name of the previously defined exception handler, or NULL on
-error. If no previous handler was defined, NULL is also returned.
+===============================================================================
+*Return* *Values*
 
-Version Description 5.5.0 Previously, if NULL was passed then this function
-returned TRUE. It returns the previous handler since PHP 5.5.0.
+Returns the name of the previously defined exception handler, or NULL on error.
+If no previous handler was defined, NULL is also returned.
 
-|set_exception_handler| example
+===============================================================================
+*Changelog*
+
+Version                               Description
+5.5.0   Previously, if NULL was passed then this function returned TRUE. It
+        returns the previous handler since PHP 5.5.0.
+
+===============================================================================
+*Examples*
+
+Example #1 set_exception_handler() example
 
 <?php >
-  function exception_handler($exception) {
-    echo "Uncaught exception: " , $exception->getMessage(), "\n";
-  }
-  
-  set_exception_handler('exception_handler');
-  
-  throw new Exception('Uncaught Exception');
-  echo "Not Executed\n";
-?>
+    function exception_handler($exception) {
+      echo "Uncaught exception: " , $exception->getMessage(), "\n";
+    }
 
+    set_exception_handler('exception_handler');
 
+    throw new Exception('Uncaught Exception');
+    echo "Not Executed\n";
+<?>
 
+===============================================================================
+*See* *Also*
 
+  * |restore_exception_handler| - Restores the previously defined exception
+    handler function
+  * |restore_error_handler| - Restores the previous error handler function
+  * |error_reporting| - Sets which PHP errors are reported
+  * information about the callback type
+  * PHP 5 Exceptions
 
-|restore_exception_handler| |restore_error_handler| |error_reporting|
-information about the callback type PHP 5 Exceptions
 
 vim:ft=help:

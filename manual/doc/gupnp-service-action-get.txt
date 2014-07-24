@@ -1,30 +1,60 @@
-gupnp_service_action_get -- Retrieves the specified action arguments
+gupnp_service_action_get
 
-  mixed gupnp_service_action_get(resource action, string name, int type)~
+(PECL gupnp >= 0.1.0)
+
+gupnp_service_action_get — Retrieves the specified action arguments
+
+===============================================================================
+*Description*
+
+    mixed gupnp_service_action_get ( resource $action , string $name , int~
+    $type )~
 
 Retrieves the specified action arguments.
 
-{action} A service action identifier.
+===============================================================================
+*Parameters*
 
-{name} The name of the variable to retrieve.
+{action}
 
-{type} The type of the variable to retrieve. Type can be one of the following
-values: GUPNP_TYPE_BOOLEAN Type of the variable is boolean.
+    A service action identifier.
 
-GUPNP_TYPE_INT Type of the variable is integer.
+{name}
 
-GUPNP_TYPE_LONG Type of the variable is long.
+    The name of the variable to retrieve.
 
-GUPNP_TYPE_DOUBLE Type of the variable is double.
+{type}
 
-GUPNP_TYPE_FLOAT Type of the variable is float.
+    The type of the variable to retrieve. Type can be one of the following
+    values:
 
-GUPNP_TYPE_STRING Type of the variable is string.
+    GUPNP_TYPE_BOOLEAN
+        Type of the variable is boolean.
+    GUPNP_TYPE_INT
+        Type of the variable is integer.
+    GUPNP_TYPE_LONG
+        Type of the variable is long.
+    GUPNP_TYPE_DOUBLE
+        Type of the variable is double.
+    GUPNP_TYPE_FLOAT
+        Type of the variable is float.
+    GUPNP_TYPE_STRING
+        Type of the variable is string.
+
+===============================================================================
+*Return* *Values*
 
 The value of the variable.
 
+===============================================================================
+*Errors/Exceptions*
+
 Issues E_WARNING with not correctly defined type of the variable.
 
-|gupnp_service_action_set|
+===============================================================================
+*See* *Also*
+
+  * |gupnp_service_action_set| - Sets the specified action return values
+
 
 vim:ft=help:

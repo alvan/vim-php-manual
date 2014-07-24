@@ -1,11 +1,27 @@
-readline_read_history -- Reads the history
+readline_read_history
 
-  bool readline_read_history([string filename])~
+(PHP 4, PHP 5)
+
+readline_read_history — Reads the history
+
+===============================================================================
+*Description*
+
+    bool readline_read_history ([ string $filename ] )~
 
 This function reads a command history from a file.
 
-{filename} Path to the filename containing the command history.
+===============================================================================
+*Parameters*
 
-Returns TRUE on success or &false; on failure.
+{filename}
+
+    Path to the filename containing the command history.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
 
 vim:ft=help:

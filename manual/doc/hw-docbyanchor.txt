@@ -1,13 +1,31 @@
-hw_DocByAnchor -- Object id object belonging to anchor
+hw_DocByAnchor
 
-  int hw_docbyanchor(int connection, int anchorID)~
+(PHP 4)
+
+hw_DocByAnchor — Object id object belonging to anchor
+
+===============================================================================
+*Description*
+
+    int hw_docbyanchor ( int $connection , int $anchorID )~
 
 Returns an th object id of the document to which {anchorID} belongs.
 
-{connection} The connection identifier.
+===============================================================================
+*Parameters*
 
-{anchorID} The anchor identifier.
+{connection}
+
+    The connection identifier.
+
+{anchorID}
+
+    The anchor identifier.
+
+===============================================================================
+*Return* *Values*
 
 Returns the document object id.
+
 
 vim:ft=help:

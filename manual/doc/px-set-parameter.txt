@@ -1,28 +1,57 @@
-px_set_parameter -- Sets a parameter
+px_set_parameter
 
-  bool px_set_parameter(resource pxdoc, string name, string value)~
+(PECL paradox >= 1.1.0)
+
+px_set_parameter — Sets a parameter
+
+===============================================================================
+*Description*
+
+    bool px_set_parameter ( resource $pxdoc , string $name , string $value )~
 
 Sets various parameters.
 
-{pxdoc} Resource identifier of the paradox database as returned by |px_new|.
+===============================================================================
+*Parameters*
 
-{name} Depending on the parameter you want to set, {name} can be one of the
-following.
+{pxdoc}
 
-tablename The name of the table as it will be stored in the database header.
+    Resource identifier of the paradox database as returned by |px_new|.
 
-targetencoding The encoding for the output. Data which is being read from
-character fields is recoded into the targetencoding.
+{name}
 
-inputencoding The encoding of the input data which is to be stored into the
-database.
+    Depending on the parameter you want to set, {name} can be one of the
+    following.
 
-{value} The value of parameter to set. For inputencoding and targetencoding
-this must be the name of the encoding as understood by iconv or recode, e.g.
-iso-8859-1, utf-8, cp850.
+    tablename
 
-Returns TRUE on success or &false; on failure.
+        The name of the table as it will be stored in the database header.
 
-|px_get_info| to determine the DOS code page.
+    targetencoding
+
+        The encoding for the output. Data which is being read from character
+        fields is recoded into the targetencoding.
+
+    inputencoding
+
+        The encoding of the input data which is to be stored into the database.
+
+{value}
+
+    The value of parameter to set. For inputencoding and targetencoding this
+    must be the name of the encoding as understood by iconv or recode, e.g.
+    iso-8859-1, utf-8, cp850.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*See* *Also*
+
+  * |px_get_info| - Return lots of information about a paradox file to
+    determine the DOS code page.
+
 
 vim:ft=help:

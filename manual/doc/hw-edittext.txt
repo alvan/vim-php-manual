@@ -1,6 +1,13 @@
-hw_EditText -- Retrieve text document
+hw_EditText
 
-  bool hw_edittext(int connection, int hw_document)~
+(PHP 4)
+
+hw_EditText — Retrieve text document
+
+===============================================================================
+*Description*
+
+    bool hw_edittext ( int $connection , int $hw_document )~
 
 Uploads the text document to the server. The object record of the document may
 not be modified while the document is edited.
@@ -9,13 +16,31 @@ This function will only works for pure text documents. It will not open a
 special data connection and therefore blocks the control connection during the
 transfer.
 
-{connection} The connection identifier.
+===============================================================================
+*Parameters*
 
-{hw_document} The document identifier.
+{connection}
 
-Returns TRUE on success or &false; on failure.
+    The connection identifier.
 
-|hw_pipedocument| |hw_free_document| |hw_document_bodytag| |hw_document_size|
-|hw_output_document| |hw_gettext|
+{hw_document}
+
+    The document identifier.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*See* *Also*
+
+  * |hw_pipedocument| - Retrieve any document
+  * |hw_free_document| - Frees hw_document
+  * |hw_document_bodytag| - Body tag of hw_document
+  * |hw_document_size| - Size of hw_document
+  * |hw_output_document| - Prints hw_document
+  * |hw_gettext| - Retrieve text document
+
 
 vim:ft=help:

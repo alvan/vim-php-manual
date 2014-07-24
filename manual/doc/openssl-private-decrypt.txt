@@ -1,25 +1,47 @@
-openssl_private_decrypt -- Decrypts data with private key
+openssl_private_decrypt
 
-  bool openssl_private_decrypt(string data, string &decrypted, mixed key [, int padding = OPENSSL_PKCS1_PADDING])~
+(PHP 4 >= 4.0.6, PHP 5)
 
-|openssl_private_decrypt| decrypts {data} that was previous encrypted via
-|openssl_public_encrypt| and stores the result into {decrypted}.
+openssl_private_decrypt — Decrypts data with private key
 
-You can use this function e.g. to decrypt data which were supposed only to
-you.
+===============================================================================
+*Description*
+
+    bool openssl_private_decrypt ( string $data , string &$decrypted , mixed~
+    $key [, int $padding = OPENSSL_PKCS1_PADDING ] )~
+
+openssl_private_decrypt() decrypts {data} that was previous encrypted via |
+openssl_public_encrypt| and stores the result into {decrypted}.
+
+You can use this function e.g. to decrypt data which were supposed only to you.
+
+===============================================================================
+*Parameters*
 
 {data}
 
 {decrypted}
 
-{key} {key} must be the private key corresponding that was used to encrypt the
-data.
+{key}
 
-{padding} {padding} can be one of OPENSSL_PKCS1_PADDING,
-OPENSSL_SSLV23_PADDING, OPENSSL_PKCS1_OAEP_PADDING, OPENSSL_NO_PADDING.
+    {key} must be the private key corresponding that was used to encrypt the
+    data.
 
-Returns TRUE on success or &false; on failure.
+{padding}
 
-|openssl_public_encrypt| |openssl_public_decrypt|
+    {padding} can be one of OPENSSL_PKCS1_PADDING, OPENSSL_SSLV23_PADDING,
+    OPENSSL_PKCS1_OAEP_PADDING, OPENSSL_NO_PADDING.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*See* *Also*
+
+  * |openssl_public_encrypt| - Encrypts data with public key
+  * |openssl_public_decrypt| - Decrypts data with public key
+
 
 vim:ft=help:

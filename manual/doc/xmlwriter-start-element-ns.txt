@@ -1,27 +1,58 @@
-xmlwriter_start_element_ns -- Create start namespaced element tag
+XMLWriter::startElementNS
+
+xmlwriter_start_element_ns
+
+(PHP 5 >= 5.1.2, PECL xmlwriter >= 0.1.0)
+
+XMLWriter::startElementNS -- xmlwriter_start_element_ns — Create start
+namespaced element tag
+
+===============================================================================
+*Description*
 
 Object oriented style
 
-  bool XMLWriter::startElementNS(string prefix, string name, string uri)~
+    bool XMLWriter::startElementNS ( string $prefix , string $name , string~
+    $uri )~
 
 Procedural style
 
-  bool xmlwriter_start_element_ns(resource xmlwriter, string prefix, string name, string uri)~
+    bool xmlwriter_start_element_ns ( resource $xmlwriter , string $prefix ,~
+    string $name , string $uri )~
 
 Starts a namespaced element.
 
-{ xmlwriter}Only for procedural calls. The XMLWriter resource that is being
-modified. This resource comes from a call to |xmlwriter_open_uri| or
-|xmlwriter_open_memory|.
+===============================================================================
+*Parameters*
 
-{prefix} The namespace prefix.
+{ xmlwriter}
 
-{name} The element name.
+    Only for procedural calls. The XMLWriter resource that is being modified.
+    This resource comes from a call to |xmlwriter_open_uri| or |
+    xmlwriter_open_memory|.
 
-{uri} The namespace URI.
+{prefix}
 
-Returns TRUE on success or &false; on failure.
+    The namespace prefix.
 
-XMLWriter::endElement XMLWriter::writeElementNS
+{name}
+
+    The element name.
+
+{uri}
+
+    The namespace URI.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*See* *Also*
+
+  * |XMLWriter::endElement| - End current element
+  * |XMLWriter::writeElementNS| - Write full namespaced element tag
+
 
 vim:ft=help:

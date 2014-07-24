@@ -1,13 +1,29 @@
-trait_exists -- Checks if the trait exists
+trait_exists
 
-  bool trait_exists(string traitname [, bool autoload])~
+(PHP 5 >= 5.4.0)
 
+trait_exists — Checks if the trait exists
 
+===============================================================================
+*Description*
 
-Name of the trait to check
+    bool trait_exists ( string $traitname [, bool $autoload ] )~
 
-Whether to autoload if not already loaded.
+===============================================================================
+*Parameters*
+
+{traitname}
+
+    Name of the trait to check
+
+{autoload}
+
+    Whether to autoload if not already loaded.
+
+===============================================================================
+*Return* *Values*
 
 Returns TRUE if trait exists, FALSE if not, NULL in case of an error.
+
 
 vim:ft=help:

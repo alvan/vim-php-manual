@@ -1,16 +1,35 @@
-fann_get_cascade_max_out_epochs -- Returns the maximum out epochs
+fann_get_cascade_max_out_epochs
 
-  int fann_get_cascade_max_out_epochs(resource ann)~
+(PECL fann >= 1.0.0)
+
+fann_get_cascade_max_out_epochs — Returns the maximum out epochs
+
+===============================================================================
+*Description*
+
+    int fann_get_cascade_max_out_epochs ( resource $ann )~
 
 The maximum out epochs determines the maximum number of epochs the output
 connections may be trained after adding a new candidate neuron.
 
 The default max out epochs is 150.
 
-Neural network resource.
+===============================================================================
+*Parameters*
+
+{ann}
+
+    Neural network resource.
+
+===============================================================================
+*Return* *Values*
 
 The maximum out epochs, or FALSE on error.
 
-|fann_set_cascade_max_out_epochs|
+===============================================================================
+*See* *Also*
+
+  * |fann_set_cascade_max_out_epochs| - Sets the maximum out epochs
+
 
 vim:ft=help:

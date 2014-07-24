@@ -1,53 +1,85 @@
-mysql_drop_db -- Drop (delete) a MySQL database
+mysql_drop_db
+
+(PHP 4, PHP 5)
+
+mysql_drop_db — Drop (delete) a MySQL database
+
+Warning
 
 This extension is deprecated as of PHP 5.5.0, and will be removed in the
 future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
-MySQL: choosing an API guide and related FAQ for more information.
-Alternatives to this function include:
+MySQL: choosing an API guide and related FAQ for more information. Alternatives
+to this function include:
 
-  bool mysql_drop_db(string database_name [, resource link_identifier = NULL])~
+  * Execute a DROP DATABASE query
 
-|mysql_drop_db| attempts to drop (remove) an entire database from the server
+===============================================================================
+*Description*
+
+    bool mysql_drop_db ( string $database_name [, resource $link_identifier =~
+    NULL ] )~
+
+mysql_drop_db() attempts to drop (remove) an entire database from the server
 associated with the specified link identifier. This function is deprecated, it
 is preferable to use |mysql_query| to issue an sql DROP DATABASE statement
 instead.
 
-{database_name} The name of the database that will be deleted.
+===============================================================================
+*Parameters*
 
-{ link_identifier}The MySQL connection. If the link identifier is not
-specified, the last link opened by |mysql_connect| is assumed. If no such link
-is found, it will try to create one as if |mysql_connect| was called with no
-arguments. If no connection is found or established, an E_WARNING level error
-is generated.
+{database_name}
 
-Returns TRUE on success or &false; on failure.
+    The name of the database that will be deleted.
 
-|mysql_drop_db| alternative example
+{ link_identifier}
+
+    The MySQL connection. If the link identifier is not specified, the last
+    link opened by |mysql_connect| is assumed. If no such link is found, it
+    will try to create one as if |mysql_connect| was called with no arguments.
+    If no connection is found or established, an E_WARNING level error is
+    generated.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*Examples*
+
+Example #1 mysql_drop_db() alternative example
 
 <?php >
-  $link = mysql_connect('localhost', 'mysql_user', 'mysql_password');
-  if (!$link) {
-      die('Could not connect: ' . mysql_error());
-  }
-  
-  $sql = 'DROP DATABASE my_db';
-  if (mysql_query($sql, $link)) {
-      echo "Database my_db was successfully dropped\n";
-  } else {
-      echo 'Error dropping database: ' . mysql_error() . "\n";
-  }
-?>
+    $link = mysql_connect('localhost', 'mysql_user', 'mysql_password');
+    if (!$link) {
+        die('Could not connect: ' . mysql_error());
+    }
 
+    $sql = 'DROP DATABASE my_db';
+    if (mysql_query($sql, $link)) {
+        echo "Database my_db was successfully dropped\n";
+    } else {
+        echo 'Error dropping database: ' . mysql_error() . "\n";
+    }
+<?>
 
+===============================================================================
+*Notes*
 
-
+Warning
 
 This function will not be available if the MySQL extension was built against a
 MySQL 4.x client library.
 
-For backward compatibility, the following deprecated alias may be used:
-|mysql_dropdb|
+    Note:
 
-|mysql_query|
+    For backward compatibility, the following deprecated alias may be used: 
+    mysql_dropdb()
+
+===============================================================================
+*See* *Also*
+
+  * |mysql_query| - Send a MySQL query
+
 
 vim:ft=help:

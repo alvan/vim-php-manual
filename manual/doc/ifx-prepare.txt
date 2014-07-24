@@ -1,6 +1,14 @@
-ifx_prepare -- Prepare an SQL-statement for execution
+ifx_prepare
 
-  resource ifx_prepare(string query, resource link_identifier [, int cursor_def, mixed blobidarray])~
+(PHP 4, PHP <=5.2.0)
+
+ifx_prepare — Prepare an SQL-statement for execution
+
+===============================================================================
+*Description*
+
+    resource ifx_prepare ( string $query , resource $link_identifier [, int~
+    $cursor_def ], mixed $blobidarray )~
 
 Prepares a {query} for later use with |ifx_do|.
 
@@ -20,20 +28,38 @@ select queries will return BLOB columns as blob id's (integer value). You can
 get the value of the blob as a string or file with the blob functions (see
 below).
 
-{query} The query string.
+===============================================================================
+*Parameters*
 
-{link_identifier} The link identifier.
+{query}
 
-{cursor_def} This optional parameter allows you to make this a scroll and/or
-hold cursor. It's a bitmask and can be either IFX_SCROLL, IFX_HOLD, or both
-or'ed together.
+    The query string.
 
-{blobidarray} If you have BLOB (BYTE or TEXT) columns in the query, you can
-add a {blobidarray} parameter containing the corresponding "blob ids", and you
-should replace those columns with a "?" in the query text.
+{link_identifier}
+
+    The link identifier.
+
+{cursor_def}
+
+    This optional parameter allows you to make this a scroll and/or hold
+    cursor. It's a bitmask and can be either IFX_SCROLL, IFX_HOLD, or both
+    or'ed together.
+
+{blobidarray}
+
+    If you have BLOB (BYTE or TEXT) columns in the query, you can add a
+    {blobidarray} parameter containing the corresponding "blob ids", and you
+    should replace those columns with a "?" in the query text.
+
+===============================================================================
+*Return* *Values*
 
 Returns a valid result identifier for use by |ifx_do|, or FALSE on errors.
 
-|ifx_do|
+===============================================================================
+*See* *Also*
+
+  * |ifx_do| - Execute a previously prepared SQL-statement
+
 
 vim:ft=help:

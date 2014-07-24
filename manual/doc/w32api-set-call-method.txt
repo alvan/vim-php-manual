@@ -1,15 +1,36 @@
-w32api_set_call_method -- Sets the calling method used
+w32api_set_call_method
 
-  void w32api_set_call_method(int method)~
+(PHP 4 >= 4.2.0)
+
+w32api_set_call_method — Sets the calling method used
+
+===============================================================================
+*Description*
+
+    void w32api_set_call_method ( int $method )~
 
 This function sets the method call type.
 
-{method} Can be one of DC_CALL_CDECL or DC_CALL_STD (the extension default).
+===============================================================================
+*Parameters*
+
+{method}
+
+    Can be one of DC_CALL_CDECL or DC_CALL_STD (the extension default).
+
+===============================================================================
+*Return* *Values*
 
 No value is returned.
 
+===============================================================================
+*Notes*
+
+Warning
+
 This function is EXPERIMENTAL. The behaviour of this function, its name, and
-surrounding documentation may change without notice in a future release of
-PHP. This function should be used at your own risk.
+surrounding documentation may change without notice in a future release of PHP.
+This function should be used at your own risk.
+
 
 vim:ft=help:

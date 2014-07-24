@@ -1,18 +1,42 @@
-msql_data_seek -- Move internal row pointer
+msql_data_seek
 
-  bool msql_data_seek(resource result, int row_number)~
+(PHP 4, PHP 5)
 
-|msql_data_seek| moves the internal row pointer of the mSQL result associated
+msql_data_seek — Move internal row pointer
+
+===============================================================================
+*Description*
+
+    bool msql_data_seek ( resource $result , int $row_number )~
+
+msql_data_seek() moves the internal row pointer of the mSQL result associated
 with the specified query identifier to point to the specified row number. The
 next call to |msql_fetch_row| would return that row.
 
-{ result}The result resource that is being evaluated. This result comes from a
-call to |msql_query|.
+===============================================================================
+*Parameters*
 
-{row_number} The seeked row number.
+{ result}
 
-Returns TRUE on success or &false; on failure.
+    The result resource that is being evaluated. This result comes from a call
+    to |msql_query|.
 
-|msql_fetch_array| |msql_fetch_object| |msql_fetch_row| |msql_result|
+{row_number}
+
+    The seeked row number.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*See* *Also*
+
+  * |msql_fetch_array| - Fetch row as array
+  * |msql_fetch_object| - Fetch row as object
+  * |msql_fetch_row| - Get row as enumerated array
+  * |msql_result| - Get result data
+
 
 vim:ft=help:

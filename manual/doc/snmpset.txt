@@ -1,75 +1,123 @@
-snmpset -- Set the value of an SNMP object
+snmpset
 
-  bool snmpset(string host, string community, string object_id, string type, mixed value [, int timeout = 1000000 [, int retries = 5]])~
+(PHP 4, PHP 5)
 
-|snmpset| is used to set the value of an SNMP object specified by the
+snmpset — Set the value of an SNMP object
+
+===============================================================================
+*Description*
+
+    bool snmpset ( string $host , string $community , string $object_id ,~
+    string $type , mixed $value [, int $timeout = 1000000 [, int $retries = 5~
+    ]] )~
+
+snmpset() is used to set the value of an SNMP object specified by the
 {object_id}.
 
-{host} The hostname of the SNMP agent (server).
+===============================================================================
+*Parameters*
 
-{community} The write community.
+{host}
 
-{object_id} The SNMP object id.
+    The hostname of the SNMP agent (server).
 
-{type} The MIB defines the type of each object id. It has to be specified as a
-single character from the below list.
+{community}
 
-types =The type is taken from the MIB iINTEGER uINTEGER sSTRING xHEX STRING
-dDECIMAL STRING nNULLOBJ oOBJID tTIMETICKS aIPADDRESS bBITS If
-OPAQUE_SPECIAL_TYPES was defined while compiling the SNMP library, the
-following are also valid:
+    The write community.
 
-types Uunsigned int64 Isigned int64 Ffloat Ddouble Most of these will use the
-obvious corresponding ASN.1 type. "s", "x", "d" and "b" are all different ways
-of specifying an OCTET STRING value, and the "u" unsigned type is also used
-for handling Gauge32 values.
+{object_id}
 
-If the MIB-Files are loaded by into the MIB Tree with "snmp_read_mib" or by
-specifying it in the libsnmp config, "=" may be used as the {type} parameter
-for all object ids as the type can then be automatically read from the MIB.
+    The SNMP object id.
 
-Note that there are two ways to set a variable of the type BITS like e.g.
-"SYNTAX BITS {telnet(0), ftp(1), http(2), icmp(3), snmp(4), ssh(5),
-https(6)}":
+{type}
 
-Using type "b" and a list of bit numbers. This method is not recommended since
-GET query for the same OID would return e.g. 0xF8.
+    The MIB defines the type of each object id. It has to be specified as a
+    single character from the below list.
 
-Using type "x" and a hex number but without(!) the usual "0x" prefix.
+               types
+    = The type is taken from the MIB
+    i INTEGER
+    u INTEGER
+    s STRING
+    x HEX STRING
+    d DECIMAL STRING
+    n NULLOBJ
+    o OBJID
+    t TIMETICKS
+    a IPADDRESS
+    b BITS
 
-See examples section for more details.
+    If OPAQUE_SPECIAL_TYPES was defined while compiling the SNMP library, the
+    following are also valid:
 
-{value} The new value.
+        types
+    U unsigned int64
+    I signed int64
+    F float
+    D double
 
-{timeout} The number of microseconds until the first timeout.
+    Most of these will use the obvious corresponding ASN.1 type. 's', 'x', 'd'
+    and 'b' are all different ways of specifying an OCTET STRING value, and the
+    'u' unsigned type is also used for handling Gauge32 values.
 
-{retries} The number of times to retry if timeouts occur.
+    If the MIB-Files are loaded by into the MIB Tree with "snmp_read_mib" or by
+    specifying it in the libsnmp config, '=' may be used as the {type}
+    parameter for all object ids as the type can then be automatically read
+    from the MIB.
 
-Returns TRUE on success or &false; on failure.
+    Note that there are two ways to set a variable of the type BITS like e.g.
+    "SYNTAX BITS {telnet(0), ftp(1), http(2), icmp(3), snmp(4), ssh(5), https
+    (6)}":
+
+      + Using type "b" and a list of bit numbers. This method is not
+        recommended since GET query for the same OID would return e.g. 0xF8.
+      + Using type "x" and a hex number but without(!) the usual "0x" prefix.
+
+    See examples section for more details.
+
+{value}
+
+    The new value.
+
+{timeout}
+
+    The number of microseconds until the first timeout.
+
+{retries}
+
+    The number of times to retry if timeouts occur.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
 
 If the SNMP host rejects the data type, an E_WARNING message like "Warning:
 Error in packet. Reason: (badValue) The value given has the wrong type or
 length." is shown. If an unknown or invalid OID is specified the warning
 probably reads "Could not add variable".
 
-Using |snmpset|
+===============================================================================
+*Examples*
+
+Example #1 Using snmpset()
 
 <?php >
-    snmpset("localhost", "public", "IF-MIB::ifAlias.3", "s", "foo");
-?>
+      snmpset("localhost", "public", "IF-MIB::ifAlias.3", "s", "foo");
+<?>
 
-
-
-Using |snmpset| for setting BITS SNMP object id
+Example #2 Using snmpset() for setting BITS SNMP object id
 
 <?php >
-    snmpset("localhost", "public", 'FOO-MIB::bar.42', 'b', '0 1 2 3 4');
-  // or
-    snmpset("localhost", "public", 'FOO-MIB::bar.42', 'x', 'F0');
-?>
+      snmpset("localhost", "public", 'FOO-MIB::bar.42', 'b', '0 1 2 3 4');
+    // or
+      snmpset("localhost", "public", 'FOO-MIB::bar.42', 'x', 'F0');
+<?>
 
+===============================================================================
+*See* *Also*
 
+  * |snmpget| - Fetch an SNMP object
 
-|snmpget|
 
 vim:ft=help:

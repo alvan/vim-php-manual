@@ -1,41 +1,65 @@
-dbase_add_record -- Adds a record to a database
+dbase_add_record
 
-  bool dbase_add_record(int dbase_identifier, array record)~
+(PHP 4, PHP 5)
+
+dbase_add_record — Adds a record to a database
+
+===============================================================================
+*Description*
+
+    bool dbase_add_record ( int $dbase_identifier , array $record )~
 
 Adds the given data to the database.
 
-{dbase_identifier} The database link identifier, returned by |dbase_open| or
-|dbase_create|.
+===============================================================================
+*Parameters*
 
-{record} An indexed array of data. The number of items must be equal to the
-number of fields in the database, otherwise |dbase_add_record| will fail.
+{dbase_identifier}
 
-If you're using |dbase_get_record| return value for this parameter, remember
-to reset the key named deleted.
+    The database link identifier, returned by |dbase_open| or |dbase_create|.
 
-Returns TRUE on success or &false; on failure.
+{record}
 
-Inserting a record in a dBase database
+    An indexed array of data. The number of items must be equal to the number
+    of fields in the database, otherwise dbase_add_record() will fail.
+
+        Note:
+
+        If you're using |dbase_get_record| return value for this parameter,
+        remember to reset the key named deleted.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*Examples*
+
+Example #1 Inserting a record in a dBase database
 
 <?php >
-  // open in read-write mode
-  $db = dbase_open('/tmp/test.dbf', 2);
-  
-  if ($db) {
-    dbase_add_record($db, array(
-        date('Ymd'), 
-        'Maxim Topolov', 
-        '23', 
-        'max@example.com',
-        'T'));   
-    dbase_close($db);
-  }
-?>
 
+    // open in read-write mode
+    $db = dbase_open('/tmp/test.dbf', 2);
 
+    if ($db) {
+      dbase_add_record($db, array(
+          date('Ymd'), 
+          'Maxim Topolov', 
+          '23', 
+          'max@example.com',
+          'T'));   
+      dbase_close($db);
+    }
 
+<?>
 
+===============================================================================
+*See* *Also*
 
-|dbase_delete_record| |dbase_replace_record|
+  * |dbase_delete_record| - Deletes a record from a database
+  * |dbase_replace_record| - Replaces a record in a database
+
 
 vim:ft=help:

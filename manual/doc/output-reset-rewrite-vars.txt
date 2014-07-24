@@ -1,33 +1,51 @@
-output_reset_rewrite_vars -- Reset URL rewriter values
+output_reset_rewrite_vars
 
-  bool output_reset_rewrite_vars()~
+(PHP 4 >= 4.3.0, PHP 5)
+
+output_reset_rewrite_vars — Reset URL rewriter values
+
+===============================================================================
+*Description*
+
+    bool output_reset_rewrite_vars ( void )~
 
 This function resets the URL rewriter and removes all rewrite variables
 previously set by the |output_add_rewrite_var| function or the session
 mechanism (if session.use_trans_sid was set on |session_start|).
 
-Returns TRUE on success or &false; on failure.
+===============================================================================
+*Return* *Values*
 
-|output_reset_rewrite_vars| example
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*Examples*
+
+Example #1 output_reset_rewrite_vars() example
 
 <?php >
-  session_start();
-  output_add_rewrite_var('var', 'value');
-  
-  echo '<a href="file.php">link</a>';
-  ob_flush();
-  
-  output_reset_rewrite_vars();
-  echo '<a href="file.php">link</a>';
-?>
+    session_start();
+    output_add_rewrite_var('var', 'value');
+
+    echo '<a href="file.php">link</a>';
+    ob_flush();
+
+    output_reset_rewrite_vars();
+    echo '<a href="file.php">link</a>';
+<?>
 
 The above example will output:
 
-  <a href="file.php?PHPSESSID=xxx&var=value">link</a>
-  <a href="file.php">link</a>
+<a href="file.php?PHPSESSID=xxx&var=value">link</a>
+<a href="file.php">link</a>
 
+===============================================================================
+*See* *Also*
 
+  * |output_add_rewrite_var| - Add URL rewriter values
+  * |ob_flush| - Flush (send) the output buffer
+  * |ob_list_handlers| - List all output handlers in use
+  * |session_start| - Start new or resume existing session
 
-|output_add_rewrite_var| |ob_flush| |ob_list_handlers| |session_start|
 
 vim:ft=help:

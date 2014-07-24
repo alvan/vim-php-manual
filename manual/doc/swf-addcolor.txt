@@ -1,24 +1,46 @@
-swf_addcolor -- Set the global add color to the rgba value specified
+swf_addcolor
 
-  void swf_addcolor(float r, float g, float b, float a)~
+(PHP 4)
 
-Sets the global add color to the specified color. This color is then
-implicitly used by the |swf_placeobject|, |swf_modifyobject| and
-|swf_addbuttonrecord| functions.
+swf_addcolor — Set the global add color to the rgba value specified
+
+===============================================================================
+*Description*
+
+    void swf_addcolor ( float $r , float $g , float $b , float $a )~
+
+Sets the global add color to the specified color. This color is then implicitly
+used by the |swf_placeobject|, |swf_modifyobject| and |swf_addbuttonrecord|
+functions.
 
 The color of the object will be add by the given values when the object is
 written to the screen.
 
-{r} Red value
+===============================================================================
+*Parameters*
 
-{g} Green value
+{r}
 
-{b} Blue value
+    Red value
 
-{a} Alpha value
+{g}
+
+    Green value
+
+{b}
+
+    Blue value
+
+{a}
+
+    Alpha value
 
 These parameters can be either positive or negative.
 
+===============================================================================
+*Return* *Values*
+
 No value is returned.
+
 
 vim:ft=help:

@@ -1,13 +1,32 @@
-gupnp_root_device_start -- Start main loop
+gupnp_root_device_start
 
-  bool gupnp_root_device_start(resource root_device)~
+(PECL gupnp >= 0.1.0)
+
+gupnp_root_device_start — Start main loop
+
+===============================================================================
+*Description*
+
+    bool gupnp_root_device_start ( resource $root_device )~
 
 Start root server's main loop.
 
-{root_device} A root device identifier, returned by |gupnp_root_device_new|.
+===============================================================================
+*Parameters*
 
-Returns TRUE on success or &false; on failure.
+{root_device}
 
-|gupnp_root_device_stop|
+    A root device identifier, returned by |gupnp_root_device_new|.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*See* *Also*
+
+  * |gupnp_root_device_stop| - Stop main loop
+
 
 vim:ft=help:

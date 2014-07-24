@@ -1,11 +1,27 @@
-fann_destroy_train -- Destructs the training data
+fann_destroy_train
 
-  bool fann_destroy_train(resource train_data)~
+(PECL fann >= 1.0.0)
+
+fann_destroy_train — Destructs the training data
+
+===============================================================================
+*Description*
+
+    bool fann_destroy_train ( resource $train_data )~
 
 Destructs the training data
 
-Neural network training data resource.
+===============================================================================
+*Parameters*
+
+{train_data}
+
+    Neural network training data resource.
+
+===============================================================================
+*Return* *Values*
 
 Returns TRUE on success, or FALSE otherwise.
+
 
 vim:ft=help:

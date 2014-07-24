@@ -1,61 +1,94 @@
-glob -- Find pathnames matching a pattern
+glob
 
-  array glob(string pattern [, int flags = 0])~
+(PHP 4 >= 4.3.0, PHP 5)
 
-The |glob| function searches for all the pathnames matching {pattern}
-according to the rules used by the libc glob() function, which is similar to
-the rules used by common shells.
+glob — Find pathnames matching a pattern
 
-{pattern} The pattern. No tilde expansion or parameter substitution is done.
+===============================================================================
+*Description*
 
-{flags} Valid flags: GLOB_MARK - Adds a slash to each directory returned
+    array glob ( string $pattern [, int $flags = 0 ] )~
 
-GLOB_NOSORT - Return files as they appear in the directory (no sorting). When
-this flag is not used, the pathnames are sorted alphabetically
+The glob() function searches for all the pathnames matching {pattern} according
+to the rules used by the libc glob() function, which is similar to the rules
+used by common shells.
 
-GLOB_NOCHECK - Return the search pattern if no files matching it were found
+===============================================================================
+*Parameters*
 
-GLOB_NOESCAPE - Backslashes do not quote metacharacters
+{pattern}
 
-GLOB_BRACE - Expands {a,b,c} to match 'a', 'b', or 'c'
+    The pattern. No tilde expansion or parameter substitution is done.
 
-GLOB_ONLYDIR - Return only directory entries which match the pattern
+{flags}
 
-GLOB_ERR - Stop on read errors (like unreadable directories), by default
-errors are ignored.
+    Valid flags:
+      + GLOB_MARK - Adds a slash to each directory returned
+      + GLOB_NOSORT - Return files as they appear in the directory (no
+        sorting). When this flag is not used, the pathnames are sorted
+        alphabetically
+      + GLOB_NOCHECK - Return the search pattern if no files matching it were
+        found
+      + GLOB_NOESCAPE - Backslashes do not quote metacharacters
+      + GLOB_BRACE - Expands {a,b,c} to match 'a', 'b', or 'c'
+      + GLOB_ONLYDIR - Return only directory entries which match the pattern
+      + GLOB_ERR - Stop on read errors (like unreadable directories), by
+        default errors are ignored.
 
-Returns an array containing the matched files/directories, an empty array if
-no file matched or FALSE on error.
+===============================================================================
+*Return* *Values*
 
-On some systems it is impossible to distinguish between empty match and an
-error.
+Returns an array containing the matched files/directories, an empty array if no
+file matched or FALSE on error.
 
-Version Description 5.1.0 GLOB_ERR was added 4.3.3 GLOB_ONLYDIR became
-available on Windows and other systems not using the GNU C library
+    Note:
 
-Convenient way how |glob| can replace |opendir| and friends.
+    On some systems it is impossible to distinguish between empty match and an
+    error.
+
+===============================================================================
+*Changelog*
+
+Version                               Description
+5.1.0   GLOB_ERR was added
+4.3.3   GLOB_ONLYDIR became available on Windows and other systems not using
+        the GNU C library
+
+===============================================================================
+*Examples*
+
+Example #1 Convenient way how glob() can replace |opendir| and friends.
 
 <?php >
-  foreach (glob("*.txt") as $filename) {
-      echo "$filename size " . filesize($filename) . "\n";
-  }
-?>
+    foreach (glob("*.txt") as $filename) {
+        echo "$filename size " . filesize($filename) . "\n";
+    }
+<?>
 
 The above example will output something similar to:
 
-  funclist.txt size 44686
-  funcsummary.txt size 267625
-  quickref.txt size 137820
+funclist.txt size 44686
+funcsummary.txt size 267625
+quickref.txt size 137820
 
+===============================================================================
+*Notes*
 
+    Note: This function will not work on remote files as the file to be
+    examined must be accessible via the server's filesystem.
 
-This function will not work on remote files as the file to be examined must be
-accessible via the server"s filesystem.
+    Note: This function isn't available on some systems (e.g. old Sun OS).
 
-This function isn't available on some systems (e.g. old Sun OS).
+    Note: The GLOB_BRACE flag is not available on some non GNU systems, like
+    Solaris.
 
-The GLOB_BRACE flag is not available on some non GNU systems, like Solaris.
+===============================================================================
+*See* *Also*
 
-|opendir| |readdir| |closedir| |fnmatch|
+  * |opendir| - Open directory handle
+  * |readdir| - Read entry from directory handle
+  * |closedir| - Close directory handle
+  * |fnmatch| - Match filename against a pattern
+
 
 vim:ft=help:

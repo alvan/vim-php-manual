@@ -1,30 +1,45 @@
-sybase_fetch_field -- Get field information from a result
+sybase_fetch_field
 
-  object sybase_fetch_field(resource result [, int field_offset = -1])~
+(PHP 4, PHP 5)
 
-|sybase_fetch_field| can be used in order to obtain information about fields
-in a certain query result.
+sybase_fetch_field — Get field information from a result
+
+===============================================================================
+*Description*
+
+    object sybase_fetch_field ( resource $result [, int $field_offset = -1 ] )~
+
+sybase_fetch_field() can be used in order to obtain information about fields in
+a certain query result.
+
+===============================================================================
+*Parameters*
 
 {result}
 
-{field_offset} If the field offset isn't specified, the next field that wasn't
-yet retrieved by |sybase_fetch_field| is retrieved.
+{field_offset}
+
+    If the field offset isn't specified, the next field that wasn't yet
+    retrieved by sybase_fetch_field() is retrieved.
+
+===============================================================================
+*Return* *Values*
 
 Returns an object containing field information.
 
 The properties of the object are:
 
-name - column name. if the column is a result of a function, this property is
-set to computed#N, where #N is a serial number.
+  * name - column name. if the column is a result of a function, this property
+    is set to computed#N, where #N is a serial number.
+  * column_source - the table from which the column was taken
+  * max_length - maximum length of the column
+  * numeric - 1 if the column is numeric
+  * type - datatype of the column
 
-column_source - the table from which the column was taken
+===============================================================================
+*See* *Also*
 
-max_length - maximum length of the column
+  * |sybase_field_seek| - Sets field offset
 
-numeric - 1 if the column is numeric
-
-type - datatype of the column
-
-|sybase_field_seek|
 
 vim:ft=help:

@@ -1,50 +1,84 @@
-imagecharup -- Draw a character vertically
+imagecharup
 
-  bool imagecharup(resource image, int font, int x, int y, string c, int color)~
+(PHP 4, PHP 5)
+
+imagecharup — Draw a character vertically
+
+===============================================================================
+*Description*
+
+    bool imagecharup ( resource $image , int $font , int $x , int $y , string~
+    $c , int $color )~
 
 Draws the character {c} vertically at the specified coordinate on the given
 {image}.
 
-{ image}An image resource, returned by one of the image creation functions,
-such as |imagecreatetruecolor|.
+===============================================================================
+*Parameters*
 
-{ font}Can be 1, 2, 3, 4, 5 for built-in fonts in latin2 encoding (where
-higher numbers corresponding to larger fonts) or any of your own font
-identifiers registered with |imageloadfont|.
+{ image}
 
-{x} x-coordinate of the start.
+    An image resource, returned by one of the image creation functions, such as
+    |imagecreatetruecolor|.
 
-{y} y-coordinate of the start.
+{ font}
 
-{c} The character to draw.
+    Can be 1, 2, 3, 4, 5 for built-in fonts in latin2 encoding (where higher
+    numbers corresponding to larger fonts) or any of your own font identifiers
+    registered with |imageloadfont|.
 
-{color} A color identifier created with |imagecolorallocate|.
+{x}
 
-Returns TRUE on success or &false; on failure.
+    x-coordinate of the start.
 
-|imagecharup| example
+{y}
+
+    y-coordinate of the start.
+
+{c}
+
+    The character to draw.
+
+{color}
+
+    A color identifier created with |imagecolorallocate|.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*Examples*
+
+Example #1 imagecharup() example
 
 <?php >
-  $im = imagecreate(100, 100);
-  
-  $string = 'Note that the first letter is a N';
-  
-  $bg = imagecolorallocate($im, 255, 255, 255);
-  $black = imagecolorallocate($im, 0, 0, 0);
-  
-  // prints a black "Z" on a white background
-  imagecharup($im, 3, 10, 10, $string, $black);
-  
-  header('Content-type: image/png');
-  imagepng($im);
-?>
+
+    $im = imagecreate(100, 100);
+
+    $string = 'Note that the first letter is a N';
+
+    $bg = imagecolorallocate($im, 255, 255, 255);
+    $black = imagecolorallocate($im, 0, 0, 0);
+
+    // prints a black "Z" on a white background
+    imagecharup($im, 3, 10, 10, $string, $black);
+
+    header('Content-type: image/png');
+    imagepng($im);
+
+<?>
 
 The above example will output something similar to:
 
 Output of example : imagecharup()
 
+===============================================================================
+*See* *Also*
 
+  * |imagechar| - Draw a character horizontally
+  * |imageloadfont| - Load a new font
 
-|imagechar| |imageloadfont|
 
 vim:ft=help:

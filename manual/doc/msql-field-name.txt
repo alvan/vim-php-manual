@@ -1,16 +1,37 @@
-msql_field_name -- Get the name of the specified field in a result
+msql_field_name
 
-  string msql_field_name(resource result, int field_offset)~
+(PHP 4, PHP 5)
 
-|msql_field_name| gets the name of the specified field index.
+msql_field_name — Get the name of the specified field in a result
 
-{ result}The result resource that is being evaluated. This result comes from a
-call to |msql_query|.
+===============================================================================
+*Description*
 
-{ field_offset}The numerical field offset. The {field_offset} starts at 1.
+    string msql_field_name ( resource $result , int $field_offset )~
+
+msql_field_name() gets the name of the specified field index.
+
+===============================================================================
+*Parameters*
+
+{ result}
+
+    The result resource that is being evaluated. This result comes from a call
+    to |msql_query|.
+
+{ field_offset}
+
+    The numerical field offset. The {field_offset} starts at 1.
+
+===============================================================================
+*Return* *Values*
 
 The name of the field or FALSE on failure.
 
-|msql_field_len|
+===============================================================================
+*See* *Also*
+
+  * |msql_field_len| - Get field length
+
 
 vim:ft=help:

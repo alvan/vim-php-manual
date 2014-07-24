@@ -1,36 +1,60 @@
-hexdec -- Hexadecimal to decimal
+hexdec
 
-  number hexdec(string hex_string)~
+(PHP 4, PHP 5)
+
+hexdec — Hexadecimal to decimal
+
+===============================================================================
+*Description*
+
+    number hexdec ( string $hex_string )~
 
 Returns the decimal equivalent of the hexadecimal number represented by the
-{hex_string} argument. |hexdec| converts a hexadecimal string to a decimal
+{hex_string} argument. hexdec() converts a hexadecimal string to a decimal
 number.
 
-|hexdec| will ignore any non-hexadecimal characters it encounters.
+hexdec() will ignore any non-hexadecimal characters it encounters.
 
-{hex_string} The hexadecimal string to convert
+===============================================================================
+*Parameters*
+
+{hex_string}
+
+    The hexadecimal string to convert
+
+===============================================================================
+*Return* *Values*
 
 The decimal representation of {hex_string}
 
-Version Description 4.1.0 The function can now convert values that are too big
-for the platforms integer type, it will return the value as float instead in
-that case.
+===============================================================================
+*Changelog*
 
-|hexdec| example
+Version                               Description
+4.1.0   The function can now convert values that are too big for the platforms 
+        integer type, it will return the value as float instead in that case.
+
+===============================================================================
+*Examples*
+
+Example #1 hexdec() example
 
 <?php >
-  var_dump(hexdec("See"));
-  var_dump(hexdec("ee"));
-  // both print "int(238)"
-  
-  var_dump(hexdec("that")); // print "int(10)"
-  var_dump(hexdec("a0")); // print "int(160)"
-?>
+    var_dump(hexdec("See"));
+    var_dump(hexdec("ee"));
+    // both print "int(238)"
 
+    var_dump(hexdec("that")); // print "int(10)"
+    var_dump(hexdec("a0")); // print "int(160)"
+<?>
 
+===============================================================================
+*See* *Also*
 
+  * |dechex| - Decimal to hexadecimal
+  * |bindec| - Binary to decimal
+  * |octdec| - Octal to decimal
+  * |base_convert| - Convert a number between arbitrary bases
 
-
-|dechex| |bindec| |octdec| |base_convert|
 
 vim:ft=help:

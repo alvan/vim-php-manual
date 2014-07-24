@@ -1,29 +1,61 @@
-xmlwriter_write_dtd -- Write full DTD tag
+XMLWriter::writeDTD
+
+xmlwriter_write_dtd
+
+(PHP 5 >= 5.1.2, PECL xmlwriter >= 0.1.0)
+
+XMLWriter::writeDTD -- xmlwriter_write_dtd — Write full DTD tag
+
+===============================================================================
+*Description*
 
 Object oriented style
 
-  bool XMLWriter::writeDTD(string name [, string publicId [, string systemId [, string subset]]])~
+    bool XMLWriter::writeDTD ( string $name [, string $publicId [, string~
+    $systemId [, string $subset ]]] )~
 
 Procedural style
 
-  bool xmlwriter_write_dtd(resource xmlwriter, string name [, string publicId [, string systemId [, string subset]]])~
+    bool xmlwriter_write_dtd ( resource $xmlwriter , string $name [, string~
+    $publicId [, string $systemId [, string $subset ]]] )~
 
 Writes a full DTD.
 
-{ xmlwriter}Only for procedural calls. The XMLWriter resource that is being
-modified. This resource comes from a call to |xmlwriter_open_uri| or
-|xmlwriter_open_memory|.
+===============================================================================
+*Parameters*
 
-{name} The DTD name.
+{ xmlwriter}
 
-{publicId} The external subset public identifier.
+    Only for procedural calls. The XMLWriter resource that is being modified.
+    This resource comes from a call to |xmlwriter_open_uri| or |
+    xmlwriter_open_memory|.
 
-{systemId} The external subset system identifier.
+{name}
 
-{subset} The content of the DTD.
+    The DTD name.
 
-Returns TRUE on success or &false; on failure.
+{publicId}
 
-XMLWriter::startDTD XMLWriter::endDTD
+    The external subset public identifier.
+
+{systemId}
+
+    The external subset system identifier.
+
+{subset}
+
+    The content of the DTD.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*See* *Also*
+
+  * |XMLWriter::startDTD| - Create start DTD tag
+  * |XMLWriter::endDTD| - End current DTD
+
 
 vim:ft=help:

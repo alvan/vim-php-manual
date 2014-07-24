@@ -1,22 +1,47 @@
-hw_InsDoc -- Insert document
+hw_InsDoc
 
-  int hw_insdoc(resource connection, int parentID, string object_record [, string text])~
+(PHP 4)
+
+hw_InsDoc — Insert document
+
+===============================================================================
+*Description*
+
+    int hw_insdoc ( resource $connection , int $parentID , string~
+    $object_record [, string $text ] )~
 
 Inserts a new document with attributes as in {object_record} into acollection.
 
 If you want to insert a general document of any kind use |hw_insertdocument|
 instead.
 
-{connection} The connection identifier.
+===============================================================================
+*Parameters*
 
-{parentID} The collection id.
+{connection}
 
-{object_record} Object attributes.
+    The connection identifier.
 
-{text} If provided, this ascii text will be inserted too.
+{parentID}
 
+    The collection id.
 
+{object_record}
 
-|hw_insertdocument| |hw_inscoll|
+    Object attributes.
+
+{text}
+
+    If provided, this ascii text will be inserted too.
+
+===============================================================================
+*Return* *Values*
+
+===============================================================================
+*See* *Also*
+
+  * |hw_insertdocument| - Upload any document
+  * |hw_inscoll| - Insert collection
+
 
 vim:ft=help:

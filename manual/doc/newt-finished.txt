@@ -1,12 +1,26 @@
-newt_finished -- Uninitializes newt interface
+newt_finished
 
-  int newt_finished()~
+(PECL newt >= 0.1)
 
-Uninitializes newt interface. This function be called, when program is ready
-to exit.
+newt_finished — Uninitializes newt interface
+
+===============================================================================
+*Description*
+
+    int newt_finished ( void )~
+
+Uninitializes newt interface. This function be called, when program is ready to
+exit.
+
+===============================================================================
+*Return* *Values*
 
 Returns 1 on success, 0 on failure.
 
-|newt_init|
+===============================================================================
+*See* *Also*
+
+  * |newt_init| - Initialize newt
+
 
 vim:ft=help:

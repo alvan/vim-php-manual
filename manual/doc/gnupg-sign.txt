@@ -1,40 +1,55 @@
-gnupg_sign -- Signs a given text
+gnupg_sign
 
-  string gnupg_sign(resource identifier, string plaintext)~
+(PECL gnupg >= 0.1)
 
-Signs the given {plaintext} with the keys, which were set with
-gnupg_addsignkey before and returns the signed text or the signature,
-depending on what was set with gnupg_setsignmode.
+gnupg_sign — Signs a given text
 
-{identifier} The gnupg identifier, from a call to |gnupg_init| or gnupg.
+===============================================================================
+*Description*
 
-{plaintext} The plain text being signed.
+    string gnupg_sign ( resource $identifier , string $plaintext )~
 
-On success, this function returns the signed text or the signature. On
-failure, this function returns FALSE.
+Signs the given {plaintext} with the keys, which were set with |
+gnupg_addsignkey| before and returns the signed text or the signature,
+depending on what was set with |gnupg_setsignmode|.
 
-Procedural |gnupg_sign| example
+===============================================================================
+*Parameters*
+
+{identifier}
+
+    The gnupg identifier, from a call to |gnupg_init| or gnupg.
+
+{plaintext}
+
+    The plain text being signed.
+
+===============================================================================
+*Return* *Values*
+
+On success, this function returns the signed text or the signature. On failure,
+this function returns FALSE.
+
+===============================================================================
+*Examples*
+
+Example #1 Procedural gnupg_sign() example
 
 <?php >
-  $res = gnupg_init();
-  gnupg_addsignkey($res,"8660281B6051D071D94B5B230549F9DC851566DC","test");
-  $signed = gnupg_sign($res, "just a test");
-  echo $signed;
-?>
+    $res = gnupg_init();
+    gnupg_addsignkey($res,"8660281B6051D071D94B5B230549F9DC851566DC","test");
+    $signed = gnupg_sign($res, "just a test");
+    echo $signed;
+<?>
 
-
-
-OO |gnupg_sign| example
+Example #2 OO gnupg_sign() example
 
 <?php >
-  $gpg = new gnupg();
-  $gpg -> setsignkey("8660281B6051D071D94B5B230549F9DC851566DC","test");
-  $signed = $gpg -> sign("just a test");
-  echo $signed;
-?>
-
-
-
+    $gpg = new gnupg();
+    $gpg -> setsignkey("8660281B6051D071D94B5B230549F9DC851566DC","test");
+    $signed = $gpg -> sign("just a test");
+    echo $signed;
+<?>
 
 
 vim:ft=help:

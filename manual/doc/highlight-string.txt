@@ -1,48 +1,79 @@
-highlight_string -- Syntax highlighting of a string
+highlight_string
 
-  mixed highlight_string(string str [, bool return = false])~
+(PHP 4, PHP 5)
+
+highlight_string — Syntax highlighting of a string
+
+===============================================================================
+*Description*
+
+    mixed highlight_string ( string $str [, bool $return = false ] )~
 
 Outputs or returns html markup for a syntax highlighted version of the given
 PHP code using the colors defined in the built-in syntax highlighter for PHP.
 
-{str} The PHP code to be highlighted. This should include the opening tag.
+===============================================================================
+*Parameters*
 
-{return} Set this parameter to TRUE to make this function return the
-highlighted code.
+{str}
 
-If {return} is set to TRUE, returns the highlighted code as a string instead
-of printing it out. Otherwise, it will return TRUE on success, FALSE on
-failure.
+    The PHP code to be highlighted. This should include the opening tag.
 
-Version Description 4.2.0 The {return} parameter was added.
+{return}
 
-|highlight_string| example
+    Set this parameter to TRUE to make this function return the highlighted
+    code.
+
+===============================================================================
+*Return* *Values*
+
+If {return} is set to TRUE, returns the highlighted code as a string instead of
+printing it out. Otherwise, it will return TRUE on success, FALSE on failure.
+
+===============================================================================
+*Changelog*
+
+Version            Description
+4.2.0   The {return} parameter was added.
+
+===============================================================================
+*Examples*
+
+Example #1 highlight_string() example
 
 <?php >
-  highlight_string('<?php phpinfo(); ?>');
-?>
+    highlight_string('<?php phpinfo(); ?>');
+<?>
 
 The above example will output (in PHP 4):
 
-  <code><font color="#000000">
-  <font color="#0000BB"><?php phpinfo</font><font color="#007700">(); </font><font color="#0000BB">?></font>
-  </font>
-  </code>
+<code><font color="#000000">
+<font color="#0000BB">&lt;?php phpinfo</font><font color="#007700">(); </font><font color="#0000BB">?&gt;</font>
+</font>
+</code>
 
 The above example will output (in PHP 5):
 
-  <code><span style="color: #000000">
-  <span style="color: #0000BB"><?php phpinfo</span><span style="color: #007700">(); </span><span style="color: #0000BB">?></span>
-  </span>
-  </code>
+<code><span style="color: #000000">
+<span style="color: #0000BB">&lt;?php phpinfo</span><span style="color: #007700">(); </span><span style="color: #0000BB">?&gt;</span>
+</span>
+</code>
 
+===============================================================================
+*Notes*
 
+    Note:
 
-When the {return} parameter is used, this function uses internal output
-buffering so it cannot be used inside an |ob_start| callback function.
+    When the {return} parameter is used, this function uses internal output
+    buffering so it cannot be used inside an |ob_start| callback function.
 
 The HTML markup generated is subject to change.
 
-|highlight_file| Highlighting INI directives
+===============================================================================
+*See* *Also*
+
+  * |highlight_file| - Syntax highlighting of a file
+  * Highlighting INI directives
+
 
 vim:ft=help:

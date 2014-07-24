@@ -1,22 +1,40 @@
-imagescale -- Scale an image using the given new width and height
+imagescale
 
-  resource imagescale(resource image, int new_width [, int new_height = -1 [, int mode = IMG_BILINEAR_FIXED]])~
+(PHP 5 >= 5.5.0)
 
+imagescale — Scale an image using the given new width and height
 
+===============================================================================
+*Description*
 
-This function is currently not documented; only its argument list is
-available.
+    resource imagescale ( resource $image , int $new_width [, int $new_height~
+    = -1 [, int $mode = IMG_BILINEAR_FIXED ]] )~
 
-An image resource, returned by one of the image creation functions, such as
-|imagecreatetruecolor|.
+Warning
 
+This function is currently not documented; only its argument list is available.
 
+===============================================================================
+*Parameters*
 
+{ image}
 
+    An image resource, returned by one of the image creation functions, such as
+    |imagecreatetruecolor|.
 
-One of IMG_NEAREST_NEIGHBOUR, IMG_BILINEAR_FIXED, IMG_BICUBIC,
-IMG_BICUBIC_FIXED or anything else (will use two pass).
+{new_width}
+
+{new_height}
+
+{mode}
+
+    One of IMG_NEAREST_NEIGHBOUR, IMG_BILINEAR_FIXED, IMG_BICUBIC,
+    IMG_BICUBIC_FIXED or anything else (will use two pass).
+
+===============================================================================
+*Return* *Values*
 
 Return scaled image resource on success or FALSE on failure.
+
 
 vim:ft=help:

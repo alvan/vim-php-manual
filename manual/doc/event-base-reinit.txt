@@ -1,12 +1,28 @@
-event_base_reinit -- Reinitialize the event base after a fork
+event_base_reinit
 
-  bool event_base_reinit(resource event_base)~
+(PECL libevent >= 0.1.0)
+
+event_base_reinit — Reinitialize the event base after a fork
+
+===============================================================================
+*Description*
+
+    bool event_base_reinit ( resource $event_base )~
 
 Some event mechanisms do not survive across fork. The {event_base} needs to be
 reinitialized with this function.
 
-{event_base} Valid event base resource that needs to be re-initialized.
+===============================================================================
+*Parameters*
 
-Returns TRUE on success or &false; on failure.
+{event_base}
+
+    Valid event base resource that needs to be re-initialized.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
 
 vim:ft=help:

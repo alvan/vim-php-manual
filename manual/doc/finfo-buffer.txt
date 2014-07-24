@@ -1,39 +1,67 @@
-finfo::buffer -- Return information about a string buffer
+finfo_buffer
+
+finfo::buffer
+
+(PHP 5 >= 5.3.0, PECL fileinfo >= 0.1.0)
+
+finfo_buffer -- finfo::buffer — Return information about a string buffer
+
+===============================================================================
+*Description*
 
 Procedural style
 
-  string finfo_buffer(resource finfo, string string = NULL [, int options = FILEINFO_NONE [, resource context = NULL]])~
+    string finfo_buffer ( resource $finfo , string $string = NULL [, int~
+    $options = FILEINFO_NONE [, resource $context = NULL ]] )~
 
 Object oriented style
 
-  string finfo::buffer(string string = NULL [, int options = FILEINFO_NONE [, resource context = NULL]])~
+    public string finfo::buffer ( string $string = NULL [, int $options =~
+    FILEINFO_NONE [, resource $context = NULL ]] )~
 
 This function is used to get information about binary data in a string.
 
-{finfo} Fileinfo resource returned by |finfo_open|.
+===============================================================================
+*Parameters*
 
-{string} Content of a file to be checked.
+{finfo}
 
-{options} One or disjunction of more Fileinfo constants.
+    Fileinfo resource returned by |finfo_open|.
+
+{string}
+
+    Content of a file to be checked.
+
+{options}
+
+    One or disjunction of more Fileinfo constants.
 
 {context}
+
+===============================================================================
+*Return* *Values*
 
 Returns a textual description of the {string} argument, or FALSE if an error
 occurred.
 
-A |finfo_buffer| example
+===============================================================================
+*Examples*
+
+Example #1 A finfo_buffer() example
 
 <?php >
-  $finfo = new finfo(FILEINFO_MIME);
-  echo $finfo->buffer($_POST["script"]) . "\n";
-?>
+    $finfo = new finfo(FILEINFO_MIME);
+    echo $finfo->buffer($_POST["script"]) . "\n";
+<?>
 
 The above example will output something similar to:
 
-  application/x-sh; charset=us-ascii
+application/x-sh; charset=us-ascii
 
+===============================================================================
+*See* *Also*
 
+  * |finfo_file| - Return information about a file
 
-|finfo_file|
 
 vim:ft=help:

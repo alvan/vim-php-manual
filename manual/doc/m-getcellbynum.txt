@@ -1,12 +1,25 @@
-m_getcellbynum -- Get a specific cell from a comma delimited response by
-column number
+m_getcellbynum
 
-  string m_getcellbynum(resource conn, int identifier, int column, int row)~
+(PHP 4 >= 4.3.9, PHP 5 <= 5.0.5, PECL mcve >= 1.0.0)
 
-This function is currently not documented; only its argument list is
-available.
+m_getcellbynum — Get a specific cell from a comma delimited response by column
+number
 
-{ conn}An MCVE_CONN resource returned by |m_initengine|.
+===============================================================================
+*Description*
+
+    string m_getcellbynum ( resource $conn , int $identifier , int $column ,~
+    int $row )~
+Warning
+
+This function is currently not documented; only its argument list is available.
+
+===============================================================================
+*Parameters*
+
+{ conn}
+
+    An MCVE_CONN resource returned by |m_initengine|.
 
 {identifier}
 
@@ -14,6 +27,8 @@ available.
 
 {row}
 
+===============================================================================
+*Return* *Values*
 
 
 vim:ft=help:

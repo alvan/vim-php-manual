@@ -1,37 +1,59 @@
-ob_tidyhandler -- ob_start callback function to repair the buffer
+ob_tidyhandler
 
-  string ob_tidyhandler(string input [, int mode])~
+(PHP 5)
+
+ob_tidyhandler — ob_start callback function to repair the buffer
+
+===============================================================================
+*Description*
+
+    string ob_tidyhandler ( string $input [, int $mode ] )~
 
 Callback function for |ob_start| to repair the buffer.
 
-{input} The buffer.
+===============================================================================
+*Parameters*
 
-{mode} The buffer mode.
+{input}
+
+    The buffer.
+
+{mode}
+
+    The buffer mode.
+
+===============================================================================
+*Return* *Values*
 
 Returns the modified buffer.
 
-|ob_tidyhandler| example
+===============================================================================
+*Examples*
+
+Example #1 ob_tidyhandler() example
 
 <?php >
-  ob_start('ob_tidyhandler');
-  
-  echo '<p>test</i>';
-?>
+    ob_start('ob_tidyhandler');
+
+    echo '<p>test</i>';
+<?>
 
 The above example will output:
 
-  <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
-  <html>
-  <head>
-  <title></title>
-  </head>
-  <body>
-  <p>test</p>
-  </body>
-  </html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+<title></title>
+</head>
+<body>
+<p>test</p>
+</body>
+</html>
 
+===============================================================================
+*See* *Also*
 
+  * |ob_start| - Turn on output buffering
 
-|ob_start|
 
 vim:ft=help:

@@ -1,15 +1,34 @@
-zip_entry_compressionmethod -- Retrieve the compression method of a directory
+zip_entry_compressionmethod
+
+(PHP 4 >= 4.1.0, PHP 5 >= 5.2.0, PECL zip >= 1.0.0)
+
+zip_entry_compressionmethod — Retrieve the compression method of a directory
 entry
 
-  string zip_entry_compressionmethod(resource zip_entry)~
+===============================================================================
+*Description*
 
-Returns the compression method of the directory entry specified by
-{zip_entry}.
+    string zip_entry_compressionmethod ( resource $zip_entry )~
 
-{zip_entry} A directory entry returned by |zip_read|.
+Returns the compression method of the directory entry specified by {zip_entry}.
+
+===============================================================================
+*Parameters*
+
+{zip_entry}
+
+    A directory entry returned by |zip_read|.
+
+===============================================================================
+*Return* *Values*
 
 The compression method.
 
-|zip_open| |zip_read|
+===============================================================================
+*See* *Also*
+
+  * |zip_open| - Open a ZIP file archive
+  * |zip_read| - Read next entry in a ZIP file archive
+
 
 vim:ft=help:

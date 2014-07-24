@@ -1,15 +1,36 @@
-fann_set_quickprop_mu -- Sets the quickprop mu factor
+fann_set_quickprop_mu
 
-  bool fann_set_quickprop_mu(resource ann, float quickprop_mu)~
+(PECL fann >= 1.0.0)
+
+fann_set_quickprop_mu — Sets the quickprop mu factor
+
+===============================================================================
+*Description*
+
+    bool fann_set_quickprop_mu ( resource $ann , float $quickprop_mu )~
 
 Sets the quickprop mu factor.
 
-Neural network resource.
+===============================================================================
+*Parameters*
 
-The mu factor.
+{ann}
+
+    Neural network resource.
+
+{quickprop_mu}
+
+    The mu factor.
+
+===============================================================================
+*Return* *Values*
 
 Returns TRUE on success, or FALSE otherwise.
 
-|fann_get_quickprop_mu|
+===============================================================================
+*See* *Also*
+
+  * |fann_get_quickprop_mu| - Returns the mu factor
+
 
 vim:ft=help:

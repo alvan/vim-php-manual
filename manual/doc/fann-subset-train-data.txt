@@ -1,6 +1,14 @@
-fann_subset_train_data -- Returns an copy of a subset of the train data
+fann_subset_train_data
 
-  resource fann_subset_train_data(resource data, int pos, int length)~
+(PECL fann >= 1.0.0)
+
+fann_subset_train_data — Returns an copy of a subset of the train data
+
+===============================================================================
+*Description*
+
+    resource fann_subset_train_data ( resource $data , int $pos , int $length~
+)~
 
 Returns an copy of a subset of the train data resource, starting at position
 pos and length elements forward.
@@ -8,14 +16,30 @@ pos and length elements forward.
 The fann_subset_train_data(train_data, 0, fann_length_train_data(train_data))
 do the same as |fann_duplicate_train_data|
 
-Neural network training data resource.
+===============================================================================
+*Parameters*
 
-Starting position.
+{data}
 
-The number of copied elements.
+    Neural network training data resource.
+
+{pos}
+
+    Starting position.
+
+{length}
+
+    The number of copied elements.
+
+===============================================================================
+*Return* *Values*
 
 Returns a train data resource on success, or FALSE on error.
 
-|fann_duplicate_train_data|
+===============================================================================
+*See* *Also*
+
+  * |fann_duplicate_train_data| - Returns an exact copy of a fann train data
+
 
 vim:ft=help:

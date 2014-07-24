@@ -1,18 +1,38 @@
-yaz_range -- Specifies a range of records to retrieve
+yaz_range
 
-  void yaz_range(resource id, int start, int number)~
+(PHP 4 >= 4.0.1, PECL yaz >= 0.9.0)
+
+yaz_range — Specifies a range of records to retrieve
+
+===============================================================================
+*Description*
+
+    void yaz_range ( resource $id , int $start , int $number )~
 
 Specifies a range of records to retrieve.
 
 This function should be called before |yaz_search| or |yaz_present|.
 
-{id} The connection resource returned by |yaz_connect|.
+===============================================================================
+*Parameters*
 
-{start} Specifies the position of the first record to be retrieved. The
-records numbers goes from 1 to |yaz_hits|.
+{id}
 
-{number} Specifies the number of records to be retrieved.
+    The connection resource returned by |yaz_connect|.
+
+{start}
+
+    Specifies the position of the first record to be retrieved. The records
+    numbers goes from 1 to |yaz_hits|.
+
+{number}
+
+    Specifies the number of records to be retrieved.
+
+===============================================================================
+*Return* *Values*
 
 No value is returned.
+
 
 vim:ft=help:

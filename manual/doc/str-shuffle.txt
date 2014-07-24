@@ -1,27 +1,46 @@
-str_shuffle -- Randomly shuffles a string
+str_shuffle
 
-  string str_shuffle(string str)~
+(PHP 4 >= 4.3.0, PHP 5)
 
-|str_shuffle| shuffles a string. One permutation of all possible is created.
+str_shuffle — Randomly shuffles a string
 
-{str} The input string.
+===============================================================================
+*Description*
+
+    string str_shuffle ( string $str )~
+
+str_shuffle() shuffles a string. One permutation of all possible is created.
+
+===============================================================================
+*Parameters*
+
+{str}
+
+    The input string.
+
+===============================================================================
+*Return* *Values*
 
 Returns the shuffled string.
 
-|str_shuffle| example
+===============================================================================
+*Examples*
+
+Example #1 str_shuffle() example
 
 <?php >
-  $str = 'abcdef';
-  $shuffled = str_shuffle($str);
-  
-  // This will echo something like: bfdaec
-  echo $shuffled;
-?>
+    $str = 'abcdef';
+    $shuffled = str_shuffle($str);
 
+    // This will echo something like: bfdaec
+    echo $shuffled;
+<?>
 
+===============================================================================
+*See* *Also*
 
+  * |shuffle| - Shuffle an array
+  * |rand| - Generate a random integer
 
-
-|shuffle| |rand|
 
 vim:ft=help:

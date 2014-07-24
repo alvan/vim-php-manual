@@ -1,13 +1,32 @@
-fann_copy -- Creates a copy of a fann structure
+fann_copy
 
-  resource fann_copy(resource ann)~
+(PECL fann >= 1.0.0)
+
+fann_copy — Creates a copy of a fann structure
+
+===============================================================================
+*Description*
+
+    resource fann_copy ( resource $ann )~
 
 Creates a copy of a fann structure.
 
-Neural network resource.
+===============================================================================
+*Parameters*
+
+{ann}
+
+    Neural network resource.
+
+===============================================================================
+*Return* *Values*
 
 Returns a copy of neural network resource on success, or FALSE on error
 
-|fann_test|
+===============================================================================
+*See* *Also*
+
+  * |fann_test| - Test with a set of inputs, and a set of desired outputs
+
 
 vim:ft=help:

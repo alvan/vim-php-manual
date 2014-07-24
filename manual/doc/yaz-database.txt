@@ -1,16 +1,34 @@
-yaz_database -- Specifies the databases within a session
+yaz_database
 
-  bool yaz_database(resource id, string databases)~
+(PHP 4 >= 4.0.6, PECL yaz >= 0.9.0)
 
-This function allows you to change databases within a session by specifying
-one or more databases to be used in search, retrieval, etc. - overriding
-databases specified in call to |yaz_connect|.
+yaz_database — Specifies the databases within a session
 
-{id} The connection resource returned by |yaz_connect|.
+===============================================================================
+*Description*
 
-{databases} A string containing one or more databases. Multiple databases are
-separated by a plus sign +.
+    bool yaz_database ( resource $id , string $databases )~
 
-Returns TRUE on success or &false; on failure.
+This function allows you to change databases within a session by specifying one
+or more databases to be used in search, retrieval, etc. - overriding databases
+specified in call to |yaz_connect|.
+
+===============================================================================
+*Parameters*
+
+{id}
+
+    The connection resource returned by |yaz_connect|.
+
+{databases}
+
+    A string containing one or more databases. Multiple databases are separated
+    by a plus sign +.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
 
 vim:ft=help:

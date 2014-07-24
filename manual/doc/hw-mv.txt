@@ -1,22 +1,49 @@
-hw_mv -- Moves objects
+hw_mv
 
-  int hw_mv(int connection, array object_id_array, int source_id, int destination_id)~
+(PHP 4)
+
+hw_mv — Moves objects
+
+===============================================================================
+*Description*
+
+    int hw_mv ( int $connection , array $object_id_array , int $source_id ,~
+    int $destination_id )~
 
 Moves the specified objects from a collection to another.
 
-{connection} The connection identifier.
+===============================================================================
+*Parameters*
 
-{object_id_array} An array of object ids.
+{connection}
 
-{source_id} The source collection id.
+    The connection identifier.
 
-{destination_id} The target collection id. If set to 0 the objects will be
-unlinked from the source collection. If this is the last instance of that
-object it will be deleted. If you want to delete all instances at once, use
-|hw_deleteobject|.
+{object_id_array}
+
+    An array of object ids.
+
+{source_id}
+
+    The source collection id.
+
+{destination_id}
+
+    The target collection id. If set to 0 the objects will be unlinked from the
+    source collection. If this is the last instance of that object it will be
+    deleted. If you want to delete all instances at once, use |hw_deleteobject|
+    .
+
+===============================================================================
+*Return* *Values*
 
 Returns the number of moved objects.
 
-|hw_cp| |hw_deleteobject|
+===============================================================================
+*See* *Also*
+
+  * |hw_cp| - Copies objects
+  * |hw_deleteobject| - Deletes object
+
 
 vim:ft=help:

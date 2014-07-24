@@ -1,54 +1,78 @@
-ldap_add -- Add entries to LDAP directory
+ldap_add
 
-  bool ldap_add(resource link_identifier, string dn, array entry)~
+(PHP 4, PHP 5)
+
+ldap_add — Add entries to LDAP directory
+
+===============================================================================
+*Description*
+
+    bool ldap_add ( resource $link_identifier , string $dn , array $entry )~
 
 Add entries in the LDAP directory.
 
-{link_identifier} An LDAP link identifier, returned by |ldap_connect|.
+===============================================================================
+*Parameters*
 
-{dn} The distinguished name of an LDAP entity.
+{link_identifier}
 
-{entry} An array that specifies the information about the entry. The values in
-the entries are indexed by individual attributes. In case of multiple values
-for an attribute, they are indexed using integers starting with 0.
+    An LDAP link identifier, returned by |ldap_connect|.
+
+{dn}
+
+    The distinguished name of an LDAP entity.
+
+{entry}
+
+    An array that specifies the information about the entry. The values in the
+    entries are indexed by individual attributes. In case of multiple values
+    for an attribute, they are indexed using integers starting with 0.
+    <?php >
+    $entree["attribut1"] = "value";
+    $entree["attribut2"][0] = "value1";
+    $entree["attribut2"][1] = "value2";
+<    ?>
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*Examples*
+
+Example #1 Complete example with authenticated bind
 
 <?php >
-  $entree["attribut1"] = "value";
-  $entree["attribut2"][0] = "value1";
-  $entree["attribut2"][1] = "value2";
-?>
+    $ds = ldap_connect("localhost");  // assuming the LDAP server is on this host
 
-Returns TRUE on success or &false; on failure.
+    if ($ds) {
+        // bind with appropriate dn to give update access
+        $r = ldap_bind($ds, "cn=root, o=My Company, c=US", "secret");
 
-Complete example with authenticated bind
+        // prepare data
+        $info["cn"] = "John Jones";
+        $info["sn"] = "Jones";
+        $info["objectclass"] = "person";
 
-<?php >
-  $ds = ldap_connect("localhost");  // assuming the LDAP server is on this host
-  
-  if ($ds) {
-      // bind with appropriate dn to give update access
-      $r = ldap_bind($ds, "cn=root, o=My Company, c=US", "secret");
-  
-      // prepare data
-      $info["cn"] = "John Jones";
-      $info["sn"] = "Jones";
-      $info["objectclass"] = "person";
-  
-      // add data to directory
-      $r = ldap_add($ds, "cn=John Jones, o=My Company, c=US", $info);
-  
-      ldap_close($ds);
-  } else {
-      echo "Unable to connect to LDAP server";
-  }
-?>
+        // add data to directory
+        $r = ldap_add($ds, "cn=John Jones, o=My Company, c=US", $info);
 
+        ldap_close($ds);
+    } else {
+        echo "Unable to connect to LDAP server";
+    }
+<?>
 
+===============================================================================
+*Notes*
 
+    Note: This function is binary-safe.
 
+===============================================================================
+*See* *Also*
 
-This function is binary-safe.
+  * |ldap_delete| - Delete an entry from a directory
 
-|ldap_delete|
 
 vim:ft=help:

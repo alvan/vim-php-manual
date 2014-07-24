@@ -1,14 +1,34 @@
-ps_fill -- Fills the current path
+ps_fill
 
-  bool ps_fill(resource psdoc)~
+(PECL ps >= 1.1.0)
 
-Fills the path constructed with previously called drawing functions like
-|ps_lineto|.
+ps_fill — Fills the current path
 
-{psdoc} Resource identifier of the postscript file as returned by |ps_new|.
+===============================================================================
+*Description*
 
-Returns TRUE on success or &false; on failure.
+    bool ps_fill ( resource $psdoc )~
 
-|ps_fill_stroke| |ps_stroke|
+Fills the path constructed with previously called drawing functions like |
+ps_lineto|.
+
+===============================================================================
+*Parameters*
+
+{psdoc}
+
+    Resource identifier of the postscript file as returned by |ps_new|.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*See* *Also*
+
+  * |ps_fill_stroke| - Fills and strokes the current path
+  * |ps_stroke| - Draws the current path
+
 
 vim:ft=help:

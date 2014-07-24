@@ -1,29 +1,47 @@
-uopz_backup -- Backup a function
+uopz_backup
 
-  void uopz_backup(string class, string function)~
+(PECL uopz >= 1.0.3)
 
-  void uopz_backup(string function)~
+uopz_backup — Backup a function
+
+===============================================================================
+*Description*
+
+    void uopz_backup ( string $class , string $function )~
+    void uopz_backup ( string $function )~
 
 Backup a function at runtime, to be restored on shutdown
 
-The name of the class containing the function to backup
+===============================================================================
+*Parameters*
 
-The name of the function
+{class}
 
+    The name of the class containing the function to backup
 
+{function}
 
-|uopz_backup| example
+    The name of the function
+
+===============================================================================
+*Return* *Values*
+
+===============================================================================
+*Examples*
+
+Example #1 uopz_backup() example
 
 <?php >
-  uopz_backup("fgets");
-  uopz_function("fgets", function(){
-      return true;
-  });
-  var_dump(fgets());
-?>
+    uopz_backup("fgets");
+    uopz_function("fgets", function(){
+        return true;
+    });
+    var_dump(fgets());
+<?>
 
 The above example will output something similar to:
 
-  bool(true)
+bool(true)
+
 
 vim:ft=help:

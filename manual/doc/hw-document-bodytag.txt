@@ -1,19 +1,39 @@
-hw_Document_BodyTag -- Body tag of hw_document
+hw_Document_BodyTag
 
-  string hw_document_bodytag(int hw_document [, string prefix])~
+(PHP 4)
+
+hw_Document_BodyTag — Body tag of hw_document
+
+===============================================================================
+*Description*
+
+    string hw_document_bodytag ( int $hw_document [, string $prefix ] )~
 
 Returns the BODY tag of the document. If the document is an HTML document the
 BODY tag should be printed before the document.
 
-For backward compatibility, |hw_documentbodytag| is also accepted. This is
+For backward compatibility, hw_documentbodytag() is also accepted. This is
 deprecated, however.
 
-{hw_document} The document identifier.
+===============================================================================
+*Parameters*
+
+{hw_document}
+
+    The document identifier.
 
 {prefix}
 
+===============================================================================
+*Return* *Values*
+
 Returns the BODY tag as a string.
 
-|hw_document_attributes| |hw_document_size|
+===============================================================================
+*See* *Also*
+
+  * |hw_document_attributes| - Object record of hw_document
+  * |hw_document_size| - Size of hw_document
+
 
 vim:ft=help:

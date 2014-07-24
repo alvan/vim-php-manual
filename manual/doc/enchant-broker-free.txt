@@ -1,13 +1,32 @@
-enchant_broker_free -- Free the broker resource and its dictionnaries
+enchant_broker_free
 
-  bool enchant_broker_free(resource broker)~
+(PHP 5 >= 5.3.0, PECL enchant >= 0.1.0 )
+
+enchant_broker_free — Free the broker resource and its dictionnaries
+
+===============================================================================
+*Description*
+
+    bool enchant_broker_free ( resource $broker )~
 
 Free a broker resource with all its dictionaries.
 
-{broker} Broker resource
+===============================================================================
+*Parameters*
 
-Returns TRUE on success or &false; on failure.
+{broker}
 
-|enchant_broker_init|
+    Broker resource
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*See* *Also*
+
+  * |enchant_broker_init| - create a new broker object capable of requesting
+
 
 vim:ft=help:

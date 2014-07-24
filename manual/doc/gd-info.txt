@@ -1,62 +1,101 @@
-gd_info -- Retrieve information about the currently installed GD library
+gd_info
 
-  array gd_info()~
+(PHP 4 >= 4.3.0, PHP 5)
+
+gd_info — Retrieve information about the currently installed GD library
+
+===============================================================================
+*Description*
+
+    array gd_info ( void )~
 
 Gets information about the version and capabilities of the installed GD
 library.
 
+===============================================================================
+*Return* *Values*
+
 Returns an associative array.
 
-Elements of array returned by |gd_info| Attribute Meaning GD Version string
-value describing the installed libgd version. FreeType Support boolean value.
-TRUE if FreeType Support is installed. FreeType Linkage string value
-describing the way in which FreeType was linked. Expected values are: 'with
-freetype', 'with TTF library', and 'with unknown library'. This element will
-only be defined if FreeType Support evaluated to TRUE. T1Lib Support boolean
-value. TRUE if T1Lib support is included. GIF Read Support boolean value. TRUE
-if support for reading GIF images is included. GIF Create Support boolean
-value. TRUE if support for creating GIF images is included. JPEG Support
-boolean value. TRUE if JPEG support is included. PNG Support boolean value.
-TRUE if PNG support is included. WBMP Support boolean value. TRUE if WBMP
-support is included. XBM Support boolean value. TRUE if XBM support is
-included. WebP Support boolean value. TRUE if WebP support is included.
+                    Elements of array returned by gd_info()
+Attribute                                Meaning
+GD        string value describing the installed libgd version.
+Version
+FreeType  boolean value. TRUE if FreeType Support is installed.
+Support
+          string value describing the way in which FreeType was linked.
+FreeType  Expected values are: 'with freetype', 'with TTF library', and 'with
+Linkage   unknown library'. This element will only be defined if FreeType
+          Support evaluated to TRUE.
+T1Lib     boolean value. TRUE if T1Lib support is included.
+Support
+GIF Read  boolean value. TRUE if support for reading GIF images is included.
+Support
+GIF
+Create    boolean value. TRUE if support for creating GIF images is included.
+Support
+JPEG      boolean value. TRUE if JPEG support is included.
+Support
+PNG       boolean value. TRUE if PNG support is included.
+Support
+WBMP      boolean value. TRUE if WBMP support is included.
+Support
+XBM       boolean value. TRUE if XBM support is included.
+Support
+WebP      boolean value. TRUE if WebP support is included.
+Support
 
-Previous to PHP 5.3.0, the JPEG Support attribute was named JPG Support.
+    Note:
 
-Using |gd_info|
+    Previous to PHP 5.3.0, the JPEG Support attribute was named JPG Support.
+
+===============================================================================
+*Examples*
+
+Example #1 Using gd_info()
 
 <?php >
-  var_dump(gd_info());
-?>
+    var_dump(gd_info());
+<?>
 
 The above example will output something similar to:
 
-  array(9) {
-    ["GD Version"]=>
-    string(24) "bundled (2.0 compatible)"
-    ["FreeType Support"]=>
-    bool(false)
-    ["T1Lib Support"]=>
-    bool(false)
-    ["GIF Read Support"]=>
-    bool(true)
-    ["GIF Create Support"]=>
-    bool(false)
-    ["JPEG Support"]=>
-    bool(false)
-    ["PNG Support"]=>
-    bool(true)
-    ["WBMP Support"]=>
-    bool(true)
-    ["XBM Support"]=>
-    bool(false)
-  }
+array(9) {
+  ["GD Version"]=>
+  string(24) "bundled (2.0 compatible)"
+  ["FreeType Support"]=>
+  bool(false)
+  ["T1Lib Support"]=>
+  bool(false)
+  ["GIF Read Support"]=>
+  bool(true)
+  ["GIF Create Support"]=>
+  bool(false)
+  ["JPEG Support"]=>
+  bool(false)
+  ["PNG Support"]=>
+  bool(true)
+  ["WBMP Support"]=>
+  bool(true)
+  ["XBM Support"]=>
+  bool(false)
+}
 
+===============================================================================
+*Changelog*
 
+Version                  Description
+5.5.0   WebP Support added.
+5.3.0   JPG Support attribute renamed to JPEG Support.
 
-Version Description 5.5.0 WebP Support added. 5.3.0 JPG Support attribute
-renamed to JPEG Support.
+===============================================================================
+*See* *Also*
 
-|imagepng| |imagejpeg| |imagegif| |imagewbmp| |imagetypes|
+  * |imagepng| - Output a PNG image to either the browser or a file
+  * |imagejpeg| - Output image to browser or file
+  * |imagegif| - Output image to browser or file
+  * |imagewbmp| - Output image to browser or file
+  * |imagetypes| - Return the image types supported by this PHP build
+
 
 vim:ft=help:

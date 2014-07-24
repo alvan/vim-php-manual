@@ -1,18 +1,38 @@
-msql_list_dbs -- List mSQL databases on server
+msql_list_dbs
 
-  resource msql_list_dbs([resource link_identifier])~
+(PHP 4, PHP 5)
+
+msql_list_dbs — List mSQL databases on server
+
+===============================================================================
+*Description*
+
+    resource msql_list_dbs ([ resource $link_identifier ] )~
 
 |msql_list_tables| lists the databases available on the specified
 {link_identifier}.
 
-{ link_identifier}The mSQL connection. If not specified, the last link opened
-by |msql_connect| is assumed. If no such link is found, the function will try
-to establish a link as if |msql_connect| was called, and use it.
+===============================================================================
+*Parameters*
+
+{ link_identifier}
+
+    The mSQL connection. If not specified, the last link opened by |
+    msql_connect| is assumed. If no such link is found, the function will try
+    to establish a link as if |msql_connect| was called, and use it.
+
+===============================================================================
+*Return* *Values*
 
 Returns a result set which may be traversed with any function that fetches
 result sets, such as |msql_fetch_array|. On failure, this function will return
 FALSE.
 
-|msql_list_tables| |msql_list_fields|
+===============================================================================
+*See* *Also*
+
+  * |msql_list_tables| - List tables in an mSQL database
+  * |msql_list_fields| - List result fields
+
 
 vim:ft=help:

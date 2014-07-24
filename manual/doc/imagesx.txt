@@ -1,27 +1,49 @@
-imagesx -- Get image width
+imagesx
 
-  int imagesx(resource image)~
+(PHP 4, PHP 5)
+
+imagesx — Get image width
+
+===============================================================================
+*Description*
+
+    int imagesx ( resource $image )~
 
 Returns the width of the given {image} resource.
 
-{ image}An image resource, returned by one of the image creation functions,
-such as |imagecreatetruecolor|.
+===============================================================================
+*Parameters*
+
+{ image}
+
+    An image resource, returned by one of the image creation functions, such as
+    |imagecreatetruecolor|.
+
+===============================================================================
+*Return* *Values*
 
 Return the width of the {image} or FALSE on errors.
 
-Using |imagesx|
+===============================================================================
+*Examples*
+
+Example #1 Using imagesx()
 
 <?php >
-  // create a 300*200 image
-  $img = imagecreatetruecolor(300, 200);
-  
-  echo imagesx($img); // 300
-?>
 
+    // create a 300*200 image
+    $img = imagecreatetruecolor(300, 200);
 
+    echo imagesx($img); // 300
 
+<?>
 
+===============================================================================
+*See* *Also*
 
-|imagecreatetruecolor| |getimagesize| |imagesy|
+  * |imagecreatetruecolor| - Create a new true color image
+  * |getimagesize| - Get the size of an image
+  * |imagesy| - Get image height
+
 
 vim:ft=help:

@@ -1,38 +1,60 @@
-pg_lo_read -- Read a large object
+pg_lo_read
 
-  string pg_lo_read(resource large_object [, int len = 8192])~
+(PHP 4 >= 4.2.0, PHP 5)
 
-|pg_lo_read| reads at most {len} bytes from a large object and returns it as a
+pg_lo_read — Read a large object
+
+===============================================================================
+*Description*
+
+    string pg_lo_read ( resource $large_object [, int $len = 8192 ] )~
+
+pg_lo_read() reads at most {len} bytes from a large object and returns it as a 
 string.
 
 To use the large object interface, it is necessary to enclose it within a
 transaction block.
 
-This function used to be called |pg_loread|.
+    Note:
 
-{large_object} PostgreSQL large object (LOB) resource, returned by
-|pg_lo_open|.
+    This function used to be called pg_loread().
 
-{len} An optional maximum number of bytes to return.
+===============================================================================
+*Parameters*
+
+{large_object}
+
+    PostgreSQL large object (LOB) resource, returned by |pg_lo_open|.
+
+{len}
+
+    An optional maximum number of bytes to return.
+
+===============================================================================
+*Return* *Values*
 
 A string containing {len} bytes from the large object, or FALSE on error.
 
-|pg_lo_read| example
+===============================================================================
+*Examples*
+
+Example #1 pg_lo_read() example
 
 <?php >
-     $doc_oid = 189762345;
-     $database = pg_connect("dbname=jacarta");
-     pg_query($database, "begin");
-     $handle = pg_lo_open($database, $doc_oid, "r");
-     $data = pg_lo_read($handle, 50000);
-     pg_query($database, "commit");
-     echo $data;
-?>
+       $doc_oid = 189762345;
+       $database = pg_connect("dbname=jacarta");
+       pg_query($database, "begin");
+       $handle = pg_lo_open($database, $doc_oid, "r");
+       $data = pg_lo_read($handle, 50000);
+       pg_query($database, "commit");
+       echo $data;
+<?>
 
+===============================================================================
+*See* *Also*
 
+  * |pg_lo_read_all| - Reads an entire large object and send straight to
+    browser
 
-
-
-|pg_lo_read_all|
 
 vim:ft=help:

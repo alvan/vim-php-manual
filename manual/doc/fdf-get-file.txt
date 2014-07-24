@@ -1,14 +1,33 @@
-fdf_get_file -- Get the value of the /F key
+fdf_get_file
 
-  string fdf_get_file(resource fdf_document)~
+(PHP 4, PHP 5)
+
+fdf_get_file — Get the value of the /F key
+
+===============================================================================
+*Description*
+
+    string fdf_get_file ( resource $fdf_document )~
 
 Gets the value of the /F key.
 
-{fdf_document} The FDF document handle, returned by |fdf_create|, |fdf_open|
-or |fdf_open_string|.
+===============================================================================
+*Parameters*
+
+{fdf_document}
+
+    The FDF document handle, returned by |fdf_create|, |fdf_open| or |
+    fdf_open_string|.
+
+===============================================================================
+*Return* *Values*
 
 Returns the key value, as a string.
 
-|fdf_set_file|
+===============================================================================
+*See* *Also*
+
+  * |fdf_set_file| - Set PDF document to display FDF data in
+
 
 vim:ft=help:

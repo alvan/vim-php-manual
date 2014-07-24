@@ -1,12 +1,25 @@
-m_transkeyval -- Add key/value pair to a transaction. Replaces deprecated
+m_transkeyval
+
+(PHP 5 >= 5.0.5, PECL mcve >= 1.0.0)
+
+m_transkeyval — Add key/value pair to a transaction. Replaces deprecated
 transparam()
 
-  int m_transkeyval(resource conn, int identifier, string key, string value)~
+===============================================================================
+*Description*
 
-This function is currently not documented; only its argument list is
-available.
+    int m_transkeyval ( resource $conn , int $identifier , string $key ,~
+    string $value )~
+Warning
 
-{ conn}An MCVE_CONN resource returned by |m_initengine|.
+This function is currently not documented; only its argument list is available.
+
+===============================================================================
+*Parameters*
+
+{ conn}
+
+    An MCVE_CONN resource returned by |m_initengine|.
 
 {identifier}
 
@@ -14,6 +27,8 @@ available.
 
 {value}
 
+===============================================================================
+*Return* *Values*
 
 
 vim:ft=help:

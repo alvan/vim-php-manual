@@ -1,114 +1,145 @@
-func_get_arg -- Return an item from the argument list
+func_get_arg
 
-  mixed func_get_arg(int arg_num)~
+(PHP 4, PHP 5)
+
+func_get_arg — Return an item from the argument list
+
+===============================================================================
+*Description*
+
+    mixed func_get_arg ( int $arg_num )~
 
 Gets the specified argument from a user-defined function's argument list.
 
-This function may be used in conjunction with |func_get_args| and
-|func_num_args| to allow user-defined functions to accept variable-length
+This function may be used in conjunction with |func_get_args| and |
+func_num_args| to allow user-defined functions to accept variable-length
 argument lists.
 
-{arg_num} The argument offset. Function arguments are counted starting from
-zero.
+===============================================================================
+*Parameters*
+
+{arg_num}
+
+    The argument offset. Function arguments are counted starting from zero.
+
+===============================================================================
+*Return* *Values*
 
 Returns the specified argument, or FALSE on error.
 
-Version Description 5.3.0 This function can now be used in parameter lists.
-5.3.0 If this function is called from the outermost scope of a file which has
-been included by calling |include| or |require| from within a function in the
-calling file, it now generates a warning and returns FALSE.
+===============================================================================
+*Changelog*
+
+Version                               Description
+5.3.0   This function can now be used in parameter lists.
+        If this function is called from the outermost scope of a file which has
+5.3.0   been included by calling |include| or |require| from within a function
+        in the calling file, it now generates a warning and returns FALSE.
+
+===============================================================================
+*Errors/Exceptions*
 
 Generates a warning if called from outside of a user-defined function, or if
 {arg_num} is greater than the number of arguments actually passed.
 
-|func_get_arg| example
+===============================================================================
+*Examples*
+
+Example #1 func_get_arg() example
 
 <?php >
-  function foo()
-  {
-       $numargs = func_num_args();
-       echo "Number of arguments: $numargs<br />\n";
-       if ($numargs >= 2) {
-           echo "Second argument is: " . func_get_arg(1) . "<br />\n";
-       }
-  }
-  
-  foo (1, 2, 3);
-?>
+    function foo()
+    {
+         $numargs = func_num_args();
+         echo "Number of arguments: $numargs<br />\n";
+         if ($numargs >= 2) {
+             echo "Second argument is: " . func_get_arg(1) . "<br />\n";
+         }
+    }
 
+    foo (1, 2, 3);
+<?>
 
+Example #2 func_get_arg() example before and after PHP 5.3
 
-
-
-|func_get_arg| example before and after PHP 5.3
-
-  test.php
+test.php
 <?php >
-  function foo() {
-      include './fga.inc';
-  }
-  
-  foo('First arg', 'Second arg');
-?>
-  
-  fga.inc
+    function foo() {
+        include './fga.inc';
+    }
+
+    foo('First arg', 'Second arg');
+<?>
+
+fga.inc
 <?php >
-  $arg = func_get_arg(1);
-  var_export($arg);
-?>
+
+    $arg = func_get_arg(1);
+    var_export($arg);
+
+<?>
 
 Output previous to PHP 5.3:
 
-  'Second arg'
+'Second arg'
 
 Output in PHP 5.3 and later:
 
-  Warning: func_get_arg():  Called from the global scope - no function
-  context in /home/torben/Desktop/code/ml/fga.inc on line 3
-  false
+Warning: func_get_arg():  Called from the global scope - no function
+context in /home/torben/Desktop/code/ml/fga.inc on line 3
+false
 
-
-
-|func_get_arg| example of byref and byval arguments
+Example #3 func_get_arg() example of byref and byval arguments
 
 <?php >
-  function byVal($arg) {
-      echo 'As passed     : ', var_export(func_get_arg(0)), PHP_EOL;
-      $arg = 'baz';
-      echo 'After change  : ', var_export(func_get_arg(0)), PHP_EOL;
-  }
-  
-  function byRef(&amp;$arg) {
-      echo 'As passed     : ', var_export(func_get_arg(0)), PHP_EOL;
-      $arg = 'baz';
-      echo 'After change  : ', var_export(func_get_arg(0)), PHP_EOL;
-  }
-  
-  $arg = 'bar';
-  byVal($arg);
-  byRef($arg);
-?>
+    function byVal($arg) {
+        echo 'As passed     : ', var_export(func_get_arg(0)), PHP_EOL;
+        $arg = 'baz';
+        echo 'After change  : ', var_export(func_get_arg(0)), PHP_EOL;
+    }
+
+    function byRef(&$arg) {
+        echo 'As passed     : ', var_export(func_get_arg(0)), PHP_EOL;
+        $arg = 'baz';
+        echo 'After change  : ', var_export(func_get_arg(0)), PHP_EOL;
+    }
+
+    $arg = 'bar';
+    byVal($arg);
+    byRef($arg);
+<?>
 
 The above example will output:
 
-  As passed     : 'bar'
-  After change  : 'bar'
-  As passed     : 'bar'
-  After change  : 'baz'
 
+As passed : 'bar'
+After change : 'bar'
+As passed : 'bar'
+After change : 'baz'
 
+===============================================================================
+*Notes*
 
-Because this function depends on the current scope to determine parameter
-details, it cannot be used as a function parameter in versions prior to 5.3.0.
-If this value must be passed, the results should be assigned to a variable,
-and that variable should be passed.
+    Note:
 
-If the arguments are passed by reference, any changes to the arguments will be
-reflected in the values returned by this function.
+    Because this function depends on the current scope to determine parameter
+    details, it cannot be used as a function parameter in versions prior to
+    5.3.0. If this value must be passed, the results should be assigned to a
+    variable, and that variable should be passed.
 
-This function returns a copy of the passed arguments only, and does not
-account for default (non-passed) arguments.
+    Note:
 
-|func_get_args| |func_num_args|
+    If the arguments are passed by reference, any changes to the arguments will
+    be reflected in the values returned by this function.
+
+    Note: This function returns a copy of the passed arguments only, and does
+    not account for default (non-passed) arguments.
+
+===============================================================================
+*See* *Also*
+
+  * |func_get_args| - Returns an array comprising a function's argument list
+  * |func_num_args| - Returns the number of arguments passed to the function
+
 
 vim:ft=help:

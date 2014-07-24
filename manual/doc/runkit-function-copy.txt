@@ -1,32 +1,57 @@
-runkit_function_copy -- Copy a function to a new function name
+runkit_function_copy
 
-  bool runkit_function_copy(string funcname, string targetname)~
+(PECL runkit >= 0.7.0)
 
-{funcname} Name of existing function
+runkit_function_copy — Copy a function to a new function name
 
-{targetname} Name of new function to copy definition to
+===============================================================================
+*Description*
 
-Returns TRUE on success or &false; on failure.
+    bool runkit_function_copy ( string $funcname , string $targetname )~
 
-A |runkit_function_copy| example
+===============================================================================
+*Parameters*
+
+{funcname}
+
+    Name of existing function
+
+{targetname}
+
+    Name of new function to copy definition to
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*Examples*
+
+Example #1 A runkit_function_copy() example
 
 <?php >
-  function original() {
-    echo "In a function\n";
-  }
-  runkit_function_copy('original','duplicate');
-  original();
-  duplicate();
-?>
+    function original() {
+      echo "In a function\n";
+    }
+    runkit_function_copy('original','duplicate');
+    original();
+    duplicate();
+<?>
 
 The above example will output:
 
-  In a function
-  In a function
+In a function
+In a function
 
+===============================================================================
+*See* *Also*
 
+  * |runkit_function_add| - Add a new function, similar to create_function
+  * |runkit_function_redefine| - Replace a function definition with a new
+    implementation
+  * |runkit_function_rename| - Change a function's name
+  * |runkit_function_remove| - Remove a function definition
 
-|runkit_function_add| |runkit_function_redefine| |runkit_function_rename|
-|runkit_function_remove|
 
 vim:ft=help:

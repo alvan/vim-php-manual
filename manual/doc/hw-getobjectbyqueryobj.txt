@@ -1,19 +1,43 @@
-hw_GetObjectByQueryObj -- Search object
+hw_GetObjectByQueryObj
 
-  array hw_getobjectbyqueryobj(int connection, string query, int max_hits)~
+(PHP 4)
+
+hw_GetObjectByQueryObj — Search object
+
+===============================================================================
+*Description*
+
+    array hw_getobjectbyqueryobj ( int $connection , string $query , int~
+    $max_hits )~
 
 Searches for objects on the whole server and returns an array of object
 records.
 
-{connection} The connection identifier.
+===============================================================================
+*Parameters*
 
-{query} The query will only work with indexed attributes.
+{connection}
 
-{max_hits} The maximum number of matches is limited to {max_hits}. If
-{max_hits} is set to -1 the maximum number of matches is unlimited.
+    The connection identifier.
+
+{query}
+
+    The query will only work with indexed attributes.
+
+{max_hits}
+
+    The maximum number of matches is limited to {max_hits}. If {max_hits} is
+    set to -1 the maximum number of matches is unlimited.
+
+===============================================================================
+*Return* *Values*
 
 Returns an array of object records.
 
-|hw_getobjectbyquery|
+===============================================================================
+*See* *Also*
+
+  * |hw_getobjectbyquery| - Search object
+
 
 vim:ft=help:

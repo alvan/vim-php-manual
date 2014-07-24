@@ -1,17 +1,39 @@
-trader_apo -- Absolute Price Oscillator
+trader_apo
 
-  array trader_apo(array real [, integer fastPeriod [, integer slowPeriod [, integer mAType]]])~
+(PECL trader >= 0.2.0)
 
+trader_apo — Absolute Price Oscillator
 
+===============================================================================
+*Description*
 
-Array of real values.
+    array trader_apo ( array $real [, integer $fastPeriod [, integer~
+    $slowPeriod [, integer $mAType ]]] )~
 
-Number of period for the fast MA. Valid range from 2 to 100000.
+===============================================================================
+*Parameters*
 
-Number of period for the slow MA. Valid range from 2 to 100000.
+{real}
 
-Type of Moving Average. TRADER_MA_TYPE_* series of constants should be used.
+    Array of real values.
+
+{fastPeriod}
+
+    Number of period for the fast MA. Valid range from 2 to 100000.
+
+{slowPeriod}
+
+    Number of period for the slow MA. Valid range from 2 to 100000.
+
+{mAType}
+
+    Type of Moving Average. TRADER_MA_TYPE_* series of constants should be
+    used.
+
+===============================================================================
+*Return* *Values*
 
 Returns an array with calculated data or false on failure.
+
 
 vim:ft=help:

@@ -1,28 +1,52 @@
-posix_getpgid -- Get process group id for job control
+posix_getpgid
 
-  int posix_getpgid(int pid)~
+(PHP 4, PHP 5)
+
+posix_getpgid — Get process group id for job control
+
+===============================================================================
+*Description*
+
+    int posix_getpgid ( int $pid )~
 
 Returns the process group identifier of the process {pid} or FALSE on failure.
 
-{pid} The process id.
+===============================================================================
+*Parameters*
+
+{pid}
+
+    The process id.
+
+===============================================================================
+*Return* *Values*
 
 Returns the identifier, as an integer.
 
-Example use of |posix_getpgid|
+===============================================================================
+*Examples*
+
+Example #1 Example use of posix_getpgid()
 
 <?php >
-  $pid = posix_getppid();
-  echo posix_getpgid($pid); //35
-?>
+    $pid = posix_getppid();
+    echo posix_getpgid($pid); //35
+<?>
 
+===============================================================================
+*Notes*
 
+    Note:
 
+    This is a not POSIX function, but is common on BSD and System V systems. If
+    the system does not support this function, then it will not be included at
+    compile time. This may be checked with |function_exists|.
 
+===============================================================================
+*See* *Also*
 
-This is a not POSIX function, but is common on BSD and System V systems. If
-the system does not support this function, then it will not be included at
-compile time. This may be checked with |function_exists|.
+  * |posix_getppid| - Return the parent process identifier
+  * man page SETPGID(2)
 
-|posix_getppid| man page SETPGID(2)
 
 vim:ft=help:

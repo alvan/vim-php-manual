@@ -1,16 +1,39 @@
-fann_set_cascade_candidate_stagnation_epochs -- Sets the number of cascade
+fann_set_cascade_candidate_stagnation_epochs
+
+(PECL fann >= 1.0.0)
+
+fann_set_cascade_candidate_stagnation_epochs — Sets the number of cascade
 candidate stagnation epochs
 
-  bool fann_set_cascade_candidate_stagnation_epochs(resource ann, int cascade_candidate_stagnation_epochs)~
+===============================================================================
+*Description*
+
+    bool fann_set_cascade_candidate_stagnation_epochs ( resource $ann , int~
+    $cascade_candidate_stagnation_epochs )~
 
 Sets the number of cascade candidate stagnation epochs.
 
-Neural network resource.
+===============================================================================
+*Parameters*
 
-The number of cascade candidate stagnation epochs.
+{ann}
+
+    Neural network resource.
+
+{cascade_candidate_stagnation_epochs}
+
+    The number of cascade candidate stagnation epochs.
+
+===============================================================================
+*Return* *Values*
 
 Returns TRUE on success, or FALSE otherwise.
 
-|fann_get_cascade_candidate_stagnation_epochs|
+===============================================================================
+*See* *Also*
+
+  * |fann_get_cascade_candidate_stagnation_epochs| - Returns the number of
+    cascade candidate stagnation epochs
+
 
 vim:ft=help:

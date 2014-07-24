@@ -1,16 +1,37 @@
-dgettext -- Override the current domain
+dgettext
 
-  string dgettext(string domain, string message)~
+(PHP 4, PHP 5)
 
-The |dgettext| function allows you to override the current {domain} for a
+dgettext — Override the current domain
+
+===============================================================================
+*Description*
+
+    string dgettext ( string $domain , string $message )~
+
+The dgettext() function allows you to override the current {domain} for a
 single message lookup.
 
-{domain} The domain
+===============================================================================
+*Parameters*
 
-{message} The message
+{domain}
+
+    The domain
+
+{message}
+
+    The message
+
+===============================================================================
+*Return* *Values*
 
 A string on success.
 
-|gettext|
+===============================================================================
+*See* *Also*
+
+  * |gettext| - Lookup a message in the current domain
+
 
 vim:ft=help:

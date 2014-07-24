@@ -1,16 +1,37 @@
-swf_definefont -- Defines a font
+swf_definefont
 
-  void swf_definefont(int fontid, string fontname)~
+(PHP 4)
 
-The |swf_definefont| function defines a font parameter and gives it the
+swf_definefont — Defines a font
+
+===============================================================================
+*Description*
+
+    void swf_definefont ( int $fontid , string $fontname )~
+
+The swf_definefont() function defines a font parameter and gives it the
 specified id. It then sets the font given by { fontname} to the current font.
 
-{fontid} The id to be given to the font.
+===============================================================================
+*Parameters*
 
-{fontname} The font so be set as current font.
+{fontid}
+
+    The id to be given to the font.
+
+{fontname}
+
+    The font so be set as current font.
+
+===============================================================================
+*Return* *Values*
 
 No value is returned.
 
-|swf_definetext|
+===============================================================================
+*See* *Also*
+
+  * |swf_definetext| - Define a text string
+
 
 vim:ft=help:

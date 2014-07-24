@@ -1,13 +1,33 @@
-zip_close -- Close a ZIP file archive
+zip_close
 
-  void zip_close(resource zip)~
+(PHP 4 >= 4.1.0, PHP 5 >= 5.2.0, PECL zip >= 1.0.0)
+
+zip_close — Close a ZIP file archive
+
+===============================================================================
+*Description*
+
+    void zip_close ( resource $zip )~
 
 Closes the given ZIP file archive.
 
-{zip} A ZIP file previously opened with |zip_open|.
+===============================================================================
+*Parameters*
+
+{zip}
+
+    A ZIP file previously opened with |zip_open|.
+
+===============================================================================
+*Return* *Values*
 
 No value is returned.
 
-|zip_open| |zip_read|
+===============================================================================
+*See* *Also*
+
+  * |zip_open| - Open a ZIP file archive
+  * |zip_read| - Read next entry in a ZIP file archive
+
 
 vim:ft=help:

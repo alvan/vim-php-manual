@@ -1,17 +1,38 @@
-posix_kill -- Send a signal to a process
+posix_kill
 
-  bool posix_kill(int pid, int sig)~
+(PHP 4, PHP 5)
+
+posix_kill — Send a signal to a process
+
+===============================================================================
+*Description*
+
+    bool posix_kill ( int $pid , int $sig )~
 
 Send the signal {sig} to the process with the process identifier {pid}.
 
-{pid} The process identifier.
+===============================================================================
+*Parameters*
 
-{sig} One of the PCNTL signals constants.
+{pid}
 
-Returns TRUE on success or &false; on failure.
+    The process identifier.
 
-The kill(2) manual page of the POSIX system, which contains additional
-information about negative process identifiers, the special pid 0, the special
-pid -1, and the signal number 0.
+{sig}
+
+    One of the PCNTL signals constants.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*See* *Also*
+
+  * The kill(2) manual page of the POSIX system, which contains additional
+    information about negative process identifiers, the special pid 0, the
+    special pid -1, and the signal number 0.
+
 
 vim:ft=help:

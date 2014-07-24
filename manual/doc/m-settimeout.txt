@@ -1,14 +1,28 @@
-m_settimeout -- Set maximum transaction time (per trans)
+m_settimeout
 
-  int m_settimeout(resource conn, int seconds)~
+(PHP 4 >= 4.3.9, PHP 5 <= 5.0.5, PECL mcve >= 1.0.0)
 
-This function is currently not documented; only its argument list is
-available.
+m_settimeout — Set maximum transaction time (per trans)
 
-{ conn}An MCVE_CONN resource returned by |m_initengine|.
+===============================================================================
+*Description*
+
+    int m_settimeout ( resource $conn , int $seconds )~
+Warning
+
+This function is currently not documented; only its argument list is available.
+
+===============================================================================
+*Parameters*
+
+{ conn}
+
+    An MCVE_CONN resource returned by |m_initengine|.
 
 {seconds}
 
+===============================================================================
+*Return* *Values*
 
 
 vim:ft=help:

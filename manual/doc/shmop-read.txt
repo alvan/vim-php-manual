@@ -1,30 +1,52 @@
-shmop_read -- Read data from shared memory block
+shmop_read
 
-  string shmop_read(int shmid, int start, int count)~
+(PHP 4 >= 4.0.4, PHP 5)
 
-|shmop_read| will read a string from shared memory block.
+shmop_read — Read data from shared memory block
 
-{shmid} The shared memory block identifier created by |shmop_open|
+===============================================================================
+*Description*
 
-{start} Offset from which to start reading
+    string shmop_read ( int $shmid , int $start , int $count )~
 
-{count} The number of bytes to read
+shmop_read() will read a string from shared memory block.
+
+===============================================================================
+*Parameters*
+
+{shmid}
+
+    The shared memory block identifier created by |shmop_open|
+
+{start}
+
+    Offset from which to start reading
+
+{count}
+
+    The number of bytes to read
+
+===============================================================================
+*Return* *Values*
 
 Returns the data or FALSE on failure.
 
-Reading shared memory block
+===============================================================================
+*Examples*
+
+Example #1 Reading shared memory block
 
 <?php >
-  $shm_data = shmop_read($shm_id, 0, 50);
-?>
-
-
-
-
+    $shm_data = shmop_read($shm_id, 0, 50);
+<?>
 
 This example will read 50 bytes from shared memory block and place the data
 inside $shm_data.
 
-|shmop_write|
+===============================================================================
+*See* *Also*
+
+  * |shmop_write| - Write data into shared memory block
+
 
 vim:ft=help:

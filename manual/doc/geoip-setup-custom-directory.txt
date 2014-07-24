@@ -1,27 +1,47 @@
-geoip_setup_custom_directory -- Set a custom directory for the GeoIP database.
+geoip_setup_custom_directory
 
-  void geoip_setup_custom_directory(string path)~
+(PECL geoip >= 1.1.0)
 
-The |geoip_setup_custom_directory| function will change the default directory
+geoip_setup_custom_directory — Set a custom directory for the GeoIP database.
+
+===============================================================================
+*Description*
+
+    void geoip_setup_custom_directory ( string $path )~
+
+The geoip_setup_custom_directory() function will change the default directory
 of the GeoIP database. This is equivalent to changing geoip.custom_directory.
 
-{path} The full path of where the GeoIP database is on disk.
+===============================================================================
+*Parameters*
+
+{path}
+
+    The full path of where the GeoIP database is on disk.
+
+===============================================================================
+*Return* *Values*
 
 No value is returned.
 
-A |geoip_setup_custom_directory| example This will change the GeoIP default
-database path.
+===============================================================================
+*Examples*
+
+Example #1 A geoip_setup_custom_directory() example
+
+This will change the GeoIP default database path.
 
 <?php >
-  geoip_setup_custom_directory('/some/other/path');
-  
-  print geoip_db_filename(GEOIP_COUNTRY_EDITION);
-?>
+
+    geoip_setup_custom_directory('/some/other/path');
+
+    print geoip_db_filename(GEOIP_COUNTRY_EDITION);
+
+<?>
 
 The above example will output:
 
-  /some/other/path/GeoIP.dat
-
+/some/other/path/GeoIP.dat
 
 
 vim:ft=help:

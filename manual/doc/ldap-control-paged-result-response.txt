@@ -1,20 +1,44 @@
-ldap_control_paged_result_response -- Retrieve the LDAP pagination cookie
+ldap_control_paged_result_response
 
-  bool ldap_control_paged_result_response(resource link, resource result [, string &cookie [, int &estimated]])~
+(PHP 5 >= 5.4.0)
+
+ldap_control_paged_result_response — Retrieve the LDAP pagination cookie
+
+===============================================================================
+*Description*
+
+    bool ldap_control_paged_result_response ( resource $link , resource~
+    $result [, string &$cookie [, int &$estimated ]] )~
 
 Retrieve the pagination information send by the server.
 
-{link} An LDAP link identifier, returned by |ldap_connect|.
+===============================================================================
+*Parameters*
+
+{link}
+
+    An LDAP link identifier, returned by |ldap_connect|.
 
 {result}
 
-{cookie} An opaque structure sent by the server.
+{cookie}
 
-{estimated} The estimated number of entries to retrieve.
+    An opaque structure sent by the server.
 
-Returns TRUE on success or &false; on failure.
+{estimated}
 
-|ldap_control_paged_result| RFC2696 : LDAP Control Extension for Simple Paged
-Results Manipulation
+    The estimated number of entries to retrieve.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*See* *Also*
+
+  * |ldap_control_paged_result| - Send LDAP pagination control
+  * » RFC2696 : LDAP Control Extension for Simple Paged Results Manipulation
+
 
 vim:ft=help:

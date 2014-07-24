@@ -1,11 +1,63 @@
-escapeshellcmd -- Escape shell metacharacters
+escapeshellcmd
 
-  string escapeshellcmd(string command)~
+(PHP 4, PHP 5)
 
-|escapeshellcmd| escapes any characters in a string that might be used to
-trick a shell command into executing arbitrary commands. This function should
-be used to make sure that any data coming from user input is escaped before
-this data is passed to the |exec| or |system| functions, or to the backtick
-operator.
+escapeshellcmd — Escape shell metacharacters
+
+===============================================================================
+*Description*
+
+    string escapeshellcmd ( string $command )~
+
+escapeshellcmd() escapes any characters in a string that might be used to trick
+a shell command into executing arbitrary commands. This function should be used
+to make sure that any data coming from user input is escaped before this data
+is passed to the |exec| or |system| functions, or to the backtick operator.
+
+Following characters are preceded by a backslash: #&;`|*?~<>^()[]{}$\, \x0A and
+\xFF. ' and " are escaped only if they are not paired. In Windows, all these
+characters plus % are replaced by a space instead.
+
+===============================================================================
+*Parameters*
+
+{command}
+
+    The command that will be escaped.
+
+===============================================================================
+*Return* *Values*
+
+The escaped string.
+
+===============================================================================
+*Examples*
+
+Example #1 escapeshellcmd() example
+
+<?php >
+    // We allow arbitrary number of arguments intentionally here.
+    $command = './configure '.$_POST['configure_options'];
+
+    $escaped_command = escapeshellcmd($command);
+     
+    system($escaped_command);
+<?>
+
+Warning
+
+escapeshellcmd() should be used on the whole command string, and it still
+allows the attacker to pass arbitrary number of arguments. For escaping a
+single argument |escapeshellarg| should be used instead.
+
+===============================================================================
+*See* *Also*
+
+  * |escapeshellarg| - Escape a string to be used as a shell argument
+  * |exec| - Execute an external program
+  * |popen| - Opens process file pointer
+  * |system| - Execute an external program and display the output
+  * backtick operator
+
 
 vim:ft=help:

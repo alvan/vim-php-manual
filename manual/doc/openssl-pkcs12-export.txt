@@ -1,21 +1,44 @@
-openssl_pkcs12_export -- Exports a PKCS#12 Compatible Certificate Store File
-to variable.
+openssl_pkcs12_export
 
-  bool openssl_pkcs12_export(mixed x509, string &out, mixed priv_key, string pass [, array args])~
+(PHP 5 >= 5.2.2)
 
-|openssl_pkcs12_export| stores {x509} into a string named by {out} in a
-PKCS#12 file format.
+openssl_pkcs12_export — Exports a PKCS#12 Compatible Certificate Store File to
+variable.
 
-{x509} See Key/Certificate parameters for a list of valid values.
+===============================================================================
+*Description*
 
-{out} On success, this will hold the PKCS#12.
+    bool openssl_pkcs12_export ( mixed $x509 , string &$out , mixed $priv_key~
+    , string $pass [, array $args ] )~
 
-{priv_key} Private key component of PKCS#12 file.
+openssl_pkcs12_export() stores {x509} into a string named by {out} in a PKCS#12
+file format.
 
-{pass} Encryption password for unlocking the PKCS#12 file.
+===============================================================================
+*Parameters*
+
+{x509}
+
+    See Key/Certificate parameters for a list of valid values.
+
+{out}
+
+    On success, this will hold the PKCS#12.
+
+{priv_key}
+
+    Private key component of PKCS#12 file.
+
+{pass}
+
+    Encryption password for unlocking the PKCS#12 file.
 
 {args}
 
-Returns TRUE on success or &false; on failure.
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
 
 vim:ft=help:

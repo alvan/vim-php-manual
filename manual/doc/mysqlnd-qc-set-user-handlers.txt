@@ -1,36 +1,72 @@
-mysqlnd_qc_set_user_handlers -- Sets the callback functions for a user-defined
+mysqlnd_qc_set_user_handlers
+
+(PECL mysqlnd_qc >= 1.0.0)
+
+mysqlnd_qc_set_user_handlers — Sets the callback functions for a user-defined
 procedural storage handler
 
-  bool mysqlnd_qc_set_user_handlers(string get_hash, string find_query_in_cache, string return_to_cache, string add_query_to_cache_if_not_exists, string query_is_select, string update_query_run_time_stats, string get_stats, string clear_cache)~
+===============================================================================
+*Description*
+
+    bool mysqlnd_qc_set_user_handlers ( string $get_hash , string~
+    $find_query_in_cache , string $return_to_cache , string~
+    $add_query_to_cache_if_not_exists , string $query_is_select , string~
+    $update_query_run_time_stats , string $get_stats , string $clear_cache )~
 
 Sets the callback functions for a user-defined procedural storage handler.
 
-Name of the user function implementing the storage handler get_hash
-functionality.
+===============================================================================
+*Parameters*
 
-Name of the user function implementing the storage handler find_in_cache
-functionality.
+{get_hash}
 
-Name of the user function implementing the storage handler return_to_cache
-functionality.
+    Name of the user function implementing the storage handler get_hash
+    functionality.
 
-Name of the user function implementing the storage handler
-add_query_to_cache_if_not_exists functionality.
+{find_query_in_cache}
 
-Name of the user function implementing the storage handler query_is_select
-functionality.
+    Name of the user function implementing the storage handler find_in_cache
+    functionality.
 
-Name of the user function implementing the storage handler
-update_query_run_time_stats functionality.
+{return_to_cache}
 
-Name of the user function implementing the storage handler get_stats
-functionality.
+    Name of the user function implementing the storage handler return_to_cache
+    functionality.
 
-Name of the user function implementing the storage handler clear_cache
-functionality.
+{add_query_to_cache_if_not_exists}
+
+    Name of the user function implementing the storage handler
+    add_query_to_cache_if_not_exists functionality.
+
+{query_is_select}
+
+    Name of the user function implementing the storage handler query_is_select
+    functionality.
+
+{update_query_run_time_stats}
+
+    Name of the user function implementing the storage handler
+    update_query_run_time_stats functionality.
+
+{get_stats}
+
+    Name of the user function implementing the storage handler get_stats
+    functionality.
+
+{clear_cache}
+
+    Name of the user function implementing the storage handler clear_cache
+    functionality.
+
+===============================================================================
+*Return* *Values*
 
 Returns TRUE on success or FALSE on FAILURE.
 
-Procedural user-defined storage handler example
+===============================================================================
+*See* *Also*
+
+  * Procedural user-defined storage handler example
+
 
 vim:ft=help:

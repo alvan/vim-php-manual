@@ -1,21 +1,48 @@
-swf_defineline -- Define a line
+swf_defineline
 
-  void swf_defineline(int objid, float x1, float y1, float x2, float y2, float width)~
+(PHP 4)
+
+swf_defineline — Define a line
+
+===============================================================================
+*Description*
+
+    void swf_defineline ( int $objid , float $x1 , float $y1 , float $x2 ,~
+    float $y2 , float $width )~
 
 Defines a line.
 
-{objid} The object id.
+===============================================================================
+*Parameters*
 
-{x1} x-coordinate of start point.
+{objid}
 
-{y1} y-coordinate of start point.
+    The object id.
 
-{x2} x-coordinate of end point.
+{x1}
 
-{y2} y-coordinate of end point.
+    x-coordinate of start point.
 
-{width} The line width.
+{y1}
+
+    y-coordinate of start point.
+
+{x2}
+
+    x-coordinate of end point.
+
+{y2}
+
+    y-coordinate of end point.
+
+{width}
+
+    The line width.
+
+===============================================================================
+*Return* *Values*
 
 No value is returned.
+
 
 vim:ft=help:

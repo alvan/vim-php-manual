@@ -1,32 +1,52 @@
-uopz_copy -- Copy a function
+uopz_copy
 
-  Closure uopz_copy(string class, string function)~
+(PECL uopz >= 1.0.4)
 
-  Closure uopz_copy(string function)~
+uopz_copy — Copy a function
+
+===============================================================================
+*Description*
+
+    Closure uopz_copy ( string $class , string $function )~
+    Closure uopz_copy ( string $function )~
 
 Copy a function by name
 
-The name of the class containing the function to copy
+===============================================================================
+*Parameters*
 
-The name of the function
+{class}
+
+    The name of the class containing the function to copy
+
+{function}
+
+    The name of the function
+
+===============================================================================
+*Return* *Values*
 
 A Closure for the specified function
 
-|uopz_copy| example
+===============================================================================
+*Examples*
+
+Example #1 uopz_copy() example
 
 <?php >
-  $strtotime = uopz_copy('strtotime');
-  
-  uopz_function("strtotime", function($arg1, $arg2) use($strtotime) {
-      /* can call original strtotime from here */
-      var_dump($arg1);
-  });
-  
-  var_dump(strtotime('dummy'));
-?>
+    $strtotime = uopz_copy('strtotime');
+
+    uopz_function("strtotime", function($arg1, $arg2) use($strtotime) {
+        /* can call original strtotime from here */
+        var_dump($arg1);
+    });
+
+    var_dump(strtotime('dummy'));
+<?>
 
 The above example will output something similar to:
 
-  string(5) "dummy"
+string(5) "dummy"
+
 
 vim:ft=help:

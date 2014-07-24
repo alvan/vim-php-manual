@@ -1,15 +1,39 @@
-ibase_blob_add -- Add data into a newly created blob
+ibase_blob_add
 
-  void ibase_blob_add(resource blob_handle, string data)~
+(PHP 5)
 
-|ibase_blob_add| adds data into a blob created with |ibase_blob_create|.
+ibase_blob_add — Add data into a newly created blob
 
-{blob_handle} A blob handle opened with |ibase_blob_create|.
+===============================================================================
+*Description*
 
-{data} The data to be added.
+    void ibase_blob_add ( resource $blob_handle , string $data )~
+
+ibase_blob_add() adds data into a blob created with |ibase_blob_create|.
+
+===============================================================================
+*Parameters*
+
+{blob_handle}
+
+    A blob handle opened with |ibase_blob_create|.
+
+{data}
+
+    The data to be added.
+
+===============================================================================
+*Return* *Values*
 
 No value is returned.
 
-|ibase_blob_cancel| |ibase_blob_close| |ibase_blob_create| |ibase_blob_import|
+===============================================================================
+*See* *Also*
+
+  * |ibase_blob_cancel| - Cancel creating blob
+  * |ibase_blob_close| - Close blob
+  * |ibase_blob_create| - Create a new blob for adding data
+  * |ibase_blob_import| - Create blob, copy file in it, and close it
+
 
 vim:ft=help:

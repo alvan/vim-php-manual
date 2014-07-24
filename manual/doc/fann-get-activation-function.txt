@@ -1,6 +1,14 @@
-fann_get_activation_function -- Returns the activation function
+fann_get_activation_function
 
-  int fann_get_activation_function(resource ann, int layer, int neuron)~
+(PECL fann >= 1.0.0)
+
+fann_get_activation_function — Returns the activation function
+
+===============================================================================
+*Description*
+
+    int fann_get_activation_function ( resource $ann , int $layer , int~
+    $neuron )~
 
 Get the activation function for neuron number neuron in layer number layer,
 counting the input layer as layer 0.
@@ -10,17 +18,40 @@ layer.
 
 The return value is one of the activation functions constants.
 
-Neural network resource.
+===============================================================================
+*Parameters*
 
-Layer number.
+{ann}
 
-Neuron number.
+    Neural network resource.
+
+{layer}
+
+    Layer number.
+
+{neuron}
+
+    Neuron number.
+
+===============================================================================
+*Return* *Values*
 
 Learning functions constant or -1 if the neuron is not defined in the neural
 network, or FALSE on error.
 
-|fann_set_activation_function_layer| |fann_set_activation_function_hidden|
-|fann_set_activation_function_output| |fann_set_activation_steepness|
-|fann_set_activation_function|
+===============================================================================
+*See* *Also*
+
+  * |fann_set_activation_function_layer| - Sets the activation function for all
+    the neurons in the supplied layer.
+  * |fann_set_activation_function_hidden| - Sets the activation function for
+    all of the hidden layers
+  * |fann_set_activation_function_output| - Sets the activation function for
+    the output layer
+  * |fann_set_activation_steepness| - Sets the activation steepness for
+    supplied neuron and layer number
+  * |fann_set_activation_function| - Sets the activation function for supplied
+    neuron and layer
+
 
 vim:ft=help:

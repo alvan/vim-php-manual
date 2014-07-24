@@ -1,32 +1,52 @@
-getenv -- Gets the value of an environment variable
+getenv
 
-  string getenv(string varname)~
+(PHP 4, PHP 5)
+
+getenv — Gets the value of an environment variable
+
+===============================================================================
+*Description*
+
+    string getenv ( string $varname )~
 
 Gets the value of an environment variable.
 
 You can see a list of all the environmental variables by using |phpinfo|. Many
-of these variables are listed within RFC 3875, specifically section 4.1,
+of these variables are listed within » RFC 3875, specifically section 4.1,
 "Request Meta-Variables".
 
-{varname} The variable name.
+===============================================================================
+*Parameters*
+
+{varname}
+
+    The variable name.
+
+===============================================================================
+*Return* *Values*
 
 Returns the value of the environment variable {varname}, or FALSE if the
 environment variable {varname} does not exist.
 
-|getenv| Example
+===============================================================================
+*Examples*
+
+Example #1 getenv() Example
 
 <?php >
-  // Example use of getenv()
-  $ip = getenv('REMOTE_ADDR');
-  
-  // Or simply use a Superglobal ($_SERVER or $_ENV)
-  $ip = $_SERVER['REMOTE_ADDR'];
-?>
+    // Example use of getenv()
+    $ip = getenv('REMOTE_ADDR');
 
+    // Or simply use a Superglobal ($_SERVER or $_ENV)
+    $ip = $_SERVER['REMOTE_ADDR'];
+<?>
 
+===============================================================================
+*See* *Also*
 
+  * |putenv| - Sets the value of an environment variable
+  * |apache_getenv| - Get an Apache subprocess_env variable
+  * Superglobals
 
-
-|putenv| |apache_getenv| Superglobals
 
 vim:ft=help:

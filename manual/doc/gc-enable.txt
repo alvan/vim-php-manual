@@ -1,13 +1,30 @@
-gc_enable -- Activates the circular reference collector
+gc_enable
 
-  void gc_enable()~
+(PHP 5 >= 5.3.0)
+
+gc_enable — Activates the circular reference collector
+
+===============================================================================
+*Description*
+
+    void gc_enable ( void )~
 
 Activates the circular reference collector, setting zend.enable_gc to 1.
 
+===============================================================================
+*Parameters*
+
 This function has no parameters.
+
+===============================================================================
+*Return* *Values*
 
 No value is returned.
 
-Garbage Collection
+===============================================================================
+*See* *Also*
+
+  * Garbage Collection
+
 
 vim:ft=help:

@@ -1,6 +1,14 @@
-hw_InsertDocument -- Upload any document
+hw_InsertDocument
 
-  int hw_insertdocument(int connection, int parent_id, int hw_document)~
+(PHP 4)
+
+hw_InsertDocument — Upload any document
+
+===============================================================================
+*Description*
+
+    int hw_insertdocument ( int $connection , int $parent_id , int~
+    $hw_document )~
 
 Uploads a document into the given collection.
 
@@ -8,14 +16,30 @@ The document has to be created before with |hw_new_document|. Make sure that
 the object record of the new document contains at least the attributes: Type,
 DocumentType, Title and Name. Possibly you also want to set the MimeType.
 
-{connection} The connection identifier.
+===============================================================================
+*Parameters*
 
-{parent_id} The collection identifier.
+{connection}
 
-{hw_document} The document identifier.
+    The connection identifier.
+
+{parent_id}
+
+    The collection identifier.
+
+{hw_document}
+
+    The document identifier.
+
+===============================================================================
+*Return* *Values*
 
 The functions returns the object id of the new document or FALSE.
 
-|hw_pipedocument|
+===============================================================================
+*See* *Also*
+
+  * |hw_pipedocument| - Retrieve any document
+
 
 vim:ft=help:

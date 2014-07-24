@@ -1,34 +1,70 @@
-session_set_cookie_params -- Set the session cookie parameters
+session_set_cookie_params
 
-  void session_set_cookie_params(int lifetime [, string path [, string domain [, bool secure = false [, bool httponly = false]]]])~
+(PHP 4, PHP 5)
+
+session_set_cookie_params — Set the session cookie parameters
+
+===============================================================================
+*Description*
+
+    void session_set_cookie_params ( int $lifetime [, string $path [, string~
+    $domain [, bool $secure = false [, bool $httponly = false ]]]] )~
 
 Set cookie parameters defined in the php.ini file. The effect of this function
-only lasts for the duration of the script. Thus, you need to call
-|session_set_cookie_params| for every request and before |session_start| is
+only lasts for the duration of the script. Thus, you need to call 
+session_set_cookie_params() for every request and before |session_start| is
 called.
 
 This function updates the runtime ini values of the corresponding PHP ini
 configuration keys which can be retrieved with the |ini_get|.
 
-{lifetime} Lifetime of the session cookie, defined in seconds.
+===============================================================================
+*Parameters*
 
-{path} Path on the domain where the cookie will work. Use a single slash ('/')
-for all paths on the domain.
+{lifetime}
 
-{domain} Cookie domain, for example 'www.php.net'. To make cookies visible on
-all subdomains then the domain must be prefixed with a dot like '.php.net'.
+    Lifetime of the session cookie, defined in seconds.
 
-{secure} If TRUE cookie will only be sent over secure connections.
+{path}
 
-{httponly} If set to TRUE then PHP will attempt to send the httponly flag when
-setting the session cookie.
+    Path on the domain where the cookie will work. Use a single slash ('/') for
+    all paths on the domain.
+
+{domain}
+
+    Cookie domain, for example 'www.php.net'. To make cookies visible on all
+    subdomains then the domain must be prefixed with a dot like '.php.net'.
+
+{secure}
+
+    If TRUE cookie will only be sent over secure connections.
+
+{httponly}
+
+    If set to TRUE then PHP will attempt to send the httponly flag when setting
+    the session cookie.
+
+===============================================================================
+*Return* *Values*
 
 No value is returned.
 
-Version Description 5.2.0 The {httponly} parameter was added. 4.0.4 The
-{secure} parameter was added.
+===============================================================================
+*Changelog*
 
-session.cookie_lifetime session.cookie_path session.cookie_domain
-session.cookie_secure session.cookie_httponly |session_get_cookie_params|
+Version             Description
+5.2.0   The {httponly} parameter was added.
+4.0.4   The {secure} parameter was added.
+
+===============================================================================
+*See* *Also*
+
+  * session.cookie_lifetime
+  * session.cookie_path
+  * session.cookie_domain
+  * session.cookie_secure
+  * session.cookie_httponly
+  * |session_get_cookie_params| - Get the session cookie parameters
+
 
 vim:ft=help:

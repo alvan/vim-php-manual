@@ -1,15 +1,37 @@
-atan -- Arc tangent
+atan
 
-  float atan(float arg)~
+(PHP 4, PHP 5)
 
-Returns the arc tangent of {arg} in radians. |atan| is the complementary
+atan — Arc tangent
+
+===============================================================================
+*Description*
+
+    float atan ( float $arg )~
+
+Returns the arc tangent of {arg} in radians. atan() is the complementary
 function of |tan|, which means that a==tan(atan(a)) for every value of a that
-is within |atan|'s range.
+is within atan()'s range.
 
-{arg} The argument to process
+===============================================================================
+*Parameters*
+
+{arg}
+
+    The argument to process
+
+===============================================================================
+*Return* *Values*
 
 The arc tangent of {arg} in radians.
 
-|tan| |atanh| |asin| |acos|
+===============================================================================
+*See* *Also*
+
+  * |tan| - Tangent
+  * |atanh| - Inverse hyperbolic tangent
+  * |asin| - Arc sine
+  * |acos| - Arc cosine
+
 
 vim:ft=help:

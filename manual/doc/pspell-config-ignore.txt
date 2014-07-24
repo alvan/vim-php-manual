@@ -1,28 +1,43 @@
-pspell_config_ignore -- Ignore words less than N characters long
+pspell_config_ignore
 
-  bool pspell_config_ignore(int dictionary_link, int n)~
+(PHP 4 >= 4.0.2, PHP 5)
 
-|pspell_config_ignore| should be used on a config before calling
-|pspell_new_config|. This function allows short words to be skipped by the
-spell checker.
+pspell_config_ignore — Ignore words less than N characters long
+
+===============================================================================
+*Description*
+
+    bool pspell_config_ignore ( int $dictionary_link , int $n )~
+
+pspell_config_ignore() should be used on a config before calling |
+pspell_new_config|. This function allows short words to be skipped by the spell
+checker.
+
+===============================================================================
+*Parameters*
 
 {dictionary_link}
 
-{n} Words less than {n} characters will be skipped.
+{n}
 
-Returns TRUE on success or &false; on failure.
+    Words less than {n} characters will be skipped.
 
-|pspell_config_ignore|
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*Examples*
+
+Example #1 pspell_config_ignore()
 
 <?php >
-  $pspell_config = pspell_config_create("en");
-  pspell_config_ignore($pspell_config, 5);
-  $pspell_link = pspell_new_config($pspell_config);
-  pspell_check($pspell_link, "abcd");    //will not result in an error
-?>
-
-
-
+    $pspell_config = pspell_config_create("en");
+    pspell_config_ignore($pspell_config, 5);
+    $pspell_link = pspell_new_config($pspell_config);
+    pspell_check($pspell_link, "abcd");    //will not result in an error
+<?>
 
 
 vim:ft=help:

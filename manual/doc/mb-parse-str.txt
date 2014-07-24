@@ -1,18 +1,40 @@
-mb_parse_str -- Parse GET/POST/COOKIE data and set global variable
+mb_parse_str
 
-  bool mb_parse_str(string encoded_string [, array &result])~
+(PHP 4 >= 4.0.6, PHP 5)
+
+mb_parse_str — Parse GET/POST/COOKIE data and set global variable
+
+===============================================================================
+*Description*
+
+    bool mb_parse_str ( string $encoded_string [, array &$result ] )~
 
 Parses GET/POST/COOKIE data and sets global variables. Since PHP does not
 provide raw POST/COOKIE data, it can only be used for GET data for now. It
-parses URL encoded data, detects encoding, converts coding to internal
-encoding and set values to the {result} array or global variables.
+parses URL encoded data, detects encoding, converts coding to internal encoding
+and set values to the {result} array or global variables.
 
-{encoded_string} The URL encoded data.
+===============================================================================
+*Parameters*
 
-{result} An array containing decoded and character encoded converted values.
+{encoded_string}
 
-Returns TRUE on success or &false; on failure.
+    The URL encoded data.
 
-|mb_detect_order| |mb_internal_encoding|
+{result}
+
+    An array containing decoded and character encoded converted values.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*See* *Also*
+
+  * |mb_detect_order| - Set/Get character encoding detection order
+  * |mb_internal_encoding| - Set/Get internal character encoding
+
 
 vim:ft=help:

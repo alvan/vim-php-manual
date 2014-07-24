@@ -1,44 +1,77 @@
-idn_to_ascii -- Convert UTF-8 encoded domain name to ASCII
+idn_to_ascii
 
-  string idn_to_ascii(string utf8_domain [, int &errorcode])~
+(PHP 5 >= 5.3.0, PECL intl >= 1.0.2, PECL idn >= 0.1)
 
-This function converts a UTF-8 encoded domain name to ASCII according to the
-IDNA toUnicode() specification. If the input has non-ASCII characters, the
-output will be in the "xn--" ACE notation.
+idn_to_ascii — Convert domain name to IDNA ASCII form.
 
-{utf8_domain} The UTF-8 encoded domain name. If e.g. an ISO-8859-1 (aka
-Western Europe latin1) encoded string is passed it will be converted into an
-ACE encoded "xn--" string. It will not be the one you expected though!
+===============================================================================
+*Description*
 
-{errorcode} Will be set to the IDNA error code.
+Procedural style
 
-The ACE encoded version of the domain name or FALSE on failure.
+    string idn_to_ascii ( string $domain [, int $options = 0 [, int $variant =~
+    INTL_IDNA_VARIANT_2003 [, array &$idna_info ]]] )~
 
-If an error occurs FALSE is returned and the optional errorcode is set. In
-addition a E_WARNING message is printed.
+This function converts Unicode domain name to IDNA ASCII-compatible format.
 
-|idn_to_ascii| example First a simple example and then one explaining how to
-catch errors.
+===============================================================================
+*Parameters*
+
+{domain}
+
+    Domain to convert. In PHP 5 must be UTF-8 encoded.
+
+{options}
+
+    Conversion options - combination of IDNA_* constants (except IDNA_ERROR_*
+    constants).
+
+{variant}
+
+    Either INTL_IDNA_VARIANT_2003 for IDNA 2003 or INTL_IDNA_VARIANT_UTS46 for
+    UTS #46.
+
+{idna_info}
+
+    This parameter can be used only if INTL_IDNA_VARIANT_UTS46 was used for
+    {variant}. In that case, it will be filled with an array with the keys
+    'result', the possibly illegal result of the transformation,
+    'isTransitionalDifferent', a boolean indicating whether the usage of the
+    transitional mechanisms of UTS #46 either has or would have changed the
+    result and 'errors', which is an int representing a bitset of the error
+    constants IDNA_ERROR_*.
+
+===============================================================================
+*Return* *Values*
+
+Domain name encoded in ASCII-compatible form. or FALSE on failure
+
+===============================================================================
+*Changelog*
+
+     Version                               Description
+5.4.0/PECL        Added the parameters {variant} and {idna_info}; UTS #46
+2.0.0b1           support.
+
+===============================================================================
+*Examples*
+
+Example #1 idn_to_ascii() example
 
 <?php >
-  // ISO-8859-1 encoded string
-  echo idn_to_ascii(utf8_encode('täst.de'));
-  
-  // Cannot convert a domain name to ASCII that contains non-ASCII chars but already starts with "xn--"
-  $ascii = idn_to_ascii("xn--".chr(0xC3).chr(0xA4), $errorcode);
-  if ($ascii === false) {
-      printf("Detected error %d: %s\n", $errorcode, idn_strerror($errorcode));
-  }
-?>
 
-The above example will output something similar to:
+    echo idn_to_ascii('täst.de'); 
 
-  xn--tst-qla.de
-  
-  Detected error 8: Input already contain ACE prefix (`xn--')
+<?>
 
+The above example will output:
 
+xn--tst-qla.de
 
-|utf8_encode| |idn_strerror| |idn_to_utf8|
+===============================================================================
+*See* *Also*
+
+  * |idn_to_unicode| - Alias of idn_to_utf8
+
 
 vim:ft=help:

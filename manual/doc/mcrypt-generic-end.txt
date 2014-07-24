@@ -1,6 +1,15 @@
-mcrypt_generic_end -- This function terminates encryption
+mcrypt_generic_end
 
-  bool mcrypt_generic_end(resource td)~
+(PHP 4 >= 4.0.2, PHP 5 <= 5.1.6)
+
+mcrypt_generic_end — This function terminates encryption
+
+===============================================================================
+*Description*
+
+    bool mcrypt_generic_end ( resource $td )~
+
+Warning
 
 This function is deprecated, use |mcrypt_generic_deinit| instead. It can cause
 crashes when used with |mcrypt_module_close| due to multiple buffer frees.
@@ -8,5 +17,6 @@ crashes when used with |mcrypt_module_close| due to multiple buffer frees.
 This function terminates encryption specified by the encryption descriptor
 ({td}). Actually it clears all buffers, and closes all the modules used.
 Returns FALSE on error, or TRUE on success.
+
 
 vim:ft=help:

@@ -1,16 +1,31 @@
-ps_include_file -- Reads an external file with raw PostScript code
+ps_include_file
 
-  bool ps_include_file(resource psdoc, string file)~
+(PECL ps >= 1.3.4)
 
-This function is currently not documented; only its argument list is
-available.
+ps_include_file — Reads an external file with raw PostScript code
 
+===============================================================================
+*Description*
 
+    bool ps_include_file ( resource $psdoc , string $file )~
 
-{psdoc} Resource identifier of the postscript file as returned by |ps_new|.
+Warning
+
+This function is currently not documented; only its argument list is available.
+
+===============================================================================
+*Parameters*
+
+{psdoc}
+
+    Resource identifier of the postscript file as returned by |ps_new|.
 
 {file}
 
-Returns TRUE on success or &false; on failure.
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
 
 vim:ft=help:

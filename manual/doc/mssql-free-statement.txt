@@ -1,34 +1,56 @@
-mssql_free_statement -- Free statement memory
+mssql_free_statement
 
-  bool mssql_free_statement(resource stmt)~
+(PHP 4 >= 4.3.2, PHP 5, PECL odbtp >= 1.1.1)
 
-|mssql_free_statement| only needs to be called if you are worried about using
+mssql_free_statement — Free statement memory
+
+===============================================================================
+*Description*
+
+    bool mssql_free_statement ( resource $stmt )~
+
+mssql_free_statement() only needs to be called if you are worried about using
 too much memory while your script is running. All statement memory will
-automatically be freed when the script ends. You may call
-|mssql_free_statement| with the statement identifier as an argument and the
-associated statement memory will be freed.
+automatically be freed when the script ends. You may call mssql_free_statement
+() with the statement identifier as an argument and the associated statement
+memory will be freed.
 
-{stmt} Statement resource, obtained with |mssql_init|.
+===============================================================================
+*Parameters*
 
-Returns TRUE on success or &false; on failure.
+{stmt}
 
-|mssql_free_statement| example
+    Statement resource, obtained with |mssql_init|.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*Examples*
+
+Example #1 mssql_free_statement() example
 
 <?php >
-  // Create a new statement
-  $stmt = mssql_init('test');
-  
-  // Bind values here and execute the statement
-  
-  // once we're done, we clear it from the memory
-  // using mssql_free_statement like so:
-  mssql_free_statement($stmt);
-?>
+    // Create a new statement
+    $stmt = mssql_init('test');
 
+    // Bind values here and execute the statement
 
+    // once we're done, we clear it from the memory
+    // using mssql_free_statement like so:
+    mssql_free_statement($stmt);
+<?>
 
+===============================================================================
+*See* *Also*
 
+  * |mssql_bind| - Adds a parameter to a stored procedure or a remote stored
+    procedure
+  * |mssql_execute| - Executes a stored procedure on a MS SQL server database
+  * |mssql_init| - Initializes a stored procedure or a remote stored procedure
+  * |mssql_free_result| - Free result memory
 
-|mssql_bind| |mssql_execute| |mssql_init| |mssql_free_result|
 
 vim:ft=help:

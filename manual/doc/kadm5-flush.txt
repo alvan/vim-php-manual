@@ -1,12 +1,28 @@
-kadm5_flush -- Flush all changes to the Kerberos database
+kadm5_flush
 
-  bool kadm5_flush(resource handle)~
+(PECL kadm5 >= 0.2.3)
+
+kadm5_flush — Flush all changes to the Kerberos database
+
+===============================================================================
+*Description*
+
+    bool kadm5_flush ( resource $handle )~
 
 Flush all changes to the Kerberos database, leaving the connection to the
 Kerberos admin server open.
 
-{handle} A KADM5 handle.
+===============================================================================
+*Parameters*
 
-Returns TRUE on success or &false; on failure.
+{handle}
+
+    A KADM5 handle.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
 
 vim:ft=help:

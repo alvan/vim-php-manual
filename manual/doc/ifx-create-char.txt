@@ -1,13 +1,32 @@
-ifx_create_char -- Creates an char object
+ifx_create_char
 
-  int ifx_create_char(string param)~
+(PHP 4, PHP <=5.2.0)
+
+ifx_create_char — Creates an char object
+
+===============================================================================
+*Description*
+
+    int ifx_create_char ( string $param )~
 
 Creates an char object.
 
-{param} The char content.
+===============================================================================
+*Parameters*
+
+{param}
+
+    The char content.
+
+===============================================================================
+*Return* *Values*
 
 Returns the new char object id, or FALSE on errors.
 
-|ifx_free_char|
+===============================================================================
+*See* *Also*
+
+  * |ifx_free_char| - Deletes the char object
+
 
 vim:ft=help:

@@ -1,21 +1,35 @@
-posix_getlogin -- Return login name
+posix_getlogin
 
-  string posix_getlogin()~
+(PHP 4, PHP 5)
+
+posix_getlogin — Return login name
+
+===============================================================================
+*Description*
+
+    string posix_getlogin ( void )~
 
 Returns the login name of the user owning the current process.
 
+===============================================================================
+*Return* *Values*
+
 Returns the login name of the user, as a string.
 
-Example use of |posix_getlogin|
+===============================================================================
+*Examples*
+
+Example #1 Example use of posix_getlogin()
 
 <?php >
-  echo posix_getlogin(); //apache
-?>
+    echo posix_getlogin(); //apache
+<?>
 
+===============================================================================
+*See* *Also*
 
+  * |posix_getpwnam| - Return info about a user by username
+  * POSIX man page GETLOGIN(3)
 
-
-
-|posix_getpwnam| POSIX man page GETLOGIN(3)
 
 vim:ft=help:

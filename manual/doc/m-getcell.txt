@@ -1,12 +1,24 @@
-m_getcell -- Get a specific cell from a comma delimited response by column
-name
+m_getcell
 
-  string m_getcell(resource conn, int identifier, string column, int row)~
+(PHP 4 >= 4.3.9, PHP 5 <= 5.0.5, PECL mcve >= 1.0.0)
 
-This function is currently not documented; only its argument list is
-available.
+m_getcell — Get a specific cell from a comma delimited response by column name
 
-{ conn}An MCVE_CONN resource returned by |m_initengine|.
+===============================================================================
+*Description*
+
+    string m_getcell ( resource $conn , int $identifier , string $column , int~
+    $row )~
+Warning
+
+This function is currently not documented; only its argument list is available.
+
+===============================================================================
+*Parameters*
+
+{ conn}
+
+    An MCVE_CONN resource returned by |m_initengine|.
 
 {identifier}
 
@@ -14,6 +26,8 @@ available.
 
 {row}
 
+===============================================================================
+*Return* *Values*
 
 
 vim:ft=help:

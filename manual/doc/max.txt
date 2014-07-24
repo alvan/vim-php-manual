@@ -1,68 +1,95 @@
-max -- Find highest value
+max
 
-  mixed max(array values)~
+(PHP 4, PHP 5)
 
-  mixed max(mixed value1, mixed value2 [, mixed ...])~
+max — Find highest value
 
-If the first and only parameter is an array, |max| returns the highest value
-in that array. If at least two parameters are provided, |max| returns the
-biggest of these values.
+===============================================================================
+*Description*
 
-PHP will evaluate a non-numeric string as 0 if compared to integer, but still
-return the string if it's seen as the numerically highest value. If multiple
-arguments evaluate to 0, |max| will return a numeric 0 if given, else the
-alphabetical highest string value will be returned.
+    mixed max ( array $values )~
+    mixed max ( mixed $value1 , mixed $value2 [, mixed $... ] )~
 
-{values} An array containing the values.
+If the first and only parameter is an array, max() returns the highest value in
+that array. If at least two parameters are provided, max() returns the biggest
+of these values.
 
-{value1} Any comparable value.
+    Note:
 
-{value2} Any comparable value.
+    PHP will evaluate a non-numeric string as 0 if compared to integer, but
+    still return the string if it's seen as the numerically highest value. If
+    multiple arguments evaluate to 0, max() will return a numeric 0 if given,
+    else the alphabetical highest string value will be returned.
 
-{...} Any comparable value.
+===============================================================================
+*Parameters*
 
-|max| returns the numerically highest of the parameter values. If multiple
-values can be considered of the same size, the one that is listed first will
-be returned.
+{values}
 
-When |max| is given multiple arrays, the longest array is returned. If all the
-arrays have the same length, |max| will use lexicographic ordering to find the
+    An array containing the values.
+
+{value1}
+
+    Any comparable value.
+
+{value2}
+
+    Any comparable value.
+
+{...}
+
+    Any comparable value.
+
+===============================================================================
+*Return* *Values*
+
+max() returns the numerically highest of the parameter values. If multiple
+values can be considered of the same size, the one that is listed first will be
+returned.
+
+When max() is given multiple arrays, the longest array is returned. If all the
+arrays have the same length, max() will use lexicographic ordering to find the
 return value.
 
 When given a string it will be cast as an integer when comparing.
 
-Example uses of |max|
+===============================================================================
+*Examples*
+
+Example #1 Example uses of max()
 
 <?php >
-  echo max(1, 3, 5, 6, 7);  // 7
-  echo max(array(2, 4, 5)); // 5
-  
-  // When 'hello' is cast as integer it will be 0. Both the parameters are equally
-  // long, so the order they are given in determines the result
-  echo max(0, 'hello');     // 0
-  echo max('hello', 0);     // hello
-  
-  echo max('42', 3); // '42'
-  
-  // Here 0 > -1, so 'hello' is the return value.
-  echo max(-1, 'hello');    // hello
-  
-  // With multiple arrays of different lengths, max returns the longest
-  $val = max(array(2, 2, 2), array(1, 1, 1, 1)); // array(1, 1, 1, 1)
-  
-  // With multiple arrays of the same length, max compares from left to right
-  // using lexicographic order, so in our example: 2 == 2, but 4 < 5
-  $val = max(array(2, 4, 8), array(2, 5, 7)); // array(2, 5, 7)
-  
-  // If both an array and non-array are given, the array
-  // is always returned as it's seen as the largest
-  $val = max('string', array(2, 5, 7), 42);   // array(2, 5, 7)
-?>
+    echo max(1, 3, 5, 6, 7);  // 7
+    echo max(array(2, 4, 5)); // 5
 
+    //
+     When 'hello' is cast as integer it will be 0. Both the parameters are equally
+    // long, so the order they are given in determines the result
+    echo max(0, 'hello');     // 0
+    echo max('hello', 0);     // hello
 
+    echo max('42', 3); // '42'
 
+    // Here 0 > -1, so 'hello' is the return value.
+    echo max(-1, 'hello');    // hello
 
+    // With multiple arrays of different lengths, max returns the longest
+    $val = max(array(2, 2, 2), array(1, 1, 1, 1)); // array(1, 1, 1, 1)
 
-|min| |count|
+    // With multiple arrays of the same length, max compares from left to right
+    // using lexicographic order, so in our example: 2 == 2, but 4 < 5
+    $val = max(array(2, 4, 8), array(2, 5, 7)); // array(2, 5, 7)
+
+    // If both an array and non-array are given, the array
+    // is always returned as it's seen as the largest
+    $val = max('string', array(2, 5, 7), 42);   // array(2, 5, 7)
+<?>
+
+===============================================================================
+*See* *Also*
+
+  * |min| - Find lowest value
+  * |count| - Count all elements in an array, or something in an object
+
 
 vim:ft=help:

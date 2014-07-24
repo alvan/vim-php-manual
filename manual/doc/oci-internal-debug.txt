@@ -1,15 +1,36 @@
-oci_internal_debug -- Enables or disables internal debug output
+oci_internal_debug
 
-  void oci_internal_debug(bool onoff)~
+(PHP 5, PECL OCI8 >= 1.1.0)
+
+oci_internal_debug — Enables or disables internal debug output
+
+===============================================================================
+*Description*
+
+    void oci_internal_debug ( bool $onoff )~
 
 Enables or disables internal debug output.
 
-{onoff} Set this to FALSE to turn debug output off or TRUE to turn it on.
+===============================================================================
+*Parameters*
+
+{onoff}
+
+    Set this to FALSE to turn debug output off or TRUE to turn it on.
+
+===============================================================================
+*Return* *Values*
 
 No value is returned.
 
-In PHP versions before 5.0.0 you must use |ociinternaldebug| instead. This
-name still can be used, it was left as alias of |oci_internal_debug| for
-downwards compatability. This, however, is deprecated and not recommended.
+===============================================================================
+*Notes*
+
+    Note:
+
+    In PHP versions before 5.0.0 you must use |ociinternaldebug| instead. This
+    name still can be used, it was left as alias of oci_internal_debug() for
+    downwards compatability. This, however, is deprecated and not recommended.
+
 
 vim:ft=help:

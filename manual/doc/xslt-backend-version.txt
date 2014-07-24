@@ -1,21 +1,38 @@
-xslt_backend_version -- Returns the version number of Sablotron
+xslt_backend_version
 
-  string xslt_backend_version()~
+(PHP 4 >= 4.3.0)
 
-|xslt_backend_version| gets the version number of Sablotron.
+xslt_backend_version — Returns the version number of Sablotron
+
+===============================================================================
+*Description*
+
+    string xslt_backend_version ( void )~
+
+xslt_backend_version() gets the version number of Sablotron.
+
+===============================================================================
+*Return* *Values*
 
 Returns the version number, or FALSE if not available.
 
-|xslt_backend_version| example
+===============================================================================
+*Examples*
+
+Example #1 xslt_backend_version() example
 
 <?php >
-  echo xslt_backend_version(); // 0.98 for example
-?>
 
+    echo xslt_backend_version(); // 0.98 for example
 
+<?>
 
+===============================================================================
+*See* *Also*
 
+  * |xslt_backend_info| - Returns the information on the compilation settings
+    of the backend
+  * |xslt_backend_name| - Returns the name of the backend
 
-|xslt_backend_info| |xslt_backend_name|
 
 vim:ft=help:

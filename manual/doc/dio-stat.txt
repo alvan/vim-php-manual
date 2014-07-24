@@ -1,37 +1,55 @@
-dio_stat -- Gets stat information about the file descriptor fd
+dio_stat
 
-  array dio_stat(resource fd)~
+(PHP 4 >= 4.2.0, PHP 5 <= 5.0.5)
 
-|dio_stat| returns information about the given file descriptor.
+dio_stat — Gets stat information about the file descriptor fd
 
-{fd} The file descriptor returned by |dio_open|.
+===============================================================================
+*Description*
 
-Returns an associative array with the following keys: "device" - device
+    array dio_stat ( resource $fd )~
 
-"inode" - inode
+dio_stat() returns information about the given file descriptor.
 
-"mode" - mode
+===============================================================================
+*Parameters*
 
-"nlink" - number of hard links
+{fd}
 
-"uid" - user id
+    The file descriptor returned by |dio_open|.
 
-"gid" - group id
+===============================================================================
+*Return* *Values*
 
-"device_type" - device type (if inode device)
+Returns an associative array with the following keys:
 
-"size" - total size in bytes
+  * "device" - device
 
-"blocksize" - blocksize
+  * "inode" - inode
 
-"blocks" - number of blocks allocated
+  * "mode" - mode
 
-"atime" - time of last access
+  * "nlink" - number of hard links
 
-"mtime" - time of last modification
+  * "uid" - user id
 
-"ctime" - time of last change
+  * "gid" - group id
 
-On error |dio_stat| returns NULL.
+  * "device_type" - device type (if inode device)
+
+  * "size" - total size in bytes
+
+  * "blocksize" - blocksize
+
+  * "blocks" - number of blocks allocated
+
+  * "atime" - time of last access
+
+  * "mtime" - time of last modification
+
+  * "ctime" - time of last change
+
+On error dio_stat() returns NULL.
+
 
 vim:ft=help:

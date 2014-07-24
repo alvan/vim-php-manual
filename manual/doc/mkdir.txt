@@ -1,71 +1,107 @@
-mkdir -- Makes directory
+mkdir
 
-  bool mkdir(string pathname [, int mode = 0777 [, bool recursive = false [, resource context]]])~
+(PHP 4, PHP 5)
+
+mkdir — Makes directory
+
+===============================================================================
+*Description*
+
+    bool mkdir ( string $pathname [, int $mode = 0777 [, bool $recursive =~
+    false [, resource $context ]]] )~
 
 Attempts to create the directory specified by pathname.
 
-{pathname} The directory path.
+===============================================================================
+*Parameters*
 
-{mode} The mode is 0777 by default, which means the widest possible access.
-For more information on modes, read the details on the |chmod| page.
+{pathname}
 
-{mode} is ignored on Windows.
+    The directory path.
 
-Note that you probably want to specify the mode as an octal number, which
-means it should have a leading zero. The mode is also modified by the current
-umask, which you can change using |umask|.
+{mode}
 
-{recursive} Allows the creation of nested directories specified in the
-{pathname}.
+    The mode is 0777 by default, which means the widest possible access. For
+    more information on modes, read the details on the |chmod| page.
 
-{context} Context support was added with PHP 5.0.0. For a description of
-contexts, refer to .
+        Note:
 
-Returns TRUE on success or &false; on failure.
+        {mode} is ignored on Windows.
 
-Version Description 5.0.0 The {recursive} parameter was added 5.0.0 As of PHP
-5.0.0 |mkdir| can also be used with some URL wrappers. Refer to for a listing
-of which wrappers support |mkdir| 4.2.0 The {mode} parameter became optional.
+    Note that you probably want to specify the mode as an octal number, which
+    means it should have a leading zero. The mode is also modified by the
+    current umask, which you can change using |umask|.
 
-|mkdir| example
+{recursive}
+
+    Allows the creation of nested directories specified in the {pathname}.
+
+{context}
+
+
+        Note: Context support was added with PHP 5.0.0. For a description of
+        contexts, refer to Streams.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*Changelog*
+
+Version                               Description
+5.0.0   The {recursive} parameter was added
+        As of PHP 5.0.0 mkdir() can also be used with some URL wrappers. Refer
+5.0.0   to Supported Protocols and Wrappers for a listing of which wrappers
+        support mkdir()
+4.2.0   The {mode} parameter became optional.
+
+===============================================================================
+*Examples*
+
+Example #1 mkdir() example
 
 <?php >
-  mkdir("/path/to/my/dir", 0700);
-?>
+    mkdir("/path/to/my/dir", 0700);
+<?>
 
-
-
-
-
-|mkdir| using the {recursive} parameter
+Example #2 mkdir() using the {recursive} parameter
 
 <?php >
-  // Desired folder structure
-  $structure = './depth1/depth2/depth3/';
-  
-  // To create the nested structure, the $recursive parameter 
-  // to mkdir() must be specified.
-  
-  if (!mkdir($structure, 0777, true)) {
-      die('Failed to create folders...');
-  }
-  
-  // ...
-?>
+    // Desired folder structure
+    $structure = './depth1/depth2/depth3/';
 
+    // To create the nested structure, the $recursive parameter 
+    // to mkdir() must be specified.
 
+    if (!mkdir($structure, 0777, true)) {
+        die('Failed to create folders...');
+    }
 
+    // ...
+<?>
 
+===============================================================================
+*Errors/Exceptions*
 
 Emits an E_WARNING level error if the directory already exists.
 
-Emits an E_WARNING level error if the relevant permissions prevent creating
-the directory.
+Emits an E_WARNING level error if the relevant permissions prevent creating the
+directory.
 
-When safe mode is enabled, PHP checks whether the directory in which the
-script is operating has the same UID (owner) as the script that is being
-executed.
+===============================================================================
+*Notes*
 
-|is_dir| |rmdir|
+    Note: When safe mode is enabled, PHP checks whether the directory in which
+    the script is operating has the same UID (owner) as the script that is
+    being executed.
+
+===============================================================================
+*See* *Also*
+
+  * |is_dir| - Tells whether the filename is a directory
+  * |rmdir| - Removes directory
+
 
 vim:ft=help:

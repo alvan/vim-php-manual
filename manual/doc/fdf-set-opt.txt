@@ -1,13 +1,28 @@
-fdf_set_opt -- Sets an option of a field
+fdf_set_opt
 
-  bool fdf_set_opt(resource fdf_document, string fieldname, int element, string str1, string str2)~
+(PHP 4 >= 4.0.2, PHP 5)
+
+fdf_set_opt — Sets an option of a field
+
+===============================================================================
+*Description*
+
+    bool fdf_set_opt ( resource $fdf_document , string $fieldname , int~
+    $element , string $str1 , string $str2 )~
 
 Sets options of the given field.
 
-{fdf_document} The FDF document handle, returned by |fdf_create|, |fdf_open|
-or |fdf_open_string|.
+===============================================================================
+*Parameters*
 
-{fieldname} Name of the FDF field, as a string.
+{fdf_document}
+
+    The FDF document handle, returned by |fdf_create|, |fdf_open| or |
+    fdf_open_string|.
+
+{fieldname}
+
+    Name of the FDF field, as a string.
 
 {element}
 
@@ -15,8 +30,15 @@ or |fdf_open_string|.
 
 {str2}
 
-Returns TRUE on success or &false; on failure.
+===============================================================================
+*Return* *Values*
 
-|fdf_set_flags|
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*See* *Also*
+
+  * |fdf_set_flags| - Sets a flag of a field
+
 
 vim:ft=help:

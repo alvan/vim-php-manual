@@ -1,12 +1,28 @@
-rrd_lastupdate -- Gets information about last updated data.
+rrd_lastupdate
 
-  array rrd_lastupdate(string filename)~
+(PECL rrd >= 0.9.0)
+
+rrd_lastupdate — Gets information about last updated data.
+
+===============================================================================
+*Description*
+
+    array rrd_lastupdate ( string $filename )~
 
 Gets array of the UNIX timestamp and the values stored for each date in the
 most recent update of the RRD database file.
 
-RRD database file name.
+===============================================================================
+*Parameters*
+
+{file}
+
+    RRD database file name.
+
+===============================================================================
+*Return* *Values*
 
 Array of information about last update, FALSE when error occurs.
+
 
 vim:ft=help:

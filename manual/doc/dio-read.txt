@@ -1,17 +1,38 @@
-dio_read -- Reads bytes from a file descriptor
+dio_read
 
-  string dio_read(resource fd [, int len = 1024])~
+(PHP 4 >= 4.2.0, PHP 5 <= 5.0.5)
 
-The function |dio_read| reads and returns {len} bytes from file with
-descriptor {fd}.
+dio_read — Reads bytes from a file descriptor
 
-{fd} The file descriptor returned by |dio_open|.
+===============================================================================
+*Description*
 
-{len} The number of bytes to read. If not specified, |dio_read| reads 1K sized
-block.
+    string dio_read ( resource $fd [, int $len = 1024 ] )~
+
+The function dio_read() reads and returns {len} bytes from file with descriptor
+{fd}.
+
+===============================================================================
+*Parameters*
+
+{fd}
+
+    The file descriptor returned by |dio_open|.
+
+{len}
+
+    The number of bytes to read. If not specified, dio_read() reads 1K sized
+    block.
+
+===============================================================================
+*Return* *Values*
 
 The bytes read from {fd}.
 
-|dio_write|
+===============================================================================
+*See* *Also*
+
+  * |dio_write| - Writes data to fd with optional truncation at length
+
 
 vim:ft=help:

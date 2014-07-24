@@ -1,48 +1,81 @@
-array_uintersect_uassoc -- Computes the intersection of arrays with additional
+array_uintersect_uassoc
+
+(PHP 5)
+
+array_uintersect_uassoc — Computes the intersection of arrays with additional
 index check, compares data and indexes by a callback functions
 
-  array array_uintersect_uassoc(array array1, array array2 [, array ..., callable value_compare_func, callable key_compare_func])~
+===============================================================================
+*Description*
+
+    array array_uintersect_uassoc ( array $array1 , array $array2 [, array~
+    $... ], callable $value_compare_func , callable $key_compare_func )~
 
 Computes the intersection of arrays with additional index check, compares data
 and indexes by a callback functions Note that the keys are used in the
 comparison unlike in |array_uintersect|. Both the data and the indexes are
 compared by using separate callback functions.
 
-{array1} The first array.
+===============================================================================
+*Parameters*
 
-{array2} The second array.
+{array1}
 
-{value_compare_func} The comparison function must return an integer less than,
-equal to, or greater than zero if the first argument is considered to be
-respectively less than, equal to, or greater than the second.
+    The first array.
 
-  int callback(mixed a, mixed b)~
+{array2}
 
-{key_compare_func} Key comparison callback function.
+    The second array.
+
+{value_compare_func}
+
+    The comparison function must return an integer less than, equal to, or
+    greater than zero if the first argument is considered to be respectively
+    less than, equal to, or greater than the second.
+
+
+    int callback ( mixed $a, mixed $b )~
+{key_compare_func}
+
+    Key comparison callback function.
+
+===============================================================================
+*Return* *Values*
 
 Returns an array containing all the values of {array1} that are present in all
 the arguments.
 
-|array_uintersect_uassoc| example
+===============================================================================
+*Examples*
+
+Example #1 array_uintersect_uassoc() example
 
 <?php >
-  $array1 = array("a" => "green", "b" => "brown", "c" => "blue", "red");
-  $array2 = array("a" => "GREEN", "B" => "brown", "yellow", "red");
-  
-  print_r(array_uintersect_uassoc($array1, $array2, "strcasecmp", "strcasecmp"));
-?>
+    $array1 = array("a" => "green", "b" => "brown", "c" => "blue", "red");
+    $array2 = array("a" => "GREEN", "B" => "brown", "yellow", "red");
+
+    print_r(array_uintersect_uassoc($array1, $array2, "strcasecmp", "strcasecmp"));
+<?>
 
 The above example will output:
 
-  Array
-  (
-      [a] => green
-      [b] => brown
-  )
+Array
+(
+    [a] => green
+    [b] => brown
+)
 
+===============================================================================
+*See* *Also*
 
+  * |array_uintersect| - Computes the intersection of arrays, compares data by
+    a callback function
+  * |array_intersect_assoc| - Computes the intersection of arrays with
+    additional index check
+  * |array_intersect_uassoc| - Computes the intersection of arrays with
+    additional index check, compares indexes by a callback function
+  * |array_uintersect_assoc| - Computes the intersection of arrays with
+    additional index check, compares data by a callback function
 
-|array_uintersect| |array_intersect_assoc| |array_intersect_uassoc|
-|array_uintersect_assoc|
 
 vim:ft=help:

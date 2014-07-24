@@ -1,15 +1,29 @@
-m_setssl_cafile -- Set SSL CA (Certificate Authority) file for verification of
+m_setssl_cafile
+
+(PHP 5 >= 5.0.5, PECL mcve >= 1.0.0)
+
+m_setssl_cafile — Set SSL CA (Certificate Authority) file for verification of
 server certificate
 
-  int m_setssl_cafile(resource conn, string cafile)~
+===============================================================================
+*Description*
 
-This function is currently not documented; only its argument list is
-available.
+    int m_setssl_cafile ( resource $conn , string $cafile )~
+Warning
 
-{ conn}An MCVE_CONN resource returned by |m_initengine|.
+This function is currently not documented; only its argument list is available.
+
+===============================================================================
+*Parameters*
+
+{ conn}
+
+    An MCVE_CONN resource returned by |m_initengine|.
 
 {cafile}
 
+===============================================================================
+*Return* *Values*
 
 
 vim:ft=help:

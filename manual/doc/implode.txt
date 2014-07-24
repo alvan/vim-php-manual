@@ -1,42 +1,74 @@
-implode -- Join array elements with a string
+implode
 
-  string implode(string glue, array pieces)~
+(PHP 4, PHP 5)
 
-  string implode(array pieces)~
+implode — Join array elements with a string
+
+===============================================================================
+*Description*
+
+    string implode ( string $glue , array $pieces )~
+    string implode ( array $pieces )~
 
 Join array elements with a {glue} string.
 
-|implode| can, for historical reasons, accept its parameters in either order.
-For consistency with |explode|, however, it may be less confusing to use the
-documented order of arguments.
+    Note:
 
-{glue} Defaults to an empty string.
+    implode() can, for historical reasons, accept its parameters in either
+    order. For consistency with |explode|, however, it may be less confusing to
+    use the documented order of arguments.
 
-{pieces} The array of strings to implode.
+===============================================================================
+*Parameters*
+
+{glue}
+
+    Defaults to an empty string.
+
+{pieces}
+
+    The array of strings to implode.
+
+===============================================================================
+*Return* *Values*
 
 Returns a string containing a string representation of all the array elements
 in the same order, with the glue string between each element.
 
-Version Description 4.3.0 The {glue} parameter became optional.
+===============================================================================
+*Changelog*
 
-|implode| example
+Version              Description
+4.3.0   The {glue} parameter became optional.
+
+===============================================================================
+*Examples*
+
+Example #1 implode() example
 
 <?php >
-  $array = array('lastname', 'email', 'phone');
-  $comma_separated = implode(",", $array);
-  
-  echo $comma_separated; // lastname,email,phone
-  
-  // Empty string when using an empty array:
-  var_dump(implode('hello', array())); // string(0) ""
-?>
 
+    $array = array('lastname', 'email', 'phone');
+    $comma_separated = implode(",", $array);
 
+    echo $comma_separated; // lastname,email,phone
 
+    // Empty string when using an empty array:
+    var_dump(implode('hello', array())); // string(0) ""
 
+<?>
 
-This function is binary-safe.
+===============================================================================
+*Notes*
 
-|explode| |preg_split| |http_build_query|
+    Note: This function is binary-safe.
+
+===============================================================================
+*See* *Also*
+
+  * |explode| - Split a string by string
+  * |preg_split| - Split string by a regular expression
+  * |http_build_query| - Generate URL-encoded query string
+
 
 vim:ft=help:

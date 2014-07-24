@@ -1,34 +1,59 @@
-mqseries_disc -- MQSeries MQDISC
+mqseries_disc
 
-  void mqseries_disc(resource hconn, resource &compCode, resource &reason)~
+(PECL mqseries >= 0.10.0)
 
-The |mqseries_disc| (MQDISC) call breaks the connection between the queue
+mqseries_disc — MQSeries MQDISC
+
+===============================================================================
+*Description*
+
+    void mqseries_disc ( resource $hconn , resource &$compCode , resource~
+    &$reason )~
+
+The mqseries_disc() (MQDISC) call breaks the connection between the queue
 manager and the application program, and is the inverse of the |mqseries_conn|
 (MQCONN) or |mqseries_connx| (MQCONNX) call.
 
-{hConn} Connection handle.
+===============================================================================
+*Parameters*
 
-This handle represents the connection to the queue manager.
+{hConn}
 
-{compCode} Completion code.
+    Connection handle.
 
-{reason} Reason code qualifying the compCode.
+    This handle represents the connection to the queue manager.
+
+{compCode}
+
+    Completion code.
+
+{reason}
+
+    Reason code qualifying the compCode.
+
+===============================================================================
+*Return* *Values*
 
 No value is returned.
 
-|mqseries_disc| example
+===============================================================================
+*Examples*
+
+Example #1 mqseries_disc() example
 
 <?php >
-      mqseries_disc($conn, $comp_code, $reason);
-      if ($comp_code !== MQSERIES_MQCC_OK) {
-          printf("disc CompCode:%d Reason:%d Text:%s<br>\n", $comp_code, $reason, mqseries_strerror($reason));
-      }
-?>
+        mqseries_disc($conn, $comp_code, $reason);
+        if ($comp_code !== MQSERIES_MQCC_OK) {
+            printf("disc CompCode:%d Reason:%d Text:%s<br>\n", $comp_code, $reason
+    , mqseries_strerror($reason));
+        }
+<?>
 
+===============================================================================
+*See* *Also*
 
+  * |mqseries_conn| - MQSeries MQCONN
+  * |mqseries_connx| - MQSeries MQCONNX
 
-
-
-|mqseries_conn| |mqseries_connx|
 
 vim:ft=help:

@@ -1,23 +1,50 @@
-ps_set_border_color -- Sets color of border for annotations
+ps_set_border_color
 
-  bool ps_set_border_color(resource psdoc, float red, float green, float blue)~
+(PECL ps >= 1.1.0)
+
+ps_set_border_color — Sets color of border for annotations
+
+===============================================================================
+*Description*
+
+    bool ps_set_border_color ( resource $psdoc , float $red , float $green ,~
+    float $blue )~
 
 Links added with one of the functions |ps_add_weblink|, |ps_add_pdflink|, etc.
 will be displayed with a surounded rectangle when the postscript document is
 converted to pdf and viewed in a pdf viewer. This rectangle is not visible in
-the postscript document. This function sets the color of the rectangle's
-border line.
+the postscript document. This function sets the color of the rectangle's border
+line.
 
-{psdoc} Resource identifier of the postscript file as returned by |ps_new|.
+===============================================================================
+*Parameters*
 
-{red} The red component of the border color.
+{psdoc}
 
-{green} The green component of the border color.
+    Resource identifier of the postscript file as returned by |ps_new|.
 
-{blue} The blue component of the border color.
+{red}
 
-Returns TRUE on success or &false; on failure.
+    The red component of the border color.
 
-|ps_set_border_dash| |ps_set_border_style|
+{green}
+
+    The green component of the border color.
+
+{blue}
+
+    The blue component of the border color.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*See* *Also*
+
+  * |ps_set_border_dash| - Sets length of dashes for border of annotations
+  * |ps_set_border_style| - Sets border style of annotations
+
 
 vim:ft=help:

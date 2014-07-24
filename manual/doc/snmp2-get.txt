@@ -1,32 +1,59 @@
-snmp2_get -- Fetch an SNMP object
+snmp2_get
 
-  string snmp2_get(string host, string community, string object_id [, string timeout = 1000000 [, string retries = 5]])~
+(PHP 5 >= 5.2.0)
 
-The |snmp2_get| function is used to read the value of an SNMP object specified
+snmp2_get — Fetch an SNMP object
+
+===============================================================================
+*Description*
+
+    string snmp2_get ( string $host , string $community , string $object_id [,~
+    string $timeout = 1000000 [, string $retries = 5 ]] )~
+
+The snmp2_get() function is used to read the value of an SNMP object specified
 by the {object_id}.
 
-The SNMP agent.
+===============================================================================
+*Parameters*
 
-The read community.
+{host}
 
-The SNMP object.
+    The SNMP agent.
 
-The number of microseconds until the first timeout.
+{community}
 
-The number of times to retry if timeouts occur.
+    The read community.
+
+{object_id}
+
+    The SNMP object.
+
+{timeout}
+
+    The number of microseconds until the first timeout.
+
+{retries}
+
+    The number of times to retry if timeouts occur.
+
+===============================================================================
+*Return* *Values*
 
 Returns SNMP object value on success or FALSE on error.
 
-Using |snmp2_get|
+===============================================================================
+*Examples*
+
+Example #1 Using snmp2_get()
 
 <?php >
-  $syscontact = snmp2_get("127.0.0.1", "public", "system.SysContact.0");
-?>
+    $syscontact = snmp2_get("127.0.0.1", "public", "system.SysContact.0");
+<?>
 
+===============================================================================
+*See* *Also*
 
+  * |snmp2_set| - Set the value of an SNMP object
 
-
-
-|snmp2_set|
 
 vim:ft=help:

@@ -1,59 +1,80 @@
-imagegd -- Output GD image to browser or file
+imagegd
 
-  bool imagegd(resource image [, string filename])~
+(PHP 4 >= 4.0.7, PHP 5)
+
+imagegd — Output GD image to browser or file
+
+===============================================================================
+*Description*
+
+    bool imagegd ( resource $image [, string $filename ] )~
 
 Outputs a GD image to the given {filename}.
 
-{ image}An image resource, returned by one of the image creation functions,
-such as |imagecreatetruecolor|.
+===============================================================================
+*Parameters*
 
-{filename} The path to save the file to. If not set or NULL, the raw image
-stream will be outputted directly.
+{ image}
 
-Returns TRUE on success or &false; on failure.
+    An image resource, returned by one of the image creation functions, such as
+    |imagecreatetruecolor|.
 
-Outputting a GD image
+{filename}
 
-<?php >
-  // Create a blank image and add some text
-  $im = imagecreatetruecolor(120, 20);
-  $text_color = imagecolorallocate($im, 233, 14, 91);
-  imagestring($im, 1, 5, 5,  "A Simple Text String", $text_color);
-  
-  // Output the image
-  imagegd($im);
-  
-  // Free up memory
-  imagedestroy($im);
-?>
+    The path to save the file to. If not set or NULL, the raw image stream will
+    be outputted directly.
 
+===============================================================================
+*Return* *Values*
 
+Returns TRUE on success or FALSE on failure.
 
+===============================================================================
+*Examples*
 
-
-Saving a GD image
+Example #1 Outputting a GD image
 
 <?php >
-  // Create a blank image and add some text
-  $im = imagecreatetruecolor(120, 20);
-  $text_color = imagecolorallocate($im, 233, 14, 91);
-  imagestring($im, 1, 5, 5,  "A Simple Text String", $text_color);
-  
-  // Save the gd image
-  // The file format for GD images is .gd, see http://www.libgd.org/GdFileFormats
-  imagegd($im, 'simple.gd');
-  
-  // Free up memory
-  imagedestroy($im);
-?>
+    // Create a blank image and add some text
+    $im = imagecreatetruecolor(120, 20);
+    $text_color = imagecolorallocate($im, 233, 14, 91);
+    imagestring($im, 1, 5, 5,  "A Simple Text String", $text_color);
 
+    // Output the image
+    imagegd($im);
 
+    // Free up memory
+    imagedestroy($im);
+<?>
 
+Example #2 Saving a GD image
 
+<?php >
+    // Create a blank image and add some text
+    $im = imagecreatetruecolor(120, 20);
+    $text_color = imagecolorallocate($im, 233, 14, 91);
+    imagestring($im, 1, 5, 5,  "A Simple Text String", $text_color);
 
-The GD format is commonly used to allow fast loading of parts of images. Note
-that the GD format is only usable in GD-compatible applications.
+    // Save the gd image
+    // The file format for GD images is .gd, see http://www.libgd.org/GdFileFormats
+    imagegd($im, 'simple.gd');
 
-|imagegd2|
+    // Free up memory
+    imagedestroy($im);
+<?>
+
+===============================================================================
+*Notes*
+
+    Note:
+
+    The GD format is commonly used to allow fast loading of parts of images.
+    Note that the GD format is only usable in GD-compatible applications.
+
+===============================================================================
+*See* *Also*
+
+  * |imagegd2| - Output GD2 image to browser or file
+
 
 vim:ft=help:

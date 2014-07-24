@@ -1,15 +1,36 @@
-openal_listener_set -- Set a listener property
+openal_listener_set
 
-  bool openal_listener_set(int property, mixed setting)~
+(PECL openal >= 0.1.0)
 
-Property to set, one of: AL_GAIN (float), AL_POSITION
-(array(float,float,float)), AL_VELOCITY (array(float,float,float)) and
-AL_ORIENTATION (array(float,float,float)).
+openal_listener_set — Set a listener property
 
-Value to set, either float, or an array of floats as appropriate.
+===============================================================================
+*Description*
 
-Returns TRUE on success or &false; on failure.
+    bool openal_listener_set ( int $property , mixed $setting )~
 
-|openal_listener_get|
+===============================================================================
+*Parameters*
+
+{property}
+
+    Property to set, one of: AL_GAIN (float), AL_POSITION (array
+    (float,float,float)), AL_VELOCITY (array(float,float,float)) and
+    AL_ORIENTATION (array(float,float,float)).
+
+{setting}
+
+    Value to set, either float, or an array of floats as appropriate.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*See* *Also*
+
+  * |openal_listener_get| - Retrieve a listener property
+
 
 vim:ft=help:

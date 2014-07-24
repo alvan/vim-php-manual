@@ -1,8 +1,17 @@
-PDF_setmatrix -- Set current transformation matrix
+PDF_setmatrix
 
-  bool PDF_setmatrix(resource p, float a, float b, float c, float d, float e, float f)~
+(PHP 4 >= 4.0.5, PECL pdflib >= 1.0.0)
+
+PDF_setmatrix — Set current transformation matrix
+
+===============================================================================
+*Description*
+
+    bool PDF_setmatrix ( resource $p , float $a , float $b , float $c , float~
+    $d , float $e , float $f )~
 
 Explicitly sets the current transformation matrix. Returns TRUE on success or
-&false; on failure.
+FALSE on failure.
+
 
 vim:ft=help:

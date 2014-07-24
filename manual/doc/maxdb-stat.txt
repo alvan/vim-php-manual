@@ -1,60 +1,73 @@
-maxdb::stat -- Gets the current system status
+maxdb_stat
+
+maxdb::stat
+
+(PECL maxdb >= 1.0)
+
+maxdb_stat -- maxdb::stat — Gets the current system status
+
+===============================================================================
+*Description*
 
 Procedural style
 
-  string maxdb_stat(resource link)~
+    string maxdb_stat ( resource $link )~
 
 Object oriented style
 
-  string maxdb::stat()~
+    string maxdb::stat ( void )~
 
-|maxdb_stat| returns a string containing several information about the MaxDB
+maxdb_stat() returns a string containing several information about the MaxDB
 server running.
+
+===============================================================================
+*Return* *Values*
 
 A string describing the server status. FALSE if an error occurred.
 
-Object oriented style
+===============================================================================
+*Examples*
+
+Example #1 Object oriented style
 
 <?php >
-  $maxdb = new maxdb("localhost", "MONA", "RED", "DEMODB");
-  
-  /* check connection */
-  if (maxdb_connect_errno()) {
-     printf("Connect failed: %s\n", maxdb_connect_error());
-     exit();
-  }
-  
-  printf ("System status: %s\n", $maxdb->stat());
-  
-  $maxdb->close();
-?>
+    $maxdb = new maxdb("localhost", "MONA", "RED", "DEMODB");
 
+    /* check connection */
+    if (maxdb_connect_errno()) {
+       printf("Connect failed: %s\n", maxdb_connect_error());
+       exit();
+    }
 
+    printf ("System status: %s\n", $maxdb->stat());
 
-Procedural style
+    $maxdb->close();
+<?>
+
+Example #2 Procedural style
 
 <?php >
-  $link = maxdb_connect("localhost", "MONA", "RED", "DEMODB");
-  
-  /* check connection */
-  if (maxdb_connect_errno()) {
-     printf("Connect failed: %s\n", maxdb_connect_error());
-     exit();
-  }
-  
-  printf("System status: %s\n", maxdb_stat($link));
-  
-  maxdb_close($link);
-?>
+    $link = maxdb_connect("localhost", "MONA", "RED", "DEMODB");
 
+    /* check connection */
+    if (maxdb_connect_errno()) {
+       printf("Connect failed: %s\n", maxdb_connect_error());
+       exit();
+    }
 
+    printf("System status: %s\n", maxdb_stat($link));
+
+    maxdb_close($link);
+<?>
 
 The above example will output something similar to:
 
+System status: Kernel    7<...>
 
+===============================================================================
+*See* *Also*
 
-  System status: Kernel    7<...>
+  * |maxdb_get_server_info| - Returns the version of the MaxDB server
 
-|maxdb_get_server_info|
 
 vim:ft=help:

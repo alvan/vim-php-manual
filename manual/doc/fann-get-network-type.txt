@@ -1,11 +1,27 @@
-fann_get_network_type -- Get the type of neural network it was created as
+fann_get_network_type
 
-  int fann_get_network_type(resource ann)~
+(PECL fann >= 1.0.0)
+
+fann_get_network_type — Get the type of neural network it was created as
+
+===============================================================================
+*Description*
+
+    int fann_get_network_type ( resource $ann )~
 
 Get the type of neural network it was created as.
 
-Neural network resource.
+===============================================================================
+*Parameters*
+
+{ann}
+
+    Neural network resource.
+
+===============================================================================
+*Return* *Values*
 
 Network type constant, or FALSE on error.
+
 
 vim:ft=help:

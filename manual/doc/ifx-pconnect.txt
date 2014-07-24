@@ -1,8 +1,16 @@
-ifx_pconnect -- Open persistent Informix connection
+ifx_pconnect
 
-  resource ifx_pconnect([string database [, string userid [, string password]]])~
+(PHP 4, PHP <=5.2.0)
 
-|ifx_pconnect| acts very much like |ifx_connect| with two major differences.
+ifx_pconnect — Open persistent Informix connection
+
+===============================================================================
+*Description*
+
+    resource ifx_pconnect ([ string $database [, string $userid [, string~
+    $password ]]] )~
+
+ifx_pconnect() acts very much like |ifx_connect| with two major differences.
 
 First, when connecting, the function would first try to find a (persistent)
 link that's already open with the same host, username and password. If one is
@@ -10,10 +18,13 @@ found, an identifier for it will be returned instead of opening a new
 connection.
 
 Second, the connection to the SQL server will not be closed when the execution
-of the script ends. Instead, the link will remain open for future use
-(|ifx_close| will not close links established by |ifx_pconnect|).
+of the script ends. Instead, the link will remain open for future use (|
+ifx_close| will not close links established by ifx_pconnect()).
 
 This type of links is therefore called 'persistent'.
+
+===============================================================================
+*Parameters*
 
 All of the arguments are optional, and if they're missing, defaults are taken
 from values supplied in php.ini (ifx.default_host for the host (Informix
@@ -21,15 +32,28 @@ libraries will use INFORMIXSERVER environment value if not defined),
 ifx.default_user for user, ifx.default_password for the password (none if not
 defined).
 
-{database} The database name, as a string.
+{database}
 
-{userid} The username, as a string.
+    The database name, as a string.
 
-{password} The password, as a string.
+{userid}
+
+    The username, as a string.
+
+{password}
+
+    The password, as a string.
+
+===============================================================================
+*Return* *Values*
 
 Returns: valid Informix persistent link identifier on success, or FALSE on
 errors.
 
-|ifx_connect|
+===============================================================================
+*See* *Also*
+
+  * |ifx_connect| - Open Informix server connection
+
 
 vim:ft=help:

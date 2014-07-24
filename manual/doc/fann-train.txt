@@ -1,21 +1,46 @@
-fann_train -- Train one iteration with a set of inputs, and a set of desired
+fann_train
+
+(PECL fann >= 1.0.0)
+
+fann_train — Train one iteration with a set of inputs, and a set of desired
 outputs
 
-  bool fann_train(resource ann, array input, array desired_output)~
+===============================================================================
+*Description*
+
+    bool fann_train ( resource $ann , array $input , array $desired_output )~
 
 Train one iteration with a set of inputs, and a set of desired outputs. This
 training is always incremental training, since only one pattern is presented.
 
-Neural network resource.
+===============================================================================
+*Parameters*
 
-An array of inputs. This array must be exactly |fann_get_num_input| long.
+{ann}
 
-An array of desired outputs. This array must be exactly |fann_get_num_output|
-long.
+    Neural network resource.
+
+{input}
+
+    An array of inputs. This array must be exactly |fann_get_num_input| long.
+
+{desired_output}
+
+    An array of desired outputs. This array must be exactly |
+    fann_get_num_output| long.
+
+===============================================================================
+*Return* *Values*
 
 Returns TRUE on success, or FALSE otherwise.
 
-|fann_train_on_data| |fann_train_epoch| |fann_get_num_input|
-|fann_get_num_output|
+===============================================================================
+*See* *Also*
+
+  * |fann_train_on_data| - Trains on an entire dataset for a period of time
+  * |fann_train_epoch| - Train one epoch with a set of training data
+  * |fann_get_num_input| - Get the number of input neurons
+  * |fann_get_num_output| - Get the number of output neurons
+
 
 vim:ft=help:

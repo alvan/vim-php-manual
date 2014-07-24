@@ -1,13 +1,31 @@
-hw_GetAnchorsObj -- Object records of anchors of document
+hw_GetAnchorsObj
 
-  array hw_getanchorsobj(int connection, int objectID)~
+(PHP 4)
+
+hw_GetAnchorsObj — Object records of anchors of document
+
+===============================================================================
+*Description*
+
+    array hw_getanchorsobj ( int $connection , int $objectID )~
 
 Returns records with anchors of the document with object ID {objectID}.
 
-{connection} The connection identifier.
+===============================================================================
+*Parameters*
 
-{objectID} The object identifier.
+{connection}
+
+    The connection identifier.
+
+{objectID}
+
+    The object identifier.
+
+===============================================================================
+*Return* *Values*
 
 Returns an array of object records.
+
 
 vim:ft=help:

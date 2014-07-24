@@ -1,6 +1,14 @@
-hw_PipeDocument -- Retrieve any document
+hw_PipeDocument
 
-  int hw_pipedocument(int connection, int objectID [, array url_prefixes])~
+(PHP 4)
+
+hw_PipeDocument — Retrieve any document
+
+===============================================================================
+*Description*
+
+    int hw_pipedocument ( int $connection , int $objectID [, array~
+    $url_prefixes ] )~
 
 Gets the Hyperwave document with the given object ID. If the document has
 anchors which can be inserted, they will have been inserted already.
@@ -8,15 +16,32 @@ anchors which can be inserted, they will have been inserted already.
 The document will be transferred via a special data connection which does not
 block the control connection.
 
-{connection} The connection identifier.
+===============================================================================
+*Parameters*
 
-{objectID} The object identifier.
+{connection}
+
+    The connection identifier.
+
+{objectID}
+
+    The object identifier.
 
 {url_prefixes}
 
+===============================================================================
+*Return* *Values*
+
 Returns the Hyperwave document.
 
-|hw_gettext| |hw_free_document| |hw_document_size| |hw_document_bodytag|
-|hw_output_document|
+===============================================================================
+*See* *Also*
+
+  * |hw_gettext| - Retrieve text document
+  * |hw_free_document| - Frees hw_document
+  * |hw_document_size| - Size of hw_document
+  * |hw_document_bodytag| - Body tag of hw_document
+  * |hw_output_document| - Prints hw_document
+
 
 vim:ft=help:

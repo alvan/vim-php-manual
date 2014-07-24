@@ -1,14 +1,34 @@
-dba_close -- Close a DBA database
+dba_close
 
-  void dba_close(resource handle)~
+(PHP 4, PHP 5)
 
-|dba_close| closes the established database and frees all resources of the
+dba_close — Close a DBA database
+
+===============================================================================
+*Description*
+
+    void dba_close ( resource $handle )~
+
+dba_close() closes the established database and frees all resources of the
 specified database handle.
 
-{handle} The database handler, returned by |dba_open| or |dba_popen|.
+===============================================================================
+*Parameters*
+
+{handle}
+
+    The database handler, returned by |dba_open| or |dba_popen|.
+
+===============================================================================
+*Return* *Values*
 
 No value is returned.
 
-|dba_open| |dba_popen|
+===============================================================================
+*See* *Also*
+
+  * |dba_open| - Open database
+  * |dba_popen| - Open database persistently
+
 
 vim:ft=help:

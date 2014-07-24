@@ -1,12 +1,26 @@
-stream_wrapper_restore -- Restores a previously unregistered built-in wrapper
+stream_wrapper_restore
 
-  bool stream_wrapper_restore(string protocol)~
+(PHP 5 >= 5.1.0)
 
-Restores a built-in wrapper previously unregistered with
-|stream_wrapper_unregister|.
+stream_wrapper_restore — Restores a previously unregistered built-in wrapper
+
+===============================================================================
+*Description*
+
+    bool stream_wrapper_restore ( string $protocol )~
+
+Restores a built-in wrapper previously unregistered with |
+stream_wrapper_unregister|.
+
+===============================================================================
+*Parameters*
 
 {protocol}
 
-Returns TRUE on success or &false; on failure.
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
 
 vim:ft=help:

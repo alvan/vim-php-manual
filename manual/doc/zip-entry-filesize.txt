@@ -1,13 +1,33 @@
-zip_entry_filesize -- Retrieve the actual file size of a directory entry
+zip_entry_filesize
 
-  int zip_entry_filesize(resource zip_entry)~
+(PHP 4 >= 4.1.0, PHP 5 >= 5.2.0, PECL zip >= 1.0.0)
+
+zip_entry_filesize — Retrieve the actual file size of a directory entry
+
+===============================================================================
+*Description*
+
+    int zip_entry_filesize ( resource $zip_entry )~
 
 Returns the actual size of the specified directory entry.
 
-{zip_entry} A directory entry returned by |zip_read|.
+===============================================================================
+*Parameters*
+
+{zip_entry}
+
+    A directory entry returned by |zip_read|.
+
+===============================================================================
+*Return* *Values*
 
 The size of the directory entry.
 
-|zip_open| |zip_read|
+===============================================================================
+*See* *Also*
+
+  * |zip_open| - Open a ZIP file archive
+  * |zip_read| - Read next entry in a ZIP file archive
+
 
 vim:ft=help:

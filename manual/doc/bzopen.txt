@@ -1,30 +1,52 @@
-bzopen -- Opens a bzip2 compressed file
+bzopen
 
-  resource bzopen(string filename, string mode)~
+(PHP 4 >= 4.0.4, PHP 5)
 
-|bzopen| opens a bzip2 (.bz2) file for reading or writing.
+bzopen — Opens a bzip2 compressed file
 
-{filename} The name of the file to open, or an existing stream resource.
+===============================================================================
+*Description*
 
-{mode} Similar to the |fopen| function, only 'r' (read) and 'w' (write) are
-supported. Everything else will cause bzopen to return FALSE.
+    resource bzopen ( string $filename , string $mode )~
 
-If the open fails, |bzopen| returns FALSE, otherwise it returns a pointer to
+bzopen() opens a bzip2 (.bz2) file for reading or writing.
+
+===============================================================================
+*Parameters*
+
+{filename}
+
+    The name of the file to open, or an existing stream resource.
+
+{mode}
+
+    Similar to the |fopen| function, only 'r' (read) and 'w' (write) are
+    supported. Everything else will cause bzopen to return FALSE.
+
+===============================================================================
+*Return* *Values*
+
+If the open fails, bzopen() returns FALSE, otherwise it returns a pointer to
 the newly opened file.
 
-|bzopen| example
+===============================================================================
+*Examples*
+
+Example #1 bzopen() example
 
 <?php >
-  $file = "/tmp/foo.bz2";
-  $bz = bzopen($file, "r") or die("Couldn't open $file for reading");
-  
-  bzclose($bz);
-?>
 
+    $file = "/tmp/foo.bz2";
+    $bz = bzopen($file, "r") or die("Couldn't open $file for reading");
 
+    bzclose($bz);
 
+<?>
 
+===============================================================================
+*See* *Also*
 
-|bzclose|
+  * |bzclose| - Close a bzip2 file
+
 
 vim:ft=help:

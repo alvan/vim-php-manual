@@ -1,16 +1,38 @@
-hw_GetAndLock -- Return object record and lock object
+hw_GetAndLock
 
-  string hw_getandlock(int connection, int objectID)~
+(PHP 4)
+
+hw_GetAndLock — Return object record and lock object
+
+===============================================================================
+*Description*
+
+    string hw_getandlock ( int $connection , int $objectID )~
 
 Returns the object record for the object with ID {objectID}. It will also lock
 the object, so other users cannot access it until it is unlocked.
 
-{connection} The connection identifier.
+===============================================================================
+*Parameters*
 
-{objectID} The object identifier.
+{connection}
+
+    The connection identifier.
+
+{objectID}
+
+    The object identifier.
+
+===============================================================================
+*Return* *Values*
 
 Returns the object record for the object with ID {objectID}.
 
-|hw_unlock| |hw_getobject|
+===============================================================================
+*See* *Also*
+
+  * |hw_unlock| - Unlock object
+  * |hw_getobject| - Object record
+
 
 vim:ft=help:

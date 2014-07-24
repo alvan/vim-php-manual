@@ -1,15 +1,31 @@
-yaz_hits -- Returns number of hits for last search
+yaz_hits
 
-  int yaz_hits(resource id [, array &searchresult])~
+(PHP 4 >= 4.0.1, PECL yaz >= 0.9.0)
 
-|yaz_hits| returns the number of hits for the last search.
+yaz_hits — Returns number of hits for last search
 
-{id} The connection resource returned by |yaz_connect|.
+===============================================================================
+*Description*
 
-{searchresult} Result array for detailed search result information.
+    int yaz_hits ( resource $id [, array &$searchresult ] )~
 
-Returns the number of hits for the last search or 0 if no search was
-performed.
+yaz_hits() returns the number of hits for the last search.
+
+===============================================================================
+*Parameters*
+
+{id}
+
+    The connection resource returned by |yaz_connect|.
+
+{searchresult}
+
+    Result array for detailed search result information.
+
+===============================================================================
+*Return* *Values*
+
+Returns the number of hits for the last search or 0 if no search was performed.
 
 The search result array (if supplied) holds information that is returned by a
 Z39.50 server in the SearchResult-1 format part of a search response. The
@@ -18,9 +34,22 @@ various parts of the query (subquery). In particular, it is possible to obtain
 hit counts for the individual search terms in a query. Information for first
 subquery is in $array[0], second subquery in $array[1], and so forth.
 
-The SearchResult facility requires PECL YAZ 1.0.5 or later and YAZ 2.1.9 or
-later.
+                  searchresult members
+      Element                    Description
+id                  Sub query ID2 (string)
+count               Result count / hits (integer)
+subquery.term       Sub query term (string)
+interpretation.term Interpretated sub query term (string)
+recommendation.term Recommended sub query term (string)
 
-Very few Z39.50 implementations support the SearchResult facility.
+    Note:
+
+    The SearchResult facility requires PECL YAZ 1.0.5 or later and YAZ 2.1.9 or
+    later.
+
+    Note:
+
+    Very few Z39.50 implementations support the SearchResult facility.
+
 
 vim:ft=help:

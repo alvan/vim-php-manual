@@ -1,43 +1,84 @@
-snmp3_getnext -- Fetch the SNMP object which follows the given object id
+snmp3_getnext
 
-  string snmp3_getnext(string host, string sec_name, string sec_level, string auth_protocol, string auth_passphrase, string priv_protocol, string priv_passphrase, string object_id [, string timeout = 1000000 [, string retries = 5]])~
+(PHP 5)
 
-The |snmp3_getnext| function is used to read the value of the SNMP object that
+snmp3_getnext — Fetch the SNMP object which follows the given object id
+
+===============================================================================
+*Description*
+
+    string snmp3_getnext ( string $host , string $sec_name , string $sec_level~
+    , string $auth_protocol , string $auth_passphrase , string $priv_protocol~
+    , string $priv_passphrase , string $object_id [, string $timeout = 1000000~
+    [, string $retries = 5 ]] )~
+
+The snmp3_getnext() function is used to read the value of the SNMP object that
 follows the specified {object_id}.
 
-The hostname of the SNMP agent (server).
+===============================================================================
+*Parameters*
 
-the security name, usually some kind of username
+{host}
 
-the security level (noAuthNoPriv|authNoPriv|authPriv)
+    The hostname of the SNMP agent (server).
 
-the authentication protocol (MD5 or SHA)
+{sec_name}
 
-the authentication pass phrase
+    the security name, usually some kind of username
 
-the privacy protocol (DES or AES)
+{sec_level}
 
-the privacy pass phrase
+    the security level (noAuthNoPriv|authNoPriv|authPriv)
 
-The SNMP object id.
+{auth_protocol}
 
-The number of microseconds until the first timeout.
+    the authentication protocol (MD5 or SHA)
 
-The number of times to retry if timeouts occur.
+{auth_passphrase}
 
-Returns SNMP object value on success or FALSE on error. In case of an error,
-an E_WARNING message is shown.
+    the authentication pass phrase
 
-Using |snmp3_getnext|
+{priv_protocol}
+
+    the privacy protocol (DES or AES)
+
+{priv_passphrase}
+
+    the privacy pass phrase
+
+{object_id}
+
+    The SNMP object id.
+
+{timeout}
+
+    The number of microseconds until the first timeout.
+
+{retries}
+
+    The number of times to retry if timeouts occur.
+
+===============================================================================
+*Return* *Values*
+
+Returns SNMP object value on success or FALSE on error. In case of an error, an
+E_WARNING message is shown.
+
+===============================================================================
+*Examples*
+
+Example #1 Using snmp3_getnext()
 
 <?php >
-  $nameOfSecondInterface = snmp3_getnext('localhost', 'james', 'authPriv', 'SHA', 'secret007', 'AES', 'secret007', 'IF-MIB::ifName.1');
-?>
+    $nameOfSecondInterface = snmp3_getnext('localhost', 'james', 'authPriv', 'SHA'
+    , 'secret007', 'AES', 'secret007', 'IF-MIB::ifName.1');
+<?>
 
+===============================================================================
+*See* *Also*
 
+  * |snmp3_get| - Fetch an SNMP object
+  * |snmp3_walk| - Fetch all the SNMP objects from an agent
 
-
-
-|snmp3_get| |snmp3_walk|
 
 vim:ft=help:

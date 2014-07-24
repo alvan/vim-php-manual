@@ -1,9 +1,20 @@
-ncurses_pnoutrefresh -- Copies a region from a pad into the virtual screen
+ncurses_pnoutrefresh
 
-  int ncurses_pnoutrefresh(resource pad, int pminrow, int pmincol, int sminrow, int smincol, int smaxrow, int smaxcol)~
+(PHP 4 >= 4.3.0, PHP 5 < 5.3.0, PECL ncurses >= 1.0.0)
 
-This function is currently not documented; only its argument list is
-available.
+ncurses_pnoutrefresh — Copies a region from a pad into the virtual screen
+
+===============================================================================
+*Description*
+
+    int ncurses_pnoutrefresh ( resource $pad , int $pminrow , int $pmincol ,~
+    int $sminrow , int $smincol , int $smaxrow , int $smaxcol )~
+Warning
+
+This function is currently not documented; only its argument list is available.
+
+===============================================================================
+*Parameters*
 
 {pad}
 
@@ -18,5 +29,6 @@ available.
 {smaxrow}
 
 {smaxcol}
+
 
 vim:ft=help:

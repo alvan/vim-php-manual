@@ -1,12 +1,19 @@
-assert -- Checks if assertion is FALSE
+assert
 
-  bool assert(mixed assertion [, string description])~
+(PHP 4, PHP 5)
 
-|assert| will check the given {assertion} and take appropriate action if its
+assert — Checks if assertion is FALSE
+
+===============================================================================
+*Description*
+
+    bool assert ( mixed $assertion [, string $description ] )~
+
+assert() will check the given {assertion} and take appropriate action if its
 result is FALSE.
 
-If the {assertion} is given as a string it will be evaluated as PHP code by
-|assert|. The advantages of a string {assertion} are less overhead when
+If the {assertion} is given as a string it will be evaluated as PHP code by 
+assert(). The advantages of a string {assertion} are less overhead when
 assertion checking is off and messages containing the {assertion} expression
 when an assertion fails. This means that if you pass a boolean condition as
 {assertion} this condition will not show up as parameter to the assertion
@@ -16,21 +23,20 @@ the boolean FALSE is converted as the empty string.
 
 Assertions should be used as a debugging feature only. You may use them for
 sanity-checks that test for conditions that should always be TRUE and that
-indicate some programming errors if not or to check for the presence of
-certain features like extension functions or certain system limits and
-features.
+indicate some programming errors if not or to check for the presence of certain
+features like extension functions or certain system limits and features.
 
 Assertions should not be used for normal runtime operations like input
 parameter checks. As a rule of thumb your code should always be able to work
 correctly if assertion checking is not activated.
 
-The behavior of |assert| may be configured by |assert_options| or by
+The behavior of assert() may be configured by |assert_options| or by
 .ini-settings described in that functions manual page.
 
 The |assert_options| function and/or ASSERT_CALLBACK configuration directive
 allow a callback function to be set to handle failed assertions.
 
-|assert| callbacks are particularly useful for building automated test suites
+assert() callbacks are particularly useful for building automated test suites
 because they allow you to easily capture the code passed to the assertion,
 along with information on where the assertion was made. While this information
 can be captured via other methods, using assertions makes it much faster and
@@ -38,84 +44,99 @@ easier!
 
 The callback function should accept three arguments. The first argument will
 contain the file the assertion failed in. The second argument will contain the
-line the assertion failed on and the third argument will contain the
-expression that failed (if any &#x2014; literal values such as 1 or "two" will
-not be passed via this argument). Users of PHP 5.4.8 and later may also
-provide a fourth optional argument, which will contain the {description} given
-to |assert|, if it was set.
+line the assertion failed on and the third argument will contain the expression
+that failed (if any — literal values such as 1 or "two" will not be passed via
+this argument). Users of PHP 5.4.8 and later may also provide a fourth optional
+argument, which will contain the {description} given to assert(), if it was
+set.
 
-{assertion} The assertion.
+===============================================================================
+*Parameters*
 
-{description} An optional description that will be included in the failure
-message if the {assertion} fails.
+{assertion}
+
+    The assertion.
+
+{description}
+
+    An optional description that will be included in the failure message if the
+    {assertion} fails.
+
+===============================================================================
+*Return* *Values*
 
 FALSE if the assertion is false, TRUE otherwise.
 
-Version Description 5.4.8 The {description} parameter was added. The
-{description} is also now provided to a callback function in ASSERT_CALLBACK
-mode as the fourth argument.
+===============================================================================
+*Changelog*
 
-Handle a failed assertion with a custom handler
+Version                               Description
+        The {description} parameter was added. The {description} is also now
+5.4.8   provided to a callback function in ASSERT_CALLBACK mode as the fourth
+        argument.
 
-<?php >
-  // Active assert and make it quiet
-  assert_options(ASSERT_ACTIVE, 1);
-  assert_options(ASSERT_WARNING, 0);
-  assert_options(ASSERT_QUIET_EVAL, 1);
-  
-  // Create a handler function
-  function my_assert_handler($file, $line, $code)
-  {
-      echo "<hr>Assertion Failed:
-          File '$file'<br />
-          Line '$line'<br />
-          Code '$code'<br /><hr />";
-  }
-  
-  // Set up the callback
-  assert_options(ASSERT_CALLBACK, 'my_assert_handler');
-  
-  // Make an assertion that should fail
-  assert('mysql_query("")');
-?>
+===============================================================================
+*Examples*
 
-
-
-
-
-Using a custom handler to print a description
+Example #1 Handle a failed assertion with a custom handler
 
 <?php >
-  // Active assert and make it quiet
-  assert_options(ASSERT_ACTIVE, 1);
-  assert_options(ASSERT_WARNING, 0);
-  assert_options(ASSERT_QUIET_EVAL, 1);
-  
-  // Create a handler function
-  function my_assert_handler($file, $line, $code, $desc = null)
-  {
-      echo "Assertion failed at $file:$line: $code";
-      if ($desc) {
-          echo ": $desc";
-      }
-      echo "\n";
-  }
-  
-  // Set up the callback
-  assert_options(ASSERT_CALLBACK, 'my_assert_handler');
-  
-  // Make an assertion that should fail
-  assert('2 < 1');
-  assert('2 < 1', 'Two is less than one');
-?>
+    // Active assert and make it quiet
+    assert_options(ASSERT_ACTIVE, 1);
+    assert_options(ASSERT_WARNING, 0);
+    assert_options(ASSERT_QUIET_EVAL, 1);
+
+    // Create a handler function
+    function my_assert_handler($file, $line, $code)
+    {
+        echo "<hr>Assertion Failed:
+            File '$file'<br />
+            Line '$line'<br />
+            Code '$code'<br /><hr />";
+    }
+
+    // Set up the callback
+    assert_options(ASSERT_CALLBACK, 'my_assert_handler');
+
+    // Make an assertion that should fail
+    assert('mysql_query("")');
+<?>
+
+Example #2 Using a custom handler to print a description
+
+<?php >
+    // Active assert and make it quiet
+    assert_options(ASSERT_ACTIVE, 1);
+    assert_options(ASSERT_WARNING, 0);
+    assert_options(ASSERT_QUIET_EVAL, 1);
+
+    // Create a handler function
+    function my_assert_handler($file, $line, $code, $desc = null)
+    {
+        echo "Assertion failed at $file:$line: $code";
+        if ($desc) {
+            echo ": $desc";
+        }
+        echo "\n";
+    }
+
+    // Set up the callback
+    assert_options(ASSERT_CALLBACK, 'my_assert_handler');
+
+    // Make an assertion that should fail
+    assert('2 < 1');
+    assert('2 < 1', 'Two is less than one');
+<?>
 
 The above example will output:
 
-  Assertion failed at test.php:21: 2 < 1
-  Assertion failed at test.php:22: 2 < 1: Two is less than one
+Assertion failed at test.php:21: 2 < 1
+Assertion failed at test.php:22: 2 < 1: Two is less than one
 
+===============================================================================
+*See* *Also*
 
+  * |assert_options| - Set/get the various assert flags
 
-|assert_options|
 
 vim:ft=help:

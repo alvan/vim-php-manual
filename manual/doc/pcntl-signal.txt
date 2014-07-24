@@ -1,91 +1,128 @@
-pcntl_signal -- Installs a signal handler
+pcntl_signal
 
-  bool pcntl_signal(int signo, callable|int handler [, bool restart_syscalls = true])~
+(PHP 4 >= 4.1.0, PHP 5)
 
-The |pcntl_signal| function installs a new signal handler or replaces the
+pcntl_signal — Installs a signal handler
+
+===============================================================================
+*Description*
+
+    bool pcntl_signal ( int $signo , callable|int $handler [, bool~
+    $restart_syscalls = true ] )~
+
+The pcntl_signal() function installs a new signal handler or replaces the
 current signal handler for the signal indicated by {signo}.
 
-{signo} The signal number.
+===============================================================================
+*Parameters*
 
-{handler} The signal handler. This may be either a callable, which will be
-invoked to handle the signal, or either of the two global constants SIG_IGN or
-SIG_DFL, which will ignore the signal or restore the default signal handler
-respectively.
+{signo}
 
-If a callable is given, it must implement the following signature:
+    The signal number.
 
-  void handler(int signo)~
+{handler}
 
-{signo} The signal being handled.
+    The signal handler. This may be either a callable, which will be invoked to
+    handle the signal, or either of the two global constants SIG_IGN or SIG_DFL
+    , which will ignore the signal or restore the default signal handler
+    respectively.
 
-Note that when you set a handler to an object method, that object's reference
-count is increased which makes it persist until you either change the handler
-to something else, or your script ends.
+    If a callable is given, it must implement the following signature:
 
-{restart_syscalls} Specifies whether system call restarting should be used
-when this signal arrives.
 
-Returns TRUE on success or &false; on failure.
+    void handler ( int $signo )~
 
-Version Description 4.3.0 The {restart_syscalls} parameter was added. 4.3.0
-The ability to use an object method as a callback became available. 4.3.0 As
-of PHP 4.3.0 PCNTL uses ticks as the signal handle callback mechanism, which
-is much faster than the previous mechanism. This change follows the same
-semantics as using "user ticks". You must use the declare() statement to
-specify the locations in your program where callbacks are allowed to occur for
-the signal handler to function properly (as used in the example below).
+    {signo}
+        The signal being handled.
 
-|pcntl_signal| example
+        Note:
+
+        Note that when you set a handler to an object method, that object's
+        reference count is increased which makes it persist until you either
+        change the handler to something else, or your script ends.
+
+{restart_syscalls}
+
+    Specifies whether system call restarting should be used when this signal
+    arrives.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*Changelog*
+
+Version                               Description
+4.3.0   The {restart_syscalls} parameter was added.
+4.3.0   The ability to use an object method as a callback became available.
+        As of PHP 4.3.0 PCNTL uses ticks as the signal handle callback
+        mechanism, which is much faster than the previous mechanism. This
+4.3.0   change follows the same semantics as using "user ticks". You must use
+        the declare() statement to specify the locations in your program where
+        callbacks are allowed to occur for the signal handler to function
+        properly (as used in the example below).
+
+===============================================================================
+*Examples*
+
+Example #1 pcntl_signal() example
 
 <?php >
-  // tick use required as of PHP 4.3.0
-  declare(ticks = 1);
-  
-  // signal handler function
-  function sig_handler($signo)
-  {
-  
-       switch ($signo) {
-           case SIGTERM:
-               // handle shutdown tasks
-               exit;
-               break;
-           case SIGHUP:
-               // handle restart tasks
-               break;
-           case SIGUSR1:
-               echo "Caught SIGUSR1...\n";
-               break;
-           default:
-               // handle all other signals
-       }
-  
-  }
-  
-  echo "Installing signal handler...\n";
-  
-  // setup signal handlers
-  pcntl_signal(SIGTERM, "sig_handler");
-  pcntl_signal(SIGHUP,  "sig_handler");
-  pcntl_signal(SIGUSR1, "sig_handler");
-  
-  // or use an object, available as of PHP 4.3.0
-  // pcntl_signal(SIGUSR1, array($obj, "do_something"));
-  
-  echo"Generating signal SIGTERM to self...\n";
-  
-  // send SIGUSR1 to current process id
-  posix_kill(posix_getpid(), SIGUSR1);
-  
-  echo "Done\n";
-?>
+    // tick use required as of PHP 4.3.0
+    declare(ticks = 1);
 
+    // signal handler function
+    function sig_handler($signo)
+    {
 
+         switch ($signo) {
+             case SIGTERM:
+                 // handle shutdown tasks
+                 exit;
+                 break;
+             case SIGHUP:
+                 // handle restart tasks
+                 break;
+             case SIGUSR1:
+                 echo "Caught SIGUSR1...\n";
+                 break;
+             default:
+                 // handle all other signals
+         }
 
+    }
 
+    echo "Installing signal handler...\n";
 
-|pcntl_signal| doesn't stack the signal handlers, but replaces them.
+    // setup signal handlers
+    pcntl_signal(SIGTERM, "sig_handler");
+    pcntl_signal(SIGHUP,  "sig_handler");
+    pcntl_signal(SIGUSR1, "sig_handler");
 
-|pcntl_fork| |pcntl_waitpid|
+    // or use an object, available as of PHP 4.3.0
+    // pcntl_signal(SIGUSR1, array($obj, "do_something"));
+
+    echo"Generating signal SIGTERM to self...\n";
+
+    // send SIGUSR1 to current process id
+    posix_kill(posix_getpid(), SIGUSR1);
+
+    echo "Done\n";
+
+<?>
+
+===============================================================================
+*Notes*
+
+pcntl_signal() doesn't stack the signal handlers, but replaces them.
+
+===============================================================================
+*See* *Also*
+
+  * |pcntl_fork| - Forks the currently running process
+  * |pcntl_waitpid| - Waits on or returns the status of a forked child
+
 
 vim:ft=help:

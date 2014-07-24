@@ -1,13 +1,33 @@
-ifx_copy_blob -- Duplicates the given blob object
+ifx_copy_blob
 
-  int ifx_copy_blob(int bid)~
+(PHP 4, PHP <=5.2.0)
+
+ifx_copy_blob — Duplicates the given blob object
+
+===============================================================================
+*Description*
+
+    int ifx_copy_blob ( int $bid )~
 
 Duplicates the given blob object.
 
-{bid} A BLOB identifier.
+===============================================================================
+*Parameters*
+
+{bid}
+
+    A BLOB identifier.
+
+===============================================================================
+*Return* *Values*
 
 Returns the new blob object-id, or FALSE on errors.
 
-|ifx_create_blob| |ifx_free_blob|
+===============================================================================
+*See* *Also*
+
+  * |ifx_create_blob| - Creates an blob object
+  * |ifx_free_blob| - Deletes the blob object
+
 
 vim:ft=help:

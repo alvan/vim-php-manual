@@ -1,17 +1,38 @@
-hw_GetSrcByDestObj -- Returns anchors pointing at object
+hw_GetSrcByDestObj
 
-  array hw_getsrcbydestobj(int connection, int objectID)~
+(PHP 4)
+
+hw_GetSrcByDestObj — Returns anchors pointing at object
+
+===============================================================================
+*Description*
+
+    array hw_getsrcbydestobj ( int $connection , int $objectID )~
 
 Gets the object records of all anchors pointing to the object with ID
 {objectID}.
 
-{connection} The connection identifier.
+===============================================================================
+*Parameters*
 
-{objectID} The object identifier. The object can either be a document or an
-anchor of type destination.
+{connection}
+
+    The connection identifier.
+
+{objectID}
+
+    The object identifier. The object can either be a document or an anchor of
+    type destination.
+
+===============================================================================
+*Return* *Values*
 
 Returns an array of object records.
 
-|hw_getanchors|
+===============================================================================
+*See* *Also*
+
+  * |hw_getanchors| - Object ids of anchors of document
+
 
 vim:ft=help:

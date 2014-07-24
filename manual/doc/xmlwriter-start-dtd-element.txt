@@ -1,23 +1,49 @@
-xmlwriter_start_dtd_element -- Create start DTD element
+XMLWriter::startDTDElement
+
+xmlwriter_start_dtd_element
+
+(PHP 5 >= 5.1.2, PECL xmlwriter >= 0.1.0)
+
+XMLWriter::startDTDElement -- xmlwriter_start_dtd_element — Create start DTD
+element
+
+===============================================================================
+*Description*
 
 Object oriented style
 
-  bool XMLWriter::startDTDElement(string qualifiedName)~
+    bool XMLWriter::startDTDElement ( string $qualifiedName )~
 
 Procedural style
 
-  bool xmlwriter_start_dtd_element(resource xmlwriter, string qualifiedName)~
+    bool xmlwriter_start_dtd_element ( resource $xmlwriter , string~
+    $qualifiedName )~
 
 Starts a DTD element.
 
-{ xmlwriter}Only for procedural calls. The XMLWriter resource that is being
-modified. This resource comes from a call to |xmlwriter_open_uri| or
-|xmlwriter_open_memory|.
+===============================================================================
+*Parameters*
 
-{qualifiedName} The qualified name of the document type to create.
+{ xmlwriter}
 
-Returns TRUE on success or &false; on failure.
+    Only for procedural calls. The XMLWriter resource that is being modified.
+    This resource comes from a call to |xmlwriter_open_uri| or |
+    xmlwriter_open_memory|.
 
-XMLWriter::endDTDElement XMLWriter::writeDTDElement
+{qualifiedName}
+
+    The qualified name of the document type to create.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*See* *Also*
+
+  * |XMLWriter::endDTDElement| - End current DTD element
+  * |XMLWriter::writeDTDElement| - Write full DTD element tag
+
 
 vim:ft=help:

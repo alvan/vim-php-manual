@@ -1,11 +1,31 @@
-openal_context_destroy -- Destroys a context
+openal_context_destroy
 
-  bool openal_context_destroy(resource context)~
+(PECL openal >= 0.1.0)
 
-An Open AL(Context) resource (previously created by |openal_context_create|).
+openal_context_destroy — Destroys a context
 
-Returns TRUE on success or &false; on failure.
+===============================================================================
+*Description*
 
-|openal_context_create|
+    bool openal_context_destroy ( resource $context )~
+
+===============================================================================
+*Parameters*
+
+{context}
+
+    An Open AL(Context) resource (previously created by |openal_context_create|
+    ).
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*See* *Also*
+
+  * |openal_context_create| - Create an audio processing context
+
 
 vim:ft=help:

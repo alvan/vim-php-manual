@@ -1,47 +1,73 @@
-header_remove -- Remove previously set headers
+header_remove
 
-  void header_remove([string name])~
+(PHP 5 >= 5.3.0)
+
+header_remove — Remove previously set headers
+
+===============================================================================
+*Description*
+
+    void header_remove ([ string $name ] )~
 
 Removes an HTTP header previously set using |header|.
 
-{name} The header name to be removed.
+===============================================================================
+*Parameters*
 
-This parameter is case-insensitive.
+{name}
+
+    The header name to be removed.
+
+        Note: This parameter is case-insensitive.
+
+===============================================================================
+*Return* *Values*
 
 No value is returned.
 
-Unsetting specific header.
+===============================================================================
+*Examples*
+
+Example #1 Unsetting specific header.
 
 <?php >
-  header("X-Foo: Bar");
-  header("X-Bar: Baz");
-  header_remove("X-Foo"); 
-?>
+    header("X-Foo: Bar");
+    header("X-Bar: Baz");
+    header_remove("X-Foo"); 
+<?>
 
 The above example will output something similar to:
 
-  X-Bar: Baz
+X-Bar: Baz
 
-Unsetting all previously set headers.
+Example #2 Unsetting all previously set headers.
 
 <?php >
-  header("X-Foo: Bar");
-  header("X-Bar: Baz");
-  header_remove(); 
-?>
+    header("X-Foo: Bar");
+    header("X-Bar: Baz");
+    header_remove(); 
+<?>
 
 The above example will output something similar to:
 
-  
+===============================================================================
+*Notes*
 
-
+Caution
 
 This function will remove all headers set by PHP, including cookies, session
 and the X-Powered-By headers.
 
-Headers will only be accessible and output when a SAPI that supports them is
-in use.
+    Note:
 
-|header| |headers_sent|
+    Headers will only be accessible and output when a SAPI that supports them
+    is in use.
+
+===============================================================================
+*See* *Also*
+
+  * |header| - Send a raw HTTP header
+  * |headers_sent| - Checks if or where headers have been sent
+
 
 vim:ft=help:

@@ -1,42 +1,64 @@
-xslt_set_log -- Set the log file to write log messages to
+xslt_set_log
 
-  void xslt_set_log(resource xh [, mixed log])~
+(PHP 4 >= 4.0.6)
+
+xslt_set_log — Set the log file to write log messages to
+
+===============================================================================
+*Description*
+
+    void xslt_set_log ( resource $xh [, mixed $log ] )~
 
 This function allows you to set the file in which you want XSLT log messages
 to, XSLT log messages are different than error messages, in that log messages
-are not actually error messages but rather messages related to the state of
-the XSLT processor. They are useful for debugging XSLT, when something goes
-wrong.
+are not actually error messages but rather messages related to the state of the
+XSLT processor. They are useful for debugging XSLT, when something goes wrong.
 
-By default logging is disabled, in order to enable logging you must first call
-|xslt_set_log| with a boolean parameter which enables logging, then if you
-want to set the log file to debug to, you must then pass it a string
-containing the filename.
+By default logging is disabled, in order to enable logging you must first call 
+xslt_set_log() with a boolean parameter which enables logging, then if you want
+to set the log file to debug to, you must then pass it a string containing the
+filename.
 
-{ xh}The XSLT processor link identifier, created with |xslt_create|.
+===============================================================================
+*Parameters*
 
-{log} This parameter is either a boolean value which toggles logging on and
-off, or a string containing the logfile in which log errors too.
+{ xh}
+
+    The XSLT processor link identifier, created with |xslt_create|.
+
+{log}
+
+    This parameter is either a boolean value which toggles logging on and off,
+    or a string containing the logfile in which log errors too.
+
+===============================================================================
+*Return* *Values*
 
 No value is returned.
 
-Please note that file:// is needed in front of the path when using Windows.
+===============================================================================
+*Notes*
 
-Using the XSLT Logging features
+    Note:
+
+    Please note that file:// is needed in front of the path when using Windows.
+
+===============================================================================
+*Examples*
+
+Example #1 Using the XSLT Logging features
 
 <?php >
-  $xh = xslt_create();
-  xslt_set_log($xh, true);
-  xslt_set_log($xh, getcwd() . '/myfile.log');
-  
-  $result = xslt_process($xh, 'dog.xml', 'pets.xsl');
-  echo $result;
-  
-  xslt_free($xh);
-?>
 
+    $xh = xslt_create();
+    xslt_set_log($xh, true);
+    xslt_set_log($xh, getcwd() . '/myfile.log');
 
+    $result = xslt_process($xh, 'dog.xml', 'pets.xsl');
+    echo $result;
 
+    xslt_free($xh);
+<?>
 
 
 vim:ft=help:

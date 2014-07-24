@@ -1,15 +1,36 @@
-imap_unsubscribe -- Unsubscribe from a mailbox
+imap_unsubscribe
 
-  bool imap_unsubscribe(resource imap_stream, string mailbox)~
+(PHP 4, PHP 5)
+
+imap_unsubscribe — Unsubscribe from a mailbox
+
+===============================================================================
+*Description*
+
+    bool imap_unsubscribe ( resource $imap_stream , string $mailbox )~
 
 Unsubscribe from the specified {mailbox}.
 
-{ imap_stream}An IMAP stream returned by |imap_open|.
+===============================================================================
+*Parameters*
 
-{mailbox} The mailbox name, see |imap_open| for more information
+{ imap_stream}
 
-Returns TRUE on success or &false; on failure.
+    An IMAP stream returned by |imap_open|.
 
-|imap_subscribe|
+{mailbox}
+
+    The mailbox name, see |imap_open| for more information
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*See* *Also*
+
+  * |imap_subscribe| - Subscribe to a mailbox
+
 
 vim:ft=help:

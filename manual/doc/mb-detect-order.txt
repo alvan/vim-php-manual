@@ -1,62 +1,79 @@
-mb_detect_order -- Set/Get character encoding detection order
+mb_detect_order
 
-  mixed mb_detect_order([mixed encoding_list = mb_detect_order()])~
+(PHP 4 >= 4.0.6, PHP 5)
+
+mb_detect_order — Set/Get character encoding detection order
+
+===============================================================================
+*Description*
+
+    mixed mb_detect_order ([ mixed $encoding_list = mb_detect_order() ] )~
 
 Sets the automatic character encoding detection order to {encoding_list}.
 
-{encoding_list} {encoding_list} is an array or comma separated list of
-character encoding. See supported encodings.
+===============================================================================
+*Parameters*
 
-If {encoding_list} is omitted, it returns the current character encoding
-detection order as array.
+{encoding_list}
 
-This setting affects |mb_detect_encoding| and |mb_send_mail|.
+    {encoding_list} is an array or comma separated list of character encoding.
+    See supported encodings.
 
-mbstring currently implements the following encoding detection filters. If
-there is an invalid byte sequence for the following encodings, encoding
-detection will fail.
+    If {encoding_list} is omitted, it returns the current character encoding
+    detection order as array.
 
-UTF-8, UTF-7, ASCII, EUC-JP,SJIS, eucJP-win, SJIS-win, JIS, ISO-2022-JP
+    This setting affects |mb_detect_encoding| and |mb_send_mail|.
 
-For ISO-8859-*, mbstring always detects as ISO-8859-*.
+    mbstring currently implements the following encoding detection filters. If
+    there is an invalid byte sequence for the following encodings, encoding
+    detection will fail.
 
-For UTF-16, UTF-32, UCS2 and UCS4, encoding detection will fail always.
+    UTF-8, UTF-7, ASCII, EUC-JP,SJIS, eucJP-win, SJIS-win, JIS, ISO-2022-JP
 
-Returns TRUE on success or &false; on failure.
+    For ISO-8859-*, mbstring always detects as ISO-8859-*.
 
-|mb_detect_order| examples
+    For UTF-16, UTF-32, UCS2 and UCS4, encoding detection will fail always.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*Examples*
+
+Example #1 mb_detect_order() examples
 
 <?php >
-  /* Set detection order by enumerated list */
-  mb_detect_order("eucjp-win,sjis-win,UTF-8");
-  
-  /* Set detection order by array */
-  $ary[] = "ASCII";
-  $ary[] = "JIS";
-  $ary[] = "EUC-JP";
-  mb_detect_order($ary);
-  
-  /* Display current detection order */
-  echo implode(", ", mb_detect_order());
-?>
+    /* Set detection order by enumerated list */
+    mb_detect_order("eucjp-win,sjis-win,UTF-8");
 
+    /* Set detection order by array */
+    $ary[] = "ASCII";
+    $ary[] = "JIS";
+    $ary[] = "EUC-JP";
+    mb_detect_order($ary);
 
+    /* Display current detection order */
+    echo implode(", ", mb_detect_order());
+<?>
 
+Example #2 Example showing useless detect orders
 
+; Always detect as ISO-8859-1
+detect_order = ISO-8859-1, UTF-8
 
-Example showing useless detect orders
+; Always detect as UTF-8, since ASCII/UTF-7 values are
+; valid for UTF-8
+detect_order = UTF-8, ASCII, UTF-7
 
-  ; Always detect as ISO-8859-1
-  detect_order = ISO-8859-1, UTF-8
-  
-  ; Always detect as UTF-8, since ASCII/UTF-7 values are 
-  ; valid for UTF-8
-  detect_order = UTF-8, ASCII, UTF-7
+===============================================================================
+*See* *Also*
 
+  * |mb_internal_encoding| - Set/Get internal character encoding
+  * |mb_http_input| - Detect HTTP input character encoding
+  * |mb_http_output| - Set/Get HTTP output character encoding
+  * |mb_send_mail| - Send encoded mail
 
-
-
-
-|mb_internal_encoding| |mb_http_input| |mb_http_output| |mb_send_mail|
 
 vim:ft=help:

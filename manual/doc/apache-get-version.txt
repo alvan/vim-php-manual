@@ -1,27 +1,46 @@
-apache_get_version -- Fetch Apache version
+apache_get_version
 
-  string apache_get_version()~
+(PHP 4 >= 4.3.2, PHP 5)
+
+apache_get_version — Fetch Apache version
+
+===============================================================================
+*Description*
+
+    string apache_get_version ( void )~
 
 Fetch the Apache version.
 
+===============================================================================
+*Return* *Values*
+
 Returns the Apache version on success or FALSE on failure.
 
-Version Description 4.3.4 Became available with Apache 1. 5.0.0 Became
-available with the Apache 2 filter API.
+===============================================================================
+*Changelog*
 
-|apache_get_version| example
+Version                  Description
+4.3.4   Became available with Apache 1.
+5.0.0   Became available with the Apache 2 filter API.
+
+===============================================================================
+*Examples*
+
+Example #1 apache_get_version() example
 
 <?php >
-  $version = apache_get_version();
-  echo "$version\n";
-?>
+    $version = apache_get_version();
+    echo "$version\n";
+<?>
 
 The above example will output something similar to:
 
-  Apache/1.3.29 (Unix) PHP/4.3.4
+Apache/1.3.29 (Unix) PHP/4.3.4
 
+===============================================================================
+*See* *Also*
 
+  * |phpinfo| - Outputs information about PHP's configuration
 
-|phpinfo|
 
 vim:ft=help:

@@ -1,15 +1,33 @@
-openssl_dh_compute_key -- Computes shared secret for public value of remote DH
+openssl_dh_compute_key
+
+(PHP 5 >= 5.3.11)
+
+openssl_dh_compute_key — Computes shared secret for public value of remote DH
 key and local DH key
 
-  string openssl_dh_compute_key(string pub_key, resource dh_key)~
+===============================================================================
+*Description*
 
-This function is currently not documented; only its argument list is
-available.
+    string openssl_dh_compute_key ( string $pub_key , resource $dh_key )~
+Warning
 
-{pub_key} Public key
+This function is currently not documented; only its argument list is available.
 
-{dh_key} DH key
+===============================================================================
+*Parameters*
+
+{pub_key}
+
+    Public key
+
+{dh_key}
+
+    DH key
+
+===============================================================================
+*Return* *Values*
 
 Returns computed key on success or FALSE on failure.
+
 
 vim:ft=help:

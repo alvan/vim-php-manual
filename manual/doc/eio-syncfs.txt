@@ -1,29 +1,55 @@
-eio_syncfs -- Calls Linux' syncfs syscall, if available
+eio_syncfs
 
-  resource eio_syncfs(mixed fd [, int pri = EIO_PRI_DEFAULT [, callable callback = NULL [, mixed data = NULL]]])~
+(PECL eio >= 0.0.1dev)
 
+eio_syncfs — Calls Linux' syncfs syscall, if available
 
+===============================================================================
+*Description*
 
-File descriptor
+    resource eio_syncfs ( mixed $fd [, int $pri = EIO_PRI_DEFAULT [, callable~
+    $callback = NULL [, mixed $data = NULL ]]] )~
 
-The request priority: EIO_PRI_DEFAULT, EIO_PRI_MIN, EIO_PRI_MAX, or NULL. If
-NULL passed, {pri} internally is set to EIO_PRI_DEFAULT.
+===============================================================================
+*Parameters*
 
-{callback} function is called when the request is done. It should match the
-following prototype:
+{fd}
 
-  void callback(mixed $data, int $result[, resource $req]);
+    File descriptor
 
-{data} is custom data passed to the request.
+{pri}
 
-{result} request-specific result value; basically, the value returned by
-corresponding system call.
+    The request priority: EIO_PRI_DEFAULT, EIO_PRI_MIN, EIO_PRI_MAX, or NULL.
+    If NULL passed, {pri} internally is set to EIO_PRI_DEFAULT.
 
-{req} is optional request resource which can be used with functions like
-|eio_get_last_error|
+{callback}
 
-Arbitrary variable passed to {callback}.
+    {callback} function is called when the request is done. It should match the
+    following prototype:
+    void callback(mixed $data, int $result[, resource $req]);
 
-|eio_syncfs| returns request resource on success or FALSE on error.
+    {data}
+
+        is custom data passed to the request.
+
+    {result}
+
+        request-specific result value; basically, the value returned by
+        corresponding system call.
+
+    {req}
+
+        is optional request resource which can be used with functions like |
+        eio_get_last_error|
+
+{data}
+
+    Arbitrary variable passed to {callback}.
+
+===============================================================================
+*Return* *Values*
+
+eio_syncfs() returns request resource on success or FALSE on error.
+
 
 vim:ft=help:

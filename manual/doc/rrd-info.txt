@@ -1,11 +1,27 @@
-rrd_info -- Gets information about rrd file
+rrd_info
 
-  array rrd_info(string filename)~
+(PECL rrd >= 0.9.0)
+
+rrd_info — Gets information about rrd file
+
+===============================================================================
+*Description*
+
+    array rrd_info ( string $filename )~
 
 Returns information about particular RRD database file.
 
-RRD database file name.
+===============================================================================
+*Parameters*
+
+{file}
+
+    RRD database file name.
+
+===============================================================================
+*Return* *Values*
 
 Array with information about requsted RRD file, FALSE when error occurs.
+
 
 vim:ft=help:

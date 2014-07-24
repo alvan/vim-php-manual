@@ -1,13 +1,32 @@
-xslt_free -- Free XSLT processor
+xslt_free
 
-  void xslt_free(resource xh)~
+(PHP 4 >= 4.0.3)
+
+xslt_free — Free XSLT processor
+
+===============================================================================
+*Description*
+
+    void xslt_free ( resource $xh )~
 
 Free the XSLT processor identified by the given handle.
 
-{ xh}The XSLT processor link identifier, created with |xslt_create|.
+===============================================================================
+*Parameters*
+
+{ xh}
+
+    The XSLT processor link identifier, created with |xslt_create|.
+
+===============================================================================
+*Return* *Values*
 
 No value is returned.
 
-|xslt_create|
+===============================================================================
+*See* *Also*
+
+  * |xslt_create| - Create a new XSLT processor
+
 
 vim:ft=help:

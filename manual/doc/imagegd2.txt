@@ -1,67 +1,99 @@
-imagegd2 -- Output GD2 image to browser or file
+imagegd2
 
-  bool imagegd2(resource image [, string filename [, int chunk_size [, int type = IMG_GD2_RAW]]])~
+(PHP 4 >= 4.0.7, PHP 5)
+
+imagegd2 — Output GD2 image to browser or file
+
+===============================================================================
+*Description*
+
+    bool imagegd2 ( resource $image [, string $filename [, int $chunk_size [,~
+    int $type = IMG_GD2_RAW ]]] )~
 
 Outputs a GD2 image to the given {filename}.
 
-{ image}An image resource, returned by one of the image creation functions,
-such as |imagecreatetruecolor|.
+===============================================================================
+*Parameters*
 
-{filename} The path to save the file to. If not set or NULL, the raw image
-stream will be outputted directly.
+{ image}
 
-{chunk_size} Chunk size.
+    An image resource, returned by one of the image creation functions, such as
+    |imagecreatetruecolor|.
 
-{type} Either IMG_GD2_RAW or IMG_GD2_COMPRESSED. Default is IMG_GD2_RAW.
+{filename}
 
-Returns TRUE on success or &false; on failure.
+    The path to save the file to. If not set or NULL, the raw image stream will
+    be outputted directly.
 
-Outputting a GD2 image
+{chunk_size}
 
-<?php >
-  // Create a blank image and add some text
-  $im = imagecreatetruecolor(120, 20);
-  $text_color = imagecolorallocate($im, 233, 14, 91);
-  imagestring($im, 1, 5, 5,  "A Simple Text String", $text_color);
-  
-  // Output the image
-  imagegd2($im);
-  
-  // Free up memory
-  imagedestroy($im);
-?>
+    Chunk size.
 
+{type}
 
+    Either IMG_GD2_RAW or IMG_GD2_COMPRESSED. Default is IMG_GD2_RAW.
 
+===============================================================================
+*Return* *Values*
 
+Returns TRUE on success or FALSE on failure.
 
-Saving a GD2 image
+===============================================================================
+*Examples*
+
+Example #1 Outputting a GD2 image
 
 <?php >
-  // Create a blank image and add some text
-  $im = imagecreatetruecolor(120, 20);
-  $text_color = imagecolorallocate($im, 233, 14, 91);
-  imagestring($im, 1, 5, 5,  "A Simple Text String", $text_color);
-  
-  // Save the gd2 image
-  // The file format for GD2 images is .gd2, see http://www.libgd.org/GdFileFormats
-  imagegd2($im, 'simple.gd2');
-  
-  // Free up memory
-  imagedestroy($im);
-?>
+    // Create a blank image and add some text
+    $im = imagecreatetruecolor(120, 20);
+    $text_color = imagecolorallocate($im, 233, 14, 91);
+    imagestring($im, 1, 5, 5,  "A Simple Text String", $text_color);
 
+    // Output the image
+    imagegd2($im);
 
+    // Free up memory
+    imagedestroy($im);
+<?>
 
+Example #2 Saving a GD2 image
 
+<?php >
+    // Create a blank image and add some text
+    $im = imagecreatetruecolor(120, 20);
+    $text_color = imagecolorallocate($im, 233, 14, 91);
+    imagestring($im, 1, 5, 5,  "A Simple Text String", $text_color);
 
-This function requires GD 2.0.1 or later (2.0.28 or later is recommended).
+    // Save the gd2 image
+    // The file format for GD2 images is .gd2, see http://www.libgd.org/
+    GdFileFormats
+    imagegd2($im, 'simple.gd2');
 
-The GD2 format is commonly used to allow fast loading of parts of images. Note
-that the GD2 format is only usable in GD2-compatible applications.
+    // Free up memory
+    imagedestroy($im);
+<?>
 
-Version Description 4.3.2 {chunk_size} and {type} were added.
+===============================================================================
+*Notes*
 
-|imagegd|
+    Note: This function requires GD 2.0.1 or later (2.0.28 or later is
+    recommended).
+
+    Note:
+
+    The GD2 format is commonly used to allow fast loading of parts of images.
+    Note that the GD2 format is only usable in GD2-compatible applications.
+
+===============================================================================
+*Changelog*
+
+Version             Description
+4.3.2   {chunk_size} and {type} were added.
+
+===============================================================================
+*See* *Also*
+
+  * |imagegd| - Output GD image to browser or file
+
 
 vim:ft=help:

@@ -1,17 +1,37 @@
-variant_set_type -- Convert a variant into another type "in-place"
+variant_set_type
 
-  void variant_set_type(variant variant, int type)~
+(PHP 5)
+
+variant_set_type — Convert a variant into another type "in-place"
+
+===============================================================================
+*Description*
+
+    void variant_set_type ( variant $variant , int $type )~
 
 This function is similar to |variant_cast| except that the variant is modified
 "in-place"; no new variant is created. The parameters for this function have
 identical meaning to those of |variant_cast|.
 
-{variant} The variant.
+===============================================================================
+*Parameters*
+
+{variant}
+
+    The variant.
 
 {type}
 
+===============================================================================
+*Return* *Values*
+
 No value is returned.
 
-|variant_cast|
+===============================================================================
+*See* *Also*
+
+  * |variant_cast| - Convert a variant into a new variant object of another
+    type
+
 
 vim:ft=help:

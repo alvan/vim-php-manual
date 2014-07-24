@@ -1,15 +1,36 @@
-ifxus_write_slob -- Writes a string into the slob object
+ifxus_write_slob
 
-  int ifxus_write_slob(int bid, string content)~
+(PHP 4, PHP <=5.2.0)
+
+ifxus_write_slob — Writes a string into the slob object
+
+===============================================================================
+*Description*
+
+    int ifxus_write_slob ( int $bid , string $content )~
 
 Writes a string into the slob object.
 
-{bid} An existing slob id.
+===============================================================================
+*Parameters*
 
-{content} The content to write, as a string.
+{bid}
+
+    An existing slob id.
+
+{content}
+
+    The content to write, as a string.
+
+===============================================================================
+*Return* *Values*
 
 Returns the bytes written as an integer, or FALSE on errors.
 
-|ifxus_read_slob|
+===============================================================================
+*See* *Also*
+
+  * |ifxus_read_slob| - Reads nbytes of the slob object
+
 
 vim:ft=help:

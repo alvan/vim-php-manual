@@ -1,12 +1,19 @@
-pg_last_oid -- Returns the last row's OID
+pg_last_oid
 
-  string pg_last_oid(resource result)~
+(PHP 4 >= 4.2.0, PHP 5)
 
-|pg_last_oid| is used to retrieve the OID assigned to an inserted row.
+pg_last_oid — Returns the last row's OID
+
+===============================================================================
+*Description*
+
+    string pg_last_oid ( resource $result )~
+
+pg_last_oid() is used to retrieve the OID assigned to an inserted row.
 
 OID field became an optional field from PostgreSQL 7.2 and will not be present
-by default in PostgreSQL 8.1. When the OID field is not present in a table,
-the programmer must use |pg_result_status| to check for successful insertion.
+by default in PostgreSQL 8.1. When the OID field is not present in a table, the
+programmer must use |pg_result_status| to check for successful insertion.
 
 To get the value of a SERIAL field in an inserted row, it is necessary to use
 the PostgreSQL CURRVAL function, naming the sequence whose last value is
@@ -17,30 +24,44 @@ PostgreSQL 8.1 has a function LASTVAL that returns the value of the most
 recently used sequence in the session. This avoids the need for naming the
 sequence, table or column altogether.
 
-This function used to be called |pg_getlastoid|.
+    Note:
 
-{result} PostgreSQL query result resource, returned by |pg_query|,
-|pg_query_params| or |pg_execute| (among others).
+    This function used to be called pg_getlastoid().
+
+===============================================================================
+*Parameters*
+
+{result}
+
+    PostgreSQL query result resource, returned by |pg_query|, |pg_query_params|
+    or |pg_execute| (among others).
+
+===============================================================================
+*Return* *Values*
 
 A string containing the OID assigned to the most recently inserted row in the
 specified {connection}, or FALSE on error or no available OID.
 
-|pg_last_oid| example
+===============================================================================
+*Examples*
+
+Example #1 pg_last_oid() example
 
 <?php >
-    $pgsql_conn = pg_connect("dbname=mark host=localhost");
-    
-    $res1 = pg_query("CREATE TABLE test (a INTEGER) WITH OIDS");
-  
-    $res2 = pg_query("INSERT INTO test VALUES (1)");
-    
-    $oid = pg_last_oid($res2);
-?>
+      $pgsql_conn = pg_connect("dbname=mark host=localhost");
+      
+      $res1 = pg_query("CREATE TABLE test (a INTEGER) WITH OIDS");
 
+      $res2 = pg_query("INSERT INTO test VALUES (1)");
+      
+      $oid = pg_last_oid($res2);
+<?>
 
+===============================================================================
+*See* *Also*
 
+  * |pg_query| - Execute a query
+  * |pg_result_status| - Get status of query result
 
-
-|pg_query| |pg_result_status|
 
 vim:ft=help:

@@ -1,15 +1,37 @@
-fann_set_quickprop_decay -- Sets the quickprop decay factor
+fann_set_quickprop_decay
 
-  bool fann_set_quickprop_decay(resource ann, float quickprop_decay)~
+(PECL fann >= 1.0.0)
+
+fann_set_quickprop_decay — Sets the quickprop decay factor
+
+===============================================================================
+*Description*
+
+    bool fann_set_quickprop_decay ( resource $ann , float $quickprop_decay )~
 
 Sets the quickprop decay factor.
 
-Neural network resource.
+===============================================================================
+*Parameters*
 
-The quickprop decay factor.
+{ann}
+
+    Neural network resource.
+
+{quickprop_decay}
+
+    The quickprop decay factor.
+
+===============================================================================
+*Return* *Values*
 
 Returns TRUE on success, or FALSE otherwise.
 
-|fann_get_quickprop_decay|
+===============================================================================
+*See* *Also*
+
+  * |fann_get_quickprop_decay| - Returns the decay which is a factor that
+    weights should decrease in each iteration during quickprop training
+
 
 vim:ft=help:

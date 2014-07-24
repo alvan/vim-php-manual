@@ -1,23 +1,47 @@
-imap_mail_copy -- Copy specified messages to a mailbox
+imap_mail_copy
 
-  bool imap_mail_copy(resource imap_stream, string msglist, string mailbox [, int options = 0])~
+(PHP 4, PHP 5)
+
+imap_mail_copy — Copy specified messages to a mailbox
+
+===============================================================================
+*Description*
+
+    bool imap_mail_copy ( resource $imap_stream , string $msglist , string~
+    $mailbox [, int $options = 0 ] )~
 
 Copies mail messages specified by {msglist} to specified mailbox.
 
-{ imap_stream}An IMAP stream returned by |imap_open|.
+===============================================================================
+*Parameters*
 
-{msglist} {msglist} is a range not just message numbers (as described in
-RFC2060).
+{ imap_stream}
 
-{mailbox} The mailbox name, see |imap_open| for more information
+    An IMAP stream returned by |imap_open|.
 
-{options} {options} is a bitmask of one or more of CP_UID - the sequence
-numbers contain UIDS
+{msglist}
 
-CP_MOVE - Delete the messages from the current mailbox after copying
+    {msglist} is a range not just message numbers (as described in » RFC2060).
 
-Returns TRUE on success or &false; on failure.
+{mailbox}
 
-|imap_mail_move|
+    The mailbox name, see |imap_open| for more information
+
+{options}
+
+    {options} is a bitmask of one or more of
+      + CP_UID - the sequence numbers contain UIDS
+      + CP_MOVE - Delete the messages from the current mailbox after copying
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*See* *Also*
+
+  * |imap_mail_move| - Move specified messages to a mailbox
+
 
 vim:ft=help:

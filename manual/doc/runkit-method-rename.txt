@@ -1,49 +1,80 @@
-runkit_method_rename -- Dynamically changes the name of the given method
+runkit_method_rename
 
-  bool runkit_method_rename(string classname, string methodname, string newname)~
+(PECL runkit >= 0.7.0)
 
-This function cannot be used to manipulate the currently running (or chained)
-method.
+runkit_method_rename — Dynamically changes the name of the given method
+
+===============================================================================
+*Description*
+
+    bool runkit_method_rename ( string $classname , string $methodname ,~
+    string $newname )~
+
+
+    Note: This function cannot be used to manipulate the currently running (or
+    chained) method.
+
+Warning
 
 This function is EXPERIMENTAL. The behaviour of this function, its name, and
-surrounding documentation may change without notice in a future release of
-PHP. This function should be used at your own risk.
+surrounding documentation may change without notice in a future release of PHP.
+This function should be used at your own risk.
 
-{classname} The class in which to rename the method
+===============================================================================
+*Parameters*
 
-{methodname} The name of the method to rename
+{classname}
 
-{newname} The new name to give to the renamed method
+    The class in which to rename the method
 
-Returns TRUE on success or &false; on failure.
+{methodname}
 
-|runkit_method_rename| example
+    The name of the method to rename
+
+{newname}
+
+    The new name to give to the renamed method
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*Examples*
+
+Example #1 runkit_method_rename() example
 
 <?php >
-  class Example {
-      function foo() {
-          return "foo!\n";
-      }
-  }
-  
-  // Rename the 'foo' method to 'bar'
-  runkit_method_rename(
-      'Example',
-      'foo',
-      'bar'
-  );
-  
-  // output renamed function
-  echo Example::bar();
-?>
+    class Example {
+        function foo() {
+            return "foo!\n";
+        }
+    }
+
+    // Rename the 'foo' method to 'bar'
+    runkit_method_rename(
+        'Example',
+        'foo',
+        'bar'
+    );
+
+    // output renamed function
+    echo Example::bar();
+<?>
 
 The above example will output:
 
-  foo!
+foo!
 
+===============================================================================
+*See* *Also*
 
+  * |runkit_method_add| - Dynamically adds a new method to a given class
+  * |runkit_method_copy| - Copies a method from class to another
+  * |runkit_method_redefine| - Dynamically changes the code of the given method
+  * |runkit_method_remove| - Dynamically removes the given method
+  * |runkit_function_rename| - Change a function's name
 
-|runkit_method_add| |runkit_method_copy| |runkit_method_redefine|
-|runkit_method_remove| |runkit_function_rename|
 
 vim:ft=help:

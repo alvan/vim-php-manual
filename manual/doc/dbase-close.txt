@@ -1,31 +1,51 @@
-dbase_close -- Closes a database
+dbase_close
 
-  bool dbase_close(int dbase_identifier)~
+(PHP 4, PHP 5)
+
+dbase_close — Closes a database
+
+===============================================================================
+*Description*
+
+    bool dbase_close ( int $dbase_identifier )~
 
 Closes the given database link identifier.
 
-{dbase_identifier} The database link identifier, returned by |dbase_open| or
-|dbase_create|.
+===============================================================================
+*Parameters*
 
-Returns TRUE on success or &false; on failure.
+{dbase_identifier}
 
-Closing a dBase database file
+    The database link identifier, returned by |dbase_open| or |dbase_create|.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*Examples*
+
+Example #1 Closing a dBase database file
 
 <?php >
-  // open in read-only mode
-  $db = dbase_open('/tmp/test.dbf', 0);
-  
-  if ($db) {
-    // read some data ..
-    
-    dbase_close($db);
-  }
-?>
 
+    // open in read-only mode
+    $db = dbase_open('/tmp/test.dbf', 0);
 
+    if ($db) {
+      // read some data ..
+      
+      dbase_close($db);
+    }
 
+<?>
 
+===============================================================================
+*See* *Also*
 
-|dbase_open| |dbase_create|
+  * |dbase_open| - Opens a database
+  * |dbase_create| - Creates a database
+
 
 vim:ft=help:

@@ -1,13 +1,31 @@
-enchant_dict_check -- Check whether a word is correctly spelled or not
+enchant_dict_check
 
-  bool enchant_dict_check(resource dict, string word)~
+(PHP 5 >= 5.3.0, PECL enchant >= 0.1.0 )
+
+enchant_dict_check — Check whether a word is correctly spelled or not
+
+===============================================================================
+*Description*
+
+    bool enchant_dict_check ( resource $dict , string $word )~
 
 If the word is correctly spelled return TRUE, otherwise return FALSE
 
-{dict} Dictionary resource
+===============================================================================
+*Parameters*
 
-{word} The word to check
+{dict}
+
+    Dictionary resource
+
+{word}
+
+    The word to check
+
+===============================================================================
+*Return* *Values*
 
 Returns TRUE if the word is spelled correctly, FALSE if not.
+
 
 vim:ft=help:

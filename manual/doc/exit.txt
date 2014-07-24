@@ -1,91 +1,113 @@
-exit -- Output a message and terminate the current script
+exit
 
-  void exit([string status])~
+(PHP 4, PHP 5)
 
-  void exit(int status)~
+exit — Output a message and terminate the current script
 
-Terminates execution of the script. Shutdown functions and object destructors
+===============================================================================
+*Description*
+
+    void exit ([ string $status ] )~
+    void exit ( int $status )~
+
+Terminates execution of the script. |Shutdown functions| and object destructors
 will always be executed even if exit is called.
 
 exit is a language construct and it can be called without parentheses if no
 {status} is passed.
 
-{status} If {status} is a string, this function prints the {status} just
-before exiting.
+===============================================================================
+*Parameters*
 
-If {status} is an integer, that value will be used as the exit status and not
-printed. Exit statuses should be in the range 0 to 254, the exit status 255 is
-reserved by PHP and shall not be used. The status 0 is used to terminate the
-program successfully.
+{status}
 
-PHP >= 4.2.0 does NOT print the {status} if it is an integer.
+    If {status} is a string, this function prints the {status} just before
+    exiting.
+
+    If {status} is an integer, that value will be used as the exit status and
+    not printed. Exit statuses should be in the range 0 to 254, the exit status
+    255 is reserved by PHP and shall not be used. The status 0 is used to
+    terminate the program successfully.
+
+        Note: PHP >= 4.2.0 does NOT print the {status} if it is an integer.
+
+===============================================================================
+*Return* *Values*
 
 No value is returned.
 
-exit example
+===============================================================================
+*Examples*
+
+Example #1 exit example
 
 <?php >
-  $filename = '/path/to/data-file';
-  $file = fopen($filename, 'r')
-      or exit("unable to open file ($filename)");
-?>
 
+    $filename = '/path/to/data-file';
+    $file = fopen($filename, 'r')
+        or exit("unable to open file ($filename)");
 
+<?>
 
-
-
-exit status example
+Example #2 exit status example
 
 <?php >
-  //exit program normally
-  exit;
-  exit();
-  exit(0);
-  
-  //exit with an error code
-  exit(1);
-  exit(0376); //octal
-?>
 
+    //exit program normally
+    exit;
+    exit();
+    exit(0);
 
+    //exit with an error code
+    exit(1);
+    exit(0376); //octal
 
+<?>
 
-
-Shutdown functions and destructors run regardless
+Example #3 Shutdown functions and destructors run regardless
 
 <?php >
-  class Foo
-  {
-      public function __destruct()
-      {
-          echo 'Destruct: ' . __METHOD__ . '()' . PHP_EOL;
-      }
-  }
-  
-  function shutdown()
-  {
-      echo 'Shutdown: ' . __FUNCTION__ . '()' . PHP_EOL;
-  }
-  
-  $foo = new Foo();
-  register_shutdown_function('shutdown');
-  
-  exit();
-  echo 'This will not be output.';
-?>
+    class Foo
+    {
+        public function __destruct()
+        {
+            echo 'Destruct: ' . __METHOD__ . '()' . PHP_EOL;
+        }
+    }
+
+    function shutdown()
+    {
+        echo 'Shutdown: ' . __FUNCTION__ . '()' . PHP_EOL;
+    }
+
+    $foo = new Foo();
+    register_shutdown_function('shutdown');
+
+    exit();
+    echo 'This will not be output.';
+<?>
 
 The above example will output:
 
-  Shutdown: shutdown()
-   Destruct: Foo::__destruct()
+ Shutdown: shutdown()
+ Destruct: Foo::__destruct()
 
 
+===============================================================================
+*Notes*
 
-Because this is a language construct and not a function, it cannot be called
-using variable functions.
+    Note: Because this is a language construct and not a function, it cannot be
+    called using variable functions.
 
-This language construct is equivalent to |die|.
+    Note:
 
-|register_shutdown_function|
+    This language construct is equivalent to |die|.
+
+===============================================================================
+*See* *Also*
+
+  * |register_shutdown_function| - Register a function for execution on
+    shutdown
+
 
 vim:ft=help:

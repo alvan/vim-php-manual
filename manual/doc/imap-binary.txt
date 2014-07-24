@@ -1,13 +1,32 @@
-imap_binary -- Convert an 8bit string to a base64 string
+imap_binary
 
-  string imap_binary(string string)~
+(PHP 4, PHP 5)
 
-Convert an 8bit string to a base64 string according to RFC2045, Section 6.8.
+imap_binary — Convert an 8bit string to a base64 string
 
-{string} The 8bit string
+===============================================================================
+*Description*
+
+    string imap_binary ( string $string )~
+
+Convert an 8bit string to a base64 string according to » RFC2045, Section 6.8.
+
+===============================================================================
+*Parameters*
+
+{string}
+
+    The 8bit string
+
+===============================================================================
+*Return* *Values*
 
 Returns a base64 encoded string.
 
-|imap_base64|
+===============================================================================
+*See* *Also*
+
+  * |imap_base64| - Decode BASE64 encoded text
+
 
 vim:ft=help:

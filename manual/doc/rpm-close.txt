@@ -1,26 +1,46 @@
-rpm_close -- Closes an RPM file
+rpm_close
 
-  bool rpm_close(resource rpmr)~
+(PECL rpmreader >= 0.1.0)
 
-|rpm_close| will close an RPM file pointer.
+rpm_close — Closes an RPM file
 
-{rpmr} A file pointer resource successfully opened by |rpm_open|.
+===============================================================================
+*Description*
 
-Returns TRUE on success or &false; on failure.
+    bool rpm_close ( resource $rpmr )~
 
-|rpm_close| example
+rpm_close() will close an RPM file pointer.
+
+===============================================================================
+*Parameters*
+
+{rpmr}
+
+    A file pointer resource successfully opened by |rpm_open|.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*Examples*
+
+Example #1 rpm_close() example
 
 <?php >
-  $file = "/path/to/file.rpm";
-  $rpmr = rpm_open($file);
-  
-  rpm_close($rpmr);
-?>
 
+    $file = "/path/to/file.rpm";
+    $rpmr = rpm_open($file);
 
+    rpm_close($rpmr);
 
+<?>
 
+===============================================================================
+*See* *Also*
 
-|rpm_open|
+  * |rpm_open| - Opens an RPM file
+
 
 vim:ft=help:

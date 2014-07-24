@@ -1,14 +1,32 @@
-swf_rotate -- Rotate the current transformation
+swf_rotate
 
-  void swf_rotate(float angle, string axis)~
+(PHP 4)
+
+swf_rotate — Rotate the current transformation
+
+===============================================================================
+*Description*
+
+    void swf_rotate ( float $angle , string $axis )~
 
 Rotates the current transformation by a given {angle} around the given {axis}.
 
-{angle} The rotation angle.
+===============================================================================
+*Parameters*
 
-{axis} The axis. Valid values axis are x (the x axis), y (the y axis) or z
-(the z axis).
+{angle}
+
+    The rotation angle.
+
+{axis}
+
+    The axis. Valid values axis are x (the x axis), y (the y axis) or z (the z
+    axis).
+
+===============================================================================
+*Return* *Values*
 
 No value is returned.
+
 
 vim:ft=help:

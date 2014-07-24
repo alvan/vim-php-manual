@@ -1,33 +1,58 @@
-recode_file -- Recode from file to file according to recode request
+recode_file
 
-  bool recode_file(string request, resource input, resource output)~
+(PHP 4, PHP 5)
+
+recode_file — Recode from file to file according to recode request
+
+===============================================================================
+*Description*
+
+    bool recode_file ( string $request , resource $input , resource $output )~
 
 Recode the file referenced by file handle {input} into the file referenced by
 file handle {output} according to the recode {request}.
 
-{request} The desired recode request type
+===============================================================================
+*Parameters*
 
-{input} A local file handle resource for the {input}
+{request}
 
-{output} A local file handle resource for the {output}
+    The desired recode request type
+
+{input}
+
+    A local file handle resource for the {input}
+
+{output}
+
+    A local file handle resource for the {output}
+
+===============================================================================
+*Return* *Values*
 
 Returns FALSE, if unable to comply, TRUE otherwise.
 
-Basic |recode_file| example
+===============================================================================
+*Examples*
+
+Example #1 Basic recode_file() example
 
 <?php >
-  $input = fopen('input.txt', 'r');
-  $output = fopen('output.txt', 'w');
-  recode_file("us..flat", $input, $output);
-?>
+    $input = fopen('input.txt', 'r');
+    $output = fopen('output.txt', 'w');
+    recode_file("us..flat", $input, $output);
+<?>
 
-
-
-
+===============================================================================
+*Notes*
 
 This function does not currently process file handles referencing remote files
 (URLs). Both file handles must refer to local files.
 
-|fopen|
+===============================================================================
+*See* *Also*
+
+  * |fopen| - Opens file or URL
+
 
 vim:ft=help:

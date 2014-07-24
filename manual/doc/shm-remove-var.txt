@@ -1,15 +1,36 @@
-shm_remove_var -- Removes a variable from shared memory
+shm_remove_var
 
-  bool shm_remove_var(resource shm_identifier, int variable_key)~
+(PHP 4, PHP 5)
+
+shm_remove_var — Removes a variable from shared memory
+
+===============================================================================
+*Description*
+
+    bool shm_remove_var ( resource $shm_identifier , int $variable_key )~
 
 Removes a variable with a given {variable_key} and frees the occupied memory.
 
-{shm_identifier} The shared memory identifier as returned by |shm_attach|
+===============================================================================
+*Parameters*
 
-{variable_key} The variable key.
+{shm_identifier}
 
-Returns TRUE on success or &false; on failure.
+    The shared memory identifier as returned by |shm_attach|
 
-|shm_remove|
+{variable_key}
+
+    The variable key.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*See* *Also*
+
+  * |shm_remove| - Removes shared memory from Unix systems
+
 
 vim:ft=help:

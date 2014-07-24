@@ -1,59 +1,83 @@
-output_add_rewrite_var -- Add URL rewriter values
+output_add_rewrite_var
 
-  bool output_add_rewrite_var(string name, string value)~
+(PHP 4 >= 4.3.0, PHP 5)
+
+output_add_rewrite_var — Add URL rewriter values
+
+===============================================================================
+*Description*
+
+    bool output_add_rewrite_var ( string $name , string $value )~
 
 This function adds another name/value pair to the URL rewrite mechanism. The
 name and value will be added to URLs (as GET parameter) and forms (as hidden
 input fields) the same way as the session ID when transparent URL rewriting is
-enabled with session.use_trans_sid. Please note that absolute URLs
-(http://example.com/..) aren't rewritten.
+enabled with session.use_trans_sid. Please note that absolute URLs (http://
+example.com/..) aren't rewritten.
 
 This function's behavior is controlled by the url_rewriter.tags php.ini
 parameter.
 
-Calling this function will implicitly start output buffering if it is not
-active already.
+    Note: Calling this function will implicitly start output buffering if it is
+    not active already.
 
-{name} The variable name.
+===============================================================================
+*Parameters*
 
-{value} The variable value.
+{name}
 
-Returns TRUE on success or &false; on failure.
+    The variable name.
 
-|output_add_rewrite_var| example
+{value}
+
+    The variable value.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*Examples*
+
+Example #1 output_add_rewrite_var() example
 
 <?php >
-  output_add_rewrite_var('var', 'value');
-  
-  // some links
-  echo '<a href="file.php">link</a>
-  <a href="http://example.com">link2</a>';
-  
-  // a form
-  echo '<form action="script.php" method="post">
-  <input type="text" name="var2" />
-  </form>';
-  
-  print_r(ob_list_handlers());
-?>
+    output_add_rewrite_var('var', 'value');
+
+    // some links
+    echo '<a href="file.php">link</a>
+    <a href="http://example.com">link2</a>';
+
+    // a form
+    echo '<form action="script.php" method="post">
+    <input type="text" name="var2" />
+    </form>';
+
+    print_r(ob_list_handlers());
+<?>
 
 The above example will output:
 
-  <a href="file.php?var=value">link</a>
-  <a href="http://example.com">link2</a>
-  
-  <form action="script.php" method="post">
-  <input type="hidden" name="var" value="value" />
-  <input type="text" name="var2" />
-  </form>
-  
-  Array
-  (
-      [0] => URL-Rewriter
-  )
+<a href="file.php?var=value">link</a>
+<a href="http://example.com">link2</a>
 
+<form action="script.php" method="post">
+<input type="hidden" name="var" value="value" />
+<input type="text" name="var2" />
+</form>
 
+Array
+(
+    [0] => URL-Rewriter
+)
 
-|output_reset_rewrite_vars| |ob_flush| |ob_list_handlers|
+===============================================================================
+*See* *Also*
+
+  * |output_reset_rewrite_vars| - Reset URL rewriter values
+  * |ob_flush| - Flush (send) the output buffer
+  * |ob_list_handlers| - List all output handlers in use
+
 
 vim:ft=help:

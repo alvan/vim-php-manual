@@ -1,14 +1,35 @@
-openal_buffer_get -- Retrieve an OpenAL buffer property
+openal_buffer_get
 
-  int openal_buffer_get(resource buffer, int property)~
+(PECL openal >= 0.1.0)
 
-An Open AL(Buffer) resource (previously created by |openal_buffer_create|).
+openal_buffer_get — Retrieve an OpenAL buffer property
 
-Specific property, one of: AL_FREQUENCY, AL_BITS, AL_CHANNELS and AL_SIZE.
+===============================================================================
+*Description*
+
+    int openal_buffer_get ( resource $buffer , int $property )~
+
+===============================================================================
+*Parameters*
+
+{buffer}
+
+    An Open AL(Buffer) resource (previously created by |openal_buffer_create|).
+
+{property}
+
+    Specific property, one of: AL_FREQUENCY, AL_BITS, AL_CHANNELS and AL_SIZE.
+
+===============================================================================
+*Return* *Values*
 
 Returns an integer value appropriate to the {property} requested or FALSE on
 failure.
 
-|openal_buffer_create|
+===============================================================================
+*See* *Also*
+
+  * |openal_buffer_create| - Generate OpenAL buffer
+
 
 vim:ft=help:

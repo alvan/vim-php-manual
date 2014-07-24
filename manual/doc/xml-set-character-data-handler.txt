@@ -1,34 +1,53 @@
-xml_set_character_data_handler -- Set up character data handler
+xml_set_character_data_handler
 
-  bool xml_set_character_data_handler(resource parser, callable handler)~
+(PHP 4, PHP 5)
+
+xml_set_character_data_handler — Set up character data handler
+
+===============================================================================
+*Description*
+
+    bool xml_set_character_data_handler ( resource $parser , callable $handler~
+)~
 
 Sets the character data handler function for the XML parser {parser}.
 
-{parser} A reference to the XML parser to set up character data handler
-function.
+===============================================================================
+*Parameters*
 
-{handler} {handler} is a string containing the name of a function that must
-exist when |xml_parse| is called for {parser}.
+{parser}
 
-The function named by {handler} must accept two parameters:
+    A reference to the XML parser to set up character data handler function.
 
-   handler(resource parser, string data)~
+{handler}
 
-{parser} The first parameter, parser, is a reference to the XML parser calling
-the handler.
+    {handler} is a string containing the name of a function that must exist
+    when |xml_parse| is called for {parser}.
 
-{data} The second parameter, {data}, contains the character data as a string.
+    The function named by {handler} must accept two parameters:
 
-Character data handler is called for every piece of a text in the XML
-document. It can be called multiple times inside each fragment (e.g. for
-non-ASCII strings).
+    handler ( resource $parser , string $data )~
 
-If a handler function is set to an empty string, or FALSE, the handler in
-question is disabled.
+    {parser}
+        The first parameter, parser, is a reference to the XML parser calling
+        the handler.
+    {data}
+        The second parameter, {data}, contains the character data as a string.
 
-Instead of a function name, an array containing an object reference and a
-method name can also be supplied.
+    Character data handler is called for every piece of a text in the XML
+    document. It can be called multiple times inside each fragment (e.g. for
+    non-ASCII strings).
 
-Returns TRUE on success or &false; on failure.
+    If a handler function is set to an empty string, or FALSE, the handler in
+    question is disabled.
+
+        Note: Instead of a function name, an array containing an object
+        reference and a method name can also be supplied.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
 
 vim:ft=help:

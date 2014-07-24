@@ -1,12 +1,26 @@
-m_transinqueue -- Number of transactions in client-queue
+m_transinqueue
 
-  int m_transinqueue(resource conn)~
+(PHP 4 >= 4.3.9, PHP 5 <= 5.0.5, PECL mcve >= 1.0.0)
 
-This function is currently not documented; only its argument list is
-available.
+m_transinqueue — Number of transactions in client-queue
 
-{ conn}An MCVE_CONN resource returned by |m_initengine|.
+===============================================================================
+*Description*
 
+    int m_transinqueue ( resource $conn )~
+Warning
+
+This function is currently not documented; only its argument list is available.
+
+===============================================================================
+*Parameters*
+
+{ conn}
+
+    An MCVE_CONN resource returned by |m_initengine|.
+
+===============================================================================
+*Return* *Values*
 
 
 vim:ft=help:

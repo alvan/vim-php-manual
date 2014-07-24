@@ -1,11 +1,27 @@
-readline_write_history -- Writes the history
+readline_write_history
 
-  bool readline_write_history([string filename])~
+(PHP 4, PHP 5)
+
+readline_write_history — Writes the history
+
+===============================================================================
+*Description*
+
+    bool readline_write_history ([ string $filename ] )~
 
 This function writes the command history to a file.
 
-{filename} Path to the saved file.
+===============================================================================
+*Parameters*
 
-Returns TRUE on success or &false; on failure.
+{filename}
+
+    Path to the saved file.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
 
 vim:ft=help:

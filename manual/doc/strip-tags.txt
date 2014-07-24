@@ -1,17 +1,97 @@
-strip_tags -- Strip HTML and PHP tags from a string
+strip_tags
 
-  string strip_tags(string str [, string allowable_tags])~
+(PHP 4, PHP 5)
+
+strip_tags — Strip HTML and PHP tags from a string
+
+===============================================================================
+*Description*
+
+    string strip_tags ( string $str [, string $allowable_tags ] )~
 
 This function tries to return a string with all NULL bytes, HTML and PHP tags
 stripped from a given {str}. It uses the same tag stripping state machine as
 the |fgetss| function.
 
-{str} The input string.
+===============================================================================
+*Parameters*
 
-{allowable_tags} You can use the optional second parameter to specify tags
-which should not be stripped.
+{str}
 
-HTML comments and PHP tags are also stripped. This is hardcoded and can not be
-changed with {allowable_tags}.
+    The input string.
+
+{allowable_tags}
+
+    You can use the optional second parameter to specify tags which should not
+    be stripped.
+
+        Note:
+
+        HTML comments and PHP tags are also stripped. This is hardcoded and can
+        not be changed with {allowable_tags}.
+
+        Note:
+
+        This parameter should not contain whitespace. strip_tags() sees a tag
+        as a case-insensitive string between < and the first whitespace or >.
+        It means that strip_tags("<br/>", "<br>") returns an empty string.
+
+===============================================================================
+*Return* *Values*
+
+Returns the stripped string.
+
+===============================================================================
+*Changelog*
+
+Version              Description
+5.0.0   strip_tags() is now binary safe.
+4.3.0   HTML comments are now always stripped.
+
+===============================================================================
+*Examples*
+
+Example #1 strip_tags() example
+
+<?php >
+    $text = '<p>Test paragraph.</p><!-- Comment --> <a href="#fragment">Other text
+    </a>';
+    echo strip_tags($text);
+    echo "\n";
+
+    // Allow <p> and <a>
+    echo strip_tags($text, '<p><a>');
+<?>
+
+The above example will output:
+
+Test paragraph. Other text
+<p>Test paragraph.</p> <a href="#fragment">Other text</a>
+
+===============================================================================
+*Notes*
+
+Warning
+
+Because strip_tags() does not actually validate the HTML, partial or broken
+tags can result in the removal of more text/data than expected.
+
+Warning
+
+This function does not modify any attributes on the tags that you allow using
+{allowable_tags}, including the style and onmouseover attributes that a
+mischievous user may abuse when posting text that will be shown to other users.
+
+    Note:
+
+    Tag names within the input HTML that are greater than 1023 bytes in length
+    will be treated as though they are invalid, regardless of the
+    {allowable_tags} parameter.
+
+===============================================================================
+*See* *Also*
+
+  * |htmlspecialchars| - Convert special characters to HTML entities
+
 
 vim:ft=help:

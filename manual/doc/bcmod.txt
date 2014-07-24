@@ -1,24 +1,46 @@
-bcmod -- Get modulus of an arbitrary precision number
+bcmod
 
-  string bcmod(string left_operand, string modulus)~
+(PHP 4, PHP 5)
+
+bcmod — Get modulus of an arbitrary precision number
+
+===============================================================================
+*Description*
+
+    string bcmod ( string $left_operand , string $modulus )~
 
 Get the modulus of the {left_operand} using {modulus}.
 
-{left_operand} The left operand, as a string.
+===============================================================================
+*Parameters*
 
-{modulus} The modulus, as a string.
+{left_operand}
+
+    The left operand, as a string.
+
+{modulus}
+
+    The modulus, as a string.
+
+===============================================================================
+*Return* *Values*
 
 Returns the modulus as a string, or NULL if {modulus} is 0.
 
-|bcmod| example
+===============================================================================
+*Examples*
+
+Example #1 bcmod() example
 
 <?php >
-  echo bcmod('4', '2'); // 0
-  echo bcmod('2', '4'); // 2
-?>
+    echo bcmod('4', '2'); // 0
+    echo bcmod('2', '4'); // 2
+<?>
 
+===============================================================================
+*See* *Also*
 
+  * |bcdiv| - Divide two arbitrary precision numbers
 
-|bcdiv|
 
 vim:ft=help:

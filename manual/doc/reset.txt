@@ -1,36 +1,61 @@
-reset -- Set the internal pointer of an array to its first element
+reset
 
-  mixed reset(array &array)~
+(PHP 4, PHP 5)
 
-|reset| rewinds {array}'s internal pointer to the first element and returns
-the value of the first array element.
+reset — Set the internal pointer of an array to its first element
 
-{array} The input array.
+===============================================================================
+*Description*
+
+    mixed reset ( array &$array )~
+
+reset() rewinds {array}'s internal pointer to the first element and returns the
+value of the first array element.
+
+===============================================================================
+*Parameters*
+
+{array}
+
+    The input array.
+
+===============================================================================
+*Return* *Values*
 
 Returns the value of the first array element, or FALSE if the array is empty.
 
-|reset| example
+===============================================================================
+*Examples*
+
+Example #1 reset() example
 
 <?php >
-  $array = array('step one', 'step two', 'step three', 'step four');
-  
-  // by default, the pointer is on the first element
-  echo current($array) . "<br />\n"; // "step one"
-  
-  // skip two steps
-  next($array);
-  next($array);
-  echo current($array) . "<br />\n"; // "step three"
-  
-  // reset pointer, start again on step one
-  reset($array);
-  echo current($array) . "<br />\n"; // "step one"
-?>
 
+    $array = array('step one', 'step two', 'step three', 'step four');
 
+    // by default, the pointer is on the first element
+    echo current($array) . "<br />\n"; // "step one"
 
+    // skip two steps
+    next($array);
+    next($array);
+    echo current($array) . "<br />\n"; // "step three"
 
+    // reset pointer, start again on step one
+    reset($array);
+    echo current($array) . "<br />\n"; // "step one"
 
-|current| |each| |end| |next| |prev|
+<?>
+
+===============================================================================
+*See* *Also*
+
+  * |current| - Return the current element in an array
+  * |each| - Return the current key and value pair from an array and advance
+    the array cursor
+  * |end| - Set the internal pointer of an array to its last element
+  * |next| - Advance the internal array pointer of an array
+  * |prev| - Rewind the internal array pointer
+
 
 vim:ft=help:

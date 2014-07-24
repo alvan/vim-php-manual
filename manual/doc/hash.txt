@@ -1,34 +1,64 @@
-hash -- Generate a hash value (message digest)
+hash
 
-  string hash(string algo, string data [, bool raw_output = false])~
+(PHP 5 >= 5.1.2, PECL hash >= 1.1)
 
-{algo} Name of selected hashing algorithm (i.e. "md5", "sha256", "haval160,4",
-etc..)
+hash — Generate a hash value (message digest)
 
-{data} Message to be hashed.
+===============================================================================
+*Description*
 
-{raw_output} When set to TRUE, outputs raw binary data. FALSE outputs
-lowercase hexits.
+    string hash ( string $algo , string $data [, bool $raw_output = false ] )~
+
+===============================================================================
+*Parameters*
+
+{algo}
+
+    Name of selected hashing algorithm (i.e. "md5", "sha256", "haval160,4",
+    etc..)
+
+{data}
+
+    Message to be hashed.
+
+{raw_output}
+
+    When set to TRUE, outputs raw binary data. FALSE outputs lowercase hexits.
+
+===============================================================================
+*Return* *Values*
 
 Returns a string containing the calculated message digest as lowercase hexits
 unless {raw_output} is set to true in which case the raw binary representation
 of the message digest is returned.
 
-Version Description 5.4.0 The tiger algorithm now uses big-endian byte
-ordering.
+===============================================================================
+*Changelog*
 
-A |hash| example
+Version                      Description
+5.4.0   The tiger algorithm now uses big-endian byte ordering.
+
+===============================================================================
+*Examples*
+
+Example #1 A hash() example
 
 <?php >
-  echo hash('ripemd160', 'The quick brown fox jumped over the lazy dog.');
-?>
+    echo hash('ripemd160', 'The quick brown fox jumped over the lazy dog.');
+<?>
 
 The above example will output:
 
-  ec457d0a974c48d5685a7efa03d137dc8bbde7e3
+ec457d0a974c48d5685a7efa03d137dc8bbde7e3
 
+===============================================================================
+*See* *Also*
 
+  * |hash_file| - Generate a hash value using the contents of a given file
+  * |hash_hmac| - Generate a keyed hash value using the HMAC method
+  * |hash_init| - Initialize an incremental hashing context
+  * |md5| - Calculate the md5 hash of a string
+  * |sha1| - Calculate the sha1 hash of a string
 
-|hash_file| |hash_hmac| |hash_init| |md5| |sha1|
 
 vim:ft=help:

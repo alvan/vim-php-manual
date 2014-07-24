@@ -1,21 +1,43 @@
-ibase_wait_event -- Wait for an event to be posted by the database
+ibase_wait_event
 
-  string ibase_wait_event(string event_name1 [, string event_name2 [, string ...]])~
+(PHP 5)
 
-  string ibase_wait_event(resource connection, string event_name1 [, string event_name2 [, string ...]])~
+ibase_wait_event — Wait for an event to be posted by the database
+
+===============================================================================
+*Description*
+
+    string ibase_wait_event ( string $event_name1 [, string $event_name2 [,~
+    string $... ]] )~
+    string ibase_wait_event ( resource $connection , string $event_name1 [,~
+    string $event_name2 [, string $... ]] )~
 
 This function suspends execution of the script until one of the specified
 events is posted by the database. The name of the event that was posted is
 returned. This function accepts up to 15 event arguments.
 
-{event_name1} The event name.
+===============================================================================
+*Parameters*
+
+{event_name1}
+
+    The event name.
 
 {event_name2}
 
 {...}
 
+===============================================================================
+*Return* *Values*
+
 Returns the name of the event that was posted.
 
-|ibase_set_event_handler| |ibase_free_event_handler|
+===============================================================================
+*See* *Also*
+
+  * |ibase_set_event_handler| - Register a callback function to be called when
+    events are posted
+  * |ibase_free_event_handler| - Cancels a registered event handler
+
 
 vim:ft=help:

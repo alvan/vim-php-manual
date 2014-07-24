@@ -1,23 +1,49 @@
-hw_pConnect -- Make a persistent database connection
+hw_pConnect
 
-  int hw_pconnect(string host, int port [, string username, string password])~
+(PHP 4)
+
+hw_pConnect — Make a persistent database connection
+
+===============================================================================
+*Description*
+
+    int hw_pconnect ( string $host , int $port [, string $username ], string~
+    $password )~
 
 Opens a persistent connection to a Hyperwave server. You can have multiple
 persistent connections open at once.
 
-{host} The server host name.
+===============================================================================
+*Parameters*
 
-{port} The server port number.
+{host}
 
-{username} The Hyperwave user name. If omitted, no identification with the
-server will be done. It is similar to identify as user anonymous.
+    The server host name.
 
-{password} The password for {username}. Keep in mind, that the password is not
-encrypted.
+{port}
+
+    The server port number.
+
+{username}
+
+    The Hyperwave user name. If omitted, no identification with the server will
+    be done. It is similar to identify as user anonymous.
+
+{password}
+
+    The password for {username}. Keep in mind, that the password is not
+    encrypted.
+
+===============================================================================
+*Return* *Values*
 
 Returns a connection index on success, or FALSE if the connection could not be
 made.
 
-|hw_connect|
+===============================================================================
+*See* *Also*
+
+  * |hw_connect| - Opens a connection
+
 
 vim:ft=help:

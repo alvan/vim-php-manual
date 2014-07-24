@@ -1,30 +1,55 @@
-hash_final -- Finalize an incremental hash and return resulting digest
+hash_final
 
-  string hash_final(resource context [, bool raw_output = false])~
+(PHP 5 >= 5.1.2, PECL hash >= 1.1)
 
-{context} Hashing context returned by |hash_init|.
+hash_final — Finalize an incremental hash and return resulting digest
 
-{raw_output} When set to TRUE, outputs raw binary data. FALSE outputs
-lowercase hexits.
+===============================================================================
+*Description*
+
+    string hash_final ( resource $context [, bool $raw_output = false ] )~
+
+===============================================================================
+*Parameters*
+
+{context}
+
+    Hashing context returned by |hash_init|.
+
+{raw_output}
+
+    When set to TRUE, outputs raw binary data. FALSE outputs lowercase hexits.
+
+===============================================================================
+*Return* *Values*
 
 Returns a string containing the calculated message digest as lowercase hexits
 unless {raw_output} is set to true in which case the raw binary representation
 of the message digest is returned.
 
-|hash_final| example
+===============================================================================
+*Examples*
+
+Example #1 hash_final() example
 
 <?php >
-  $ctx = hash_init('sha1');
-  hash_update($ctx, 'The quick brown fox jumped over the lazy dog.');
-  echo hash_final($ctx);
-?>
+    $ctx = hash_init('sha1');
+    hash_update($ctx, 'The quick brown fox jumped over the lazy dog.');
+    echo hash_final($ctx);
+<?>
 
 The above example will output:
 
-  c0854fb9fb03c41cce3802cb0d220529e6eef94e
+c0854fb9fb03c41cce3802cb0d220529e6eef94e
 
+===============================================================================
+*See* *Also*
 
+  * |hash_init| - Initialize an incremental hashing context
+  * |hash_update| - Pump data into an active hashing context
+  * |hash_update_stream| - Pump data into an active hashing context from an
+    open stream
+  * |hash_update_file| - Pump data into an active hashing context from a file
 
-|hash_init| |hash_update| |hash_update_stream| |hash_update_file|
 
 vim:ft=help:

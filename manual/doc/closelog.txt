@@ -1,12 +1,27 @@
-closelog -- Close connection to system logger
+closelog
 
-  bool closelog()~
+(PHP 4, PHP 5)
 
-|closelog| closes the descriptor being used to write to the system logger. The
-use of |closelog| is optional.
+closelog — Close connection to system logger
 
-Returns TRUE on success or &false; on failure.
+===============================================================================
+*Description*
 
-|syslog| |openlog|
+    bool closelog ( void )~
+
+closelog() closes the descriptor being used to write to the system logger. The
+use of closelog() is optional.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*See* *Also*
+
+  * |syslog| - Generate a system log message
+  * |openlog| - Open connection to system logger
+
 
 vim:ft=help:

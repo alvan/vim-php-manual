@@ -1,39 +1,54 @@
-gnupg_encrypt -- Encrypts a given text
+gnupg_encrypt
 
-  string gnupg_encrypt(resource identifier, string plaintext)~
+(PECL gnupg >= 0.1)
 
-Encrypts the given {plaintext} with the keys, which were set with
-gnupg_addencryptkey before and returns the encrypted text.
+gnupg_encrypt — Encrypts a given text
 
-{identifier} The gnupg identifier, from a call to |gnupg_init| or gnupg.
+===============================================================================
+*Description*
 
-{plaintext} The text being encrypted.
+    string gnupg_encrypt ( resource $identifier , string $plaintext )~
 
-On success, this function returns the encrypted text. On failure, this
-function returns FALSE.
+Encrypts the given {plaintext} with the keys, which were set with |
+gnupg_addencryptkey| before and returns the encrypted text.
 
-Procedural |gnupg_encrypt| example
+===============================================================================
+*Parameters*
+
+{identifier}
+
+    The gnupg identifier, from a call to |gnupg_init| or gnupg.
+
+{plaintext}
+
+    The text being encrypted.
+
+===============================================================================
+*Return* *Values*
+
+On success, this function returns the encrypted text. On failure, this function
+returns FALSE.
+
+===============================================================================
+*Examples*
+
+Example #1 Procedural gnupg_encrypt() example
 
 <?php >
-  $res = gnupg_init();
-  gnupg_addencryptkey($res,"8660281B6051D071D94B5B230549F9DC851566DC");
-  $enc = gnupg_encrypt($res, "just a test");
-  echo $enc;
-?>
+    $res = gnupg_init();
+    gnupg_addencryptkey($res,"8660281B6051D071D94B5B230549F9DC851566DC");
+    $enc = gnupg_encrypt($res, "just a test");
+    echo $enc;
+<?>
 
-
-
-OO |gnupg_encrypt| example
+Example #2 OO gnupg_encrypt() example
 
 <?php >
-  $gpg = new gnupg();
-  $gpg -> addencryptkey("8660281B6051D071D94B5B230549F9DC851566DC");
-  $enc = $gpg -> encrypt("just a test");
-  echo $enc;
-?>
-
-
-
+    $gpg = new gnupg();
+    $gpg -> addencryptkey("8660281B6051D071D94B5B230549F9DC851566DC");
+    $enc = $gpg -> encrypt("just a test");
+    echo $enc;
+<?>
 
 
 vim:ft=help:

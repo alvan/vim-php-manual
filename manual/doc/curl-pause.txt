@@ -1,16 +1,33 @@
-curl_pause -- Pause and unpause a connection
+curl_pause
 
-  int curl_pause(resource ch, int bitmask)~
+(PHP 5 >= 5.5.0)
 
+curl_pause — Pause and unpause a connection
 
+===============================================================================
+*Description*
 
-This function is currently not documented; only its argument list is
-available.
+    int curl_pause ( resource $ch , int $bitmask )~
 
-A cURL handle returned by |curl_init|.
+Warning
 
-One of CURLPAUSE_* constants.
+This function is currently not documented; only its argument list is available.
+
+===============================================================================
+*Parameters*
+
+{ch}
+
+    A cURL handle returned by |curl_init|.
+
+{bitmask}
+
+    One of CURLPAUSE_* constants.
+
+===============================================================================
+*Return* *Values*
 
 Returns an error code (CURLE_OK for no error).
+
 
 vim:ft=help:

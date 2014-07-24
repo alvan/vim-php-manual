@@ -1,16 +1,37 @@
-hw_Deleteobject -- Deletes object
+hw_Deleteobject
 
-  bool hw_deleteobject(int connection, int object_to_delete)~
+(PHP 4)
+
+hw_Deleteobject — Deletes object
+
+===============================================================================
+*Description*
+
+    bool hw_deleteobject ( int $connection , int $object_to_delete )~
 
 Deletes the object with the given object id in the second parameter. It will
 delete all instances of the object.
 
-{connection} The connection identifier.
+===============================================================================
+*Parameters*
 
-{object_to_delete} The object identifier.
+{connection}
 
-Returns TRUE on success or &false; on failure.
+    The connection identifier.
 
-|hw_mv|
+{object_to_delete}
+
+    The object identifier.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*See* *Also*
+
+  * |hw_mv| - Moves objects
+
 
 vim:ft=help:

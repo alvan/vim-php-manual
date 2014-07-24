@@ -1,40 +1,68 @@
-define -- Defines a named constant
+define
 
-  bool define(string name, mixed value [, bool case_insensitive = false])~
+(PHP 4, PHP 5)
+
+define — Defines a named constant
+
+===============================================================================
+*Description*
+
+    bool define ( string $name , mixed $value [, bool $case_insensitive =~
+    false ] )~
 
 Defines a named constant at runtime.
 
-{name} The name of the constant.
+===============================================================================
+*Parameters*
 
-{value} The value of the constant; only scalar and null values are allowed.
-Scalar values are integer, float, string or boolean values. It is possible to
-define resource constants, however it is not recommended and may cause
-unpredictable behavior.
+{name}
 
-{case_insensitive} If set to TRUE, the constant will be defined
-case-insensitive. The default behavior is case-sensitive; i.e. CONSTANT and
-Constant represent different values.
+    The name of the constant.
 
-Case-insensitive constants are stored as lower-case.
+{value}
 
-Returns TRUE on success or &false; on failure.
+    The value of the constant; only scalar and null values are allowed. Scalar
+    values are integer, float, string or boolean values. It is possible to
+    define resource constants, however it is not recommended and may cause
+    unpredictable behavior.
 
-Defining Constants
+{case_insensitive}
+
+    If set to TRUE, the constant will be defined case-insensitive. The default
+    behavior is case-sensitive; i.e. CONSTANT and Constant represent different
+    values.
+
+        Note:
+
+        Case-insensitive constants are stored as lower-case.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*Examples*
+
+Example #1 Defining Constants
 
 <?php >
-  define("CONSTANT", "Hello world.");
-  echo CONSTANT; // outputs "Hello world."
-  echo Constant; // outputs "Constant" and issues a notice.
-  
-  define("GREETING", "Hello you.", true);
-  echo GREETING; // outputs "Hello you."
-  echo Greeting; // outputs "Hello you."
-?>
+    define("CONSTANT", "Hello world.");
+    echo CONSTANT; // outputs "Hello world."
+    echo Constant; // outputs "Constant" and issues a notice.
 
+    define("GREETING", "Hello you.", true);
+    echo GREETING; // outputs "Hello you."
+    echo Greeting; // outputs "Hello you."
 
+<?>
 
+===============================================================================
+*See* *Also*
 
+  * |defined| - Checks whether a given named constant exists
+  * |constant| - Returns the value of a constant
+  * The section on Constants
 
-|defined| |constant| The section on Constants
 
 vim:ft=help:

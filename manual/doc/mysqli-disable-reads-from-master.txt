@@ -1,16 +1,29 @@
-mysqli_disable_reads_from_master -- Disable reads from master
+mysqli::disable_reads_from_master
+
+mysqli_disable_reads_from_master
+
+(PHP 5)
+
+mysqli::disable_reads_from_master -- mysqli_disable_reads_from_master — Disable
+reads from master
+
+===============================================================================
+*Description*
 
 Object oriented style
 
-  void mysqli::disable_reads_from_master()~
+    void mysqli::disable_reads_from_master ( void )~
 
 Procedural style
 
-  bool mysqli_disable_reads_from_master(mysqli link)~
+    bool mysqli_disable_reads_from_master ( mysqli $link )~
+Warning
 
-This function is currently not documented; only its argument list is
-available.
+This function is currently not documented; only its argument list is available.
+
+Warning
 
 This function has been DEPRECATED and REMOVED as of PHP 5.3.0.
+
 
 vim:ft=help:

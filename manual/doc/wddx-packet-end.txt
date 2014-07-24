@@ -1,11 +1,27 @@
-wddx_packet_end -- Ends a WDDX packet with the specified ID
+wddx_packet_end
 
-  string wddx_packet_end(resource packet_id)~
+(PHP 4, PHP 5)
+
+wddx_packet_end — Ends a WDDX packet with the specified ID
+
+===============================================================================
+*Description*
+
+    string wddx_packet_end ( resource $packet_id )~
 
 Ends and returns the given WDDX packet.
 
-{packet_id} A WDDX packet, returned by |wddx_packet_start|.
+===============================================================================
+*Parameters*
+
+{packet_id}
+
+    A WDDX packet, returned by |wddx_packet_start|.
+
+===============================================================================
+*Return* *Values*
 
 Returns the string containing the WDDX packet.
+
 
 vim:ft=help:

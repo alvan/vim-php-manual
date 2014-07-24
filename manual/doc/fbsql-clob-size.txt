@@ -1,20 +1,41 @@
-fbsql_clob_size -- Get the size of a CLOB
+fbsql_clob_size
 
-  int fbsql_clob_size(string clob_handle [, resource link_identifier])~
+(PHP 4 >= 4.2.0, PHP 5)
+
+fbsql_clob_size — Get the size of a CLOB
+
+===============================================================================
+*Description*
+
+    int fbsql_clob_size ( string $clob_handle [, resource $link_identifier ] )~
 
 Returns the size of the given CLOB.
 
-{clob_handle} A CLOB handle, returned by |fbsql_create_clob|.
+===============================================================================
+*Parameters*
 
-{ link_identifier}A FrontBase link identifier returned by |fbsql_connect| or
-|fbsql_pconnect|.
+{clob_handle}
 
-If optional and not specified, the function will try to find an open link to
-the FrontBase server and if no such link is found it will try to create one as
-if |fbsql_connect| was called with no arguments.
+    A CLOB handle, returned by |fbsql_create_clob|.
+
+{ link_identifier}
+
+    A FrontBase link identifier returned by |fbsql_connect| or |fbsql_pconnect|
+    .
+
+    If optional and not specified, the function will try to find an open link
+    to the FrontBase server and if no such link is found it will try to create
+    one as if |fbsql_connect| was called with no arguments.
+
+===============================================================================
+*Return* *Values*
 
 Returns the CLOB size as an integer, or FALSE on error.
 
-|fbsql_blob_size|
+===============================================================================
+*See* *Also*
+
+  * |fbsql_blob_size| - Get the size of a BLOB
+
 
 vim:ft=help:

@@ -1,39 +1,60 @@
-imap_sort -- Gets and sort messages
+imap_sort
 
-  array imap_sort(resource imap_stream, int criteria, int reverse [, int options = 0 [, string search_criteria = NULL [, string charset = NIL]]])~
+(PHP 4, PHP 5)
+
+imap_sort — Gets and sort messages
+
+===============================================================================
+*Description*
+
+    array imap_sort ( resource $imap_stream , int $criteria , int $reverse [,~
+    int $options = 0 [, string $search_criteria = NULL [, string $charset =~
+    NIL ]]] )~
 
 Gets and sorts message numbers by the given parameters.
 
-{ imap_stream}An IMAP stream returned by |imap_open|.
+===============================================================================
+*Parameters*
 
-{criteria} Criteria can be one (and only one) of the following: SORTDATE -
-message Date
+{ imap_stream}
 
-SORTARRIVAL - arrival date
+    An IMAP stream returned by |imap_open|.
 
-SORTFROM - mailbox in first From address
+{criteria}
 
-SORTSUBJECT - message subject
+    Criteria can be one (and only one) of the following:
+      + SORTDATE - message Date
+      + SORTARRIVAL - arrival date
+      + SORTFROM - mailbox in first From address
+      + SORTSUBJECT - message subject
+      + SORTTO - mailbox in first To address
+      + SORTCC - mailbox in first cc address
+      + SORTSIZE - size of message in octets
 
-SORTTO - mailbox in first To address
+{reverse}
 
-SORTCC - mailbox in first cc address
+    Set this to 1 for reverse sorting
 
-SORTSIZE - size of message in octets
+{options}
 
-{reverse} Set this to 1 for reverse sorting
-
-{options} The {options} are a bitmask of one or more of the following: SE_UID
-- Return UIDs instead of sequence numbers
-
-SE_NOPREFETCH - Don't prefetch searched messages
+    The {options} are a bitmask of one or more of the following:
+      + SE_UID - Return UIDs instead of sequence numbers
+      + SE_NOPREFETCH - Don't prefetch searched messages
 
 {search_criteria}
 
 {charset}
 
+===============================================================================
+*Return* *Values*
+
 Returns an array of message numbers sorted by the given parameters.
 
-Version Description 4.3.3 The {charset} parameter was added
+===============================================================================
+*Changelog*
+
+Version            Description
+4.3.3   The {charset} parameter was added
+
 
 vim:ft=help:

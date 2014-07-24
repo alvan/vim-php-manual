@@ -1,57 +1,85 @@
-range -- Create an array containing a range of elements
+range
 
-  array range(mixed start, mixed end [, number step = 1])~
+(PHP 4, PHP 5)
+
+range — Create an array containing a range of elements
+
+===============================================================================
+*Description*
+
+    array range ( mixed $start , mixed $end [, number $step = 1 ] )~
 
 Create an array containing a range of elements.
 
-{start} First value of the sequence.
+===============================================================================
+*Parameters*
 
-{end} The sequence is ended upon reaching the {end} value.
+{start}
 
-{step} If a {step} value is given, it will be used as the increment between
-elements in the sequence. {step} should be given as a positive number. If not
-specified, {step} will default to 1.
+    First value of the sequence.
+
+{end}
+
+    The sequence is ended upon reaching the {end} value.
+
+{step}
+
+    If a {step} value is given, it will be used as the increment between
+    elements in the sequence. {step} should be given as a positive number. If
+    not specified, {step} will default to 1.
+
+===============================================================================
+*Return* *Values*
 
 Returns an array of elements from {start} to {end}, inclusive.
 
-Version Description 5.0.0 The optional {step} parameter was added. 4.1.0 to
-4.3.2 In PHP versions 4.1.0 through 4.3.2, |range| sees numeric strings as
-strings and not integers. Instead, they will be used for character sequences.
-For example, "4242" is treated as "4". 4.1.0 Prior to PHP 4.1.0, |range| only
-generated incrementing integer arrays. Support for character sequences and
-decrementing arrays was added in 4.1.0. Character sequence values are limited
-to a length of one. If a length greater than one is entered, only the first
-character is used.
+===============================================================================
+*Changelog*
 
-|range| examples
+Version                               Description
+5.0.0   The optional {step} parameter was added.
+4.1.0   In PHP versions 4.1.0 through 4.3.2, range() sees numeric strings as
+to      strings and not integers. Instead, they will be used for character
+4.3.2   sequences. For example, "4242" is treated as "4".
+        Prior to PHP 4.1.0, range() only generated incrementing integer arrays.
+4.1.0   Support for character sequences and decrementing arrays was added in
+        4.1.0. Character sequence values are limited to a length of one. If a
+        length greater than one is entered, only the first character is used.
+
+===============================================================================
+*Examples*
+
+Example #1 range() examples
 
 <?php >
-  // array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)
-  foreach (range(0, 12) as $number) {
-      echo $number;
-  }
-  
-  // The step parameter was introduced in 5.0.0
-  // array(0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100)
-  foreach (range(0, 100, 10) as $number) {
-      echo $number;
-  }
-  
-  // Use of character sequences introduced in 4.1.0
-  // array('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i');
-  foreach (range('a', 'i') as $letter) {
-      echo $letter;
-  }
-  // array('c', 'b', 'a');
-  foreach (range('c', 'a') as $letter) {
-      echo $letter;
-  }
-?>
+    // array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)
+    foreach (range(0, 12) as $number) {
+        echo $number;
+    }
 
+    // The step parameter was introduced in 5.0.0
+    // array(0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100)
+    foreach (range(0, 100, 10) as $number) {
+        echo $number;
+    }
 
+    // Use of character sequences introduced in 4.1.0
+    // array('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i');
+    foreach (range('a', 'i') as $letter) {
+        echo $letter;
+    }
+    // array('c', 'b', 'a');
+    foreach (range('c', 'a') as $letter) {
+        echo $letter;
+    }
+<?>
 
+===============================================================================
+*See* *Also*
 
+  * |shuffle| - Shuffle an array
+  * |array_fill| - Fill an array with values
+  * foreach
 
-|shuffle| |array_fill| foreach
 
 vim:ft=help:

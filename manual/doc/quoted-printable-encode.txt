@@ -1,16 +1,37 @@
-quoted_printable_encode -- Convert a 8 bit string to a quoted-printable string
+quoted_printable_encode
 
-  string quoted_printable_encode(string str)~
+(PHP 5 >= 5.3.0)
 
-Returns a quoted printable string created according to RFC2045, section 6.7.
+quoted_printable_encode — Convert a 8 bit string to a quoted-printable string
+
+===============================================================================
+*Description*
+
+    string quoted_printable_encode ( string $str )~
+
+Returns a quoted printable string created according to » RFC2045, section 6.7.
 
 This function is similar to |imap_8bit|, except this one does not require the
 IMAP module to work.
 
-{str} The input string.
+===============================================================================
+*Parameters*
+
+{str}
+
+    The input string.
+
+===============================================================================
+*Return* *Values*
 
 Returns the encoded string.
 
-|quoted_printable_decode| |iconv_mime_encode|
+===============================================================================
+*See* *Also*
+
+  * |quoted_printable_decode| - Convert a quoted-printable string to an 8 bit
+    string
+  * |iconv_mime_encode| - Composes a MIME header field
+
 
 vim:ft=help:

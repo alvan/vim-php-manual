@@ -1,20 +1,46 @@
-dba_insert -- Insert entry
+dba_insert
 
-  bool dba_insert(string key, string value, resource handle)~
+(PHP 4, PHP 5)
 
-|dba_insert| inserts the entry described with {key} and {value} into the
+dba_insert — Insert entry
+
+===============================================================================
+*Description*
+
+    bool dba_insert ( string $key , string $value , resource $handle )~
+
+dba_insert() inserts the entry described with {key} and {value} into the
 database.
 
-{key} The key of the entry to be inserted. If this key already exist in the
-database, this function will fail. Use |dba_replace| if you need to replace an
-existent key.
+===============================================================================
+*Parameters*
 
-{value} The value to be inserted.
+{key}
 
-{handle} The database handler, returned by |dba_open| or |dba_popen|.
+    The key of the entry to be inserted. If this key already exist in the
+    database, this function will fail. Use |dba_replace| if you need to replace
+    an existent key.
 
-Returns TRUE on success or &false; on failure.
+{value}
 
-|dba_exists| |dba_delete| |dba_fetch| |dba_replace|
+    The value to be inserted.
+
+{handle}
+
+    The database handler, returned by |dba_open| or |dba_popen|.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*See* *Also*
+
+  * |dba_exists| - Check whether key exists
+  * |dba_delete| - Delete DBA entry specified by key
+  * |dba_fetch| - Fetch data specified by key
+  * |dba_replace| - Replace or insert entry
+
 
 vim:ft=help:

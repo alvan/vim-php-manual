@@ -1,11 +1,20 @@
-socket_recvmsg -- Read a message
+socket_recvmsg
 
-  int socket_recvmsg(resource socket, string message [, int flags])~
+(PHP 5 >= 5.5.0)
 
+socket_recvmsg — Read a message
 
+===============================================================================
+*Description*
 
-This function is currently not documented; only its argument list is
-available.
+    int socket_recvmsg ( resource $socket , string $message [, int $flags ] )~
+
+Warning
+
+This function is currently not documented; only its argument list is available.
+
+===============================================================================
+*Parameters*
 
 {socket}
 
@@ -13,8 +22,14 @@ available.
 
 {flags}
 
+===============================================================================
+*Return* *Values*
 
+===============================================================================
+*See* *Also*
 
-|socket_sendmsg| |socket_cmsg_space|
+  * |socket_sendmsg| - Send a message
+  * |socket_cmsg_space| - Calculate message buffer size
+
 
 vim:ft=help:

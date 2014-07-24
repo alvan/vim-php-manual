@@ -1,28 +1,63 @@
-mqseries_put1 -- MQSeries MQPUT1
+mqseries_put1
 
-  void mqseries_put1(resource hconn, resource &objDesc, resource &msgDesc, resource &pmo, string buffer, resource &compCode, resource &reason)~
+(PECL mqseries >= 0.10.0)
 
-The |mqseries_put1| (MQPUT1) call puts one message on a queue. The queue need
+mqseries_put1 — MQSeries MQPUT1
+
+===============================================================================
+*Description*
+
+    void mqseries_put1 ( resource $hconn , resource &$objDesc , resource~
+    &$msgDesc , resource &$pmo , string $buffer , resource &$compCode ,~
+    resource &$reason )~
+
+The mqseries_put1() (MQPUT1) call puts one message on a queue. The queue need
 not be open.
 
-{hConn} Connection handle.
+===============================================================================
+*Parameters*
 
-This handle represents the connection to the queue manager.
+{hConn}
 
-{objDesc} Object descriptor. (MQOD)
+    Connection handle.
 
-This is a structure which identifies the queue to which the message is added.
+    This handle represents the connection to the queue manager.
 
-{msgDesc} Message descriptor (MQMD).
+{objDesc}
 
-{pmo} Put message options (MQPMO).
+    Object descriptor. (MQOD)
 
-{compCode} Completion code.
+    This is a structure which identifies the queue to which the message is
+    added.
 
-{reason} Reason code qualifying the compCode.
+{msgDesc}
+
+    Message descriptor (MQMD).
+
+{pmo}
+
+    Put message options (MQPMO).
+
+{compCode}
+
+    Completion code.
+
+{reason}
+
+    Reason code qualifying the compCode.
+
+===============================================================================
+*Return* *Values*
 
 No value is returned.
 
-|mqseries_conn| |mqseries_connx| |mqseries_open| |mqseries_get|
+===============================================================================
+*See* *Also*
+
+  * |mqseries_conn| - MQSeries MQCONN
+  * |mqseries_connx| - MQSeries MQCONNX
+  * |mqseries_open| - MQSeries MQOPEN
+  * |mqseries_get| - MQSeries MQGET
+
 
 vim:ft=help:

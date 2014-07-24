@@ -1,61 +1,92 @@
-uniqid -- Generate a unique ID
+uniqid
 
-  string uniqid([string prefix = "" [, bool more_entropy = false]])~
+(PHP 4, PHP 5)
+
+uniqid — Generate a unique ID
+
+===============================================================================
+*Description*
+
+    string uniqid ([ string $prefix = "" [, bool $more_entropy =~
+    false ]] )~
 
 Gets a prefixed unique identifier based on the current time in microseconds.
+
+Warning
 
 This function does not create random nor unpredictable strings. This function
 must not be used for security purposes. Use a cryptographically secure random
 function/generator and cryptographically secure hash functions to create
 unpredictable secure IDs.
 
-{prefix} Can be useful, for instance, if you generate identifiers
-simultaneously on several hosts that might happen to generate the identifier
-at the same microsecond.
+===============================================================================
+*Parameters*
 
-With an empty {prefix}, the returned string will be 13 characters long. If
-{more_entropy} is TRUE, it will be 23 characters.
+{prefix}
 
-{more_entropy} If set to TRUE, |uniqid| will add additional entropy (using the
-combined linear congruential generator) at the end of the return value, which
-increases the likelihood that the result will be unique.
+    Can be useful, for instance, if you generate identifiers simultaneously on
+    several hosts that might happen to generate the identifier at the same
+    microsecond.
+
+    With an empty {prefix}, the returned string will be 13 characters long. If
+    {more_entropy} is TRUE, it will be 23 characters.
+
+{more_entropy}
+
+    If set to TRUE, uniqid() will add additional entropy (using the combined
+    linear congruential generator) at the end of the return value, which
+    increases the likelihood that the result will be unique.
+
+===============================================================================
+*Return* *Values*
 
 Returns the unique identifier, as a string.
 
-|uniqid| Example
+===============================================================================
+*Examples*
+
+Example #1 uniqid() Example
 
 <?php >
-  /* A uniqid, like: 4b3403665fea6 */
-  printf("uniqid(): %s\r\n", uniqid());
-  
-  /* We can also prefix the uniqid, this the same as 
-   * doing:
-   *
-   * $uniqid = $prefix . uniqid();
-   * $uniqid = uniqid($prefix);
-   */
-  printf("uniqid('php_'): %s\r\n", uniqid('php_'));
-  
-  /* We can also activate the more_entropy parameter, which is 
-   * required on some systems, like Cygwin. This makes uniqid()
-   * produce a value like: 4b340550242239.64159797
-   */
-  printf("uniqid('', true): %s\r\n", uniqid('', true));
-?>
+    /* A uniqid, like: 4b3403665fea6 */
+    printf("uniqid(): %s\r\n", uniqid());
 
+    /* We can also prefix the uniqid, this the same as 
+     * doing:
+     *
+     * $uniqid = $prefix . uniqid();
+     * $uniqid = uniqid($prefix);
+     */
+    printf("uniqid('php_'): %s\r\n", uniqid('php_'));
 
+    /* We can also activate the more_entropy parameter, which is 
+     * required on some systems, like Cygwin. This makes uniqid()
+     * produce a value like: 4b340550242239.64159797
+     */
+    printf("uniqid('', true): %s\r\n", uniqid('', true));
+<?>
 
+===============================================================================
+*Changelog*
 
+Version                        Description
+5.0.0   The {prefix} parameter was made optional.
+4.3.1   The limit of 114 characters long for {prefix} was raised.
 
-Version Description 5.0.0 The {prefix} parameter was made optional. 4.3.1 The
-limit of 114 characters long for {prefix} was raised.
+===============================================================================
+*Notes*
+
+Caution
 
 This function does not generate cryptographically secure tokens, in fact
 without being passed any additional parameters the return value is little
 different from |microtime|. If you need to generate cryptographically secure
 tokens use |openssl_random_pseudo_bytes|.
 
-Under Cygwin, the {more_entropy} must be set to TRUE for this function to
-work.
+    Note:
+
+    Under Cygwin, the {more_entropy} must be set to TRUE for this function to
+    work.
+
 
 vim:ft=help:

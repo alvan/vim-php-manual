@@ -1,53 +1,86 @@
-fputcsv -- Format line as CSV and write to file pointer
+fputcsv
 
-  int fputcsv(resource handle, array fields [, string delimiter = "," [, string enclosure = '"']])~
+(PHP 5 >= 5.1.0)
 
-|fputcsv| formats a line (passed as a {fields} array) as CSV and write it
+fputcsv — Format line as CSV and write to file pointer
+
+===============================================================================
+*Description*
+
+    int fputcsv ( resource $handle , array $fields [, string $delimiter =~
+    "," [, string $enclosure = '"' ]] )~
+
+fputcsv() formats a line (passed as a {fields} array) as CSV and write it
 (terminated by a newline) to the specified file {handle}.
 
-{handle} The file pointer must be valid, and must point to a file successfully
-opened by |fopen| or |fsockopen| (and not yet closed by |fclose|).
+===============================================================================
+*Parameters*
 
-{fields} An array of values.
+{handle}
 
-{delimiter} The optional {delimiter} parameter sets the field delimiter (one
-character only).
+    The file pointer must be valid, and must point to a file successfully
+    opened by |fopen| or |fsockopen| (and not yet closed by |fclose|).
 
-{enclosure} The optional {enclosure} parameter sets the field enclosure (one
-character only).
+{fields}
+
+    An array of values.
+
+{delimiter}
+
+    The optional {delimiter} parameter sets the field delimiter (one character
+    only).
+
+{enclosure}
+
+    The optional {enclosure} parameter sets the field enclosure (one character
+    only).
+
+===============================================================================
+*Return* *Values*
 
 Returns the length of the written string or FALSE on failure.
 
-|fputcsv| example
+===============================================================================
+*Examples*
+
+Example #1 fputcsv() example
 
 <?php >
-  $list = array (
-      array('aaa', 'bbb', 'ccc', 'dddd'),
-      array('123', '456', '789'),
-      array('"aaa"', '"bbb"')
-  );
-  
-  $fp = fopen('file.csv', 'w');
-  
-  foreach ($list as $fields) {
-      fputcsv($fp, $fields);
-  }
-  
-  fclose($fp);
-?>
+
+    $list = array (
+        array('aaa', 'bbb', 'ccc', 'dddd'),
+        array('123', '456', '789'),
+        array('"aaa"', '"bbb"')
+    );
+
+    $fp = fopen('file.csv', 'w');
+
+    foreach ($list as $fields) {
+        fputcsv($fp, $fields);
+    }
+
+    fclose($fp);
+<?>
 
 The above example will write the following to file.csv:
 
-  aaa,bbb,ccc,dddd
-  123,456,789
-  """aaa""","""bbb"""
+aaa,bbb,ccc,dddd
+123,456,789
+"""aaa""","""bbb"""
 
 
+===============================================================================
+*Notes*
 
-If PHP is not properly recognizing the line endings when reading files either
-on or created by a Macintosh computer, enabling the auto_detect_line_endings
-run-time configuration option may help resolve the problem.
+    Note: If PHP is not properly recognizing the line endings when reading
+    files either on or created by a Macintosh computer, enabling the
+    auto_detect_line_endings run-time configuration option may help resolve the
+    problem.
 
-|fgetcsv|
+===============================================================================
+*See* *Also*
+
+  * |fgetcsv| - Gets line from file pointer and parse for CSV fields
+
 
 vim:ft=help:

@@ -1,11 +1,30 @@
-openal_source_destroy -- Destroy a source resource
+openal_source_destroy
 
-  bool openal_source_destroy(resource source)~
+(PECL openal >= 0.1.0)
 
-An Open AL(Source) resource (previously created by |openal_source_create|).
+openal_source_destroy — Destroy a source resource
 
-Returns TRUE on success or &false; on failure.
+===============================================================================
+*Description*
 
-|openal_source_create|
+    bool openal_source_destroy ( resource $source )~
+
+===============================================================================
+*Parameters*
+
+{source}
+
+    An Open AL(Source) resource (previously created by |openal_source_create|).
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*See* *Also*
+
+  * |openal_source_create| - Generate a source resource
+
 
 vim:ft=help:

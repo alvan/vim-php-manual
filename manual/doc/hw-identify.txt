@@ -1,18 +1,38 @@
-hw_Identify -- Identifies as user
+hw_Identify
 
-  string hw_identify(int link, string username, string password)~
+(PHP 4)
 
-Identifies as user with {username} and {password}. Identification is only
-valid for the current session. I do not think this function will be needed
-very often. In most cases it will be easier to identify with the opening of
-the connection.
+hw_Identify — Identifies as user
 
-{link} The connection identifier.
+===============================================================================
+*Description*
 
-{username} The username.
+    string hw_identify ( int $link , string $username , string $password )~
 
-{password} The password.
+Identifies as user with {username} and {password}. Identification is only valid
+for the current session. I do not think this function will be needed very
+often. In most cases it will be easier to identify with the opening of the
+connection.
 
-|hw_connect|
+===============================================================================
+*Parameters*
+
+{link}
+
+    The connection identifier.
+
+{username}
+
+    The username.
+
+{password}
+
+    The password.
+
+===============================================================================
+*See* *Also*
+
+  * |hw_connect| - Opens a connection
+
 
 vim:ft=help:

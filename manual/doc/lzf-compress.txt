@@ -1,13 +1,32 @@
-lzf_compress -- LZF compression
+lzf_compress
 
-  string lzf_compress(string data)~
+(PECL lzf >= 0.1.0)
 
-|lzf_compress| compresses the given {data} string using LZF encoding.
+lzf_compress — LZF compression
 
-{data} The string to compress.
+===============================================================================
+*Description*
+
+    string lzf_compress ( string $data )~
+
+lzf_compress() compresses the given {data} string using LZF encoding.
+
+===============================================================================
+*Parameters*
+
+{data}
+
+    The string to compress.
+
+===============================================================================
+*Return* *Values*
 
 Returns the compressed data or FALSE if an error occurred.
 
-|lzf_decompress|
+===============================================================================
+*See* *Also*
+
+  * |lzf_decompress| - LZF decompression
+
 
 vim:ft=help:

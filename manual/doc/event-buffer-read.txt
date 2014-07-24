@@ -1,11 +1,26 @@
-event_buffer_read -- Read data from a buffered event
+event_buffer_read
 
-  string event_buffer_read(resource bevent, int data_size)~
+(PECL libevent >= 0.0.1)
+
+event_buffer_read — Read data from a buffered event
+
+===============================================================================
+*Description*
+
+    string event_buffer_read ( resource $bevent , int $data_size )~
 
 Reads data from the input buffer of the buffered event.
 
-{bevent} Valid buffered event resource.
+===============================================================================
+*Parameters*
 
-{data_size} Data size in bytes.
+{bevent}
+
+    Valid buffered event resource.
+
+{data_size}
+
+    Data size in bytes.
+
 
 vim:ft=help:

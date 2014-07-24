@@ -1,15 +1,34 @@
-fdf_get_encoding -- Get the value of the /Encoding key
+fdf_get_encoding
 
-  string fdf_get_encoding(resource fdf_document)~
+(PHP 4 >= 4.3.0, PHP 5)
+
+fdf_get_encoding — Get the value of the /Encoding key
+
+===============================================================================
+*Description*
+
+    string fdf_get_encoding ( resource $fdf_document )~
 
 Gets the value of the /Encoding key.
 
-{fdf_document} The FDF document handle, returned by |fdf_create|, |fdf_open|
-or |fdf_open_string|.
+===============================================================================
+*Parameters*
+
+{fdf_document}
+
+    The FDF document handle, returned by |fdf_create|, |fdf_open| or |
+    fdf_open_string|.
+
+===============================================================================
+*Return* *Values*
 
 Returns the encoding as a string. An empty string is returned if the default
 PDFDocEncoding/Unicode scheme is used.
 
-|fdf_set_encoding|
+===============================================================================
+*See* *Also*
+
+  * |fdf_set_encoding| - Sets FDF character encoding
+
 
 vim:ft=help:

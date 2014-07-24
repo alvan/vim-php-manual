@@ -1,13 +1,30 @@
-hw_objrec2array -- Convert attributes from object record to object array
+hw_objrec2array
 
-  array hw_objrec2array(string object_record [, array format])~
+(PHP 4)
+
+hw_objrec2array — Convert attributes from object record to object array
+
+===============================================================================
+*Description*
+
+    array hw_objrec2array ( string $object_record [, array $format ] )~
 
 Converts an {object_record} into an object array.
 
-{object_record} The object record.
+===============================================================================
+*Parameters*
 
-{format} An associative array with the attribute name as its key and the value
-being one of HW_ATTR_LANG or HW_ATTR_NONE.
+{object_record}
+
+    The object record.
+
+{format}
+
+    An associative array with the attribute name as its key and the value being
+    one of HW_ATTR_LANG or HW_ATTR_NONE.
+
+===============================================================================
+*Return* *Values*
 
 Returns an array. The keys of the resulting array are the attributes names.
 Multi-value attributes like 'Title' in different languages form its own array.
@@ -20,6 +37,10 @@ optional parameter is missing the attributes 'Title', 'Description' and
 'Parent' and 'HtmlAttr' as non-prefixed multi-value attributes. By passing an
 array holding the type for each attribute you can alter this behaviour.
 
-|hw_array2objrec|
+===============================================================================
+*See* *Also*
+
+  * |hw_array2objrec| - Convert attributes from object array to object record
+
 
 vim:ft=help:

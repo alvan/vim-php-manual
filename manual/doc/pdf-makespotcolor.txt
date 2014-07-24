@@ -1,8 +1,16 @@
-PDF_makespotcolor -- Make spot color
+PDF_makespotcolor
 
-  int PDF_makespotcolor(resource p, string spotname)~
+(PHP 4 >= 4.0.5, PECL pdflib >= 1.0.0)
+
+PDF_makespotcolor — Make spot color
+
+===============================================================================
+*Description*
+
+    int PDF_makespotcolor ( resource $p , string $spotname )~
 
 Finds a built-in spot color name, or makes a named spot color from the current
-fill color. Returns TRUE on success or &false; on failure.
+fill color. Returns TRUE on success or FALSE on failure.
+
 
 vim:ft=help:

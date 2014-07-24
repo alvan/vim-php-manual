@@ -1,15 +1,37 @@
-gupnp_context_unhost_path -- Stop hosting
+gupnp_context_unhost_path
 
-  bool gupnp_context_unhost_path(resource context, string server_path)~
+(PECL gupnp >= 0.1.0)
+
+gupnp_context_unhost_path — Stop hosting
+
+===============================================================================
+*Description*
+
+    bool gupnp_context_unhost_path ( resource $context , string $server_path )~
 
 Stop hosting the file or folder at {server_path}.
 
-{context} A context identifier, returned by |gupnp_context_new|.
+===============================================================================
+*Parameters*
 
-{server_path} Web server path where the file or folder is hosted.
+{context}
 
-Returns TRUE on success or &false; on failure.
+    A context identifier, returned by |gupnp_context_new|.
 
-|gupnp_context_new| |gupnp_context_host_path|
+{server_path}
+
+    Web server path where the file or folder is hosted.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*See* *Also*
+
+  * |gupnp_context_new| - Create a new context
+  * |gupnp_context_host_path| - Start hosting
+
 
 vim:ft=help:

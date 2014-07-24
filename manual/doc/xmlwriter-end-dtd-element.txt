@@ -1,21 +1,43 @@
-xmlwriter_end_dtd_element -- End current DTD element
+XMLWriter::endDTDElement
+
+xmlwriter_end_dtd_element
+
+(PHP 5 >= 5.1.2, PECL xmlwriter >= 0.1.0)
+
+XMLWriter::endDTDElement -- xmlwriter_end_dtd_element — End current DTD element
+
+===============================================================================
+*Description*
 
 Object oriented style
 
-  bool XMLWriter::endDTDElement()~
+    bool XMLWriter::endDTDElement ( void )~
 
 Procedural style
 
-  bool xmlwriter_end_dtd_element(resource xmlwriter)~
+    bool xmlwriter_end_dtd_element ( resource $xmlwriter )~
 
 Ends the current DTD element.
 
-{ xmlwriter}Only for procedural calls. The XMLWriter resource that is being
-modified. This resource comes from a call to |xmlwriter_open_uri| or
-|xmlwriter_open_memory|.
+===============================================================================
+*Parameters*
 
-Returns TRUE on success or &false; on failure.
+{ xmlwriter}
 
-XMLWriter::startDTDElement XMLWriter::writeDTDElement
+    Only for procedural calls. The XMLWriter resource that is being modified.
+    This resource comes from a call to |xmlwriter_open_uri| or |
+    xmlwriter_open_memory|.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*See* *Also*
+
+  * |XMLWriter::startDTDElement| - Create start DTD element
+  * |XMLWriter::writeDTDElement| - Write full DTD element tag
+
 
 vim:ft=help:

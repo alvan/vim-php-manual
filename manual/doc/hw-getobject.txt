@@ -1,41 +1,66 @@
-hw_GetObject -- Object record
+hw_GetObject
 
-  mixed hw_getobject(int connection, mixed objectID [, string query])~
+(PHP 4)
+
+hw_GetObject — Object record
+
+===============================================================================
+*Description*
+
+    mixed hw_getobject ( int $connection , mixed $objectID [, string $query ]~
+)~
 
 Gets an object record. If the second parameter is an array of integer the
 function will
 
-{connection} The connection identifier.
+===============================================================================
+*Parameters*
 
-{objectID} The object identifier, or an array of identifiers.
+{connection}
 
-{query} The query string has the following syntax:
+    The connection identifier.
 
-  <expr> ::= "(" <expr> ")" |
-             "!" <expr> |          /* NOT */
-             <expr> "||" <expr> |  /* OR */
-             <expr> "&&" <expr> |  /* AND */
-             <attribute> <operator> <value>
-  
-  <attribute> ::= /* any attribute name (Title, Author, DocumentType ...) */
-  
-  <operator> ::= "=" |    /* equal */
-                 "<" |    /* less than (string compare) */
-                 ">" |    /* greater than (string compare) */
-                 "~"      /* regular expression matching */
+{objectID}
 
-The query allows to further select certain objects from the list of given
-objects. Unlike the other query functions, this query may use not indexed
-attributes. How many object records are returned depends on the query and if
-access to the object is allowed.
+    The object identifier, or an array of identifiers.
 
-Returns the object record for the given object ID if the second parameter is
-an integer.
+{query}
+
+    The query string has the following syntax:
+
+    <expr> ::= "(" <expr> ")" |
+               "!" &lt;expr> |          /* NOT */
+               <expr> "||" <expr> |  /* OR */
+               <expr> "&amp;&amp;" <expr> |  /* AND */
+               <attribute> <operator> <value>
+
+    <attribute> ::= /* any attribute name (Title, Author, DocumentType ...) */
+
+    <operator> ::= "=" |    /* equal */
+                   "<" |    /* less than (string compare) */
+                   ">" |    /* greater than (string compare) */
+                   "~"      /* regular expression matching */
+
+    The query allows to further select certain objects from the list of given
+    objects. Unlike the other query functions, this query may use not indexed
+    attributes. How many object records are returned depends on the query and
+    if access to the object is allowed.
+
+===============================================================================
+*Return* *Values*
+
+Returns the object record for the given object ID if the second parameter is an
+integer.
 
 If the second parameter is an array of integer the function will return an
 array of object records. In such a case the last parameter is also evaluated
 which is a query string.
 
-|hw_getandlock| |hw_getobjectbyquery|
+===============================================================================
+*See* *Also*
+
+  * |hw_getandlock| - Return object record and lock object
+  * |hw_getobjectbyquery| - Search object
+
 
 vim:ft=help:

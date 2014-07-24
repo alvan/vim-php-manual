@@ -1,23 +1,43 @@
-rad2deg -- Converts the radian number to the equivalent number in degrees
+rad2deg
 
-  float rad2deg(float number)~
+(PHP 4, PHP 5)
+
+rad2deg — Converts the radian number to the equivalent number in degrees
+
+===============================================================================
+*Description*
+
+    float rad2deg ( float $number )~
 
 This function converts {number} from radian to degrees.
 
-{number} A radian value
+===============================================================================
+*Parameters*
+
+{number}
+
+    A radian value
+
+===============================================================================
+*Return* *Values*
 
 The equivalent of {number} in degrees
 
-|rad2deg| example
+===============================================================================
+*Examples*
+
+Example #1 rad2deg() example
 
 <?php >
-  echo rad2deg(M_PI_4); // 45
-?>
 
+    echo rad2deg(M_PI_4); // 45
 
+<?>
 
+===============================================================================
+*See* *Also*
 
+  * |deg2rad| - Converts the number in degrees to the radian equivalent
 
-|deg2rad|
 
 vim:ft=help:

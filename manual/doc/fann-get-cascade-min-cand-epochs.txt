@@ -1,6 +1,13 @@
-fann_get_cascade_min_cand_epochs -- Returns the minimum candidate epochs
+fann_get_cascade_min_cand_epochs
 
-  int fann_get_cascade_min_cand_epochs(resource ann)~
+(PECL fann >= 1.0.0)
+
+fann_get_cascade_min_cand_epochs — Returns the minimum candidate epochs
+
+===============================================================================
+*Description*
+
+    int fann_get_cascade_min_cand_epochs ( resource $ann )~
 
 The minimum candidate epochs determines the minimum number of epochs the input
 connections to the candidates may be trained before adding a new candidate
@@ -8,10 +15,22 @@ neuron.
 
 The default min candidate epochs is 50.
 
-Neural network resource.
+===============================================================================
+*Parameters*
+
+{ann}
+
+    Neural network resource.
+
+===============================================================================
+*Return* *Values*
 
 The minimum candidate epochs, or FALSE on error.
 
-|fann_set_cascade_min_cand_epochs|
+===============================================================================
+*See* *Also*
+
+  * |fann_set_cascade_min_cand_epochs| - Sets the min candidate epochs
+
 
 vim:ft=help:

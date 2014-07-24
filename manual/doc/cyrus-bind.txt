@@ -1,13 +1,31 @@
-cyrus_bind -- Bind callbacks to a Cyrus IMAP connection
+cyrus_bind
 
-  bool cyrus_bind(resource connection, array callbacks)~
+(PHP 4 >= 4.1.0, PECL cyrus 1.0)
+
+cyrus_bind — Bind callbacks to a Cyrus IMAP connection
+
+===============================================================================
+*Description*
+
+    bool cyrus_bind ( resource $connection , array $callbacks )~
 
 Binds callbacks to a Cyrus IMAP connection.
 
-{connection} The connection handle.
+===============================================================================
+*Parameters*
 
-{callbacks} An array of callbacks.
+{connection}
 
-Returns TRUE on success or &false; on failure.
+    The connection handle.
+
+{callbacks}
+
+    An array of callbacks.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
 
 vim:ft=help:

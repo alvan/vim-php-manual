@@ -1,41 +1,62 @@
-array_pop -- Pop the element off the end of array
+array_pop
 
-  mixed array_pop(array &array)~
+(PHP 4, PHP 5)
 
-|array_pop| pops and returns the last value of the {array}, shortening the
+array_pop — Pop the element off the end of array
+
+===============================================================================
+*Description*
+
+    mixed array_pop ( array &$array )~
+
+array_pop() pops and returns the last value of the {array}, shortening the
 {array} by one element. If {array} is empty (or is not an array), NULL will be
 returned. Will additionally produce a Warning when called on a non-array.
 
-This function will |reset| the array pointer of the input array after use.
+    Note: This function will |reset| the array pointer of the input array after
+    use.
 
-{array} The array to get the value from.
+===============================================================================
+*Parameters*
+
+{array}
+
+    The array to get the value from.
+
+===============================================================================
+*Return* *Values*
 
 Returns the last value of {array}. If {array} is empty (or is not an array),
 NULL will be returned.
 
-|array_pop| example
+===============================================================================
+*Examples*
+
+Example #1 array_pop() example
 
 <?php >
-  $stack = array("orange", "banana", "apple", "raspberry");
-  $fruit = array_pop($stack);
-  print_r($stack);
-?>
+    $stack = array("orange", "banana", "apple", "raspberry");
+    $fruit = array_pop($stack);
+    print_r($stack);
+<?>
 
 After this, $stack will have only 3 elements:
 
-  Array
-  (
-      [0] => orange
-      [1] => banana
-      [2] => apple
-  )
+Array
+(
+    [0] => orange
+    [1] => banana
+    [2] => apple
+)
 
 and raspberry will be assigned to $fruit.
 
+===============================================================================
+*See* *Also*
 
+  * |array_push| - Push one or more elements onto the end of array
+  * |array_shift| - Shift an element off the beginning of array
+  * |array_unshift| - Prepend one or more elements to the beginning of an array
 
-
-
-|array_push| |array_shift| |array_unshift|
 
 vim:ft=help:

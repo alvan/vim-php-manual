@@ -1,12 +1,22 @@
-fbsql_pconnect -- Open a persistent connection to a FrontBase Server
+fbsql_pconnect
 
-  resource fbsql_pconnect([string hostname = ini_get("fbsql.default_host") [, string username = ini_get("fbsql.default_user") [, string password = ini_get("fbsql.default_password")]]])~
+(PHP 4 >= 4.0.6, PHP 5)
+
+fbsql_pconnect — Open a persistent connection to a FrontBase Server
+
+===============================================================================
+*Description*
+
+    resource fbsql_pconnect ([ string $hostname =~
+    ini_get("fbsql.default_host") [, string $username =~
+    ini_get("fbsql.default_user") [, string $password =~
+    ini_get("fbsql.default_password") ]]] )~
 
 Establishes a persistent connection to a FrontBase server.
 
 To set the server port number, use |fbsql_select_db|.
 
-|fbsql_pconnect| acts very much like |fbsql_connect| with two major
+fbsql_pconnect() acts very much like |fbsql_connect| with two major
 differences:
 
 First, when connecting, the function would first try to find a (persistent)
@@ -19,15 +29,31 @@ of the script ends. Instead, the link will remain open for future use.
 
 This type of links is therefore called 'persistent'.
 
-{hostname} The server host name.
+===============================================================================
+*Parameters*
 
-{username} The user name for the connection.
+{hostname}
 
-{password} The password for the connection.
+    The server host name.
 
-Returns a positive FrontBase persistent link identifier on success, or FALSE
-on error.
+{username}
 
-|fbsql_connect|
+    The user name for the connection.
+
+{password}
+
+    The password for the connection.
+
+===============================================================================
+*Return* *Values*
+
+Returns a positive FrontBase persistent link identifier on success, or FALSE on
+error.
+
+===============================================================================
+*See* *Also*
+
+  * |fbsql_connect| - Open a connection to a FrontBase Server
+
 
 vim:ft=help:

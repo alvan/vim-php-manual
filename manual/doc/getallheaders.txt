@@ -1,37 +1,56 @@
-getallheaders -- Fetch all HTTP request headers
+getallheaders
 
-  array getallheaders()~
+(PHP 4, PHP 5)
+
+getallheaders — Fetch all HTTP request headers
+
+===============================================================================
+*Description*
+
+    array getallheaders ( void )~
 
 Fetches all HTTP headers from the current request.
 
-This function is an alias for |apache_request_headers|. Please read the
-|apache_request_headers| documentation for more information on how this
-function works.
+This function is an alias for |apache_request_headers|. Please read the |
+apache_request_headers| documentation for more information on how this function
+works.
+
+===============================================================================
+*Return* *Values*
 
 An associative array of all the HTTP headers in the current request, or FALSE
 on failure.
 
-Version Description 5.5.7 This function became available in the CLI server.
-5.4.0 This function became available under FastCGI. Previously, it was
-supported only when PHP was installed as an Apache module. 4.3.3 As of PHP
-4.3.3 you can use this function with the NSAPI server module in
-Netscape/iPlanet/SunONE webservers, too.
+===============================================================================
+*Changelog*
 
-4.3.0 Became an alias for |apache_request_headers|. Essentially, it was
-renamed. This is because this function only works with Apache.
+Version                               Description
+5.5.7   This function became available in the CLI server.
+5.4.0   This function became available under FastCGI. Previously, it was
+        supported only when PHP was installed as an Apache module.
+        As of PHP 4.3.3 you can use this function with the NSAPI server module
+4.3.3   in Netscape/iPlanet/SunONE webservers, too.
 
-|getallheaders| example
+4.3.0   Became an alias for |apache_request_headers|. Essentially, it was
+        renamed. This is because this function only works with Apache.
+
+===============================================================================
+*Examples*
+
+Example #1 getallheaders() example
 
 <?php >
-  foreach (getallheaders() as $name => $value) {
-      echo "$name: $value\n";
-  }
-?>
 
+    foreach (getallheaders() as $name => $value) {
+        echo "$name: $value\n";
+    }
 
+<?>
 
+===============================================================================
+*See* *Also*
 
+  * |apache_response_headers| - Fetch all HTTP response headers
 
-|apache_response_headers|
 
 vim:ft=help:

@@ -1,20 +1,48 @@
-aggregate -- Dynamic class and object aggregation of methods and properties
+aggregate
 
-  void aggregate(object object, string class_name)~
+(PHP 4 >= 4.2.0)
+
+aggregate — Dynamic class and object aggregation of methods and properties
+
+===============================================================================
+*Description*
+
+    void aggregate ( object $object , string $class_name )~
 
 Aggregates methods and properties defined in a class to an existing object.
-Methods and properties with names starting with an underscore character (_)
-are considered private to the aggregated class and are not used, constructors
-are also excluded from the aggregation procedure.
+Methods and properties with names starting with an underscore character (_) are
+considered private to the aggregated class and are not used, constructors are
+also excluded from the aggregation procedure.
+
+===============================================================================
+*Parameters*
 
 {object}
 
 {class_name}
 
+===============================================================================
+*Return* *Values*
+
 No value is returned.
 
-|aggregate_info| |aggregate_methods| |aggregate_methods_by_list|
-|aggregate_methods_by_regexp| |aggregate_properties|
-|aggregate_properties_by_list| |aggregate_properties_by_regexp| |deaggregate|
+===============================================================================
+*See* *Also*
+
+  * |aggregate_info| - Gets aggregation information for a given object
+  * |aggregate_methods| - Dynamic class and object aggregation of methods
+  * |aggregate_methods_by_list| - Selective dynamic class methods aggregation
+    to an object
+  * |aggregate_methods_by_regexp| - Selective class methods aggregation to an
+    object using a regular expression
+  * |aggregate_properties| - Dynamic aggregation of class properties to an
+    object
+  * |aggregate_properties_by_list| - Selective dynamic class properties
+    aggregation to an object
+  * |aggregate_properties_by_regexp| - Selective class properties aggregation
+    to an object using a regular expression
+  * |deaggregate| - Removes the aggregated methods and properties from an
+    object
+
 
 vim:ft=help:

@@ -1,55 +1,104 @@
-snmp3_walk -- Fetch all the SNMP objects from an agent
+snmp3_walk
 
-  array snmp3_walk(string host, string sec_name, string sec_level, string auth_protocol, string auth_passphrase, string priv_protocol, string priv_passphrase, string object_id [, string timeout = 1000000 [, string retries = 5]])~
+(PHP 4, PHP 5)
 
-|snmp3_walk| function is used to read all the values from an SNMP agent
+snmp3_walk — Fetch all the SNMP objects from an agent
+
+===============================================================================
+*Description*
+
+    array snmp3_walk ( string $host , string $sec_name , string $sec_level ,~
+    string $auth_protocol , string $auth_passphrase , string $priv_protocol ,~
+    string $priv_passphrase , string $object_id [, string $timeout = 1000000~
+    [, string $retries = 5 ]] )~
+
+snmp3_walk() function is used to read all the values from an SNMP agent
 specified by the {hostname}.
 
-Even if the security level does not use an auth or priv protocol/password
-valid values have to be specified.
+Even if the security level does not use an auth or priv protocol/password valid
+values have to be specified.
 
-The hostname of the SNMP agent (server).
+===============================================================================
+*Parameters*
 
-the security name, usually some kind of username
+{host}
 
-the security level (noAuthNoPriv|authNoPriv|authPriv)
+    The hostname of the SNMP agent (server).
 
-the authentication protocol (MD5 or SHA)
+{sec_name}
 
-the authentication pass phrase
+    the security name, usually some kind of username
 
-the privacy protocol (DES or AES)
+{sec_level}
 
-the privacy pass phrase
+    the security level (noAuthNoPriv|authNoPriv|authPriv)
 
-If NULL, {object_id} is taken as the root of the SNMP objects tree and all
-objects under that tree are returned as an array.
+{auth_protocol}
 
-If {object_id} is specified, all the SNMP objects below that {object_id} are
-returned.
+    the authentication protocol (MD5 or SHA)
 
-The number of microseconds until the first timeout.
+{auth_passphrase}
 
-The number of times to retry if timeouts occur.
+    the authentication pass phrase
 
-Returns an array of SNMP object values starting from the {object_id} as root
-or FALSE on error.
+{priv_protocol}
 
-|snmp3_walk| Example
+    the privacy protocol (DES or AES)
+
+{priv_passphrase}
+
+    the privacy pass phrase
+
+{object_id}
+
+    If NULL, {object_id} is taken as the root of the SNMP objects tree and all
+    objects under that tree are returned as an array.
+
+    If {object_id} is specified, all the SNMP objects below that {object_id}
+    are returned.
+
+{timeout}
+
+    The number of microseconds until the first timeout.
+
+{retries}
+
+    The number of times to retry if timeouts occur.
+
+===============================================================================
+*Return* *Values*
+
+Returns an array of SNMP object values starting from the {object_id} as root or
+FALSE on error.
+
+===============================================================================
+*Examples*
+
+Example #1 snmp3_walk() Example
 
 <?php >
-  $ret = snmp3_walk('localhost', 'james', 'authPriv', 'SHA', 'secret007', 'AES', 'secret007', 'IF-MIB::ifName');
-  var_export($ret);
-?>
-
-
-
-
+    $ret = snmp3_walk('localhost', 'james', 'authPriv', 'SHA', 'secret007', 'AES', 
+    'secret007', 'IF-MIB::ifName');
+    var_export($ret);
+<?>
 
 Above function call would return all the SNMP objects from the SNMP agent
-running on localhost: array ( 0 => 'STRING: lo', 1 => 'STRING: eth0', 2 =>
-'STRING: eth2', 3 => 'STRING: sit0', 4 => 'STRING: sixxs', )
+running on localhost:
 
-|snmp3_real_walk|
+
+array (
+  0 => 'STRING: lo',
+  1 => 'STRING: eth0',
+  2 => 'STRING: eth2',
+  3 => 'STRING: sit0',
+  4 => 'STRING: sixxs',
+)
+
+===============================================================================
+*See* *Also*
+
+  * |snmp3_real_walk| - Return all objects including their respective object ID
+    within the specified one
+
 
 vim:ft=help:

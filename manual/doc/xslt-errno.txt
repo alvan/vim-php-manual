@@ -1,14 +1,33 @@
-xslt_errno -- Returns an error number
+xslt_errno
 
-  int xslt_errno(resource xh)~
+(PHP 4 >= 4.0.3)
 
-Returns an error code describing the last error that occurred on the passed
+xslt_errno — Returns an error number
+
+===============================================================================
+*Description*
+
+    int xslt_errno ( resource $xh )~
+
+Returns an error code describing the last error that occurred on the passed 
 XSLT processor.
 
-{ xh}The XSLT processor link identifier, created with |xslt_create|.
+===============================================================================
+*Parameters*
+
+{ xh}
+
+    The XSLT processor link identifier, created with |xslt_create|.
+
+===============================================================================
+*Return* *Values*
 
 Returns the error code, as an integer.
 
-|xslt_error|
+===============================================================================
+*See* *Also*
+
+  * |xslt_error| - Returns an error string
+
 
 vim:ft=help:

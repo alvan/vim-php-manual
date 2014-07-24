@@ -1,30 +1,59 @@
-svn_cat -- Returns the contents of a file in a repository
+svn_cat
 
-  string svn_cat(string repos_url [, int revision_no])~
+(PECL svn >= 0.1.0)
+
+svn_cat — Returns the contents of a file in a repository
+
+===============================================================================
+*Description*
+
+    string svn_cat ( string $repos_url [, int $revision_no ] )~
 
 Returns the contents of the URL {repos_url} to a file in the repository,
 optionally at revision number {revision_no}.
 
-{repos_url} String URL path to item in a repository.
+===============================================================================
+*Parameters*
 
-{revision_no} Integer revision number of item to retrieve, default is the HEAD
-revision.
+{repos_url}
+
+    String URL path to item in a repository.
+
+{revision_no}
+
+    Integer revision number of item to retrieve, default is the HEAD revision.
+
+===============================================================================
+*Return* *Values*
 
 Returns the string contents of the item from the repository on success, and
 FALSE on failure.
 
-This function is EXPERIMENTAL. The behaviour of this function, its name, and
-surrounding documentation may change without notice in a future release of
-PHP. This function should be used at your own risk.
+===============================================================================
+*Notes*
 
-Basic example This example retrieves the contents of a file at revision 28:
+Warning
+
+This function is EXPERIMENTAL. The behaviour of this function, its name, and
+surrounding documentation may change without notice in a future release of PHP.
+This function should be used at your own risk.
+
+===============================================================================
+*Examples*
+
+Example #1 Basic example
+
+This example retrieves the contents of a file at revision 28:
 
 <?php >
-  $contents = svn_cat('http://www.example.com/svnroot/calc/gui.c', 28)
-?>
+    $contents = svn_cat('http://www.example.com/svnroot/calc/gui.c', 28)
+<?>
 
+===============================================================================
+*See* *Also*
 
+  * svn_list()
+  * » SVN documentation on svn cat
 
-|svn_list| SVN documentation on svn cat
 
 vim:ft=help:

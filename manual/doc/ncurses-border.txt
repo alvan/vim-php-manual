@@ -1,16 +1,30 @@
-ncurses_border -- Draw a border around the screen using attributed characters
+ncurses_border
 
-  int ncurses_border(int left, int right, int top, int bottom, int tl_corner, int tr_corner, int bl_corner, int br_corner)~
+(PHP 4 >= 4.2.0, PHP 5 < 5.3.0, PECL ncurses >= 1.0.0)
+
+ncurses_border — Draw a border around the screen using attributed characters
+
+===============================================================================
+*Description*
+
+    int ncurses_border ( int $left , int $right , int $top , int $bottom , int~
+    $tl_corner , int $tr_corner , int $bl_corner , int $br_corner )~
+Warning
 
 This function is EXPERIMENTAL. The behaviour of this function, its name, and
-surrounding documentation may change without notice in a future release of
-PHP. This function should be used at your own risk.
+surrounding documentation may change without notice in a future release of PHP.
+This function should be used at your own risk.
 
 Draws the specified lines and corners around the main window.
 
 Use |ncurses_wborder| for borders around subwindows!
 
-Every parameter expects 0 to draw a line or 1 to skip it. {left}
+===============================================================================
+*Parameters*
+
+Every parameter expects 0 to draw a line or 1 to skip it.
+
+{left}
 
 {right}
 
@@ -18,14 +32,27 @@ Every parameter expects 0 to draw a line or 1 to skip it. {left}
 
 {bottom}
 
-{tl_corner} Top left corner
+{tl_corner}
 
-{tr_corner} Top right corner
+    Top left corner
 
-{bl_corner} Bottom left corner
+{tr_corner}
 
-{br_corner} Bottom right corner
+    Top right corner
 
-|ncurses_wborder|
+{bl_corner}
+
+    Bottom left corner
+
+{br_corner}
+
+    Bottom right corner
+
+===============================================================================
+*See* *Also*
+
+  * |ncurses_wborder| - Draws a border around the window using attributed
+    characters
+
 
 vim:ft=help:

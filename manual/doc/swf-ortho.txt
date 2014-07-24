@@ -1,10 +1,21 @@
-swf_ortho -- Defines an orthographic mapping of user coordinates onto the
+swf_ortho
+
+(PHP 4 >= 4.0.1)
+
+swf_ortho — Defines an orthographic mapping of user coordinates onto the
 current viewport
 
-  void swf_ortho(float xmin, float xmax, float ymin, float ymax, float zmin, float zmax)~
+===============================================================================
+*Description*
+
+    void swf_ortho ( float $xmin , float $xmax , float $ymin , float $ymax ,~
+    float $zmin , float $zmax )~
 
 Defines an 3D orthographic mapping of user coordinates onto the current
 viewport.
+
+===============================================================================
+*Parameters*
 
 {xmin}
 
@@ -18,8 +29,16 @@ viewport.
 
 {zmax}
 
+===============================================================================
+*Return* *Values*
+
 No value is returned.
 
-|swf_ortho2|
+===============================================================================
+*See* *Also*
+
+  * |swf_ortho2| - Defines 2D orthographic mapping of user coordinates onto the
+    current viewport
+
 
 vim:ft=help:

@@ -1,29 +1,52 @@
-array_product -- Calculate the product of values in an array
+array_product
 
-  number array_product(array array)~
+(PHP 5 >= 5.1.0)
 
-|array_product| returns the product of values in an array.
+array_product — Calculate the product of values in an array
 
-{array} The array.
+===============================================================================
+*Description*
+
+    number array_product ( array $array )~
+
+array_product() returns the product of values in an array.
+
+===============================================================================
+*Parameters*
+
+{array}
+
+    The array.
+
+===============================================================================
+*Return* *Values*
 
 Returns the product as an integer or float.
 
-Version Description 5.3.6 The product of an empty array is now 1, when before
-this function would return 0 for an empty array.
+===============================================================================
+*Changelog*
 
-|array_product| examples
+Version                               Description
+5.3.6   The product of an empty array is now 1, when before this function would
+        return 0 for an empty array.
+
+===============================================================================
+*Examples*
+
+Example #1 array_product() examples
 
 <?php >
-  $a = array(2, 4, 6, 8);
-  echo "product(a) = " . array_product($a) . "\n";
-  echo "product(array()) = " . array_product(array()) . "\n";
-?>
+
+    $a = array(2, 4, 6, 8);
+    echo "product(a) = " . array_product($a) . "\n";
+    echo "product(array()) = " . array_product(array()) . "\n";
+
+<?>
 
 The above example will output:
 
-  product(a) = 384
-  product(array()) = 1
-
+product(a) = 384
+product(array()) = 1
 
 
 vim:ft=help:

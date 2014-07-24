@@ -1,33 +1,56 @@
-pg_num_fields -- Returns the number of fields in a result
+pg_num_fields
 
-  int pg_num_fields(resource result)~
+(PHP 4 >= 4.2.0, PHP 5)
 
-|pg_num_fields| returns the number of fields (columns) in a PostgreSQL result
+pg_num_fields — Returns the number of fields in a result
+
+===============================================================================
+*Description*
+
+    int pg_num_fields ( resource $result )~
+
+pg_num_fields() returns the number of fields (columns) in a PostgreSQL result
 resource.
 
-This function used to be called |pg_numfields|.
+    Note:
 
-{result} PostgreSQL query result resource, returned by |pg_query|,
-|pg_query_params| or |pg_execute| (among others).
+    This function used to be called pg_numfields().
+
+===============================================================================
+*Parameters*
+
+{result}
+
+    PostgreSQL query result resource, returned by |pg_query|, |pg_query_params|
+    or |pg_execute| (among others).
+
+===============================================================================
+*Return* *Values*
 
 The number of fields (columns) in the result. On error, -1 is returned.
 
-|pg_num_fields| example
+===============================================================================
+*Examples*
+
+Example #1 pg_num_fields() example
 
 <?php >
-  $result = pg_query($conn, "SELECT 1, 2");
-  
-  $num = pg_num_fields($result);
-  
-  echo $num . " field(s) returned.\n";
-?>
+    $result = pg_query($conn, "SELECT 1, 2");
+
+    $num = pg_num_fields($result);
+
+    echo $num . " field(s) returned.\n";
+<?>
 
 The above example will output:
 
-  2 field(s) returned.
+2 field(s) returned.
 
+===============================================================================
+*See* *Also*
 
+  * |pg_num_rows| - Returns the number of rows in a result
+  * |pg_affected_rows| - Returns number of affected records (tuples)
 
-|pg_num_rows| |pg_affected_rows|
 
 vim:ft=help:

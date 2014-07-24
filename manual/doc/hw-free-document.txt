@@ -1,11 +1,27 @@
-hw_Free_Document -- Frees hw_document
+hw_Free_Document
 
-  bool hw_free_document(int hw_document)~
+(PHP 4)
+
+hw_Free_Document — Frees hw_document
+
+===============================================================================
+*Description*
+
+    bool hw_free_document ( int $hw_document )~
 
 Frees the memory occupied by the Hyperwave document.
 
-{hw_document} The document identifier.
+===============================================================================
+*Parameters*
 
-Returns TRUE on success or &false; on failure.
+{hw_document}
+
+    The document identifier.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
 
 vim:ft=help:

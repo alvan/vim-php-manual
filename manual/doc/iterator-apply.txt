@@ -1,38 +1,66 @@
-iterator_apply -- Call a function for every element in an iterator
+iterator_apply
 
-  int iterator_apply(Traversable iterator, callable function [, array args])~
+(PHP 5 >= 5.1.0)
+
+iterator_apply — Call a function for every element in an iterator
+
+===============================================================================
+*Description*
+
+    int iterator_apply ( Traversable $iterator , callable $function [, array~
+    $args ] )~
 
 Calls a function for every element in an iterator.
 
-{iterator} The class to iterate over.
+===============================================================================
+*Parameters*
 
-{function} The callback function to call on every element. The function must
-return TRUE in order to continue iterating over the {iterator}.
+{iterator}
 
-{args} Arguments to pass to the callback function.
+    The class to iterate over.
+
+{function}
+
+    The callback function to call on every element.
+
+
+        Note: The function must return TRUE in order to continue iterating over
+        the {iterator}.
+
+{args}
+
+    Arguments to pass to the callback function.
+
+===============================================================================
+*Return* *Values*
 
 Returns the iteration count.
 
-|iterator_apply| example
+===============================================================================
+*Examples*
+
+Example #1 iterator_apply() example
 
 <?php >
-  function print_caps(Iterator $iterator) {
-      echo strtoupper($iterator->current()) . "\n";
-      return TRUE;
-  }
-  
-  $it = new ArrayIterator(array("Apples", "Bananas", "Cherries"));
-  iterator_apply($it, "print_caps", array($it));
-?>
+    function print_caps(Iterator $iterator) {
+        echo strtoupper($iterator->current()) . "\n";
+        return TRUE;
+    }
+
+    $it = new ArrayIterator(array("Apples", "Bananas", "Cherries"));
+    iterator_apply($it, "print_caps", array($it));
+<?>
 
 The above example will output:
 
-  APPLES
-  BANANAS
-  CHERRIES
+APPLES
+BANANAS
+CHERRIES
 
+===============================================================================
+*See* *Also*
 
+  * |array_walk| - Apply a user function to every member of an array
 
-|array_walk|
 
 vim:ft=help:

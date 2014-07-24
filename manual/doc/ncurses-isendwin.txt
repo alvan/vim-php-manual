@@ -1,17 +1,33 @@
-ncurses_isendwin -- Ncurses is in endwin mode, normal screen output may be
+ncurses_isendwin
+
+(PHP 4 >= 4.0.7, PHP 5 < 5.3.0, PECL ncurses >= 1.0.0)
+
+ncurses_isendwin — Ncurses is in endwin mode, normal screen output may be
 performed
 
-  bool ncurses_isendwin()~
+===============================================================================
+*Description*
+
+    bool ncurses_isendwin ( void )~
+Warning
 
 This function is EXPERIMENTAL. The behaviour of this function, its name, and
-surrounding documentation may change without notice in a future release of
-PHP. This function should be used at your own risk.
+surrounding documentation may change without notice in a future release of PHP.
+This function should be used at your own risk.
 
 Checks if ncurses is in endwin mode.
 
-Returns TRUE, if |ncurses_end| has been called without any subsequent calls to
+===============================================================================
+*Return* *Values*
+
+Returns TRUE, if |ncurses_end| has been called without any subsequent calls to 
 |ncurses_wrefresh|, FALSE otherwise.
 
-|ncurses_end| |ncurses_wrefresh|
+===============================================================================
+*See* *Also*
+
+  * |ncurses_end| - Stop using ncurses, clean up the screen
+  * |ncurses_wrefresh| - Refresh window on terminal screen
+
 
 vim:ft=help:

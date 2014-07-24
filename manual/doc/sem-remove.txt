@@ -1,15 +1,36 @@
-sem_remove -- Remove a semaphore
+sem_remove
 
-  bool sem_remove(resource sem_identifier)~
+(PHP 4 >= 4.1.0, PHP 5)
 
-|sem_remove| removes the given semaphore.
+sem_remove — Remove a semaphore
+
+===============================================================================
+*Description*
+
+    bool sem_remove ( resource $sem_identifier )~
+
+sem_remove() removes the given semaphore.
 
 After removing the semaphore, it is no longer accessible.
 
-{sem_identifier} A semaphore resource identifier as returned by |sem_get|.
+===============================================================================
+*Parameters*
 
-Returns TRUE on success or &false; on failure.
+{sem_identifier}
 
-|sem_get| |sem_release| |sem_acquire|
+    A semaphore resource identifier as returned by |sem_get|.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*See* *Also*
+
+  * |sem_get| - Get a semaphore id
+  * |sem_release| - Release a semaphore
+  * |sem_acquire| - Acquire a semaphore
+
 
 vim:ft=help:

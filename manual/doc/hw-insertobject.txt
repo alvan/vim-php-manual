@@ -1,6 +1,14 @@
-hw_InsertObject -- Inserts an object record
+hw_InsertObject
 
-  int hw_insertobject(int connection, string object_rec, string parameter)~
+(PHP 4)
+
+hw_InsertObject — Inserts an object record
+
+===============================================================================
+*Description*
+
+    int hw_insertobject ( int $connection , string $object_rec , string~
+    $parameter )~
 
 Inserts an object into the server.
 
@@ -8,13 +16,29 @@ Note: If you want to insert an Anchor, the attribute Position has always been
 set either to a start/end value or to 'invisible'. Invisible positions are
 needed if the annotation has no corresponding link in the annotation text.
 
-{connection} The connection identifier.
+===============================================================================
+*Parameters*
 
-{object_rec} The object can be any valid hyperwave object.
+{connection}
 
-{parameter} See the HG-CSP documentation for a detailed information on how the
-parameters have to be.
+    The connection identifier.
 
-|hw_pipedocument| |hw_insertdocument| |hw_insdoc| |hw_inscoll|
+{object_rec}
+
+    The object can be any valid hyperwave object.
+
+{parameter}
+
+    See the HG-CSP documentation for a detailed information on how the
+    parameters have to be.
+
+===============================================================================
+*See* *Also*
+
+  * |hw_pipedocument| - Retrieve any document
+  * |hw_insertdocument| - Upload any document
+  * |hw_insdoc| - Insert document
+  * |hw_inscoll| - Insert collection
+
 
 vim:ft=help:

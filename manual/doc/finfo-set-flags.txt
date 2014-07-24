@@ -1,20 +1,40 @@
-finfo::set_flags -- Set libmagic configuration options
+finfo_set_flags
+
+finfo::set_flags
+
+(PHP >= 5.3.0, PECL fileinfo >= 0.1.0)
+
+finfo_set_flags -- finfo::set_flags — Set libmagic configuration options
+
+===============================================================================
+*Description*
 
 Procedural style
 
-  bool finfo_set_flags(resource finfo, int options)~
+    bool finfo_set_flags ( resource $finfo , int $options )~
 
 Object oriented style
 
-  bool finfo::set_flags(int options)~
+    public bool finfo::set_flags ( int $options )~
 
 This function sets various Fileinfo options. Options can be set also directly
 in |finfo_open| or other Fileinfo functions.
 
-{finfo} Fileinfo resource returned by |finfo_open|.
+===============================================================================
+*Parameters*
 
-{options} One or disjunction of more Fileinfo constants.
+{finfo}
 
-Returns TRUE on success or &false; on failure.
+    Fileinfo resource returned by |finfo_open|.
+
+{options}
+
+    One or disjunction of more Fileinfo constants.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
 
 vim:ft=help:

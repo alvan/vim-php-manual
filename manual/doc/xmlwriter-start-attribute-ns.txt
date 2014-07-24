@@ -1,28 +1,60 @@
-xmlwriter_start_attribute_ns -- Create start namespaced attribute
+XMLWriter::startAttributeNS
+
+xmlwriter_start_attribute_ns
+
+(PHP 5 >= 5.1.2, PECL xmlwriter >= 0.1.0)
+
+XMLWriter::startAttributeNS -- xmlwriter_start_attribute_ns — Create start
+namespaced attribute
+
+===============================================================================
+*Description*
 
 Object oriented style
 
-  bool XMLWriter::startAttributeNS(string prefix, string name, string uri)~
+    bool XMLWriter::startAttributeNS ( string $prefix , string $name , string~
+    $uri )~
 
 Procedural style
 
-  bool xmlwriter_start_attribute_ns(resource xmlwriter, string prefix, string name, string uri)~
+    bool xmlwriter_start_attribute_ns ( resource $xmlwriter , string $prefix ,~
+    string $name , string $uri )~
 
 Starts a namespaced attribute.
 
-{ xmlwriter}Only for procedural calls. The XMLWriter resource that is being
-modified. This resource comes from a call to |xmlwriter_open_uri| or
-|xmlwriter_open_memory|.
+===============================================================================
+*Parameters*
 
-{prefix} The namespace prefix.
+{ xmlwriter}
 
-{name} The attribute name.
+    Only for procedural calls. The XMLWriter resource that is being modified.
+    This resource comes from a call to |xmlwriter_open_uri| or |
+    xmlwriter_open_memory|.
 
-{uri} The namespace URI.
+{prefix}
 
-Returns TRUE on success or &false; on failure.
+    The namespace prefix.
 
-XMLWriter::startAttribute XMLWriter::endAttribute XMLWriter::writeAttribute
-XMLWriter::writeAttributeNS
+{name}
+
+    The attribute name.
+
+{uri}
+
+    The namespace URI.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*See* *Also*
+
+  * |XMLWriter::startAttribute| - Create start attribute
+  * |XMLWriter::endAttribute| - End attribute
+  * |XMLWriter::writeAttribute| - Write full attribute
+  * |XMLWriter::writeAttributeNS| - Write full namespaced attribute
+
 
 vim:ft=help:

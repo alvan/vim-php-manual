@@ -1,18 +1,36 @@
-eio_get_last_error -- Returns string describing the last error associated with
-a request resource
+eio_get_last_error
 
-  string eio_get_last_error(resource req)~
+(PECL eio >= 1.0.0)
 
-|eio_get_last_error| returns string describing the last error associated with
+eio_get_last_error — Returns string describing the last error associated with a
+request resource
+
+===============================================================================
+*Description*
+
+    string eio_get_last_error ( resource $req )~
+
+eio_get_last_error() returns string describing the last error associated with
 {req}.
 
-The request resource
+===============================================================================
+*Parameters*
 
-|eio_get_last_error| returns string describing the last error associated with
+{req}
+
+    The request resource
+
+===============================================================================
+*Return* *Values*
+
+eio_get_last_error() returns string describing the last error associated with
 the request resource specified by {req}.
 
+Warning
+
 This function is EXPERIMENTAL. The behaviour of this function, its name, and
-surrounding documentation may change without notice in a future release of
-PHP. This function should be used at your own risk.
+surrounding documentation may change without notice in a future release of PHP.
+This function should be used at your own risk.
+
 
 vim:ft=help:

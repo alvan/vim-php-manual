@@ -1,13 +1,30 @@
-connection_status -- Returns connection status bitfield
+connection_status
 
-  int connection_status()~
+(PHP 4, PHP 5)
+
+connection_status — Returns connection status bitfield
+
+===============================================================================
+*Description*
+
+    int connection_status ( void )~
 
 Gets the connection status bitfield.
+
+===============================================================================
+*Return* *Values*
 
 Returns the connection status bitfield, which can be used against the
 CONNECTION_XXX constants to determine the connection status.
 
-|connection_aborted| |ignore_user_abort| Connection Handling for a complete
-description of connection handling in PHP.
+===============================================================================
+*See* *Also*
+
+  * |connection_aborted| - Check whether client disconnected
+  * |ignore_user_abort| - Set whether a client disconnect should abort script
+    execution
+  * Connection Handling for a complete description of connection handling in
+    PHP.
+
 
 vim:ft=help:

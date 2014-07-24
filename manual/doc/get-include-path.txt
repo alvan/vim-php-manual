@@ -1,25 +1,42 @@
-get_include_path -- Gets the current include_path configuration option
+get_include_path
 
-  string get_include_path()~
+(PHP 4 >= 4.3.0, PHP 5)
+
+get_include_path — Gets the current include_path configuration option
+
+===============================================================================
+*Description*
+
+    string get_include_path ( void )~
 
 Gets the current include_path configuration option value.
 
+===============================================================================
+*Return* *Values*
+
 Returns the path, as a string.
 
-|get_include_path| example
+===============================================================================
+*Examples*
+
+Example #1 get_include_path() example
 
 <?php >
-  // Works as of PHP 4.3.0
-  echo get_include_path();
-  
-  // Works in all PHP versions
-  echo ini_get('include_path');
-?>
+    // Works as of PHP 4.3.0
+    echo get_include_path();
 
+    // Works in all PHP versions
+    echo ini_get('include_path');
+<?>
 
+===============================================================================
+*See* *Also*
 
+  * |ini_get| - Gets the value of a configuration option
+  * |restore_include_path| - Restores the value of the include_path
+    configuration option
+  * |set_include_path| - Sets the include_path configuration option
+  * |include| - include
 
-
-|ini_get| |restore_include_path| |set_include_path| |include|
 
 vim:ft=help:

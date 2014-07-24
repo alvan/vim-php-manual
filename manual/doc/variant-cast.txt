@@ -1,6 +1,13 @@
-variant_cast -- Convert a variant into a new variant object of another type
+variant_cast
 
-  variant variant_cast(variant variant, int type)~
+(PHP 5)
+
+variant_cast — Convert a variant into a new variant object of another type
+
+===============================================================================
+*Description*
+
+    variant variant_cast ( variant $variant , int $type )~
 
 This function makes a copy of {variant} and then performs a variant cast
 operation to force the copy to have the type given by {type}.
@@ -8,12 +15,26 @@ operation to force the copy to have the type given by {type}.
 This function wraps VariantChangeType() in the COM library; consult MSDN for
 more information.
 
-{variant} The variant.
+===============================================================================
+*Parameters*
 
-{type} {type} should be one of the VT_XXX constants.
+{variant}
+
+    The variant.
+
+{type}
+
+    {type} should be one of the VT_XXX constants.
+
+===============================================================================
+*Return* *Values*
 
 Returns a VT_DATE variant.
 
-|variant_set_type|
+===============================================================================
+*See* *Also*
+
+  * |variant_set_type| - Convert a variant into another type "in-place"
+
 
 vim:ft=help:

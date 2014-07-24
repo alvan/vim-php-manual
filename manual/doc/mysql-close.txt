@@ -1,45 +1,76 @@
-mysql_close -- Close MySQL connection
+mysql_close
+
+(PHP 4, PHP 5)
+
+mysql_close — Close MySQL connection
+
+Warning
 
 This extension is deprecated as of PHP 5.5.0, and will be removed in the
 future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
-MySQL: choosing an API guide and related FAQ for more information.
-Alternatives to this function include:
+MySQL: choosing an API guide and related FAQ for more information. Alternatives
+to this function include:
 
-  bool mysql_close([resource link_identifier = NULL])~
+  * mysqli_close()
+  * PDO: Assign the value of NULL to the PDO object
 
-|mysql_close| closes the non-persistent connection to the MySQL server that's
+===============================================================================
+*Description*
+
+    bool mysql_close ([ resource $link_identifier = NULL ] )~
+
+mysql_close() closes the non-persistent connection to the MySQL server that's
 associated with the specified link identifier. If {link_identifier} isn't
 specified, the last opened link is used.
 
-Using |mysql_close| isn't usually necessary, as non-persistent open links are
+Using mysql_close() isn't usually necessary, as non-persistent open links are
 automatically closed at the end of the script's execution. See also freeing
 resources.
 
-{ link_identifier}The MySQL connection. If the link identifier is not
-specified, the last link opened by |mysql_connect| is assumed. If no
-connection is found or established, an E_WARNING level error is generated.
+===============================================================================
+*Parameters*
 
-Returns TRUE on success or &false; on failure.
+{ link_identifier}
 
-|mysql_close| example
+    The MySQL connection. If the link identifier is not specified, the last
+    link opened by |mysql_connect| is assumed. If no connection is found or
+    established, an E_WARNING level error is generated.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*Examples*
+
+Example #1 mysql_close() example
 
 <?php >
-  $link = mysql_connect('localhost', 'mysql_user', 'mysql_password');
-  if (!$link) {
-      die('Could not connect: ' . mysql_error());
-  }
-  echo 'Connected successfully';
-  mysql_close($link);
-?>
+    $link = mysql_connect('localhost', 'mysql_user', 'mysql_password');
+    if (!$link) {
+        die('Could not connect: ' . mysql_error());
+    }
+    echo 'Connected successfully';
+    mysql_close($link);
+<?>
 
 The above example will output:
 
-  Connected successfully
+Connected successfully
 
+===============================================================================
+*Notes*
 
+    Note:
 
-|mysql_close| will not close persistent links created by |mysql_pconnect|.
+    mysql_close() will not close persistent links created by |mysql_pconnect|.
 
-|mysql_connect| |mysql_free_result|
+===============================================================================
+*See* *Also*
+
+  * |mysql_connect| - Open a connection to a MySQL Server
+  * |mysql_free_result| - Free result memory
+
 
 vim:ft=help:

@@ -1,33 +1,59 @@
-shuffle -- Shuffle an array
+shuffle
 
-  bool shuffle(array &array)~
+(PHP 4, PHP 5)
+
+shuffle — Shuffle an array
+
+===============================================================================
+*Description*
+
+    bool shuffle ( array &$array )~
 
 This function shuffles (randomizes the order of the elements in) an array.
 
-{array} The array.
+===============================================================================
+*Parameters*
 
-Returns TRUE on success or &false; on failure.
+{array}
 
-|shuffle| example
+    The array.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*Examples*
+
+Example #1 shuffle() example
 
 <?php >
-  $numbers = range(1, 20);
-  shuffle($numbers);
-  foreach ($numbers as $number) {
-      echo "$number ";
-  }
-?>
+    $numbers = range(1, 20);
+    shuffle($numbers);
+    foreach ($numbers as $number) {
+        echo "$number ";
+    }
+<?>
 
+===============================================================================
+*Changelog*
 
+Version                     Description
+4.2.0   The random number generator is seeded automatically.
 
+===============================================================================
+*Notes*
 
+    Note: This function assigns new keys to the elements in {array}. It will
+    remove any existing keys that may have been assigned, rather than just
+    reordering the keys.
 
-Version Description 4.2.0The random number generator is seeded automatically.
+===============================================================================
+*See* *Also*
 
-This function assigns new keys to the elements in {array}. It will remove any
-existing keys that may have been assigned, rather than just reordering the
-keys.
+  * |array_rand| - Pick one or more random entries out of an array
+  * The comparison of array sorting functions
 
-|array_rand| The comparison of array sorting functions
 
 vim:ft=help:

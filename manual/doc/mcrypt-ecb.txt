@@ -1,17 +1,27 @@
-mcrypt_ecb -- Deprecated: Encrypts/decrypts data in ECB mode
+mcrypt_ecb
 
-  string mcrypt_ecb(int cipher, string key, string data, int mode)~
+(PHP 4, PHP 5)
 
-  string mcrypt_ecb(string cipher, string key, string data, int mode [, string iv])~
+mcrypt_ecb — Deprecated: Encrypts/decrypts data in ECB mode
+
+===============================================================================
+*Description*
+
+    string mcrypt_ecb ( int $cipher , string $key , string $data , int $mode )~
+    string mcrypt_ecb ( string $cipher , string $key , string $data , int~
+    $mode [, string $iv ] )~
 
 The first prototype is when linked against libmcrypt 2.2.x, the second when
 linked against libmcrypt 2.4.x or higher. The {mode} should be either
 MCRYPT_ENCRYPT or MCRYPT_DECRYPT.
 
-This function is deprecated and should not be used anymore, see
-|mcrypt_generic| and |mdecrypt_generic| for replacements.
+This function is deprecated and should not be used anymore, see |mcrypt_generic
+| and |mdecrypt_generic| for replacements.
+
+Warning
 
 This function has been DEPRECATED as of PHP 5.5.0. Relying on this function is
 highly discouraged.
+
 
 vim:ft=help:

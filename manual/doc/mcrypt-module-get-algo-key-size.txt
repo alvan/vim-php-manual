@@ -1,16 +1,35 @@
-mcrypt_module_get_algo_key_size -- Returns the maximum supported keysize of
-the opened mode
+mcrypt_module_get_algo_key_size
 
-  int mcrypt_module_get_algo_key_size(string algorithm [, string lib_dir])~
+(PHP 4 >= 4.0.2, PHP 5)
+
+mcrypt_module_get_algo_key_size — Returns the maximum supported keysize of the
+opened mode
+
+===============================================================================
+*Description*
+
+    int mcrypt_module_get_algo_key_size ( string $algorithm [, string $lib_dir~
+    ] )~
 
 Gets the maximum supported keysize of the opened mode.
 
-{algorithm} The algorithm name.
+===============================================================================
+*Parameters*
 
-{lib_dir} This optional parameter can contain the location where the mode
-module is on the system.
+{algorithm}
 
-This function returns the maximum supported key size of the algorithm
-specified in bytes.
+    The algorithm name.
+
+{lib_dir}
+
+    This optional parameter can contain the location where the mode module is
+    on the system.
+
+===============================================================================
+*Return* *Values*
+
+This function returns the maximum supported key size of the algorithm specified
+in bytes.
+
 
 vim:ft=help:

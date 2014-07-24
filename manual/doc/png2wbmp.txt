@@ -1,40 +1,71 @@
-png2wbmp -- Convert PNG image file to WBMP image file
+png2wbmp
 
-  bool png2wbmp(string pngname, string wbmpname, int dest_height, int dest_width, int threshold)~
+(PHP 4 >= 4.0.5, PHP 5)
+
+png2wbmp — Convert PNG image file to WBMP image file
+
+===============================================================================
+*Description*
+
+    bool png2wbmp ( string $pngname , string $wbmpname , int $dest_height ,~
+    int $dest_width , int $threshold )~
 
 Converts a PNG file into a WBMP file.
 
-{pngname} Path to PNG file.
+===============================================================================
+*Parameters*
 
-{wbmpname} Path to destination WBMP file.
+{pngname}
 
-{dest_height} Destination image height.
+    Path to PNG file.
 
-{dest_width} Destination image width.
+{wbmpname}
 
-{threshold} Threshold value, between 0 and 8 (inclusive).
+    Path to destination WBMP file.
 
-Returns TRUE on success or &false; on failure.
+{dest_height}
 
-|png2wbmp| example
+    Destination image height.
+
+{dest_width}
+
+    Destination image width.
+
+{threshold}
+
+    Threshold value, between 0 and 8 (inclusive).
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*Examples*
+
+Example #1 png2wbmp() example
 
 <?php >
-  // Path to the target png
-  $path = './test.png';
-  
-  // Get the image sizes
-  $image = getimagesize($path);
-  
-  // Convert image
-  png2wbmp($path, './test.wbmp', $image[1], $image[0], 7);
-?>
+    // Path to the target png
+    $path = './test.png';
 
+    // Get the image sizes
+    $image = getimagesize($path);
 
+    // Convert image
+    png2wbmp($path, './test.wbmp', $image[1], $image[0], 7);
+<?>
 
+===============================================================================
+*Notes*
 
+    Note: WBMP support is only available if PHP was compiled against GD-1.8 or
+    later.
 
-WBMP support is only available if PHP was compiled against GD-1.8 or later.
+===============================================================================
+*See* *Also*
 
-|jpeg2wbmp|
+  * |jpeg2wbmp| - Convert JPEG image file to WBMP image file
+
 
 vim:ft=help:

@@ -1,41 +1,70 @@
-register_tick_function -- Register a function for execution on each tick
+register_tick_function
 
-  bool register_tick_function(callable function [, mixed arg [, mixed ...]])~
+(PHP 4 >= 4.0.3, PHP 5)
+
+register_tick_function — Register a function for execution on each tick
+
+===============================================================================
+*Description*
+
+    bool register_tick_function ( callable $function [, mixed $arg [, mixed~
+    $... ]] )~
 
 Registers the given {function} to be executed when a tick is called.
 
-{function} The function name as a string, or an array consisting of an object
-and a method.
+===============================================================================
+*Parameters*
+
+{function}
+
+    The function name as a string, or an array consisting of an object and a
+    method.
 
 {arg}
 
 {...}
 
-Returns TRUE on success or &false; on failure.
+===============================================================================
+*Return* *Values*
 
-|register_tick_function| example
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*Examples*
+
+Example #1 register_tick_function() example
 
 <?php >
-  declare(ticks=1);
-  
-  // using a function as the callback
-  register_tick_function('my_function', true);
-  
-  // using an object->method
-  $object = new my_class();
-  register_tick_function(array(&amp;$object, 'my_method'), true);
-?>
+    declare(ticks=1);
 
+    // using a function as the callback
+    register_tick_function('my_function', true);
 
+    // using an object->method
+    $object = new my_class();
+    register_tick_function(array(&$object, 'my_method'), true);
+<?>
 
+===============================================================================
+*Changelog*
 
+Version                       Description
+5.3.0   Ticks are now supported on threaded web server modules.
 
-Version Description 5.3.0 Ticks are now supported on threaded web server
-modules.
+===============================================================================
+*Notes*
 
-|register_tick_function| should not be used with threaded web server modules
+Warning
+
+register_tick_function() should not be used with threaded web server modules
 with PHP 5.2 or lower.
 
-declare |unregister_tick_function|
+===============================================================================
+*See* *Also*
+
+  * declare
+  * |unregister_tick_function| - De-register a function for execution on each
+    tick
+
 
 vim:ft=help:
