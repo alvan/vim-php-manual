@@ -1,6 +1,6 @@
 ob_start -- Turn on output buffering
 
-  bool ob_start([callable output_callback =  [, int chunk_size = 0 [, int flags = ]]])~
+  bool ob_start([callable output_callback = NULL [, int chunk_size = 0 [, int flags = NULL]]])~
 
 This function will turn output buffering on. While output buffering is active
 no output is sent from the script (other than headers), instead the output is
@@ -30,7 +30,7 @@ is expected to return a new output buffer as a result, which will be sent to
 the browser. If the {output_callback} is not a callable function, this
 function will return FALSE. This is the callback signature:
 
-  string ([callable output_callback =  [, int chunk_size = 0 [, int flags = , string buffer =  [, int phase = ]]]])~
+  string handler(string buffer [, int phase])~
 
 {buffer} Contents of the output buffer.
 

@@ -6,7 +6,7 @@ Procedural style
 
 Object oriented style
 
-  mixed maxdb_stmt::prepare(resource stmt, string query, string query)~
+  mixed maxdb_stmt::prepare(string query)~
 
 |maxdb_stmt_prepare| prepares the SQL query pointed to by the null-terminated
 string query. The statement resource has to be allocated by |maxdb_stmt_init|.

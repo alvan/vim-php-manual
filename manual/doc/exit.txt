@@ -2,7 +2,7 @@ exit -- Output a message and terminate the current script
 
   void exit([string status])~
 
-  void exit([string status, int status])~
+  void exit(int status)~
 
 Terminates execution of the script. Shutdown functions and object destructors
 will always be executed even if exit is called.

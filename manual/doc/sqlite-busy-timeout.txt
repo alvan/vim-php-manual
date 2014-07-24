@@ -5,7 +5,7 @@ handlers
 
 Object oriented style (method):
 
-  void SQLiteDatabase::busyTimeout(resource dbhandle, int milliseconds, int milliseconds)~
+  void SQLiteDatabase::busyTimeout(int milliseconds)~
 
 Set the maximum time, in milliseconds, that SQLite will wait for a {dbhandle}
 to become ready for use.

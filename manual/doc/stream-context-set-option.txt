@@ -2,7 +2,7 @@ stream_context_set_option -- Sets an option for a stream/wrapper/context
 
   bool stream_context_set_option(resource stream_or_context, string wrapper, string option, mixed value)~
 
-  bool stream_context_set_option(resource stream_or_context, string wrapper, string option, mixed value, resource stream_or_context, array options)~
+  bool stream_context_set_option(resource stream_or_context, array options)~
 
 Sets an option on the specified context. {value} is set to {option} for
 {wrapper}

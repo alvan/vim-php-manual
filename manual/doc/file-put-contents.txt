@@ -1,6 +1,6 @@
 file_put_contents -- Write a string to a file
 
-  int file_put_contents(string filename, mixed data [, int flags = 0 [, resource context = 0]])~
+  int file_put_contents(string filename, mixed data [, int flags = 0 [, resource context]])~
 
 This function is identical to calling |fopen|, |fwrite| and |fclose|
 successively to write data to a file.

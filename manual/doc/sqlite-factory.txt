@@ -1,7 +1,7 @@
 sqlite_factory -- Opens an SQLite database and returns an SQLiteDatabase
 object
 
-  SQLiteDatabase sqlite_factory(string filename [, int mode = 0666 [, string &error_message = 0666]])~
+  SQLiteDatabase sqlite_factory(string filename [, int mode = 0666 [, string &error_message]])~
 
 |sqlite_factory| behaves similarly to |sqlite_open| in that it opens an SQLite
 database or attempts to create it if it does not exist. However, a

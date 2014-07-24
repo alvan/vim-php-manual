@@ -1,6 +1,6 @@
 mb_check_encoding -- Check if the string is valid for the specified encoding
 
-  bool mb_check_encoding([string var =  [, string encoding = mb_internal_encoding()]])~
+  bool mb_check_encoding([string var = NULL [, string encoding = mb_internal_encoding()]])~
 
 Checks if the specified byte stream is valid for the specified encoding. It is
 useful to prevent so-called "Invalid Encoding Attack".

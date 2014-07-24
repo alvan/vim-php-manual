@@ -1,6 +1,6 @@
 ssh2_shell -- Request an interactive shell
 
-  resource ssh2_shell(resource session [, string term_type = "vanilla" [, array env = "vanilla" [, int width = 80 [, int height = 25 [, int width_height_type = SSH2_TERM_UNIT_CHARS]]]]])~
+  resource ssh2_shell(resource session [, string term_type = "vanilla" [, array env [, int width = 80 [, int height = 25 [, int width_height_type = SSH2_TERM_UNIT_CHARS]]]]])~
 
 Open a shell at the remote end and allocate a stream for it.
 

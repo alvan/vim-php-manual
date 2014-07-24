@@ -1,7 +1,7 @@
 stream_notification_callback -- A callback function for the notification
 context parameter
 
-  void (int notification_code, int severity, string message, int message_code, int bytes_transferred, int bytes_max)~
+  void stream_notification_callback(int notification_code, int severity, string message, int message_code, int bytes_transferred, int bytes_max)~
 
 A callable function, used by the notification context parameter, called during
 an event.

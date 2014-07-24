@@ -6,7 +6,7 @@ Procedural style
 
 Object oriented style
 
-  bool maxdb_stmt::stmt_send_long_data(resource stmt, int param_nr, string data, int param_nr, string data)~
+  bool maxdb_stmt::stmt_send_long_data(int param_nr, string data)~
 
 Allows to send parameter data to the server in pieces (or chunks). This
 function can be called multiple times to send the parts of a character or

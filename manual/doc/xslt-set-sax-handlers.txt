@@ -44,25 +44,43 @@ The given array does not need to contain all of the different sax handler
 elements (although it can), but it only needs to conform to "handler" =>
 "function" format described above.
 
-  void (resource processor, array handlers, resource processor)~
-
 Each of the individual SAX handler functions are in the format below:
 
-  void (resource processor, array handlers, resource processor, resource processor)~
+   start_doc(resource processor)~
 
-  void (resource processor, array handlers, resource processor, resource processor, resource processor, string name, array attributes)~
 
-  void (resource processor, array handlers, resource processor, resource processor, resource processor, string name, array attributes, resource processor, string name)~
 
-  void (resource processor, array handlers, resource processor, resource processor, resource processor, string name, array attributes, resource processor, string name, resource processor, string prefix, string uri)~
+   end_doc(resource processor)~
 
-  void (resource processor, array handlers, resource processor, resource processor, resource processor, string name, array attributes, resource processor, string name, resource processor, string prefix, string uri, resource processor, string prefix)~
 
-  void (resource processor, array handlers, resource processor, resource processor, resource processor, string name, array attributes, resource processor, string name, resource processor, string prefix, string uri, resource processor, string prefix, resource processor, string contents)~
 
-  void (resource processor, array handlers, resource processor, resource processor, resource processor, string name, array attributes, resource processor, string name, resource processor, string prefix, string uri, resource processor, string prefix, resource processor, string contents, resource processor, string target, string contents)~
+   start_element(resource processor, string name, array attributes)~
 
-  void (resource processor, array handlers, resource processor, resource processor, resource processor, string name, array attributes, resource processor, string name, resource processor, string prefix, string uri, resource processor, string prefix, resource processor, string contents, resource processor, string target, string contents, resource processor, string contents)~
+
+
+   end_element(resource processor, string name)~
+
+
+
+   start_namespace(resource processor, string prefix, string uri)~
+
+
+
+   end_namespace(resource processor, string prefix)~
+
+
+
+   comment(resource processor, string contents)~
+
+
+
+   pi(resource processor, string target, string contents)~
+
+
+
+   characters(resource processor, string contents)~
+
+
 
 No value is returned.
 

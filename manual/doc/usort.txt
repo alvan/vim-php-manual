@@ -19,7 +19,7 @@ keys.
 equal to, or greater than zero if the first argument is considered to be
 respectively less than, equal to, or greater than the second.
 
-  int (array &array, callable value_compare_func, mixed a, mixed b)~
+  int callback(mixed a, mixed b)~
 
 Returning non-integer values from the comparison function, such as float, will
 result in an internal cast to integer of the callback's return value. So

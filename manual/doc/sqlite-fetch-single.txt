@@ -5,9 +5,9 @@ string
 
 Object oriented style (method):
 
-  string SQLiteResult::fetchSingle(resource result [, bool decode_binary = true [, bool decode_binary = true]])~
+  string SQLiteResult::fetchSingle([bool decode_binary = true])~
 
-  string SQLiteUnbuffered::fetchSingle(resource result [, bool decode_binary = true [, bool decode_binary = true [, bool decode_binary = true]]])~
+  string SQLiteUnbuffered::fetchSingle([bool decode_binary = true])~
 
 |sqlite_fetch_single| is identical to |sqlite_fetch_array| except that it
 returns the value of the first column of the rowset.

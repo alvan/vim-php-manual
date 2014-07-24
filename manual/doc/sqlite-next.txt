@@ -4,9 +4,9 @@ SQLiteUnbuffered::next -- Seek to the next row number
 
 Object oriented style (method):
 
-  bool SQLiteResult::next(resource result)~
+  bool SQLiteResult::next()~
 
-  bool SQLiteUnbuffered::next(resource result)~
+  bool SQLiteUnbuffered::next()~
 
 |sqlite_next| advances the result handle {result} to the next row.
 

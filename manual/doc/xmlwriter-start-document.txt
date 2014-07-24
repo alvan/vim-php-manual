@@ -2,11 +2,11 @@ xmlwriter_start_document -- Create document tag
 
 Object oriented style
 
-  bool XMLWriter::startDocument([string version = 1.0 [, string encoding =  [, string standalone = ]]])~
+  bool XMLWriter::startDocument([string version = 1.0 [, string encoding = NULL [, string standalone]]])~
 
 Procedural style
 
-  bool xmlwriter_start_document([string version = 1.0 [, string encoding =  [, string standalone = , resource xmlwriter =  [, string version = 1.0 [, string encoding =  [, string standalone = ]]]]]])~
+  bool xmlwriter_start_document(resource xmlwriter [, string version = 1.0 [, string encoding = NULL [, string standalone]]])~
 
 Starts a document.
 

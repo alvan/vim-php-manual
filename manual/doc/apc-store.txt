@@ -2,7 +2,7 @@ apc_store -- Cache a variable in the data store
 
   bool apc_store(string key, mixed var [, int ttl = 0])~
 
-  array apc_store(string key, mixed var [, int ttl = 0, array values = 0 [, mixed unused = NULL [, int ttl = 0]]])~
+  array apc_store(array values [, mixed unused = NULL [, int ttl = 0]])~
 
 Cache a variable in the data store.
 

@@ -6,7 +6,7 @@ Procedural style
 
 Object oriented style
 
-  bool maxdb_result::field_seek(resource result, int fieldnr, int fieldnr)~
+  bool maxdb_result::field_seek(int fieldnr)~
 
 Sets the field cursor to the given offset. The next call to
 |maxdb_fetch_field| will retrieve the field definition of the column

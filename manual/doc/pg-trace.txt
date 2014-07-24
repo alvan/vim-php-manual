@@ -1,6 +1,6 @@
 pg_trace -- Enable tracing a PostgreSQL connection
 
-  bool pg_trace(string pathname [, string mode = "w" [, resource connection = "w"]])~
+  bool pg_trace(string pathname [, string mode = "w" [, resource connection]])~
 
 |pg_trace| enables tracing of the PostgreSQL frontend/backend communication to
 a file. To fully understand the results, one needs to be familiar with the

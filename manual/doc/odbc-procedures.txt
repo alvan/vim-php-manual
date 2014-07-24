@@ -2,7 +2,7 @@ odbc_procedures -- Get the list of procedures stored in a specific data source
 
   resource odbc_procedures(resource connection_id)~
 
-  resource odbc_procedures(resource connection_id, resource connection_id, string qualifier, string owner, string name)~
+  resource odbc_procedures(resource connection_id, string qualifier, string owner, string name)~
 
 Lists all procedures in the requested range.
 

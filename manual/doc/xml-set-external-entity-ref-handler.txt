@@ -12,14 +12,15 @@ handler function.
 {handler} {handler} is a string containing the name of a function that must
 exist when |xml_parse| is called for {parser}.
 
-  bool (resource parser, callable handler, resource parser, string open_entity_names, string base, string system_id, string public_id)~
-
 The function named by {handler} must accept five parameters, and should return
 an integer value.If the value returned from the handler is FALSE (which it
 will be if no value is returned), the XML parser will stop parsing and
-|xml_get_error_code| will return XML_ERROR_EXTERNAL_ENTITY_HANDLING. {parser}
-The first parameter, parser, is a reference to the XML parser calling the
-handler.
+|xml_get_error_code| will return XML_ERROR_EXTERNAL_ENTITY_HANDLING.
+
+   handler(resource parser, string open_entity_names, string base, string system_id, string public_id)~
+
+{parser} The first parameter, parser, is a reference to the XML parser calling
+the handler.
 
 {open_entity_names} The second parameter, {open_entity_names}, is a
 space-separated list of the names of the entities that are open for the parse

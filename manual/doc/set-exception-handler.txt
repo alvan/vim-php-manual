@@ -9,7 +9,9 @@ try/catch block. Execution will stop after the {exception_handler} is called.
 exception occurs. This handler function needs to accept one parameter, which
 will be the exception object that was thrown. This is the handler signature:
 
-  void (callable exception_handler, Exception ex)~
+  void handler(Exception ex)~
+
+
 
 NULL may be passed instead, to reset this handler to its default state.
 

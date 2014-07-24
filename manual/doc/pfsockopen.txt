@@ -1,6 +1,6 @@
 pfsockopen -- Open persistent Internet or Unix domain socket connection
 
-  resource pfsockopen(string hostname [, int port = -1 [, int &errno = -1 [, string &errstr = -1 [, float timeout = ini_get("default_socket_timeout")]]]])~
+  resource pfsockopen(string hostname [, int port = -1 [, int &errno [, string &errstr [, float timeout = ini_get("default_socket_timeout")]]]])~
 
 This function behaves exactly as |fsockopen| with the difference that the
 connection is not closed after the script finishes. It is the persistent

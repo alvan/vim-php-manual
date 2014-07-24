@@ -2,7 +2,7 @@ cubrid_execute -- Execute a prepared SQL statement
 
   resource cubrid_execute(resource conn_identifier, string sql [, int option])~
 
-  bool cubrid_execute(resource conn_identifier, string sql [, int option, resource request_identifier [, int option]])~
+  bool cubrid_execute(resource request_identifier [, int option])~
 
 The |cubrid_execute| function is used to execute the given SQL statement. It
 executes the query by using {conn_identifier} and SQL, and then returns the

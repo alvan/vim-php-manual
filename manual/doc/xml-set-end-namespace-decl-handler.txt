@@ -11,14 +11,15 @@ end tag of the element in which the namespace was declared.
 {handler} {handler} is a string containing the name of a function that must
 exist when |xml_parse| is called for {parser}.
 
-  bool (resource parser, callable handler, resource parser, string prefix)~
-
 The function named by {handler} must accept two parameters, and should return
 an integer value. If the value returned from the handler is FALSE (which it
 will be if no value is returned), the XML parser will stop parsing and
-|xml_get_error_code| will return XML_ERROR_EXTERNAL_ENTITY_HANDLING. {parser}
-The first parameter, parser, is a reference to the XML parser calling the
-handler.
+|xml_get_error_code| will return XML_ERROR_EXTERNAL_ENTITY_HANDLING.
+
+   handler(resource parser, string prefix)~
+
+{parser} The first parameter, parser, is a reference to the XML parser calling
+the handler.
 
 {prefix} The prefix is a string used to reference the namespace within an XML
 object.

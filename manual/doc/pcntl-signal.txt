@@ -14,7 +14,7 @@ respectively.
 
 If a callable is given, it must implement the following signature:
 
-  void (int signo, callable|int handler [, bool restart_syscalls = true, int signo = true])~
+  void handler(int signo)~
 
 {signo} The signal being handled.
 

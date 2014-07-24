@@ -1,7 +1,7 @@
 openssl_x509_checkpurpose -- Verifies if a certificate can be used for a
 particular purpose
 
-  int openssl_x509_checkpurpose(mixed x509cert, int purpose [, array cainfo = array() [, string untrustedfile = array()]])~
+  int openssl_x509_checkpurpose(mixed x509cert, int purpose [, array cainfo = array() [, string untrustedfile]])~
 
 |openssl_x509_checkpurpose| examines a certificate to see if it can be used
 for the specified {purpose}.

@@ -2,7 +2,7 @@ levenshtein -- Calculate Levenshtein distance between two strings
 
   int levenshtein(string str1, string str2)~
 
-  int levenshtein(string str1, string str2, string str1, string str2, int cost_ins, int cost_rep, int cost_del)~
+  int levenshtein(string str1, string str2, int cost_ins, int cost_rep, int cost_del)~
 
 The Levenshtein distance is defined as the minimal number of characters you
 have to replace, insert or delete to transform {str1} into {str2}. The

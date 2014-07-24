@@ -1,7 +1,7 @@
 sqlite_popen -- Opens a persistent handle to an SQLite database and create the
 database if it does not exist
 
-  resource sqlite_popen(string filename [, int mode = 0666 [, string &error_message = 0666]])~
+  resource sqlite_popen(string filename [, int mode = 0666 [, string &error_message]])~
 
 This function behaves identically to |sqlite_open| except that is uses the
 persistent resource mechanism of PHP. For information about the meaning of the

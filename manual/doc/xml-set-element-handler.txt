@@ -9,11 +9,13 @@ names of functions that must exist when |xml_parse| is called for {parser}.
 {parser} A reference to the XML parser to set up start and end element handler
 functions.
 
-  bool (resource parser, callable start_element_handler, callable end_element_handler, resource parser, string name, array attribs)~
-
 {start_element_handler} The function named by {start_element_handler} must
-accept three parameters: {parser} The first parameter, parser, is a reference
-to the XML parser calling the handler.
+accept three parameters:
+
+   start_element_handler(resource parser, string name, array attribs)~
+
+{parser} The first parameter, parser, is a reference to the XML parser calling
+the handler.
 
 {name} The second parameter, {name}, contains the name of the element for
 which this handler is called.If case-folding is in effect for this parser, the
@@ -31,11 +33,13 @@ first attribute, and so on.
 Instead of a function name, an array containing an object reference and a
 method name can also be supplied.
 
-  bool (resource parser, callable start_element_handler, callable end_element_handler, resource parser, string name, array attribs, resource parser, string name)~
-
 {end_element_handler} The function named by {end_element_handler} must accept
-two parameters: {parser} The first parameter, parser, is a reference to the
-XML parser calling the handler.
+two parameters:
+
+   end_element_handler(resource parser, string name)~
+
+{parser} The first parameter, parser, is a reference to the XML parser calling
+the handler.
 
 {name} The second parameter, {name}, contains the name of the element for
 which this handler is called.If case-folding is in effect for this parser, the

@@ -1,17 +1,19 @@
 array_reduce -- Iteratively reduce the array to a single value using a
 callback function
 
-  mixed array_reduce(array array, callable callback [, mixed initial = ])~
+  mixed array_reduce(array array, callable callback [, mixed initial = NULL])~
 
 |array_reduce| applies iteratively the {callback} function to the elements of
 the {array}, so as to reduce the array to a single value.
 
 {array} The input array.
 
-  mixed (array array, callable callback [, mixed initial = , mixed carry = , mixed item = ])~
+{callback}
 
-{callback} {carry} Holds the return value of the previous iteration; in the
-case of the first iteration it instead holds the value of {initial}.
+  mixed callback(mixed carry, mixed item)~
+
+{carry} Holds the return value of the previous iteration; in the case of the
+first iteration it instead holds the value of {initial}.
 
 {item} Holds the value of the current iteration.
 

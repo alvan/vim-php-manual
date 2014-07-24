@@ -1,6 +1,6 @@
 stream_socket_client -- Open Internet or Unix domain socket connection
 
-  resource stream_socket_client(string remote_socket [, int &errno [, string &errstr [, float timeout = ini_get("default_socket_timeout") [, int flags = STREAM_CLIENT_CONNECT [, resource context = STREAM_CLIENT_CONNECT]]]]])~
+  resource stream_socket_client(string remote_socket [, int &errno [, string &errstr [, float timeout = ini_get("default_socket_timeout") [, int flags = STREAM_CLIENT_CONNECT [, resource context]]]]])~
 
 Initiates a stream or datagram connection to the destination specified by
 {remote_socket}. The type of socket created is determined by the transport

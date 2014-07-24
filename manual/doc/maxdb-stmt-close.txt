@@ -6,7 +6,7 @@ Procedural style
 
 Object oriented style
 
-  bool maxdb_stmt::close(resource stmt)~
+  bool maxdb_stmt::close()~
 
 Closes a prepared statement. |maxdb_stmt_close| also deallocates the statement
 handle pointed to by {stmt}. If the current statement has pending or unread

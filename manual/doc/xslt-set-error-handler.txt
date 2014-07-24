@@ -8,11 +8,13 @@ function will be called whenever an error occurs in the XSLT transformation
 
 { xh}The XSLT processor link identifier, created with |xslt_create|.
 
-  void (resource xh, mixed handler, resource xh, int error_level, int error_code, array messages)~
-
 {handler} The user function needs to accept four parameters: the XSLT
 processor, the error level, the error code and an array of messages. The
 function can be shown as:
+
+   error_handler(resource xh, int error_level, int error_code, array messages)~
+
+
 
 No value is returned.
 

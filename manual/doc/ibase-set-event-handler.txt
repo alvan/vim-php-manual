@@ -3,7 +3,7 @@ events are posted
 
   resource ibase_set_event_handler(callable event_handler, string event_name1 [, string event_name2 [, string ...]])~
 
-  resource ibase_set_event_handler(callable event_handler, string event_name1 [, string event_name2 [, string ..., resource connection, callable event_handler, string event_name1 [, string event_name2 [, string ...]]]])~
+  resource ibase_set_event_handler(resource connection, callable event_handler, string event_name1 [, string event_name2 [, string ...]])~
 
 This function registers a PHP user function as event handler for the specified
 events.

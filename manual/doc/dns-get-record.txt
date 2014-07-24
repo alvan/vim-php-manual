@@ -1,6 +1,6 @@
 dns_get_record -- Fetch DNS Resource Records associated with a hostname
 
-  array dns_get_record(string hostname [, int type = DNS_ANY [, array &authns = DNS_ANY [, array &addtl = DNS_ANY [, bool &raw = false]]]])~
+  array dns_get_record(string hostname [, int type = DNS_ANY [, array &authns [, array &addtl [, bool &raw = false]]]])~
 
 Fetch DNS Resource Records associated with the given {hostname}.
 

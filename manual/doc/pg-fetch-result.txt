@@ -2,7 +2,7 @@ pg_fetch_result -- Returns values from a result resource
 
   string pg_fetch_result(resource result, int row, mixed field)~
 
-  string pg_fetch_result(resource result, int row, mixed field, resource result, mixed field)~
+  string pg_fetch_result(resource result, mixed field)~
 
 |pg_fetch_result| returns the value of a particular row and field (column) in
 a PostgreSQL result resource.

@@ -32,7 +32,7 @@ custom error handler cannot be called since it is not registered at that time.
 {error_handler} A callback with the following signature. NULL may be passed
 instead, to reset this handler to its default state.
 
-  bool (callable error_handler [, int error_types = E_ALL | E_STRICT, int errno = E_ALL | E_STRICT, string errstr = E_ALL | E_STRICT [, string errfile = E_ALL | E_STRICT [, int errline = E_ALL | E_STRICT [, array errcontext = E_ALL | E_STRICT]]]])~
+  bool handler(int errno, string errstr [, string errfile [, int errline [, array errcontext]]])~
 
 {errno} The first parameter, {errno}, contains the level of the error raised,
 as an integer.

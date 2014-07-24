@@ -1,7 +1,7 @@
 array_walk_recursive -- Apply a user function recursively to every member of
 an array
 
-  bool array_walk_recursive(array &array, callable callback [, mixed userdata = ])~
+  bool array_walk_recursive(array &array, callable callback [, mixed userdata = NULL])~
 
 Applies the user-defined {callback} function to each element of the {array}.
 This function will recurse into deeper arrays.

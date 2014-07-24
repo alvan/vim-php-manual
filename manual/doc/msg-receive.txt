@@ -1,6 +1,6 @@
 msg_receive -- Receive a message from a message queue
 
-  bool msg_receive(resource queue, int desiredmsgtype, int &msgtype, int maxsize, mixed &message [, bool unserialize = true [, int flags = 0 [, int &errorcode = 0]]])~
+  bool msg_receive(resource queue, int desiredmsgtype, int &msgtype, int maxsize, mixed &message [, bool unserialize = true [, int flags = 0 [, int &errorcode]]])~
 
 |msg_receive| will receive the first message from the specified {queue} of the
 type specified by {desiredmsgtype}.

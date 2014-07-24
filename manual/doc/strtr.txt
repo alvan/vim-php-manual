@@ -2,7 +2,7 @@ strtr -- Translate characters or replace substrings
 
   string strtr(string str, string from, string to)~
 
-  string strtr(string str, string from, string to, string str, array replace_pairs)~
+  string strtr(string str, array replace_pairs)~
 
 If given three arguments, this function returns a copy of {str} where all
 occurrences of each (single-byte) character in {from} have been translated to

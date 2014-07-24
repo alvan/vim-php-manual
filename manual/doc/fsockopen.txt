@@ -1,6 +1,6 @@
 fsockopen -- Open Internet or Unix domain socket connection
 
-  resource fsockopen(string hostname [, int port = -1 [, int &errno = -1 [, string &errstr = -1 [, float timeout = ini_get("default_socket_timeout")]]]])~
+  resource fsockopen(string hostname [, int port = -1 [, int &errno [, string &errstr [, float timeout = ini_get("default_socket_timeout")]]]])~
 
 Initiates a socket connection to the resource specified by {hostname}.
 

@@ -2,7 +2,7 @@ dba_fetch -- Fetch data specified by key
 
   string dba_fetch(string key, resource handle)~
 
-  string dba_fetch(string key, resource handle, string key, int skip, resource handle)~
+  string dba_fetch(string key, int skip, resource handle)~
 
 |dba_fetch| fetches the data specified by {key} from the database specified
 with {handle}.

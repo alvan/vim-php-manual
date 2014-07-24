@@ -1,6 +1,6 @@
 imap_mail -- Send an email message
 
-  bool imap_mail(string to, string subject, string message [, string additional_headers =  [, string cc =  [, string bcc =  [, string rpath = ]]]])~
+  bool imap_mail(string to, string subject, string message [, string additional_headers = NULL [, string cc = NULL [, string bcc = NULL [, string rpath = NULL]]]])~
 
 This function allows sending of emails with correct handling of Cc and Bcc
 receivers.

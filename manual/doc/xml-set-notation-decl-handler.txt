@@ -19,10 +19,12 @@ function.
 {handler} {handler} is a string containing the name of a function that must
 exist when |xml_parse| is called for {parser}.
 
-  bool (resource parser, callable handler, resource parser, string notation_name, string base, string system_id, string public_id)~
+The function named by {handler} must accept five parameters:
 
-The function named by {handler} must accept five parameters: {parser} The
-first parameter, parser, is a reference to the XML parser calling the handler.
+   handler(resource parser, string notation_name, string base, string system_id, string public_id)~
+
+{parser} The first parameter, parser, is a reference to the XML parser calling
+the handler.
 
 {notation_name} This is the notation's {name}, as per the notation format
 described above.

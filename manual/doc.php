@@ -150,7 +150,7 @@ class Parser extends XML_Parser
             $text .= $p[0] . ' ' . $p[1];
 
 			if (isset($p[3])) {
-				$text .= ' = ' . $p[3];
+				$text .= ' = ' . ($p[3] === '' ? 'NULL' : $p[3]);
 			}
         }
         for ($i=0; $i<$opt; $i++) {
@@ -239,7 +239,7 @@ class Parser extends XML_Parser
                 $this->paragraphlist[] = $this->format_title($this->refname, $this->refpurpose);
             }
         }
-        elseif ($this->inElement('methodsynopsis')) {
+		elseif ($this->inElement('methodsynopsis') && !$this->inElement('varlistentry')) {
             if ($this->inElement('methodparam')) {
                 if ($name == 'type') {
                     $this->paramtype = trim($data);
@@ -257,13 +257,20 @@ class Parser extends XML_Parser
 						isset($attr['choice']) && ($attr['choice'] == 'opt'),
                         isset($this->paraminit) ? trim($this->paraminit) : null,
                     );
+					unset($this->paramtype, $this->paramname, $this->paraminit);
                 }
             }
             elseif ($name == 'type') {
                 $this->methodtype = trim($data);
             }
+			elseif ($name == 'replaceable' && $this->inElement('methodname')) {
+				$this->methodname = trim($data);
+			}
             elseif ($name == 'methodname') {
-                $this->methodname = trim($data);
+				if ($data != '')
+				{
+					$this->methodname = trim($data);
+				}
             }
             elseif (($name == 'methodsynopsis') && $final) {
                 $this->proto = $this->format_proto(
@@ -271,6 +278,7 @@ class Parser extends XML_Parser
                     $this->methodname,
                     isset($this->paramlist) ? $this->paramlist : array());
                 $this->paragraphlist[] = $this->proto;
+				unset($this->paramlist, $this->methodtype, $this->methodname);
             }
         }
         elseif ($this->inElement('programlisting') || $this->inElement('screen') || $this->inElement('literallayout')) {
@@ -284,7 +292,7 @@ class Parser extends XML_Parser
             if ($name == 'function') {
                 $this->paratext .= $this->format_function_ref($data);
             }
-            elseif ($name == 'parameter') {
+			elseif ($name == 'parameter' && !$this->inElement('methodparam')) {
                 $this->paratext .= $this->format_param_ref($data);
             }
             elseif (($name == 'para' || $name == 'simpara' || $name == 'example') && $final) {
@@ -295,6 +303,55 @@ class Parser extends XML_Parser
                     $this->paragraphlist[] = $this->format_text($this->paratext);
                 $this->paratext = '';
             }
+			elseif ($this->inElement('methodsynopsis')) {
+				if ($this->inElement('methodparam')) {
+					if ($name == 'type') {
+						$this->paramtype = trim($data);
+					}
+					elseif ($name == 'parameter') {
+						$this->paramname = ((isset($attr['role']) && $attr['role'] == 'reference') ? '&' : '') . trim($data);
+					}
+					elseif ($name == 'initializer') {
+						$this->paraminit = trim($data);
+					}
+					elseif (($name == 'methodparam') && $final) {
+						$this->paramlist[] = array(
+							isset($this->paramtype) ? trim($this->paramtype) : '',
+							trim($this->paramname),
+							isset($attr['choice']) && ($attr['choice'] == 'opt'),
+							isset($this->paraminit) ? trim($this->paraminit) : null,
+						);
+						unset($this->paramtype, $this->paramname, $this->paraminit);
+					}
+				}
+				elseif ($name == 'type') {
+					$this->methodtype = trim($data);
+				}
+				elseif ($name == 'replaceable' && $this->inElement('methodname')) {
+					$this->methodname = trim($data);
+				}
+				elseif ($name == 'methodname') {
+					if ($data != '')
+					{
+						$this->methodname = trim($data);
+					}
+				}
+				elseif (($name == 'methodsynopsis') && $final) {
+					if (!ctype_space($data)) {
+						$this->paratext .= $data;
+					}
+					if (!ctype_space($this->paratext))
+						$this->paragraphlist[] = $this->format_text($this->paratext);
+					$this->paratext = '';
+
+					$this->proto = $this->format_proto(
+						$this->methodtype,
+						$this->methodname,
+						isset($this->paramlist) ? $this->paramlist : array());
+					$this->paragraphlist[] = $this->proto;
+					unset($this->paramlist, $this->methodtype, $this->methodname);
+				}
+			}
             else {
                 $this->paratext .= $data;
             }

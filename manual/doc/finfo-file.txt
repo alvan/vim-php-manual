@@ -2,11 +2,11 @@ finfo::file -- Return information about a file
 
 Procedural style
 
-  string finfo_file(resource finfo, string file_name =  [, int options = FILEINFO_NONE [, resource context = ]])~
+  string finfo_file(resource finfo, string file_name = NULL [, int options = FILEINFO_NONE [, resource context = NULL]])~
 
 Object oriented style
 
-  string finfo::file(resource finfo, string file_name =  [, int options = FILEINFO_NONE [, resource context = , string file_name =  [, int options = FILEINFO_NONE [, resource context = ]]]])~
+  string finfo::file(string file_name = NULL [, int options = FILEINFO_NONE [, resource context = NULL]])~
 
 This function is used to get information about a file.
 

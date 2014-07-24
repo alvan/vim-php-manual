@@ -5,7 +5,7 @@ for use in SQL statements
 
 Object oriented style (method):
 
-  void SQLiteDatabase::createFunction(resource dbhandle, string function_name, callable callback [, int num_args = -1, string function_name = -1, callable callback = -1 [, int num_args = -1]])~
+  void SQLiteDatabase::createFunction(string function_name, callable callback [, int num_args = -1])~
 
 |sqlite_create_function| allows you to register a PHP function with SQLite as
 an UDF (User Defined Function), so that it can be called from within your SQL

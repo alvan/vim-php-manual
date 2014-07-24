@@ -3,11 +3,11 @@ returns an array
 
   array sqlite_array_query(resource dbhandle, string query [, int result_type = SQLITE_BOTH [, bool decode_binary = true]])~
 
-  array sqlite_array_query(resource dbhandle, string query [, int result_type = SQLITE_BOTH [, bool decode_binary = true, string query = true, resource dbhandle = true [, int result_type = SQLITE_BOTH [, bool decode_binary = true]]]])~
+  array sqlite_array_query(string query, resource dbhandle [, int result_type = SQLITE_BOTH [, bool decode_binary = true]])~
 
 Object oriented style (method):
 
-  array SQLiteDatabase::arrayQuery(resource dbhandle, string query [, int result_type = SQLITE_BOTH [, bool decode_binary = true, string query = true, resource dbhandle = true [, int result_type = SQLITE_BOTH [, bool decode_binary = true, string query = true [, int result_type = SQLITE_BOTH [, bool decode_binary = true]]]]]])~
+  array SQLiteDatabase::arrayQuery(string query [, int result_type = SQLITE_BOTH [, bool decode_binary = true]])~
 
 |sqlite_array_query| executes the given query and returns an array of the
 entire result set. It is similar to calling |sqlite_query| and then

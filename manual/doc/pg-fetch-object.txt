@@ -2,7 +2,7 @@ pg_fetch_object -- Fetch a row as an object
 
   object pg_fetch_object(resource result [, int row [, int result_type = PGSQL_ASSOC]])~
 
-  object pg_fetch_object(resource result [, int row [, int result_type = PGSQL_ASSOC, resource result = PGSQL_ASSOC [, int row = PGSQL_ASSOC [, string class_name = PGSQL_ASSOC [, array params = PGSQL_ASSOC]]]]])~
+  object pg_fetch_object(resource result [, int row [, string class_name [, array params]]])~
 
 |pg_fetch_object| returns an object with properties that correspond to the
 fetched row's field names. It can optionally instantiate an object of a

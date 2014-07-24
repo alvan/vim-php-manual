@@ -1,7 +1,7 @@
 preg_replace_callback -- Perform a regular expression search and replace using
 a callback
 
-  mixed preg_replace_callback(mixed pattern, callable callback, mixed subject [, int limit = -1 [, int &count = -1]])~
+  mixed preg_replace_callback(mixed pattern, callable callback, mixed subject [, int limit = -1 [, int &count]])~
 
 The behavior of this function is almost identical to |preg_replace|, except
 for the fact that instead of {replacement} parameter, one should specify a
@@ -14,7 +14,9 @@ with strings.
 elements in the {subject} string. The callback should return the replacement
 string. This is the callback signature:
 
-  string (mixed pattern, callable callback, mixed subject [, int limit = -1 [, int &count = -1, array matches = -1]])~
+  string handler(array matches)~
+
+
 
 You'll often need the {callback} function for a |preg_replace_callback| in
 just one place. In this case you can use an anonymous function to declare the

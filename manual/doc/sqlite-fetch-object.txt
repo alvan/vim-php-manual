@@ -5,9 +5,9 @@ object
 
 Object oriented style (method):
 
-  object SQLiteResult::fetchObject(resource result [, string class_name [, array ctor_params [, bool decode_binary = true [, string class_name = true [, array ctor_params = true [, bool decode_binary = true]]]]]])~
+  object SQLiteResult::fetchObject([string class_name [, array ctor_params [, bool decode_binary = true]]])~
 
-  object SQLiteUnbuffered::fetchObject(resource result [, string class_name [, array ctor_params [, bool decode_binary = true [, string class_name = true [, array ctor_params = true [, bool decode_binary = true [, string class_name = true [, array ctor_params = true [, bool decode_binary = true]]]]]]]]])~
+  object SQLiteUnbuffered::fetchObject([string class_name [, array ctor_params [, bool decode_binary = true]]])~
 
 This function is currently not documented; only its argument list is
 available.

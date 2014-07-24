@@ -4,9 +4,9 @@ SQLiteUnbuffered::fieldName -- Returns the name of a particular field
 
 Object oriented style (method):
 
-  string SQLiteResult::fieldName(resource result, int field_index, int field_index)~
+  string SQLiteResult::fieldName(int field_index)~
 
-  string SQLiteUnbuffered::fieldName(resource result, int field_index, int field_index, int field_index)~
+  string SQLiteUnbuffered::fieldName(int field_index)~
 
 Given the ordinal column number, {field_index}, |sqlite_field_name| returns
 the name of that field in the result set {result}.

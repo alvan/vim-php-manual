@@ -5,7 +5,7 @@ particular table
 
 Object oriented style (method):
 
-  array SQLiteDatabase::fetchColumnTypes(string table_name, resource dbhandle [, int result_type = SQLITE_ASSOC, string table_name = SQLITE_ASSOC [, int result_type = SQLITE_ASSOC]])~
+  array SQLiteDatabase::fetchColumnTypes(string table_name [, int result_type = SQLITE_ASSOC])~
 
 |sqlite_fetch_column_types| returns an array of column data types from the
 specified {table_name} table.

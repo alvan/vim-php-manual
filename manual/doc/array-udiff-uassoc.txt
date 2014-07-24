@@ -17,7 +17,7 @@ Note that the keys are used in the comparison unlike |array_diff| and
 equal to, or greater than zero if the first argument is considered to be
 respectively less than, equal to, or greater than the second.
 
-  int (array array1, array array2 [, array ..., callable value_compare_func, callable key_compare_func, mixed a, mixed b])~
+  int callback(mixed a, mixed b)~
 
 {key_compare_func} The comparison of keys (indices) is done also by the
 callback function {key_compare_func}. This behaviour is unlike what

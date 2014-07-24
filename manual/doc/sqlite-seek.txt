@@ -4,7 +4,7 @@ SQLiteResult::seek -- Seek to a particular row number of a buffered result set
 
 Object oriented style (method):
 
-  bool SQLiteResult::seek(resource result, int rownum, int rownum)~
+  bool SQLiteResult::seek(int rownum)~
 
 |sqlite_seek| seeks to the row given by the parameter {rownum}.
 

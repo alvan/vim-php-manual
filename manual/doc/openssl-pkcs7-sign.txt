@@ -1,6 +1,6 @@
 openssl_pkcs7_sign -- Sign an S/MIME message
 
-  bool openssl_pkcs7_sign(string infilename, string outfilename, mixed signcert, mixed privkey, array headers [, int flags = PKCS7_DETACHED [, string extracerts = PKCS7_DETACHED]])~
+  bool openssl_pkcs7_sign(string infilename, string outfilename, mixed signcert, mixed privkey, array headers [, int flags = PKCS7_DETACHED [, string extracerts]])~
 
 |openssl_pkcs7_sign| takes the contents of the file named {infilename} and
 signs them using the certificate and its matching private key specified by

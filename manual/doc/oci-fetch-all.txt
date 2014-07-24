@@ -1,7 +1,7 @@
 oci_fetch_all -- Fetches multiple rows from a query into a two-dimensional
 array
 
-  int oci_fetch_all(resource statement, array &output [, int skip = 0 [, int maxrows = -1 [, int flags = ]]])~
+  int oci_fetch_all(resource statement, array &output [, int skip = 0 [, int maxrows = -1 [, int flags = NULL]]])~
 
 Fetches multiple rows from a query into a two-dimensional array. By default,
 all rows are returned.

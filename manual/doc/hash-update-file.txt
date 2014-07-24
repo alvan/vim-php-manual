@@ -1,6 +1,6 @@
 hash_update_file -- Pump data into an active hashing context from a file
 
-  bool hash_update_file(resource hcontext, string filename [, resource scontext = ])~
+  bool hash_update_file(resource hcontext, string filename [, resource scontext = NULL])~
 
 {hcontext} Hashing context returned by |hash_init|.
 

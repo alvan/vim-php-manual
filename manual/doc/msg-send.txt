@@ -1,6 +1,6 @@
 msg_send -- Send a message to a message queue
 
-  bool msg_send(resource queue, int msgtype, mixed message [, bool serialize = true [, bool blocking = true [, int &errorcode = true]]])~
+  bool msg_send(resource queue, int msgtype, mixed message [, bool serialize = true [, bool blocking = true [, int &errorcode]]])~
 
 |msg_send| sends a {message} of type {msgtype} (which MUST be greater than 0)
 to the message queue specified by {queue}.

@@ -1,6 +1,6 @@
 ssh2_publickey_add -- Add an authorized publickey
 
-  bool ssh2_publickey_add(resource pkey, string algoname, string blob [, bool overwrite = false [, array attributes = false]])~
+  bool ssh2_publickey_add(resource pkey, string algoname, string blob [, bool overwrite = false [, array attributes]])~
 
 The public key subsystem is used for managing public keys on a server to which
 the client is already authenticated. To authenticate to a remote system using

@@ -1,6 +1,6 @@
 openssl_x509_export_to_file -- Exports a certificate to file
 
-  bool openssl_x509_export_to_file(mixed x509, string outfilename [, bool notext = ])~
+  bool openssl_x509_export_to_file(mixed x509, string outfilename [, bool notext = NULL])~
 
 |openssl_x509_export_to_file| stores {x509} into a file named by {outfilename}
 in a PEM encoded format.

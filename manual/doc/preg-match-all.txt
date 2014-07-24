@@ -1,6 +1,6 @@
 preg_match_all -- Perform a global regular expression match
 
-  int preg_match_all(string pattern, string subject [, array &matches [, int flags =  [, int offset = 0]]])~
+  int preg_match_all(string pattern, string subject [, array &matches [, int flags = NULL [, int offset = 0]]])~
 
 Searches {subject} for all matches to the regular expression given in
 {pattern} and puts them in {matches} in the order specified by {flags}.

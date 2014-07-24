@@ -1,6 +1,6 @@
 mb_send_mail -- Send encoded mail
 
-  bool mb_send_mail(string to, string subject, string message [, string additional_headers =  [, string additional_parameter = ]])~
+  bool mb_send_mail(string to, string subject, string message [, string additional_headers = NULL [, string additional_parameter = NULL]])~
 
 Sends email. Headers and messages are converted and encoded according to the
 |mb_language| setting. It's a wrapper function for |mail|, so see also |mail|

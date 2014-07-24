@@ -2,7 +2,7 @@ ibase_trans -- Begin a transaction
 
   resource ibase_trans([int trans_args [, resource link_identifier]])~
 
-  resource ibase_trans([int trans_args [, resource link_identifier [, resource link_identifier [, int trans_args]]]])~
+  resource ibase_trans([resource link_identifier [, int trans_args]])~
 
 Begins a transaction.
 

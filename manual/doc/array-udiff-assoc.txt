@@ -18,7 +18,7 @@ array_udiff_assoc($array1[0], $array2[0], "some_comparison_func");.
 equal to, or greater than zero if the first argument is considered to be
 respectively less than, equal to, or greater than the second.
 
-  int (array array1, array array2 [, array ..., callable value_compare_func, mixed a, mixed b])~
+  int callback(mixed a, mixed b)~
 
 |array_udiff_assoc| returns an array containing all the values from {array1}
 that are not present in any of the other arguments. Note that the keys are

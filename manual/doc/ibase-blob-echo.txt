@@ -2,7 +2,7 @@ ibase_blob_echo -- Output blob contents to browser
 
   bool ibase_blob_echo(string blob_id)~
 
-  bool ibase_blob_echo(string blob_id, resource link_identifier, string blob_id)~
+  bool ibase_blob_echo(resource link_identifier, string blob_id)~
 
 This function opens a BLOB for reading and sends its contents directly to
 standard output (the browser, in most cases).

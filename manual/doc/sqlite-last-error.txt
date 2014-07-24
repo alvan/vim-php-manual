@@ -5,7 +5,7 @@ database
 
 Object oriented style (method):
 
-  int SQLiteDatabase::lastError(resource dbhandle)~
+  int SQLiteDatabase::lastError()~
 
 Returns the error code from the last operation performed on {dbhandle} (the
 database handle), or 0 when no error occurred. A human readable description of

@@ -2,7 +2,7 @@ pg_field_prtlen -- Returns the printed length
 
   int pg_field_prtlen(resource result, int row_number, mixed field_name_or_number)~
 
-  int pg_field_prtlen(resource result, int row_number, mixed field_name_or_number, resource result, mixed field_name_or_number)~
+  int pg_field_prtlen(resource result, mixed field_name_or_number)~
 
 |pg_field_prtlen| returns the actual printed length (number of characters) of
 a specific value in a PostgreSQL {result}. Row numbering starts at 0. This

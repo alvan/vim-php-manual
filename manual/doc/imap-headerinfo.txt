@@ -1,6 +1,6 @@
 imap_headerinfo -- Read the header of the message
 
-  object imap_headerinfo(resource imap_stream, int msg_number [, int fromlength = 0 [, int subjectlength = 0 [, string defaulthost = ]]])~
+  object imap_headerinfo(resource imap_stream, int msg_number [, int fromlength = 0 [, int subjectlength = 0 [, string defaulthost = NULL]]])~
 
 Gets information about the given message number by reading its headers.
 
