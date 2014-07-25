@@ -4,7 +4,7 @@ mb_convert_case
 
 mb_convert_case — Perform case folding on a string
 
-===============================================================================
+==============================================================================
 *Description*
 
     string mb_convert_case ( string $str , int $mode [, string $encoding =~
@@ -12,7 +12,7 @@ mb_convert_case — Perform case folding on a string
 
 Performs case folding on a string, converted in the way specified by {mode}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {str}
@@ -29,12 +29,12 @@ Performs case folding on a string, converted in the way specified by {mode}.
     The {encoding} parameter is the character encoding. If it is omitted, the
     internal character encoding value will be used.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 A case folded version of {string} converted in the way specified by {mode}.
 
-===============================================================================
+==============================================================================
 *Unicode*
 
 By contrast to the standard case folding functions such as |strtolower| and |
@@ -46,7 +46,7 @@ such as A-umlaut (Ä).
 For more information about the Unicode properties, please see » http://
 www.unicode.org/unicode/reports/tr21/.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mb_convert_case() example
@@ -71,7 +71,7 @@ Example #2 mb_convert_case() example with non-Latin UTF-8 text
      Prints Τάχιστη Αλώπηξ Βαφήσ Ψημένη Γη, Δρασκελίζει Υπέρ Νωθρού Κυνόσ
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mb_strtolower| - Make a string lowercase

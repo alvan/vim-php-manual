@@ -4,7 +4,7 @@ imagecreate
 
 imagecreate — Create a new palette based image
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource imagecreate ( int $width , int $height )~
@@ -14,11 +14,11 @@ specified size.
 
 In general, we recommend the use of |imagecreatetruecolor| instead of 
 imagecreate() so that image processing occurs on the highest quality image
-possible. If you want to output a palette image, then |imagetruecolortopalette|
-should be called immediately before saving the image with |imagepng| or |
+possible. If you want to output a palette image, then |imagetruecolortopalette
+| should be called immediately before saving the image with |imagepng| or |
 imagegif|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {width}
@@ -29,12 +29,12 @@ imagegif|.
 
     The image height.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an image resource identifier on success, FALSE on errors.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Creating a new GD image stream and outputting an image.
@@ -54,7 +54,7 @@ The above example will output something similar to:
 
 Output of example : Creating a new GD image stream and outputting an image.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |imagedestroy| - Destroy an image

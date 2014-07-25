@@ -4,7 +4,7 @@ setlocale
 
 setlocale — Set locale information
 
-===============================================================================
+==============================================================================
 *Description*
 
     string setlocale ( int $category , string $locale [, string $... ] )~
@@ -12,7 +12,7 @@ setlocale — Set locale information
 
 Sets locale information.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {category}
@@ -53,7 +53,7 @@ Sets locale information.
     On Windows, setlocale(LC_ALL, '') sets the locale names from the system's
     regional/language settings (accessible via Control Panel).
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the new current locale, or FALSE if the locale functionality is not
@@ -69,18 +69,18 @@ naming schemes for locales.
     The return value of setlocale() depends on the system that PHP is running.
     It returns exactly what the system setlocale function returns.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 5.3.0   This function now throws an E_DEPRECATED notice if a string is passed
         to the {category} parameter instead of one of the LC_* constants.
 4.3.0   Passing multiple locales became possible.
         Passing {category} as a string is now deprecated, use the above
-4.2.0   constants instead. Passing them as a string (within quotes) will result
-        in a warning message.
+4.2.0   constants instead. Passing them as a string (within quotes) will
+        result in a warning message.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 setlocale() Examples
@@ -111,7 +111,7 @@ Example #2 setlocale() Examples for Windows
     echo "Preferred locale for german on this system is '$loc_de'";
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
 Warning

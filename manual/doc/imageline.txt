@@ -4,21 +4,21 @@ imageline
 
 imageline — Draw a line
 
-===============================================================================
+==============================================================================
 *Description*
 
-    bool imageline ( resource $image , int $x1 , int $y1 , int $x2 , int $y2 ,~
-    int $color )~
+    bool imageline ( resource $image , int $x1 , int $y1 , int $x2 , int $y2~
+    , int $color )~
 
 Draws a line between the two given points.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { image}
 
-    An image resource, returned by one of the image creation functions, such as
-    |imagecreatetruecolor|.
+    An image resource, returned by one of the image creation functions, such
+    as |imagecreatetruecolor|.
 
 {x1}
 
@@ -40,12 +40,12 @@ Draws a line between the two given points.
 
     The line color. A color identifier created with |imagecolorallocate|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Drawing a thick line
@@ -81,7 +81,7 @@ Example #1 Drawing a thick line
 
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |imagecreatetruecolor| - Create a new true color image

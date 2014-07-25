@@ -5,7 +5,7 @@ mb_eregi_replace
 mb_eregi_replace — Replace regular expression with multibyte support ignoring
 case
 
-===============================================================================
+==============================================================================
 *Description*
 
     string mb_eregi_replace ( string $pattern , string $replace , string~
@@ -14,7 +14,7 @@ case
 Scans {string} for matches to {pattern}, then replaces the matched text with
 {replacement}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {pattern}
@@ -33,12 +33,12 @@ Scans {string} for matches to {pattern}, then replaces the matched text with
 {option}
     {option} has the same meaning as in |mb_ereg_replace|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The resultant string or FALSE on error.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -49,11 +49,12 @@ The resultant string or FALSE on error.
 
 Warning
 
-Never use the e modifier when working on untrusted input. No automatic escaping
-will happen (as known from |preg_replace|). Not taking care of this will most
-likely create remote code execution vulnerabilities in your application.
+Never use the e modifier when working on untrusted input. No automatic
+escaping will happen (as known from |preg_replace|). Not taking care of this
+will most likely create remote code execution vulnerabilities in your
+application.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mb_regex_encoding| - Set/Get character encoding for multibyte regex

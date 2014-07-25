@@ -4,7 +4,7 @@ tcpwrap_check
 
 tcpwrap_check — Performs a tcpwrap check
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool tcpwrap_check ( string $daemon , string $address [, string $user [,~
@@ -13,7 +13,7 @@ tcpwrap_check — Performs a tcpwrap check
 This function consults the /etc/hosts.allow and /etc/hosts.deny files to check
 if access to service {daemon} should be granted or denied for a client.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {daemon}
@@ -33,12 +33,12 @@ if access to service {daemon} should be granted or denied for a client.
     If {address} looks like domain name then DNS is used to resolve it to IP
     address; set {nodns} to TRUE to avoid this.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 This function returns TRUE if access should be granted, FALSE otherwise.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Deny all connections from localhost
@@ -55,7 +55,7 @@ And your code looks like:
     }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
 For more details please consult hosts_access(3) man page.

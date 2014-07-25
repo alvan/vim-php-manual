@@ -4,7 +4,7 @@ fbsql_create_clob
 
 fbsql_create_clob — Create a CLOB
 
-===============================================================================
+==============================================================================
 *Description*
 
     string fbsql_create_clob ( string $clob_data [, resource $link_identifier~
@@ -12,7 +12,7 @@ fbsql_create_clob — Create a CLOB
 
 Creates a CLOB from the given data.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {clob_data}
@@ -21,20 +21,20 @@ Creates a CLOB from the given data.
 
 { link_identifier}
 
-    A FrontBase link identifier returned by |fbsql_connect| or |fbsql_pconnect|
-    .
+    A FrontBase link identifier returned by |fbsql_connect| or |fbsql_pconnect
+    |.
 
     If optional and not specified, the function will try to find an open link
     to the FrontBase server and if no such link is found it will try to create
     one as if |fbsql_connect| was called with no arguments.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a resource handle to the newly created CLOB, which can be used with
 insert and update commands to store the CLOB in the database.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 fbsql_create_clob() example
@@ -53,13 +53,14 @@ Example #1 fbsql_create_clob() example
     $rs = fbsql_query($sql, $link);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |fbsql_create_blob| - Create a BLOB
   * |fbsql_read_blob| - Read a BLOB from the database
   * |fbsql_read_clob| - Read a CLOB from the database
-  * |fbsql_set_lob_mode| - Set the LOB retrieve mode for a FrontBase result set
+  * |fbsql_set_lob_mode| - Set the LOB retrieve mode for a FrontBase result
+    set
 
 
 vim:ft=help:

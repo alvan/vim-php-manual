@@ -4,14 +4,14 @@ ftp_exec
 
 ftp_exec — Requests execution of a command on the FTP server
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool ftp_exec ( resource $ftp_stream , string $command )~
 
 Sends a SITE EXEC {command} request to the FTP server.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {ftp_stream}
@@ -22,13 +22,13 @@ Sends a SITE EXEC {command} request to the FTP server.
 
     The command to execute.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE if the command was successful (server sent response code: 200);
 otherwise returns FALSE.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 ftp_exec() example
@@ -56,7 +56,7 @@ Example #1 ftp_exec() example
 
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ftp_raw| - Sends an arbitrary command to an FTP server

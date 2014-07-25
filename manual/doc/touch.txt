@@ -4,18 +4,18 @@ touch
 
 touch — Sets access and modification time of file
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool touch ( string $filename [, int $time = time() [, int $atime ]] )~
 
 Attempts to set the access and modification times of the file named in the
-{filename} parameter to the value given in {time}. Note that the access time is
-always modified, regardless of the number of parameters.
+{filename} parameter to the value given in {time}. Note that the access time
+is always modified, regardless of the number of parameters.
 
 If the file does not exist, it will be created.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {filename}
@@ -24,7 +24,8 @@ If the file does not exist, it will be created.
 
 {time}
 
-    The touch time. If {time} is not supplied, the current system time is used.
+    The touch time. If {time} is not supplied, the current system time is
+    used.
 
 {atime}
 
@@ -32,19 +33,19 @@ If the file does not exist, it will be created.
     {atime}. Otherwise, it is set to the value passed to the {time} parameter.
     If neither are present, the current system time is used.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
-5.3.0   It became possible to change the modification time of a directory under
-        Windows.
+Version                              Description
+5.3.0   It became possible to change the modification time of a directory
+        under Windows.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 touch() example
@@ -71,7 +72,7 @@ Example #2 touch() using the {time} parameter
     }
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:

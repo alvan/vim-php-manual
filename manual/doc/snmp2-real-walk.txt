@@ -5,7 +5,7 @@ snmp2_real_walk
 snmp2_real_walk — Return all objects including their respective object ID
 within the specified one
 
-===============================================================================
+==============================================================================
 *Description*
 
     array snmp2_real_walk ( string $host , string $community , string~
@@ -15,7 +15,7 @@ The snmp2_real_walk() function is used to traverse over a number of SNMP
 objects starting from {object_id} and return not only their values but also
 their object ids.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {host}
@@ -38,13 +38,13 @@ their object ids.
 
     The number of times to retry if timeouts occur.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns an associative array of the SNMP object ids and their values on success
-or FALSE on error. In case of an error, an E_WARNING message is shown.
+Returns an associative array of the SNMP object ids and their values on
+success or FALSE on error. In case of an error, an E_WARNING message is shown.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Using snmp2_real_walk()
@@ -64,7 +64,7 @@ The above will output something like:
       [IF-MIB::ifName.5] => STRING: sixxs
     )
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |snmp2_walk| - Fetch all the SNMP objects from an agent

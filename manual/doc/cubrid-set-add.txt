@@ -4,7 +4,7 @@ cubrid_set_add
 
 cubrid_set_add — Insert a single element to set type column using OID
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool cubrid_set_add ( resource $conn_identifier , string $oid , string~
@@ -13,7 +13,7 @@ cubrid_set_add — Insert a single element to set type column using OID
 The cubrid_set_add() function is used to insert a single element to a set type
 attribute (set, multiset, sequence) you requested.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {conn_identifier}
@@ -32,14 +32,14 @@ attribute (set, multiset, sequence) you requested.
 
     Content of the element you want to insert.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 TRUE, when process is successful.
 
 FALSE, when process is unsuccessful.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_set_add() example
@@ -91,7 +91,7 @@ array(4) {
   string(1) "4"
 }
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |cubrid_seq_drop| - Delete an element from sequence type column using OID

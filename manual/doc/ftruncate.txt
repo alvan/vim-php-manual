@@ -4,14 +4,14 @@ ftruncate
 
 ftruncate — Truncates a file to a given length
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool ftruncate ( resource $handle , int $size )~
 
 Takes the filepointer, {handle}, and truncates the file to length, {size}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {handle}
@@ -34,19 +34,19 @@ Takes the filepointer, {handle}, and truncates the file to length, {size}.
         If {size} is smaller than the file then the file is truncated to that
         size.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 4.3.3   Prior to this release ftruncate() returned an integer value of 1 on
         success, instead of boolean TRUE.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 File truncation example
@@ -61,14 +61,14 @@ Example #1 File truncation example
     fclose($handle);
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
 
     The file pointer is not changed.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |fopen| - Opens file or URL

@@ -5,14 +5,14 @@ dio_open
 dio_open — Opens a file (creating it if necessary) at a lower level than the C
 library input/ouput stream functions allow.
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource dio_open ( string $filename , int $flags [, int $mode = 0 ] )~
 
 dio_open() opens a file and returns a new file descriptor for it.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {filename}
@@ -52,15 +52,15 @@ dio_open() opens a file and returns a new file descriptor for it.
     (creation permissions). {Mode} is required for correct operation when
     O_CREAT is specified in mode and is ignored otherwise.
 
-    The actual permissions assigned to the created file will be affected by the
-    process's umask setting as per usual.
+    The actual permissions assigned to the created file will be affected by
+    the process's umask setting as per usual.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 A file descriptor or FALSE on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Opening a file descriptor
@@ -72,7 +72,7 @@ Example #1 Opening a file descriptor
     dio_close($fd);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |dio_close| - Closes the file descriptor given by fd

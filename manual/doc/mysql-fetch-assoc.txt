@@ -8,13 +8,13 @@ Warning
 
 This extension is deprecated as of PHP 5.5.0, and will be removed in the
 future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
-MySQL: choosing an API guide and related FAQ for more information. Alternatives
-to this function include:
+MySQL: choosing an API guide and related FAQ for more information.
+Alternatives to this function include:
 
   * mysqli_fetch_assoc()
   * PDOStatement::fetch(PDO::FETCH_ASSOC)
 
-===============================================================================
+==============================================================================
 *Description*
 
     array mysql_fetch_assoc ( resource $result )~
@@ -24,7 +24,7 @@ internal data pointer ahead. mysql_fetch_assoc() is equivalent to calling |
 mysql_fetch_array| with MYSQL_ASSOC for the optional second parameter. It only
 returns an associative array.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { result}
@@ -32,19 +32,19 @@ returns an associative array.
     The result resource that is being evaluated. This result comes from a call
     to |mysql_query|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns an associative array of strings that corresponds to the fetched row, or
-FALSE if there are no more rows.
+Returns an associative array of strings that corresponds to the fetched row,
+or FALSE if there are no more rows.
 
-If two or more columns of the result have the same field names, the last column
-will take precedence. To access the other column(s) of the same name, you
-either need to access the result with numeric indices by using |mysql_fetch_row
-| or add alias names. See the example at the |mysql_fetch_array| description
-about aliases.
+If two or more columns of the result have the same field names, the last
+column will take precedence. To access the other column(s) of the same name,
+you either need to access the result with numeric indices by using |
+mysql_fetch_row| or add alias names. See the example at the |mysql_fetch_array
+| description about aliases.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 An expanded mysql_fetch_assoc() example
@@ -93,7 +93,7 @@ Example #1 An expanded mysql_fetch_assoc() example
 
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: Performance
@@ -106,12 +106,12 @@ Example #1 An expanded mysql_fetch_assoc() example
 
     Note: This function sets NULL fields to the PHP NULL value.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mysql_fetch_row| - Get a result row as an enumerated array
-  * |mysql_fetch_array| - Fetch a result row as an associative array, a numeric
-    array, or both
+  * |mysql_fetch_array| - Fetch a result row as an associative array, a
+    numeric array, or both
   * |mysql_data_seek| - Move internal result pointer
   * |mysql_query| - Send a MySQL query
   * |mysql_error| - Returns the text of the error message from previous MySQL

@@ -5,17 +5,18 @@ xml_set_start_namespace_decl_handler
 xml_set_start_namespace_decl_handler — Set up start namespace declaration
 handler
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool xml_set_start_namespace_decl_handler ( resource $parser , callable~
     $handler )~
 
-Set a handler to be called when a namespace is declared. Namespace declarations
-occur inside start tags. But the namespace declaration start handler is called
-before the start tag handler for each namespace declared in that start tag.
+Set a handler to be called when a namespace is declared. Namespace
+declarations occur inside start tags. But the namespace declaration start
+handler is called before the start tag handler for each namespace declared in
+that start tag.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {parser}
@@ -50,12 +51,12 @@ before the start tag handler for each namespace declared in that start tag.
         Note: Instead of a function name, an array containing an object
         reference and a method name can also be supplied.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |xml_set_end_namespace_decl_handler| - Set up end namespace declaration

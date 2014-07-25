@@ -4,7 +4,7 @@ mqseries_close
 
 mqseries_close — MQSeries MQCLOSE
 
-===============================================================================
+==============================================================================
 *Description*
 
     void mqseries_close ( resource $hconn , resource $hobj , int $options ,~
@@ -13,7 +13,7 @@ mqseries_close — MQSeries MQCLOSE
 The mqseries_close() (MQCLOSE) call relinquishes access to an object, and is
 the inverse of the |mqseries_open| (MQOPEN) call.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {hConn}
@@ -38,12 +38,12 @@ the inverse of the |mqseries_open| (MQOPEN) call.
 
     Reason code qualifying the compCode.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 No value is returned.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mqseries_close() example
@@ -51,12 +51,12 @@ Example #1 mqseries_close() example
 <?php >
         mqseries_close($conn, $obj, MQSERIES_MQCO_NONE, $comp_code, $reason);
         if ($comp_code !== MQSERIES_MQCC_OK) {
-            printf("close CompCode:%d Reason:%d Text:%s<br>\n", $comp_code, $reason
-    , mqseries_strerror($reason));
+            printf("close CompCode:%d Reason:%d Text:%s<br>\n", $comp_code, 
+    $reason, mqseries_strerror($reason));
         }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mqseries_open| - MQSeries MQOPEN

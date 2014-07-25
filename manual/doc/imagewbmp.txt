@@ -4,39 +4,39 @@ imagewbmp
 
 imagewbmp — Output image to browser or file
 
-===============================================================================
+==============================================================================
 *Description*
 
-    bool imagewbmp ( resource $image [, string $filename [, int $foreground ]]~
-)~
+    bool imagewbmp ( resource $image [, string $filename [, int $foreground~
+    ]] )~
 
 imagewbmp() outputs or save a WBMP version of the given {image}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { image}
 
-    An image resource, returned by one of the image creation functions, such as
-    |imagecreatetruecolor|.
+    An image resource, returned by one of the image creation functions, such
+    as |imagecreatetruecolor|.
 
 {filename}
 
-    The path to save the file to. If not set or NULL, the raw image stream will
-    be outputted directly.
+    The path to save the file to. If not set or NULL, the raw image stream
+    will be outputted directly.
 
 {foreground}
 
     You can set the foreground color with this parameter by setting an
-    identifier obtained from |imagecolorallocate|. The default foreground color
-    is black.
+    identifier obtained from |imagecolorallocate|. The default foreground
+    color is black.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Outputting a WBMP image
@@ -94,14 +94,15 @@ Example #3 Outputting the image with a different foreground
     imagedestroy($im);
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
 
-    WBMP support is only available if PHP was compiled against GD-1.8 or later.
+    WBMP support is only available if PHP was compiled against GD-1.8 or
+    later.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |image2wbmp| - Output image to browser or file

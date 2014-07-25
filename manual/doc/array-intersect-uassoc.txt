@@ -5,17 +5,17 @@ array_intersect_uassoc
 array_intersect_uassoc — Computes the intersection of arrays with additional
 index check, compares indexes by a callback function
 
-===============================================================================
+==============================================================================
 *Description*
 
-    array array_intersect_uassoc ( array $array1 , array $array2 [, array $...~
-    ], callable $key_compare_func )~
+    array array_intersect_uassoc ( array $array1 , array $array2 [, array~
+    $... ], callable $key_compare_func )~
 
-array_intersect_uassoc() returns an array containing all the values of {array1}
-that are present in all the arguments. Note that the keys are used in the
-comparison unlike in |array_intersect|.
+array_intersect_uassoc() returns an array containing all the values of
+{array1} that are present in all the arguments. Note that the keys are used in
+the comparison unlike in |array_intersect|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {array1}
@@ -39,12 +39,12 @@ comparison unlike in |array_intersect|.
 
     int callback ( mixed $a, mixed $b )~
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the values of {array1} whose values exist in all of the arguments.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 array_intersect_uassoc() example
@@ -63,7 +63,7 @@ Array
     [b] => brown
 )
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |array_intersect| - Computes the intersection of arrays

@@ -9,25 +9,25 @@ Warning
 
 This extension is deprecated as of PHP 5.5.0, and will be removed in the
 future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
-MySQL: choosing an API guide and related FAQ for more information. Alternatives
-to this function include:
+MySQL: choosing an API guide and related FAQ for more information.
+Alternatives to this function include:
 
   * mysqli_error()
   * PDO::errorInfo()
 
-===============================================================================
+==============================================================================
 *Description*
 
     string mysql_error ([ resource $link_identifier = NULL ] )~
 
 Returns the error text from the last MySQL function. Errors coming back from
-the MySQL database backend no longer issue warnings. Instead, use mysql_error()
-to retrieve the error text. Note that this function only returns the error text
-from the most recently executed MySQL function (not including mysql_error() and
-|mysql_errno|), so if you want to use it, make sure you check the value before
-calling another MySQL function.
+the MySQL database backend no longer issue warnings. Instead, use mysql_error
+() to retrieve the error text. Note that this function only returns the error
+text from the most recently executed MySQL function (not including mysql_error
+() and |mysql_errno|), so if you want to use it, make sure you check the value
+before calling another MySQL function.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { link_identifier}
@@ -38,13 +38,13 @@ calling another MySQL function.
     If no connection is found or established, an E_WARNING level error is
     generated.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns the error text from the last MySQL function, or '' (empty string) if no
-error occurred.
+Returns the error text from the last MySQL function, or '' (empty string) if
+no error occurred.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mysql_error() example
@@ -65,7 +65,7 @@ The above example will output something similar to:
 1049: Unknown database 'nonexistentdb'
 1146: Table 'kossu.nonexistenttable' doesn't exist
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mysql_errno| - Returns the numerical value of the error message from

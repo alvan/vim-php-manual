@@ -4,14 +4,14 @@ bbcode_create
 
 bbcode_create — Create a BBCode Resource
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource bbcode_create ([ array $bbcode_initial_tags = NULL ] )~
 
 This function returns a new BBCode Resource used to parse BBCode strings.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {bbcode_initial_tags}
@@ -26,24 +26,24 @@ This function returns a new BBCode Resource used to parse BBCode strings.
       + close_tag required - the HTML replacement string for the close tag.
       + default_arg optional - use this value as the default argument if none
         is provided and tag_type is of type OPTARG.
-      + content_handling optional - Gives the callback used for modification of
-        the content. Object Oriented Notation supported only since 0.10.1
+      + content_handling optional - Gives the callback used for modification
+        of the content. Object Oriented Notation supported only since 0.10.1
         callback prototype is string name(string $content, string $argument)
       + param_handling optional - Gives the callback used for modification of
         the argument. Object Oriented Notation supported only since 0.10.1
         callback prototype is string name(string $content, string $argument)
       + childs optional - List of accepted children for the tag. The format of
-        the list is a comma separated string. If the list starts with ! it will
-        be the list of rejected children for the tag.
+        the list is a comma separated string. If the list starts with ! it
+        will be the list of rejected children for the tag.
       + parent optional - List of accepted parents for the tag. The format of
         the list is a comma separated string.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a BBCode_Container
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 bbcode_create() example

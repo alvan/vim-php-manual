@@ -4,19 +4,19 @@ headers_sent
 
 headers_sent — Checks if or where headers have been sent
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool headers_sent ([ string &$file [, int &$line ]] )~
 
 Checks if or where headers have been sent.
 
-You can't add any more header lines using the |header| function once the header
-block has already been sent. Using this function you can at least prevent
-getting HTTP header related error messages. Another option is to use Output
-Buffering.
+You can't add any more header lines using the |header| function once the
+header block has already been sent. Using this function you can at least
+prevent getting HTTP header related error messages. Another option is to use
+Output Buffering.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {file}
@@ -29,19 +29,19 @@ Buffering.
 
     The line number where the output started.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 headers_sent() will return FALSE if no HTTP headers have already been sent or
 TRUE otherwise.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version                      Description
 4.3.0   The optional {file} and {line} parameters were added.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Examples using headers_sent()
@@ -72,7 +72,7 @@ Example #1 Examples using headers_sent()
 
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -80,12 +80,13 @@ Example #1 Examples using headers_sent()
     Headers will only be accessible and output when a SAPI that supports them
     is in use.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ob_start| - Turn on output buffering
   * |trigger_error| - Generates a user-level error/warning/notice message
-  * |headers_list| - Returns a list of response headers sent (or ready to send)
+  * |headers_list| - Returns a list of response headers sent (or ready to
+    send)
   * |header| - Send a raw HTTP header for a more detailed discussion of the
     matters involved.
 

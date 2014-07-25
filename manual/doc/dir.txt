@@ -4,7 +4,7 @@ dir
 
 dir — Return an instance of the Directory class
 
-===============================================================================
+==============================================================================
 *Description*
 
     Directory dir ( string $directory [, resource $context ] )~
@@ -12,7 +12,7 @@ dir — Return an instance of the Directory class
 A pseudo-object oriented mechanism for reading a directory. The given
 {directory} is opened.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {directory}
@@ -24,19 +24,19 @@ A pseudo-object oriented mechanism for reading a directory. The given
         Note: Context support was added with PHP 5.0.0. For a description of
         contexts, refer to Streams.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an instance of Directory, or NULL with wrong parameters, or FALSE in
 case of another error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 dir() example
 
-Please note the fashion in which Directory::read()'s return value is checked in
-the example below. We are explicitly testing whether the return value is
+Please note the fashion in which Directory::read()'s return value is checked
+in the example below. We are explicitly testing whether the return value is
 identical to (equal to and of the same type as - see Comparison Operators for
 more information) FALSE since otherwise, any directory entry whose name
 evaluates to FALSE will stop the loop.
@@ -61,7 +61,7 @@ apache
 cgi
 cli
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:

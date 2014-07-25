@@ -4,7 +4,7 @@ ob_clean
 
 ob_clean — Clean (erase) the output buffer
 
-===============================================================================
+==============================================================================
 *Description*
 
     void ob_clean ( void )~
@@ -16,12 +16,12 @@ This function does not destroy the output buffer like |ob_end_clean| does.
 The output buffer must be started by |ob_start| with
 PHP_OUTPUT_HANDLER_CLEANABLE flag. Otherwise ob_clean() will not work.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 No value is returned.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ob_flush| - Flush (send) the output buffer

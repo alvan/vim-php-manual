@@ -4,16 +4,16 @@ stream_wrapper_register
 
 stream_wrapper_register — Register a URL wrapper implemented as a PHP class
 
-===============================================================================
+==============================================================================
 *Description*
 
-    bool stream_wrapper_register ( string $protocol , string $classname [, int~
-    $flags = 0 ] )~
+    bool stream_wrapper_register ( string $protocol , string $classname [,~
+    int $flags = 0 ] )~
 
-Allows you to implement your own protocol handlers and streams for use with all
-the other filesystem functions (such as |fopen|, |fread| etc.).
+Allows you to implement your own protocol handlers and streams for use with
+all the other filesystem functions (such as |fopen|, |fread| etc.).
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {protocol}
@@ -29,7 +29,7 @@ the other filesystem functions (such as |fopen|, |fread| etc.).
     Should be set to STREAM_IS_URL if {protocol} is a URL protocol. Default is
     0, local stream.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
@@ -37,13 +37,13 @@ Returns TRUE on success or FALSE on failure.
 stream_wrapper_register() will return FALSE if the {protocol} already has a
 handler.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version         Description
 5.2.4   Added the {flags} parameter.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 How to register a stream wrapper
@@ -85,7 +85,7 @@ line2
 line3
 "
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * The streamWrapper prototype class

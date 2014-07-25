@@ -4,21 +4,21 @@ ob_list_handlers
 
 ob_list_handlers — List all output handlers in use
 
-===============================================================================
+==============================================================================
 *Description*
 
     array ob_list_handlers ( void )~
 
 Lists all output handlers in use.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 This will return an array with the output handlers in use (if any). If
-output_buffering is enabled or an anonymous function was used with |ob_start|, 
+output_buffering is enabled or an anonymous function was used with |ob_start|,
 ob_list_handlers() will return "default output handler".
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 ob_list_handlers() example
@@ -55,7 +55,7 @@ Array
     [0] => Closure::__invoke
 )
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ob_end_clean| - Clean (erase) the output buffer and turn off output

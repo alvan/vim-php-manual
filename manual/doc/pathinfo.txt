@@ -4,7 +4,7 @@ pathinfo
 
 pathinfo — Returns information about a file path
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed pathinfo ( string $path [, int $options = PATHINFO_DIRNAME |~
@@ -13,7 +13,7 @@ pathinfo — Returns information about a file path
 pathinfo() returns information about {path}: either an associative array or a
 string, depending on {options}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {path}
@@ -28,7 +28,7 @@ string, depending on {options}.
 
     If {options} is not specified, returns all available elements.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 If the {options} parameter is not passed, an associative array containing the
@@ -48,13 +48,13 @@ filename.
 
 If {options} is present, returns a string containing the requested element.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version                Description
 5.2.0   The PATHINFO_FILENAME constant was added.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 pathinfo() Example
@@ -92,7 +92,7 @@ string(0) ""
 Notice: Undefined index: extension in test.php on line 6
 NULL
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -103,10 +103,10 @@ NULL
     Note:
 
     pathinfo() is locale aware, so for it to parse a path containing multibyte
-    characters correctly, the matching locale must be set using the |setlocale|
-    function.
+    characters correctly, the matching locale must be set using the |setlocale
+    | function.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |dirname| - Returns parent directory's path

@@ -7,7 +7,7 @@ SQLiteDatabase::unbufferedQuery
 sqlite_unbuffered_query -- SQLiteDatabase::unbufferedQuery — Execute a query
 that does not prefetch and buffer all data
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource sqlite_unbuffered_query ( resource $dbhandle , string $query [,~
@@ -17,16 +17,16 @@ that does not prefetch and buffer all data
 
 Object oriented style (method):
 
-    public SQLiteUnbuffered SQLiteDatabase::unbufferedQuery ( string $query [,~
-    int $result_type = SQLITE_BOTH [, string &$error_msg ]] )~
+    public SQLiteUnbuffered SQLiteDatabase::unbufferedQuery ( string $query~
+    [, int $result_type = SQLITE_BOTH [, string &$error_msg ]] )~
 
-sqlite_unbuffered_query() is identical to |sqlite_query| except that the result
-that is returned is a sequential forward-only result set that can only be used
-to read each row, one after the other.
+sqlite_unbuffered_query() is identical to |sqlite_query| except that the
+result that is returned is a sequential forward-only result set that can only
+be used to read each row, one after the other.
 
-This function is ideal for generating things such as HTML tables where you only
-need to process one row at a time and don't need to randomly access the row
-data.
+This function is ideal for generating things such as HTML tables where you
+only need to process one row at a time and don't need to randomly access the
+row data.
 
     Note:
 
@@ -34,14 +34,14 @@ data.
     sqlite_current|, and |sqlite_num_rows| do not work on result handles
     returned from sqlite_unbuffered_query().
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {dbhandle}
 
     The SQLite Database resource; returned from |sqlite_open| when used
-    procedurally. This parameter is not required when using the object-oriented
-    method.
+    procedurally. This parameter is not required when using the
+    object-oriented method.
 
 {query}
 
@@ -60,29 +60,29 @@ data.
 
 {error_msg}
 
-    The specified variable will be filled if an error occurs. This is specially
-    important because SQL syntax errors can't be fetched using the |
+    The specified variable will be filled if an error occurs. This is
+    specially important because SQL syntax errors can't be fetched using the |
     sqlite_last_error| function.
 
     Note: Two alternative syntaxes are supported for compatibility with other
-    database extensions (such as MySQL). The preferred form is the first, where
-    the {dbhandle} parameter is the first parameter to the function.
+    database extensions (such as MySQL). The preferred form is the first,
+    where the {dbhandle} parameter is the first parameter to the function.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a result handle or FALSE on failure.
 
-sqlite_unbuffered_query() returns a sequential forward-only result set that can
-only be used to read each row, one after the other.
+sqlite_unbuffered_query() returns a sequential forward-only result set that
+can only be used to read each row, one after the other.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version           Description
 5.1.0   Added the {error_msg} parameter
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |sqlite_query| - Executes a query against a given database and returns a

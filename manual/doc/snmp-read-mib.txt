@@ -4,7 +4,7 @@ snmp_read_mib
 
 snmp_read_mib — Reads and parses a MIB file into the active MIB tree
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool snmp_read_mib ( string $filename )~
@@ -16,14 +16,14 @@ can be used.
 The order in which the MIBs are loaded does matter as the underlying Net-SNMP
 libary will print warnings if referenced objects cannot be resolved.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {filename}
 
     The filename of the MIB.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Using snmp_read_mib()

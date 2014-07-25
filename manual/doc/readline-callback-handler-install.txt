@@ -2,10 +2,10 @@ readline_callback_handler_install
 
 (PHP 5 >= 5.1.0)
 
-readline_callback_handler_install — Initializes the readline callback interface
-and terminal, prints the prompt and returns immediately
+readline_callback_handler_install — Initializes the readline callback
+interface and terminal, prints the prompt and returns immediately
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool readline_callback_handler_install ( string $prompt , callable~
@@ -18,7 +18,7 @@ interface will automatically and conveniently overwrite the old interface.
 The callback feature is useful when combined with |stream_select| as it allows
 interleaving of IO and user input, unlike |readline|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {prompt}
@@ -29,12 +29,12 @@ interleaving of IO and user input, unlike |readline|.
 
     The {callback} function takes one parameter; the user input returned.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Readline Callback Interface Example
@@ -74,7 +74,7 @@ Example #1 Readline Callback Interface Example
     echo "Prompting disabled. All done.\n";
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |readline_callback_handler_remove| - Removes a previously installed

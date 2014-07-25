@@ -5,7 +5,7 @@ oci_fetch_array
 oci_fetch_array — Returns the next row from a query as an associative or
 numeric array
 
-===============================================================================
+==============================================================================
 *Description*
 
     array oci_fetch_array ( resource $statement [, int $mode ] )~
@@ -22,7 +22,7 @@ of rows for one child query are returned.
 For details on the data type mapping performed by the OCI8 extension, see the
 datatypes supported by the driver
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {statement}
@@ -30,15 +30,15 @@ datatypes supported by the driver
     A valid OCI8 statement identifier created by |oci_parse| and executed by |
     oci_execute|, or a REF CURSOR statement identifier.
 
-    Can also be a statement identifier returned by |oci_get_implicit_resultset|
-    .
+    Can also be a statement identifier returned by |oci_get_implicit_resultset
+    |.
 
 {mode}
 
     An optional second parameter can be any combination of the following
     constants:
 
-                            oci_fetch_array() Modes
+                           oci_fetch_array() Modes
         Constant                            Description
                      Returns an array with both associative and numeric
     OCI_BOTH         indices. This is the same as OCI_ASSOC + OCI_NUM and is
@@ -54,7 +54,7 @@ datatypes supported by the driver
 
     Use the addition operator "+" to specify more than one mode at a time.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an array with associative and/or numeric indices. If there are no more
@@ -64,7 +64,8 @@ By default, LOB columns are returned as LOB descriptors.
 
 DATE columns are returned as strings formatted to the current date format. The
 default format can be changed with Oracle environment variables such as
-NLS_LANG or by a previously executed ALTER SESSION SET NLS_DATE_FORMAT command.
+NLS_LANG or by a previously executed ALTER SESSION SET NLS_DATE_FORMAT
+command.
 
 Oracle's default, non-case sensitive column names will have uppercase
 associative indices in the result array. Case-sensitive column names will have
@@ -73,10 +74,10 @@ to verify the appropriate case to use for each query.
 
 The table name is not included in the array index. If your query contains two
 different columns with the same name, use OCI_NUM or add a column alias to the
-query to ensure name uniqueness, see example #7. Otherwise only one column will
-be returned via PHP.
+query to ensure name uniqueness, see example #7. Otherwise only one column
+will be returned via PHP.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 oci_fetch_array() with OCI_BOTH
@@ -396,8 +397,8 @@ Example #9 oci_fetch_array() with REF CURSOR
      Execute the returned REF CURSOR and fetch from it like a statement identifier
     oci_execute($refcur);  
     echo "<table border='1'>\n";
-    while (($row = oci_fetch_array($refcur, OCI_ASSOC+OCI_RETURN_NULLS)) != false) 
-    {
+    while (($row = oci_fetch_array($refcur, OCI_ASSOC+OCI_RETURN_NULLS)) != false)
+     {
         echo "<tr>\n";
         foreach ($row as $item) {
             echo "    <td>".($item !== null ? htmlentities($item, ENT_QUOTES) : "&
@@ -452,8 +453,8 @@ Example #10 Pagination with oci_fetch_array() using a LIMIT-like query
     oci_bind_by_name($stid, ':offset', $offset);
     oci_execute($stid);
 
-    while (($row = oci_fetch_array($stid, OCI_ASSOC + OCI_RETURN_NULLS)) != false) 
-    {
+    while (($row = oci_fetch_array($stid, OCI_ASSOC + OCI_RETURN_NULLS)) != false)
+     {
         echo $row['CITY'] . " " . $row['POSTAL_CODE'] . "<br>\n";
     }
 
@@ -520,7 +521,7 @@ Example #11 oci_fetch_array() with Oracle Database 12c Implicit Result Sets
 
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -539,12 +540,12 @@ Example #11 oci_fetch_array() with Oracle Database 12c Implicit Result Sets
     The function oci_fetch_array() is insignificantly slower than |
     oci_fetch_assoc| or |oci_fetch_row|, but is more flexible.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |oci_fetch| - Fetches the next row from a query into internal buffers
-  * |oci_fetch_all| - Fetches multiple rows from a query into a two-dimensional
-    array
+  * |oci_fetch_all| - Fetches multiple rows from a query into a
+    two-dimensional array
   * |oci_fetch_assoc| - Returns the next row from a query as an associative
     array
   * |oci_fetch_object| - Returns the next row from a query as an object

@@ -4,21 +4,21 @@ fileperms
 
 fileperms — Gets file permissions
 
-===============================================================================
+==============================================================================
 *Description*
 
     int fileperms ( string $filename )~
 
 Gets permissions for the given file.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {filename}
 
     Path to the file.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the file's permissions as a numeric mode. Lower bits of this mode are
@@ -28,13 +28,13 @@ return value will also include information on the type of file given as
 specific permissions and file types on POSIX systems, including Linux and Mac
 OS X.
 
-For local files, the specific return value is that of the st_mode member of the
-structure returned by the C library's |stat| function. Exactly which bits are
-set can vary from platform to platform, and looking up your specific platform's
-documentation is recommended if parsing the non-permission bits of the return
-value is required.
+For local files, the specific return value is that of the st_mode member of
+the structure returned by the C library's |stat| function. Exactly which bits
+are set can vary from platform to platform, and looking up your specific
+platform's documentation is recommended if parsing the non-permission bits of
+the return value is required.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Display permissions as an octal value
@@ -108,12 +108,12 @@ The above example will output:
 
 -rw-r--r--
 
-===============================================================================
+==============================================================================
 *Errors/Exceptions*
 
 Upon failure, an E_WARNING is emitted.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: The results of this function are cached. See |clearstatcache| for
@@ -125,7 +125,7 @@ As of PHP 5.0.0, this function can also be used with some URL wrappers. Refer
 to Supported Protocols and Wrappers to determine which wrappers support |stat|
 family of functionality.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |chmod| - Changes file mode

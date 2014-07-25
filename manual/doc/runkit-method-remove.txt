@@ -4,7 +4,7 @@ runkit_method_remove
 
 runkit_method_remove — Dynamically removes the given method
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool runkit_method_remove ( string $classname , string $methodname )~
@@ -16,10 +16,10 @@ runkit_method_remove — Dynamically removes the given method
 Warning
 
 This function is EXPERIMENTAL. The behaviour of this function, its name, and
-surrounding documentation may change without notice in a future release of PHP.
-This function should be used at your own risk.
+surrounding documentation may change without notice in a future release of
+PHP. This function should be used at your own risk.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {classname}
@@ -30,12 +30,12 @@ This function should be used at your own risk.
 
     The name of the method to remove
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 runkit_method_remove() example
@@ -65,12 +65,13 @@ The above example will output:
 
 bar
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |runkit_method_add| - Dynamically adds a new method to a given class
   * |runkit_method_copy| - Copies a method from class to another
-  * |runkit_method_redefine| - Dynamically changes the code of the given method
+  * |runkit_method_redefine| - Dynamically changes the code of the given
+    method
   * |runkit_method_rename| - Dynamically changes the name of the given method
   * |runkit_function_remove| - Remove a function definition
 

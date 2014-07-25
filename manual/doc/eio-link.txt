@@ -4,7 +4,7 @@ eio_link
 
 eio_link — Create a hardlink for file
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource eio_link ( string $path , string $new_path [, int $pri =~
@@ -12,7 +12,7 @@ eio_link — Create a hardlink for file
 
 eio_link() creates a hardlink {new_path} for a file specified by {path}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {path}
@@ -30,8 +30,8 @@ eio_link() creates a hardlink {new_path} for a file specified by {path}.
 
 {callback}
 
-    {callback} function is called when the request is done. It should match the
-    following prototype:
+    {callback} function is called when the request is done. It should match
+    the following prototype:
     void callback(mixed $data, int $result[, resource $req]);
 
     {data}
@@ -52,10 +52,10 @@ eio_link() creates a hardlink {new_path} for a file specified by {path}.
 
     Arbitrary variable passed to {callback}.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 eio_link() example
@@ -102,7 +102,7 @@ bool(true)
 bool(true)
 string(%d) "%ssymlink.dat"
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * eio_symlink

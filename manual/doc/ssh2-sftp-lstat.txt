@@ -4,7 +4,7 @@ ssh2_sftp_lstat
 
 ssh2_sftp_lstat — Stat a symbolic link
 
-===============================================================================
+==============================================================================
 *Description*
 
     array ssh2_sftp_lstat ( resource $sftp , string $path )~
@@ -14,7 +14,7 @@ Stats a symbolic link on the remote filesystem without following the link.
 This function is similar to using the |lstat| function with the ssh2.sftp://
 wrapper in PHP 5 and returns the same values.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {sftp}
@@ -23,13 +23,13 @@ wrapper in PHP 5 and returns the same values.
 
     Path to the remote symbolic link.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 See the documentation for |stat| for details on the values which may be
 returned.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Stating a symbolic link via SFTP
@@ -49,7 +49,7 @@ Example #1 Stating a symbolic link via SFTP
     $mode = $statinfo['mode'];
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ssh2_sftp_stat| - Stat a file on a remote filesystem

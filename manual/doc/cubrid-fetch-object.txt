@@ -4,7 +4,7 @@ cubrid_fetch_object
 
 cubrid_fetch_object — Fetche the next row and returns it as an object
 
-===============================================================================
+==============================================================================
 *Description*
 
     object cubrid_fetch_object ( resource $result [, string $class_name [,~
@@ -14,7 +14,7 @@ This function returns an object with the column names of the result set as
 properties. The values of these properties are extracted from the current row
 of the result.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
@@ -24,27 +24,27 @@ of the result.
 {class_name}
 
     The name of the class to instantiate. If not specified, a stdClass
-    (stdClass is PHP's generic empty class that's used when casting other types
-    to objects) object is returned.
+    (stdClass is PHP's generic empty class that's used when casting other
+    types to objects) object is returned.
 
 {params}
 
-    An optional array of parameters to pass to the constructor for {class_name}
-    objects.
+    An optional array of parameters to pass to the constructor for
+    {class_name} objects.
 
 {type}
 
-    Type can only be CUBRID_LOB, this parameter will be used only when you need
-    to operate the lob object.
+    Type can only be CUBRID_LOB, this parameter will be used only when you
+    need to operate the lob object.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 An object, when process is successful.
 
 FALSE, when there are no more rows; NULL, when process is unsuccessful.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_fetch_object() example
@@ -119,15 +119,15 @@ object(stdClass)#1 (2) {
   string(6) "Bronze"
 }
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |cubrid_execute| - Execute a prepared SQL statement
   * |cubrid_fetch| - Fetch the next row from a result set
   * |cubrid_fetch_array| - Fetch a result row as an associative array, a
     numeric array, or both
-  * |cubrid_fetch_assoc| - Return the associative array that corresponds to the
-    fetched row
+  * |cubrid_fetch_assoc| - Return the associative array that corresponds to
+    the fetched row
   * |cubrid_fetch_row| - Return a numerical array with the values of the
     current row
 

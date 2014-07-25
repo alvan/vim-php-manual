@@ -5,7 +5,7 @@ get_headers
 get_headers — Fetches all the headers sent by the server in response to a HTTP
 request
 
-===============================================================================
+==============================================================================
 *Description*
 
     array get_headers ( string $url [, int $format = 0 ] )~
@@ -13,7 +13,7 @@ request
 get_headers() returns an array with the headers sent by the server in response
 to a HTTP request.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {url}
@@ -22,22 +22,22 @@ to a HTTP request.
 
 {format}
 
-    If the optional {format} parameter is set to non-zero, get_headers() parses
-    the response and sets the array's keys.
+    If the optional {format} parameter is set to non-zero, get_headers()
+    parses the response and sets the array's keys.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an indexed or associative array with the headers, or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 5.1.3   This function now uses the default stream context, which can be set/
         changed with the |stream_context_set_default| function.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 get_headers() example
@@ -93,7 +93,7 @@ Example #2 get_headers() using HEAD example
     $headers = get_headers('http://example.com');
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |apache_request_headers| - Fetch all HTTP request headers

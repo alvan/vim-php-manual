@@ -4,16 +4,16 @@ xmlwriter_write_dtd_entity
 
 (PHP 5 >= 5.1.2, PECL xmlwriter >= 0.1.0)
 
-XMLWriter::writeDTDEntity -- xmlwriter_write_dtd_entity — Write full DTD Entity
-tag
+XMLWriter::writeDTDEntity -- xmlwriter_write_dtd_entity — Write full DTD
+Entity tag
 
-===============================================================================
+==============================================================================
 *Description*
 
 Object oriented style
 
-    bool XMLWriter::writeDTDEntity ( string $name , string $content , bool $pe~
-    , string $pubid , string $sysid , string $ndataid )~
+    bool XMLWriter::writeDTDEntity ( string $name , string $content , bool~
+    $pe , string $pubid , string $sysid , string $ndataid )~
 
 Procedural style
 
@@ -23,7 +23,7 @@ Procedural style
 
 Writes a full DTD entity.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { xmlwriter}
@@ -40,12 +40,12 @@ Writes a full DTD entity.
 
     The content of the entity.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |XMLWriter::startDTDEntity| - Create start DTD Entity

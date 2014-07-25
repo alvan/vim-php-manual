@@ -4,7 +4,7 @@ sqlite_udf_encode_binary
 
 sqlite_udf_encode_binary — Encode binary data before returning it from an UDF
 
-===============================================================================
+==============================================================================
 *Description*
 
     string sqlite_udf_encode_binary ( string $data )~
@@ -13,8 +13,8 @@ sqlite_udf_encode_binary() applies a binary encoding to the {data} so that it
 can be safely returned from queries (since the underlying libsqlite API is not
 binary safe).
 
-If there is a chance that your data might be binary unsafe (e.g.: it contains a
-NUL byte in the middle rather than at the end, or if it has and 0x01 byte as
+If there is a chance that your data might be binary unsafe (e.g.: it contains
+a NUL byte in the middle rather than at the end, or if it has and 0x01 byte as
 the first character) then you must call this function to encode the return
 value from your UDF.
 
@@ -27,19 +27,19 @@ severely impact performance if it did.
     it will lead to double-quoting of the data. Use sqlite_udf_encode_binary()
     instead!
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {data}
 
     The string being encoded.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The encoded string.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |sqlite_udf_decode_binary| - Decode binary data passed as parameters to an

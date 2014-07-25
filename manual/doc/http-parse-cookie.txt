@@ -4,7 +4,7 @@ http_parse_cookie
 
 http_parse_cookie — Parse HTTP cookie
 
-===============================================================================
+==============================================================================
 *Description*
 
     object http_parse_cookie ( string $cookie [, int $flags [, array~
@@ -12,7 +12,7 @@ http_parse_cookie — Parse HTTP cookie
 
 Parses HTTP cookies like sent in a response into a struct.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {cookie}
@@ -25,15 +25,15 @@ Parses HTTP cookies like sent in a response into a struct.
 
 {allowed_extras}
 
-    array containing recognized extra keys; by default all unknown keys will be
-    treated as cookie names
+    array containing recognized extra keys; by default all unknown keys will
+    be treated as cookie names
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a stdClass object on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Using http_parse_cookie()
@@ -64,7 +64,7 @@ stdClass Object
   [domain] => example.com
 )
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |http_parse_headers| - Parse HTTP headers

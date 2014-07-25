@@ -4,17 +4,18 @@ openal_source_get
 
 openal_source_get — Retrieve an OpenAL source property
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed openal_source_get ( resource $source , int $property )~
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {source}
 
-    An Open AL(Source) resource (previously created by |openal_source_create|).
+    An Open AL(Source) resource (previously created by |openal_source_create|
+    ).
 
 {property}
 
@@ -26,13 +27,13 @@ openal_source_get — Retrieve an OpenAL source property
     (array(float,float,float)), AL_VELOCITY (array(float,float,float)),
     AL_DIRECTION (array(float,float,float)).
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the type associated with the property being retrieved or FALSE on
 failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |openal_source_create| - Generate a source resource

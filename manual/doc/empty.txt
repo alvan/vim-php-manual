@@ -4,7 +4,7 @@ empty
 
 empty — Determine whether a variable is empty
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool empty ( mixed $var )~
@@ -13,7 +13,7 @@ Determine whether a variable is considered to be empty. A variable is
 considered empty if it does not exist or if its value equals FALSE. empty()
 does not generate a warning if the variable does not exist.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {var}
@@ -24,12 +24,13 @@ does not generate a warning if the variable does not exist.
 
         Prior to PHP 5.5, empty() only supports variables; anything else will
         result in a parse error. In other words, the following will not work:
-        empty(trim($name)). Instead, use trim($name) == false.
+        `empty(trim($name))`. Instead, use `trim($name)` `==` `false`.
 
     No warning is generated if the variable does not exist. That means empty()
-    is essentially the concise equivalent to !isset($var) || $var == false.
+    is essentially the concise equivalent to `!isset($var)` `||` `$var` `==`
+    `false`.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns FALSE if {var} exists and has a non-empty, non-zero value. Otherwise
@@ -46,7 +47,7 @@ The following things are considered to be empty:
   * array() (an empty array)
   * $var; (a variable declared, but without a value)
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version                          Description
@@ -56,7 +57,7 @@ Version                          Description
 
 5.0.0   Objects with no properties are no longer considered empty.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A simple empty() / |isset| comparison.
@@ -107,18 +108,18 @@ bool(false)
 bool(true)
 bool(true)
 
-===============================================================================
+==============================================================================
 *Notes*
 
-    Note: Because this is a language construct and not a function, it cannot be
-    called using variable functions.
+    Note: Because this is a language construct and not a function, it cannot
+    be called using variable functions.
 
     Note:
 
     When using empty() on inaccessible object properties, the __isset()
     overloading method will be called, if declared.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |isset| - Determine if a variable is set and is not NULL

@@ -4,27 +4,28 @@ sqlsrv_execute
 
 sqlsrv_execute — Executes a statement prepared with |sqlsrv_prepare|
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool sqlsrv_execute ( resource $stmt )~
 
-Executes a statement prepared with |sqlsrv_prepare|. This function is ideal for
-executing a prepared statement multiple times with different parameter values.
+Executes a statement prepared with |sqlsrv_prepare|. This function is ideal
+for executing a prepared statement multiple times with different parameter
+values.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {stmt}
 
     A statement resource returned by |sqlsrv_prepare|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 sqlsrv_execute() example
@@ -68,7 +69,7 @@ sqlsrv_execute().
     }
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
 When you prepare a statement that uses variables as parameters, the variables
@@ -77,7 +78,7 @@ variables, the next time you execute the statement it will run with updated
 parameter values. For statements that you plan to execute only once, use |
 sqlsrv_query|.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |sqlsrv_prepare| - Prepares a query for execution

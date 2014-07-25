@@ -4,26 +4,26 @@ fileinode
 
 fileinode — Gets file inode
 
-===============================================================================
+==============================================================================
 *Description*
 
     int fileinode ( string $filename )~
 
 Gets the file inode.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {filename}
 
     Path to the file.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the inode number of the file, or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Comparing the inode of a file with the current file
@@ -35,12 +35,12 @@ Example #1 Comparing the inode of a file with the current file
     }
 <?>
 
-===============================================================================
+==============================================================================
 *Errors/Exceptions*
 
 Upon failure, an E_WARNING is emitted.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: The results of this function are cached. See |clearstatcache| for
@@ -52,7 +52,7 @@ As of PHP 5.0.0, this function can also be used with some URL wrappers. Refer
 to Supported Protocols and Wrappers to determine which wrappers support |stat|
 family of functionality.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |getmyinode| - Gets the inode of the current script

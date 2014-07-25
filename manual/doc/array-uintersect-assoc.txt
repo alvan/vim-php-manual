@@ -5,19 +5,19 @@ array_uintersect_assoc
 array_uintersect_assoc — Computes the intersection of arrays with additional
 index check, compares data by a callback function
 
-===============================================================================
+==============================================================================
 *Description*
 
-    array array_uintersect_assoc ( array $array1 , array $array2 [, array $...~
-    ], callable $value_compare_func )~
+    array array_uintersect_assoc ( array $array1 , array $array2 [, array~
+    $... ], callable $value_compare_func )~
 
 Computes the intersection of arrays with additional index check, compares data
 by a callback function.
 
-Note that the keys are used in the comparison unlike in |array_uintersect|. The
-data is compared by using a callback function.
+Note that the keys are used in the comparison unlike in |array_uintersect|.
+The data is compared by using a callback function.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {array1}
@@ -37,13 +37,13 @@ data is compared by using a callback function.
 
     int callback ( mixed $a, mixed $b )~
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an array containing all the values of {array1} that are present in all
 the arguments.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 array_uintersect_assoc() example
@@ -62,7 +62,7 @@ Array
     [a] => green
 )
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |array_uintersect| - Computes the intersection of arrays, compares data by

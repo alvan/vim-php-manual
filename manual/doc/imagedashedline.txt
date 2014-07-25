@@ -4,22 +4,22 @@ imagedashedline
 
 imagedashedline — Draw a dashed line
 
-===============================================================================
+==============================================================================
 *Description*
 
-    bool imagedashedline ( resource $image , int $x1 , int $y1 , int $x2 , int~
-    $y2 , int $color )~
+    bool imagedashedline ( resource $image , int $x1 , int $y1 , int $x2 ,~
+    int $y2 , int $color )~
 
-This function is deprecated. Use combination of |imagesetstyle| and |imageline|
-instead.
+This function is deprecated. Use combination of |imagesetstyle| and |imageline
+| instead.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { image}
 
-    An image resource, returned by one of the image creation functions, such as
-    |imagecreatetruecolor|.
+    An image resource, returned by one of the image creation functions, such
+    as |imagecreatetruecolor|.
 
 {x1}
 
@@ -41,12 +41,12 @@ instead.
 
     The fill color. A color identifier created with |imagecolorallocate|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Always returns true
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 imagedashedline() example
@@ -98,7 +98,7 @@ Example #2 Alternative to imagedashedline()
     imagedestroy($im);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |imagesetstyle| - Set the style for line drawing

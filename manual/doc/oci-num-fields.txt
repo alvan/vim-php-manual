@@ -4,26 +4,26 @@ oci_num_fields
 
 oci_num_fields — Returns the number of result columns in a statement
 
-===============================================================================
+==============================================================================
 *Description*
 
     int oci_num_fields ( resource $statement )~
 
 Gets the number of columns in the given {statement}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {statement}
 
     A valid OCI statement identifier.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the number of columns as an integer, or FALSE on errors.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 oci_num_fields() example
@@ -45,8 +45,8 @@ Example #1 oci_num_fields() example
 
     $ncols = oci_num_fields($stid);
     for ($i = 1; $i <= $ncols; $i++) {
-        echo oci_field_name($stid, $i) . " " . oci_field_type($stid, $i) . "<br>\n"
-    ;
+        echo oci_field_name($stid, $i) . " " . oci_field_type($stid, $i) . "<br>\
+    n";
     }
 
     // Outputs:
@@ -58,7 +58,7 @@ Example #1 oci_num_fields() example
 
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:

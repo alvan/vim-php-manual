@@ -5,7 +5,7 @@ db2_fetch_both
 db2_fetch_both — Returns an array, indexed by both column name and position,
 representing a row in a result set
 
-===============================================================================
+==============================================================================
 *Description*
 
     array db2_fetch_both ( resource $stmt [, int $row_number = -1 ] )~
@@ -15,7 +15,7 @@ in a result set. Note that the row returned by db2_fetch_both() requires more
 memory than the single-indexed arrays returned by |db2_fetch_assoc| or |
 db2_fetch_array|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {stmt}
@@ -28,15 +28,15 @@ db2_fetch_array|.
     parameter results in a PHP warning if the result set uses a forward-only
     cursor.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns an associative array with column values indexed by both the column name
-and 0-indexed column number. The array represents the next or requested row in
-the result set. Returns FALSE if there are no rows left in the result set, or
-if the row requested by {row_number} does not exist in the result set.
+Returns an associative array with column values indexed by both the column
+name and 0-indexed column number. The array represents the next or requested
+row in the result set. Returns FALSE if there are no rows left in the result
+set, or if the row requested by {row_number} does not exist in the result set.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Iterating through a forward-only cursor
@@ -66,9 +66,9 @@ The above example will output:
 Example #2 Retrieving specific rows with db2_fetch_both() from a scrollable
 cursor
 
-If your result set uses a scrollable cursor, you can call db2_fetch_both() with
-a specific row number. The following example retrieves every other row in the
-result set, starting with the second row.
+If your result set uses a scrollable cursor, you can call db2_fetch_both()
+with a specific row number. The following example retrieves every other row in
+the result set, starting with the second row.
 
 <?php >
 
@@ -89,15 +89,15 @@ The above example will output:
 5     Rickety Ride     goat                                   9.70
 2     Smarty           horse                                350.00
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |db2_fetch_array| - Returns an array, indexed by column position,
     representing a row in a result set
   * |db2_fetch_assoc| - Returns an array, indexed by column name, representing
     a row in a result set
-  * |db2_fetch_object| - Returns an object with properties representing columns
-    in the fetched row
+  * |db2_fetch_object| - Returns an object with properties representing
+    columns in the fetched row
   * |db2_fetch_row| - Sets the result set pointer to the next row or requested
     row
   * |db2_result| - Returns a single column from a row in the result set

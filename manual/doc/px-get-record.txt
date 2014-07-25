@@ -4,12 +4,12 @@ px_get_record
 
 px_get_record — Returns record of paradox database
 
-===============================================================================
+==============================================================================
 *Description*
 
     array px_get_record ( resource $pxdoc , int $num [, int $mode = 0 ] )~
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {pxdoc}
@@ -35,13 +35,13 @@ px_get_record — Returns record of paradox database
     calendar. Use the functions |px-timestamp2string| and |px-date2string| to
     convert them into a character representation.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the {num}'th record from the paradox database. The record is returned
 as an associated array with its keys being the field names.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |px_retrieve_record| - Returns record of paradox database

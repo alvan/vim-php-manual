@@ -5,7 +5,7 @@ bbcode_set_arg_parser
 bbcode_set_arg_parser — Attach another parser in order to use another rule set
 for argument parsing
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool bbcode_set_arg_parser ( resource $bbcode_container , resource~
@@ -15,7 +15,7 @@ Attaches another parser to the bbcode_container. This parser is used only when
 arguments must be parsed. If this function is not used, the default argument
 parser is the parser itself.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {bbcode_container}
@@ -27,12 +27,12 @@ parser is the parser itself.
     BBCode_Container resource, returned by |bbcode_create|. It will be used
     only for parsed arguments
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 bbcode_set_arg_parser() usage example

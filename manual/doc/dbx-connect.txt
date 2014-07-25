@@ -4,7 +4,7 @@ dbx_connect
 
 dbx_connect — Open a connection/database
 
-===============================================================================
+==============================================================================
 *Description*
 
     object dbx_connect ( mixed $module , string $host , string $database ,~
@@ -12,7 +12,7 @@ dbx_connect — Open a connection/database
 
 Opens a connection to a database.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {module}
@@ -54,11 +54,11 @@ Opens a connection to a database.
 The {host}, {database}, {username} and {password} parameters are expected, but
 not always used depending on the connect functions for the abstracted module.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns an object on success, FALSE on error. If a connection has been made but
-the database could not be selected, the connection is closed and FALSE is
+Returns an object on success, FALSE on error. If a connection has been made
+but the database could not be selected, the connection is closed and FALSE is
 returned.
 
 The returned object has three properties:
@@ -67,8 +67,8 @@ database
     It is the name of the currently selected database.
 handle
 
-    It is a valid handle for the connected database, and as such it can be used
-    in module-specific functions (if required).
+    It is a valid handle for the connected database, and as such it can be
+    used in module-specific functions (if required).
     <?php >
     $link = dbx_connect(DBX_MYSQL, "localhost", "db", "username", "password");
     mysql_close($link->handle); // dbx_close($link) would be better here
@@ -78,7 +78,7 @@ module
     It is used internally by dbx only, and is actually the module number
     mentioned above.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version       Description
@@ -87,27 +87,28 @@ Version       Description
 4.2.0   Introduced DBX_SYBASECT.
 4.1.0   Introduced DBX_FBSQL.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 dbx_connect() example
 
 <?php >
-    $link = dbx_connect(DBX_ODBC, "", "db", "username", "password", DBX_PERSISTENT)
+    $link = dbx_connect(DBX_ODBC, "", "db", "username", "password", DBX_PERSISTENT
+    )
         or die("Could not connect");
 
     echo "Connected successfully";
     dbx_close($link);
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
 
     Always refer to the module-specific documentation as well.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |dbx_close| - Close an open connection/database

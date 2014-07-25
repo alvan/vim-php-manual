@@ -4,7 +4,7 @@ fwrite
 
 fwrite — Binary-safe file write
 
-===============================================================================
+==============================================================================
 *Description*
 
     int fwrite ( resource $handle , string $string [, int $length ] )~
@@ -12,7 +12,7 @@ fwrite — Binary-safe file write
 fwrite() writes the contents of {string} to the file stream pointed to by
 {handle}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {handle}
@@ -26,18 +26,19 @@ fwrite() writes the contents of {string} to the file stream pointed to by
 {length}
 
     If the {length} argument is given, writing will stop after {length} bytes
-    have been written or the end of {string} is reached, whichever comes first.
+    have been written or the end of {string} is reached, whichever comes
+    first.
 
     Note that if the {length} argument is given, then the magic_quotes_runtime
     configuration option will be ignored and no slashes will be stripped from
     {string}.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 fwrite() returns the number of bytes written, or FALSE on error.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -58,21 +59,22 @@ fwrite() returns the number of bytes written, or FALSE on error.
 
     Note:
 
-    On systems which differentiate between binary and text files (i.e. Windows)
-    the file must be opened with 'b' included in |fopen| mode parameter.
+    On systems which differentiate between binary and text files (i.e.
+    Windows) the file must be opened with 'b' included in |fopen| mode
+    parameter.
 
     Note:
 
     If {handle} was |fopen|ed in append mode, fwrite()s are atomic (unless the
     size of {string} exceeds the filesystem's block size, on some platforms,
     and as long as the file is on a local filesystem). That is, there is no
-    need to |flock| a resource before calling fwrite(); all of the data will be
-    written without interruption.
+    need to |flock| a resource before calling fwrite(); all of the data will
+    be written without interruption.
 
     Note:
 
-    If writing twice to the file pointer, then the data will be appended to the
-    end of the file content:
+    If writing twice to the file pointer, then the data will be appended to
+    the end of the file content:
     <?php >
     $fp = fopen('data.txt', 'w');
     fwrite($fp, '1');
@@ -82,7 +84,7 @@ fwrite() returns the number of bytes written, or FALSE on error.
     // the content of 'data.txt' is now 123 and not 23!
 <    ?>
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A simple fwrite() example
@@ -117,7 +119,7 @@ Example #1 A simple fwrite() example
     }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |fread| - Binary-safe file read

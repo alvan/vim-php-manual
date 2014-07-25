@@ -4,23 +4,23 @@ odbc_connect
 
 odbc_connect — Connect to a datasource
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource odbc_connect ( string $dsn , string $user , string $password [,~
     int $cursor_type ] )~
 
-The connection id returned by this functions is needed by other ODBC functions.
-You can have multiple connections open at once as long as they either use
-different db or different credentials.
+The connection id returned by this functions is needed by other ODBC
+functions. You can have multiple connections open at once as long as they
+either use different db or different credentials.
 
 With some ODBC drivers, executing a complex stored procedure may fail with an
-error similar to: "Cannot open a cursor on a stored procedure that has anything
-other than a single select statement in it". Using SQL_CUR_USE_ODBC may avoid
-that error. Also, some drivers don't support the optional row_number parameter
-in |odbc_fetch_row|. SQL_CUR_USE_ODBC might help in that case, too.
+error similar to: "Cannot open a cursor on a stored procedure that has
+anything other than a single select statement in it". Using SQL_CUR_USE_ODBC
+may avoid that error. Also, some drivers don't support the optional row_number
+parameter in |odbc_fetch_row|. SQL_CUR_USE_ODBC might help in that case, too.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {dsn}
@@ -38,9 +38,9 @@ in |odbc_fetch_row|. SQL_CUR_USE_ODBC might help in that case, too.
 
 {cursor_type}
 
-    This sets the type of cursor to be used for this connection. This parameter
-    is not normally needed, but can be useful for working around problems with
-    some ODBC drivers.
+    This sets the type of cursor to be used for this connection. This
+    parameter is not normally needed, but can be useful for working around
+    problems with some ODBC drivers.
 
     The following constants are defined for cursortype:
 
@@ -48,12 +48,12 @@ in |odbc_fetch_row|. SQL_CUR_USE_ODBC might help in that case, too.
       + SQL_CUR_USE_ODBC
       + SQL_CUR_USE_DRIVER
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an ODBC connection or (FALSE) on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 DSN-less connections
@@ -75,7 +75,7 @@ Example #1 DSN-less connections
     790;Dbq=$excelFile;DefaultDir=$excelDir" , '', '');
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * For persistent connections: |odbc_pconnect| - Open a persistent database

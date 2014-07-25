@@ -5,7 +5,7 @@ fann_get_cascade_output_change_fraction
 fann_get_cascade_output_change_fraction — Returns the cascade output change
 fraction
 
-===============================================================================
+==============================================================================
 *Description*
 
     float fann_get_cascade_output_change_fraction ( resource $ann )~
@@ -28,26 +28,26 @@ trained more and if the fraction is high, they will be trained less.
 The default cascade output change fraction is 0.01, which is equalent to a 1%
 change in MSE.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {ann}
 
     Neural network resource.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The cascade output change fraction, or FALSE on error.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |fann_set_cascade_output_change_fraction| - Sets the cascade output change
     fraction
   * |fann_get_MSE| - Reads the mean square error from the network
-  * |fann_get_cascade_output_stagnation_epochs| - Returns the number of cascade
-    output stagnation epochs
+  * |fann_get_cascade_output_stagnation_epochs| - Returns the number of
+    cascade output stagnation epochs
 
 
 vim:ft=help:

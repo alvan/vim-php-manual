@@ -4,7 +4,7 @@ stream_socket_server
 
 stream_socket_server — Create an Internet or Unix domain server socket
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource stream_socket_server ( string $local_socket [, int &$errno [,~
@@ -16,7 +16,7 @@ Creates a stream or datagram socket on the specified {local_socket}.
 This function only creates a socket, to begin accepting connections use |
 stream_socket_accept|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {local_socket}
@@ -25,23 +25,24 @@ stream_socket_accept|.
     standard URL formatting: transport://target.
 
     For Internet Domain sockets (AF_INET) such as TCP and UDP, the target
-    portion of the {remote_socket} parameter should consist of a hostname or IP
-    address followed by a colon and a port number. For Unix domain sockets, the
-    target portion should point to the socket file on the filesystem.
+    portion of the {remote_socket} parameter should consist of a hostname or
+    IP address followed by a colon and a port number. For Unix domain sockets,
+    the target portion should point to the socket file on the filesystem.
 
     Depending on the environment, Unix domain sockets may not be available. A
-    list of available transports can be retrieved using |stream_get_transports|
-    . See List of Supported Socket Transports for a list of bulitin transports.
+    list of available transports can be retrieved using |stream_get_transports
+    |. See List of Supported Socket Transports for a list of bulitin
+    transports.
 
 {errno}
 
-    If the optional {errno} and {errstr} arguments are present they will be set
-    to indicate the actual system level error that occurred in the system-level
-    socket(), bind(), and listen() calls. If the value returned in {errno} is 0
-    and the function returned FALSE, it is an indication that the error
-    occurred before the bind() call. This is most likely due to a problem
-    initializing the socket. Note that the {errno} and {errstr} arguments will
-    always be passed by reference.
+    If the optional {errno} and {errstr} arguments are present they will be
+    set to indicate the actual system level error that occurred in the
+    system-level socket(), bind(), and listen() calls. If the value returned
+    in {errno} is 0 and the function returned FALSE, it is an indication that
+    the error occurred before the bind() call. This is most likely due to a
+    problem initializing the socket. Note that the {errno} and {errstr}
+    arguments will always be passed by reference.
 
 {errstr}
 
@@ -59,12 +60,12 @@ stream_socket_accept|.
 
 {context}
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the created stream, or FALSE on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Using TCP server sockets
@@ -106,13 +107,13 @@ Example #2 Using UDP server sockets
 
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: When specifying a numerical IPv6 address (e.g. fe80::1), you must
     enclose the IP in square brackets—for example, tcp://[fe80::1]:80.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |stream_socket_client| - Open Internet or Unix domain socket connection

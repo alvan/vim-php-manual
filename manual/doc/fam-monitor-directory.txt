@@ -4,7 +4,7 @@ fam_monitor_directory
 
 fam_monitor_directory — Monitor a directory for changes
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource fam_monitor_directory ( resource $fam , string $dirname )~
@@ -18,7 +18,7 @@ of |readdir|) changes.
 The possible event codes are described in detail in the constants part of this
 section.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {fam}
@@ -30,17 +30,17 @@ section.
 
     Path to the monitored directory
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a monitoring resource or FALSE on errors.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |fam_monitor_file| - Monitor a regular file for changes
-  * |fam_monitor_collection| - Monitor a collection of files in a directory for
-    changes
+  * |fam_monitor_collection| - Monitor a collection of files in a directory
+    for changes
   * |fam_cancel_monitor| - Terminate monitoring
   * |fam_suspend_monitor| - Temporarily suspend monitoring
   * |fam_resume_monitor| - Resume suspended monitoring

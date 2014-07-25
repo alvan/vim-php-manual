@@ -4,14 +4,14 @@ fgets
 
 fgets — Gets line from file pointer
 
-===============================================================================
+==============================================================================
 *Description*
 
     string fgets ( resource $handle [, int $length ] )~
 
 Gets a line from file pointer.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {handle}
@@ -21,8 +21,8 @@ Gets a line from file pointer.
 
 {length}
 
-    Reading ends when {length} - 1 bytes have been read, or a newline (which is
-    included in the return value), or an EOF (whichever comes first). If no
+    Reading ends when {length} - 1 bytes have been read, or a newline (which
+    is included in the return value), or an EOF (whichever comes first). If no
     length is specified, it will keep reading from the stream until it reaches
     the end of the line.
 
@@ -33,7 +33,7 @@ Gets a line from file pointer.
         more resource efficient for your script to specify the maximum line
         length.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a string of up to {length} - 1 bytes read from the file pointed to by
@@ -42,14 +42,14 @@ returned.
 
 If an error occurs, FALSE is returned.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version              Description
 4.3.0   fgets() is now binary safe
 4.2.0   The {length} parameter became optional
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Reading a file line by line
@@ -67,20 +67,20 @@ Example #1 Reading a file line by line
     }
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: If PHP is not properly recognizing the line endings when reading
     files either on or created by a Macintosh computer, enabling the
-    auto_detect_line_endings run-time configuration option may help resolve the
-    problem.
+    auto_detect_line_endings run-time configuration option may help resolve
+    the problem.
 
     Note:
 
     People used to the 'C' semantics of fgets() should note the difference in
     how EOF is returned.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |fgetss| - Gets line from file pointer and strip HTML tags

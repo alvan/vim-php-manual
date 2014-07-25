@@ -4,15 +4,16 @@ cubrid_result
 
 cubrid_result — Return the value of a specific field in a specific row
 
-===============================================================================
+==============================================================================
 *Description*
 
-    string cubrid_result ( resource $result , int $row [, mixed $field = 0 ] )~
+    string cubrid_result ( resource $result , int $row [, mixed $field = 0 ]~
+)~
 
 This function returns the value of a specific field in a specific row from a
 result set.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
@@ -32,14 +33,14 @@ result set.
     bar from...'), use the alias instead of the column name. If undefined, the
     first field is retrieved.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Value of a specific field, on success (NULL if value if null).
 
 FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_result() example

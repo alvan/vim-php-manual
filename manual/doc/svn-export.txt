@@ -4,7 +4,7 @@ svn_export
 
 svn_export — Export the contents of a SVN directory
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool svn_export ( string $frompath , string $topath [, bool $working_copy~
@@ -13,7 +13,7 @@ svn_export — Export the contents of a SVN directory
 Export the contents of either a working copy or repository into a 'clean'
 directory.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {frompath}
@@ -28,12 +28,12 @@ directory.
 
     If TRUE, it will export uncommitted files from the working copy.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 svn_export() example
@@ -45,7 +45,7 @@ Example #1 svn_export() example
     svn_export($working_dir, $new_working_dir);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |svn_import| - Imports an unversioned path into a repository

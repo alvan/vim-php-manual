@@ -4,7 +4,7 @@ curl_init
 
 curl_init — Initialize a cURL session
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource curl_init ([ string $url = NULL ] )~
@@ -12,7 +12,7 @@ curl_init — Initialize a cURL session
 Initializes a new session and return a cURL handle for use with the |
 curl_setopt|, |curl_exec|, and |curl_close| functions.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {url}
@@ -24,12 +24,12 @@ curl_setopt|, |curl_exec|, and |curl_close| functions.
 
         The file protocol is disabled by cURL if open_basedir is set.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a cURL handle on success, FALSE on errors.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Initializing a new cURL session and fetching a web page
@@ -49,7 +49,7 @@ Example #1 Initializing a new cURL session and fetching a web page
     curl_close($ch);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |curl_close| - Close a cURL session

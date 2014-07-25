@@ -4,17 +4,17 @@ msg_receive
 
 msg_receive — Receive a message from a message queue
 
-===============================================================================
+==============================================================================
 *Description*
 
-    bool msg_receive ( resource $queue , int $desiredmsgtype , int &$msgtype ,~
-    int $maxsize , mixed &$message [, bool $unserialize = true [, int $flags =~
-    0 [, int &$errorcode ]]] )~
+    bool msg_receive ( resource $queue , int $desiredmsgtype , int &$msgtype~
+    , int $maxsize , mixed &$message [, bool $unserialize = true [, int~
+    $flags = 0 [, int &$errorcode ]]] )~
 
 msg_receive() will receive the first message from the specified {queue} of the
 type specified by {desiredmsgtype}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {queue}
@@ -32,13 +32,14 @@ type specified by {desiredmsgtype}.
 
 {msgtype}
 
-    The type of the message that was received will be stored in this parameter.
+    The type of the message that was received will be stored in this
+    parameter.
 
 {maxsize}
 
     The maximum size of message to be accepted is specified by the {maxsize};
-    if the message in the queue is larger than this size the function will fail
-    (unless you set {flags} as described below).
+    if the message in the queue is larger than this size the function will
+    fail (unless you set {flags} as described below).
 
 {message}
 
@@ -62,7 +63,7 @@ type specified by {desiredmsgtype}.
     system call. It defaults to 0, but you may specify one or more of the
     following values (by adding or ORing them together).
 
-                          Flag values for msg_receive
+                         Flag values for msg_receive
                    If there are no messages of the {desiredmsgtype}, return
     MSG_IPC_NOWAIT immediately and do not wait. The function will fail and
                    return an integer value corresponding to MSG_ENOMSG.
@@ -75,19 +76,19 @@ type specified by {desiredmsgtype}.
 
 {errorcode}
 
-    If the function fails, the optional {errorcode} will be set to the value of
-    the system errno variable.
+    If the function fails, the optional {errorcode} will be set to the value
+    of the system errno variable.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
 Upon successful completion the message queue data structure is updated as
-follows: msg_lrpid is set to the process-ID of the calling process, msg_qnum is
-decremented by 1 and msg_rtime is set to the current time.
+follows: msg_lrpid is set to the process-ID of the calling process, msg_qnum
+is decremented by 1 and msg_rtime is set to the current time.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |msg_remove_queue| - Destroy a message queue

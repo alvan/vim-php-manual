@@ -5,7 +5,7 @@ mssql_fetch_assoc
 mssql_fetch_assoc — Returns an associative array of the current row in the
 result
 
-===============================================================================
+==============================================================================
 *Description*
 
     array mssql_fetch_assoc ( resource $result_id )~
@@ -14,7 +14,7 @@ Returns an associative array that corresponds to the fetched row and moves the
 internal data pointer ahead. mssql_fetch_assoc() is equivalent to calling |
 mssql_fetch_array| with MSSQL_ASSOC for the optional second parameter.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result_id}
@@ -22,13 +22,13 @@ mssql_fetch_array| with MSSQL_ASSOC for the optional second parameter.
     The result resource that is being evaluated. This result comes from a call
     to |mssql_query|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an associative array that corresponds to the fetched row, or FALSE if
 there are no more rows.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mssql_fetch_assoc() example

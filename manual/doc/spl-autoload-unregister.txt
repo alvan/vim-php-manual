@@ -5,7 +5,7 @@ spl_autoload_unregister
 spl_autoload_unregister — Unregister given function as __autoload()
 implementation
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool spl_autoload_unregister ( mixed $autoload_function )~
@@ -17,14 +17,14 @@ deactivated.
 When this function results in the autoload stack being deactivated, any
 __autoload function that previously existed will not be reactivated.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {autoload_function}
 
     The autoload function being unregistered.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.

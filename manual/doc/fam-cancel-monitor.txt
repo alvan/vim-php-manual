@@ -4,7 +4,7 @@ fam_cancel_monitor
 
 fam_cancel_monitor — Terminate monitoring
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool fam_cancel_monitor ( resource $fam , resource $fam_monitor )~
@@ -13,7 +13,7 @@ Terminates monitoring on a resource.
 
 In addition an FAMAcknowledge event occurs.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {fam}
@@ -25,18 +25,18 @@ In addition an FAMAcknowledge event occurs.
 
     A resource returned by one of the fam_monitor_XXX functions
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |fam_monitor_file| - Monitor a regular file for changes
   * |fam_monitor_directory| - Monitor a directory for changes
-  * |fam_monitor_collection| - Monitor a collection of files in a directory for
-    changes
+  * |fam_monitor_collection| - Monitor a collection of files in a directory
+    for changes
   * |fam_suspend_monitor| - Temporarily suspend monitoring
 
 

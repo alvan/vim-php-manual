@@ -4,32 +4,32 @@ pg_result_seek
 
 pg_result_seek — Set internal row offset in result resource
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool pg_result_seek ( resource $result , int $offset )~
 
 pg_result_seek() sets the internal row offset in a result resource.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
 
-    PostgreSQL query result resource, returned by |pg_query|, |pg_query_params|
-    or |pg_execute| (among others).
+    PostgreSQL query result resource, returned by |pg_query|, |pg_query_params
+    | or |pg_execute| (among others).
 
 {offset}
 
     Row to move the internal offset to in the {result} resource. Rows are
     numbered starting from zero.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 pg_result_seek() example
@@ -50,7 +50,7 @@ Example #1 pg_result_seek() example
      
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |pg_fetch_row| - Get a row as an enumerated array

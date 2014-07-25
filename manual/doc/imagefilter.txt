@@ -4,7 +4,7 @@ imagefilter
 
 imagefilter — Applies a filter to an image
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool imagefilter ( resource $image , int $filtertype [, int $arg1 [, int~
@@ -12,13 +12,13 @@ imagefilter — Applies a filter to an image
 
 imagefilter() applies the given filter {filtertype} on the {image}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { image}
 
-    An image resource, returned by one of the image creation functions, such as
-    |imagecreatetruecolor|.
+    An image resource, returned by one of the image creation functions, such
+    as |imagecreatetruecolor|.
 
 {filtertype}
 
@@ -30,9 +30,9 @@ imagefilter() applies the given filter {filtertype} on the {image}.
       + IMG_FILTER_CONTRAST: Changes the contrast of the image. Use {arg1} to
         set the level of contrast.
       + IMG_FILTER_COLORIZE: Like IMG_FILTER_GRAYSCALE, except you can specify
-        the color. Use {arg1}, {arg2} and {arg3} in the form of {red}, {green},
-        {blue} and {arg4} for the {alpha} channel. The range for each color is
-        0 to 255.
+        the color. Use {arg1}, {arg2} and {arg3} in the form of {red},
+        {green}, {blue} and {arg4} for the {alpha} channel. The range for each
+        color is 0 to 255.
       + IMG_FILTER_EDGEDETECT: Uses edge detection to highlight the edges in
         the image.
       + IMG_FILTER_EMBOSS: Embosses the image.
@@ -42,8 +42,9 @@ imagefilter() applies the given filter {filtertype} on the {image}.
         effect.
       + IMG_FILTER_SMOOTH: Makes the image smoother. Use {arg1} to set the
         level of smoothness.
-      + IMG_FILTER_PIXELATE: Applies pixelation effect to the image, use {arg1}
-        to set the block size and {arg2} to set the pixelation effect mode.
+      + IMG_FILTER_PIXELATE: Applies pixelation effect to the image, use
+        {arg1} to set the block size and {arg2} to set the pixelation effect
+        mode.
 
 {arg1}
 
@@ -66,21 +67,22 @@ imagefilter() applies the given filter {filtertype} on the {image}.
 {arg4}
 
       + IMG_FILTER_COLORIZE: Alpha channel, A value between 0 and 127. 0
-        indicates completely opaque while 127 indicates completely transparent.
+        indicates completely opaque while 127 indicates completely
+        transparent.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version                     Description
 5.3.0   Pixelation support (IMG_FILTER_PIXELATE) was added.
 5.2.5   Alpha support for IMG_FILTER_COLORIZE was added.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 imagefilter() grayscale example
@@ -200,8 +202,8 @@ Example #5 imagefilter() pixelate example
     imagefilter($logo2, IMG_FILTER_PIXELATE, 3, true);
 
     // Merge the differences onto the output image
-    imagecopy($output, $logo1, 0, 0, 0, 0, imagesx($logo1) - 1, imagesy($logo1) - 1
-    );
+    imagecopy($output, $logo1, 0, 0, 0, 0, imagesx($logo1) - 1, imagesy($logo1) - 
+    1);
     imagecopy($output, $logo2, imagesx($logo2), 0, 0, 0, imagesx($logo2) - 1, 
     imagesy($logo2) - 1);
     imagedestroy($logo1);
@@ -217,10 +219,10 @@ The above example will output something similar to:
 
 Output of example : imagefilter() pixelate
 
-===============================================================================
+==============================================================================
 *Notes*
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |imageconvolution| - Apply a 3x3 convolution matrix, using coefficient and

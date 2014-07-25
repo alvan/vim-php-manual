@@ -4,11 +4,11 @@ xdiff_file_patch_binary
 
 xdiff_file_patch_binary — Alias of xdiff_file_bpatch
 
-===============================================================================
+==============================================================================
 *Description*
 
-    bool xdiff_file_patch_binary ( string $file , string $patch , string $dest~
-)~
+    bool xdiff_file_patch_binary ( string $file , string $patch , string~
+    $dest )~
 
 Patches a {file} with a binary {patch} and stores the result in a file {dest}.
 This function accepts patches created both via |xdiff_file_bdiff| or |
@@ -16,7 +16,7 @@ xdiff_file_rabdiff| functions or their string counterparts.
 
 Starting with version 1.5.0 this function is an alias of |xdiff_file_bpatch|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {file}
@@ -31,12 +31,12 @@ Starting with version 1.5.0 this function is an alias of |xdiff_file_bpatch|.
 
     Path of the resulting file.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 xdiff_file_patch_binary() example
@@ -56,7 +56,7 @@ The following code applies binary diff to a file.
 
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -64,7 +64,7 @@ The following code applies binary diff to a file.
     Both files ({file} and {patch}) will be loaded into memory so ensure that
     your memory_limit is set high enough.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |xdiff_string_patch_binary| - Alias of xdiff_string_bpatch

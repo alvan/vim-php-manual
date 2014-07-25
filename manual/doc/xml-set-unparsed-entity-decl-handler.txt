@@ -5,7 +5,7 @@ xml_set_unparsed_entity_decl_handler
 xml_set_unparsed_entity_decl_handler — Set up unparsed entity declaration
 handler
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool xml_set_unparsed_entity_decl_handler ( resource $parser , callable~
@@ -20,16 +20,16 @@ declaration with an NDATA declaration, like the following:
 <!ENTITY <parameter>name</parameter> {<parameter>publicId</parameter> | <parameter>systemId</parameter>}
         NDATA <parameter>notationName</parameter>
 
-See » section 4.2.2 of the XML 1.0 spec for the definition of notation declared
-external entities.
+See » section 4.2.2 of the XML 1.0 spec for the definition of notation
+declared external entities.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {parser}
 
-    A reference to the XML parser to set up unparsed entity declaration handler
-    function.
+    A reference to the XML parser to set up unparsed entity declaration
+    handler function.
 
 {handler}
 
@@ -55,8 +55,8 @@ external entities.
     {public_id}
         Public identifier for the external entity.
     {notation_name}
-        Name of the notation of this entity (see |xml_set_notation_decl_handler
-        |).
+        Name of the notation of this entity (see |
+        xml_set_notation_decl_handler|).
 
     If a handler function is set to an empty string, or FALSE, the handler in
     question is disabled.
@@ -64,7 +64,7 @@ external entities.
         Note: Instead of a function name, an array containing an object
         reference and a method name can also be supplied.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.

@@ -4,7 +4,7 @@ array_pop
 
 array_pop — Pop the element off the end of array
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed array_pop ( array &$array )~
@@ -13,23 +13,23 @@ array_pop() pops and returns the last value of the {array}, shortening the
 {array} by one element. If {array} is empty (or is not an array), NULL will be
 returned. Will additionally produce a Warning when called on a non-array.
 
-    Note: This function will |reset| the array pointer of the input array after
-    use.
+    Note: This function will |reset| the array pointer of the input array
+    after use.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {array}
 
     The array to get the value from.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the last value of {array}. If {array} is empty (or is not an array),
 NULL will be returned.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 array_pop() example
@@ -51,12 +51,13 @@ Array
 
 and raspberry will be assigned to $fruit.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |array_push| - Push one or more elements onto the end of array
   * |array_shift| - Shift an element off the beginning of array
-  * |array_unshift| - Prepend one or more elements to the beginning of an array
+  * |array_unshift| - Prepend one or more elements to the beginning of an
+    array
 
 
 vim:ft=help:

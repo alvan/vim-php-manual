@@ -4,7 +4,7 @@ readfile
 
 readfile — Outputs a file
 
-===============================================================================
+==============================================================================
 *Description*
 
     int readfile ( string $filename [, bool $use_include_path = false [,~
@@ -12,7 +12,7 @@ readfile — Outputs a file
 
 Reads a file and writes it to the output buffer.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {filename}
@@ -28,14 +28,14 @@ Reads a file and writes it to the output buffer.
 
     A context stream resource.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the number of bytes read from the file. If an error occurs, FALSE is
-returned and unless the function was called as @readfile(), an error message is
-printed.
+returned and unless the function was called as @readfile(), an error message
+is printed.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Forcing a download using readfile()
@@ -60,7 +60,7 @@ The above example will output something similar to:
 
 Open / Save dialogue
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -80,7 +80,7 @@ any predefined variables they may provide.
     Note: Context support was added with PHP 5.0.0. For a description of
     contexts, refer to Streams.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |fpassthru| - Output all remaining data on a file pointer

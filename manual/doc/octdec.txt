@@ -4,7 +4,7 @@ octdec
 
 octdec — Octal to decimal
 
-===============================================================================
+==============================================================================
 *Description*
 
     number octdec ( string $octal_string )~
@@ -12,27 +12,27 @@ octdec — Octal to decimal
 Returns the decimal equivalent of the octal number represented by the
 {octal_string} argument.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {octal_string}
 
     The octal string to convert
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The decimal representation of {octal_string}
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
-        The function can now convert numbers that are too large to fit into the
-4.1.0   platforms integer type, larger values are returned as float in that
-        case.
+Version                              Description
+        The function can now convert numbers that are too large to fit into
+4.1.0   the platforms integer type, larger values are returned as float in
+        that case.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 octdec() example
@@ -47,7 +47,7 @@ The above example will output:
 63
 45
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |decoct| - Decimal to octal

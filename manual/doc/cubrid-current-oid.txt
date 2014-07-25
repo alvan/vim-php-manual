@@ -4,31 +4,31 @@ cubrid_current_oid
 
 cubrid_current_oid — Get OID of the current cursor location
 
-===============================================================================
+==============================================================================
 *Description*
 
     string cubrid_current_oid ( resource $req_identifier )~
 
 The cubrid_current_oid() function is used to get the oid of the current cursor
-location from the query result. To use cubrid_current_oid(), the query executed
-must be a updatable query, and the CUBRID_INCLUDE_OID option must be included
-during the query execution.
+location from the query result. To use cubrid_current_oid(), the query
+executed must be a updatable query, and the CUBRID_INCLUDE_OID option must be
+included during the query execution.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {req_identifier}
 
     Request identifier.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Oid of current cursor location, when process is successful
 
 FALSE, when process is unsuccessful.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_current_oid() example
@@ -53,7 +53,7 @@ Array
     [f_name] => Mixed
 )
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |cubrid_execute| - Execute a prepared SQL statement

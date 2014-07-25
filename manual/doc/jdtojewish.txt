@@ -4,15 +4,15 @@ jdtojewish
 
 jdtojewish — Converts a Julian day count to a Jewish calendar date
 
-===============================================================================
+==============================================================================
 *Description*
 
-    string jdtojewish ( int $juliandaycount [, bool $hebrew = false [, int $fl~
-    = 0 ]] )~
+    string jdtojewish ( int $juliandaycount [, bool $hebrew = false [, int~
+    $fl = 0 ]] )~
 
 Converts a Julian Day Count to the Jewish Calendar.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {julianday}
@@ -29,19 +29,19 @@ Converts a Julian Day Count to the Jewish Calendar.
     The available formats are: CAL_JEWISH_ADD_ALAFIM_GERESH,
     CAL_JEWISH_ADD_ALAFIM, CAL_JEWISH_ADD_GERESHAYIM.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The jewish date as a string in the form "month/day/year"
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version            Description
 5.0.0   The {fl} parameter was added.
 4.3.0   The {hebrew} parameter was added.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 jdtojewish() Example
@@ -52,7 +52,7 @@ Example #1 jdtojewish() Example
     CAL_JEWISH_ADD_ALAFIM_GERESH); 
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |jewishtojd| - Converts a date in the Jewish Calendar to Julian Day Count

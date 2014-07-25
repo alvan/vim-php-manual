@@ -4,7 +4,7 @@ dbase_numrecords
 
 dbase_numrecords — Gets the number of records in a database
 
-===============================================================================
+==============================================================================
 *Description*
 
     int dbase_numrecords ( int $dbase_identifier )~
@@ -13,22 +13,22 @@ Gets the number of records (rows) in the specified database.
 
     Note:
 
-    Record numbers are between 1 and dbase_numrecords($db), while field numbers
-    are between 0 and dbase_numfields($db)-1.
+    Record numbers are between 1 and dbase_numrecords($db), while field
+    numbers are between 0 and dbase_numfields($db)-1.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {dbase_identifier}
 
     The database link identifier, returned by |dbase_open| or |dbase_create|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The number of records in the database, or FALSE if an error occurs.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Looping over all the records of the database
@@ -47,7 +47,7 @@ Example #1 Looping over all the records of the database
 
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |dbase_numfields| - Gets the number of fields of a database

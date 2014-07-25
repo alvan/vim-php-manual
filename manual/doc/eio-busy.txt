@@ -4,7 +4,7 @@ eio_busy
 
 eio_busy — Artificially increase load. Could be useful in tests, benchmarking.
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource eio_busy ( int $delay [, int $pri = EIO_PRI_DEFAULT [, callable~
@@ -13,7 +13,7 @@ eio_busy — Artificially increase load. Could be useful in tests, benchmarking.
 eio_busy() artificially increases load taking {delay} seconds to execute. May
 be used for debugging, or benchmarking.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {delay}
@@ -33,12 +33,12 @@ be used for debugging, or benchmarking.
 
     Arbitrary variable passed to {callback}.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 eio_busy() returns request resource on success or FALSE on error.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * eio_nop

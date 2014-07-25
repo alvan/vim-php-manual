@@ -5,15 +5,16 @@ wincache_ucache_cas
 wincache_ucache_cas — Compares the variable with old value and assigns new
 value to it
 
-===============================================================================
+==============================================================================
 *Description*
 
-    bool wincache_ucache_cas ( string $key , int $old_value , int $new_value )~
+    bool wincache_ucache_cas ( string $key , int $old_value , int $new_value~
+)~
 
 Compares the variable associated with the {key} with {old_value} and if it
 matches then assigns the {new_value} to it.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {key}
@@ -32,12 +33,12 @@ matches then assigns the {new_value} to it.
     is found. The value should be of type long, otherwise the function returns
     FALSE.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Using wincache_ucache_cas()
@@ -53,7 +54,7 @@ The above example will output:
 bool(true)
 int(1)
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |wincache_ucache_inc| - Increments the value associated with the key

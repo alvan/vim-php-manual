@@ -4,21 +4,21 @@ GregorianToJD
 
 GregorianToJD — Converts a Gregorian date to Julian Day Count
 
-===============================================================================
+==============================================================================
 *Description*
 
     int gregoriantojd ( int $month , int $day , int $year )~
 
 Valid Range for Gregorian Calendar 4714 B.C. to 9999 A.D.
 
-Although this function can handle dates all the way back to 4714 B.C., such use
-may not be meaningful. The Gregorian calendar was not instituted until October
-15, 1582 (or October 5, 1582 in the Julian calendar). Some countries did not
-accept it until much later. For example, Britain converted in 1752, The USSR in
-1918 and Greece in 1923. Most European countries used the Julian calendar prior
-to the Gregorian.
+Although this function can handle dates all the way back to 4714 B.C., such
+use may not be meaningful. The Gregorian calendar was not instituted until
+October 15, 1582 (or October 5, 1582 in the Julian calendar). Some countries
+did not accept it until much later. For example, Britain converted in 1752,
+The USSR in 1918 and Greece in 1923. Most European countries used the Julian
+calendar prior to the Gregorian.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {month}
@@ -33,12 +33,12 @@ to the Gregorian.
 
     The year as a number between -4714 and 9999
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The julian day for the given gregorian date as an integer.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Calendar functions
@@ -50,7 +50,7 @@ Example #1 Calendar functions
     echo "$gregorian\n";
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |jdtogregorian| - Converts Julian Day Count to Gregorian date

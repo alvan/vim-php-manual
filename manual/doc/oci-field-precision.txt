@@ -4,7 +4,7 @@ oci_field_precision
 
 oci_field_precision — Tell the precision of a field
 
-===============================================================================
+==============================================================================
 *Description*
 
     int oci_field_precision ( resource $statement , mixed $field )~
@@ -14,7 +14,7 @@ Returns precision of the {field}.
 For FLOAT columns, precision is nonzero and scale is -127. If precision is 0,
 then column is NUMBER. Else it's NUMBER(precision, scale).
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {statement}
@@ -25,12 +25,12 @@ then column is NUMBER. Else it's NUMBER(precision, scale).
 
     Can be the field's index (1-based) or name.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the precision as an integer, or FALSE on errors.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 oci_field_precision() Example
@@ -68,7 +68,7 @@ Example #1 oci_field_precision() Example
 
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -78,7 +78,7 @@ Example #1 oci_field_precision() Example
     for downwards compatability. This, however, is deprecated and not
     recommended.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |oci_field_scale| - Tell the scale of the field

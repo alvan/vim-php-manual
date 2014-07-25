@@ -4,16 +4,16 @@ snmp2_getnext
 
 snmp2_getnext — Fetch the SNMP object which follows the given object id
 
-===============================================================================
+==============================================================================
 *Description*
 
     string snmp2_getnext ( string $host , string $community , string~
     $object_id [, string $timeout = 1000000 [, string $retries = 5 ]] )~
 
-The snmp2_get_next() function is used to read the value of the SNMP object that
-follows the specified {object_id}.
+The snmp2_get_next() function is used to read the value of the SNMP object
+that follows the specified {object_id}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {host}
@@ -36,13 +36,13 @@ follows the specified {object_id}.
 
     The number of times to retry if timeouts occur.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns SNMP object value on success or FALSE on error. In case of an error, an
-E_WARNING message is shown.
+Returns SNMP object value on success or FALSE on error. In case of an error,
+an E_WARNING message is shown.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Using snmp2_get_next()
@@ -52,7 +52,7 @@ Example #1 Using snmp2_get_next()
     'IF-MIB::ifName.1';
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |snmp2_get| - Fetch an SNMP object

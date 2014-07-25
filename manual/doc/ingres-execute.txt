@@ -4,7 +4,7 @@ ingres_execute
 
 ingres_execute — Execute a prepared query
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool ingres_execute ( resource $result [, array $params [, string $types~
@@ -17,7 +17,7 @@ Execute a query prepared using |ingres_prepare|.
     See also the ingres.describe, ingres.scrollable and ingres.utf8 directives
     in Runtime Configuration.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
@@ -33,12 +33,12 @@ Execute a query prepared using |ingres_prepare|.
     A string containing a sequence of types for the parameter values passed.
     See the types parameter in |ingres_query| for the list of type codes.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ingres_unbuffered_query| - Send an unbuffered SQL query to Ingres

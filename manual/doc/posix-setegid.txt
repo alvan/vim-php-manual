@@ -4,7 +4,7 @@ posix_setegid
 
 posix_setegid — Set the effective GID of the current process
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool posix_setegid ( int $gid )~
@@ -13,19 +13,19 @@ Set the effective group ID of the current process. This is a privileged
 function and needs appropriate privileges (usually root) on the system to be
 able to perform this function.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {gid}
 
     The group id.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 posix_setegid() example
@@ -39,7 +39,7 @@ This example will print out the effective group id, once changed.
     echo 'My effective group id is '.posix_getegid(); //40
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |posix_getgrgid| - Return info about a group by group id

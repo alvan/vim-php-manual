@@ -8,12 +8,12 @@ Warning
 
 This extension is deprecated as of PHP 5.5.0, and will be removed in the
 future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
-MySQL: choosing an API guide and related FAQ for more information. Alternatives
-to this function include:
+MySQL: choosing an API guide and related FAQ for more information.
+Alternatives to this function include:
 
   * SQL Query: SHOW TABLES
 
-===============================================================================
+==============================================================================
 *Description*
 
     string mysql_tablename ( resource $result , int $i )~
@@ -23,7 +23,7 @@ Retrieves the table name from a {result}.
 This function is deprecated. It is preferable to use |mysql_query| to issue an
 SQL SHOW TABLES [FROM db_name] [LIKE 'pattern'] statement instead.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
@@ -34,7 +34,7 @@ SQL SHOW TABLES [FROM db_name] [LIKE 'pattern'] statement instead.
 
     The integer index (row/table number)
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The name of the table on success or FALSE on failure.
@@ -42,14 +42,14 @@ The name of the table on success or FALSE on failure.
 Use the mysql_tablename() function to traverse this result pointer, or any
 function for result tables, such as |mysql_fetch_array|.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
-5.5.0   The mysql_tablename() function is deprecated, and emits an E_DEPRECATED
-        level error.
+Version                              Description
+5.5.0   The mysql_tablename() function is deprecated, and emits an
+        E_DEPRECATED level error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mysql_tablename() example
@@ -65,15 +65,15 @@ Example #1 mysql_tablename() example
     mysql_free_result($result);
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
 
-    The |mysql_num_rows| function may be used to determine the number of tables
-    in the result pointer.
+    The |mysql_num_rows| function may be used to determine the number of
+    tables in the result pointer.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mysql_list_tables| - List tables in a MySQL database

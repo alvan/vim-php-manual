@@ -4,7 +4,7 @@ pg_connection_busy
 
 pg_connection_busy — Get connection is busy or not
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool pg_connection_busy ( resource $connection )~
@@ -13,19 +13,19 @@ pg_connection_busy() determines whether or not a connection is busy. If it is
 busy, a previous query is still executing. If |pg_get_result| is used on the
 connection, it will be blocked.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
 
     PostgreSQL database connection resource.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE if the connection is busy, FALSE otherwise.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 pg_connection_busy() example
@@ -40,7 +40,7 @@ Example #1 pg_connection_busy() example
       }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |pg_connection_status| - Get connection status

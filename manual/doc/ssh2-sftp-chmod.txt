@@ -4,14 +4,14 @@ ssh2_sftp_chmod
 
 ssh2_sftp_chmod — Changes file mode
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool ssh2_sftp_chmod ( resource $sftp , string $filename , int $mode )~
 
 Attempts to change the mode of the specified file to that given in {mode}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {sftp}
@@ -27,12 +27,12 @@ Attempts to change the mode of the specified file to that given in {mode}.
     Permissions on the file. See the |chmod| for more details on this
     parameter.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Creating a directory on a remote server
@@ -45,7 +45,7 @@ Example #1 Creating a directory on a remote server
     ssh2_sftp_chmod($sftp, '/somedir/somefile', 0755);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |chmod| - Changes file mode

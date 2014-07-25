@@ -4,7 +4,7 @@ pow
 
 pow — Exponential expression
 
-===============================================================================
+==============================================================================
 *Description*
 
     number pow ( number $base , number $exp )~
@@ -15,7 +15,7 @@ Returns {base} raised to the power of {exp}.
 
     In PHP 5.6 onwards, you may prefer to use the ** operator.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {base}
@@ -26,23 +26,23 @@ Returns {base} raised to the power of {exp}.
 
     The exponent
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 {base} raised to the power of {exp}. If both arguments are non-negative
 integers and the result can be represented as an integer, the result will be
 returned with integer type, otherwise it will be returned as a float.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 4.2.0   No warning is emitted on errors, even if the value can't be computed.
         The function will now return integer results if possible, before this
 4.0.6   it always returned a float result. For older versions, you may receive
         a bogus result for complex numbers.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Some examples of pow()
@@ -57,7 +57,7 @@ Example #1 Some examples of pow()
     echo pow(-1, 5.5); // PHP <=4.0.6 1.#IND
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -65,7 +65,7 @@ Example #1 Some examples of pow()
     This function will convert all input to a number, even non-scalar values,
     which could lead to weird results.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |exp| - Calculates the exponent of e

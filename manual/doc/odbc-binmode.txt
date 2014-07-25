@@ -4,7 +4,7 @@ odbc_binmode
 
 odbc_binmode — Handling of binary column data
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool odbc_binmode ( resource $result_id , int $mode )~
@@ -31,7 +31,7 @@ ODBC_BINMODE_CONVERT  >0          return as char
 If |odbc_fetch_into| is used, passthru means that an empty string is returned
 for these columns.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result_id}
@@ -52,7 +52,7 @@ for these columns.
       + ODBC_BINMODE_RETURN: Return as is
       + ODBC_BINMODE_CONVERT: Convert to char and return
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.

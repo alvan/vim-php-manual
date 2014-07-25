@@ -4,13 +4,13 @@ hash_init
 
 hash_init — Initialize an incremental hashing context
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource hash_init ( string $algo [, int $options = 0 [, string $key =~
     NULL ]] )~
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {algo}
@@ -28,13 +28,13 @@ hash_init — Initialize an incremental hashing context
     When HASH_HMAC is specified for {options}, a shared secret key to be used
     with the HMAC hashing method must be supplied in this parameter.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a Hashing Context resource for use with |hash_update|, |
 hash_update_stream|, |hash_update_file|, and |hash_final|.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Incremental hashing example
@@ -50,7 +50,7 @@ The above example will output:
 
 5c6ffbdd40d9556b73a21e63c3e0e904
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |hash| - Generate a hash value (message digest)

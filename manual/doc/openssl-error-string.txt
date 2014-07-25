@@ -4,7 +4,7 @@ openssl_error_string
 
 openssl_error_string — Return openSSL error message
 
-===============================================================================
+==============================================================================
 *Description*
 
     string openssl_error_string ( void )~
@@ -13,13 +13,13 @@ openssl_error_string() returns the last error from the openSSL library. Error
 messages are queued, so this function should be called multiple times to
 collect all of the information. The last error will be the most recent one.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an error message string, or FALSE if there are no more error messages
 to return.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 openssl_error_string() example

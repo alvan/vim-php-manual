@@ -4,15 +4,15 @@ ssh2_auth_pubkey_file
 
 ssh2_auth_pubkey_file — Authenticate using a public key
 
-===============================================================================
+==============================================================================
 *Description*
 
-    bool ssh2_auth_pubkey_file ( resource $session , string $username , string~
-    $pubkeyfile , string $privkeyfile [, string $passphrase ] )~
+    bool ssh2_auth_pubkey_file ( resource $session , string $username ,~
+    string $pubkeyfile , string $privkeyfile [, string $passphrase ] )~
 
 Authenticate using a public key read from a file.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {session}
@@ -35,12 +35,12 @@ Authenticate using a public key read from a file.
     If {privkeyfile} is encrypted (which it should be), the {passphrase} must
     be provided.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Authentication using a public key

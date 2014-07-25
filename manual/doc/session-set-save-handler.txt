@@ -4,7 +4,7 @@ session_set_save_handler
 
 session_set_save_handler — Sets user-level session storage functions
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool session_set_save_handler ( callable $open , callable $close ,~
@@ -12,15 +12,15 @@ session_set_save_handler — Sets user-level session storage functions
 
 Since PHP 5.4 it is possible to register the following prototype:
 
-    bool session_set_save_handler ( SessionHandlerInterface $sessionhandler [,~
-    bool $register_shutdown = true ] )~
+    bool session_set_save_handler ( SessionHandlerInterface $sessionhandler~
+    [, bool $register_shutdown = true ] )~
 
 session_set_save_handler() sets the user-level session storage functions which
 are used for storing and retrieving data associated with a session. This is
 most useful when a storage method other than those supplied by PHP sessions is
 preferred. i.e. Storing the session data in a local database.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 This function has two prototypes.
@@ -40,14 +40,14 @@ open(string $savePath, string $sessionName)
 
     The open callback works like a constructor in classes and is executed when
     the session is being opened. It is the first callback function executed
-    when the session is started automatically or manually with |session_start|.
-    Return value is TRUE for success, FALSE for failure.
+    when the session is started automatically or manually with |session_start|
+    . Return value is TRUE for success, FALSE for failure.
 
 {close()}
 
-    The close callback works like a destructor in classes and is executed after
-    the session write callback has been called. It is also invoked when |
-    session_write_close| is called. Return value should be TRUE for success,
+    The close callback works like a destructor in classes and is executed
+    after the session write callback has been called. It is also invoked when 
+    |session_write_close| is called. Return value should be TRUE for success,
     FALSE for failure.
 
 read(string $sessionId)
@@ -55,8 +55,8 @@ read(string $sessionId)
     The {read} callback must always return a session encoded (serialized)
     string, or an empty string if there is no data to read.
 
-    This callback is called internally by PHP when the session starts or when |
-    session_start| is called. Before this callback is invoked PHP will invoke
+    This callback is called internally by PHP when the session starts or when 
+    |session_start| is called. Before this callback is invoked PHP will invoke
     the {open} callback.
 
     The value this callback returns must be in exactly the same serialized
@@ -79,37 +79,38 @@ write(string $sessionId, string $data)
     {write} callback.
 
     This callback is invoked when PHP shuts down or explicitly when |
-    session_write_close| is called. Note that after executing this function PHP
-    will internally execute the {close} callback.
+    session_write_close| is called. Note that after executing this function
+    PHP will internally execute the {close} callback.
 
 
         Note:
 
         The "write" handler is not executed until after the output stream is
         closed. Thus, output from debugging statements in the "write" handler
-        will never be seen in the browser. If debugging output is necessary, it
-        is suggested that the debug output be written to a file instead.
+        will never be seen in the browser. If debugging output is necessary,
+        it is suggested that the debug output be written to a file instead.
 
 destroy($sessionId)
 
-    This callback is executed when a session is destroyed with |session_destroy
-    | or with |session_regenerate_id| with the destroy parameter set to TRUE.
-    Return value should be TRUE for success, FALSE for failure.
+    This callback is executed when a session is destroyed with |
+    session_destroy| or with |session_regenerate_id| with the destroy
+    parameter set to TRUE. Return value should be TRUE for success, FALSE for
+    failure.
 
 gc($lifetime)
 
-    The garbage collector callback is invoked internally by PHP periodically in
-    order to purge old session data. The frequency is controlled by
+    The garbage collector callback is invoked internally by PHP periodically
+    in order to purge old session data. The frequency is controlled by
     session.gc_probability and session.gc_divisor. The value of lifetime which
     is passed to this callback can be set in session.gc_maxlifetime. Return
     value should be TRUE for success, FALSE for failure.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Custom session handler: see full code in SessionHandlerInterface
@@ -140,13 +141,13 @@ Example #2 Custom session save handler using objects
 The following code is for PHP versions less than 5.4.0.
 
 The following example provides file based session storage similar to the PHP
-sessions default save handler {files}. This example could easily be extended to
-cover database storage using your favorite PHP supported database engine.
+sessions default save handler {files}. This example could easily be extended
+to cover database storage using your favorite PHP supported database engine.
 
-Note we additionally register the shutdown function |session_write_close| using
-|register_shutdown_function| under PHP less than 5.4.0. This is generally
-advised when registering objects as session save handlers under PHP less than
-5.4.0.
+Note we additionally register the shutdown function |session_write_close|
+using |register_shutdown_function| under PHP less than 5.4.0. This is
+generally advised when registering objects as session save handlers under PHP
+less than 5.4.0.
 
 <?php >
 class FileSessionHandler
@@ -175,8 +176,8 @@ class FileSessionHandler
 
     function write($id, $data)
     {
-        return file_put_contents("$this->savePath/sess_$id", $data) === false ?
- false : true;
+        return file_put_contents("$this->savePath/sess_$id", $data) === false 
+? false : true;
     }
 
     function destroy($id)
@@ -192,8 +193,8 @@ class FileSessionHandler
     function gc($maxlifetime)
     {
         foreach (glob("$this->savePath/sess_*") as $file) {
-            if (filemtime($file) + $maxlifetime < time() && file_exists($file))
- {
+            if (filemtime($file) + $maxlifetime < time() && file_exists($file
+)) {
                 unlink($file);
             }
         }
@@ -219,27 +220,27 @@ register_shutdown_function('session_write_close');
 session_start();
 // proceed to set and retrieve values by key from $_SESSION
 
-===============================================================================
+==============================================================================
 *Notes*
 
 Warning
 
 When using objects as session save handlers, it is important to register the
 shutdown function with PHP to avoid unexpected side-effects from the way PHP
-internally destroys objects on shutdown and may prevent the {write} and {close}
-from being called. Typically you should register {'session_write_close'} using
-the |register_shutdown_function| function.
+internally destroys objects on shutdown and may prevent the {write} and
+{close} from being called. Typically you should register
+{'session_write_close'} using the |register_shutdown_function| function.
 
 As of PHP 5.4.0 you can use |session_register_shutdown| or simply use the
-'register shutdown' flag when invoking session_set_save_handler() using the OOP
-method and passing an instance that implements SessionHandlerInterface.
+'register shutdown' flag when invoking session_set_save_handler() using the
+OOP method and passing an instance that implements SessionHandlerInterface.
 
 Warning
 
 As of PHP 5.0.5 the {write} and {close} handlers are called after object
 destruction and therefore cannot use objects or throw exceptions. Exceptions
-are not able to be caught since will not be caught nor will any exception trace
-be displayed and the execution will just cease unexpectedly. The object
+are not able to be caught since will not be caught nor will any exception
+trace be displayed and the execution will just cease unexpectedly. The object
 destructors can however use sessions.
 
 It is possible to call |session_write_close| from the destructor to solve this
@@ -252,14 +253,14 @@ Current working directory is changed with some SAPIs if session is closed in
 the script termination. It is possible to close the session earlier with |
 session_write_close|.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 5.4.0   Added SessionHandlerInterface for implementing session handlers and
         SessionHandler to expose internal PHP session handlers.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * The session.save_handler configuration directive

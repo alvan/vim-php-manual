@@ -4,7 +4,7 @@ levenshtein
 
 levenshtein — Calculate Levenshtein distance between two strings
 
-===============================================================================
+==============================================================================
 *Description*
 
     int levenshtein ( string $str1 , string $str2 )~
@@ -25,7 +25,7 @@ A second variant will take three additional parameters that define the cost of
 insert, replace and delete operations. This is more general and adaptive than
 variant one, but not as efficient.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {str1}
@@ -48,14 +48,14 @@ variant one, but not as efficient.
 
     Defines the cost of deletion.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-This function returns the Levenshtein-Distance between the two argument strings
-or -1, if one of the argument strings is longer than the limit of 255
+This function returns the Levenshtein-Distance between the two argument
+strings or -1, if one of the argument strings is longer than the limit of 255
 characters.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 levenshtein() example
@@ -112,7 +112,7 @@ The above example will output:
 Input word: carrrot
 Did you mean: carrot?
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |soundex| - Calculate the soundex key of a string

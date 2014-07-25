@@ -4,7 +4,7 @@ mqseries_disc
 
 mqseries_disc — MQSeries MQDISC
 
-===============================================================================
+==============================================================================
 *Description*
 
     void mqseries_disc ( resource $hconn , resource &$compCode , resource~
@@ -14,7 +14,7 @@ The mqseries_disc() (MQDISC) call breaks the connection between the queue
 manager and the application program, and is the inverse of the |mqseries_conn|
 (MQCONN) or |mqseries_connx| (MQCONNX) call.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {hConn}
@@ -31,12 +31,12 @@ manager and the application program, and is the inverse of the |mqseries_conn|
 
     Reason code qualifying the compCode.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 No value is returned.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mqseries_disc() example
@@ -49,7 +49,7 @@ Example #1 mqseries_disc() example
         }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mqseries_conn| - MQSeries MQCONN

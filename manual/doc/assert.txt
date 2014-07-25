@@ -4,7 +4,7 @@ assert
 
 assert — Checks if assertion is FALSE
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool assert ( mixed $assertion [, string $description ] )~
@@ -23,8 +23,9 @@ the boolean FALSE is converted as the empty string.
 
 Assertions should be used as a debugging feature only. You may use them for
 sanity-checks that test for conditions that should always be TRUE and that
-indicate some programming errors if not or to check for the presence of certain
-features like extension functions or certain system limits and features.
+indicate some programming errors if not or to check for the presence of
+certain features like extension functions or certain system limits and
+features.
 
 Assertions should not be used for normal runtime operations like input
 parameter checks. As a rule of thumb your code should always be able to work
@@ -44,13 +45,13 @@ easier!
 
 The callback function should accept three arguments. The first argument will
 contain the file the assertion failed in. The second argument will contain the
-line the assertion failed on and the third argument will contain the expression
-that failed (if any — literal values such as 1 or "two" will not be passed via
-this argument). Users of PHP 5.4.8 and later may also provide a fourth optional
-argument, which will contain the {description} given to assert(), if it was
-set.
+line the assertion failed on and the third argument will contain the
+expression that failed (if any — literal values such as 1 or "two" will not be
+passed via this argument). Users of PHP 5.4.8 and later may also provide a
+fourth optional argument, which will contain the {description} given to assert
+(), if it was set.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {assertion}
@@ -59,23 +60,23 @@ set.
 
 {description}
 
-    An optional description that will be included in the failure message if the
-    {assertion} fails.
+    An optional description that will be included in the failure message if
+    the {assertion} fails.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 FALSE if the assertion is false, TRUE otherwise.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
         The {description} parameter was added. The {description} is also now
 5.4.8   provided to a callback function in ASSERT_CALLBACK mode as the fourth
         argument.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Handle a failed assertion with a custom handler
@@ -133,7 +134,7 @@ The above example will output:
 Assertion failed at test.php:21: 2 < 1
 Assertion failed at test.php:22: 2 < 1: Two is less than one
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |assert_options| - Set/get the various assert flags

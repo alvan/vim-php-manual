@@ -4,17 +4,17 @@ xslt_set_base
 
 xslt_set_base — Set the base URI for all XSLT transformations
 
-===============================================================================
+==============================================================================
 *Description*
 
     void xslt_set_base ( resource $xh , string $uri )~
 
-Sets the base URI for all XSLT transformations, the base URI is used with Xpath
-instructions to resolve document() and other commands which access external
-resources. It is also used to resolve URIs for the <xsl:include> and
+Sets the base URI for all XSLT transformations, the base URI is used with
+Xpath instructions to resolve document() and other commands which access
+external resources. It is also used to resolve URIs for the <xsl:include> and
 <xsl:import> elements.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { xh}
@@ -25,25 +25,27 @@ resources. It is also used to resolve URIs for the <xsl:include> and
 
     The base URI to be used.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 No value is returned.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
-        As of PHP 4.3.0, the default base URI is the directory of the executing
-4.3.0   script. In effect, it is the directory name value of the __FILE__
-        constant. The default base URI is less predictable with older versions.
+Version                              Description
+        As of PHP 4.3.0, the default base URI is the directory of the
+4.3.0   executing script. In effect, it is the directory name value of the
+        __FILE__ constant. The default base URI is less predictable with older
+        versions.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
 
-    Please note that file:// is needed in front of the path when using Windows.
+    Please note that file:// is needed in front of the path when using
+    Windows.
 
 
 vim:ft=help:

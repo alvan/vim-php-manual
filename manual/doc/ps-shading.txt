@@ -4,7 +4,7 @@ ps_shading
 
 ps_shading — Creates a shading for later use
 
-===============================================================================
+==============================================================================
 *Description*
 
     int ps_shading ( resource $psdoc , string $type , float $x0 , float $y0 ,~
@@ -15,7 +15,7 @@ Creates a shading, which can be used by |ps_shfill| or |ps_shading_pattern|.
 
 The color of the shading can be in any color space except for pattern.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {psdoc}
@@ -24,9 +24,9 @@ The color of the shading can be in any color space except for pattern.
 
 {type}
 
-    The type of shading can be either radial or axial. Each shading starts with
-    the current fill color and ends with the given color values passed in the
-    parameters {c1} to {c4} (see |ps_setcolor| for their meaning).
+    The type of shading can be either radial or axial. Each shading starts
+    with the current fill color and ends with the given color values passed in
+    the parameters {c1} to {c4} (see |ps_setcolor| for their meaning).
 
 {x0, x1, y0, y1}
 
@@ -43,12 +43,12 @@ The color of the shading can be in any color space except for pattern.
     If the shading is of type radial the {optlist} must also contain the
     parameters r0 and r1 with the radius of the start and end circle.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the identifier of the pattern or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ps_shading_pattern| - Creates a pattern based on a shading

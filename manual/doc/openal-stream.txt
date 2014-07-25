@@ -4,17 +4,18 @@ openal_stream
 
 openal_stream — Begin streaming on a source
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource openal_stream ( resource $source , int $format , int $rate )~
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {source}
 
-    An Open AL(Source) resource (previously created by |openal_source_create|).
+    An Open AL(Source) resource (previously created by |openal_source_create|
+    ).
 
 {format}
 
@@ -25,12 +26,12 @@ openal_stream — Begin streaming on a source
 
     Frequency of data to stream given in Hz.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a stream resource on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |openal_source_create| - Generate a source resource

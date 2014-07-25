@@ -4,7 +4,7 @@ http_match_etag
 
 http_match_etag — Match ETag
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool http_match_etag ( string $etag [, bool $for_range = false ] )~
@@ -12,7 +12,7 @@ http_match_etag — Match ETag
 Matches the given ETag against the clients If-Match resp. If-None-Match HTTP
 headers.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {etag}
@@ -24,13 +24,13 @@ headers.
     if set to TRUE, the header usually used to validate HTTP ranges will be
     checked
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE if ETag matches or the header contained the asterisk ("*"), else
 FALSE.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * http_match_last_modified()

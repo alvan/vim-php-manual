@@ -4,14 +4,14 @@ event_base_loop
 
 event_base_loop — Handle events
 
-===============================================================================
+==============================================================================
 *Description*
 
     int event_base_loop ( resource $event_base [, int $flags = 0 ] )~
 
 Starts event loop for the specified event base.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {event_base}
@@ -23,7 +23,7 @@ Starts event loop for the specified event base.
     Optional parameter, which can take any combination of EVLOOP_ONCE and
     EVLOOP_NONBLOCK.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 event_base_loop() returns 0 on success, -1 on error and 1 if no events were

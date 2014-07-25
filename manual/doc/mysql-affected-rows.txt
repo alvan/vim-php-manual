@@ -8,13 +8,13 @@ Warning
 
 This extension is deprecated as of PHP 5.5.0, and will be removed in the
 future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
-MySQL: choosing an API guide and related FAQ for more information. Alternatives
-to this function include:
+MySQL: choosing an API guide and related FAQ for more information.
+Alternatives to this function include:
 
   * mysqli_affected_rows()
   * PDOStatement::rowCount()
 
-===============================================================================
+==============================================================================
 *Description*
 
     int mysql_affected_rows ([ resource $link_identifier = NULL ] )~
@@ -22,7 +22,7 @@ to this function include:
 Get the number of affected rows by the last INSERT, UPDATE, REPLACE or DELETE
 query associated with {link_identifier}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { link_identifier}
@@ -33,7 +33,7 @@ query associated with {link_identifier}.
     If no connection is found or established, an E_WARNING level error is
     generated.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the number of affected rows on success, and -1 if the last query
@@ -45,8 +45,8 @@ MySQL versions prior to 4.1.2.
 
 When using UPDATE, MySQL will not update columns where the new value is the
 same as the old value. This creates the possibility that mysql_affected_rows()
-may not actually equal the number of rows matched, only the number of rows that
-were literally affected by the query.
+may not actually equal the number of rows matched, only the number of rows
+that were literally affected by the query.
 
 The REPLACE statement first deletes the record with the same primary key and
 then inserts the new record. This function returns the number of deleted
@@ -55,7 +55,7 @@ records plus the number of inserted records.
 In the case of "INSERT ... ON DUPLICATE KEY UPDATE" queries, the return value
 will be 1 if an insert was performed, or 2 for an update of an existing row.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mysql_affected_rows() example
@@ -100,17 +100,17 @@ The above example will output something similar to:
 
 Updated Records: 10
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: Transactions
 
-    If you are using transactions, you need to call mysql_affected_rows() after
-    your INSERT, UPDATE, or DELETE query, not after the COMMIT.
+    If you are using transactions, you need to call mysql_affected_rows()
+    after your INSERT, UPDATE, or DELETE query, not after the COMMIT.
 
     Note: SELECT Statements
 
-    To retrieve the number of rows returned by a SELECT, it is possible to use 
+    To retrieve the number of rows returned by a SELECT, it is possible to use
     |mysql_num_rows|.
 
     Note: Cascaded Foreign Keys
@@ -119,7 +119,7 @@ Updated Records: 10
     use of ON DELETE CASCADE and/or ON UPDATE CASCADE in foreign key
     constraints.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mysql_num_rows| - Get number of rows in result

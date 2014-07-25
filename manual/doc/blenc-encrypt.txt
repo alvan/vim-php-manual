@@ -4,7 +4,7 @@ blenc_encrypt
 
 blenc_encrypt — Encrypt a PHP script with BLENC.
 
-===============================================================================
+==============================================================================
 *Description*
 
     string blenc_encrypt ( string $plaintext , string $encodedfile [, string~
@@ -12,12 +12,13 @@ blenc_encrypt — Encrypt a PHP script with BLENC.
 
 Encrypt the plaintext content and write it into encodedfile
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {plaintext}
 
-    A source code to encrypt. Does not need to contain opening/closing PHP tags
+    A source code to encrypt. Does not need to contain opening/closing PHP
+    tags
 
 {encodedfile}
 
@@ -28,13 +29,13 @@ Encrypt the plaintext content and write it into encodedfile
     The key that BLENC will use to encrypt plaintext content. If not given
     BLENC will create a valid key.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-BLENC will return the redistributable key that must be saved into key_file: the
-path of key_file is specified at runtime with the option blenc.key_file
+BLENC will return the redistributable key that must be saved into key_file:
+the path of key_file is specified at runtime with the option blenc.key_file
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 blenc_encrypt() example

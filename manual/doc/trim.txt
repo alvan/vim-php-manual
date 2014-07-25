@@ -5,14 +5,15 @@ trim
 trim — Strip whitespace (or other characters) from the beginning and end of a
 string
 
-===============================================================================
+==============================================================================
 *Description*
 
     string trim ( string $str [, string $character_mask = "~
     \t\n\r\0\x0B" ] )~
 
 This function returns a string with whitespace stripped from the beginning and
-end of {str}. Without the second parameter, trim() will strip these characters:
+end of {str}. Without the second parameter, trim() will strip these
+characters:
 
   * " " (ASCII 32 (0x20)), an ordinary space.
   * "\t" (ASCII 9 (0x09)), a tab.
@@ -21,7 +22,7 @@ end of {str}. Without the second parameter, trim() will strip these characters:
   * "\0" (ASCII 0 (0x00)), the NUL-byte.
   * "\x0B" (ASCII 11 (0x0B)), a vertical tab.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {str}
@@ -34,18 +35,18 @@ end of {str}. Without the second parameter, trim() will strip these characters:
     {character_mask} parameter. Simply list all characters that you want to be
     stripped. With .. you can specify a range of characters.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The trimmed string.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version                    Description
 4.1.0   The optional {character_mask} parameter was added.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Usage example of trim()
@@ -127,7 +128,7 @@ array(3) {
 }
 
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: Possible gotcha: removing middle characters
@@ -138,7 +139,7 @@ array(3) {
     moving 'b' to the beginning to also be trimmed. So, this is why it "works"
     whereas trim('abc', 'b') seemingly does not.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ltrim| - Strip whitespace (or other characters) from the beginning of a

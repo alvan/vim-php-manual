@@ -4,7 +4,7 @@ fbsql_result
 
 fbsql_result — Get result data
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed fbsql_result ( resource $result [, int $row [, mixed $field ]] )~
@@ -12,14 +12,14 @@ fbsql_result — Get result data
 Returns the contents of one cell from a FrontBase {result} set.
 
 When working on large result sets, you should consider using one of the
-functions that fetch an entire row (specified below). As these functions return
-the contents of multiple cells in one function call, they're MUCH quicker than 
-fbsql_result().
+functions that fetch an entire row (specified below). As these functions
+return the contents of multiple cells in one function call, they're MUCH
+quicker than fbsql_result().
 
 Calls to fbsql_result() should not be mixed with calls to other functions that
 deal with the result set.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { result}
@@ -38,20 +38,20 @@ deal with the result set.
 
         Note:
 
-        Specifying a numeric offset for the field argument is much quicker than
-        specifying a fieldname or tablename.fieldname argument.
+        Specifying a numeric offset for the field argument is much quicker
+        than specifying a fieldname or tablename.fieldname argument.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
 Recommended high-performance alternatives:
 
   * |fbsql_fetch_row| - Get a result row as an enumerated array
-  * |fbsql_fetch_array| - Fetch a result row as an associative array, a numeric
-    array, or both
+  * |fbsql_fetch_array| - Fetch a result row as an associative array, a
+    numeric array, or both
   * |fbsql_fetch_assoc| - Fetch a result row as an associative array
   * |fbsql_fetch_object| - Fetch a result row as an object
 

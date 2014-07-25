@@ -4,13 +4,13 @@ eio_syncfs
 
 eio_syncfs — Calls Linux' syncfs syscall, if available
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource eio_syncfs ( mixed $fd [, int $pri = EIO_PRI_DEFAULT [, callable~
     $callback = NULL [, mixed $data = NULL ]]] )~
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {fd}
@@ -24,8 +24,8 @@ eio_syncfs — Calls Linux' syncfs syscall, if available
 
 {callback}
 
-    {callback} function is called when the request is done. It should match the
-    following prototype:
+    {callback} function is called when the request is done. It should match
+    the following prototype:
     void callback(mixed $data, int $result[, resource $req]);
 
     {data}
@@ -46,7 +46,7 @@ eio_syncfs — Calls Linux' syncfs syscall, if available
 
     Arbitrary variable passed to {callback}.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 eio_syncfs() returns request resource on success or FALSE on error.

@@ -4,14 +4,14 @@ odbc_longreadlen
 
 odbc_longreadlen — Handling of LONG columns
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool odbc_longreadlen ( resource $result_id , int $length )~
 
 Enables handling of LONG and LONGVARBINARY columns.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result_id}
@@ -23,12 +23,12 @@ Enables handling of LONG and LONGVARBINARY columns.
     The number of bytes returned to PHP is controlled by the parameter length.
     If it is set to 0, Long column data is passed through to the client.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:

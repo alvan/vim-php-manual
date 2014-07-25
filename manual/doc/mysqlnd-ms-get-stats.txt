@@ -4,7 +4,7 @@ mysqlnd_ms_get_stats
 
 mysqlnd_ms_get_stats — Returns query distribution and connection statistics
 
-===============================================================================
+==============================================================================
 *Description*
 
     array mysqlnd_ms_get_stats ( void )~
@@ -23,12 +23,12 @@ Statistics are aggregated for all connections and all storage handler. It is
 not possible to tell how much queries originating from mysqli, PDO_MySQL or
 mysql API calls have contributed to the aggregated data values.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 This function has no parameters.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns NULL if the PHP configuration directive mysqlnd_ms.enable has disabled
@@ -283,7 +283,7 @@ fabric_sharding_lookup_servers_xml_failure understood. Please note, the current 
                                            distinguish between valid errors returned
                                            and malformed replies.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mysqlnd_ms_get_stats() example
@@ -356,7 +356,7 @@ array(26) {
   string(1) "0"
 }
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * Runtime configuration

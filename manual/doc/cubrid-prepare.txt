@@ -4,11 +4,11 @@ cubrid_prepare
 
 cubrid_prepare — Prepare a SQL statement for execution
 
-===============================================================================
+==============================================================================
 *Description*
 
-    resource cubrid_prepare ( resource $conn_identifier , string $prepare_stmt~
-    [, int $option = 0 ] )~
+    resource cubrid_prepare ( resource $conn_identifier , string~
+    $prepare_stmt [, int $option = 0 ] )~
 
 The cubrid_prepare() function is a sort of API which represents SQL statements
 compiled previously to a given connection handle. This pre-compiled SQL
@@ -16,12 +16,12 @@ statement will be included in the cubrid_prepare().
 
 Accordingly, you can use this statement effectively to execute several times
 repeatedly or to process long data. Only a single statement can be used and a
-parameter may put a question mark (?) to appropriate area in the SQL statement.
-Add a parameter when you bind a value in the VALUES clause of INSERT statement
-or in the WHERE clause. Note that it is allowed to bind a value to a MARK(?) by
-using the |cubrid_bind| function only.
+parameter may put a question mark (?) to appropriate area in the SQL
+statement. Add a parameter when you bind a value in the VALUES clause of
+INSERT statement or in the WHERE clause. Note that it is allowed to bind a
+value to a MARK(?) by using the |cubrid_bind| function only.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {conn_identifier}
@@ -36,14 +36,14 @@ using the |cubrid_bind| function only.
 
     OID return option CUBRID_INCLUDE_OID.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Request identifier, if process is successful;
 
 FALSE, if process is unsuccessful.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_prepare() example
@@ -67,8 +67,8 @@ Example #1 cubrid_prepare() example
 
     $row_num = cubrid_num_rows($req);
     printf(
-    "There are %d event that exits in 2004 olympic but not in 2000. For example:\n\
-    n", $row_num);
+    "There are %d event that exits in 2004 olympic but not in 2000. For example:\n
+    \n", $row_num);
 
     printf("%-15s %s\n", "Event_code", "Event_name");
     printf("----------------------------\n");
@@ -90,7 +90,7 @@ Event_code      Event_name
 20063           +91kg
 20070           64kg
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |cubrid_execute| - Execute a prepared SQL statement

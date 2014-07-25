@@ -4,14 +4,14 @@ getmxrr
 
 getmxrr — Get MX records corresponding to a given Internet host name
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool getmxrr ( string $hostname , array &$mxhosts [, array &$weight ] )~
 
 Searches DNS for MX records corresponding to {hostname}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {hostname}
@@ -27,19 +27,19 @@ Searches DNS for MX records corresponding to {hostname}.
     If the {weight} array is given, it will be filled with the weight
     information gathered.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE if any records are found; returns FALSE if no records were found
 or if an error occurred.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version                     Description
 5.3.0   This function is now available on Windows platforms.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -54,7 +54,7 @@ Version                     Description
     For compatibility with Windows before this was implemented, then try the
     » PEAR class » Net_DNS.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |checkdnsrr| - Check DNS records corresponding to a given Internet host

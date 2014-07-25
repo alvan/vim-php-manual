@@ -4,27 +4,27 @@ session_destroy
 
 session_destroy — Destroys all data registered to a session
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool session_destroy ( void )~
 
-session_destroy() destroys all of the data associated with the current session.
-It does not unset any of the global variables associated with the session, or
-unset the session cookie. To use the session variables again, |session_start|
-has to be called.
+session_destroy() destroys all of the data associated with the current
+session. It does not unset any of the global variables associated with the
+session, or unset the session cookie. To use the session variables again, |
+session_start| has to be called.
 
 In order to kill the session altogether, like to log the user out, the session
-id must also be unset. If a cookie is used to propagate the session id (default
-behavior), then the session cookie must be deleted. |setcookie| may be used for
-that.
+id must also be unset. If a cookie is used to propagate the session id
+(default behavior), then the session cookie must be deleted. |setcookie| may
+be used for that.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Destroying a session with $_SESSION
@@ -51,7 +51,7 @@ Example #1 Destroying a session with $_SESSION
     session_destroy();
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -59,7 +59,7 @@ Example #1 Destroying a session with $_SESSION
     Only use |session_unset| for older deprecated code that does not use
     $_SESSION.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |unset| - Unset a given variable

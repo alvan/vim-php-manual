@@ -4,7 +4,7 @@ ftp_login
 
 ftp_login — Logs in to an FTP connection
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool ftp_login ( resource $ftp_stream , string $username , string~
@@ -12,7 +12,7 @@ ftp_login — Logs in to an FTP connection
 
 Logs in to the given FTP stream.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {ftp_stream}
@@ -27,13 +27,13 @@ Logs in to the given FTP stream.
 
     The password (PASS).
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure. If login fails, PHP will also
 throw a warning.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 ftp_login() example
@@ -45,7 +45,8 @@ Example #1 ftp_login() example
     $ftp_pass = "bar";
 
     // set up a connection or die
-    $conn_id = ftp_connect($ftp_server) or die("Couldn't connect to $ftp_server"); 
+    $conn_id = ftp_connect($ftp_server) or die("Couldn't connect to $ftp_server");
+     
 
     // try to login
     if (@ftp_login($conn_id, $ftp_user, $ftp_pass)) {

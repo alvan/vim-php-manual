@@ -8,14 +8,14 @@ Warning
 
 This extension is deprecated as of PHP 5.5.0, and will be removed in the
 future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
-MySQL: choosing an API guide and related FAQ for more information. Alternatives
-to this function include:
+MySQL: choosing an API guide and related FAQ for more information.
+Alternatives to this function include:
 
   * mysqli_data_seek() in conjunction with mysqli_field_seek() and 
     mysqli_fetch_field()
   * PDOStatement::fetchColumn()
 
-===============================================================================
+==============================================================================
 *Description*
 
     string mysql_result ( resource $result , int $row [, mixed $field = 0 ] )~
@@ -23,13 +23,13 @@ to this function include:
 Retrieves the contents of one cell from a MySQL result set.
 
 When working on large result sets, you should consider using one of the
-functions that fetch an entire row (specified below). As these functions return
-the contents of multiple cells in one function call, they're MUCH quicker than 
-mysql_result(). Also, note that specifying a numeric offset for the field
-argument is much quicker than specifying a fieldname or tablename.fieldname
-argument.
+functions that fetch an entire row (specified below). As these functions
+return the contents of multiple cells in one function call, they're MUCH
+quicker than mysql_result(). Also, note that specifying a numeric offset for
+the field argument is much quicker than specifying a fieldname or
+tablename.fieldname argument.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { result}
@@ -39,8 +39,8 @@ argument.
 
 {row}
 
-    The row number from the result that's being retrieved. Row numbers start at
-    0.
+    The row number from the result that's being retrieved. Row numbers start
+    at 0.
 
 {field}
 
@@ -48,16 +48,16 @@ argument.
 
     It can be the field's offset, the field's name, or the field's table dot
     field name (tablename.fieldname). If the column name has been aliased
-    ('select foo as bar from...'), use the alias instead of the column name. If
-    undefined, the first field is retrieved.
+    ('select foo as bar from...'), use the alias instead of the column name.
+    If undefined, the first field is retrieved.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The contents of one cell from a MySQL result set on success, or FALSE on
 failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mysql_result() example
@@ -79,7 +79,7 @@ Example #1 mysql_result() example
     mysql_close($link);
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -87,12 +87,12 @@ Example #1 mysql_result() example
     Calls to mysql_result() should not be mixed with calls to other functions
     that deal with the result set.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mysql_fetch_row| - Get a result row as an enumerated array
-  * |mysql_fetch_array| - Fetch a result row as an associative array, a numeric
-    array, or both
+  * |mysql_fetch_array| - Fetch a result row as an associative array, a
+    numeric array, or both
   * |mysql_fetch_assoc| - Fetch a result row as an associative array
   * |mysql_fetch_object| - Fetch a result row as an object
 

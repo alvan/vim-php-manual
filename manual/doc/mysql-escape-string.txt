@@ -8,13 +8,13 @@ Warning
 
 This extension is deprecated as of PHP 5.5.0, and will be removed in the
 future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
-MySQL: choosing an API guide and related FAQ for more information. Alternatives
-to this function include:
+MySQL: choosing an API guide and related FAQ for more information.
+Alternatives to this function include:
 
   * |mysqli_escape_string|
   * PDO::quote()
 
-===============================================================================
+==============================================================================
 *Description*
 
     string mysql_escape_string ( string $unescaped_string )~
@@ -32,27 +32,27 @@ Warning
 This function has been DEPRECATED as of PHP 5.3.0. Relying on this feature is
 highly discouraged.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {unescaped_string}
 
     The string that is to be escaped.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the escaped string.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 5.3.0   This function now throws an E_DEPRECATED notice.
-4.3.0   This function became deprecated, do not use this function. Instead, use
-        |mysql_real_escape_string|.
+4.3.0   This function became deprecated, do not use this function. Instead,
+        use |mysql_real_escape_string|.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mysql_escape_string() example
@@ -67,18 +67,18 @@ The above example will output:
 
 Escaped string: Zak\'s Laptop
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
 
     mysql_escape_string() does not escape % and _.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
-  * |mysql_real_escape_string| - Escapes special characters in a string for use
-    in an SQL statement
+  * |mysql_real_escape_string| - Escapes special characters in a string for
+    use in an SQL statement
   * |addslashes| - Quote string with slashes
   * The magic_quotes_gpc directive.
 

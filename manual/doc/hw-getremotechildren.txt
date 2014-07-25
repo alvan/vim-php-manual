@@ -4,7 +4,7 @@ hw_getremotechildren
 
 hw_getremotechildren — Gets children of remote document
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed hw_getremotechildren ( int $connection , string $object_record )~
@@ -18,7 +18,7 @@ should also consider to use PHP instead of Hyperwave to access external
 sources. Adding database support by a Hyperwave gateway should be more
 difficult than doing it in PHP.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
@@ -29,7 +29,7 @@ difficult than doing it in PHP.
 
     The object record.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 If the number of children is 1 the function will return the document itself
@@ -40,7 +40,7 @@ are virtual and do not exist in the Hyperwave server, therefore they do not
 have a valid object ID. How exactly such an object record looks like is up to
 the HGI.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |hw_getremote| - Gets a remote document

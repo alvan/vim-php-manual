@@ -4,27 +4,28 @@ posix_geteuid
 
 posix_geteuid — Return the effective user ID of the current process
 
-===============================================================================
+==============================================================================
 *Description*
 
     int posix_geteuid ( void )~
 
 Return the numeric effective user ID of the current process. See also |
-posix_getpwuid| for information on how to convert this into a useable username.
+posix_getpwuid| for information on how to convert this into a useable
+username.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the user id, as an integer
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 posix_geteuid() example
 
 This example will show the current user id then set the effective user id to a
-separate id using |posix_seteuid|, then show the difference between the real id
-and the effective id.
+separate id using |posix_seteuid|, then show the difference between the real
+id and the effective id.
 
 <?php >
     echo posix_getuid()."\n"; //10001
@@ -34,7 +35,7 @@ and the effective id.
     echo posix_geteuid()."\n"; //10000
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |posix_getpwuid| - Return info about a user by user id

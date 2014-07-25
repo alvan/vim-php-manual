@@ -5,7 +5,7 @@ ob_get_flush
 ob_get_flush — Flush the output buffer, return it as a string and turn off
 output buffering
 
-===============================================================================
+==============================================================================
 *Description*
 
     string ob_get_flush ( void )~
@@ -16,15 +16,15 @@ output buffering.
 The output buffer must be started by |ob_start| with
 PHP_OUTPUT_HANDLER_FLUSHABLE flag. Otherwise ob_get_flush() will not work.
 
-    Note: This function is similar to |ob_end_flush|, except that this function
-    returns the buffer as a string.
+    Note: This function is similar to |ob_end_flush|, except that this
+    function returns the buffer as a string.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the output buffer or FALSE if no buffering is active.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 ob_get_flush() example
@@ -50,7 +50,7 @@ Array
 (
 )
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ob_end_clean| - Clean (erase) the output buffer and turn off output

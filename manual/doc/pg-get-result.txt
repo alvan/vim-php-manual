@@ -4,31 +4,31 @@ pg_get_result
 
 pg_get_result — Get asynchronous query result
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource pg_get_result ([ resource $connection ] )~
 
-pg_get_result() gets the result resource from an asynchronous query executed by
-|pg_send_query|, |pg_send_query_params| or |pg_send_execute|.
+pg_get_result() gets the result resource from an asynchronous query executed
+by |pg_send_query|, |pg_send_query_params| or |pg_send_execute|.
 
 |pg_send_query| and the other asynchronous query functions can send multiple
 queries to a PostgreSQL server and pg_get_result() is used to get each query's
 results, one by one.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
 
     PostgreSQL database connection resource.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The result resource, or FALSE if no more results are available.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 pg_get_result() example
@@ -60,7 +60,7 @@ Resource id #3 has 3 records
 Second call to pg_get_result(): Resource id #4
 Resource id #4 has 1 records
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |pg_send_query| - Sends asynchronous query

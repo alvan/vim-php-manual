@@ -4,7 +4,7 @@ sybase_fetch_row
 
 sybase_fetch_row — Get a result row as an enumerated array
 
-===============================================================================
+==============================================================================
 *Description*
 
     array sybase_fetch_row ( resource $result )~
@@ -15,12 +15,12 @@ specified result identifier.
 Subsequent call to sybase_fetch_row() would return the next row in the result
 set, or FALSE if there are no more rows.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an array that corresponds to the fetched row, or FALSE if there are no
@@ -28,14 +28,14 @@ more rows. Each result column is stored in an array offset, starting at offset
 0.
 
                                   Data types
- PHP                                    Sybase
+ PHP                                   Sybase
 string VARCHAR, TEXT, CHAR, IMAGE, BINARY, VARBINARY, DATETIME
 int    NUMERIC (w/o precision), DECIMAL (w/o precision), INT, BIT, TINYINT,
        SMALLINT
 float  NUMERIC (w/ precision), DECIMAL (w/ precision), REAL, FLOAT, MONEY
 NULL   NULL
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |sybase_fetch_array| - Fetch row as array

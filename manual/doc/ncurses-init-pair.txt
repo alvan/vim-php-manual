@@ -4,7 +4,7 @@ ncurses_init_pair
 
 ncurses_init_pair — Define a color pair
 
-===============================================================================
+==============================================================================
 *Description*
 
     int ncurses_init_pair ( int $pair , int $fg , int $bg )~
@@ -18,7 +18,7 @@ calling this function. The first color pair (color pair 0) is assumed to be
 white on black by default, but can be changed using |
 ncurses_assume_default_colors|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {pair}
@@ -37,20 +37,20 @@ ncurses_assume_default_colors|.
     colors or one defined by |ncurses_init_color| if the terminal has color
     changing capabilities.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns -1 if the function was successful, and 0 if ncurses or color support
 were not initialized.
 
-===============================================================================
+==============================================================================
 *Notes*
 
-Note that color changing capabilities are not required for defining color pairs
-of pre-existing colors, but only for changing definitions (red, green, and blue
-components) of colors themselves per |ncurses_init_color|.
+Note that color changing capabilities are not required for defining color
+pairs of pre-existing colors, but only for changing definitions (red, green,
+and blue components) of colors themselves per |ncurses_init_color|.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Writing a string with a specified color to the screen
@@ -74,7 +74,7 @@ Example #1 Writing a string with a specified color to the screen
     ncurses_end();
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ncurses_pair_content| - Retrieves foreground and background colors of a

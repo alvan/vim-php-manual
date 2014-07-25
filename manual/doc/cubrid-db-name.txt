@@ -4,14 +4,14 @@ cubrid_db_name
 
 cubrid_db_name — Get db name from results of cubrid_list_dbs
 
-===============================================================================
+==============================================================================
 *Description*
 
     string cubrid_db_name ( array $result , int $index )~
 
 Retrieve the database name from a call to |cubrid_list_dbs|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
@@ -22,13 +22,13 @@ Retrieve the database name from a call to |cubrid_list_dbs|.
 
     The index into the result set.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the database name on success, and FALSE on failure. If FALSE is
 returned, use |cubrid_error| to determine the nature of the error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_db_name() example
@@ -51,7 +51,7 @@ The above example will output:
 
 demodb
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |cubrid_list_dbs| - Return an array with the list of all existing CUBRID

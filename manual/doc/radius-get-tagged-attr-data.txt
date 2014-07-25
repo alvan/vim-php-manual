@@ -4,7 +4,7 @@ radius_get_tagged_attr_data
 
 radius_get_tagged_attr_data — Extracts the data from a tagged attribute
 
-===============================================================================
+==============================================================================
 *Description*
 
     string radius_get_tagged_attr_data ( string $data )~
@@ -12,19 +12,19 @@ radius_get_tagged_attr_data — Extracts the data from a tagged attribute
 If a tagged attribute has been returned from |radius_get_attr|, 
 radius_get_tagged_attr_data() will return the data from the attribute.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {data}
 
     The tagged attribute to be decoded.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the data from the tagged attribute or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 radius_get_tagged_attr_data() example
@@ -46,7 +46,7 @@ Example #1 radius_get_tagged_attr_data() example
     }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |radius_get_attr| - Extracts an attribute

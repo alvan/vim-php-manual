@@ -4,7 +4,7 @@ cubrid_field_len
 
 cubrid_field_len — Get the maximum length of the specified field
 
-===============================================================================
+==============================================================================
 *Description*
 
     int cubrid_field_len ( resource $result , int $field_offset )~
@@ -12,7 +12,7 @@ cubrid_field_len — Get the maximum length of the specified field
 This function returns the maximum length of the specified field on success, or
 it returns FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
@@ -24,14 +24,14 @@ it returns FALSE on failure.
     The numerical field offset. The {field_offset} starts at 0. If
     {field_offset} does not exist, an error of level E_WARNING is also issued.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Maximum length, when process is successful.
 
 FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_field_len() example
@@ -44,7 +44,8 @@ Example #1 cubrid_field_len() example
     $column_names = cubrid_column_names($result);
     $column_types = cubrid_column_types($result);
 
-    printf("%-30s %-30s %-15s\n", "Column Names", "Column Types", "Column Maxlen");
+    printf("%-30s %-30s %-15s\n", "Column Names", "Column Types", "Column Maxlen"
+    );
     for($i = 0, $size = count($column_names); $i < $size; $i++) {
         $column_len = cubrid_field_len($result, $i);
         printf("%-30s %-30s %-15s\n", $column_names[$i], $column_types[$i], 

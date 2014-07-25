@@ -4,14 +4,14 @@ gzuncompress
 
 gzuncompress — Uncompress a compressed string
 
-===============================================================================
+==============================================================================
 *Description*
 
     string gzuncompress ( string $data [, int $length = 0 ] )~
 
 This function uncompress a compressed string.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {data}
@@ -22,7 +22,7 @@ This function uncompress a compressed string.
 
     The maximum length of data to decode.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The original uncompressed data or FALSE on error.
@@ -31,7 +31,7 @@ The function will return an error if the uncompressed data is more than 32768
 times the length of the compressed input {data} or more than the optional
 parameter {length}.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 gzuncompress() example
@@ -42,7 +42,7 @@ Example #1 gzuncompress() example
     echo $uncompressed;
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |gzcompress| - Compress a string

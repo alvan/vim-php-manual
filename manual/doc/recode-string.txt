@@ -4,14 +4,14 @@ recode_string
 
 recode_string — Recode a string according to a recode request
 
-===============================================================================
+==============================================================================
 *Description*
 
     string recode_string ( string $request , string $string )~
 
 Recode the string {string} according to the recode request {request}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {request}
@@ -22,12 +22,12 @@ Recode the string {string} according to the recode request {request}.
 
     The string to be recoded
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the recoded string or FALSE, if unable to perform the recode request.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Basic recode_string() example
@@ -37,16 +37,16 @@ Example #1 Basic recode_string() example
     "The following character has a diacritical mark: á");
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
 A simple recode request may be "lat1..iso646-de".
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
-  * The GNU Recode documentation of your installation for detailed instructions
-    about recode requests.
+  * The GNU Recode documentation of your installation for detailed
+    instructions about recode requests.
 
 
 vim:ft=help:

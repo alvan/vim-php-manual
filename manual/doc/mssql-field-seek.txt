@@ -4,7 +4,7 @@ mssql_field_seek
 
 mssql_field_seek — Seeks to the specified field offset
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool mssql_field_seek ( resource $result , int $field_offset )~
@@ -12,7 +12,7 @@ mssql_field_seek — Seeks to the specified field offset
 Seeks to the specified field offset. If the next call to |mssql_fetch_field|
 won't include a field offset, this field would be returned.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
@@ -24,12 +24,12 @@ won't include a field offset, this field would be returned.
 
     The field offset, starts at 0.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Using mssql_field_seek() on the example for |mssql_fetch_field|
@@ -83,7 +83,7 @@ Example #1 Using mssql_field_seek() on the example for |mssql_fetch_field|
     mssql_free_result($query);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mssql_fetch_field| - Get field information

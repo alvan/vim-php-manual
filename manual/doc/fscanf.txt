@@ -4,7 +4,7 @@ fscanf
 
 fscanf — Parses input from a file according to a format
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed fscanf ( resource $handle , string $format [, mixed &$... ] )~
@@ -13,13 +13,13 @@ The function fscanf() is similar to |sscanf|, but it takes its input from a
 file associated with {handle} and interprets the input according to the
 specified {format}, which is described in the documentation for |sprintf|.
 
-Any whitespace in the format string matches any whitespace in the input stream.
-This means that even a tab \t in the format string can match a single space
-character in the input stream.
+Any whitespace in the format string matches any whitespace in the input
+stream. This means that even a tab \t in the format string can match a single
+space character in the input stream.
 
 Each call to fscanf() reads one line from the file.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {handle}
@@ -34,7 +34,7 @@ Each call to fscanf() reads one line from the file.
 
     The optional assigned values.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 If only two parameters were passed to this function, the values parsed will be
@@ -42,15 +42,15 @@ returned as an array. Otherwise, if optional parameters are passed, the
 function will return the number of assigned values. The optional parameters
 must be passed by reference.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
         Before this time, the maximum number of characters read from the file
 4.3.0   was 512 (or up to the first \n, whichever came first). But now,
         arbitrarily long lines will be read and scanned.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 fscanf() Example
@@ -71,7 +71,7 @@ hiroshi sculptor        jp
 robert  slacker us
 luigi   florist it
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |fread| - Binary-safe file read

@@ -4,7 +4,7 @@ msg_get_queue
 
 msg_get_queue — Create or attach to a message queue
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource msg_get_queue ( int $key [, int $perms = 0666 ] )~
@@ -15,7 +15,7 @@ optional {perms}. A second call to msg_get_queue() for the same {key} will
 return a different message queue identifier, but both identifiers access the
 same underlying message queue.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {key}
@@ -27,13 +27,13 @@ same underlying message queue.
     Queue permissions. Default to 0666. If the message queue already exists,
     the {perms} will be ignored.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a resource handle that can be used to access the System V message
 queue.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |msg_remove_queue| - Destroy a message queue

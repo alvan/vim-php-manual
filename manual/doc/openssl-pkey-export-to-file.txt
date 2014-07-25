@@ -2,10 +2,10 @@ openssl_pkey_export_to_file
 
 (PHP 4 >= 4.2.0, PHP 5)
 
-openssl_pkey_export_to_file — Gets an exportable representation of a key into a
-file
+openssl_pkey_export_to_file — Gets an exportable representation of a key into
+a file
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool openssl_pkey_export_to_file ( mixed $key , string $outfilename [,~
@@ -18,7 +18,7 @@ of {key} into the file named by {outfilename}.
     operate correctly. See the notes under the installation section for more
     information.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {key}
@@ -33,11 +33,11 @@ of {key} into the file named by {outfilename}.
 
 {configargs}
 
-    {configargs} can be used to fine-tune the export process by specifying and/
-    or overriding options for the openssl configuration file. See |
+    {configargs} can be used to fine-tune the export process by specifying and
+    /or overriding options for the openssl configuration file. See |
     openssl_csr_new| for more information about {configargs}.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.

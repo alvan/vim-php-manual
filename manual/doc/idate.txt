@@ -4,26 +4,26 @@ idate
 
 idate — Format a local time/date as integer
 
-===============================================================================
+==============================================================================
 *Description*
 
     int idate ( string $format [, int $timestamp = time() ] )~
 
-Returns a number formatted according to the given format string using the given
-integer {timestamp} or the current local time if no timestamp is given. In
-other words, {timestamp} is optional and defaults to the value of |time|.
+Returns a number formatted according to the given format string using the
+given integer {timestamp} or the current local time if no timestamp is given.
+In other words, {timestamp} is optional and defaults to the value of |time|.
 
 Unlike the function |date|, idate() accepts just one char in the {format}
 parameter.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {format}
 
-       The following characters are recognized in the {format} parameter
+      The following characters are recognized in the {format} parameter
                                     string
-      {format}                             Description
+      {format}                            Description
       character
     B             Swatch Beat/Internet Time
     d             Day of the month
@@ -52,7 +52,7 @@ parameter.
     defaults to the current local time if a {timestamp} is not given. In other
     words, it defaults to the value of |time|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an integer.
@@ -60,20 +60,20 @@ Returns an integer.
 As idate() always returns an integer and as they can't start with a "0", idate
 () may return fewer digits than you would expect. See the example below.
 
-===============================================================================
+==============================================================================
 *Errors/Exceptions*
 
-Every call to a date/time function will generate a E_NOTICE if the time zone is
-not valid, and/or a E_STRICT or E_WARNING message if using the system settings
-or the TZ environment variable. See also |date_default_timezone_set|
+Every call to a date/time function will generate a E_NOTICE if the time zone
+is not valid, and/or a E_STRICT or E_WARNING message if using the system
+settings or the TZ environment variable. See also |date_default_timezone_set|
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version                      Description
 5.1.0   Now issues the E_STRICT and E_NOTICE time zone errors.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 idate() example
@@ -87,7 +87,7 @@ Example #1 idate() example
     echo idate('y', $timestamp);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |date| - Format a local time/date

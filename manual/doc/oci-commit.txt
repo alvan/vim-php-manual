@@ -4,7 +4,7 @@ oci_commit
 
 oci_commit — Commits the outstanding database transaction
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool oci_commit ( resource $connection )~
@@ -13,29 +13,30 @@ Commits the outstanding transaction for the Oracle {connection}. A commit ends
 the current transaction and makes permanent all changes. It releases all locks
 held.
 
-A transaction begins when the first SQL statement that changes data is executed
-with |oci_execute| using the OCI_NO_AUTO_COMMIT flag. Further data changes made
-by other statements become part of the same transaction. Data changes made in a
-transaction are temporary until the transaction is committed or rolled back.
-Other users of the database will not see the changes until they are committed.
+A transaction begins when the first SQL statement that changes data is
+executed with |oci_execute| using the OCI_NO_AUTO_COMMIT flag. Further data
+changes made by other statements become part of the same transaction. Data
+changes made in a transaction are temporary until the transaction is committed
+or rolled back. Other users of the database will not see the changes until
+they are committed.
 
 When inserting or updating data, using transactions is recommended for
 relational data consistency and for performance reasons.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
 
-    An Oracle connection identifier, returned by |oci_connect|, |oci_pconnect|,
-    or |oci_new_connect|.
+    An Oracle connection identifier, returned by |oci_connect|, |oci_pconnect|
+    , or |oci_new_connect|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 oci_commit() example
@@ -75,13 +76,13 @@ Example #1 oci_commit() example
 
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
 
     Transactions are automatically rolled back when you close the connection,
-    or when the script ends, whichever is soonest. You need to explicitly call 
+    or when the script ends, whichever is soonest. You need to explicitly call
     oci_commit() to commit the transaction.
 
     Any call to |oci_execute| that uses OCI_COMMIT_ON_SUCCESS mode explicitly
@@ -90,7 +91,7 @@ Example #1 oci_commit() example
     Any Oracle DDL statement such as CREATE or DROP will automatically commit
     any uncommitted transaction.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |oci_execute| - Executes a statement

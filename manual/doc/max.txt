@@ -4,15 +4,15 @@ max
 
 max — Find highest value
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed max ( array $values )~
     mixed max ( mixed $value1 , mixed $value2 [, mixed $... ] )~
 
-If the first and only parameter is an array, max() returns the highest value in
-that array. If at least two parameters are provided, max() returns the biggest
-of these values.
+If the first and only parameter is an array, max() returns the highest value
+in that array. If at least two parameters are provided, max() returns the
+biggest of these values.
 
     Note:
 
@@ -21,7 +21,7 @@ of these values.
     multiple arguments evaluate to 0, max() will return a numeric 0 if given,
     else the alphabetical highest string value will be returned.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {values}
@@ -40,12 +40,12 @@ of these values.
 
     Any comparable value.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 max() returns the numerically highest of the parameter values. If multiple
-values can be considered of the same size, the one that is listed first will be
-returned.
+values can be considered of the same size, the one that is listed first will
+be returned.
 
 When max() is given multiple arrays, the longest array is returned. If all the
 arrays have the same length, max() will use lexicographic ordering to find the
@@ -53,7 +53,7 @@ return value.
 
 When given a string it will be cast as an integer when comparing.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Example uses of max()
@@ -85,7 +85,7 @@ Example #1 Example uses of max()
     $val = max('string', array(2, 5, 7), 42);   // array(2, 5, 7)
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |min| - Find lowest value

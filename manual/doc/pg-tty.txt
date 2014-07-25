@@ -4,7 +4,7 @@ pg_tty
 
 pg_tty — Return the TTY name associated with the connection
 
-===============================================================================
+==============================================================================
 *Description*
 
     string pg_tty ([ resource $connection ] )~
@@ -17,7 +17,7 @@ the given PostgreSQL {connection} resource.
     pg_tty() is obsolete, since the server no longer pays attention to the TTY
     setting, but the function remains for backwards compatibility.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
@@ -26,12 +26,12 @@ the given PostgreSQL {connection} resource.
     the default connection is used. The default connection is the last
     connection made by |pg_connect| or |pg_pconnect|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 A string containing the debug TTY of the {connection}, or FALSE on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 pg_tty() example

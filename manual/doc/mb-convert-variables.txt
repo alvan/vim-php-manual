@@ -4,11 +4,11 @@ mb_convert_variables
 
 mb_convert_variables — Convert character code in variable(s)
 
-===============================================================================
+==============================================================================
 *Description*
 
-    string mb_convert_variables ( string $to_encoding , mixed $from_encoding ,~
-    mixed &$vars [, mixed &$... ] )~
+    string mb_convert_variables ( string $to_encoding , mixed $from_encoding~
+    , mixed &$vars [, mixed &$... ] )~
 
 Converts character encoding of variables {vars} in encoding {from_encoding} to
 encoding {to_encoding}.
@@ -17,7 +17,7 @@ mb_convert_variables() join strings in Array or Object to detect encoding,
 since encoding detection tends to fail for short strings. Therefore, it is
 impossible to mix encoding in single array or object.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {to_encoding}
@@ -33,19 +33,19 @@ impossible to mix encoding in single array or object.
 {vars}
 
     {vars} is the reference to the variable being converted. String, Array and
-    Object are accepted. mb_convert_variables() assumes all parameters have the
-    same encoding.
+    Object are accepted. mb_convert_variables() assumes all parameters have
+    the same encoding.
 
 {...}
 
     Additional {vars}.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The character encoding before conversion for success, or FALSE for failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mb_convert_variables() example

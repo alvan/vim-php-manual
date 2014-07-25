@@ -4,7 +4,7 @@ db2_lob_read
 
 db2_lob_read — Gets a user defined size of LOB files with each invocation
 
-===============================================================================
+==============================================================================
 *Description*
 
     string db2_lob_read ( resource $stmt , int $colnum , int $length )~
@@ -12,7 +12,7 @@ db2_lob_read — Gets a user defined size of LOB files with each invocation
 Use db2_lob_read() to iterate through a specified column of a result set and
 retrieve a user defined size of LOB data.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {stmt}
@@ -27,13 +27,13 @@ retrieve a user defined size of LOB data.
 
     The size of the LOB data to be retrieved from the stmt resource.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns the amount of data the user specifies. Returns FALSE if the data cannot
-be retrieved.
+Returns the amount of data the user specifies. Returns FALSE if the data
+cannot be retrieved.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Iterating through different types of data
@@ -119,7 +119,7 @@ Loop 4: S IS A
 Loop 5:  BLOB
 Loop 6: TEST.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |db2_bind_param| - Binds a PHP variable to an SQL statement parameter

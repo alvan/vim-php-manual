@@ -4,7 +4,7 @@ cubrid_col_get
 
 cubrid_col_get — Get contents of collection type column using OID
 
-===============================================================================
+==============================================================================
 *Description*
 
     array cubrid_col_get ( resource $conn_identifier , string $oid , string~
@@ -13,7 +13,7 @@ cubrid_col_get — Get contents of collection type column using OID
 The cubrid_col_get() function is used to get contents of the elements of the
 collection type (set, multiset, sequence) attribute you requested as an array.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {conn_identifier}
@@ -28,7 +28,7 @@ collection type (set, multiset, sequence) attribute you requested as an array.
 
     Attribute name that you want to read from the instance.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Array (0-based numerical array) containing the elements you requested, when
@@ -39,7 +39,7 @@ collection or NULL, in case of error, a warning message is shown; in such case
 you can check the error by using |cubrid_error_code|), when process is
 unsuccessful.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_col_get() example

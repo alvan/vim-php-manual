@@ -4,19 +4,19 @@ radius_create_request
 
 radius_create_request — Create accounting or authentication request
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool radius_create_request ( resource $radius_handle , int $type )~
 
-A Radius request consists of a code specifying the kind of request, and zero or
-more attributes which provide additional information. To begin constructing a
-new request, call radius_create_request().
+A Radius request consists of a code specifying the kind of request, and zero
+or more attributes which provide additional information. To begin constructing
+a new request, call radius_create_request().
 
     Note: Attention: You must call this function, before you can put any
     attribute!
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {radius_handle}
@@ -25,12 +25,12 @@ new request, call radius_create_request().
 
     Type is RADIUS_ACCESS_REQUEST or RADIUS_ACCOUNTING_REQUEST.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 radius_create_request() example
@@ -42,7 +42,7 @@ Example #1 radius_create_request() example
     }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |radius_send_request| - Sends the request and waites for a reply

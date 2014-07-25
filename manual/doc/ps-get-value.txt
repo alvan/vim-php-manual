@@ -4,10 +4,11 @@ ps_get_value
 
 ps_get_value — Gets certain values
 
-===============================================================================
+==============================================================================
 *Description*
 
-    float ps_get_value ( resource $psdoc , string $name [, float $modifier ] )~
+    float ps_get_value ( resource $psdoc , string $name [, float $modifier ]~
+)~
 
 Gets several values which were set by |ps_set_value|. Values are by definition
 float values.
@@ -126,7 +127,7 @@ subminor, revision
 
     The subminor version number of pslib.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {psdoc}
@@ -142,12 +143,12 @@ subminor, revision
     The parameter {modifier} specifies the resource for which the value is to
     be retrieved. This can be the id of a font or an image.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the value of the parameter or FALSE.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ps_set_value| - Sets certain values

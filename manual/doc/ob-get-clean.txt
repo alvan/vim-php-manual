@@ -4,7 +4,7 @@ ob_get_clean
 
 ob_get_clean — Get current buffer contents and delete current output buffer
 
-===============================================================================
+==============================================================================
 *Description*
 
     string ob_get_clean ( void )~
@@ -16,13 +16,13 @@ ob_get_clean() essentially executes both |ob_get_contents| and |ob_end_clean|.
 The output buffer must be started by |ob_start| with
 PHP_OUTPUT_HANDLER_CLEANABLE flag. Otherwise ob_get_clean() will not work.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the contents of the output buffer and end output buffering. If output
 buffering isn't active then FALSE is returned.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A simple ob_get_clean() example
@@ -45,7 +45,7 @@ The above example will output:
 string(11) "hello world"
 
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ob_get_contents| - Return the contents of the output buffer

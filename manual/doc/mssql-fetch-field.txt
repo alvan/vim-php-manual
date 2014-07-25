@@ -4,7 +4,7 @@ mssql_fetch_field
 
 mssql_fetch_field — Get field information
 
-===============================================================================
+==============================================================================
 *Description*
 
     object mssql_fetch_field ( resource $result [, int $field_offset = -1 ] )~
@@ -12,7 +12,7 @@ mssql_fetch_field — Get field information
 mssql_fetch_field() can be used in order to obtain information about fields in
 a certain query result.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
@@ -26,7 +26,7 @@ a certain query result.
     field that was not yet retrieved by this function is retrieved. The
     {field_offset} starts at 0.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an object containing field information.
@@ -40,7 +40,7 @@ The properties of the object are:
   * numeric - 1 if the column is numeric
   * type - the column type.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mssql_fetch_field() example
@@ -88,7 +88,7 @@ Example #1 mssql_fetch_field() example
     mssql_free_result($query);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mssql_field_seek| - Seeks to the specified field offset

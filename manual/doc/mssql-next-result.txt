@@ -4,7 +4,7 @@ mssql_next_result
 
 mssql_next_result — Move the internal result pointer to the next result
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool mssql_next_result ( resource $result_id )~
@@ -12,10 +12,10 @@ mssql_next_result — Move the internal result pointer to the next result
 When sending more than one SQL statement to the server or executing a stored
 procedure with multiple results, it will cause the server to return multiple
 result sets. This function will test for additional results available form the
-server. If an additional result set exists it will free the existing result set
-and prepare to fetch the rows from the new result set.
+server. If an additional result set exists it will free the existing result
+set and prepare to fetch the rows from the new result set.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result_id}
@@ -23,12 +23,12 @@ and prepare to fetch the rows from the new result set.
     The result resource that is being evaluated. This result comes from a call
     to |mssql_query|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE if an additional result set was available or FALSE otherwise.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mssql_next_result() example

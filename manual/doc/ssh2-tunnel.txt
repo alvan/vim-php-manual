@@ -4,7 +4,7 @@ ssh2_tunnel
 
 ssh2_tunnel — Open a tunnel through a remote server
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource ssh2_tunnel ( resource $session , string $host , int $port )~
@@ -12,7 +12,7 @@ ssh2_tunnel — Open a tunnel through a remote server
 Open a socket stream to an arbitrary host/port by way of the currently
 connected SSH server.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {session}
@@ -23,10 +23,10 @@ connected SSH server.
 
 {port}
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Opening a tunnel to an arbitrary host
@@ -38,7 +38,7 @@ Example #1 Opening a tunnel to an arbitrary host
     $tunnel = ssh2_tunnel($connection, '10.0.0.101', 12345);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ssh2_connect| - Connect to an SSH server

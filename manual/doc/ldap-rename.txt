@@ -4,15 +4,15 @@ ldap_rename
 
 ldap_rename — Modify the name of an entry
 
-===============================================================================
+==============================================================================
 *Description*
 
-    bool ldap_rename ( resource $link_identifier , string $dn , string $newrdn~
-    , string $newparent , bool $deleteoldrdn )~
+    bool ldap_rename ( resource $link_identifier , string $dn , string~
+    $newrdn , string $newparent , bool $deleteoldrdn )~
 
 The entry specified by {dn} is renamed/moved.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {link_identifier}
@@ -36,12 +36,12 @@ The entry specified by {dn} is renamed/moved.
     If TRUE the old RDN value(s) is removed, else the old RDN value(s) is
     retained as non-distinguished values of the entry.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -50,7 +50,7 @@ Returns TRUE on success or FALSE on failure.
     ldap_set_option| prior to binding to use LDAPv3. This function is only
     available when using OpenLDAP 2.x.x OR Netscape Directory SDK x.x.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ldap_modify| - Modify an LDAP entry

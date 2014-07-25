@@ -4,14 +4,14 @@ curl_share_setopt
 
 curl_share_setopt — Set an option for a cURL share handle.
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool curl_share_setopt ( resource $sh , int $option , string $value )~
 
 Sets an option on the given cURL share handle.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {sh}
@@ -36,12 +36,12 @@ Sets an option on the given cURL share handle.
                                same server. Note that SSL session IDs are
                                reused withing the same handle by default.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 curl_share_setopt() example

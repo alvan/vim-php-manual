@@ -4,7 +4,7 @@ ingres_field_nullable
 
 ingres_field_nullable — Test if a field is nullable
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool ingres_field_nullable ( resource $result , int $index )~
@@ -15,7 +15,7 @@ Test if a field is nullable.
 
     See ingres.array_index_start in Runtime Configuration
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
@@ -28,17 +28,17 @@ Test if a field is nullable.
 
     The possible values of {index} depend upon the value of
     ingres.array_index_start. If ingres.array_index_start is 1 (the default)
-    then {index} must be between 1 and the value returned by |ingres_num_fields
-    |. If ingres.array_index_start is 0 then {index} must be between 0 and |
-    ingres_num_fields| - 1.
+    then {index} must be between 1 and the value returned by |
+    ingres_num_fields|. If ingres.array_index_start is 0 then {index} must be
+    between 0 and |ingres_num_fields| - 1.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 ingres_field_nullable() returns TRUE if the field can be set to the NULL value
 and FALSE if it cannot
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ingres_query| - Send an SQL query to Ingres

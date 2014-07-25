@@ -6,7 +6,7 @@ maxdb_stmt::execute
 
 maxdb_stmt_execute -- maxdb_stmt::execute — Executes a prepared Query
 
-===============================================================================
+==============================================================================
 *Description*
 
 Procedural style
@@ -18,9 +18,9 @@ Object oriented style
     bool maxdb_stmt::execute ( void )~
 
 The maxdb_stmt_execute() function executes a query that has been previously
-prepared using the |maxdb_prepare| function represented by the {stmt} resource.
-When executed any parameter markers which exist will automatically be replaced
-with the appropiate data.
+prepared using the |maxdb_prepare| function represented by the {stmt}
+resource. When executed any parameter markers which exist will automatically
+be replaced with the appropiate data.
 
 If the statement is UPDATE, DELETE, or INSERT, the total number of affected
 rows can be determined by using the |maxdb_stmt_affected_rows| function.
@@ -28,15 +28,15 @@ Likewise, if the query yields a result set the |maxdb_fetch| function is used.
 
     Note:
 
-    When using maxdb_stmt_execute(), the |maxdb_fetch| function must be used to
-    fetch the data prior to preforming any additional queries.
+    When using maxdb_stmt_execute(), the |maxdb_fetch| function must be used
+    to fetch the data prior to preforming any additional queries.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Object oriented style
@@ -150,7 +150,7 @@ The above example will output something similar to:
 11111 (Georgetown,NY)
 22222 (Hubbatown,CA)
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |maxdb_prepare| - Prepare an SQL statement for execution

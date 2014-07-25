@@ -4,7 +4,7 @@ ingres_field_precision
 
 ingres_field_precision — Get the precision of a field
 
-===============================================================================
+==============================================================================
 *Description*
 
     int ingres_field_precision ( resource $result , int $index )~
@@ -18,7 +18,7 @@ documentation.
 
     See ingres.array_index_start in Runtime Configuration
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
@@ -31,16 +31,16 @@ documentation.
 
     The possible values of {index} depend upon the value of
     ingres.array_index_start. If ingres.array_index_start is 1 (the default)
-    then {index} must be between 1 and the value returned by |ingres_num_fields
-    |. If ingres.array_index_start is 0 then {index} must be between 0 and |
-    ingres_num_fields| - 1.
+    then {index} must be between 1 and the value returned by |
+    ingres_num_fields|. If ingres.array_index_start is 0 then {index} must be
+    between 0 and |ingres_num_fields| - 1.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the field precision as an integer
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ingres_query| - Send an SQL query to Ingres

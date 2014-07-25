@@ -4,15 +4,15 @@ bzcompress
 
 bzcompress — Compress a string into bzip2 encoded data
 
-===============================================================================
+==============================================================================
 *Description*
 
-    mixed bzcompress ( string $source [, int $blocksize = 4 [, int $workfactor~
-    = 0 ]] )~
+    mixed bzcompress ( string $source [, int $blocksize = 4 [, int~
+    $workfactor = 0 ]] )~
 
 bzcompress() compresses the given string and returns it as bzip2 encoded data.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {source}
@@ -21,9 +21,9 @@ bzcompress() compresses the given string and returns it as bzip2 encoded data.
 
 {blocksize}
 
-    Specifies the blocksize used during compression and should be a number from
-    1 to 9 with 9 giving the best compression, but using more resources to do
-    so.
+    Specifies the blocksize used during compression and should be a number
+    from 1 to 9 with 9 giving the best compression, but using more resources
+    to do so.
 
 {workfactor}
 
@@ -33,12 +33,12 @@ bzcompress() compresses the given string and returns it as bzip2 encoded data.
 
     Regardless of the {workfactor}, the generated output is the same.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The compressed string, or an error number if an error occurred.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Compressing data
@@ -49,7 +49,7 @@ Example #1 Compressing data
     echo $bzstr;
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |bzdecompress| - Decompresses bzip2 encoded data

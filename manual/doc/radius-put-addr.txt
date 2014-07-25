@@ -4,7 +4,7 @@ radius_put_addr
 
 radius_put_addr — Attaches an IP address attribute
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool radius_put_addr ( resource $radius_handle , int $type , string $addr~
@@ -17,7 +17,7 @@ Attaches an IP address attribute to the current RADIUS request.
     A request must be created via |radius_create_request| before this function
     can be called.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {radius_handle}
@@ -42,12 +42,12 @@ Attaches an IP address attribute to the current RADIUS request.
     The attribute tag. This parameter is ignored unless the
     RADIUS_OPTION_TAGGED option is set.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
      Version                       Description

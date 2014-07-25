@@ -4,7 +4,7 @@ sqlsrv_get_field
 
 sqlsrv_get_field — Gets field data from the currently selected row
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed sqlsrv_get_field ( resource $stmt , int $fieldIndex [, int~
@@ -13,7 +13,7 @@ sqlsrv_get_field — Gets field data from the currently selected row
 Gets field data from the currently selected row. Fields must be accessed in
 order. Field indices start at 0.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {stmt}
@@ -33,12 +33,12 @@ order. Field indices start at 0.
     information about default PHP data types, see » Default PHP Data Types in
     the Microsoft SQLSRV documentation.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns data from the specified field on success. Returns FALSE otherwise.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 sqlsrv_get_field() example
@@ -69,7 +69,8 @@ and get the row fields with sqlsrv_get_field().
          die( print_r( sqlsrv_errors(), true));
     }
 
-    // Get the row fields. Field indeces start at 0 and must be retrieved in order.
+    //
+     Get the row fields. Field indeces start at 0 and must be retrieved in order.
     // Retrieving row fields by name is not supported by sqlsrv_get_field.
     $name = sqlsrv_get_field( $stmt, 0);
     echo "$name: ";
@@ -78,7 +79,7 @@ and get the row fields with sqlsrv_get_field().
     echo $comment;
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |sqlsrv_fetch| - Makes the next row in a result set available for reading

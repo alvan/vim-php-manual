@@ -4,7 +4,7 @@ sem_acquire
 
 sem_acquire — Acquire a semaphore
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool sem_acquire ( resource $sem_identifier )~
@@ -18,19 +18,19 @@ After processing a request, any semaphores acquired by the process but not
 explicitly released will be released automatically and a warning will be
 generated.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {sem_identifier}
 
     {sem_identifier} is a semaphore resource, obtained from |sem_get|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |sem_get| - Get a semaphore id

@@ -4,7 +4,7 @@ session_id
 
 session_id — Get and/or set the current session id
 
-===============================================================================
+==============================================================================
 *Description*
 
     string session_id ([ string $id ] )~
@@ -14,7 +14,7 @@ session_id() is used to get or set the session id for the current session.
 The constant SID can also be used to retrieve the current name and session id
 as a string suitable for adding to URLs. See also Session handling.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {id}
@@ -27,22 +27,23 @@ as a string suitable for adding to URLs. See also Session handling.
 
         Note: When using session cookies, specifying an {id} for session_id()
         will always send a new cookie when |session_start| is called,
-        regardless if the current session id is identical to the one being set.
+        regardless if the current session id is identical to the one being
+        set.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-session_id() returns the session id for the current session or the empty string
-("") if there is no current session (no current session id exists).
+session_id() returns the session id for the current session or the empty
+string ("") if there is no current session (no current session id exists).
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 5.0.0   The , (comma) and - (minus) characters are allowed in the file session
         handler.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |session_regenerate_id| - Update the current session id with a newly

@@ -4,7 +4,7 @@ gnupg_verify
 
 gnupg_verify — Verifies a signed text
 
-===============================================================================
+==============================================================================
 *Description*
 
     array gnupg_verify ( resource $identifier , string $signed_text , string~
@@ -12,7 +12,7 @@ gnupg_verify — Verifies a signed text
 
 Verifies the given {signed_text} and returns information about the signature.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {identifier}
@@ -29,16 +29,16 @@ Verifies the given {signed_text} and returns information about the signature.
 
 {plaintext}
 
-    The plain text. If this optional parameter is passed, it is filled with the
-    plain text.
+    The plain text. If this optional parameter is passed, it is filled with
+    the plain text.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 On success, this function returns information about the signature. On failure,
 this function returns FALSE.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Procedural gnupg_verify() example

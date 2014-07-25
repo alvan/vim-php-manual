@@ -5,7 +5,7 @@ mysqlnd_ms_xa_rollback
 mysqlnd_ms_xa_rollback — Rolls back a distributed/XA transaction among MySQL
 servers
 
-===============================================================================
+==============================================================================
 *Description*
 
     int mysqlnd_ms_xa_rollback ( mixed $connection , string $gtrid )~
@@ -21,25 +21,25 @@ is left to be solved by the garbage collection.
     The feature is currently under development. There may be issues and/or
     feature limitations. Do not use in production environments.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
 
-    A MySQL connection handle obtained from any of the connect functions of the
-    mysqli, mysql or PDO_MYSQL extensions.
+    A MySQL connection handle obtained from any of the connect functions of
+    the mysqli, mysql or PDO_MYSQL extensions.
 
 {gtrid}
 
     Global transaction identifier (gtrid).
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns TRUE if the global transaction has been rolled back. Otherwise, returns
-FALSE
+Returns TRUE if the global transaction has been rolled back. Otherwise,
+returns FALSE
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * Quickstart XA/Distributed transactions

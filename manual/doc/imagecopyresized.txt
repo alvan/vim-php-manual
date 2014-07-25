@@ -4,7 +4,7 @@ imagecopyresized
 
 imagecopyresized — Copy and resize part of an image
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool imagecopyresized ( resource $dst_image , resource $src_image , int~
@@ -26,7 +26,7 @@ The coordinates refer to the upper left corner. This function can be used to
 copy regions within the same image (if {dst_image} is the same as {src_image})
 but if the regions overlap the results will be unpredictable.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {dst_image}
@@ -69,12 +69,12 @@ but if the regions overlap the results will be unpredictable.
 
     Source height.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Resizing an image
@@ -113,7 +113,7 @@ Output of example : Resizing an image
 The image will be output at half size, though better quality could be obtained
 using |imagecopyresampled|.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -121,13 +121,14 @@ using |imagecopyresampled|.
     There is a problem due to palette image limitations (255+1 colors).
     Resampling or filtering an image commonly needs more colors than 255, a
     kind of approximation is used to calculate the new resampled pixel and its
-    color. With a palette image we try to allocate a new color, if that failed,
-    we choose the closest (in theory) computed color. This is not always the
-    closest visual color. That may produce a weird result, like blank (or
-    visually blank) images. To skip this problem, please use a truecolor image
-    as a destination image, such as one created by |imagecreatetruecolor|.
+    color. With a palette image we try to allocate a new color, if that
+    failed, we choose the closest (in theory) computed color. This is not
+    always the closest visual color. That may produce a weird result, like
+    blank (or visually blank) images. To skip this problem, please use a
+    truecolor image as a destination image, such as one created by |
+    imagecreatetruecolor|.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
 |imagecopyresampled| - Copy and resize part of an image with resampling

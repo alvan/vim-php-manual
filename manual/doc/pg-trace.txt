@@ -4,7 +4,7 @@ pg_trace
 
 pg_trace — Enable tracing a PostgreSQL connection
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool pg_trace ( string $pathname [, string $mode = "w" [,~
@@ -19,7 +19,7 @@ sent to the server, you could do for example grep '^To backend' trace.log and
 see what queries actually were sent to the PostgreSQL server. For more
 information, refer to the » PostgreSQL Documentation.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {pathname}
@@ -37,12 +37,12 @@ information, refer to the » PostgreSQL Documentation.
     the default connection is used. The default connection is the last
     connection made by |pg_connect| or |pg_pconnect|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 pg_trace() example
@@ -61,7 +61,7 @@ Example #1 pg_trace() example
     }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |fopen| - Opens file or URL

@@ -4,7 +4,7 @@ sybase_affected_rows
 
 sybase_affected_rows — Gets number of affected rows in last query
 
-===============================================================================
+==============================================================================
 *Description*
 
     int sybase_affected_rows ([ resource $link_identifier ] )~
@@ -17,19 +17,19 @@ This command is not effective for SELECT statements, only on statements which
 modify records. To retrieve the number of rows returned from a SELECT, use |
 sybase_num_rows|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {link_identifier}
 
     If the link identifier isn't specified, the last opened link is assumed.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the number of affected rows, as an integer.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Delete-Query
@@ -48,7 +48,7 @@ The above example will output:
 
 Records deleted: 10
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |sybase_num_rows| - Get number of rows in a result set

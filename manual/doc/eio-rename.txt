@@ -4,7 +4,7 @@ eio_rename
 
 eio_rename — Change the name or location of a file.
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource eio_rename ( string $path , string $new_path [, int $pri =~
@@ -12,7 +12,7 @@ eio_rename — Change the name or location of a file.
 
 eio_rename() renames or moves a file to new location.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {path}
@@ -30,8 +30,8 @@ eio_rename() renames or moves a file to new location.
 
 {callback}
 
-    {callback} function is called when the request is done. It should match the
-    following prototype:
+    {callback} function is called when the request is done. It should match
+    the following prototype:
     void callback(mixed $data, int $result[, resource $req]);
 
     {data}
@@ -52,12 +52,12 @@ eio_rename() renames or moves a file to new location.
 
     Arbitrary variable passed to {callback}.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 eio_rename() returns request resource on success or FALSE on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 eio_rename() example
@@ -70,8 +70,8 @@ Example #1 eio_rename() example
     function my_rename_cb($data, $result) {
         global $filename, $new_filename;
 
-        if ($result == 0 && !file_exists($filename) && file_exists($new_filename)) 
-    {
+        if ($result == 0 && !file_exists($filename) && file_exists($new_filename))
+     {
             @unlink($new_filename);
             echo "eio_rename_ok";
         } else {
@@ -79,8 +79,8 @@ Example #1 eio_rename() example
         }
     }
 
-    eio_rename($filename, $new_filename, EIO_PRI_DEFAULT, "my_rename_cb", $filename
-    );
+    eio_rename($filename, $new_filename, EIO_PRI_DEFAULT, "my_rename_cb", 
+    $filename);
     eio_event_loop();
 <?>
 

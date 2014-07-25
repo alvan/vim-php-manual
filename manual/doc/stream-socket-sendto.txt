@@ -5,15 +5,15 @@ stream_socket_sendto
 stream_socket_sendto — Sends a message to a socket, whether it is connected or
 not
 
-===============================================================================
+==============================================================================
 *Description*
 
-    int stream_socket_sendto ( resource $socket , string $data [, int $flags =~
-    0 [, string $address ]] )~
+    int stream_socket_sendto ( resource $socket , string $data [, int $flags~
+    = 0 [, string $address ]] )~
 
 Sends the specified {data} through the {socket}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {socket}
@@ -38,12 +38,12 @@ Sends the specified {data} through the {socket}.
 
     If specified, it must be in dotted quad (or [ipv6]) format.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a result code, as an integer.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 stream_socket_sendto() Example
@@ -62,7 +62,7 @@ Example #1 stream_socket_sendto() Example
     fclose($socket);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |stream_socket_recvfrom| - Receives data from a socket, connected or not

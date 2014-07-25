@@ -4,7 +4,7 @@ mysqlnd_qc_set_cache_condition
 
 mysqlnd_qc_set_cache_condition — Set conditions for automatic caching
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool mysqlnd_qc_set_cache_condition ( int $condition_type , mixed~
@@ -13,7 +13,7 @@ mysqlnd_qc_set_cache_condition — Set conditions for automatic caching
 Sets a condition for automatic caching of statements which do not contain the
 necessary SQL hints to enable caching of them.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {condition_type}
@@ -26,16 +26,16 @@ necessary SQL hints to enable caching of them.
     Parameter for the condition set with condition_type. Parameter type and
     structure depend on condition_type
 
-    If condition_type equals MYSQLND_QC_CONDITION_META_SCHEMA_PATTERN condition
-    must be a string. The string sets a pattern. Statements are cached if table
-    and database meta data entry of their result sets match the pattern. The
-    pattern is checked for a match with the db and org_table meta data entries
-    provided by the underlying MySQL client server library. Please, check the
-    MySQL Reference manual for details about the two entries. The db and
-    org_table values are concatenated with a dot (.) before matched against
-    condition. Pattern matching supports the wildcards % and _. The wildcard %
-    will match one or many arbitrary characters. _ will match one arbitrary
-    character. The escape symbol is backslash.
+    If condition_type equals MYSQLND_QC_CONDITION_META_SCHEMA_PATTERN
+    condition must be a string. The string sets a pattern. Statements are
+    cached if table and database meta data entry of their result sets match
+    the pattern. The pattern is checked for a match with the db and org_table
+    meta data entries provided by the underlying MySQL client server library.
+    Please, check the MySQL Reference manual for details about the two
+    entries. The db and org_table values are concatenated with a dot (.)
+    before matched against condition. Pattern matching supports the wildcards
+    % and _. The wildcard % will match one or many arbitrary characters. _
+    will match one arbitrary character. The escape symbol is backslash.
 
 {condition_option}
 
@@ -44,7 +44,7 @@ necessary SQL hints to enable caching of them.
     If condition_type equals MYSQLND_QC_CONDITION_META_SCHEMA_PATTERN
     condition_options is the TTL to be used.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mysqlnd_qc_set_cache_condition() example
@@ -69,12 +69,12 @@ Example #1 mysqlnd_qc_set_cache_condition() example
     $pdo_mysql->query("SELECT id, title FROM news");
 <?>
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on FAILURE.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * Quickstart: pattern based caching

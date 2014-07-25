@@ -4,15 +4,15 @@ yaml_emit
 
 yaml_emit — Returns the YAML representation of a value
 
-===============================================================================
+==============================================================================
 *Description*
 
-    string yaml_emit ( mixed $data [, int $encoding = YAML_ANY_ENCODING [, int~
-    $linebreak = YAML_ANY_BREAK [, array $callbacks ]]] )~
+    string yaml_emit ( mixed $data [, int $encoding = YAML_ANY_ENCODING [,~
+    int $linebreak = YAML_ANY_BREAK [, array $callbacks ]]] )~
 
 Generate a YAML representation of the provided {data}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {data}
@@ -21,8 +21,8 @@ Generate a YAML representation of the provided {data}.
 
 {encoding}
 
-    Output character encoding chosen from YAML_ANY_ENCODING, YAML_UTF8_ENCODING
-    , YAML_UTF16LE_ENCODING, YAML_UTF16BE_ENCODING.
+    Output character encoding chosen from YAML_ANY_ENCODING,
+    YAML_UTF8_ENCODING, YAML_UTF16LE_ENCODING, YAML_UTF16BE_ENCODING.
 
 {linebreak}
 
@@ -31,21 +31,21 @@ Generate a YAML representation of the provided {data}.
 
 {callbacks}
 
-    Content handlers for emitting YAML nodes. Associative array of classname =>
-    callable mappings. See emit callbacks for more details.
+    Content handlers for emitting YAML nodes. Associative array of classname
+    => callable mappings. See emit callbacks for more details.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a YAML encoded string on success.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version             Description
 1.1.0   The {callbacks} parameter was added.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 yaml_emit() example
@@ -129,7 +129,7 @@ comments: Late afternoon is best. Backup contact is Nancy Billsmer @ 338-4338.
 ...
 "
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |yaml_emit_file| - Send the YAML representation of a value to a file

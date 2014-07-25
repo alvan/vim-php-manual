@@ -5,7 +5,7 @@ snmprealwalk
 snmprealwalk — Return all objects including their respective object ID within
 the specified one
 
-===============================================================================
+==============================================================================
 *Description*
 
     array snmprealwalk ( string $host , string $community , string $object_id~
@@ -15,7 +15,7 @@ The snmprealwalk() function is used to traverse over a number of SNMP objects
 starting from {object_id} and return not only their values but also their
 object ids.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {host}
@@ -38,13 +38,13 @@ object ids.
 
     The number of times to retry if timeouts occur.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns an associative array of the SNMP object ids and their values on success
-or FALSE on error. In case of an error, an E_WARNING message is shown.
+Returns an associative array of the SNMP object ids and their values on
+success or FALSE on error. In case of an error, an E_WARNING message is shown.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Using snmprealwalk()
@@ -65,7 +65,7 @@ The above will output something like:
       [IF-MIB::ifName.5] => STRING: sixxs
     )
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |snmpwalk| - Fetch all the SNMP objects from an agent

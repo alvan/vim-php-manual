@@ -4,7 +4,7 @@ msql_data_seek
 
 msql_data_seek — Move internal row pointer
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool msql_data_seek ( resource $result , int $row_number )~
@@ -13,7 +13,7 @@ msql_data_seek() moves the internal row pointer of the mSQL result associated
 with the specified query identifier to point to the specified row number. The
 next call to |msql_fetch_row| would return that row.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { result}
@@ -25,12 +25,12 @@ next call to |msql_fetch_row| would return that row.
 
     The seeked row number.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |msql_fetch_array| - Fetch row as array

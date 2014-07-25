@@ -4,7 +4,7 @@ mcrypt_get_key_size
 
 mcrypt_get_key_size — Gets the key size of the specified cipher
 
-===============================================================================
+==============================================================================
 *Description*
 
     int mcrypt_get_key_size ( int $cipher )~
@@ -19,7 +19,7 @@ mcrypt_get_key_size() is used to get the size of a key of the specified
 It is more useful to use the |mcrypt_enc_get_key_size| function as this uses
 the resource returned by |mcrypt_module_open|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {cipher}
@@ -29,16 +29,16 @@ the resource returned by |mcrypt_module_open|.
 
 {mode}
 
-    One of the MCRYPT_MODE_modename constants, or one of the following strings:
-    "ecb", "cbc", "cfb", "ofb", "nofb" or "stream".
+    One of the MCRYPT_MODE_modename constants, or one of the following
+    strings: "ecb", "cbc", "cfb", "ofb", "nofb" or "stream".
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the maximum supported key size of the algorithm in bytes or FALSE on
 failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mcrypt_get_key_size() Example
@@ -54,7 +54,7 @@ The above example will output:
 
 24
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mcrypt_get_block_size| - Gets the block size of the specified cipher

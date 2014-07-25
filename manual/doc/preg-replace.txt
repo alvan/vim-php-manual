@@ -4,7 +4,7 @@ preg_replace
 
 preg_replace — Perform a regular expression search and replace
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed preg_replace ( mixed $pattern , mixed $replacement , mixed $subject~
@@ -13,7 +13,7 @@ preg_replace — Perform a regular expression search and replace
 Searches {subject} for matches to {pattern} and replaces them with
 {replacement}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {pattern}
@@ -28,15 +28,16 @@ Searches {subject} for matches to {pattern} and replaces them with
 
     The string or an array with strings to replace. If this parameter is a
     string and the {pattern} parameter is an array, all patterns will be
-    replaced by that string. If both {pattern} and {replacement} parameters are
-    arrays, each {pattern} will be replaced by the {replacement} counterpart.
-    If there are fewer elements in the {replacement} array than in the
-    {pattern} array, any extra {pattern}s will be replaced by an empty string.
+    replaced by that string. If both {pattern} and {replacement} parameters
+    are arrays, each {pattern} will be replaced by the {replacement}
+    counterpart. If there are fewer elements in the {replacement} array than
+    in the {pattern} array, any extra {pattern}s will be replaced by an empty
+    string.
 
-    {replacement} may contain references of the form \\n or (since PHP 4.0.4) $
-    n, with the latter form being the preferred one. Every such reference will
-    be replaced by the text captured by the n'th parenthesized pattern. n can
-    be from 0 to 99, and \\0 or $0 refers to the text matched by the whole
+    {replacement} may contain references of the form \\n or (since PHP 4.0.4)
+    $n, with the latter form being the preferred one. Every such reference
+    will be replaced by the text captured by the n'th parenthesized pattern. n
+    can be from 0 to 99, and \\0 or $0 refers to the text matched by the whole
     pattern. Opening parentheses are counted from left to right (starting from
     1) to obtain the number of the capturing subpattern. To use backslash in
     replacement, it must be doubled ("\\\\" PHP string).
@@ -50,19 +51,19 @@ Searches {subject} for matches to {pattern} and replaces them with
     by nothing. In this case the solution is to use \${1}1. This creates an
     isolated $1 backreference, leaving the 1 as a literal.
 
-    When using the deprecated e modifier, this function escapes some characters
-    (namely ', ", \ and NULL) in the strings that replace the backreferences.
-    This is done to ensure that no syntax errors arise from backreference usage
-    with either single or double quotes (e.g. 'strlen(\'$1\')+strlen("$2")').
-    Make sure you are aware of PHP's string syntax to know exactly how the
-    interpreted string will look.
+    When using the deprecated e modifier, this function escapes some
+    characters (namely ', ", \ and NULL) in the strings that replace the
+    backreferences. This is done to ensure that no syntax errors arise from
+    backreference usage with either single or double quotes (e.g. 'strlen(\'$1
+    \')+strlen("$2")'). Make sure you are aware of PHP's string syntax to know
+    exactly how the interpreted string will look.
 
 {subject}
 
     The string or an array with strings to search and replace.
 
-    If {subject} is an array, then the search and replace is performed on every
-    entry of {subject}, and the return value is an array as well.
+    If {subject} is an array, then the search and replace is performed on
+    every entry of {subject}, and the return value is an array as well.
 
 {limit}
 
@@ -74,7 +75,7 @@ Searches {subject} for matches to {pattern} and replaces them with
     If specified, this variable will be filled with the number of replacements
     done.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 preg_replace() returns an array if the {subject} parameter is an array, or a
@@ -83,23 +84,23 @@ string otherwise.
 If matches are found, the new {subject} will be returned, otherwise {subject}
 will be returned unchanged or NULL if an error occurred.
 
-===============================================================================
+==============================================================================
 *Errors/Exceptions*
 
 An E_DEPRECATED level error is emitted when passing in the "\e" modifier.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
-        The /e modifier is deprecated. Use |preg_replace_callback| instead. See
-5.5.0   the PREG_REPLACE_EVAL documentation for additional information about
-        security risks.
+Version                              Description
+        The /e modifier is deprecated. Use |preg_replace_callback| instead.
+5.5.0   See the PREG_REPLACE_EVAL documentation for additional information
+        about security risks.
 5.1.0   Added the {count} parameter
 4.0.4   Added the '$n' form for the {replacement} parameter
 4.0.2   Added the {limit} parameter
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Using backreferences followed by numeric literals
@@ -184,7 +185,7 @@ The above example will output:
 xp***to
 3
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -195,7 +196,7 @@ xp***to
     should be replaced by which {replacement}, you should perform a |ksort| on
     each array prior to calling preg_replace().
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * PCRE Patterns
@@ -204,7 +205,8 @@ xp***to
   * |preg_replace_callback| - Perform a regular expression search and replace
     using a callback
   * |preg_split| - Split string by a regular expression
-  * |preg_last_error| - Returns the error code of the last PCRE regex execution
+  * |preg_last_error| - Returns the error code of the last PCRE regex
+    execution
 
 
 vim:ft=help:

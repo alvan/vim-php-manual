@@ -4,14 +4,14 @@ udm_get_res_param
 
 udm_get_res_param — Get mnoGoSearch result parameters
 
-===============================================================================
+==============================================================================
 *Description*
 
     string udm_get_res_param ( resource $res , int $param )~
 
 Gets the mnoGoSearch result parameters.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {res}
@@ -25,15 +25,15 @@ Gets the mnoGoSearch result parameters.
         page. It is equal to UDM_PARAM_PAGE_SIZE for all search pages, on the
         last page - the rest of links.
       + UDM_PARAM_FOUND - total number of results matching the query.
-      + UDM_PARAM_WORDINFO - information on the words found. E.g. search for "a
-        good book" will return "a: stopword, good:5637, book: 120"
+      + UDM_PARAM_WORDINFO - information on the words found. E.g. search for
+        "a good book" will return "a: stopword, good:5637, book: 120"
       + UDM_PARAM_SEARCHTIME - search time in seconds.
       + UDM_PARAM_FIRST_DOC - the number of the first document displayed on
         current page.
       + UDM_PARAM_LAST_DOC - the number of the last document displayed on
         current page.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 udm_get_res_param() returns result parameter value on success, FALSE on error.

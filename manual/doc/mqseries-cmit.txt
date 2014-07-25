@@ -4,7 +4,7 @@ mqseries_cmit
 
 mqseries_cmit — MQSeries MQCMIT
 
-===============================================================================
+==============================================================================
 *Description*
 
     void mqseries_cmit ( resource $hconn , resource &$compCode , resource~
@@ -16,7 +16,7 @@ that have occurred since the last syncpoint are to be made permanent. Messages
 put as part of a unit of work are made available to other applications;
 messages retrieved as part of a unit of work are deleted.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {hConn}
@@ -33,12 +33,12 @@ messages retrieved as part of a unit of work are deleted.
 
     Reason code qualifying the compCode.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 No value is returned.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mqseries_cmit() example
@@ -51,7 +51,7 @@ Example #1 mqseries_cmit() example
         }
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -59,7 +59,7 @@ Example #1 mqseries_cmit() example
     |mqseries_back| will not function when using MQSeries Client to connect to
     a Queueu Manager.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mqseries_begin| - MQseries MQBEGIN

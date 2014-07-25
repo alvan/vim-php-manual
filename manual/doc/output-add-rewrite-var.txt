@@ -4,7 +4,7 @@ output_add_rewrite_var
 
 output_add_rewrite_var — Add URL rewriter values
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool output_add_rewrite_var ( string $name , string $value )~
@@ -18,10 +18,10 @@ example.com/..) aren't rewritten.
 This function's behavior is controlled by the url_rewriter.tags php.ini
 parameter.
 
-    Note: Calling this function will implicitly start output buffering if it is
-    not active already.
+    Note: Calling this function will implicitly start output buffering if it
+    is not active already.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {name}
@@ -32,12 +32,12 @@ parameter.
 
     The variable value.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 output_add_rewrite_var() example
@@ -72,7 +72,7 @@ Array
     [0] => URL-Rewriter
 )
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |output_reset_rewrite_vars| - Reset URL rewriter values

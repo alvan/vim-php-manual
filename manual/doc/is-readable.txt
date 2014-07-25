@@ -4,27 +4,27 @@ is_readable
 
 is_readable — Tells whether a file exists and is readable
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool is_readable ( string $filename )~
 
 Tells whether a file exists and is readable.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {filename}
 
     Path to the file.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE if the file or directory specified by {filename} exists and is
 readable, FALSE otherwise.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 is_readable() example
@@ -38,12 +38,12 @@ Example #1 is_readable() example
     }
 <?>
 
-===============================================================================
+==============================================================================
 *Errors/Exceptions*
 
 Upon failure, an E_WARNING is emitted.
 
-===============================================================================
+==============================================================================
 *Notes*
 
 Keep in mind that PHP may be accessing the file as the user id that the web
@@ -63,10 +63,10 @@ family of functionality.
 
     The check is done using the real UID/GID instead of the effective one.
 
-This function may return TRUE for directories. Use |is_dir| to distinguish file
-and directory.
+This function may return TRUE for directories. Use |is_dir| to distinguish
+file and directory.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |is_writable| - Tells whether the filename is writable

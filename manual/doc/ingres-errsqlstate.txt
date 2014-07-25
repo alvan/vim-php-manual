@@ -4,7 +4,7 @@ ingres_errsqlstate
 
 ingres_errsqlstate — Get the last SQLSTATE error code generated
 
-===============================================================================
+==============================================================================
 *Description*
 
     string ingres_errsqlstate ([ resource $link ] )~
@@ -16,24 +16,25 @@ If a {link} resource is passed to ingres_errsqlstate(), it returns the last
 error recorded for the link. If no link is passed, then ingres_errsqlstate()
 returns the last error reported using the default link.
 
-The function, ingres_errsqlstate(), should always be called after executing any
-database query. Calling another function before ingres_errsqlstate() is called
-will reset or change any error message from the last Ingres function call.
+The function, ingres_errsqlstate(), should always be called after executing
+any database query. Calling another function before ingres_errsqlstate() is
+called will reset or change any error message from the last Ingres function
+call.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {link}
 
     The connection link identifier
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a string containing the last SQLSTATE, or NULL if no error has
 occurred.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Get the last SQLSTATE error code generated
@@ -50,7 +51,7 @@ Example #1 Get the last SQLSTATE error code generated
     }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ingres_errno| - Get the last Ingres error number generated

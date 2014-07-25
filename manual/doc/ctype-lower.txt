@@ -4,7 +4,7 @@ ctype_lower
 
 ctype_lower — Check for lowercase character(s)
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool ctype_lower ( string $text )~
@@ -12,20 +12,20 @@ ctype_lower — Check for lowercase character(s)
 Checks if all of the characters in the provided string, {text}, are lowercase
 letters.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {text}
 
     The tested string.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE if every character in {text} is a lowercase letter in the current
 locale.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A ctype_lower() example (using the default locale)
@@ -48,17 +48,18 @@ The string aac123 does not consist of all lowercase letters.
 The string qiutoas consists of all lowercase letters.
 The string QASsdks does not consist of all lowercase letters.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
 
-    If an integer between -128 and 255 inclusive is provided, it is interpreted
-    as the ASCII value of a single character (negative values have 256 added in
-    order to allow characters in the Extended ASCII range). Any other integer
-    is interpreted as a string containing the decimal digits of the integer.
+    If an integer between -128 and 255 inclusive is provided, it is
+    interpreted as the ASCII value of a single character (negative values have
+    256 added in order to allow characters in the Extended ASCII range). Any
+    other integer is interpreted as a string containing the decimal digits of
+    the integer.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ctype_alpha| - Check for alphabetic character(s)

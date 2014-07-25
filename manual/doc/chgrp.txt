@@ -4,7 +4,7 @@ chgrp
 
 chgrp — Changes file group
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool chgrp ( string $filename , mixed $group )~
@@ -14,7 +14,7 @@ Attempts to change the group of the file {filename} to {group}.
 Only the superuser may change the group of a file arbitrarily; other users may
 change the group of a file to any group of which that user is a member.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {filename}
@@ -25,12 +25,12 @@ change the group of a file to any group of which that user is a member.
 
     A group name or number.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Changing a file's group
@@ -44,7 +44,7 @@ Example #1 Changing a file's group
     printf($format, $filename, date('r'), filegroup($filename));
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: This function will not work on remote files as the file to be
@@ -54,7 +54,7 @@ Example #1 Changing a file's group
     directories being operated upon have the same UID (owner) as the script
     that is being executed.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |chown| - Changes file owner

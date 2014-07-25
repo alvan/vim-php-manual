@@ -4,7 +4,7 @@ mssql_free_statement
 
 mssql_free_statement — Free statement memory
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool mssql_free_statement ( resource $stmt )~
@@ -15,19 +15,19 @@ automatically be freed when the script ends. You may call mssql_free_statement
 () with the statement identifier as an argument and the associated statement
 memory will be freed.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {stmt}
 
     Statement resource, obtained with |mssql_init|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mssql_free_statement() example
@@ -43,7 +43,7 @@ Example #1 mssql_free_statement() example
     mssql_free_statement($stmt);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mssql_bind| - Adds a parameter to a stored procedure or a remote stored

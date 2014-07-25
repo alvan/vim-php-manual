@@ -4,7 +4,7 @@ xdiff_string_patch_binary
 
 xdiff_string_patch_binary — Alias of xdiff_string_bpatch
 
-===============================================================================
+==============================================================================
 *Description*
 
     string xdiff_string_patch_binary ( string $str , string $patch )~
@@ -13,9 +13,10 @@ Patches a string {str} with a binary {patch}. This function accepts patches
 created both via |xdiff_string_bdiff| and |xdiff_string_rabdiff| functions or
 their file counterparts.
 
-Starting with version 1.5.0 this function is an alias of |xdiff_string_bpatch|.
+Starting with version 1.5.0 this function is an alias of |xdiff_string_bpatch|
+.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {str}
@@ -26,12 +27,12 @@ Starting with version 1.5.0 this function is an alias of |xdiff_string_bpatch|.
 
     The binary patch string.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the patched string, or FALSE on error.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |xdiff_string_bpatch| - Patch a string with a binary diff

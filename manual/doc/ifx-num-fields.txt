@@ -4,15 +4,15 @@ ifx_num_fields
 
 ifx_num_fields — Returns the number of columns in the query
 
-===============================================================================
+==============================================================================
 *Description*
 
     int ifx_num_fields ( resource $result_id )~
 
-After preparing or executing a query, this call gives you the number of columns
-in the query.
+After preparing or executing a query, this call gives you the number of
+columns in the query.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result_id}
@@ -20,12 +20,12 @@ in the query.
     {result_id} is a valid resultid returned by |ifx_query| or |ifx_prepare|
     (select type queries only!).
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the number of columns in query for {result_id}, or FALSE on errors.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 ifx_num_fields() Example
@@ -36,7 +36,7 @@ Example #1 ifx_num_fields() Example
     echo ifx_num_fields($res_id);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ifx_num_rows| - Count the rows already fetched from a query

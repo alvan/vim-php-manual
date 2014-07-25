@@ -5,7 +5,7 @@ inet_ntop
 inet_ntop — Converts a packed internet address to a human readable
 representation
 
-===============================================================================
+==============================================================================
 *Description*
 
     string inet_ntop ( string $in_addr )~
@@ -14,19 +14,19 @@ This function converts a 32bit IPv4, or 128bit IPv6 address (if PHP was built
 with IPv6 support enabled) into an address family appropriate string
 representation.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {in_addr}
 
     A 32bit IPv4, or 128bit IPv6 address.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a string representation of the address or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 inet_ntop() Example
@@ -45,19 +45,19 @@ Example #1 inet_ntop() Example
     echo $expanded;
 <?>
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version                     Description
 5.3.0   This function is now available on Windows platforms.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |long2ip| - Converts an (IPv4) Internet network address into a string in
     Internet standard dotted format
-  * |ip2long| - Converts a string containing an (IPv4) Internet Protocol dotted
-    address into a proper address
+  * |ip2long| - Converts a string containing an (IPv4) Internet Protocol
+    dotted address into a proper address
   * |inet_pton| - Converts a human readable IP address to its packed in_addr
     representation
 

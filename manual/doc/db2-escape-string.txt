@@ -4,14 +4,14 @@ db2_escape_string
 
 db2_escape_string — Used to escape certain characters
 
-===============================================================================
+==============================================================================
 *Description*
 
     string db2_escape_string ( string $string_literal )~
 
 Prepends backslashes to special characters in the string argument.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {string_literal}
@@ -20,13 +20,13 @@ Prepends backslashes to special characters in the string argument.
     Characters that are prepended with a backslash are \x00, \n, \r, \, ', "
     and \x1a.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns {string_literal} with the special characters noted above prepended with
-backslashes.
+Returns {string_literal} with the special characters noted above prepended
+with backslashes.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A db2_escape_string() example
@@ -62,7 +62,7 @@ db2_escape_string: Nothing to quote
 db2_escape_string: 200676
 db2_escape_string:
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |db2_prepare| - Prepares an SQL statement to be executed

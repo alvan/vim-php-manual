@@ -5,7 +5,7 @@ db2_get_option
 db2_get_option — Retrieves an option value for a statement resource or a
 connection resource
 
-===============================================================================
+==============================================================================
 *Description*
 
     string db2_get_option ( resource $resource , string $option )~
@@ -13,7 +13,7 @@ connection resource
 Retrieves the value of a specified option value for a statement resource or a
 connection resource.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {resource}
@@ -35,9 +35,9 @@ connection resource.
         When the value in each option is being set, some servers might not
         handle the entire length provided and might truncate the value.
 
-        To ensure that the data specified in each option is converted correctly
-        when transmitted to a host system, use only the characters A through Z,
-        0 through 9, and the underscore (_) or period (.).
+        To ensure that the data specified in each option is converted
+        correctly when transmitted to a host system, use only the characters A
+        through Z, 0 through 9, and the underscore (_) or period (.).
 
     {userid}
 
@@ -55,9 +55,9 @@ connection resource.
 
     {acctstr}
 
-        SQL_ATTR_INFO_ACCTSTR - A pointer to a null-terminated character string
-        used to identify the client accounting string sent to the host database
-        server when using DB2 Connect.
+        SQL_ATTR_INFO_ACCTSTR - A pointer to a null-terminated character
+        string used to identify the client accounting string sent to the host
+        database server when using DB2 Connect.
 
 
             Note:
@@ -100,13 +100,13 @@ acctstr    SQL_ATTR_INFO_ACCTSTR    X          X         -
 applname   SQL_ATTR_INFO_APPLNAME   X          X         -
 wrkstnname SQL_ATTR_INFO_WRKSTNNAME X          X         -
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the current setting of the connection attribute provided on success or
 FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Setting and retrieving parameters through a connection resource
@@ -188,7 +188,7 @@ account
 myapp
 workstation
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |db2_connect| - Returns a connection to a database

@@ -4,7 +4,7 @@ version_compare
 
 version_compare — Compares two "PHP-standardized" version number strings
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed version_compare ( string $version1 , string $version2 [, string~
@@ -16,12 +16,12 @@ The function first replaces _, - and + with a dot . in the version strings and
 also inserts dots . before and after any non number so that for example
 '4.3.2RC1' becomes '4.3.2.RC.1'. Then it compares the parts starting from left
 to right. If a part contains special version strings these are handled in the
-following order: any string not found in this list < dev < alpha = a < beta = b
-< RC = rc < # < pl = p. This way not only versions with different levels like
-'4.1' and '4.1.2' can be compared but also any PHP specific version containing
-development state.
+following order: any string not found in this list < dev < alpha = a < beta =
+b < RC = rc < # < pl = p. This way not only versions with different levels
+like '4.1' and '4.1.2' can be compared but also any PHP specific version
+containing development state.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {version1}
@@ -40,16 +40,16 @@ development state.
 
     This parameter is case-sensitive, values should be lowercase.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-By default, version_compare() returns -1 if the first version is lower than the
-second, 0 if they are equal, and 1 if the second is lower.
+By default, version_compare() returns -1 if the first version is lower than
+the second, 0 if they are equal, and 1 if the second is lower.
 
 When using the optional {operator} argument, the function will return TRUE if
 the relationship is the one specified by the operator, FALSE otherwise.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 The examples below use the PHP_VERSION constant, because it contains the value
@@ -75,7 +75,7 @@ Example #1 version_compare() examples
     }
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -93,12 +93,12 @@ Example #1 version_compare() examples
     strings from arbitrary sources that do not adhere to the PHP standard may
     need to be lowercased via |strtolower| before calling version_compare().
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |phpversion| - Gets the current PHP version
-  * |php_uname| - Returns information about the operating system PHP is running
-    on
+  * |php_uname| - Returns information about the operating system PHP is
+    running on
   * |function_exists| - Return TRUE if the given function has been defined
 
 

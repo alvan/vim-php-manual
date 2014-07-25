@@ -4,14 +4,14 @@ str_split
 
 str_split — Convert a string to an array
 
-===============================================================================
+==============================================================================
 *Description*
 
     array str_split ( string $string [, int $split_length = 1 ] )~
 
 Converts a string to an array.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {string}
@@ -22,7 +22,7 @@ Converts a string to an array.
 
     Maximum length of the chunk.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 If the optional {split_length} parameter is specified, the returned array will
@@ -33,7 +33,7 @@ FALSE is returned if {split_length} is less than 1. If the {split_length}
 length exceeds the length of {string}, the entire string is returned as the
 first (and only) array element.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Example uses of str_split()
@@ -76,7 +76,7 @@ Array
     [3] => end
 )
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |chunk_split| - Split a string into smaller chunks

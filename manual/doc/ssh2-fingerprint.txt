@@ -4,7 +4,7 @@ ssh2_fingerprint
 
 ssh2_fingerprint — Retrieve fingerprint of remote server
 
-===============================================================================
+==============================================================================
 *Description*
 
     string ssh2_fingerprint ( resource $session [, int $flags =~
@@ -12,7 +12,7 @@ ssh2_fingerprint — Retrieve fingerprint of remote server
 
 Returns a server hostkey hash from an active session.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {session}
@@ -24,12 +24,12 @@ Returns a server hostkey hash from an active session.
     {flags} may be either of SSH2_FINGERPRINT_MD5 or SSH2_FINGERPRINT_SHA1
     logically ORed with SSH2_FINGERPRINT_HEX or SSH2_FINGERPRINT_RAW.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the hostkey hash as a string.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Checking the fingerprint against a known value

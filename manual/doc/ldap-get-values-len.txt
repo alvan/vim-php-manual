@@ -4,7 +4,7 @@ ldap_get_values_len
 
 ldap_get_values_len — Get all binary values from a result entry
 
-===============================================================================
+==============================================================================
 *Description*
 
     array ldap_get_values_len ( resource $link_identifier , resource~
@@ -15,7 +15,7 @@ Reads all the values of the attribute in the entry in the result.
 This function is used exactly like |ldap_get_values| except that it handles
 binary data and not string data.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {link_identifier}
@@ -26,7 +26,7 @@ binary data and not string data.
 
 {attribute}
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an array of values for the attribute on success and FALSE on error.
@@ -34,7 +34,7 @@ Individual values are accessed by integer index in the array. The first index
 is 0. The number of values can be found by indexing "count" in the resultant
 array.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ldap_get_values| - Get all values from a result entry

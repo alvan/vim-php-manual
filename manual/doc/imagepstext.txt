@@ -4,7 +4,7 @@ imagepstext
 
 imagepstext — Draws a text over an image using PostScript Type1 fonts
 
-===============================================================================
+==============================================================================
 *Description*
 
     array imagepstext ( resource $image , string $text , resource $font_index~
@@ -14,16 +14,16 @@ imagepstext — Draws a text over an image using PostScript Type1 fonts
 
 Draws a text on an image using PostScript Type1 fonts.
 
-Refer to PostScript documentation about fonts and their measuring system if you
-have trouble understanding how this works.
+Refer to PostScript documentation about fonts and their measuring system if
+you have trouble understanding how this works.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { image}
 
-    An image resource, returned by one of the image creation functions, such as
-    |imagecreatetruecolor|.
+    An image resource, returned by one of the image creation functions, such
+    as |imagecreatetruecolor|.
 
 {text}
 
@@ -57,16 +57,16 @@ have trouble understanding how this works.
 
 {space}
 
-    Allows you to change the default value of a space in a font. This amount is
-    added to the normal value and can also be negative. Expressed in character
-    space units, where 1 unit is 1/1000th of an em-square.
+    Allows you to change the default value of a space in a font. This amount
+    is added to the normal value and can also be negative. Expressed in
+    character space units, where 1 unit is 1/1000th of an em-square.
 
 {tightness}
 
     {tightness} allows you to control the amount of white space between
-    characters. This amount is added to the normal character width and can also
-    be negative. Expressed in character space units, where 1 unit is 1/1000th
-    of an em-square.
+    characters. This amount is added to the normal character width and can
+    also be negative. Expressed in character space units, where 1 unit is 1/
+    1000th of an em-square.
 
 {angle}
 
@@ -75,11 +75,11 @@ have trouble understanding how this works.
 {antialias_steps}
 
     Allows you to control the number of colours used for antialiasing text.
-    Allowed values are 4 and 16. The higher value is recommended for text sizes
-    lower than 20, where the effect in text quality is quite visible. With
-    bigger sizes, use 4. It's less computationally intensive.
+    Allowed values are 4 and 16. The higher value is recommended for text
+    sizes lower than 20, where the effect in text quality is quite visible.
+    With bigger sizes, use 4. It's less computationally intensive.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 This function returns an array containing the following elements:
@@ -89,7 +89,7 @@ This function returns an array containing the following elements:
 2 upper right x-coordinate
 3 upper right y-coordinate
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 imagepstext() usage
@@ -115,13 +115,13 @@ Example #1 imagepstext() usage
     imagedestroy($im);
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
-    Note: This function is only available if PHP is compiled using --with-t1lib
-    [=DIR] .
+    Note: This function is only available if PHP is compiled using
+    --with-t1lib[=DIR] .
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |imagepsbbox| - Give the bounding box of a text rectangle using PostScript

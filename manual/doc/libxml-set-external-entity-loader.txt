@@ -4,14 +4,14 @@ libxml_set_external_entity_loader
 
 libxml_set_external_entity_loader — Changes the default external entity loader
 
-===============================================================================
+==============================================================================
 *Description*
 
     void libxml_set_external_entity_loader ( callable $resolver_function )~
 
 Changes the default external entity loader.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {resolver_function}
@@ -21,12 +21,12 @@ Changes the default external entity loader.
     callback should return a resource, a string from which a resource can be
     opened, or NULL.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 No value is returned.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 libxml_set_external_entity_loader() example
@@ -71,7 +71,7 @@ array(4) {
 }
 bool(true)
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |libxml_disable_entity_loader| - Disable the ability to load external

@@ -4,7 +4,7 @@ sqlite_error_string
 
 sqlite_error_string — Returns the textual description of an error code
 
-===============================================================================
+==============================================================================
 *Description*
 
     string sqlite_error_string ( int $error_code )~
@@ -12,20 +12,20 @@ sqlite_error_string — Returns the textual description of an error code
 Returns a human readable description of the {error_code} returned from |
 sqlite_last_error|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {error_code}
 
-    The error code being used, which might be passed in from |sqlite_last_error
-    |.
+    The error code being used, which might be passed in from |
+    sqlite_last_error|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a human readable description of the {error_code}, as a string.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |sqlite_last_error| - Returns the error code of the last error for a

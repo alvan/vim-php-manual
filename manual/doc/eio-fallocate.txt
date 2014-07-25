@@ -5,12 +5,12 @@ eio_fallocate
 eio_fallocate — Allows the caller to directly manipulate the allocated disk
 space for a file
 
-===============================================================================
+==============================================================================
 *Description*
 
-    resource eio_fallocate ( mixed $fd , int $mode , int $offset , int $length~
-    [, int $pri = EIO_PRI_DEFAULT [, callable $callback = NULL [, mixed $data~
-    = NULL ]]] )~
+    resource eio_fallocate ( mixed $fd , int $mode , int $offset , int~
+    $length [, int $pri = EIO_PRI_DEFAULT [, callable $callback = NULL [,~
+    mixed $data = NULL ]]] )~
 
 eio_fallocate() allows the caller to directly manipulate the allocated disk
 space for the file specified by {fd} file descriptor for the byte range
@@ -20,7 +20,7 @@ starting at {offset} and continuing for {length} bytes.
 
     EIO_O_CREAT should be logically OR'd with EIO_O_WRONLY, or EIO_O_RDWR
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {fd}
@@ -30,8 +30,8 @@ starting at {offset} and continuing for {length} bytes.
 
 {mode}
 
-    Currently only one flag is supported for mode: EIO_FALLOC_FL_KEEP_SIZE (the
-    same as POSIX constant FALLOC_FL_KEEP_SIZE).
+    Currently only one flag is supported for mode: EIO_FALLOC_FL_KEEP_SIZE
+    (the same as POSIX constant FALLOC_FL_KEEP_SIZE).
 
 {offset}
 
@@ -48,8 +48,8 @@ starting at {offset} and continuing for {length} bytes.
 
 {callback}
 
-    {callback} function is called when the request is done. It should match the
-    following prototype:
+    {callback} function is called when the request is done. It should match
+    the following prototype:
     void callback(mixed $data, int $result[, resource $req]);
 
     {data}
@@ -70,7 +70,7 @@ starting at {offset} and continuing for {length} bytes.
 
     Arbitrary variable passed to {callback}.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 eio_fallocate() returns request resource on success or FALSE on error.

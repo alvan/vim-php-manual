@@ -4,7 +4,7 @@ snmp3_walk
 
 snmp3_walk — Fetch all the SNMP objects from an agent
 
-===============================================================================
+==============================================================================
 *Description*
 
     array snmp3_walk ( string $host , string $sec_name , string $sec_level ,~
@@ -15,10 +15,10 @@ snmp3_walk — Fetch all the SNMP objects from an agent
 snmp3_walk() function is used to read all the values from an SNMP agent
 specified by the {hostname}.
 
-Even if the security level does not use an auth or priv protocol/password valid
-values have to be specified.
+Even if the security level does not use an auth or priv protocol/password
+valid values have to be specified.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {host}
@@ -65,20 +65,20 @@ values have to be specified.
 
     The number of times to retry if timeouts occur.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns an array of SNMP object values starting from the {object_id} as root or
-FALSE on error.
+Returns an array of SNMP object values starting from the {object_id} as root
+or FALSE on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 snmp3_walk() Example
 
 <?php >
-    $ret = snmp3_walk('localhost', 'james', 'authPriv', 'SHA', 'secret007', 'AES', 
-    'secret007', 'IF-MIB::ifName');
+    $ret = snmp3_walk('localhost', 'james', 'authPriv', 'SHA', 'secret007', 'AES'
+    , 'secret007', 'IF-MIB::ifName');
     var_export($ret);
 <?>
 
@@ -94,11 +94,11 @@ array (
   4 => 'STRING: sixxs',
 )
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
-  * |snmp3_real_walk| - Return all objects including their respective object ID
-    within the specified one
+  * |snmp3_real_walk| - Return all objects including their respective object
+    ID within the specified one
 
 
 vim:ft=help:

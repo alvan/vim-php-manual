@@ -4,28 +4,28 @@ imagecolorstotal
 
 imagecolorstotal — Find out the number of colors in an image's palette
 
-===============================================================================
+==============================================================================
 *Description*
 
     int imagecolorstotal ( resource $image )~
 
 Returns the number of colors in an image palette.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {image}
 
-    An image resource, returned by one of the image creation functions, such as
-    |imagecreatefromgif|.
+    An image resource, returned by one of the image creation functions, such
+    as |imagecreatefromgif|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the number of colors in the specified image's palette or 0 for
 truecolor images.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Getting total number of colors in an image using imagecolorstotal()
@@ -44,7 +44,7 @@ The above example will output something similar to:
 
 Total colors in image: 128
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |imagecolorat| - Get the index of the color of a pixel

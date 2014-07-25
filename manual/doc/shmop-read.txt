@@ -4,14 +4,14 @@ shmop_read
 
 shmop_read — Read data from shared memory block
 
-===============================================================================
+==============================================================================
 *Description*
 
     string shmop_read ( int $shmid , int $start , int $count )~
 
 shmop_read() will read a string from shared memory block.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {shmid}
@@ -26,12 +26,12 @@ shmop_read() will read a string from shared memory block.
 
     The number of bytes to read
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the data or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Reading shared memory block
@@ -43,7 +43,7 @@ Example #1 Reading shared memory block
 This example will read 50 bytes from shared memory block and place the data
 inside $shm_data.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |shmop_write| - Write data into shared memory block

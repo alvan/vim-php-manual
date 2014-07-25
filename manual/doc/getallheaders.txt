@@ -4,7 +4,7 @@ getallheaders
 
 getallheaders — Fetch all HTTP request headers
 
-===============================================================================
+==============================================================================
 *Description*
 
     array getallheaders ( void )~
@@ -12,19 +12,19 @@ getallheaders — Fetch all HTTP request headers
 Fetches all HTTP headers from the current request.
 
 This function is an alias for |apache_request_headers|. Please read the |
-apache_request_headers| documentation for more information on how this function
-works.
+apache_request_headers| documentation for more information on how this
+function works.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 An associative array of all the HTTP headers in the current request, or FALSE
 on failure.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 5.5.7   This function became available in the CLI server.
 5.4.0   This function became available under FastCGI. Previously, it was
         supported only when PHP was installed as an Apache module.
@@ -34,7 +34,7 @@ Version                               Description
 4.3.0   Became an alias for |apache_request_headers|. Essentially, it was
         renamed. This is because this function only works with Apache.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 getallheaders() example
@@ -47,7 +47,7 @@ Example #1 getallheaders() example
 
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |apache_response_headers| - Fetch all HTTP response headers

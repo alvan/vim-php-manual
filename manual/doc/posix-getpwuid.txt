@@ -4,33 +4,34 @@ posix_getpwuid
 
 posix_getpwuid — Return info about a user by user id
 
-===============================================================================
+==============================================================================
 *Description*
 
     array posix_getpwuid ( int $uid )~
 
-Returns an array of information about the user referenced by the given user ID.
+Returns an array of information about the user referenced by the given user
+ID.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {uid}
 
     The user identifier.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an associative array with the following elements:
 
                           The user information array
-Element                               Description
+Element                              Description
         The name element contains the username of the user. This is a short,
-name    usually less than 16 character "handle" of the user, not the real, full
-        name.
-        The passwd element contains the user's password in an encrypted format.
-passwd  Often, for example on a system employing "shadow" passwords, an
-        asterisk is returned instead.
+name    usually less than 16 character "handle" of the user, not the real,
+        full name.
+        The passwd element contains the user's password in an encrypted
+passwd  format. Often, for example on a system employing "shadow" passwords,
+        an asterisk is returned instead.
 uid     User ID, should be the same as the {uid} parameter used when calling
         the function, and hence redundant.
 gid     The group ID of the user. Use the function |posix_getgrgid| to resolve
@@ -46,7 +47,7 @@ dir     This element contains the absolute path to the home directory of the
 shell   The shell element contains the absolute path to the executable of the
         user's default shell.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Example use of posix_getpwuid()
@@ -71,7 +72,7 @@ Array
     [shell]   => "/bin/bash"
 )
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |posix_getpwnam| - Return info about a user by username

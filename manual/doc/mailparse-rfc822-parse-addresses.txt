@@ -4,7 +4,7 @@ mailparse_rfc822_parse_addresses
 
 mailparse_rfc822_parse_addresses — Parse RFC 822 compliant addresses
 
-===============================================================================
+==============================================================================
 *Description*
 
     array mailparse_rfc822_parse_addresses ( string $addresses )~
@@ -12,7 +12,7 @@ mailparse_rfc822_parse_addresses — Parse RFC 822 compliant addresses
 Parses a » RFC 822 compliant recipient list, such as that found in the To:
 header.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {addresses}
@@ -24,18 +24,18 @@ header.
 
         This string must not include the header name.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an array of associative arrays with the following keys for each
 recipient:
 
-display  The recipient name, for display purpose. If this part is not set for a
-         recipient, this key will hold the same value as address.
+display  The recipient name, for display purpose. If this part is not set for
+         a recipient, this key will hold the same value as address.
 address  The email address
 is_group TRUE if the recipient is a newsgroup, FALSE otherwise.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mailparse_rfc822_parse_addresses() example

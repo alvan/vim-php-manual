@@ -7,7 +7,7 @@ maxdb_stmt::store_result
 maxdb_stmt_store_result -- maxdb_stmt::store_result — Transfers a result set
 from a prepared statement
 
-===============================================================================
+==============================================================================
 *Description*
 
 Procedural style
@@ -18,15 +18,15 @@ Object oriented style
 
     object maxdb_stmt::store_result ( void )~
 
-maxdb_stmt_store_result() has no functionally effect and should not be used for
-retrieving data from MaxDB server.
+maxdb_stmt_store_result() has no functionally effect and should not be used
+for retrieving data from MaxDB server.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Object oriented style
@@ -101,7 +101,7 @@ The above example will output something similar to:
 
 Number of rows: 25.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |maxdb_prepare| - Prepare an SQL statement for execution

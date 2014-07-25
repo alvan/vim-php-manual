@@ -4,19 +4,20 @@ oci_fetch_assoc
 
 oci_fetch_assoc — Returns the next row from a query as an associative array
 
-===============================================================================
+==============================================================================
 *Description*
 
     array oci_fetch_assoc ( resource $statement )~
 
 Returns an associative array containing the next result-set row of a query.
-Each array entry corresponds to a column of the row. This function is typically
-called in a loop until it returns FALSE, indicating no more rows exist.
+Each array entry corresponds to a column of the row. This function is
+typically called in a loop until it returns FALSE, indicating no more rows
+exist.
 
 Calling oci_fetch_assoc() is identical to calling |oci_fetch_array| with
 OCI_ASSOC + OCI_RETURN_NULLS.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {statement}
@@ -24,13 +25,13 @@ OCI_ASSOC + OCI_RETURN_NULLS.
     A valid OCI8 statement identifier created by |oci_parse| and executed by |
     oci_execute|, or a REF CURSOR statement identifier.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns an associative array. If there are no more rows in the {statement} then
-FALSE is returned.
+Returns an associative array. If there are no more rows in the {statement}
+then FALSE is returned.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 oci_fetch_assoc() Example
@@ -56,19 +57,19 @@ Example #1 oci_fetch_assoc() Example
 
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
 
     See |oci_fetch_array| for more examples of fetching rows.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |oci_fetch| - Fetches the next row from a query into internal buffers
-  * |oci_fetch_all| - Fetches multiple rows from a query into a two-dimensional
-    array
+  * |oci_fetch_all| - Fetches multiple rows from a query into a
+    two-dimensional array
   * |oci_fetch_array| - Returns the next row from a query as an associative or
     numeric array
   * |oci_fetch_object| - Returns the next row from a query as an object

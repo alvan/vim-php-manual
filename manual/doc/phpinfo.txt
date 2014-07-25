@@ -4,7 +4,7 @@ phpinfo
 
 phpinfo — Outputs information about PHP's configuration
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool phpinfo ([ int $what = INFO_ALL ] )~
@@ -22,7 +22,7 @@ system.
 phpinfo() is also a valuable debugging tool as it contains all EGPCS
 (Environment, GET, POST, Cookie, Server) data.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {what}
@@ -32,7 +32,7 @@ phpinfo() is also a valuable debugging tool as it contains all EGPCS
     One can also combine the respective constants or bitwise values together
     with the or operator.
 
-                               phpinfo() options
+                              phpinfo() options
      Name (constant)   Value                    Description
     INFO_GENERAL       1     The configuration line, php.ini location, build
                              date, Web Server, System and more.
@@ -49,22 +49,22 @@ phpinfo() is also a valuable debugging tool as it contains all EGPCS
                              FAQ.
     INFO_ALL           -1    Shows all of the above.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
         Logo GUIDs were replaced with data URIs, and so turning off expose_php
 5.5.0   now has no effect on the result of phpinfo(). Credits are also now
         embedded within the output itself instead of linked.
-5.2.2   The "Loaded Configuration File" information was added, when before only
-        "Configuration File (php.ini) Path" existed.
+5.2.2   The "Loaded Configuration File" information was added, when before
+        only "Configuration File (php.ini) Path" existed.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 phpinfo() Example
@@ -80,7 +80,7 @@ Example #1 phpinfo() Example
 
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -93,7 +93,7 @@ Example #1 phpinfo() Example
 
     phpinfo() outputs plain text instead of HTML when using the CLI mode.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |phpversion| - Gets the current PHP version

@@ -4,10 +4,10 @@ maxdb_stmt::fetch
 
 (PECL maxdb >= 1.0)
 
-maxdb_stmt_fetch -- maxdb_stmt::fetch — Fetch results from a prepared statement
-into the bound variables
+maxdb_stmt_fetch -- maxdb_stmt::fetch — Fetch results from a prepared
+statement into the bound variables
 
-===============================================================================
+==============================================================================
 *Description*
 
 Procedural style
@@ -26,7 +26,7 @@ maxdb_stmt_bind_result|.
     Note that all columns must be bound by the application before calling 
     maxdb_stmt_fetch().
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
            Return values
@@ -35,7 +35,7 @@ TRUE  Success. Data has been fetched
 FALSE Error occurred
 NULL  No more rows/data exists
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Object oriented style
@@ -134,7 +134,7 @@ The above example will output something similar to:
 20019 (Washington)
 20037 (Washington)
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |maxdb_prepare| - Prepare an SQL statement for execution

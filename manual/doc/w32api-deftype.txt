@@ -4,7 +4,7 @@ w32api_deftype
 
 w32api_deftype — Defines a type for use with other w32api_functions
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool w32api_deftype ( string $typename , string $member1_type , string~
@@ -13,7 +13,7 @@ w32api_deftype — Defines a type for use with other w32api_functions
 You need to call this function if you would like to define a type for a w32api
 call.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {typename}
@@ -37,19 +37,19 @@ This function takes 2n+1 arguments, where n is the number of members the type
 has. After that is the type of the member followed by the members name (in
 pairs).
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Notes*
 
 Warning
 
 This function is EXPERIMENTAL. The behaviour of this function, its name, and
-surrounding documentation may change without notice in a future release of PHP.
-This function should be used at your own risk.
+surrounding documentation may change without notice in a future release of
+PHP. This function should be used at your own risk.
 
 
 vim:ft=help:

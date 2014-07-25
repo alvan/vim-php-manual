@@ -4,7 +4,7 @@ hw_mv
 
 hw_mv — Moves objects
 
-===============================================================================
+==============================================================================
 *Description*
 
     int hw_mv ( int $connection , array $object_id_array , int $source_id ,~
@@ -12,7 +12,7 @@ hw_mv — Moves objects
 
 Moves the specified objects from a collection to another.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
@@ -29,17 +29,17 @@ Moves the specified objects from a collection to another.
 
 {destination_id}
 
-    The target collection id. If set to 0 the objects will be unlinked from the
-    source collection. If this is the last instance of that object it will be
-    deleted. If you want to delete all instances at once, use |hw_deleteobject|
-    .
+    The target collection id. If set to 0 the objects will be unlinked from
+    the source collection. If this is the last instance of that object it will
+    be deleted. If you want to delete all instances at once, use |
+    hw_deleteobject|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the number of moved objects.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |hw_cp| - Copies objects

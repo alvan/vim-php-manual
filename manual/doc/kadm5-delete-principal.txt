@@ -4,14 +4,14 @@ kadm5_delete_principal
 
 kadm5_delete_principal — Deletes a kerberos principal
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool kadm5_delete_principal ( resource $handle , string $principal )~
 
 Removes the {principal} from the Kerberos database.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {handle}
@@ -22,12 +22,12 @@ Removes the {principal} from the Kerberos database.
 
     The removed principal.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 kadm5_delete_principal() example
@@ -42,7 +42,7 @@ Example #1 kadm5_delete_principal() example
     kadm5_destroy($handle);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |kadm5_modify_principal| - Modifies a kerberos principal with the given

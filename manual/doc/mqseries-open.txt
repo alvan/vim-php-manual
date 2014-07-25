@@ -4,7 +4,7 @@ mqseries_open
 
 mqseries_open — MQSeries MQOPEN
 
-===============================================================================
+==============================================================================
 *Description*
 
     void mqseries_open ( resource $hconn , array &$objDesc , int $option ,~
@@ -12,7 +12,7 @@ mqseries_open — MQSeries MQOPEN
 
 The mqseries_open() (MQOPEN) call establishes access to an object.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {hConn}
@@ -43,12 +43,12 @@ The mqseries_open() (MQOPEN) call establishes access to an object.
 
     Reason code qualifying the compCode.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 No value is returned.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mqseries_open() example
@@ -58,8 +58,8 @@ Example #1 mqseries_open() example
         mqseries_open(
                     $conn,
                     $mqods,
-                    MQSERIES_MQOO_INPUT_AS_Q_DEF | MQSERIES_MQOO_FAIL_IF_QUIESCING 
-    | MQSERIES_MQOO_OUTPUT,
+                    MQSERIES_MQOO_INPUT_AS_Q_DEF | 
+    MQSERIES_MQOO_FAIL_IF_QUIESCING | MQSERIES_MQOO_OUTPUT,
                     $obj,
                     $comp_code,
                     $reason);
@@ -70,7 +70,7 @@ Example #1 mqseries_open() example
         }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mqseries_close| - MQSeries MQCLOSE

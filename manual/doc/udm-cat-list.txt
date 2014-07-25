@@ -4,7 +4,7 @@ udm_cat_list
 
 udm_cat_list — Get all the categories on the same level with the current one
 
-===============================================================================
+==============================================================================
 *Description*
 
     array udm_cat_list ( resource $agent , string $category )~
@@ -13,7 +13,7 @@ Gets all the categories on the same level with the current one.
 
 The function can be useful for developing categories tree browser.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {agent}
@@ -22,7 +22,7 @@ The function can be useful for developing categories tree browser.
 
 {category}
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an array listing all categories of the same level as the current
@@ -40,7 +40,7 @@ $array[0] will contain '020300'
   ...
  etc.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Following is an example of displaying links of the current level in format:
@@ -62,7 +62,7 @@ Example #1 udm_cat_list()example
      }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |udm_cat_path| - Get the path to the current category

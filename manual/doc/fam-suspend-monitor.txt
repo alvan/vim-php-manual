@@ -4,7 +4,7 @@ fam_suspend_monitor
 
 fam_suspend_monitor — Temporarily suspend monitoring
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool fam_suspend_monitor ( resource $fam , resource $fam_monitor )~
@@ -14,7 +14,7 @@ fam_suspend_monitor() temporarily suspend monitoring of a resource.
 Monitoring can later be continued using |fam_resume_monitor| without the need
 of requesting a complete new monitor.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {fam}
@@ -26,12 +26,12 @@ of requesting a complete new monitor.
 
     A resource returned by one of the fam_monitor_XXX functions
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |fam_cancel_monitor| - Terminate monitoring

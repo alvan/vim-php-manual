@@ -4,7 +4,7 @@ wordwrap
 
 wordwrap — Wraps a string to a given number of characters
 
-===============================================================================
+==============================================================================
 *Description*
 
     string wordwrap ( string $str [, int $width = 75 [, string $break =~
@@ -12,7 +12,7 @@ wordwrap — Wraps a string to a given number of characters
 
 Wraps a string to a given number of characters using a string break character.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {str}
@@ -30,21 +30,21 @@ Wraps a string to a given number of characters using a string break character.
 {cut}
 
     If the {cut} is set to TRUE, the string is always wrapped at or before the
-    specified width. So if you have a word that is larger than the given width,
-    it is broken apart. (See second example).
+    specified width. So if you have a word that is larger than the given
+    width, it is broken apart. (See second example).
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the given string wrapped at the specified length.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version               Description
 4.0.3   The optional {cut} parameter was added.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 wordwrap() example
@@ -78,7 +78,7 @@ long
 wooooooo
 ooooord.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |nl2br| - Inserts HTML line breaks before all newlines in a string

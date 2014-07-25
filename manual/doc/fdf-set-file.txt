@@ -4,7 +4,7 @@ fdf_set_file
 
 fdf_set_file — Set PDF document to display FDF data in
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool fdf_set_file ( resource $fdf_document , string $url [, string~
@@ -13,7 +13,7 @@ fdf_set_file — Set PDF document to display FDF data in
 Selects a different PDF document to display the form results in then the form
 it originated from.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {fdf_document}
@@ -31,12 +31,12 @@ it originated from.
     displayed. You can also set the default value for this parameter using |
     fdf_set_target_frame|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Passing FDF data to a second form
@@ -61,7 +61,7 @@ Example #1 Passing FDF data to a second form
       fdf_close($fdf);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |fdf_get_file| - Get the value of the /F key

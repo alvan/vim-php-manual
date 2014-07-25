@@ -4,7 +4,7 @@ ldap_errno
 
 ldap_errno — Return the LDAP error number of the last LDAP command
 
-===============================================================================
+==============================================================================
 *Description*
 
     int ldap_errno ( resource $link_identifier )~
@@ -12,24 +12,24 @@ ldap_errno — Return the LDAP error number of the last LDAP command
 Returns the standardized error number returned by the last LDAP command. This
 number can be converted into a textual error message using |ldap_err2str|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {link_identifier}
 
     An LDAP link identifier, returned by |ldap_connect|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Return the LDAP error number of the last LDAP command for this link.
 
-===============================================================================
+==============================================================================
 *Examples*
 
-Unless you lower your warning level in your php.ini sufficiently or prefix your
-LDAP commands with @ (at) characters to suppress warning output, the errors
-generated will also show up in your HTML output.
+Unless you lower your warning level in your php.ini sufficiently or prefix
+your LDAP commands with @ (at) characters to suppress warning output, the
+errors generated will also show up in your HTML output.
 
 Example #1 Generating and catching an error
 
@@ -49,7 +49,7 @@ Example #1 Generating and catching an error
     echo $info["count"] . " matching entries.<br />\n";
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ldap_err2str| - Convert LDAP error number into string error message

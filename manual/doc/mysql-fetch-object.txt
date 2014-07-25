@@ -8,13 +8,13 @@ Warning
 
 This extension is deprecated as of PHP 5.5.0, and will be removed in the
 future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
-MySQL: choosing an API guide and related FAQ for more information. Alternatives
-to this function include:
+MySQL: choosing an API guide and related FAQ for more information.
+Alternatives to this function include:
 
   * mysqli_fetch_object()
   * PDOStatement::fetch(PDO::FETCH_OBJ)
 
-===============================================================================
+==============================================================================
 *Description*
 
     object mysql_fetch_object ( resource $result [, string $class_name [,~
@@ -23,7 +23,7 @@ to this function include:
 Returns an object with properties that correspond to the fetched row and moves
 the internal data pointer ahead.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { result}
@@ -38,22 +38,22 @@ the internal data pointer ahead.
 
 {params}
 
-    An optional array of parameters to pass to the constructor for {class_name}
-    objects.
+    An optional array of parameters to pass to the constructor for
+    {class_name} objects.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns an object with string properties that correspond to the fetched row, or
-FALSE if there are no more rows.
+Returns an object with string properties that correspond to the fetched row,
+or FALSE if there are no more rows.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version                    Description
 5.0.0   Added the ability to return as a different object.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mysql_fetch_object() example
@@ -84,30 +84,30 @@ Example #2 mysql_fetch_object() example
     var_dump($obj);
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: Performance
 
-    Speed-wise, the function is identical to |mysql_fetch_array|, and almost as
-    quick as |mysql_fetch_row| (the difference is insignificant).
+    Speed-wise, the function is identical to |mysql_fetch_array|, and almost
+    as quick as |mysql_fetch_row| (the difference is insignificant).
 
     Note:
 
-    mysql_fetch_object() is similar to |mysql_fetch_array|, with one difference
-    - an object is returned, instead of an array. Indirectly, that means that
-    you can only access the data by the field names, and not by their offsets
-    (numbers are illegal property names).
+    mysql_fetch_object() is similar to |mysql_fetch_array|, with one
+    difference - an object is returned, instead of an array. Indirectly, that
+    means that you can only access the data by the field names, and not by
+    their offsets (numbers are illegal property names).
 
     Note: Field names returned by this function are case-sensitive.
 
     Note: This function sets NULL fields to the PHP NULL value.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
-  * |mysql_fetch_array| - Fetch a result row as an associative array, a numeric
-    array, or both
+  * |mysql_fetch_array| - Fetch a result row as an associative array, a
+    numeric array, or both
   * |mysql_fetch_assoc| - Fetch a result row as an associative array
   * |mysql_fetch_row| - Get a result row as an enumerated array
   * |mysql_data_seek| - Move internal result pointer

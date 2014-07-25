@@ -4,7 +4,7 @@ stream_context_get_default
 
 stream_context_get_default — Retrieve the default stream context
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource stream_context_get_default ([ array $options ] )~
@@ -14,7 +14,7 @@ fopen|, |file_get_contents|, etc...) are called without a context parameter.
 Options for the default context can optionally be specified with this function
 using the same syntax as |stream_context_create|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {options}
@@ -27,12 +27,12 @@ using the same syntax as |stream_context_create|.
         As of PHP 5.3.0, the |stream_context_set_default| function can be used
         to set the default context.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 A stream context resource.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Using stream_context_get_default()
@@ -72,12 +72,12 @@ Example #1 Using stream_context_get_default()
 
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |stream_context_create| - Creates a stream context
-  * Listing of supported wrappers with context options (Supported Protocols and
-    Wrappers).
+  * Listing of supported wrappers with context options (Supported Protocols
+    and Wrappers).
 
 
 vim:ft=help:

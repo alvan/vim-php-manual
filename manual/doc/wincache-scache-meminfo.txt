@@ -5,14 +5,14 @@ wincache_scache_meminfo
 wincache_scache_meminfo — Retrieves information about session cache memory
 usage
 
-===============================================================================
+==============================================================================
 *Description*
 
     array wincache_scache_meminfo ( void )~
 
 Retrieves information about memory usage by session cache.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Array of meta data about session cache memory usage or FALSE on failure
@@ -28,7 +28,7 @@ The array returned by this function contains the following elements:
   * memory_overhead - amount of memory in bytes used for the session cache
     internal structures
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A wincache_scache_meminfo() example
@@ -50,7 +50,7 @@ Array
     [memory_overhead] => 176
 )
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |wincache_fcache_fileinfo| - Retrieves information about files cached in
@@ -61,8 +61,8 @@ Array
     the opcode cache
   * |wincache_rplist_fileinfo| - Retrieves information about resolve file path
     cache
-  * |wincache_rplist_meminfo| - Retrieves information about memory usage by the
-    resolve file path cache
+  * |wincache_rplist_meminfo| - Retrieves information about memory usage by
+    the resolve file path cache
   * |wincache_refresh_if_changed| - Refreshes the cache entries for the cached
     files
   * |wincache_ucache_info| - Retrieves information about data stored in the

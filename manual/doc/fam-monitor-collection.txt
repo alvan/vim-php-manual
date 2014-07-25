@@ -5,7 +5,7 @@ fam_monitor_collection
 fam_monitor_collection — Monitor a collection of files in a directory for
 changes
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource fam_monitor_collection ( resource $fam , string $dirname , int~
@@ -17,7 +17,7 @@ A FAM event will be generated whenever the status of the files change. The
 possible event codes are described in detail in the constants part of this
 section.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {fam}
@@ -37,12 +37,12 @@ section.
 
     A shell pattern {mask} restricting the file names to look for
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a monitoring resource or FALSE on errors.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |fam_monitor_file| - Monitor a regular file for changes

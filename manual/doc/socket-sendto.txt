@@ -4,16 +4,16 @@ socket_sendto
 
 socket_sendto — Sends a message to a socket, whether it is connected or not
 
-===============================================================================
+==============================================================================
 *Description*
 
-    int socket_sendto ( resource $socket , string $buf , int $len , int $flags~
-    , string $addr [, int $port = 0 ] )~
+    int socket_sendto ( resource $socket , string $buf , int $len , int~
+    $flags , string $addr [, int $port = 0 ] )~
 
 The function socket_sendto() sends {len} bytes from {buf} through the socket
 {socket} to the {port} at the address {addr}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {socket}
@@ -33,12 +33,12 @@ The function socket_sendto() sends {len} bytes from {buf} through the socket
     The value of {flags} can be any combination of the following flags, joined
     with the binary OR (|) operator.
 
-                          Possible values for {flags}
+                         Possible values for {flags}
     MSG_OOB       Send OOB (out-of-band) data.
     MSG_EOR       Indicate a record mark. The sent data completes the record.
                   Close the sender side of the socket and include an
-    MSG_EOF       appropriate notification of this at the end of the sent data.
-                  The sent data completes the transaction.
+    MSG_EOF       appropriate notification of this at the end of the sent
+                  data. The sent data completes the transaction.
     MSG_DONTROUTE Bypass routing, use direct interface.
 
 {addr}
@@ -49,13 +49,13 @@ The function socket_sendto() sends {len} bytes from {buf} through the socket
 
     {port} is the remote port number at which the data will be sent.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 socket_sendto() returns the number of bytes sent to the remote host, or FALSE
 if an error occurred.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 socket_sendto() Example
@@ -70,7 +70,7 @@ Example #1 socket_sendto() Example
         socket_close($sock);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |socket_send| - Sends data to a connected socket

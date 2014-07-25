@@ -4,7 +4,7 @@ posix_getrlimit
 
 posix_getrlimit — Return info about system resource limits
 
-===============================================================================
+==============================================================================
 *Description*
 
     array posix_getrlimit ( void )~
@@ -15,10 +15,10 @@ soft and hard limits.
 Each resource has an associated soft and hard limit. The soft limit is the
 value that the kernel enforces for the corresponding resource. The hard limit
 acts as a ceiling for the soft limit. An unprivileged process may only set its
-soft limit to a value from 0 to the hard limit, and irreversibly lower its hard
-limit.
+soft limit to a value from 0 to the hard limit, and irreversibly lower its
+hard limit.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an associative array of elements for each limit that is defined. Each
@@ -41,7 +41,7 @@ cpu        The amount of time the process is allowed to use the CPU.
 filesize   The maximum size of the data segment for the process, in bytes.
 openfiles  One more than the maximum number of open file descriptors.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Example use of posix_getrlimit()
@@ -79,16 +79,16 @@ Array
     [hard openfiles] => 1024
 )
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
 
-    This is a not POSIX function, but is common on BSD and System V systems. If
-    the system does not support this function, then it will not be included at
-    compile time. This may be checked with |function_exists|.
+    This is a not POSIX function, but is common on BSD and System V systems.
+    If the system does not support this function, then it will not be included
+    at compile time. This may be checked with |function_exists|.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * man page GETRLIMIT(2)

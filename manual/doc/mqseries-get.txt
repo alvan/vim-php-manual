@@ -4,17 +4,17 @@ mqseries_get
 
 mqseries_get — MQSeries MQGET
 
-===============================================================================
+==============================================================================
 *Description*
 
     void mqseries_get ( resource $hConn , resource $hObj , array &$md , array~
     &$gmo , int &$bufferLength , string &$msg , int &$data_length , resource~
     &$compCode , resource &$reason )~
 
-The mqseries_get() (MQGET) call retrieves a message from a local queue that has
-been opened using the |mqseries_open| (MQOPEN) call
+The mqseries_get() (MQGET) call retrieves a message from a local queue that
+has been opened using the |mqseries_open| (MQOPEN) call
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {hConn}
@@ -57,12 +57,12 @@ been opened using the |mqseries_open| (MQOPEN) call
 
     Reason code qualifying the compCode.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 No value is returned.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mqseries_get() example
@@ -76,8 +76,8 @@ Example #1 mqseries_get() example
         mqseries_open(
                     $conn,
                     array('ObjectName' => 'TESTQ'),
-                    MQSERIES_MQOO_INPUT_AS_Q_DEF | MQSERIES_MQOO_FAIL_IF_QUIESCING 
-    | MQSERIES_MQOO_OUTPUT,
+                    MQSERIES_MQOO_INPUT_AS_Q_DEF | 
+    MQSERIES_MQOO_FAIL_IF_QUIESCING | MQSERIES_MQOO_OUTPUT,
                     $obj,
                     $comp_code,
                     $reason);
@@ -90,8 +90,8 @@ Example #1 mqseries_get() example
     MQSERIES_MQGMO_WAIT, 'WaitInterval' => 3000);
 
     // get the message from the queueu    
-        mqseries_get($conn, $obj, $mdg, $gmo, 255, $msg, $data_length, $comp_code, 
-    $reason);
+        mqseries_get($conn, $obj, $mdg, $gmo, 255, $msg, $data_length, $comp_code
+    , $reason);
         if ($comp_code !== MQSERIES_MQCC_OK) {
             printf("GET CompCode:%d Reason:%d Text:%s<br>", $comp_code, $reason, 
     mqseries_strerror($reason));
@@ -105,8 +105,8 @@ Example #1 mqseries_get() example
         mqseries_open(
                     $conn,
                     array('ObjectName' => 'TESTQ'),
-                    MQSERIES_MQOO_INPUT_AS_Q_DEF | MQSERIES_MQOO_FAIL_IF_QUIESCING 
-    | MQSERIES_MQOO_OUTPUT,
+                    MQSERIES_MQOO_INPUT_AS_Q_DEF | 
+    MQSERIES_MQOO_FAIL_IF_QUIESCING | MQSERIES_MQOO_OUTPUT,
                     $obj,
                     $comp_code,
                     $reason);
@@ -114,7 +114,7 @@ Example #1 mqseries_get() example
         
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mqseries_conn| - MQSeries MQCONN

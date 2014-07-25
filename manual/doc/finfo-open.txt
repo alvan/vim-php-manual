@@ -6,7 +6,7 @@ finfo::__construct
 
 finfo_open -- finfo::__construct — Create a new fileinfo resource
 
-===============================================================================
+==============================================================================
 *Description*
 
 Procedural style
@@ -16,12 +16,12 @@ Procedural style
 
 Object oriented style (constructor):
 
-public finfo::__construct ([ int $options = FILEINFO_NONE [, string $magic_file
-= NULL ]] )
+public finfo::__construct ([ int $options = FILEINFO_NONE [, string
+$magic_file = NULL ]] )
 
 This function opens a magic database and returns its resource.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {options}
@@ -37,13 +37,13 @@ This function opens a magic database and returns its resource.
 
     Passing NULL or an empty string will be equivalent to the default value.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 (Procedural style only) Returns a magic database resource on success or FALSE
 on failure.
 
-===============================================================================
+==============================================================================
 *Notes*
 
 Warning
@@ -61,7 +61,7 @@ returned.
     the MAGIC environment variables unset) is the best course of action unless
     you specifically need a custom magic database.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Object oriented style
@@ -99,7 +99,7 @@ The above example will output:
 
 text/plain; charset=us-ascii
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |finfo_close| - Close fileinfo resource

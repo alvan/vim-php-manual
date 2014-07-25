@@ -5,26 +5,26 @@ eio_get_event_stream
 eio_get_event_stream — Get stream representing a variable used in internal
 communications with libeio.
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed eio_get_event_stream ( void )~
 
-eio_get_event_stream() acquires stream representing a variable used in internal
-communications with libeio. Could be used to bind with some event loop provided
-by other PECL extension, for example libevent.
+eio_get_event_stream() acquires stream representing a variable used in
+internal communications with libeio. Could be used to bind with some event
+loop provided by other PECL extension, for example libevent.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 This function has no parameters.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 eio_get_event_stream() returns stream on success; otherwise, NULL
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Using eio with libevent
@@ -49,8 +49,8 @@ Example #1 Using eio with libevent
     var_dump($fd);
 
     eio_nop(EIO_PRI_DEFAULT, "my_res_cb", "nop data");
-    eio_mkdir("/tmp/abc-eio-temp", 0750, EIO_PRI_DEFAULT, "my_res_cb", "mkdir data"
-    );
+    eio_mkdir("/tmp/abc-eio-temp", 0750, EIO_PRI_DEFAULT, "my_res_cb", 
+    "mkdir data");
     /* some other eio_* calls here ... */
 
 

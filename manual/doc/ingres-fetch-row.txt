@@ -4,7 +4,7 @@ ingres_fetch_row
 
 ingres_fetch_row — Fetch a row of result into an enumerated array
 
-===============================================================================
+==============================================================================
 *Description*
 
     array ingres_fetch_row ( resource $result )~
@@ -25,20 +25,20 @@ using the configuration parameter ingres.array_index_start.
     See also the ingres.array_index_start, ingres.fetch_buffer_size and
     ingres.utf8 directives in Runtime Configuration.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
 
     The query result identifier
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an array that corresponds to the fetched row, or FALSE if there are no
 more rows
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Fetch a row of result into an enumerated array
@@ -53,7 +53,7 @@ Example #1 Fetch a row of result into an enumerated array
     }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ingres_num_fields| - Get the number of fields returned by the last query

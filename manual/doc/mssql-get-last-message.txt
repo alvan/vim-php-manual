@@ -4,25 +4,25 @@ mssql_get_last_message
 
 mssql_get_last_message — Returns the last message from the server
 
-===============================================================================
+==============================================================================
 *Description*
 
     string mssql_get_last_message ( void )~
 
 Gets the last message from the MS-SQL server
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 This function has no parameters.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns last error message from server, or an empty string if no error messages
-are returned from MSSQL.
+Returns last error message from server, or an empty string if no error
+messages are returned from MSSQL.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mssql_get_last_message() example
@@ -46,7 +46,7 @@ The above example will output something similar to:
 
 MSSQL error: Invalid object name 'php.dbo.not-found'.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mssql_min_error_severity| - Sets the minimum error severity

@@ -9,22 +9,22 @@ Warning
 
 This extension is deprecated as of PHP 5.5.0, and will be removed in the
 future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
-MySQL: choosing an API guide and related FAQ for more information. Alternatives
-to this function include:
+MySQL: choosing an API guide and related FAQ for more information.
+Alternatives to this function include:
 
   * mysqli_fetch_field_direct() [flags]
   * PDOStatement::getColumnMeta() [flags]
 
-===============================================================================
+==============================================================================
 *Description*
 
     string mysql_field_flags ( resource $result , int $field_offset )~
 
 mysql_field_flags() returns the field flags of the specified field. The flags
-are reported as a single word per flag separated by a single space, so that you
-can split the returned value using |explode|.
+are reported as a single word per flag separated by a single space, so that
+you can split the returned value using |explode|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { result}
@@ -37,16 +37,17 @@ can split the returned value using |explode|.
     The numerical field offset. The {field_offset} starts at 0. If
     {field_offset} does not exist, an error of level E_WARNING is also issued.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a string of flags associated with the result or FALSE on failure.
 
-The following flags are reported, if your version of MySQL is current enough to
-support them: "not_null", "primary_key", "unique_key", "multiple_key", "blob",
-"unsigned", "zerofill", "binary", "enum", "auto_increment" and "timestamp".
+The following flags are reported, if your version of MySQL is current enough
+to support them: "not_null", "primary_key", "unique_key", "multiple_key",
+"blob", "unsigned", "zerofill", "binary", "enum", "auto_increment" and
+"timestamp".
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A mysql_field_flags() example
@@ -73,7 +74,7 @@ Array
     [2] => auto_increment
 )
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -81,7 +82,7 @@ Array
     For backward compatibility, the following deprecated alias may be used: 
     mysql_fieldflags()
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mysql_field_type| - Get the type of the specified field in a result

@@ -4,7 +4,7 @@ dns_get_record
 
 dns_get_record — Fetch DNS Resource Records associated with a hostname
 
-===============================================================================
+==============================================================================
 *Description*
 
     array dns_get_record ( string $hostname [, int $type = DNS_ANY [, array~
@@ -12,7 +12,7 @@ dns_get_record — Fetch DNS Resource Records associated with a hostname
 
 Fetch DNS Resource Records associated with the given {hostname}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {hostname}
@@ -31,10 +31,10 @@ Fetch DNS Resource Records associated with the given {hostname}.
 {type}
 
     By default, dns_get_record() will search for any resource records
-    associated with {hostname}. To limit the query, specify the optional {type}
-    parameter. May be any one of the following: DNS_A, DNS_CNAME, DNS_HINFO,
-    DNS_MX, DNS_NS, DNS_PTR, DNS_SOA, DNS_TXT, DNS_AAAA, DNS_SRV, DNS_NAPTR,
-    DNS_A6, DNS_ALL or DNS_ANY.
+    associated with {hostname}. To limit the query, specify the optional
+    {type} parameter. May be any one of the following: DNS_A, DNS_CNAME,
+    DNS_HINFO, DNS_MX, DNS_NS, DNS_PTR, DNS_SOA, DNS_TXT, DNS_AAAA, DNS_SRV,
+    DNS_NAPTR, DNS_A6, DNS_ALL or DNS_ANY.
 
         Note:
 
@@ -57,21 +57,21 @@ Fetch DNS Resource Records associated with the given {hostname}.
     In case of raw mode, we query only the requestd type instead of looping
     type by type before going with the additional info stuff.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-This function returns an array of associative arrays, or FALSE on failure. Each
-associative array contains at minimum the following keys:
+This function returns an array of associative arrays, or FALSE on failure.
+Each associative array contains at minimum the following keys:
 
                              Basic DNS attributes
-Attribute                                Meaning
+Attribute                               Meaning
 host      The record in the DNS namespace to which the rest of the associated
           data refers.
-class     dns_get_record() only returns Internet class records and as such this
-          parameter will always return IN.
-          String containing the record type. Additional attributes will also be
-type      contained in the resulting array dependant on the value of type. See
-          table below.
+class     dns_get_record() only returns Internet class records and as such
+          this parameter will always return IN.
+          String containing the record type. Additional attributes will also
+type      be contained in the resulting array dependant on the value of type.
+          See table below.
           "Time To Live" remaining for this record. This will not equal the
 ttl       record's original ttl, but will rather equal the original ttl minus
           whatever length of time has passed since the authoritative name
@@ -112,19 +112,19 @@ A6(PHP masklen: Length (in bits) to inherit from the target specified by
 SRV    to weight which of commonly prioritized {targets} should be chosen at
        random. target and port: hostname and port where the requested service
        can be found. For additional information see: » RFC 2782
-NAPTR  order and pref: Equivalent to {pri} and {weight} above. flags, services,
-       regex, and replacement: Parameters as defined by » RFC 2915.
+NAPTR  order and pref: Equivalent to {pri} and {weight} above. flags, services
+       , regex, and replacement: Parameters as defined by » RFC 2915.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 5.4.0   Added {raw} parameter.
 5.3.0   This function is now available on Windows platforms.
-5.3.0   Prior to this release, if the {authns} parameter was given, the {addtl}
-        parameter was also required.
+5.3.0   Prior to this release, if the {authns} parameter was given, the
+        {addtl} parameter was also required.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Using dns_get_record()
@@ -293,15 +293,15 @@ Additional = Array
 
 )
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
 
-    For compatibility with versions before PHP 5.3.0 on some operating systems,
-    try the » PEAR class » Net_DNS.
+    For compatibility with versions before PHP 5.3.0 on some operating
+    systems, try the » PEAR class » Net_DNS.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |dns_get_mx| - Alias of getmxrr

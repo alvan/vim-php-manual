@@ -4,7 +4,7 @@ fbsql_fetch_assoc
 
 fbsql_fetch_assoc — Fetch a result row as an associative array
 
-===============================================================================
+==============================================================================
 *Description*
 
     array fbsql_fetch_assoc ( resource $result )~
@@ -19,24 +19,25 @@ An important thing to note is that using fbsql_fetch_assoc() is NOT
 significantly slower than using |fbsql_fetch_row|, while it provides a
 significant added value.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { result}
 
     A result identifier returned by |fbsql_query| or |fbsql_db_query|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an associative array that corresponds to the fetched row, or FALSE if
 there are no more rows.
 
-If two or more columns of the result have the same field names, the last column
-will take precedence. To access the other column(s) of the same name, you must
-use |fbsql_fetch_array| and have it return the numeric indices as well.
+If two or more columns of the result have the same field names, the last
+column will take precedence. To access the other column(s) of the same name,
+you must use |fbsql_fetch_array| and have it return the numeric indices as
+well.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 fbsql_fetch_assoc() example
@@ -51,12 +52,12 @@ Example #1 fbsql_fetch_assoc() example
     fbsql_free_result($result);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |fbsql_fetch_row| - Get a result row as an enumerated array
-  * |fbsql_fetch_array| - Fetch a result row as an associative array, a numeric
-    array, or both
+  * |fbsql_fetch_array| - Fetch a result row as an associative array, a
+    numeric array, or both
   * |fbsql_fetch_object| - Fetch a result row as an object
 
 

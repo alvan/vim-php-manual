@@ -4,7 +4,7 @@ current
 
 current — Return the current element in an array
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed current ( array &$array )~
@@ -12,14 +12,14 @@ current — Return the current element in an array
 Every array has an internal pointer to its "current" element, which is
 initialized to the first element inserted into the array.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {array}
 
     The array.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The current() function simply returns the value of the array element that's
@@ -29,12 +29,12 @@ elements list or the array is empty, current() returns FALSE.
 
 Warning
 
-This function may return Boolean FALSE, but may also return a non-Boolean value
-which evaluates to FALSE. Please read the section on Booleans for more
+This function may return Boolean FALSE, but may also return a non-Boolean
+value which evaluates to FALSE. Please read the section on Booleans for more
 information. Use the === operator for testing the return value of this
 function.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Example use of current() and friends
@@ -55,14 +55,14 @@ Example #1 Example use of current() and friends
     var_dump(current($arr)); // array(0) { }
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: You won't be able to distinguish the end of an array from a boolean
     FALSE element. To properly traverse an array which may contain FALSE
     elements, see the |each| function.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |end| - Set the internal pointer of an array to its last element

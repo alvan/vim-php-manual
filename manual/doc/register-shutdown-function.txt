@@ -4,21 +4,21 @@ register_shutdown_function
 
 register_shutdown_function — Register a function for execution on shutdown
 
-===============================================================================
+==============================================================================
 *Description*
 
     void register_shutdown_function ( callable $callback [, mixed $parameter~
     [, mixed $... ]] )~
 
-Registers a {callback} to be executed after script execution finishes or |exit|
-is called.
+Registers a {callback} to be executed after script execution finishes or |exit
+| is called.
 
 Multiple calls to register_shutdown_function() can be made, and each will be
-called in the same order as they were registered. If you call |exit| within one
-registered shutdown function, processing will stop completely and no other
+called in the same order as they were registered. If you call |exit| within
+one registered shutdown function, processing will stop completely and no other
 registered shutdown functions will be called.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {callback}
@@ -35,29 +35,30 @@ registered shutdown functions will be called.
 
 {...}
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 No value is returned.
 
-===============================================================================
+==============================================================================
 *Errors/Exceptions*
 
 If the passed callback is not callable a E_WARNING level error will be
 generated.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
         The shutdown functions are now called as a part of the request. In
         earlier versions under Apache, the registered shutdown functions were
-4.1.0   called after the request has been completed (including sending any
-        output buffers), so it was not possible to send output to the browser
-        using |echo| or |print|, or retrieve the contents of any output buffers
-        using |ob_get_contents|. Headers were also always already sent.
+        called after the request has been completed (including sending any
+4.1.0   output buffers), so it was not possible to send output to the browser
+        using |echo| or |print|, or retrieve the contents of any output
+        buffers using |ob_get_contents|. Headers were also always already
+        sent.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 register_shutdown_function() example
@@ -75,7 +76,7 @@ Example #1 register_shutdown_function() example
     register_shutdown_function('shutdown');
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -90,7 +91,7 @@ Example #1 register_shutdown_function() example
     use |pcntl_signal| to install a handler for a SIGTERM which uses |exit| to
     end cleanly.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * auto_append_file

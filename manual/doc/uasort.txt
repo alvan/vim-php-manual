@@ -5,14 +5,14 @@ uasort
 uasort — Sort an array with a user-defined comparison function and maintain
 index association
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool uasort ( array &$array , callable $value_compare_func )~
 
-This function sorts an array such that array indices maintain their correlation
-with the array elements they are associated with, using a user-defined
-comparison function.
+This function sorts an array such that array indices maintain their
+correlation with the array elements they are associated with, using a
+user-defined comparison function.
 
 This is used mainly when sorting associative arrays where the actual element
 order is significant.
@@ -22,7 +22,7 @@ order is significant.
     If two members compare as equal, their relative order in the sorted array
     is undefined.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {array}
@@ -31,14 +31,15 @@ order is significant.
 
 {value_compare_func}
 
-    See |usort| and |uksort| for examples of user-defined comparison functions.
+    See |usort| and |uksort| for examples of user-defined comparison
+    functions.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Basic uasort() example
@@ -87,7 +88,7 @@ Array
     [b] => 8
 )
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |usort| - Sort an array by values using a user-defined comparison function

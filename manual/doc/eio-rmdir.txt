@@ -4,7 +4,7 @@ eio_rmdir
 
 eio_rmdir — Remove a directory
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource eio_rmdir ( string $path [, int $pri = EIO_PRI_DEFAULT [,~
@@ -12,7 +12,7 @@ eio_rmdir — Remove a directory
 
 eio_rmdir() removes a directory.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {path}
@@ -26,8 +26,8 @@ eio_rmdir() removes a directory.
 
 {callback}
 
-    {callback} function is called when the request is done. It should match the
-    following prototype:
+    {callback} function is called when the request is done. It should match
+    the following prototype:
     void callback(mixed $data, int $result[, resource $req]);
 
     {data}
@@ -48,12 +48,12 @@ eio_rmdir() removes a directory.
 
     Arbitrary variable passed to {callback}.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 eio_rmdir() returns request resource on success or FALSE on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 eio_rmdir() example
@@ -79,7 +79,7 @@ The above example will output something similar to:
 
 eio_rmdir_ok
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * eio_mkdir

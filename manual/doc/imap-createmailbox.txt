@@ -4,14 +4,14 @@ imap_createmailbox
 
 imap_createmailbox — Create a new mailbox
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool imap_createmailbox ( resource $imap_stream , string $mailbox )~
 
 Creates a new mailbox specified by {mailbox}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { imap_stream}
@@ -23,12 +23,12 @@ Creates a new mailbox specified by {mailbox}.
     The mailbox name, see |imap_open| for more information. Names containing
     international characters should be encoded by |imap_utf7_encode|
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 imap_createmailbox() example
@@ -64,8 +64,8 @@ Example #1 imap_createmailbox() example
                 echo "renamed new mailbox from '$name1' to '$name2'<br />\n";
                 $newname = $name2;
             } else {
-                echo "imap_renamemailbox on new mailbox failed: " . imap_last_error
-    () . "<br />\n";
+                echo "imap_renamemailbox on new mailbox failed: " . 
+    imap_last_error() . "<br />\n";
             }
         } else {
             echo "imap_status on new mailbox failed: " . imap_last_error() . "<br 
@@ -87,7 +87,7 @@ Example #1 imap_createmailbox() example
     imap_close($mbox);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |imap_renamemailbox| - Rename an old mailbox to new mailbox

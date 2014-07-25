@@ -4,11 +4,11 @@ mb_strwidth
 
 mb_strwidth — Return width of string
 
-===============================================================================
+==============================================================================
 *Description*
 
-    int mb_strwidth ( string $str [, string $encoding = mb_internal_encoding()~
-    ] )~
+    int mb_strwidth ( string $str [, string $encoding =~
+    mb_internal_encoding() ] )~
 
 Returns the width of string {str}.
 
@@ -22,7 +22,7 @@ U+2000 - U+FF60  2
 U+FF61 - U+FF9F  1
 U+FFA0 -         2
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {str}
@@ -34,12 +34,12 @@ U+FFA0 -         2
     The {encoding} parameter is the character encoding. If it is omitted, the
     internal character encoding value will be used.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The width of string {str}.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mb_strimwidth| - Get truncated string with specified width

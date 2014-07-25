@@ -4,13 +4,13 @@ hash_hmac
 
 hash_hmac — Generate a keyed hash value using the HMAC method
 
-===============================================================================
+==============================================================================
 *Description*
 
     string hash_hmac ( string $algo , string $data , string $key [, bool~
     $raw_output = false ] )~
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {algo}
@@ -31,14 +31,14 @@ hash_hmac — Generate a keyed hash value using the HMAC method
 
     When set to TRUE, outputs raw binary data. FALSE outputs lowercase hexits.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a string containing the calculated message digest as lowercase hexits
 unless {raw_output} is set to true in which case the raw binary representation
 of the message digest is returned. Returns FALSE when {algo} is unknown.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 hash_hmac() example
@@ -52,7 +52,7 @@ The above example will output:
 
 b8e7ae12510bdfb1812e463a7f086122cf37e4f7
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |hash| - Generate a hash value (message digest)

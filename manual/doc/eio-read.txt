@@ -4,7 +4,7 @@ eio_read
 
 eio_read — Read from a file descriptor at given offset.
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource eio_read ( mixed $fd , int $length , int $offset , int $pri ,~
@@ -13,7 +13,7 @@ eio_read — Read from a file descriptor at given offset.
 eio_read() reads up to {length} bytes from {fd} file descriptor at {offset}.
 The read bytes are stored in {result} argument of {callback}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {fd}
@@ -35,8 +35,8 @@ The read bytes are stored in {result} argument of {callback}.
 
 {callback}
 
-    {callback} function is called when the request is done. It should match the
-    following prototype:
+    {callback} function is called when the request is done. It should match
+    the following prototype:
     void callback(mixed $data, int $result[, resource $req]);
 
     {data}
@@ -57,12 +57,12 @@ The read bytes are stored in {result} argument of {callback}.
 
     Arbitrary variable passed to {callback}.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 eio_read() stores read bytes in {result} argument of {callback} function.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 eio_read() example
@@ -112,7 +112,7 @@ The above example will output something similar to:
 
 string(5) "34567"
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * eio_open

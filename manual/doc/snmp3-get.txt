@@ -4,7 +4,7 @@ snmp3_get
 
 snmp3_get — Fetch an SNMP object
 
-===============================================================================
+==============================================================================
 *Description*
 
     string snmp3_get ( string $host , string $sec_name , string $sec_level ,~
@@ -15,7 +15,7 @@ snmp3_get — Fetch an SNMP object
 The snmp3_get() function is used to read the value of an SNMP object specified
 by the {object_id}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {host}
@@ -58,12 +58,12 @@ by the {object_id}.
 
     The number of times to retry if timeouts occur.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns SNMP object value on success or FALSE on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Using snmp3_get()
@@ -73,7 +73,7 @@ Example #1 Using snmp3_get()
     'secret007', 'AES', 'secret007', 'IF-MIB::ifName.2');
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |snmp3_set| - Set the value of an SNMP object

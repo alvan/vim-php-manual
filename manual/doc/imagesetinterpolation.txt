@@ -4,7 +4,7 @@ imagesetinterpolation
 
 imagesetinterpolation — Set the interpolation method
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool imagesetinterpolation ( resource $image [, int $method =~
@@ -13,13 +13,13 @@ imagesetinterpolation — Set the interpolation method
 Sets the interpolation method, setting an interpolation method affects the
 rendering of various functions in GD, such as the |imagerotate| function.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { image}
 
-    An image resource, returned by one of the image creation functions, such as
-    |imagecreatetruecolor|.
+    An image resource, returned by one of the image creation functions, such
+    as |imagecreatetruecolor|.
 
 {method}
 
@@ -48,12 +48,12 @@ rendering of various functions in GD, such as the |imagerotate| function.
       + IMG_WEIGHTED4: Weighting filter.
       + IMG_TRIANGLE: Triangle interpolation.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 imagesetinterpolation() example
@@ -69,7 +69,7 @@ Example #1 imagesetinterpolation() example
     // Continue to work with $im ...
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
 Changing the interpolation method affects the following functions when

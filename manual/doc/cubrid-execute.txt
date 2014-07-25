@@ -4,7 +4,7 @@ cubrid_execute
 
 cubrid_execute — Execute a prepared SQL statement
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource cubrid_execute ( resource $conn_identifier , string $sql [, int~
@@ -13,10 +13,10 @@ cubrid_execute — Execute a prepared SQL statement
 
 The cubrid_execute() function is used to execute the given SQL statement. It
 executes the query by using {conn_identifier} and SQL, and then returns the
-request identifier created. It is used for simple execution of query, where the
-parameter binding is not needed. In addition, the cubrid_execute() function is
-used to execute the prepared statement by means of |cubrid_prepare| and |
-cubrid_bind|. At this time, you need to specify arguments of
+request identifier created. It is used for simple execution of query, where
+the parameter binding is not needed. In addition, the cubrid_execute()
+function is used to execute the prepared statement by means of |cubrid_prepare
+| and |cubrid_bind|. At this time, you need to specify arguments of
 {request_identifier} and {option}.
 
 The {option} is used to determine whether to get OID after query execution and
@@ -29,16 +29,17 @@ retrieve query results, and in such cases the following rules are applied:
 
   * The return value is the result of the first query.
   * If an error occurs in any query, the execution is processed as a failure.
-  * In a query composed of q1 q2 q3, if an error occurs in q2 after q1 succeeds
-    the execution, the result of q1 remains valid. That is, the previous
-    successful query executions are not rolled back when an error occurs.
+  * In a query composed of q1 q2 q3, if an error occurs in q2 after q1
+    succeeds the execution, the result of q1 remains valid. That is, the
+    previous successful query executions are not rolled back when an error
+    occurs.
   * If a query is executed successfully, the result of the second query can be
     obtained using |cubrid_next_result|.
 
 If the first argument is {request_identifier} to execute the |cubrid_prepare|
 function, you can specify an option, CUBRID_ASYNC only.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {conn_identifier}
@@ -58,7 +59,7 @@ function, you can specify an option, CUBRID_ASYNC only.
 
     |cubrid_prepare| identifier.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Request identifier, when process is successful and first param is
@@ -67,13 +68,13 @@ request_identifier.
 
 FALSE, when process is unsuccessful.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version              Description
 8.4.0   Add new option CUBRID_EXEC_QUERY_ALL.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_execute() example
@@ -88,8 +89,8 @@ Example #1 cubrid_execute() example
 
     cubrid_close_request($result);
 
-    $history_req = cubrid_prepare($conn, "SELECT * FROM history WHERE event_code=?"
-    );
+    $history_req = cubrid_prepare($conn, "SELECT * FROM history WHERE event_code=?
+    ");
     cubrid_bind($history_req, 1, $event_code, "number");
     cubrid_execute($history_req);
 
@@ -109,13 +110,13 @@ The above example will output:
 athlete              host_year score      unit
 Phelps Michael       2004      51.25      time
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |cubrid_prepare| - Prepare a SQL statement for execution
   * |cubrid_bind| - Bind variables to a prepared statement as parameters
-  * |cubrid_next_result| - Get result of next query when executing multiple SQL
-    statements
+  * |cubrid_next_result| - Get result of next query when executing multiple
+    SQL statements
   * |cubrid_close_request| - Close the request handle
   * |cubrid_commit| - Commit a transaction
   * |cubrid_rollback| - Roll back a transaction

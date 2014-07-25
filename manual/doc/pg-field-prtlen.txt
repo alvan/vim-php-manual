@@ -4,20 +4,20 @@ pg_field_prtlen
 
 pg_field_prtlen — Returns the printed length
 
-===============================================================================
+==============================================================================
 *Description*
 
     int pg_field_prtlen ( resource $result , int $row_number , mixed~
     $field_name_or_number )~
     int pg_field_prtlen ( resource $result , mixed $field_name_or_number )~
 
-pg_field_prtlen() returns the actual printed length (number of characters) of a
-specific value in a PostgreSQL {result}. Row numbering starts at 0. This
+pg_field_prtlen() returns the actual printed length (number of characters) of
+a specific value in a PostgreSQL {result}. Row numbering starts at 0. This
 function will return FALSE on an error.
 
-{field_name_or_number} can be passed either as an integer or as a string. If it
-is passed as an integer, PHP recognises it as the field number, otherwise as
-field name.
+{field_name_or_number} can be passed either as an integer or as a string. If
+it is passed as an integer, PHP recognises it as the field number, otherwise
+as field name.
 
 See the example given at the |pg_field_name| page.
 
@@ -25,25 +25,25 @@ See the example given at the |pg_field_name| page.
 
     This function used to be called pg_fieldprtlen().
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
 
-    PostgreSQL query result resource, returned by |pg_query|, |pg_query_params|
-    or |pg_execute| (among others).
+    PostgreSQL query result resource, returned by |pg_query|, |pg_query_params
+    | or |pg_execute| (among others).
 
 {row}
 
-    Row number in result. Rows are numbered from 0 upwards. If omitted, current
-    row is fetched.
+    Row number in result. Rows are numbered from 0 upwards. If omitted,
+    current row is fetched.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The field printed length, or FALSE on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Getting information about fields
@@ -84,7 +84,7 @@ printed length: 24 characters
 storage length: -1 bytes
 field type: varchar
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |pg_field_size| - Returns the internal storage size of the named field

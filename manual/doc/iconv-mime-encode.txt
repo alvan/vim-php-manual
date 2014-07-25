@@ -4,7 +4,7 @@ iconv_mime_encode
 
 iconv_mime_encode — Composes a MIME header field
 
-===============================================================================
+==============================================================================
 *Description*
 
     string iconv_mime_encode ( string $field_name , string $field_value [,~
@@ -18,7 +18,7 @@ Subject: =?ISO-8859-1?Q?Pr=FCfung_f=FCr?= Entwerfen von einer MIME kopfzeile
 In the above example, "Subject" is the field name and the portion that begins
 with "=?ISO-8859-1?..." is the field value.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {field_name}
@@ -94,13 +94,13 @@ with "=?ISO-8859-1?..." is the field value.
                              the value of
                              input-charset.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an encoded MIME field on success, or FALSE if an error occurs during
 the encoding.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 iconv_mime_encode() example
@@ -121,7 +121,7 @@ Example #1 iconv_mime_encode() example
     echo iconv_mime_encode("Subject", "Prüfung Prüfung", $preferences);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |imap_binary| - Convert an 8bit string to a base64 string

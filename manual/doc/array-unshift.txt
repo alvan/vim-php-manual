@@ -4,17 +4,17 @@ array_unshift
 
 array_unshift — Prepend one or more elements to the beginning of an array
 
-===============================================================================
+==============================================================================
 *Description*
 
     int array_unshift ( array &$array , mixed $value1 [, mixed $... ] )~
 
-array_unshift() prepends passed elements to the front of the {array}. Note that
-the list of elements is prepended as a whole, so that the prepended elements
-stay in the same order. All numerical array keys will be modified to start
-counting from zero while literal keys won't be touched.
+array_unshift() prepends passed elements to the front of the {array}. Note
+that the list of elements is prepended as a whole, so that the prepended
+elements stay in the same order. All numerical array keys will be modified to
+start counting from zero while literal keys won't be touched.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {array}
@@ -25,12 +25,12 @@ counting from zero while literal keys won't be touched.
 
     First value to prepend.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the new number of elements in the {array}.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 array_unshift() example
@@ -51,7 +51,7 @@ Array
     [3] => banana
 )
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |array_shift| - Shift an element off the beginning of array

@@ -5,7 +5,7 @@ socket_create_pair
 socket_create_pair — Creates a pair of indistinguishable sockets and stores
 them in an array
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool socket_create_pair ( int $domain , int $type , int $protocol , array~
@@ -15,7 +15,7 @@ socket_create_pair() creates two connected and indistinguishable sockets, and
 stores them in {fd}. This function is commonly used in IPC (InterProcess
 Communication).
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {domain}
@@ -42,19 +42,19 @@ Communication).
 
     Reference to an array in which the two socket resources will be inserted.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version                              Description
 5.3.0   This function is now re-enabled on Windows platforms.
 4.3.0   This function was due to a bug made unavailable on Windows platforms.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 socket_create_pair() example
@@ -71,13 +71,13 @@ Example #1 socket_create_pair() example
     socket_last_error());
     }
     /* Send and Recieve Data */
-    if (socket_write($sockets[0], "ABCdef123\n", strlen("ABCdef123\n")) === false) 
-    {
+    if (socket_write($sockets[0], "ABCdef123\n", strlen("ABCdef123\n")) === false)
+     {
         echo "socket_write() failed. Reason: ".socket_strerror(socket_last_error(
     $sockets[0]));
     }
-    if (($data = socket_read($sockets[1], strlen("ABCdef123\n"), PHP_BINARY_READ)) 
-    === false) {
+    if (($data = socket_read($sockets[1], strlen("ABCdef123\n"), PHP_BINARY_READ))
+     === false) {
         echo "socket_read() failed. Reason: ".socket_strerror(socket_last_error(
     $sockets[1]));
     }
@@ -127,7 +127,7 @@ Example #2 socket_create_pair() IPC example
     }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |socket_create| - Create a socket (endpoint for communication)

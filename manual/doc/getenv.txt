@@ -4,7 +4,7 @@ getenv
 
 getenv — Gets the value of an environment variable
 
-===============================================================================
+==============================================================================
 *Description*
 
     string getenv ( string $varname )~
@@ -15,20 +15,20 @@ You can see a list of all the environmental variables by using |phpinfo|. Many
 of these variables are listed within » RFC 3875, specifically section 4.1,
 "Request Meta-Variables".
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {varname}
 
     The variable name.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the value of the environment variable {varname}, or FALSE if the
 environment variable {varname} does not exist.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 getenv() Example
@@ -41,7 +41,7 @@ Example #1 getenv() Example
     $ip = $_SERVER['REMOTE_ADDR'];
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |putenv| - Sets the value of an environment variable

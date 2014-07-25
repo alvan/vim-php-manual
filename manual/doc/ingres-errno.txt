@@ -4,13 +4,13 @@ ingres_errno
 
 ingres_errno — Get the last Ingres error number generated
 
-===============================================================================
+==============================================================================
 *Description*
 
     int ingres_errno ([ resource $link ] )~
 
-Returns an integer containing the last error number. If no error was reported 0
-is returned.
+Returns an integer containing the last error number. If no error was reported
+0 is returned.
 
 If a {link} resource is passed to ingres_errno() it returns the last error
 recorded for the link. If no link is passed, then ingres_errno() returns the
@@ -20,20 +20,20 @@ The function, ingres_errno(), should always be called after executing a
 database query. Calling another function before ingres_errno() is called will
 reset or change any error code from the last Ingres function call.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {link}
 
     The connection link identifier
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an integer containing the last error number. If no error was reported,
 0 is returned.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Get the last Ingres error number generated
@@ -50,7 +50,7 @@ Example #1 Get the last Ingres error number generated
     }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ingres_error| - Get a meaningful error message for the last error

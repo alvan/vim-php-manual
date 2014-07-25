@@ -4,14 +4,14 @@ rrd_first
 
 rrd_first — Gets the timestamp of the first sample from rrd file.
 
-===============================================================================
+==============================================================================
 *Description*
 
     int rrd_first ( string $file [, int $raaindex = 0 ] )~
 
 Returns the first data sample from the specified RRA of the RRD file.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {file}
@@ -22,7 +22,7 @@ Returns the first data sample from the specified RRA of the RRD file.
 
     The index number of the RRA that is to be examined. Default value is 0.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Integer number of unix timestamp, FALSE if some error occurs.

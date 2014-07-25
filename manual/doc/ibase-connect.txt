@@ -4,7 +4,7 @@ ibase_connect
 
 ibase_connect — Open a connection to a database
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource ibase_connect ([ string $database [, string $username [, string~
@@ -19,7 +19,7 @@ opened link will be returned. The link to the server will be closed as soon as
 the execution of the script ends, unless it's closed earlier by explicitly
 calling |ibase_close|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {database}
@@ -44,14 +44,14 @@ calling |ibase_close|.
 
 {buffers}
 
-    {buffers} is the number of database buffers to allocate for the server-side
-    cache. If 0 or omitted, server chooses its own default.
+    {buffers} is the number of database buffers to allocate for the
+    server-side cache. If 0 or omitted, server chooses its own default.
 
 {dialect}
 
-    {dialect} selects the default SQL dialect for any statement executed within
-    a connection, and it defaults to the highest one supported by client
-    libraries.
+    {dialect} selects the default SQL dialect for any statement executed
+    within a connection, and it defaults to the highest one supported by
+    client libraries.
 
 {role}
 
@@ -59,21 +59,21 @@ calling |ibase_close|.
 
 {sync}
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an Firebird/InterBase link identifier on success, or FALSE on error.
 
-===============================================================================
+==============================================================================
 *Errors/Exceptions*
 
 If you get some error like "arithmetic exception, numeric overflow, or string
-truncation. Cannot transliterate character between character sets" (this occurs
-when you try use some character with accents) when using this and after |
-ibase_query| you must set the character set (i.e. ISO8859_1 or your current
+truncation. Cannot transliterate character between character sets" (this
+occurs when you try use some character with accents) when using this and after
+|ibase_query| you must set the character set (i.e. ISO8859_1 or your current
 character set).
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 ibase_connect() example
@@ -91,7 +91,7 @@ Example #1 ibase_connect() example
     ibase_close($dbh);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ibase_pconnect| - Open a persistent connection to an InterBase database

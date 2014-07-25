@@ -4,7 +4,7 @@ msql_fetch_object
 
 msql_fetch_object — Fetch row as object
 
-===============================================================================
+==============================================================================
 *Description*
 
     object msql_fetch_object ( resource $result )~
@@ -17,7 +17,7 @@ illegal property names).
 Speed-wise, the function is identical to |msql_fetch_array|, and almost as
 quick as |msql_fetch_row| (the difference is insignificant).
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { result}
@@ -25,13 +25,13 @@ quick as |msql_fetch_row| (the difference is insignificant).
     The result resource that is being evaluated. This result comes from a call
     to |msql_query|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an object with properties that correspond to the fetched row, or FALSE
 if there are no more rows.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 msql_fetch_object() example
@@ -58,14 +58,14 @@ Example #1 msql_fetch_object() example
     msql_free_result($result);
 <?>
 
-===============================================================================
+==============================================================================
 *Changelog*
 
- Version                               Description
+ Version                              Description
 4.3.11    A bug was fixed when retrieving data from columns containing NULL
 and 5.0.4 values. Such columns were not placed into the resulting array.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |msql_fetch_array| - Fetch row as array

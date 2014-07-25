@@ -4,14 +4,14 @@ mssql_init
 
 mssql_init — Initializes a stored procedure or a remote stored procedure
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource mssql_init ( string $sp_name [, resource $link_identifier ] )~
 
 Initializes a stored procedure or a remote stored procedure.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {sp_name}
@@ -22,13 +22,13 @@ Initializes a stored procedure or a remote stored procedure.
 
     A MS SQL link identifier, returned by |mssql_connect|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a resource identifier "statement", used in subsequent calls to |
 mssql_bind| and |mssql_execute|, or FALSE on errors.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mssql_init() example
@@ -51,7 +51,7 @@ Example #1 mssql_init() example
     mssql_free_statement($stmt);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mssql_bind| - Adds a parameter to a stored procedure or a remote stored

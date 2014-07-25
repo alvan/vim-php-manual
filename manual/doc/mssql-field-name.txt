@@ -4,14 +4,14 @@ mssql_field_name
 
 mssql_field_name — Get the name of a field
 
-===============================================================================
+==============================================================================
 *Description*
 
     string mssql_field_name ( resource $result [, int $offset = -1 ] )~
 
 Returns the name of field no. {offset} in {result}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
@@ -23,12 +23,12 @@ Returns the name of field no. {offset} in {result}.
 
     The field offset, starts at 0. If omitted, the current field is used.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The name of the specified field index on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mssql_field_name() example
@@ -56,7 +56,7 @@ Result set contains the following field(s):
  - name
  - email
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mssql_field_length| - Get the length of a field

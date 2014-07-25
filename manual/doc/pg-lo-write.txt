@@ -4,7 +4,7 @@ pg_lo_write
 
 pg_lo_write — Write to a large object
 
-===============================================================================
+==============================================================================
 *Description*
 
     int pg_lo_write ( resource $large_object , string $data [, int $len ] )~
@@ -18,7 +18,7 @@ transaction block.
 
     This function used to be called pg_lowrite().
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {large_object}
@@ -32,15 +32,16 @@ transaction block.
 
 {len}
 
-    An optional maximum number of bytes to write. Must be greater than zero and
-    no greater than the length of {data}. Defaults to the length of {data}.
+    An optional maximum number of bytes to write. Must be greater than zero
+    and no greater than the length of {data}. Defaults to the length of
+    {data}.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The number of bytes written to the large object, or FALSE on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 pg_lo_write() example
@@ -55,7 +56,7 @@ Example #1 pg_lo_write() example
        pg_query($database, "commit");
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |pg_lo_create| - Create a large object

@@ -2,10 +2,10 @@ win32_get_last_control_message
 
 (PECL win32service SVN)
 
-win32_get_last_control_message — Returns the last control message that was sent
-to this service
+win32_get_last_control_message — Returns the last control message that was
+sent to this service
 
-===============================================================================
+==============================================================================
 *Description*
 
     int win32_get_last_control_message ( void )~
@@ -14,7 +14,7 @@ Returns the control code that was last sent to this service process. When
 running as a service you should periodically check this to determine if your
 service needs to stop running.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a control constant which will be one of the Win32Service Service
@@ -23,7 +23,7 @@ WIN32_SERVICE_CONTROL_INTERROGATE, WIN32_SERVICE_CONTROL_PAUSE,
 WIN32_SERVICE_CONTROL_PRESHUTDOWN, WIN32_SERVICE_CONTROL_SHUTDOWN,
 WIN32_SERVICE_CONTROL_STOP.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |win32_start_service_ctrl_dispatcher| - Registers the script with the SCM,

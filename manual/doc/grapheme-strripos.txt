@@ -5,18 +5,18 @@ grapheme_strripos
 grapheme_strripos — Find position (in grapheme units) of last occurrence of a
 case-insensitive string
 
-===============================================================================
+==============================================================================
 *Description*
 
 Procedural style
 
-    int grapheme_strripos ( string $haystack , string $needle [, int $offset =~
-    0 ] )~
+    int grapheme_strripos ( string $haystack , string $needle [, int $offset~
+    = 0 ] )~
 
 Find position (in grapheme units) of last occurrence of a case-insensitive
 string
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {haystack}
@@ -34,13 +34,13 @@ string
     The position returned is still relative to the beginning of haystack
     regardless of the value of $offset.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns the position as an integer. If needle is not found, grapheme_strripos()
-will return boolean FALSE.
+Returns the position as an integer. If needle is not found, grapheme_strripos
+() will return boolean FALSE.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 grapheme_strripos() example
@@ -63,7 +63,7 @@ The above example will output:
 
 2
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |grapheme_stripos| - Find position (in grapheme units) of first occurrence

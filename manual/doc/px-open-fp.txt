@@ -4,18 +4,18 @@ px_open_fp
 
 px_open_fp — Open paradox database
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool px_open_fp ( resource $pxdoc , resource $file )~
 
-Open an existing paradox database file. The actual file has to be opened before
-with |fopen|. This function can also be used to open primary index files and
-tread them like a paradox database. This is supported for those who would like
-to investigate a primary index. It cannot be used to accelerate access to a
-database file.
+Open an existing paradox database file. The actual file has to be opened
+before with |fopen|. This function can also be used to open primary index
+files and tread them like a paradox database. This is supported for those who
+would like to investigate a primary index. It cannot be used to accelerate
+access to a database file.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {pxdoc}
@@ -28,12 +28,12 @@ database file.
     parameter. Make sure the database is writable if you plan to update or
     insert records.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |fopen| - Opens file or URL

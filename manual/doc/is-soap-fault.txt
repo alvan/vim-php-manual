@@ -4,7 +4,7 @@ is_soap_fault
 
 is_soap_fault — Checks if a SOAP call has failed
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool is_soap_fault ( mixed $object )~
@@ -18,19 +18,19 @@ faultactor and faultdetails).
 If exceptions is not set then SOAP call will throw an exception on error. 
 is_soap_fault() checks if the given parameter is a SoapFault object.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {object}
 
     The object to test.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 This will return TRUE on error, and FALSE otherwise.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 is_soap_fault() example
@@ -39,8 +39,8 @@ Example #1 is_soap_fault() example
     $client = new SoapClient("some.wsdl", array('exceptions' => 0));
     $result = $client->SomeFunction();
     if (is_soap_fault($result)) {
-        trigger_error("SOAP Fault: (faultcode: {$result->faultcode}, faultstring: {
-    $result->faultstring})", E_USER_ERROR);
+        trigger_error("SOAP Fault: (faultcode: {$result->faultcode}, faultstring: 
+    {$result->faultstring})", E_USER_ERROR);
     }
 <?>
 
@@ -56,7 +56,7 @@ Example #2 SOAP's standard method for error reporting is exceptions
     }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * SoapClient::SoapClient() - SoapClient constructor

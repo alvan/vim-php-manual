@@ -4,15 +4,15 @@ strpos
 
 strpos — Find the position of the first occurrence of a substring in a string
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed strpos ( string $haystack , mixed $needle [, int $offset = 0 ] )~
 
-Find the numeric position of the first occurrence of {needle} in the {haystack}
-string.
+Find the numeric position of the first occurrence of {needle} in the
+{haystack} string.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {haystack}
@@ -27,10 +27,10 @@ string.
 {offset}
 
     If specified, search will start this number of characters counted from the
-    beginning of the string. Unlike |strrpos| and |strripos|, the offset cannot
-    be negative.
+    beginning of the string. Unlike |strrpos| and |strripos|, the offset
+    cannot be negative.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the position of where the needle exists relative to the beginning of
@@ -41,12 +41,12 @@ Returns FALSE if the needle was not found.
 
 Warning
 
-This function may return Boolean FALSE, but may also return a non-Boolean value
-which evaluates to FALSE. Please read the section on Booleans for more
+This function may return Boolean FALSE, but may also return a non-Boolean
+value which evaluates to FALSE. Please read the section on Booleans for more
 information. Use the === operator for testing the return value of this
 function.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Using ===
@@ -92,20 +92,20 @@ Example #3 Using an offset
     $pos = strpos($newstring, 'a', 1); // $pos = 7, not 0
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: This function is binary-safe.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
-  * |stripos| - Find the position of the first occurrence of a case-insensitive
-    substring in a string
+  * |stripos| - Find the position of the first occurrence of a
+    case-insensitive substring in a string
   * |strrpos| - Find the position of the last occurrence of a substring in a
     string
-  * |strripos| - Find the position of the last occurrence of a case-insensitive
-    substring in a string
+  * |strripos| - Find the position of the last occurrence of a
+    case-insensitive substring in a string
   * |strstr| - Find the first occurrence of a string
   * |strpbrk| - Search a string for any of a set of characters
   * |substr| - Return part of a string

@@ -5,7 +5,7 @@ mysqlnd_ms_xa_gc
 mysqlnd_ms_xa_gc — Garbage collects unfinished XA transactions after severe
 errors
 
-===============================================================================
+==============================================================================
 *Description*
 
     int mysqlnd_ms_xa_gc ( mixed $connection [, string $gtrid ] )~
@@ -13,20 +13,20 @@ errors
 Garbage collects unfinished XA transactions.
 
 The XA protocol is a blocking protocol. There exist cases when servers
-participating in a global transaction cannot make progress when the transaction
-coordinator crashes or disconnects. In such a case, the MySQL servers keep
-waiting for instructions to finish the XA transaction in question. Because
-transactions occupy resources, transactions should always be terminated
-properly.
+participating in a global transaction cannot make progress when the
+transaction coordinator crashes or disconnects. In such a case, the MySQL
+servers keep waiting for instructions to finish the XA transaction in
+question. Because transactions occupy resources, transactions should always be
+terminated properly.
 
 Garbage collection requires configuring a state store to track global
 transactions. Should a PHP client crash in the middle of a transaction and a
-new PHP client be started, then the built-in garbage collection can learn about
-the aborted global transaction and terminate it. If you do not configure a
-state store, the garbage collection cannot perform any cleanup tasks.
+new PHP client be started, then the built-in garbage collection can learn
+about the aborted global transaction and terminate it. If you do not configure
+a state store, the garbage collection cannot perform any cleanup tasks.
 
-The state store should be crash-safe and be highly available to survive its own
-crash. Currently, only MySQL is supported as a state store.
+The state store should be crash-safe and be highly available to survive its
+own crash. Currently, only MySQL is supported as a state store.
 
 Garbage collection can also be performed automatically in the background. See
 the plugin configuration directive garbage_collection for details.
@@ -36,13 +36,13 @@ the plugin configuration directive garbage_collection for details.
     The feature is currently under development. There may be issues and/or
     feature limitations. Do not use in production environments.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
 
-    A MySQL connection handle obtained from any of the connect functions of the
-    mysqli, mysql or PDO_MYSQL extensions.
+    A MySQL connection handle obtained from any of the connect functions of
+    the mysqli, mysql or PDO_MYSQL extensions.
 
 {gtrid}
 
@@ -50,13 +50,13 @@ the plugin configuration directive garbage_collection for details.
     considers the transaction only. Otherwise, the state store is scanned for
     any unfinished transaction.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns TRUE if the global transaction has been rolled back. Otherwise, returns
-FALSE
+Returns TRUE if the global transaction has been rolled back. Otherwise,
+returns FALSE
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * Quickstart XA/Distributed transactions

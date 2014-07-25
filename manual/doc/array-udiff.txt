@@ -5,7 +5,7 @@ array_udiff
 array_udiff — Computes the difference of arrays by using a callback function
 for data comparison
 
-===============================================================================
+==============================================================================
 *Description*
 
     array array_udiff ( array $array1 , array $array2 [, array $... ],~
@@ -15,7 +15,7 @@ Computes the difference of arrays by using a callback function for data
 comparison. This is unlike |array_diff| which uses an internal function for
 comparing the data.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {array1}
@@ -37,13 +37,13 @@ comparing the data.
 
     int callback ( mixed $a, mixed $b )~
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an array containing all the values of {array1} that are not present in
 any of the other arguments.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 array_udiff() example using stdClass Objects
@@ -120,8 +120,8 @@ Example #2 array_udiff() example using DateTime Objects
         }
 
         public function bookAppointment(DateTime $date, $note) {
-            $this->booked[] = array('date' => $date->modify('midnight'), 'note' => 
-    $note);
+            $this->booked[] = array('date' => $date->modify('midnight'), 'note' =>
+     $note);
         }
 
         public function checkAvailability() {
@@ -181,14 +181,14 @@ Monday: Cleaning GoogleGuy's apartment.
 Wednesday: Going on a snowboarding trip.
 Friday: Fixing buggy code.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: Please note that this function only checks one dimension of a
     n-dimensional array. Of course you can check deeper dimensions by using
     array_udiff($array1[0], $array2[0], "data_compare_func");.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |array_diff| - Computes the difference of arrays

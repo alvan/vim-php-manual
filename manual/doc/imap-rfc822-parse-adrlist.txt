@@ -4,14 +4,15 @@ imap_rfc822_parse_adrlist
 
 imap_rfc822_parse_adrlist — Parses an address string
 
-===============================================================================
+==============================================================================
 *Description*
 
-    array imap_rfc822_parse_adrlist ( string $address , string $default_host )~
+    array imap_rfc822_parse_adrlist ( string $address , string $default_host~
+)~
 
 Parses the address string as defined in » RFC2822 and for each address.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {address}
@@ -22,7 +23,7 @@ Parses the address string as defined in » RFC2822 and for each address.
 
     The default host name
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an array of objects. The objects properties are:
@@ -32,7 +33,7 @@ Returns an array of objects. The objects properties are:
   * personal - the personal name
   * adl - at domain source route
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 imap_rfc822_parse_adrlist() example
@@ -73,7 +74,7 @@ The above example will output:
   adl     :
 
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |imap_rfc822_parse_headers| - Parse mail headers from a string

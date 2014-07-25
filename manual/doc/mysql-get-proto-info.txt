@@ -8,19 +8,19 @@ Warning
 
 This extension is deprecated as of PHP 5.5.0, and will be removed in the
 future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
-MySQL: choosing an API guide and related FAQ for more information. Alternatives
-to this function include:
+MySQL: choosing an API guide and related FAQ for more information.
+Alternatives to this function include:
 
   * mysqli_get_proto_info()
 
-===============================================================================
+==============================================================================
 *Description*
 
     int mysql_get_proto_info ([ resource $link_identifier = NULL ] )~
 
 Retrieves the MySQL protocol.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { link_identifier}
@@ -31,12 +31,12 @@ Retrieves the MySQL protocol.
     If no connection is found or established, an E_WARNING level error is
     generated.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the MySQL protocol on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mysql_get_proto_info() example
@@ -53,7 +53,7 @@ The above example will output something similar to:
 
 MySQL protocol version: 10
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mysql_get_client_info| - Get MySQL client info

@@ -4,7 +4,7 @@ zip_entry_open
 
 zip_entry_open — Open a directory entry for reading
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool zip_entry_open ( resource $zip , resource $zip_entry [, string $mode~
@@ -12,7 +12,7 @@ zip_entry_open — Open a directory entry for reading
 
 Opens a directory entry in a zip file for reading.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {zip}
@@ -32,7 +32,7 @@ Opens a directory entry in a zip file for reading.
         Currently, {mode} is ignored and is always "rb". This is due to the
         fact that zip support in PHP is read only access.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
@@ -43,7 +43,7 @@ Returns TRUE on success or FALSE on failure.
     zip_entry_open() only indicates the result of the operation and is not
     needed for reading or closing the directory entry.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |zip_entry_close| - Close a directory entry

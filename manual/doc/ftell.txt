@@ -4,14 +4,14 @@ ftell
 
 ftell — Returns the current position of the file read/write pointer
 
-===============================================================================
+==============================================================================
 *Description*
 
     int ftell ( resource $handle )~
 
 Returns the position of the file pointer referenced by {handle}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {handle}
@@ -20,7 +20,7 @@ Returns the position of the file pointer referenced by {handle}.
     opened by |fopen| or |popen|. ftell() gives undefined results for
     append-only streams (opened with "a" flag).
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the position of the file pointer referenced by {handle} as an integer;
@@ -29,10 +29,10 @@ i.e., its offset into the file stream.
 If an error occurs, returns FALSE.
 
     Note: Because PHP's integer type is signed and many platforms use 32bit
-    integers, some filesystem functions may return unexpected results for files
-    which are larger than 2GB.
+    integers, some filesystem functions may return unexpected results for
+    files which are larger than 2GB.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 ftell() example
@@ -50,7 +50,7 @@ Example #1 ftell() example
 
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |fopen| - Opens file or URL

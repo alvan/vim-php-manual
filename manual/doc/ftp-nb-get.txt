@@ -2,10 +2,10 @@ ftp_nb_get
 
 (PHP 4 >= 4.3.0, PHP 5)
 
-ftp_nb_get — Retrieves a file from the FTP server and writes it to a local file
-(non-blocking)
+ftp_nb_get — Retrieves a file from the FTP server and writes it to a local
+file (non-blocking)
 
-===============================================================================
+==============================================================================
 *Description*
 
     int ftp_nb_get ( resource $ftp_stream , string $local_file , string~
@@ -15,10 +15,10 @@ ftp_nb_get() retrieves a remote file from the FTP server, and saves it into a
 local file.
 
 The difference between this function and |ftp_get| is that this function
-retrieves the file asynchronously, so your program can perform other operations
-while the file is being downloaded.
+retrieves the file asynchronously, so your program can perform other
+operations while the file is being downloaded.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {ftp_stream}
@@ -41,12 +41,12 @@ while the file is being downloaded.
 
     The position in the remote file to start downloading from.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns FTP_FAILED or FTP_FINISHED or FTP_MOREDATA.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 ftp_nb_get() example
@@ -114,13 +114,14 @@ In the example above, newfile is 100 bytes smaller than README on the FTP
 server because we started reading at offset 100. If we didn't disable
 FTP_AUTOSEEK, the first 100 bytes of newfile would be '\0'.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ftp_nb_fget| - Retrieves a file from the FTP server and writes it to an
     open file (non-blocking)
   * |ftp_nb_continue| - Continues retrieving/sending a file (non-blocking)
-  * |ftp_fget| - Downloads a file from the FTP server and saves to an open file
+  * |ftp_fget| - Downloads a file from the FTP server and saves to an open
+    file
   * |ftp_get| - Downloads a file from the FTP server
 
 

@@ -4,23 +4,23 @@ ncurses_mousemask
 
 ncurses_mousemask — Sets mouse options
 
-===============================================================================
+==============================================================================
 *Description*
 
     int ncurses_mousemask ( int $newmask , int &$oldmask )~
 Warning
 
 This function is EXPERIMENTAL. The behaviour of this function, its name, and
-surrounding documentation may change without notice in a future release of PHP.
-This function should be used at your own risk.
+surrounding documentation may change without notice in a future release of
+PHP. This function should be used at your own risk.
 
 Sets mouse events to be reported. By default no mouse events will be reported.
 
-Mouse events are represented by NCURSES_KEY_MOUSE in the |ncurses_wgetch| input
-stream. To read the event data and pop the event of queue, call |
+Mouse events are represented by NCURSES_KEY_MOUSE in the |ncurses_wgetch|
+input stream. To read the event data and pop the event of queue, call |
 ncurses_getmouse|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {newmask}
@@ -76,20 +76,20 @@ ncurses_getmouse|.
 
       + NCURSES_REPORT_MOUSE_POSITION
 
-    As a side effect, setting a zero mousemask in {newmask} turns off the mouse
-    pointer. Setting a non zero value turns mouse pointer on.
+    As a side effect, setting a zero mousemask in {newmask} turns off the
+    mouse pointer. Setting a non zero value turns mouse pointer on.
 
 {oldmask}
 
     This will be set to the previous value of the mouse event mask.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns a mask to indicated which of the in parameter {newmask} specified mouse
-events can be reported. On complete failure, it returns 0.
+Returns a mask to indicated which of the in parameter {newmask} specified
+mouse events can be reported. On complete failure, it returns 0.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 ncurses_mousemask() example
@@ -102,7 +102,7 @@ Example #1 ncurses_mousemask() example
     }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ncurses_getch| - Read a character from keyboard

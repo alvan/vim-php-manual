@@ -4,7 +4,7 @@ imagearc
 
 imagearc — Draws an arc
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool imagearc ( resource $image , int $cx , int $cy , int $width , int~
@@ -12,13 +12,13 @@ imagearc — Draws an arc
 
 imagearc() draws an arc of circle centered at the given coordinates.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { image}
 
-    An image resource, returned by one of the image creation functions, such as
-    |imagecreatetruecolor|.
+    An image resource, returned by one of the image creation functions, such
+    as |imagecreatetruecolor|.
 
 {cx}
 
@@ -42,19 +42,19 @@ imagearc() draws an arc of circle centered at the given coordinates.
 
 {end}
 
-    The arc end angle, in degrees. 0° is located at the three-o'clock position,
-    and the arc is drawn clockwise.
+    The arc end angle, in degrees. 0° is located at the three-o'clock
+    position, and the arc is drawn clockwise.
 
 {color}
 
     A color identifier created with |imagecolorallocate|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Drawing a circle with imagearc()
@@ -91,7 +91,7 @@ The above example will output something similar to:
 
 Output of example : Drawing a circle with imagearc()
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |imagefilledarc| - Draw a partial arc and fill it

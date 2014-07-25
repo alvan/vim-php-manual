@@ -4,7 +4,7 @@ ldap_sasl_bind
 
 ldap_sasl_bind — Bind to LDAP directory using SASL
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool ldap_sasl_bind ( resource $link [, string $binddn = NULL [, string~
@@ -13,21 +13,22 @@ ldap_sasl_bind — Bind to LDAP directory using SASL
     $props = NULL ]]]]]]] )~
 Warning
 
-This function is currently not documented; only its argument list is available.
+This function is currently not documented; only its argument list is
+available.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: Requirement
     ldap_sasl_bind() requires SASL support (sasl.h). Be sure --with-ldap-sasl
     is used when configuring PHP otherwise this function will be undefined.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version          Description

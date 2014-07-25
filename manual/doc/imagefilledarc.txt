@@ -4,7 +4,7 @@ imagefilledarc
 
 imagefilledarc — Draw a partial arc and fill it
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool imagefilledarc ( resource $image , int $cx , int $cy , int $width ,~
@@ -12,13 +12,13 @@ imagefilledarc — Draw a partial arc and fill it
 
 Draws a partial arc centered at the specified coordinate in the given {image}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { image}
 
-    An image resource, returned by one of the image creation functions, such as
-    |imagecreatetruecolor|.
+    An image resource, returned by one of the image creation functions, such
+    as |imagecreatetruecolor|.
 
 {cx}
 
@@ -42,8 +42,8 @@ Draws a partial arc centered at the specified coordinate in the given {image}.
 
 {end}
 
-    The arc end angle, in degrees. 0° is located at the three-o'clock position,
-    and the arc is drawn clockwise.
+    The arc end angle, in degrees. 0° is located at the three-o'clock
+    position, and the arc is drawn clockwise.
 
 {color}
 
@@ -64,12 +64,12 @@ Draws a partial arc centered at the specified coordinate in the given {image}.
     connected to the center - this is a good way to outline (rather than fill)
     a 'pie slice'.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Creating a 3D looking pie
@@ -110,7 +110,7 @@ The above example will output something similar to:
 
 Output of example : Creating a 3D looking pie
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: This function requires GD 2.0.1 or later (2.0.28 or later is

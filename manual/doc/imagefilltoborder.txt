@@ -4,23 +4,23 @@ imagefilltoborder
 
 imagefilltoborder — Flood fill to specific color
 
-===============================================================================
+==============================================================================
 *Description*
 
-    bool imagefilltoborder ( resource $image , int $x , int $y , int $border ,~
-    int $color )~
+    bool imagefilltoborder ( resource $image , int $x , int $y , int $border~
+    , int $color )~
 
 imagefilltoborder() performs a flood fill whose border color is defined by
 {border}. The starting point for the fill is {x}, {y} (top left is 0, 0) and
 the region is filled with color {color}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { image}
 
-    An image resource, returned by one of the image creation functions, such as
-    |imagecreatetruecolor|.
+    An image resource, returned by one of the image creation functions, such
+    as |imagecreatetruecolor|.
 
 {x}
 
@@ -38,12 +38,12 @@ the region is filled with color {color}.
 
     The fill color. A color identifier created with |imagecolorallocate|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Filling an ellipse with a color
@@ -51,8 +51,8 @@ Example #1 Filling an ellipse with a color
 <?php >
     // Create the image handle, set the background to white
     $im = imagecreatetruecolor(100, 100);
-    imagefilledrectangle($im, 0, 0, 100, 100, imagecolorallocate($im, 255, 255, 255
-    ));
+    imagefilledrectangle($im, 0, 0, 100, 100, imagecolorallocate($im, 255, 255, 
+    255));
 
     // Draw an ellipse to fill with a black border
     imageellipse($im, 50, 50, 50, 50, imagecolorallocate($im, 0, 0, 0));

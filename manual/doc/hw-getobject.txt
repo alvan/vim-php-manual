@@ -4,7 +4,7 @@ hw_GetObject
 
 hw_GetObject — Object record
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed hw_getobject ( int $connection , mixed $objectID [, string $query ]~
@@ -13,7 +13,7 @@ hw_GetObject — Object record
 Gets an object record. If the second parameter is an array of integer the
 function will
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
@@ -46,17 +46,17 @@ function will
     attributes. How many object records are returned depends on the query and
     if access to the object is allowed.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns the object record for the given object ID if the second parameter is an
-integer.
+Returns the object record for the given object ID if the second parameter is
+an integer.
 
 If the second parameter is an array of integer the function will return an
 array of object records. In such a case the last parameter is also evaluated
 which is a query string.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |hw_getandlock| - Return object record and lock object

@@ -5,7 +5,7 @@ get_html_translation_table
 get_html_translation_table — Returns the translation table used by |
 htmlspecialchars| and |htmlentities|
 
-===============================================================================
+==============================================================================
 *Description*
 
     array get_html_translation_table ([ int $table = HTML_SPECIALCHARS [, int~
@@ -17,11 +17,11 @@ internally for |htmlspecialchars| and |htmlentities|.
 
     Note:
 
-    Special characters can be encoded in several ways. E.g. " can be encoded as
-    &quot;, &#34; or &#x22. get_html_translation_table() returns only the form
-    used by |htmlspecialchars| and |htmlentities|.
+    Special characters can be encoded in several ways. E.g. " can be encoded
+    as &quot;, &#34; or &#x22. get_html_translation_table() returns only the
+    form used by |htmlspecialchars| and |htmlentities|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {table}
@@ -30,16 +30,17 @@ internally for |htmlspecialchars| and |htmlentities|.
 
 {flags}
 
-    A bitmask of one or more of the following flags, which specify which quotes
-    the table will contain as well as which document type the table is for. The
-    default is ENT_COMPAT | ENT_HTML401.
+    A bitmask of one or more of the following flags, which specify which
+    quotes the table will contain as well as which document type the table is
+    for. The default is ENT_COMPAT | ENT_HTML401.
 
-                          Available {flags} constants
+                         Available {flags} constants
       Constant                            Description
         Name
     ENT_COMPAT   Table will contain entities for double-quotes, but not for
                  single-quotes.
-    ENT_QUOTES   Table will contain entities for both double and single quotes.
+    ENT_QUOTES   Table will contain entities for both double and single
+                 quotes.
     ENT_NOQUOTES Table will neither contain entities for single quotes nor for
                  double quotes.
     ENT_HTML401  Table for HTML 4.01.
@@ -56,7 +57,7 @@ internally for |htmlspecialchars| and |htmlentities|.
     The following character sets are supported:
 
                               Supported charsets
-      Charset      Aliases                       Description
+      Charset      Aliases                      Description
     ISO-8859-1  ISO8859-1     Western European, Latin-1.
     ISO-8859-5  ISO8859-5     Little used cyrillic charset (Latin/Cyrillic).
                               Western European, Latin-9. Adds the Euro sign,
@@ -84,28 +85,28 @@ internally for |htmlspecialchars| and |htmlentities|.
     MacRoman                  Charset that was used by Mac OS.
                               An empty string activates detection from script
     ''                        encoding (Zend multibyte), default_charset and
-                              current locale (see |nl_langinfo| and |setlocale|
-                              ), in this order. Not recommended.
+                              current locale (see |nl_langinfo| and |setlocale
+                              |), in this order. Not recommended.
 
-        Note: Any other character sets are not recognized. The default encoding
-        will be used instead and a warning will be emitted.
+        Note: Any other character sets are not recognized. The default
+        encoding will be used instead and a warning will be emitted.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns the translation table as an array, with the original characters as keys
-and entities as values.
+Returns the translation table as an array, with the original characters as
+keys and entities as values.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 5.4.0   The default value for the {encoding} parameter was changed to UTF-8.
 5.4.0   The constants ENT_HTML401, ENT_XML1, ENT_XHTML and ENT_HTML5 were
         added.
 5.3.4   The {encoding} parameter was added.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Translation Table Example
@@ -137,7 +138,7 @@ array(1510) {
   // ...
 }
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |htmlspecialchars| - Convert special characters to HTML entities

@@ -4,18 +4,18 @@ spl_autoload
 
 spl_autoload — Default implementation for __autoload()
 
-===============================================================================
+==============================================================================
 *Description*
 
     void spl_autoload ( string $class_name [, string $file_extensions =~
     spl_autoload_extensions() ] )~
 
 This function is intended to be used as a default implementation for |
-__autoload|. If nothing else is specified and |spl_autoload_register| is called
-without any parameters then this function will be used for any later call to |
-__autoload|.
+__autoload|. If nothing else is specified and |spl_autoload_register| is
+called without any parameters then this function will be used for any later
+call to |__autoload|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {class_name}
@@ -24,10 +24,11 @@ __autoload|.
 
 {file_extensions}
 
-    By default it checks all include paths to contain filenames built up by the
-    lowercase class name appended by the filename extensions .inc and .php.
+    By default it checks all include paths to contain filenames built up by
+    the lowercase class name appended by the filename extensions .inc and
+    .php.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 No value is returned.

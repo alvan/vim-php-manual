@@ -4,7 +4,7 @@ simplexml_load_string
 
 simplexml_load_string — Interprets a string of XML into an object
 
-===============================================================================
+==============================================================================
 *Description*
 
     SimpleXMLElement simplexml_load_string ( string $data [, string~
@@ -13,7 +13,7 @@ simplexml_load_string — Interprets a string of XML into an object
 
 Takes a well-formed XML string and returns it as an object.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {data}
@@ -39,13 +39,13 @@ Takes a well-formed XML string and returns it as an object.
 
     TRUE if {ns} is a prefix, FALSE if it's a URI; defaults to FALSE.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns an object of class SimpleXMLElement with properties containing the data
-held within the xml document, or FALSE on failure.
+Returns an object of class SimpleXMLElement with properties containing the
+data held within the xml document, or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Errors/Exceptions*
 
 Produces an E_WARNING error message for each error found in the XML data.
@@ -55,7 +55,7 @@ Tip
 Use |libxml_use_internal_errors| to suppress all XML errors, and |
 libxml_get_errors| to iterate over them afterwards.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Interpret an XML string
@@ -91,7 +91,7 @@ SimpleXMLElement Object
 
 At this point, you can go about using $xml->body and such.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |simplexml_load_file| - Interprets an XML file into an object

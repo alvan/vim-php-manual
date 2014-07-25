@@ -4,7 +4,7 @@ substr
 
 substr — Return part of a string
 
-===============================================================================
+==============================================================================
 *Description*
 
     string substr ( string $string , int $start [, int $length ] )~
@@ -12,7 +12,7 @@ substr — Return part of a string
 Returns the portion of {string} specified by the {start} and {length}
 parameters.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {string}
@@ -22,15 +22,15 @@ parameters.
 {start}
 
     If {start} is non-negative, the returned string will start at the {start}
-    'th position in {string}, counting from zero. For instance, in the string '
-    abcdef', the character at position 0 is 'a', the character at position 2 is
-    'c', and so forth.
+    'th position in {string}, counting from zero. For instance, in the string
+    'abcdef', the character at position 0 is 'a', the character at position 2
+    is 'c', and so forth.
 
     If {start} is negative, the returned string will start at the {start}'th
     character from the end of {string}.
 
-    If {string} is less than or equal to {start} characters long, FALSE will be
-    returned.
+    If {string} is less than or equal to {start} characters long, FALSE will
+    be returned.
 
     Example #1 Using a negative {start}
 
@@ -43,8 +43,8 @@ parameters.
 {length}
 
     If {length} is given and is positive, the string returned will contain at
-    most {length} characters beginning from {start} (depending on the length of
-    {string}).
+    most {length} characters beginning from {start} (depending on the length
+    of {string}).
 
     If {length} is given and is negative, then that many characters will be
     omitted from the end of {string} (after the start position has been
@@ -66,21 +66,21 @@ parameters.
     $rest = substr("abcdef", -3, -1); // returns "de"
 <    ?>
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the extracted part of string; or FALSE on failure, or an empty
 {string}.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 5.2.2 - If the {start} parameter indicates the position of a negative
 5.2.6   truncation or beyond, false is returned. Other versions get the string
         from start.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #3 Basic substr() usage
@@ -129,7 +129,7 @@ The above example will output:
 6) false
 7) '1200'
 
-===============================================================================
+==============================================================================
 *Errors/Exceptions*
 
 Returns FALSE on error.
@@ -137,7 +137,7 @@ Returns FALSE on error.
     var_dump(substr('a', 1)); // bool(false)
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |strrchr| - Find the last occurrence of a character in a string

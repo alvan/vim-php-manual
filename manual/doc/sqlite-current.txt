@@ -9,7 +9,7 @@ SQLiteUnbuffered::current
 sqlite_current -- SQLiteResult::current -- SQLiteUnbuffered::current — Fetches
 the current row from a result set as an array
 
-===============================================================================
+==============================================================================
 *Description*
 
     array sqlite_current ( resource $result [, int $result_type = SQLITE_BOTH~
@@ -26,7 +26,7 @@ sqlite_current() is identical to |sqlite_fetch_array| except that it does not
 advance to the next row prior to returning the data; it returns the data from
 the current position only.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
@@ -51,7 +51,7 @@ the current position only.
     default, unless you are interoperating with databases created by other
     sqlite capable applications.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an array of the current row from a result set; FALSE if the current
@@ -60,7 +60,7 @@ position is beyond the final row.
 The column names returned by SQLITE_ASSOC and SQLITE_BOTH will be case-folded
 according to the value of the sqlite.assoc_case configuration option.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |sqlite_seek| - Seek to a particular row number of a buffered result set

@@ -4,7 +4,7 @@ db2_pclose
 
 db2_pclose — Closes a persistent database connection
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool db2_pclose ( resource $resource )~
@@ -18,25 +18,25 @@ returns the corresponding resources to the database server.
     This function is only available on i5/OS in response to i5/OS system
     administration requests.
 
-If you have a persistent DB2 client connection created with |db2_pconnect|, you
-may use this function to close the connection. To avoid substantial connection
-performance penalties, this function should only be used in rare cases when the
-persistent connection has become unresponsive or the persistent connection will
-not be needed for a long period of time.
+If you have a persistent DB2 client connection created with |db2_pconnect|,
+you may use this function to close the connection. To avoid substantial
+connection performance penalties, this function should only be used in rare
+cases when the persistent connection has become unresponsive or the persistent
+connection will not be needed for a long period of time.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
 
     Specifies an active DB2 client connection.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Closing a persistent connection
@@ -56,7 +56,7 @@ The above example will output:
 
 Connection was successfully closed.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |db2_close| - Closes a database connection

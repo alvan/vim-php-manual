@@ -4,7 +4,7 @@ strrpos
 
 strrpos — Find the position of the last occurrence of a substring in a string
 
-===============================================================================
+==============================================================================
 *Description*
 
     int strrpos ( string $haystack , string $needle [, int $offset = 0 ] )~
@@ -12,7 +12,7 @@ strrpos — Find the position of the last occurrence of a substring in a string
 Find the numeric position of the last occurrence of {needle} in the {haystack}
 string.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {haystack}
@@ -31,7 +31,7 @@ string.
     start from that many characters from the end of the string, searching
     backwards.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the position where the needle exists relative to the beginnning of the
@@ -42,25 +42,25 @@ Returns FALSE if the needle was not found.
 
 Warning
 
-This function may return Boolean FALSE, but may also return a non-Boolean value
-which evaluates to FALSE. Please read the section on Booleans for more
+This function may return Boolean FALSE, but may also return a non-Boolean
+value which evaluates to FALSE. Please read the section on Booleans for more
 information. Use the === operator for testing the return value of this
 function.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version                         Description
 5.0.0   The {needle} may now be a string of more than one character.
 5.0.0   The {offset} parameter was introduced.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Checking if a needle is in the haystack
 
-It is easy to mistake the return values for "character found at position 0" and
-"character not found". Here's how to detect the difference:
+It is easy to mistake the return values for "character found at position 0"
+and "character not found". Here's how to detect the difference:
 
 <?php >
 
@@ -85,15 +85,15 @@ Example #2 Searching with offsets
     var_dump(strrpos($foo, '7', 28));  // Result: bool(false)
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |strpos| - Find the position of the first occurrence of a substring in a
     string
-  * |stripos| - Find the position of the first occurrence of a case-insensitive
-    substring in a string
-  * |strripos| - Find the position of the last occurrence of a case-insensitive
-    substring in a string
+  * |stripos| - Find the position of the first occurrence of a
+    case-insensitive substring in a string
+  * |strripos| - Find the position of the last occurrence of a
+    case-insensitive substring in a string
   * |strrchr| - Find the last occurrence of a character in a string
   * |substr| - Return part of a string
 

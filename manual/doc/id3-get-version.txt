@@ -4,7 +4,7 @@ id3_get_version
 
 id3_get_version — Get version of an ID3 tag
 
-===============================================================================
+==============================================================================
 *Description*
 
     int id3_get_version ( string $filename )~
@@ -14,7 +14,7 @@ id3_get_version() retrieves the version(s) of the ID3 tag(s) in the MP3 file.
 If a file contains an ID3 v1.1 tag, it always contains a 1.0 tag, as version
 1.1 is just an extension of 1.0.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {filename}
@@ -23,14 +23,14 @@ If a file contains an ID3 v1.1 tag, it always contains a 1.0 tag, as version
 
     Instead of a filename you may also pass a valid stream resource
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns the version number of the ID3 tag of the file. As a tag can contain ID3
-v1.x and v2.x tags, the return value of this function should be bitwise
+Returns the version number of the ID3 tag of the file. As a tag can contain
+ID3 v1.x and v2.x tags, the return value of this function should be bitwise
 compared with the predefined constants ID3_V1_0, ID3_V1_1 and ID3_V2.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 id3_get_version() example
@@ -53,7 +53,7 @@ The above example will output something similar to:
 Contains a 1.x tag
 Contains a 1.1 tag
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |id3_set_tag| - Update information stored in an ID3 tag

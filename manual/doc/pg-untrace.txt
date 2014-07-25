@@ -4,14 +4,14 @@ pg_untrace
 
 pg_untrace — Disable tracing of a PostgreSQL connection
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool pg_untrace ([ resource $connection ] )~
 
 Stop tracing started by |pg_trace|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
@@ -20,12 +20,12 @@ Stop tracing started by |pg_trace|.
     the default connection is used. The default connection is the last
     connection made by |pg_connect| or |pg_pconnect|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Always returns TRUE.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 pg_untrace() example
@@ -44,7 +44,7 @@ Example #1 pg_untrace() example
     }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |pg_trace| - Enable tracing a PostgreSQL connection

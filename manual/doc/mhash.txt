@@ -4,14 +4,14 @@ mhash
 
 mhash — Computes hash
 
-===============================================================================
+==============================================================================
 *Description*
 
     string mhash ( int $hash , string $data [, string $key ] )~
 
 mhash() applies a hash function specified by {hash} to the {data}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {hash}
@@ -29,7 +29,7 @@ mhash() applies a hash function specified by {hash} to the {data}.
     depends on the specified key. Not all algorithms supported in mhash can be
     used in HMAC mode.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the resulting hash (also called digest) or HMAC as a string, or FALSE

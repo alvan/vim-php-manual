@@ -4,18 +4,18 @@ parse_ini_file
 
 parse_ini_file — Parse a configuration file
 
-===============================================================================
+==============================================================================
 *Description*
 
     array parse_ini_file ( string $filename [, bool $process_sections = false~
     [, int $scanner_mode = INI_SCANNER_NORMAL ]] )~
 
-parse_ini_file() loads in the ini file specified in {filename}, and returns the
-settings in it in an associative array.
+parse_ini_file() loads in the ini file specified in {filename}, and returns
+the settings in it in an associative array.
 
 The structure of the ini file is the same as the php.ini's.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {filename}
@@ -33,28 +33,28 @@ The structure of the ini file is the same as the php.ini's.
     Can either be INI_SCANNER_NORMAL (default) or INI_SCANNER_RAW. If
     INI_SCANNER_RAW is supplied, then option values will not be parsed.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The settings are returned as an associative array on success, and FALSE on
 failure.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
         Added optional {scanner_mode} parameter. Single quotes may now be used
 5.3.0   around variable assignments. Hash marks (#) may no longer be used as
         comments and will throw a deprecation warning if used.
 5.2.7   On syntax error this function will return FALSE rather than an empty
         array.
         Keys and section names consisting of numbers are now evaluated as PHP
-5.2.4   integers thus numbers starting by 0 are evaluated as octals and numbers
-        starting by 0x are evaluated as hexadecimals.
+5.2.4   integers thus numbers starting by 0 are evaluated as octals and
+        numbers starting by 0x are evaluated as hexadecimals.
 5.0.0   Values enclosed in double quotes can contain new lines.
 4.2.1   This function is now affected by safe mode and open_basedir.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Contents of sample.ini
@@ -162,10 +162,10 @@ Example #3 parse_ini_file() parsing a php.ini file
 
     // Print and compare the values, note that using get_cfg_var()
     // will give the same results for parsed and loaded here
-    echo '(parsed) magic_quotes_gpc = ' . yesno($ini['magic_quotes_gpc']) . PHP_EOL
-    ;
-    echo '(loaded) magic_quotes_gpc = ' . yesno(get_cfg_var('magic_quotes_gpc')) . 
+    echo '(parsed) magic_quotes_gpc = ' . yesno($ini['magic_quotes_gpc']) . 
     PHP_EOL;
+    echo '(loaded) magic_quotes_gpc = ' . yesno(get_cfg_var('magic_quotes_gpc'))
+     . PHP_EOL;
 <?>
 
 The above example will output something similar to:
@@ -173,7 +173,7 @@ The above example will output something similar to:
 (parsed) magic_quotes_gpc = Yes
 (loaded) magic_quotes_gpc = Yes
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -196,11 +196,11 @@ The above example will output something similar to:
     Note:
 
     Entries without an equal sign are ignored. For example, "foo" is ignored
-    whereas "bar =" is parsed and added with an empty value. For example, MySQL
-    has a "no-auto-rehash" setting in my.cnf that does not take a value, so it
-    is ignored.
+    whereas "bar =" is parsed and added with an empty value. For example,
+    MySQL has a "no-auto-rehash" setting in my.cnf that does not take a value,
+    so it is ignored.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |parse_ini_string| - Parse a configuration string

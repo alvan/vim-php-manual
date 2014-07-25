@@ -4,15 +4,16 @@ eio_futime
 
 eio_futime — Change file last access and modification times
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource eio_futime ( mixed $fd , float $atime , float $mtime [, int $pri~
-    = EIO_PRI_DEFAULT [, callable $callback = NULL [, mixed $data = NULL ]]] )~
+    = EIO_PRI_DEFAULT [, callable $callback = NULL [, mixed $data = NULL ]]]~
+)~
 
 eio_futime() changes file last access and modification times.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {fd}
@@ -35,8 +36,8 @@ eio_futime() changes file last access and modification times.
 
 {callback}
 
-    {callback} function is called when the request is done. It should match the
-    following prototype:
+    {callback} function is called when the request is done. It should match
+    the following prototype:
     void callback(mixed $data, int $result[, resource $req]);
 
     {data}
@@ -57,12 +58,12 @@ eio_futime() changes file last access and modification times.
 
     Arbitrary variable passed to {callback}.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 eio_futime() returns request resource on success or FALSE on error.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * eio_utime

@@ -4,7 +4,7 @@ imap_status
 
 imap_status — Returns status information on a mailbox
 
-===============================================================================
+==============================================================================
 *Description*
 
     object imap_status ( resource $imap_stream , string $mailbox , int~
@@ -12,7 +12,7 @@ imap_status — Returns status information on a mailbox
 
 Gets status information about the given {mailbox}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { imap_stream}
@@ -28,8 +28,8 @@ Gets status information about the given {mailbox}.
     Valid flags are:
       + SA_MESSAGES - set $status->messages to the number of messages in the
         mailbox
-      + SA_RECENT - set $status->recent to the number of recent messages in the
-        mailbox
+      + SA_RECENT - set $status->recent to the number of recent messages in
+        the mailbox
       + SA_UNSEEN - set $status->unseen to the number of unseen (new) messages
         in the mailbox
       + SA_UIDNEXT - set $status->uidnext to the next uid to be used in the
@@ -38,16 +38,16 @@ Gets status information about the given {mailbox}.
         when uids for the mailbox may no longer be valid
       + SA_ALL - set all of the above
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 This function returns an object containing status information. The object has
 the following properties: messages, recent, unseen, uidnext, and uidvalidity.
 
-flags is also set, which contains a bitmask which can be checked against any of
-the above constants.
+flags is also set, which contains a bitmask which can be checked against any
+of the above constants.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 imap_status() example

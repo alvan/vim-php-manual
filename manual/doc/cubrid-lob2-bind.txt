@@ -5,19 +5,19 @@ cubrid_lob2_bind
 cubrid_lob2_bind — Bind a lob object or a string as a lob object to a prepared
 statement as parameters.
 
-===============================================================================
+==============================================================================
 *Description*
 
-    bool cubrid_lob2_bind ( resource $req_identifier , int $bind_index , mixed~
-    $bind_value [, string $bind_value_type ] )~
+    bool cubrid_lob2_bind ( resource $req_identifier , int $bind_index ,~
+    mixed $bind_value [, string $bind_value_type ] )~
 
 The cubrid_lob2_bind() function is used to bind BLOB/CLOB datas to a
-corresponding question mark placeholder in the SQL statement that was passed to
-|cubrid_prepare|. If {bind_value_type} is not given, string will be "BLOB" as
-the default. But if you use |cubrid_lob2_new| before, {bind_value_type} will be
-consistent with {type} in |cubrid_lob2_new| as the default.
+corresponding question mark placeholder in the SQL statement that was passed
+to |cubrid_prepare|. If {bind_value_type} is not given, string will be "BLOB"
+as the default. But if you use |cubrid_lob2_new| before, {bind_value_type}
+will be consistent with {type} in |cubrid_lob2_new| as the default.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {req_identifier}
@@ -37,14 +37,14 @@ consistent with {type} in |cubrid_lob2_new| as the default.
     It must be "BLOB" or "CLOB" and it won't be case-sensitive. If it not be
     given, the default value is "BLOB".
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 TRUE, when process is successful.
 
 FALSE, when process is unsuccessful.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_lob2_bind() example
@@ -75,7 +75,7 @@ Example #1 cubrid_lob2_bind() example
     cubrid_disconnect($conn);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |cubrid_lob2_new| - Create a lob object.

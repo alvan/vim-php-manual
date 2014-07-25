@@ -4,7 +4,7 @@ http_build_url
 
 http_build_url — Build a URL
 
-===============================================================================
+==============================================================================
 *Description*
 
     string http_build_url ([ mixed $url [, mixed $parts [, int $flags =~
@@ -15,7 +15,7 @@ Build a URL.
 The parts of the second URL will be merged into the first according to the
 flags argument.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {url}
@@ -37,12 +37,12 @@ flags argument.
     if set, it will be filled with the parts of the composed url like |
     parse_url| would return
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the new URL as string on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A http_build_url() example
@@ -64,7 +64,7 @@ The above example will output:
 
 ftp://ftp.example.com/pub/files/current/?a=c
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |parse_url| - Parse a URL and return its components

@@ -4,15 +4,15 @@ cubrid_send_glo
 
 cubrid_send_glo — Read data from glo and send it to std output
 
-===============================================================================
+==============================================================================
 *Description*
 
     int cubrid_send_glo ( resource $conn_identifier , string $oid )~
 
-The cubrid_send_glo() function is used to read data from glo instance and sends
-it to the PHP standard output.
+The cubrid_send_glo() function is used to read data from glo instance and
+sends it to the PHP standard output.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {conn_identifier}
@@ -23,14 +23,14 @@ it to the PHP standard output.
 
     Oid of the glo instance that you want to read data from.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 TRUE, when process is successful.
 
 FALSE, when process is unsuccessful.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_send_glo() example
@@ -45,7 +45,7 @@ Example #1 cubrid_send_glo() example
     }
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -57,7 +57,7 @@ Example #1 cubrid_send_glo() example
 
     This function is removed from CUBRID 3.1.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |cubrid_new_glo| - Create a glo instance

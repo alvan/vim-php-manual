@@ -4,7 +4,7 @@ pg_set_client_encoding
 
 pg_set_client_encoding — Set the client encoding
 
-===============================================================================
+==============================================================================
 *Description*
 
     int pg_set_client_encoding ([ resource $connection ], string $encoding )~
@@ -19,7 +19,7 @@ into the frontend encoding.
 
     The function used to be called pg_setclientencoding().
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
@@ -37,12 +37,12 @@ into the frontend encoding.
     The exact list of available encodings depends on your PostgreSQL version,
     so check your PostgreSQL manual for a more specific list.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns 0 on success or -1 on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 pg_set_client_encoding() example
@@ -73,7 +73,7 @@ Example #1 pg_set_client_encoding() example
      
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |pg_client_encoding| - Gets the client encoding

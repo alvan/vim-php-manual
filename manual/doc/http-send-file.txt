@@ -4,7 +4,7 @@ http_send_file
 
 http_send_file — Send file
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool http_send_file ( string $file )~
@@ -15,22 +15,22 @@ This functions behaviour and further action is dependent on the following INI
 settings: http.send.not_found_404 and http.log.not_found.
 
 If the INI setting http.send.not_found_404 is enabled and the INI setting
-http.log.not_found points to a writable file, a log message is written when the
-{file} was not found.
+http.log.not_found points to a writable file, a log message is written when
+the {file} was not found.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {file}
 
     the file to send
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A http_send_file() example
@@ -54,7 +54,7 @@ Content-Disposition: inline; filename="document.pdf"
 
 %PDF...
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |http_send_data| - Send arbitrary data

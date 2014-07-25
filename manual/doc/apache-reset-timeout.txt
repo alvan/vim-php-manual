@@ -4,7 +4,7 @@ apache_reset_timeout
 
 apache_reset_timeout — Reset the Apache write timer
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool apache_reset_timeout ( void )~
@@ -15,17 +15,17 @@ apache_reset_timeout() calls, Apache can theoretically run forever.
 
 This function requires Apache 1.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: This function is disabled when PHP is running in safe mode.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |set_time_limit| - Limits the maximum execution time

@@ -8,13 +8,13 @@ Warning
 
 This extension is deprecated as of PHP 5.5.0, and will be removed in the
 future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
-MySQL: choosing an API guide and related FAQ for more information. Alternatives
-to this function include:
+MySQL: choosing an API guide and related FAQ for more information.
+Alternatives to this function include:
 
   * mysqli_select_db() then the query
   * PDO::__construct()
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource mysql_db_query ( string $database , string $query [, resource~
@@ -27,7 +27,7 @@ Warning
 This function has been DEPRECATED as of PHP 5.3.0. Relying on this feature is
 highly discouraged.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {database}
@@ -48,22 +48,22 @@ highly discouraged.
     If no connection is found or established, an E_WARNING level error is
     generated.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a positive MySQL result resource to the query result, or FALSE on
-error. The function also returns TRUE/FALSE for INSERT/UPDATE/DELETE queries to
-indicate success/failure.
+error. The function also returns TRUE/FALSE for INSERT/UPDATE/DELETE queries
+to indicate success/failure.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 5.3.0   This function now throws an E_DEPRECATED notice.
 4.0.6   This function is deprecated, do not use this function. Use |
         mysql_select_db| and |mysql_query| instead.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mysql_db_query() alternative example
@@ -97,18 +97,19 @@ Example #1 mysql_db_query() alternative example
 
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
 
     Be aware that this function does NOT switch back to the database you were
     connected before. In other words, you can't use this function to
-    temporarily run a sql query on another database, you would have to manually
-    switch back. Users are strongly encouraged to use the database.table syntax
-    in their sql queries or |mysql_select_db| instead of this function.
+    temporarily run a sql query on another database, you would have to
+    manually switch back. Users are strongly encouraged to use the
+    database.table syntax in their sql queries or |mysql_select_db| instead of
+    this function.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mysql_query| - Send a MySQL query

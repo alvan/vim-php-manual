@@ -4,7 +4,7 @@ is_subclass_of
 
 is_subclass_of — Checks if the object has this class as one of its parents
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool is_subclass_of ( mixed $object , string $class_name [, bool~
@@ -12,7 +12,7 @@ is_subclass_of — Checks if the object has this class as one of its parents
 
 Checks if the given {object} has the class {class_name} as one of its parents.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {object}
@@ -29,22 +29,22 @@ Checks if the given {object} has the class {class_name} as one of its parents.
     allowed. This also prevents from calling autoloader if the class doesn't
     exist.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 This function returns TRUE if the object {object}, belongs to a class which is
 a subclass of {class_name}, FALSE otherwise.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 5.3.9   Added {allow_string} parameter
 5.3.7   Added support for {class_name} to work with interfaces
 5.0.3   You may also specify the {object} parameter as a string (the name of
         the class)
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 is_subclass_of() example
@@ -137,15 +137,15 @@ The above example will output:
 Yes, $my_object is a subclass of MyInterface
 Yes, MyClass is a subclass of MyInterface
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
 
-    Using this function will use any registered autoloaders if the class is not
-    already known.
+    Using this function will use any registered autoloaders if the class is
+    not already known.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |get_class| - Returns the name of the class of an object

@@ -4,7 +4,7 @@ json_last_error
 
 json_last_error — Returns the last error occurred
 
-===============================================================================
+==============================================================================
 *Description*
 
     int json_last_error ( void )~
@@ -12,35 +12,35 @@ json_last_error — Returns the last error occurred
 Returns the last error (if any) occurred during the last JSON encoding/
 decoding.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 This function has no parameters.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an integer, the value can be one of the following constants:
 
                                JSON error codes
-         Constant                          Meaning                 Availability
-JSON_ERROR_NONE             No error has occurred                   
-JSON_ERROR_DEPTH            The maximum stack depth has been        
+         Constant                          Meaning                Availability
+JSON_ERROR_NONE             No error has occurred                  
+JSON_ERROR_DEPTH            The maximum stack depth has been       
                             exceeded
-JSON_ERROR_STATE_MISMATCH   Invalid or malformed JSON               
-JSON_ERROR_CTRL_CHAR        Control character error, possibly       
+JSON_ERROR_STATE_MISMATCH   Invalid or malformed JSON              
+JSON_ERROR_CTRL_CHAR        Control character error, possibly      
                             incorrectly encoded
-JSON_ERROR_SYNTAX           Syntax error                            
-JSON_ERROR_UTF8             Malformed UTF-8 characters, possibly   PHP 5.3.3
+JSON_ERROR_SYNTAX           Syntax error                           
+JSON_ERROR_UTF8             Malformed UTF-8 characters, possibly  PHP 5.3.3
                             incorrectly encoded
-JSON_ERROR_RECURSION        One or more recursive references in    PHP 5.5.0
+JSON_ERROR_RECURSION        One or more recursive references in   PHP 5.5.0
                             the value to be encoded
-JSON_ERROR_INF_OR_NAN       One or more NAN or |INF| values in the PHP 5.5.0
-                            value to be encoded
-JSON_ERROR_UNSUPPORTED_TYPE A value of a type that cannot be       PHP 5.5.0
+JSON_ERROR_INF_OR_NAN       One or more NAN or |INF| values in    PHP 5.5.0
+                            the value to be encoded
+JSON_ERROR_UNSUPPORTED_TYPE A value of a type that cannot be      PHP 5.5.0
                             encoded was given
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 json_last_error() example
@@ -75,7 +75,8 @@ Example #1 json_last_error() example
                 echo ' - Syntax error, malformed JSON';
             break;
             case JSON_ERROR_UTF8:
-                echo ' - Malformed UTF-8 characters, possibly incorrectly encoded';
+                echo ' - Malformed UTF-8 characters, possibly incorrectly encoded'
+    ;
             break;
             default:
                 echo ' - Unknown error';
@@ -108,7 +109,7 @@ The above example will output:
 string(4) "null"
 bool(true)
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |json_last_error_msg| - Returns the error string of the last json_encode()

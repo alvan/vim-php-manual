@@ -8,20 +8,20 @@ Warning
 
 This extension is deprecated as of PHP 5.5.0, and will be removed in the
 future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
-MySQL: choosing an API guide and related FAQ for more information. Alternatives
-to this function include:
+MySQL: choosing an API guide and related FAQ for more information.
+Alternatives to this function include:
 
   * mysqli_field_count()
   * PDOStatement::columnCount()
 
-===============================================================================
+==============================================================================
 *Description*
 
     int mysql_num_fields ( resource $result )~
 
 Retrieves the number of fields from a query.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { result}
@@ -29,13 +29,13 @@ Retrieves the number of fields from a query.
     The result resource that is being evaluated. This result comes from a call
     to |mysql_query|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the number of fields in the result set resource on success or FALSE on
 failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A mysql_num_fields() example
@@ -51,7 +51,7 @@ Example #1 A mysql_num_fields() example
     echo mysql_num_fields($result);
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -59,13 +59,13 @@ Example #1 A mysql_num_fields() example
     For backward compatibility, the following deprecated alias may be used: 
     mysql_numfields()
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mysql_select_db| - Select a MySQL database
   * |mysql_query| - Send a MySQL query
-  * |mysql_fetch_field| - Get column information from a result and return as an
-    object
+  * |mysql_fetch_field| - Get column information from a result and return as
+    an object
   * |mysql_num_rows| - Get number of rows in result
 
 

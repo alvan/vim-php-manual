@@ -4,18 +4,18 @@ sybase_fetch_object
 
 sybase_fetch_object — Fetch a row as an object
 
-===============================================================================
+==============================================================================
 *Description*
 
     object sybase_fetch_object ( resource $result [, mixed $object ] )~
 
-sybase_fetch_object() is similar to |sybase_fetch_assoc|, with one difference -
-an object is returned, instead of an array.
+sybase_fetch_object() is similar to |sybase_fetch_assoc|, with one difference
+- an object is returned, instead of an array.
 
 Speed-wise, the function is identical to |sybase_fetch_array|, and almost as
 quick as |sybase_fetch_row| (the difference is insignificant).
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
@@ -25,16 +25,16 @@ quick as |sybase_fetch_row| (the difference is insignificant).
     Use the second {object} to specify the type of object you want to return.
     If this parameter is omitted, the object will be of type stdClass.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an object with properties that correspond to the fetched row, or FALSE
 if there are no more rows.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
         This function will no longer return numeric object members. Old
         behaviour:
 
@@ -58,7 +58,7 @@ Version                               Description
           string(3) "bar"
         }
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 sybase_fetch_object() return as Foo
@@ -75,7 +75,7 @@ Example #1 sybase_fetch_object() return as Foo
         // {...]
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |sybase_fetch_array| - Fetch row as array

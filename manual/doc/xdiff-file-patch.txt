@@ -4,17 +4,17 @@ xdiff_file_patch
 
 xdiff_file_patch — Patch a file with an unified diff
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed xdiff_file_patch ( string $file , string $patch , string $dest [,~
     int $flags = DIFF_PATCH_NORMAL ] )~
 
-Patches a {file} with a {patch} and stores the result in a file. {patch} has to
-be an unified diff created by |xdiff_file_diff|/|xdiff_string_diff| function.
-An optional {flags} parameter specifies mode of operation.
+Patches a {file} with a {patch} and stores the result in a file. {patch} has
+to be an unified diff created by |xdiff_file_diff|/|xdiff_string_diff|
+function. An optional {flags} parameter specifies mode of operation.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {file}
@@ -38,13 +38,13 @@ An optional {flags} parameter specifies mode of operation.
     Starting from version 1.5.0, you can also use binary OR to enable
     XDIFF_PATCH_IGNORESPACE flag.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns FALSE if an internal error happened, string with rejected chunks if
 patch couldn't be applied or TRUE if patch has been successfully applied.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 xdiff_file_patch() example
@@ -80,7 +80,7 @@ The following code reverses a patch.
 
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |xdiff_file_diff| - Make unified diff of two files

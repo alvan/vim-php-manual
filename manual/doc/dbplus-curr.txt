@@ -4,14 +4,14 @@ dbplus_curr
 
 dbplus_curr — Get current tuple from relation
 
-===============================================================================
+==============================================================================
 *Description*
 
     int dbplus_curr ( resource $relation , array &$tuple )~
 
 Reads the data for the current tuple for the given {relation}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {relation}
@@ -22,22 +22,22 @@ Reads the data for the current tuple for the given {relation}.
 
     The data will be passed back in this parameter, as an associative array.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The function will return zero (aka. DBPLUS_ERR_NOERR) on success or a db++
 error code on failure.
 
-===============================================================================
+==============================================================================
 *Notes*
 
 Warning
 
 This function is EXPERIMENTAL. The behaviour of this function, its name, and
-surrounding documentation may change without notice in a future release of PHP.
-This function should be used at your own risk.
+surrounding documentation may change without notice in a future release of
+PHP. This function should be used at your own risk.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |dbplus_first| - Get first tuple from relation

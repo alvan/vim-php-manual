@@ -4,7 +4,7 @@ fann_get_training_algorithm
 
 fann_get_training_algorithm — Returns the training algorithm
 
-===============================================================================
+==============================================================================
 *Description*
 
     int fann_get_training_algorithm ( resource $ann )~
@@ -16,19 +16,19 @@ Note that this algorithm is also used during |fann_cascadetrain_on_data|,
 although only FANN_TRAIN_RPROP and FANN_TRAIN_QUICKPROP is allowed during
 cascade training.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {ann}
 
     Neural network resource.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Training algorithm constant, or FALSE on error.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |fann_set_training_algorithm| - Sets the training algorithm

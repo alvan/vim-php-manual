@@ -4,7 +4,7 @@ parse_url
 
 parse_url — Parse a URL and return its components
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed parse_url ( string $url [, int $component = -1 ] )~
@@ -12,11 +12,11 @@ parse_url — Parse a URL and return its components
 This function parses a URL and returns an associative array containing any of
 the various components of the URL that are present.
 
-This function is not meant to validate the given URL, it only breaks it up into
-the above listed parts. Partial URLs are also accepted, parse_url() tries its
-best to parse them correctly.
+This function is not meant to validate the given URL, it only breaks it up
+into the above listed parts. Partial URLs are also accepted, parse_url() tries
+its best to parse them correctly.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {url}
@@ -30,7 +30,7 @@ best to parse them correctly.
     just a specific URL component as a string (except when PHP_URL_PORT is
     given, in which case the return value will be an integer).
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 On seriously malformed URLs, parse_url() may return FALSE.
@@ -48,20 +48,20 @@ array are:
   * query - after the question mark ?
   * fragment - after the hashmark #
 
-If the {component} parameter is specified, parse_url() returns a string (or an 
+If the {component} parameter is specified, parse_url() returns a string (or an
 integer, in the case of PHP_URL_PORT) instead of an array. If the requested
 component doesn't exist within the given URL, NULL will be returned.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 5.4.7   Fixed host recognition when scheme is omitted and a leading component
         separator is present.
 5.3.3   Removed the E_WARNING that was emitted when URL parsing failed.
 5.1.2   Added the {component} parameter.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A parse_url() example
@@ -108,7 +108,7 @@ array(3) {
   string(17) "googleguy=googley"
 }
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -122,7 +122,7 @@ array(3) {
     requirements it makes an exception for the file:// scheme where triple
     slashes (file:///...) are allowed. For any other scheme this is invalid.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |pathinfo| - Returns information about a file path

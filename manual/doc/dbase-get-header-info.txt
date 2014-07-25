@@ -4,7 +4,7 @@ dbase_get_header_info
 
 dbase_get_header_info — Gets the header info of a database
 
-===============================================================================
+==============================================================================
 *Description*
 
     array dbase_get_header_info ( int $dbase_identifier )~
@@ -12,18 +12,18 @@ dbase_get_header_info — Gets the header info of a database
 Returns information on the column structure of the given database link
 identifier.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {dbase_identifier}
 
     The database link identifier, returned by |dbase_open| or |dbase_create|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-An indexed array with an entry for each column in the database. The array index
-starts at 0.
+An indexed array with an entry for each column in the database. The array
+index starts at 0.
 
 Each array element contains an associative array of column information, as
 described here:
@@ -44,7 +44,7 @@ offset
 
 If the database header information cannot be read, FALSE is returned.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Showing header information for a dBase database file

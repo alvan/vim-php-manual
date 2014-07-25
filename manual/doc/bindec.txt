@@ -4,7 +4,7 @@ bindec
 
 bindec — Binary to decimal
 
-===============================================================================
+==============================================================================
 *Description*
 
     number bindec ( string $binary_string )~
@@ -12,14 +12,14 @@ bindec — Binary to decimal
 Returns the decimal equivalent of the binary number represented by the
 {binary_string} argument.
 
-bindec() converts a binary number to an integer or, if needed for size reasons,
-float.
+bindec() converts a binary number to an integer or, if needed for size
+reasons, float.
 
 bindec() interprets all {binary_string} values as unsigned integers. This is
 because bindec() sees the most significant bit as another order of magnitude
 rather than as the sign bit.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {binary_string}
@@ -31,20 +31,20 @@ Warning
 The parameter must be a string. Using other data types will produce unexpected
 results.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The decimal value of {binary_string}
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
-        The function can now convert numbers that are too large to fit into the
-4.1.0   platforms integer type, larger values are returned as float in that
-        case.
+Version                              Description
+        The function can now convert numbers that are too large to fit into
+4.1.0   the platforms integer type, larger values are returned as float in
+        that case.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 bindec() example
@@ -158,7 +158,7 @@ bindec():     18446744073709551616
 NOTE:         interpreted to be the largest unsigned integer
               (18446744073709551615) but skewed by float precision
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |decbin| - Decimal to binary

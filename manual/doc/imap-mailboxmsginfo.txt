@@ -4,23 +4,23 @@ imap_mailboxmsginfo
 
 imap_mailboxmsginfo — Get information about the current mailbox
 
-===============================================================================
+==============================================================================
 *Description*
 
     object imap_mailboxmsginfo ( resource $imap_stream )~
 
-Checks the current mailbox status on the server. It is similar to |imap_status|
-, but will additionally sum up the size of all messages in the mailbox, which
+Checks the current mailbox status on the server. It is similar to |imap_status
+|, but will additionally sum up the size of all messages in the mailbox, which
 will take some additional time to execute.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { imap_stream}
 
     An IMAP stream returned by |imap_open|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the information in an object with following properties:
@@ -37,7 +37,7 @@ Size    mailbox size
 
 Returns FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 imap_mailboxmsginfo() example

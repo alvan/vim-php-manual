@@ -50,10 +50,10 @@ test.php
 <?>
 
 If the include occurs inside a function within the calling file, then all of
-the code contained in the called file will behave as though it had been defined
-inside that function. So, it will follow the variable scope of that function.
-An exception to this rule are magic constants which are evaluated by the parser
-before the include occurs.
+the code contained in the called file will behave as though it had been
+defined inside that function. So, it will follow the variable scope of that
+function. An exception to this rule are magic constants which are evaluated by
+the parser before the include occurs.
 
 Example #2 Including within functions
 
@@ -85,8 +85,8 @@ must be enclosed within valid PHP start and end tags.
 
 If "URL include wrappers" are enabled in PHP, you can specify the file to be
 included using a URL (via HTTP or other supported wrapper - see Supported
-Protocols and Wrappers for a list of protocols) instead of a local pathname. If
-the target server interprets the target file as PHP code, variables may be
+Protocols and Wrappers for a list of protocols) instead of a local pathname.
+If the target server interprets the target file as PHP code, variables may be
 passed to the included file using a URL request string as used with HTTP GET.
 This is not strictly speaking the same thing as including the file and having
 it inherit the parent file's variable scope; the script is actually being run
@@ -129,10 +129,11 @@ Security warning
 
 Remote file may be processed at the remote server (depending on the file
 extension and the fact if the remote server runs PHP or not) but it still has
-to produce a valid PHP script because it will be processed at the local server.
-If the file from the remote server should be processed there and outputted
-only, |readfile| is much better function to use. Otherwise, special care should
-be taken to secure the remote script to produce a valid and desired code.
+to produce a valid PHP script because it will be processed at the local
+server. If the file from the remote server should be processed there and
+outputted only, |readfile| is much better function to use. Otherwise, special
+care should be taken to secure the remote script to produce a valid and
+desired code.
 
 See also Remote files, |fopen| and |file| for related information.
 
@@ -143,9 +144,9 @@ terminate processing in that file and return to the script which called it.
 Also, it's possible to return values from included files. You can take the
 value of the include call as you would for a normal function. This is not,
 however, possible when including remote files unless the output of the remote
-file has valid PHP start and end tags (as with any local file). You can declare
-the needed variables within those tags and they will be introduced at whichever
-point the file was included.
+file has valid PHP start and end tags (as with any local file). You can
+declare the needed variables within those tags and they will be introduced at
+whichever point the file was included.
 
 Because include is a special language construct, parentheses are not needed
 around its argument. Take care when comparing return value.
@@ -207,8 +208,8 @@ declared, while PHP 4 doesn't complain about functions defined after |return|.
 It is recommended to use |include_once| instead of checking if the file was
 already included and conditionally return inside the included file.
 
-Another way to "include" a PHP file into a variable is to capture the output by
-using the Output Control Functions with include. For example:
+Another way to "include" a PHP file into a variable is to capture the output
+by using the Output Control Functions with include. For example:
 
 Example #6 Using output buffering to include a PHP file into a string
 
@@ -229,8 +230,8 @@ Example #6 Using output buffering to include a PHP file into a string
 In order to automatically include files within scripts, see also the
 auto_prepend_file and auto_append_file configuration options in php.ini.
 
-    Note: Because this is a language construct and not a function, it cannot be
-    called using variable functions.
+    Note: Because this is a language construct and not a function, it cannot
+    be called using variable functions.
 
 See also |require|, |require_once|, |include_once|, |get_included_files|, |
 readfile|, |virtual|, and include_path.

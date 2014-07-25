@@ -5,18 +5,18 @@ fann_create_train_from_callback
 fann_create_train_from_callback — Creates the training data struct from a user
 supplied function
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource fann_create_train_from_callback ( int $num_data , int $num_input~
     , int $num_output , collable $user_function )~
 
-Creates the training data struct from a user supplied function. As the training
-data are numerable (data 1, data 2...), the user must write a function that
-receives the number of the training data set (input, output) and returns the
-set.
+Creates the training data struct from a user supplied function. As the
+training data are numerable (data 1, data 2...), the user must write a
+function that receives the number of the training data set (input, output) and
+returns the set.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {num_data}
@@ -42,12 +42,12 @@ set.
     The function should return an associative array with keys input and output
     and two array values of input and output.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a train data resource on success, or FALSE on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 fann_create_train_from_callback() example
@@ -70,7 +70,7 @@ Example #1 fann_create_train_from_callback() example
     }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |fann_read_train_from_file| - Reads a file that stores training data

@@ -4,7 +4,7 @@ fbsql_create_db
 
 fbsql_create_db — Create a FrontBase database
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool fbsql_create_db ( string $database_name [, resource $link_identifier~
@@ -12,7 +12,7 @@ fbsql_create_db — Create a FrontBase database
 
 Attempts to create a new database on the specified server.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {database_name}
@@ -21,8 +21,8 @@ Attempts to create a new database on the specified server.
 
 { link_identifier}
 
-    A FrontBase link identifier returned by |fbsql_connect| or |fbsql_pconnect|
-    .
+    A FrontBase link identifier returned by |fbsql_connect| or |fbsql_pconnect
+    |.
 
     If optional and not specified, the function will try to find an open link
     to the FrontBase server and if no such link is found it will try to create
@@ -30,12 +30,12 @@ Attempts to create a new database on the specified server.
 
 {database_options}
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 fbsql_create_db() example
@@ -50,7 +50,7 @@ Example #1 fbsql_create_db() example
     }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |fbsql_drop_db| - Drop (delete) a FrontBase database

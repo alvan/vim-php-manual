@@ -4,17 +4,17 @@ stream_get_contents
 
 stream_get_contents — Reads remainder of a stream into a string
 
-===============================================================================
+==============================================================================
 *Description*
 
     string stream_get_contents ( resource $handle [, int $maxlength = -1 [,~
     int $offset = -1 ]] )~
 
-Identical to |file_get_contents|, except that stream_get_contents() operates on
-an already open stream resource and returns the remaining contents in a string,
-up to {maxlength} bytes and starting at the specified {offset}.
+Identical to |file_get_contents|, except that stream_get_contents() operates
+on an already open stream resource and returns the remaining contents in a
+string, up to {maxlength} bytes and starting at the specified {offset}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {handle} (resource)
@@ -27,21 +27,21 @@ up to {maxlength} bytes and starting at the specified {offset}.
 
 {offset} (integer)
 
-    Seek to the specified offset before reading. If this number is negative, no
-    seeking will occur and reading will start from the current position.
+    Seek to the specified offset before reading. If this number is negative,
+    no seeking will occur and reading will start from the current position.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a string or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version       Description
 5.1.0   The {offset} was added.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 stream_get_contents() example
@@ -65,12 +65,12 @@ Example #1 stream_get_contents() example
 
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: This function is binary-safe.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |fgets| - Gets line from file pointer

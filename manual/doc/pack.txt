@@ -4,7 +4,7 @@ pack
 
 pack — Pack data into binary string
 
-===============================================================================
+==============================================================================
 *Description*
 
     string pack ( string $format [, mixed $args [, mixed $... ]] )~
@@ -19,7 +19,7 @@ Note that the distinction between signed and unsigned values only affects the
 function |unpack|, where as function pack() gives the same result for signed
 and unsigned format codes.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {format}
@@ -28,9 +28,9 @@ and unsigned format codes.
     repeater argument. The repeater argument can be either an integer value or
     * for repeating to the end of the input data. For a, A, h, H the repeat
     count specifies how many characters of one data argument are taken, for @
-    it is the absolute position where to put the next data, for everything else
-    the repeat count specifies how many data arguments are consumed and packed
-    into the resulting binary string.
+    it is the absolute position where to put the next data, for everything
+    else the repeat count specifies how many data arguments are consumed and
+    packed into the resulting binary string.
 
     Currently implemented formats are:
 
@@ -61,19 +61,19 @@ and unsigned format codes.
 
 {args}
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a binary string containing data.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 5.5.0   The "Z" code was added with equivalent functionality to "a" for Perl
         compatibility.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 pack() example
@@ -85,7 +85,7 @@ Example #1 pack() example
 The resulting binary string will be 6 bytes long and contain the byte sequence
 0x12, 0x34, 0x78, 0x56, 0x41, 0x42.
 
-===============================================================================
+==============================================================================
 *Notes*
 
 Caution
@@ -108,7 +108,7 @@ don't), the only way to use the I pack format in the upper range is to create
 integer negative values with the same byte representation as the desired
 unsigned value.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |unpack| - Unpack data from binary string

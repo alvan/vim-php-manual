@@ -4,7 +4,7 @@ filemtime
 
 filemtime — Gets file modification time
 
-===============================================================================
+==============================================================================
 *Description*
 
     int filemtime ( string $filename )~
@@ -12,20 +12,20 @@ filemtime — Gets file modification time
 This function returns the time when the data blocks of a file were being
 written to, that is, the time when the content of the file was changed.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {filename}
 
     Path to the file.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the time the file was last modified, or FALSE on failure. The time is
 returned as a Unix timestamp, which is suitable for the |date| function.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 filemtime() example
@@ -40,12 +40,12 @@ Example #1 filemtime() example
     }
 <?>
 
-===============================================================================
+==============================================================================
 *Errors/Exceptions*
 
 Upon failure, an E_WARNING is emitted.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -61,7 +61,7 @@ As of PHP 5.0.0, this function can also be used with some URL wrappers. Refer
 to Supported Protocols and Wrappers to determine which wrappers support |stat|
 family of functionality.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |filectime| - Gets inode change time of file

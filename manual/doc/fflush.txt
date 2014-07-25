@@ -4,7 +4,7 @@ fflush
 
 fflush — Flushes the output to a file
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool fflush ( resource $handle )~
@@ -12,7 +12,7 @@ fflush — Flushes the output to a file
 This function forces a write of all buffered output to the resource pointed to
 by the file {handle}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {handle}
@@ -20,12 +20,12 @@ by the file {handle}.
     The file pointer must be valid, and must point to a file successfully
     opened by |fopen| or |fsockopen| (and not yet closed by |fclose|).
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 File write example using fflush()
@@ -41,7 +41,7 @@ Example #1 File write example using fflush()
     fclose($file);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |clearstatcache| - Clears file status cache

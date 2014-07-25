@@ -4,7 +4,7 @@ mcrypt_decrypt
 
 mcrypt_decrypt — Decrypts crypttext with given parameters
 
-===============================================================================
+==============================================================================
 *Description*
 
     string mcrypt_decrypt ( string $cipher , string $key , string $data ,~
@@ -12,7 +12,7 @@ mcrypt_decrypt — Decrypts crypttext with given parameters
 
 Decrypts the {data} and returns the unencrypted data.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {cipher}
@@ -32,8 +32,8 @@ Decrypts the {data} and returns the unencrypted data.
 
 {mode}
 
-    One of the MCRYPT_MODE_modename constants, or one of the following strings:
-    "ecb", "cbc", "cfb", "ofb", "nofb" or "stream".
+    One of the MCRYPT_MODE_modename constants, or one of the following
+    strings: "ecb", "cbc", "cfb", "ofb", "nofb" or "stream".
 
 {iv}
 
@@ -42,7 +42,7 @@ Decrypts the {data} and returns the unencrypted data.
     algorithm, the function issues a warning and uses an IV with all its bytes
     set to "\0".
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the decrypted data as a string.

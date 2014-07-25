@@ -4,7 +4,7 @@ unpack
 
 unpack — Unpack data from binary string
 
-===============================================================================
+==============================================================================
 *Description*
 
     array unpack ( string $format , string $data )~
@@ -16,7 +16,7 @@ have to name the different format codes and separate them by a slash /. If a
 repeater argument is present, then each of the array keys will have a sequence
 number behind the given name.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {format}
@@ -27,15 +27,15 @@ number behind the given name.
 
     The packed data.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an associative array containing unpacked elements of binary string.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
         Changes were made to bring this function into line with Perl:
 
         The "a" code now retains trailing NULL bytes.
@@ -46,7 +46,7 @@ Version                               Description
         The "Z" code was added for NULL-padded strings, and removes trailing
         NULL bytes.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 unpack() example
@@ -68,7 +68,7 @@ Example #2 unpack() example with a repeater
 
 The resulting array will contain the entries "chars1", "chars2" and "int".
 
-===============================================================================
+==============================================================================
 *Notes*
 
 Caution
@@ -80,9 +80,9 @@ specified.
 
 Caution
 
-Be aware that if you do not name an element, an empty string is used. If you do
-not name more than one element, this means that some data is overwritten as the
-keys are the same such as in:
+Be aware that if you do not name an element, an empty string is used. If you
+do not name more than one element, this means that some data is overwritten as
+the keys are the same such as in:
 
 Example #3 unpack() example with unnamed keys
 
@@ -92,11 +92,11 @@ Example #3 unpack() example with unnamed keys
     var_dump($array);
 <?>
 
-The resulting array will contain the entries "1" with value 160 and "2" with 66
-. The first value from the c specifier is overwritten by the first value from
-the n specifier.
+The resulting array will contain the entries "1" with value 160 and "2" with
+66. The first value from the c specifier is overwritten by the first value
+from the n specifier.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |pack| - Pack data into binary string

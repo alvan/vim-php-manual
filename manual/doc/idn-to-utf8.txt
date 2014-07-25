@@ -4,7 +4,7 @@ idn_to_utf8
 
 idn_to_utf8 — Convert domain name from IDNA ASCII to Unicode.
 
-===============================================================================
+==============================================================================
 *Description*
 
 Procedural style
@@ -12,10 +12,10 @@ Procedural style
     string idn_to_utf8 ( string $domain [, int $options = 0 [, int $variant =~
     INTL_IDNA_VARIANT_2003 [, array &$idna_info ]]] )~
 
-This function converts Unicode domain name from IDNA ASCII-compatible format to
-plain Unicode, encoded in UTF-8.
+This function converts Unicode domain name from IDNA ASCII-compatible format
+to plain Unicode, encoded in UTF-8.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {domain}
@@ -42,19 +42,19 @@ plain Unicode, encoded in UTF-8.
     result and 'errors', which is an int representing a bitset of the error
     constants IDNA_ERROR_*.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Domain name in Unicode, encoded in UTF-8. or FALSE on failure
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-     Version                               Description
+     Version                              Description
 5.4.0/PECL        Added the parameters {variant} and {idna_info}; UTS #46
 2.0.0b1           support.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 idn_to_utf8() example
@@ -69,7 +69,7 @@ The above example will output:
 
 täst.de
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |idn_to_unicode| - Alias of idn_to_utf8

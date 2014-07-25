@@ -4,7 +4,7 @@ oci_bind_by_name
 
 oci_bind_by_name — Binds a PHP variable to an Oracle placeholder
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool oci_bind_by_name ( resource $statement , string $bv_name , mixed~
@@ -16,12 +16,12 @@ way to avoid SQL Injection security issues.
 
 Binding allows the database to reuse the statement context and caches from
 previous executions of the statement, even if another user or process
-originally executed it. Binding reduces SQL Injection concerns because the data
-associated with a bind variable is never treated as part of the SQL statement.
-It does not need quoting or escaping.
+originally executed it. Binding reduces SQL Injection concerns because the
+data associated with a bind variable is never treated as part of the SQL
+statement. It does not need quoting or escaping.
 
-PHP variables that have been bound can be changed and the statement re-executed
-without needing to re-parse the statement or re-bind.
+PHP variables that have been bound can be changed and the statement
+re-executed without needing to re-parse the statement or re-bind.
 
 In Oracle, bind variables are commonly divided into IN binds for values that
 are passed into the database, and OUT binds for values that are returned to
@@ -35,9 +35,9 @@ For IN binds it is recommended to set the {maxlength} length if the statement
 is re-executed multiple times with different values for the PHP variable.
 Otherwise Oracle may truncate data to the length of the initial PHP variable
 value. If you don't know what the maximum length will be, then re-call 
-oci_bind_by_name() with the current data size prior to each |oci_execute| call.
-Binding an unnecessarily large length will have an impact on process memory in
-the database.
+oci_bind_by_name() with the current data size prior to each |oci_execute|
+call. Binding an unnecessarily large length will have an impact on process
+memory in the database.
 
 A bind call tells Oracle which memory address to read data from. For IN binds
 that address needs to contain valid data when |oci_execute| is called. This
@@ -53,7 +53,7 @@ benefit from binding. However in both cases, binding might be safer than
 joining strings into a SQL statement, as this can be a security risk if
 unfiltered user text is concatenated.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {statement}
@@ -79,9 +79,9 @@ unfiltered user text is concatenated.
 
 {type}
 
-    The datatype that Oracle will treat the data as. The default {type} used is
-    SQLT_CHR. Oracle will convert the data between this type and the database
-    column (or PL/SQL variable type), when possible.
+    The datatype that Oracle will treat the data as. The default {type} used
+    is SQLT_CHR. Oracle will convert the data between this type and the
+    database column (or PL/SQL variable type), when possible.
 
     If you need to bind an abstract datatype (LOB/ROWID/BFILE) you need to
     allocate it first using the |oci_new_descriptor| function. The {length} is
@@ -115,12 +115,12 @@ unfiltered user text is concatenated.
       + SQLT_BOL or OCI_B_BOL - for PL/SQL BOOLEANs (Requires OCI8 2.0.7 and
         Oracle Database 12c)
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Inserting data with oci_bind_by_name()
@@ -136,8 +136,8 @@ Example #1 Inserting data with oci_bind_by_name()
         trigger_error(htmlentities($m['message']), E_USER_ERROR);
     }
 
-    $stid = oci_parse($conn,"INSERT INTO mytab (id, text) VALUES(:id_bv, :text_bv)"
-    );
+    $stid = oci_parse($conn,"INSERT INTO mytab (id, text) VALUES(:id_bv, :text_bv)
+    ");
 
     $id = 1;
     $text = "Data to insert     ";
@@ -588,20 +588,20 @@ Example #13 Binding a PL/SQL BOOLEAN
 
 <?>
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Notes*
 
 Warning
 
 Do not use magic_quotes_gpc or |addslashes| and oci_bind_by_name()
 simultaneously as no quoting is needed. Any magically applied quotes will be
-written into your database because oci_bind_by_name() inserts data verbatim and
-does not remove quotes or escape characters.
+written into your database because oci_bind_by_name() inserts data verbatim
+and does not remove quotes or escape characters.
 
     Note:
 
@@ -612,8 +612,8 @@ does not remove quotes or escape characters.
 
     Note:
 
-    The PHP {variable} argument is a reference. Some forms of loops do not work
-    as expected:
+    The PHP {variable} argument is a reference. Some forms of loops do not
+    work as expected:
 
     <?php >
     foreach ($myarray as $key => $value)  {
@@ -630,7 +630,7 @@ does not remove quotes or escape characters.
     }
 <    ?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |oci_bind_array_by_name| - Binds a PHP array to an Oracle PL/SQL array

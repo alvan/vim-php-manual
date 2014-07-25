@@ -4,16 +4,16 @@ cubrid_load_from_glo
 
 cubrid_load_from_glo — Read data from a GLO instance and save it in a file
 
-===============================================================================
+==============================================================================
 *Description*
 
     int cubrid_load_from_glo ( resource $conn_identifier , string $oid ,~
     string $file_name )~
 
-The cubrid_load_from_glo() function is used to read a data from a glo instance,
-and saves it in a designated file.
+The cubrid_load_from_glo() function is used to read a data from a glo
+instance, and saves it in a designated file.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {conn_identifier}
@@ -28,14 +28,14 @@ and saves it in a designated file.
 
     Name of the file where you want to save the data in.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 TRUE, when process is successful.
 
 FALSE, when process is unsuccessful.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_load_from_glo() example
@@ -52,7 +52,7 @@ Example #1 cubrid_load_from_glo() example
     }
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -64,7 +64,7 @@ Example #1 cubrid_load_from_glo() example
 
     This function is removed from CUBRID 3.1.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |cubrid_new_glo| - Create a glo instance

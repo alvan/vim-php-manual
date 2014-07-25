@@ -4,7 +4,7 @@ mcrypt_module_open
 
 mcrypt_module_open — Opens the module of the algorithm and the mode to be used
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource mcrypt_module_open ( string $algorithm , string~
@@ -15,7 +15,7 @@ name of the algorithm is specified in algorithm, e.g. "twofish" or is one of
 the MCRYPT_ciphername constants. The module is closed by calling |
 mcrypt_module_close|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {algorithm}
@@ -26,16 +26,16 @@ mcrypt_module_close|.
 {algorithm_directory}
 
     The {algorithm_directory} parameter is used to locate the encryption
-    module. When you supply a directory name, it is used. When you set it to an
-    empty string (""), the value set by the mcrypt.algorithms_dir php.ini
+    module. When you supply a directory name, it is used. When you set it to
+    an empty string (""), the value set by the mcrypt.algorithms_dir php.ini
     directive is used. When it is not set, the default directory that is used
     is the one that was compiled into libmcrypt (usually /usr/local/lib/
     libmcrypt).
 
 {mode}
 
-    One of the MCRYPT_MODE_modename constants, or one of the following strings:
-    "ecb", "cbc", "cfb", "ofb", "nofb" or "stream".
+    One of the MCRYPT_MODE_modename constants, or one of the following
+    strings: "ecb", "cbc", "cfb", "ofb", "nofb" or "stream".
 
 {mode_directory}
 
@@ -45,12 +45,12 @@ mcrypt_module_close|.
     used. When it is not set, the default directory that is used is the one
     that was compiled-in into libmcrypt (usually /usr/local/lib/libmcrypt).
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Normally it returns an encryption descriptor, or FALSE on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mcrypt_module_open() Examples
@@ -104,7 +104,7 @@ Example #2 Using mcrypt_module_open() in encryption
         echo trim($decrypted) . "\n";
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mcrypt_module_close| - Closes the mcrypt module

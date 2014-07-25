@@ -7,7 +7,7 @@ maxdb_stmt::prepare
 maxdb_stmt_prepare -- maxdb_stmt::prepare — Prepare an SQL statement for
 execution
 
-===============================================================================
+==============================================================================
 *Description*
 
 Procedural style
@@ -39,22 +39,22 @@ positions.
 
     However, they are not allowed for identifiers (such as table or column
     names), in the select list that names the columns to be returned by a
-    SELECT statement), or to specify both operands of a binary operator such as
-    the = equal sign. The latter restriction is necessary because it would be
-    impossible to determine the parameter type. In general, parameters are
-    legal only in Data Manipulation Languange (DML) statements, and not in Data
-    Defination Language (DDL) statements.
+    SELECT statement), or to specify both operands of a binary operator such
+    as the = equal sign. The latter restriction is necessary because it would
+    be impossible to determine the parameter type. In general, parameters are
+    legal only in Data Manipulation Languange (DML) statements, and not in
+    Data Defination Language (DDL) statements.
 
 The parameter markers must be bound to application variables using |
 maxdb_stmt_bind_param| and/or |maxdb_stmt_bind_result| before executing the
 statement or fetching rows.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Object oriented style
@@ -139,14 +139,14 @@ The above example will output something similar to:
 
 Portland is in district OR
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
-  * |maxdb_stmt_init| - Initializes a statement and returns an resource for use
-    with maxdb_stmt_prepare
+  * |maxdb_stmt_init| - Initializes a statement and returns an resource for
+    use with maxdb_stmt_prepare
   * |maxdb_stmt_execute| - Executes a prepared Query
-  * |maxdb_stmt_fetch| - Fetch results from a prepared statement into the bound
-    variables
+  * |maxdb_stmt_fetch| - Fetch results from a prepared statement into the
+    bound variables
   * |maxdb_stmt_bind_param| - Binds variables to a prepared statement as
     parameters
   * |maxdb_stmt_bind_result| - Binds variables to a prepared statement for

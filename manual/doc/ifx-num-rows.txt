@@ -4,7 +4,7 @@ ifx_num_rows
 
 ifx_num_rows — Count the rows already fetched from a query
 
-===============================================================================
+==============================================================================
 *Description*
 
     int ifx_num_rows ( resource $result_id )~
@@ -12,7 +12,7 @@ ifx_num_rows — Count the rows already fetched from a query
 Gives the number of rows fetched so far for a query with {result_id} after a |
 ifx_query| or |ifx_do| query.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result_id}
@@ -20,12 +20,12 @@ ifx_query| or |ifx_do| query.
     {result_id} is a valid resultid returned by |ifx_query| or |ifx_prepare|
     (select type queries only!).
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the number of fetched rows or FALSE on errors.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ifx_num_fields| - Returns the number of columns in the query

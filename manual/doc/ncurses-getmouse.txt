@@ -4,25 +4,25 @@ ncurses_getmouse
 
 ncurses_getmouse — Reads mouse event
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool ncurses_getmouse ( array &$mevent )~
 Warning
 
 This function is EXPERIMENTAL. The behaviour of this function, its name, and
-surrounding documentation may change without notice in a future release of PHP.
-This function should be used at your own risk.
+surrounding documentation may change without notice in a future release of
+PHP. This function should be used at your own risk.
 
 ncurses_getmouse() reads mouse event out of queue.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {mevent}
 
-    Event options will be delivered in this parameter which has to be an array,
-    passed by reference (see example below).
+    Event options will be delivered in this parameter which has to be an
+    array, passed by reference (see example below).
 
     On success an associative array with following keys will be delivered:
       + "id" : Id to distinguish multiple devices
@@ -35,13 +35,13 @@ ncurses_getmouse() reads mouse event out of queue.
 
       + "mmask" : Mouse action
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns FALSE if a mouse event is actually visible in the given window,
 otherwise returns TRUE.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 ncurses_getmouse() example
@@ -62,7 +62,7 @@ Example #1 ncurses_getmouse() example
     }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ncurses_ungetmouse| - Pushes mouse event to queue

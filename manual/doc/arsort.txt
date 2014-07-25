@@ -4,18 +4,18 @@ arsort
 
 arsort — Sort an array in reverse order and maintain index association
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool arsort ( array &$array [, int $sort_flags = SORT_REGULAR ] )~
 
-This function sorts an array such that array indices maintain their correlation
-with the array elements they are associated with.
+This function sorts an array such that array indices maintain their
+correlation with the array elements they are associated with.
 
 This is used mainly when sorting associative arrays where the actual element
 order is significant.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {array}
@@ -27,12 +27,12 @@ order is significant.
     You may modify the behavior of the sort using the optional parameter
     {sort_flags}, for details see |sort|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 arsort() example
@@ -56,7 +56,7 @@ c = apple
 The fruits have been sorted in reverse alphabetical order, and the index
 associated with each element has been maintained.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |asort| - Sort an array and maintain index association

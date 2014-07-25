@@ -7,7 +7,7 @@ maxdb::warning_count
 maxdb_warning_count -- maxdb::warning_count — Returns the number of warnings
 from the last query for the given link
 
-===============================================================================
+==============================================================================
 *Description*
 
 Procedural style
@@ -18,15 +18,15 @@ Object oriented style
 
 int $maxdb->warning_count;
 
-maxdb_warning_count() returns the number of warnings from the last query in the
-connection represented by the {link} parameter.
+maxdb_warning_count() returns the number of warnings from the last query in
+the connection represented by the {link} parameter.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Number of warnings or zero if there are no warnings.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Object oriented style
@@ -84,12 +84,13 @@ The above example will output something similar to:
 Warning: maxdb_query(): -8004 POS(62) Constant must be compatible with column type and length <...>
 Number of warning: 0
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |maxdb_errno| - Returns the error code for the most recent function call
   * |maxdb_error| - Returns a string description of the last error
-  * |maxdb_sqlstate| - Returns the SQLSTATE error from previous MaxDB operation
+  * |maxdb_sqlstate| - Returns the SQLSTATE error from previous MaxDB
+    operation
 
 
 vim:ft=help:

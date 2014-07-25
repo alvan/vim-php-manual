@@ -4,7 +4,7 @@ oci_new_connect
 
 oci_new_connect — Connect to the Oracle server using a unique connection
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource oci_new_connect ( string $username , string $password [, string~
@@ -17,7 +17,7 @@ connections and will always return a brand-new freshly opened connection
 handle. This is useful if your application needs transactional isolation
 between two sets of queries.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {username}
@@ -65,28 +65,29 @@ between two sets of queries.
 
 {session_mode}
 
-    This parameter is available since version PHP 5 (PECL OCI8 1.1) and accepts
-    the following values: OCI_DEFAULT, OCI_SYSOPER and OCI_SYSDBA. If either
-    OCI_SYSOPER or OCI_SYSDBA were specified, this function will try to
+    This parameter is available since version PHP 5 (PECL OCI8 1.1) and
+    accepts the following values: OCI_DEFAULT, OCI_SYSOPER and OCI_SYSDBA. If
+    either OCI_SYSOPER or OCI_SYSDBA were specified, this function will try to
     establish privileged connection using external credentials. Privileged
     connections are disabled by default. To enable them you need to set
     oci8.privileged_connect to On.
 
     PHP 5.3 (PECL OCI8 1.3.4) introduced the OCI_CRED_EXT mode value. This
-    tells Oracle to use External or OS authentication, which must be configured
-    in the database. The OCI_CRED_EXT flag can only be used with username of "/
-    " and a empty password. oci8.privileged_connect may be On or Off.
+    tells Oracle to use External or OS authentication, which must be
+    configured in the database. The OCI_CRED_EXT flag can only be used with
+    username of "/" and a empty password. oci8.privileged_connect may be On or
+    Off.
 
     OCI_CRED_EXT may be combined with the OCI_SYSOPER or OCI_SYSDBA modes.
 
     OCI_CRED_EXT is not supported on Windows for security reasons.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a connection identifier or FALSE on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 The following demonstrates how you can separate connections.
@@ -137,7 +138,7 @@ Example #1 oci_new_connect() example
 
 See |oci_connect| for further examples of parameter usage.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |oci_connect| - Connect to an Oracle database

@@ -4,7 +4,7 @@ pcntl_alarm
 
 pcntl_alarm — Set an alarm clock for delivery of a signal
 
-===============================================================================
+==============================================================================
 *Description*
 
     int pcntl_alarm ( int $seconds )~
@@ -13,7 +13,7 @@ Creates a timer that will send a SIGALRM signal to the process after the given
 number of seconds. Any call to pcntl_alarm() will cancel any previously set
 alarm.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {seconds}
@@ -21,11 +21,12 @@ alarm.
     The number of seconds to wait. If {seconds} is zero, no new alarm is
     created.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the time in seconds that any previously scheduled alarm had remaining
-before it was to be delivered, or 0 if there was no previously scheduled alarm.
+before it was to be delivered, or 0 if there was no previously scheduled
+alarm.
 
 
 vim:ft=help:

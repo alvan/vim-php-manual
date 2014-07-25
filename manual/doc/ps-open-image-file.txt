@@ -4,15 +4,15 @@ ps_open_image_file
 
 ps_open_image_file — Opens image from file
 
-===============================================================================
+==============================================================================
 *Description*
 
-    int ps_open_image_file ( resource $psdoc , string $type , string $filename~
-    [, string $stringparam [, int $intparam = 0 ]] )~
+    int ps_open_image_file ( resource $psdoc , string $type , string~
+    $filename [, string $stringparam [, int $intparam = 0 ]] )~
 
 Loads an image for later use.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {psdoc}
@@ -35,13 +35,13 @@ Loads an image for later use.
 
     Not used.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns identifier of image or zero in case of an error. The identifier is a
 positive number greater than 0.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ps_open_image| - Reads an image for later placement

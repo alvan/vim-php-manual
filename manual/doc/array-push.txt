@@ -4,7 +4,7 @@ array_push
 
 array_push — Push one or more elements onto the end of array
 
-===============================================================================
+==============================================================================
 *Description*
 
     int array_push ( array &$array , mixed $value1 [, mixed $... ] )~
@@ -22,9 +22,10 @@ repeated for each passed value.
     function.
 
     Note: array_push() will raise a warning if the first argument is not an
-    array. This differs from the $var[] behaviour where a new array is created.
+    array. This differs from the $var[] behaviour where a new array is
+    created.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {array}
@@ -35,12 +36,12 @@ repeated for each passed value.
 
     The first value to push onto the end of the {array}.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the new number of elements in the array.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 array_push() example
@@ -61,12 +62,13 @@ Array
     [3] => raspberry
 )
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |array_pop| - Pop the element off the end of array
   * |array_shift| - Shift an element off the beginning of array
-  * |array_unshift| - Prepend one or more elements to the beginning of an array
+  * |array_unshift| - Prepend one or more elements to the beginning of an
+    array
 
 
 vim:ft=help:

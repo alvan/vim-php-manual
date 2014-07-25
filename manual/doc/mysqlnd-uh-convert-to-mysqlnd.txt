@@ -5,15 +5,15 @@ mysqlnd_uh_convert_to_mysqlnd
 mysqlnd_uh_convert_to_mysqlnd — Converts a MySQL connection handle into a
 mysqlnd connection handle
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource mysqlnd_uh_convert_to_mysqlnd ( mysqli &$mysql_connection )~
 
 Converts a MySQL connection handle into a mysqlnd connection handle. After
-conversion you can execute mysqlnd library calls on the connection handle. This
-can be used to access mysqlnd functionality not made available through user
-space API calls.
+conversion you can execute mysqlnd library calls on the connection handle.
+This can be used to access mysqlnd functionality not made available through
+user space API calls.
 
 The function can be disabled with mysqlnd_uh.enable. If mysqlnd_uh.enable is
 set to FALSE the function will not install the proxy and always return TRUE.
@@ -22,26 +22,26 @@ may read like PHP Warning: mysqlnd_uh_convert_to_mysqlnd(): (Mysqlnd User
 Handler) The plugin has been disabled by setting the configuration parameter
 mysqlnd_uh.enable = false. You are not allowed to call this function [...].
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {MySQL connection handle}
 
     A MySQL connection handle of type mysql, mysqli or PDO_MySQL.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 A mysqlnd connection handle.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 5.4.0   The {mysql_connection} parameter can now be of type mysql, PDO_MySQL,
         or mysqli. Before, only the mysqli type was allowed.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mysqlnd_uh_convert_to_mysqlnd() example
@@ -75,7 +75,7 @@ array(1) {
   }
 }
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * mysqlnd_uh.enable

@@ -4,7 +4,7 @@ putenv
 
 putenv — Sets the value of an environment variable
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool putenv ( string $setting )~
@@ -22,23 +22,23 @@ PHP_FOO=BAR). Note: if this directive is empty, PHP will let the user modify
 ANY environment variable!
 
 The safe_mode_protected_env_vars directive contains a comma-delimited list of
-environment variables, that the end user won't be able to change using putenv()
-. These variables will be protected even if safe_mode_allowed_env_vars is set
-to allow to change them.
+environment variables, that the end user won't be able to change using putenv
+(). These variables will be protected even if safe_mode_allowed_env_vars is
+set to allow to change them.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {setting}
 
     The setting, like "FOO=BAR"
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Setting an environment variable
@@ -47,15 +47,15 @@ Example #1 Setting an environment variable
     putenv("UNIQID=$uniqid");
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
 Warning
 
-The safe_mode_allowed_env_vars and safe_mode_protected_env_vars directives only
-take effect when safe_mode is enabled.
+The safe_mode_allowed_env_vars and safe_mode_protected_env_vars directives
+only take effect when safe_mode is enabled.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |getenv| - Gets the value of an environment variable

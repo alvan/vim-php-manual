@@ -4,14 +4,14 @@ spl_autoload_register
 
 spl_autoload_register — Register given function as __autoload() implementation
 
-===============================================================================
+==============================================================================
 *Description*
 
-    bool spl_autoload_register ([ callable $autoload_function [, bool $throw =~
-    true [, bool $prepend = false ]]] )~
+    bool spl_autoload_register ([ callable $autoload_function [, bool $throw~
+    = true [, bool $prepend = false ]]] )~
 
-Register a function with the spl provided __autoload stack. If the stack is not
-yet activated it will be activated.
+Register a function with the spl provided __autoload stack. If the stack is
+not yet activated it will be activated.
 
 If your code has an existing |__autoload| function then this function must be
 explicitly registered on the __autoload stack. This is because 
@@ -23,7 +23,7 @@ for this. It effectively creates a queue of autoload functions, and runs
 through each of them in the order they are defined. By contrast, |__autoload|
 may only be defined once.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {autoload_function}
@@ -41,19 +41,19 @@ may only be defined once.
     If true, spl_autoload_register() will prepend the autoloader on the
     autoload stack instead of appending it.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version            Description
 5.3.0   Namespaces support was introduced.
 5.3.0   The {prepend} parameter was added.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 spl_autoload_register() as a replacement for an |__autoload|
@@ -101,7 +101,7 @@ The above example will output something similar to:
 [[Foobar\InexistentClass]]
 Fatal error: Class 'Foobar\InexistentClass' not found in ...
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |__autoload| - Attempt to load undefined class

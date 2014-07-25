@@ -4,7 +4,7 @@ dl
 
 dl — Loads a PHP extension at runtime
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool dl ( string $library )~
@@ -19,7 +19,7 @@ Warning
 
 This function has been removed from some SAPIs in PHP 5.3.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {library}
@@ -37,17 +37,18 @@ This function has been removed from some SAPIs in PHP 5.3.
     Unix - If not explicitly set in the php.ini, the default extension
     directory depends on
       + whether PHP has been built with --enable-debug or not
-      + whether PHP has been built with (experimental) ZTS (Zend Thread Safety)
-        support or not
+      + whether PHP has been built with (experimental) ZTS (Zend Thread
+        Safety) support or not
       + the current internal ZEND_MODULE_API_NO (Zend internal module API
         number, which is basically the date on which a major module API change
         happened, e.g. 20010901)
-    Taking into account the above, the directory then defaults to <install-dir>
-    /lib/php/extensions/ <debug-or-not>-<zts-or-not>-ZEND_MODULE_API_NO, e.g. /
-    usr/local/php/lib/php/extensions/debug-non-zts-20010901 or /usr/local/php/
-    lib/php/extensions/no-debug-zts-20010901.
+    Taking into account the above, the directory then defaults to
+    <install-dir>/lib/php/extensions/ <debug-or-not>-<zts-or-not>
+    -ZEND_MODULE_API_NO, e.g. /usr/local/php/lib/php/extensions/
+    debug-non-zts-20010901 or /usr/local/php/lib/php/extensions/
+    no-debug-zts-20010901.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure. If the functionality of loading
@@ -56,7 +57,7 @@ or by enabling safe mode in php.ini) an E_ERROR is emitted and execution is
 stopped. If dl() fails because the specified library couldn't be loaded, in
 addition to FALSE an E_WARNING message is emitted.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 dl() examples
@@ -78,21 +79,21 @@ Example #1 dl() examples
     }
 <?>
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
         dl() is now disabled in some SAPIs due to stability issues. The only
 5.3.0   SAPIs that allow dl() are CLI and Embed. Use the Extension Loading
         Directives instead.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
 
-    dl() is not supported when PHP is built with ZTS support. Use the Extension
-    Loading Directives instead.
+    dl() is not supported when PHP is built with ZTS support. Use the
+    Extension Loading Directives instead.
 
     Note:
 
@@ -100,7 +101,7 @@ Version                               Description
 
     Note: This function is disabled when PHP is running in safe mode.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * Extension Loading Directives

@@ -4,7 +4,7 @@ set_error_handler
 
 set_error_handler — Sets a user-defined error handler function
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed set_error_handler ( callable $error_handler [, int $error_types =~
@@ -14,15 +14,15 @@ Sets a user function ({error_handler}) to handle errors in a script.
 
 This function can be used for defining your own way of handling errors during
 runtime, for example in applications in which you need to do cleanup of data/
-files when a critical error happens, or when you need to trigger an error under
-certain conditions (using |trigger_error|).
+files when a critical error happens, or when you need to trigger an error
+under certain conditions (using |trigger_error|).
 
 It is important to remember that the standard PHP error handler is completely
 bypassed for the error types specified by {error_types} unless the callback
-function returns FALSE. |error_reporting| settings will have no effect and your
-error handler will be called regardless - however you are still able to read
-the current value of error_reporting and act appropriately. Of particular note
-is that this value will be 0 if the statement that caused the error was
+function returns FALSE. |error_reporting| settings will have no effect and
+your error handler will be called regardless - however you are still able to
+read the current value of error_reporting and act appropriately. Of particular
+note is that this value will be 0 if the statement that caused the error was
 prepended by the @ error-control operator.
 
 Also note that it is your responsibility to |die| if necessary. If the
@@ -34,10 +34,10 @@ E_ERROR, E_PARSE, E_CORE_ERROR, E_CORE_WARNING, E_COMPILE_ERROR,
 E_COMPILE_WARNING, and most of E_STRICT raised in the file where 
 set_error_handler() is called.
 
-If errors occur before the script is executed (e.g. on file uploads) the custom
-error handler cannot be called since it is not registered at that time.
+If errors occur before the script is executed (e.g. on file uploads) the
+custom error handler cannot be called since it is not registered at that time.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {error_handler}
@@ -56,8 +56,8 @@ error handler cannot be called since it is not registered at that time.
         The second parameter, {errstr}, contains the error message, as a
         string.
     {errfile}
-        The third parameter is optional, {errfile}, which contains the filename
-        that the error was raised in, as a string.
+        The third parameter is optional, {errfile}, which contains the
+        filename that the error was raised in, as a string.
     {errline}
         The fourth parameter is optional, {errline}, which contains the line
         number the error was raised at, as an integer.
@@ -77,28 +77,28 @@ error handler cannot be called since it is not registered at that time.
     Without this mask set the {error_handler} will be called for every error
     regardless to the setting of the error_reporting setting.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a string containing the previously defined error handler (if any). If
 the built-in error handler is used NULL is returned. NULL is also returned in
-case of an error such as an invalid callback. If the previous error handler was
-a class method, this function will return an indexed array with the class and
-the method name.
+case of an error such as an invalid callback. If the previous error handler
+was a class method, this function will return an indexed array with the class
+and the method name.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 5.5.0   {error_handler} now accepts NULL.
 5.2.0   The error handler must return FALSE to populate $php_errormsg.
 5.0.0   The {error_types} parameter was introduced.
-4.3.0   Instead of a function name, an array containing an object reference and
-        a method name can also be supplied as the {error_handler}.
+4.3.0   Instead of a function name, an array containing an object reference
+        and a method name can also be supplied as the {error_handler}.
 4.0.2   Three optional parameters for the {error_handler} user function was
         introduced. These are the filename, the line number, and the context.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Error handling with set_error_handler() and |trigger_error|
@@ -145,8 +145,8 @@ errors and handling them with a user defined function:
     function scale_by_log($vect, $scale)
     {
         if (!is_numeric($scale) || $scale <= 0) {
-            trigger_error("log(x) for x <= 0 is undefined, you used: scale = $scale
-    ", E_USER_ERROR);
+            trigger_error("log(x) for x <= 0 is undefined, you used: scale = 
+    $scale", E_USER_ERROR);
         }
 
         if (!is_array($vect)) {
@@ -229,7 +229,7 @@ vector d - fatal error
   Fatal error on line 35 in file trigger_error.php, PHP 5.2.1 (FreeBSD)<br />
 Aborting...<br />
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * ErrorException

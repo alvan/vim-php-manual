@@ -4,7 +4,7 @@ curl_close
 
 curl_close — Close a cURL session
 
-===============================================================================
+==============================================================================
 *Description*
 
     void curl_close ( resource $ch )~
@@ -12,19 +12,19 @@ curl_close — Close a cURL session
 Closes a cURL session and frees all resources. The cURL handle, {ch}, is also
 deleted.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {ch}
 
     A cURL handle returned by |curl_init|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 No value is returned.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Initializing a new cURL session and fetching a web page
@@ -44,7 +44,7 @@ Example #1 Initializing a new cURL session and fetching a web page
     curl_close($ch);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |curl_init| - Initialize a cURL session

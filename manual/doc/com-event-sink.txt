@@ -4,7 +4,7 @@ com_event_sink
 
 com_event_sink — Connect events from a COM object to a PHP object
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool com_event_sink ( variant $comobject , object $sinkobject [, mixed~
@@ -17,7 +17,7 @@ Be careful how you use this feature; if you are doing something similar to the
 example below, then it doesn't really make sense to run it in a web server
 context.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {comobject}
@@ -35,12 +35,12 @@ context.
     by setting {sinkinterface} to the name of the dispinterface that you want
     to use.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 COM event sink example
@@ -74,7 +74,7 @@ Example #1 COM event sink example
     $ie = null;
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |com_print_typeinfo| - Print out a PHP class definition for a dispatchable

@@ -4,14 +4,14 @@ dbase_get_record
 
 dbase_get_record — Gets a record from a database as an indexed array
 
-===============================================================================
+==============================================================================
 *Description*
 
     array dbase_get_record ( int $dbase_identifier , int $record_number )~
 
 Gets a record from a database as an indexed array.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {dbase_identifier}
@@ -22,7 +22,7 @@ Gets a record from a database as an indexed array.
 
     The index of the record.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 An indexed array with the record. This array will also include an associative
@@ -37,7 +37,7 @@ Each field is converted to the appropriate PHP type, except:
 
 On error, dbase_get_record() will return FALSE.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |dbase_get_record_with_names| - Gets a record from a database as an

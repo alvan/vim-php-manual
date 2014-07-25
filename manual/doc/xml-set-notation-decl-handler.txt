@@ -4,7 +4,7 @@ xml_set_notation_decl_handler
 
 xml_set_notation_decl_handler — Set up notation declaration handler
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool xml_set_notation_decl_handler ( resource $parser , callable $handler~
@@ -21,7 +21,7 @@ format:
 See » section 4.7 of the XML 1.0 spec for the definition of notation
 declarations.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {parser}
@@ -36,8 +36,8 @@ declarations.
 
     The function named by {handler} must accept five parameters:
 
-    handler ( resource $parser , string $notation_name , string $base , string~
-    $system_id , string $public_id )~
+    handler ( resource $parser , string $notation_name , string $base ,~
+    string $system_id , string $public_id )~
 
     {parser}
         The first parameter, parser, is a reference to the XML parser calling
@@ -60,7 +60,7 @@ declarations.
         Note: Instead of a function name, an array containing an object
         reference and a method name can also be supplied.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.

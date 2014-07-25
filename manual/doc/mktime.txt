@@ -4,7 +4,7 @@ mktime
 
 mktime — Get Unix timestamp for a date
 
-===============================================================================
+==============================================================================
 *Description*
 
     int mktime ([ int $hour = date("H") [, int $minute =~
@@ -12,14 +12,14 @@ mktime — Get Unix timestamp for a date
     date("n") [, int $day = date("j") [, int $year =~
     date("Y") [, int $is_dst = -1 ]]]]]]] )~
 
-Returns the Unix timestamp corresponding to the arguments given. This timestamp
-is a long integer containing the number of seconds between the Unix Epoch
-(January 1 1970 00:00:00 GMT) and the time specified.
+Returns the Unix timestamp corresponding to the arguments given. This
+timestamp is a long integer containing the number of seconds between the Unix
+Epoch (January 1 1970 00:00:00 GMT) and the time specified.
 
 Arguments may be left out in order from right to left; any arguments thus
 omitted will be set to the current value according to the local date and time.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -27,7 +27,7 @@ omitted will be set to the current value according to the local date and time.
     As of PHP 5.1, when called with no arguments, mktime() throws an E_STRICT
     notice: use the |time| function instead.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {hour}
@@ -61,8 +61,8 @@ omitted will be set to the current value according to the local date and time.
 {day}
 
     The number of the day relative to the end of the previous month. Values 1
-    to 28, 29, 30 or 31 (depending upon the month) reference the normal days in
-    the relevant month. Values less than 1 (including negative values)
+    to 28, 29, 30 or 31 (depending upon the month) reference the normal days
+    in the relevant month. Values less than 1 (including negative values)
     reference the days in the previous month, so 0 is the last day of the
     previous month, -1 is the day before that, etc. Values greater than the
     number of days in the relevant month reference the appropriate day in the
@@ -71,10 +71,11 @@ omitted will be set to the current value according to the local date and time.
 {year}
 
     The number of the year, may be a two or four digit value, with values
-    between 0-69 mapping to 2000-2069 and 70-100 to 1970-2000. On systems where
-    time_t is a 32bit signed integer, as most common today, the valid range for
-    {year} is somewhere between 1901 and 2038. However, before PHP 5.1.0 this
-    range was limited from 1970 to 2038 on some systems (e.g. Windows).
+    between 0-69 mapping to 2000-2069 and 70-100 to 1970-2000. On systems
+    where time_t is a 32bit signed integer, as most common today, the valid
+    range for {year} is somewhere between 1901 and 2038. However, before PHP
+    5.1.0 this range was limited from 1970 to 2038 on some systems (e.g.
+    Windows).
 
 {is_dst}
 
@@ -91,36 +92,36 @@ omitted will be set to the current value according to the local date and time.
 
         Note:
 
-        As of PHP 5.1.0, this parameter became deprecated. As a result, the new
-        timezone handling features should be used instead.
+        As of PHP 5.1.0, this parameter became deprecated. As a result, the
+        new timezone handling features should be used instead.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 mktime() returns the Unix timestamp of the arguments given. If the arguments
 are invalid, the function returns FALSE (before PHP 5.1 it returned -1).
 
-===============================================================================
+==============================================================================
 *Errors/Exceptions*
 
-Every call to a date/time function will generate a E_NOTICE if the time zone is
-not valid, and/or a E_STRICT or E_WARNING message if using the system settings
-or the TZ environment variable. See also |date_default_timezone_set|
+Every call to a date/time function will generate a E_NOTICE if the time zone
+is not valid, and/or a E_STRICT or E_WARNING message if using the system
+settings or the TZ environment variable. See also |date_default_timezone_set|
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 5.3.0   mktime() now throws E_DEPRECATED notice if the {is_dst} parameter is
         used.
         The {is_dst} parameter became deprecated. Made the function return
 5.1.0   FALSE on error, instead of -1. Fixed the function to accept the year,
         month and day to be all passed as zero.
-5.1.0   When called with no arguments, mktime() throws E_STRICT notice. Use the
-        |time| function instead.
+5.1.0   When called with no arguments, mktime() throws E_STRICT notice. Use
+        the |time| function instead.
 5.1.0   Now issues the E_STRICT and E_NOTICE time zone errors.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mktime() basic example
@@ -162,16 +163,16 @@ month, not the -1 day. Both of the following examples will produce the string
     echo strftime("Last day in Feb 2000 is: %d", $lastday);
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
 Caution
 
 Before PHP 5.1.0, negative timestamps were not supported under any known
-version of Windows and some other systems as well. Therefore the range of valid
-years was limited to 1970 through 2038.
+version of Windows and some other systems as well. Therefore the range of
+valid years was limited to 1970 through 2038.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |checkdate| - Validate a Gregorian date

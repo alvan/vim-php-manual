@@ -4,7 +4,7 @@ jdtounix
 
 jdtounix — Convert Julian Day to Unix timestamp
 
-===============================================================================
+==============================================================================
 *Description*
 
     int jdtounix ( int $jday )~
@@ -14,19 +14,19 @@ given in {jday} or FALSE if {jday} is not inside the Unix epoch (Gregorian
 years between 1970 and 2037 or 2440588 <= {jday} <= 2465342 ). The time
 returned is localtime (and not GMT).
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {jday}
 
     A julian day number between 2440588 and 2465342.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The unix timestamp for the start of the given julian day.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |unixtojd| - Convert Unix timestamp to Julian Day

@@ -4,14 +4,14 @@ gmp_testbit
 
 gmp_testbit — Tests if a bit is set
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool gmp_testbit ( GMP $a , int $index )~
 
 Tests if the specified bit is set.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {a}
@@ -24,18 +24,18 @@ Tests if the specified bit is set.
 
     The bit to test
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE if the bit is set in resource $a, otherwise FALSE.
 
-===============================================================================
+==============================================================================
 *Errors/Exceptions*
 
-An E_WARNING level error is issued when {index} is less than zero, and FALSE is
-returned.
+An E_WARNING level error is issued when {index} is less than zero, and FALSE
+is returned.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 gmp_testbit() example
@@ -52,7 +52,7 @@ The above example will output:
 bool(false)
 bool(true)
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |gmp_setbit| - Set bit

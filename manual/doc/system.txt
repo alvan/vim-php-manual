@@ -4,7 +4,7 @@ system
 
 system — Execute an external program and display the output
 
-===============================================================================
+==============================================================================
 *Description*
 
     string system ( string $command [, int &$return_var ] )~
@@ -18,7 +18,7 @@ buffer after each line of output if PHP is running as a server module.
 If you need to execute a command and have all the data from the command passed
 directly back without any interference, use the |passthru| function.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {command}
@@ -30,12 +30,12 @@ directly back without any interference, use the |passthru| function.
     If the {return_var} argument is present, then the return status of the
     executed command will be written to this variable.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the last line of the command output on success, and FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 system() example
@@ -55,7 +55,7 @@ Example #1 system() example
     <hr />Return value: ' . $retval;
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
 Warning
@@ -80,7 +80,7 @@ Warning
 With safe mode enabled, the command string is escaped with |escapeshellcmd|.
 Thus, echo y | echo x becomes echo y \| echo x.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |exec| - Execute an external program

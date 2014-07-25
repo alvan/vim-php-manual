@@ -4,7 +4,7 @@ strrchr
 
 strrchr — Find the last occurrence of a character in a string
 
-===============================================================================
+==============================================================================
 *Description*
 
     string strrchr ( string $haystack , mixed $needle )~
@@ -12,7 +12,7 @@ strrchr — Find the last occurrence of a character in a string
 This function returns the portion of {haystack} which starts at the last
 occurrence of {needle} and goes until the end of {haystack}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {haystack}
@@ -27,18 +27,19 @@ occurrence of {needle} and goes until the end of {haystack}.
     If {needle} is not a string, it is converted to an integer and applied as
     the ordinal value of a character.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-This function returns the portion of string, or FALSE if {needle} is not found.
+This function returns the portion of string, or FALSE if {needle} is not
+found.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version            Description
 4.3.0   This function is now binary safe.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 strrchr() example
@@ -52,12 +53,12 @@ Example #1 strrchr() example
     $last = substr(strrchr($text, 10), 1 );
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: This function is binary-safe.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |strstr| - Find the first occurrence of a string

@@ -4,7 +4,7 @@ yaz_connect
 
 yaz_connect — Prepares for a connection to a Z39.50 server
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed yaz_connect ( string $zurl [, mixed $options ] )~
@@ -19,7 +19,7 @@ prepares a connect to be performed later when |yaz_wait| is called.
 
     The » YAZ proxy is a freely available Z39.50 proxy.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {zurl}
@@ -76,8 +76,8 @@ prepares a connect to be performed later when |yaz_wait| is called.
 
     charset
 
-        A string that specifies character set to be used in Z39.50 language and
-        character set negotiation. Use strings such as: ISO-8859-1, UTF-8,
+        A string that specifies character set to be used in Z39.50 language
+        and character set negotiation. Use strings such as: ISO-8859-1, UTF-8,
         UTF-16.
 
         Most Z39.50 servers do not support this feature (and thus, this is
@@ -97,25 +97,25 @@ prepares a connect to be performed later when |yaz_wait| is called.
     maximumRecordSize
 
         An integer that specifies the maximum byte size of a single record to
-        be returned by a target during retrieval. This entity is referred to as
-        Exceptional-record-size in the » Z39.50 standard.
+        be returned by a target during retrieval. This entity is referred to
+        as Exceptional-record-size in the » Z39.50 standard.
 
             Note:
 
             This option is supported in PECL YAZ 1.0.5 or later.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 A connection resource on success, FALSE on error.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version            Description
 4.1.0   The parameter {options} was added.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |yaz_close| - Close YAZ connection

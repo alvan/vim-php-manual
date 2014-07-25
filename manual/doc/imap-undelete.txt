@@ -4,16 +4,16 @@ imap_undelete
 
 imap_undelete — Unmark the message which is marked deleted
 
-===============================================================================
+==============================================================================
 *Description*
 
-    bool imap_undelete ( resource $imap_stream , int $msg_number [, int $flags~
-    = 0 ] )~
+    bool imap_undelete ( resource $imap_stream , int $msg_number [, int~
+    $flags = 0 ] )~
 
-Removes the deletion flag for a specified message, which is set by |imap_delete
-| or |imap_mail_move|.
+Removes the deletion flag for a specified message, which is set by |
+imap_delete| or |imap_mail_move|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { imap_stream}
@@ -26,12 +26,12 @@ Removes the deletion flag for a specified message, which is set by |imap_delete
 
 {flags}
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |imap_delete| - Mark a message for deletion from current mailbox

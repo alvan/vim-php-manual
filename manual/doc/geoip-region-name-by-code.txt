@@ -2,10 +2,10 @@ geoip_region_name_by_code
 
 (PECL geoip >= 1.0.4)
 
-geoip_region_name_by_code — Returns the region name for some country and region
-code combo
+geoip_region_name_by_code — Returns the region name for some country and
+region code combo
 
-===============================================================================
+==============================================================================
 *Description*
 
     string geoip_region_name_by_code ( string $country_code , string~
@@ -18,15 +18,15 @@ In the United States, the region code corresponds to the two-letter
 abbreviation of each state. In Canada, the region code corresponds to the
 two-letter province or territory code as attributed by Canada Post.
 
-For the rest of the world, GeoIP uses FIPS 10-4 codes to represent regions. You
-can check » http://www.maxmind.com/app/fips10_4 for a detailed list of FIPS
-10-4 codes.
+For the rest of the world, GeoIP uses FIPS 10-4 codes to represent regions.
+You can check » http://www.maxmind.com/app/fips10_4 for a detailed list of
+FIPS 10-4 codes.
 
 This function is always available if using GeoIP Library version 1.4.1 or
 newer. The data is taken directly from the GeoIP Library and not from any
 database.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {country_code}
@@ -37,13 +37,13 @@ database.
 
     The two-letter (or digit) region code (see |geoip_region_by_name|)
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the region name on success, or FALSE if the country and region code
 combo cannot be found.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A geoip_region_name_by_code() example using region code for US/

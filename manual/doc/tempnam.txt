@@ -4,7 +4,7 @@ tempnam
 
 tempnam — Create file with unique file name
 
-===============================================================================
+==============================================================================
 *Description*
 
     string tempnam ( string $dir , string $prefix )~
@@ -14,7 +14,7 @@ the specified directory. If the directory does not exist, tempnam() may
 generate a file in the system's temporary directory, and return the full path
 to that file, including its name.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {dir}
@@ -27,28 +27,28 @@ to that file, including its name.
 
         Note: Windows uses only the first three characters of prefix.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the new temporary filename (with path), or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
         Prior to PHP 4.0.6, the behaviour of the tempnam() function was system
         dependent. On Windows the TMP environment variable will override the
 4.0.6   {dir} parameter, on Linux the TMPDIR environment variable has
         precedence, while SVR4 will always use your {dir} parameter if the
-        directory it points to exists. Consult your system documentation on the
-        tempnam(3) function if in doubt.
+        directory it points to exists. Consult your system documentation on
+        the tempnam(3) function if in doubt.
         This function's behavior changed in 4.0.3. The temporary file is also
         created to avoid a race condition where the file might appear in the
 4.0.3   filesystem between the time the string was generated and before the
         script gets around to creating the file. Note, that you need to remove
         the file in case you need it no more, it is not done automatically.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 tempnam() example
@@ -65,14 +65,14 @@ Example #1 tempnam() example
     unlink($tmpfname);
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: If PHP cannot create a file in the specified {dir} parameter, it
     falls back on the system default. On NTFS this also happens if the
     specified {dir} contains more than 65534 files.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |tmpfile| - Creates a temporary file

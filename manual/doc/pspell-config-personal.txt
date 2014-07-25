@@ -4,20 +4,20 @@ pspell_config_personal
 
 pspell_config_personal — Set a file that contains personal wordlist
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool pspell_config_personal ( int $dictionary_link , string $file )~
 
 Set a file that contains personal wordlist. The personal wordlist will be
 loaded and used in addition to the standard one after you call |
-pspell_new_config|. The file is also the file where |pspell_save_wordlist| will
-save personal wordlist to.
+pspell_new_config|. The file is also the file where |pspell_save_wordlist|
+will save personal wordlist to.
 
 pspell_config_personal() should be used on a config before calling |
 pspell_new_config|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {dictionary_link}
@@ -27,12 +27,12 @@ pspell_new_config|.
     The personal wordlist. If the file does not exist, it will be created. The
     file should be writable by whoever PHP runs as (e.g. nobody).
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 pspell_config_personal()
@@ -44,7 +44,7 @@ Example #1 pspell_config_personal()
     pspell_check($pspell_link, "thecat");
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:

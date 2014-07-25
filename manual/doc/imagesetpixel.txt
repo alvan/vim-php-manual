@@ -4,20 +4,20 @@ imagesetpixel
 
 imagesetpixel — Set a single pixel
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool imagesetpixel ( resource $image , int $x , int $y , int $color )~
 
 imagesetpixel() draws a pixel at the specified coordinate.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { image}
 
-    An image resource, returned by one of the image creation functions, such as
-    |imagecreatetruecolor|.
+    An image resource, returned by one of the image creation functions, such
+    as |imagecreatetruecolor|.
 
 {x}
 
@@ -31,12 +31,12 @@ imagesetpixel() draws a pixel at the specified coordinate.
 
     A color identifier created with |imagecolorallocate|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 imagesetpixel() example
@@ -72,7 +72,7 @@ The above example will output something similar to:
 
 Output of example : imagesetpixel()
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |imagecreatetruecolor| - Create a new true color image

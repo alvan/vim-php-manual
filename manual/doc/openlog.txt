@@ -4,7 +4,7 @@ openlog
 
 openlog — Open connection to system logger
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool openlog ( string $ident , int $option , int $facility )~
@@ -14,7 +14,7 @@ openlog() opens a connection to the system logger for a program.
 The use of openlog() is optional. It will automatically be called by |syslog|
 if necessary, in which case {ident} will default to FALSE.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {ident}
@@ -23,10 +23,10 @@ if necessary, in which case {ident} will default to FALSE.
 
 {option}
 
-    The {option} argument is used to indicate what logging options will be used
-    when generating a log message.
+    The {option} argument is used to indicate what logging options will be
+    used when generating a log message.
 
-                               openlog() Options
+                              openlog() Options
      Constant                            Description
     LOG_CONS   if there is an error while sending data to the system logger,
                write directly to the system console
@@ -49,7 +49,7 @@ if necessary, in which case {ident} will default to FALSE.
     handled.
 
                              openlog() Facilities
-       Constant                             Description
+       Constant                            Description
     LOG_AUTH        security/authorization messages (use LOG_AUTHPRIV instead
                     in systems where that constant is defined)
     LOG_AUTHPRIV    security/authorization messages (private)
@@ -69,12 +69,12 @@ if necessary, in which case {ident} will default to FALSE.
 
         LOG_USER is the only valid log type under Windows operating systems
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |syslog| - Generate a system log message

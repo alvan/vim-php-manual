@@ -4,7 +4,7 @@ xattr_supported
 
 xattr_supported — Check if filesystem supports extended attributes
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool xattr_supported ( string $filename [, int $flags = 0 ] )~
@@ -12,7 +12,7 @@ xattr_supported — Check if filesystem supports extended attributes
 This functions checks if the filesystem holding the given file supports
 extended attributes. Read access to the file is required.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {filename}
@@ -21,18 +21,18 @@ extended attributes. Read access to the file is required.
 
 {flags}
 
-                             Supported xattr flags
+                            Supported xattr flags
     XATTR_DONTFOLLOW Do not follow the symbolic link but operate on symbolic
                      link itself.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-This function returns TRUE if filesystem supports extended attributes, FALSE if
-it doesn't and NULL if it can't be determined (for example wrong path or lack
-of permissions to file).
+This function returns TRUE if filesystem supports extended attributes, FALSE
+if it doesn't and NULL if it can't be determined (for example wrong path or
+lack of permissions to file).
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 xattr_supported() example
@@ -48,7 +48,7 @@ The following code checks if we can use extended attributes.
 
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |xattr_get| - Get an extended attribute

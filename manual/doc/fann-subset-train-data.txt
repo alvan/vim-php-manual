@@ -4,7 +4,7 @@ fann_subset_train_data
 
 fann_subset_train_data — Returns an copy of a subset of the train data
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource fann_subset_train_data ( resource $data , int $pos , int $length~
@@ -16,7 +16,7 @@ pos and length elements forward.
 The fann_subset_train_data(train_data, 0, fann_length_train_data(train_data))
 do the same as |fann_duplicate_train_data|
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {data}
@@ -31,12 +31,12 @@ do the same as |fann_duplicate_train_data|
 
     The number of copied elements.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a train data resource on success, or FALSE on error.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |fann_duplicate_train_data| - Returns an exact copy of a fann train data

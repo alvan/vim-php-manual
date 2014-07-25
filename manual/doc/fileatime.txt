@@ -4,27 +4,27 @@ fileatime
 
 fileatime — Gets last access time of file
 
-===============================================================================
+==============================================================================
 *Description*
 
     int fileatime ( string $filename )~
 
 Gets the last access time of the given file.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {filename}
 
     Path to the file.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the time the file was last accessed, or FALSE on failure. The time is
 returned as a Unix timestamp.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 fileatime() example
@@ -41,19 +41,20 @@ Example #1 fileatime() example
 
 <?>
 
-===============================================================================
+==============================================================================
 *Errors/Exceptions*
 
 Upon failure, an E_WARNING is emitted.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
 
     The atime of a file is supposed to change whenever the data blocks of a
     file are being read. This can be costly performance-wise when an
-    application regularly accesses a very large number of files or directories.
+    application regularly accesses a very large number of files or
+    directories.
 
     Some Unix filesystems can be mounted with atime updates disabled to
     increase the performance of such applications; USENET news spools are a
@@ -72,7 +73,7 @@ As of PHP 5.0.0, this function can also be used with some URL wrappers. Refer
 to Supported Protocols and Wrappers to determine which wrappers support |stat|
 family of functionality.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |filemtime| - Gets file modification time

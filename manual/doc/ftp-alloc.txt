@@ -4,11 +4,11 @@ ftp_alloc
 
 ftp_alloc — Allocates space for a file to be uploaded
 
-===============================================================================
+==============================================================================
 *Description*
 
-    bool ftp_alloc ( resource $ftp_stream , int $filesize [, string &$result ]~
-)~
+    bool ftp_alloc ( resource $ftp_stream , int $filesize [, string &$result~
+    ] )~
 
 Sends an ALLO command to the remote FTP server to allocate space for a file to
 be uploaded.
@@ -17,12 +17,12 @@ be uploaded.
 
     Many FTP servers do not support this command. These servers may return a
     failure code (FALSE) indicating the command is not supported or a success
-    code (TRUE) to indicate that pre-allocation is not necessary and the client
-    should continue as though the operation were successful. Because of this,
-    it may be best to reserve this function for servers which explicitly
+    code (TRUE) to indicate that pre-allocation is not necessary and the
+    client should continue as though the operation were successful. Because of
+    this, it may be best to reserve this function for servers which explicitly
     require preallocation.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {ftp_stream}
@@ -38,12 +38,12 @@ be uploaded.
     A textual representation of the servers response will be returned by
     reference in {result} if a variable is provided.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 ftp_alloc() example
@@ -67,7 +67,7 @@ Example #1 ftp_alloc() example
 
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ftp_put| - Uploads a file to the FTP server

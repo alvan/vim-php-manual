@@ -4,7 +4,7 @@ ps_symbol_name
 
 ps_symbol_name — Gets name of a glyph
 
-===============================================================================
+==============================================================================
 *Description*
 
     string ps_symbol_name ( resource $psdoc , int $ord [, int $fontid = 0 ] )~
@@ -12,7 +12,7 @@ ps_symbol_name — Gets name of a glyph
 This function needs an Adobe font metrics file to know which glyphs are
 available.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {psdoc}
@@ -26,15 +26,15 @@ available.
 
 {fontid}
 
-    The identifier of the font to be used. If not font is specified the current
-    font will be used.
+    The identifier of the font to be used. If not font is specified the
+    current font will be used.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The name of a glyph in the given font.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ps_symbol| - Output a glyph

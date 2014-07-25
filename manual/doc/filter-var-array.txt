@@ -4,16 +4,16 @@ filter_var_array
 
 filter_var_array — Gets multiple variables and optionally filters them
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed filter_var_array ( array $data [, mixed $definition [, bool~
     $add_empty = true ]] )~
 
-This function is useful for retrieving many values without repetitively calling
-|filter_var|.
+This function is useful for retrieving many values without repetitively
+calling |filter_var|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {data}
@@ -37,14 +37,14 @@ This function is useful for retrieving many values without repetitively calling
 
     Add missing keys as NULL to the return value.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 An array containing the values of the requested variables on success, or FALSE
 on failure. An array value will be FALSE if the filter fails, or NULL if the
 variable is not set.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A filter_var_array() example
@@ -63,8 +63,8 @@ Example #1 A filter_var_array() example
         'product_id'   => FILTER_SANITIZE_ENCODED,
         'component'    => array('filter'    => FILTER_VALIDATE_INT,
                                 'flags'     => FILTER_FORCE_ARRAY, 
-                                'options'   => array('min_range' => 1, 'max_range' 
-    => 10)
+                                'options'   => array('min_range' => 1, 
+    'max_range' => 10)
                                ),
         'versions'     => FILTER_SANITIZE_ENCODED,
         'doesnotexist' => FILTER_VALIDATE_INT,
@@ -114,13 +114,13 @@ array(6) {
   }
 }
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version         Description
 5.4.0   Added {add_empty} parameter.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |filter_input_array| - Gets external variables and optionally filters them

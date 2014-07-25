@@ -4,14 +4,14 @@ event_buffer_priority_set
 
 event_buffer_priority_set — Assign a priority to a buffered event
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool event_buffer_priority_set ( resource $bevent , int $priority )~
 
 Assign a priority to the {bevent}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {bevent}
@@ -20,10 +20,10 @@ Assign a priority to the {bevent}.
 
 {priority}
 
-    Priority level. Cannot be less than zero and cannot exceed maximum priority
-    level of the event base (see |event_base_priority_init|).
+    Priority level. Cannot be less than zero and cannot exceed maximum
+    priority level of the event base (see |event_base_priority_init|).
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 event_buffer_priority_set() returns TRUE on success or FALSE on error.

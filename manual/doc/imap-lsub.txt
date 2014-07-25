@@ -4,14 +4,14 @@ imap_lsub
 
 imap_lsub — List all the subscribed mailboxes
 
-===============================================================================
+==============================================================================
 *Description*
 
     array imap_lsub ( resource $imap_stream , string $ref , string $pattern )~
 
 Gets an array of all the mailboxes that you have subscribed.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { imap_stream}
@@ -27,19 +27,19 @@ Gets an array of all the mailboxes that you have subscribed.
 
     Specifies where in the mailbox hierarchy to start searching.
 
-    There are two special characters you can pass as part of the {pattern}: '*'
-    and '%'. '*' means to return all mailboxes. If you pass {pattern} as '*',
-    you will get a list of the entire mailbox hierarchy. '%' means to return
-    the current level only. '%' as the {pattern} parameter will return only the
-    top level mailboxes; '~/mail/%' on UW_IMAPD will return every mailbox in
-    the ~/mail directory, but none in subfolders of that directory.
+    There are two special characters you can pass as part of the {pattern}: '*
+    ' and '%'. '*' means to return all mailboxes. If you pass {pattern} as '*
+    ', you will get a list of the entire mailbox hierarchy. '%' means to
+    return the current level only. '%' as the {pattern} parameter will return
+    only the top level mailboxes; '~/mail/%' on UW_IMAPD will return every
+    mailbox in the ~/mail directory, but none in subfolders of that directory.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an array of all the subscribed mailboxes.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |imap_list| - Read the list of mailboxes

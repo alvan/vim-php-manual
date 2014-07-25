@@ -4,12 +4,12 @@ win32_create_service
 
 win32_create_service — Creates a new service entry in the SCM database
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed win32_create_service ( array $details [, string $machine ] )~
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {details}
@@ -54,8 +54,8 @@ win32_create_service — Creates a new service entry in the SCM database
         Command line parameters to pass to the service when it starts. If you
         want to run a PHP script as the service, then the first parameter
         should be the full path to the PHP script that you intend to run. If
-        the script name or path contains spaces, then wrap the full path to the
-        PHP script with ".
+        the script name or path contains spaces, then wrap the full path to
+        the PHP script with ".
 
     {load_order}
 
@@ -64,8 +64,8 @@ win32_create_service — Creates a new service entry in the SCM database
     {svc_type}
 
         Sets the service type. If omitted, the default value is
-        WIN32_SERVICE_WIN32_OWN_PROCESS. Don't change this unless you know what
-        you're doing.
+        WIN32_SERVICE_WIN32_OWN_PROCESS. Don't change this unless you know
+        what you're doing.
 
     {start_type}
 
@@ -105,13 +105,13 @@ win32_create_service — Creates a new service entry in the SCM database
     The optional machine name on which you want to create a service. If
     omitted, it will use the local machine.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns WIN32_NO_ERROR on success, FALSE if there is a problem with the
 parameters or a Win32 Error Code on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A win32_create_service() example
@@ -132,7 +132,7 @@ Create a service with the short name 'dummyphp'.
     debug_zval_dump($x);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |win32_delete_service| - Deletes a service entry from the SCM database

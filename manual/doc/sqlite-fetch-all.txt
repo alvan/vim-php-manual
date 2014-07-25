@@ -9,7 +9,7 @@ SQLiteUnbuffered::fetchAll
 sqlite_fetch_all -- SQLiteResult::fetchAll -- SQLiteUnbuffered::fetchAll — 
 Fetches all rows from a result set as an array of arrays
 
-===============================================================================
+==============================================================================
 *Description*
 
     array sqlite_fetch_all ( resource $result [, int $result_type =~
@@ -19,14 +19,14 @@ Object oriented style (method):
 
     array SQLiteResult::fetchAll ([ int $result_type = SQLITE_BOTH [, bool~
     $decode_binary = true ]] )~
-    array SQLiteUnbuffered::fetchAll ([ int $result_type = SQLITE_BOTH [, bool~
-    $decode_binary = true ]] )~
+    array SQLiteUnbuffered::fetchAll ([ int $result_type = SQLITE_BOTH [,~
+    bool $decode_binary = true ]] )~
 
 sqlite_fetch_all() returns an array of the entire result set from the {result}
-resource. It is similar to calling |sqlite_query| (or |sqlite_unbuffered_query|
-) and then |sqlite_fetch_array| for each row in the result set.
+resource. It is similar to calling |sqlite_query| (or |sqlite_unbuffered_query
+|) and then |sqlite_fetch_array| for each row in the result set.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
@@ -51,18 +51,18 @@ resource. It is similar to calling |sqlite_query| (or |sqlite_unbuffered_query|
     default, unless you are interoperating with databases created by other
     sqlite capable applications.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns an array of the remaining rows in a result set. If called right after |
-sqlite_query|, it returns all rows. If called after |sqlite_fetch_array|, it
+Returns an array of the remaining rows in a result set. If called right after 
+|sqlite_query|, it returns all rows. If called after |sqlite_fetch_array|, it
 returns the rest. If there are no rows in a result set, it returns an empty
 array.
 
 The column names returned by SQLITE_ASSOC and SQLITE_BOTH will be case-folded
 according to the value of the sqlite.assoc_case configuration option.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Procedural example
@@ -83,8 +83,8 @@ Example #2 Object-oriented example
 
     $query = $dbhandle->query('SELECT name, email FROM users LIMIT 25'); //
      buffered result set
-    $query = $dbhandle->unbufferedQuery('SELECT name, email FROM users LIMIT 25'); 
-    // unbuffered result set
+    $query = $dbhandle->unbufferedQuery('SELECT name, email FROM users LIMIT 25');
+     // unbuffered result set
 
     $result = $query->fetchAll(SQLITE_ASSOC);
     foreach ($result as $entry) {
@@ -92,7 +92,7 @@ Example #2 Object-oriented example
     }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |sqlite_fetch_array| - Fetches the next row from a result set as an array

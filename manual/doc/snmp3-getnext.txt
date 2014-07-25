@@ -4,18 +4,18 @@ snmp3_getnext
 
 snmp3_getnext — Fetch the SNMP object which follows the given object id
 
-===============================================================================
+==============================================================================
 *Description*
 
-    string snmp3_getnext ( string $host , string $sec_name , string $sec_level~
-    , string $auth_protocol , string $auth_passphrase , string $priv_protocol~
-    , string $priv_passphrase , string $object_id [, string $timeout = 1000000~
-    [, string $retries = 5 ]] )~
+    string snmp3_getnext ( string $host , string $sec_name , string~
+    $sec_level , string $auth_protocol , string $auth_passphrase , string~
+    $priv_protocol , string $priv_passphrase , string $object_id [, string~
+    $timeout = 1000000 [, string $retries = 5 ]] )~
 
 The snmp3_getnext() function is used to read the value of the SNMP object that
 follows the specified {object_id}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {host}
@@ -58,13 +58,13 @@ follows the specified {object_id}.
 
     The number of times to retry if timeouts occur.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns SNMP object value on success or FALSE on error. In case of an error, an
-E_WARNING message is shown.
+Returns SNMP object value on success or FALSE on error. In case of an error,
+an E_WARNING message is shown.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Using snmp3_getnext()
@@ -74,7 +74,7 @@ Example #1 Using snmp3_getnext()
     , 'secret007', 'AES', 'secret007', 'IF-MIB::ifName.1');
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |snmp3_get| - Fetch an SNMP object

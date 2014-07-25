@@ -4,19 +4,19 @@ preg_match_all
 
 preg_match_all — Perform a global regular expression match
 
-===============================================================================
+==============================================================================
 *Description*
 
     int preg_match_all ( string $pattern , string $subject [, array &$matches~
     [, int $flags = PREG_PATTERN_ORDER [, int $offset = 0 ]]] )~
 
-Searches {subject} for all matches to the regular expression given in {pattern}
-and puts them in {matches} in the order specified by {flags}.
+Searches {subject} for all matches to the regular expression given in
+{pattern} and puts them in {matches} in the order specified by {flags}.
 
 After the first match is found, the subsequent searches are continued on from
 end of the last match.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {pattern}
@@ -39,9 +39,9 @@ end of the last match.
 
     PREG_PATTERN_ORDER
 
-        Orders results so that $matches[0] is an array of full pattern matches,
-        $matches[1] is an array of strings matched by the first parenthesized
-        subpattern, and so on.
+        Orders results so that $matches[0] is an array of full pattern
+        matches, $matches[1] is an array of strings matched by the first
+        parenthesized subpattern, and so on.
 
         <?php >
         preg_match_all("|<[^>]+>(.*)</[^>]+>|U",
@@ -61,8 +61,8 @@ end of the last match.
 
     PREG_SET_ORDER
 
-        Orders results so that $matches[0] is an array of first set of matches,
-        $matches[1] is an array of second set of matches, and so on.
+        Orders results so that $matches[0] is an array of first set of
+        matches, $matches[1] is an array of second set of matches, and so on.
         <?php >
         preg_match_all("|<[^>]+>(.*)</[^>]+>|U",
             "<b>example: </b><div align=\"left\">this is a test</div>",
@@ -89,8 +89,8 @@ end of the last match.
 {offset}
 
     Normally, the search starts from the beginning of the subject string. The
-    optional parameter {offset} can be used to specify the alternate place from
-    which to start the search (in bytes).
+    optional parameter {offset} can be used to specify the alternate place
+    from which to start the search (in bytes).
 
         Note:
 
@@ -99,24 +99,24 @@ end of the last match.
         can contain assertions such as ^, $ or (?<=x). See |preg_match| for
         examples.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the number of full pattern matches (which might be zero), or FALSE if
 an error occurred.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 5.4.0   The {matches} parameter became optional.
 5.3.6   Returns FALSE if {offset} is higher than {subject} length.
-5.2.2   Named subpatterns now accept the syntax (?<name>) and (?'name') as well
-        as (?P<name>). Previous versions accepted only (?P<name>).
+5.2.2   Named subpatterns now accept the syntax (?<name>) and (?'name') as
+        well as (?P<name>). Previous versions accepted only (?P<name>).
 4.3.3   The {offset} parameter was added
 4.3.0   The PREG_OFFSET_CAPTURE flag was added
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Getting all phone numbers out of some text.
@@ -222,14 +222,15 @@ Array
 
 )
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * PCRE Patterns
   * |preg_match| - Perform a regular expression match
   * |preg_replace| - Perform a regular expression search and replace
   * |preg_split| - Split string by a regular expression
-  * |preg_last_error| - Returns the error code of the last PCRE regex execution
+  * |preg_last_error| - Returns the error code of the last PCRE regex
+    execution
 
 
 vim:ft=help:

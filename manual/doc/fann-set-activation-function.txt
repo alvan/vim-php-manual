@@ -2,10 +2,10 @@ fann_set_activation_function
 
 (PECL fann >= 1.0.0)
 
-fann_set_activation_function — Sets the activation function for supplied neuron
-and layer
+fann_set_activation_function — Sets the activation function for supplied
+neuron and layer
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool fann_set_activation_function ( resource $ann , int~
@@ -27,7 +27,7 @@ constants.
 
 The return value is one of the activation functions constants.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {ann}
@@ -46,16 +46,16 @@ The return value is one of the activation functions constants.
 
     Neuron number.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success, or FALSE otherwise.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
-  * |fann_set_activation_function_layer| - Sets the activation function for all
-    the neurons in the supplied layer.
+  * |fann_set_activation_function_layer| - Sets the activation function for
+    all the neurons in the supplied layer.
   * |fann_set_activation_function_hidden| - Sets the activation function for
     all of the hidden layers
   * |fann_set_activation_function_output| - Sets the activation function for

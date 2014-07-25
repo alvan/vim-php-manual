@@ -5,7 +5,7 @@ aggregate_methods_by_list
 aggregate_methods_by_list — Selective dynamic class methods aggregation to an
 object
 
-===============================================================================
+==============================================================================
 *Description*
 
     void aggregate_methods_by_list ( object $object , string $class_name ,~
@@ -14,10 +14,11 @@ object
 Aggregates methods from a class to an existing object using a list of method
 names.
 
-The class constructor or methods whose names start with an underscore character
-(_), which are considered private to the aggregated class, are always excluded.
+The class constructor or methods whose names start with an underscore
+character (_), which are considered private to the aggregated class, are
+always excluded.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {object}
@@ -29,15 +30,16 @@ The class constructor or methods whose names start with an underscore character
 {exclude}
 
     The optional parameter {exclude} is used to decide whether the list
-    contains the names of methods to include in the aggregation (i.e. {exclude}
-    is FALSE), or to exclude from the aggregation ({exclude} is TRUE).
+    contains the names of methods to include in the aggregation (i.e.
+    {exclude} is FALSE), or to exclude from the aggregation ({exclude} is TRUE
+    ).
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 No value is returned.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |aggregate| - Dynamic class and object aggregation of methods and

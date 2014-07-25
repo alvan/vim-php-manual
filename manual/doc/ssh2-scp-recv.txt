@@ -4,7 +4,7 @@ ssh2_scp_recv
 
 ssh2_scp_recv — Request a file via SCP
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool ssh2_scp_recv ( resource $session , string $remote_file , string~
@@ -13,7 +13,7 @@ ssh2_scp_recv — Request a file via SCP
 Copy a file from the remote server to the local filesystem using the SCP
 protocol.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {session}
@@ -28,12 +28,12 @@ protocol.
 
     Path to the local file.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Downloading a file via SCP
@@ -45,7 +45,7 @@ Example #1 Downloading a file via SCP
     ssh2_scp_recv($connection, '/remote/filename', '/local/filename');
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ssh2_scp_send| - Send a file via SCP

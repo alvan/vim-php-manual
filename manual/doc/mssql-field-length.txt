@@ -4,14 +4,14 @@ mssql_field_length
 
 mssql_field_length — Get the length of a field
 
-===============================================================================
+==============================================================================
 *Description*
 
     int mssql_field_length ( resource $result [, int $offset = -1 ] )~
 
 Returns the length of field no. {offset} in {result}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
@@ -23,12 +23,12 @@ Returns the length of field no. {offset} in {result}.
 
     The field offset, starts at 0. If omitted, the current field is used.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The length of the specified field index on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mssql_field_length() example
@@ -42,7 +42,8 @@ Example #1 mssql_field_length() example
     $query = mssql_query('SELECT [name], [age] FROM [php].[dbo].[persons]');
 
     // Print the field length
-    echo 'The field \'age\' has a data length of ' . mssql_field_length($query, 1);
+    echo 'The field \'age\' has a data length of ' . mssql_field_length($query, 1
+    );
 
     // Free the query result
     mssql_free_result($query);
@@ -52,16 +53,16 @@ The above example will output something similar to:
 
 The field 'age' has a data length of 4
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: Note to Windows Users
 
-    Due to a limitation in the underlying API used by PHP (MS DBLib C API), the
-    length of VARCHAR fields is limited to 255. If you need to store more data,
-    use a TEXT field instead.
+    Due to a limitation in the underlying API used by PHP (MS DBLib C API),
+    the length of VARCHAR fields is limited to 255. If you need to store more
+    data, use a TEXT field instead.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mssql_field_name| - Get the name of a field

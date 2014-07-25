@@ -4,7 +4,7 @@ eio_chown
 
 eio_chown — Change file/direcrory permissions.
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource eio_chown ( string $path , int $uid [, int $gid = -1 [, int $pri~
@@ -13,7 +13,7 @@ eio_chown — Change file/direcrory permissions.
 
 Changes file, or directory permissions.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {path}
@@ -38,8 +38,8 @@ Changes file, or directory permissions.
 
 {callback}
 
-    {callback} function is called when the request is done. It should match the
-    following prototype:
+    {callback} function is called when the request is done. It should match
+    the following prototype:
     void callback(mixed $data, int $result[, resource $req]);
 
     {data}
@@ -60,12 +60,12 @@ Changes file, or directory permissions.
 
     Arbitrary variable passed to {callback}.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 eio_chown() returns request resource on success or FALSE on error.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * eio_chmod

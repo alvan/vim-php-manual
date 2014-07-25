@@ -4,7 +4,7 @@ ftp_close
 
 ftp_close — Closes an FTP connection
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool ftp_close ( resource $ftp_stream )~
@@ -16,19 +16,19 @@ ftp_close() closes the given link identifier and releases the resource.
     After calling this function, you can no longer use the FTP connection and
     must create a new one with |ftp_connect|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {ftp_stream}
 
     The link identifier of the FTP connection.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 ftp_close() example
@@ -48,7 +48,7 @@ Example #1 ftp_close() example
     ftp_close($conn_id);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ftp_connect| - Opens an FTP connection

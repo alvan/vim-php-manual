@@ -4,7 +4,7 @@ mcrypt_get_block_size
 
 mcrypt_get_block_size — Gets the block size of the specified cipher
 
-===============================================================================
+==============================================================================
 *Description*
 
     int mcrypt_get_block_size ( int $cipher )~
@@ -19,7 +19,7 @@ mcrypt_get_block_size() is used to get the size of a block of the specified
 It is more useful to use the |mcrypt_enc_get_block_size| function as this uses
 the resource returned by |mcrypt_module_open|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {cipher}
@@ -29,21 +29,21 @@ the resource returned by |mcrypt_module_open|.
 
 {mode}
 
-    One of the MCRYPT_MODE_modename constants, or one of the following strings:
-    "ecb", "cbc", "cfb", "ofb", "nofb" or "stream".
+    One of the MCRYPT_MODE_modename constants, or one of the following
+    strings: "ecb", "cbc", "cfb", "ofb", "nofb" or "stream".
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Gets the block size, as an integer.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mcrypt_get_block_size() example
 
-This example shows how to use this function when linked against libmcrypt 2.4.x
-and 2.5.x.
+This example shows how to use this function when linked against libmcrypt
+2.4.x and 2.5.x.
 
 <?php >
 
@@ -51,11 +51,12 @@ and 2.5.x.
 
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mcrypt_get_key_size| - Gets the key size of the specified cipher
-  * |mcrypt_enc_get_block_size| - Returns the blocksize of the opened algorithm
+  * |mcrypt_enc_get_block_size| - Returns the blocksize of the opened
+    algorithm
   * |mcrypt_encrypt| - Encrypts plaintext with given parameters
 
 

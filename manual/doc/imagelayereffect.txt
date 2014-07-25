@@ -5,20 +5,20 @@ imagelayereffect
 imagelayereffect — Set the alpha blending flag to use the bundled libgd
 layering effects
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool imagelayereffect ( resource $image , int $effect )~
 
 Set the alpha blending flag to use the bundled libgd layering effects.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { image}
 
-    An image resource, returned by one of the image creation functions, such as
-    |imagecreatetruecolor|.
+    An image resource, returned by one of the image creation functions, such
+    as |imagecreatetruecolor|.
 
 {effect}
 
@@ -37,12 +37,12 @@ Set the alpha blending flag to use the bundled libgd layering effects.
         white background pixels will remain white, but grey background pixels
         will take the colour of the foreground pixel.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 imagelayereffect() example
@@ -52,8 +52,8 @@ Example #1 imagelayereffect() example
     $im = imagecreatetruecolor(100, 100);
 
     // Set a background
-    imagefilledrectangle($im, 0, 0, 100, 100, imagecolorallocate($im, 220, 220, 220
-    ));
+    imagefilledrectangle($im, 0, 0, 100, 100, imagecolorallocate($im, 220, 220, 
+    220));
 
     // Apply the overlay alpha blending flag
     imagelayereffect($im, IMG_EFFECT_OVERLAY);
@@ -77,7 +77,7 @@ The above example will output something similar to:
 
 Output of example : imagelayereffect()
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: This function requires GD 2.0.1 or later (2.0.28 or later is

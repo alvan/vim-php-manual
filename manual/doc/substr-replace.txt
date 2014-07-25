@@ -4,7 +4,7 @@ substr_replace
 
 substr_replace — Replace text within a portion of a string
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed substr_replace ( mixed $string , mixed $replacement , mixed $start~
@@ -13,7 +13,7 @@ substr_replace — Replace text within a portion of a string
 substr_replace() replaces a copy of {string} delimited by the {start} and
 (optionally) {length} parameters with the string given in {replacement}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {string}
@@ -23,8 +23,8 @@ substr_replace() replaces a copy of {string} delimited by the {start} and
     An array of strings can be provided, in which case the replacements will
     occur on each string in turn. In this case, the {replacement}, {start} and
     {length} parameters may be provided either as scalar values to be applied
-    to each input string in turn, or as arrays, in which case the corresponding
-    array element will be used for each input string.
+    to each input string in turn, or as arrays, in which case the
+    corresponding array element will be used for each input string.
 
 {replacement}
 
@@ -45,21 +45,21 @@ substr_replace() replaces a copy of {string} delimited by the {start} and
     number of characters from the end of {string} at which to stop replacing.
     If it is not given, then it will default to strlen( {string} ); i.e. end
     the replacing at the end of {string}. Of course, if {length} is zero then
-    this function will have the effect of inserting {replacement} into {string}
-    at the given {start} offset.
+    this function will have the effect of inserting {replacement} into
+    {string} at the given {start} offset.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The result string is returned. If {string} is an array then array is returned.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version            Description
 4.3.3   All parameters now accept arrays.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Simple substr_replace() examples
@@ -106,12 +106,12 @@ A: YYY; B: YYY; C: YYY
 A: AAA; B: BBB; C: CCC
 A: AAAXX; B: BBBX; C: CCC
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: This function is binary-safe.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |str_replace| - Replace all occurrences of the search string with the

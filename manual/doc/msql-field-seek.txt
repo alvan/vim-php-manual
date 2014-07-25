@@ -4,7 +4,7 @@ msql_field_seek
 
 msql_field_seek — Set field offset
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool msql_field_seek ( resource $result , int $field_offset )~
@@ -12,7 +12,7 @@ msql_field_seek — Set field offset
 Seeks to the specified field offset. If the next call to |msql_fetch_field|
 won't include a field offset, this field would be returned.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { result}
@@ -24,12 +24,12 @@ won't include a field offset, this field would be returned.
 
     The numerical field offset. The {field_offset} starts at 1.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |msql_fetch_field| - Get field information

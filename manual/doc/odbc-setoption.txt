@@ -4,27 +4,28 @@ odbc_setoption
 
 odbc_setoption — Adjust ODBC settings
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool odbc_setoption ( resource $id , int $function , int $option , int~
     $param )~
 
-This function allows fiddling with the ODBC options for a particular connection
-or query result. It was written to help find work around to problems in quirky
-ODBC drivers. You should probably only use this function if you are an ODBC
-programmer and understand the effects the various options will have. You will
-certainly need a good ODBC reference to explain all the different options and
-values that can be used. Different driver versions support different options.
+This function allows fiddling with the ODBC options for a particular
+connection or query result. It was written to help find work around to
+problems in quirky ODBC drivers. You should probably only use this function if
+you are an ODBC programmer and understand the effects the various options will
+have. You will certainly need a good ODBC reference to explain all the
+different options and values that can be used. Different driver versions
+support different options.
 
-Because the effects may vary depending on the ODBC driver, use of this function
-in scripts to be made publicly available is strongly discouraged. Also, some
-ODBC options are not available to this function because they must be set before
-the connection is established or the query is prepared. However, if on a
-particular job it can make PHP work so your boss doesn't tell you to use a
-commercial product, that's all that really matters.
+Because the effects may vary depending on the ODBC driver, use of this
+function in scripts to be made publicly available is strongly discouraged.
+Also, some ODBC options are not available to this function because they must
+be set before the connection is established or the query is prepared. However,
+if on a particular job it can make PHP work so your boss doesn't tell you to
+use a commercial product, that's all that really matters.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {id}
@@ -46,12 +47,12 @@ commercial product, that's all that really matters.
 
     The value for the given {option}.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 odbc_setoption() examples

@@ -4,7 +4,7 @@ db2_bind_param
 
 db2_bind_param — Binds a PHP variable to an SQL statement parameter
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool db2_bind_param ( resource $stmt , int $parameter-number , string~
@@ -16,7 +16,7 @@ returned by |db2_prepare|. This function gives you more control over the
 parameter type, data type, precision, and scale for the parameter than simply
 passing the variable as part of the optional input array to |db2_execute|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {stmt}
@@ -39,8 +39,8 @@ passing the variable as part of the optional input array to |db2_execute|.
     parameter as an input parameter (DB2_PARAM_IN), an output parameter (
     DB2_PARAM_OUT), or as a parameter that accepts input and returns output (
     DB2_PARAM_INOUT). To avoid memory overhead, you can also specify
-    DB2_PARAM_FILE to bind the PHP variable to the name of a file that contains
-    large object (BLOB, CLOB, or DBCLOB) data.
+    DB2_PARAM_FILE to bind the PHP variable to the name of a file that
+    contains large object (BLOB, CLOB, or DBCLOB) data.
 
 {data-type}
 
@@ -52,21 +52,21 @@ passing the variable as part of the optional input array to |db2_execute|.
     Specifies the precision with which the variable should be bound to the
     database. This parameter can also be used for retrieving XML output values
     from stored procedures. A non-negative value specifies the maximum size of
-    the XML data that will be retrieved from the database. If this parameter is
-    not used, a default of 1MB will be assumed for retrieving the XML output
-    value from the stored procedure.
+    the XML data that will be retrieved from the database. If this parameter
+    is not used, a default of 1MB will be assumed for retrieving the XML
+    output value from the stored procedure.
 
 {scale}
 
     Specifies the scale with which the variable should be bound to the
     database.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Binding PHP variables to a prepared statement
@@ -171,12 +171,12 @@ Results:
 
 Example #3 Inserting a binary large object (BLOB) directly from a file
 
-The data for large objects are typically stored in files, such as XML documents
-or audio files. Rather than reading an entire file into a PHP variable, and
-then binding that PHP variable into an SQL statement, you can avoid some memory
-overhead by binding the file directly to the input parameter of your SQL
-statement. The following example demonstrates how to bind a file directly into
-a BLOB column.
+The data for large objects are typically stored in files, such as XML
+documents or audio files. Rather than reading an entire file into a PHP
+variable, and then binding that PHP variable into an SQL statement, you can
+avoid some memory overhead by binding the file directly to the input parameter
+of your SQL statement. The following example demonstrates how to bind a file
+directly into a BLOB column.
 
 <?php >
     $stmt = db2_prepare($conn, "INSERT INTO animal_pictures(picture) VALUES (?)");
@@ -186,7 +186,7 @@ a BLOB column.
     $rc = db2_execute($stmt);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |db2_execute| - Executes a prepared SQL statement

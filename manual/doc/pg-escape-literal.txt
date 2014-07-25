@@ -4,24 +4,24 @@ pg_escape_literal
 
 pg_escape_literal — Escape a literal for insertion into a text field
 
-===============================================================================
+==============================================================================
 *Description*
 
     string pg_escape_literal ([ resource $connection ], string $data )~
 
 pg_escape_literal() escapes a literal for querying the PostgreSQL database. It
 returns an escaped literal in the PostgreSQL format. pg_escape_literal() adds
-quotes before and after data. Users should not add quotes. Use of this function
-is recommended instead of |pg_escape_string|. If the type of the column is
-bytea, |pg_escape_bytea| must be used instead. For escaping identifiers (e.g.
-table, field names), |pg_escape_identifier| must be used.
+quotes before and after data. Users should not add quotes. Use of this
+function is recommended instead of |pg_escape_string|. If the type of the
+column is bytea, |pg_escape_bytea| must be used instead. For escaping
+identifiers (e.g. table, field names), |pg_escape_identifier| must be used.
 
     Note:
 
-    This function has internal escape code and can also be used with PostgreSQL
-    8.4 or less.
+    This function has internal escape code and can also be used with
+    PostgreSQL 8.4 or less.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
@@ -34,12 +34,12 @@ table, field names), |pg_escape_identifier| must be used.
 
     A string containing text to be escaped.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 A string containing the escaped data.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 pg_escape_literal() example
@@ -59,7 +59,7 @@ Example #1 pg_escape_literal() example
     $escaped})");
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |pg_escape_identifier| - Escape a identifier for insertion into a text

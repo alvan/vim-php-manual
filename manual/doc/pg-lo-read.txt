@@ -4,12 +4,12 @@ pg_lo_read
 
 pg_lo_read — Read a large object
 
-===============================================================================
+==============================================================================
 *Description*
 
     string pg_lo_read ( resource $large_object [, int $len = 8192 ] )~
 
-pg_lo_read() reads at most {len} bytes from a large object and returns it as a 
+pg_lo_read() reads at most {len} bytes from a large object and returns it as a
 string.
 
 To use the large object interface, it is necessary to enclose it within a
@@ -19,7 +19,7 @@ transaction block.
 
     This function used to be called pg_loread().
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {large_object}
@@ -30,12 +30,12 @@ transaction block.
 
     An optional maximum number of bytes to return.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 A string containing {len} bytes from the large object, or FALSE on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 pg_lo_read() example
@@ -50,7 +50,7 @@ Example #1 pg_lo_read() example
        echo $data;
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |pg_lo_read_all| - Reads an entire large object and send straight to

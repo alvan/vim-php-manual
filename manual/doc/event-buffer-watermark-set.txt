@@ -4,7 +4,7 @@ event_buffer_watermark_set
 
 event_buffer_watermark_set — Set the watermarks for read and write events
 
-===============================================================================
+==============================================================================
 *Description*
 
     void event_buffer_watermark_set ( resource $bevent , int $events , int~
@@ -15,7 +15,7 @@ callback unless there is at least {lowmark} bytes in the input buffer; if the
 read buffer is beyond the {highmark}, reading is stopped. On output, the write
 callback is invoked whenever the buffered data falls below the {lowmark}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {bevent}

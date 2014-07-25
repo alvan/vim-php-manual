@@ -4,7 +4,7 @@ stream_socket_client
 
 stream_socket_client — Open Internet or Unix domain socket connection
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource stream_socket_client ( string $remote_socket [, int &$errno [,~
@@ -22,10 +22,10 @@ should point to the socket file on the filesystem.
 
     Note:
 
-    The stream will by default be opened in blocking mode. You can switch it to
-    non-blocking mode by using |stream_set_blocking|.
+    The stream will by default be opened in blocking mode. You can switch it
+    to non-blocking mode by using |stream_set_blocking|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {remote_socket}
@@ -65,24 +65,24 @@ should point to the socket file on the filesystem.
 
     A valid context resource created with |stream_context_create|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 On success a stream resource is returned which may be used together with the
-other file functions (such as |fgets|, |fgetss|, |fwrite|, |fclose|, and |feof|
-), FALSE on failure.
+other file functions (such as |fgets|, |fgetss|, |fwrite|, |fclose|, and |feof
+|), FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Errors/Exceptions*
 
-On failure the {errno} and {errstr} arguments will be populated with the actual
-system level error that occurred in the system-level connect() call. If the
-value returned in {errno} is 0 and the function returned FALSE, it is an
+On failure the {errno} and {errstr} arguments will be populated with the
+actual system level error that occurred in the system-level connect() call. If
+the value returned in {errno} is 0 and the function returned FALSE, it is an
 indication that the error occurred before the connect() call. This is most
 likely due to a problem initializing the socket. Note that the {errno} and
 {errstr} arguments will always be passed by reference.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 stream_socket_client() example
@@ -117,7 +117,7 @@ localhost.
     }
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
 Warning
@@ -139,7 +139,7 @@ data.
     retrieved using |stream_get_transports|. See List of Supported Socket
     Transports for a list of built in transports.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |stream_socket_server| - Create an Internet or Unix domain server socket

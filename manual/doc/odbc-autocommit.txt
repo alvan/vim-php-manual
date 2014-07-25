@@ -4,17 +4,18 @@ odbc_autocommit
 
 odbc_autocommit — Toggle autocommit behaviour
 
-===============================================================================
+==============================================================================
 *Description*
 
-    mixed odbc_autocommit ( resource $connection_id [, bool $OnOff = false ] )~
+    mixed odbc_autocommit ( resource $connection_id [, bool $OnOff = false ]~
+)~
 
 Toggles autocommit behaviour.
 
 By default, auto-commit is on for a connection. Disabling auto-commit is
 equivalent with starting a transaction.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection_id}
@@ -26,7 +27,7 @@ equivalent with starting a transaction.
     If {OnOff} is TRUE, auto-commit is enabled, if it is FALSE auto-commit is
     disabled.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Without the {OnOff} parameter, this function returns auto-commit status for
@@ -35,7 +36,7 @@ FALSE if an error occurs.
 
 If {OnOff} is set, this function returns TRUE on success and FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |odbc_commit| - Commit an ODBC transaction

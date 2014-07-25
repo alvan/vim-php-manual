@@ -4,7 +4,7 @@ db2_close
 
 db2_close — Closes a database connection
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool db2_close ( resource $connection )~
@@ -16,19 +16,19 @@ If you attempt to close a persistent DB2 client connection created with |
 db2_pconnect|, the close request is ignored and the persistent DB2 client
 connection remains available for the next caller.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
 
     Specifies an active DB2 client connection.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Closing a connection
@@ -48,7 +48,7 @@ The above example will output:
 
 Connection was successfully closed.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |db2_connect| - Returns a connection to a database

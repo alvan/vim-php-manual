@@ -4,25 +4,25 @@ dba_handlers
 
 dba_handlers — List all the handlers available
 
-===============================================================================
+==============================================================================
 *Description*
 
     array dba_handlers ([ bool $full_info = false ] )~
 
 dba_handlers() list all the handlers supported by this extension.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {full_info}
 
     Turns on/off full information display in the result.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns an array of database handlers. If {full_info} is set to TRUE, the array
-will be associative with the handlers names as keys, and their version
+Returns an array of database handlers. If {full_info} is set to TRUE, the
+array will be associative with the handlers names as keys, and their version
 information as value. Otherwise, the result will be an indexed array of
 handlers names.
 
@@ -30,7 +30,7 @@ handlers names.
 
     When the internal cdb library is used you will see cdb and cdb_make.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 dba_handlers() Example

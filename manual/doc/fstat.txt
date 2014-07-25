@@ -4,7 +4,7 @@ fstat
 
 fstat — Gets information about a file using an open file pointer
 
-===============================================================================
+==============================================================================
 *Description*
 
     array fstat ( resource $handle )~
@@ -13,20 +13,20 @@ Gathers the statistics of the file opened by the file pointer {handle}. This
 function is similar to the |stat| function except that it operates on an open
 file pointer instead of a filename.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {handle}
 
     A file system pointer resource that is typically created using |fopen|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an array with the statistics of the file; the format of the array is
 described in detail on the |stat| manual page.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 fstat() example
@@ -66,7 +66,7 @@ Array
     [blocks] => 8
 )
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: This function will not work on remote files as the file to be

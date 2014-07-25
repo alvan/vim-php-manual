@@ -4,14 +4,14 @@ bzwrite
 
 bzwrite — Binary safe bzip2 file write
 
-===============================================================================
+==============================================================================
 *Description*
 
     int bzwrite ( resource $bz , string $data [, int $length ] )~
 
 bzwrite() writes a string into the given bzip2 file stream.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {bz}
@@ -28,12 +28,12 @@ bzwrite() writes a string into the given bzip2 file stream.
     If supplied, writing will stop after {length} (uncompressed) bytes have
     been written or the end of {data} is reached, whichever comes first.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the number of bytes written, or FALSE on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 bzwrite() example
@@ -45,7 +45,7 @@ Example #1 bzwrite() example
     bzclose($bz);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |bzread| - Binary safe bzip2 file read

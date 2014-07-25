@@ -4,7 +4,7 @@ dbx_compare
 
 dbx_compare — Compare two rows for sorting purposes
 
-===============================================================================
+==============================================================================
 *Description*
 
     int dbx_compare ( array $row_a , array $row_b , string $column_key [, int~
@@ -13,7 +13,7 @@ dbx_compare — Compare two rows for sorting purposes
 dbx_compare() is a helper function for |dbx_sort| to ease the make and use of
 the custom sorting function.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {row_a}
@@ -40,14 +40,14 @@ the custom sorting function.
     One of the direction and one of the type constant can be combined with
     bitwise OR operator (|).
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns 0 if the row_a[$column_key] is equal to row_b[$column_key], and 1 or -1
-if the former is greater or is smaller than the latter one, respectively, or
-vice versa if the {flag} is set to DBX_CMP_DESC.
+Returns 0 if the row_a[$column_key] is equal to row_b[$column_key], and 1 or
+-1 if the former is greater or is smaller than the latter one, respectively,
+or vice versa if the {flag} is set to DBX_CMP_DESC.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 dbx_compare() example
@@ -75,7 +75,7 @@ Example #1 dbx_compare() example
     dbx_close($link);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |dbx_sort| - Sort a result from a dbx_query by a custom sort function

@@ -4,16 +4,16 @@ ssh2_exec
 
 ssh2_exec — Execute a command on a remote server
 
-===============================================================================
+==============================================================================
 *Description*
 
-    resource ssh2_exec ( resource $session , string $command [, string $pty [,~
-    array $env [, int $width = 80 [, int $height = 25 [, int~
+    resource ssh2_exec ( resource $session , string $command [, string $pty~
+    [, array $env [, int $width = 80 [, int $height = 25 [, int~
     $width_height_type = SSH2_TERM_UNIT_CHARS ]]]]] )~
 
 Execute a command at the remote end and allocate a channel for it.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {session}
@@ -42,12 +42,12 @@ Execute a command at the remote end and allocate a channel for it.
     {width_height_type} should be one of SSH2_TERM_UNIT_CHARS or
     SSH2_TERM_UNIT_PIXELS.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a stream on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Executing a command
@@ -59,7 +59,7 @@ Example #1 Executing a command
     $stream = ssh2_exec($connection, '/usr/local/bin/php -i');
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ssh2_connect| - Connect to an SSH server

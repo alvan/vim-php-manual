@@ -8,19 +8,19 @@ Warning
 
 This extension is deprecated as of PHP 5.5.0, and will be removed in the
 future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
-MySQL: choosing an API guide and related FAQ for more information. Alternatives
-to this function include:
+MySQL: choosing an API guide and related FAQ for more information.
+Alternatives to this function include:
 
   * mysqli_thread_id()
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource mysql_list_processes ([ resource $link_identifier = NULL ] )~
 
 Retrieves the current MySQL server threads.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { link_identifier}
@@ -31,12 +31,12 @@ Retrieves the current MySQL server threads.
     If no connection is found or established, an E_WARNING level error is
     generated.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 A result pointer resource on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mysql_list_processes() example
@@ -57,7 +57,7 @@ The above example will output something similar to:
 1 localhost test Processlist 0
 4 localhost mysql sleep 5
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mysql_thread_id| - Return the current thread ID

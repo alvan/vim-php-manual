@@ -4,23 +4,23 @@ ncurses_wborder
 
 ncurses_wborder — Draws a border around the window using attributed characters
 
-===============================================================================
+==============================================================================
 *Description*
 
-    int ncurses_wborder ( resource $window , int $left , int $right , int $top~
-    , int $bottom , int $tl_corner , int $tr_corner , int $bl_corner , int~
-    $br_corner )~
+    int ncurses_wborder ( resource $window , int $left , int $right , int~
+    $top , int $bottom , int $tl_corner , int $tr_corner , int $bl_corner ,~
+    int $br_corner )~
 Warning
 
 This function is EXPERIMENTAL. The behaviour of this function, its name, and
-surrounding documentation may change without notice in a future release of PHP.
-This function should be used at your own risk.
+surrounding documentation may change without notice in a future release of
+PHP. This function should be used at your own risk.
 
 Draws the specified lines and corners around the passed {window}.
 
 Use |ncurses_border| for borders around the main window.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 Each parameter expects 0 to draw a line and 1 to skip it.
@@ -53,7 +53,7 @@ Each parameter expects 0 to draw a line and 1 to skip it.
 
     Bottom right corner
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ncurses_border| - Draw a border around the screen using attributed

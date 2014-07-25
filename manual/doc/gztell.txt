@@ -4,7 +4,7 @@ gztell
 
 gztell — Tell gz-file pointer read/write position
 
-===============================================================================
+==============================================================================
 *Description*
 
     int gztell ( resource $zp )~
@@ -12,7 +12,7 @@ gztell — Tell gz-file pointer read/write position
 Gets the position of the given file pointer; i.e., its offset into the
 uncompressed file stream.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {zp}
@@ -20,12 +20,12 @@ uncompressed file stream.
     The gz-file pointer. It must be valid, and must point to a file
     successfully opened by |gzopen|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The position of the file pointer or FALSE if an error occurs.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |gzopen| - Open gz-file

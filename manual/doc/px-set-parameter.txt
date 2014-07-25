@@ -4,14 +4,14 @@ px_set_parameter
 
 px_set_parameter — Sets a parameter
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool px_set_parameter ( resource $pxdoc , string $name , string $value )~
 
 Sets various parameters.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {pxdoc}
@@ -34,7 +34,8 @@ Sets various parameters.
 
     inputencoding
 
-        The encoding of the input data which is to be stored into the database.
+        The encoding of the input data which is to be stored into the
+        database.
 
 {value}
 
@@ -42,12 +43,12 @@ Sets various parameters.
     must be the name of the encoding as understood by iconv or recode, e.g.
     iso-8859-1, utf-8, cp850.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |px_get_info| - Return lots of information about a paradox file to

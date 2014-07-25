@@ -4,7 +4,7 @@ ibase_name_result
 
 ibase_name_result — Assigns a name to a result set
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool ibase_name_result ( resource $result , string $name )~
@@ -12,7 +12,7 @@ ibase_name_result — Assigns a name to a result set
 This function assigns a name to a result set. This name can be used later in
 UPDATE|DELETE ... WHERE CURRENT OF {name} statements.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
@@ -23,12 +23,12 @@ UPDATE|DELETE ... WHERE CURRENT OF {name} statements.
 
     The name to be assigned.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 ibase_name_result() example
@@ -45,7 +45,7 @@ Example #1 ibase_name_result() example
     }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ibase_prepare| - Prepare a query for later binding of parameter

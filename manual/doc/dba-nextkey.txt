@@ -4,7 +4,7 @@ dba_nextkey
 
 dba_nextkey — Fetch next key
 
-===============================================================================
+==============================================================================
 *Description*
 
     string dba_nextkey ( resource $handle )~
@@ -12,19 +12,19 @@ dba_nextkey — Fetch next key
 dba_nextkey() returns the next key of the database and advances the internal
 key pointer.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {handle}
 
     The database handler, returned by |dba_open| or |dba_popen|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the key on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |dba_firstkey| - Fetch first key

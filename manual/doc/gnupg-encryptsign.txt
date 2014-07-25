@@ -4,7 +4,7 @@ gnupg_encryptsign
 
 gnupg_encryptsign — Encrypts and signs a given text
 
-===============================================================================
+==============================================================================
 *Description*
 
     string gnupg_encryptsign ( resource $identifier , string $plaintext )~
@@ -13,7 +13,7 @@ Encrypts and signs the given {plaintext} with the keys, which were set with |
 gnupg_addsignkey| and |gnupg_addencryptkey| before and returns the encrypted
 and signed text.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {identifier}
@@ -24,13 +24,13 @@ and signed text.
 
     The text being encrypted.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 On success, this function returns the encrypted and signed text. On failure,
 this function returns FALSE.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Procedural gnupg_encryptsign() example

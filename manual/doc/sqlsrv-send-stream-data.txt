@@ -4,27 +4,27 @@ sqlsrv_send_stream_data
 
 sqlsrv_send_stream_data — Sends data from parameter streams to the server
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool sqlsrv_send_stream_data ( resource $stmt )~
 
-Send data from parameter streams to the server. Up to 8 KB of data is sent with
-each call.
+Send data from parameter streams to the server. Up to 8 KB of data is sent
+with each call.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {stmt}
 
     A statement resource returned by |sqlsrv_query| or |sqlsrv_execute|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE if there is more data to send and FALSE if there is not.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 sqlsrv_send_stream_data() example
@@ -61,7 +61,7 @@ Example #1 sqlsrv_send_stream_data() example
     echo "$i calls were made.";
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |sqlsrv_prepare| - Prepares a query for execution

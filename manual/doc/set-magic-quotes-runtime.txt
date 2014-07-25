@@ -5,7 +5,7 @@ set_magic_quotes_runtime
 set_magic_quotes_runtime — Sets the current active configuration setting of
 magic_quotes_runtime
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool set_magic_quotes_runtime ( bool $new_setting )~
@@ -17,26 +17,26 @@ Warning
 This function has been DEPRECATED as of PHP 5.3.0. Relying on this feature is
 highly discouraged.
 
-===============================================================================
+==============================================================================
 *Errors/Exceptions*
 
 Since PHP 5.3 this function has been deprecated and will raise an E_DEPRECATED
 warning upon execution. Since PHP 5.4 this function will also raise an
 E_CORE_ERROR on trying to enable magic quotes.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {new_setting}
 
     FALSE for off, TRUE for on.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 set_magic_quotes_runtime() example
@@ -69,7 +69,7 @@ The above example will output:
 Without magic_quotes_runtime: 'PHP' is a Recursive acronym
 With magic_quotes_runtime: \'PHP\' is a Recursive acronym
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |get_magic_quotes_gpc| - Gets the current configuration setting of

@@ -4,7 +4,7 @@ oci_set_client_identifier
 
 oci_set_client_identifier — Sets the client identifier
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool oci_set_client_identifier ( resource $connection , string~
@@ -13,36 +13,37 @@ oci_set_client_identifier — Sets the client identifier
 Sets the client identifier used by various database components to identify
 lightweight application users who authenticate as the same database user.
 
-The client identifier is registered with the database when the next 'roundtrip'
-from PHP to the database occurs, typically when an SQL statement is executed.
+The client identifier is registered with the database when the next
+'roundtrip' from PHP to the database occurs, typically when an SQL statement
+is executed.
 
-The identifier can subsequently be queried, for example with SELECT SYS_CONTEXT
-('USERENV','CLIENT_IDENTIFIER') FROM DUAL. Database administration views such
-as V$SESSION will also contain the value. It can be used with
+The identifier can subsequently be queried, for example with SELECT
+SYS_CONTEXT('USERENV','CLIENT_IDENTIFIER') FROM DUAL. Database administration
+views such as V$SESSION will also contain the value. It can be used with
 DBMS_MONITOR.CLIENT_ID_TRACE_ENABLE for tracing and can also be used for
 auditing.
 
 The value may be retained across page requests that use the same persistent
 connection.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
 
-    An Oracle connection identifier, returned by |oci_connect|, |oci_pconnect|,
-    or |oci_new_connect|.
+    An Oracle connection identifier, returned by |oci_connect|, |oci_pconnect|
+    , or |oci_new_connect|.
 
 {client_identifier}
 
     User chosen string up to 64 bytes long.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Setting the client identifier to the application user
@@ -65,7 +66,7 @@ Example #1 Setting the client identifier to the application user
 
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
 Caution
@@ -75,7 +76,7 @@ Roundtrip Gotcha
 Some but not all OCI8 functions cause roundtrips. Roundtrips to the database
 may not occur with queries when result caching is enabled.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |oci_set_module_name| - Sets the module name

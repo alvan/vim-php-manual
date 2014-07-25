@@ -7,7 +7,7 @@ maxdb_result::fetch_fields
 maxdb_fetch_fields -- maxdb_result::fetch_fields — Returns an array of
 resources representing the fields in a result set
 
-===============================================================================
+==============================================================================
 *Description*
 
 Procedural style
@@ -22,7 +22,7 @@ This function serves an identical purpose to the |maxdb_fetch_field| function
 with the single difference that, instead of returning one resource at a time
 for each field, the columns are returned as an array of resources.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an array of resources which contains field definition information or
@@ -35,7 +35,7 @@ max_length The maximum width of the field for the result set.
 type       The data type used for this field
 decimals   The number of decimals used (for integer fields)
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Object oriented style
@@ -116,7 +116,7 @@ max. Len: 4
 Flags:    -1
 Type:     0
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |maxdb_num_fields| - Get the number of fields in a result

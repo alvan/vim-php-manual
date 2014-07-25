@@ -4,7 +4,7 @@ ldap_get_values
 
 ldap_get_values — Get all values from a result entry
 
-===============================================================================
+==============================================================================
 *Description*
 
     array ldap_get_values ( resource $link_identifier , resource~
@@ -19,7 +19,7 @@ You application will either be hard coded to look for certain attributes (such
 as "surname" or "mail") or you will have to use the |ldap_get_attributes| call
 to work out what attributes exist for a given entry.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {link_identifier}
@@ -30,24 +30,24 @@ to work out what attributes exist for a given entry.
 
 {attribute}
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns an array of values for the attribute on success and FALSE on error. The
-number of values can be found by indexing "count" in the resultant array.
+Returns an array of values for the attribute on success and FALSE on error.
+The number of values can be found by indexing "count" in the resultant array.
 Individual values are accessed by integer index in the array. The first index
 is 0.
 
-LDAP allows more than one entry for an attribute, so it can, for example, store
-a number of email addresses for one person's directory entry all labeled with
-the attribute "mail"
+LDAP allows more than one entry for an attribute, so it can, for example,
+store a number of email addresses for one person's directory entry all labeled
+with the attribute "mail"
 
     return_value["count"] = number of values for attribute
     return_value[0] = first value of attribute
     return_value[i] = ith value of attribute
 
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 List all values of the "mail" attribute for a directory entry
@@ -70,7 +70,7 @@ Example #1 List all values of the "mail" attribute for a directory entry
     }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ldap_get_values_len| - Get all binary values from a result entry

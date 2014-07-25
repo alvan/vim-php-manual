@@ -4,7 +4,7 @@ pg_client_encoding
 
 pg_client_encoding — Gets the client encoding
 
-===============================================================================
+==============================================================================
 *Description*
 
     string pg_client_encoding ([ resource $connection ] )~
@@ -16,14 +16,15 @@ PostgreSQL encoding identifiers.
 
     Note:
 
-    This function requires PHP 4.0.3 or higher and PostgreSQL 7.0 or higher. If
-    libpq is compiled without multibyte encoding support, pg_client_encoding()
-    always returns SQL_ASCII. Supported encoding depends on PostgreSQL version.
-    Refer to the PostgreSQL Documentation supported encodings.
+    This function requires PHP 4.0.3 or higher and PostgreSQL 7.0 or higher.
+    If libpq is compiled without multibyte encoding support, 
+    pg_client_encoding() always returns SQL_ASCII. Supported encoding depends
+    on PostgreSQL version. Refer to the PostgreSQL Documentation supported
+    encodings.
 
     The function used to be called pg_clientencoding().
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
@@ -32,12 +33,12 @@ PostgreSQL encoding identifiers.
     the default connection is used. The default connection is the last
     connection made by |pg_connect| or |pg_pconnect|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The client encoding, or FALSE on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 pg_client_encoding() example
@@ -53,7 +54,7 @@ The above example will output:
 
 Client encoding is: ISO-8859-1
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |pg_set_client_encoding| - Set the client encoding

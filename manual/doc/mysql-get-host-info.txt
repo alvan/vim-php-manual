@@ -8,13 +8,13 @@ Warning
 
 This extension is deprecated as of PHP 5.5.0, and will be removed in the
 future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
-MySQL: choosing an API guide and related FAQ for more information. Alternatives
-to this function include:
+MySQL: choosing an API guide and related FAQ for more information.
+Alternatives to this function include:
 
   * mysqli_get_host_info()
   * PDO::getAttribute(PDO::ATTR_CONNECTION_STATUS)
 
-===============================================================================
+==============================================================================
 *Description*
 
     string mysql_get_host_info ([ resource $link_identifier = NULL ] )~
@@ -22,7 +22,7 @@ to this function include:
 Describes the type of connection in use for the connection, including the
 server host name.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { link_identifier}
@@ -33,13 +33,13 @@ server host name.
     If no connection is found or established, an E_WARNING level error is
     generated.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a string describing the type of MySQL connection in use for the
 connection or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mysql_get_host_info() example
@@ -56,7 +56,7 @@ The above example will output something similar to:
 
 MySQL host info: Localhost via UNIX socket
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mysql_get_client_info| - Get MySQL client info

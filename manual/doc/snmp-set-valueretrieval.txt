@@ -5,17 +5,17 @@ snmp_set_valueretrieval
 snmp_set_valueretrieval — Specify the method how the SNMP values will be
 returned
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool snmp_set_valueretrieval ( int $method = SNMP_VALUE_LIBRARY )~
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {method}
 
-                                     types
+                                    types
     SNMP_VALUE_LIBRARY The return values will be as returned by the Net-SNMP
                        library.
     SNMP_VALUE_PLAIN   The return values will be the plain value without the
@@ -26,7 +26,7 @@ returned
                        "value" is returned is based on which one of constants
                        SNMP_VALUE_LIBRARY, SNMP_VALUE_PLAIN is set.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Using snmp_set_valueretrieval()
@@ -67,10 +67,10 @@ Example #1 Using snmp_set_valueretrieval()
 
 <?>
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
         Constants SNMP_VALUE_PLAIN or SNMP_VALUE_LIBRARY may be combined with
         SNMP_VALUE_OBJECT resulting different way of representing contents of
         {value} array element in return value of GET-function. If no
@@ -80,7 +80,7 @@ Version                               Description
         Prior to 5.4.0 SNMP_VALUE_OBJECT effecively meant SNMP_VALUE_OBJECT|
         SNMP_VALUE_PLAIN.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |snmp_get_valueretrieval| - Return the method how the SNMP values will be

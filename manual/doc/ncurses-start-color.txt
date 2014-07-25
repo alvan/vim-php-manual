@@ -4,27 +4,27 @@ ncurses_start_color
 
 ncurses_start_color — Initializes color functionality
 
-===============================================================================
+==============================================================================
 *Description*
 
     int ncurses_start_color ( void )~
 
-Initializes color functionality in ncurses. This function must be called before
-any color manipulation functions are called and after |ncurses_init| is called.
-It is good practice to call this function right after |ncurses_init|.
+Initializes color functionality in ncurses. This function must be called
+before any color manipulation functions are called and after |ncurses_init| is
+called. It is good practice to call this function right after |ncurses_init|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 This function has no parameters.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns 0 on success, or -1 if the color table could not be allocated or
 ncurses was not initialized.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Writing a string with a specified color to the screen
@@ -48,7 +48,7 @@ Example #1 Writing a string with a specified color to the screen
     ncurses_end();
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ncurses_can_change_color| - Checks if terminal color definitions can be

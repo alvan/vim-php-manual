@@ -4,7 +4,7 @@ ifx_query
 
 ifx_query — Send Informix query
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource ifx_query ( string $query , resource $link_identifier [, int~
@@ -29,7 +29,7 @@ select queries will return BLOB columns as blob id's (integer value). You can
 get the value of the blob as a string or file with the blob functions (see
 below).
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {query}
@@ -44,8 +44,8 @@ below).
 
     This optional parameter allows you to make this a scroll and/or hold
     cursor. It's a bitmask and can be either IFX_SCROLL, IFX_HOLD, or both
-    or'ed together. I you omit this parameter the cursor is a normal sequential
-    cursor.
+    or'ed together. I you omit this parameter the cursor is a normal
+    sequential cursor.
 
 {blobidarray}
 
@@ -53,12 +53,12 @@ below).
     {blobidarray} parameter containing the corresponding "blob ids", and you
     should replace those columns with a "?" in the query text.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns valid Informix result identifier on success, or FALSE on errors.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Show all rows of the "orders" table as a HTML table
@@ -99,7 +99,7 @@ Example #2 Insert some values into the "catalog" table
     ifx_free_result($res_id);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ifx_connect| - Open Informix server connection

@@ -4,7 +4,7 @@ bzread
 
 bzread — Binary safe bzip2 file read
 
-===============================================================================
+==============================================================================
 *Description*
 
     string bzread ( resource $bz [, int $length = 1024 ] )~
@@ -14,7 +14,7 @@ bzread() reads from the given bzip2 file pointer.
 Reading stops when {length} (uncompressed) bytes have been read or EOF is
 reached, whichever comes first.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {bz}
@@ -24,15 +24,15 @@ reached, whichever comes first.
 
 {length}
 
-    If not specified, bzread() will read 1024 (uncompressed) bytes at a time. A
-    maximum of 8192 uncompressed bytes will be read at a time.
+    If not specified, bzread() will read 1024 (uncompressed) bytes at a time.
+    A maximum of 8192 uncompressed bytes will be read at a time.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the uncompressed data, or FALSE on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 bzread() example
@@ -53,7 +53,7 @@ Example #1 bzread() example
 
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |bzwrite| - Binary safe bzip2 file write

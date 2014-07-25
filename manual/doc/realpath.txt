@@ -4,7 +4,7 @@ realpath
 
 realpath — Returns canonicalized absolute pathname
 
-===============================================================================
+==============================================================================
 *Description*
 
     string realpath ( string $path )~
@@ -13,7 +13,7 @@ realpath() expands all symbolic links and resolves references to '/./', '/../'
 and extra '/' characters in the input {path} and returns the canonicalized
 absolute pathname.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {path}
@@ -23,14 +23,14 @@ absolute pathname.
 
         Note:
 
-        Whilst a path must be supplied, the value can be blank or NULL In these
-        cases, the value is interpreted as the current directory.
+        Whilst a path must be supplied, the value can be blank or NULL In
+        these cases, the value is interpreted as the current directory.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns the canonicalized absolute pathname on success. The resulting path will
-have no symbolic link, '/./' or '/../' components.
+Returns the canonicalized absolute pathname on success. The resulting path
+will have no symbolic link, '/./' or '/../' components.
 
 realpath() returns FALSE on failure, e.g. if the file does not exist.
 
@@ -40,20 +40,20 @@ realpath() returns FALSE on failure, e.g. if the file does not exist.
     the hierarchy, otherwise realpath() will return FALSE.
 
     Note: Because PHP's integer type is signed and many platforms use 32bit
-    integers, some filesystem functions may return unexpected results for files
-    which are larger than 2GB.
+    integers, some filesystem functions may return unexpected results for
+    files which are larger than 2GB.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
-        Prior to this release, if only the last {path} component did not exist,
-5.3.0   realpath() would not fail on *BSD systems. realpath() now fails in this
-        case.
-5.0.0   Prior to this release, a blank or NULL {path} would cause realpath() to
-        return the directory name of the script.
+Version                              Description
+        Prior to this release, if only the last {path} component did not
+5.3.0   exist, realpath() would not fail on *BSD systems. realpath() now fails
+        in this case.
+5.0.0   Prior to this release, a blank or NULL {path} would cause realpath()
+        to return the directory name of the script.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 realpath() example
@@ -79,7 +79,7 @@ The above example will output:
 
 C:\WINDOWS\System32
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |basename| - Returns trailing name component of path

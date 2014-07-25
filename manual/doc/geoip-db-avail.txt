@@ -4,7 +4,7 @@ geoip_db_avail
 
 geoip_db_avail — Determine if GeoIP Database is available
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool geoip_db_avail ( int $database )~
@@ -14,7 +14,7 @@ available and can be opened on disk.
 
 It does not indicate if the file is a proper database, only if it is readable.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {database}
@@ -22,12 +22,12 @@ It does not indicate if the file is a proper database, only if it is readable.
     The database type as an integer. You can use the various constants defined
     with this extension (ie: GEOIP_*_EDITION).
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE is database exists, FALSE if not found, or NULL on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A geoip_db_avail() example

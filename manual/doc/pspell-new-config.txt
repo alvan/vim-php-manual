@@ -2,19 +2,20 @@ pspell_new_config
 
 (PHP 4 >= 4.0.2, PHP 5)
 
-pspell_new_config — Load a new dictionary with settings based on a given config
+pspell_new_config — Load a new dictionary with settings based on a given
+config
 
-===============================================================================
+==============================================================================
 *Description*
 
     int pspell_new_config ( int $config )~
 
 pspell_new_config() opens up a new dictionary with settings specified in a
-config, created with |pspell_config_create| and modified with pspell_config_*()
-functions. This method provides you with the most flexibility and has all the
-functionality provided by |pspell_new| and |pspell_new_personal|.
+config, created with |pspell_config_create| and modified with pspell_config_*
+() functions. This method provides you with the most flexibility and has all
+the functionality provided by |pspell_new| and |pspell_new_personal|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {config}
@@ -22,12 +23,12 @@ functionality provided by |pspell_new| and |pspell_new_personal|.
     The {config} parameter is the one returned by |pspell_config_create| when
     the config was created.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a dictionary link identifier on success.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 pspell_new_config()

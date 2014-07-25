@@ -4,7 +4,7 @@ nl_langinfo
 
 nl_langinfo — Query language and locale information
 
-===============================================================================
+==============================================================================
 *Description*
 
     string nl_langinfo ( int $item )~
@@ -13,7 +13,7 @@ nl_langinfo() is used to access individual elements of the locale categories.
 Unlike |localeconv|, which returns all of the elements, nl_langinfo() allows
 you to select any specific element.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {item}
@@ -23,8 +23,8 @@ you to select any specific element.
     used and their description. Some of these constants may not be defined or
     hold no value for certain locales.
 
-                             nl_langinfo Constants
-        Constant                             Description
+                            nl_langinfo Constants
+        Constant                            Description
     LC_TIME Category Constants
     ABDAY_(1-7)       Abbreviated name of n-th day of the week.
     DAY_(1-7)         Name of the n-th day of the week (DAY_1 = Sunday).
@@ -43,8 +43,8 @@ you to select any specific element.
                       post meridian.
     ERA               Alternate era.
     ERA_YEAR          Year in alternate era format.
-    ERA_D_T_FMT       Date and time in alternate era format (string can be used
-                      in |strftime|).
+    ERA_D_T_FMT       Date and time in alternate era format (string can be
+                      used in |strftime|).
     ERA_D_FMT         Date in alternate era format (string can be used in |
                       strftime|).
     ERA_T_FMT         Time in alternate era format (string can be used in |
@@ -70,10 +70,10 @@ you to select any specific element.
                           CURRENCY_SYMBOL.
     P_SIGN_POSN         * Returns 1 if the sign string precedes the quantity
                           and CURRENCY_SYMBOL.
-                        * Returns 2 if the sign string follows the quantity and
-                          CURRENCY_SYMBOL.
-                        * Returns 3 if the sign string immediately precedes the
-                          CURRENCY_SYMBOL.
+                        * Returns 2 if the sign string follows the quantity
+                          and CURRENCY_SYMBOL.
+                        * Returns 3 if the sign string immediately precedes
+                          the CURRENCY_SYMBOL.
     N_SIGN_POSN         * Returns 4 if the sign string immediately follows the
                           CURRENCY_SYMBOL.
 
@@ -93,17 +93,17 @@ you to select any specific element.
     LC_CTYPE Category Constants
     CODESET           Return a string with the name of the character encoding.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the element as a string, or FALSE if {item} is not valid.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: This function is not implemented on Windows platforms.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |setlocale| - Set locale information

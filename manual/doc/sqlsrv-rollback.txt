@@ -5,7 +5,7 @@ sqlsrv_rollback
 sqlsrv_rollback — Rolls back a transaction that was begun with |
 sqlsrv_begin_transaction|
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool sqlsrv_rollback ( resource $conn )~
@@ -13,19 +13,19 @@ sqlsrv_begin_transaction|
 Rolls back a transaction that was begun with |sqlsrv_begin_transaction| and
 returns the connection to auto-commit mode.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {conn}
 
     The connection resource returned by a call to |sqlsrv_connect|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 sqlsrv_rollback() example
@@ -74,7 +74,7 @@ together with |sqlsrv_commit| and sqlsrv_rollback().
     }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |sqlsrv_begin_transaction| - Begins a database transaction

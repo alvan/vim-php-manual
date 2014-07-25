@@ -4,7 +4,7 @@ dio_truncate
 
 dio_truncate — Truncates file descriptor fd to offset bytes
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool dio_truncate ( resource $fd , int $offset )~
@@ -16,7 +16,7 @@ the file previously was shorter, it is unspecified whether the file is left
 unchanged or is extended. In the latter case the extended part reads as zero
 bytes.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {fd}
@@ -27,12 +27,12 @@ bytes.
 
     The offset in bytes.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: This function is not implemented on Windows platforms.

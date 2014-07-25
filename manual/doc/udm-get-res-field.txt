@@ -4,14 +4,14 @@ udm_get_res_field
 
 udm_get_res_field — Fetch a result field
 
-===============================================================================
+==============================================================================
 *Description*
 
     string udm_get_res_field ( resource $res , int $row , int $field )~
 
 Fetch a mnoGoSearch result field.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {res}
@@ -27,10 +27,10 @@ Fetch a mnoGoSearch result field.
 
     {field} - field identifier, may have the following values:
       + UDM_FIELD_URL - document URL field
-      + UDM_FIELD_CONTENT - document Content-type field (for example, text/html
-        ).
-      + UDM_FIELD_CATEGORY - document category field. Use |udm_cat_path| to get
-        full path to current category from the categories tree root. (This
+      + UDM_FIELD_CONTENT - document Content-type field (for example, text/
+        html).
+      + UDM_FIELD_CATEGORY - document category field. Use |udm_cat_path| to
+        get full path to current category from the categories tree root. (This
         parameter is available only in PHP 4.0.6 or later).
       + UDM_FIELD_TITLE - document title field.
       + UDM_FIELD_KEYWORDS - document keywords field (from META KEYWORDS tag).
@@ -46,7 +46,7 @@ Fetch a mnoGoSearch result field.
         documents.
       + UDM_FIELD_CRC - document CRC.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 udm_get_res_field() returns result field value on success, FALSE on error.

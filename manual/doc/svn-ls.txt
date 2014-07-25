@@ -5,7 +5,7 @@ svn_ls
 svn_ls — Returns list of directory contents in repository URL, optionally at
 revision number
 
-===============================================================================
+==============================================================================
 *Description*
 
     array svn_ls ( string $repos_url [, int $revision_no = SVN_REVISION_HEAD~
@@ -20,7 +20,7 @@ list $repos_url[@$revision_no]
     This function does not work with working copies. {repos_url} must be a
     repository URL.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {url}
@@ -38,7 +38,7 @@ list $repos_url[@$revision_no]
 
     Enables recursion.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 On success, this function returns an array file listing in the format of:
@@ -56,16 +56,16 @@ On success, this function returns an array file listing in the format of:
     )
 [1] => ...
 
-===============================================================================
+==============================================================================
 *Notes*
 
 Warning
 
 This function is EXPERIMENTAL. The behaviour of this function, its name, and
-surrounding documentation may change without notice in a future release of PHP.
-This function should be used at your own risk.
+surrounding documentation may change without notice in a future release of
+PHP. This function should be used at your own risk.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 svn_ls() example
@@ -100,7 +100,7 @@ Array
         )
 )
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * » SVN documentation on svn list

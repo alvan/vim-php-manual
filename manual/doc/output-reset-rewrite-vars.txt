@@ -4,7 +4,7 @@ output_reset_rewrite_vars
 
 output_reset_rewrite_vars — Reset URL rewriter values
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool output_reset_rewrite_vars ( void )~
@@ -13,12 +13,12 @@ This function resets the URL rewriter and removes all rewrite variables
 previously set by the |output_add_rewrite_var| function or the session
 mechanism (if session.use_trans_sid was set on |session_start|).
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 output_reset_rewrite_vars() example
@@ -39,7 +39,7 @@ The above example will output:
 <a href="file.php?PHPSESSID=xxx&var=value">link</a>
 <a href="file.php">link</a>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |output_add_rewrite_var| - Add URL rewriter values

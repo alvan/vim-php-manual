@@ -4,7 +4,7 @@ ldap_set_option
 
 ldap_set_option — Set the value of the given option
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool ldap_set_option ( resource $link_identifier , int $option , mixed~
@@ -12,7 +12,7 @@ ldap_set_option — Set the value of the given option
 
 Sets the value of the specified option to be {newval}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {link_identifier}
@@ -39,9 +39,9 @@ Sets the value of the specified option to be {newval}.
     LDAP_OPT_CLIENT_CONTROLS  array    
 
     LDAP_OPT_SERVER_CONTROLS and LDAP_OPT_CLIENT_CONTROLS require a list of
-    controls, this means that the value must be an array of controls. A control
-    consists of an oid identifying the control, an optional value, and an
-    optional flag for criticality. In PHP a control is given by an array
+    controls, this means that the value must be an array of controls. A
+    control consists of an oid identifying the control, an optional value, and
+    an optional flag for criticality. In PHP a control is given by an array
     containing an element with the key oid and string value, and two optional
     elements. The optional elements are key value with string value and key
     iscritical with boolean value. iscritical defaults to FALSE if not
@@ -52,12 +52,12 @@ Sets the value of the specified option to be {newval}.
 
     The new value for the specified {option}.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Set protocol version
@@ -85,7 +85,7 @@ Example #2 Set server controls
     }
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -93,7 +93,7 @@ Example #2 Set server controls
     This function is only available when using OpenLDAP 2.x.x OR Netscape
     Directory SDK x.x.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ldap_get_option| - Get the current value for given option

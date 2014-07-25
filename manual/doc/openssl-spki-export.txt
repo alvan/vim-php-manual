@@ -5,32 +5,32 @@ openssl_spki_export
 openssl_spki_export — Exports a valid PEM formatted public key signed public
 key and challenge
 
-===============================================================================
+==============================================================================
 *Description*
 
     string openssl_spki_export ( string &$spkac )~
 
 Exports PEM formatted public key from encoded signed public key and challenge
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {spkac}
 
     Expects a valid signed public key and challenge
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the associated PEM formatted public key or NULL on failure.
 
-===============================================================================
+==============================================================================
 *Errors/Exceptions*
 
-Emits an E_WARNING level error if an invalid argument is passed via the {spkac}
-parameter.
+Emits an E_WARNING level error if an invalid argument is passed via the
+{spkac} parameter.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 openssl_spki_export() example
@@ -62,7 +62,7 @@ element
 <?>
 <keygen name="spkac" challenge="challenge string" keytype="RSA">
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |openssl_spki_new| - Generate a new signed public key and challenge

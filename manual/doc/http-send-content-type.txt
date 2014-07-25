@@ -4,7 +4,7 @@ http_send_content_type
 
 http_send_content_type — Send Content-Type
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool http_send_content_type ([ string $content_type =~
@@ -15,25 +15,25 @@ Send the Content-Type of the sent entity.
     Note: This function should be used in conjunction with |http_send_data|, |
     http_send_file| and |http_send_stream|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {content_type}
 
     the desired content type (primary/secondary)
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Errors/Exceptions*
 
 Raises an E_WARNING when the {content_type} doesn't seem to contain a primary
 and a secondary part.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |http_send_data| - Send arbitrary data

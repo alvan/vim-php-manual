@@ -4,7 +4,7 @@ socket_write
 
 socket_write — Write to a socket
 
-===============================================================================
+==============================================================================
 *Description*
 
     int socket_write ( resource $socket , string $buffer [, int $length = 0 ]~
@@ -12,7 +12,7 @@ socket_write — Write to a socket
 
 The function socket_write() writes to the {socket} from the given {buffer}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {socket}
@@ -24,10 +24,10 @@ The function socket_write() writes to the {socket} from the given {buffer}.
 {length}
 
     The optional parameter {length} can specify an alternate length of bytes
-    written to the socket. If this length is greater than the buffer length, it
-    is silently truncated to the length of the buffer.
+    written to the socket. If this length is greater than the buffer length,
+    it is silently truncated to the length of the buffer.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the number of bytes successfully written to the socket or FALSE on
@@ -37,10 +37,10 @@ may be passed to |socket_strerror| to get a textual explanation of the error.
     Note:
 
     It is perfectly valid for socket_write() to return zero which means no
-    bytes have been written. Be sure to use the === operator to check for FALSE
-    in case of an error.
+    bytes have been written. Be sure to use the === operator to check for
+    FALSE in case of an error.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -51,7 +51,7 @@ may be passed to |socket_strerror| to get a textual explanation of the error.
     You have to watch out so you don't unintentionally forget to transmit the
     rest of your data.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |socket_accept| - Accepts a connection on a socket

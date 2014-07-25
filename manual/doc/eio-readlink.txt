@@ -4,13 +4,13 @@ eio_readlink
 
 eio_readlink — Read value of a symbolic link.
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource eio_readlink ( string $path , int $pri , callable $callback [,~
     string $data = NULL ] )~
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {path}
@@ -24,8 +24,8 @@ eio_readlink — Read value of a symbolic link.
 
 {callback}
 
-    {callback} function is called when the request is done. It should match the
-    following prototype:
+    {callback} function is called when the request is done. It should match
+    the following prototype:
     void callback(mixed $data, int $result[, resource $req]);
 
     {data}
@@ -46,12 +46,12 @@ eio_readlink — Read value of a symbolic link.
 
     Arbitrary variable passed to {callback}.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 eio_readlink() returns request resource on success or FALSE on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 eio_readlink() example
@@ -98,7 +98,7 @@ bool(true)
 bool(true)
 string(16) "/tmp/symlink.dat"
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * eio_symlink

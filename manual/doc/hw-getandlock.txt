@@ -4,7 +4,7 @@ hw_GetAndLock
 
 hw_GetAndLock — Return object record and lock object
 
-===============================================================================
+==============================================================================
 *Description*
 
     string hw_getandlock ( int $connection , int $objectID )~
@@ -12,7 +12,7 @@ hw_GetAndLock — Return object record and lock object
 Returns the object record for the object with ID {objectID}. It will also lock
 the object, so other users cannot access it until it is unlocked.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
@@ -23,12 +23,12 @@ the object, so other users cannot access it until it is unlocked.
 
     The object identifier.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the object record for the object with ID {objectID}.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |hw_unlock| - Unlock object

@@ -4,7 +4,7 @@ geoip_netspeedcell_by_name
 
 geoip_netspeedcell_by_name — Get the Internet connection speed
 
-===============================================================================
+==============================================================================
 *Description*
 
     string geoip_netspeedcell_by_name ( string $hostname )~
@@ -14,9 +14,9 @@ type and speed corresponding to a hostname or an IP address.
 
 This function is only available if using GeoIP Library version 1.4.8 or newer.
 
-This function is currently only available to users who have bought a commercial
-GeoIP NetSpeedCell Edition. A warning will be issued if the proper database
-cannot be located.
+This function is currently only available to users who have bought a
+commercial GeoIP NetSpeedCell Edition. A warning will be issued if the proper
+database cannot be located.
 
 The return value is a string, common values are:
 
@@ -25,20 +25,20 @@ The return value is a string, common values are:
   * Cellular
   * Corporate
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {hostname}
 
     The hostname or IP address.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the connection speed on success, or FALSE if the address cannot be
 found in the database.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A geoip_netspeedcell_by_name() example

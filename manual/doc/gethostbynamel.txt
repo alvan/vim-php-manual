@@ -2,10 +2,10 @@ gethostbynamel
 
 (PHP 4, PHP 5)
 
-gethostbynamel — Get a list of IPv4 addresses corresponding to a given Internet
-host name
+gethostbynamel — Get a list of IPv4 addresses corresponding to a given
+Internet host name
 
-===============================================================================
+==============================================================================
 *Description*
 
     array gethostbynamel ( string $hostname )~
@@ -13,20 +13,20 @@ host name
 Returns a list of IPv4 addresses to which the Internet host specified by
 {hostname} resolves.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {hostname}
 
     The host name.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an array of IPv4 addresses or FALSE if {hostname} could not be
 resolved.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 gethostbynamel() example
@@ -43,7 +43,7 @@ Array
     [0] => 192.0.34.166
 )
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |gethostbyname| - Get the IPv4 address corresponding to a given Internet

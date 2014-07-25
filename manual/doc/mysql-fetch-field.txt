@@ -9,13 +9,13 @@ Warning
 
 This extension is deprecated as of PHP 5.5.0, and will be removed in the
 future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
-MySQL: choosing an API guide and related FAQ for more information. Alternatives
-to this function include:
+MySQL: choosing an API guide and related FAQ for more information.
+Alternatives to this function include:
 
   * mysqli_fetch_field()
   * PDOStatement::getColumnMeta()
 
-===============================================================================
+==============================================================================
 *Description*
 
     object mysql_fetch_field ( resource $result [, int $field_offset = 0 ] )~
@@ -23,7 +23,7 @@ to this function include:
 Returns an object containing field information. This function can be used to
 obtain information about fields in the provided query result.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { result}
@@ -37,15 +37,15 @@ obtain information about fields in the provided query result.
     field that was not yet retrieved by this function is retrieved. The
     {field_offset} starts at 0.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an object containing field information. The properties of the object
 are:
 
   * name - column name
-  * table - name of the table the column belongs to, which is the alias name if
-    one is defined
+  * table - name of the table the column belongs to, which is the alias name
+    if one is defined
   * max_length - maximum length of the column
   * not_null - 1 if the column cannot be NULL
   * primary_key - 1 if the column is a primary key
@@ -57,7 +57,7 @@ are:
   * unsigned - 1 if the column is unsigned
   * zerofill - 1 if the column is zero-filled
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mysql_fetch_field() example
@@ -99,7 +99,7 @@ Example #1 mysql_fetch_field() example
     mysql_free_result($result);
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: Field names returned by this function are case-sensitive.
@@ -110,7 +110,7 @@ Example #1 mysql_fetch_field() example
     be returned. The original name can be retrieved for instance by using 
     mysqli_result::fetch_field().
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mysql_field_seek| - Set result pointer to a specified field offset

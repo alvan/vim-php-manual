@@ -4,7 +4,7 @@ openssl_public_decrypt
 
 openssl_public_decrypt — Decrypts data with public key
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool openssl_public_decrypt ( string $data , string &$decrypted , mixed~
@@ -13,10 +13,10 @@ openssl_public_decrypt — Decrypts data with public key
 openssl_public_decrypt() decrypts {data} that was previous encrypted via |
 openssl_private_encrypt| and stores the result into {decrypted}.
 
-You can use this function e.g. to check if the message was written by the owner
-of the private key.
+You can use this function e.g. to check if the message was written by the
+owner of the private key.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {data}
@@ -32,12 +32,12 @@ of the private key.
 
     {padding} can be one of OPENSSL_PKCS1_PADDING, OPENSSL_NO_PADDING.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |openssl_private_encrypt| - Encrypts data with private key

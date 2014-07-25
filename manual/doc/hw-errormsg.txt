@@ -4,27 +4,28 @@ hw_ErrorMsg
 
 hw_ErrorMsg — Returns error message
 
-===============================================================================
+==============================================================================
 *Description*
 
     string hw_errormsg ( int $connection )~
 
-Returns a string containing the last error message related to the last command.
+Returns a string containing the last error message related to the last
+command.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
 
     The connection identifier.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a string containing the last error message or 'No Error'. If FALSE is
 returned, this function failed.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |hw_error| - Error number

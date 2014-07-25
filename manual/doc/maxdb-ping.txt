@@ -4,10 +4,10 @@ maxdb::ping
 
 (PECL maxdb >= 1.0)
 
-maxdb_ping -- maxdb::ping — Pings a server connection, or tries to reconnect if
-the connection has gone down
+maxdb_ping -- maxdb::ping — Pings a server connection, or tries to reconnect
+if the connection has gone down
 
-===============================================================================
+==============================================================================
 *Description*
 
 Procedural style
@@ -25,12 +25,12 @@ attempted.
 This function can be used by clients that remain idle for a long while, to
 check whether the server has closed the connection and reconnect if necessary.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Object oriented style

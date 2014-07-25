@@ -5,16 +5,16 @@ fann_create_sparse
 fann_create_sparse — Creates a standard backpropagation neural network, which
 is not fully connected
 
-===============================================================================
+==============================================================================
 *Description*
 
-    ReturnType fann_create_sparse ( float $connection_rate , int $num_layers ,~
-    int $num_neurons1 , int $num_neurons2 [, int $... ] )~
+    ReturnType fann_create_sparse ( float $connection_rate , int $num_layers~
+    , int $num_neurons1 , int $num_neurons2 [, int $... ] )~
 
 Creates a standard backpropagation neural network, which is not fully
 connected.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection_rate}
@@ -41,18 +41,18 @@ connected.
 
     Number of neurons in other layers.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a neural network resource on success, or FALSE on error.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |fann_create_sparse_array| - Creates a standard backpropagation neural
     network, which is not fully connected using an array of layer sizes
-  * |fann_create_standard| - Creates a standard fully connected backpropagation
-    neural network
+  * |fann_create_standard| - Creates a standard fully connected
+    backpropagation neural network
   * |fann_create_shortcut| - Creates a standard backpropagation neural network
     which is not fully connectected and has shortcut connections
 

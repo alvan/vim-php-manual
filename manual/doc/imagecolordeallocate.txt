@@ -4,7 +4,7 @@ imagecolordeallocate
 
 imagecolordeallocate — De-allocate a color for an image
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool imagecolordeallocate ( resource $image , int $color )~
@@ -12,24 +12,24 @@ imagecolordeallocate — De-allocate a color for an image
 De-allocates a color previously allocated with |imagecolorallocate| or |
 imagecolorallocatealpha|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { image}
 
-    An image resource, returned by one of the image creation functions, such as
-    |imagecreatetruecolor|.
+    An image resource, returned by one of the image creation functions, such
+    as |imagecreatetruecolor|.
 
 {color}
 
     The color identifier.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Using imagecolordeallocate()
@@ -39,7 +39,7 @@ Example #1 Using imagecolordeallocate()
     imagecolordeallocate($im, $white);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |imagecolorallocate| - Allocate a color for an image

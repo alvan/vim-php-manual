@@ -4,7 +4,7 @@ imageantialias
 
 imageantialias — Should antialias functions be used or not
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool imageantialias ( resource $image , bool $enabled )~
@@ -17,27 +17,27 @@ Thickness and styled are not supported.
 
 Using antialiased primitives with transparent background color can end with
 some unexpected results. The blend method uses the background color as any
-other colors. The lack of alpha component support does not allow an alpha based
-antialiasing method.
+other colors. The lack of alpha component support does not allow an alpha
+based antialiasing method.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { image}
 
-    An image resource, returned by one of the image creation functions, such as
-    |imagecreatetruecolor|.
+    An image resource, returned by one of the image creation functions, such
+    as |imagecreatetruecolor|.
 
 {enabled}
 
     Whether to enable antialiasing or not.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A comparison of two lines, one with anti-aliasing switched on
@@ -74,10 +74,10 @@ The above example will output something similar to:
 Output of example : A comparison of two lines, one with anti-aliasing switched
 on
 
-===============================================================================
+==============================================================================
 *Notes*
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |imagecreatetruecolor| - Create a new true color image

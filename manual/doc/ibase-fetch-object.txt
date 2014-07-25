@@ -4,16 +4,18 @@ ibase_fetch_object
 
 ibase_fetch_object — Get an object from a InterBase database
 
-===============================================================================
+==============================================================================
 *Description*
 
-    object ibase_fetch_object ( resource $result_id [, int $fetch_flag = 0 ] )~
+    object ibase_fetch_object ( resource $result_id [, int $fetch_flag = 0 ]~
+)~
 
 Fetches a row as a pseudo-object from a given result identifier.
 
-Subsequent calls to ibase_fetch_object() return the next row in the result set.
+Subsequent calls to ibase_fetch_object() return the next row in the result
+set.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result_id}
@@ -29,13 +31,13 @@ Subsequent calls to ibase_fetch_object() return the next row in the result set.
     cause this function to return date/time values as Unix timestamps instead
     of as formatted strings.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an object with the next row information, or FALSE if there are no more
 rows.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 ibase_fetch_object() example
@@ -50,7 +52,7 @@ Example #1 ibase_fetch_object() example
     ibase_close($dbh);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ibase_fetch_row| - Fetch a row from an InterBase database

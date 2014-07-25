@@ -4,7 +4,7 @@ ingres_query
 
 ingres_query — Send an SQL query to Ingres
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed ingres_query ( resource $link , string $query [, array $params [,~
@@ -25,7 +25,7 @@ immediately committed.
     See also the ingres.describe, ingres.scrollable and ingres.utf8 directives
     in Runtime Configuration
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {link}
@@ -78,14 +78,14 @@ immediately committed.
     v         VARCHAR
     V         LONG VARCHAR
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 ingres_query() returns a query result identifier on success else it returns
 FALSE. To see if an error occurred use |ingres_errno|, |ingres_error| or |
 ingres_errsqlstate|.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Send a simple select
@@ -144,7 +144,7 @@ Example #3 Inserting a BLOB with parameter types
     ingres_close($link);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ingres_unbuffered_query| - Send an unbuffered SQL query to Ingres

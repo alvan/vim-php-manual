@@ -4,14 +4,14 @@ sha1
 
 sha1 — Calculate the sha1 hash of a string
 
-===============================================================================
+==============================================================================
 *Description*
 
     string sha1 ( string $str [, bool $raw_output = false ] )~
 
 Calculates the sha1 hash of {str} using the » US Secure Hash Algorithm 1.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {str}
@@ -24,18 +24,18 @@ Calculates the sha1 hash of {str} using the » US Secure Hash Algorithm 1.
     instead returned in raw binary format with a length of 20, otherwise the
     returned value is a 40-character hexadecimal number.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the sha1 hash as a string.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version              Description
 5.0.0   The {raw_output} parameter was added.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A sha1() example
@@ -48,7 +48,7 @@ Example #1 A sha1() example
     }
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: Secure password hashing
@@ -56,7 +56,7 @@ Example #1 A sha1() example
     It is not recommended to use this function to secure passwords, due to the
     fast nature of this hashing algorithm. See here for details.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |sha1_file| - Calculate the sha1 hash of a file

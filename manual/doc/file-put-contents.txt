@@ -4,7 +4,7 @@ file_put_contents
 
 file_put_contents — Write a string to a file
 
-===============================================================================
+==============================================================================
 *Description*
 
     int file_put_contents ( string $filename , mixed $data [, int $flags = 0~
@@ -13,10 +13,10 @@ file_put_contents — Write a string to a file
 This function is identical to calling |fopen|, |fwrite| and |fclose|
 successively to write data to a file.
 
-If {filename} does not exist, the file is created. Otherwise, the existing file
-is overwritten, unless the FILE_APPEND flag is set.
+If {filename} does not exist, the file is created. Otherwise, the existing
+file is overwritten, unless the FILE_APPEND flag is set.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {filename}
@@ -27,24 +27,24 @@ is overwritten, unless the FILE_APPEND flag is set.
 
     The data to write. Can be either a string, an array or a stream resource.
 
-    If {data} is a stream resource, the remaining buffer of that stream will be
-    copied to the specified file. This is similar with using |
+    If {data} is a stream resource, the remaining buffer of that stream will
+    be copied to the specified file. This is similar with using |
     stream_copy_to_stream|.
 
-    You can also specify the {data} parameter as a single dimension array. This
-    is equivalent to file_put_contents($filename, implode('', $array)).
+    You can also specify the {data} parameter as a single dimension array.
+    This is equivalent to file_put_contents($filename, implode('', $array)).
 
 {flags}
 
     The value of {flags} can be any combination of the following flags, joined
     with the binary OR (|) operator.
 
-                                Available flags
-            Flag                               Description
+                               Available flags
+            Flag                              Description
     FILE_USE_INCLUDE_PATH Search for {filename} in the include directory. See
                           include_path for more information.
-    FILE_APPEND           If file {filename} already exists, append the data to
-                          the file instead of overwriting it.
+    FILE_APPEND           If file {filename} already exists, append the data
+                          to the file instead of overwriting it.
     LOCK_EX               Acquire an exclusive lock on the file while
                           proceeding to the writing.
 
@@ -52,7 +52,7 @@ is overwritten, unless the FILE_APPEND flag is set.
 
     A valid context resource created with |stream_context_create|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 This function returns the number of bytes that were written to the file, or
@@ -60,12 +60,12 @@ FALSE on failure.
 
 Warning
 
-This function may return Boolean FALSE, but may also return a non-Boolean value
-which evaluates to FALSE. Please read the section on Booleans for more
+This function may return Boolean FALSE, but may also return a non-Boolean
+value which evaluates to FALSE. Please read the section on Booleans for more
 information. Use the === operator for testing the return value of this
 function.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Simple usage example
@@ -93,15 +93,15 @@ Example #2 Using flags
     file_put_contents($file, $person, FILE_APPEND | LOCK_EX);
 <?>
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 5.0.0   Added context support
 5.1.0   Added support for LOCK_EX and the ability to pass a stream resource to
         the {data} parameter
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: This function is binary-safe.
@@ -114,7 +114,7 @@ the Supported Protocols and Wrappers for links to information about what
 abilities the various wrappers have, notes on their usage, and information on
 any predefined variables they may provide.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |fopen| - Opens file or URL

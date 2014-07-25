@@ -4,7 +4,7 @@ posix_ctermid
 
 posix_ctermid — Get path name of controlling terminal
 
-===============================================================================
+==============================================================================
 *Description*
 
     string posix_ctermid ( void )~
@@ -13,14 +13,14 @@ Generates a string which is the pathname for the current controlling terminal
 for the process. On error this will set errno, which can be checked using |
 posix_get_last_error|
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Upon successful completion, returns string of the pathname to the current
 controlling terminal. Otherwise FALSE is returned and errno is set, which can
 be checked with |posix_get_last_error|.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 posix_ctermid() example
@@ -31,7 +31,7 @@ This example will display the path to the current TTY.
     echo "I am running from ".posix_ctermid();
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |posix_ttyname| - Determine terminal device name

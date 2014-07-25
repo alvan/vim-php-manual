@@ -4,14 +4,14 @@ sqlsrv_num_fields
 
 sqlsrv_num_fields — Retrieves the number of fields (columns) on a statement
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed sqlsrv_num_fields ( resource $stmt )~
 
 Retrieves the number of fields (columns) on a statement.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {stmt}
@@ -19,12 +19,12 @@ Retrieves the number of fields (columns) on a statement.
     The statment for which the number of fields is returned. sqlsrv_num_fields
     () can be called on a statement before or after statement execution.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the number of fields on success. Returns FALSE otherwise.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 sqlsrv_num_fields() example
@@ -56,7 +56,7 @@ Example #1 sqlsrv_num_fields() example
     }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |sqlsrv_field_metadata| - Retrieves metadata for the fields of a statement

@@ -4,14 +4,14 @@ stream_socket_shutdown
 
 stream_socket_shutdown — Shutdown a full-duplex connection
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool stream_socket_shutdown ( resource $stream , int $how )~
 
 Shutdowns (partially or not) a full-duplex connection.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {stream}
@@ -24,12 +24,12 @@ Shutdowns (partially or not) a full-duplex connection.
     receptions), STREAM_SHUT_WR (disable further transmissions) or
     STREAM_SHUT_RDWR (disable further receptions and transmissions).
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A stream_socket_shutdown() example
@@ -53,7 +53,7 @@ int(5)
 Notice: fputs(): send of 5 bytes failed with errno=32 Broken pipe in test.php on line 9
 int(0)
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |fclose| - Closes an open file pointer

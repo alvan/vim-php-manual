@@ -4,14 +4,14 @@ popen
 
 popen — Opens process file pointer
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource popen ( string $command , string $mode )~
 
 Opens a pipe to a process executed by forking the command given by {command}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {command}
@@ -22,19 +22,19 @@ Opens a pipe to a process executed by forking the command given by {command}.
 
     The mode
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns a file pointer identical to that returned by |fopen|, except that it is
-unidirectional (may only be used for reading or writing) and must be closed
+Returns a file pointer identical to that returned by |fopen|, except that it
+is unidirectional (may only be used for reading or writing) and must be closed
 with |pclose|. This pointer may be used with |fgets|, |fgetss|, and |fwrite|.
 When the mode is 'r', the returned file pointer equals to the STDOUT of the
-command, when the mode is 'w', the returned file pointer equals to the STDIN of
-the command.
+command, when the mode is 'w', the returned file pointer equals to the STDIN
+of the command.
 
 If an error occurs, returns FALSE.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 popen() example
@@ -43,9 +43,9 @@ Example #1 popen() example
     $handle = popen("/bin/ls", "r");
 <?>
 
-If the command to be executed could not be found, a valid resource is returned.
-This may seem odd, but makes sense; it allows you to access any error message
-returned by the shell:
+If the command to be executed could not be found, a valid resource is
+returned. This may seem odd, but makes sense; it allows you to access any
+error message returned by the shell:
 
 Example #2 popen() example
 
@@ -60,7 +60,7 @@ Example #2 popen() example
     pclose($handle);
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -76,7 +76,7 @@ Warning
 With safe mode enabled, the command string is escaped with |escapeshellcmd|.
 Thus, echo y | echo x becomes echo y \| echo x.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |pclose| - Closes process file pointer

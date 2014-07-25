@@ -8,28 +8,28 @@ Warning
 
 This extension is deprecated as of PHP 5.5.0, and will be removed in the
 future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
-MySQL: choosing an API guide and related FAQ for more information. Alternatives
-to this function include:
+MySQL: choosing an API guide and related FAQ for more information.
+Alternatives to this function include:
 
   * mysqli_data_seek()
   * PDO::FETCH_ORI_ABS
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool mysql_data_seek ( resource $result , int $row_number )~
 
-mysql_data_seek() moves the internal row pointer of the MySQL result associated
-with the specified result identifier to point to the specified row number. The
-next call to a MySQL fetch function, such as |mysql_fetch_assoc|, would return
-that row.
+mysql_data_seek() moves the internal row pointer of the MySQL result
+associated with the specified result identifier to point to the specified row
+number. The next call to a MySQL fetch function, such as |mysql_fetch_assoc|,
+would return that row.
 
 {row_number} starts at 0. The {row_number} should be a value in the range from
-0 to |mysql_num_rows| - 1. However if the result set is empty (|mysql_num_rows|
-== 0), a seek to 0 will fail with a E_WARNING and mysql_data_seek() will return
-FALSE.
+0 to |mysql_num_rows| - 1. However if the result set is empty (|mysql_num_rows
+| == 0), a seek to 0 will fail with a E_WARNING and mysql_data_seek() will
+return FALSE.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { result}
@@ -41,12 +41,12 @@ FALSE.
 
     The desired row number of the new result pointer.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mysql_data_seek() example
@@ -82,7 +82,7 @@ Example #1 mysql_data_seek() example
     mysql_free_result($result);
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -90,15 +90,15 @@ Example #1 mysql_data_seek() example
     The function mysql_data_seek() can be used in conjunction only with |
     mysql_query|, not with |mysql_unbuffered_query|.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mysql_query| - Send a MySQL query
   * |mysql_num_rows| - Get number of rows in result
   * |mysql_fetch_row| - Get a result row as an enumerated array
   * |mysql_fetch_assoc| - Fetch a result row as an associative array
-  * |mysql_fetch_array| - Fetch a result row as an associative array, a numeric
-    array, or both
+  * |mysql_fetch_array| - Fetch a result row as an associative array, a
+    numeric array, or both
   * |mysql_fetch_object| - Fetch a result row as an object
 
 

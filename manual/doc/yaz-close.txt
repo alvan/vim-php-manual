@@ -4,7 +4,7 @@ yaz_close
 
 yaz_close — Close YAZ connection
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool yaz_close ( resource $id )~
@@ -13,22 +13,22 @@ Closes the connection given by parameter {id}.
 
     Note:
 
-    This function will only close a non-persistent connection opened by setting
-    the persistent option to FALSE with |yaz_connect|.
+    This function will only close a non-persistent connection opened by
+    setting the persistent option to FALSE with |yaz_connect|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {id}
 
     The connection resource returned by |yaz_connect|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |yaz_connect| - Prepares for a connection to a Z39.50 server

@@ -9,7 +9,7 @@ SQLiteUnbuffered::fieldName
 sqlite_field_name -- SQLiteResult::fieldName -- SQLiteUnbuffered::fieldName — 
 Returns the name of a particular field
 
-===============================================================================
+==============================================================================
 *Description*
 
     string sqlite_field_name ( resource $result , int $field_index )~
@@ -19,10 +19,10 @@ Object oriented style (method):
     string SQLiteResult::fieldName ( int $field_index )~
     string SQLiteUnbuffered::fieldName ( int $field_index )~
 
-Given the ordinal column number, {field_index}, sqlite_field_name() returns the
-name of that field in the result set {result}.
+Given the ordinal column number, {field_index}, sqlite_field_name() returns
+the name of that field in the result set {result}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
@@ -34,7 +34,7 @@ name of that field in the result set {result}.
 
     The ordinal column number in the result set.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the name of a field in an SQLite result set, given the ordinal column

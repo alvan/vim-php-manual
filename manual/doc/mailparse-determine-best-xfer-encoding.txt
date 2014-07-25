@@ -4,7 +4,7 @@ mailparse_determine_best_xfer_encoding
 
 mailparse_determine_best_xfer_encoding — Gets the best way of encoding
 
-===============================================================================
+==============================================================================
 *Description*
 
     string mailparse_determine_best_xfer_encoding ( resource $fp )~
@@ -12,19 +12,19 @@ mailparse_determine_best_xfer_encoding — Gets the best way of encoding
 Figures out the best way of encoding the content read from the given file
 pointer.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {fp}
 
     A valid file pointer, which must be seek-able.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns one of the character encodings supported by the mbstring module.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mailparse_determine_best_xfer_encoding() example

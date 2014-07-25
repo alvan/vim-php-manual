@@ -4,7 +4,7 @@ oci_execute
 
 oci_execute — Executes a statement
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool oci_execute ( resource $statement [, int $mode =~
@@ -18,10 +18,10 @@ of the query. Query results can subsequently be fetched in PHP with functions
 like |oci_fetch_array|.
 
 Each parsed statement may be executed multiple times, saving the cost of
-re-parsing. This is commonly used for INSERT statements when data is bound with
-|oci_bind_by_name|.
+re-parsing. This is commonly used for INSERT statements when data is bound
+with |oci_bind_by_name|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {statement}
@@ -32,11 +32,11 @@ re-parsing. This is commonly used for INSERT statements when data is bound with
 
     An optional second parameter can be one of the following constants:
 
-                                Execution Modes
-          Constant                             Description
-                          Automatically commit all outstanding changes for this
-    OCI_COMMIT_ON_SUCCESS connection when the statement has succeeded. This is
-                          the default.
+                               Execution Modes
+          Constant                            Description
+                          Automatically commit all outstanding changes for
+    OCI_COMMIT_ON_SUCCESS this connection when the statement has succeeded.
+                          This is the default.
                           Make query meta data available to functions like |
     OCI_DESCRIBE_ONLY     oci_field_name| but do not create a result set. Any
                           subsequent fetch call such as |oci_fetch_array| will
@@ -53,20 +53,20 @@ re-parsing. This is commonly used for INSERT statements when data is bound with
     When inserting or updating data, using transactions is recommended for
     relational data consistency and for performance reasons.
 
-    If OCI_NO_AUTO_COMMIT mode is used for any statement including queries, and
-    |oci_commit| or |oci_rollback| is not subsequently called, then OCI8 will
-    perform a rollback at the end of the script even if no data was changed. To
-    avoid an unnecessary rollback, many scripts do not use OCI_NO_AUTO_COMMIT
-    mode for queries or PL/SQL. Be careful to ensure the appropriate
-    transactional consistency for the application when using oci_execute() with
-    different modes in the same script.
+    If OCI_NO_AUTO_COMMIT mode is used for any statement including queries,
+    and |oci_commit| or |oci_rollback| is not subsequently called, then OCI8
+    will perform a rollback at the end of the script even if no data was
+    changed. To avoid an unnecessary rollback, many scripts do not use
+    OCI_NO_AUTO_COMMIT mode for queries or PL/SQL. Be careful to ensure the
+    appropriate transactional consistency for the application when using 
+    oci_execute() with different modes in the same script.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 oci_execute() for queries
@@ -82,8 +82,8 @@ Example #1 oci_execute() for queries
     while ($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)) {
         echo "<tr>\n";
         foreach ($row as $item) {
-            echo "    <td>" . ($item !== null ? htmlentities($item, ENT_QUOTES) : "
-    &nbsp;") . "</td>\n";
+            echo "    <td>" . ($item !== null ? htmlentities($item, ENT_QUOTES) : 
+    "&nbsp;") . "</td>\n";
         }
         echo "</tr>\n";
     }
@@ -157,14 +157,14 @@ Example #5 oci_execute() with OCI_DESCRIBE_ONLY example
 
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
 
     Transactions are automatically rolled back when connections are closed, or
-    when the script ends, whichever is soonest. Explicitly call |oci_commit| to
-    commit a transaction.
+    when the script ends, whichever is soonest. Explicitly call |oci_commit|
+    to commit a transaction.
 
     Any call to oci_execute() that uses OCI_COMMIT_ON_SUCCESS mode explicitly
     or by default will commit any previous uncommitted transaction.
@@ -178,7 +178,7 @@ Example #5 oci_execute() with OCI_DESCRIBE_ONLY example
     database, oci_execute() can identify some statement syntax errors that the
     lightweight, local |oci_parse| function does not.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |oci_parse| - Prepares an Oracle statement for execution

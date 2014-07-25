@@ -4,20 +4,20 @@ eio_grp
 
 eio_grp — Createsa request group.
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource eio_grp ( callable $callback [, string $data = NULL ] )~
 
 eio_grp() creates a request group.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {callback}
 
-    {callback} function is called when the request is done. It should match the
-    following prototype:
+    {callback} function is called when the request is done. It should match
+    the following prototype:
     void callback(mixed $data, int $result[, resource $req]);
 
     {data}
@@ -38,12 +38,12 @@ eio_grp() creates a request group.
 
     Arbitrary variable passed to {callback}.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 eio_grp() returns request group resource on success or FALSE on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 eio_grp() example
@@ -103,7 +103,7 @@ The above example will output something similar to:
 
 string(4) "some"
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * eio_grp_cancel

@@ -4,7 +4,7 @@ imagecharup
 
 imagecharup — Draw a character vertically
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool imagecharup ( resource $image , int $font , int $x , int $y , string~
@@ -13,13 +13,13 @@ imagecharup — Draw a character vertically
 Draws the character {c} vertically at the specified coordinate on the given
 {image}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { image}
 
-    An image resource, returned by one of the image creation functions, such as
-    |imagecreatetruecolor|.
+    An image resource, returned by one of the image creation functions, such
+    as |imagecreatetruecolor|.
 
 { font}
 
@@ -43,12 +43,12 @@ Draws the character {c} vertically at the specified coordinate on the given
 
     A color identifier created with |imagecolorallocate|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 imagecharup() example
@@ -74,7 +74,7 @@ The above example will output something similar to:
 
 Output of example : imagecharup()
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |imagechar| - Draw a character horizontally

@@ -4,7 +4,7 @@ cubrid_seq_put
 
 cubrid_seq_put — Update the element value of sequence type column using OID
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool cubrid_seq_put ( resource $conn_identifier , string $oid , string~
@@ -13,7 +13,7 @@ cubrid_seq_put — Update the element value of sequence type column using OID
 The cubrid_seq_put() function is used to update the content of the requested
 element in a sequent type attribute using OID.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {conn_identifier}
@@ -36,14 +36,14 @@ element in a sequent type attribute using OID.
 
     New content that you want to use for the update.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 TRUE, when process is successful.
 
 FALSE, when process is unsuccessful.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_seq_put() example
@@ -97,11 +97,12 @@ array(4) {
   string(3) "333"
 }
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |cubrid_seq_drop| - Delete an element from sequence type column using OID
-  * |cubrid_seq_insert| - Insert an element to a sequence type column using OID
+  * |cubrid_seq_insert| - Insert an element to a sequence type column using
+    OID
 
 
 vim:ft=help:

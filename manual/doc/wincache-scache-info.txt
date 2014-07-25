@@ -5,14 +5,14 @@ wincache_scache_info
 wincache_scache_info — Retrieves information about files cached in the session
 cache
 
-===============================================================================
+==============================================================================
 *Description*
 
     array wincache_scache_info ([ bool $summaryonly = false ] )~
 
 Retrieves information about session cache content and its usage.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {summaryonly}
@@ -20,7 +20,7 @@ Retrieves information about session cache content and its usage.
     Controls whether the returned array will contain information about
     individual cache entries along with the session cache summary.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Array of meta data about session cache or FALSE on failure
@@ -34,7 +34,8 @@ The array returned by this function contains the following elements:
   * is_local_cache - true is the cache metadata is for a local cache instance,
     false if the metadata is for the global cache
   * total_hit_count - number of times the data has been served from the cache
-  * total_miss_count - number of times the data has not been found in the cache
+  * total_miss_count - number of times the data has not been found in the
+    cache
   * scache_entries - an array that contains the information about all the
     cached items:
       + key_name - name of the key which is used to store the data
@@ -49,7 +50,7 @@ The array returned by this function contains the following elements:
         cache
       + hitcount - number of times data has been served from the cache
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A wincache_scache_info() example
@@ -84,19 +85,19 @@ Array
         )
 )
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |wincache_fcache_fileinfo| - Retrieves information about files cached in
     the file cache
   * |wincache_fcache_meminfo| - Retrieves information about file cache memory
     usage
-  * |wincache_ocache_meminfo| - Retrieves information about opcode cache memory
-    usage
+  * |wincache_ocache_meminfo| - Retrieves information about opcode cache
+    memory usage
   * |wincache_rplist_fileinfo| - Retrieves information about resolve file path
     cache
-  * |wincache_rplist_meminfo| - Retrieves information about memory usage by the
-    resolve file path cache
+  * |wincache_rplist_meminfo| - Retrieves information about memory usage by
+    the resolve file path cache
   * |wincache_refresh_if_changed| - Refreshes the cache entries for the cached
     files
   * |wincache_ucache_meminfo| - Retrieves information about user cache memory

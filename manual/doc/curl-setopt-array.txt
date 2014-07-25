@@ -4,15 +4,15 @@ curl_setopt_array
 
 curl_setopt_array — Set multiple options for a cURL transfer
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool curl_setopt_array ( resource $ch , array $options )~
 
-Sets multiple options for a cURL session. This function is useful for setting a
-large amount of cURL options without repetitively calling |curl_setopt|.
+Sets multiple options for a cURL session. This function is useful for setting
+a large amount of cURL options without repetitively calling |curl_setopt|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {ch}
@@ -24,14 +24,14 @@ large amount of cURL options without repetitively calling |curl_setopt|.
     An array specifying which options to set and their values. The keys should
     be valid |curl_setopt| constants or their integer equivalents.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE if all options were successfully set. If an option could not be
-successfully set, FALSE is immediately returned, ignoring any future options in
-the {options} array.
+successfully set, FALSE is immediately returned, ignoring any future options
+in the {options} array.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Initializing a new cURL session and fetching a web page
@@ -72,16 +72,16 @@ Example #2 Our own implementation of curl_setopt_array()
     }
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
 
     As with |curl_setopt|, passing an array to CURLOPT_POST will encode the
-    data as multipart/form-data, while passing a URL-encoded string will encode
-    the data as application/x-www-form-urlencoded.
+    data as multipart/form-data, while passing a URL-encoded string will
+    encode the data as application/x-www-form-urlencoded.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |curl_setopt| - Set an option for a cURL transfer

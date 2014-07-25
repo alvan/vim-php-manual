@@ -4,16 +4,16 @@ mqseries_put
 
 mqseries_put — MQSeries MQPUT
 
-===============================================================================
+==============================================================================
 *Description*
 
     void mqseries_put ( resource $hConn , resource $hObj , array &$md , array~
     &$pmo , string $message , resource &$compCode , resource &$reason )~
 
-The mqseries_put() (MQPUT) call puts a message on a queue or distribution list.
-The queue or distribution list must already be open.
+The mqseries_put() (MQPUT) call puts a message on a queue or distribution
+list. The queue or distribution list must already be open.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {hConn}
@@ -48,12 +48,12 @@ The queue or distribution list must already be open.
 
     Reason code qualifying the compCode.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 No value is returned.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mqseries_put() example
@@ -67,8 +67,8 @@ Example #1 mqseries_put() example
         mqseries_open(
                     $conn,
                     array('ObjectName' => 'TESTQ'),
-                    MQSERIES_MQOO_INPUT_AS_Q_DEF | MQSERIES_MQOO_FAIL_IF_QUIESCING 
-    | MQSERIES_MQOO_OUTPUT,
+                    MQSERIES_MQOO_INPUT_AS_Q_DEF | 
+    MQSERIES_MQOO_FAIL_IF_QUIESCING | MQSERIES_MQOO_OUTPUT,
                     $obj,
                     $comp_code,
                     $reason);
@@ -92,8 +92,8 @@ Example #1 mqseries_put() example
         mqseries_put($conn, $obj, $md, $pmo, 'Ping', $comp_code, $reason);
 
         if ($comp_code !== MQSERIES_MQCC_OK) {
-            printf("put CompCode:%d Reason:%d Text:%s<br>\n", $comp_code, $reason, 
-    mqseries_strerror($reason));
+            printf("put CompCode:%d Reason:%d Text:%s<br>\n", $comp_code, $reason
+    , mqseries_strerror($reason));
         }
 
     // close the object reference $obj    
@@ -104,7 +104,7 @@ Example #1 mqseries_put() example
         
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mqseries_conn| - MQSeries MQCONN

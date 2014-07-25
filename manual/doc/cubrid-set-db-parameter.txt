@@ -4,11 +4,11 @@ cubrid_set_db_parameter
 
 cubrid_set_db_parameter — Sets the CUBRID database parameters
 
-===============================================================================
+==============================================================================
 *Description*
 
-    bool cubrid_set_db_parameter ( resource $conn_identifier , int $param_type~
-    , int $param_value )~
+    bool cubrid_set_db_parameter ( resource $conn_identifier , int~
+    $param_type , int $param_value )~
 
 The cubrid_set_db_parameter() function is used to set the CUBRID database
 parameters. It can set the following CUBRID database parameters:
@@ -20,7 +20,7 @@ parameters. It can set the following CUBRID database parameters:
 
     The auto-commit mode can be set by using |cubrid_set_autocommit|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {conn_identifier}
@@ -36,14 +36,14 @@ parameters. It can set the following CUBRID database parameters:
 
     Isolation level value (1-6) or lock timeout (in seconds) value.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 TRUE on success.
 
 FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 |cubrid_get_db_parameter| example
@@ -86,7 +86,7 @@ array(4) {
   int(1)
 }
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |cubrid_get_db_parameter| - Returns the CUBRID database parameters

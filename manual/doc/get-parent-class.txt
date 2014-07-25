@@ -4,21 +4,21 @@ get_parent_class
 
 get_parent_class — Retrieves the parent class name for object or class
 
-===============================================================================
+==============================================================================
 *Description*
 
     string get_parent_class ([ mixed $object ] )~
 
 Retrieves the parent class name for object or class.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {object}
 
     The tested object or class name
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the name of the parent class of the class of which {object} is an
@@ -31,17 +31,17 @@ instance or the name.
 
 If called without parameter outside object, this function returns FALSE.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 5.1.0   If called without parameter outside object, this function would have
         returned NULL with a warning, but now returns FALSE.
 5.0.0   The {object} parameter is optional if called from the object's method.
 4.0.5   If {object} is a string, returns the name of the parent class of the
         class with that name.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Using get_parent_class()
@@ -79,7 +79,7 @@ The above example will output:
 I'm dad's son
 I'm dad's son too
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |get_class| - Returns the name of the class of an object

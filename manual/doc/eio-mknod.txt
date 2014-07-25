@@ -4,7 +4,7 @@ eio_mknod
 
 eio_mknod — Create a special or ordinary file.
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource eio_mknod ( string $path , int $mode , int $dev [, int $pri =~
@@ -14,9 +14,10 @@ eio_mknod() creates ordinary or special(often) file.
 
 Warning
 
-This function is currently not documented; only its argument list is available.
+This function is currently not documented; only its argument list is
+available.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {path}
@@ -27,17 +28,17 @@ This function is currently not documented; only its argument list is available.
 
     Specifies both the permissions to use and the type of node to be created.
     It should be a combination (using bitwise OR) of one of the file types
-    listed below and the permissions for the new node(e.g. 0640). Possible file
-    types are: EIO_S_IFREG(regular file), EIO_S_IFCHR(character file),
+    listed below and the permissions for the new node(e.g. 0640). Possible
+    file types are: EIO_S_IFREG(regular file), EIO_S_IFCHR(character file),
     EIO_S_IFBLK(block special file), EIO_S_IFIFO(FIFO - named pipe) and
-    EIO_S_IFSOCK(UNIX domain socket). To specify permissions EIO_S_I* constants
-    could be used.
+    EIO_S_IFSOCK(UNIX domain socket). To specify permissions EIO_S_I*
+    constants could be used.
 
 {dev}
 
-    If the file type is EIO_S_IFCHR or EIO_S_IFBLK then dev specifies the major
-    and minor numbers of the newly created device special file. Otherwise {dev}
-    ignored. See mknod(2) man page for details.
+    If the file type is EIO_S_IFCHR or EIO_S_IFBLK then dev specifies the
+    major and minor numbers of the newly created device special file.
+    Otherwise {dev} ignored. See mknod(2) man page for details.
 
 {pri}
 
@@ -46,8 +47,8 @@ This function is currently not documented; only its argument list is available.
 
 {callback}
 
-    {callback} function is called when the request is done. It should match the
-    following prototype:
+    {callback} function is called when the request is done. It should match
+    the following prototype:
     void callback(mixed $data, int $result[, resource $req]);
 
     {data}
@@ -68,12 +69,12 @@ This function is currently not documented; only its argument list is available.
 
     Arbitrary variable passed to {callback}.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 eio_mknod() returns request resource on success or FALSE on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 eio_mknod() example
@@ -157,7 +158,7 @@ array(26) {
 }
 eio_mknod_ok
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * eio_open

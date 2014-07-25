@@ -4,26 +4,26 @@ kadm5_get_principals
 
 kadm5_get_principals — Gets all principals from the Kerberos database
 
-===============================================================================
+==============================================================================
 *Description*
 
     array kadm5_get_principals ( resource $handle )~
 
 kadm5_get_principals() returns an array containing the principals's names.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {handle}
 
     A KADM5 handle.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns array of principals on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 kadm5_get_principals() example
@@ -40,7 +40,7 @@ Example #1 kadm5_get_principals() example
     kadm5_destroy($handle);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |kadm5_get_principal| - Gets the principal's entries from the Kerberos

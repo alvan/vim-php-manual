@@ -4,7 +4,7 @@ ps_set_border_color
 
 ps_set_border_color — Sets color of border for annotations
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool ps_set_border_color ( resource $psdoc , float $red , float $green ,~
@@ -13,10 +13,10 @@ ps_set_border_color — Sets color of border for annotations
 Links added with one of the functions |ps_add_weblink|, |ps_add_pdflink|, etc.
 will be displayed with a surounded rectangle when the postscript document is
 converted to pdf and viewed in a pdf viewer. This rectangle is not visible in
-the postscript document. This function sets the color of the rectangle's border
-line.
+the postscript document. This function sets the color of the rectangle's
+border line.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {psdoc}
@@ -35,12 +35,12 @@ line.
 
     The blue component of the border color.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ps_set_border_dash| - Sets length of dashes for border of annotations

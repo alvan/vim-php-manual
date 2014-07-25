@@ -4,7 +4,7 @@ phpversion
 
 phpversion — Gets the current PHP version
 
-===============================================================================
+==============================================================================
 *Description*
 
     string phpversion ([ string $extension ] )~
@@ -12,21 +12,21 @@ phpversion — Gets the current PHP version
 Returns a string containing the version of the currently running PHP parser or
 extension.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {extension}
 
     An optional extension name.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 If the optional {extension} parameter is specified, phpversion() returns the
 version of that extension, or FALSE if there is no version information
 associated or the extension isn't enabled.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 phpversion() example
@@ -74,15 +74,16 @@ Example #2 PHP_VERSION_ID example and usage
     }
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
 
     This information is also available in the predefined constant PHP_VERSION.
-    More versioning information is available using the PHP_VERSION_* constants.
+    More versioning information is available using the PHP_VERSION_*
+    constants.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * PHP_VERSION constants

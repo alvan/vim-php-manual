@@ -4,54 +4,55 @@ mysqlnd_ms_dump_servers
 
 mysqlnd_ms_dump_servers — Returns a list of currently configured servers
 
-===============================================================================
+==============================================================================
 *Description*
 
     array mysqlnd_ms_dump_servers ( mixed $connection )~
 
 Returns a list of currently configured servers.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
 
-    A MySQL connection handle obtained from any of the connect functions of the
-    mysqli, mysql or PDO_MYSQL extensions.
+    A MySQL connection handle obtained from any of the connect functions of
+    the mysqli, mysql or PDO_MYSQL extensions.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-FALSE on error. Otherwise, returns an array with two entries masters and slaves
-each of which contains an array listing all corresponding servers.
+FALSE on error. Otherwise, returns an array with two entries masters and
+slaves each of which contains an array listing all corresponding servers.
 
 The function can be used to check and debug the list of servers currently used
-by the plugin. It is mostly useful when the list of servers changes at runtime,
-for example, when using MySQL Fabric.
+by the plugin. It is mostly useful when the list of servers changes at
+runtime, for example, when using MySQL Fabric.
 
 masters and slaves server entries
 
-      Key                             Description                       Version
-                 Server entry name from config, if appliciable. NULL if Since
-name_from_config no configuration name is available.                    1.6.0.
+      Key                             Description                      Version
+                 Server entry name from config, if appliciable. NULL   Since
+name_from_config if no configuration name is available.                1.6.0.
 
-hostname         Host name of the server.                               Since
-                                                                        1.6.0.
-user             Database user used to authenticate against the server. Since
-                                                                        1.6.0.
-port             TCP/IP port of the server.                             Since
-                                                                        1.6.0.
-socket           Unix domain socket of the server.                      Since
-                                                                        1.6.0.
+hostname         Host name of the server.                              Since
+                                                                       1.6.0.
+                 Database user used to authenticate against the        Since
+user             server.                                               1.6.0.
 
-===============================================================================
+port             TCP/IP port of the server.                            Since
+                                                                       1.6.0.
+socket           Unix domain socket of the server.                     Since
+                                                                       1.6.0.
+
+==============================================================================
 *Notes*
 
     Note:
 
     mysqlnd_ms_dump_servers() requires PECL mysqlnd_ms >> 1.6.0.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mysqlnd_ms_dump_servers() example
@@ -85,8 +86,8 @@ Example #1 mysqlnd_ms_dump_servers() example
 }
 
 <?php >
-    $link = mysqli_connect("myapp", "global_user", "global_pass", "global_db", 1234
-    , "global_socket");
+    $link = mysqli_connect("myapp", "global_user", "global_pass", "global_db", 
+    1234, "global_socket");
     var_dump(mysqlnd_ms_dump_servers($link);
 <?>
 

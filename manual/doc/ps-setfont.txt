@@ -4,7 +4,7 @@ ps_setfont
 
 ps_setfont — Sets font to use for following output
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool ps_setfont ( resource $psdoc , int $fontid , float $size )~
@@ -12,7 +12,7 @@ ps_setfont — Sets font to use for following output
 Sets a font, which has to be loaded before with |ps_findfont|. Outputting text
 without setting a font results in an error.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {psdoc}
@@ -27,12 +27,12 @@ without setting a font results in an error.
 
     The size of the font.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ps_findfont| - Loads a font

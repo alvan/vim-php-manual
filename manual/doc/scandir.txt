@@ -4,7 +4,7 @@ scandir
 
 scandir — List files and directories inside the specified path
 
-===============================================================================
+==============================================================================
 *Description*
 
     array scandir ( string $directory [, int $sorting_order =~
@@ -12,7 +12,7 @@ scandir — List files and directories inside the specified path
 
 Returns an array of files and directories from the {directory}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {directory}
@@ -31,23 +31,23 @@ Returns an array of files and directories from the {directory}.
     For a description of the {context} parameter, refer to the streams section
     of the manual.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an array of filenames on success, or FALSE on failure. If {directory}
 is not a directory, then boolean FALSE is returned, and an error of level
 E_WARNING is generated.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
         {sorting_order} constants were added. Any nonzero value caused
 5.4.0   descending order in previous versions. So for all PHP versions, use 0
         for ascending order, and 1 for descending order. An option for
         SCANDIR_SORT_NONE behavior did not exist prior to PHP 5.4.0.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A simple scandir() example
@@ -118,7 +118,7 @@ Array
     [4] => .
 )
 
-===============================================================================
+==============================================================================
 *Notes*
 
 Tip
@@ -129,7 +129,7 @@ the Supported Protocols and Wrappers for links to information about what
 abilities the various wrappers have, notes on their usage, and information on
 any predefined variables they may provide.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |opendir| - Open directory handle

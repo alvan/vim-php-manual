@@ -4,7 +4,7 @@ ifx_connect
 
 ifx_connect — Open Informix server connection
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource ifx_connect ([ string $database [, string $userid [, string~
@@ -19,7 +19,7 @@ opened link will be returned.
 The link to the server will be closed as soon as the execution of the script
 ends, unless it's closed earlier by explicitly calling |ifx_close|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 All of the arguments are optional, and if they're missing, defaults are taken
@@ -40,12 +40,12 @@ defined).
 
     The password, as a string.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a connection identifier on success, or FALSE on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Connect to a Informix database
@@ -54,7 +54,7 @@ Example #1 Connect to a Informix database
     $conn_id = ifx_connect ("mydb@ol_srv1", "imyself", "mypassword");
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ifx_pconnect| - Open persistent Informix connection

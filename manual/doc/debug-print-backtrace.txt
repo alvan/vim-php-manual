@@ -4,7 +4,7 @@ debug_print_backtrace
 
 debug_print_backtrace — Prints a backtrace
 
-===============================================================================
+==============================================================================
 *Description*
 
     void debug_print_backtrace ([ int $options = 0 [, int $limit = 0 ]] )~
@@ -12,36 +12,36 @@ debug_print_backtrace — Prints a backtrace
 debug_print_backtrace() prints a PHP backtrace. It prints the function calls,
 included/required files and |eval|ed stuff.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {options}
 
     As of 5.3.6, this parameter is a bitmask for the following options:
 
-                        debug_print_backtrace() options
+                       debug_print_backtrace() options
                                 Whether or not to omit the "args" index, and
-    DEBUG_BACKTRACE_IGNORE_ARGS thus all the function/method arguments, to save
-                                memory.
+    DEBUG_BACKTRACE_IGNORE_ARGS thus all the function/method arguments, to
+                                save memory.
 
 {limit}
 
-    As of 5.4.0, this parameter can be used to limit the number of stack frames
-    printed. By default ({limit}=0) it prints all stack frames.
+    As of 5.4.0, this parameter can be used to limit the number of stack
+    frames printed. By default ({limit}=0) it prints all stack frames.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 No value is returned.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version               Description
 5.4.0   Added the optional parameter {limit}.
 5.3.6   Added the optional parameter {options}.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 debug_print_backtrace() example
@@ -78,7 +78,7 @@ The above example will output something similar to:
 #2  a() called at [/tmp/include.php:17]
 #3  include(/tmp/include.php) called at [/tmp/test.php:3]
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |debug_backtrace| - Generates a backtrace

@@ -5,7 +5,7 @@ eio_seek
 eio_seek — Repositions the offset of the open file associated with the {fd}
 argument to the argument {offset} according to the directive {whence}
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource eio_seek ( mixed $fd , int $offset , int $whence [, int $pri =~
@@ -19,7 +19,7 @@ according to the directive {whence} as follows:
   * EIO_SEEK_CUR - Set position to current location plus {offset}.
   * EIO_SEEK_END - Set position to end-of-file plus {offset}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {fd}
@@ -41,8 +41,8 @@ according to the directive {whence} as follows:
 
 {callback}
 
-    {callback} function is called when the request is done. It should match the
-    following prototype:
+    {callback} function is called when the request is done. It should match
+    the following prototype:
     void callback(mixed $data, int $result[, resource $req]);
 
     {data}
@@ -63,7 +63,7 @@ according to the directive {whence} as follows:
 
     Arbitrary variable passed to {callback}.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 eio_seek() returns request resource on success or FALSE on error.

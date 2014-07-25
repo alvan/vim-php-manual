@@ -4,26 +4,26 @@ mssql_rows_affected
 
 mssql_rows_affected — Returns the number of records affected by the query
 
-===============================================================================
+==============================================================================
 *Description*
 
     int mssql_rows_affected ( resource $link_identifier )~
 
 Returns the number of records affected by the last write query.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {link_identifier}
 
     A MS SQL link identifier, returned by |mssql_connect| or |mssql_pconnect|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the number of records affected by last operation.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mssql_rows_affected() example

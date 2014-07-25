@@ -4,7 +4,7 @@ cubrid_error
 
 cubrid_error — Get the error message
 
-===============================================================================
+==============================================================================
 *Description*
 
     string cubrid_error ([ resource $connection ] )~
@@ -13,19 +13,19 @@ The cubrid_error() function is used to get the error message that occurred
 during the use of CUBRID API. Usually, it gets error message when API returns
 false as its return value.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
 
     The CUBRID connection.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Error message that occurred.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_error() example
@@ -46,7 +46,7 @@ The above example will output:
 
 Error Code: -493 Error Message: Syntax: Unknown class "person". select id, [name] from person
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |cubrid_errno| - Return the numerical value of the error message from

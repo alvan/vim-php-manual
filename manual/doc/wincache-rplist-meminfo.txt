@@ -5,14 +5,14 @@ wincache_rplist_meminfo
 wincache_rplist_meminfo — Retrieves information about memory usage by the
 resolve file path cache
 
-===============================================================================
+==============================================================================
 *Description*
 
     array wincache_rplist_meminfo ( void )~
 
 Retrieves information about memory usage by resolve file path cache.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Array of meta data that describes memory usage by resolve file path cache. or
@@ -22,15 +22,16 @@ The array returned by this function contains the following elements:
 
   * memory_total - amount of memory in bytes allocated for the resolve file
     path cache
-  * memory_free - amount of free memory in bytes available for the resolve file
-    path cache
-  * num_used_blks - number of memory blocks used by the resolve file path cache
-  * num_free_blks - number of free memory blocks available for the resolve file
-    path cache
+  * memory_free - amount of free memory in bytes available for the resolve
+    file path cache
+  * num_used_blks - number of memory blocks used by the resolve file path
+    cache
+  * num_free_blks - number of free memory blocks available for the resolve
+    file path cache
   * memory_overhead - amount of memory in bytes used for the internal
     structures of resolve file path cache
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A wincache_rplist_meminfo() example
@@ -52,7 +53,7 @@ Array
     [memory_overhead] => 416
 )
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |wincache_fcache_fileinfo| - Retrieves information about files cached in
@@ -61,8 +62,8 @@ Array
     usage
   * |wincache_ocache_fileinfo| - Retrieves information about files cached in
     the opcode cache
-  * |wincache_ocache_meminfo| - Retrieves information about opcode cache memory
-    usage
+  * |wincache_ocache_meminfo| - Retrieves information about opcode cache
+    memory usage
   * |wincache_rplist_fileinfo| - Retrieves information about resolve file path
     cache
   * |wincache_refresh_if_changed| - Refreshes the cache entries for the cached

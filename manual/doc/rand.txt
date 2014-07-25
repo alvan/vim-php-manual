@@ -4,7 +4,7 @@ rand
 
 rand — Generate a random integer
 
-===============================================================================
+==============================================================================
 *Description*
 
     int rand ( void )~
@@ -19,7 +19,7 @@ between 5 and 15 (inclusive), for example, use rand(5, 15).
     allow you to create a range larger than this, or consider using |mt_rand|
     instead.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {min}
@@ -30,19 +30,19 @@ between 5 and 15 (inclusive), for example, use rand(5, 15).
 
     The highest value to return (default: |getrandmax|)
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 A pseudo random value between {min} (or 0) and {max} (or |getrandmax|,
 inclusive).
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version                     Description
 4.2.0   The random number generator is seeded automatically.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 rand() example
@@ -60,16 +60,16 @@ The above example will output something similar to:
 22264
 11
 
-===============================================================================
+==============================================================================
 *Notes*
 
 Caution
 
-This function does not generate cryptographically secure values, and should not
-be used for cryptographic purposes. If you need a cryptographically secure
+This function does not generate cryptographically secure values, and should
+not be used for cryptographic purposes. If you need a cryptographically secure
 value, consider using |openssl_random_pseudo_bytes| instead.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |srand| - Seed the random number generator

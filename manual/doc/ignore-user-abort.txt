@@ -5,7 +5,7 @@ ignore_user_abort
 ignore_user_abort — Set whether a client disconnect should abort script
 execution
 
-===============================================================================
+==============================================================================
 *Description*
 
     int ignore_user_abort ([ string $value ] )~
@@ -16,7 +16,7 @@ When running PHP as a command line script, and the script's tty goes away
 without the script being terminated then the script will die the next time it
 tries to write anything, unless {value} is set to TRUE
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {value}
@@ -25,12 +25,12 @@ tries to write anything, unless {value} is set to TRUE
     given {value}. If not, this function will only return the previous setting
     without changing it.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the previous setting, as an integer.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A ignore_user_abort() example
@@ -66,14 +66,14 @@ Example #1 A ignore_user_abort() example
     // browser.
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
 PHP will not detect that the user has aborted the connection until an attempt
 is made to send information to the client. Simply using an echo statement does
 not guarantee that information is sent, see |flush|.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |connection_aborted| - Check whether client disconnected

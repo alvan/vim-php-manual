@@ -4,7 +4,7 @@ pcntl_waitpid
 
 pcntl_waitpid — Waits on or returns the status of a forked child
 
-===============================================================================
+==============================================================================
 *Description*
 
     int pcntl_waitpid ( int $pid , int &$status [, int $options = 0 ] )~
@@ -18,14 +18,14 @@ so-called "zombie" process), the function returns immediately. Any system
 resources used by the child are freed. Please see your system's waitpid(2) man
 page for specific details as to how waitpid works on your system.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {pid}
 
     The value of {pid} can be one of the following:
 
-                           possible values for {pid}
+                          possible values for {pid}
     <   wait for any child process whose process group ID is equal to the
     -1  absolute value of {pid}.
     -1  wait for any child process; this is the same behaviour that the wait
@@ -51,18 +51,18 @@ page for specific details as to how waitpid works on your system.
     The value of {options} is the value of zero or more of the following two
     global constants OR'ed together:
 
-                         possible values for {options}
+                        possible values for {options}
     WNOHANG   return immediately if no child has exited.
     WUNTRACED return for children which are stopped, and whose status has not
               been reported.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 pcntl_waitpid() returns the process ID of the child which exited, -1 on error
 or zero if WNOHANG was used and no child was available
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |pcntl_fork| - Forks the currently running process

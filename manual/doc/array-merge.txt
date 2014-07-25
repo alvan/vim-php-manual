@@ -4,7 +4,7 @@ array_merge
 
 array_merge — Merge one or more arrays
 
-===============================================================================
+==============================================================================
 *Description*
 
     array array_merge ( array $array1 [, array $... ] )~
@@ -20,7 +20,7 @@ appended.
 Values in the input array with numeric keys will be renumbered with
 incrementing keys starting from zero in the result array.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {array1}
@@ -31,15 +31,15 @@ incrementing keys starting from zero in the result array.
 
     Variable list of arrays to merge.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the resulting array.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
         Warning
 
         The behavior of array_merge() was modified in PHP 5. Unlike PHP 4, 
@@ -64,7 +64,7 @@ Version                               Description
                 [1] => bar
             )
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #2 array_merge() example
@@ -115,9 +115,9 @@ use the + array union operator:
     var_dump($result);
 <?>
 
-The keys from the first array will be preserved. If an array key exists in both
-arrays, then the element from the first array will be used and the matching
-key's element from the second array will be ignored.
+The keys from the first array will be preserved. If an array key exists in
+both arrays, then the element from the first array will be used and the
+matching key's element from the second array will be ignored.
 
 array(5) {
   [0]=>
@@ -132,11 +132,12 @@ array(5) {
   string(6) "four_b"
 }
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |array_merge_recursive| - Merge two or more arrays recursively
-  * |array_replace| - Replaces elements from passed arrays into the first array
+  * |array_replace| - Replaces elements from passed arrays into the first
+    array
   * |array_combine| - Creates an array by using one array for keys and another
     for its values
   * array operators

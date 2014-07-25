@@ -4,7 +4,7 @@ pg_lo_import
 
 pg_lo_import — Import a large object from file
 
-===============================================================================
+==============================================================================
 *Description*
 
     int pg_lo_import ([ resource $connection ], string $pathname [, mixed~
@@ -24,7 +24,7 @@ transaction block.
 
     This function used to be called pg_loimport().
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
@@ -35,8 +35,8 @@ transaction block.
 
 {pathname}
 
-    The full path and file name of the file on the client filesystem from which
-    to read the large object data.
+    The full path and file name of the file on the client filesystem from
+    which to read the large object data.
 
 {object_id}
 
@@ -45,12 +45,12 @@ transaction block.
     parameter was added in PHP 5.3 and relies on functionality that first
     appeared in PostgreSQL 8.1.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The OID of the newly created large object, or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version                           Description
@@ -60,7 +60,7 @@ Version                           Description
 4.2.0
         int pg_lo_import ( string $pathname [, resource $connection ] )~
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 pg_lo_import() example
@@ -72,7 +72,7 @@ Example #1 pg_lo_import() example
        pg_query($database, "commit");
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |pg_lo_export| - Export a large object to file

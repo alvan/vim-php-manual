@@ -4,7 +4,7 @@ cubrid_lob2_size64
 
 cubrid_lob2_size64 — Get a lob object's size.
 
-===============================================================================
+==============================================================================
 *Description*
 
     string cubrid_lob2_size64 ( resource $lob_identifier )~
@@ -13,14 +13,15 @@ The cubrid_lob2_size64() function is used to get the size of a lob object. If
 the size of a lob object is larger than an integer data can be stored, you can
 use this function and it will return the size as a string.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {lob_identifier}
 
-    Lob identifier as a result of |cubrid_lob2_new| or get from the result set.
+    Lob identifier as a result of |cubrid_lob2_new| or get from the result
+    set.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 It will return the size of the LOB object as a string when it processes
@@ -28,7 +29,7 @@ successfully.
 
 FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |cubrid_lob2_read| - Read from BLOB/CLOB data.

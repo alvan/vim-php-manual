@@ -4,7 +4,7 @@ fann_init_weights
 
 fann_init_weights — Initialize the weights using Widrow + Nguyen’s algorithm
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool fann_init_weights ( resource $ann , resource $train_data )~
@@ -20,7 +20,7 @@ The algorithm requires access to the range of the input data (for example
 largest and smallest input), and therefore accepts a second argument, data,
 which is the training data that will be used to train the network.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {ann}
@@ -31,12 +31,12 @@ which is the training data that will be used to train the network.
 
     Neural network training data resource.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success, or FALSE otherwise.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |fann_randomize_weights| - Give each connection a random weight between

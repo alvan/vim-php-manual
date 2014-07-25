@@ -4,7 +4,7 @@ imagepalettetotruecolor
 
 imagepalettetotruecolor — Converts a palette based image to true color
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool imagepalettetotruecolor ( resource $src )~
@@ -12,21 +12,21 @@ imagepalettetotruecolor — Converts a palette based image to true color
 Converts a palette based image, created by functions like |imagecreate| to a
 true color image, like |imagecreatetruecolor|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { image}
 
-    An image resource, returned by one of the image creation functions, such as
-    |imagecreatetruecolor|.
+    An image resource, returned by one of the image creation functions, such
+    as |imagecreatetruecolor|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE if the convertion was complete, or if the source image already is
 a true color image, otherwise FALSE is returned.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Converts any image resource to true color
@@ -77,7 +77,7 @@ The above example will output:
 typeof($im) = palette
 typeof($im) = true color
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |imagecreatetruecolor| - Create a new true color image

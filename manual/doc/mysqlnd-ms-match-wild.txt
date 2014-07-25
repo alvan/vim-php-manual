@@ -5,7 +5,7 @@ mysqlnd_ms_match_wild
 mysqlnd_ms_match_wild — Finds whether a table name matches a wildcard pattern
 or not
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool mysqlnd_ms_match_wild ( string $table_name , string $wildcard )~
@@ -15,7 +15,7 @@ Finds whether a table name matches a wildcard pattern or not.
 This function is not of much practical relevance with PECL mysqlnd_ms 1.1.0
 because the plugin does not support MySQL replication table filtering yet.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {table_name}
@@ -28,9 +28,9 @@ because the plugin does not support MySQL replication table filtering yet.
     supports the same placeholders as MySQL replication filters do.
 
     MySQL replication filters can be configured by using the MySQL Server
-    configuration options --replicate-wild-do-table and --replicate-wild-do-db.
-    Please, consult the MySQL Reference Manual to learn more about this MySQL
-    Server feature.
+    configuration options --replicate-wild-do-table and --replicate-wild-do-db
+    . Please, consult the MySQL Reference Manual to learn more about this
+    MySQL Server feature.
 
     The supported placeholders are:
       + % - zero or more literals
@@ -38,12 +38,12 @@ because the plugin does not support MySQL replication table filtering yet.
 
     Placeholders can be escaped using \.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE table_name is matched by wildcard. Otherwise, returns FALSE
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mysqlnd_ms_match_wild() example

@@ -4,7 +4,7 @@ curl_multi_info_read
 
 curl_multi_info_read — Get information about the current transfers
 
-===============================================================================
+==============================================================================
 *Description*
 
     array curl_multi_info_read ( resource $mh [, int &$msgs_in_queue = NULL ]~
@@ -24,7 +24,7 @@ Warning
 The data the returned resource points to will not survive calling |
 curl_multi_remove_handle|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {mh}
@@ -35,20 +35,20 @@ curl_multi_remove_handle|.
 
     Number of messages that are still in the queue
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 On success, returns an associative array for the message, FALSE on failure.
 
                         Contents of the returned array
- Key:                                   Value:
+ Key:                                  Value:
 msg    The CURLMSG_DONE constant. Other return values are currently not
        available.
 result One of the CURLE_* constants. If everything is OK, the CURLE_OK will be
        the result.
 handle Resource of type curl indicates the handle which it concerns.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A curl_multi_info_read() example
@@ -114,13 +114,13 @@ array(3) {
 }
 bool(false)
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version        Description
 5.2.0   {msgs_in_queue} was added.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |curl_multi_init| - Returns a new cURL multi handle

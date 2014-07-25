@@ -4,7 +4,7 @@ stream_socket_recvfrom
 
 stream_socket_recvfrom — Receives data from a socket, connected or not
 
-===============================================================================
+==============================================================================
 *Description*
 
     string stream_socket_recvfrom ( resource $socket , int $length [, int~
@@ -13,7 +13,7 @@ stream_socket_recvfrom — Receives data from a socket, connected or not
 stream_socket_recvfrom() accepts data from a remote socket up to {length}
 bytes.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {socket}
@@ -28,7 +28,7 @@ bytes.
 
     The value of {flags} can be any combination of the following:
 
-                          Possible values for {flags}
+                         Possible values for {flags}
     STREAM_OOB  Process OOB (out-of-band) data.
                 Retrieve data from the socket, but do not consume the buffer.
     STREAM_PEEK Subsequent calls to |fread| or stream_socket_recvfrom() will
@@ -39,12 +39,12 @@ bytes.
     If {address} is provided it will be populated with the address of the
     remote socket.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the read data, as a string
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 stream_socket_recvfrom() example
@@ -63,7 +63,8 @@ Example #1 stream_socket_recvfrom() example
     /* Take a peek at the normal in-band data, but don't comsume it. */
     echo "Data: '" . stream_socket_recvfrom($socket, 1500, STREAM_PEEK) . "'\n";
 
-    /* Get the exact same packet again, but remove it from the buffer this time. */
+    /* Get the exact same packet again, but remove it from the buffer this time. *
+    /
     echo "Data: '" . stream_socket_recvfrom($socket, 1500) . "'\n";
 
     /* Close it up */
@@ -71,7 +72,7 @@ Example #1 stream_socket_recvfrom() example
     fclose($server);
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -83,10 +84,10 @@ Example #1 stream_socket_recvfrom() example
     Note:
 
     Calls to stream_socket_recvfrom() on socket-based streams, after calls to
-    buffer-based stream functions (like |fread| or |stream_get_line|) read data
-    directly from the socket and bypass the stream buffer.
+    buffer-based stream functions (like |fread| or |stream_get_line|) read
+    data directly from the socket and bypass the stream buffer.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |stream_socket_sendto| - Sends a message to a socket, whether it is

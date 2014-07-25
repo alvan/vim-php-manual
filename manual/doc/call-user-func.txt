@@ -4,7 +4,7 @@ call_user_func
 
 call_user_func — Call the callback given by the first parameter
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed call_user_func ( callable $callback [, mixed $parameter [, mixed~
@@ -13,7 +13,7 @@ call_user_func — Call the callback given by the first parameter
 Calls the {callback} given by the first parameter and passes the remaining
 parameters as arguments.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {callback}
@@ -52,20 +52,21 @@ parameters as arguments.
         0
         1
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the return value of the callback, or FALSE on error.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
-        The interpretation of object oriented keywords like parent and self has
-5.3.0   changed. Previously, calling them using the double colon syntax would
-        emit an E_STRICT warning because they were interpreted as static.
+Version                              Description
+        The interpretation of object oriented keywords like parent and self
+5.3.0   has changed. Previously, calling them using the double colon syntax
+        would emit an E_STRICT warning because they were interpreted as
+        static.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #2 call_user_func() example
@@ -145,7 +146,7 @@ The above example will output:
 
 [test]
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -154,7 +155,7 @@ The above example will output:
     call_user_func_array| will not be called if there is an uncaught exception
     thrown in a previous callback.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |call_user_func_array| - Call a callback with an array of parameters

@@ -4,35 +4,36 @@ cubrid_lob2_import
 
 cubrid_lob2_import — Import BLOB/CLOB data from a file.
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool cubrid_lob2_import ( resource $lob_identifier , string $file_name )~
 
 The cubrid_lob2_import() function is used to save the contents of BLOB/CLOB
-data from a file. To use this function, you must use |cubrid_lob2_new| or fetch
-a lob object from CUBRID database first. If the file already exists, the
+data from a file. To use this function, you must use |cubrid_lob2_new| or
+fetch a lob object from CUBRID database first. If the file already exists, the
 operation will fail. This function will not influence the cursor position of
 the lob object. It operates the entire lob object.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {lob_identifier}
 
-    Lob identifier as a result of |cubrid_lob2_new| or get from the result set.
+    Lob identifier as a result of |cubrid_lob2_new| or get from the result
+    set.
 
 {filename}
 
     File name you want to import BLOB/CLOB data. It also supports the path of
     the file.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 TRUE if the process is successful and FALSE for failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 |cubrid_lob2_export| example
@@ -49,7 +50,8 @@ Example #1 |cubrid_lob2_export| example
 
     $lob = cubrid_lob2_new($conn, "clob");
     cubrid_lob2_import($lob, "doc_1.txt");
-    cubrid_lob2_bind($req, 2, $lob, 'CLOB'); // or cubrid_lob2_bind($req, 2, $lob);
+    cubrid_lob2_bind($req, 2, $lob, 'CLOB'); // or cubrid_lob2_bind
+    ($req, 2, $lob);
 
     cubrid_execute($req);
 
@@ -57,7 +59,7 @@ Example #1 |cubrid_lob2_export| example
     cubrid_disconnect($conn);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |cubrid_lob2_new| - Create a lob object.

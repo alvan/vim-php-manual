@@ -4,14 +4,14 @@ yaz_hits
 
 yaz_hits — Returns number of hits for last search
 
-===============================================================================
+==============================================================================
 *Description*
 
     int yaz_hits ( resource $id [, array &$searchresult ] )~
 
 yaz_hits() returns the number of hits for the last search.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {id}
@@ -22,10 +22,11 @@ yaz_hits() returns the number of hits for the last search.
 
     Result array for detailed search result information.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns the number of hits for the last search or 0 if no search was performed.
+Returns the number of hits for the last search or 0 if no search was
+performed.
 
 The search result array (if supplied) holds information that is returned by a
 Z39.50 server in the SearchResult-1 format part of a search response. The
@@ -44,8 +45,8 @@ recommendation.term Recommended sub query term (string)
 
     Note:
 
-    The SearchResult facility requires PECL YAZ 1.0.5 or later and YAZ 2.1.9 or
-    later.
+    The SearchResult facility requires PECL YAZ 1.0.5 or later and YAZ 2.1.9
+    or later.
 
     Note:
 

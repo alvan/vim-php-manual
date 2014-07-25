@@ -4,21 +4,21 @@ snmp3_set
 
 snmp3_set — Set the value of an SNMP object
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool snmp3_set ( string $host , string $sec_name , string $sec_level ,~
     string $auth_protocol , string $auth_passphrase , string $priv_protocol ,~
-    string $priv_passphrase , string $object_id , string $type , string $value~
-    [, int $timeout = 1000000 [, int $retries = 5 ]] )~
+    string $priv_passphrase , string $object_id , string $type , string~
+    $value [, int $timeout = 1000000 [, int $retries = 5 ]] )~
 
 snmp3_set() is used to set the value of an SNMP object specified by the
 {object_id}.
 
-Even if the security level does not use an auth or priv protocol/password valid
-values have to be specified.
+Even if the security level does not use an auth or priv protocol/password
+valid values have to be specified.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {host}
@@ -81,11 +81,11 @@ values have to be specified.
     D double
 
     Most of these will use the obvious corresponding ASN.1 type. 's', 'x', 'd'
-    and 'b' are all different ways of specifying an OCTET STRING value, and the
-    'u' unsigned type is also used for handling Gauge32 values.
+    and 'b' are all different ways of specifying an OCTET STRING value, and
+    the 'u' unsigned type is also used for handling Gauge32 values.
 
-    If the MIB-Files are loaded by into the MIB Tree with "snmp_read_mib" or by
-    specifying it in the libsnmp config, '=' may be used as the {type}
+    If the MIB-Files are loaded by into the MIB Tree with "snmp_read_mib" or
+    by specifying it in the libsnmp config, '=' may be used as the {type}
     parameter for all object ids as the type can then be automatically read
     from the MIB.
 
@@ -111,7 +111,7 @@ values have to be specified.
 
     The number of times to retry if timeouts occur.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
@@ -121,7 +121,7 @@ Error in packet. Reason: (badValue) The value given has the wrong type or
 length." is shown. If an unknown or invalid OID is specified the warning
 probably reads "Could not add variable".
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Using snmp3_set()

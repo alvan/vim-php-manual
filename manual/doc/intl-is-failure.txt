@@ -4,12 +4,12 @@ intl_is_failure
 
 intl_is_failure — Check whether the given error code indicates failure
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool intl_is_failure ( int $error_code )~
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {error_code}
@@ -17,13 +17,13 @@ intl_is_failure — Check whether the given error code indicates failure
     is a value that returned by functions: |intl_get_error_code|, 
     collator_get_error_code() .
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 TRUE if it the code indicates some failure, and FALSE in case of success or a
 warning.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 intl_is_failure() example
@@ -46,7 +46,7 @@ false
 false
 true
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |intl_get_error_code| - Get the last error code

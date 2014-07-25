@@ -5,17 +5,17 @@ grapheme_strpos
 grapheme_strpos — Find position (in grapheme units) of first occurrence of a
 string
 
-===============================================================================
+==============================================================================
 *Description*
 
 Procedural style
 
-    int grapheme_strpos ( string $haystack , string $needle [, int $offset = 0~
-    ] )~
+    int grapheme_strpos ( string $haystack , string $needle [, int $offset =~
+    0 ] )~
 
 Find position (in grapheme units) of first occurrence of a string
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {haystack}
@@ -33,13 +33,13 @@ Find position (in grapheme units) of first occurrence of a string
     The position returned is still relative to the beginning of haystack
     regardless of the value of $offset.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the position as an integer. If needle is not found, strpos() will
 return boolean FALSE.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 grapheme_strpos() example
@@ -60,7 +60,7 @@ The above example will output:
 
 2
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |grapheme_stripos| - Find position (in grapheme units) of first occurrence

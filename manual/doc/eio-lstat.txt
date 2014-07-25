@@ -4,15 +4,15 @@ eio_lstat
 
 eio_lstat — Get file status
 
-===============================================================================
+==============================================================================
 *Description*
 
-    resource eio_lstat ( string $path , int $pri , callable $callback [, mixed~
-    $data = NULL ] )~
+    resource eio_lstat ( string $path , int $pri , callable $callback [,~
+    mixed $data = NULL ] )~
 
 eio_lstat() returns file status information in {result} argument of {callback}
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {path}
@@ -26,8 +26,8 @@ eio_lstat() returns file status information in {result} argument of {callback}
 
 {callback}
 
-    {callback} function is called when the request is done. It should match the
-    following prototype:
+    {callback} function is called when the request is done. It should match
+    the following prototype:
     void callback(mixed $data, int $result[, resource $req]);
 
     {data}
@@ -48,12 +48,12 @@ eio_lstat() returns file status information in {result} argument of {callback}
 
     Arbitrary variable passed to {callback}.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 eio_lstat() returns request resource on success or FALSE on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 eio_lstat() example
@@ -110,7 +110,7 @@ array(12) {
   int(1318235777)
 }
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * eio_stat

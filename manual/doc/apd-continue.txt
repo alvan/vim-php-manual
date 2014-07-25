@@ -4,14 +4,14 @@ apd_continue
 
 apd_continue — Restarts the interpreter
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool apd_continue ( int $debug_level )~
 
 Usually sent via the socket to restart the interpreter.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { debug_level}
@@ -24,12 +24,12 @@ Usually sent via the socket to restart the interpreter.
     To turn on all functional traces (TIMING, FUNCTIONS, ARGS SUMMARY (like
     strace -c)) use the value 99
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 apd_continue() example

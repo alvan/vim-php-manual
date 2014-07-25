@@ -4,16 +4,16 @@ cal_from_jd
 
 cal_from_jd — Converts from Julian Day Count to a supported calendar
 
-===============================================================================
+==============================================================================
 *Description*
 
     array cal_from_jd ( int $jd , int $calendar )~
 
 cal_from_jd() converts the Julian day given in {jd} into a date of the
-specified {calendar}. Supported {calendar} values are CAL_GREGORIAN, CAL_JULIAN
-, CAL_JEWISH and CAL_FRENCH.
+specified {calendar}. Supported {calendar} values are CAL_GREGORIAN,
+CAL_JULIAN, CAL_JEWISH and CAL_FRENCH.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {jd}
@@ -24,14 +24,14 @@ specified {calendar}. Supported {calendar} values are CAL_GREGORIAN, CAL_JULIAN
 
     Calendar to convert to
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an array containing calendar information like month, day, year, day of
 week, abbreviated and full names of weekday and month and the date in string
 form "month/day/year".
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cal_from_jd() example
@@ -56,7 +56,7 @@ Array
     [monthname] => August
 )
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |cal_to_jd| - Converts from a supported calendar to Julian Day Count

@@ -4,16 +4,16 @@ filter_input_array
 
 filter_input_array — Gets external variables and optionally filters them
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed filter_input_array ( int $type [, mixed $definition [, bool~
     $add_empty = true ]] )~
 
-This function is useful for retrieving many values without repetitively calling
-|filter_input|.
+This function is useful for retrieving many values without repetitively
+calling |filter_input|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {type}
@@ -37,7 +37,7 @@ This function is useful for retrieving many values without repetitively calling
 
     Add missing keys as NULL to the return value.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 An array containing the values of the requested variables on success, or FALSE
@@ -45,7 +45,7 @@ on failure. An array value will be FALSE if the filter fails, or NULL if the
 variable is not set. Or if the flag FILTER_NULL_ON_FAILURE is used, it returns
 FALSE if the variable is not set and NULL if the filter fails.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A filter_input_array() example
@@ -66,8 +66,8 @@ Example #1 A filter_input_array() example
         'product_id'   => FILTER_SANITIZE_ENCODED,
         'component'    => array('filter'    => FILTER_VALIDATE_INT,
                                 'flags'     => FILTER_REQUIRE_ARRAY, 
-                                'options'   => array('min_range' => 1, 'max_range' 
-    => 10)
+                                'options'   => array('min_range' => 1, 
+    'max_range' => 10)
                                ),
         'versions'     => FILTER_SANITIZE_ENCODED,
         'doesnotexist' => FILTER_VALIDATE_INT,
@@ -117,13 +117,13 @@ array(6) {
   }
 }
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version         Description
 5.4.0   Added {add_empty} parameter.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -131,7 +131,7 @@ Version         Description
     There is no REQUEST_TIME key in INPUT_SERVER array because it is inserted
     into the $_SERVER later.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |filter_input| - Gets a specific external variable by name and optionally

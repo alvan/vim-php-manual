@@ -4,15 +4,15 @@ gzgetss
 
 gzgetss — Get line from gz-file pointer and strip HTML tags
 
-===============================================================================
+==============================================================================
 *Description*
 
     string gzgetss ( resource $zp , int $length [, string $allowable_tags ] )~
 
-Identical to |gzgets|, except that gzgetss() attempts to strip any HTML and PHP
-tags from the text it reads.
+Identical to |gzgets|, except that gzgetss() attempts to strip any HTML and
+PHP tags from the text it reads.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {zp}
@@ -29,12 +29,12 @@ tags from the text it reads.
     You can use this optional parameter to specify tags which should not be
     stripped.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The uncompressed and stripped string, or FALSE on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 gzgetss() example
@@ -48,7 +48,7 @@ Example #1 gzgetss() example
     gzclose($handle);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |gzopen| - Open gz-file

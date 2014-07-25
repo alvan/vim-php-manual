@@ -5,7 +5,7 @@ getservbyname
 getservbyname — Get port number associated with an Internet service and
 protocol
 
-===============================================================================
+==============================================================================
 *Description*
 
     int getservbyname ( string $service , string $protocol )~
@@ -13,7 +13,7 @@ protocol
 getservbyname() returns the Internet port which corresponds to {service} for
 the specified {protocol} as per /etc/services.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {service}
@@ -24,12 +24,12 @@ the specified {protocol} as per /etc/services.
 
     {protocol} is either "tcp" or "udp" (in lowercase).
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the port number, or FALSE if {service} or {protocol} is not found.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 getservbyname() example
@@ -44,7 +44,7 @@ Example #1 getservbyname() example
     }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |getservbyport| - Get Internet service which corresponds to port and

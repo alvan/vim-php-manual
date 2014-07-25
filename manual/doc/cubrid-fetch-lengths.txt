@@ -5,7 +5,7 @@ cubrid_fetch_lengths
 cubrid_fetch_lengths — Return an array with the lengths of the values of each
 field from the current row
 
-===============================================================================
+==============================================================================
 *Description*
 
     array cubrid_fetch_lengths ( resource $result )~
@@ -18,21 +18,21 @@ field from the current row of the result set or it returns FALSE on failure.
     If field data type is BLOB/CLOB, you should get its length by using |
     cubrid_lob_size|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
 
     {result} comes from a call to |cubrid_execute|
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 An numeric array, when process is successful.
 
 FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_fetch_lengths() example

@@ -4,7 +4,7 @@ http_match_request_header
 
 http_match_request_header — Match any header
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool http_match_request_header ( string $header , string $value [, bool~
@@ -12,7 +12,7 @@ http_match_request_header — Match any header
 
 Match an incoming HTTP header.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {header}
@@ -27,12 +27,12 @@ Match an incoming HTTP header.
 
     whether the value should be compared case sensitively
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE if header value matches, else FALSE.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |http_match_etag| - Match ETag

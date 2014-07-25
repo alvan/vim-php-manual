@@ -5,7 +5,7 @@ wincache_ucache_add
 wincache_ucache_add — Adds a variable in user cache only if variable does not
 already exist in the cache
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool wincache_ucache_add ( string $key , mixed $value [, int $ttl = 0 ] )~
@@ -13,11 +13,11 @@ already exist in the cache
     ]] )~
 
 Adds a variable in user cache, only if this variable doesn't already exist in
-the cache. The added variable remains in the user cache unless its time to live
-expires or it is deleted by using |wincache_ucache_delete| or |
+the cache. The added variable remains in the user cache unless its time to
+live expires or it is deleted by using |wincache_ucache_delete| or |
 wincache_ucache_clear| functions.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {key}
@@ -33,10 +33,10 @@ wincache_ucache_clear| functions.
 {value}
 
     Value of a variable to store. {Value} supports all data types except
-    resources, such as file handles. This paramter is ignored if first argument
-    is an array. A general guidance is to pass NULL as {value} while using
-    array as {key}. If {value} is an object, or an array containing objects,
-    then the objects will be serialized. See __sleep() for details on
+    resources, such as file handles. This paramter is ignored if first
+    argument is an array. A general guidance is to pass NULL as {value} while
+    using array as {key}. If {value} is an object, or an array containing
+    objects, then the objects will be serialized. See __sleep() for details on
     serializing objects.
 
 {values}
@@ -51,21 +51,21 @@ wincache_ucache_clear| functions.
     will stay in the cache unless explicitly deleted by using |
     wincache_ucache_delete| or |wincache_ucache_clear| functions.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 If {key} is string, the function returns TRUE on success and FALSE on failure.
 
 If {key} is an array, the function returns:
 
-  * If all the name => value pairs in the array can be set, function returns an
-    empty array;
-  * If all the name => value pairs in the array cannot be set, function returns
-    FALSE;
-  * If some can be set while others cannot, function returns an array with name
-    =>value pair for which the addition failed in the user cache.
+  * If all the name => value pairs in the array can be set, function returns
+    an empty array;
+  * If all the name => value pairs in the array cannot be set, function
+    returns FALSE;
+  * If some can be set while others cannot, function returns an array with
+    name=>value pair for which the addition failed in the user cache.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 wincache_ucache_add() with {key} as a string
@@ -86,8 +86,8 @@ string(3) "BAR"
 Example #2 wincache_ucache_add() with {key} as an array
 
 <?php >
-    $colors_array = array('green' => '5', 'Blue' => '6', 'yellow' => '7', 'cyan' =>
-     '8');
+    $colors_array = array('green' => '5', 'Blue' => '6', 'yellow' => '7', 'cyan' 
+    => '8');
     var_dump(wincache_ucache_add($colors_array));
     var_dump(wincache_ucache_add($colors_array));
     var_dump(wincache_ucache_get('Blue'));
@@ -104,7 +104,7 @@ array(4) {
 }
 string(1) "6"
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |wincache_ucache_set| - Adds a variable in user cache and overwrites a

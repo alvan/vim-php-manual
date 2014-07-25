@@ -4,7 +4,7 @@ geoip_country_name_by_name
 
 geoip_country_name_by_name — Get the full country name
 
-===============================================================================
+==============================================================================
 *Description*
 
     string geoip_country_name_by_name ( string $hostname )~
@@ -12,20 +12,20 @@ geoip_country_name_by_name — Get the full country name
 The geoip_country_name_by_name() function will return the full country name
 corresponding to a hostname or an IP address.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {hostname}
 
     The hostname or IP address whose location is to be looked-up.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns the country name on success, or FALSE if the address cannot be found in
-the database.
+Returns the country name on success, or FALSE if the address cannot be found
+in the database.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A geoip_country_name_by_name() example
@@ -43,7 +43,7 @@ The above example will output:
 
  This host is located in: United States
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |geoip_country_code_by_name| - Get the two letter country code

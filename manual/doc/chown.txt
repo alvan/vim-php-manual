@@ -4,7 +4,7 @@ chown
 
 chown — Changes file owner
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool chown ( string $filename , mixed $user )~
@@ -12,7 +12,7 @@ chown — Changes file owner
 Attempts to change the owner of the file {filename} to user {user}. Only the
 superuser may change the owner of a file.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {filename}
@@ -23,12 +23,12 @@ superuser may change the owner of a file.
 
     A user name or number.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Simple chown() usage
@@ -62,7 +62,7 @@ Array
     [shell] => /bin/bash
 )
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: This function will not work on remote files as the file to be
@@ -72,7 +72,7 @@ Array
     directories being operated upon have the same UID (owner) as the script
     that is being executed.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |chmod| - Changes file mode

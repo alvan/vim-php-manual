@@ -4,21 +4,21 @@ inotify_read
 
 inotify_read — Read events from an inotify instance
 
-===============================================================================
+==============================================================================
 *Description*
 
     array inotify_read ( resource $inotify_instance )~
 
 Read inotify events from an inotify instance.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {inotify_instance}
 
     Resource returned by |inotify_init|
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 An array of inotify events or FALSE if no events was pending and
@@ -32,7 +32,7 @@ keys:
   * name is the name of a file (e.g. if a file was modified in a watched
     directory)
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |inotify_init| - Initialize an inotify instance

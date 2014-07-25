@@ -4,7 +4,7 @@ ifx_prepare
 
 ifx_prepare — Prepare an SQL-statement for execution
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource ifx_prepare ( string $query , resource $link_identifier [, int~
@@ -28,7 +28,7 @@ select queries will return BLOB columns as blob id's (integer value). You can
 get the value of the blob as a string or file with the blob functions (see
 below).
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {query}
@@ -51,12 +51,12 @@ below).
     {blobidarray} parameter containing the corresponding "blob ids", and you
     should replace those columns with a "?" in the query text.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a valid result identifier for use by |ifx_do|, or FALSE on errors.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ifx_do| - Execute a previously prepared SQL-statement

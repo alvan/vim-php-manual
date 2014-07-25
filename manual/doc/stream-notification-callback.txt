@@ -2,15 +2,15 @@ stream_notification_callback
 
 (PHP 5 >= 5.2.0)
 
-stream_notification_callback — A callback function for the notification context
-parameter
+stream_notification_callback — A callback function for the notification
+context parameter
 
-===============================================================================
+==============================================================================
 *Description*
 
-    void stream_notification_callback ( int $notification_code , int $severity~
-    , string $message , int $message_code , int $bytes_transferred , int~
-    $bytes_max )~
+    void stream_notification_callback ( int $notification_code , int~
+    $severity , string $message , int $message_code , int $bytes_transferred~
+    , int $bytes_max )~
 
 A callable function, used by the notification context parameter, called during
 an event.
@@ -20,7 +20,7 @@ an event.
     This is not a real function, only a prototype of how the function should
     be.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {notification_code}
@@ -49,19 +49,19 @@ an event.
 
     If applicable, the {bytes_max} will be populated.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 No value is returned.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 stream_notification_callback() example
 
 <?php >
-    function stream_notification_callback($notification_code, $severity, $message, 
-    $message_code, $bytes_transferred, $bytes_max) {
+    function stream_notification_callback($notification_code, $severity, $message
+    , $message_code, $bytes_transferred, $bytes_max) {
 
         switch($notification_code) {
             case STREAM_NOTIFY_RESOLVE:
@@ -136,8 +136,8 @@ Example #2 Simple progressbar for commandline download client
         exit(1);
     }
 
-    function stream_notification_callback($notification_code, $severity, $message, 
-    $message_code, $bytes_transferred, $bytes_max) {
+    function stream_notification_callback($notification_code, $severity, $message
+    , $message_code, $bytes_transferred, $bytes_max) {
         static $filesize = null;
 
         switch($notification_code) {
@@ -169,8 +169,8 @@ Example #2 Simple progressbar for commandline download client
         case STREAM_NOTIFY_PROGRESS:
             if ($bytes_transferred > 0) {
                 if (!isset($filesize)) {
-                    printf("\rUnknown filesize.. %2d kb done..", $bytes_transferred
-    /1024);
+                    printf("\rUnknown filesize.. %2d kb done..", 
+    $bytes_transferred/1024);
                 } else {
                     $length = (int)(($bytes_transferred/$filesize)*100);
                     printf("\r[%-100s] %d%% (%2d/%2d kb)", str_repeat("=", $length
@@ -210,7 +210,7 @@ Filesize: 7773024
 Mime-type: application/octet-stream
 [========================================>                                                           ] 40% (3076/7590 kb)
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * Context parameters

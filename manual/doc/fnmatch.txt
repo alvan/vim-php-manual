@@ -4,7 +4,7 @@ fnmatch
 
 fnmatch — Match filename against a pattern
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool fnmatch ( string $pattern , string $string [, int $flags = 0 ] )~
@@ -12,7 +12,7 @@ fnmatch — Match filename against a pattern
 fnmatch() checks if the passed {string} would match the given shell wildcard
 {pattern}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {pattern}
@@ -26,8 +26,8 @@ fnmatch() checks if the passed {string} would match the given shell wildcard
 
     The average user may be used to shell patterns or at least in their
     simplest form to '?' and '*' wildcards so using fnmatch() instead of |
-    preg_match| for frontend search expression input may be way more convenient
-    for non-programming users.
+    preg_match| for frontend search expression input may be way more
+    convenient for non-programming users.
 
 {flags}
 
@@ -42,18 +42,18 @@ fnmatch() checks if the passed {string} would match the given shell wildcard
                  the given pattern.
     FNM_CASEFOLD Caseless match. Part of the GNU extension.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE if there is a match, FALSE otherwise.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version                     Description
 5.3.0   This function is now available on Windows platforms.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Checking a color name against a shell wildcard pattern
@@ -64,7 +64,7 @@ Example #1 Checking a color name against a shell wildcard pattern
     }
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
 Warning
@@ -72,7 +72,7 @@ Warning
 For now, this function is not available on non-POSIX compliant systems except
 Windows.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |glob| - Find pathnames matching a pattern

@@ -4,7 +4,7 @@ copy
 
 copy — Copies file
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool copy ( string $source , string $dest [, resource $context ] )~
@@ -13,7 +13,7 @@ Makes a copy of the file {source} to {dest}.
 
 If you wish to move a file, use the |rename| function.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {source}
@@ -33,20 +33,20 @@ If you wish to move a file, use the |rename| function.
 
     A valid context resource created with |stream_context_create|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 5.3.0   Added context support.
 4.3.0   Both {source} and {dest} may now be URLs if the "fopen wrappers" have
         been enabled. See |fopen| for more details.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 copy() example
@@ -60,7 +60,7 @@ Example #1 copy() example
     }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |move_uploaded_file| - Moves an uploaded file to a new location

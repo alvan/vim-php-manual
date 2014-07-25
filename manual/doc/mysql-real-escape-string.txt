@@ -2,20 +2,20 @@ mysql_real_escape_string
 
 (PHP 4 >= 4.3.0, PHP 5)
 
-mysql_real_escape_string — Escapes special characters in a string for use in an
-SQL statement
+mysql_real_escape_string — Escapes special characters in a string for use in
+an SQL statement
 
 Warning
 
 This extension is deprecated as of PHP 5.5.0, and will be removed in the
 future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
-MySQL: choosing an API guide and related FAQ for more information. Alternatives
-to this function include:
+MySQL: choosing an API guide and related FAQ for more information.
+Alternatives to this function include:
 
   * mysqli_real_escape_string()
   * PDO::quote()
 
-===============================================================================
+==============================================================================
 *Description*
 
     string mysql_real_escape_string ( string $unescaped_string [, resource~
@@ -40,7 +40,7 @@ The character set must be set either at the server level, or with the API
 function |mysql_set_charset| for it to affect mysql_real_escape_string(). See
 the concepts section on character sets for more information.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {unescaped_string}
@@ -55,12 +55,12 @@ the concepts section on character sets for more information.
     If no connection is found or established, an E_WARNING level error is
     generated.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the escaped string, or FALSE on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Simple mysql_real_escape_string() example
@@ -85,8 +85,8 @@ Example #2 An example SQL Injection Attack
     $_POST['password'] = "' OR ''='";
 
     // Query database to check if there are any matching users
-    $query = "SELECT * FROM users WHERE user='{$_POST['username']}' AND password='{
-    $_POST['password']}'";
+    $query = "SELECT * FROM users WHERE user='{$_POST['username']}' AND password='
+    {$_POST['password']}'";
     mysql_query($query);
 
     // This means the query sent to MySQL would be:
@@ -99,7 +99,7 @@ SELECT * FROM users WHERE user='aidan' AND password='' OR ''=''
 
 This would allow anyone to log in without a valid password.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -116,13 +116,13 @@ This would allow anyone to log in without a valid password.
 
     Note:
 
-    If this function is not used to escape data, the query is vulnerable to SQL
-    Injection Attacks.
+    If this function is not used to escape data, the query is vulnerable to
+    SQL Injection Attacks.
 
     Note: mysql_real_escape_string() does not escape % and _. These are
     wildcards in MySQL if combined with LIKE, GRANT, or REVOKE.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mysql_set_charset| - Sets the client character set

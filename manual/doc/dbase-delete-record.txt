@@ -4,7 +4,7 @@ dbase_delete_record
 
 dbase_delete_record — Deletes a record from a database
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool dbase_delete_record ( int $dbase_identifier , int $record_number )~
@@ -16,7 +16,7 @@ Marks the given record to be deleted from the database.
     To actually remove the record from the database, you must also call |
     dbase_pack|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {dbase_identifier}
@@ -28,12 +28,12 @@ Marks the given record to be deleted from the database.
     An integer which spans from 1 to the number of records in the database (as
     returned by |dbase_numrecords|).
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |dbase_add_record| - Adds a record to a database

@@ -4,33 +4,33 @@ strlen
 
 strlen — Get string length
 
-===============================================================================
+==============================================================================
 *Description*
 
     int strlen ( string $string )~
 
 Returns the length of the given {string}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {string}
 
     The string being measured for length.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The length of the {string} on success, and 0 if the {string} is empty.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 5.3.0   Prior versions treated arrays as the string Array, thus returning a
         string length of 5 and emitting an E_NOTICE level error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A strlen() example
@@ -43,7 +43,7 @@ Example #1 A strlen() example
     echo strlen($str); // 7
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -53,10 +53,10 @@ Example #1 A strlen() example
 
     Note:
 
-    strlen() returns NULL when executed on arrays, and an E_WARNING level error
-    is emitted.
+    strlen() returns NULL when executed on arrays, and an E_WARNING level
+    error is emitted.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |count| - Count all elements in an array, or something in an object

@@ -4,7 +4,7 @@ array_merge_recursive
 
 array_merge_recursive — Merge two or more arrays recursively
 
-===============================================================================
+==============================================================================
 *Description*
 
     array array_merge_recursive ( array $array1 [, array $... ] )~
@@ -14,13 +14,13 @@ that the values of one are appended to the end of the previous one. It returns
 the resulting array.
 
 If the input arrays have the same string keys, then the values for these keys
-are merged together into an array, and this is done recursively, so that if one
-of the values is an array itself, the function will merge it with a
-corresponding entry in another array too. If, however, the arrays have the same
-numeric key, the later value will not overwrite the original value, but will be
-appended.
+are merged together into an array, and this is done recursively, so that if
+one of the values is an array itself, the function will merge it with a
+corresponding entry in another array too. If, however, the arrays have the
+same numeric key, the later value will not overwrite the original value, but
+will be appended.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {array1}
@@ -31,12 +31,12 @@ appended.
 
     Variable list of arrays to recursively merge.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 An array of values resulted from merging the arguments together.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 array_merge_recursive() example
@@ -67,7 +67,7 @@ Array
     [1] => 10
 )
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |array_merge| - Merge one or more arrays

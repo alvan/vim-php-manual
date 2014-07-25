@@ -4,7 +4,7 @@ eio_fchown
 
 eio_fchown — Change file ownership
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource eio_fchown ( mixed $fd , int $uid [, int $gid = -1 [, int $pri =~
@@ -12,7 +12,7 @@ eio_fchown — Change file ownership
 
 eio_fchown() changes ownership of the file specified by {fd} file descriptor.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {fd}
@@ -34,8 +34,8 @@ eio_fchown() changes ownership of the file specified by {fd} file descriptor.
 
 {callback}
 
-    {callback} function is called when the request is done. It should match the
-    following prototype:
+    {callback} function is called when the request is done. It should match
+    the following prototype:
     void callback(mixed $data, int $result[, resource $req]);
 
     {data}
@@ -56,7 +56,7 @@ eio_fchown() changes ownership of the file specified by {fd} file descriptor.
 
     Arbitrary variable passed to {callback}.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * eio_fchmod

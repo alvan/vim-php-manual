@@ -4,11 +4,11 @@ ps_add_launchlink
 
 ps_add_launchlink — Adds link which launches file
 
-===============================================================================
+==============================================================================
 *Description*
 
-    bool ps_add_launchlink ( resource $psdoc , float $llx , float $lly , float~
-    $urx , float $ury , string $filename )~
+    bool ps_add_launchlink ( resource $psdoc , float $llx , float $lly ,~
+    float $urx , float $ury , string $filename )~
 
 Places a hyperlink at the given position pointing to a file program which is
 being started when clicked on. The hyperlink's source position is a rectangle
@@ -19,7 +19,7 @@ The note will not be visible if the document is printed or viewed but it will
 show up if the document is converted to pdf by either Acrobat Distiller™ or
 Ghostview.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {psdoc}
@@ -46,12 +46,12 @@ Ghostview.
 
     The path of the program to be started, when the link is clicked on.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ps_add_locallink| - Adds link to a page in the same document

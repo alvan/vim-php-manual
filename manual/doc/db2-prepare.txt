@@ -4,7 +4,7 @@ db2_prepare
 
 db2_prepare — Prepares an SQL statement to be executed
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource db2_prepare ( resource $connection , string $statement [, array~
@@ -13,33 +13,34 @@ db2_prepare — Prepares an SQL statement to be executed
 db2_prepare() creates a prepared SQL statement which can include 0 or more
 parameter markers (? characters) representing parameters for input, output, or
 input/output. You can pass parameters to the prepared statement using |
-db2_bind_param|, or for input values only, as an array passed to |db2_execute|.
+db2_bind_param|, or for input values only, as an array passed to |db2_execute|
+.
 
 There are three main advantages to using prepared statements in your
 application:
 
   * Performance: when you prepare a statement, the database server creates an
-    optimized access plan for retrieving data with that statement. Subsequently
-    issuing the prepared statement with |db2_execute| enables the statements to
-    reuse that access plan and avoids the overhead of dynamically creating a
-    new access plan for every statement you issue.
+    optimized access plan for retrieving data with that statement.
+    Subsequently issuing the prepared statement with |db2_execute| enables the
+    statements to reuse that access plan and avoids the overhead of
+    dynamically creating a new access plan for every statement you issue.
 
   * Security: when you prepare a statement, you can include parameter markers
     for input values. When you execute a prepared statement with input values
     for placeholders, the database server checks each input value to ensure
     that the type matches the column definition or parameter definition.
 
-  * Advanced functionality: Parameter markers not only enable you to pass input
-    values to prepared SQL statements, they also enable you to retrieve OUT and
-    INOUT parameters from stored procedures using |db2_bind_param|.
+  * Advanced functionality: Parameter markers not only enable you to pass
+    input values to prepared SQL statements, they also enable you to retrieve
+    OUT and INOUT parameters from stored procedures using |db2_bind_param|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
 
-    A valid database connection resource variable as returned from |db2_connect
-    | or |db2_pconnect|.
+    A valid database connection resource variable as returned from |
+    db2_connect| or |db2_pconnect|.
 
 {statement}
 
@@ -53,15 +54,15 @@ application:
 
     For a description of valid statement options, see |db2_set_option|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a statement resource if the SQL statement was successfully parsed and
 prepared by the database server. Returns FALSE if the database server returned
-an error. You can determine which error was returned by calling |db2_stmt_error
-| or |db2_stmt_errormsg|.
+an error. You can determine which error was returned by calling |
+db2_stmt_error| or |db2_stmt_errormsg|.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Preparing and executing an SQL statement with parameter markers
@@ -87,7 +88,7 @@ be passed to |db2_execute|.
     }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |db2_bind_param| - Binds a PHP variable to an SQL statement parameter

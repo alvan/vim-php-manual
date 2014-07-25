@@ -5,7 +5,7 @@ cubrid_field_type
 cubrid_field_type — Return the type of the column corresponding to the given
 field offset
 
-===============================================================================
+==============================================================================
 *Description*
 
     string cubrid_field_type ( resource $result , int $field_offset )~
@@ -14,7 +14,7 @@ This function returns the type of the column corresponding to the given field
 offset. The returned field type could be one of the following: "int", "real",
 "string", etc.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
@@ -26,7 +26,7 @@ offset. The returned field type could be one of the following: "int", "real",
     The numerical field offset. The {field_offset} starts at 0. If
     {field_offset} does not exist, an error of level E_WARNING is also issued.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Type of the column, on success.
@@ -35,7 +35,7 @@ FALSE when invalid field_offset value.
 
 -1 if SQL sentence is not SELECT.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_field_type() example

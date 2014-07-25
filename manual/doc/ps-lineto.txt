@@ -4,7 +4,7 @@ ps_lineto
 
 ps_lineto — Draws a line
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool ps_lineto ( resource $psdoc , float $x , float $y )~
@@ -12,7 +12,7 @@ ps_lineto — Draws a line
 Adds a straight line from the current point to the given coordinates to the
 current path. Use |ps_moveto| to set the starting point of the line.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {psdoc}
@@ -27,12 +27,12 @@ current path. Use |ps_moveto| to set the starting point of the line.
 
     y-coordinate of the end point of the line.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Drawing a rectangle
@@ -60,7 +60,7 @@ Example #1 Drawing a rectangle
     ps_delete($ps);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ps_moveto| - Sets current point

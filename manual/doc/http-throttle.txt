@@ -4,7 +4,7 @@ http_throttle
 
 http_throttle — HTTP throttling
 
-===============================================================================
+==============================================================================
 *Description*
 
     void http_throttle ( float $sec [, int $bytes = 40960 ] )~
@@ -21,7 +21,7 @@ Sets the throttle delay and send buffer size.
 
     This may not work as expected with the following SAPI(s): FastCGI.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {sec}
@@ -32,7 +32,7 @@ Sets the throttle delay and send buffer size.
 
     the chunk size in bytes
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A http_throttle() example
@@ -47,7 +47,7 @@ Send file with approximately 20 kbyte/s.
     http_send_file('document.pdf');
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |http_send_data| - Send arbitrary data

@@ -4,14 +4,14 @@ xhprof_enable
 
 xhprof_enable — Start xhprof profiler
 
-===============================================================================
+==============================================================================
 *Description*
 
     void xhprof_enable ([ int $flags = 0 [, array $options ]] )~
 
 Start xhprof profiling.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {flags}
@@ -25,18 +25,18 @@ Start xhprof profiling.
     An array of optional options, namely, the 'ignored_functions' option to
     pass in functions to be ignored during profiling.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 NULL
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version                 Description
 0.9.2   The optional {options} parameter was added.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 xhprof_enable() examples
@@ -44,8 +44,8 @@ Example #1 xhprof_enable() examples
 <?php >
     // 1. elapsed time + memory + CPU profiling; and ignore built-in (internal)
      functions
-    xhprof_enable(XHPROF_FLAGS_NO_BUILTINS | XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY
-    );
+    xhprof_enable(XHPROF_FLAGS_NO_BUILTINS | XHPROF_FLAGS_CPU | 
+    XHPROF_FLAGS_MEMORY);
 
     // 2. elapsed time profiling; ignore call_user_func* during profiling
     xhprof_enable(
@@ -60,7 +60,7 @@ Example #1 xhprof_enable() examples
                                             'call_user_func_array')));
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |xhprof_disable| - Stops xhprof profiler

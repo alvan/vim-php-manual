@@ -4,7 +4,7 @@ prev
 
 prev — Rewind the internal array pointer
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed prev ( array &$array )~
@@ -14,20 +14,20 @@ Rewind the internal array pointer.
 prev() behaves just like |next|, except it rewinds the internal array pointer
 one place instead of advancing it.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {array}
 
     The input array.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns the array value in the previous place that's pointed to by the internal
-array pointer, or FALSE if there are no more elements.
+Returns the array value in the previous place that's pointed to by the
+internal array pointer, or FALSE if there are no more elements.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Example use of prev() and friends
@@ -41,13 +41,13 @@ Example #1 Example use of prev() and friends
     $mode = end($transport);     // $mode = 'plane';
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
 Warning
 
-This function may return Boolean FALSE, but may also return a non-Boolean value
-which evaluates to FALSE. Please read the section on Booleans for more
+This function may return Boolean FALSE, but may also return a non-Boolean
+value which evaluates to FALSE. Please read the section on Booleans for more
 information. Use the === operator for testing the return value of this
 function.
 
@@ -55,7 +55,7 @@ function.
     boolean FALSE element. To properly traverse an array which may contain
     FALSE elements, see the |each| function.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |current| - Return the current element in an array

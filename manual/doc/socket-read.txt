@@ -4,7 +4,7 @@ socket_read
 
 socket_read — Reads a maximum of length bytes from a socket
 
-===============================================================================
+==============================================================================
 *Description*
 
     string socket_read ( resource $socket , int $length [, int $type =~
@@ -13,7 +13,7 @@ socket_read — Reads a maximum of length bytes from a socket
 The function socket_read() reads from the socket resource {socket} created by
 the |socket_create| or |socket_accept| functions.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {socket}
@@ -23,8 +23,8 @@ the |socket_create| or |socket_accept| functions.
 {length}
 
     The maximum number of bytes read is specified by the {length} parameter.
-    Otherwise you can use \r, \n, or \0 to end reading (depending on the {type}
-    parameter, see below).
+    Otherwise you can use \r, \n, or \0 to end reading (depending on the
+    {type} parameter, see below).
 
 {type}
 
@@ -33,27 +33,27 @@ the |socket_create| or |socket_accept| functions.
         reading binary data.
       + PHP_NORMAL_READ - reading stops at \n or \r.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 socket_read() returns the data as a string on success, or FALSE on error
-(including if the remote host has closed the connection). The error code can be
-retrieved with |socket_last_error|. This code may be passed to |socket_strerror
-| to get a textual representation of the error.
+(including if the remote host has closed the connection). The error code can
+be retrieved with |socket_last_error|. This code may be passed to |
+socket_strerror| to get a textual representation of the error.
 
     Note:
 
     socket_read() returns a zero length string ("") when there is no more data
     to read.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 4.1.0   The default value for {type} was changed from PHP_NORMAL_READ to
         PHP_BINARY_READ
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |socket_accept| - Accepts a connection on a socket

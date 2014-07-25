@@ -4,16 +4,16 @@ cubrid_query
 
 cubrid_query — Send a CUBRID query
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource cubrid_query ( string $query [, resource $conn_identifier ] )~
 
-cubrid_query() sends a unique query (multiple queries are not supported) to the
-currently active database on the server that's associated with the specified
-{conn_identifier}.
+cubrid_query() sends a unique query (multiple queries are not supported) to
+the currently active database on the server that's associated with the
+specified {conn_identifier}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {query}
@@ -27,7 +27,7 @@ currently active database on the server that's associated with the specified
     The CUBRID connection. If the connection identifier is not specified, the
     last connection opened by |cubrid_connect| is assumed.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 For SELECT, SHOW, DESCRIBE, EXPLAIN and other statements returning resultset, 
@@ -46,7 +46,7 @@ a DELETE, INSERT, REPLACE, or UPDATE statement.
 cubrid_query() will also fail and return FALSE if the user does not have
 permission to access the table(s) referenced by the query.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Invalid Query
@@ -78,8 +78,10 @@ The following query is valid, so cubrid_query() returns a resource.
     cubrid_execute($conn,"DROP TABLE if exists friends");
     cubrid_execute($conn,"create table friends
     (firstname varchar,lastname varchar,address char(24),age int)");
-    cubrid_execute($conn,"insert into friends values('fred','fox','home-1','20')");
-    cubrid_execute($conn,"insert into friends values('blue','cat','home-2','21')");
+    cubrid_execute($conn,"insert into friends values('fred','fox','home-1','20')"
+    );
+    cubrid_execute($conn,"insert into friends values('blue','cat','home-2','21')"
+    );
     // Formulate Query
     // This is the best way to perform an SQL query
     // For more examples, see cubrid_real_escape_string()
@@ -118,16 +120,16 @@ The following query is valid, so cubrid_query() returns a resource.
     cubrid_free_result($result);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |cubrid_connect| - Open a connection to a CUBRID Server
   * |cubrid_error| - Get the error message
-  * |cubrid_real_escape_string| - Escape special characters in a string for use
-    in an SQL statement
+  * |cubrid_real_escape_string| - Escape special characters in a string for
+    use in an SQL statement
   * |cubrid_result| - Return the value of a specific field in a specific row
-  * |cubrid_fetch_assoc| - Return the associative array that corresponds to the
-    fetched row
+  * |cubrid_fetch_assoc| - Return the associative array that corresponds to
+    the fetched row
   * |cubrid_unbuffered_query| - Perform a query without fetching the results
     into memory
 

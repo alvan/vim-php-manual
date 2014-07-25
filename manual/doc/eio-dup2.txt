@@ -4,7 +4,7 @@ eio_dup2
 
 eio_dup2 — Duplicate a file descriptor
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource eio_dup2 ( mixed $fd , mixed $fd2 [, int $pri = EIO_PRI_DEFAULT~
@@ -12,7 +12,7 @@ eio_dup2 — Duplicate a file descriptor
 
 eio_dup2() duplicates file descriptor.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {fd}
@@ -30,8 +30,8 @@ eio_dup2() duplicates file descriptor.
 
 {callback}
 
-    {callback} function is called when the request is done. It should match the
-    following prototype:
+    {callback} function is called when the request is done. It should match
+    the following prototype:
     void callback(mixed $data, int $result[, resource $req]);
 
     {data}
@@ -52,7 +52,7 @@ eio_dup2() duplicates file descriptor.
 
     Arbitrary variable passed to {callback}.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 eio_dup2() returns request resource on success or FALSE on error.

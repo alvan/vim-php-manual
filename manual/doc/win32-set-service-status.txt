@@ -4,7 +4,7 @@ win32_set_service_status
 
 win32_set_service_status — Update the service status
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool win32_set_service_status ( int $status [, int $checkpoint = 0 ] )~
@@ -12,7 +12,7 @@ win32_set_service_status — Update the service status
 Informs the SCM of the current status of a running service. This call is only
 valid for a running service process.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {status}
@@ -33,13 +33,13 @@ valid for a running service process.
     WIN32_SERVICE_STOP_PENDING, WIN32_SERVICE_START_PENDING,
     WIN32_SERVICE_CONTINUE_PENDING or WIN32_SERVICE_PAUSE_PENDING.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success, FALSE if there is a problem with the parameters or a
 Win32 Error Code on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |win32_start_service_ctrl_dispatcher| - Registers the script with the SCM,

@@ -4,7 +4,7 @@ addcslashes
 
 addcslashes — Quote string with slashes in a C style
 
-===============================================================================
+==============================================================================
 *Description*
 
     string addcslashes ( string $str , string $charlist )~
@@ -12,7 +12,7 @@ addcslashes — Quote string with slashes in a C style
 Returns a string with backslashes before characters that are listed in
 {charlist} parameter.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {str}
@@ -21,14 +21,14 @@ Returns a string with backslashes before characters that are listed in
 
 {charlist}
 
-    A list of characters to be escaped. If {charlist} contains characters \n, \
-    r etc., they are converted in C-like style, while other non-alphanumeric
+    A list of characters to be escaped. If {charlist} contains characters \n,
+    \r etc., they are converted in C-like style, while other non-alphanumeric
     characters with ASCII codes lower than 32 and higher than 126 converted to
     octal representation.
 
-    When you define a sequence of characters in the charlist argument make sure
-    that you know what characters come between the characters that you set as
-    the start and end of the range.
+    When you define a sequence of characters in the charlist argument make
+    sure that you know what characters come between the characters that you
+    set as the start and end of the range.
     <?php >
     echo addcslashes('foo[ ]', 'A..z');
     // output:  \f\o\o\[ \]
@@ -37,8 +37,8 @@ Returns a string with backslashes before characters that are listed in
 <    ?>
     Also, if the first character in a range has a higher ASCII value than the
     second character in the range, no range will be constructed. Only the
-    start, end and period characters will be escaped. Use the |ord| function to
-    find the ASCII value for a character.
+    start, end and period characters will be escaped. Use the |ord| function
+    to find the ASCII value for a character.
     <?php >
     echo addcslashes("zoo['.']", 'z..A');
     // output:  \zoo['\.']
@@ -52,18 +52,18 @@ Returns a string with backslashes before characters that are listed in
     generate code in those languages with these characters defined in
     {charlist}.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the escaped string.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version                Description
 5.2.5   The escape sequences \v and \f were added.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 {charlist} like "\0..\37", which would escape all characters with ASCII code
@@ -75,7 +75,7 @@ Example #1 addcslashes() example
     $escaped = addcslashes($not_escaped, "\0..\37!@\177..\377");
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |stripcslashes| - Un-quote string quoted with addcslashes

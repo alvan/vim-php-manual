@@ -5,21 +5,21 @@ restore_exception_handler
 restore_exception_handler — Restores the previously defined exception handler
 function
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool restore_exception_handler ( void )~
 
-Used after changing the exception handler function using |set_exception_handler
-|, to revert to the previous exception handler (which could be the built-in or
-a user defined function).
+Used after changing the exception handler function using |
+set_exception_handler|, to revert to the previous exception handler (which
+could be the built-in or a user defined function).
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 This function always returns TRUE.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 restore_exception_handler() example
@@ -47,7 +47,7 @@ The above example will output:
 
 [exception_handler_1] This triggers the first exception handler...
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |set_exception_handler| - Sets a user-defined exception handler function

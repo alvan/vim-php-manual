@@ -4,14 +4,15 @@ cyrus_connect
 
 cyrus_connect — Connect to a Cyrus IMAP server
 
-===============================================================================
+==============================================================================
 *Description*
 
-    resource cyrus_connect ([ string $host [, string $port [, int $flags ]]] )~
+    resource cyrus_connect ([ string $host [, string $port [, int $flags ]]]~
+)~
 
 Connects to a Cyrus IMAP server.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {host}
@@ -24,7 +25,7 @@ Connects to a Cyrus IMAP server.
 
 {flags}
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a connection handler on success or FALSE on failure.

@@ -4,7 +4,7 @@ msg_set_queue
 
 msg_set_queue — Set information in the message queue data structure
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool msg_set_queue ( resource $queue , array $data )~
@@ -18,7 +18,7 @@ that created the queue, owns the queue (as determined by the existing
 msg_perm.xxx fields), or be running with root privileges. root privileges are
 required to raise the msg_qbytes values above the system defined limit.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {queue}
@@ -30,12 +30,12 @@ required to raise the msg_qbytes values above the system defined limit.
     You specify the values you require by setting the value of the keys that
     you require in the {data} array.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |msg_remove_queue| - Destroy a message queue

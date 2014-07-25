@@ -4,7 +4,7 @@ eio_write
 
 eio_write — Write to file
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource eio_write ( mixed $fd , string $str [, int $length = 0 [, int~
@@ -14,7 +14,7 @@ eio_write — Write to file
 eio_write() writes up to {length} bytes from {str} at {offset} offset from the
 beginning of the file.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {fd}
@@ -41,8 +41,8 @@ beginning of the file.
 
 {callback}
 
-    {callback} function is called when the request is done. It should match the
-    following prototype:
+    {callback} function is called when the request is done. It should match
+    the following prototype:
     void callback(mixed $data, int $result[, resource $req]);
 
     {data}
@@ -63,12 +63,12 @@ beginning of the file.
 
     Arbitrary variable passed to {callback}.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 eio_write() returns request resource on success or FALSE on error.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * eio_open

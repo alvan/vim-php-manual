@@ -4,26 +4,27 @@ cubrid_lob2_read
 
 cubrid_lob2_read — Read from BLOB/CLOB data.
 
-===============================================================================
+==============================================================================
 *Description*
 
     string cubrid_lob2_read ( resource $lob_identifier , int $len )~
 
-The cubrid_lob2_read() function reads {len} bytes from the LOB data and returns
-the bytes read.
+The cubrid_lob2_read() function reads {len} bytes from the LOB data and
+returns the bytes read.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {lob_identifier}
 
-    Lob identifier as a result of |cubrid_lob2_new| or get from the result set.
+    Lob identifier as a result of |cubrid_lob2_new| or get from the result
+    set.
 
 {len}
 
     Length from buffer you want to read from the lob data.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the contents as a string.
@@ -32,7 +33,7 @@ FALSE when there is no more data.
 
 NULL on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_lob2_read() example 1
@@ -50,7 +51,8 @@ Example #1 cubrid_lob2_read() example 1
 
     cubrid_lob2_seek($row[1], 10, CUBRID_CURSOR_FIRST);
 
-    print "\nposition after moving farword is " . cubrid_lob2_tell($row[1]) . "\n";
+    print "\nposition after moving farword is " . cubrid_lob2_tell($row[1]) . "\n"
+    ;
 
     $data = cubrid_lob2_read($row[1], 12);
 
@@ -96,7 +98,7 @@ Example #2 cubrid_lob2_read() example 2
     cubrid_disconnect($conn);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |cubrid_lob2_write| - Write to a lob object.

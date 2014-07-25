@@ -2,22 +2,23 @@ db2_autocommit
 
 (PECL ibm_db2 >= 1.0.0)
 
-db2_autocommit — Returns or sets the AUTOCOMMIT state for a database connection
+db2_autocommit — Returns or sets the AUTOCOMMIT state for a database
+connection
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed db2_autocommit ( resource $connection [, bool $value ] )~
 
 Sets or gets the AUTOCOMMIT behavior of the specified connection resource.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
 
-    A valid database connection resource variable as returned from |db2_connect
-    | or |db2_pconnect|.
+    A valid database connection resource variable as returned from |
+    db2_connect| or |db2_pconnect|.
 
 {value}
 
@@ -31,19 +32,20 @@ Sets or gets the AUTOCOMMIT behavior of the specified connection resource.
 
         Turns AUTOCOMMIT on.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 When db2_autocommit() receives only the {connection} parameter, it returns the
-current state of AUTOCOMMIT for the requested connection as an integer value. A
-value of 0 indicates that AUTOCOMMIT is off, while a value of 1 indicates that
-AUTOCOMMIT is on.
+current state of AUTOCOMMIT for the requested connection as an integer value.
+A value of 0 indicates that AUTOCOMMIT is off, while a value of 1 indicates
+that AUTOCOMMIT is on.
 
-When db2_autocommit() receives both the {connection} parameter and {autocommit}
-parameter, it attempts to set the AUTOCOMMIT state of the requested connection
-to the corresponding state. Returns TRUE on success or FALSE on failure.
+When db2_autocommit() receives both the {connection} parameter and
+{autocommit} parameter, it attempts to set the AUTOCOMMIT state of the
+requested connection to the corresponding state. Returns TRUE on success or
+FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Retrieving the AUTOCOMMIT value for a connection
@@ -95,7 +97,7 @@ The above example will output:
 Turning AUTOCOMMIT on succeeded.
 1 -- AUTOCOMMIT is on.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |db2_connect| - Returns a connection to a database

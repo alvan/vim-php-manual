@@ -4,7 +4,7 @@ stream_set_blocking
 
 stream_set_blocking — Set blocking/non-blocking mode on a stream
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool stream_set_blocking ( resource $stream , int $mode )~
@@ -14,7 +14,7 @@ Sets blocking or non-blocking mode on a {stream}.
 This function works for any stream that supports non-blocking mode (currently,
 regular files and socket streams).
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {stream}
@@ -23,24 +23,24 @@ regular files and socket streams).
 
 {mode}
 
-    If {mode} is 0, the given stream will be switched to non-blocking mode, and
-    if 1, it will be switched to blocking mode. This affects calls like |fgets|
-    and |fread| that read from the stream. In non-blocking mode an |fgets| call
-    will always return right away while in blocking mode it will wait for data
-    to become available on the stream.
+    If {mode} is 0, the given stream will be switched to non-blocking mode,
+    and if 1, it will be switched to blocking mode. This affects calls like |
+    fgets| and |fread| that read from the stream. In non-blocking mode an |
+    fgets| call will always return right away while in blocking mode it will
+    wait for data to become available on the stream.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version                              Description
 4.3.0   Prior to PHP 4.3.0, this function only worked on socket based streams.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -48,7 +48,7 @@ Version                              Description
     This function was previously called as |set_socket_blocking| and later |
     socket_set_blocking| but this usage is deprecated.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |stream_select| - Runs the equivalent of the select() system call on the

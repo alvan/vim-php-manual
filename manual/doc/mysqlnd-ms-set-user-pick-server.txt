@@ -5,13 +5,13 @@ mysqlnd_ms_set_user_pick_server
 mysqlnd_ms_set_user_pick_server — Sets a callback for user-defined read/write
 splitting
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool mysqlnd_ms_set_user_pick_server ( string $function )~
 
-Sets a callback for user-defined read/write splitting. The plugin will call the
-callback only if pick[]=user is the default rule for server picking in the
+Sets a callback for user-defined read/write splitting. The plugin will call
+the callback only if pick[]=user is the default rule for server picking in the
 relevant section of the plugins configuration file.
 
 The plugins built-in read/write query split mechanism decisions can be
@@ -31,16 +31,17 @@ lists of configured master and slave servers. The callback function inspects
 the query to run and picks a server for query execution by returning the hosts
 URI, as found in the master and slave list.
 
-If the lazy connections are enabled and the callback chooses a slave server for
-which no connection has been established so far and establishing the connection
-to the slave fails, the plugin will return an error upon the next action on the
-failed connection, for example, when running a query. It is the responsibility
-of the application developer to handle the error. For example, the application
-can re-run the query to trigger a new server selection and callback invocation.
-If so, the callback must make sure to select a different slave, or check slave
-availability, before returning to the plugin to prevent an endless loop.
+If the lazy connections are enabled and the callback chooses a slave server
+for which no connection has been established so far and establishing the
+connection to the slave fails, the plugin will return an error upon the next
+action on the failed connection, for example, when running a query. It is the
+responsibility of the application developer to handle the error. For example,
+the application can re-run the query to trigger a new server selection and
+callback invocation. If so, the callback must make sure to select a different
+slave, or check slave availability, before returning to the plugin to prevent
+an endless loop.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {function}
@@ -50,17 +51,17 @@ availability, before returning to the plugin to prevent an endless loop.
     parameter. Additionally class methods of an object instance may be called
     by passing array($objectinstance, $methodname) to this parameter.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Host to run the query on. The host URI is to be taken from the master and slave
-connection lists passed to the callback function. If callback returns a value
-neither found in the master nor in the slave connection lists the plugin will
-fallback to the second pick method configured via the pick[] setting in the
-plugin configuration file. If not second pick method is given, the plugin falls
-back to the build-in default pick method for server selection.
+Host to run the query on. The host URI is to be taken from the master and
+slave connection lists passed to the callback function. If callback returns a
+value neither found in the master nor in the slave connection lists the plugin
+will fallback to the second pick method configured via the pick[] setting in
+the plugin configuration file. If not second pick method is given, the plugin
+falls back to the build-in default pick method for server selection.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -69,7 +70,7 @@ back to the build-in default pick method for server selection.
     1.1.0. It has been replaced by the user filter. Please, check the Change
     History for upgrade notes.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mysqlnd_ms_set_user_pick_server() example
@@ -165,7 +166,7 @@ User has connected to 'myapp'...
 ... access to table available only on slave A detected
 ... ret = 'tcp://192.168.2.27:3306'
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mysqlnd_ms_query_is_select| - Find whether to send the query to the

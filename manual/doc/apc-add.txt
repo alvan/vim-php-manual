@@ -4,18 +4,20 @@ apc_add
 
 apc_add — Cache a new variable in the data store
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool apc_add ( string $key , mixed $var [, int $ttl = 0 ] )~
-    array apc_add ( array $values [, mixed $unused = NULL [, int $ttl = 0 ]] )~
+    array apc_add ( array $values [, mixed $unused = NULL [, int $ttl = 0 ]]~
+)~
 
 Caches a variable in the data store, only if it's not already stored.
 
-    Note: Unlike many other mechanisms in PHP, variables stored using apc_add()
-    will persist between requests (until the value is removed from the cache).
+    Note: Unlike many other mechanisms in PHP, variables stored using apc_add
+    () will persist between requests (until the value is removed from the
+    cache).
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {key}
@@ -41,13 +43,13 @@ Caches a variable in the data store, only if it's not already stored.
 
     Names in key, variables in value.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE if something has effectively been added into the cache, FALSE
 otherwise. Second syntax returns array with error keys.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A apc_add() example
@@ -68,7 +70,7 @@ The above example will output:
 string(3) "BAR"
 string(3) "BAR"
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |apc_store| - Cache a variable in the data store

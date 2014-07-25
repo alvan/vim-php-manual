@@ -4,7 +4,7 @@ virtual
 
 virtual — Perform an Apache sub-request
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool virtual ( string $filename )~
@@ -21,34 +21,34 @@ pending headers are sent too.
 
 This function is only supported when PHP is installed as an Apache module.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {filename}
 
     The file that the virtual command will be performed on.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Performs the virtual command on success, or returns FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
         As of PHP 4.3.3 you can use this function with the NSAPI server module
 4.3.3   in Netscape/iPlanet/SunONE webservers, too.
 
-4.0.6   This function may be used on PHP files. However, it is typically better
-        to use |include| or |require| for PHP files.
+4.0.6   This function may be used on PHP files. However, it is typically
+        better to use |include| or |require| for PHP files.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 See |apache_note| for an example.
 
-===============================================================================
+==============================================================================
 *Notes*
 
 Warning
@@ -63,7 +63,7 @@ requested file will not be listed in the Apache access log.
     Environment variables set in the requested file are not visible to the
     calling script.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |apache_note| - Get and set apache request notes

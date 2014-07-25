@@ -4,17 +4,17 @@ array_map
 
 array_map — Applies the callback to the elements of the given arrays
 
-===============================================================================
+==============================================================================
 *Description*
 
     array array_map ( callable $callback , array $array1 [, array $... ] )~
 
 array_map() returns an array containing all the elements of {array1} after
-applying the {callback} function to each one. The number of parameters that the
-{callback} function accepts should match the number of arrays passed to the 
-array_map()
+applying the {callback} function to each one. The number of parameters that
+the {callback} function accepts should match the number of arrays passed to
+the array_map()
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {callback}
@@ -29,13 +29,13 @@ array_map()
 
     Variable list of array arguments to run through the {callback} function.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an array containing all the elements of {array1} after applying the
 {callback} function to each one.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 array_map() example
@@ -206,9 +206,9 @@ Array
 
 )
 
-If the array argument contains string keys then the returned array will contain
-string keys if and only if exactly one array is passed. If more than one
-argument is passed then the returned array always has integer keys.
+If the array argument contains string keys then the returned array will
+contain string keys if and only if exactly one array is passed. If more than
+one argument is passed then the returned array always has integer keys.
 
 Example #5 array_map() - with string keys
 
@@ -258,7 +258,7 @@ array(1) {
   }
 }
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |array_filter| - Filters elements of an array using a callback function

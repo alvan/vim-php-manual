@@ -4,14 +4,14 @@ ftp_mkdir
 
 ftp_mkdir — Creates a directory
 
-===============================================================================
+==============================================================================
 *Description*
 
     string ftp_mkdir ( resource $ftp_stream , string $directory )~
 
 Creates the specified {directory} on the FTP server.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {ftp_stream}
@@ -22,12 +22,12 @@ Creates the specified {directory} on the FTP server.
 
     The name of the directory that will be created.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the newly created directory name on success or FALSE on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 ftp_mkdir() example
@@ -53,7 +53,7 @@ Example #1 ftp_mkdir() example
     ftp_close($conn_id);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ftp_rmdir| - Removes a directory

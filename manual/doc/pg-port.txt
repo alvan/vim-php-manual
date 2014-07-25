@@ -4,7 +4,7 @@ pg_port
 
 pg_port — Return the port number associated with the connection
 
-===============================================================================
+==============================================================================
 *Description*
 
     int pg_port ([ resource $connection ] )~
@@ -12,7 +12,7 @@ pg_port — Return the port number associated with the connection
 pg_port() returns the port number that the given PostgreSQL {connection}
 resource is connected to.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
@@ -21,13 +21,13 @@ resource is connected to.
     the default connection is used. The default connection is the last
     connection made by |pg_connect| or |pg_pconnect|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 An int containing the port number of the database server the {connection} is
 to, or FALSE on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 pg_port() example
@@ -36,7 +36,8 @@ Example #1 pg_port() example
     $pgsql_conn = pg_connect("dbname=mark host=localhost");
 
     if ($pgsql_conn) {
-       print "Successfully connected to port: " . pg_port($pgsql_conn) . "<br/>\n";
+       print "Successfully connected to port: " . pg_port($pgsql_conn) . "<br/>\n"
+    ;
     } else {
        print pg_last_error($pgsql_conn);
        exit;

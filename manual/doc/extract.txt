@@ -4,7 +4,7 @@ extract
 
 extract — Import variables into the current symbol table from an array
 
-===============================================================================
+==============================================================================
 *Description*
 
     int extract ( array &$array [, int $flags = EXTR_OVERWRITE [, string~
@@ -12,10 +12,10 @@ extract — Import variables into the current symbol table from an array
 
 Import variables from an array into the current symbol table.
 
-Checks each key to see whether it has a valid variable name. It also checks for
-collisions with existing variables in the symbol table.
+Checks each key to see whether it has a valid variable name. It also checks
+for collisions with existing variables in the symbol table.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {array}
@@ -64,25 +64,25 @@ collisions with existing variables in the symbol table.
     Note that {prefix} is only required if {flags} is EXTR_PREFIX_SAME,
     EXTR_PREFIX_ALL, EXTR_PREFIX_INVALID or EXTR_PREFIX_IF_EXISTS. If the
     prefixed result is not a valid variable name, it is not imported into the
-    symbol table. Prefixes are automatically separated from the array key by an
-    underscore character.
+    symbol table. Prefixes are automatically separated from the array key by
+    an underscore character.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the number of variables successfully imported into the symbol table.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 4.3.0   EXTR_REFS was added.
 4.2.0   EXTR_IF_EXISTS and EXTR_PREFIX_IF_EXISTS were added.
         This function now returns the number of variables extracted.
 4.0.5   EXTR_PREFIX_INVALID was added. EXTR_PREFIX_ALL includes numeric
         variables as well.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 extract() example
@@ -112,10 +112,10 @@ blue, large, sphere, medium
 The $size wasn't overwritten because we specified EXTR_PREFIX_SAME, which
 resulted in $wddx_size being created. If EXTR_SKIP was specified, then
 $wddx_size wouldn't even have been created. EXTR_OVERWRITE would have caused
-$size to have value "medium", and EXTR_PREFIX_ALL would result in new variables
-being named $wddx_color, $wddx_size, and $wddx_shape.
+$size to have value "medium", and EXTR_PREFIX_ALL would result in new
+variables being named $wddx_color, $wddx_size, and $wddx_shape.
 
-===============================================================================
+==============================================================================
 *Notes*
 
 Warning
@@ -128,16 +128,16 @@ same order that's defined in variables_order within the php.ini.
 
     Note:
 
-    If you have register_globals turned on and you use extract() on $_FILES and
-    specify EXTR_SKIP, you may be surprised at the results.
+    If you have register_globals turned on and you use extract() on $_FILES
+    and specify EXTR_SKIP, you may be surprised at the results.
 
     Warning
 
     This is not recommended practice and is only documented here for
-    completeness. The use of register_globals is deprecated and calling extract
-    () on untrusted data such as $_FILES is, as noted above, a potential
-    security risk. If you encounter this issue, it means that you are using at
-    least two poor coding practices.
+    completeness. The use of register_globals is deprecated and calling 
+    extract() on untrusted data such as $_FILES is, as noted above, a
+    potential security risk. If you encounter this issue, it means that you
+    are using at least two poor coding practices.
 
     <?php >
 
@@ -173,14 +173,15 @@ same order that's defined in variables_order within the php.ini.
     string(14) "/tmp/phpgCCPX8"
     string(1) "/"
 
-    This is due to the fact that since register_globals is turned on, $testfile
-    already exists in the global scope when extract() is called. And since
-    EXTR_SKIP is specified, $testfile is not overwritten with the contents of
-    the $_FILES array so $testfile remains a string. Because strings may be
-    accessed using array syntax and the non-numeric string tmp_name is
-    interpreted as 0, PHP sees $testfile['tmp_name'] as $testfile[0].
+    This is due to the fact that since register_globals is turned on,
+    $testfile already exists in the global scope when extract() is called. And
+    since EXTR_SKIP is specified, $testfile is not overwritten with the
+    contents of the $_FILES array so $testfile remains a string. Because
+    strings may be accessed using array syntax and the non-numeric string
+    tmp_name is interpreted as 0, PHP sees $testfile['tmp_name'] as $testfile
+    [0].
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |compact| - Create array containing variables and their values

@@ -4,7 +4,7 @@ preg_grep
 
 preg_grep — Return array entries that match the pattern
 
-===============================================================================
+==============================================================================
 *Description*
 
     array preg_grep ( string $pattern , array $input [, int $flags = 0 ] )~
@@ -12,7 +12,7 @@ preg_grep — Return array entries that match the pattern
 Returns the array consisting of the elements of the {input} array that match
 the given {pattern}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {pattern}
@@ -25,26 +25,26 @@ the given {pattern}.
 
 {flags}
 
-    If set to PREG_GREP_INVERT, this function returns the elements of the input
-    array that do not match the given {pattern}.
+    If set to PREG_GREP_INVERT, this function returns the elements of the
+    input array that do not match the given {pattern}.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an array indexed using the keys from the {input} array.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 4.2.0   The {flags} parameter was added.
-        Prior to this version, the returned array was indexed regardless of the
-        keys of the {input} array.
+        Prior to this version, the returned array was indexed regardless of
+        the keys of the {input} array.
 4.0.4
         If you want to reproduce this old behavior, use |array_values| on the
         returned array to reindex the values.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 preg_grep() example
@@ -55,13 +55,14 @@ Example #1 preg_grep() example
     $fl_array = preg_grep("/^(\d+)?\.\d+$/", $array);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * PCRE Patterns
   * |preg_match_all| - Perform a global regular expression match
   * |preg_filter| - Perform a regular expression search and replace
-  * |preg_last_error| - Returns the error code of the last PCRE regex execution
+  * |preg_last_error| - Returns the error code of the last PCRE regex
+    execution
 
 
 vim:ft=help:

@@ -4,7 +4,7 @@ mailparse_msg_extract_part_file
 
 mailparse_msg_extract_part_file — Extracts/decodes a message section
 
-===============================================================================
+==============================================================================
 *Description*
 
     string mailparse_msg_extract_part_file ( resource $mimemail , mixed~
@@ -15,7 +15,7 @@ Extracts/decodes a message section from the supplied filename.
 The contents of the section will be decoded according to their transfer
 encoding - base64, quoted-printable and uuencoded text are supported.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {mimemail}
@@ -34,7 +34,7 @@ encoding - base64, quoted-printable and uuencoded text are supported.
 
     If not specified, the contents will be sent to "stdout".
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 If {callbackfunc} is not NULL returns TRUE on success.
@@ -43,7 +43,7 @@ If {callbackfunc} is set to NULL, returns the extracted section as a string.
 
 Returns FALSE on error.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mailparse_msg_extract_part| - Extracts/decodes a message section

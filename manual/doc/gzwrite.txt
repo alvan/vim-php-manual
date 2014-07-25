@@ -4,14 +4,14 @@ gzwrite
 
 gzwrite — Binary-safe gz-file write
 
-===============================================================================
+==============================================================================
 *Description*
 
     int gzwrite ( resource $zp , string $string [, int $length ] )~
 
 gzwrite() writes the contents of {string} to the given gz-file.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {zp}
@@ -35,12 +35,13 @@ gzwrite() writes the contents of {string} to the given gz-file.
         magic_quotes_runtime configuration option will be ignored and no
         slashes will be stripped from {string}.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns the number of (uncompressed) bytes written to the given gz-file stream.
+Returns the number of (uncompressed) bytes written to the given gz-file
+stream.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 gzwrite() example
@@ -52,7 +53,7 @@ Example #1 gzwrite() example
     gzclose($gz);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |gzread| - Binary-safe gz-file read

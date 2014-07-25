@@ -4,7 +4,7 @@ cubrid_field_table
 
 cubrid_field_table — Return the name of the table of the specified field
 
-===============================================================================
+==============================================================================
 *Description*
 
     string cubrid_field_table ( resource $result , int $field_offset )~
@@ -12,7 +12,7 @@ cubrid_field_table — Return the name of the table of the specified field
 This function returns the name of the table of the specified field. This is
 useful when using large select queries with JOINS.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
@@ -24,7 +24,7 @@ useful when using large select queries with JOINS.
     The numerical field offset. The {field_offset} starts at 0. If
     {field_offset} does not exist, an error of level E_WARNING is also issued.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Name of the table of the specified field, on success.
@@ -33,7 +33,7 @@ FALSE when invalid field_offset value.
 
 -1 if SQL sentence is not SELECT.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_field_table() example

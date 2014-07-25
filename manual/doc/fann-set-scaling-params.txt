@@ -5,7 +5,7 @@ fann_set_scaling_params
 fann_set_scaling_params — Calculate input and output scaling parameters for
 future use based on training data
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool fann_set_scaling_params ( resource $ann , resource $train_data ,~
@@ -15,7 +15,7 @@ future use based on training data
 Calculate input and output scaling parameters for future use based on training
 data.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {ann}
@@ -28,11 +28,13 @@ data.
 
 {new_input_min}
 
-    The desired lower bound in input data after scaling (not strictly followed)
+    The desired lower bound in input data after scaling (not strictly
+    followed)
 
 {new_input_max}
 
-    The desired upper bound in input data after scaling (not strictly followed)
+    The desired upper bound in input data after scaling (not strictly
+    followed)
 
 {new_output_min}
 
@@ -44,12 +46,12 @@ data.
     The desired upper bound in output data after scaling (not strictly
     followed)
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success, or FALSE otherwise.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |fann_set_input_scaling_params| - Calculate input scaling parameters for

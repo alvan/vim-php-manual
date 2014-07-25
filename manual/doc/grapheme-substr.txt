@@ -4,7 +4,7 @@ grapheme_substr
 
 grapheme_substr — Return part of a string
 
-===============================================================================
+==============================================================================
 *Description*
 
 Procedural style
@@ -13,7 +13,7 @@ Procedural style
 
 Return part of a string
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {string}
@@ -32,24 +32,25 @@ Return part of a string
     Length in grapheme units. If $length is given and is positive, the string
     returned will contain at most $length grapheme units beginning from $start
     (depending on the length of string). If $length is given and is negative,
-    then that many grapheme units will be omitted from the end of string (after
-    the start position has been calculated when a start is negative). If $start
-    denotes a position beyond this truncation, FALSE will be returned.
+    then that many grapheme units will be omitted from the end of string
+    (after the start position has been calculated when a start is negative).
+    If $start denotes a position beyond this truncation, FALSE will be
+    returned.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the extracted part of $string.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
         If {length} is given and positive and the argument string is shorter
 5.4     than the specified length, all the rest of the string according to
         {start} parameter is returned. Previously, FALSE was returned.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 grapheme_substr() example
@@ -69,7 +70,7 @@ The above example will output:
 
 a%CC%8Abco%CC%88
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |grapheme_extract| - Function to extract a sequence of default grapheme

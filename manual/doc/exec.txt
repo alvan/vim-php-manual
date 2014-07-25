@@ -4,14 +4,14 @@ exec
 
 exec — Execute an external program
 
-===============================================================================
+==============================================================================
 *Description*
 
     string exec ( string $command [, array &$output [, int &$return_var ]] )~
 
 exec() executes the given {command}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {command}
@@ -33,7 +33,7 @@ exec() executes the given {command}.
     then the return status of the executed command will be written to this
     variable.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The last line from the result of the command. If you need to execute a command
@@ -43,7 +43,7 @@ interference, use the |passthru| function.
 To get the output of the executed command, be sure to set and use the {output}
 parameter.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 An exec() example
@@ -54,7 +54,7 @@ Example #1 An exec() example
     echo exec('whoami');
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
 Warning
@@ -79,7 +79,7 @@ Warning
 With safe mode enabled, the command string is escaped with |escapeshellcmd|.
 Thus, echo y | echo x becomes echo y \| echo x.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |system| - Execute an external program and display the output

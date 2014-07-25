@@ -2,9 +2,10 @@ kadm5_create_principal
 
 (PECL kadm5 >= 0.2.3)
 
-kadm5_create_principal — Creates a kerberos principal with the given parameters
+kadm5_create_principal — Creates a kerberos principal with the given
+parameters
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool kadm5_create_principal ( resource $handle , string $principal [,~
@@ -12,7 +13,7 @@ kadm5_create_principal — Creates a kerberos principal with the given parameter
 
 Creates a {principal} with the given {password}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {handle}
@@ -34,12 +35,12 @@ Creates a {principal} with the given {password}.
     KADM5_PW_EXPIRATION, KADM5_ATTRIBUTES, KADM5_MAX_LIFE, KADM5_KVNO,
     KADM5_POLICY, KADM5_CLEARPOLICY, KADM5_MAX_RLIFE.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Example of principal's creation
@@ -54,12 +55,13 @@ Example #1 Example of principal's creation
                      KADM5_POLICY => "default",
                      KADM5_ATTRIBUTES => $attributes);
 
-    kadm5_create_principal($handle, "burbach@GONICUS.LOCAL", "password", $options);
+    kadm5_create_principal($handle, "burbach@GONICUS.LOCAL", "password", $options
+    );
 
     kadm5_destroy($handle);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |kadm5_modify_principal| - Modifies a kerberos principal with the given

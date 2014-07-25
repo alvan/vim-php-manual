@@ -4,15 +4,16 @@ imap_savebody
 
 imap_savebody — Save a specific body section to a file
 
-===============================================================================
+==============================================================================
 *Description*
 
-    bool imap_savebody ( resource $imap_stream , mixed $file , int $msg_number~
-    [, string $part_number = "" [, int $options = 0 ]] )~
+    bool imap_savebody ( resource $imap_stream , mixed $file , int~
+    $msg_number [, string $part_number = "" [, int $options = 0 ]]~
+)~
 
 Saves a part or the whole body of the specified message.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { imap_stream}
@@ -21,8 +22,8 @@ Saves a part or the whole body of the specified message.
 
 {file}
 
-    The path to the saved file as a string, or a valid file descriptor returned
-    by |fopen|.
+    The path to the saved file as a string, or a valid file descriptor
+    returned by |fopen|.
 
 {msg_number}
 
@@ -30,8 +31,8 @@ Saves a part or the whole body of the specified message.
 
 {part_number}
 
-    The part number. It is a string of integers delimited by period which index
-    into a body part list as per the IMAP4 specification
+    The part number. It is a string of integers delimited by period which
+    index into a body part list as per the IMAP4 specification
 
 {options}
 
@@ -41,12 +42,12 @@ Saves a part or the whole body of the specified message.
       + FT_INTERNAL - The return string is in internal format, will not
         canonicalize to CRLF.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |imap_fetchbody| - Fetch a particular section of the body of the message

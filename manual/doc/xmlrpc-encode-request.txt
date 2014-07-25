@@ -4,7 +4,7 @@ xmlrpc_encode_request
 
 xmlrpc_encode_request — Generates XML for a method request
 
-===============================================================================
+==============================================================================
 *Description*
 
     string xmlrpc_encode_request ( string $method , mixed $params [, array~
@@ -12,10 +12,10 @@ xmlrpc_encode_request — Generates XML for a method request
 Warning
 
 This function is EXPERIMENTAL. The behaviour of this function, its name, and
-surrounding documentation may change without notice in a future release of PHP.
-This function should be used at your own risk.
+surrounding documentation may change without notice in a future release of
+PHP. This function should be used at your own risk.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {method}
@@ -34,19 +34,19 @@ This function should be used at your own risk.
 
       + verbosity: no_white_space, newlines_only, pretty
 
-      + escaping: cdata, non-ascii, non-print, markup (may be a string with one
-        value or an array with multiple values)
+      + escaping: cdata, non-ascii, non-print, markup (may be a string with
+        one value or an array with multiple values)
 
       + version: simple, xmlrpc, soap 1.1, auto
 
       + encoding: iso-8859-1, other character set supported by iconv
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a string containing the XML representation of the request.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 XMLRPC client functions example
@@ -67,7 +67,7 @@ Example #1 XMLRPC client functions example
     }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |stream_context_create| - Creates a stream context

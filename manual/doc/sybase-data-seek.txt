@@ -4,28 +4,28 @@ sybase_data_seek
 
 sybase_data_seek — Moves internal row pointer
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool sybase_data_seek ( resource $result_identifier , int $row_number )~
 
 sybase_data_seek() moves the internal row pointer of the Sybase result
-associated with the specified result identifier to pointer to the specified row
-number. The next call to |sybase_fetch_row| would return that row.
+associated with the specified result identifier to pointer to the specified
+row number. The next call to |sybase_fetch_row| would return that row.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result_identifier}
 
 {row_number}
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |sybase_fetch_row| - Get a result row as an enumerated array

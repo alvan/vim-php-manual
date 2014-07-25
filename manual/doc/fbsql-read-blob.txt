@@ -4,7 +4,7 @@ fbsql_read_blob
 
 fbsql_read_blob — Read a BLOB from the database
 
-===============================================================================
+==============================================================================
 *Description*
 
     string fbsql_read_blob ( string $blob_handle [, resource $link_identifier~
@@ -15,10 +15,10 @@ Reads BLOB data from the database.
 If a select statement contains BLOB and/or CLOB columns FrontBase will return
 the data directly when data is fetched. This default behavior can be changed
 with |fbsql_set_lob_mode| so the fetch functions will return handles to BLOB
-and CLOB data. If a handle is fetched a user must call fbsql_read_blob() to get
-the actual BLOB data from the database.
+and CLOB data. If a handle is fetched a user must call fbsql_read_blob() to
+get the actual BLOB data from the database.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {blob_handle}
@@ -27,19 +27,19 @@ the actual BLOB data from the database.
 
 { link_identifier}
 
-    A FrontBase link identifier returned by |fbsql_connect| or |fbsql_pconnect|
-    .
+    A FrontBase link identifier returned by |fbsql_connect| or |fbsql_pconnect
+    |.
 
     If optional and not specified, the function will try to find an open link
     to the FrontBase server and if no such link is found it will try to create
     one as if |fbsql_connect| was called with no arguments.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a string containing the specified BLOB data.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 fbsql_read_blob() example
@@ -62,12 +62,13 @@ Example #1 fbsql_read_blob() example
 
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |fbsql_create_blob| - Create a BLOB
   * |fbsql_read_clob| - Read a CLOB from the database
-  * |fbsql_set_lob_mode| - Set the LOB retrieve mode for a FrontBase result set
+  * |fbsql_set_lob_mode| - Set the LOB retrieve mode for a FrontBase result
+    set
 
 
 vim:ft=help:

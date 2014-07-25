@@ -4,28 +4,29 @@ openal_buffer_loadwav
 
 openal_buffer_loadwav — Load a .wav file into a buffer
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool openal_buffer_loadwav ( resource $buffer , string $wavfile )~
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {buffer}
 
-    An Open AL(Buffer) resource (previously created by |openal_buffer_create|).
+    An Open AL(Buffer) resource (previously created by |openal_buffer_create|
+    ).
 
 {wavfile}
 
     Path to .wav file on local file system.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |openal_buffer_data| - Load a buffer with data

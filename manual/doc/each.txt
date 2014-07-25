@@ -5,7 +5,7 @@ each
 each — Return the current key and value pair from an array and advance the
 array cursor
 
-===============================================================================
+==============================================================================
 *Description*
 
     array each ( array &$array )~
@@ -13,18 +13,18 @@ array cursor
 Return the current key and value pair from an array and advance the array
 cursor.
 
-After each() has executed, the array cursor will be left on the next element of
-the array, or past the last element if it hits the end of the array. You have
-to use |reset| if you want to traverse the array again using each.
+After each() has executed, the array cursor will be left on the next element
+of the array, or past the last element if it hits the end of the array. You
+have to use |reset| if you want to traverse the array again using each.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {array}
 
     The input array.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the current key and value pair from the array {array}. This pair is
@@ -35,7 +35,7 @@ the data.
 If the internal pointer for the array points past the end of the array
 contents, each() returns FALSE.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 each() examples
@@ -103,7 +103,7 @@ Warning
 each() will also accept objects, but may return unexpected results. Its
 therefore not recommended to iterate though object properties with each().
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |key| - Fetch a key from an array

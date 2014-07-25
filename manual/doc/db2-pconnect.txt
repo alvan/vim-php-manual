@@ -4,7 +4,7 @@ db2_pconnect
 
 db2_pconnect — Returns a persistent connection to a database
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource db2_pconnect ( string $database , string $username , string~
@@ -26,7 +26,7 @@ end of a request, thus ending the transaction. This prevents the transaction
 block from carrying over to the next request which uses that connection if
 script execution ends before the transaction block does.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {database}
@@ -72,8 +72,9 @@ script execution ends before the transaction block does.
         on all database servers.
 
         Passing the DB2_SCROLLABLE value specifies a scrollable cursor for a
-        statement resource. This mode enables random access to rows in a result
-        set, but currently is supported only by IBM DB2 Universal Database.
+        statement resource. This mode enables random access to rows in a
+        result set, but currently is supported only by IBM DB2 Universal
+        Database.
 
     The following new option is available in ibm_db2 version 1.7.0 and later.
 
@@ -112,9 +113,9 @@ script execution ends before the transaction block does.
 
     {i5_naming}
 
-        DB2_I5_NAMING_ON value turns on DB2 UDB CLI iSeries system naming mode.
-        Files are qualified using the slash (/) delimiter. Unqualified files
-        are resolved using the library list for the job.
+        DB2_I5_NAMING_ON value turns on DB2 UDB CLI iSeries system naming
+        mode. Files are qualified using the slash (/) delimiter. Unqualified
+        files are resolved using the library list for the job.
 
         DB2_I5_NAMING_OFF value turns off DB2 UDB CLI default naming mode,
         which is SQL naming. Files are qualified using the period (.)
@@ -124,24 +125,25 @@ script execution ends before the transaction block does.
     {i5_commit}
 
         The {i5_commit} attribute should be set before the db2_pconnect(). If
-        the value is changed after the connection has been established, and the
-        connection is to a remote data source, the change does not take effect
-        until the next successful db2_pconnect() for the connection handle.
+        the value is changed after the connection has been established, and
+        the connection is to a remote data source, the change does not take
+        effect until the next successful db2_pconnect() for the connection
+        handle.
 
 
             Note:
 
             The php.ini setting {ibm_db2.i5_allow_commit}==0 or
-            DB2_I5_TXN_NO_COMMIT is the default, but may be overridden with the
-            {i5_commit} option.
+            DB2_I5_TXN_NO_COMMIT is the default, but may be overridden with
+            the {i5_commit} option.
 
         DB2_I5_TXN_NO_COMMIT - Commitment control is not used.
 
         DB2_I5_TXN_READ_UNCOMMITTED - Dirty reads, nonrepeatable reads, and
         phantoms are possible.
 
-        DB2_I5_TXN_READ_COMMITTED - Dirty reads are not possible. Nonrepeatable
-        reads, and phantoms are possible.
+        DB2_I5_TXN_READ_COMMITTED - Dirty reads are not possible.
+        Nonrepeatable reads, and phantoms are possible.
 
         DB2_I5_TXN_REPEATABLE_READ - Dirty reads and nonrepeatable reads are
         not possible. Phantoms are possible.
@@ -152,25 +154,26 @@ script execution ends before the transaction block does.
     {i5_query_optimize}
 
         DB2_FIRST_IO All queries are optimized with the goal of returning the
-        first page of output as fast as possible. This goal works well when the
-        output is controlled by a user who is most likely to cancel the query
-        after viewing the first page of output data. Queries coded with an
-        OPTIMIZE FOR nnn ROWS clause honor the goal specified by the clause.
+        first page of output as fast as possible. This goal works well when
+        the output is controlled by a user who is most likely to cancel the
+        query after viewing the first page of output data. Queries coded with
+        an OPTIMIZE FOR nnn ROWS clause honor the goal specified by the
+        clause.
 
         DB2_ALL_IO All queries are optimized with the goal of running the
-        entire query to completion in the shortest amount of elapsed time. This
-        is a good option when the output of a query is being written to a file
-        or report, or the interface is queuing the output data. Queries coded
-        with an OPTIMIZE FOR nnn ROWS clause honor the goal specified by the
-        clause. This is the default.
+        entire query to completion in the shortest amount of elapsed time.
+        This is a good option when the output of a query is being written to a
+        file or report, or the interface is queuing the output data. Queries
+        coded with an OPTIMIZE FOR nnn ROWS clause honor the goal specified by
+        the clause. This is the default.
 
     {i5_dbcs_alloc}
 
         DB2_I5_DBCS_ALLOC_ON value turns on DB2 6X allocation scheme for DBCS
         translation column size growth.
 
-        DB2_I5_DBCS_ALLOC_OFF value turns off DB2 6X allocation scheme for DBCS
-        translation column size growth.
+        DB2_I5_DBCS_ALLOC_OFF value turns off DB2 6X allocation scheme for
+        DBCS translation column size growth.
 
 
             Note:
@@ -203,8 +206,8 @@ script execution ends before the transaction block does.
 
     {i5_date_sep}
 
-        DB2_I5_SEP_SLASH - A slash ( / ) is used as the date separator. This is
-        the default.
+        DB2_I5_SEP_SLASH - A slash ( / ) is used as the date separator. This
+        is the default.
 
         DB2_I5_SEP_DASH - A dash ( - ) is used as the date separator.
 
@@ -233,8 +236,8 @@ script execution ends before the transaction block does.
 
     {i5_time_sep}
 
-        DB2_I5_SEP_COLON - A colon ( : ) is used as the time separator. This is
-        the default.
+        DB2_I5_SEP_COLON - A colon ( : ) is used as the time separator. This
+        is the default.
 
         DB2_I5_SEP_PERIOD - A period ( . ) is used as the time separator.
 
@@ -258,8 +261,8 @@ script execution ends before the transaction block does.
 
     {i5_libl}
 
-        A character value that indicates the library list that will be used for
-        resolving unqualified file references. Specify the library list
+        A character value that indicates the library list that will be used
+        for resolving unqualified file references. Specify the library list
         elements separated by blanks 'i5_libl'=>"MYLIB YOURLIB ANYLIB".
 
 
@@ -268,7 +271,7 @@ script execution ends before the transaction block does.
             i5_libl calls qsys2/qcmdexc('cmd',cmdlen), which is only available
             in i5/OS V5R4 and later.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a connection handle resource if the connection attempt is successful. 
@@ -276,10 +279,10 @@ db2_pconnect() tries to reuse an existing connection resource that exactly
 matches the {database}, {username}, and {password} parameters. If the
 connection attempt fails, db2_pconnect() returns FALSE.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 ibm_db2 Active transactions within a persistent connection will be rolled back
 1.9.0   at the end of each request.
 ibm_db2 The {i5_libl} option is available for i5/OS users.
@@ -291,7 +294,7 @@ ibm_db2 {i5_dbcs_alloc}, {i5_date_fmt}, {i5_date_sep}, {i5_time_fmt},
 1.5.1   {i5_time_sep} and {i5_decimal_sep} options are available for i5/OS
         users.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A db2_pconnect() example
@@ -383,7 +386,7 @@ The above example will output:
 Explicit trusted connection succeeded.
 User has been switched.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |db2_connect| - Returns a connection to a database

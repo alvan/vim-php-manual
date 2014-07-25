@@ -4,7 +4,7 @@ http_response_code
 
 http_response_code — Get or Set the HTTP response code
 
-===============================================================================
+==============================================================================
 *Description*
 
     int http_response_code ([ int $response_code ] )~
@@ -12,7 +12,7 @@ http_response_code — Get or Set the HTTP response code
 If you pass no parameters then http_response_code will get the current status
 code. If you pass a parameter it will set the response code.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {response_code}
@@ -23,12 +23,12 @@ code. If you pass a parameter it will set the response code.
     http_response_code(404);
 <    ?>
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The current response code. By default the return value is int(200).
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Examples using http_response_code()
@@ -47,11 +47,12 @@ Example #1 Examples using http_response_code()
 
 The above example will output:
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |header| - Send a raw HTTP header
-  * |headers_list| - Returns a list of response headers sent (or ready to send)
+  * |headers_list| - Returns a list of response headers sent (or ready to
+    send)
 
 
 vim:ft=help:

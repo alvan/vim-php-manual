@@ -5,14 +5,14 @@ fbsql_fetch_field
 fbsql_fetch_field — Get column information from a result and return as an
 object
 
-===============================================================================
+==============================================================================
 *Description*
 
     object fbsql_fetch_field ( resource $result [, int $field_offset ] )~
 
 Used in order to obtain information about fields in a certain query result.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { result}
@@ -25,7 +25,7 @@ Used in order to obtain information about fields in a certain query result.
     specified, the next field that wasn't yet retrieved by fbsql_fetch_field()
     is retrieved.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an object containing field information, or FALSE on errors.
@@ -38,7 +38,7 @@ The properties of the object are:
   * not_null - 1 if the column cannot be NULL
   * type - the type of the column
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 fbsql_fetch_field() example
@@ -68,7 +68,7 @@ Example #1 fbsql_fetch_field() example
     fbsql_free_result($result);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |fbsql_field_seek| - Set result pointer to a specified field offset

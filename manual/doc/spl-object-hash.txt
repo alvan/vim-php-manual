@@ -4,7 +4,7 @@ spl_object_hash
 
 spl_object_hash — Return hash id for given object
 
-===============================================================================
+==============================================================================
 *Description*
 
     string spl_object_hash ( object $obj )~
@@ -12,20 +12,20 @@ spl_object_hash — Return hash id for given object
 This function returns a unique identifier for the object. This id can be used
 as a hash key for storing objects or for identifying an object.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {object}
 
     Any object.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 A string that is unique for each currently existing object and is always the
 same for each object.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A spl_object_hash() example
@@ -35,7 +35,7 @@ Example #1 A spl_object_hash() example
     $storage[$id] = $object;
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:

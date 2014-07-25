@@ -4,17 +4,19 @@ yaz_ccl_parse
 
 yaz_ccl_parse — Invoke CCL Parser
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool yaz_ccl_parse ( resource $id , string $query , array &$result )~
 
 This function invokes a CCL parser. It converts a given CCL FIND query to an
-RPN query which may be passed to the |yaz_search| function to perform a search.
+RPN query which may be passed to the |yaz_search| function to perform a
+search.
 
-To define a set of valid CCL fields call |yaz_ccl_conf| prior to this function.
+To define a set of valid CCL fields call |yaz_ccl_conf| prior to this
+function.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {id}
@@ -27,8 +29,8 @@ To define a set of valid CCL fields call |yaz_ccl_conf| prior to this function.
 
 {result}
 
-    If the function was executed successfully, this will be an array containing
-    the valid RPN query under the key rpn.
+    If the function was executed successfully, this will be an array
+    containing the valid RPN query under the key rpn.
 
     Upon failure, three indexes are set in this array to indicate the cause of
     failure:
@@ -39,12 +41,12 @@ To define a set of valid CCL fields call |yaz_ccl_conf| prior to this function.
       + errorpos - approximate position in query of failure (integer is
         character position)
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 CCL Parsing

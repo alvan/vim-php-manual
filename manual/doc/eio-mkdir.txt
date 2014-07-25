@@ -4,7 +4,7 @@ eio_mkdir
 
 eio_mkdir — Create directory
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource eio_mkdir ( string $path , int $mode [, int $pri =~
@@ -12,7 +12,7 @@ eio_mkdir — Create directory
 
 eio_mkdir() creates directory with specified access {mode}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {path}
@@ -30,8 +30,8 @@ eio_mkdir() creates directory with specified access {mode}.
 
 {callback}
 
-    {callback} function is called when the request is done. It should match the
-    following prototype:
+    {callback} function is called when the request is done. It should match
+    the following prototype:
     void callback(mixed $data, int $result[, resource $req]);
 
     {data}
@@ -52,12 +52,12 @@ eio_mkdir() creates directory with specified access {mode}.
 
     Arbitrary variable passed to {callback}.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 eio_mkdir() returns request resource on success or FALSE on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 eio_mkdir() example
@@ -88,7 +88,7 @@ The above example will output something similar to:
 
 eio_mkdir_ok
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * eio_rmdir

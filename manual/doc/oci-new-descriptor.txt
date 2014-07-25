@@ -4,7 +4,7 @@ oci_new_descriptor
 
 oci_new_descriptor — Initializes a new empty LOB or FILE descriptor
 
-===============================================================================
+==============================================================================
 *Description*
 
     OCI-Lob oci_new_descriptor ( resource $connection [, int $type =~
@@ -12,25 +12,25 @@ oci_new_descriptor — Initializes a new empty LOB or FILE descriptor
 
 Allocates resources to hold descriptor or LOB locator.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
 
-    An Oracle connection identifier, returned by |oci_connect| or |oci_pconnect
-    |.
+    An Oracle connection identifier, returned by |oci_connect| or |
+    oci_pconnect|.
 
 {type}
 
     Valid values for {type} are: OCI_DTYPE_FILE, OCI_DTYPE_LOB and
     OCI_DTYPE_ROWID.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a new LOB or FILE descriptor on success, FALSE on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 oci_new_descriptor() example
@@ -129,7 +129,7 @@ Example #2 oci_new_descriptor() example
     oci_free_statement($stmt);
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -138,7 +138,7 @@ Example #2 oci_new_descriptor() example
     name still can be used, it was left as alias of oci_new_descriptor() for
     downwards compatability. This, however, is deprecated and not recommended.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |oci_bind_by_name| - Binds a PHP variable to an Oracle placeholder

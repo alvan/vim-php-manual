@@ -9,13 +9,13 @@ Warning
 
 This extension is deprecated as of PHP 5.5.0, and will be removed in the
 future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
-MySQL: choosing an API guide and related FAQ for more information. Alternatives
-to this function include:
+MySQL: choosing an API guide and related FAQ for more information.
+Alternatives to this function include:
 
   * mysqli_errno()
   * PDO::errorCode()
 
-===============================================================================
+==============================================================================
 *Description*
 
     int mysql_errno ([ resource $link_identifier = NULL ] )~
@@ -24,11 +24,11 @@ Returns the error number from the last MySQL function.
 
 Errors coming back from the MySQL database backend no longer issue warnings.
 Instead, use mysql_errno() to retrieve the error code. Note that this function
-only returns the error code from the most recently executed MySQL function (not
-including |mysql_error| and mysql_errno()), so if you want to use it, make sure
-you check the value before calling another MySQL function.
+only returns the error code from the most recently executed MySQL function
+(not including |mysql_error| and mysql_errno()), so if you want to use it,
+make sure you check the value before calling another MySQL function.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { link_identifier}
@@ -39,13 +39,13 @@ you check the value before calling another MySQL function.
     If no connection is found or established, an E_WARNING level error is
     generated.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the error number from the last MySQL function, or 0 (zero) if no error
 occurred.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mysql_errno() example
@@ -68,7 +68,7 @@ The above example will output something similar to:
 1049: Unknown database 'nonexistentdb'
 1146: Table 'kossu.nonexistenttable' doesn't exist
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mysql_error| - Returns the text of the error message from previous MySQL

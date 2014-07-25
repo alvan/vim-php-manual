@@ -4,14 +4,14 @@ curl_unescape
 
 curl_unescape — Decodes the given URL encoded string
 
-===============================================================================
+==============================================================================
 *Description*
 
     string curl_unescape ( resource $ch , string $str )~
 
 This function decodes the given URL encoded string.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {ch}
@@ -22,12 +22,12 @@ This function decodes the given URL encoded string.
 
     The URL encoded string to be decoded.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns decoded string or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 |curl_escape| example
@@ -52,7 +52,7 @@ Example #1 |curl_escape| example
     curl_close($ch);
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -60,7 +60,7 @@ Example #1 |curl_escape| example
     curl_unescape() does not decode plus symbols (+) into spaces. |urldecode|
     does.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |curl_escape| - URL encodes the given string

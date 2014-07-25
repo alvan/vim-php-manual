@@ -2,10 +2,10 @@ geoip_record_by_name
 
 (PECL geoip >= 0.2.0)
 
-geoip_record_by_name — Returns the detailed City information found in the GeoIP
-Database
+geoip_record_by_name — Returns the detailed City information found in the
+GeoIP Database
 
-===============================================================================
+==============================================================================
 *Description*
 
     array geoip_record_by_name ( string $hostname )~
@@ -22,8 +22,8 @@ follows:
 
   * "continent_code" -- Two letter continent code (as of version 1.0.4 with
     libgeoip 1.4.3 or newer)
-  * "country_code" -- Two letter country code (see |geoip_country_code_by_name|
-    )
+  * "country_code" -- Two letter country code (see |geoip_country_code_by_name
+    |)
   * "country_code3" -- Three letter country code (see |
     geoip_country_code3_by_name|)
   * "country_name" -- The country name (see |geoip_country_name_by_name|)
@@ -35,27 +35,27 @@ follows:
   * "dma_code" -- Designated Market Area code (USA and Canada only)
   * "area_code" -- The PSTN area code (ex: 212)
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {hostname}
 
     The hostname or IP address whose record is to be looked-up.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the associative array on success, or FALSE if the address cannot be
 found in the database.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version                           Description
 1.0.4   Adding the continent_code with GeoIP Library 1.4.3 or newer only
 1.0.3   Adding country_code3 and country_name
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A geoip_record_by_name() example

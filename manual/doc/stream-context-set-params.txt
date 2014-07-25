@@ -4,7 +4,7 @@ stream_context_set_params
 
 stream_context_set_params — Set parameters for a stream/wrapper/context
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool stream_context_set_params ( resource $stream_or_context , array~
@@ -12,7 +12,7 @@ stream_context_set_params — Set parameters for a stream/wrapper/context
 
 Sets parameters on the specified context.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {stream_or_context}
@@ -28,7 +28,7 @@ Sets parameters on the specified context.
         {params} should be an associative array of the structure: $params
         ['paramname'] = "paramvalue";.
 
-===============================================================================
+==============================================================================
 *Supported* *parameters*
 
  Parameters                               Purpose
@@ -36,12 +36,12 @@ notification Name of user-defined callback function to be called whenever a
              stream triggers a notification.
 options      Array of options as in context options and parameters.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |stream_notification_callback| - A callback function for the notification

@@ -4,7 +4,7 @@ ftp_get
 
 ftp_get — Downloads a file from the FTP server
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool ftp_get ( resource $ftp_stream , string $local_file , string~
@@ -13,7 +13,7 @@ ftp_get — Downloads a file from the FTP server
 ftp_get() retrieves a remote file from the FTP server, and saves it into a
 local file.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {ftp_stream}
@@ -36,12 +36,12 @@ local file.
 
     The position in the remote file to start downloading from.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 ftp_get() example
@@ -70,17 +70,18 @@ Example #1 ftp_get() example
 
 <?>
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version       Description
+Version      Description
 4.3.0   {resumepos} was added.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ftp_pasv| - Turns passive mode on or off
-  * |ftp_fget| - Downloads a file from the FTP server and saves to an open file
+  * |ftp_fget| - Downloads a file from the FTP server and saves to an open
+    file
   * |ftp_nb_get| - Retrieves a file from the FTP server and writes it to a
     local file (non-blocking)
   * |ftp_nb_fget| - Retrieves a file from the FTP server and writes it to an

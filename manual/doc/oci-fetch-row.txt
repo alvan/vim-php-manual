@@ -4,7 +4,7 @@ oci_fetch_row
 
 oci_fetch_row — Returns the next row from a query as a numeric array
 
-===============================================================================
+==============================================================================
 *Description*
 
     array oci_fetch_row ( resource $statement )~
@@ -17,7 +17,7 @@ exist.
 Calling oci_fetch_row() is identical to calling |oci_fetch_array| with OCI_NUM
 + OCI_RETURN_NULLS.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {statement}
@@ -25,13 +25,13 @@ Calling oci_fetch_row() is identical to calling |oci_fetch_array| with OCI_NUM
     A valid OCI8 statement identifier created by |oci_parse| and executed by |
     oci_execute|, or a REF CURSOR statement identifier.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a numerically indexed array. If there are no more rows in the
 {statement} then FALSE is returned.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 oci_fetch_row() Example
@@ -57,19 +57,19 @@ Example #1 oci_fetch_row() Example
 
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
 
     See |oci_fetch_array| for more examples of fetching rows.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |oci_fetch| - Fetches the next row from a query into internal buffers
-  * |oci_fetch_all| - Fetches multiple rows from a query into a two-dimensional
-    array
+  * |oci_fetch_all| - Fetches multiple rows from a query into a
+    two-dimensional array
   * |oci_fetch_array| - Returns the next row from a query as an associative or
     numeric array
   * |oci_fetch_assoc| - Returns the next row from a query as an associative

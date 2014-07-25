@@ -5,7 +5,7 @@ fann_cascadetrain_on_data
 fann_cascadetrain_on_data — Trains on an entire dataset, for a period of time
 using the Cascade2 training algorithm
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool fann_cascadetrain_on_data ( resource $ann , resource $data , int~
@@ -24,7 +24,7 @@ algorithm can be set to either FANN_TRAIN_RPROP or FANN_TRAIN_QUICKPROP by |
 fann_set_training_algorithm|, and the parameters set for these training
 algorithms will also affect the cascade training.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {ann}
@@ -49,12 +49,12 @@ algorithms will also affect the cascade training.
     The desired |fann_get_MSE| or |fann_get_bit_fail|, depending on which stop
     function is chosen by |fann_set_train_stop_function|
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success, or FALSE otherwise.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |fann_train_on_data| - Trains on an entire dataset for a period of time

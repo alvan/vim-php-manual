@@ -4,7 +4,7 @@ socket_create
 
 socket_create — Create a socket (endpoint for communication)
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource socket_create ( int $domain , int $type , int $protocol )~
@@ -14,7 +14,7 @@ communication. A typical network connection is made up of 2 sockets, one
 performing the role of the client, and another performing the role of the
 server.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {domain}
@@ -22,14 +22,15 @@ server.
     The {domain} parameter specifies the protocol family to be used by the
     socket.
 
-                      Available address/protocol families
+                     Available address/protocol families
      Domain                             Description
-    AF_INET  IPv4 Internet based protocols. TCP and UDP are common protocols of
-             this protocol family.
-    AF_INET6 IPv6 Internet based protocols. TCP and UDP are common protocols of
-             this protocol family.
-    AF_UNIX  Local communication protocol family. High efficiency and low
-             overhead make it a great form of IPC (Interprocess Communication).
+    AF_INET  IPv4 Internet based protocols. TCP and UDP are common protocols
+             of this protocol family.
+    AF_INET6 IPv6 Internet based protocols. TCP and UDP are common protocols
+             of this protocol family.
+             Local communication protocol family. High efficiency and low
+    AF_UNIX  overhead make it a great form of IPC (Interprocess
+             Communication).
 
 {type}
 
@@ -39,15 +40,16 @@ server.
                             Available socket types
          Type                              Description
                    Provides sequenced, reliable, full-duplex, connection-based
-    SOCK_STREAM    byte streams. An out-of-band data transmission mechanism may
-                   be supported. The TCP protocol is based on this socket type.
-                   Supports datagrams (connectionless, unreliable messages of a
-    SOCK_DGRAM     fixed maximum length). The UDP protocol is based on this
+    SOCK_STREAM    byte streams. An out-of-band data transmission mechanism
+                   may be supported. The TCP protocol is based on this socket
+                   type.
+                   Supports datagrams (connectionless, unreliable messages of
+    SOCK_DGRAM     a fixed maximum length). The UDP protocol is based on this
                    socket type.
                    Provides a sequenced, reliable, two-way connection-based
     SOCK_SEQPACKET data transmission path for datagrams of fixed maximum
-                   length; a consumer is required to read an entire packet with
-                   each read call.
+                   length; a consumer is required to read an entire packet
+                   with each read call.
                    Provides raw network protocol access. This special type of
     SOCK_RAW       socket can be used to manually construct any type of
                    protocol. A common use for this socket type is to perform
@@ -83,7 +85,7 @@ server.
          underlying datagram communication layer. Therefore, TCP applications
          must allow for the possibility of partial record transmission.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 socket_create() returns a socket resource on success, or FALSE on error. The
@@ -91,19 +93,19 @@ actual error code can be retrieved by calling |socket_last_error|. This error
 code may be passed to |socket_strerror| to get a textual explanation of the
 error.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version           Description
 5.0.0   The AF_INET6 constant was added.
 
-===============================================================================
+==============================================================================
 *Errors/Exceptions*
 
 If an invalid {domain} or {type} is given, socket_create() defaults to AF_INET
 and SOCK_STREAM respectively and additionally emits an E_WARNING message.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |socket_accept| - Accepts a connection on a socket

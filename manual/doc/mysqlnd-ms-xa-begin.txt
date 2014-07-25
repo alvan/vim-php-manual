@@ -4,7 +4,7 @@ mysqlnd_ms_xa_begin
 
 mysqlnd_ms_xa_begin — Starts a distributed/XA transaction among MySQL servers
 
-===============================================================================
+==============================================================================
 *Description*
 
     int mysqlnd_ms_xa_begin ( mixed $connection , string $gtrid [, int~
@@ -21,18 +21,18 @@ mysqlnd_ms_xa_rollback| or by an implicit rollback in case of an error.
 During a global transaction, the plugin tracks all server switches, for
 example, when switching from one MySQL shard to another MySQL shard.
 Immediately before a query is run on a server that has not been participating
-in the global transaction yet, XA BEGIN is executed on the server. From a users
-perspective the injection happens during a call to a query execution function
-such as mysqli_query(). Should the injection fail an error is reported to the
-caller of the query execution function. The failing server does not become a
-participant in the global transaction. The user may retry executing a query on
-the server and hereby retry injecting XA BEGIN, abort the global transaction
-because not all required servers can participat or, ignore continue the global
-without the failed server.
+in the global transaction yet, XA BEGIN is executed on the server. From a
+users perspective the injection happens during a call to a query execution
+function such as mysqli_query(). Should the injection fail an error is
+reported to the caller of the query execution function. The failing server
+does not become a participant in the global transaction. The user may retry
+executing a query on the server and hereby retry injecting XA BEGIN, abort the
+global transaction because not all required servers can participat or, ignore
+continue the global without the failed server.
 
 Reasons to fail executing XA BEGIN include but are not limited to a server
-being unreachable or the server having an open, concurrent XA transaction using
-the same xid.
+being unreachable or the server having an open, concurrent XA transaction
+using the same xid.
 
 Please note, global and local transactions are mutually exclusive. You cannot
 start a XA transaction when you have a local transaction open. The local
@@ -52,18 +52,18 @@ yourself.
     The feature is currently under development. There may be issues and/or
     feature limitations. Do not use in production environments.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
 
-    A MySQL connection handle obtained from any of the connect functions of the
-    mysqli, mysql or PDO_MYSQL extensions.
+    A MySQL connection handle obtained from any of the connect functions of
+    the mysqli, mysql or PDO_MYSQL extensions.
 
 {gtrid}
 
-    Global transaction identifier (gtrid). The gtrid is a binary string upto 64
-    bytes long. Please note, depending on your character set settings, 64
+    Global transaction identifier (gtrid). The gtrid is a binary string upto
+    64 bytes long. Please note, depending on your character set settings, 64
     characters may require more than 64 bytes to store.
 
     In accordance with the MySQL SQL syntax, XA transactions use identifiers
@@ -86,17 +86,17 @@ yourself.
     checking the transactions status.
 
     Setting a low value may make the garbage collection check the progress too
-    often. Please note, checking the status of a global transaction may involve
-    connecting to all recorded participants and possibly issueing queries on
-    the servers.
+    often. Please note, checking the status of a global transaction may
+    involve connecting to all recorded participants and possibly issueing
+    queries on the servers.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE if there is no open local or global transaction and a new global
 transaction can be started. Otherwise, returns FALSE
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * Quickstart XA/Distributed transactions

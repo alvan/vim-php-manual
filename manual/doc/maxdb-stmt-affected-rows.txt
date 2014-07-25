@@ -7,7 +7,7 @@ maxdb_stmt::affected_rows
 maxdb_stmt_affected_rows -- maxdb_stmt::affected_rows — Returns the total
 number of rows changed, deleted, or inserted by the last executed statement
 
-===============================================================================
+==============================================================================
 *Description*
 
 Procedural style
@@ -22,7 +22,7 @@ maxdb_stmt_affected_rows() returns the number of rows affected by INSERT,
 UPDATE, or DELETE query. If the last query was invalid or the number of rows
 can not determined, this function will return -1.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 An integer greater than zero indicates the number of rows affected or
@@ -31,7 +31,7 @@ statement, no rows matched the WHERE clause in the query or that no query has
 yet been executed. -1 indicates that the query has returned an error or the
 number of rows can not determined.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Object oriented style
@@ -48,7 +48,8 @@ Example #1 Object oriented style
     /* create temp table */
     $maxdb->query("CREATE TABLE temp.mycity LIKE hotel.city");
 
-    $query = "INSERT INTO temp.mycity SELECT * FROM hotel.city WHERE state LIKE ?";
+    $query = "INSERT INTO temp.mycity SELECT * FROM hotel.city WHERE state LIKE ?"
+    ;
 
     /* prepare statement */
     if ($stmt = $maxdb->prepare($query)) {
@@ -84,7 +85,8 @@ Example #2 Procedural style
     /* create temp table */
     maxdb_query($link, "CREATE TABLE temp.mycity LIKE hotel.city");
 
-    $query = "INSERT INTO temp.mycity SELECT * FROM hotel.city WHERE state LIKE ?";
+    $query = "INSERT INTO temp.mycity SELECT * FROM hotel.city WHERE state LIKE ?"
+    ;
 
     /* prepare statement */
     if ($stmt = maxdb_prepare($link, $query)) {
@@ -110,7 +112,7 @@ The above example will output something similar to:
 
 rows inserted: 4
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |maxdb_stmt_num_rows| - Return the number of rows in statements result set

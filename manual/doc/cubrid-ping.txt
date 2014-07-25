@@ -4,14 +4,14 @@ cubrid_ping
 
 cubrid_ping — Ping a server connection or reconnect if there is no connection
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool cubrid_ping ([ resource $conn_identifier ] )~
 
 Checks whether or not the connection to the server is working.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {conn_identifier}
@@ -19,13 +19,13 @@ Checks whether or not the connection to the server is working.
     The CUBRID connection identifier. If the connection identifier is not
     specified, the last connection opened by |cubrid_connect| is assumed.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE if the connection to the server CUBRID server is working,
 otherwise FALSE.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_ping() example

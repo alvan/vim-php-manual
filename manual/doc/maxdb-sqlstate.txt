@@ -7,7 +7,7 @@ maxdb::sqlstate
 maxdb_sqlstate -- maxdb::sqlstate — Returns the SQLSTATE error from previous
 MaxDB operation
 
-===============================================================================
+==============================================================================
 *Description*
 
 Procedural style
@@ -27,13 +27,13 @@ specified by ANSI SQL and ODBC.
     Note that not all MaxDB errors are yet mapped to SQLSTATE's. The value
     HY000 (general error) is used for unmapped errors.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a string containing the SQLSTATE error code for the last error. The
 error code consists of five characters. '00000' means no error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Object oriented style
@@ -67,8 +67,8 @@ Example #2 Procedural style
     }
 
     /* Table City already exists, so we should get an error */
-    if (!maxdb_query($link, "CREATE TABLE hotel.city (ID INT, Name VARCHAR(30))")) 
-    {
+    if (!maxdb_query($link, "CREATE TABLE hotel.city (ID INT, Name VARCHAR(30))"))
+     {
        printf("Error - SQLSTATE %s.\n", maxdb_sqlstate($link));
     }
 
@@ -80,7 +80,7 @@ The above example will output something similar to:
 Warning: maxdb_query(): -6000 POS(20) Duplicate table name:CITY [I6000] <...>
 Error - SQLSTATE I6000.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |maxdb_errno| - Returns the error code for the most recent function call

@@ -4,17 +4,17 @@ sybase_deadlock_retry_count
 
 sybase_deadlock_retry_count — Sets the deadlock retry count
 
-===============================================================================
+==============================================================================
 *Description*
 
     void sybase_deadlock_retry_count ( int $retry_count )~
 
 Using sybase_deadlock_retry_count(), the number of retries can be defined in
-cases of deadlocks. By default, every deadlock is retried an infinite number of
-times or until the process is killed by Sybase, the executing script is killed
-(for instance, by |set_time_limit|) or the query succeeds.
+cases of deadlocks. By default, every deadlock is retried an infinite number
+of times or until the process is killed by Sybase, the executing script is
+killed (for instance, by |set_time_limit|) or the query succeeds.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {retry_count}
@@ -24,12 +24,12 @@ times or until the process is killed by Sybase, the executing script is killed
     0  Do not retry
     n  Retry n times
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 No value is returned.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: This function is only available when using the CT library interface

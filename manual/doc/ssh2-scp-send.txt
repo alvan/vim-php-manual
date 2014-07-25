@@ -4,7 +4,7 @@ ssh2_scp_send
 
 ssh2_scp_send — Send a file via SCP
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool ssh2_scp_send ( resource $session , string $local_file , string~
@@ -13,7 +13,7 @@ ssh2_scp_send — Send a file via SCP
 Copy a file from the local filesystem to the remote server using the SCP
 protocol.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {session}
@@ -32,12 +32,12 @@ protocol.
 
     The file will be created with the mode specified by {create_mode}.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Uploading a file via SCP
@@ -49,7 +49,7 @@ Example #1 Uploading a file via SCP
     ssh2_scp_send($connection, '/local/filename', '/remote/filename', 0644);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ssh2_scp_recv| - Request a file via SCP

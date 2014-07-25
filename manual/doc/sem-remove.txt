@@ -4,7 +4,7 @@ sem_remove
 
 sem_remove — Remove a semaphore
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool sem_remove ( resource $sem_identifier )~
@@ -13,19 +13,19 @@ sem_remove() removes the given semaphore.
 
 After removing the semaphore, it is no longer accessible.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {sem_identifier}
 
     A semaphore resource identifier as returned by |sem_get|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |sem_get| - Get a semaphore id

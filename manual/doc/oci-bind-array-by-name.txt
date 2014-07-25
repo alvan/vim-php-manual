@@ -4,7 +4,7 @@ oci_bind_array_by_name
 
 oci_bind_array_by_name — Binds a PHP array to an Oracle PL/SQL array parameter
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool oci_bind_array_by_name ( resource $statement , string $name , array~
@@ -15,7 +15,7 @@ Binds the PHP array {var_array} to the Oracle placeholder {name}, which points
 to an Oracle PL/SQL array. Whether it will be used for input or output will be
 determined at run-time.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {statement}
@@ -42,8 +42,8 @@ determined at run-time.
 
 {type}
 
-    Should be used to set the type of PL/SQL array items. See list of available
-    types below:
+    Should be used to set the type of PL/SQL array items. See list of
+    available types below:
 
       + SQLT_NUM - for arrays of NUMBER.
 
@@ -67,12 +67,12 @@ determined at run-time.
 
       + SQLT_ODT - for arrays of DATE.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 oci_bind_array_by_name() example

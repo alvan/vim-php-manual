@@ -4,7 +4,7 @@ pg_field_size
 
 pg_field_size — Returns the internal storage size of the named field
 
-===============================================================================
+==============================================================================
 *Description*
 
     int pg_field_size ( resource $result , int $field_number )~
@@ -16,25 +16,25 @@ number in the given PostgreSQL {result}.
 
     This function used to be called pg_fieldsize().
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
 
-    PostgreSQL query result resource, returned by |pg_query|, |pg_query_params|
-    or |pg_execute| (among others).
+    PostgreSQL query result resource, returned by |pg_query|, |pg_query_params
+    | or |pg_execute| (among others).
 
 {field_number}
 
     Field number, starting from 0.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The internal field storage size (in bytes). -1 indicates a variable length
 field. FALSE is returned on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Getting information about fields
@@ -75,7 +75,7 @@ printed length: 24 characters
 storage length: -1 bytes
 field type: varchar
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |pg_field_prtlen| - Returns the printed length

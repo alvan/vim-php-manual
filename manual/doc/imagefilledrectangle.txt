@@ -4,7 +4,7 @@ imagefilledrectangle
 
 imagefilledrectangle — Draw a filled rectangle
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool imagefilledrectangle ( resource $image , int $x1 , int $y1 , int $x2~
@@ -13,13 +13,13 @@ imagefilledrectangle — Draw a filled rectangle
 Creates a rectangle filled with {color} in the given {image} starting at point
 1 and ending at point 2. 0, 0 is the top left corner of the image.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { image}
 
-    An image resource, returned by one of the image creation functions, such as
-    |imagecreatetruecolor|.
+    An image resource, returned by one of the image creation functions, such
+    as |imagecreatetruecolor|.
 
 {x1}
 
@@ -41,12 +41,12 @@ Creates a rectangle filled with {color} in the given {image} starting at point
 
     The fill color. A color identifier created with |imagecolorallocate|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 imagefilledrectangle() usage

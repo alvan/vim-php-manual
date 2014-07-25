@@ -4,7 +4,7 @@ get_object_vars
 
 get_object_vars — Gets the properties of the given object
 
-===============================================================================
+==============================================================================
 *Description*
 
     array get_object_vars ( object $object )~
@@ -12,30 +12,30 @@ get_object_vars — Gets the properties of the given object
 Gets the accessible non-static properties of the given {object} according to
 scope.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {object}
 
     An object instance.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns an associative array of defined object accessible non-static properties
-for the specified {object} in scope. If a property has not been assigned a
-value, it will be returned with a NULL value.
+Returns an associative array of defined object accessible non-static
+properties for the specified {object} in scope. If a property has not been
+assigned a value, it will be returned with a NULL value.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 5.3.0   This function now returns NULL if the {object} isn't an object.
         Previously FALSE was returned.
 4.2.0   Properties which were declared in the class of the {object} but which
         weren't assigned a value are now also returned (with value NULL).
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Use of get_object_vars()
@@ -80,7 +80,7 @@ array(4) {
   NULL
 }
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |get_class_methods| - Gets the class methods' names

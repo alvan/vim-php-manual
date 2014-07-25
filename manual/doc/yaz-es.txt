@@ -4,7 +4,7 @@ yaz_es
 
 yaz_es — Prepares for an Extended Service Request
 
-===============================================================================
+==============================================================================
 *Description*
 
     void yaz_es ( resource $id , string $type , array $args )~
@@ -18,11 +18,11 @@ Database administration etc.
     Many Z39.50 Servers do not support Extended Services.
 
 The yaz_es() creates an Extended Service Request packages and puts it into a
-queue of operations. Use |yaz_wait| to send the request(s) to the server. After
-completion of |yaz_wait| the result of the Extended Service operation should be
-expected with a call to |yaz_es_result|.
+queue of operations. Use |yaz_wait| to send the request(s) to the server.
+After completion of |yaz_wait| the result of the Extended Service operation
+should be expected with a call to |yaz_es_result|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {id}
@@ -31,23 +31,23 @@ expected with a call to |yaz_es_result|.
 
 {type}
 
-    A string which represents the type of the Extended Service: itemorder (Item
-    Order), create (Create Database), drop (Drop Database), commit (Commit
-    Operation), update (Update Record), xmlupdate (XML Update). Each type is
-    specified in the following section.
+    A string which represents the type of the Extended Service: itemorder
+    (Item Order), create (Create Database), drop (Drop Database), commit
+    (Commit Operation), update (Update Record), xmlupdate (XML Update). Each
+    type is specified in the following section.
 
 {args}
 
     An array with extended service options plus package specific options. The
-    options are identical to those offered in the C API of ZOOM C. Refer to the
-    ZOOM » Extended Services.
+    options are identical to those offered in the C API of ZOOM C. Refer to
+    the ZOOM » Extended Services.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 No value is returned.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Record Update
@@ -64,7 +64,7 @@ Example #1 Record Update
     $result = yaz_es_result($id);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |yaz_es_result| - Inspects Extended Services Result

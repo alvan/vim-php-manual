@@ -4,21 +4,21 @@ image2wbmp
 
 image2wbmp — Output image to browser or file
 
-===============================================================================
+==============================================================================
 *Description*
 
-    bool image2wbmp ( resource $image [, string $filename [, int $threshold ]]~
-)~
+    bool image2wbmp ( resource $image [, string $filename [, int $threshold~
+    ]] )~
 
 image2wbmp() outputs or save a WBMP version of the given {image}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { image}
 
-    An image resource, returned by one of the image creation functions, such as
-    |imagecreatetruecolor|.
+    An image resource, returned by one of the image creation functions, such
+    as |imagecreatetruecolor|.
 
 {filename}
 
@@ -29,12 +29,12 @@ image2wbmp() outputs or save a WBMP version of the given {image}.
 
     Threshold value, between 0 and 255 (inclusive).
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 image2wbmp() example
@@ -48,14 +48,15 @@ Example #1 image2wbmp() example
     imagedestroy($image);
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
 
-    WBMP support is only available if PHP was compiled against GD-1.8 or later.
+    WBMP support is only available if PHP was compiled against GD-1.8 or
+    later.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |imagewbmp| - Output image to browser or file

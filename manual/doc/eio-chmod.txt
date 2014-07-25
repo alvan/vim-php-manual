@@ -4,7 +4,7 @@ eio_chmod
 
 eio_chmod — Change file/direcrory permissions.
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource eio_chmod ( string $path , int $mode [, int $pri =~
@@ -13,7 +13,7 @@ eio_chmod — Change file/direcrory permissions.
 eio_chmod() changes file, or direcrory permissions. The new permissions are
 specified by {mode}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {path}
@@ -34,8 +34,8 @@ specified by {mode}.
 
 {callback}
 
-    {callback} function is called when the request is done. It should match the
-    following prototype:
+    {callback} function is called when the request is done. It should match
+    the following prototype:
     void callback(mixed $data, int $result[, resource $req]);
 
     {data}
@@ -56,12 +56,12 @@ specified by {mode}.
 
     Arbitrary variable passed to {callback}.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 eio_chmod() returns request resource on success or FALSE on error.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * eio_chown

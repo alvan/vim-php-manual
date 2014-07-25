@@ -4,7 +4,7 @@ ps_delete
 
 ps_delete — Deletes all resources of a PostScript document
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool ps_delete ( resource $psdoc )~
@@ -15,19 +15,19 @@ ps_close| before, because |ps_close| not just closes the file but also outputs
 a trailor containing PostScript comments like the number of pages in the
 document and adding the bookmark hierarchy.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {psdoc}
 
     Resource identifier of the postscript file as returned by |ps_new|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ps_close| - Closes a PostScript document

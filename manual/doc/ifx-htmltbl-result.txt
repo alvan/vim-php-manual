@@ -4,15 +4,15 @@ ifx_htmltbl_result
 
 ifx_htmltbl_result — Formats all rows of a query into a HTML table
 
-===============================================================================
+==============================================================================
 *Description*
 
-    int ifx_htmltbl_result ( resource $result_id [, string $html_table_options~
-    ] )~
+    int ifx_htmltbl_result ( resource $result_id [, string~
+    $html_table_options ] )~
 
 Formats and prints all rows of the {result_id} query into a HTML table.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result_id}
@@ -24,12 +24,12 @@ Formats and prints all rows of the {result_id} query into a HTML table.
 
     This optional argument is a string of <table> tag options.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the number of fetched rows, or FALSE on errors.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Informix results as HTML table

@@ -2,10 +2,10 @@ ibase_prepare
 
 (PHP 5)
 
-ibase_prepare — Prepare a query for later binding of parameter placeholders and
-execution
+ibase_prepare — Prepare a query for later binding of parameter placeholders
+and execution
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource ibase_prepare ( string $query )~
@@ -13,17 +13,17 @@ execution
     resource ibase_prepare ( resource $link_identifier , string $trans ,~
     string $query )~
 
-Prepare a query for later binding of parameter placeholders and execution (via 
+Prepare a query for later binding of parameter placeholders and execution (via
 |ibase_execute|).
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {query}
 
     An InterBase query.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a prepared query handle, or FALSE on error.

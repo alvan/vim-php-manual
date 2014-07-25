@@ -4,7 +4,7 @@ json_encode
 
 json_encode — Returns the JSON representation of a value
 
-===============================================================================
+==============================================================================
 *Description*
 
     string json_encode ( mixed $value [, int $options = 0 [, int $depth = 512~
@@ -12,7 +12,7 @@ json_encode — Returns the JSON representation of a value
 
 Returns a string containing the JSON representation of {value}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {value}
@@ -38,22 +38,22 @@ Returns a string containing the JSON representation of {value}.
 
     Set the maximum depth. Must be greater than zero.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a JSON encoded string on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 5.5.0   {depth} parameter was added.
 5.4.0   JSON_PRETTY_PRINT, JSON_UNESCAPED_SLASHES, and JSON_UNESCAPED_UNICODE
         {options} were added.
 5.3.3   JSON_NUMERIC_CHECK {option} was added.
 5.3.0   The {options} parameter was added.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A json_encode() example
@@ -79,14 +79,14 @@ Example #2 A json_encode() example showing some options in use
     echo "Quot: ",    json_encode($a, JSON_HEX_QUOT), "\n";
     echo "Amp: ",     json_encode($a, JSON_HEX_AMP), "\n";
     echo "Unicode: ", json_encode($a, JSON_UNESCAPED_UNICODE), "\n";
-    echo "All: ",     json_encode($a, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT 
-    | JSON_HEX_AMP | JSON_UNESCAPED_UNICODE), "\n\n";
+    echo "All: ",     json_encode($a, JSON_HEX_TAG | JSON_HEX_APOS | 
+    JSON_HEX_QUOT | JSON_HEX_AMP | JSON_UNESCAPED_UNICODE), "\n\n";
 
     $b = array();
 
     echo "Empty array output as array: ", json_encode($b), "\n";
-    echo "Empty array output as object: ", json_encode($b, JSON_FORCE_OBJECT), "\n\
-    n";
+    echo "Empty array output as object: ", json_encode($b, JSON_FORCE_OBJECT), "\n
+    \n";
 
     $c = array(array(1,2,3));
 
@@ -184,7 +184,7 @@ array(3) {
 }
 string(33) "{"0":"foo","2":"baz","3":"blong"}"
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -200,16 +200,16 @@ string(33) "{"0":"foo","2":"baz","3":"blong"}"
 
     Note:
 
-    Like the reference JSON encoder, json_encode() will generate JSON that is a
-    simple value (that is, neither an object nor an array) if given a string, 
-    integer, float or boolean as an input {value}. While most decoders will
+    Like the reference JSON encoder, json_encode() will generate JSON that is
+    a simple value (that is, neither an object nor an array) if given a string
+    , integer, float or boolean as an input {value}. While most decoders will
     accept these values as valid JSON, some may not, as the specification is
     ambiguous on this point.
 
     To summarise, always test that your JSON decoder can handle the output you
     generate from json_encode().
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * JsonSerializable

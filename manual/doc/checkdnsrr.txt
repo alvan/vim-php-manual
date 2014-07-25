@@ -5,14 +5,14 @@ checkdnsrr
 checkdnsrr — Check DNS records corresponding to a given Internet host name or
 IP address
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool checkdnsrr ( string $host [, string $type = "MX" ] )~
 
 Searches DNS for records of type {type} corresponding to {host}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {host}
@@ -22,16 +22,16 @@ Searches DNS for records of type {type} corresponding to {host}.
 
 {type}
 
-    {type} may be any one of: A, MX, NS, SOA, PTR, CNAME, AAAA, A6, SRV, NAPTR,
-    TXT or ANY.
+    {type} may be any one of: A, MX, NS, SOA, PTR, CNAME, AAAA, A6, SRV,
+    NAPTR, TXT or ANY.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE if any records are found; returns FALSE if no records were found
 or if an error occurred.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version                     Description
@@ -39,7 +39,7 @@ Version                     Description
 5.2.4   TXT {type} was added.
 5.0.0   AAAA {type} was added.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -47,7 +47,7 @@ Version                     Description
     For compatibility with Windows before this was implemented, then try the
     » PEAR class » Net_DNS.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |dns_get_record| - Fetch DNS Resource Records associated with a hostname

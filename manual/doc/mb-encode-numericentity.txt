@@ -4,7 +4,7 @@ mb_encode_numericentity
 
 mb_encode_numericentity — Encode character to HTML numeric string reference
 
-===============================================================================
+==============================================================================
 *Description*
 
     string mb_encode_numericentity ( string $str , array $convmap [, string~
@@ -13,7 +13,7 @@ mb_encode_numericentity — Encode character to HTML numeric string reference
 Converts specified character codes in string {str} from character code to HTML
 numeric character reference.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {str}
@@ -31,18 +31,18 @@ numeric character reference.
 
 {is_hex}
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The converted string.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version        Description
 5.4.0   Added {is_hex} parameter.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 {convmap} example
@@ -58,7 +58,7 @@ Example #1 {convmap} example
     // it converts value to numeric string reference.
 <?>
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #2 mb_encode_numericentity() example
@@ -84,7 +84,7 @@ Example #2 mb_encode_numericentity() example
     $str = mb_encode_numericentity($str, $convmap, "sjis-win");
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mb_decode_numericentity| - Decode HTML numeric string reference to

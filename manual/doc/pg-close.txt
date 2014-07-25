@@ -4,7 +4,7 @@ pg_close
 
 pg_close — Closes a PostgreSQL connection
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool pg_close ([ resource $connection ] )~
@@ -20,7 +20,7 @@ associated with the given {connection} resource.
 If there is open large object resource on the connection, do not close the
 connection before closing all large object resources.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
@@ -29,12 +29,12 @@ connection before closing all large object resources.
     the default connection is used. The default connection is the last
     connection made by |pg_connect| or |pg_pconnect|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 pg_close() example
@@ -50,7 +50,7 @@ The above example will output:
 
 Connected successfully
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |pg_connect| - Open a PostgreSQL connection

@@ -5,7 +5,7 @@ get_included_files
 get_included_files — Returns an array with the names of included or required
 files
 
-===============================================================================
+==============================================================================
 *Description*
 
     array get_included_files ( void )~
@@ -13,7 +13,7 @@ files
 Gets the names of all files that have been included using |include|, |
 include_once|, |require| or |require_once|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an array of the names of all files.
@@ -24,17 +24,17 @@ listed together with the files referenced by |include| and family.
 Files that are included or required multiple times only show up once in the
 returned array.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
         In PHP 4.0.1 and previous versions this function assumed that the
         required files ended in the extension .php; other extensions would not
 4.0.1   be returned. The array returned by get_included_files() was an
         associative array and only listed files included by |include| and |
         include_once|.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 get_included_files() example
@@ -63,7 +63,7 @@ test2.php
 test3.php
 test4.php
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -71,7 +71,7 @@ test4.php
     Files included using the auto_prepend_file configuration directive are not
     included in the returned array.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |include| - include

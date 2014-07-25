@@ -4,7 +4,7 @@ udm_cat_path
 
 udm_cat_path — Get the path to the current category
 
-===============================================================================
+==============================================================================
 *Description*
 
     array udm_cat_path ( resource $agent , string $category )~
@@ -12,7 +12,7 @@ udm_cat_path — Get the path to the current category
 Returns an array describing the path in the categories tree from the tree root
 to the current one, specified by {category}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {agent}
@@ -21,7 +21,7 @@ to the current one, specified by {category}.
 
 {category}
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The returned array consists of pairs. Elements with even index numbers contain
@@ -39,7 +39,7 @@ following array:
  $array[4] will contain '02031D'
  $array[5] will contain 'Ferrari'
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Specifying path to the current category in the following format: '>
@@ -55,7 +55,7 @@ Root > Sport > Auto > Ferrari'
       }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |udm_cat_list| - Get all the categories on the same level with the current

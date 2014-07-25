@@ -4,10 +4,10 @@ maxdb_result::fetch_object
 
 (PECL maxdb >= 1.0)
 
-maxdb_fetch_object -- maxdb_result::fetch_object — Returns the current row of a
-result set as an object
+maxdb_fetch_object -- maxdb_result::fetch_object — Returns the current row of
+a result set as an object
 
-===============================================================================
+==============================================================================
 *Description*
 
 Procedural style
@@ -20,10 +20,10 @@ Object oriented style
 
 The maxdb_fetch_object() will return the current row result set as an object
 where the attributes of the object represent the names of the fields found
-within the result set. If no more rows exist in the current result set, NULL is
-returned.
+within the result set. If no more rows exist in the current result set, NULL
+is returned.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an object that corresponds to the fetched row or NULL if there are no
@@ -33,7 +33,7 @@ more rows in resultset.
 
     Note: This function sets NULL fields to the PHP NULL value.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Object oriented style
@@ -120,7 +120,7 @@ Irvine (CA)
 Santa Clara (CA)
 Portland (OR)
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |maxdb_fetch_array| - Fetch a result row as an associative, a numeric

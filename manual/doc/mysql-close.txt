@@ -8,13 +8,13 @@ Warning
 
 This extension is deprecated as of PHP 5.5.0, and will be removed in the
 future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
-MySQL: choosing an API guide and related FAQ for more information. Alternatives
-to this function include:
+MySQL: choosing an API guide and related FAQ for more information.
+Alternatives to this function include:
 
   * mysqli_close()
   * PDO: Assign the value of NULL to the PDO object
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool mysql_close ([ resource $link_identifier = NULL ] )~
@@ -27,7 +27,7 @@ Using mysql_close() isn't usually necessary, as non-persistent open links are
 automatically closed at the end of the script's execution. See also freeing
 resources.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { link_identifier}
@@ -36,12 +36,12 @@ resources.
     link opened by |mysql_connect| is assumed. If no connection is found or
     established, an E_WARNING level error is generated.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mysql_close() example
@@ -59,14 +59,14 @@ The above example will output:
 
 Connected successfully
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
 
     mysql_close() will not close persistent links created by |mysql_pconnect|.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mysql_connect| - Open a connection to a MySQL Server

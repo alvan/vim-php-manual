@@ -4,7 +4,7 @@ pcntl_signal_dispatch
 
 pcntl_signal_dispatch — Calls signal handlers for pending signals
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool pcntl_signal_dispatch ( void )~
@@ -12,12 +12,12 @@ pcntl_signal_dispatch — Calls signal handlers for pending signals
 The pcntl_signal_dispatch() function calls the signal handlers installed by |
 pcntl_signal| for each pending signal.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 pcntl_signal_dispatch() example
@@ -46,7 +46,7 @@ Dispatching...
 signal handler called
 Done
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |pcntl_signal| - Installs a signal handler

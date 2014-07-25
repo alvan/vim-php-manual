@@ -4,7 +4,7 @@ array_slice
 
 array_slice — Extract a slice of the array
 
-===============================================================================
+==============================================================================
 *Description*
 
     array array_slice ( array $array , int $offset [, int $length = NULL [,~
@@ -13,7 +13,7 @@ array_slice — Extract a slice of the array
 array_slice() returns the sequence of elements from the array {array} as
 specified by the {offset} and {length} parameters.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {array}
@@ -23,39 +23,40 @@ specified by the {offset} and {length} parameters.
 {offset}
 
     If {offset} is non-negative, the sequence will start at that offset in the
-    {array}. If {offset} is negative, the sequence will start that far from the
-    end of the {array}.
+    {array}. If {offset} is negative, the sequence will start that far from
+    the end of the {array}.
 
 {length}
 
     If {length} is given and is positive, then the sequence will have up to
     that many elements in it. If the array is shorter than the {length}, then
-    only the available array elements will be present. If {length} is given and
-    is negative then the sequence will stop that many elements from the end of
-    the array. If it is omitted, then the sequence will have everything from
-    {offset} up until the end of the {array}.
+    only the available array elements will be present. If {length} is given
+    and is negative then the sequence will stop that many elements from the
+    end of the array. If it is omitted, then the sequence will have everything
+    from {offset} up until the end of the {array}.
 
 {preserve_keys}
 
-    Note that array_slice() will reorder and reset the numeric array indices by
-    default. You can change this behaviour by setting {preserve_keys} to TRUE.
+    Note that array_slice() will reorder and reset the numeric array indices
+    by default. You can change this behaviour by setting {preserve_keys} to
+    TRUE.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the slice.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
-        The default value of the {length} parameter was changed to NULL. A NULL
-5.2.4   {length} now tells the function to use the length of {array}. Prior to
-        this version, a NULL {length} was taken to mean a zero length (nothing
-        will be returned).
+Version                              Description
+        The default value of the {length} parameter was changed to NULL. A
+5.2.4   NULL {length} now tells the function to use the length of {array}.
+        Prior to this version, a NULL {length} was taken to mean a zero length
+        (nothing will be returned).
 5.0.2   The optional {preserve_keys} parameter was added.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 array_slice() examples
@@ -85,7 +86,7 @@ Array
     [3] => d
 )
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |array_splice| - Remove a portion of the array and replace it with

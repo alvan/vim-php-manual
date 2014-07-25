@@ -5,7 +5,7 @@ fann_train_on_file
 fann_train_on_file — Trains on an entire dataset, which is read from file, for
 a period of time
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool fann_train_on_file ( resource $ann , string $filename , int~
@@ -17,7 +17,7 @@ This training uses the training algorithm chosen by |
 fann_set_training_algorithm| and the parameters set for these training
 algorithms.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {ann}
@@ -34,20 +34,20 @@ algorithms.
 
 {epochs_between_reports}
 
-    The number of epochs between calling a user function. A value of zero means
-    that user function is not called.
+    The number of epochs between calling a user function. A value of zero
+    means that user function is not called.
 
 {desired_error}
 
     The desired |fann_get_MSE| or |fann_get_bit_fail|, depending on the stop
     function chosen by |fann_set_train_stop_function|
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success, or FALSE otherwise.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |fann_train_on_data| - Trains on an entire dataset for a period of time

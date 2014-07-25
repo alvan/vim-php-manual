@@ -4,7 +4,7 @@ iterator_apply
 
 iterator_apply — Call a function for every element in an iterator
 
-===============================================================================
+==============================================================================
 *Description*
 
     int iterator_apply ( Traversable $iterator , callable $function [, array~
@@ -12,7 +12,7 @@ iterator_apply — Call a function for every element in an iterator
 
 Calls a function for every element in an iterator.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {iterator}
@@ -24,19 +24,19 @@ Calls a function for every element in an iterator.
     The callback function to call on every element.
 
 
-        Note: The function must return TRUE in order to continue iterating over
-        the {iterator}.
+        Note: The function must return TRUE in order to continue iterating
+        over the {iterator}.
 
 {args}
 
     Arguments to pass to the callback function.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the iteration count.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 iterator_apply() example
@@ -57,7 +57,7 @@ APPLES
 BANANAS
 CHERRIES
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |array_walk| - Apply a user function to every member of an array

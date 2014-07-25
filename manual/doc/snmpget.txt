@@ -4,16 +4,16 @@ snmpget
 
 snmpget — Fetch an SNMP object
 
-===============================================================================
+==============================================================================
 *Description*
 
     string snmpget ( string $hostname , string $community , string $object_id~
     [, int $timeout = 1000000 [, int $retries = 5 ]] )~
 
-The snmpget() function is used to read the value of an SNMP object specified by
-the {object_id}.
+The snmpget() function is used to read the value of an SNMP object specified
+by the {object_id}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {hostname}
@@ -36,12 +36,12 @@ the {object_id}.
 
     The number of times to retry if timeouts occur.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns SNMP object value on success or FALSE on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Using snmpget()
@@ -50,7 +50,7 @@ Example #1 Using snmpget()
     $syscontact = snmpget("127.0.0.1", "public", "system.SysContact.0");
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |snmpset| - Set the value of an SNMP object

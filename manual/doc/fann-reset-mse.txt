@@ -4,7 +4,7 @@ fann_reset_MSE
 
 fann_reset_MSE — Resets the mean square error from the network
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool fann_reset_MSE ( string $ann )~
@@ -13,24 +13,25 @@ Resets the mean square error from the network.
 
 This function also resets the number of bits that fail.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {ann}
 
     Neural network resource.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success, or FALSE otherwise.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |fann_get_MSE| - Reads the mean square error from the network
   * |fann_get_bit_fail| - The number of fail bits
-  * |fann_get_bit_fail_limit| - Returns the bit fail limit used during training
+  * |fann_get_bit_fail_limit| - Returns the bit fail limit used during
+    training
 
 
 vim:ft=help:

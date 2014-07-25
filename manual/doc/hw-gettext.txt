@@ -4,11 +4,11 @@ hw_GetText
 
 hw_GetText — Retrieve text document
 
-===============================================================================
+==============================================================================
 *Description*
 
-    int hw_gettext ( int $connection , int $objectID [, mixed $rootID/prefix ]~
-)~
+    int hw_gettext ( int $connection , int $objectID [, mixed $rootID/prefix~
+    ] )~
 
 Returns the document with object ID {objectID}. If the document has anchors
 which can be inserted, they will be inserted already.
@@ -17,7 +17,7 @@ This function will only work for pure text documents. It will not open a
 special data connection and therefore blocks the control connection during the
 transfer.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
@@ -30,19 +30,19 @@ transfer.
 
 {rootID/prefix}
 
-    The optional parameter {rootID/prefix} can be a string or an integer. If it
-    is an integer it determines how links are inserted into the document. The
-    default is 0 and will result in links that are constructed from the name of
-    the link's destination object. This is useful for web applications. If a
-    link points to an object with name 'internet_movie' the HTML link will be
-    <A href="/internet_movie">. The actual location of the source and
-    destination object in the document hierarchy is disregarded. You will have
-    to set up your web browser, to rewrite that URL to for example '/
-    my_script.php/internet_movie'. 'my_script.php' will have to evaluate
-    $PATH_INFO and retrieve the document. All links will have the prefix '/
-    my_script.php/'. If you do not want this you can set the optional parameter
-    {rootID/prefix} to any prefix which is used instead. Is this case it has to
-    be a string.
+    The optional parameter {rootID/prefix} can be a string or an integer. If
+    it is an integer it determines how links are inserted into the document.
+    The default is 0 and will result in links that are constructed from the
+    name of the link's destination object. This is useful for web
+    applications. If a link points to an object with name 'internet_movie' the
+    HTML link will be <A href="/internet_movie">. The actual location of the
+    source and destination object in the document hierarchy is disregarded.
+    You will have to set up your web browser, to rewrite that URL to for
+    example '/my_script.php/internet_movie'. 'my_script.php' will have to
+    evaluate $PATH_INFO and retrieve the document. All links will have the
+    prefix '/my_script.php/'. If you do not want this you can set the optional
+    parameter {rootID/prefix} to any prefix which is used instead. Is this
+    case it has to be a string.
 
     If {rootID/prefix} is an integer and unequal to 0 the link is constructed
     from all the names starting at the object with the id {rootID/prefix}
@@ -55,12 +55,12 @@ transfer.
     internet_movie">. This is useful if you want to download the whole server
     content onto disk and map the document hierarchy onto the file system.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the text document.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |hw_pipedocument| - Retrieve any document

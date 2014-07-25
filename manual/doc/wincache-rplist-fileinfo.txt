@@ -4,7 +4,7 @@ wincache_rplist_fileinfo
 
 wincache_rplist_fileinfo — Retrieves information about resolve file path cache
 
-===============================================================================
+==============================================================================
 *Description*
 
     array wincache_rplist_fileinfo ([ bool $summaryonly = false ] )~
@@ -12,7 +12,7 @@ wincache_rplist_fileinfo — Retrieves information about resolve file path cache
 Retrieves information about cached mappings between relative file paths and
 corresponding absolute file paths.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Array of meta data about the resolve file path cache or FALSE on failure
@@ -25,7 +25,7 @@ The array returned by this function contains the following elements:
       + resolve_path - path to a file
       + subkey_data - corresponding absolute path to a file
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A wincache_rplist_fileinfo() example
@@ -53,7 +53,7 @@ Array
         )
 )
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |wincache_fcache_meminfo| - Retrieves information about file cache memory
@@ -62,10 +62,10 @@ Array
     the file cache
   * |wincache_ocache_fileinfo| - Retrieves information about files cached in
     the opcode cache
-  * |wincache_ocache_meminfo| - Retrieves information about opcode cache memory
-    usage
-  * |wincache_rplist_meminfo| - Retrieves information about memory usage by the
-    resolve file path cache
+  * |wincache_ocache_meminfo| - Retrieves information about opcode cache
+    memory usage
+  * |wincache_rplist_meminfo| - Retrieves information about memory usage by
+    the resolve file path cache
   * |wincache_refresh_if_changed| - Refreshes the cache entries for the cached
     files
   * |wincache_ucache_meminfo| - Retrieves information about user cache memory

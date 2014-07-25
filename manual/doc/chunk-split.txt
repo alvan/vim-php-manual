@@ -4,17 +4,17 @@ chunk_split
 
 chunk_split — Split a string into smaller chunks
 
-===============================================================================
+==============================================================================
 *Description*
 
     string chunk_split ( string $body [, int $chunklen = 76 [, string $end =~
     "\r\n" ]] )~
 
 Can be used to split a string into smaller chunks which is useful for e.g.
-converting |base64_encode| output to match RFC 2045 semantics. It inserts {end}
-every {chunklen} characters.
+converting |base64_encode| output to match RFC 2045 semantics. It inserts
+{end} every {chunklen} characters.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {body}
@@ -29,12 +29,12 @@ every {chunklen} characters.
 
     The line ending sequence.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the chunked string.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 chunk_split() example
@@ -44,7 +44,7 @@ Example #1 chunk_split() example
     $new_string = chunk_split(base64_encode($data));
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |str_split| - Convert a string to an array

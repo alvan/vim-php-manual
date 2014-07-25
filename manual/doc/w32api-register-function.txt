@@ -5,7 +5,7 @@ w32api_register_function
 w32api_register_function — Registers function function_name from library with
 PHP
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool w32api_register_function ( string $library , string $function_name ,~
@@ -14,7 +14,7 @@ PHP
 This function tries to find the {function_name} function in {library}, and
 tries to import it into PHP.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {library}
@@ -27,24 +27,24 @@ tries to import it into PHP.
 
 {return_type}
 
-    The function will be registered with the given {return_type}. This type can
-    be a generic PHP type, or a type defined with |w32api_deftype|. All type
-    names are case sensitive. Built in type names should be provided in
+    The function will be registered with the given {return_type}. This type
+    can be a generic PHP type, or a type defined with |w32api_deftype|. All
+    type names are case sensitive. Built in type names should be provided in
     lowercase.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Notes*
 
 Warning
 
 This function is EXPERIMENTAL. The behaviour of this function, its name, and
-surrounding documentation may change without notice in a future release of PHP.
-This function should be used at your own risk.
+surrounding documentation may change without notice in a future release of
+PHP. This function should be used at your own risk.
 
 
 vim:ft=help:

@@ -4,16 +4,16 @@ pspell_config_ignore
 
 pspell_config_ignore — Ignore words less than N characters long
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool pspell_config_ignore ( int $dictionary_link , int $n )~
 
 pspell_config_ignore() should be used on a config before calling |
-pspell_new_config|. This function allows short words to be skipped by the spell
-checker.
+pspell_new_config|. This function allows short words to be skipped by the
+spell checker.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {dictionary_link}
@@ -22,12 +22,12 @@ checker.
 
     Words less than {n} characters will be skipped.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 pspell_config_ignore()

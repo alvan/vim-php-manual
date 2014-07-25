@@ -4,7 +4,7 @@ variant_or
 
 variant_or — Performs a logical disjunction on two variants
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed variant_or ( mixed $left , mixed $right )~
@@ -12,7 +12,7 @@ variant_or — Performs a logical disjunction on two variants
 Performs a bitwise OR operation. Note that this is slightly different from a
 regular OR operation.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {left}
@@ -28,17 +28,17 @@ regular OR operation.
     As with all the variant arithmetic functions, the parameters for this
     function can be either a PHP native type (integer, string, floating point,
     boolean or NULL), or an instance of a COM, VARIANT or DOTNET class. PHP
-    native types will be converted to variants using the same rules as found in
-    the constructor for the VARIANT class. COM and DOTNET objects will have the
-    value of their default property taken and used as the variant value.
+    native types will be converted to variants using the same rules as found
+    in the constructor for the VARIANT class. COM and DOTNET objects will have
+    the value of their default property taken and used as the variant value.
 
     The variant arithmetic functions are wrappers around the similarly named
     functions in the COM library; for more information on these functions,
-    consult the MSDN library. The PHP functions are named slightly differently;
-    for example |variant_add| in PHP corresponds to VarAdd() in the MSDN
-    documentation.
+    consult the MSDN library. The PHP functions are named slightly
+    differently; for example |variant_add| in PHP corresponds to VarAdd() in
+    the MSDN documentation.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
               Variant OR Rules
@@ -53,7 +53,7 @@ NULL         TRUE          TRUE
 NULL         FALSE         NULL
 NULL         NULL          NULL
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |variant_and| - Performs a bitwise AND operation between two variants

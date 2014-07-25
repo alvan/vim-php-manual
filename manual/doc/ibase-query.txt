@@ -4,7 +4,7 @@ ibase_query
 
 ibase_query — Execute a query on an InterBase database
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource ibase_query ([ resource $link_identifier ], string $query [, int~
@@ -12,7 +12,7 @@ ibase_query — Execute a query on an InterBase database
 
 Performs a query on an InterBase database.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {link_identifier}
@@ -25,13 +25,13 @@ Performs a query on an InterBase database.
 
 {bind_args}
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-If the query raises an error, returns FALSE. If it is successful and there is a
-(possibly empty) result set (such as with a SELECT query), returns a result
-identifier. If the query was successful and there were no results, returns TRUE
-.
+If the query raises an error, returns FALSE. If it is successful and there is
+a (possibly empty) result set (such as with a SELECT query), returns a result
+identifier. If the query was successful and there were no results, returns
+TRUE.
 
     Note:
 
@@ -40,24 +40,24 @@ identifier. If the query was successful and there were no results, returns TRUE
     backward compatibility, it will return TRUE for these statements if the
     query succeeded without affecting any rows.
 
-===============================================================================
+==============================================================================
 *Errors/Exceptions*
 
 If you get some error like "arithmetic exception, numeric overflow, or string
-truncation. Cannot transliterate character between character sets" (this occurs
-when you try use some character with accents) when using this and after 
+truncation. Cannot transliterate character between character sets" (this
+occurs when you try use some character with accents) when using this and after
 ibase_query() you must set the character set (i.e. ISO8859_1 or your current
 character set).
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
         On success the function now returns TRUE if there were no affected
 5.3.1   rows, where it previously returned 0 (a zero followed by an empty
         space).
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 ibase_query() example
@@ -73,7 +73,7 @@ Example #1 ibase_query() example
 
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ibase_errmsg| - Return error messages

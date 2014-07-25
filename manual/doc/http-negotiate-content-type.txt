@@ -4,17 +4,17 @@ http_negotiate_content_type
 
 http_negotiate_content_type — Negotiate client's preferred content type
 
-===============================================================================
+==============================================================================
 *Description*
 
     string http_negotiate_content_type ( array $supported [, array &$result ]~
 )~
 
-This function negotiates the clients preferred content type based on its Accept
-HTTP header. The qualifier is recognized and content types without qualifier
-are rated highest.
+This function negotiates the clients preferred content type based on its
+Accept HTTP header. The qualifier is recognized and content types without
+qualifier are rated highest.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {supported}
@@ -25,13 +25,13 @@ are rated highest.
 
     will be filled with an array containing the negotiation results
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the negotiated content type or the default content type (i.e. first
 array entry) if none match.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Using http_negotiate_content_type()

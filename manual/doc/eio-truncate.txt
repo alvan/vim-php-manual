@@ -4,7 +4,7 @@ eio_truncate
 
 eio_truncate — Truncate a file
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource eio_truncate ( string $path [, int $offset = 0 [, int $pri =~
@@ -13,7 +13,7 @@ eio_truncate — Truncate a file
 eio_truncate() causes the regular file named by {path} to be truncated to a
 size of precisely {length} bytes
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {path}
@@ -31,8 +31,8 @@ size of precisely {length} bytes
 
 {callback}
 
-    {callback} function is called when the request is done. It should match the
-    following prototype:
+    {callback} function is called when the request is done. It should match
+    the following prototype:
     void callback(mixed $data, int $result[, resource $req]);
 
     {data}
@@ -53,12 +53,12 @@ size of precisely {length} bytes
 
     Arbitrary variable passed to {callback}.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 |eio_busy| returns request resource on success or FALSE on error.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * eio_ftruncate

@@ -5,7 +5,7 @@ db2_fetch_array
 db2_fetch_array — Returns an array, indexed by column position, representing a
 row in a result set
 
-===============================================================================
+==============================================================================
 *Description*
 
     array db2_fetch_array ( resource $stmt [, int $row_number = -1 ] )~
@@ -13,7 +13,7 @@ row in a result set
 Returns an array, indexed by column position, representing a row in a result
 set. The columns are 0-indexed.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {stmt}
@@ -26,7 +26,7 @@ set. The columns are 0-indexed.
     parameter results in a PHP warning if the result set uses a forward-only
     cursor.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a 0-indexed array with column values indexed by the column position
@@ -34,7 +34,7 @@ representing the next or requested row in the result set. Returns FALSE if
 there are no rows left in the result set, or if the row requested by
 {row_number} does not exist in the result set.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Iterating through a forward-only cursor
@@ -86,15 +86,15 @@ The above example will output:
 5     Rickety Ride     goat                                   9.70
 2     Smarty           horse                                350.00
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |db2_fetch_assoc| - Returns an array, indexed by column name, representing
     a row in a result set
   * |db2_fetch_both| - Returns an array, indexed by both column name and
     position, representing a row in a result set
-  * |db2_fetch_object| - Returns an object with properties representing columns
-    in the fetched row
+  * |db2_fetch_object| - Returns an object with properties representing
+    columns in the fetched row
   * |db2_fetch_row| - Sets the result set pointer to the next row or requested
     row
   * |db2_result| - Returns a single column from a row in the result set

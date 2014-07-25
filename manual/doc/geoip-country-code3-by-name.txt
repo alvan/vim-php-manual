@@ -4,28 +4,28 @@ geoip_country_code3_by_name
 
 geoip_country_code3_by_name — Get the three letter country code
 
-===============================================================================
+==============================================================================
 *Description*
 
     string geoip_country_code3_by_name ( string $hostname )~
 
-The geoip_country_code3_by_name() function will return the three letter country
-code corresponding to a hostname or an IP address.
+The geoip_country_code3_by_name() function will return the three letter
+country code corresponding to a hostname or an IP address.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {hostname}
 
     The hostname or IP address whose location is to be looked-up.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the three letter country code on success, or FALSE if the address
 cannot be found in the database.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A geoip_country_code3_by_name() example
@@ -43,7 +43,7 @@ The above example will output:
 
 This host is located in: USA
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |geoip_country_code_by_name| - Get the two letter country code

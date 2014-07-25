@@ -4,15 +4,15 @@ unset
 
 unset — Unset a given variable
 
-===============================================================================
+==============================================================================
 *Description*
 
     void unset ( mixed $var [, mixed $... ] )~
 
 unset() destroys the specified variables.
 
-The behavior of unset() inside of a function can vary depending on what type of
-variable you are attempting to destroy.
+The behavior of unset() inside of a function can vary depending on what type
+of variable you are attempting to destroy.
 
 If a globalized variable is unset() inside of a function, only the local
 variable is destroyed. The variable in the calling environment will retain the
@@ -45,9 +45,9 @@ to do so:
     foo();
 <?>
 
-If a variable that is PASSED BY REFERENCE is unset() inside of a function, only
-the local variable is destroyed. The variable in the calling environment will
-retain the same value as before unset() was called.
+If a variable that is PASSED BY REFERENCE is unset() inside of a function,
+only the local variable is destroyed. The variable in the calling environment
+will retain the same value as before unset() was called.
 <?php >
     function foo(&$bar) 
     {
@@ -92,7 +92,7 @@ Before unset: 1, after unset: 23
 Before unset: 2, after unset: 23
 Before unset: 3, after unset: 23
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {var}
@@ -103,18 +103,18 @@ Before unset: 3, after unset: 23
 
     Another variable ...
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 No value is returned.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version              Description
 4.0.1   Added support for multiple arguments.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 unset() example
@@ -148,11 +148,11 @@ The above example will output:
 NULL
 string(6) "Felipe"
 
-===============================================================================
+==============================================================================
 *Notes*
 
-    Note: Because this is a language construct and not a function, it cannot be
-    called using variable functions.
+    Note: Because this is a language construct and not a function, it cannot
+    be called using variable functions.
 
     Note:
 
@@ -167,7 +167,7 @@ string(6) "Felipe"
     When using unset() on inaccessible object properties, the __unset()
     overloading method will be called, if declared.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |isset| - Determine if a variable is set and is not NULL

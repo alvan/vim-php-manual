@@ -4,7 +4,7 @@ list
 
 list — Assign variables as if they were an array
 
-===============================================================================
+==============================================================================
 *Description*
 
     array list ( mixed $var1 [, mixed $... ] )~
@@ -12,19 +12,19 @@ list — Assign variables as if they were an array
 Like |array|, this is not really a function, but a language construct. list()
 is used to assign a list of variables in one operation.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {var1}
 
     A variable.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the assigned array.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 list() examples
@@ -109,28 +109,28 @@ array(3) {
   string(6) "coffee"
 }
 
-===============================================================================
+==============================================================================
 *Notes*
 
 Warning
 
 list() assigns the values starting with the right-most parameter. If you are
-using plain variables, you don't have to worry about this. But if you are using
-arrays with indices you usually expect the order of the indices in the array
-the same you wrote in the list() from left to right; which it isn't. It's
-assigned in the reverse order.
+using plain variables, you don't have to worry about this. But if you are
+using arrays with indices you usually expect the order of the indices in the
+array the same you wrote in the list() from left to right; which it isn't.
+It's assigned in the reverse order.
 
 Warning
 
-Modification of the array during list() execution (e.g. using list($a, $b) = $b
-) results in undefined behavior.
+Modification of the array during list() execution (e.g. using list($a, $b) =
+$b) results in undefined behavior.
 
     Note:
 
     list() only works on numerical arrays and assumes the numerical indices
     start at 0.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |each| - Return the current key and value pair from an array and advance

@@ -4,7 +4,7 @@ svn_blame
 
 svn_blame — Get the SVN blame for a file
 
-===============================================================================
+==============================================================================
 *Description*
 
     array svn_blame ( string $repository_url [, int $revision_no =~
@@ -12,7 +12,7 @@ svn_blame — Get the SVN blame for a file
 
 Get the SVN blame of a file from a repository URL.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {repository_url}
@@ -23,13 +23,13 @@ Get the SVN blame of a file from a repository URL.
 
     The revision number.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-An array of SVN blame information separated by line which includes the revision
-number, line number, line of code, author, and date.
+An array of SVN blame information separated by line which includes the
+revision number, line number, line of code, author, and date.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 svn_blame() example
@@ -56,7 +56,7 @@ Array
     [1] = Array
           ...
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |svn_diff| - Recursively diffs two paths

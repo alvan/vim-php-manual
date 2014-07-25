@@ -4,15 +4,15 @@ pg_options
 
 pg_options — Get the options associated with the connection
 
-===============================================================================
+==============================================================================
 *Description*
 
     string pg_options ([ resource $connection ] )~
 
-pg_options() will return a string containing the options specified on the given
-PostgreSQL {connection} resource.
+pg_options() will return a string containing the options specified on the
+given PostgreSQL {connection} resource.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
@@ -21,12 +21,12 @@ PostgreSQL {connection} resource.
     the default connection is used. The default connection is the last
     connection made by |pg_connect| or |pg_pconnect|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 A string containing the {connection} options, or FALSE on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 pg_options() example
@@ -36,7 +36,7 @@ Example #1 pg_options() example
        echo pg_options($pgsql_conn);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |pg_connect| - Open a PostgreSQL connection

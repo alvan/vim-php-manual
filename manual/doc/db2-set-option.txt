@@ -4,7 +4,7 @@ db2_set_option
 
 db2_set_option — Set options for connection or statement resources
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool db2_set_option ( resource $resource , array $options , int $type )~
@@ -12,7 +12,7 @@ db2_set_option — Set options for connection or statement resources
 Sets options for a statement resource or a connection resource. You cannot set
 options for result set resources.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {resource}
@@ -22,10 +22,10 @@ options for result set resources.
 
 {options}
 
-    An associative array containing valid statement or connection options. This
-    parameter can be used to change autocommit values, cursor types (scrollable
-    or forward), and to specify the case of the column names (lower, upper, or
-    natural) that will appear in a result set.
+    An associative array containing valid statement or connection options.
+    This parameter can be used to change autocommit values, cursor types
+    (scrollable or forward), and to specify the case of the column names
+    (lower, upper, or natural) that will appear in a result set.
 
     {autocommit}
 
@@ -79,8 +79,8 @@ options for result set resources.
         specified statement resource.
 
     The following new i5/OS options are available in ibm_db2 version 1.5.1 and
-    later. These options apply only when running PHP and ibm_db2 natively on i5
-    systems.
+    later. These options apply only when running PHP and ibm_db2 natively on
+    i5 systems.
 
     {i5_fetch_only}
 
@@ -96,13 +96,14 @@ options for result set resources.
     {rowcount}
 
         DB2_ROWCOUNT_PREFETCH_ON - Client can request the full row count prior
-        to fetching, which means that |db2_num_rows| returns the number of rows
-        selected even when a ROLLFORWARD_ONLY cursor is used.
+        to fetching, which means that |db2_num_rows| returns the number of
+        rows selected even when a ROLLFORWARD_ONLY cursor is used.
 
         DB2_ROWCOUNT_PREFETCH_OFF - Client cannot request the full row count
         prior to fetching.
 
-    The following new options are available in ibm_db2 version 1.7.0 and later.
+    The following new options are available in ibm_db2 version 1.7.0 and
+    later.
 
     {trusted_user}
 
@@ -116,9 +117,9 @@ options for result set resources.
         The password (String) that corresponds to the user specified by the
         trusted_user key.
 
-    The following new options are available in ibm_db2 version 1.6.0 and later.
-    These options provide useful tracking information that can be accessed
-    during execution with |db2_get_option|.
+    The following new options are available in ibm_db2 version 1.6.0 and
+    later. These options provide useful tracking information that can be
+    accessed during execution with |db2_get_option|.
 
 
         Note:
@@ -126,9 +127,9 @@ options for result set resources.
         When the value in each option is being set, some servers might not
         handle the entire length provided and might truncate the value.
 
-        To ensure that the data specified in each option is converted correctly
-        when transmitted to a host system, use only the characters A through Z,
-        0 through 9, and the underscore (_) or period (.).
+        To ensure that the data specified in each option is converted
+        correctly when transmitted to a host system, use only the characters A
+        through Z, 0 through 9, and the underscore (_) or period (.).
 
     {userid}
 
@@ -146,9 +147,9 @@ options for result set resources.
 
     {acctstr}
 
-        SQL_ATTR_INFO_ACCTSTR - A pointer to a null-terminated character string
-        used to identify the client accounting string sent to the host database
-        server when using DB2 Connect.
+        SQL_ATTR_INFO_ACCTSTR - A pointer to a null-terminated character
+        string used to identify the client accounting string sent to the host
+        database server when using DB2 Connect.
 
 
             Note:
@@ -185,8 +186,8 @@ options for result set resources.
     An integer value that specifies the type of resource that was passed into
     the function. The type of resource and this value must correspond.
 
-    Passing 1 as the value specifies that a connection resource has been passed
-    into the function.
+    Passing 1 as the value specifies that a connection resource has been
+    passed into the function.
 
     Passing any integer not equal to 1 as the value specifies that a statement
     resource has been passed into the function.
@@ -220,12 +221,12 @@ acctstr          SQL_ATTR_INFO_ACCTSTR     X          X         -
 applname         SQL_ATTR_INFO_APPLNAME    X          X         -
 wrkstnname       SQL_ATTR_INFO_WRKSTNNAME  X          X         -
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Setting one parameter with a connection resource
@@ -405,8 +406,8 @@ The above example will output:
 
 Could Not Set Options
 
-Example #5 Setting multiple parameters with a connection resource and the wrong
-type
+Example #5 Setting multiple parameters with a connection resource and the
+wrong type
 
 <?php >
     /* Database Connection Parameters */
@@ -521,8 +522,8 @@ Example #7 Putting it all together
     $options = array('db2_attr_case' => DB2_CASE_LOWER,
                             'cursor' => DB2_SCROLLABLE);
 
-    $stmt = db2_prepare($conn, 'SELECT * FROM EMPLOYEE WHERE EMPNO = ? OR EMPNO = ?
-    ');
+    $stmt = db2_prepare($conn, 'SELECT * FROM EMPLOYEE WHERE EMPNO = ? OR EMPNO =
+     ?');
 
     /
     * Call the function using the correct resource, options array, and type values *
@@ -595,7 +596,7 @@ The above example will output:
 
 first2 last2
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |db2_connect| - Returns a connection to a database

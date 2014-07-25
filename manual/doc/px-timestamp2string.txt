@@ -4,7 +4,7 @@ px_timestamp2string
 
 px_timestamp2string — Converts the timestamp into a string.
 
-===============================================================================
+==============================================================================
 *Description*
 
     string px_timestamp2string ( resource $pxdoc , float $value , string~
@@ -15,7 +15,7 @@ Paradox timestamps are the number of miliseconds since 0001-01-02. This
 function is just for convenience. It can be easily replaced by some math and
 the calendar functions as demonstrated in the following example.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {pxdoc}
@@ -30,15 +30,15 @@ the calendar functions as demonstrated in the following example.
 {format}
 
     String format similar to the format used by |date|. The placeholders
-    support by this function is a subset of those supported by |date| (Y, y, m,
-    n, d, j, H, h, G, g, i, s, A, a, L).
+    support by this function is a subset of those supported by |date| (Y, y,
+    m, n, d, j, H, h, G, g, i, s, A, a, L).
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Turn a paradox timestamp into a human readable form
@@ -76,7 +76,7 @@ The Julian day count as passed to |jdtogregorian| has a different base of
 count used in the paradox file. Turning the day count into a timestamp is
 easily done by multiplying with 86400000.0 to obtain miliseconds.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |px_date2string| - Converts a date into a string.

@@ -4,7 +4,7 @@ pg_escape_identifier
 
 pg_escape_identifier — Escape a identifier for insertion into a text field
 
-===============================================================================
+==============================================================================
 *Description*
 
     string pg_escape_identifier ([ resource $connection ], string $data )~
@@ -19,10 +19,10 @@ fields, |pg_escape_bytea| must be used instead.
 
     Note:
 
-    This function has internal escape code and can also be used with PostgreSQL
-    8.4 or less.
+    This function has internal escape code and can also be used with
+    PostgreSQL 8.4 or less.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
@@ -35,12 +35,12 @@ fields, |pg_escape_bytea| must be used instead.
 
     A string containing text to be escaped.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 A string containing the escaped data.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 pg_escape_identifier() example
@@ -56,7 +56,7 @@ Example #1 pg_escape_identifier() example
       pg_query("SELECT * FROM {$escaped};");
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |pg_escape_literal| - Escape a literal for insertion into a text field

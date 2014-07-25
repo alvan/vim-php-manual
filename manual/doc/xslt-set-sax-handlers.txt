@@ -2,10 +2,10 @@ xslt_set_sax_handlers
 
 (PHP 4 >= 4.0.6)
 
-xslt_set_sax_handlers — Set the SAX handlers to be called when the XML document
-gets processed
+xslt_set_sax_handlers — Set the SAX handlers to be called when the XML
+document gets processed
 
-===============================================================================
+==============================================================================
 *Description*
 
     void xslt_set_sax_handlers ( resource $processor , array $handlers )~
@@ -16,7 +16,7 @@ XSLT {processor} resource.
 Using xslt_set_sax_handlers() doesn't look very different than running a SAX
 parser like |xml_parse| on the result of an |xslt_process| transformation.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { processor}
@@ -79,7 +79,8 @@ parser like |xml_parse| on the result of an |xslt_process| transformation.
 
       + 
 
-        start_namespace ( resource $processor , string $prefix , string $uri )~
+        start_namespace ( resource $processor , string $prefix , string $uri )
+        ~
 
       + 
 
@@ -97,12 +98,12 @@ parser like |xml_parse| on the result of an |xslt_process| transformation.
 
         characters ( resource $processor , string $contents )~
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 No value is returned.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 xslt_set_sax_handlers() Example
@@ -126,7 +127,8 @@ Example #1 xslt_set_sax_handlers() Example
     </books>';
 
     $xsl='<?xml version="1.0"?>
-    <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/
+    Transform">
     <xsl:output method="html" encoding="ISO-8859-1" indent=
     "no" omit-xml-declaration="yes"/>
     <xsl:template match="/">
@@ -183,8 +185,8 @@ Example #1 xslt_set_sax_handlers() Example
     xslt_free($xh);
 <?>
 
-You can also use |xslt_set_object| if you want to implement your handlers in an
-object.
+You can also use |xslt_set_object| if you want to implement your handlers in
+an object.
 
 Example #2 Object oriented handler
 

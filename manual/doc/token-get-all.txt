@@ -4,25 +4,25 @@ token_get_all
 
 token_get_all — Split given source into PHP tokens
 
-===============================================================================
+==============================================================================
 *Description*
 
     array token_get_all ( string $source )~
 
-token_get_all() parses the given {source} string into PHP language tokens using
-the Zend engine's lexical scanner.
+token_get_all() parses the given {source} string into PHP language tokens
+using the Zend engine's lexical scanner.
 
 For a list of parser tokens, see List of Parser Tokens, or use |token_name| to
 translate a token value into its string representation.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {source}
 
     The PHP source to parse.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 An array of token identifiers. Each individual token identifier is either a
@@ -30,7 +30,7 @@ single character (i.e.: ;, ., >, !, etc...), or a three element array
 containing the token index in element 0, the string content of the original
 token in element 1 and the line number in element 2.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 token_get_all() examples
@@ -40,8 +40,8 @@ Example #1 token_get_all() examples
                                                       array(T_OPEN_TAG, '<?php'), 
                                                       array(T_ECHO, 'echo'),
                                                       ';',
-                                                      array(T_CLOSE_TAG, '?>') ); *
-    /
+                                                      array(T_CLOSE_TAG, '?>') );
+     */
 
     /* Note in the following example that the string is parsed as T_INLINE_HTML
        rather than the otherwise expected T_COMMENT (T_ML_COMMENT in PHP <5).
@@ -52,7 +52,7 @@ Example #1 token_get_all() examples
     * comment */'));
 <?>
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version              Description

@@ -7,7 +7,7 @@ maxdb_result::field_seek
 maxdb_field_seek -- maxdb_result::field_seek — Set result pointer to a
 specified field offset
 
-===============================================================================
+==============================================================================
 *Description*
 
 Procedural style
@@ -18,19 +18,20 @@ Object oriented style
 
     bool maxdb_result::field_seek ( int $fieldnr )~
 
-Sets the field cursor to the given offset. The next call to |maxdb_fetch_field|
-will retrieve the field definition of the column associated with that offset.
+Sets the field cursor to the given offset. The next call to |maxdb_fetch_field
+| will retrieve the field definition of the column associated with that
+offset.
 
     Note:
 
     To seek to the beginning of a row, pass an offset value of zero.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 maxdb_field_seek() returns previuos value of field cursor.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Object oriented style
@@ -105,7 +106,7 @@ max. Len: 10
 Flags:    -1
 Type:     2
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |maxdb_fetch_field| - Returns the next field in the result set

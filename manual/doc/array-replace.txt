@@ -4,7 +4,7 @@ array_replace
 
 array_replace — Replaces elements from passed arrays into the first array
 
-===============================================================================
+==============================================================================
 *Description*
 
     array array_replace ( array $array1 , array $array2 [, array $... ] )~
@@ -13,14 +13,14 @@ array_replace() replaces the values of {array1} with values having the same
 keys in each of the following arrays. If a key from the first array exists in
 the second array, its value will be replaced by the value from the second
 array. If the key exists in the second array, and not the first, it will be
-created in the first array. If a key only exists in the first array, it will be
-left as is. If several arrays are passed for replacement, they will be
+created in the first array. If a key only exists in the first array, it will
+be left as is. If several arrays are passed for replacement, they will be
 processed in order, the later arrays overwriting the previous values.
 
-array_replace() is not recursive : it will replace values in the first array by
-whatever type is in the second array.
+array_replace() is not recursive : it will replace values in the first array
+by whatever type is in the second array.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {array1}
@@ -33,15 +33,15 @@ whatever type is in the second array.
 
 {...}
 
-    More arrays from which elements will be extracted. Values from later arrays
-    overwrite the previous values.
+    More arrays from which elements will be extracted. Values from later
+    arrays overwrite the previous values.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an array, or NULL if an error occurs.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 array_replace() example
@@ -66,7 +66,7 @@ Array
     [4] => cherry
 )
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |array_replace_recursive| - Replaces elements from passed arrays into the

@@ -4,16 +4,16 @@ eio_custom
 
 eio_custom — Execute custom request like any other eio_* call.
 
-===============================================================================
+==============================================================================
 *Description*
 
-    resource eio_custom ( callable $execute , int $pri , callable $callback [,~
-    mixed $data = NULL ] )~
+    resource eio_custom ( callable $execute , int $pri , callable $callback~
+    [, mixed $data = NULL ] )~
 
-eio_custom() executes custom function specified by {execute} processing it just
-like any other eio_* call.
+eio_custom() executes custom function specified by {execute} processing it
+just like any other eio_* call.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {execute}
@@ -39,8 +39,8 @@ like any other eio_* call.
 
 {callback}
 
-    {callback} function is called when the request is done. It should match the
-    following prototype:
+    {callback} function is called when the request is done. It should match
+    the following prototype:
     void callback(mixed $data, int $result[, resource $req]);
 
     {data}
@@ -61,12 +61,12 @@ like any other eio_* call.
 
     Arbitrary variable passed to {callback}.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 eio_custom() returns request resource on success or FALSE on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 eio_custom() example

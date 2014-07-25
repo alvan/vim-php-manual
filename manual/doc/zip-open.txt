@@ -4,28 +4,28 @@ zip_open
 
 zip_open — Open a ZIP file archive
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource zip_open ( string $filename )~
 
 Opens a new zip archive for reading.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {filename}
 
     The file name of the ZIP archive to open.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a resource handle for later use with |zip_read| and |zip_close| or
 returns the number of error if {filename} does not exist or in case of other
 error.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |zip_read| - Read next entry in a ZIP file archive

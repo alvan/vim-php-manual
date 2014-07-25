@@ -4,15 +4,15 @@ iconv_mime_decode_headers
 
 iconv_mime_decode_headers — Decodes multiple MIME header fields at once
 
-===============================================================================
+==============================================================================
 *Description*
 
-    array iconv_mime_decode_headers ( string $encoded_headers [, int $mode = 0~
-    [, string $charset = ini_get("iconv.internal_encoding") ]] )~
+    array iconv_mime_decode_headers ( string $encoded_headers [, int $mode =~
+    0 [, string $charset = ini_get("iconv.internal_encoding") ]] )~
 
 Decodes multiple MIME header fields at once.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {encoded_headers}
@@ -26,18 +26,19 @@ Decodes multiple MIME header fields at once.
     of the following bitmasks.
 
               Bitmasks acceptable to iconv_mime_decode_headers()
-    Value              Constant                          Description
+    Value              Constant                         Description
                                               If set, the given header is
                                               decoded in full conformance with
                                               the standards defined in
                                               » RFC2047. This option is
-    1     ICONV_MIME_DECODE_STRICT            disabled by default because there
-                                              are a lot of broken mail user
-                                              agents that don't follow the
-                                              specification and don't produce
-                                              correct MIME headers.
-                                              If set, iconv_mime_decode_headers
-    2     ICONV_MIME_DECODE_CONTINUE_ON_ERROR () attempts to ignore any
+    1     ICONV_MIME_DECODE_STRICT            disabled by default because
+                                              there are a lot of broken mail
+                                              user agents that don't follow
+                                              the specification and don't
+                                              produce correct MIME headers.
+                                              If set, 
+                                              iconv_mime_decode_headers()
+    2     ICONV_MIME_DECODE_CONTINUE_ON_ERROR attempts to ignore any
                                               grammatical errors and continue
                                               to process a given header.
 
@@ -46,7 +47,7 @@ Decodes multiple MIME header fields at once.
     The optional {charset} parameter specifies the character set to represent
     the result by. If omitted, iconv.internal_encoding will be used.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an associative array that holds a whole set of MIME header fields
@@ -58,7 +59,7 @@ corresponding element represents a field value. If more than one field of the
 same name are present, iconv_mime_decode_headers() automatically incorporates
 them into a numerically indexed array in the order of occurrence.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 iconv_mime_decode_headers() example
@@ -97,7 +98,7 @@ Array
 
 )
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |iconv_mime_decode| - Decodes a MIME header field

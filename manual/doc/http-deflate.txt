@@ -4,7 +4,7 @@ http_deflate
 
 http_deflate — Deflate data
 
-===============================================================================
+==============================================================================
 *Description*
 
     string http_deflate ( string $data [, int $flags = 0 ] )~
@@ -13,7 +13,7 @@ Compress data with gzip, zlib AKA deflate or raw deflate encoding.
 
 See the deflate constants table for possible values for the flags parameter.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {data}
@@ -24,12 +24,12 @@ See the deflate constants table for possible values for the flags parameter.
 
     deflate options
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the encoded string on success, or NULL on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |http_inflate| - Inflate data

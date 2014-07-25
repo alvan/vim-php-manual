@@ -4,14 +4,14 @@ sprintf
 
 sprintf — Return a formatted string
 
-===============================================================================
+==============================================================================
 *Description*
 
     string sprintf ( string $format [, mixed $args [, mixed $... ]] )~
 
 Returns a string produced according to the formatting string {format}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {format}
@@ -27,8 +27,8 @@ Returns a string produced according to the formatting string {format}.
         number. By default, only the - sign is used on a number if it's
         negative. This specifier forces positive numbers to have the + sign
         attached as well, and was added in PHP 4.3.0.
-     2. An optional padding specifier that says what character will be used for
-        padding the results to the right string size. This may be a space
+     2. An optional padding specifier that says what character will be used
+        for padding the results to the right string size. This may be a space
         character or a 0 (zero character). The default is to pad with spaces.
         An alternate padding character can be specified by prefixing it with a
         single quote ('). See the examples below.
@@ -53,8 +53,8 @@ Returns a string produced according to the formatting string {format}.
             (signed) decimal number.
           o e - the argument is treated as scientific notation (e.g. 1.2e+2).
             The precision specifier stands for the number of digits after the
-            decimal point since PHP 5.2.1. In earlier versions, it was taken as
-            number of significant digits (one less).
+            decimal point since PHP 5.2.1. In earlier versions, it was taken
+            as number of significant digits (one less).
           o E - like %e but uses uppercase letter (e.g. 1.2E+2).
           o f - the argument is treated as a float, and presented as a
             floating-point number (locale aware).
@@ -87,7 +87,8 @@ Returns a string produced according to the formatting string {format}.
     character sets that require more than one byte per character may result in
     unexpected results
 
-    The format string supports argument numbering/swapping. Here is an example:
+    The format string supports argument numbering/swapping. Here is an
+    example:
    
     Example #1 Argument swapping
 
@@ -99,8 +100,8 @@ Returns a string produced according to the formatting string {format}.
     echo sprintf($format, $num, $location);
 <    ?>
     This will output "There are 5 monkeys in the tree". But imagine we are
-    creating a format string in a separate file, commonly because we would like
-    to internationalize it and we rewrite it as:
+    creating a format string in a separate file, commonly because we would
+    like to internationalize it and we rewrite it as:
    
     Example #2 Argument swapping
 
@@ -158,18 +159,18 @@ Returns a string produced according to the formatting string {format}.
 
 {...}
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a string produced according to the formatting string {format}.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version                    Description
 4.0.6   Support for argument numbering/swapping was added
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #6 |printf|: various examples
@@ -264,7 +265,7 @@ Example #10 sprintf(): scientific notation
     echo sprintf("%.3e", $number); // outputs 3.625e+8
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |printf| - Output a formatted string

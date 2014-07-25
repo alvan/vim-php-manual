@@ -4,16 +4,16 @@ snmp2_walk
 
 snmp2_walk — Fetch all the SNMP objects from an agent
 
-===============================================================================
+==============================================================================
 *Description*
 
-    array snmp2_walk ( string $host , string $community , string $object_id [,~
-    string $timeout = 1000000 [, string $retries = 5 ]] )~
+    array snmp2_walk ( string $host , string $community , string $object_id~
+    [, string $timeout = 1000000 [, string $retries = 5 ]] )~
 
 snmp2_walk() function is used to read all the values from an SNMP agent
 specified by the {hostname}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {host}
@@ -40,13 +40,13 @@ specified by the {hostname}.
 
     The number of times to retry if timeouts occur.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns an array of SNMP object values starting from the {object_id} as root or
-FALSE on error.
+Returns an array of SNMP object values starting from the {object_id} as root
+or FALSE on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 snm2_pwalk() Example
@@ -63,11 +63,11 @@ Example #1 snm2_pwalk() Example
 Above function call would return all the SNMP objects from the SNMP agent
 running on localhost. One can step through the values with a loop
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
-  * |snmp2_real_walk| - Return all objects including their respective object ID
-    within the specified one
+  * |snmp2_real_walk| - Return all objects including their respective object
+    ID within the specified one
 
 
 vim:ft=help:

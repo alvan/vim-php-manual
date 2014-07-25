@@ -4,7 +4,7 @@ msql_free_result
 
 msql_free_result — Free result memory
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool msql_free_result ( resource $result )~
@@ -14,7 +14,7 @@ PHP completes a request, this memory is freed automatically, so you only need
 to call this function when you want to make sure you don't use too much memory
 while the script is running.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { result}
@@ -22,7 +22,7 @@ while the script is running.
     The result resource that is being evaluated. This result comes from a call
     to |msql_query|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.

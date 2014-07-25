@@ -4,14 +4,15 @@ xslt_setopt
 
 xslt_setopt — Set options on a given XSLT processor
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed xslt_setopt ( resource $processor , int $newmask )~
 
-xslt_setopt() sets the options specified by {newmask} on the given {processor}.
+xslt_setopt() sets the options specified by {newmask} on the given
+{processor}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { processor}
@@ -34,13 +35,13 @@ xslt_setopt() sets the options specified by {newmask} on the given {processor}.
       + XSLT_SABOPT_IGNORE_DOC_NOT_FOUND - Consider unresolved documents (the
         document() function) non-lethal.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the number of previous mask is possible, TRUE otherwise, FALSE in case
 of an error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 xslt_setopt() Example
@@ -57,7 +58,7 @@ Example #1 xslt_setopt() Example
 
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |xslt_getopt| - Get options on a given xsl processor

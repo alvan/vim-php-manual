@@ -4,7 +4,7 @@ imagegrabwindow
 
 imagegrabwindow — Captures a window
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource imagegrabwindow ( int $window_handle [, int $client_area = 0 ] )~
@@ -12,7 +12,7 @@ imagegrabwindow — Captures a window
 Grabs a window or its client area using a windows handle (HWND property in COM
 instance)
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {window_handle}
@@ -23,18 +23,18 @@ instance)
 
     Include the client area of the application window.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an image resource identifier on success, FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Errors/Exceptions*
 
 E_NOTICE is issued if {window_handle} is invalid window handle. E_WARNING is
 issued if the Windows API is too old.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 imagegrabwindow() example
@@ -69,14 +69,14 @@ Capture a window (IE for example) but with its content
     imagedestroy($im);
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
 
     This function is only available on Windows.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |imagegrabscreen| - Captures the whole screen

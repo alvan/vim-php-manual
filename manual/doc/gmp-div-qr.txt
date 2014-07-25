@@ -4,14 +4,14 @@ gmp_div_qr
 
 gmp_div_qr — Divide numbers and get quotient and remainder
 
-===============================================================================
+==============================================================================
 *Description*
 
     array gmp_div_qr ( GMP $n , GMP $d [, int $round = GMP_ROUND_ZERO ] )~
 
 The function divides {n} by {d}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {n}
@@ -34,13 +34,14 @@ The function divides {n} by {d}.
 
     See the |gmp_div_q| function for description of the {round} argument.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns an array, with the first element being [n/d] (the integer result of the
-division) and the second being (n - [n/d] * d) (the remainder of the division).
+Returns an array, with the first element being [n/d] (the integer result of
+the division) and the second being (n - [n/d] * d) (the remainder of the
+division).
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Division of GMP numbers
@@ -52,7 +53,7 @@ Example #1 Division of GMP numbers
            gmp_strval($res[0]), gmp_strval($res[1]));
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |gmp_div_q| - Divide numbers

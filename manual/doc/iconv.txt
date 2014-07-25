@@ -4,7 +4,7 @@ iconv
 
 iconv — Convert string to requested character encoding
 
-===============================================================================
+==============================================================================
 *Description*
 
     string iconv ( string $in_charset , string $out_charset , string $str )~
@@ -12,7 +12,7 @@ iconv — Convert string to requested character encoding
 Performs a character set conversion on the string {str} from {in_charset} to
 {out_charset}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {in_charset}
@@ -28,19 +28,19 @@ Performs a character set conversion on the string {str} from {in_charset} to
     target charset, it can be approximated through one or several similarly
     looking characters. If you append the string //IGNORE, characters that
     cannot be represented in the target charset are silently discarded.
-    Otherwise, {str} is cut from the first illegal character and an E_NOTICE is
-    generated.
+    Otherwise, {str} is cut from the first illegal character and an E_NOTICE
+    is generated.
 
 {str}
 
     The string to be converted.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the converted string or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 iconv() example

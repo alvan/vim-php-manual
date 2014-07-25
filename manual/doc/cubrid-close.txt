@@ -4,17 +4,17 @@ cubrid_close
 
 cubrid_close — Close CUBRID connection
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool cubrid_close ([ resource $conn_identifier ] )~
 
 The cubrid_close() function ends the transaction currently in process, closes
 the connection handle and disconnects from server. If there is any request
-handles not closed yet at this point, they will be closed. It is similar to the
-CUBRID function |cubrid_disconnect|.
+handles not closed yet at this point, they will be closed. It is similar to
+the CUBRID function |cubrid_disconnect|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {conn_identifier}
@@ -22,14 +22,14 @@ CUBRID function |cubrid_disconnect|.
     The CUBRID connection identifier. If the connection identifier is not
     specified, the last connection opened by |cubrid_connect| is assumed.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 TRUE, when process is successful.
 
 FALSE, when process is unsuccessful.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_close() example
@@ -49,7 +49,7 @@ Example #1 cubrid_close() example
     }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |cubrid_disconnect| - Close a database connection

@@ -4,7 +4,7 @@ pg_copy_to
 
 pg_copy_to — Copy a table to an array
 
-===============================================================================
+==============================================================================
 *Description*
 
     array pg_copy_to ( resource $connection , string $table_name [, string~
@@ -13,7 +13,7 @@ pg_copy_to — Copy a table to an array
 pg_copy_to() copies a table to an array. It issues COPY TO SQL command
 internally to retrieve records.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
@@ -33,13 +33,13 @@ internally to retrieve records.
 
     How SQL NULL values are represented in the {rows}. Default is \N ("\\N").
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 An array with one element for each line of COPY data. It returns FALSE on
 failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 pg_copy_to() example
@@ -54,7 +54,7 @@ Example #1 pg_copy_to() example
        pg_copy_from($db, $table_name, $rows);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |pg_copy_from| - Insert records into a table from an array

@@ -4,7 +4,7 @@ mssql_fetch_row
 
 mssql_fetch_row — Get row as enumerated array
 
-===============================================================================
+==============================================================================
 *Description*
 
     array mssql_fetch_row ( resource $result )~
@@ -16,7 +16,7 @@ column is stored in an array offset, starting at offset 0.
 Subsequent call to mssql_fetch_row() would return the next row in the result
 set, or FALSE if there are no more rows.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
@@ -24,13 +24,13 @@ set, or FALSE if there are no more rows.
     The result resource that is being evaluated. This result comes from a call
     to |mssql_query|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an array that corresponds to the fetched row, or FALSE if there are no
 more rows.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mssql_fetch_row() example
@@ -41,8 +41,8 @@ Example #1 mssql_fetch_row() example
     mssql_select_db('php', $link);
 
     // Query to execute
-    $query = mssql_query('SELECT [id], [quote] FROM [quotes] WHERE [id] = \'42\'', 
-    $link);
+    $query = mssql_query('SELECT [id], [quote] FROM [quotes] WHERE [id] = \'42\''
+    , $link);
 
     // Did the query fail?
     if (!$query) {
@@ -60,16 +60,16 @@ The above example will output something similar to:
 
 Quote #42: "The answer to everything..."
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: This function sets NULL fields to the PHP NULL value.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
-  * |mssql_fetch_array| - Fetch a result row as an associative array, a numeric
-    array, or both
+  * |mssql_fetch_array| - Fetch a result row as an associative array, a
+    numeric array, or both
   * |mssql_fetch_object| - Fetch row as object
   * |mssql_data_seek| - Moves internal row pointer
   * |mssql_result| - Get result data

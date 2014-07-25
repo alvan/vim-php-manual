@@ -4,18 +4,19 @@ openal_buffer_data
 
 openal_buffer_data — Load a buffer with data
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool openal_buffer_data ( resource $buffer , int $format , string $data ,~
     int $freq )~
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {buffer}
 
-    An Open AL(Buffer) resource (previously created by |openal_buffer_create|).
+    An Open AL(Buffer) resource (previously created by |openal_buffer_create|
+    ).
 
 {format}
 
@@ -30,12 +31,12 @@ openal_buffer_data — Load a buffer with data
 
     Frequency of {data} given in Hz.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |openal_buffer_loadwav| - Load a .wav file into a buffer

@@ -4,14 +4,14 @@ mssql_field_type
 
 mssql_field_type — Gets the type of a field
 
-===============================================================================
+==============================================================================
 *Description*
 
     string mssql_field_type ( resource $result [, int $offset = -1 ] )~
 
 Returns the type of field no. {offset} in {result}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
@@ -23,12 +23,12 @@ Returns the type of field no. {offset} in {result}.
 
     The field offset, starts at 0. If omitted, the current field is used.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The type of the specified field index on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mssql_field_type() example
@@ -54,7 +54,7 @@ The above example will output something similar to:
 
 'name' is a type of CHAR(50)
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mssql_field_length| - Get the length of a field

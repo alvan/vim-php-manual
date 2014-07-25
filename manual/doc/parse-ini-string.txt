@@ -4,7 +4,7 @@ parse_ini_string
 
 parse_ini_string — Parse a configuration string
 
-===============================================================================
+==============================================================================
 *Description*
 
     array parse_ini_string ( string $ini [, bool $process_sections = false [,~
@@ -15,7 +15,7 @@ array.
 
 The structure of the ini string is the same as the php.ini's.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {ini}
@@ -33,13 +33,13 @@ The structure of the ini string is the same as the php.ini's.
     Can either be INI_SCANNER_NORMAL (default) or INI_SCANNER_RAW. If
     INI_SCANNER_RAW is supplied, then option values will not be parsed.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The settings are returned as an associative array on success, and FALSE on
 failure.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: There are reserved words which must not be used as keys for ini
@@ -48,7 +48,7 @@ failure.
     "1". Characters ?{}|&~![()^" must not be used anywhere in the key and have
     a special meaning in the value.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |parse_ini_file| - Parse a configuration file

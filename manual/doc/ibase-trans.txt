@@ -4,7 +4,7 @@ ibase_trans
 
 ibase_trans — Begin a transaction
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource ibase_trans ([ int $trans_args [, resource $link_identifier ]] )~
@@ -15,8 +15,8 @@ Begins a transaction.
     Note:
 
     The first call to ibase_trans() will not return the default transaction of
-    a connection. All transactions started by ibase_trans() will be rolled back
-    at the end of the script if they were not committed or rolled back by
+    a connection. All transactions started by ibase_trans() will be rolled
+    back at the end of the script if they were not committed or rolled back by
     either |ibase_commit| or |ibase_rollback|.
 
     Note:
@@ -32,7 +32,7 @@ Begins a transaction.
     both the {link_id} and {transaction_id} in calls to |ibase_query| and |
     ibase_prepare|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {trans_args}
@@ -45,7 +45,7 @@ Begins a transaction.
 
     An InterBase link identifier. If omitted, the last opened link is assumed.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a transaction handle, or FALSE on error.

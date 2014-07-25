@@ -4,14 +4,14 @@ header_remove
 
 header_remove — Remove previously set headers
 
-===============================================================================
+==============================================================================
 *Description*
 
     void header_remove ([ string $name ] )~
 
 Removes an HTTP header previously set using |header|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {name}
@@ -20,12 +20,12 @@ Removes an HTTP header previously set using |header|.
 
         Note: This parameter is case-insensitive.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 No value is returned.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Unsetting specific header.
@@ -50,7 +50,7 @@ Example #2 Unsetting all previously set headers.
 
 The above example will output something similar to:
 
-===============================================================================
+==============================================================================
 *Notes*
 
 Caution
@@ -63,7 +63,7 @@ and the X-Powered-By headers.
     Headers will only be accessible and output when a SAPI that supports them
     is in use.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |header| - Send a raw HTTP header

@@ -8,13 +8,13 @@ Warning
 
 This extension is deprecated as of PHP 5.5.0, and will be removed in the
 future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
-MySQL: choosing an API guide and related FAQ for more information. Alternatives
-to this function include:
+MySQL: choosing an API guide and related FAQ for more information.
+Alternatives to this function include:
 
   * |mysqli_connect| with p: host prefix
   * PDO::__construct() with PDO::ATTR_PERSISTENT as a driver option
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource mysql_pconnect ([ string $server =~
@@ -39,7 +39,7 @@ mysql_close| will not close links established by mysql_pconnect()).
 
 This type of link is therefore called 'persistent'.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {server}
@@ -66,19 +66,19 @@ This type of link is therefore called 'persistent'.
     MYSQL_CLIENT_COMPRESS, MYSQL_CLIENT_IGNORE_SPACE or
     MYSQL_CLIENT_INTERACTIVE.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a MySQL persistent link identifier on success, or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version                    Description
 5.5.0   This function will generate an E_DEPRECATED error.
 4.3.0   Added the {client_flags} parameter.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -90,15 +90,15 @@ Version                    Description
 Warning
 
 Using persistent connections can require a bit of tuning of your Apache and
-MySQL configurations to ensure that you do not exceed the number of connections
-allowed by MySQL.
+MySQL configurations to ensure that you do not exceed the number of
+connections allowed by MySQL.
 
     Note:
 
     You can suppress the error message on failure by prepending a @ to the
     function name.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mysql_connect| - Open a connection to a MySQL Server

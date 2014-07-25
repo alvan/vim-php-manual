@@ -4,14 +4,14 @@ oci_field_name
 
 oci_field_name — Returns the name of a field from the statement
 
-===============================================================================
+==============================================================================
 *Description*
 
     string oci_field_name ( resource $statement , mixed $field )~
 
 Returns the name of the {field}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {statement}
@@ -22,12 +22,12 @@ Returns the name of the {field}.
 
     Can be the field's index (1-based) or name.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the name as a string, or FALSE on errors.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 oci_field_name() example
@@ -81,7 +81,7 @@ Example #1 oci_field_name() example
 
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -90,7 +90,7 @@ Example #1 oci_field_name() example
     name still can be used, it was left as alias of oci_field_name() for
     downwards compatability. This, however, is deprecated and not recommended.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |oci_num_fields| - Returns the number of result columns in a statement

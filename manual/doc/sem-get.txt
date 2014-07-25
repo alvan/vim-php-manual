@@ -4,11 +4,11 @@ sem_get
 
 sem_get — Get a semaphore id
 
-===============================================================================
+==============================================================================
 *Description*
 
-    resource sem_get ( int $key [, int $max_acquire = 1 [, int $perm = 0666 [,~
-    int $auto_release = 1 ]]] )~
+    resource sem_get ( int $key [, int $max_acquire = 1 [, int $perm = 0666~
+    [, int $auto_release = 1 ]]] )~
 
 sem_get() returns an id that can be used to access the System V semaphore with
 the given {key}.
@@ -16,7 +16,7 @@ the given {key}.
 A second call to sem_get() for the same key will return a different semaphore
 identifier, but both identifiers access the same underlying semaphore.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {key}
@@ -36,18 +36,18 @@ identifier, but both identifiers access the same underlying semaphore.
     Specifies if the semaphore should be automatically released on request
     shutdown.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a positive semaphore identifier on success, or FALSE on error.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version               Description
 4.3.0   The {auto_release} parameter was added.
 
-===============================================================================
+==============================================================================
 *Notes*
 
 Warning
@@ -57,7 +57,7 @@ semaphore must have been created as a set of 3 semaphores (for example, by
 specifying 3 as the nsems parameter when calling the C semget() function),
 otherwise PHP will be unable to access the semaphore.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |sem_acquire| - Acquire a semaphore

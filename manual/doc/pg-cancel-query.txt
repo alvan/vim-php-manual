@@ -4,7 +4,7 @@ pg_cancel_query
 
 pg_cancel_query — Cancel an asynchronous query
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool pg_cancel_query ( resource $connection )~
@@ -13,19 +13,19 @@ pg_cancel_query() cancels an asynchronous query sent with |pg_send_query|, |
 pg_send_query_params| or |pg_send_execute|. You cannot cancel a query executed
 using |pg_query|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
 
     PostgreSQL database connection resource.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 pg_cancel_query() example
@@ -53,7 +53,7 @@ The above example will output:
 First call to pg_get_result(): Resource id #3
 Resource id #3 has 3 records
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |pg_send_query| - Sends asynchronous query

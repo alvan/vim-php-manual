@@ -4,7 +4,7 @@ fbsql_data_seek
 
 fbsql_data_seek — Move internal result pointer
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool fbsql_data_seek ( resource $result , int $row_number )~
@@ -14,7 +14,7 @@ specified result identifier to point to the specified row number.
 
 The next call to |fbsql_fetch_row| would return that row.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { result}
@@ -25,12 +25,12 @@ The next call to |fbsql_fetch_row| would return that row.
 
     The row number. Starts at 0.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 fbsql_data_seek() example

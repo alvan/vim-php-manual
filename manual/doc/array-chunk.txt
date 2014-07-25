@@ -4,7 +4,7 @@ array_chunk
 
 array_chunk — Split an array into chunks
 
-===============================================================================
+==============================================================================
 *Description*
 
     array array_chunk ( array $array , int $size [, bool $preserve_keys =~
@@ -13,7 +13,7 @@ array_chunk — Split an array into chunks
 Chunks an array into arrays with {size} elements. The last chunk may contain
 less than {size} elements.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {array}
@@ -29,18 +29,18 @@ less than {size} elements.
     When set to TRUE keys will be preserved. Default is FALSE which will
     reindex the chunk numerically
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a multidimensional numerically indexed array, starting with zero, with
 each dimension containing {size} elements.
 
-===============================================================================
+==============================================================================
 *Errors/Exceptions*
 
 If {size} is less than 1 E_WARNING will be thrown and NULL returned.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 array_chunk() example
@@ -94,7 +94,7 @@ Array
 
 )
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |array_slice| - Extract a slice of the array

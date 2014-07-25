@@ -4,14 +4,14 @@ ini_get_all
 
 ini_get_all — Gets all configuration options
 
-===============================================================================
+==============================================================================
 *Description*
 
     array ini_get_all ([ string $extension [, bool $details = true ]] )~
 
 Returns all the registered configuration options.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {extension}
@@ -24,7 +24,7 @@ Returns all the registered configuration options.
     Retrieve details settings or only the current value for each setting.
     Default is TRUE (retrieve details).
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an associative array with directive name as the array key.
@@ -42,13 +42,13 @@ See the manual section for information on what access levels mean.
     It's possible for a directive to have multiple access levels, which is why
     access shows the appropriate bitmask values.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version    Description
 5.3.0   Added {details}.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 ini_get_all() examples
@@ -118,7 +118,7 @@ Array
     ...
 )
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * How to change configuration settings

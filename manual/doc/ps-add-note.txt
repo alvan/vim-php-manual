@@ -4,23 +4,23 @@ ps_add_note
 
 ps_add_note — Adds note to current page
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool ps_add_note ( resource $psdoc , float $llx , float $lly , float $urx~
-    , float $ury , string $contents , string $title , string $icon , int $open~
-)~
+    , float $ury , string $contents , string $title , string $icon , int~
+    $open )~
 
 Adds a note at a certain position on the page. Notes are like little
 rectangular sheets with text on it, which can be placed anywhere on a page.
-They are shown either folded or unfolded. If folded, the specified icon is used
-as a placeholder.
+They are shown either folded or unfolded. If folded, the specified icon is
+used as a placeholder.
 
 The note will not be visible if the document is printed or viewed but it will
 show up if the document is converted to pdf by either Acrobat Distiller™ or
 Ghostview.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {psdoc}
@@ -53,20 +53,20 @@ Ghostview.
 
 {icon}
 
-    The icon shown if the note is folded. This parameter can be set to comment,
-    insert, note, paragraph, newparagraph, key, or help.
+    The icon shown if the note is folded. This parameter can be set to comment
+    , insert, note, paragraph, newparagraph, key, or help.
 
 {open}
 
     If {open} is unequal to zero the note will be shown unfolded after opening
     the document with a pdf viewer.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ps_add_pdflink| - Adds link to a page in a second pdf document

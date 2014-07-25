@@ -4,7 +4,7 @@ openssl_private_encrypt
 
 openssl_private_encrypt — Encrypts data with private key
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool openssl_private_encrypt ( string $data , string &$crypted , mixed~
@@ -17,7 +17,7 @@ openssl_public_decrypt|.
 This function can be used e.g. to sign data (or its hash) to prove that it is
 not written by someone else.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {data}
@@ -30,12 +30,12 @@ not written by someone else.
 
     {padding} can be one of OPENSSL_PKCS1_PADDING, OPENSSL_NO_PADDING.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |openssl_public_encrypt| - Encrypts data with public key

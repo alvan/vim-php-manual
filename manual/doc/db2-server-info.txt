@@ -5,14 +5,14 @@ db2_server_info
 db2_server_info — Returns an object with properties that describe the DB2
 database server
 
-===============================================================================
+==============================================================================
 *Description*
 
     object db2_server_info ( resource $connection )~
 
 This function returns an object with read-only properties that return
-information about the IBM DB2, Cloudscape, or Apache Derby database server. The
-following table lists the database server properties:
+information about the IBM DB2, Cloudscape, or Apache Derby database server.
+The following table lists the database server properties:
 
                           Database server properties
     Property name     Return                    Description
@@ -21,11 +21,11 @@ following table lists the database server properties:
 DBMS_NAME             string connected. For DB2 servers this is a combination
                              of DB2 followed by the operating system on which
                              the database server is running.
-                             The version of the database server, in the form of
-                             a string "MM.mm.uuuu" where MM is the major
+                             The version of the database server, in the form
+                             of a string "MM.mm.uuuu" where MM is the major
 DBMS_VER              string version, mm is the minor version, and uuuu is the
-                             update. For example, "08.02.0001" represents major
-                             version 8, minor version 2, update 1.
+                             update. For example, "08.02.0001" represents
+                             major version 8, minor version 2, update 1.
 DB_CODEPAGE           int    The code page of the database to which you are
                              connected.
 DB_NAME               string The name of the database to which you are
@@ -65,14 +65,15 @@ DFT_ISOLATION         string
 IDENTIFIER_QUOTE_CHAR string The character used to delimit an identifier.
 INST_NAME             string The instance on the database server that contains
                              the database.
-                             An array of the isolation options supported by the
-ISOLATION_OPTION      array  database server. The isolation options are
+                             An array of the isolation options supported by
+ISOLATION_OPTION      array  the database server. The isolation options are
                              described in the DFT_ISOLATION property.
 KEYWORDS              array  An array of the keywords reserved by the database
                              server.
                              TRUE if the database server supports the use of %
 LIKE_ESCAPE_CLAUSE    bool   and _ wildcard characters. FALSE if the database
-                             server does not support these wildcard characters.
+                             server does not support these wildcard
+                             characters.
 MAX_COL_NAME_LEN      int    Maximum length of a column name supported by the
                              database server, expressed in bytes.
 MAX_IDENTIFIER_LEN    int    Maximum length of an SQL identifier supported by
@@ -120,19 +121,19 @@ SQL_CONFORMANCE       string
 
                                  Intermediate level SQL-92 compliance.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
 
     Specifies an active DB2 client connection.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an object on a successful call. Returns FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A db2_server_info() example
@@ -173,10 +174,12 @@ connection resource to db2_server_info().
         echo "MAX_IDENTIFIER_LEN: ";        var_dump( $server->MAX_IDENTIFIER_LEN 
     );
         echo "MAX_INDEX_SIZE: ";            var_dump( $server->MAX_INDEX_SIZE );
-        echo "MAX_PROC_NAME_LEN: ";         var_dump( $server->MAX_PROC_NAME_LEN );
-        echo "MAX_SCHEMA_NAME_LEN: ";       var_dump( $server->MAX_SCHEMA_NAME_LEN 
+        echo "MAX_PROC_NAME_LEN: ";         var_dump( $server->MAX_PROC_NAME_LEN 
     );
-        echo "MAX_STATEMENT_LEN: ";         var_dump( $server->MAX_STATEMENT_LEN );
+        echo "MAX_SCHEMA_NAME_LEN: ";       var_dump( $server->
+    MAX_SCHEMA_NAME_LEN );
+        echo "MAX_STATEMENT_LEN: ";         var_dump( $server->MAX_STATEMENT_LEN 
+    );
         echo "MAX_TABLE_NAME_LEN: ";        var_dump( $server->MAX_TABLE_NAME_LEN 
     );
         echo "NON_NULLABLE_COLUMNS: ";      var_dump( $server->
@@ -211,11 +214,11 @@ MAX_STATEMENT_LEN: int(2097152)
 MAX_TABLE_NAME_LEN: int(128)
 NON_NULLABLE_COLUMNS: bool(true)
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
-  * |db2_client_info| - Returns an object with properties that describe the DB2
-    database client
+  * |db2_client_info| - Returns an object with properties that describe the
+    DB2 database client
 
 
 vim:ft=help:

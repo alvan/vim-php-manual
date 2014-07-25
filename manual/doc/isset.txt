@@ -4,7 +4,7 @@ isset
 
 isset — Determine if a variable is set and is not NULL
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool isset ( mixed $var [, mixed $... ] )~
@@ -16,10 +16,10 @@ will return FALSE if testing a variable that has been set to NULL. Also note
 that a NULL byte ("\0") is not equivalent to the PHP NULL constant.
 
 If multiple parameters are supplied then isset() will return TRUE only if all
-of the parameters are set. Evaluation goes from left to right and stops as soon
-as an unset variable is encountered.
+of the parameters are set. Evaluation goes from left to right and stops as
+soon as an unset variable is encountered.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {var}
@@ -30,18 +30,18 @@ as an unset variable is encountered.
 
     Another variable ...
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE if {var} exists and has value other than NULL, FALSE otherwise.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version                        Description
 5.4.0   Checking non-numeric offsets of strings now returns FALSE.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 isset() Examples
@@ -126,7 +126,7 @@ bool(true)
 bool(false)
 bool(false)
 
-===============================================================================
+==============================================================================
 *Notes*
 
 Warning
@@ -134,15 +134,15 @@ Warning
 isset() only works with variables as passing anything else will result in a
 parse error. For checking if constants are set use the |defined| function.
 
-    Note: Because this is a language construct and not a function, it cannot be
-    called using variable functions.
+    Note: Because this is a language construct and not a function, it cannot
+    be called using variable functions.
 
     Note:
 
     When using isset() on inaccessible object properties, the __isset()
     overloading method will be called, if declared.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |empty| - Determine whether a variable is empty

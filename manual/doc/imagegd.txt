@@ -4,32 +4,32 @@ imagegd
 
 imagegd — Output GD image to browser or file
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool imagegd ( resource $image [, string $filename ] )~
 
 Outputs a GD image to the given {filename}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { image}
 
-    An image resource, returned by one of the image creation functions, such as
-    |imagecreatetruecolor|.
+    An image resource, returned by one of the image creation functions, such
+    as |imagecreatetruecolor|.
 
 {filename}
 
-    The path to save the file to. If not set or NULL, the raw image stream will
-    be outputted directly.
+    The path to save the file to. If not set or NULL, the raw image stream
+    will be outputted directly.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Outputting a GD image
@@ -56,14 +56,15 @@ Example #2 Saving a GD image
     imagestring($im, 1, 5, 5,  "A Simple Text String", $text_color);
 
     // Save the gd image
-    // The file format for GD images is .gd, see http://www.libgd.org/GdFileFormats
+    // The file format for GD images is .gd, see http://www.libgd.org/
+    GdFileFormats
     imagegd($im, 'simple.gd');
 
     // Free up memory
     imagedestroy($im);
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -71,7 +72,7 @@ Example #2 Saving a GD image
     The GD format is commonly used to allow fast loading of parts of images.
     Note that the GD format is only usable in GD-compatible applications.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |imagegd2| - Output GD2 image to browser or file

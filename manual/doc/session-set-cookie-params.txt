@@ -4,7 +4,7 @@ session_set_cookie_params
 
 session_set_cookie_params — Set the session cookie parameters
 
-===============================================================================
+==============================================================================
 *Description*
 
     void session_set_cookie_params ( int $lifetime [, string $path [, string~
@@ -18,7 +18,7 @@ called.
 This function updates the runtime ini values of the corresponding PHP ini
 configuration keys which can be retrieved with the |ini_get|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {lifetime}
@@ -27,8 +27,8 @@ configuration keys which can be retrieved with the |ini_get|.
 
 {path}
 
-    Path on the domain where the cookie will work. Use a single slash ('/') for
-    all paths on the domain.
+    Path on the domain where the cookie will work. Use a single slash ('/')
+    for all paths on the domain.
 
 {domain}
 
@@ -41,22 +41,22 @@ configuration keys which can be retrieved with the |ini_get|.
 
 {httponly}
 
-    If set to TRUE then PHP will attempt to send the httponly flag when setting
-    the session cookie.
+    If set to TRUE then PHP will attempt to send the httponly flag when
+    setting the session cookie.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 No value is returned.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version             Description
 5.2.0   The {httponly} parameter was added.
 4.0.4   The {secure} parameter was added.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * session.cookie_lifetime

@@ -4,14 +4,14 @@ time_nanosleep
 
 time_nanosleep — Delay for a number of seconds and nanoseconds
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed time_nanosleep ( int $seconds , int $nanoseconds )~
 
 Delays program execution for the given number of {seconds} and {nanoseconds}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {seconds}
@@ -22,24 +22,24 @@ Delays program execution for the given number of {seconds} and {nanoseconds}.
 
     Must be a non-negative integer less than 1 billion.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-If the delay was interrupted by a signal, an associative array will be returned
-with the components:
+If the delay was interrupted by a signal, an associative array will be
+returned with the components:
 
   * seconds - number of seconds remaining in the delay
   * nanoseconds - number of nanoseconds remaining in the delay
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version                     Description
 5.3.0   This function is now available on Windows platforms.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 time_nanosleep() example
@@ -70,7 +70,7 @@ Example #1 time_nanosleep() example
     }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |sleep| - Delay execution

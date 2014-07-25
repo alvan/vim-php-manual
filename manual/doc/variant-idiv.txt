@@ -5,7 +5,7 @@ variant_idiv
 variant_idiv — Converts variants to integers and then returns the result from
 dividing them
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed variant_idiv ( mixed $left , mixed $right )~
@@ -13,7 +13,7 @@ dividing them
 Converts {left} and {right} to integer values, and then performs integer
 division.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {left}
@@ -29,17 +29,17 @@ division.
     As with all the variant arithmetic functions, the parameters for this
     function can be either a PHP native type (integer, string, floating point,
     boolean or NULL), or an instance of a COM, VARIANT or DOTNET class. PHP
-    native types will be converted to variants using the same rules as found in
-    the constructor for the VARIANT class. COM and DOTNET objects will have the
-    value of their default property taken and used as the variant value.
+    native types will be converted to variants using the same rules as found
+    in the constructor for the VARIANT class. COM and DOTNET objects will have
+    the value of their default property taken and used as the variant value.
 
     The variant arithmetic functions are wrappers around the similarly named
     functions in the COM library; for more information on these functions,
-    consult the MSDN library. The PHP functions are named slightly differently;
-    for example |variant_add| in PHP corresponds to VarAdd() in the MSDN
-    documentation.
+    consult the MSDN library. The PHP functions are named slightly
+    differently; for example |variant_add| in PHP corresponds to VarAdd() in
+    the MSDN documentation.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
                         Variant Integer Division Rules
@@ -55,7 +55,7 @@ Either expression is NULL                   NULL is returned
 Both expressions are empty                  A com_exception with code
                                             DISP_E_DIVBYZERO is thrown
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |variant_div| - Returns the result from dividing two variants

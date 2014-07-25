@@ -4,7 +4,7 @@ pg_put_line
 
 pg_put_line — Send a NULL-terminated string to PostgreSQL backend
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool pg_put_line ([ resource $connection ], string $data )~
@@ -30,7 +30,7 @@ Use of the pg_put_line() causes most large object operations, including |
 pg_lo_read| and |pg_lo_tell|, to subsequently fail. You can use |pg_copy_from|
 and |pg_copy_to| instead.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
@@ -44,12 +44,12 @@ and |pg_copy_to| instead.
     A line of text to be sent directly to the PostgreSQL backend. A NULL
     terminator is added automatically.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 pg_put_line() example
@@ -64,7 +64,7 @@ Example #1 pg_put_line() example
       pg_end_copy($conn);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |pg_end_copy| - Sync with PostgreSQL backend

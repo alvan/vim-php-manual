@@ -4,17 +4,17 @@ ps_continue_text
 
 ps_continue_text — Continue text in next line
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool ps_continue_text ( resource $psdoc , string $text )~
 
 Output a text one line below the last line. The line spacing is taken from the
 value "leading" which must be set with |ps_set_value|. The actual position of
-the text is determined by the values "textx" and "texty" which can be requested
-with |ps_get_value|
+the text is determined by the values "textx" and "texty" which can be
+requested with |ps_get_value|
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {psdoc}
@@ -25,12 +25,12 @@ with |ps_get_value|
 
     The text to output.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ps_show| - Output text

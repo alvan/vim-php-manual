@@ -4,7 +4,7 @@ pg_select
 
 pg_select — Select records
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed pg_select ( resource $connection , string $table_name , array~
@@ -17,7 +17,7 @@ that match the condition specified by assoc_array.
 If options is specified, |pg_convert| is applied to assoc_array with the
 specified flags.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
@@ -41,13 +41,13 @@ specified flags.
     When PGSQL_DML_NO_CONV or PGSQL_DML_ESCAPE is set, it does not call |
     pg_convert| internally.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns TRUE on success or FALSE on failure. Returns string if PGSQL_DML_STRING
-is passed via {options}.
+Returns TRUE on success or FALSE on failure. Returns string if
+PGSQL_DML_STRING is passed via {options}.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 pg_select() example
@@ -64,16 +64,16 @@ Example #1 pg_select() example
       }
 <?>
 
-===============================================================================
+==============================================================================
 *Changelog*
 
- Version                               Description
+ Version                              Description
 5.6.0     No longer experimental. Added PGSQL_DML_ESCAPE constant, TRUE/FALSE
           and NULL data type support.
 5.5.3/    Direct SQL injection to {table_name} and Indirect SQL injection to
 5.4.19    identifiers are fixed.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |pg_convert| - Convert associative array values into suitable for SQL

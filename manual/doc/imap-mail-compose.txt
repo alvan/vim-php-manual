@@ -5,14 +5,14 @@ imap_mail_compose
 imap_mail_compose — Create a MIME message based on given envelope and body
 sections
 
-===============================================================================
+==============================================================================
 *Description*
 
     string imap_mail_compose ( array $envelope , array $body )~
 
 Create a MIME message based on the given {envelope} and {body} sections.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {envelope}
@@ -28,15 +28,15 @@ Create a MIME message based on the given {envelope} and {body} sections.
 
     A body is an associative array which can consist of the following keys:
     "type", "encoding", "charset", "type.parameters", "subtype", "id",
-    "description", "disposition.type", "disposition", "contents.data", "lines",
-    "bytes" and "md5".
+    "description", "disposition.type", "disposition", "contents.data",
+    "lines", "bytes" and "md5".
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the MIME message.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 imap_mail_compose() example

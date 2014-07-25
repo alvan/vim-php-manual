@@ -4,7 +4,7 @@ basename
 
 basename — Returns trailing name component of path
 
-===============================================================================
+==============================================================================
 *Description*
 
     string basename ( string $path [, string $suffix ] )~
@@ -12,7 +12,7 @@ basename — Returns trailing name component of path
 Given a string containing the path to a file or directory, this function will
 return the trailing name component.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {path}
@@ -26,18 +26,18 @@ return the trailing name component.
 
     If the name component ends in {suffix} this will also be cut off.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the base name of the given {path}.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version           Description
 4.1.0   The {suffix} parameter was added
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 basename() example
@@ -58,7 +58,7 @@ The above example will output:
 4) .
 5)
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -72,7 +72,7 @@ The above example will output:
     multibyte character paths, the matching locale must be set using the |
     setlocale| function.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |dirname| - Returns parent directory's path

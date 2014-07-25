@@ -4,7 +4,7 @@ cubrid_lob_export
 
 cubrid_lob_export — Export BLOB/CLOB data to file
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool cubrid_lob_export ( resource $conn_identifier , resource~
@@ -14,7 +14,7 @@ cubrid_lob_export() is used to get BLOB/CLOB data from CUBRID database, and
 saves its contents to a file. To use this function, you must use |
 cubrid_lob_get| first to get BLOB/CLOB info from CUBRID.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {conn_identifier}
@@ -29,14 +29,14 @@ cubrid_lob_get| first to get BLOB/CLOB info from CUBRID.
 
     Path name of the file.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 TRUE, when process is successful.
 
 FALSE, when process is unsuccessful.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_lob_export() example
@@ -55,7 +55,7 @@ Example #1 cubrid_lob_export() example
     cubrid_disconnect($conn);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |cubrid_lob_get| - Get BLOB/CLOB data

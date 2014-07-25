@@ -4,7 +4,7 @@ eio_unlink
 
 eio_unlink — Delete a name and possibly the file it refers to
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource eio_unlink ( string $path [, int $pri = EIO_PRI_DEFAULT [,~
@@ -12,7 +12,7 @@ eio_unlink — Delete a name and possibly the file it refers to
 
 eio_unlink() deletes a name from the file system.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {path}
@@ -26,8 +26,8 @@ eio_unlink() deletes a name from the file system.
 
 {callback}
 
-    {callback} function is called when the request is done. It should match the
-    following prototype:
+    {callback} function is called when the request is done. It should match
+    the following prototype:
     void callback(mixed $data, int $result[, resource $req]);
 
     {data}
@@ -48,7 +48,7 @@ eio_unlink() deletes a name from the file system.
 
     Arbitrary variable passed to {callback}.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 eio_unlink() returns request resource on success or FALSE on error.

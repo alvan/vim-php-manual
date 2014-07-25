@@ -9,13 +9,13 @@ Warning
 
 This extension is deprecated as of PHP 5.5.0, and will be removed in the
 future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
-MySQL: choosing an API guide and related FAQ for more information. Alternatives
-to this function include:
+MySQL: choosing an API guide and related FAQ for more information.
+Alternatives to this function include:
 
   * mysqli_fetch_array()
   * PDOStatement::fetch()
 
-===============================================================================
+==============================================================================
 *Description*
 
     array mysql_fetch_array ( resource $result [, int $result_type =~
@@ -24,7 +24,7 @@ to this function include:
 Returns an array that corresponds to the fetched row and moves the internal
 data pointer ahead.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { result}
@@ -37,22 +37,23 @@ data pointer ahead.
     The type of array that is to be fetched. It's a constant and can take the
     following values: MYSQL_ASSOC, MYSQL_NUM, and MYSQL_BOTH.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an array of strings that corresponds to the fetched row, or FALSE if
-there are no more rows. The type of returned array depends on how {result_type}
-is defined. By using MYSQL_BOTH (default), you'll get an array with both
-associative and number indices. Using MYSQL_ASSOC, you only get associative
-indices (as |mysql_fetch_assoc| works), using MYSQL_NUM, you only get number
-indices (as |mysql_fetch_row| works).
+there are no more rows. The type of returned array depends on how
+{result_type} is defined. By using MYSQL_BOTH (default), you'll get an array
+with both associative and number indices. Using MYSQL_ASSOC, you only get
+associative indices (as |mysql_fetch_assoc| works), using MYSQL_NUM, you only
+get number indices (as |mysql_fetch_row| works).
 
-If two or more columns of the result have the same field names, the last column
-will take precedence. To access the other column(s) of the same name, you must
-use the numeric index of the column or make an alias for the column. For
-aliased columns, you cannot access the contents with the original column name.
+If two or more columns of the result have the same field names, the last
+column will take precedence. To access the other column(s) of the same name,
+you must use the numeric index of the column or make an alias for the column.
+For aliased columns, you cannot access the contents with the original column
+name.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Query with aliased duplicate field names
@@ -107,7 +108,7 @@ Example #4 mysql_fetch_array() with MYSQL_BOTH
     mysql_free_result($result);
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: Performance
@@ -120,7 +121,7 @@ Example #4 mysql_fetch_array() with MYSQL_BOTH
 
     Note: This function sets NULL fields to the PHP NULL value.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mysql_fetch_row| - Get a result row as an enumerated array

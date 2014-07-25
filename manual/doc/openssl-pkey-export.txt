@@ -4,11 +4,11 @@ openssl_pkey_export
 
 openssl_pkey_export — Gets an exportable representation of a key into a string
 
-===============================================================================
+==============================================================================
 *Description*
 
-    bool openssl_pkey_export ( mixed $key , string &$out [, string $passphrase~
-    [, array $configargs ]] )~
+    bool openssl_pkey_export ( mixed $key , string &$out [, string~
+    $passphrase [, array $configargs ]] )~
 
 openssl_pkey_export() exports {key} as a PEM encoded string and stores it into
 {out} (which is passed by reference).
@@ -17,7 +17,7 @@ openssl_pkey_export() exports {key} as a PEM encoded string and stores it into
     operate correctly. See the notes under the installation section for more
     information.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {key}
@@ -30,11 +30,11 @@ openssl_pkey_export() exports {key} as a PEM encoded string and stores it into
 
 {configargs}
 
-    {configargs} can be used to fine-tune the export process by specifying and/
-    or overriding options for the openssl configuration file. See |
+    {configargs} can be used to fine-tune the export process by specifying and
+    /or overriding options for the openssl configuration file. See |
     openssl_csr_new| for more information about {configargs}.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.

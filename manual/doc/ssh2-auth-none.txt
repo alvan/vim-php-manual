@@ -4,7 +4,7 @@ ssh2_auth_none
 
 ssh2_auth_none — Authenticate as "none"
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed ssh2_auth_none ( resource $session , string $username )~
@@ -13,7 +13,7 @@ Attempt "none" authentication which usually will (and should) fail. As part of
 the failure, this function will return an array of accepted authentication
 methods.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {session}
@@ -24,13 +24,13 @@ methods.
 
     Remote user name.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE if the server does accept "none" as an authentication method, or
 an array of accepted authentication methods on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Retrieving a list of authentication methods

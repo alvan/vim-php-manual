@@ -4,7 +4,7 @@ socket_last_error
 
 socket_last_error — Returns the last error on the socket
 
-===============================================================================
+==============================================================================
 *Description*
 
     int socket_last_error ([ resource $socket ] )~
@@ -17,19 +17,19 @@ socket on failure and |socket_select| which can fail for reasons not directly
 tied to a particular socket. The error code is suitable to be fed to |
 socket_strerror| which returns a string describing the given error code.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {socket}
 
     A valid socket resource created with |socket_create|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 This function returns a socket error code.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 socket_last_error() example
@@ -45,13 +45,13 @@ Example #1 socket_last_error() example
     }
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
 
-    socket_last_error() does not clear the error code, use |socket_clear_error|
-    for this purpose.
+    socket_last_error() does not clear the error code, use |socket_clear_error
+    | for this purpose.
 
 
 vim:ft=help:

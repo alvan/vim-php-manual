@@ -5,24 +5,25 @@ mysqlnd_qc_get_query_trace_log
 mysqlnd_qc_get_query_trace_log — Returns a backtrace for each query inspected
 by the query cache
 
-===============================================================================
+==============================================================================
 *Description*
 
     array mysqlnd_qc_get_query_trace_log ( void )~
 
-Returns a backtrace for each query inspected by the query cache. The collection
-of the backtrace is disabled by default. To collect the backtrace you have to
-set the PHP configuration directive mysqlnd_qc.collect_query_trace to 1
+Returns a backtrace for each query inspected by the query cache. The
+collection of the backtrace is disabled by default. To collect the backtrace
+you have to set the PHP configuration directive mysqlnd_qc.collect_query_trace
+to 1
 
 The maximum depth of the backtrace is limited to the depth set with the PHP
 configuration directive mysqlnd_qc.query_trace_bt_depth.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 This function has no parameters.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 An array of query backtrace. Every list entry contains the query string, a
@@ -43,9 +44,9 @@ eligible_for_caching TRUE if query is cacheable otherwise FALSE.
                      TRUE if the query has generated a result set and at least
                      one column from the result set has no table name set in
                      its metadata. This is usually the case with queries which
-no_table             one probably do not want to cache such as SELECT SLEEP(1).
-                     By default any such query will not be added to the cache.
-                     See also PHP configuration directive
+no_table             one probably do not want to cache such as SELECT SLEEP(1)
+                     . By default any such query will not be added to the
+                     cache. See also PHP configuration directive
                      mysqlnd_qc.cache_no_table.
 was_added            TRUE if the query result has been put into the cache,
                      otherwise FALSE.
@@ -53,7 +54,7 @@ was_added            TRUE if the query result has been put into the cache,
 was_already_in_cache cache if it was not already in the cache (cache hit).
                      Otherwise FALSE.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mysqlnd_qc_get_query_trace_log() example
@@ -224,7 +225,7 @@ array(6) {
   }
 }
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * Runtime configuration

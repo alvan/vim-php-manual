@@ -4,7 +4,7 @@ fann_get_total_neurons
 
 fann_get_total_neurons — Get the total number of neurons in the entire network
 
-===============================================================================
+==============================================================================
 *Description*
 
     int fann_get_total_neurons ( resource $ann )~
@@ -12,14 +12,14 @@ fann_get_total_neurons — Get the total number of neurons in the entire network
 Get the total number of neurons in the entire network. This number does also
 include the bias neurons, so a 2-4-2 network has 2+4+2 +2(bias) = 10 neurons.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {ann}
 
     Neural network resource.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Total number of neurons in the entire network, or FALSE on error.

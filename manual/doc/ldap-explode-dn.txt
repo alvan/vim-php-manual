@@ -4,7 +4,7 @@ ldap_explode_dn
 
 ldap_explode_dn — Splits DN into its component parts
 
-===============================================================================
+==============================================================================
 *Description*
 
     array ldap_explode_dn ( string $dn , int $with_attrib )~
@@ -12,7 +12,7 @@ ldap_explode_dn — Splits DN into its component parts
 Splits the DN returned by |ldap_get_dn| and breaks it up into its component
 parts. Each part is known as Relative Distinguished Name, or RDN.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {dn}
@@ -25,7 +25,7 @@ parts. Each part is known as Relative Distinguished Name, or RDN.
     attributes as well. To get RDNs with the attributes (i.e. in attribute=
     value format) set {with_attrib} to 0 and to get only values set it to 1.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an array of all DN components. The first element in this array has

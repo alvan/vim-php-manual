@@ -4,7 +4,7 @@ apc_cas
 
 apc_cas — Updates an old value with a new value
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool apc_cas ( string $key , int $old , int $new )~
@@ -12,7 +12,7 @@ apc_cas — Updates an old value with a new value
 apc_cas() updates an already existing integer value if the {old} parameter
 matches the currently stored value with the value of the {new} parameter.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {key}
@@ -27,12 +27,12 @@ matches the currently stored value with the value of the {new} parameter.
 
     The new value to update to.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 apc_cas() example
@@ -67,7 +67,7 @@ $f__bar == 1 ? 2 : 1 = fail
 $perfection == 2 ? 1 : 2 = epic fail
 $foobar = 1
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |apc_dec| - Decrease a stored number

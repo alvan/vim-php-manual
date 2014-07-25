@@ -4,7 +4,7 @@ session_save_path
 
 session_save_path — Get and/or set the current session save path
 
-===============================================================================
+==============================================================================
 *Description*
 
     string session_save_path ([ string $path ] )~
@@ -12,7 +12,7 @@ session_save_path — Get and/or set the current session save path
 session_save_path() returns the path of the current directory used to save
 session data.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {path}
@@ -27,12 +27,12 @@ session data.
         filesystem that handles lots of small files efficiently. For example,
         on Linux, reiserfs may provide better performance than ext2fs.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the path of the current directory used for data storage.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * The session.save_path configuration directive

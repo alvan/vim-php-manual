@@ -5,16 +5,16 @@ get_defined_constants
 get_defined_constants — Returns an associative array with the names of all the
 constants and their values
 
-===============================================================================
+==============================================================================
 *Description*
 
     array get_defined_constants ([ bool $categorize = false ] )~
 
 Returns the names and values of all the constants currently defined. This
-includes those created by extensions as well as those created with the |define|
-function.
+includes those created by extensions as well as those created with the |define
+| function.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {categorize}
@@ -66,26 +66,27 @@ function.
 
     )
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an array of constant name => constant value array, optionally groupped
 by extension name registering the constant.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 5.3.1   Windows only: Core constants are categorized under Core, previously
         mhash.
 5.3.0   Core constants are categorized under Core, previously internal. On
         Windows, the Core Constants are categorized under mhash.
         The {categorize} parameter now operates appropriately. Previously, the
-5.2.11  {categorize} parameter was interpreted as !is_null($categorize), making
-        any value other than NULL force the constants to be categorized.
+5.2.11  {categorize} parameter was interpreted as !is_null($categorize),
+        making any value other than NULL force the constants to be
+        categorized.
 5.0.0   The {categorize} parameter was added.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 get_defined_constants() Example
@@ -113,7 +114,7 @@ Array
     [TRUE] => 1
 )
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |defined| - Checks whether a given named constant exists

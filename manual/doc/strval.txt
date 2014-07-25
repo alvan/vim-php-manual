@@ -4,7 +4,7 @@ strval
 
 strval — Get string value of a variable
 
-===============================================================================
+==============================================================================
 *Description*
 
     string strval ( mixed $var )~
@@ -16,7 +16,7 @@ This function performs no formatting on the returned value. If you are looking
 for a way to format a numeric value as a string, please see |sprintf| or |
 number_format|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {var}
@@ -27,12 +27,12 @@ number_format|.
     method. You cannot use strval() on arrays or on objects that do not
     implement the __toString() method.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The string value of {var}.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 strval() example using PHP 5's magic __toString() method.
@@ -50,7 +50,7 @@ Example #1 strval() example using PHP 5's magic __toString() method.
     echo strval(new StrValTest);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |boolval| - Get the boolean value of a variable

@@ -4,7 +4,7 @@ dba_sync
 
 dba_sync — Synchronize database
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool dba_sync ( resource $handle )~
@@ -12,19 +12,19 @@ dba_sync — Synchronize database
 dba_sync() synchronizes the database. This will probably trigger a physical
 write to the disk, if supported.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {handle}
 
     The database handler, returned by |dba_open| or |dba_popen|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |dba_optimize| - Optimize database

@@ -5,21 +5,21 @@ sqlsrv_client_info
 sqlsrv_client_info — Returns information about the client and specified
 connection
 
-===============================================================================
+==============================================================================
 *Description*
 
     array sqlsrv_client_info ( resource $conn )~
 
 Returns information about the client and specified connection
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {conn}
 
     The connection about which information is returned.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an associative array with keys described in the table below. Returns
@@ -32,7 +32,7 @@ DriverODBCVer ODBC version (xx.yy)
 DriverVer     SQL Server Native Client DLL version (10.5.xxx)
 ExtensionVer  php_sqlsrv.dll version (2.0.xxx.x)
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 sqlsrv_client_info() example
@@ -55,7 +55,7 @@ Example #1 sqlsrv_client_info() example
     }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |sqlsrv_server_info| - Returns information about the server

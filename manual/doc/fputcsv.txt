@@ -4,7 +4,7 @@ fputcsv
 
 fputcsv — Format line as CSV and write to file pointer
 
-===============================================================================
+==============================================================================
 *Description*
 
     int fputcsv ( resource $handle , array $fields [, string $delimiter =~
@@ -13,7 +13,7 @@ fputcsv — Format line as CSV and write to file pointer
 fputcsv() formats a line (passed as a {fields} array) as CSV and write it
 (terminated by a newline) to the specified file {handle}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {handle}
@@ -35,12 +35,12 @@ fputcsv() formats a line (passed as a {fields} array) as CSV and write it
     The optional {enclosure} parameter sets the field enclosure (one character
     only).
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the length of the written string or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 fputcsv() example
@@ -69,15 +69,15 @@ aaa,bbb,ccc,dddd
 """aaa""","""bbb"""
 
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: If PHP is not properly recognizing the line endings when reading
     files either on or created by a Macintosh computer, enabling the
-    auto_detect_line_endings run-time configuration option may help resolve the
-    problem.
+    auto_detect_line_endings run-time configuration option may help resolve
+    the problem.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |fgetcsv| - Gets line from file pointer and parse for CSV fields

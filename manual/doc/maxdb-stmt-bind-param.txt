@@ -4,16 +4,16 @@ maxdb_stmt::bind_param
 
 (PECL maxdb >= 1.0)
 
-maxdb_stmt_bind_param -- maxdb_stmt::bind_param — Binds variables to a prepared
-statement as parameters
+maxdb_stmt_bind_param -- maxdb_stmt::bind_param — Binds variables to a
+prepared statement as parameters
 
-===============================================================================
+==============================================================================
 *Description*
 
 Procedural style
 
-    bool maxdb_stmt_bind_param ( resource $stmt , string $types , mixed &$var1~
-    [, mixed &$... ] )~
+    bool maxdb_stmt_bind_param ( resource $stmt , string $types , mixed~
+    &$var1 [, mixed &$... ] )~
 
 Object oriented style
 
@@ -34,16 +34,16 @@ the SQL statement that was passed to |maxdb_prepare|. The string {types}
 contains one or more characters which specify the types for the corresponding
 bind variables.
 
-The extended syntax of maxdb_stmt_bind_param() allows to give the parameters as
-an array instead of a variable list of PHP variables to the function. If the
-array variable has not been used before calling maxdb_stmt_bind_param(), it has
-to be initialized as an emtpy array. See the examples how to use 
+The extended syntax of maxdb_stmt_bind_param() allows to give the parameters
+as an array instead of a variable list of PHP variables to the function. If
+the array variable has not been used before calling maxdb_stmt_bind_param(),
+it has to be initialized as an emtpy array. See the examples how to use 
 maxdb_stmt_bind_param() with extended syntax.
 
 Variables for SELECT INTO SQL statements can also be bound using 
-maxdb_stmt_bind_param(). Parameters for database procedures can be bound using 
-maxdb_stmt_bind_param(). See the examples how to use maxdb_stmt_bind_param() in
-this cases.
+maxdb_stmt_bind_param(). Parameters for database procedures can be bound using
+maxdb_stmt_bind_param(). See the examples how to use maxdb_stmt_bind_param()
+in this cases.
 
 If a variable bound as INTO variable to an SQL statement was used before, the
 content of this variable is overwritten by the data of the SELECT INTO
@@ -62,12 +62,12 @@ d         corresponding variable has type double
 s         corresponding variable has type string
 b         corresponding variable is a blob and will be sent in packages
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Object oriented style
@@ -261,8 +261,8 @@ Example #5 Object oriented style (extended syntax)
     /* close statement and connection */
     $stmt->close();
 
-    $result = $maxdb->query("SELECT * from temp.mycity WHERE zip = '11111' OR zip =
-     '22222'");
+    $result = $maxdb->query("SELECT * from temp.mycity WHERE zip = '11111' OR zip 
+    = '22222'");
     if ($result) {
       while ($row = $result->fetch_row()) {
         printf ("%s %s %s\n", $row[0], $row[1], $row[2]);
@@ -286,14 +286,14 @@ The above example will output something similar to:
 22222 New Orleans LA
 2 Rows deleted.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |maxdb_stmt_bind_result| - Binds variables to a prepared statement for
     result storage
   * |maxdb_stmt_execute| - Executes a prepared Query
-  * |maxdb_stmt_fetch| - Fetch results from a prepared statement into the bound
-    variables
+  * |maxdb_stmt_fetch| - Fetch results from a prepared statement into the
+    bound variables
   * |maxdb_prepare| - Prepare an SQL statement for execution
   * |maxdb_stmt_send_long_data| - Send data in blocks
   * |maxdb_stmt_errno| - Returns the error code for the most recent statement

@@ -4,7 +4,7 @@ stream_context_create
 
 stream_context_create — Creates a stream context
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource stream_context_create ([ array $options [, array $params ]] )~
@@ -12,7 +12,7 @@ stream_context_create — Creates a stream context
 Creates and returns a stream context with any options supplied in {options}
 preset.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {options}
@@ -27,18 +27,18 @@ preset.
     Must be an associative array in the format $arr['parameter'] = $value.
     Refer to context parameters for a listing of standard stream parameters.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 A stream context resource.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version              Description
 5.3.0   Added the optional {params} argument.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Using stream_context_create()
@@ -61,7 +61,7 @@ Example #1 Using stream_context_create()
     fclose($fp);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |stream_context_set_option| - Sets an option for a stream/wrapper/context

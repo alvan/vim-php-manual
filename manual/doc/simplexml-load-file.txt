@@ -4,7 +4,7 @@ simplexml_load_file
 
 simplexml_load_file — Interprets an XML file into an object
 
-===============================================================================
+==============================================================================
 *Description*
 
     SimpleXMLElement simplexml_load_file ( string $filename [, string~
@@ -13,7 +13,7 @@ simplexml_load_file — Interprets an XML file into an object
 
 Convert the well-formed XML document in the given file to an object.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {filename}
@@ -23,8 +23,8 @@ Convert the well-formed XML document in the given file to an object.
         Note:
 
         Libxml 2 unescapes the URI, so if you want to pass e.g. b&c as the URI
-        parameter a, you have to call simplexml_load_file(rawurlencode('http://
-        example.com/?a=' . urlencode('b&c'))). Since PHP 5.1.0 you don't need
+        parameter a, you have to call simplexml_load_file(rawurlencode('http:/
+        /example.com/?a=' . urlencode('b&c'))). Since PHP 5.1.0 you don't need
         to do this because PHP will do it for you.
 
 {class_name}
@@ -46,13 +46,13 @@ Convert the well-formed XML document in the given file to an object.
 
     TRUE if {ns} is a prefix, FALSE if it's a URI; defaults to FALSE.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns an object of class SimpleXMLElement with properties containing the data
-held within the XML document, or FALSE on failure.
+Returns an object of class SimpleXMLElement with properties containing the
+data held within the XML document, or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Errors/Exceptions*
 
 Produces an E_WARNING error message for each error found in the XML data.
@@ -62,7 +62,7 @@ Tip
 Use |libxml_use_internal_errors| to suppress all XML errors, and |
 libxml_get_errors| to iterate over them afterwards.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Interpret an XML document
@@ -90,7 +90,7 @@ SimpleXMLElement Object
 
 At this point, you can go about using $xml->title and any other elements.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |simplexml_load_string| - Interprets a string of XML into an object

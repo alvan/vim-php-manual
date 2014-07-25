@@ -4,7 +4,7 @@ pcntl_sigprocmask
 
 pcntl_sigprocmask — Sets and retrieves blocked signals
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool pcntl_sigprocmask ( int $how , array $set [, array &$oldset ] )~
@@ -12,7 +12,7 @@ pcntl_sigprocmask — Sets and retrieves blocked signals
 The pcntl_sigprocmask() function adds, removes or sets blocked signals,
 depending on the {how} parameter.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {how}
@@ -20,8 +20,8 @@ depending on the {how} parameter.
     Sets the behavior of pcntl_sigprocmask(). Possible values:
       + SIG_BLOCK: Add the signals to the currently blocked signals.
       + SIG_UNBLOCK: Remove the signals from the currently blocked signals.
-      + SIG_SETMASK: Replace the currently blocked signals by the given list of
-        signals.
+      + SIG_SETMASK: Replace the currently blocked signals by the given list
+        of signals.
 
 {set}
 
@@ -32,12 +32,12 @@ depending on the {how} parameter.
     The {oldset} parameter is set to an array containing the list of the
     previously blocked signals.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 pcntl_sigprocmask() example
@@ -48,7 +48,7 @@ Example #1 pcntl_sigprocmask() example
     pcntl_sigprocmask(SIG_UNBLOCK, array(SIGHUP), $oldset);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |pcntl_sigwaitinfo| - Waits for signals

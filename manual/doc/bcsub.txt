@@ -4,15 +4,15 @@ bcsub
 
 bcsub — Subtract one arbitrary precision number from another
 
-===============================================================================
+==============================================================================
 *Description*
 
-    string bcsub ( string $left_operand = "" , string $right_operand~
-    = "" [, int $scale = int ] )~
+    string bcsub ( string $left_operand = "" , string~
+    $right_operand = "" [, int $scale = int ] )~
 
 Subtracts the {right_operand} from the {left_operand}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {left_operand}
@@ -29,12 +29,12 @@ Subtracts the {right_operand} from the {left_operand}.
     decimal place in the result. You can also set the global default scale for
     all functions by using |bcscale|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The result of the subtraction, as a string.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 bcsub() example
@@ -49,7 +49,7 @@ Example #1 bcsub() example
 
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |bcadd| - Add two arbitrary precision numbers

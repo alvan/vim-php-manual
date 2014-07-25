@@ -4,15 +4,15 @@ nl2br
 
 nl2br — Inserts HTML line breaks before all newlines in a string
 
-===============================================================================
+==============================================================================
 *Description*
 
     string nl2br ( string $string [, bool $is_xhtml = true ] )~
 
-Returns {string} with '<br />' or '<br>' inserted before all newlines (\r\n, \n
-\r, \n and \r).
+Returns {string} with '<br />' or '<br>' inserted before all newlines (\r\n, \
+n\r, \n and \r).
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {string}
@@ -23,12 +23,12 @@ Returns {string} with '<br />' or '<br>' inserted before all newlines (\r\n, \n
 
     Whether to use XHTML compatible line breaks or not.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the altered string.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Using nl2br()
@@ -67,15 +67,15 @@ is<br />
 a<br />
 string<br />
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 5.3.0   Added the optional {is_xhtml} parameter.
-4.0.5   nl2br() is now XHTML compliant. All older versions will return {string}
-        with '<br>' inserted before newlines instead of '<br />'.
+4.0.5   nl2br() is now XHTML compliant. All older versions will return
+        {string} with '<br>' inserted before newlines instead of '<br />'.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |htmlspecialchars| - Convert special characters to HTML entities

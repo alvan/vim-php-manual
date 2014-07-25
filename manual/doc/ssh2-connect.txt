@@ -4,7 +4,7 @@ ssh2_connect
 
 ssh2_connect — Connect to an SSH server
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource ssh2_connect ( string $host [, int $port = 22 [, array $methods~
@@ -15,7 +15,7 @@ Establish a connection to a remote SSH server.
 Once connected, the client should verify the server's hostkey using |
 ssh2_fingerprint|, then authenticate using either password or public key.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {host}
@@ -28,20 +28,20 @@ ssh2_fingerprint|, then authenticate using either password or public key.
     described below.
 
     {methods} may be an associative array with any or all of the following
-                                  parameters.
-         Index               Meaning                 Supported Values*
-                     List of key exchange    diffie-hellman-group1-sha1,
-    kex              methods to advertise,   diffie-hellman-group14-sha1, and
-                     comma separated in      diffie-hellman-group-exchange-sha1
+                                 parameters.
+         Index              Meaning                 Supported Values*
+                     List of key exchange   diffie-hellman-group1-sha1,
+    kex              methods to advertise,  diffie-hellman-group14-sha1, and
+                     comma separated in     diffie-hellman-group-exchange-sha1
                      order of preference.
-                     List of hostkey methods
-    hostkey          to advertise, comma     ssh-rsa and ssh-dss
-                     separated in order of
-                     preference.
+                     List of hostkey
+    hostkey          methods to advertise,  ssh-rsa and ssh-dss
+                     comma separated in
+                     order of preference.
                      Associative array
                      containing crypt,
                      compression, and
-    client_to_server message authentication   
+    client_to_server message authentication  
                      code (MAC) method
                      preferences for
                      messages sent from
@@ -49,7 +49,7 @@ ssh2_fingerprint|, then authenticate using either password or public key.
                      Associative array
                      containing crypt,
                      compression, and
-    server_to_client message authentication   
+    server_to_client message authentication  
                      code (MAC) method
                      preferences for
                      messages sent from
@@ -58,20 +58,20 @@ ssh2_fingerprint|, then authenticate using either password or public key.
     * - Supported Values are dependent on methods supported by underlying
     library. See » libssh2 documentation for additional information.
 
-     {client_to_server} and {server_to_client} may be an associative array
+    {client_to_server} and {server_to_client} may be an associative array
                  with any or all of the following parameters.
     Index           Meaning                       Supported Values*
-          List of crypto methods to    rijndael-cbc@lysator.liu.se, aes256-cbc,
-    crypt advertise, comma separated   aes192-cbc, aes128-cbc, 3des-cbc,
+          List of crypto methods to    rijndael-cbc@lysator.liu.se, aes256-cbc
+    crypt advertise, comma separated   , aes192-cbc, aes128-cbc, 3des-cbc,
           in order of preference.      blowfish-cbc, cast128-cbc, arcfour, and
                                        none**
           List of compression methods
     comp  to advertise, comma          zlib and none
           separated in order of
           preference.
-          List of MAC methods to       hmac-sha1, hmac-sha1-96, hmac-ripemd160,
-    mac   advertise, comma separated   hmac-ripemd160@openssh.com, and none**
-          in order of preference.
+          List of MAC methods to       hmac-sha1, hmac-sha1-96, hmac-ripemd160
+    mac   advertise, comma separated   , hmac-ripemd160@openssh.com, and
+          in order of preference.      none**
 
         Note: Crypt and MAC method "none"
 
@@ -86,30 +86,30 @@ ssh2_fingerprint|, then authenticate using either password or public key.
     parameters.
 
                              Callbacks parameters
-      Index                        Meaning                        Prototype
-    ignore     Name of function to call when an                void ignore_cb
-               SSH2_MSG_IGNORE packet is received              ($message)
-                                                               void debug_cb
-    debug      Name of function to call when an SSH2_MSG_DEBUG ($message,
-               packet is received                              $language,
-                                                               $always_display)
+      Index                       Meaning                        Prototype
+    ignore     Name of function to call when an               void ignore_cb
+               SSH2_MSG_IGNORE packet is received             ($message)
+                                                              void debug_cb
+    debug      Name of function to call when an               ($message,
+               SSH2_MSG_DEBUG packet is received              $language,
+                                                              $always_display)
                Name of function to call when a packet is
-               received but the message authentication code    bool macerror_cb
-    macerror   failed. If the callback returns TRUE, the       ($packet)
+               received but the message authentication code   bool macerror_cb
+    macerror   failed. If the callback returns TRUE, the      ($packet)
                mismatch will be ignored, otherwise the
                connection will be terminated.
-                                                               void
-               Name of function to call when an                disconnect_cb
-    disconnect SSH2_MSG_DISCONNECT packet is received          ($reason,
-                                                               $message,
-                                                               $language)
+                                                              void
+               Name of function to call when an               disconnect_cb
+    disconnect SSH2_MSG_DISCONNECT packet is received         ($reason,
+                                                              $message,
+                                                              $language)
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a resource on success, or FALSE on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 ssh2_connect() example
@@ -140,7 +140,7 @@ key exchange.
     if (!$connection) die('Connection failed');
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ssh2_fingerprint| - Retrieve fingerprint of remote server

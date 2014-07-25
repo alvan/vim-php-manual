@@ -4,14 +4,14 @@ stream_socket_get_name
 
 stream_socket_get_name — Retrieve the name of the local or remote sockets
 
-===============================================================================
+==============================================================================
 *Description*
 
     string stream_socket_get_name ( resource $handle , bool $want_peer )~
 
 Returns the local or remote name of a given socket connection.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {handle}
@@ -20,15 +20,15 @@ Returns the local or remote name of a given socket connection.
 
 {want_peer}
 
-    If set to TRUE the remote socket name will be returned, if set to FALSE the
-    local socket name will be returned.
+    If set to TRUE the remote socket name will be returned, if set to FALSE
+    the local socket name will be returned.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The name of the socket.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |stream_socket_accept| - Accept a connection on a socket created by

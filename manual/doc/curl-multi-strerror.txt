@@ -4,26 +4,26 @@ curl_multi_strerror
 
 curl_multi_strerror — Return string describing error code
 
-===============================================================================
+==============================================================================
 *Description*
 
     string curl_multi_strerror ( int $errornum )~
 
 Returns a text error message describing the given CURLM error code.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {errornum}
 
     One of the » CURLM error codes constants.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns error string for valid error code, NULL otherwise.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 curl_multi_strerror() example
@@ -51,7 +51,7 @@ Example #1 curl_multi_strerror() example
     } while ($status === CURLM_CALL_MULTI_PERFORM || $active);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |curl_strerror| - Return string describing the given error code

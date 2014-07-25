@@ -4,15 +4,16 @@ sybase_fetch_field
 
 sybase_fetch_field — Get field information from a result
 
-===============================================================================
+==============================================================================
 *Description*
 
-    object sybase_fetch_field ( resource $result [, int $field_offset = -1 ] )~
+    object sybase_fetch_field ( resource $result [, int $field_offset = -1 ]~
+)~
 
-sybase_fetch_field() can be used in order to obtain information about fields in
-a certain query result.
+sybase_fetch_field() can be used in order to obtain information about fields
+in a certain query result.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
@@ -22,7 +23,7 @@ a certain query result.
     If the field offset isn't specified, the next field that wasn't yet
     retrieved by sybase_fetch_field() is retrieved.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an object containing field information.
@@ -36,7 +37,7 @@ The properties of the object are:
   * numeric - 1 if the column is numeric
   * type - datatype of the column
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |sybase_field_seek| - Sets field offset

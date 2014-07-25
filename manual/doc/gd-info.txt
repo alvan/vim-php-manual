@@ -4,7 +4,7 @@ gd_info
 
 gd_info — Retrieve information about the currently installed GD library
 
-===============================================================================
+==============================================================================
 *Description*
 
     array gd_info ( void )~
@@ -12,13 +12,13 @@ gd_info — Retrieve information about the currently installed GD library
 Gets information about the version and capabilities of the installed GD
 library.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an associative array.
 
-                    Elements of array returned by gd_info()
-Attribute                                Meaning
+                   Elements of array returned by gd_info()
+Attribute                               Meaning
 GD        string value describing the installed libgd version.
 Version
 FreeType  boolean value. TRUE if FreeType Support is installed.
@@ -49,7 +49,7 @@ Support
 
     Previous to PHP 5.3.0, the JPEG Support attribute was named JPG Support.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Using gd_info()
@@ -81,14 +81,14 @@ array(9) {
   bool(false)
 }
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version                  Description
 5.5.0   WebP Support added.
 5.3.0   JPG Support attribute renamed to JPEG Support.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |imagepng| - Output a PNG image to either the browser or a file

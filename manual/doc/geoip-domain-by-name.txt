@@ -4,7 +4,7 @@ geoip_domain_by_name
 
 geoip_domain_by_name — Get the second level domain name
 
-===============================================================================
+==============================================================================
 *Description*
 
     string geoip_domain_by_name ( string $hostname )~
@@ -12,24 +12,24 @@ geoip_domain_by_name — Get the second level domain name
 The geoip_domain_by_name() function will return the second level domain names
 associated with a hostname or an IP address.
 
-This function is currently only available to users who have bought a commercial
-GeoIP Domain Edition. A warning will be issued if the proper database cannot be
-located.
+This function is currently only available to users who have bought a
+commercial GeoIP Domain Edition. A warning will be issued if the proper
+database cannot be located.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {hostname}
 
     The hostname or IP address.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the domain name on success, or FALSE if the address cannot be found in
 the database.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A geoip_domain_by_name() example

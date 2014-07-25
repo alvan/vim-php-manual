@@ -4,7 +4,7 @@ ifx_fieldproperties
 
 ifx_fieldproperties — List of SQL fieldproperties
 
-===============================================================================
+==============================================================================
 *Description*
 
     array ifx_fieldproperties ( resource $result_id )~
@@ -14,7 +14,7 @@ associative array. Properties are encoded as: "SQLTYPE;length;precision;scale;
 ISNULLABLE" where SQLTYPE = the Informix type like "SQLVCHAR" etc. and
 ISNULLABLE = "Y" or "N".
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result_id}
@@ -22,13 +22,13 @@ ISNULLABLE = "Y" or "N".
     {result_id} is a valid resultid returned by |ifx_query| or |ifx_prepare|
     (select type queries only!).
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns an associative array with fieldnames as key and the SQL fieldproperties
-as data for a query with {result_id}. Returns FALSE on errors.
+Returns an associative array with fieldnames as key and the SQL
+fieldproperties as data for a query with {result_id}. Returns FALSE on errors.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Informix SQL fieldproperties
@@ -43,7 +43,7 @@ Example #1 Informix SQL fieldproperties
     }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ifx_fieldtypes| - List of Informix SQL fields

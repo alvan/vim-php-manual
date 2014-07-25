@@ -4,7 +4,7 @@ fread
 
 fread — Binary-safe file read
 
-===============================================================================
+==============================================================================
 *Description*
 
     string fread ( resource $handle , int $length )~
@@ -21,7 +21,7 @@ fread() reads up to {length} bytes from the file pointer referenced by
     8192) is made; depending on the previously buffered data, the size of the
     returned data may be larger than the chunk size.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {handle}
@@ -32,12 +32,12 @@ fread() reads up to {length} bytes from the file pointer referenced by
 
     Up to {length} number of bytes read.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the read string or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A simple fread() example
@@ -54,8 +54,8 @@ Example #2 Binary fread() example
 
 Warning
 
-On systems which differentiate between binary and text files (i.e. Windows) the
-file must be opened with 'b' included in |fopen| mode parameter.
+On systems which differentiate between binary and text files (i.e. Windows)
+the file must be opened with 'b' included in |fopen| mode parameter.
 
 <?php >
     $filename = "c:\\files\\somepic.gif";
@@ -88,7 +88,7 @@ data together in chunks as shown in the examples below.
     fclose($handle);
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -98,11 +98,11 @@ data together in chunks as shown in the examples below.
 
     Note:
 
-    Note that fread() reads from the current position of the file pointer. Use 
+    Note that fread() reads from the current position of the file pointer. Use
     |ftell| to find the current position of the pointer and |rewind| to rewind
     the pointer position.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |fwrite| - Binary-safe file write

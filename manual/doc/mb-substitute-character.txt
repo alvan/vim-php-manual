@@ -4,7 +4,7 @@ mb_substitute_character
 
 mb_substitute_character — Set/Get substitution character
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed mb_substitute_character ([ mixed $substrchar =~
@@ -12,13 +12,13 @@ mb_substitute_character — Set/Get substitution character
 
 Specifies a substitution character when input character encoding is invalid or
 character code does not exist in output character encoding. Invalid characters
-may be substituted NULL (no output), string or integer value (Unicode character
-code value).
+may be substituted NULL (no output), string or integer value (Unicode
+character code value).
 
 This setting affects |mb_convert_encoding|, |mb_convert_variables|, |
 mb_output_handler|, and |mb_send_mail|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {substrchar}
@@ -29,13 +29,13 @@ mb_output_handler|, and |mb_send_mail|.
       + "long": Output character code value (Example: U+3000, JIS+7E7E)
       + "entity": Output character entity (Example: Ȁ)
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-If {substchar} is set, it returns TRUE for success, otherwise returns FALSE. If
-{substchar} is not set, it returns the current setting.
+If {substchar} is set, it returns TRUE for success, otherwise returns FALSE.
+If {substchar} is not set, it returns the current setting.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mb_substitute_character() example

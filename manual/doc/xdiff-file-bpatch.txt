@@ -4,7 +4,7 @@ xdiff_file_bpatch
 
 xdiff_file_bpatch — Patch a file with a binary diff
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool xdiff_file_bpatch ( string $file , string $patch , string $dest )~
@@ -13,7 +13,7 @@ Patches a {file} with a binary {patch} and stores the result in a file {dest}.
 This function accepts patches created both via |xdiff_file_bdiff| and |
 xdiff_file_rabdiff| functions or their string counterparts.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {file}
@@ -28,12 +28,12 @@ xdiff_file_rabdiff| functions or their string counterparts.
 
     Path of the resulting file.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 xdiff_file_bpatch() example
@@ -53,7 +53,7 @@ The following code applies binary diff to a file.
 
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -61,7 +61,7 @@ The following code applies binary diff to a file.
     Both files ({file} and {patch}) will be loaded into memory so ensure that
     your memory_limit is set high enough.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |xdiff_file_bdiff| - Make binary diff of two files

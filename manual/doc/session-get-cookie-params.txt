@@ -4,14 +4,14 @@ session_get_cookie_params
 
 session_get_cookie_params — Get the session cookie parameters
 
-===============================================================================
+==============================================================================
 *Description*
 
     array session_get_cookie_params ( void )~
 
 Gets the session cookie parameters.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an array with the current session cookie information, the array
@@ -23,14 +23,14 @@ contains the following items:
   * "secure" - The cookie should only be sent over secure connections.
   * "httponly" - The cookie can only be accessed through the HTTP protocol.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version                      Description
 5.2.0   The "httponly" entry was added in the returned array.
 4.0.4   The "secure" entry was added in the returned array.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * session.cookie_lifetime

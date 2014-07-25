@@ -4,7 +4,7 @@ escapeshellarg
 
 escapeshellarg — Escape a string to be used as a shell argument
 
-===============================================================================
+==============================================================================
 *Description*
 
     string escapeshellarg ( string $arg )~
@@ -16,19 +16,19 @@ should be used to escape individual arguments to shell functions coming from
 user input. The shell functions include |exec|, |system| and the backtick
 operator.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {arg}
 
     The argument that will be escaped.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The escaped string.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 escapeshellarg() example
@@ -37,7 +37,7 @@ Example #1 escapeshellarg() example
     system('ls '.escapeshellarg($dir));
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |escapeshellcmd| - Escape shell metacharacters

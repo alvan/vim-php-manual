@@ -4,16 +4,16 @@ yaml_parse_file
 
 yaml_parse_file — Parse a YAML stream from a file
 
-===============================================================================
+==============================================================================
 *Description*
 
-    mixed yaml_parse_file ( string $filename [, int $pos = 0 [, int &$ndocs [,~
-    array $callbacks ]]] )~
+    mixed yaml_parse_file ( string $filename [, int $pos = 0 [, int &$ndocs~
+    [, array $callbacks ]]] )~
 
 Convert all or part of a YAML document stream read from a file to a PHP
 variable.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {filename}
@@ -35,14 +35,14 @@ variable.
     Content handlers for YAML nodes. Associative array of YAML tag => callable
     mappings. See parse callbacks for more details.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the value encoded in {input} in appropriate PHP type or FALSE on
 failure. If {pos} is -1 an array will be returned with one entry for each
 document found in the stream.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |yaml_parse| - Parse a YAML stream

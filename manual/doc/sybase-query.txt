@@ -4,7 +4,7 @@ sybase_query
 
 sybase_query — Sends a Sybase query
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed sybase_query ( string $query [, resource $link_identifier ] )~
@@ -12,24 +12,24 @@ sybase_query — Sends a Sybase query
 sybase_query() sends a query to the currently active database on the server
 that's associated with the specified link identifier.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {query}
 
 {link_identifier}
 
-    If the link identifier isn't specified, the last opened link is assumed. If
-    no link is open, the function tries to establish a link as if |
+    If the link identifier isn't specified, the last opened link is assumed.
+    If no link is open, the function tries to establish a link as if |
     sybase_connect| was called, and use it.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns a positive Sybase result identifier on success, FALSE on error, or TRUE
-if the query was successful but didn't return any columns.
+Returns a positive Sybase result identifier on success, FALSE on error, or
+TRUE if the query was successful but didn't return any columns.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |sybase_select_db| - Selects a Sybase database

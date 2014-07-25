@@ -4,7 +4,7 @@ fgetss
 
 fgetss — Gets line from file pointer and strip HTML tags
 
-===============================================================================
+==============================================================================
 *Description*
 
     string fgetss ( resource $handle [, int $length [, string $allowable_tags~
@@ -13,7 +13,7 @@ fgetss — Gets line from file pointer and strip HTML tags
 Identical to |fgets|, except that fgetss() attempts to strip any NUL bytes,
 HTML and PHP tags from the text it reads.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {handle}
@@ -30,7 +30,7 @@ HTML and PHP tags from the text it reads.
     You can use the optional third parameter to specify tags which should not
     be stripped.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a string of up to {length} - 1 bytes read from the file pointed to by
@@ -38,7 +38,7 @@ Returns a string of up to {length} - 1 bytes read from the file pointed to by
 
 If an error occurs, returns FALSE.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version            Description
@@ -71,15 +71,15 @@ The above example will output something similar to:
 
 Text outside of the HTML block.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: If PHP is not properly recognizing the line endings when reading
     files either on or created by a Macintosh computer, enabling the
-    auto_detect_line_endings run-time configuration option may help resolve the
-    problem.
+    auto_detect_line_endings run-time configuration option may help resolve
+    the problem.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |fgets| - Gets line from file pointer

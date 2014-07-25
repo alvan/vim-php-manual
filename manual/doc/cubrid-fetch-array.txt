@@ -5,16 +5,17 @@ cubrid_fetch_array
 cubrid_fetch_array — Fetch a result row as an associative array, a numeric
 array, or both
 
-===============================================================================
+==============================================================================
 *Description*
 
-    array cubrid_fetch_array ( resource $result [, int $type = CUBRID_BOTH ] )~
+    array cubrid_fetch_array ( resource $result [, int $type = CUBRID_BOTH ]~
+)~
 
 The cubrid_fetch_array() function is used to get a single row from the query
 result and returns an array. The cursor automatically moves to the next row
 after getting the result.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
@@ -26,7 +27,7 @@ after getting the result.
     Array type of the fetched result CUBRID_NUM, CUBRID_ASSOC, CUBRID_BOTH. If
     you need to operate the lob object, you can use CUBRID_LOB.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an array of strings that corresponds to the fetched row, when process
@@ -34,16 +35,16 @@ is successful.
 
 FALSE, when there are no more rows; NULL, when process is unsuccessful.
 
-The type of returned array depends on how type is defined. By using CUBRID_BOTH
-(default), you'll get an array with both associative and number indices, and
-you can decide which data type to use by setting the {type} argument. The
-{type} variable can be set to one of the following values:
+The type of returned array depends on how type is defined. By using
+CUBRID_BOTH (default), you'll get an array with both associative and number
+indices, and you can decide which data type to use by setting the {type}
+argument. The {type} variable can be set to one of the following values:
 
   * CUBRID_NUM : Numerical array (0-based)
   * CUBRID_ASSOC : Associative array
   * CUBRID_BOTH : Numerical & Associative array (default)
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_fetch_array() example
@@ -80,15 +81,15 @@ Faliro Coastal Zone Olympic Complex      34650.00   12171  Faliro, Athens, Greec
 Athens Olympic Stadium                   120400.00  71030  Maroussi, Athens, Greece
 Ano Liossia                              34000.00   12000  Ano Liosia, Athens, Greece
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |cubrid_execute| - Execute a prepared SQL statement
   * |cubrid_fetch| - Fetch the next row from a result set
   * |cubrid_fetch_row| - Return a numerical array with the values of the
     current row
-  * |cubrid_fetch_assoc| - Return the associative array that corresponds to the
-    fetched row
+  * |cubrid_fetch_assoc| - Return the associative array that corresponds to
+    the fetched row
   * |cubrid_fetch_object| - Fetche the next row and returns it as an object
 
 

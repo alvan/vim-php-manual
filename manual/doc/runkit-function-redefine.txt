@@ -5,7 +5,7 @@ runkit_function_redefine
 runkit_function_redefine — Replace a function definition with a new
 implementation
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool runkit_function_redefine ( string $funcname , string $arglist ,~
@@ -16,7 +16,7 @@ implementation
     modified. In order to override internal functions, you must enable the
     runkit.internal_override setting in php.ini.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {funcname}
@@ -31,12 +31,12 @@ implementation
 
     New code implementation
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A runkit_function_redefine() example
@@ -55,7 +55,7 @@ The above example will output:
 Original Testme Implementation
 New Testme Implementation
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |runkit_function_add| - Add a new function, similar to create_function

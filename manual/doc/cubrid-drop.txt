@@ -4,15 +4,15 @@ cubrid_drop
 
 cubrid_drop — Delete an instance using OID
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool cubrid_drop ( resource $conn_identifier , string $oid )~
 
-The cubrid_drop() function is used to delete an instance from database by using
-the {oid} of the instance.
+The cubrid_drop() function is used to delete an instance from database by
+using the {oid} of the instance.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {conn_identifier}
@@ -23,14 +23,14 @@ the {oid} of the instance.
 
     Oid of the instance that you want to delete.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 TRUE, when process is successful.
 
 FALSE, when process is unsuccessful.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_drop() example
@@ -134,7 +134,7 @@ array(4) {
   string(10) "b         "
 }
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |cubrid_is_instance| - Check whether the instance pointed by OID exists

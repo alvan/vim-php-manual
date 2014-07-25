@@ -5,16 +5,16 @@ w32api_invoke_function
 w32api_invoke_function — Invokes function funcname with the arguments passed
 after the function name
 
-===============================================================================
+==============================================================================
 *Description*
 
-    mixed w32api_invoke_function ( string $funcname , mixed $argument [, mixed~
-    $... ] )~
+    mixed w32api_invoke_function ( string $funcname , mixed $argument [,~
+    mixed $... ] )~
 
 w32api_invoke_function() tries to find the previously registered function,
 passing the parameters you provided.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {funcname}
@@ -28,20 +28,20 @@ passing the parameters you provided.
 
 {...}
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The return type is the one you set when you registered the function, the value
 is the one returned by the function itself.
 
-===============================================================================
+==============================================================================
 *Notes*
 
 Warning
 
 This function is EXPERIMENTAL. The behaviour of this function, its name, and
-surrounding documentation may change without notice in a future release of PHP.
-This function should be used at your own risk.
+surrounding documentation may change without notice in a future release of
+PHP. This function should be used at your own risk.
 
 
 vim:ft=help:

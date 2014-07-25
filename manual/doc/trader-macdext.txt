@@ -4,14 +4,14 @@ trader_macdext
 
 trader_macdext — MACD with controllable MA type
 
-===============================================================================
+==============================================================================
 *Description*
 
     array trader_macdext ( array $real [, integer $fastPeriod [, integer~
     $fastMAType [, integer $slowPeriod [, integer $slowMAType [, integer~
     $signalPeriod [, integer $signalMAType ]]]]]] )~
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {real}
@@ -38,14 +38,15 @@ trader_macdext — MACD with controllable MA type
 
 {signalPeriod}
 
-    Smoothing for the signal line (nb of period). Valid range from 1 to 100000.
+    Smoothing for the signal line (nb of period). Valid range from 1 to
+    100000.
 
 {signalMAType}
 
     Type of Moving Average for signal line. TRADER_MA_TYPE_* series of
     constants should be used.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an array with calculated data or false on failure.

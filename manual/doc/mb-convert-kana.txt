@@ -5,16 +5,16 @@ mb_convert_kana
 mb_convert_kana — Convert "kana" one from another ("zen-kaku", "han-kaku" and
 more)
 
-===============================================================================
+==============================================================================
 *Description*
 
-    string mb_convert_kana ( string $str [, string $option = "KV" [,~
-    string $encoding = mb_internal_encoding() ]] )~
+    string mb_convert_kana ( string $str [, string $option = "KV"~
+    [, string $encoding = mb_internal_encoding() ]] )~
 
 Performs a "han-kaku" - "zen-kaku" conversion for string {str}. This function
 is only useful for Japanese.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {str}
@@ -27,7 +27,7 @@ is only useful for Japanese.
 
     Specify with a combination of following options.
 
-                         Applicable Conversion Options
+                        Applicable Conversion Options
     Option                               Meaning
     r      Convert "zen-kaku" alphabets to "han-kaku"
     R      Convert "han-kaku" alphabets to "zen-kaku"
@@ -53,12 +53,12 @@ is only useful for Japanese.
     The {encoding} parameter is the character encoding. If it is omitted, the
     internal character encoding value will be used.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The converted string.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mb_convert_kana() example

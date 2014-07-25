@@ -4,7 +4,7 @@ ibase_fetch_assoc
 
 ibase_fetch_assoc — Fetch a result row from a query as an associative array
 
-===============================================================================
+==============================================================================
 *Description*
 
     array ibase_fetch_assoc ( resource $result [, int $fetch_flag = 0 ] )~
@@ -17,7 +17,7 @@ precedence. To access the other column(s) of the same name, you either need to
 access the result with numeric indices by using |ibase_fetch_row| or use alias
 names in your query.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
@@ -32,14 +32,14 @@ names in your query.
     cause this function to return date/time values as Unix timestamps instead
     of as formatted strings.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an associative array that corresponds to the fetched row. Subsequent
-calls will return the next row in the result set, or FALSE if there are no more
-rows.
+calls will return the next row in the result set, or FALSE if there are no
+more rows.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ibase_fetch_row| - Fetch a row from an InterBase database

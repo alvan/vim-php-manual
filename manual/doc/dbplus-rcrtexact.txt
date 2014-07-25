@@ -5,7 +5,7 @@ dbplus_rcrtexact
 dbplus_rcrtexact — Creates an exact but empty copy of a relation including
 indices
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed dbplus_rcrtexact ( string $name , resource $relation [, bool~
@@ -14,7 +14,7 @@ indices
 dbplus_rcrtexact() will create an exact but empty copy of the given {relation}
 under a new {name}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {name}
@@ -29,19 +29,19 @@ under a new {name}.
     parameter is set to TRUE and no other process is currently using the
     relation.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns resource on success or DBPLUS_ERR_UNKNOWN on failure.
 
-===============================================================================
+==============================================================================
 *Notes*
 
 Warning
 
 This function is EXPERIMENTAL. The behaviour of this function, its name, and
-surrounding documentation may change without notice in a future release of PHP.
-This function should be used at your own risk.
+surrounding documentation may change without notice in a future release of
+PHP. This function should be used at your own risk.
 
 
 vim:ft=help:

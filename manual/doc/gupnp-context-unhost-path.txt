@@ -4,14 +4,15 @@ gupnp_context_unhost_path
 
 gupnp_context_unhost_path — Stop hosting
 
-===============================================================================
+==============================================================================
 *Description*
 
-    bool gupnp_context_unhost_path ( resource $context , string $server_path )~
+    bool gupnp_context_unhost_path ( resource $context , string $server_path~
+)~
 
 Stop hosting the file or folder at {server_path}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {context}
@@ -22,12 +23,12 @@ Stop hosting the file or folder at {server_path}.
 
     Web server path where the file or folder is hosted.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |gupnp_context_new| - Create a new context

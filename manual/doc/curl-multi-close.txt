@@ -4,32 +4,32 @@ curl_multi_close
 
 curl_multi_close — Close a set of cURL handles
 
-===============================================================================
+==============================================================================
 *Description*
 
     void curl_multi_close ( resource $mh )~
 
 Closes a set of cURL handles.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {mh}
 
     A cURL multi handle returned by |curl_multi_init|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 No value is returned.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 curl_multi_close() example
 
-This example will create two cURL handles, add them to a multi handle, and then
-run them in parallel.
+This example will create two cURL handles, add them to a multi handle, and
+then run them in parallel.
 
 <?php >
     // create both cURL resources
@@ -62,7 +62,7 @@ run them in parallel.
 
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |curl_multi_init| - Returns a new cURL multi handle

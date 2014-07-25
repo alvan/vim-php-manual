@@ -4,7 +4,7 @@ px_date2string
 
 px_date2string — Converts a date into a string.
 
-===============================================================================
+==============================================================================
 *Description*
 
     string px_date2string ( resource $pxdoc , int $value , string $format )~
@@ -14,7 +14,7 @@ Paradox dates are the number of days since 1.1.0000. This function is just for
 convenience. It can be easily replaced by some math and the calendar functions
 as demonstrated in the example below.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {pxdoc}
@@ -28,15 +28,15 @@ as demonstrated in the example below.
 {format}
 
     String format similar to the format used by |date|. The placeholders
-    support by this function is a subset of those supported by |date| (Y, y, m,
-    n, d, j, L).
+    support by this function is a subset of those supported by |date| (Y, y,
+    m, n, d, j, L).
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Turn a paradox date into a human readable form
@@ -63,7 +63,7 @@ The above example will output:
 7/15/1917
 7/15/1917
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |px_timestamp2string| - Converts the timestamp into a string.

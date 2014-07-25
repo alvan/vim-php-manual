@@ -4,7 +4,7 @@ xdiff_file_merge3
 
 xdiff_file_merge3 — Merge 3 files into one
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed xdiff_file_merge3 ( string $old_file , string $new_file1 , string~
@@ -14,7 +14,7 @@ Merges three files into one and stores the result in a file {dest}. The
 {old_file} is an original version while {new_file1} and {new_file2} are
 modified versions of an original.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {old_file}
@@ -31,16 +31,16 @@ modified versions of an original.
 
 {dest}
 
-    Path of the resulting file, containing merged changed from both {new_file1}
-    and {new_file2}.
+    Path of the resulting file, containing merged changed from both
+    {new_file1} and {new_file2}.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns TRUE if merge was successful, string with rejected chunks if it was not
-or FALSE if an internal error happened.
+Returns TRUE if merge was successful, string with rejected chunks if it was
+not or FALSE if an internal error happened.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 xdiff_file_merge3() example
@@ -59,7 +59,7 @@ The following code merges three files into one.
     }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |xdiff_string_merge3| - Merge 3 strings into one

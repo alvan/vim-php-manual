@@ -4,7 +4,7 @@ array_filter
 
 array_filter — Filters elements of an array using a callback function
 
-===============================================================================
+==============================================================================
 *Description*
 
     array array_filter ( array $array [, callable $callback ] )~
@@ -13,7 +13,7 @@ Iterates over each value in the {array} passing them to the {callback}
 function. If the {callback} function returns true, the current value from
 {array} is returned into the result array. Array keys are preserved.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {array}
@@ -27,12 +27,12 @@ function. If the {callback} function returns true, the current value from
     If no {callback} is supplied, all entries of {array} equal to FALSE (see
     converting to boolean) will be removed.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the filtered array.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 array_filter() example
@@ -100,15 +100,15 @@ Array
     [2] => -1
 )
 
-===============================================================================
+==============================================================================
 *Notes*
 
 Caution
 
-If the array is changed from the callback function (e.g. element added, deleted
-or unset) the behavior of this function is undefined.
+If the array is changed from the callback function (e.g. element added,
+deleted or unset) the behavior of this function is undefined.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |array_map| - Applies the callback to the elements of the given arrays

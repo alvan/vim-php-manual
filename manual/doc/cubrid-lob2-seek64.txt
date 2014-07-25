@@ -4,20 +4,20 @@ cubrid_lob2_seek64
 
 cubrid_lob2_seek64 — Move the cursor of a lob object.
 
-===============================================================================
+==============================================================================
 *Description*
 
-    bool cubrid_lob2_seek64 ( resource $lob_identifier , string $offset [, int~
-    $origin = CUBRID_CURSOR_CURRENT ] )~
+    bool cubrid_lob2_seek64 ( resource $lob_identifier , string $offset [,~
+    int $origin = CUBRID_CURSOR_CURRENT ] )~
 
 The cubrid_lob2_seek64() function is used to move the cursor position of a lob
 object by the value set in the {offset} argument, to the direction set in the
 {origin} argument. If the {offset} you want to move is larger than an integer
 data can be stored, you can use this function.
 
-To set the {origin} argument, you can use CUBRID_CURSOR_FIRST to set the cursor
-position moving forward {offset} units from the first beginning. In this case,
-{offset} must be a positive value.
+To set the {origin} argument, you can use CUBRID_CURSOR_FIRST to set the
+cursor position moving forward {offset} units from the first beginning. In
+this case, {offset} must be a positive value.
 
 If you use CUBRID_CURSOR_CURRENT for {origin}, you can move forward or
 backward. and {offset} can be positive or negative.
@@ -27,15 +27,16 @@ units from the end of LOB object and {offset} only can be positive.
 
     Note:
 
-    If you use this function to move the cursor position of the lob object, you
-    should pass {offset} as a string.
+    If you use this function to move the cursor position of the lob object,
+    you should pass {offset} as a string.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {lob_identifier}
 
-    Lob identifier as a result of |cubrid_lob2_new| or get from the result set.
+    Lob identifier as a result of |cubrid_lob2_new| or get from the result
+    set.
 
 {offset}
 
@@ -51,12 +52,12 @@ units from the end of LOB object and {offset} only can be positive.
 
     CUBRID_CURSOR_LAST: move backward at the end of LOB object.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 TRUE if the process is successful and FALSE for failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_lob2_seek64() example
@@ -75,7 +76,8 @@ Example #1 cubrid_lob2_seek64() example
 
     $lob = cubrid_lob2_new($conn, "clob");
     cubrid_lob2_import($lob, "doc_1.txt");
-    cubrid_lob2_bind($req, 2, $lob, 'CLOB'); // or cubrid_lob2_bind($req, 2, $lob);
+    cubrid_lob2_bind($req, 2, $lob, 'CLOB'); // or cubrid_lob2_bind
+    ($req, 2, $lob);
 
     cubrid_execute($req);
 
@@ -91,7 +93,7 @@ Example #1 cubrid_lob2_seek64() example
     cubrid_disconnect($conn);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |cubrid_lob2_read| - Read from BLOB/CLOB data.

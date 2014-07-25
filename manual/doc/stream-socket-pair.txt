@@ -5,7 +5,7 @@ stream_socket_pair
 stream_socket_pair — Creates a pair of connected, indistinguishable socket
 streams
 
-===============================================================================
+==============================================================================
 *Description*
 
     array stream_socket_pair ( int $domain , int $type , int $protocol )~
@@ -13,7 +13,7 @@ streams
 stream_socket_pair() creates a pair of connected, indistinguishable socket
 streams. This function is commonly used in IPC (Inter-Process Communication).
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {domain}
@@ -34,18 +34,19 @@ streams. This function is commonly used in IPC (Inter-Process Communication).
     Note: Please consult the Streams constant list for further details on each
     constant.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns an array with the two socket resources on success, or FALSE on failure.
+Returns an array with the two socket resources on success, or FALSE on
+failure.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version                     Description
 5.3.0   This function is now available on Windows platforms.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A stream_socket_pair() example

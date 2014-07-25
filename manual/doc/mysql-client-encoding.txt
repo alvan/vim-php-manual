@@ -8,19 +8,19 @@ Warning
 
 This extension is deprecated as of PHP 5.5.0, and will be removed in the
 future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
-MySQL: choosing an API guide and related FAQ for more information. Alternatives
-to this function include:
+MySQL: choosing an API guide and related FAQ for more information.
+Alternatives to this function include:
 
   * mysqli_character_set_name()
 
-===============================================================================
+==============================================================================
 *Description*
 
     string mysql_client_encoding ([ resource $link_identifier = NULL ] )~
 
 Retrieves the character_set variable from MySQL.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { link_identifier}
@@ -31,12 +31,12 @@ Retrieves the character_set variable from MySQL.
     If no connection is found or established, an E_WARNING level error is
     generated.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the default character set name for the current connection.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mysql_client_encoding() example
@@ -52,12 +52,12 @@ The above example will output something similar to:
 
 The current character set is: latin1
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mysql_set_charset| - Sets the client character set
-  * |mysql_real_escape_string| - Escapes special characters in a string for use
-    in an SQL statement
+  * |mysql_real_escape_string| - Escapes special characters in a string for
+    use in an SQL statement
 
 
 vim:ft=help:

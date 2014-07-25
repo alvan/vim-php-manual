@@ -4,7 +4,7 @@ cubrid_get_db_parameter
 
 cubrid_get_db_parameter — Returns the CUBRID database parameters
 
-===============================================================================
+==============================================================================
 *Description*
 
     array cubrid_get_db_parameter ( resource $conn_identifier )~
@@ -18,14 +18,14 @@ parameters:
   * PARAM_MAX_STRING_LENGTH
   * PARAM_AUTO_COMMIT
 
-                              Database parameters
-      Parameter                              Description
+                             Database parameters
+      Parameter                             Description
 PARAM_ISOLATION_LEVEL The transaction isolation level.
                       CUBRID provides the lock timeout feature, which sets the
                       waiting time (in seconds) for the lock until the
-LOCK_TIMEOUT          transaction lock setting is allowed. The default value of
-                      the lock_timeout_in_secs parameter is -1, which means the
-                      application client will wait indefinitely until the
+LOCK_TIMEOUT          transaction lock setting is allowed. The default value
+                      of the lock_timeout_in_secs parameter is -1, which means
+                      the application client will wait indefinitely until the
                       transaction lock is allowed.
                       In CUBRID PHP, auto-commit mode is disabled by default
 PARAM_AUTO_COMMIT     for transaction management. It can be set by using |
@@ -34,21 +34,22 @@ PARAM_AUTO_COMMIT     for transaction management. It can be set by using |
 The following table shows the isolation levels from 1 to 6. It consists of
 table schema (row) and isolation level:
 
-                    Levels of Isolation Supported by CUBRID
+                   Levels of Isolation Supported by CUBRID
          Name                                Description
-                       In this isolation level, problems concerning concurrency
-SERIALIZABLE (6)       (e.g. dirty read, non-repeatable read, phantom read,
-                       etc.) do not occur.
-                       Another transaction T2 cannot update the schema of table
-REPEATABLE READ CLASS  A while transaction T1 is viewing table A. Transaction
-with REPEATABLE READ   T1 may experience phantom read for the record R that was
-INSTANCES (5)          inserted by another transaction T2 when it is repeatedly
-                       retrieving a specific record.
-REPEATABLE READ CLASS  Another transaction T2 cannot update the schema of table
-with READ COMMITTED    A while transaction T1 is viewing table A. Transaction
-INSTANCES (or CURSOR   T1 may experience R read (non-repeatable read) that was
-STABILITY) (4)         updated and committed by another transaction T2 when it
-                       is repeatedly retrieving the record R.
+                       In this isolation level, problems concerning
+SERIALIZABLE (6)       concurrency (e.g. dirty read, non-repeatable read,
+                       phantom read, etc.) do not occur.
+                       Another transaction T2 cannot update the schema of
+REPEATABLE READ CLASS  table A while transaction T1 is viewing table A.
+with REPEATABLE READ   Transaction T1 may experience phantom read for the
+INSTANCES (5)          record R that was inserted by another transaction T2
+                       when it is repeatedly retrieving a specific record.
+                       Another transaction T2 cannot update the schema of
+REPEATABLE READ CLASS  table A while transaction T1 is viewing table A.
+with READ COMMITTED    Transaction T1 may experience R read (non-repeatable
+INSTANCES (or CURSOR   read) that was updated and committed by another
+STABILITY) (4)         transaction T2 when it is repeatedly retrieving the
+                       record R.
                        Default isolation level. Another transaction T2 cannot
 REPEATABLE READ CLASS  update the schema of table A while transaction T1 is
 with READ UNCOMMITTED  viewing table A. Transaction T1 may experience R' read
@@ -68,7 +69,7 @@ INSTANCES (1)          table A. Transaction T1 may experience R' read (dirty
                        read) for the record that was updated but not committed
                        by another transaction T2.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {conn_identifier}
@@ -76,21 +77,21 @@ INSTANCES (1)          table A. Transaction T1 may experience R' read (dirty
     The CUBRID connection. If the connection identifier is not specified, the
     last link opened by |cubrid_connect| is assumed.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 An associative array with CUBRID database parameters; on success.
 
 FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 8.4.0   Change LOCK_TIMEOUT to PARAM_LOCK_TIMEOUT, and MAX_STRING_LENGTH to
         PARAM_MAX_STRING_LENGTH in result.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_get_db_parameter() example
@@ -144,7 +145,7 @@ Client Info:                   9.1.0
 
 CUBRID Charset:                iso8859-1
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |cubrid_set_db_parameter| - Sets the CUBRID database parameters

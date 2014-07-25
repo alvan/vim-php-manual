@@ -4,21 +4,22 @@ socket_recv
 
 socket_recv — Receives data from a connected socket
 
-===============================================================================
+==============================================================================
 *Description*
 
     int socket_recv ( resource $socket , string &$buf , int $len , int $flags~
 )~
 
-The socket_recv() function receives {len} bytes of data in {buf} from {socket}.
-socket_recv() can be used to gather data from connected sockets. Additionally,
-one or more flags can be specified to modify the behaviour of the function.
+The socket_recv() function receives {len} bytes of data in {buf} from
+{socket}. socket_recv() can be used to gather data from connected sockets.
+Additionally, one or more flags can be specified to modify the behaviour of
+the function.
 
 {buf} is passed by reference, so it must be specified as a variable in the
 argument list. Data read from {socket} by socket_recv() will be returned in
 {buf}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {socket}
@@ -41,7 +42,7 @@ argument list. Data read from {socket} by socket_recv() will be returned in
     The value of {flags} can be any combination of the following flags, joined
     with the binary OR (|) operator.
 
-                          Possible values for {flags}
+                         Possible values for {flags}
         Flag                              Description
     MSG_OOB      Process out-of-band data.
     MSG_PEEK     Receive data from the beginning of the receive queue without
@@ -52,15 +53,15 @@ argument list. Data read from {socket} by socket_recv() will be returned in
     MSG_DONTWAIT With this flag set, the function returns even if it would
                  normally have blocked.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 socket_recv() returns the number of bytes received, or FALSE if there was an
 error. The actual error code can be retrieved by calling |socket_last_error|.
-This error code may be passed to |socket_strerror| to get a textual explanation
-of the error.
+This error code may be passed to |socket_strerror| to get a textual
+explanation of the error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 socket_recv() example
@@ -82,8 +83,8 @@ socket_recv().
     /* Create a TCP/IP socket. */
     $socket = socket_create(AF_INET, SOCK_STREAM, SOL_TCP);
     if ($socket === false) {
-        echo "socket_create() failed: reason: " . socket_strerror(socket_last_error
-    ()) . "\n";
+        echo "socket_create() failed: reason: " . socket_strerror(
+    socket_last_error()) . "\n";
     } else {
         echo "OK.\n";
     }

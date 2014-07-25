@@ -4,7 +4,7 @@ error_reporting
 
 error_reporting — Sets which PHP errors are reported
 
-===============================================================================
+==============================================================================
 *Description*
 
     int error_reporting ([ int $level ] )~
@@ -14,7 +14,7 @@ PHP has many levels of errors, using this function sets that level for the
 duration (runtime) of your script. If the optional {level} is not set, 
 error_reporting() will just return the current error reporting level.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {level}
@@ -28,13 +28,13 @@ error_reporting() will just return the current error reporting level.
     The available error level constants and the actual meanings of these error
     levels are described in the predefined constants.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the old error_reporting level or the current level if no {level}
 parameter is given.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version                  Description
@@ -43,7 +43,7 @@ Version                  Description
 5.2.0   E_RECOVERABLE_ERROR introduced.
 5.0.0   E_STRICT introduced (not part of E_ALL).
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 error_reporting() examples
@@ -74,7 +74,7 @@ Example #1 error_reporting() examples
 
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
 Warning
@@ -86,10 +86,10 @@ errors (and vice versa).
 Tip
 
 Passing in the value -1 will show every possible error, even when new levels
-and constants are added in future PHP versions. The E_ALL constant also behaves
-this way as of PHP 5.4.
+and constants are added in future PHP versions. The E_ALL constant also
+behaves this way as of PHP 5.4.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * The display_errors directive

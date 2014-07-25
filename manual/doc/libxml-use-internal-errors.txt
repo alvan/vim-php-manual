@@ -5,7 +5,7 @@ libxml_use_internal_errors
 libxml_use_internal_errors — Disable libxml errors and allow user to fetch
 error information as needed
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool libxml_use_internal_errors ([ bool $use_errors = false ] )~
@@ -13,7 +13,7 @@ error information as needed
 libxml_use_internal_errors() allows you to disable standard libxml errors and
 enable user error handling.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {use_errors}
@@ -21,12 +21,12 @@ enable user error handling.
     Enable (TRUE) user error handling or disable (FALSE) user error handling.
     Disabling will also clear any existing libxml errors.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 This function returns the previous value of {use_errors}.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A libxml_use_internal_errors() example
@@ -56,7 +56,7 @@ The above example will output:
 
 bool(false)
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |libxml_clear_errors| - Clear libxml error buffer

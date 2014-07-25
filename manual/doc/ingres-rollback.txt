@@ -4,7 +4,7 @@ ingres_rollback
 
 ingres_rollback — Roll back a transaction
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool ingres_rollback ( resource $link )~
@@ -12,22 +12,22 @@ ingres_rollback — Roll back a transaction
 ingres_rollback() rolls back the currently open transaction, actually
 cancelling all changes made to the database during the transaction.
 
-This closes the transaction. A new transaction can be opened by sending a query
-with |ingres_query|.
+This closes the transaction. A new transaction can be opened by sending a
+query with |ingres_query|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {link}
 
     The connection link identifier
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ingres_query| - Send an SQL query to Ingres

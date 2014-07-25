@@ -4,14 +4,14 @@ dio_tcsetattr
 
 dio_tcsetattr — Sets terminal attributes and baud rate for a serial port
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool dio_tcsetattr ( resource $fd , array $options )~
 
 dio_tcsetattr() sets the terminal attributes and baud rate of the open {fd}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {fd}
@@ -22,8 +22,8 @@ dio_tcsetattr() sets the terminal attributes and baud rate of the open {fd}.
 
     The currently available options are:
       + 'baud' - baud rate of the port - can be
-        38400,19200,9600,4800,2400,1800, 1200,600,300,200,150,134,110,75 or 50,
-        default value is 9600.
+        38400,19200,9600,4800,2400,1800, 1200,600,300,200,150,134,110,75 or
+        50, default value is 9600.
 
       + 'bits' - data bits - can be 8,7,6 or 5. Default value is 8.
 
@@ -31,12 +31,12 @@ dio_tcsetattr() sets the terminal attributes and baud rate of the open {fd}.
 
       + 'parity' - can be 0,1 or 2. Default value is 0.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 No value is returned.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Setting the baud rate on a serial port
@@ -65,7 +65,7 @@ Example #1 Setting the baud rate on a serial port
 
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: This function is not implemented on Windows platforms.

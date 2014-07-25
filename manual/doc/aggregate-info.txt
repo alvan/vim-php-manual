@@ -4,26 +4,26 @@ aggregate_info
 
 aggregate_info — Gets aggregation information for a given object
 
-===============================================================================
+==============================================================================
 *Description*
 
     array aggregate_info ( object $object )~
 
 Gets the aggregation information for the given {object}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {object}
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the aggregation information as an associative array of arrays of
 methods and properties. The key for the main array is the name of the
 aggregated class.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Using aggregate_info()
@@ -107,10 +107,10 @@ Array
 )
 
 As you can see, all properties and methods of the Dicer class have been
-aggregated into our new object, with the exception of the class constructor and
-the method _secret_super_dicing()
+aggregated into our new object, with the exception of the class constructor
+and the method _secret_super_dicing()
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |aggregate| - Dynamic class and object aggregation of methods and

@@ -4,7 +4,7 @@ ifx_fieldtypes
 
 ifx_fieldtypes — List of Informix SQL fields
 
-===============================================================================
+==============================================================================
 *Description*
 
     array ifx_fieldtypes ( resource $result_id )~
@@ -12,7 +12,7 @@ ifx_fieldtypes — List of Informix SQL fields
 Returns an associative array with fieldnames as key and the SQL fieldtypes as
 data for the query associated with {result_id}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result_id}
@@ -20,13 +20,13 @@ data for the query associated with {result_id}.
     {result_id} is a valid resultid returned by |ifx_query| or |ifx_prepare|
     (select type queries only!).
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an associative array with fieldnames as key and the SQL fieldtypes as
 data for query with {result_id}. Returns FALSE on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Fieldnames and SQL fieldtypes
@@ -40,7 +40,7 @@ Example #1 Fieldnames and SQL fieldtypes
     }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ifx_fieldproperties| - List of SQL fieldproperties

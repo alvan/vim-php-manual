@@ -4,7 +4,7 @@ px_create_fp
 
 px_create_fp — Create a new paradox database
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool px_create_fp ( resource $pxdoc , resource $file , array $fielddesc )~
@@ -15,8 +15,8 @@ with |fopen|. Make sure the file is writable.
     Note:
 
     Calling this functions issues a warning about an empty tablename which can
-    be safely ignored. Just set the tablename afterwards with |px_set_parameter
-    |.
+    be safely ignored. Just set the tablename afterwards with |
+    px_set_parameter|.
 
     Note:
 
@@ -25,7 +25,7 @@ with |fopen|. Make sure the file is writable.
     opened by |px_open_fp| and has been successfully opened by the Paradox
     software, but your milage may vary.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {pxdoc}
@@ -40,22 +40,23 @@ with |fopen|. Make sure the file is writable.
 
     fielddesc is an array containing one element for each field specification.
     A field specification is an array itself with either two or three
-    elements.The first element is always a string value used as the name of the
-    field. It may not be larger than ten characters. The second element
+    elements.The first element is always a string value used as the name of
+    the field. It may not be larger than ten characters. The second element
     contains the field type which is one of the constants listed in the table
     Constants for field types. In the case of a character field or bcd field,
-    you will have to provide a third element specifying the length respectively
-    the precesion of the field. If your field specification contains blob
-    fields, you will have to make sure to either make the field large enough
-    for all field values to fit or specify a blob file with |px_set_blob_file|
-    for storing the blobs. If this is not done the field data is truncated.
+    you will have to provide a third element specifying the length
+    respectively the precesion of the field. If your field specification
+    contains blob fields, you will have to make sure to either make the field
+    large enough for all field values to fit or specify a blob file with |
+    px_set_blob_file| for storing the blobs. If this is not done the field
+    data is truncated.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Creating a Paradox database with two fields
@@ -79,7 +80,7 @@ Example #1 Creating a Paradox database with two fields
     fclose($fp);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |px_new| - Create a new paradox object

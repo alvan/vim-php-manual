@@ -4,17 +4,17 @@ imap_delete
 
 imap_delete — Mark a message for deletion from current mailbox
 
-===============================================================================
+==============================================================================
 *Description*
 
-    bool imap_delete ( resource $imap_stream , int $msg_number [, int $options~
-    = 0 ] )~
+    bool imap_delete ( resource $imap_stream , int $msg_number [, int~
+    $options = 0 ] )~
 
 Marks messages listed in {msg_number} for deletion. Messages marked for
 deletion will stay in the mailbox until either |imap_expunge| is called or |
 imap_close| is called with the optional parameter CL_EXPUNGE.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { imap_stream}
@@ -30,12 +30,12 @@ imap_close| is called with the optional parameter CL_EXPUNGE.
     You can set the FT_UID which tells the function to treat the {msg_number}
     argument as an UID.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 imap_delete() example
@@ -61,7 +61,7 @@ Example #1 imap_delete() example
     imap_close($mbox);
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -70,7 +70,7 @@ Example #1 imap_delete() example
     so |imap_expunge| should be called during the same connection in order to
     guarantee that messages marked for deletion will actually be purged.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |imap_undelete| - Unmark the message which is marked deleted

@@ -4,7 +4,7 @@ call_user_func_array
 
 call_user_func_array — Call a callback with an array of parameters
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed call_user_func_array ( callable $callback , array $param_arr )~
@@ -12,7 +12,7 @@ call_user_func_array — Call a callback with an array of parameters
 Calls the {callback} given by the first parameter with the parameters in
 {param_arr}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {callback}
@@ -23,20 +23,21 @@ Calls the {callback} given by the first parameter with the parameters in
 
     The parameters to be passed to the callback, as an indexed array.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the return value of the callback, or FALSE on error.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
-        The interpretation of object oriented keywords like parent and self has
-5.3.0   changed. Previously, calling them using the double colon syntax would
-        emit an E_STRICT warning because they were interpreted as static.
+Version                              Description
+        The interpretation of object oriented keywords like parent and self
+5.3.0   has changed. Previously, calling them using the double colon syntax
+        would emit an E_STRICT warning because they were interpreted as
+        static.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 call_user_func_array() example
@@ -106,32 +107,32 @@ The above example will output:
 
 int(8)
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
 
     Before PHP 5.4, referenced variables in {param_arr} are passed to the
     function by reference, regardless of whether the function expects the
-    respective parameter to be passed by reference. This form of call-time pass
-    by reference does not emit a deprecation notice, but it is nonetheless
-    deprecated, and has been removed in PHP 5.4. Furthermore, this does not
-    apply to internal functions, for which the function signature is honored.
-    Passing by value when the function expects a parameter by reference results
-    in a warning and having |call_user_func| return FALSE (there is, however,
-    an exception for passed values with reference count = 1, such as in
-    literals, as these can be turned into references without ill effects — but
-    also without writes to that value having any effect —; do not rely in this
-    behavior, though, as the reference count is an implementation detail and
-    the soundness of this behavior is questionable).
+    respective parameter to be passed by reference. This form of call-time
+    pass by reference does not emit a deprecation notice, but it is
+    nonetheless deprecated, and has been removed in PHP 5.4. Furthermore, this
+    does not apply to internal functions, for which the function signature is
+    honored. Passing by value when the function expects a parameter by
+    reference results in a warning and having |call_user_func| return FALSE
+    (there is, however, an exception for passed values with reference count =
+    1, such as in literals, as these can be turned into references without ill
+    effects — but also without writes to that value having any effect —; do
+    not rely in this behavior, though, as the reference count is an
+    implementation detail and the soundness of this behavior is questionable).
 
     Note:
 
     Callbacks registered with functions such as |call_user_func| and 
-    call_user_func_array() will not be called if there is an uncaught exception
-    thrown in a previous callback.
+    call_user_func_array() will not be called if there is an uncaught
+    exception thrown in a previous callback.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |call_user_func| - Call the callback given by the first parameter

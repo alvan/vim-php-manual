@@ -5,18 +5,18 @@ cubrid_connect_with_url
 cubrid_connect_with_url — Establish the environment for connecting to CUBRID
 server
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource cubrid_connect_with_url ( string $conn_url [, string $userid [,~
     string $passwd [, bool $new_link = false ]]] )~
 
-The cubrid_connect_with_url() function is used to establish the environment for
-connecting to your server by using connection information passed with an url
-string argument. If the HA feature is enabled in CUBRID, you must specify the
-connection information of the standby server, which is used for failover when
-failure occurs, in the url string argument of this function. If the user name
-and password is not given, then the "PUBLIC" connection will be made by
+The cubrid_connect_with_url() function is used to establish the environment
+for connecting to your server by using connection information passed with an
+url string argument. If the HA feature is enabled in CUBRID, you must specify
+the connection information of the standby server, which is used for failover
+when failure occurs, in the url string argument of this function. If the user
+name and password is not given, then the "PUBLIC" connection will be made by
 default.
 
 <url> ::= CUBRID:<host>:<db_name>:<db_user>:<db_password>:[?<properties>]
@@ -31,8 +31,8 @@ default.
 
 <properties> ::= disconnect_on_query_timeout=true|false
 
-<alternative_hosts> ::= <standby_broker1_host>:<port> [,<standby_broker2_host>:
-<port>]
+<alternative_hosts> ::= <standby_broker1_host>:<port> [,
+<standby_broker2_host>:<port>]
 
 <host> := HOSTNAME | IP_ADDR
 
@@ -51,10 +51,10 @@ default.
   * rctime : An interval between the attempts to connect to the active broker
     in which failure occurred. After a failure occurs, the system connects to
     the broker specified by althosts (failover), terminates the transaction,
-    and then attempts to connect to the active broker of the master database at
-    every rctime. The default value is 600 seconds.
-  * login_timeout : Timeout value (unit: msec.) for database login. The default
-    value is 0, which means infinite postponement.
+    and then attempts to connect to the active broker of the master database
+    at every rctime. The default value is 600 seconds.
+  * login_timeout : Timeout value (unit: msec.) for database login. The
+    default value is 0, which means infinite postponement.
   * query_timeout : Timeout value (unit: msec.) for query request. Upon
     timeout, a message to cancel requesting a query transferred to server is
     sent. The return value can depend on the disconnect_on_query_timeout
@@ -67,8 +67,8 @@ default.
     Note:
 
     ? and : that are used as identifiers in PHP connection URL can't be
-    included in the password. The following is an example of a password that is
-    invalid to use as connection URL because it contains "?:".
+    included in the password. The following is an example of a password that
+    is invalid to use as connection URL because it contains "?:".
 
     $url = "CUBRID:localhost:33000:tdb:dba:12?:?login_timeout=100";
 
@@ -83,7 +83,7 @@ default.
 
     $url = "CUBRID:localhost:33000:demodb:::";
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {conn_url}
@@ -107,14 +107,14 @@ default.
     cubrid_connect_with_url() always open a new connection, even if 
     cubrid_connect_with_url() was called before with the same parameters.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Connection identifier, when process is successful.
 
 FALSE, when process is unsuccessful.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_connect_with_url() url without properties example
@@ -159,7 +159,7 @@ Example #2 cubrid_connect_with_url() url with properties example
     }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |cubrid_connect| - Open a connection to a CUBRID Server

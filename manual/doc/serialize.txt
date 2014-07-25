@@ -4,7 +4,7 @@ serialize
 
 serialize — Generates a storable representation of a value
 
-===============================================================================
+==============================================================================
 *Description*
 
     string serialize ( mixed $value )~
@@ -16,7 +16,7 @@ type and structure.
 
 To make the serialized string into a PHP value again, use |unserialize|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {value}
@@ -38,17 +38,18 @@ To make the serialized string into a PHP value again, use |unserialize|.
         name; protected members have a '*' prepended to the member name. These
         prepended values have null bytes on either side.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns a string containing a byte-stream representation of {value} that can be
-stored anywhere.
+Returns a string containing a byte-stream representation of {value} that can
+be stored anywhere.
 
-Note that this is a binary string which may include null bytes, and needs to be
-stored and handled as such. For example, serialize() output should generally be
-stored in a BLOB field in a database, rather than a CHAR or TEXT field.
+Note that this is a binary string which may include null bytes, and needs to
+be stored and handled as such. For example, serialize() output should
+generally be stored in a BLOB field in a database, rather than a CHAR or TEXT
+field.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 serialize() example
@@ -71,32 +72,32 @@ Example #1 serialize() example
     }
 <?>
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version                 Description
 4.0.7   The object serialization process was fixed.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
 
     Note that many built-in PHP objects cannot be serialized. However, those
     with this ability either implement the Serializable interface or the magic
-    __sleep() and __wakeup() methods. If an internal class does not fulfill any
-    of those requirements, it cannot reliably be serialized.
+    __sleep() and __wakeup() methods. If an internal class does not fulfill
+    any of those requirements, it cannot reliably be serialized.
 
-    There are some historical exceptions to the above rule, where some internal
-    objects could be serialized without implementing the interface or exposing
-    the methods. Notably, the ArrayObject prior to PHP 5.2.0.
+    There are some historical exceptions to the above rule, where some
+    internal objects could be serialized without implementing the interface or
+    exposing the methods. Notably, the ArrayObject prior to PHP 5.2.0.
 
 Warning
 
 When serialize() serializes objects, the leading slash is not included in the
 class name of namespaced classes for maximum compatibility.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |unserialize| - Creates a PHP value from a stored representation

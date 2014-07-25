@@ -4,15 +4,15 @@ ftp_connect
 
 ftp_connect — Opens an FTP connection
 
-===============================================================================
+==============================================================================
 *Description*
 
-    resource ftp_connect ( string $host [, int $port = 21 [, int $timeout = 90~
-    ]] )~
+    resource ftp_connect ( string $host [, int $port = 21 [, int $timeout =~
+    90 ]] )~
 
 ftp_connect() opens an FTP connection to the specified {host}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {host}
@@ -27,16 +27,17 @@ ftp_connect() opens an FTP connection to the specified {host}.
 
 {timeout}
 
-    This parameter specifies the timeout for all subsequent network operations.
-    If omitted, the default value is 90 seconds. The timeout can be changed and
-    queried at any time with |ftp_set_option| and |ftp_get_option|.
+    This parameter specifies the timeout for all subsequent network
+    operations. If omitted, the default value is 90 seconds. The timeout can
+    be changed and queried at any time with |ftp_set_option| and |
+    ftp_get_option|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a FTP stream on success or FALSE on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 ftp_connect() example
@@ -46,17 +47,18 @@ Example #1 ftp_connect() example
     $ftp_server = "ftp.example.com";
 
     // set up a connection or die
-    $conn_id = ftp_connect($ftp_server) or die("Couldn't connect to $ftp_server"); 
+    $conn_id = ftp_connect($ftp_server) or die("Couldn't connect to $ftp_server");
+     
 
 <?>
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version      Description
 4.2.0   {timeout} was added.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ftp_close| - Closes an FTP connection

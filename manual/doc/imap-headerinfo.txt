@@ -4,7 +4,7 @@ imap_headerinfo
 
 imap_headerinfo — Read the header of the message
 
-===============================================================================
+==============================================================================
 *Description*
 
     object imap_headerinfo ( resource $imap_stream , int $msg_number [, int~
@@ -13,7 +13,7 @@ imap_headerinfo — Read the header of the message
 
 Gets information about the given message number by reading its headers.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { imap_stream}
@@ -36,7 +36,7 @@ Gets information about the given message number by reading its headers.
 
 {defaulthost}
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the information in an object with following properties:
@@ -72,7 +72,8 @@ Returns the information in an object with following properties:
   * newsgroups -
   * followup_to -
   * references -
-  * Recent - R if recent and seen, N if recent and not seen, ' ' if not recent.
+  * Recent - R if recent and seen, N if recent and not seen, ' ' if not
+    recent.
   * Unseen - U if not seen AND not recent, ' ' if seen OR not seen and recent
   * Flagged - F if flagged, ' ' if not flagged
   * Answered - A if answered, ' ' if unanswered
@@ -85,7 +86,7 @@ Returns the information in an object with following properties:
   * fetchfrom - from line formatted to fit {fromlength} characters
   * fetchsubject - subject line formatted to fit {subjectlength} characters
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |imap_fetch_overview| - Read an overview of the information in the headers

@@ -4,7 +4,7 @@ snmpwalkoid
 
 snmpwalkoid — Query for a tree of information about a network entity
 
-===============================================================================
+==============================================================================
 *Description*
 
     array snmpwalkoid ( string $hostname , string $community , string~
@@ -16,7 +16,7 @@ values from an SNMP agent specified by {hostname}.
 The existence of snmpwalkoid() and |snmpwalk| has historical reasons. Both
 functions are provided for backward compatibility. Use |snmprealwalk| instead.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {hostname}
@@ -43,13 +43,13 @@ functions are provided for backward compatibility. Use |snmprealwalk| instead.
 
     The number of times to retry if timeouts occur.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an associative array with object ids and their respective object value
 starting from the {object_id} as root or FALSE on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 snmpwalkoid() Example
@@ -64,7 +64,7 @@ Example #1 snmpwalkoid() Example
 Above function call would return all the SNMP objects from the SNMP agent
 running on localhost. One can step through the values with a loop
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |snmpwalk| - Fetch all the SNMP objects from an agent

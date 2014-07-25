@@ -4,16 +4,16 @@ date
 
 date — Format a local time/date
 
-===============================================================================
+==============================================================================
 *Description*
 
     string date ( string $format [, int $timestamp = time() ] )~
 
-Returns a string formatted according to the given format string using the given
-integer {timestamp} or the current time if no timestamp is given. In other
-words, {timestamp} is optional and defaults to the value of |time|.
+Returns a string formatted according to the given format string using the
+given integer {timestamp} or the current time if no timestamp is given. In
+other words, {timestamp} is optional and defaults to the value of |time|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {format}
@@ -22,93 +22,95 @@ words, {timestamp} is optional and defaults to the value of |time|.
     There are also several predefined date constants that may be used instead,
     so for example DATE_RSS contains the format string 'D, d M Y H:i:s'.
 
-       The following characters are recognized in the {format} parameter
+      The following characters are recognized in the {format} parameter
                                     string
-     {format}               Description                Example returned values
+     {format}               Description               Example returned values
     character
-    Day        ---                                    ---
-    d          Day of the month, 2 digits with        01 to 31
+    Day        ---                                   ---
+    d          Day of the month, 2 digits with       01 to 31
                leading zeros
-    D          A textual representation of a day,     Mon through Sun
+    D          A textual representation of a day,    Mon through Sun
                three letters
-    j          Day of the month without leading zeros 1 to 31
+    j          Day of the month without leading      1 to 31
+               zeros
     l          A full textual representation of the
-    (lowercase day of the week                        Sunday through Saturday
+    (lowercase day of the week                       Sunday through Saturday
     'L')
-    N          ISO-8601 numeric representation of the 1 (for Monday) through 7
-               day of the week (added in PHP 5.1.0)   (for Sunday)
-    S          English ordinal suffix for the day of  st, nd, rd or th. Works
-               the month, 2 characters                well with j
-    w          Numeric representation of the day of   0 (for Sunday) through 6
-               the week                               (for Saturday)
-    z          The day of the year (starting from 0)  0 through 365
-    Week       ---                                    ---
-               ISO-8601 week number of year, weeks    Example: 42 (the 42nd
-    W          starting on Monday (added in PHP       week in the year)
+               ISO-8601 numeric representation of    1 (for Monday) through 7
+    N          the day of the week (added in PHP     (for Sunday)
+               5.1.0)
+    S          English ordinal suffix for the day of st, nd, rd or th. Works
+               the month, 2 characters               well with j
+    w          Numeric representation of the day of  0 (for Sunday) through 6
+               the week                              (for Saturday)
+    z          The day of the year (starting from 0) 0 through 365
+    Week       ---                                   ---
+               ISO-8601 week number of year, weeks   Example: 42 (the 42nd
+    W          starting on Monday (added in PHP      week in the year)
                4.1.0)
-    Month      ---                                    ---
-    F          A full textual representation of a     January through December
+    Month      ---                                   ---
+    F          A full textual representation of a    January through December
                month, such as January or March
-    m          Numeric representation of a month,     01 through 12
+    m          Numeric representation of a month,    01 through 12
                with leading zeros
-    M          A short textual representation of a    Jan through Dec
+    M          A short textual representation of a   Jan through Dec
                month, three letters
-    n          Numeric representation of a month,     1 through 12
+    n          Numeric representation of a month,    1 through 12
                without leading zeros
-    t          Number of days in the given month      28 through 31
-    Year       ---                                    ---
-    L          Whether it's a leap year               1 if it is a leap year, 0
-                                                      otherwise.
+    t          Number of days in the given month     28 through 31
+    Year       ---                                   ---
+    L          Whether it's a leap year              1 if it is a leap year, 0
+                                                     otherwise.
                ISO-8601 year number. This has the
                same value as Y, except that if the
-    o          ISO week number (W) belongs to the     Examples: 1999 or 2003
+    o          ISO week number (W) belongs to the    Examples: 1999 or 2003
                previous or next year, that year is
                used instead. (added in PHP 5.1.0)
-    Y          A full numeric representation of a     Examples: 1999 or 2003
+    Y          A full numeric representation of a    Examples: 1999 or 2003
                year, 4 digits
-    y          A two digit representation of a year   Examples: 99 or 03
-    Time       ---                                    ---
-    a          Lowercase Ante meridiem and Post       am or pm
+    y          A two digit representation of a year  Examples: 99 or 03
+    Time       ---                                   ---
+    a          Lowercase Ante meridiem and Post      am or pm
                meridiem
-    A          Uppercase Ante meridiem and Post       AM or PM
+    A          Uppercase Ante meridiem and Post      AM or PM
                meridiem
-    B          Swatch Internet time                   000 through 999
-    g          12-hour format of an hour without      1 through 12
+    B          Swatch Internet time                  000 through 999
+    g          12-hour format of an hour without     1 through 12
                leading zeros
-    G          24-hour format of an hour without      0 through 23
+    G          24-hour format of an hour without     0 through 23
                leading zeros
-    h          12-hour format of an hour with leading 01 through 12
-               zeros
-    H          24-hour format of an hour with leading 00 through 23
-               zeros
-    i          Minutes with leading zeros             00 to 59
-    s          Seconds, with leading zeros            00 through 59
+    h          12-hour format of an hour with        01 through 12
+               leading zeros
+    H          24-hour format of an hour with        00 through 23
+               leading zeros
+    i          Minutes with leading zeros            00 to 59
+    s          Seconds, with leading zeros           00 through 59
                Microseconds (added in PHP 5.2.2).
                Note that date() will always generate
-    u          000000 since it takes an integer       Example: 654321
+    u          000000 since it takes an integer      Example: 654321
                parameter, whereas DateTime::format()
                does support microseconds.
-    Timezone   ---                                    ---
-    e          Timezone identifier (added in PHP      Examples: UTC, GMT,
-               5.1.0)                                 Atlantic/Azores
-    I (capital Whether or not the date is in daylight 1 if Daylight Saving
-    i)         saving time                            Time, 0 otherwise.
-    O          Difference to Greenwich time (GMT) in  Example: +0200
+    Timezone   ---                                   ---
+    e          Timezone identifier (added in PHP     Examples: UTC, GMT,
+               5.1.0)                                Atlantic/Azores
+    I (capital Whether or not the date is in         1 if Daylight Saving
+    i)         daylight saving time                  Time, 0 otherwise.
+    O          Difference to Greenwich time (GMT) in Example: +0200
                hours
                Difference to Greenwich time (GMT)
-    P          with colon between hours and minutes   Example: +02:00
+    P          with colon between hours and minutes  Example: +02:00
                (added in PHP 5.1.3)
-    T          Timezone abbreviation                  Examples: EST, MDT ...
-               Timezone offset in seconds. The offset
-    Z          for timezones west of UTC is always    -43200 through 50400
-               negative, and for those east of UTC is
-               always positive.
-    Full Date/ ---                                    ---
+    T          Timezone abbreviation                 Examples: EST, MDT ...
+               Timezone offset in seconds. The
+    Z          offset for timezones west of UTC is   -43200 through 50400
+               always negative, and for those east
+               of UTC is always positive.
+    Full Date/ ---                                   ---
     Time
-    c          ISO 8601 date (added in PHP 5)         2004-02-12T15:19:21+00:00
-    r          » RFC 2822 formatted date              Example: Thu, 21 Dec 2000
-                                                      16:01:07 +0200
-    U          Seconds since the Unix Epoch (January  See also |time|
+    c          ISO 8601 date (added in PHP 5)        2004-02-12T15:19:21+00:00
+    r          » RFC 2822 formatted date             Example: Thu, 21 Dec 2000
+                                                     16:01:07 +0200
+    U          Seconds since the Unix Epoch (January See also |time|
                1 1970 00:00:00 GMT)
 
     Unrecognized characters in the format string will be printed as-is. The Z
@@ -126,23 +128,23 @@ words, {timestamp} is optional and defaults to the value of |time|.
     defaults to the current local time if a {timestamp} is not given. In other
     words, it defaults to the value of |time|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a formatted date string. If a non-numeric value is used for
 {timestamp}, FALSE is returned and an E_WARNING level error is emitted.
 
-===============================================================================
+==============================================================================
 *Errors/Exceptions*
 
-Every call to a date/time function will generate a E_NOTICE if the time zone is
-not valid, and/or a E_STRICT or E_WARNING message if using the system settings
-or the TZ environment variable. See also |date_default_timezone_set|
+Every call to a date/time function will generate a E_NOTICE if the time zone
+is not valid, and/or a E_STRICT or E_WARNING message if using the system
+settings or the TZ environment variable. See also |date_default_timezone_set|
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
         The valid range of a timestamp is typically from Fri, 13 Dec 1901
         20:45:54 GMT to Tue, 19 Jan 2038 03:14:07 GMT. (These are the dates
 5.1.0   that correspond to the minimum and maximum values for a 32-bit signed
@@ -153,7 +155,7 @@ Version                               Description
 5.1.1   There are useful constants of standard date/time formats that can be
         used to specify the {format} parameter.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 date() examples
@@ -180,9 +182,10 @@ Example #1 date() examples
     echo date(DATE_ATOM, mktime(0, 0, 0, 7, 1, 2000));
 <?>
 
-You can prevent a recognized character in the format string from being expanded
-by escaping it with a preceding backslash. If the character with a backslash is
-already a special sequence, you may need to also escape the backslash.
+You can prevent a recognized character in the format string from being
+expanded by escaping it with a preceding backslash. If the character with a
+backslash is already a special sequence, you may need to also escape the
+backslash.
 
 Example #2 Escaping characters in date()
 
@@ -210,9 +213,9 @@ Example #3 date() and |mktime| example
 
 Some examples of date() formatting. Note that you should escape any other
 characters, as any which currently have a special meaning will produce
-undesirable results, and other characters may be assigned meaning in future PHP
-versions. When escaping, be sure to use single quotes to prevent characters
-like \n from becoming newlines.
+undesirable results, and other characters may be assigned meaning in future
+PHP versions. When escaping, be sure to use single quotes to prevent
+characters like \n from becoming newlines.
 
 Example #4 date() Formatting
 
@@ -227,7 +230,8 @@ Example #4 date() Formatting
     $today = date('h-i-s, j-m-y, it is w Day');     //
      05-16-18, 10-03-01, 1631 1618 6 Satpm01
     $today = date('\i\t \i\s \t\h\e jS \d\a\y.');   // it is the 10th day.
-    $today = date("D M j G:i:s T Y");               // Sat Mar 10 17:16:18 MST 2001
+    $today = date("D M j G:i:s T Y");               //
+     Sat Mar 10 17:16:18 MST 2001
     $today = date('H:m:s \m \i\s\ \m\o\n\t\h');     // 17:03:18 m is month
     $today = date("H:i:s");                         // 17:16:18
     $today = date("Y-m-d H:i:s");                   // 2001-03-10 17:16:18 
@@ -237,7 +241,7 @@ Example #4 date() Formatting
 To format dates in other languages, you should use the |setlocale| and |
 strftime| functions instead of date().
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -252,7 +256,7 @@ Tip
 Timestamp of the start of the request is available in $_SERVER['REQUEST_TIME']
 since PHP 5.1.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |gmdate| - Format a GMT/UTC date/time

@@ -4,18 +4,18 @@ ibase_fetch_row
 
 ibase_fetch_row — Fetch a row from an InterBase database
 
-===============================================================================
+==============================================================================
 *Description*
 
-    array ibase_fetch_row ( resource $result_identifier [, int $fetch_flag = 0~
-    ] )~
+    array ibase_fetch_row ( resource $result_identifier [, int $fetch_flag =~
+    0 ] )~
 
 ibase_fetch_row() fetches one row of data from the given result set.
 
-Subsequent calls to ibase_fetch_row() return the next row in the result set, or
-FALSE if there are no more rows.
+Subsequent calls to ibase_fetch_row() return the next row in the result set,
+or FALSE if there are no more rows.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result_identifier}
@@ -30,14 +30,14 @@ FALSE if there are no more rows.
     cause this function to return date/time values as Unix timestamps instead
     of as formatted strings.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an array that corresponds to the fetched row, or FALSE if there are no
 more rows. Each result column is stored in an array offset, starting at offset
 0.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ibase_fetch_assoc| - Fetch a result row from a query as an associative

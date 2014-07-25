@@ -4,7 +4,7 @@ oci_define_by_name
 
 oci_define_by_name — Associates a PHP variable with a column for query fetches
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool oci_define_by_name ( resource $statement , string $column_name ,~
@@ -14,7 +14,7 @@ Associates a PHP variable with a column for query fetches using |oci_fetch|.
 
 The oci_define_by_name() call must occur before executing |oci_execute|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {statement}
@@ -42,12 +42,12 @@ The oci_define_by_name() call must occur before executing |oci_execute|.
     You can optionally use |oci_new_descriptor| to allocate LOB/ROWID/BFILE
     descriptors.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 oci_define_by_name() example
@@ -206,7 +206,7 @@ Example #4 oci_define_by_name() with an explicit type
 
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |oci_fetch| - Fetches the next row from a query into internal buffers

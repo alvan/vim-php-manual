@@ -4,15 +4,16 @@ gmp_divexact
 
 gmp_divexact — Exact division of numbers
 
-===============================================================================
+==============================================================================
 *Description*
 
     GMP gmp_divexact ( GMP $n , GMP $d )~
 
 Divides {n} by {d}, using fast "exact division" algorithm. This function
-produces correct results only when it is known in advance that {d} divides {n}.
+produces correct results only when it is known in advance that {d} divides
+{n}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {n}
@@ -31,13 +32,13 @@ produces correct results only when it is known in advance that {d} divides {n}.
     5.6 and later, or a numeric string provided that it is possible to convert
     the latter to a number.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 A GMP number resource in PHP 5.5 and earlier, or a GMP object in PHP 5.6 and
 later.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 gmp_divexact() example

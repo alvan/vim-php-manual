@@ -4,7 +4,7 @@ imap_mail_copy
 
 imap_mail_copy — Copy specified messages to a mailbox
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool imap_mail_copy ( resource $imap_stream , string $msglist , string~
@@ -12,7 +12,7 @@ imap_mail_copy — Copy specified messages to a mailbox
 
 Copies mail messages specified by {msglist} to specified mailbox.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { imap_stream}
@@ -33,12 +33,12 @@ Copies mail messages specified by {msglist} to specified mailbox.
       + CP_UID - the sequence numbers contain UIDS
       + CP_MOVE - Delete the messages from the current mailbox after copying
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |imap_mail_move| - Move specified messages to a mailbox

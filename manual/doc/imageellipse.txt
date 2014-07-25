@@ -4,21 +4,21 @@ imageellipse
 
 imageellipse — Draw an ellipse
 
-===============================================================================
+==============================================================================
 *Description*
 
-    bool imageellipse ( resource $image , int $cx , int $cy , int $width , int~
-    $height , int $color )~
+    bool imageellipse ( resource $image , int $cx , int $cy , int $width ,~
+    int $height , int $color )~
 
 Draws an ellipse centered at the specified coordinates.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { image}
 
-    An image resource, returned by one of the image creation functions, such as
-    |imagecreatetruecolor|.
+    An image resource, returned by one of the image creation functions, such
+    as |imagecreatetruecolor|.
 
 {cx}
 
@@ -41,12 +41,12 @@ Draws an ellipse centered at the specified coordinates.
     The color of the ellipse. A color identifier created with |
     imagecolorallocate|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 imageellipse() example
@@ -78,14 +78,14 @@ The above example will output something similar to:
 
 Output of example : imageellipse()
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
 
     This function requires GD 2.0.2 or later.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |imagefilledellipse| - Draw a filled ellipse

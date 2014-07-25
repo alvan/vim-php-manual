@@ -4,7 +4,7 @@ eio_open
 
 eio_open — Opens a file
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource eio_open ( string $path , int $flags , int $mode , int $pri ,~
@@ -12,7 +12,7 @@ eio_open — Opens a file
 
 eio_open() opens file specified by {path} in access mode {mode} with
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {path}
@@ -24,9 +24,9 @@ eio_open() opens file specified by {path} in access mode {mode} with
 
 {flags}
 
-    One of EIO_O_* constants, or their combinations. EIO_O_* constants have the
-    same meaning, as their corresponding O_* counterparts defined in fnctl.h C
-    header file. Default is EIO_O_RDWR.
+    One of EIO_O_* constants, or their combinations. EIO_O_* constants have
+    the same meaning, as their corresponding O_* counterparts defined in
+    fnctl.h C header file. Default is EIO_O_RDWR.
 
 {mode}
 
@@ -42,8 +42,8 @@ eio_open() opens file specified by {path} in access mode {mode} with
 
 {callback}
 
-    {callback} function is called when the request is done. It should match the
-    following prototype:
+    {callback} function is called when the request is done. It should match
+    the following prototype:
     void callback(mixed $data, int $result[, resource $req]);
 
     {data}
@@ -64,13 +64,13 @@ eio_open() opens file specified by {path} in access mode {mode} with
 
     Arbitrary variable passed to {callback}.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 eio_open() returns file descriptor in {result} argument of {callback} on
 success; otherwise, {result} is equal to -1.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 eio_open() example
@@ -109,7 +109,7 @@ The above example will output something similar to:
 bool(true)
 bool(true)
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * eio_mknod

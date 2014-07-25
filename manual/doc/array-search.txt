@@ -5,7 +5,7 @@ array_search
 array_search — Searches the array for a given value and returns the
 corresponding key if successful
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed array_search ( mixed $needle , array $haystack [, bool $strict =~
@@ -13,7 +13,7 @@ corresponding key if successful
 
 Searches {haystack} for {needle}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {needle}
@@ -33,35 +33,35 @@ Searches {haystack} for {needle}.
 
     If the third parameter {strict} is set to TRUE then the array_search()
     function will search for identical elements in the {haystack}. This means
-    it will also check the types of the {needle} in the {haystack}, and objects
-    must be the same instance.
+    it will also check the types of the {needle} in the {haystack}, and
+    objects must be the same instance.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the key for {needle} if it is found in the array, FALSE otherwise.
 
 If {needle} is found in {haystack} more than once, the first matching key is
-returned. To return the keys for all matching values, use |array_keys| with the
-optional {search_value} parameter instead.
+returned. To return the keys for all matching values, use |array_keys| with
+the optional {search_value} parameter instead.
 
 Warning
 
-This function may return Boolean FALSE, but may also return a non-Boolean value
-which evaluates to FALSE. Please read the section on Booleans for more
+This function may return Boolean FALSE, but may also return a non-Boolean
+value which evaluates to FALSE. Please read the section on Booleans for more
 information. Use the === operator for testing the return value of this
 function.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 5.3.0   As with all internal PHP functions as of 5.3.0, array_search() returns
         NULL if invalid parameters are passed to it.
 4.2.0   Prior to PHP 4.2.0, array_search() returns NULL on failure instead of
         FALSE.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 array_search() example
@@ -73,7 +73,7 @@ Example #1 array_search() example
     $key = array_search('red', $array);   // $key = 1;
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |array_keys| - Return all the keys or a subset of the keys of an array

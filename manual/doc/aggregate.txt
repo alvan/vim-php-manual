@@ -4,29 +4,29 @@ aggregate
 
 aggregate — Dynamic class and object aggregation of methods and properties
 
-===============================================================================
+==============================================================================
 *Description*
 
     void aggregate ( object $object , string $class_name )~
 
 Aggregates methods and properties defined in a class to an existing object.
-Methods and properties with names starting with an underscore character (_) are
-considered private to the aggregated class and are not used, constructors are
-also excluded from the aggregation procedure.
+Methods and properties with names starting with an underscore character (_)
+are considered private to the aggregated class and are not used, constructors
+are also excluded from the aggregation procedure.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {object}
 
 {class_name}
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 No value is returned.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |aggregate_info| - Gets aggregation information for a given object

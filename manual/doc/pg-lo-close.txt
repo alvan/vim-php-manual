@@ -4,13 +4,13 @@ pg_lo_close
 
 pg_lo_close — Close a large object
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool pg_lo_close ( resource $large_object )~
 
-pg_lo_close() closes a large object. {large_object} is a resource for the large
-object from |pg_lo_open|.
+pg_lo_close() closes a large object. {large_object} is a resource for the
+large object from |pg_lo_open|.
 
 To use the large object interface, it is necessary to enclose it within a
 transaction block.
@@ -19,19 +19,19 @@ transaction block.
 
     This function used to be called pg_loclose().
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
 
     PostgreSQL large object (LOB) resource, returned by |pg_lo_open|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 pg_lo_close() example
@@ -48,7 +48,7 @@ Example #1 pg_lo_close() example
        pg_query($database, "commit");
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |pg_lo_open| - Open a large object

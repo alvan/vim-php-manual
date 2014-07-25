@@ -5,30 +5,30 @@ runkit_constant_add
 runkit_constant_add — Similar to define(), but allows defining in class
 definitions as well
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool runkit_constant_add ( string $constname , mixed $value )~
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {constname}
 
-    Name of constant to declare. Either a string to indicate a global constant,
-    or classname::constname to indicate a class constant.
+    Name of constant to declare. Either a string to indicate a global
+    constant, or classname::constname to indicate a class constant.
 
 {value}
 
     NULL, Bool, Long, Double, String, or Resource value to store in the new
     constant.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |define| - Defines a named constant

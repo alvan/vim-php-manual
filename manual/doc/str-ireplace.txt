@@ -4,26 +4,26 @@ str_ireplace
 
 str_ireplace — Case-insensitive version of |str_replace|.
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed str_ireplace ( mixed $search , mixed $replace , mixed $subject [,~
     int &$count ] )~
 
 This function returns a string or an array with all occurrences of {search} in
-{subject} (ignoring case) replaced with the given {replace} value. If you don't
-need fancy replacing rules, you should generally use this function instead of |
-preg_replace| with the i modifier.
+{subject} (ignoring case) replaced with the given {replace} value. If you
+don't need fancy replacing rules, you should generally use this function
+instead of |preg_replace| with the i modifier.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 If {search} and {replace} are arrays, then str_ireplace() takes a value from
 each array and uses them to search and replace on {subject}. If {replace} has
 fewer values than {search}, then an empty string is used for the rest of
 replacement values. If {search} is an array and {replace} is a string, then
-this replacement string is used for every value of {search}. The converse would
-not make sense, though.
+this replacement string is used for every value of {search}. The converse
+would not make sense, though.
 
 If {search} or {replace} are arrays, their elements are processed first to
 last.
@@ -50,18 +50,18 @@ last.
 
     If passed, this will be set to the number of replacements performed.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a string or an array of replacements.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version           Description
 5.0.0   The {count} parameter was added.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 str_ireplace() example
@@ -70,7 +70,7 @@ Example #1 str_ireplace() example
     $bodytag = str_ireplace("%body%", "black", "<body text=%BODY%>");
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: This function is binary-safe.
@@ -80,10 +80,10 @@ Caution
 Replacement order gotcha
 
 Because str_ireplace() replaces left to right, it might replace a previously
-inserted value when doing multiple replacements. Example #2 in the |str_replace
-| documentation demonstrates how this may affect you in practice.
+inserted value when doing multiple replacements. Example #2 in the |
+str_replace| documentation demonstrates how this may affect you in practice.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |str_replace| - Replace all occurrences of the search string with the

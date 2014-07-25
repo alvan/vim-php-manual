@@ -4,7 +4,7 @@ dbase_pack
 
 dbase_pack — Packs a database
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool dbase_pack ( int $dbase_identifier )~
@@ -12,19 +12,19 @@ dbase_pack — Packs a database
 Packs the specified database by permanently deleting all records marked for
 deletion using |dbase_delete_record|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {dbase_identifier}
 
     The database link identifier, returned by |dbase_open| or |dbase_create|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Emptying a dBase database
@@ -45,7 +45,7 @@ Example #1 Emptying a dBase database
 
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |dbase_delete_record| - Deletes a record from a database

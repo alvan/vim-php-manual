@@ -4,7 +4,7 @@ ps_circle
 
 ps_circle — Draws a circle
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool ps_circle ( resource $psdoc , float $x , float $y , float $radius )~
@@ -15,7 +15,7 @@ will start a new path. If it is called within a path it will add the circle as
 a subpath. If the last drawing operation does not end in point ({x}+{radius},
 {y}) then there will be a gap in the path.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {psdoc}
@@ -34,12 +34,12 @@ a subpath. If the last drawing operation does not end in point ({x}+{radius},
 
     The radius of the circle
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ps_arc| - Draws an arc counterclockwise

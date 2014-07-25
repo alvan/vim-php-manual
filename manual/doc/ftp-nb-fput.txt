@@ -4,7 +4,7 @@ ftp_nb_fput
 
 ftp_nb_fput — Stores a file from an open file to the FTP server (non-blocking)
 
-===============================================================================
+==============================================================================
 *Description*
 
     int ftp_nb_fput ( resource $ftp_stream , string $remote_file , resource~
@@ -17,7 +17,7 @@ The difference between this function and the |ftp_fput| is that this function
 uploads the file asynchronously, so your program can perform other operations
 while the file is being uploaded.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {ftp_stream}
@@ -40,12 +40,12 @@ while the file is being uploaded.
 
     The position in the remote file to start uploading to.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns FTP_FAILED or FTP_FINISHED or FTP_MOREDATA.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 ftp_nb_fput() example
@@ -78,7 +78,7 @@ Example #1 ftp_nb_fput() example
     fclose($fp);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ftp_nb_put| - Stores a file on the FTP server (non-blocking)

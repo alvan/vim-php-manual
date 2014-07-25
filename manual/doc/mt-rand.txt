@@ -4,7 +4,7 @@ mt_rand
 
 mt_rand — Generate a better random value
 
-===============================================================================
+==============================================================================
 *Description*
 
     int mt_rand ( void )~
@@ -21,7 +21,7 @@ If called without the optional {min}, {max} arguments mt_rand() returns a
 pseudo-random value between 0 and |mt_getrandmax|. If you want a random number
 between 5 and 15 (inclusive), for example, use mt_rand(5, 15).
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {min}
@@ -32,20 +32,20 @@ between 5 and 15 (inclusive), for example, use mt_rand(5, 15).
 
     Optional highest value to be returned (default: |mt_getrandmax|)
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 A random integer value between {min} (or 0) and {max} (or |mt_getrandmax|,
 inclusive), or FALSE if {max} is less than {min}.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version                       Description
 5.3.4   Issues an E_WARNING and returns FALSE if {max} < {min}.
 4.2.0   The random number generator is seeded automatically.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mt_rand() example
@@ -63,13 +63,13 @@ The above example will output something similar to:
 1478613278
 6
 
-===============================================================================
+==============================================================================
 *Notes*
 
 Caution
 
-This function does not generate cryptographically secure values, and should not
-be used for cryptographic purposes. If you need a cryptographically secure
+This function does not generate cryptographically secure values, and should
+not be used for cryptographic purposes. If you need a cryptographically secure
 value, consider using |openssl_random_pseudo_bytes| instead.
 
 Caution
@@ -77,7 +77,7 @@ Caution
 The distribution of mt_rand() return values is biased towards even numbers on
 64-bit builds of PHP when {max} is beyond 2^32.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mt_srand| - Seed the better random number generator

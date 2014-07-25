@@ -5,7 +5,7 @@ db2_client_info
 db2_client_info — Returns an object with properties that describe the DB2
 database client
 
-===============================================================================
+==============================================================================
 *Description*
 
     object db2_client_info ( resource $connection )~
@@ -14,8 +14,8 @@ This function returns an object with read-only properties that return
 information about the DB2 database client. The following table lists the DB2
 client properties:
 
-                             DB2 client properties
-   Property name     Return                     Description
+                            DB2 client properties
+   Property name     Return                    Description
                       type
 APPL_CODEPAGE        int    The application code page.
 CONN_CODEPAGE        int    The code page for the current connection.
@@ -24,9 +24,9 @@ DATA_SOURCE_NAME     string The data source name (DSN) used to create the
 DRIVER_NAME          string The name of the library that implements the DB2
                             Call Level Interface (CLI) specification.
                             The version of ODBC that the DB2 client supports.
-DRIVER_ODBC_VER      string This returns a string "MM.mm" where MM is the major
-                            version and mm is the minor version. The DB2 client
-                            always returns "03.51".
+DRIVER_ODBC_VER      string This returns a string "MM.mm" where MM is the
+                            major version and mm is the minor version. The DB2
+                            client always returns "03.51".
                             The version of the client, in the form of a string
                             "MM.mm.uuuu" where MM is the major version, mm is
 DRIVER_VER           string the minor version, and uuuu is the update. For
@@ -53,19 +53,19 @@ ODBC_VER             string MM is the major version, mm is the minor version,
                             and rrrr is the release. The DB2 client always
                             returns "03.01.0000".
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
 
     Specifies an active DB2 client connection.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an object on a successful call. Returns FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A db2_client_info() example
@@ -106,11 +106,11 @@ ODBC_SQL_CONFORMANCE: string(8) "EXTENDED"
 APPL_CODEPAGE: int(819)
 CONN_CODEPAGE: int(819)
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
-  * |db2_server_info| - Returns an object with properties that describe the DB2
-    database server
+  * |db2_server_info| - Returns an object with properties that describe the
+    DB2 database server
 
 
 vim:ft=help:

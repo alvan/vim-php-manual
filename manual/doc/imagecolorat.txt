@@ -4,7 +4,7 @@ imagecolorat
 
 imagecolorat — Get the index of the color of a pixel
 
-===============================================================================
+==============================================================================
 *Description*
 
     int imagecolorat ( resource $image , int $x , int $y )~
@@ -17,13 +17,13 @@ truecolor image, this function returns the RGB value of that pixel as integer.
 Use bitshifting and masking to access the distinct red, green and blue
 component values:
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { image}
 
-    An image resource, returned by one of the image creation functions, such as
-    |imagecreatetruecolor|.
+    An image resource, returned by one of the image creation functions, such
+    as |imagecreatetruecolor|.
 
 {x}
 
@@ -33,12 +33,12 @@ component values:
 
     y-coordinate of the point.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the index of the color.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Access distinct RGB values
@@ -83,7 +83,7 @@ array(4) {
   int(127)
 }
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |imagecolorset| - Set the color for the specified palette index

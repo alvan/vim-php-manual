@@ -4,14 +4,14 @@ gmp_intval
 
 gmp_intval — Convert GMP number to integer
 
-===============================================================================
+==============================================================================
 *Description*
 
     int gmp_intval ( GMP $gmpnumber )~
 
 This function converts GMP number into native PHP integers.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {gmpnumber}
@@ -20,12 +20,12 @@ This function converts GMP number into native PHP integers.
     5.6 and later, or a numeric string provided that it is possible to convert
     the latter to a number.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The integer value of {gmpnumber}.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 gmp_intval() example
@@ -47,14 +47,14 @@ The above example will output:
 2147483647
 2147483648
 
-===============================================================================
+==============================================================================
 *Notes*
 
 Warning
 
 This function returns a useful result only if the number actually fits the PHP
-integer (i.e., signed long type). If you want just to print the GMP number, use
-|gmp_strval|.
+integer (i.e., signed long type). If you want just to print the GMP number,
+use |gmp_strval|.
 
 
 vim:ft=help:

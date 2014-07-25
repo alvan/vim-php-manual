@@ -4,7 +4,7 @@ ldap_control_paged_result
 
 ldap_control_paged_result — Send LDAP pagination control
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool ldap_control_paged_result ( resource $link , int $pagesize [, bool~
@@ -13,7 +13,7 @@ ldap_control_paged_result — Send LDAP pagination control
 Enable LDAP pagination by sending the pagination control (page size,
 cookie...).
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {link}
@@ -31,15 +31,15 @@ cookie...).
 
 {cookie}
 
-    An opaque structure sent by the server (|ldap_control_paged_result_response
-    |).
+    An opaque structure sent by the server (|
+    ldap_control_paged_result_response|).
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 The example below show the retrieval of the first page of a search paginated
@@ -95,14 +95,14 @@ Example #2 LDAP pagination
        
      } while($cookie !== null && $cookie != '');
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
 
     Pagination control is a LDAPv3 protocol feature.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ldap_control_paged_result_response| - Retrieve the LDAP pagination cookie

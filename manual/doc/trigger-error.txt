@@ -4,7 +4,7 @@ trigger_error
 
 trigger_error — Generates a user-level error/warning/notice message
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool trigger_error ( string $error_msg [, int $error_type = E_USER_NOTICE~
@@ -17,7 +17,7 @@ the new error handler (|set_error_handler|).
 This function is useful when you need to generate a particular response to an
 exception at runtime.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {error_msg}
@@ -30,12 +30,13 @@ exception at runtime.
     The designated error type for this error. It only works with the E_USER
     family of constants, and will default to E_USER_NOTICE.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-This function returns FALSE if wrong {error_type} is specified, TRUE otherwise.
+This function returns FALSE if wrong {error_type} is specified, TRUE
+otherwise.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 trigger_error() example
@@ -48,15 +49,15 @@ See |set_error_handler| for a more extensive example.
     }
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
 Warning
 
-HTML entities in {error_msg} are not escaped. Use |htmlentities| on the message
-if the error is to be displayed in a browser.
+HTML entities in {error_msg} are not escaped. Use |htmlentities| on the
+message if the error is to be displayed in a browser.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |error_reporting| - Sets which PHP errors are reported

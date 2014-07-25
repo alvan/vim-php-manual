@@ -4,7 +4,7 @@ dba_firstkey
 
 dba_firstkey — Fetch first key
 
-===============================================================================
+==============================================================================
 *Description*
 
     string dba_firstkey ( resource $handle )~
@@ -12,19 +12,19 @@ dba_firstkey — Fetch first key
 dba_firstkey() returns the first key of the database and resets the internal
 key pointer. This permits a linear search through the whole database.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {handle}
 
     The database handler, returned by |dba_open| or |dba_popen|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the key on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |dba_nextkey| - Fetch next key

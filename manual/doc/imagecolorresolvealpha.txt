@@ -5,22 +5,22 @@ imagecolorresolvealpha
 imagecolorresolvealpha — Get the index of the specified color + alpha or its
 closest possible alternative
 
-===============================================================================
+==============================================================================
 *Description*
 
-    int imagecolorresolvealpha ( resource $image , int $red , int $green , int~
-    $blue , int $alpha )~
+    int imagecolorresolvealpha ( resource $image , int $red , int $green ,~
+    int $blue , int $alpha )~
 
 This function is guaranteed to return a color index for a requested color,
 either the exact color or the closest possible alternative.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { image}
 
-    An image resource, returned by one of the image creation functions, such as
-    |imagecreatetruecolor|.
+    An image resource, returned by one of the image creation functions, such
+    as |imagecreatetruecolor|.
 
 {red}
 
@@ -42,12 +42,12 @@ either the exact color or the closest possible alternative.
 The colors parameters are integers between 0 and 255 or hexadecimals between
 0x00 and 0xFF.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a color index.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Using imagecoloresolvealpha() to get colors from an image
@@ -75,13 +75,13 @@ Array
     [1] => 85
 )
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: This function requires GD 2.0.1 or later (2.0.28 or later is
     recommended).
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |imagecolorclosestalpha| - Get the index of the closest color to the

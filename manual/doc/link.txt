@@ -4,14 +4,14 @@ link
 
 link — Create a hard link
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool link ( string $target , string $link )~
 
 link() creates a hard link.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {target}
@@ -22,19 +22,19 @@ link() creates a hard link.
 
     The link name.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
-5.3.0   This function is now available on Windows platforms (Vista, Server 2008
-        or greater).
+Version                              Description
+5.3.0   This function is now available on Windows platforms (Vista, Server
+        2008 or greater).
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Creating a simple hard link
@@ -46,7 +46,7 @@ Example #1 Creating a simple hard link
     link($target, $link);
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: This function will not work on remote files as the file to be
@@ -55,7 +55,7 @@ Example #1 Creating a simple hard link
     Note: For Windows only: This function requires PHP to run in an elevated
     mode or with the UAC disabled.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |symlink| - Creates a symbolic link

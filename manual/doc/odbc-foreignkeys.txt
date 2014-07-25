@@ -4,17 +4,17 @@ odbc_foreignkeys
 
 odbc_foreignkeys — Retrieves a list of foreign keys
 
-===============================================================================
+==============================================================================
 *Description*
 
-    resource odbc_foreignkeys ( resource $connection_id , string $pk_qualifier~
-    , string $pk_owner , string $pk_table , string $fk_qualifier , string~
-    $fk_owner , string $fk_table )~
+    resource odbc_foreignkeys ( resource $connection_id , string~
+    $pk_qualifier , string $pk_owner , string $pk_table , string~
+    $fk_qualifier , string $fk_owner , string $fk_table )~
 
 Retrieves a list of foreign keys in the specified table or a list of foreign
 keys in other tables that refer to the primary key in the specified table
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection_id}
@@ -45,7 +45,7 @@ keys in other tables that refer to the primary key in the specified table
 
     The foreign key table.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an ODBC result identifier or FALSE on failure.
@@ -75,9 +75,9 @@ containing all of the foreign keys in the specified table and the primary keys
 (in other tables) to which they refer.
 
 If both {pk_table} and {fk_table} contain table names, odbc_foreignkeys()
-returns the foreign keys in the table specified in {fk_table} that refer to the
-primary key of the table specified in {pk_table}. This should be one key at
-most.
+returns the foreign keys in the table specified in {fk_table} that refer to
+the primary key of the table specified in {pk_table}. This should be one key
+at most.
 
 
 vim:ft=help:

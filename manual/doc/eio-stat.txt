@@ -4,7 +4,7 @@ eio_stat
 
 eio_stat — Get file status
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource eio_stat ( string $path , int $pri , callable $callback [, mixed~
@@ -12,7 +12,7 @@ eio_stat — Get file status
 
 eio_stat() returns file status information in {result} argument of {callback}
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {path}
@@ -26,8 +26,8 @@ eio_stat() returns file status information in {result} argument of {callback}
 
 {callback}
 
-    {callback} function is called when the request is done. It should match the
-    following prototype:
+    {callback} function is called when the request is done. It should match
+    the following prototype:
     void callback(mixed $data, int $result[, resource $req]);
 
     {data}
@@ -48,13 +48,13 @@ eio_stat() returns file status information in {result} argument of {callback}
 
     Arbitrary variable passed to {callback}.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 eio_stat() returns request resource on success or FALSE on error. On success
 assigns {result} argument of {callback} to an array.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 eio_stat() example
@@ -111,7 +111,7 @@ array(12) {
   int(1318250380)
 }
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * eio_lstat

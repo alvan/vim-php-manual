@@ -4,7 +4,7 @@ pspell_config_create
 
 pspell_config_create — Create a config used to open a dictionary
 
-===============================================================================
+==============================================================================
 *Description*
 
     int pspell_config_create ( string $language [, string $spelling [, string~
@@ -15,13 +15,13 @@ Create a config used to open a dictionary.
 pspell_config_create() has a very similar syntax to |pspell_new|. In fact,
 using pspell_config_create() immediately followed by |pspell_new_config| will
 produce the exact same result. However, after creating a new config, you can
-also use pspell_config_*() functions before calling |pspell_new_config| to take
-advantage of some advanced functionality.
+also use pspell_config_*() functions before calling |pspell_new_config| to
+take advantage of some advanced functionality.
 
 For more information and examples, check out inline manual pspell website:
 » http://aspell.net/.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {language}
@@ -48,12 +48,12 @@ For more information and examples, check out inline manual pspell website:
     'machine unsigned 16', 'machine unsigned 32'. This parameter is largely
     untested, so be careful when using.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Retuns a pspell config identifier, or FALSE on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 pspell_config_create()

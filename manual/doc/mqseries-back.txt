@@ -4,7 +4,7 @@ mqseries_back
 
 mqseries_back — MQSeries MQBACK
 
-===============================================================================
+==============================================================================
 *Description*
 
     void mqseries_back ( resource $hconn , resource &$compCode , resource~
@@ -19,7 +19,7 @@ Using mqseries_back() only works in conjunction with |mqseries_begin| and only
 function when connecting directly to a Queueu manager. Not via the mqclient
 interface.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {hConn}
@@ -36,12 +36,12 @@ interface.
 
     Reason code qualifying the compCode.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 No value is returned.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mqseries_back() example
@@ -55,7 +55,7 @@ Example #1 mqseries_back() example
         }
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -63,7 +63,7 @@ Example #1 mqseries_back() example
     mqseries_back() will not function when using MQSeries Client to connect to
     a Queueu Manager.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mqseries_conn| - MQSeries MQCONN

@@ -4,27 +4,27 @@ gettext
 
 gettext — Lookup a message in the current domain
 
-===============================================================================
+==============================================================================
 *Description*
 
     string gettext ( string $message )~
 
 Looks up a message in the current domain.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {message}
 
     The message being translated.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a translated string if one is found in the translation table, or the
 submitted message if not found.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 gettext()-check
@@ -49,7 +49,7 @@ Example #1 gettext()-check
     echo _("Have a nice day");
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -58,10 +58,10 @@ Example #1 gettext()-check
 
     Note:
 
-    Setting a language isn't enough for some systems and the |putenv| should be
-    used to define the current locale.
+    Setting a language isn't enough for some systems and the |putenv| should
+    be used to define the current locale.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |setlocale| - Set locale information

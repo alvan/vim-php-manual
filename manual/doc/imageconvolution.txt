@@ -2,9 +2,10 @@ imageconvolution
 
 (PHP 5 >= 5.1.0)
 
-imageconvolution — Apply a 3x3 convolution matrix, using coefficient and offset
+imageconvolution — Apply a 3x3 convolution matrix, using coefficient and
+offset
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool imageconvolution ( resource $image , array $matrix , float $div ,~
@@ -13,13 +14,13 @@ imageconvolution — Apply a 3x3 convolution matrix, using coefficient and offse
 Applies a convolution matrix on the image, using the given coefficient and
 offset.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { image}
 
-    An image resource, returned by one of the image creation functions, such as
-    |imagecreatetruecolor|.
+    An image resource, returned by one of the image creation functions, such
+    as |imagecreatetruecolor|.
 
 {matrix}
 
@@ -33,12 +34,12 @@ offset.
 
     Color offset.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Embossing the PHP.net logo
@@ -79,13 +80,13 @@ The above example will output:
 
 Output of example : Gaussian blur
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: This function is only available if PHP is compiled with the bundled
     version of the GD library.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |imagefilter| - Applies a filter to an image

@@ -5,7 +5,7 @@ pg_field_type_oid
 pg_field_type_oid — Returns the type ID (OID) for the corresponding field
 number
 
-===============================================================================
+==============================================================================
 *Description*
 
     int pg_field_type_oid ( resource $result , int $field_number )~
@@ -14,33 +14,33 @@ pg_field_type_oid() returns an integer containing the OID of the base type of
 the given {field_number} in the given PostgreSQL {result} resource.
 
 You can get more information about the field type by querying PostgreSQL's
-pg_type system table using the OID obtained with this function. The PostgreSQL 
+pg_type system table using the OID obtained with this function. The PostgreSQL
 format_type() function will convert a type OID into an SQL standard type name.
 
     Note:
 
-    If the field uses a PostgreSQL domain (rather than a basic type), it is the
-    OID of the domain's underlying type that is returned, rather than the OID
-    of the domain itself.
+    If the field uses a PostgreSQL domain (rather than a basic type), it is
+    the OID of the domain's underlying type that is returned, rather than the
+    OID of the domain itself.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
 
-    PostgreSQL query result resource, returned by |pg_query|, |pg_query_params|
-    or |pg_execute| (among others).
+    PostgreSQL query result resource, returned by |pg_query|, |pg_query_params
+    | or |pg_execute| (among others).
 
 {field_number}
 
     Field number, starting from 0.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The OID of the field's base type. FALSE is returned on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Getting information about fields
@@ -59,7 +59,7 @@ The above example will output:
 
 Title field type OID: 1043
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |pg_field_type| - Returns the type name for the corresponding field number

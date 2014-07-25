@@ -4,7 +4,7 @@ oci_set_action
 
 oci_set_action — Sets the action name
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool oci_set_action ( resource $connection , string $action_name )~
@@ -20,24 +20,24 @@ V$SQLAREA and DBMS_MONITOR.SERV_MOD_ACT_STAT_ENABLE.
 
 The value may be retained across persistent connections.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
 
-    An Oracle connection identifier, returned by |oci_connect|, |oci_pconnect|,
-    or |oci_new_connect|.
+    An Oracle connection identifier, returned by |oci_connect|, |oci_pconnect|
+    , or |oci_new_connect|.
 
 {action_name}
 
     User chosen string up to 32 bytes long.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Setting the action
@@ -64,7 +64,7 @@ Example #1 Setting the action
 sqlplus system/welcome
 SQL> select action from v$session;
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: Oracle version requirement
@@ -87,7 +87,7 @@ Roundtrip Gotcha
 Some but not all OCI8 functions cause roundtrips. Roundtrips to the database
 may not occur with queries when result caching is enabled.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |oci_set_module_name| - Sets the module name

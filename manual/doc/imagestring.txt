@@ -4,7 +4,7 @@ imagestring
 
 imagestring — Draw a string horizontally
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool imagestring ( resource $image , int $font , int $x , int $y , string~
@@ -12,13 +12,13 @@ imagestring — Draw a string horizontally
 
 Draws a {string} at the given coordinates.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { image}
 
-    An image resource, returned by one of the image creation functions, such as
-    |imagecreatetruecolor|.
+    An image resource, returned by one of the image creation functions, such
+    as |imagecreatetruecolor|.
 
 { font}
 
@@ -42,12 +42,12 @@ Draws a {string} at the given coordinates.
 
     A color identifier created with |imagecolorallocate|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 imagestring() example
@@ -74,7 +74,7 @@ The above example will output something similar to:
 
 Output of example : imagestring()
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |imageloadfont| - Load a new font

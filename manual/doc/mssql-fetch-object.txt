@@ -4,20 +4,20 @@ mssql_fetch_object
 
 mssql_fetch_object — Fetch row as object
 
-===============================================================================
+==============================================================================
 *Description*
 
     object mssql_fetch_object ( resource $result )~
 
 mssql_fetch_object() is similar to |mssql_fetch_array|, with one difference -
-an object is returned, instead of an array. Indirectly, that means that you can
-only access the data by the field names, and not by their offsets (numbers are
-illegal property names).
+an object is returned, instead of an array. Indirectly, that means that you
+can only access the data by the field names, and not by their offsets (numbers
+are illegal property names).
 
 Speed-wise, the function is identical to |mssql_fetch_array|, and almost as
 quick as |mssql_fetch_row| (the difference is insignificant).
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
@@ -25,13 +25,13 @@ quick as |mssql_fetch_row| (the difference is insignificant).
     The result resource that is being evaluated. This result comes from a call
     to |mssql_query|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an object with properties that correspond to the fetched row, or FALSE
 if there are no more rows.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mssql_fetch_object() example
@@ -60,18 +60,18 @@ Example #1 mssql_fetch_object() example
     mssql_free_result($query);
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: Field names returned by this function are case-sensitive.
 
     Note: This function sets NULL fields to the PHP NULL value.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
-  * |mssql_fetch_array| - Fetch a result row as an associative array, a numeric
-    array, or both
+  * |mssql_fetch_array| - Fetch a result row as an associative array, a
+    numeric array, or both
   * |mssql_fetch_row| - Get row as enumerated array
 
 

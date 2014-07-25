@@ -5,7 +5,7 @@ strripos
 strripos — Find the position of the last occurrence of a case-insensitive
 substring in a string
 
-===============================================================================
+==============================================================================
 *Description*
 
     int strripos ( string $haystack , string $needle [, int $offset = 0 ] )~
@@ -15,7 +15,7 @@ string.
 
 Unlike the |strrpos|, strripos() is case-insensitive.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {haystack}
@@ -34,7 +34,7 @@ Unlike the |strrpos|, strripos() is case-insensitive.
     start from that many characters from the end of the string, searching
     backwards.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the position where the needle exists relative to the beginnning of the
@@ -45,12 +45,12 @@ Returns FALSE if the needle was not found.
 
 Warning
 
-This function may return Boolean FALSE, but may also return a non-Boolean value
-which evaluates to FALSE. Please read the section on Booleans for more
+This function may return Boolean FALSE, but may also return a non-Boolean
+value which evaluates to FALSE. Please read the section on Booleans for more
 information. Use the === operator for testing the return value of this
 function.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A simple strripos() example
@@ -74,13 +74,13 @@ The above example will output:
    Congratulations!
    We found the last (aB) in (ababcd) at position (2)
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |strpos| - Find the position of the first occurrence of a substring in a
     string
-  * |stripos| - Find the position of the first occurrence of a case-insensitive
-    substring in a string
+  * |stripos| - Find the position of the first occurrence of a
+    case-insensitive substring in a string
   * |strrpos| - Find the position of the last occurrence of a substring in a
     string
   * |strrchr| - Find the last occurrence of a character in a string

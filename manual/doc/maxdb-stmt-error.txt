@@ -7,7 +7,7 @@ maxdb_stmt::error
 maxdb_stmt_error -- maxdb_stmt::error — Returns a string description for last
 statement error
 
-===============================================================================
+==============================================================================
 *Description*
 
 Procedural style
@@ -22,12 +22,12 @@ For the statement specified by stmt, maxdb_stmt_error() returns a containing
 the error message for the most recently invoked statement function that can
 succeed or fail.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 A string that describes the error. An empty string if no error occurred.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Object oriented style
@@ -105,7 +105,7 @@ The above example will output something similar to:
 Warning: maxdb_stmt_execute(): -4004 POS(23) Unknown table name:MYCITY [42000] <...>
 Error: POS(23) Unknown table name:MYCITY.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |maxdb_stmt_errno| - Returns the error code for the most recent statement

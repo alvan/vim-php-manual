@@ -4,18 +4,18 @@ ldap_search
 
 ldap_search — Search LDAP tree
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource ldap_search ( resource $link_identifier , string $base_dn ,~
-    string $filter [, array $attributes [, int $attrsonly [, int $sizelimit [,~
-    int $timelimit [, int $deref ]]]]] )~
+    string $filter [, array $attributes [, int $attrsonly [, int $sizelimit~
+    [, int $timelimit [, int $deref ]]]]] )~
 
 Performs the search for a specified filter on the directory with the scope of
 LDAP_SCOPE_SUBTREE. This is equivalent to searching the entire directory.
 
-From 4.0.5 on it's also possible to do parallel searches. To do this you use an
-array of link identifiers, rather than a single identifier, as the first
+From 4.0.5 on it's also possible to do parallel searches. To do this you use
+an array of link identifiers, rather than a single identifier, as the first
 argument. If you don't want the same base DN and the same filter for all the
 searches, you can also use an array of base DNs and/or an array of filters.
 Those arrays must be of the same size as the link identifier array since the
@@ -27,7 +27,7 @@ normally returned, except that a result identifier is always returned when a
 search was made. There are some rare cases where the normal search returns
 FALSE while the parallel search returns an identifier.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {link_identifier}
@@ -40,15 +40,15 @@ FALSE while the parallel search returns an identifier.
 
 {filter}
 
-    The search filter can be simple or advanced, using boolean operators in the
-    format described in the LDAP documentation (see the » Netscape Directory
-    SDK for full information on filters).
+    The search filter can be simple or advanced, using boolean operators in
+    the format described in the LDAP documentation (see the » Netscape
+    Directory SDK for full information on filters).
 
 {attributes}
 
     An array of the required attributes, e.g. array("mail", "sn", "cn"). Note
-    that the "dn" is always returned irrespective of which attributes types are
-    requested.
+    that the "dn" is always returned irrespective of which attributes types
+    are requested.
 
     Using this parameter is much more efficient than the default action (which
     is to return all attributes and their associated values). The use of this
@@ -70,15 +70,15 @@ FALSE while the parallel search returns an identifier.
         This parameter can NOT override server-side preset sizelimit. You can
         set it lower though.
 
-        Some directory server hosts will be configured to return no more than a
-        preset number of entries. If this occurs, the server will indicate that
-        it has only returned a partial results set. This also occurs if you use
-        this parameter to limit the count of fetched entries.
+        Some directory server hosts will be configured to return no more than
+        a preset number of entries. If this occurs, the server will indicate
+        that it has only returned a partial results set. This also occurs if
+        you use this parameter to limit the count of fetched entries.
 
 {timelimit}
 
-    Sets the number of seconds how long is spend on the search. Setting this to
-    0 means no limit.
+    Sets the number of seconds how long is spend on the search. Setting this
+    to 0 means no limit.
 
         Note:
 
@@ -87,28 +87,28 @@ FALSE while the parallel search returns an identifier.
 
 {deref}
 
-    Specifies how aliases should be handled during the search. It can be one of
-    the following:
+    Specifies how aliases should be handled during the search. It can be one
+    of the following:
       + LDAP_DEREF_NEVER - (default) aliases are never dereferenced.
-      + LDAP_DEREF_SEARCHING - aliases should be dereferenced during the search
-        but not when locating the base object of the search.
+      + LDAP_DEREF_SEARCHING - aliases should be dereferenced during the
+        search but not when locating the base object of the search.
       + LDAP_DEREF_FINDING - aliases should be dereferenced when locating the
         base object but not during the search.
       + LDAP_DEREF_ALWAYS - aliases should be dereferenced always.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a search result identifier or FALSE on error.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version                            Description
 4.0.5   Parallel searches support was added.
 4.0.2   The {attrsonly}, {sizelimit}, {timelimit} and {deref} were added.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 The example below retrieves the organizational unit, surname, given name and

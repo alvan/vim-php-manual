@@ -4,18 +4,19 @@ date_sunset
 
 date_sunset — Returns time of sunset for a given day and location
 
-===============================================================================
+==============================================================================
 *Description*
 
-    mixed date_sunset ( int $timestamp [, int $format = SUNFUNCS_RET_STRING [,~
-    float $latitude = ini_get("date.default_latitude") [, float~
+    mixed date_sunset ( int $timestamp [, int $format = SUNFUNCS_RET_STRING~
+    [, float $latitude = ini_get("date.default_latitude") [, float~
     $longitude = ini_get("date.default_longitude") [, float $zenith~
-    = ini_get("date.sunset_zenith") [, float $gmt_offset = 0 ]]]]] )~
+    = ini_get("date.sunset_zenith") [, float $gmt_offset = 0 ]]]]]~
+)~
 
 date_sunset() returns the sunset time for a given day (specified as a
 {timestamp}) and location.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {timestamp}
@@ -25,10 +26,10 @@ date_sunset() returns the sunset time for a given day (specified as a
 {format}
 
                               {format} constants
-           constant                      description                  example
-    SUNFUNCS_RET_STRING    returns the result as string             16:46
-    SUNFUNCS_RET_DOUBLE    returns the result as float              16.78243132
-    SUNFUNCS_RET_TIMESTAMP returns the result as integer            1095034606
+           constant                      description                 example
+    SUNFUNCS_RET_STRING    returns the result as string            16:46
+    SUNFUNCS_RET_DOUBLE    returns the result as float             16.78243132
+    SUNFUNCS_RET_TIMESTAMP returns the result as integer           1095034606
                            (timestamp)
 
 {latitude}
@@ -49,25 +50,26 @@ date_sunset() returns the sunset time for a given day (specified as a
 
     Specified in hours.
 
-===============================================================================
+==============================================================================
 *Errors/Exceptions*
 
-Every call to a date/time function will generate a E_NOTICE if the time zone is
-not valid, and/or a E_STRICT or E_WARNING message if using the system settings
-or the TZ environment variable. See also |date_default_timezone_set|
+Every call to a date/time function will generate a E_NOTICE if the time zone
+is not valid, and/or a E_STRICT or E_WARNING message if using the system
+settings or the TZ environment variable. See also |date_default_timezone_set|
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version                      Description
 5.1.0   Now issues the E_STRICT and E_NOTICE time zone errors.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns the sunset time in a specified {format} on success or FALSE on failure.
+Returns the sunset time in a specified {format} on success or FALSE on
+failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 date_sunset() example
@@ -90,7 +92,7 @@ The above example will output something similar to:
 
 Mon Dec 20 2004, sunset time : 18:13
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |date_sunrise| - Returns time of sunrise for a given day and location

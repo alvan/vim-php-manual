@@ -4,7 +4,7 @@ fbsql_connect
 
 fbsql_connect — Open a connection to a FrontBase Server
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource fbsql_connect ([ string $hostname =~
@@ -21,7 +21,7 @@ opened link will be returned.
 The link to the server will be closed as soon as the execution of the script
 ends, unless it's closed earlier by explicitly calling |fbsql_close|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {hostname}
@@ -36,12 +36,12 @@ ends, unless it's closed earlier by explicitly calling |fbsql_close|.
 
     The password for the connection.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a positive FrontBase link identifier on success, or FALSE on errors.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 fbsql_connect() example
@@ -55,7 +55,7 @@ Example #1 fbsql_connect() example
 
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |fbsql_pconnect| - Open a persistent connection to a FrontBase Server

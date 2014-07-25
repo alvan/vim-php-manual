@@ -4,14 +4,14 @@ wincache_fcache_meminfo
 
 wincache_fcache_meminfo — Retrieves information about file cache memory usage
 
-===============================================================================
+==============================================================================
 *Description*
 
     array wincache_fcache_meminfo ( void )~
 
 Retrieves information about memory usage by file cache.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Array of meta data about file cache memory usage or FALSE on failure
@@ -25,7 +25,7 @@ The array returned by this function contains the following elements:
   * memory_overhead - amount of memory in bytes used for the file cache
     internal structures
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A wincache_fcache_meminfo() example
@@ -47,19 +47,19 @@ Array
     [memory_overhead] => 5856
 )
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |wincache_fcache_fileinfo| - Retrieves information about files cached in
     the file cache
   * |wincache_ocache_fileinfo| - Retrieves information about files cached in
     the opcode cache
-  * |wincache_ocache_meminfo| - Retrieves information about opcode cache memory
-    usage
+  * |wincache_ocache_meminfo| - Retrieves information about opcode cache
+    memory usage
   * |wincache_rplist_fileinfo| - Retrieves information about resolve file path
     cache
-  * |wincache_rplist_meminfo| - Retrieves information about memory usage by the
-    resolve file path cache
+  * |wincache_rplist_meminfo| - Retrieves information about memory usage by
+    the resolve file path cache
   * |wincache_refresh_if_changed| - Refreshes the cache entries for the cached
     files
   * |wincache_ucache_meminfo| - Retrieves information about user cache memory

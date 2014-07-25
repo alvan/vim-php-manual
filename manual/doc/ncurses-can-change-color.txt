@@ -4,7 +4,7 @@ ncurses_can_change_color
 
 ncurses_can_change_color — Checks if terminal color definitions can be changed
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool ncurses_can_change_color ( void )~
@@ -13,17 +13,17 @@ Checks whether the terminal has color capabilities and whether the programmer
 can change color definitions using |ncurses_init_color|. ncurses must be
 initialized using |ncurses_init| before calling this function.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 This function has no parameters.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Return TRUE if the programmer can change color definitions, FALSE otherwise.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ncurses_has_colors| - Checks if terminal has color capabilities

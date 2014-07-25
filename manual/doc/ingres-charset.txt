@@ -4,7 +4,7 @@ ingres_charset
 
 ingres_charset — Returns the installation character set
 
-===============================================================================
+==============================================================================
 *Description*
 
     string ingres_charset ( resource $link )~
@@ -18,20 +18,20 @@ Ingres client, from II_CHARSETxx (where xx is the installation code).
     Changing the value of II_CHARSETxx in a running Ingres installation can
     cause data corruption.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {link}
 
     The connection link identifier
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a string with the value for II_CHARSETxx or returns NULL if the value
 could not be determined.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 ingres_charset() - Get the installation character set
@@ -44,7 +44,7 @@ Example #1 ingres_charset() - Get the installation character set
     ingres_close($link);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ingres_connect| - Open a connection to an Ingres database

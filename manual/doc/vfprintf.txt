@@ -4,7 +4,7 @@ vfprintf
 
 vfprintf — Write a formatted string to a stream
 
-===============================================================================
+==============================================================================
 *Description*
 
     int vfprintf ( resource $handle , string $format , array $args )~
@@ -12,10 +12,10 @@ vfprintf — Write a formatted string to a stream
 Write a string produced according to {format} to the stream resource specified
 by {handle}.
 
-Operates as |fprintf| but accepts an array of arguments, rather than a variable
-number of arguments.
+Operates as |fprintf| but accepts an array of arguments, rather than a
+variable number of arguments.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {handle}
@@ -26,12 +26,12 @@ number of arguments.
 
 {args}
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the length of the outputted string.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 vfprintf(): zero-padded integers
@@ -44,7 +44,7 @@ Example #1 vfprintf(): zero-padded integers
     // will write the formatted ISO date to date.txt
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |printf| - Output a formatted string

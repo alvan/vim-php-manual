@@ -4,17 +4,17 @@ cubrid_data_seek
 
 cubrid_data_seek — Move the internal row pointer of the CUBRID result
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool cubrid_data_seek ( resource $result , int $row_number )~
 
 This function performs the moving of the internal row pointer of the CUBRID
-result (associated with the specified result identifier) to point to a specific
-row number. There are functions, such as |cubrid_fetch_assoc|, which use the
-current stored value of {row number}.
+result (associated with the specified result identifier) to point to a
+specific row number. There are functions, such as |cubrid_fetch_assoc|, which
+use the current stored value of {row number}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
@@ -25,12 +25,12 @@ current stored value of {row number}.
 
     This is the desired row number of the new result pointer.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_data_seek() example

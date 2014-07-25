@@ -4,7 +4,7 @@ array_fill
 
 array_fill — Fill an array with values
 
-===============================================================================
+==============================================================================
 *Description*
 
     array array_fill ( int $start_index , int $num , mixed $value )~
@@ -12,15 +12,16 @@ array_fill — Fill an array with values
 Fills an array with {num} entries of the value of the {value} parameter, keys
 starting at the {start_index} parameter.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {start_index}
 
     The first index of the returned array.
 
-    If {start_index} is negative, the first index of the returned array will be
-    {start_index} and the following indices will start from zero (see example).
+    If {start_index} is negative, the first index of the returned array will
+    be {start_index} and the following indices will start from zero (see
+    example).
 
 {num}
 
@@ -30,17 +31,17 @@ starting at the {start_index} parameter.
 
     Value to use for filling
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the filled array
 
-===============================================================================
+==============================================================================
 *Errors/Exceptions*
 
 Throws a E_WARNING if {num} is less than one.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 array_fill() example
@@ -71,13 +72,13 @@ Array
     [2] => pear
 )
 
-===============================================================================
+==============================================================================
 *Notes*
 
 See also the Arrays section of manual for a detailed explanation of negative
 keys.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |array_fill_keys| - Fill an array with values, specifying keys

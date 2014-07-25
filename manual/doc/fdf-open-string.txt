@@ -4,7 +4,7 @@ fdf_open_string
 
 fdf_open_string — Read a FDF document from a string
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource fdf_open_string ( string $fdf_data )~
@@ -14,7 +14,7 @@ Reads form data from a string.
 You can use fdf_open_string() together with $HTTP_FDF_DATA to process FDF form
 input from a remote client.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {fdf_data}
@@ -22,12 +22,12 @@ input from a remote client.
     The data as returned from a PDF form or created using |fdf_create| and |
     fdf_save_string|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a FDF document handle, or FALSE on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Accessing the form data
@@ -38,7 +38,7 @@ Example #1 Accessing the form data
     fdf_close($fdf);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |fdf_open| - Open a FDF document

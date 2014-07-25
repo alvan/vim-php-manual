@@ -4,7 +4,7 @@ pg_send_query
 
 pg_send_query — Sends asynchronous query
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool pg_send_query ( resource $connection , string $query )~
@@ -17,11 +17,11 @@ Script execution is not blocked while the queries are executing. Use |
 pg_connection_busy| to check if the connection is busy (i.e. the query is
 executing). Queries may be cancelled using |pg_cancel_query|.
 
-Although the user can send multiple queries at once, multiple queries cannot be
-sent over a busy connection. If a query is sent while the connection is busy,
-it waits until the last query is finished and discards all its results.
+Although the user can send multiple queries at once, multiple queries cannot
+be sent over a busy connection. If a query is sent while the connection is
+busy, it waits until the last query is finished and discards all its results.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
@@ -34,14 +34,14 @@ it waits until the last query is finished and discards all its results.
 
     Data inside the query should be |properly escaped|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
 Use |pg_get_result| to determine the query result.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 pg_send_query() example
@@ -73,7 +73,7 @@ Resource id #3 has 3 records
 Second call to pg_get_result(): Resource id #4
 Resource id #4 has 1 records
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |pg_query| - Execute a query

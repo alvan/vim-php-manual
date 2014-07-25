@@ -4,15 +4,16 @@ svn_status
 
 svn_status — Returns the status of working copy files and directories
 
-===============================================================================
+==============================================================================
 *Description*
 
     array svn_status ( string $path [, int $flags = 0 ] )~
 
-Returns the status of working copy files and directories, giving modifications,
-additions, deletions and other changes to items in the working copy.
+Returns the status of working copy files and directories, giving
+modifications, additions, deletions and other changes to items in the working
+copy.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {path}
@@ -30,7 +31,7 @@ additions, deletions and other changes to items in the working copy.
     out-of-date), SVN_NO_IGNORE (disregard svn:ignore properties when scanning
     for new files) and SVN_IGNORE_EXTERNALS.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a numerically indexed array of associative arrays detailing the status
@@ -54,7 +55,8 @@ repos_text_status
     Status of item's text in repository. Only accurate if {update} was set to
     TRUE. Refer to status constants for possible values.
 prop_status
-    Status of item's properties. Refer to status constants for possible values.
+    Status of item's properties. Refer to status constants for possible
+    values.
 repos_prop_status
     Status of item's property in repository. Only accurate if {update} was set
     to TRUE. Refer to status constants for possible values.
@@ -64,8 +66,8 @@ copied
     Whether or not the item was copied (scheduled for addition with history).
     (Only set if TRUE.)
 switched
-    Whether or not the item was switched using the switch command. (Only set if
-    TRUE)
+    Whether or not the item was switched using the switch command. (Only set
+    if TRUE)
 
 These keys are only set if the item is versioned:
 
@@ -88,18 +90,19 @@ schedule
         define('svn_wc_schedule_normal',  0); // nothing special
         define('svn_wc_schedule_add',     1); // item will be added
         define('svn_wc_schedule_delete',  2); // item will be deleted
-        define('svn_wc_schedule_replace', 3); // item will be added and deleted
+        define('svn_wc_schedule_replace', 3); //
+     item will be added and deleted
     }
 <    ?>
 deleted
-    Whether or not the item was deleted, but parent revision lags behind. (Only
-    set if TRUE.)
+    Whether or not the item was deleted, but parent revision lags behind.
+    (Only set if TRUE.)
 absent
     Whether or not the item is absent, that is, Subversion knows that there
     should be something there but there isn't. (Only set if TRUE.)
 incomplete
-    Whether or not the entries file for a directory is incomplete. (Only set if
-    TRUE.)
+    Whether or not the entries file for a directory is incomplete. (Only set
+    if TRUE.)
 cmt_date
     Integer Unix timestamp of last commit date. (Unaffected by {update}.)
 cmt_rev
@@ -111,16 +114,16 @@ prop_time
 text_time
     Integer Unix timestamp of last up-to-date time for text
 
-===============================================================================
+==============================================================================
 *Notes*
 
 Warning
 
 This function is EXPERIMENTAL. The behaviour of this function, its name, and
-surrounding documentation may change without notice in a future release of PHP.
-This function should be used at your own risk.
+surrounding documentation may change without notice in a future release of
+PHP. This function should be used at your own risk.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Basic example
@@ -154,7 +157,7 @@ Array (
     )
 )
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |svn_update| - Update working copy

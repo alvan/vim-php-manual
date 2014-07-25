@@ -4,28 +4,28 @@ apc_exists
 
 apc_exists — Checks if APC key exists
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed apc_exists ( mixed $keys )~
 
 Checks if one or more APC keys exist.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {keys}
 
     A string, or an array of strings, that contain keys.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE if the key exists, otherwise FALSE Or if an array was passed to
 {keys}, then an array is returned that contains all existing keys, or an empty
 array if none exist.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 apc_exists() example
@@ -69,7 +69,7 @@ array(2) {
   bool(true)
 }
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |apc_cache_info| - Retrieves cached information from APC's data store

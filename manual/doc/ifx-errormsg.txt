@@ -4,7 +4,7 @@ ifx_errormsg
 
 ifx_errormsg — Returns error message of last Informix call
 
-===============================================================================
+==============================================================================
 *Description*
 
     string ifx_errormsg ([ int $errorcode ] )~
@@ -12,7 +12,7 @@ ifx_errormsg — Returns error message of last Informix call
 Returns the Informix error message associated with the most recent Informix
 error.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {errorcode}
@@ -20,12 +20,12 @@ error.
     If specified, the function will return the message corresponding to the
     specified code.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Return the error message, as a string.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 ifx_errormsg() example
@@ -34,7 +34,7 @@ Example #1 ifx_errormsg() example
     printf("%s\n<br>", ifx_errormsg(-201));
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ifx_error| - Returns error code of last Informix call

@@ -4,14 +4,14 @@ shmop_write
 
 shmop_write — Write data into shared memory block
 
-===============================================================================
+==============================================================================
 *Description*
 
     int shmop_write ( int $shmid , string $data , int $offset )~
 
 shmop_write() will write a string into shared memory block.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {shmid}
@@ -26,12 +26,12 @@ shmop_write() will write a string into shared memory block.
 
     Specifies where to start writing data inside the shared memory segment.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The size of the written {data}, or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Writing to shared memory block
@@ -43,7 +43,7 @@ Example #1 Writing to shared memory block
 This example will write data inside $my_string into shared memory block,
 $shm_bytes_written will contain the number of bytes written.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |shmop_read| - Read data from shared memory block

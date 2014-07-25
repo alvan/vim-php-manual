@@ -4,27 +4,27 @@ imageistruecolor
 
 imageistruecolor — Finds whether an image is a truecolor image
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool imageistruecolor ( resource $image )~
 
 imageistruecolor() finds whether the image {image} is a truecolor image.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { image}
 
-    An image resource, returned by one of the image creation functions, such as
-    |imagecreatetruecolor|.
+    An image resource, returned by one of the image creation functions, such
+    as |imagecreatetruecolor|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE if the {image} is truecolor, FALSE otherwise.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Simple detection of true color image instances using 
@@ -52,13 +52,13 @@ imageistruecolor()
     // Continue working with image instance
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: This function requires GD 2.0.1 or later (2.0.28 or later is
     recommended).
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |imagecreatetruecolor| - Create a new true color image

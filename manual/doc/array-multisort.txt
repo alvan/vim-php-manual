@@ -4,7 +4,7 @@ array_multisort
 
 array_multisort — Sort multiple or multi-dimensional arrays
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool array_multisort ( array &$array1 [, mixed $array1_sort_order =~
@@ -16,7 +16,7 @@ multi-dimensional array by one or more dimensions.
 Associative (string) keys will be maintained, but numeric keys will be
 re-indexed.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {array1}
@@ -25,8 +25,8 @@ re-indexed.
 
 {array1_sort_order}
 
-    The order used to sort the previous array argument. Either SORT_ASC to sort
-    ascendingly or SORT_DESC to sort descendingly.
+    The order used to sort the previous array argument. Either SORT_ASC to
+    sort ascendingly or SORT_DESC to sort descendingly.
 
     This argument can be swapped with {array1_sort_flags} or omitted entirely,
     in which case SORT_ASC is assumed.
@@ -41,8 +41,8 @@ re-indexed.
       + SORT_STRING - compare items as strings
       + SORT_LOCALE_STRING - compare items as strings, based on the current
         locale. It uses the locale, which can be changed using |setlocale|
-      + SORT_NATURAL - compare items as strings using "natural ordering" like |
-        natsort|
+      + SORT_NATURAL - compare items as strings using "natural ordering" like 
+        |natsort|
       + SORT_FLAG_CASE - can be combined (bitwise OR) with SORT_STRING or
         SORT_NATURAL to sort strings case-insensitively
 
@@ -53,21 +53,21 @@ re-indexed.
 
     More arrays, optionally followed by sort order and flags.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 5.4.0   The SORT_NATURAL and SORT_FLAG_CASE were added to {array1_sort_flags}
         as possible sort flags.
 5.3.0   The SORT_LOCALE_STRING was added to {array1_sort_flags} as possible
         sort flags.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Sorting multiple arrays
@@ -134,8 +134,8 @@ array(2) {
 
 Example #3 Sorting database results
 
-For this example, each element in the data array represents one row in a table.
-This type of dataset is typical of database records.
+For this example, each element in the data array represents one row in a
+table. This type of dataset is typical of database records.
 
 Example data:
 
@@ -148,8 +148,8 @@ volume | edition
     86 |       6
     67 |       7
 
-The data as an array, called data. This would usually, for example, be obtained
-by looping with |mysql_fetch_assoc|.
+The data as an array, called data. This would usually, for example, be
+obtained by looping with |mysql_fetch_assoc|.
 
 <?php >
     $data[] = array('volume' => 67, 'edition' => 2);
@@ -215,7 +215,7 @@ Array
     [3] => Beta
 )
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |usort| - Sort an array by values using a user-defined comparison function

@@ -4,14 +4,14 @@ odbc_result
 
 odbc_result — Get result data
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed odbc_result ( resource $result_id , mixed $field )~
 
 Get result data
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result_id}
@@ -24,13 +24,13 @@ Get result data
     column number of the field you want; or it can be a string containing the
     name of the field.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the string contents of the field, FALSE on error, NULL for NULL data,
 or TRUE for binary data.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 The first call to odbc_result() returns the value of the third field in the
@@ -48,7 +48,7 @@ Example #1 odbc_result() examples
     $item_val = odbc_result($Query_ID, "val");
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
 Field indices start from 1. Regarding the way binary or long column data is

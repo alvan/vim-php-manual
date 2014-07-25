@@ -5,7 +5,7 @@ mysqlnd_qc_get_normalized_query_trace_log
 mysqlnd_qc_get_normalized_query_trace_log — Returns a normalized query trace
 log for each query inspected by the query cache
 
-===============================================================================
+==============================================================================
 *Description*
 
     array mysqlnd_qc_get_normalized_query_trace_log ( void )~
@@ -23,16 +23,16 @@ normalized as SELECT id FROM test WHERE id = ?. Whenever a statement is
 inspected by the query cache which matches the normalized statement pattern,
 its statistics are grouped by the normalized statement string.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 This function has no parameters.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-An array of query log. Every list entry contains the normalized query stringand
-further detail information.
+An array of query log. Every list entry contains the normalized query
+stringand further detail information.
 
         Key                                 Description
 query                Normalized statement string.
@@ -65,7 +65,7 @@ max_run_time         The maximum run time of all queries contributing to the
 max_store_time       The maximum store time of all queries contributing to the
                      query log entry.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mysqlnd_qc_get_normalized_query_trace_log() example
@@ -200,7 +200,7 @@ array(4) {
   }
 }
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * Runtime configuration

@@ -4,15 +4,16 @@ gnupg_decryptverify
 
 gnupg_decryptverify — Decrypts and verifies a given text
 
-===============================================================================
+==============================================================================
 *Description*
 
     array gnupg_decryptverify ( resource $identifier , string $text , string~
     &$plaintext )~
 
-Decrypts and verifies a given text and returns information about the signature.
+Decrypts and verifies a given text and returns information about the
+signature.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {identifier}
@@ -27,14 +28,14 @@ Decrypts and verifies a given text and returns information about the signature.
 
     The parameter {plaintext} gets filled with the decrypted text.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-On success, this function returns information about the signature and fills the
-{plaintext} parameter with the decrypted text. On failure, this function
+On success, this function returns information about the signature and fills
+the {plaintext} parameter with the decrypted text. On failure, this function
 returns FALSE.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Procedural gnupg_decryptverify() example

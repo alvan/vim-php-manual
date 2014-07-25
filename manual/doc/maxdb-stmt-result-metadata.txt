@@ -7,7 +7,7 @@ maxdb_stmt::result_metadata
 maxdb_stmt_result_metadata -- maxdb_stmt::result_metadata — Returns result set
 metadata from a prepared statement
 
-===============================================================================
+==============================================================================
 *Description*
 
 Procedural style
@@ -52,13 +52,13 @@ can do by passing it to |maxdb_free_result|
     metadata. It does not contain any row results. The rows are obtained by
     using the statement handle with |maxdb_fetch|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 maxdb_stmt_result_metadata() returns a result resource or FALSE if an error
 occurred.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Object oriented style
@@ -121,7 +121,7 @@ The above example will output something similar to:
 
 Fieldname: ID
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |maxdb_prepare| - Prepare an SQL statement for execution

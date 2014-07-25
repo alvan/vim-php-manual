@@ -4,12 +4,12 @@ ftp_nlist
 
 ftp_nlist — Returns a list of files in the given directory
 
-===============================================================================
+==============================================================================
 *Description*
 
     array ftp_nlist ( resource $ftp_stream , string $directory )~
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {ftp_stream}
@@ -23,13 +23,13 @@ ftp_nlist — Returns a list of files in the given directory
     escaped so there may be some issues with filenames containing spaces and
     other characters.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an array of filenames from the specified directory on success or FALSE
 on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 ftp_nlist() example
@@ -60,7 +60,7 @@ array(3) {
   [2]=>
   string(3) "www"
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ftp_rawlist| - Returns a detailed list of files in the given directory

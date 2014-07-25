@@ -4,16 +4,16 @@ snmpwalk
 
 snmpwalk — Fetch all the SNMP objects from an agent
 
-===============================================================================
+==============================================================================
 *Description*
 
     array snmpwalk ( string $hostname , string $community , string $object_id~
     [, int $timeout = 1000000 [, int $retries = 5 ]] )~
 
-snmpwalk() function is used to read all the values from an SNMP agent specified
-by the {hostname}.
+snmpwalk() function is used to read all the values from an SNMP agent
+specified by the {hostname}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {hostname}
@@ -40,13 +40,13 @@ by the {hostname}.
 
     The number of times to retry if timeouts occur.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns an array of SNMP object values starting from the {object_id} as root or
-FALSE on error.
+Returns an array of SNMP object values starting from the {object_id} as root
+or FALSE on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 snmpwalk() Example
@@ -63,7 +63,7 @@ Example #1 snmpwalk() Example
 Above function call would return all the SNMP objects from the SNMP agent
 running on localhost. One can step through the values with a loop
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |snmprealwalk| - Return all objects including their respective object ID

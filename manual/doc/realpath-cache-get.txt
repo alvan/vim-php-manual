@@ -4,21 +4,21 @@ realpath_cache_get
 
 realpath_cache_get — Get realpath cache entries
 
-===============================================================================
+==============================================================================
 *Description*
 
     array realpath_cache_get ( void )~
 
 Get the contents of the realpath cache.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns an array of realpath cache entries. The keys are original path entries,
-and the values are arrays of data items, containing the resolved path,
-expiration date, and other options kept in the cache.
+Returns an array of realpath cache entries. The keys are original path
+entries, and the values are arrays of data items, containing the resolved
+path, expiration date, and other options kept in the cache.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 realpath_cache_get() example
@@ -54,7 +54,7 @@ array(2) {
   }
 }
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |realpath_cache_size| - Get realpath cache size

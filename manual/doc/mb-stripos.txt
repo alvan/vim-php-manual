@@ -5,17 +5,17 @@ mb_stripos
 mb_stripos — Finds position of first occurrence of a string within another,
 case insensitive
 
-===============================================================================
+==============================================================================
 *Description*
 
     int mb_stripos ( string $haystack , string $needle [, int $offset = 0 [,~
     string $encoding = mb_internal_encoding() ]] )~
 
 mb_stripos() returns the numeric position of the first occurrence of {needle}
-in the {haystack} string. Unlike |mb_strpos|, mb_stripos() is case-insensitive.
-If {needle} is not found, it returns FALSE.
+in the {haystack} string. Unlike |mb_strpos|, mb_stripos() is
+case-insensitive. If {needle} is not found, it returns FALSE.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {haystack}
@@ -36,17 +36,17 @@ If {needle} is not found, it returns FALSE.
     Character encoding name to use. If it is omitted, internal character
     encoding is used.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Return the numeric position of the first occurrence of {needle} in the
 {haystack} string, or FALSE if {needle} is not found.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
-  * |stripos| - Find the position of the first occurrence of a case-insensitive
-    substring in a string
+  * |stripos| - Find the position of the first occurrence of a
+    case-insensitive substring in a string
   * |strpos| - Find the position of the first occurrence of a substring in a
     string
   * |mb_strpos| - Find position of first occurrence of string in a string

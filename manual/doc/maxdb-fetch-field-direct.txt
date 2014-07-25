@@ -7,7 +7,7 @@ maxdb_result::fetch_field_direct
 maxdb_fetch_field_direct -- maxdb_result::fetch_field_direct — Fetch meta-data
 for a single field
 
-===============================================================================
+==============================================================================
 *Description*
 
 Procedural style
@@ -19,10 +19,10 @@ Object oriented style
     mixed maxdb_result::fetch_field_direct ( int $fieldnr )~
 
 maxdb_fetch_field_direct() returns an resource which contains field definition
-information from specified resultset. The value of fieldnr must be in the range
-from 0 to number of fields - 1.
+information from specified resultset. The value of fieldnr must be in the
+range from 0 to number of fields - 1.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an resource which contains field definition information or FALSE if no
@@ -35,7 +35,7 @@ max_length The maximum width of the field for the result set.
 type       The data type used for this field
 decimals   The number of decimals used (for integer fields)
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Object oriented style
@@ -108,7 +108,7 @@ max. Len: 4
 Flags:    -1
 Type:     0
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |maxdb_num_fields| - Get the number of fields in a result

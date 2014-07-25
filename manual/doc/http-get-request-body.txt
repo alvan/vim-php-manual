@@ -4,7 +4,7 @@ http_get_request_body
 
 http_get_request_body — Get request body as string
 
-===============================================================================
+==============================================================================
 *Description*
 
     string http_get_request_body ( void )~
@@ -14,15 +14,15 @@ Get the raw request body (e.g. POST or PUT data).
 This function can not be used after |http_get_request_body_stream| if the
 request method was another than POST.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the raw request body as string on success or NULL on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |http_get_request_body_stream| - Get request body as stream

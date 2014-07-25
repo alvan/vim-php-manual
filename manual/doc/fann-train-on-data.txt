@@ -4,11 +4,11 @@ fann_train_on_data
 
 fann_train_on_data — Trains on an entire dataset for a period of time
 
-===============================================================================
+==============================================================================
 *Description*
 
-    bool fann_train_on_data ( resource $ann , resource $data , int $max_epochs~
-    , int $epochs_between_reports , float $desired_error )~
+    bool fann_train_on_data ( resource $ann , resource $data , int~
+    $max_epochs , int $epochs_between_reports , float $desired_error )~
 
 Trains on an entire dataset for a period of time.
 
@@ -16,7 +16,7 @@ This training uses the training algorithm chosen by |
 fann_set_training_algorithm| and the parameters set for these training
 algorithms.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {ann}
@@ -41,12 +41,12 @@ algorithms.
     The desired |fann_get_MSE| or |fann_get_bit_fail|, depending on the stop
     function chosen by |fann_set_train_stop_function|
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success, or FALSE otherwise.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |fann_train_on_file| - Trains on an entire dataset, which is read from

@@ -4,27 +4,27 @@ iptcparse
 
 iptcparse — Parse a binary IPTC block into single tags.
 
-===============================================================================
+==============================================================================
 *Description*
 
     array iptcparse ( string $iptcblock )~
 
 Parses an » IPTC block into its single tags.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {iptcblock}
 
     A binary IPTC block.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns an array using the tagmarker as an index and the value as the value. It
-returns FALSE on error or if no IPTC data was found.
+Returns an array using the tagmarker as an index and the value as the value.
+It returns FALSE on error or if no IPTC data was found.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 iptcparse() used together with |getimagesize|
@@ -38,7 +38,7 @@ Example #1 iptcparse() used together with |getimagesize|
     }
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:

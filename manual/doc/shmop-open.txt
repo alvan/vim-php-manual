@@ -4,19 +4,20 @@ shmop_open
 
 shmop_open — Create or open shared memory block
 
-===============================================================================
+==============================================================================
 *Description*
 
     int shmop_open ( int $key , string $flags , int $mode , int $size )~
 
 shmop_open() can create or open a shared memory block.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {key}
 
-    System's id for the shared memory block. Can be passed as a decimal or hex.
+    System's id for the shared memory block. Can be passed as a decimal or
+    hex.
 
 {flags}
 
@@ -45,16 +46,16 @@ shmop_open() can create or open a shared memory block.
 
     Note:
 
-    Note: the 3rd and 4th should be entered as 0 if you are opening an existing
-    memory segment.
+    Note: the 3rd and 4th should be entered as 0 if you are opening an
+    existing memory segment.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-On success shmop_open() will return an id that you can use to access the shared
-memory segment you've created. FALSE is returned on failure.
+On success shmop_open() will return an id that you can use to access the
+shared memory segment you've created. FALSE is returned on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Create a new shared memory block
@@ -66,7 +67,7 @@ Example #1 Create a new shared memory block
 
 This example opened a shared memory block with a system id returned by |ftok|.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |shmop_close| - Close shared memory block

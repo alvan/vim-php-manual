@@ -4,7 +4,7 @@ ibase_blob_close
 
 ibase_blob_close — Close blob
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed ibase_blob_close ( resource $blob_handle )~
@@ -12,22 +12,22 @@ ibase_blob_close — Close blob
 This function closes a BLOB that has either been opened for reading by |
 ibase_blob_open| or has been opened for writing by |ibase_blob_create|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {blob_handle}
 
     A BLOB handle opened with |ibase_blob_create| or |ibase_blob_open|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 If the BLOB was being read, this function returns TRUE on success, if the BLOB
 was being written to, this function returns a string containing the BLOB id
-that has been assigned to it by the database. On failure, this function returns
-FALSE.
+that has been assigned to it by the database. On failure, this function
+returns FALSE.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ibase_blob_cancel| - Cancel creating blob

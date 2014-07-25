@@ -5,7 +5,7 @@ pg_version
 pg_version — Returns an array with client, protocol and server version (when
 available)
 
-===============================================================================
+==============================================================================
 *Description*
 
     array pg_version ([ resource $connection ] )~
@@ -16,7 +16,7 @@ PostgreSQL 7.4 or later.
 
 For more detailed server information, use |pg_parameter_status|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
@@ -25,13 +25,13 @@ For more detailed server information, use |pg_parameter_status|.
     the default connection is used. The default connection is the last
     connection made by |pg_connect| or |pg_pconnect|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an array with client, protocol and server keys and values (if
 available). Returns FALSE on error or invalid connection.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 pg_version() example
@@ -49,10 +49,11 @@ The above example will output:
 
 7.4
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
-  * |pg_parameter_status| - Looks up a current parameter setting of the server.
+  * |pg_parameter_status| - Looks up a current parameter setting of the
+    server.
 
 
 vim:ft=help:

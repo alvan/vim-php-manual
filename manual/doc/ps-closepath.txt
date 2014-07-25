@@ -4,7 +4,7 @@ ps_closepath
 
 ps_closepath — Closes path
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool ps_closepath ( resource $psdoc )~
@@ -12,19 +12,19 @@ ps_closepath — Closes path
 Connects the last point with the first point of a path. The resulting path can
 be used for stroking, filling, clipping, etc..
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {psdoc}
 
     Resource identifier of the postscript file as returned by |ps_new|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ps_clip| - Clips drawing to current path

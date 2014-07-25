@@ -4,37 +4,39 @@ func_get_args
 
 func_get_args — Returns an array comprising a function's argument list
 
-===============================================================================
+==============================================================================
 *Description*
 
     array func_get_args ( void )~
 
 Gets an array of the function's argument list.
 
-This function may be used in conjunction with |func_get_arg| and |func_num_args
-| to allow user-defined functions to accept variable-length argument lists.
+This function may be used in conjunction with |func_get_arg| and |
+func_num_args| to allow user-defined functions to accept variable-length
+argument lists.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns an array in which each element is a copy of the corresponding member of
-the current user-defined function's argument list.
+Returns an array in which each element is a copy of the corresponding member
+of the current user-defined function's argument list.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 5.3.0   This function can now be used in parameter lists.
-        If this function is called from the outermost scope of a file which has
-5.3.0   been included by calling |include| or |require| from within a function
-        in the calling file, it now generates a warning and returns FALSE.
+        If this function is called from the outermost scope of a file which
+5.3.0   has been included by calling |include| or |require| from within a
+        function in the calling file, it now generates a warning and returns
+        FALSE.
 
-===============================================================================
+==============================================================================
 *Errors/Exceptions*
 
 Generates a warning if called from outside of a user-defined function.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 func_get_args() example
@@ -132,7 +134,7 @@ After change : array (
 0 => 'baz',
 )
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -144,13 +146,13 @@ After change : array (
 
     Note:
 
-    If the arguments are passed by reference, any changes to the arguments will
-    be reflected in the values returned by this function.
+    If the arguments are passed by reference, any changes to the arguments
+    will be reflected in the values returned by this function.
 
     Note: This function returns a copy of the passed arguments only, and does
     not account for default (non-passed) arguments.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |func_get_arg| - Return an item from the argument list

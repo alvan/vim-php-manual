@@ -4,17 +4,17 @@ openssl_sign
 
 openssl_sign — Generate signature
 
-===============================================================================
+==============================================================================
 *Description*
 
-    bool openssl_sign ( string $data , string &$signature , mixed $priv_key_id~
-    [, mixed $signature_alg = OPENSSL_ALGO_SHA1 ] )~
+    bool openssl_sign ( string $data , string &$signature , mixed~
+    $priv_key_id [, mixed $signature_alg = OPENSSL_ALGO_SHA1 ] )~
 
 openssl_sign() computes a signature for the specified {data} by generating a
 cryptographic digital signature using the private key associated with
 {priv_key_id}. Note that the data itself is not encrypted.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {data}
@@ -38,18 +38,18 @@ cryptographic digital signature using the private key associated with
     string - a valid string returned by |openssl_get_md_methods| example,
     "sha256WithRSAEncryption" or "sha384".
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version               Description
 5.0.0   The {signature_alg} parameter was added.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 openssl_sign() example
@@ -98,7 +98,7 @@ Example #2 openssl_sign() example
     var_dump($r);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |openssl_verify| - Verify signature

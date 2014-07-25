@@ -4,15 +4,15 @@ ps_open_file
 
 ps_open_file — Opens a file for output
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool ps_open_file ( resource $psdoc [, string $filename ] )~
 
-Creates a new file on disk and writes the PostScript document into it. The file
-will be closed when |ps_close| is called.
+Creates a new file on disk and writes the PostScript document into it. The
+file will be closed when |ps_close| is called.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {psdoc}
@@ -24,12 +24,12 @@ will be closed when |ps_close| is called.
     The name of the postscript file. If {filename} is not passed the document
     will be created in memory and all output will go straight to the browser.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ps_close| - Closes a PostScript document

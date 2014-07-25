@@ -4,7 +4,7 @@ array_key_exists
 
 array_key_exists — Checks if the given key or index exists in the array
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool array_key_exists ( mixed $key , array $array )~
@@ -12,7 +12,7 @@ array_key_exists — Checks if the given key or index exists in the array
 array_key_exists() returns TRUE if the given {key} is set in the array. {key}
 can be any value possible for an array index.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {key}
@@ -23,12 +23,12 @@ can be any value possible for an array index.
 
     An array with keys to check.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 array_key_exists() example
@@ -55,7 +55,7 @@ while array_key_exists() does.
     array_key_exists('first', $search_array);
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -66,13 +66,13 @@ while array_key_exists() does.
     Note:
 
     For backward compatibility reasons, array_key_exists() will also return
-    TRUE if {key} is a property defined within an object given as {array}. This
-    behaviour should not be relied upon, and care should be taken to ensure
-    that {array} is an array.
+    TRUE if {key} is a property defined within an object given as {array}.
+    This behaviour should not be relied upon, and care should be taken to
+    ensure that {array} is an array.
 
     To check whether a property exists in an object, use |property_exists|.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |isset| - Determine if a variable is set and is not NULL

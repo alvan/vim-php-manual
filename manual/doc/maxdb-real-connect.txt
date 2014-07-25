@@ -7,7 +7,7 @@ maxdb::real_connect
 maxdb_real_connect -- maxdb::real_connect — Opens a connection to a MaxDB
 server
 
-===============================================================================
+==============================================================================
 *Description*
 
 Procedural style
@@ -18,8 +18,9 @@ Procedural style
 
 Object oriented style
 
-    bool maxdb::real_connect ([ string $hostname [, string $username [, string~
-    $passwd [, string $dbname [, int $port = 0 [, string $socket ]]]]]] )~
+    bool maxdb::real_connect ([ string $hostname [, string $username [,~
+    string $passwd [, string $dbname [, int $port = 0 [, string $socket~
+    ]]]]]] )~
 
 maxdb_real_connect() attempts to establish a connection to a MaxDB database
 engine running on {hostname}.
@@ -31,12 +32,12 @@ This function differs from |maxdb_connect|:
 
   * With function |maxdb_options| you can set various options for connection.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Object oriented style
@@ -93,7 +94,7 @@ The above example will output something similar to:
 
 Connection: localhost <...>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |maxdb_connect| - Open a new connection to the MaxDB server

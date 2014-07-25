@@ -4,17 +4,18 @@ eio_readahead
 
 eio_readahead — Perform file readahead into page cache
 
-===============================================================================
+==============================================================================
 *Description*
 
-    resource eio_readahead ( mixed $fd , int $offset , int $length [, int $pri~
-    = EIO_PRI_DEFAULT [, callable $callback = NULL [, mixed $data = NULL ]]] )~
+    resource eio_readahead ( mixed $fd , int $offset , int $length [, int~
+    $pri = EIO_PRI_DEFAULT [, callable $callback = NULL [, mixed $data = NULL~
+    ]]] )~
 
 eio_readahead() populates the page cache with data from a file so that
 subsequent reads from that file will not block on disk I/O. See READAHEAD(2)
 man page for details.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {fd}
@@ -36,8 +37,8 @@ man page for details.
 
 {callback}
 
-    {callback} function is called when the request is done. It should match the
-    following prototype:
+    {callback} function is called when the request is done. It should match
+    the following prototype:
     void callback(mixed $data, int $result[, resource $req]);
 
     {data}
@@ -58,7 +59,7 @@ man page for details.
 
     Arbitrary variable passed to {callback}.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 eio_readahead() returns request resource on success or FALSE on error.

@@ -4,17 +4,17 @@ cubrid_new_glo
 
 cubrid_new_glo — Create a glo instance
 
-===============================================================================
+==============================================================================
 *Description*
 
     string cubrid_new_glo ( resource $conn_identifier , string $class_name ,~
     string $file_name )~
 
-The cubrid_new_glo() function is used to create a glo instance in the requested
-class (glo class). The glo created is a LO type, and is stored in the
-{file_name} file.
+The cubrid_new_glo() function is used to create a glo instance in the
+requested class (glo class). The glo created is a LO type, and is stored in
+the {file_name} file.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {conn_identifier}
@@ -29,14 +29,14 @@ class (glo class). The glo created is a LO type, and is stored in the
 
     The file name that you want to save in the newly created glo.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Oid of the instance created, when process is successful.
 
 FALSE, when process is unsuccessful.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_new_glo() example
@@ -54,7 +54,7 @@ Example #1 cubrid_new_glo() example
     }
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -66,7 +66,7 @@ Example #1 cubrid_new_glo() example
 
     This function is removed from CUBRID 3.1.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |cubrid_save_to_glo| - Save requested file in a GLO instance

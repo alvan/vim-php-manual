@@ -4,16 +4,16 @@ cubrid_field_seek
 
 cubrid_field_seek — Move the result set cursor to the specified field offset
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool cubrid_field_seek ( resource $result [, int $field_offset = 0 ] )~
 
 This function moves the result set cursor to the specified field offset. This
-offset is used by |cubrid_fetch_field| if it doesn't include a field offset. It
-returns TRUE on success or FALSE on failure.
+offset is used by |cubrid_fetch_field| if it doesn't include a field offset.
+It returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
@@ -25,14 +25,14 @@ returns TRUE on success or FALSE on failure.
     The numerical field offset. The {field_offset} starts at 0. If
     {field_offset} does not exist, an error of level E_WARNING is also issued.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 TRUE on success.
 
 FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_field_seek() example

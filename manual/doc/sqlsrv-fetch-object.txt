@@ -5,17 +5,17 @@ sqlsrv_fetch_object
 sqlsrv_fetch_object — Retrieves the next row of data in a result set as an
 object
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed sqlsrv_fetch_object ( resource $stmt [, string $className [, array~
     $ctorParams [, int $row [, int $offset ]]]] )~
 
 Retrieves the next row of data in a result set as an instance of the specified
-class with properties that match the row field names and values that correspond
-to the row field values.
+class with properties that match the row field names and values that
+correspond to the row field values.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {stmt}
@@ -29,9 +29,9 @@ to the row field values.
 
 {ctorParams}
 
-    Values passed to the constructor of the specified class. If the constructor
-    of the specified class takes parameters, the ctorParams array must be
-    supplied.
+    Values passed to the constructor of the specified class. If the
+    constructor of the specified class takes parameters, the ctorParams array
+    must be supplied.
 
 {row}
 
@@ -51,13 +51,13 @@ to the row field values.
     SQLSRV_SCROLL_ABSOLUTE or SQLSRV_SCROLL_RELATIVE. Note that the first row
     in a result set has index 0.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an object on success, NULL if there are no more rows to return, and
 FALSE if an error occurs or if the specified class does not exist.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 sqlsrv_fetch_object() example
@@ -88,7 +88,7 @@ The following example demonstrates how to retrieve a row as a stdClass object.
     }
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
 If a class name is specified with the optional $className parameter and the
@@ -113,7 +113,7 @@ When consuming a result set that has multiple columns with the same name, it
 may be better to use |sqlsrv_fetch_array| or the combination of |sqlsrv_fetch|
 and |sqlsrv_get_field|.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |sqlsrv_fetch| - Makes the next row in a result set available for reading

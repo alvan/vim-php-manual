@@ -4,7 +4,7 @@ imagefill
 
 imagefill — Flood fill
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool imagefill ( resource $image , int $x , int $y , int $color )~
@@ -12,13 +12,13 @@ imagefill — Flood fill
 Performs a flood fill starting at the given coordinate (top left is 0, 0) with
 the given {color} in the {image}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { image}
 
-    An image resource, returned by one of the image creation functions, such as
-    |imagecreatetruecolor|.
+    An image resource, returned by one of the image creation functions, such
+    as |imagecreatetruecolor|.
 
 {x}
 
@@ -32,12 +32,12 @@ the given {color} in the {image}.
 
     The fill color. A color identifier created with |imagecolorallocate|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 imagefill() example
@@ -59,7 +59,7 @@ The above example will output something similar to:
 
 Output of example : imagefill()
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |imagecolorallocate| - Allocate a color for an image

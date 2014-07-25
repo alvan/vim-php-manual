@@ -4,16 +4,16 @@ cal_to_jd
 
 cal_to_jd — Converts from a supported calendar to Julian Day Count
 
-===============================================================================
+==============================================================================
 *Description*
 
     int cal_to_jd ( int $calendar , int $month , int $day , int $year )~
 
 cal_to_jd() calculates the Julian day count for a date in the specified
-{calendar}. Supported {calendar}s are CAL_GREGORIAN, CAL_JULIAN, CAL_JEWISH and
-CAL_FRENCH.
+{calendar}. Supported {calendar}s are CAL_GREGORIAN, CAL_JULIAN, CAL_JEWISH
+and CAL_FRENCH.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {calendar}
@@ -33,12 +33,12 @@ CAL_FRENCH.
 
     The year as a number, the valid range depends on the {calendar}
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 A Julian Day number.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |cal_from_jd| - Converts from Julian Day Count to a supported calendar

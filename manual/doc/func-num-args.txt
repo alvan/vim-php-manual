@@ -4,36 +4,38 @@ func_num_args
 
 func_num_args — Returns the number of arguments passed to the function
 
-===============================================================================
+==============================================================================
 *Description*
 
     int func_num_args ( void )~
 
 Gets the number of arguments passed to the function.
 
-This function may be used in conjunction with |func_get_arg| and |func_get_args
-| to allow user-defined functions to accept variable-length argument lists.
+This function may be used in conjunction with |func_get_arg| and |
+func_get_args| to allow user-defined functions to accept variable-length
+argument lists.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the number of arguments passed into the current user-defined function.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 5.3.0   This function can now be used in parameter lists.
-        If this function is called from the outermost scope of a file which has
-5.3.0   been included by calling |include| or |require| from within a function
-        in the calling file, it now generates a warning and returns -1.
+        If this function is called from the outermost scope of a file which
+5.3.0   has been included by calling |include| or |require| from within a
+        function in the calling file, it now generates a warning and returns
+        -1.
 
-===============================================================================
+==============================================================================
 *Errors/Exceptions*
 
 Generates a warning if called from outside of a user-defined function.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 func_num_args() example
@@ -81,7 +83,7 @@ Warning: func_num_args():  Called from the global scope - no function
 context in /home/torben/Desktop/code/ml/fna.php on line 3
 -1
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -91,7 +93,7 @@ context in /home/torben/Desktop/code/ml/fna.php on line 3
     5.3.0. If this value must be passed, the results should be assigned to a
     variable, and that variable should be passed.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |func_get_arg| - Return an item from the argument list

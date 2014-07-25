@@ -5,17 +5,18 @@ date_default_timezone_get
 date_default_timezone_get — Gets the default timezone used by all date/time
 functions in a script
 
-===============================================================================
+==============================================================================
 *Description*
 
     string date_default_timezone_get ( void )~
 
 In order of preference, this function returns the default timezone by:
 
-  * Reading the timezone set using the |date_default_timezone_set| function (if
-    any)
+  * Reading the timezone set using the |date_default_timezone_set| function
+    (if any)
 
-  * Prior to PHP 5.4.0 only: Reading the TZ environment variable (if non empty)
+  * Prior to PHP 5.4.0 only: Reading the TZ environment variable (if non
+    empty)
 
   * Reading the value of the date.timezone ini option (if set)
 
@@ -25,23 +26,23 @@ In order of preference, this function returns the default timezone by:
     A warning is shown when this stage is reached. Do not rely on it to be
     guessed correctly, and set date.timezone to the correct timezone instead.
 
-If none of the above succeed, date_default_timezone_get() will return a default
-timezone of UTC.
+If none of the above succeed, date_default_timezone_get() will return a
+default timezone of UTC.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a string.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 5.4.0   The TZ environment variable is no longer used to guess the timezone.
 5.4.0   The timezone is no longer guessed from information available through
         the operating system as the guessed timezone can not be relied on.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Getting the default timezone
@@ -50,8 +51,8 @@ Example #1 Getting the default timezone
     date_default_timezone_set('Europe/London');
 
     if (date_default_timezone_get()) {
-        echo 'date_default_timezone_set: ' . date_default_timezone_get() . '<br />'
-    ;
+        echo 'date_default_timezone_set: ' . date_default_timezone_get() . '<br />
+    ';
     }
 
     if (ini_get('date.timezone')) {
@@ -76,7 +77,7 @@ The above example will output:
 
 America/Los_Angeles => America/Los_Angeles => PST
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |date_default_timezone_set| - Sets the default timezone used by all date/

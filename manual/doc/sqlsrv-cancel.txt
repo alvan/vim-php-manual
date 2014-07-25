@@ -4,30 +4,30 @@ sqlsrv_cancel
 
 sqlsrv_cancel — Cancels a statement
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool sqlsrv_cancel ( resource $stmt )~
 
 Cancels a statement. Any results associated with the statement that have not
-been consumed are deleted. After sqlsrv_cancel() has been called, the specified
-statement can be re-executed if it was created with |sqlsrv_prepare|. Calling 
-sqlsrv_cancel() is not necessary if all the results associated with the
-statement have been consumed.
+been consumed are deleted. After sqlsrv_cancel() has been called, the
+specified statement can be re-executed if it was created with |sqlsrv_prepare|
+. Calling sqlsrv_cancel() is not necessary if all the results associated with
+the statement have been consumed.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {stmt}
 
     The statement resource to be cancelled.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 sqlsrv_cancel() example
@@ -70,7 +70,7 @@ Example #1 sqlsrv_cancel() example
     sqlsrv_cancel( $stmt);
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
 The main difference between sqlsrv_cancel() and |sqlsrv_free_stmt| is that a
@@ -78,7 +78,7 @@ statement resource cancelled with sqlsrv_cancel() can be re-executed if it was
 created with |sqlsrv_prepare|. A statement resource cancelled with 
 sqlsrv_free_statement() cannot be re-executed.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |sqlsrv_free_stmt| - Frees all resources for the specified statement

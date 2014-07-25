@@ -4,19 +4,19 @@ wincache_ucache_clear
 
 wincache_ucache_clear — Deletes entire content of the user cache
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool wincache_ucache_clear ( void )~
 
 Clears/deletes all the values stored in the user cache.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 using wincache_ucache_clear()
@@ -43,13 +43,13 @@ array(5) { ["green"]=> int(1)
 bool(true)
 bool(false)
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |wincache_ucache_set| - Adds a variable in user cache and overwrites a
     variable if it already exists in the cache
-  * |wincache_ucache_add| - Adds a variable in user cache only if variable does
-    not already exist in the cache
+  * |wincache_ucache_add| - Adds a variable in user cache only if variable
+    does not already exist in the cache
   * |wincache_ucache_delete| - Deletes variables from the user cache
   * |wincache_ucache_get| - Gets a variable stored in the user cache
   * |wincache_ucache_exists| - Checks if a variable exists in the user cache

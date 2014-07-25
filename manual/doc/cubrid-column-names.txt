@@ -4,29 +4,30 @@ cubrid_column_names
 
 cubrid_column_names — Get the column names in result
 
-===============================================================================
+==============================================================================
 *Description*
 
     array cubrid_column_names ( resource $req_identifier )~
 
-The cubrid_column_names() function is used to get the column names of the query
-result by using {req_identifier}.
+The cubrid_column_names() function is used to get the column names of the
+query result by using {req_identifier}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {req_identifier}
 
     Request identifier.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Array of string values containing the column names, when process is successful.
+Array of string values containing the column names, when process is
+successful.
 
 FALSE, when process is unsuccessful.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_column_names() example
@@ -39,7 +40,8 @@ Example #1 cubrid_column_names() example
     $column_names = cubrid_column_names($result);
     $column_types = cubrid_column_types($result);
 
-    printf("%-30s %-30s %-15s\n", "Column Names", "Column Types", "Column Maxlen");
+    printf("%-30s %-30s %-15s\n", "Column Names", "Column Types", "Column Maxlen"
+    );
     for($i = 0, $size = count($column_names); $i < $size; $i++) {
         $column_len = cubrid_field_len($result, $i);
         printf("%-30s %-30s %-15s\n", $column_names[$i], $column_types[$i], 
@@ -60,7 +62,7 @@ nation_code                    char                           3
 medal                          char                           1
 game_date                      date                           10
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |cubrid_prepare| - Prepare a SQL statement for execution

@@ -9,7 +9,7 @@ SQLiteUnbuffered::valid
 sqlite_valid -- SQLiteResult::valid -- SQLiteUnbuffered::valid — Returns
 whether more rows are available
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool sqlite_valid ( resource $result )~
@@ -21,7 +21,7 @@ Object oriented style (method):
 
 Finds whether more rows are available from the given result handle.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
@@ -33,18 +33,18 @@ Finds whether more rows are available from the given result handle.
 
         This function cannot be used with unbuffered result handles.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE if there are more rows available from the {result} handle, or
 FALSE otherwise.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |sqlite_num_rows| - Returns the number of rows in a buffered result set
-  * |sqlite_changes| - Returns the number of rows that were changed by the most
-    recent SQL statement
+  * |sqlite_changes| - Returns the number of rows that were changed by the
+    most recent SQL statement
 
 
 vim:ft=help:

@@ -4,13 +4,13 @@ gmmktime
 
 gmmktime — Get Unix timestamp for a GMT date
 
-===============================================================================
+==============================================================================
 *Description*
 
     int gmmktime ([ int $hour = gmdate("H") [, int $minute =~
-    gmdate("i") [, int $second = gmdate("s") [, int $month~
-    = gmdate("n") [, int $day = gmdate("j") [, int $year =~
-    gmdate("Y") [, int $is_dst = -1 ]]]]]]] )~
+    gmdate("i") [, int $second = gmdate("s") [, int~
+    $month = gmdate("n") [, int $day = gmdate("j") [, int~
+    $year = gmdate("Y") [, int $is_dst = -1 ]]]]]]] )~
 
 Identical to |mktime| except the passed parameters represents a GMT date. 
 gmmktime() internally uses |mktime| so only times valid in derived local time
@@ -19,7 +19,7 @@ can be used.
 Like |mktime|, arguments may be left out in order from right to left, with any
 omitted arguments being set to the current corresponding GMT value.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {hour}
@@ -53,8 +53,8 @@ omitted arguments being set to the current corresponding GMT value.
 {day}
 
     The number of the day relative to the end of the previous month. Values 1
-    to 28, 29, 30 or 31 (depending upon the month) reference the normal days in
-    the relevant month. Values less than 1 (including negative values)
+    to 28, 29, 30 or 31 (depending upon the month) reference the normal days
+    in the relevant month. Values less than 1 (including negative values)
     reference the days in the previous month, so 0 is the last day of the
     previous month, -1 is the day before that, etc. Values greater than the
     number of days in the relevant month reference the appropriate day in the
@@ -69,19 +69,19 @@ omitted arguments being set to the current corresponding GMT value.
     Parameters always represent a GMT date so {is_dst} doesn't influence the
     result.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a integer Unix timestamp.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
-5.1.0   As of PHP 5.1.0, the {is_dst} parameter became deprecated. As a result,
-        the new timezone handling features should be used instead.
+Version                              Description
+5.1.0   As of PHP 5.1.0, the {is_dst} parameter became deprecated. As a
+        result, the new timezone handling features should be used instead.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 gmmktime() basic example
@@ -91,7 +91,7 @@ Example #1 gmmktime() basic example
     echo "July 1, 2000 is on a " . date("l", gmmktime(0, 0, 0, 7, 1, 2000));
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mktime| - Get Unix timestamp for a date

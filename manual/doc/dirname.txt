@@ -4,7 +4,7 @@ dirname
 
 dirname — Returns parent directory's path
 
-===============================================================================
+==============================================================================
 *Description*
 
     string dirname ( string $path )~
@@ -12,7 +12,7 @@ dirname — Returns parent directory's path
 Given a string containing the path of a file or directory, this function will
 return the parent directory's path.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {path}
@@ -22,21 +22,21 @@ return the parent directory's path.
     On Windows, both slash (/) and backslash (\) are used as directory
     separator character. In other environments, it is the forward slash (/).
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the path of the parent directory. If there are no slashes in {path}, a
 dot ('.') is returned, indicating the current directory. Otherwise, the
 returned string is {path} with any trailing /component removed.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version                Description
 5.0.0   dirname() is now binary safe
 4.0.3   dirname() was fixed to be POSIX-compliant.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 dirname() example
@@ -47,7 +47,7 @@ Example #1 dirname() example
     echo "3) " . dirname("."); // 3) .
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -57,14 +57,14 @@ Example #1 dirname() example
 
     Note:
 
-    dirname() is locale aware, so for it to see the correct directory name with
-    multibyte character paths, the matching locale must be set using the |
-    setlocale| function.
+    dirname() is locale aware, so for it to see the correct directory name
+    with multibyte character paths, the matching locale must be set using the 
+    |setlocale| function.
 
     Note:
 
-    Since PHP 4.3.0, you will often get a slash or a dot back from dirname() in
-    situations where the older functionality would have given you the empty
+    Since PHP 4.3.0, you will often get a slash or a dot back from dirname()
+    in situations where the older functionality would have given you the empty
     string.
 
 Check the following change example:
@@ -80,7 +80,7 @@ Check the following change example:
 
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |basename| - Returns trailing name component of path

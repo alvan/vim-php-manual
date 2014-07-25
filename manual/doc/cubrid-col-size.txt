@@ -5,7 +5,7 @@ cubrid_col_size
 cubrid_col_size — Get the number of elements in collection type column using
 OID
 
-===============================================================================
+==============================================================================
 *Description*
 
     int cubrid_col_size ( resource $conn_identifier , string $oid , string~
@@ -14,7 +14,7 @@ OID
 The cubrid_col_size() function is used to get the number of elements in a
 collection type (set, multiset, sequence) attribute.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {conn_identifier}
@@ -29,21 +29,21 @@ collection type (set, multiset, sequence) attribute.
 
     Name of the attribute that you want to work with.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Number of elements, when process is successful.
 
 FALSE, when process is unsuccessful.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 8.3.1   Change return value: when process is unsuccessful, return false, not
         -1.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_col_size() example

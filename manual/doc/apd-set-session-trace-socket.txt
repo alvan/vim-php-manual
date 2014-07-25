@@ -4,16 +4,16 @@ apd_set_session_trace_socket
 
 apd_set_session_trace_socket — Starts the remote session debugging
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool apd_set_session_trace_socket ( string $tcp_server , int $socket_type~
     , int $port , int $debug_level )~
 
-Connects to the specified {tcp_server} (eg. tcplisten) and sends debugging data
-to the socket.
+Connects to the specified {tcp_server} (eg. tcplisten) and sends debugging
+data to the socket.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {tcp_server}
@@ -39,12 +39,12 @@ to the socket.
     To turn on all functional traces (TIMING, FUNCTIONS, ARGS SUMMARY (like
     strace -c)) use the value 99
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 apd_set_session_trace_socket() example

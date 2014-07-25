@@ -4,26 +4,26 @@ is_object
 
 is_object — Finds whether a variable is an object
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool is_object ( mixed $var )~
 
 Finds whether the given variable is an object.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {var}
 
     The variable being evaluated.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE if {var} is an object, FALSE otherwise.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 is_object() example
@@ -49,15 +49,16 @@ Example #1 is_object() example
     var_dump(get_students($obj));
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
 
-    This function will return FALSE if used on an unserialized object where the
-    class definition is not present (even though |gettype| returns object).
+    This function will return FALSE if used on an unserialized object where
+    the class definition is not present (even though |gettype| returns object
+    ).
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |is_bool| - Finds out whether a variable is a boolean

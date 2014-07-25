@@ -4,16 +4,16 @@ hw_cp
 
 hw_cp — Copies objects
 
-===============================================================================
+==============================================================================
 *Description*
 
-    int hw_cp ( int $connection , array $object_id_array , int $destination_id~
-)~
+    int hw_cp ( int $connection , array $object_id_array , int~
+    $destination_id )~
 
 Copies the objects with object ids as specified in the second parameter to the
 collection with the id {destination id}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
@@ -28,12 +28,12 @@ collection with the id {destination id}.
 
     The target collection id.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the number of copied objects.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |hw_mv| - Moves objects

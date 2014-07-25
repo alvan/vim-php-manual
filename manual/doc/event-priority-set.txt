@@ -4,14 +4,14 @@ event_priority_set
 
 event_priority_set — Assign a priority to an event.
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool event_priority_set ( resource $event , int $priority )~
 
 Assign a priority to the {event}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {event}
@@ -20,10 +20,10 @@ Assign a priority to the {event}.
 
 {priority}
 
-    Priority level. Cannot be less than zero and cannot exceed maximum priority
-    level of the event base (see |event_base_priority_init|).
+    Priority level. Cannot be less than zero and cannot exceed maximum
+    priority level of the event base (see |event_base_priority_init|).
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.

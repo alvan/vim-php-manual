@@ -4,7 +4,7 @@ snmpgetnext
 
 snmpgetnext — Fetch the SNMP object which follows the given object id
 
-===============================================================================
+==============================================================================
 *Description*
 
     string snmpgetnext ( string $host , string $community , string $object_id~
@@ -13,7 +13,7 @@ snmpgetnext — Fetch the SNMP object which follows the given object id
 The snmpgetnext() function is used to read the value of the SNMP object that
 follows the specified {object_id}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {host}
@@ -36,23 +36,23 @@ follows the specified {object_id}.
 
     The number of times to retry if timeouts occur.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns SNMP object value on success or FALSE on error. In case of an error, an
-E_WARNING message is shown.
+Returns SNMP object value on success or FALSE on error. In case of an error,
+an E_WARNING message is shown.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Using snmpgetnext()
 
 <?php >
-    $nameOfSecondInterface = snmpgetnetxt('localhost', 'public', 'IF-MIB::ifName.1'
-    ;
+    $nameOfSecondInterface = snmpgetnetxt('localhost', 'public', 
+    'IF-MIB::ifName.1';
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |snmpget| - Fetch an SNMP object

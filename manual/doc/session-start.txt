@@ -4,22 +4,22 @@ session_start
 
 session_start — Start new or resume existing session
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool session_start ( void )~
 
-session_start() creates a session or resumes the current one based on a session
-identifier passed via a GET or POST request, or passed via a cookie.
+session_start() creates a session or resumes the current one based on a
+session identifier passed via a GET or POST request, or passed via a cookie.
 
-When session_start() is called or when a session auto starts, PHP will call the
-open and read session save handlers. These will either be a built-in save
-handler provided by default or by PHP extensions (such as SQLite or Memcached);
-or can be custom handler as defined by |session_set_save_handler|. The read
-callback will retrieve any existing session data (stored in a special
+When session_start() is called or when a session auto starts, PHP will call
+the open and read session save handlers. These will either be a built-in save
+handler provided by default or by PHP extensions (such as SQLite or
+Memcached); or can be custom handler as defined by |session_set_save_handler|.
+The read callback will retrieve any existing session data (stored in a special
 serialized format) and will be unserialized and used to automatically populate
-the $_SESSION superglobal when the read callback returns the saved session data
-back to PHP session handling.
+the $_SESSION superglobal when the read callback returns the saved session
+data back to PHP session handling.
 
 To use a named session, call |session_name| before calling session_start().
 
@@ -30,23 +30,23 @@ If a user uses ob_gzhandler or similar with |ob_start|, the function order is
 important for proper output. For example, ob_gzhandler must be registered
 before starting the session.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 This function returns TRUE if a session was successfully started, otherwise
 FALSE.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 5.3.0   If a session fails to start, then FALSE is returned. Previously TRUE
         was returned.
         As of PHP 4.3.3, calling session_start() after the session was
-4.3.3   previously started will result in an error of level E_NOTICE. Also, the
-        second session start will simply be ignored.
+4.3.3   previously started will result in an error of level E_NOTICE. Also,
+        the second session start will simply be ignored.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A session example: page1.php
@@ -70,8 +70,8 @@ Example #1 A session example: page1.php
 <?>
 
 After viewing page1.php, the second page page2.php will magically contain the
-session data. Read the session reference for information on propagating session
-ids as it, for example, explains what the constant SID is all about.
+session data. Read the session reference for information on propagating
+session ids as it, for example, explains what the constant SID is all about.
 
 Example #2 A session example: page2.php
 
@@ -90,7 +90,7 @@ Example #2 A session example: page2.php
     echo '<br /><a href="page1.php">page 1</a>';
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -107,7 +107,7 @@ Example #2 A session example: page2.php
     This function sends out several HTTP headers depending on the
     configuration. See |session_cache_limiter| to customize these headers.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * $_SESSION

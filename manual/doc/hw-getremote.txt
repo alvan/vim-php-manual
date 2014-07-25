@@ -4,16 +4,16 @@ hw_GetRemote
 
 hw_GetRemote — Gets a remote document
 
-===============================================================================
+==============================================================================
 *Description*
 
     int hw_getremote ( int $connection , int $objectID )~
 
 Gets a remote document.
 
-Remote documents in Hyperwave notation are documents retrieved from an external
-source. Common remote documents are for example external web pages or queries
-in a database.
+Remote documents in Hyperwave notation are documents retrieved from an
+external source. Common remote documents are for example external web pages or
+queries in a database.
 
 In order to be able to access external sources through remote documents
 Hyperwave introduces the HGI (Hyperwave Gateway Interface) which is similar to
@@ -26,7 +26,7 @@ also consider to use PHP instead of Hyperwave to access external sources.
 Adding database support by a Hyperwave gateway should be more difficult than
 doing it in PHP.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
@@ -37,12 +37,12 @@ doing it in PHP.
 
     The object identifier.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a remote document.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |hw_getremotechildren| - Gets children of remote document

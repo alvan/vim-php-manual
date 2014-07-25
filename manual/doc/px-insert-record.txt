@@ -4,7 +4,7 @@ px_insert_record
 
 px_insert_record — Inserts record into paradox database
 
-===============================================================================
+==============================================================================
 *Description*
 
     int px_insert_record ( resource $pxdoc , array $data )~
@@ -15,24 +15,25 @@ where the first free slot is found.
 
 The record data is passed as an array of field values. The elements in the
 array must correspond to the fields in the database. If the array has less
-elements than fields in the database, the remaining fields will be set to null.
+elements than fields in the database, the remaining fields will be set to
+null.
 
-Most field values can be passed as its equivalent php type e.g. a long value is
-used for fields of type PX_FIELD_LONG, PX_FIELD_SHORT and PX_FIELD_AUTOINC, a
-double values is used for fields of type PX_FIELD_CURRENCY and PX_FIELD_NUMBER.
-Field values for blob and alpha fields are passed as strings.
+Most field values can be passed as its equivalent php type e.g. a long value
+is used for fields of type PX_FIELD_LONG, PX_FIELD_SHORT and PX_FIELD_AUTOINC,
+a double values is used for fields of type PX_FIELD_CURRENCY and
+PX_FIELD_NUMBER. Field values for blob and alpha fields are passed as strings.
 
 Fields of type PX_FIELD_TIME and PX_FIELD_DATE both require a long value. In
-the first case this is the number of milliseconds since midnight. In the second
-case this is the number of days since 1.1.0000. Below there are two examples to
-convert the current date or timestamp into a value suitable for one of
-paradox's date/time fields.
+the first case this is the number of milliseconds since midnight. In the
+second case this is the number of days since 1.1.0000. Below there are two
+examples to convert the current date or timestamp into a value suitable for
+one of paradox's date/time fields.
 
     Note:
 
     This function is only available if pxlib >= 0.6.0 is used.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {pxdoc}
@@ -41,15 +42,15 @@ paradox's date/time fields.
 
 {data}
 
-    Associated or indexed array containing the field values as e.g. returned by
-    |px_retrieve_record|.
+    Associated or indexed array containing the field values as e.g. returned
+    by |px_retrieve_record|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns FALSE on failure or the record number in case of success.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Set the date/time fields in a paradox database to the current date/
@@ -58,8 +59,8 @@ time
 <?php >
     $px = px_new();
     $fp = fopen("test.db", "w+");
-    px_create_fp($px, $fp, array(array("timestamp", "@"), array("time", "T"), array
-    ("date", "D")));
+    px_create_fp($px, $fp, array(array("timestamp", "@"), array("time", "T"
+    ), array("date", "D")));
 
     $curdate = getdate();
     $jd = gregoriantojd($curdate["mon"], $curdate["mday"], $curdate["year"]);
@@ -96,7 +97,7 @@ The Julian day count as passed to |jdtogregorian| has a different base of
 count used in the paradox file. Turning the day count into a timestamp is
 easily done by multiplying with 86400000.0 to obtain milli seconds.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
 |px_update_record| - Updates record in paradox database

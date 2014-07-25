@@ -5,7 +5,7 @@ dbx_fetch_row
 dbx_fetch_row — Fetches rows from a query-result that had the
 DBX_RESULT_UNBUFFERED flag set
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed dbx_fetch_row ( object $result_identifier )~
@@ -19,14 +19,14 @@ fail as all rows have already been fetched into the results data property.
 As a side effect, the rows property of the query-result object is incremented
 for each successful call to dbx_fetch_row().
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result_identifier}
 
     A result set returned by |dbx_query|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an object on success that contains the same information as any row
@@ -36,7 +36,7 @@ way.
 
 Upon failure, returns 0 (e.g. when no more rows are available).
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 How to handle the returned value
@@ -56,7 +56,7 @@ Example #1 How to handle the returned value
     echo "</table>\n";
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |dbx_query| - Send a query and fetch all results (if any)

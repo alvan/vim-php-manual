@@ -7,7 +7,7 @@ maxdb_result::fetch_row
 maxdb_fetch_row -- maxdb_result::fetch_row — Get a result row as an enumerated
 array
 
-===============================================================================
+==============================================================================
 *Description*
 
 Procedural style
@@ -27,7 +27,7 @@ an array offset starting from 0 (zero). Each subsequent call to the
 maxdb_fetch_row() function will return the next row within the result set, or
 FALSE if there are no more rows.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 maxdb_fetch_row() returns an array that corresponds to the fetched row or NULL
@@ -35,7 +35,7 @@ if there are no more rows in result set.
 
     Note: This function sets NULL fields to the PHP NULL value.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Object oriented style
@@ -122,7 +122,7 @@ Irvine (CA)
 Santa Clara (CA)
 Portland (OR)
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |maxdb_fetch_array| - Fetch a result row as an associative, a numeric

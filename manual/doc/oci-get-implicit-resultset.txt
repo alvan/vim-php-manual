@@ -5,15 +5,15 @@ oci_get_implicit_resultset
 oci_get_implicit_resultset — Returns the next child statement resource from a
 parent statement resource that has Oracle Database 12c Implicit Result Sets
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource oci_get_implicit_resultset ( resource $statement )~
 
 Used to fetch consectutive sets of query results after the execution of a
 stored or anonymous Oracle PL/SQL block where that block returns query results
-with Oracle's DBMS_SQL.RETURN_RESULT PL/SQL function. This allows PL/SQL blocks
-to easily return query results.
+with Oracle's DBMS_SQL.RETURN_RESULT PL/SQL function. This allows PL/SQL
+blocks to easily return query results.
 
 The child statement can be used with any of the OCI8 fetching functions: |
 oci_fetch|, |oci_fetch_all|, |oci_fetch_array|, |oci_fetch_object|, |
@@ -22,7 +22,7 @@ oci_fetch_assoc| or |oci_fetch_row|
 Child statements inherit their parent statement's prefetch value, or it can be
 explicitly set with |oci_set_prefetch|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {statement}
@@ -31,15 +31,15 @@ explicitly set with |oci_set_prefetch|.
     oci_execute|. The statement identifier may or may not be associated with a
     SQL statement that returns Implicit Result Sets.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a statement handle for the next child statement available on
 {statement}. Returns FALSE when child statements do not exist, or all child
-statements have been returned by previous calls to oci_get_implicit_resultset()
-.
+statements have been returned by previous calls to oci_get_implicit_resultset
+().
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Fetching Implicit Result Sets in a loop
@@ -183,8 +183,8 @@ Example #3 Explicitly setting the Prefetch Count
     oci_set_prefetch($stid_c, 200);   //
      Set the prefetch before fetching from the child statement
     echo "<table>\n";
-    while (($row = oci_fetch_array($stid_c, OCI_ASSOC+OCI_RETURN_NULLS)) != false) 
-    {
+    while (($row = oci_fetch_array($stid_c, OCI_ASSOC+OCI_RETURN_NULLS)) != false)
+     {
         echo "<tr>\n";
         foreach ($row as $item) {
             echo "  <td>".($item!==null?htmlentities($item, ENT_QUOTES|
@@ -199,8 +199,8 @@ Example #3 Explicitly setting the Prefetch Count
 
 <?>
 
-Example #4 Implicit Result Set example without using oci_get_implicit_resultset
-()
+Example #4 Implicit Result Set example without using 
+oci_get_implicit_resultset()
 
 All results from all queries are returned consecutively.
 
@@ -251,7 +251,7 @@ All results from all queries are returned consecutively.
 
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:

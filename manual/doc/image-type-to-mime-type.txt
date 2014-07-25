@@ -5,7 +5,7 @@ image_type_to_mime_type
 image_type_to_mime_type — Get Mime-Type for image-type returned by
 getimagesize, exif_read_data, exif_thumbnail, exif_imagetype
 
-===============================================================================
+==============================================================================
 *Description*
 
     string image_type_to_mime_type ( int $imagetype )~
@@ -13,14 +13,14 @@ getimagesize, exif_read_data, exif_thumbnail, exif_imagetype
 The image_type_to_mime_type() function will determine the Mime-Type for an
 IMAGETYPE constant.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {imagetype}
 
     One of the IMAGETYPE_XXX constants.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The returned values are as follows
@@ -45,7 +45,7 @@ IMAGETYPE_WBMP                          image/vnd.wap.wbmp
 IMAGETYPE_XBM                           image/xbm
 IMAGETYPE_ICO                           image/vnd.microsoft.icon
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 image_type_to_mime_type() example
@@ -54,14 +54,14 @@ Example #1 image_type_to_mime_type() example
     header("Content-type: " . image_type_to_mime_type(IMAGETYPE_PNG));
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
 
     This function does not require the GD image library.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |getimagesize| - Get the size of an image

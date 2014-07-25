@@ -4,7 +4,7 @@ gmdate
 
 gmdate — Format a GMT/UTC date/time
 
-===============================================================================
+==============================================================================
 *Description*
 
     string gmdate ( string $format [, int $timestamp = time() ] )~
@@ -12,13 +12,13 @@ gmdate — Format a GMT/UTC date/time
 Identical to the |date| function except that the time returned is Greenwich
 Mean Time (GMT).
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {format}
 
-    The format of the outputted date string. See the formatting options for the
-    |date| function.
+    The format of the outputted date string. See the formatting options for
+    the |date| function.
 
 {timestamp}
 
@@ -26,16 +26,16 @@ Mean Time (GMT).
     defaults to the current local time if a {timestamp} is not given. In other
     words, it defaults to the value of |time|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a formatted date string. If a non-numeric value is used for
 {timestamp}, FALSE is returned and an E_WARNING level error is emitted.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
         The valid range of a timestamp is typically from Fri, 13 Dec 1901
         20:45:54 GMT to Tue, 19 Jan 2038 03:14:07 GMT. (These are the dates
 5.1.0   that correspond to the minimum and maximum values for a 32-bit signed
@@ -44,7 +44,7 @@ Version                               Description
 5.1.1   There are useful constants of standard date/time formats that can be
         used to specify the {format} parameter.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 gmdate() example
@@ -57,7 +57,7 @@ When run in Finland (GMT +0200), the first line below prints "Jan 01 1998
     echo gmdate("M d Y H:i:s", mktime(0, 0, 0, 1, 1, 1998));
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |date| - Format a local time/date

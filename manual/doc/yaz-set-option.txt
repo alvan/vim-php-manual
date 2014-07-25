@@ -4,7 +4,7 @@ yaz_set_option
 
 yaz_set_option — Sets one or more options for connection
 
-===============================================================================
+==============================================================================
 *Description*
 
     void yaz_set_option ( resource $id , string $name , string $value )~
@@ -12,7 +12,7 @@ yaz_set_option — Sets one or more options for connection
 
 Sets one or more options on the given connection.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {id}
@@ -30,23 +30,23 @@ Sets one or more options on the given connection.
     option value).
 
                           PHP/YAZ Connection Options
-            Name                               Description
+            Name                              Description
     implementationName    implementation name of server
     implementationVersion implementation version of server
     implementationId      implementation ID of server
                           schema for retrieval. By default, no schema is used.
-    schema                Setting this option is equivalent to using function |
-                          yaz_schema|
-                          record syntax for retrieval. By default, no syntax is
-    preferredRecordSyntax used. Setting this option is equivalent to using
+    schema                Setting this option is equivalent to using function 
+                          |yaz_schema|
+                          record syntax for retrieval. By default, no syntax
+    preferredRecordSyntax is used. Setting this option is equivalent to using
                           function |yaz_syntax|
                           offset for first record to be retrieved via |
                           yaz_search| or |yaz_present|. First record is
                           numbered has a start value of 0. Second record has
     start                 start value 1. Setting this option in combination
                           with option count has the same effect as calling |
-                          yaz_range| except that records are numbered from 1 in
-                          |yaz_range|
+                          yaz_range| except that records are numbered from 1
+                          in |yaz_range|
     count                 maximum number of records to be retrieved via |
                           yaz_search| or |yaz_present|.
     elementSetName        element-set-name for retrieval. Setting this option
@@ -57,7 +57,7 @@ Sets one or more options on the given connection.
     The new value of the option. Use this only if the previous argument is a
     string.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 No value is returned.

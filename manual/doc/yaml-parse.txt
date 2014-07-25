@@ -4,7 +4,7 @@ yaml_parse
 
 yaml_parse — Parse a YAML stream
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed yaml_parse ( string $input [, int $pos = 0 [, int &$ndocs [, array~
@@ -12,7 +12,7 @@ yaml_parse — Parse a YAML stream
 
 Convert all or part of a YAML document stream to a PHP variable.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {input}
@@ -34,14 +34,14 @@ Convert all or part of a YAML document stream to a PHP variable.
     Content handlers for YAML nodes. Associative array of YAML tag => callable
     mappings. See parse callbacks for more details.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the value encoded in {input} in appropriate PHP type or FALSE on
 failure. If {pos} is -1 an array will be returned with one entry for each
 document found in the stream.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 yaml_parse() example
@@ -159,7 +159,7 @@ array(8) {
   string(68) "Late afternoon is best. Backup contact is Nancy Billsmer @ 338-4338."
 }
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |yaml_parse_file| - Parse a YAML stream from a file

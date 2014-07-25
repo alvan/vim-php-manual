@@ -8,12 +8,12 @@ Warning
 
 This extension is deprecated as of PHP 5.5.0, and will be removed in the
 future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
-MySQL: choosing an API guide and related FAQ for more information. Alternatives
-to this function include:
+MySQL: choosing an API guide and related FAQ for more information.
+Alternatives to this function include:
 
   * mysqli_ping()
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool mysql_ping ([ resource $link_identifier = NULL ] )~
@@ -28,7 +28,7 @@ has closed the connection and reconnect if necessary.
     Automatic reconnection is disabled by default in versions of MySQL >=
     5.0.3.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { link_identifier}
@@ -39,13 +39,13 @@ has closed the connection and reconnect if necessary.
     If no connection is found or established, an E_WARNING level error is
     generated.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns TRUE if the connection to the server MySQL server is working, otherwise
-FALSE.
+Returns TRUE if the connection to the server MySQL server is working,
+otherwise FALSE.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A mysql_ping() example
@@ -74,7 +74,7 @@ Example #1 A mysql_ping() example
     $result2 = mysql_query($sql2);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mysql_thread_id| - Return the current thread ID

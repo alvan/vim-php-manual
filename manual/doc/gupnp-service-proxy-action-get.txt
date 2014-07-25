@@ -4,7 +4,7 @@ gupnp_service_proxy_action_get
 
 gupnp_service_proxy_action_get — Send action to the service and get value
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed gupnp_service_proxy_action_get ( resource $proxy , string $action ,~
@@ -13,7 +13,7 @@ gupnp_service_proxy_action_get — Send action to the service and get value
 Send action with parameters to the service exposed by proxy synchronously and
 get value.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {proxy}
@@ -46,21 +46,22 @@ get value.
     GUPNP_TYPE_STRING
         Type of the variable is string.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Return value of the action.
 
-===============================================================================
+==============================================================================
 *Errors/Exceptions*
 
-Issues E_WARNING with either not correctly defined type of the action or unable
-to send action.
+Issues E_WARNING with either not correctly defined type of the action or
+unable to send action.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
-  * |gupnp_service_proxy_action_set| - Send action to the service and set value
+  * |gupnp_service_proxy_action_set| - Send action to the service and set
+    value
   * gupnp_service_proxy_send_action() - Send action with multiple parameters
     synchronously
 

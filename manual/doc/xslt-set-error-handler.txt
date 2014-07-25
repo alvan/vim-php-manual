@@ -4,7 +4,7 @@ xslt_set_error_handler
 
 xslt_set_error_handler — Set an error handler for a XSLT processor
 
-===============================================================================
+==============================================================================
 *Description*
 
     void xslt_set_error_handler ( resource $xh , mixed $handler )~
@@ -13,7 +13,7 @@ Set an error handler function for the XSLT processor given by {xh}, this
 function will be called whenever an error occurs in the XSLT transformation
 (this function is also called for notices).
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { xh}
@@ -29,12 +29,12 @@ function will be called whenever an error occurs in the XSLT transformation
     error_handler ( resource $xh , int $error_level , int $error_code , array~
     $messages )~
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 No value is returned.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 xslt_set_error_handler() Example
@@ -56,7 +56,8 @@ Example #1 xslt_set_error_handler() Example
 
     // XSL content :
     $xsl='<?xml version="1.0"?>
-    <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/
+    Transform">
     <xsl:template match="/">
        <strong><xsl:value-of select="para"/></strong>
     </xsl:template>
@@ -97,7 +98,7 @@ array(4) {
   }
 }
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |xslt_set_object| - Sets the object in which to resolve callback functions

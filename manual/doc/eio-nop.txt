@@ -4,7 +4,7 @@ eio_nop
 
 eio_nop — Does nothing, except go through the whole request cycle.
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource eio_nop ([ int $pri = EIO_PRI_DEFAULT [, callable $callback =~
@@ -13,7 +13,7 @@ eio_nop — Does nothing, except go through the whole request cycle.
 eio_nop() does nothing, except go through the whole request cycle. Could be
 useful in debugging.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {pri}
@@ -23,8 +23,8 @@ useful in debugging.
 
 {callback}
 
-    {callback} function is called when the request is done. It should match the
-    following prototype:
+    {callback} function is called when the request is done. It should match
+    the following prototype:
     void callback(mixed $data, int $result[, resource $req]);
 
     {data}
@@ -45,12 +45,12 @@ useful in debugging.
 
     Arbitrary variable passed to {callback}.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 eio_nop() returns request resource on success or FALSE on error.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * eio_busy

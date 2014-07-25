@@ -4,7 +4,7 @@ svn_diff
 
 svn_diff — Recursively diffs two paths
 
-===============================================================================
+==============================================================================
 *Description*
 
     array svn_diff ( string $path1 , int $rev1 , string $path2 , int $rev2 )~
@@ -16,7 +16,7 @@ Recursively diffs two paths, {path1} and {path2}.
     This is not a general-purpose diff utility. Only local files that are
     versioned may be diffed: other files will fail.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {path1}
@@ -47,27 +47,27 @@ Recursively diffs two paths, {path1} and {path2}.
 
     Second path's revision number. See {rev1} for description.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an array-list consisting of two streams: the first is the diff output
 and the second contains error stream output. The streams can be read using |
 fread|. Returns FALSE or NULL on error.
 
-The diff output will, by default, be in the form of Subversion's custom unified
-diff format, but an » external diff engine may be used depending on
+The diff output will, by default, be in the form of Subversion's custom
+unified diff format, but an » external diff engine may be used depending on
 Subversion's configuration.
 
-===============================================================================
+==============================================================================
 *Notes*
 
 Warning
 
 This function is EXPERIMENTAL. The behaviour of this function, its name, and
-surrounding documentation may change without notice in a future release of PHP.
-This function should be used at your own risk.
+surrounding documentation may change without notice in a future release of
+PHP. This function should be used at your own risk.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Basic example
@@ -112,8 +112,8 @@ syntax is somewhat verbose):
 
 Example #3 Portably diffing two local files
 
-This example implements a wrapper function that portably diffs two local files,
-compensating for the |realpath| fix and the backslashes bug:
+This example implements a wrapper function that portably diffs two local
+files, compensating for the |realpath| fix and the backslashes bug:
 
 <?php >
     function svn_diff_local($path1, $rev1, $path2, $rev2) {
@@ -123,7 +123,7 @@ compensating for the |realpath| fix and the backslashes bug:
     }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * » SVN documentation on svn diff

@@ -4,14 +4,14 @@ posix_initgroups
 
 posix_initgroups — Calculate the group access list
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool posix_initgroups ( string $name , int $base_group_id )~
 
 Calculates the group access list for the user specified in name.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {name}
@@ -22,12 +22,12 @@ Calculates the group access list for the user specified in name.
 
     Typically the group number from the password file.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * The Unix manual page for initgroups(3).

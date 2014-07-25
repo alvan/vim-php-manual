@@ -5,16 +5,16 @@ openssl_x509_checkpurpose
 openssl_x509_checkpurpose — Verifies if a certificate can be used for a
 particular purpose
 
-===============================================================================
+==============================================================================
 *Description*
 
     int openssl_x509_checkpurpose ( mixed $x509cert , int $purpose [, array~
     $cainfo = array() [, string $untrustedfile ]] )~
 
-openssl_x509_checkpurpose() examines a certificate to see if it can be used for
-the specified {purpose}.
+openssl_x509_checkpurpose() examines a certificate to see if it can be used
+for the specified {purpose}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {x509cert}
@@ -49,7 +49,7 @@ the specified {purpose}.
     certificates that can be used to help verify the certificate, although no
     trust is placed in the certificates that come from that file.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE if the certificate can be used for the intended purpose, FALSE if

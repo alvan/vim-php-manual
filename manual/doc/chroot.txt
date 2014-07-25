@@ -4,7 +4,7 @@ chroot
 
 chroot — Change the root directory
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool chroot ( string $directory )~
@@ -12,22 +12,22 @@ chroot — Change the root directory
 Changes the root directory of the current process to {directory}, and changes
 the current working directory to "/".
 
-This function is only available to GNU and BSD systems, and only when using the
-CLI, CGI or Embed SAPI. Also, this function requires root privileges.
+This function is only available to GNU and BSD systems, and only when using
+the CLI, CGI or Embed SAPI. Also, this function requires root privileges.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {directory}
 
     The path to change the root directory to.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 chroot() example
@@ -41,7 +41,7 @@ The above example will output:
 
 /
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: This function is not implemented on Windows platforms.

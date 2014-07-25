@@ -4,7 +4,7 @@ openssl_decrypt
 
 openssl_decrypt — Decrypts data
 
-===============================================================================
+==============================================================================
 *Description*
 
     string openssl_decrypt ( string $data , string $method , string $password~
@@ -15,9 +15,10 @@ key.
 
 Warning
 
-This function is currently not documented; only its argument list is available.
+This function is currently not documented; only its argument list is
+available.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {data}
@@ -40,28 +41,28 @@ This function is currently not documented; only its argument list is available.
 
     A non-NULL Initialization Vector.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The decrypted string on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Errors/Exceptions*
 
-Emits an E_WARNING level error if an unknown cipher algorithm is passed via the
-{method} parameter.
+Emits an E_WARNING level error if an unknown cipher algorithm is passed via
+the {method} parameter.
 
 Emits an E_WARNING level error if an empty value is passed in via the {iv}
 parameter.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version                Description
 5.3.3   The {iv} parameter was added.
 5.4.0   The {raw_output} was changed to {options}.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |openssl_encrypt| - Encrypts data

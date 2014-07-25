@@ -5,45 +5,45 @@ mysqlnd_qc_set_is_select
 mysqlnd_qc_set_is_select — Installs a callback which decides whether a
 statement is cached
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed mysqlnd_qc_set_is_select ( string $callback )~
 
 Installs a callback which decides whether a statement is cached.
 
-There are several ways of hinting PELC/mysqlnd_qc to cache a query. By default,
-PECL/mysqlnd_qc attempts to cache a if caching of all statements is enabled or
-the query string begins with a certain SQL hint. The plugin internally calls a
-function named is_select() to find out. This internal function can be replaced
-with a user-defined callback. Then, the user-defined callback is responsible to
-decide whether the plugin attempts to cache a statement. Because the internal
-function is replaced with the callback, the callback gains full control. The
-callback is free to ignore the configuration setting
-mysqlnd_qc.cache_by_default and SQL hints.
+There are several ways of hinting PELC/mysqlnd_qc to cache a query. By
+default, PECL/mysqlnd_qc attempts to cache a if caching of all statements is
+enabled or the query string begins with a certain SQL hint. The plugin
+internally calls a function named is_select() to find out. This internal
+function can be replaced with a user-defined callback. Then, the user-defined
+callback is responsible to decide whether the plugin attempts to cache a
+statement. Because the internal function is replaced with the callback, the
+callback gains full control. The callback is free to ignore the configuration
+setting mysqlnd_qc.cache_by_default and SQL hints.
 
 The callback is invoked for every statement inspected by the plugin. It is
 given the statements string as a parameter. The callback returns FALSE if the
 statement shall not be cached. It returns TRUE to make the plugin attempt to
 cache the statements result set, if any. A so-created cache entry is given the
 default TTL set with the PHP configuration directive mysqlnd_qc.ttl. If a
-different TTL shall be used, the callback returns a numeric value to be used as
-the TTL.
+different TTL shall be used, the callback returns a numeric value to be used
+as the TTL.
 
 The internal is_select function is part of the internal cache storage handler
 interface. Thus, a user-defined storage handler offers the same capabilities.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 This function has no parameters.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mysqlnd_qc_set_is_select() example
@@ -92,7 +92,7 @@ is_select(             SELECT id FROM test WHERE id = 1): cache
 is_select(             SELECT id FROM test WHERE id = 1): cache
 is_select(                           SELECT * FROM test): cache
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * Runtime configuration

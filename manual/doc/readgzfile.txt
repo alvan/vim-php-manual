@@ -4,7 +4,7 @@ readgzfile
 
 readgzfile — Output a gz-file
 
-===============================================================================
+==============================================================================
 *Description*
 
     int readgzfile ( string $filename [, int $use_include_path = 0 ] )~
@@ -14,7 +14,7 @@ Reads a file, decompresses it and writes it to standard output.
 readgzfile() can be used to read a file which is not in gzip format; in this
 case readgzfile() will directly read from the file without decompression.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {filename}
@@ -27,14 +27,14 @@ case readgzfile() will directly read from the file without decompression.
     You can set this optional parameter to 1, if you want to search for the
     file in the include_path too.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the number of (uncompressed) bytes read from the file. If an error
-occurs, FALSE is returned and unless the function was called as @readgzfile, an
-error message is printed.
+occurs, FALSE is returned and unless the function was called as @readgzfile,
+an error message is printed.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |gzpassthru| - Output all remaining data on a gz-file pointer

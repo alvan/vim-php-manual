@@ -5,7 +5,7 @@ cubrid_affected_rows
 cubrid_affected_rows — Return the number of rows affected by the last SQL
 statement
 
-===============================================================================
+==============================================================================
 *Description*
 
     int cubrid_affected_rows ([ resource $conn_identifier ] )~
@@ -14,7 +14,7 @@ statement
 The cubrid_affected_rows() function is used to get the number of rows affected
 by the SQL statement (INSERT, DELETE, UPDATE).
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {conn_identifier}
@@ -28,7 +28,7 @@ by the SQL statement (INSERT, DELETE, UPDATE).
     cubrid_execute|. If the request identifier is not specified, the last
     identifier requested by |cubrid_prepare| or |cubrid_execute| is assumed.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Number of rows affected by the SQL statement, when process is successful.
@@ -38,7 +38,7 @@ Number of rows affected by the SQL statement, when process is successful.
 FALSE, when the request identifier is not specified, and there is no last
 request.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_affected_rows() example
@@ -70,7 +70,7 @@ The above example will output:
 
 Rows deleted: 5
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |cubrid_execute| - Execute a prepared SQL statement

@@ -4,14 +4,14 @@ gmp_div_q
 
 gmp_div_q — Divide numbers
 
-===============================================================================
+==============================================================================
 *Description*
 
     GMP gmp_div_q ( GMP $a , GMP $b [, int $round = GMP_ROUND_ZERO ] )~
 
 Divides {a} by {b} and returns the integer result.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {a}
@@ -32,8 +32,8 @@ Divides {a} by {b} and returns the integer result.
 
 {round}
 
-    The result rounding is defined by the {round}, which can have the following
-    values:
+    The result rounding is defined by the {round}, which can have the
+    following values:
       + GMP_ROUND_ZERO: The result is truncated towards 0.
       + GMP_ROUND_PLUSINF: The result is rounded towards +infinity.
       + GMP_ROUND_MINUSINF: The result is rounded towards -infinity.
@@ -42,13 +42,13 @@ Divides {a} by {b} and returns the integer result.
     5.6 and later, or a numeric string provided that it is possible to convert
     the latter to a number.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 A GMP number resource in PHP 5.5 and earlier, or a GMP object in PHP 5.6 and
 later.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 gmp_div_q() example
@@ -78,14 +78,14 @@ The above example will output:
 0
 -1
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
 
     This function can also be called as |gmp_div|.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |gmp_div_r| - Remainder of the division of numbers

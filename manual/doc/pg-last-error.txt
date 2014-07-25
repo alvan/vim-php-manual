@@ -4,7 +4,7 @@ pg_last_error
 
 pg_last_error — Get the last error message string of a connection
 
-===============================================================================
+==============================================================================
 *Description*
 
     string pg_last_error ([ resource $connection ] )~
@@ -22,7 +22,7 @@ pg_connection_status| for better error handling.
 
     This function used to be called pg_errormessage().
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
@@ -31,13 +31,13 @@ pg_connection_status| for better error handling.
     the default connection is used. The default connection is the last
     connection made by |pg_connect| or |pg_pconnect|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 A string containing the last error message on the given {connection}, or FALSE
 on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 pg_last_error() example
@@ -51,7 +51,7 @@ Example #1 pg_last_error() example
       echo pg_last_error($dbconn);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |pg_result_error| - Get error message associated with result

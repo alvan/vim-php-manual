@@ -4,7 +4,7 @@ header
 
 header — Send a raw HTTP header
 
-===============================================================================
+==============================================================================
 *Description*
 
     void header ( string $string [, bool $replace = true [, int~
@@ -16,8 +16,8 @@ for more information on HTTP headers.
 Remember that header() must be called before any actual output is sent, either
 by normal HTML tags, blank lines in a file, or from PHP. It is a very common
 error to read code with |include|, or |require|, functions, or another file
-access function, and have spaces or empty lines that are output before header()
-is called. The same problem exists when using a single PHP/HTML file.
+access function, and have spaces or empty lines that are output before header
+() is called. The same problem exists when using a single PHP/HTML file.
 <html>
 <?php >
     /* This will give an error. Note the output
@@ -26,7 +26,7 @@ is called. The same problem exists when using a single PHP/HTML file.
     exit;
 <?>
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {string}
@@ -59,9 +59,9 @@ is called. The same problem exists when using a single PHP/HTML file.
 {replace}
 
     The optional {replace} parameter indicates whether the header should
-    replace a previous similar header, or add a second header of the same type.
-    By default it will replace, but if you pass in FALSE as the second argument
-    you can force multiple headers of the same type. For example:
+    replace a previous similar header, or add a second header of the same
+    type. By default it will replace, but if you pass in FALSE as the second
+    argument you can force multiple headers of the same type. For example:
 
     <?php >
     header('WWW-Authenticate: Negotiate');
@@ -73,27 +73,27 @@ is called. The same problem exists when using a single PHP/HTML file.
     Forces the HTTP response code to the specified value. Note that this
     parameter only has an effect if the {string} is not empty.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 No value is returned.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
- Version                               Description
-4.4.2 and This function now prevents more than one header to be sent at once as
-5.1.2     a protection against header injection attacks.
+ Version                              Description
+4.4.2 and This function now prevents more than one header to be sent at once
+5.1.2     as a protection against header injection attacks.
 4.3.0     The {http_response_code} parameter was added.
 4.0.4     The {replace} parameter was added.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Download dialog
 
-If you want the user to be prompted to save the data you are sending, such as a
-generated PDF file, you can use the » Content-Disposition header to supply a
+If you want the user to be prompted to save the data you are sending, such as
+a generated PDF file, you can use the » Content-Disposition header to supply a
 recommended filename and force the browser to display the save dialog.
 
 <?php >
@@ -130,7 +130,7 @@ Many proxies and clients can be forced to disable caching with:
     configuration setting can be used to automatically generate the correct
     caching-related headers when sessions are being used.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -141,10 +141,10 @@ Many proxies and clients can be forced to disable caching with:
     Note:
 
     You can use output buffering to get around this problem, with the overhead
-    of all of your output to the browser being buffered in the server until you
-    send it. You can do this by calling |ob_start| and |ob_end_flush| in your
-    script, or setting the output_buffering configuration directive on in your
-    php.ini or server configuration files.
+    of all of your output to the browser being buffered in the server until
+    you send it. You can do this by calling |ob_start| and |ob_end_flush| in
+    your script, or setting the output_buffering configuration directive on in
+    your php.ini or server configuration files.
 
     Note:
 
@@ -183,10 +183,11 @@ Many proxies and clients can be forced to disable caching with:
 
     Note:
 
-    Session ID is not passed with Location header even if session.use_trans_sid
-    is enabled. It must by passed manually using SID constant.
+    Session ID is not passed with Location header even if
+    session.use_trans_sid is enabled. It must by passed manually using SID
+    constant.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |headers_sent| - Checks if or where headers have been sent

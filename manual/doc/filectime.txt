@@ -4,27 +4,27 @@ filectime
 
 filectime — Gets inode change time of file
 
-===============================================================================
+==============================================================================
 *Description*
 
     int filectime ( string $filename )~
 
 Gets the inode change time of a file.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {filename}
 
     Path to the file.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the time the file was last changed, or FALSE on failure. The time is
 returned as a Unix timestamp.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A filectime() example
@@ -41,21 +41,21 @@ Example #1 A filectime() example
 
 <?>
 
-===============================================================================
+==============================================================================
 *Errors/Exceptions*
 
 Upon failure, an E_WARNING is emitted.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
 
-    Note: In most Unix filesystems, a file is considered changed when its inode
-    data is changed; that is, when the permissions, owner, group, or other
-    metadata from the inode is updated. See also |filemtime| (which is what you
-    want to use when you want to create "Last Modified" footers on web pages)
-    and |fileatime|.
+    Note: In most Unix filesystems, a file is considered changed when its
+    inode data is changed; that is, when the permissions, owner, group, or
+    other metadata from the inode is updated. See also |filemtime| (which is
+    what you want to use when you want to create "Last Modified" footers on
+    web pages) and |fileatime|.
 
     Note:
 
@@ -76,7 +76,7 @@ As of PHP 5.0.0, this function can also be used with some URL wrappers. Refer
 to Supported Protocols and Wrappers to determine which wrappers support |stat|
 family of functionality.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |filemtime| - Gets file modification time

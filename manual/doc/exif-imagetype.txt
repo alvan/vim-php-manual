@@ -4,7 +4,7 @@ exif_imagetype
 
 exif_imagetype — Determine the type of an image
 
-===============================================================================
+==============================================================================
 *Description*
 
     int exif_imagetype ( string $filename )~
@@ -15,13 +15,13 @@ exif_imagetype() can be used to avoid calls to other exif functions with
 unsupported file types or in conjunction with $_SERVER['HTTP_ACCEPT'] to check
 whether or not the viewer is able to see a specific image in the browser.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {filename}
     The image being checked.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 When a correct signature is found, the appropriate constant value will be
@@ -34,7 +34,7 @@ faster.
     exif_imagetype() will emit an E_NOTICE and return FALSE if it is unable to
     read enough bytes from the file to determine the image type.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version                  Description
@@ -42,7 +42,7 @@ Version                  Description
 4.3.2   Support for JPC, JP2, JPX, JB2, XBM, and WBMP
 4.3.0   Support for SWC
 
-===============================================================================
+==============================================================================
 *Predefined* *Constants*
 
 The following constants are defined, and represent possible exif_imagetype()
@@ -68,7 +68,7 @@ Value                Constant
 16    IMAGETYPE_XBM
 17    IMAGETYPE_ICO
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 exif_imagetype() example
@@ -79,7 +79,7 @@ Example #1 exif_imagetype() example
     }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |image_type_to_mime_type| - Get Mime-Type for image-type returned by

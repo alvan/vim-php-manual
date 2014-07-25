@@ -4,26 +4,26 @@ imagettftext
 
 imagettftext — Write text to the image using TrueType fonts
 
-===============================================================================
+==============================================================================
 *Description*
 
-    array imagettftext ( resource $image , float $size , float $angle , int $x~
-    , int $y , int $color , string $fontfile , string $text )~
+    array imagettftext ( resource $image , float $size , float $angle , int~
+    $x , int $y , int $color , string $fontfile , string $text )~
 
 Writes the given {text} into the image using TrueType fonts.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { image}
 
-    An image resource, returned by one of the image creation functions, such as
-    |imagecreatetruecolor|.
+    An image resource, returned by one of the image creation functions, such
+    as |imagecreatetruecolor|.
 
 {size}
 
-    The font size. Depending on your version of GD, this should be specified as
-    the pixel size (GD1) or point size (GD2).
+    The font size. Depending on your version of GD, this should be specified
+    as the pixel size (GD1) or point size (GD2).
 
 {angle}
 
@@ -33,8 +33,8 @@ Writes the given {text} into the image using TrueType fonts.
 
 {x}
 
-    The coordinates given by {x} and {y} will define the basepoint of the first
-    character (roughly the lower-left corner of the character). This is
+    The coordinates given by {x} and {y} will define the basepoint of the
+    first character (roughly the lower-left corner of the character). This is
     different from the |imagestring|, where {x} and {y} define the upper-left
     corner of the first character. For example, "top left" is 0, 0.
 
@@ -57,12 +57,12 @@ Writes the given {text} into the image using TrueType fonts.
     and the library will attempt to search for that filename along a
     library-defined font path.
 
-    When using versions of the GD library lower than 2.0.18, a space character,
-    rather than a semicolon, was used as the 'path separator' for different
-    font files. Unintentional use of this feature will result in the warning
-    message: Warning: Could not find/open font. For these affected versions,
-    the only solution is moving the font to a path which does not contain
-    spaces.
+    When using versions of the GD library lower than 2.0.18, a space
+    character, rather than a semicolon, was used as the 'path separator' for
+    different font files. Unintentional use of this feature will result in the
+    warning message: Warning: Could not find/open font. For these affected
+    versions, the only solution is moving the font to a path which does not
+    contain spaces.
 
     In many cases where a font resides in the same directory as the script
     using it the following trick will alleviate any include problems.
@@ -89,22 +89,22 @@ Writes the given {text} into the image using TrueType fonts.
     If a character is used in the string which is not supported by the font, a
     hollow rectangle will replace the character.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an array with 8 elements representing four points making the bounding
 box of the text. The order of the points is lower left, lower right, upper
-right, upper left. The points are relative to the text regardless of the angle,
-so "upper left" means in the top left-hand corner when you see the text
+right, upper left. The points are relative to the text regardless of the
+angle, so "upper left" means in the top left-hand corner when you see the text
 horizontally. Returns FALSE on error.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version                          Description
 5.2.0   It is now possible to specify an hexadecimal entity in {text}.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 imagettftext() example
@@ -145,14 +145,14 @@ The above example will output something similar to:
 
 Output of example : imagettftext()
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
 
     This function requires both the GD library and the » FreeType library.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |imagettfbbox| - Give the bounding box of a text using TrueType fonts

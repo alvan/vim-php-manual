@@ -4,7 +4,7 @@ ncurses_has_colors
 
 ncurses_has_colors — Checks if terminal has color capabilities
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool ncurses_has_colors ( void )~
@@ -13,17 +13,17 @@ Checks whether the terminal has color capabilities. This function can be used
 to write terminal-independent programs. ncurses must be initialized using |
 ncurses_init| before calling this function.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 This function has no parameters.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Return TRUE if the terminal has color capabilities, FALSE otherwise.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Writing a string with a specified color to the screen
@@ -47,7 +47,7 @@ Example #1 Writing a string with a specified color to the screen
     ncurses_end();
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ncurses_can_change_color| - Checks if terminal color definitions can be

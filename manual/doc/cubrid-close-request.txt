@@ -4,7 +4,7 @@ cubrid_close_request
 
 cubrid_close_request — Close the request handle
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool cubrid_close_request ( resource $req_identifier )~
@@ -13,19 +13,19 @@ The cubrid_close_request() function closes the request handle given by the
 {req_identifier} argument, and releases the memory region related to the
 handle. It is an alias of |cubrid_close_prepare|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {req_identifier}
 
     Request identifier.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Return TRUE on success.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_close_request() example
@@ -47,7 +47,7 @@ Example #1 cubrid_close_request() example
     }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |cubrid_close_prepare| - Close the request handle

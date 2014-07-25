@@ -4,13 +4,14 @@ socket_strerror
 
 socket_strerror — Return a string describing a socket error
 
-===============================================================================
+==============================================================================
 *Description*
 
     string socket_strerror ( int $errno )~
 
 socket_strerror() takes as its {errno} parameter a socket error code as
-returned by |socket_last_error| and returns the corresponding explanatory text.
+returned by |socket_last_error| and returns the corresponding explanatory
+text.
 
     Note:
 
@@ -18,19 +19,19 @@ returned by |socket_last_error| and returns the corresponding explanatory text.
     English, the system messages retrieved with this function will appear
     depending on the current locale (LC_MESSAGES).
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {errno}
 
     A valid socket error number, likely produced by |socket_last_error|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the error message associated with the {errno} parameter.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 socket_strerror() example
@@ -47,12 +48,12 @@ Example #1 socket_strerror() example
     }
 <?>
 
-The expected output from the above example (assuming the script is not run with
-root privileges):
+The expected output from the above example (assuming the script is not run
+with root privileges):
 
 socket_bind() failed: reason: Permission denied
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |socket_accept| - Accepts a connection on a socket

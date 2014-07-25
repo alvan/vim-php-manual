@@ -4,7 +4,7 @@ cubrid_seq_drop
 
 cubrid_seq_drop — Delete an element from sequence type column using OID
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool cubrid_seq_drop ( resource $conn_identifier , string $oid , string~
@@ -13,7 +13,7 @@ cubrid_seq_drop — Delete an element from sequence type column using OID
 The cubrid_seq_drop() function is used to delete an element you request from
 the given sequence type attribute in the database.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {conn_identifier}
@@ -32,14 +32,14 @@ the given sequence type attribute in the database.
 
     Index of the element that you want to delete (1-based).
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 TRUE, when process is successful.
 
 FALSE, when process is unsuccessful.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_seq_drop() example
@@ -91,10 +91,11 @@ array(3) {
   string(2) "33"
 }
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
-  * |cubrid_seq_insert| - Insert an element to a sequence type column using OID
+  * |cubrid_seq_insert| - Insert an element to a sequence type column using
+    OID
   * |cubrid_seq_put| - Update the element value of sequence type column using
     OID
 

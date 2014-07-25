@@ -4,7 +4,7 @@ curl_exec
 
 curl_exec — Perform a cURL session
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed curl_exec ( resource $ch )~
@@ -14,21 +14,21 @@ Execute the given cURL session.
 This function should be called after initializing a cURL session and all the
 options for the session are set.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {ch}
 
     A cURL handle returned by |curl_init|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure. However, if the
 CURLOPT_RETURNTRANSFER option is |set|, it will return the result on success,
 FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Fetching a web page
@@ -48,7 +48,7 @@ Example #1 Fetching a web page
     curl_close($ch);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |curl_multi_exec| - Run the sub-connections of the current cURL handle

@@ -4,14 +4,14 @@ imap_close
 
 imap_close — Close an IMAP stream
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool imap_close ( resource $imap_stream [, int $flag = 0 ] )~
 
 Closes the imap stream.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { imap_stream}
@@ -20,16 +20,16 @@ Closes the imap stream.
 
 {flag}
 
-    If set to CL_EXPUNGE, the function will silently expunge the mailbox before
-    closing, removing all messages marked for deletion. You can achieve the
-    same thing by using |imap_expunge|
+    If set to CL_EXPUNGE, the function will silently expunge the mailbox
+    before closing, removing all messages marked for deletion. You can achieve
+    the same thing by using |imap_expunge|
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |imap_open| - Open an IMAP stream to a mailbox

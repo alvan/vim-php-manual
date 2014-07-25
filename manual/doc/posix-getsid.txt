@@ -4,7 +4,7 @@ posix_getsid
 
 posix_getsid — Get the current sid of the process
 
-===============================================================================
+==============================================================================
 *Description*
 
     int posix_getsid ( int $pid )~
@@ -12,7 +12,7 @@ posix_getsid — Get the current sid of the process
 Return the session id of the process {pid}. The session id of a process is the
 process group id of the session leader.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {pid}
@@ -21,12 +21,12 @@ process group id of the session leader.
     invalid {pid} is specified, then FALSE is returned and an error is set
     which can be checked with |posix_get_last_error|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the identifier, as an integer.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Example use of posix_getsid()
@@ -36,7 +36,7 @@ Example #1 Example use of posix_getsid()
     echo posix_getsid($pid); //8805
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |posix_getpgid| - Get process group id for job control

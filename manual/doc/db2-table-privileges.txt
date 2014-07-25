@@ -5,7 +5,7 @@ db2_table_privileges
 db2_table_privileges — Returns a result set listing the tables and associated
 privileges in a database
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource db2_table_privileges ( resource $connection [, string $qualifier~
@@ -14,7 +14,7 @@ privileges in a database
 Returns a result set listing the tables and associated privileges in a
 database.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
@@ -33,10 +33,10 @@ database.
 
 {table_name}
 
-    The name of the table. This parameter accepts a search pattern containing _
-    and % as wildcards.
+    The name of the table. This parameter accepts a search pattern containing
+    _ and % as wildcards.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a statement resource with a result set containing rows describing the
@@ -52,10 +52,10 @@ GRANTOR      Authorization ID of the user who granted the privilege.
 GRANTEE      Authorization ID of the user to whom the privilege was granted.
 PRIVILEGE    The privilege that has been granted. This can be one of ALTER,
              CONTROL, DELETE, INDEX, INSERT, REFERENCES, SELECT, or UPDATE.
-IS_GRANTABLE A string value of "YES" or "NO" indicating whether the grantee can
-             grant the privilege to other users.
+IS_GRANTABLE A string value of "YES" or "NO" indicating whether the grantee
+             can grant the privilege to other users.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |db2_column_privileges| - Returns a result set listing the columns and

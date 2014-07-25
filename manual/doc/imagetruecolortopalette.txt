@@ -4,7 +4,7 @@ imagetruecolortopalette
 
 imagetruecolortopalette — Convert a true color image to a palette image
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool imagetruecolortopalette ( resource $image , bool $dither , int~
@@ -18,13 +18,13 @@ addition to preserving colors as well as possible. This does not work as well
 as might be hoped. It is usually best to simply produce a truecolor output
 image instead, which guarantees the highest output quality.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { image}
 
-    An image resource, returned by one of the image creation functions, such as
-    |imagecreatetruecolor|.
+    An image resource, returned by one of the image creation functions, such
+    as |imagecreatetruecolor|.
 
 {dither}
 
@@ -36,12 +36,12 @@ image instead, which guarantees the highest output quality.
 
     Sets the maximum number of colors that should be retained in the palette.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Converting a true color image to a palette-based image
@@ -58,7 +58,7 @@ Example #1 Converting a true color image to a palette-based image
     imagedestroy($im);
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: This function requires GD 2.0.1 or later (2.0.28 or later is

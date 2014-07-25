@@ -4,7 +4,7 @@ session_cache_expire
 
 session_cache_expire — Return current cache expire
 
-===============================================================================
+==============================================================================
 *Description*
 
     int session_cache_expire ([ string $new_cache_expire ] )~
@@ -16,7 +16,7 @@ session.cache_expire at request startup time. Thus, you need to call
 session_cache_expire() for every request (and before |session_start| is
 called).
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {new_cache_expire}
@@ -27,13 +27,13 @@ called).
         Note: Setting {new_cache_expire} is of value only, if
         session.cache_limiter is set to a value different from nocache.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the current setting of session.cache_expire. The value returned should
 be read in minutes, defaults to 180.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 session_cache_expire() example
@@ -57,7 +57,7 @@ Example #1 session_cache_expire() example
     echo "The cached session pages expire after $cache_expire minutes";
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * session.cache_expire

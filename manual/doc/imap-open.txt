@@ -4,18 +4,19 @@ imap_open
 
 imap_open — Open an IMAP stream to a mailbox
 
-===============================================================================
+==============================================================================
 *Description*
 
-    resource imap_open ( string $mailbox , string $username , string $password~
-    [, int $options = 0 [, int $n_retries = 0 [, array $params = NULL ]]] )~
+    resource imap_open ( string $mailbox , string $username , string~
+    $password [, int $options = 0 [, int $n_retries = 0 [, array $params =~
+    NULL ]]] )~
 
 Opens an IMAP stream to a {mailbox}.
 
 This function can also be used to open streams to POP3 and NNTP servers, but
 some functions and features are only available on IMAP servers.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {mailbox}
@@ -44,11 +45,12 @@ some functions and features are only available on IMAP servers.
              Flag                              Description
     /service=service       mailbox access service, default is "imap"
     /user=user             remote user name for login on the server
-                           remote authentication user; if specified this is the
-    /authuser=user         user name whose password is used (e.g.
+                           remote authentication user; if specified this is
+    /authuser=user         the user name whose password is used (e.g.
                            administrator)
     /anonymous             remote access as anonymous user
-    /debug                 record protocol telemetry in application's debug log
+    /debug                 record protocol telemetry in application's debug
+                           log
     /secure                do not transmit a plaintext password over the
                            network
     /imap, /imap2, /
@@ -83,10 +85,10 @@ some functions and features are only available on IMAP servers.
     The {options} are a bit mask with one or more of the following:
       + OP_READONLY - Open mailbox read-only
       + OP_ANONYMOUS - Don't use or update a .newsrc for news (NNTP only)
-      + OP_HALFOPEN - For IMAP and NNTP names, open a connection but don't open
-        a mailbox.
-      + CL_EXPUNGE - Expunge mailbox automatically upon mailbox close (see also
-        |imap_delete| and |imap_expunge|)
+      + OP_HALFOPEN - For IMAP and NNTP names, open a connection but don't
+        open a mailbox.
+      + CL_EXPUNGE - Expunge mailbox automatically upon mailbox close (see
+        also |imap_delete| and |imap_expunge|)
       + OP_DEBUG - Debug protocol negotiations
       + OP_SHORTCACHE - Short (elt-only) caching
       + OP_SILENT - Don't pass up events (internal use)
@@ -99,23 +101,23 @@ some functions and features are only available on IMAP servers.
 
 {params}
 
-    Connection parameters, the following (string) keys maybe used to set one or
-    more connection parameters:
+    Connection parameters, the following (string) keys maybe used to set one
+    or more connection parameters:
       + DISABLE_AUTHENTICATOR - Disable authentication properties
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an IMAP stream on success or FALSE on error.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version    Description
 5.3.2   {params} added
 5.2.0   {n_retries} added
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Different use of imap_open()
@@ -173,7 +175,7 @@ Example #2 imap_open() example
     imap_close($mbox);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |imap_close| - Close an IMAP stream

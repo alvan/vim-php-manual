@@ -4,26 +4,27 @@ openssl_get_md_methods
 
 openssl_get_md_methods — Gets available digest methods
 
-===============================================================================
+==============================================================================
 *Description*
 
     array openssl_get_md_methods ([ bool $aliases = false ] )~
 
 Gets a list of available digest methods.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {aliases}
 
-    Set to TRUE if digest aliases should be included within the returned array.
+    Set to TRUE if digest aliases should be included within the returned array
+    .
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 An array of available digest methods.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 openssl_get_md_methods() example
@@ -107,7 +108,7 @@ Array
     [55] => ssl3-sha1
 )
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |openssl_digest| - Computes a digest

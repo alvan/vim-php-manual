@@ -4,7 +4,7 @@ uniqid
 
 uniqid — Generate a unique ID
 
-===============================================================================
+==============================================================================
 *Description*
 
     string uniqid ([ string $prefix = "" [, bool $more_entropy =~
@@ -19,7 +19,7 @@ must not be used for security purposes. Use a cryptographically secure random
 function/generator and cryptographically secure hash functions to create
 unpredictable secure IDs.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {prefix}
@@ -37,12 +37,12 @@ unpredictable secure IDs.
     linear congruential generator) at the end of the return value, which
     increases the likelihood that the result will be unique.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the unique identifier, as a string.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 uniqid() Example
@@ -66,14 +66,14 @@ Example #1 uniqid() Example
     printf("uniqid('', true): %s\r\n", uniqid('', true));
 <?>
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version                        Description
 5.0.0   The {prefix} parameter was made optional.
 4.3.1   The limit of 114 characters long for {prefix} was raised.
 
-===============================================================================
+==============================================================================
 *Notes*
 
 Caution

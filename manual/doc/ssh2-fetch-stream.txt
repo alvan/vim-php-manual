@@ -4,16 +4,16 @@ ssh2_fetch_stream
 
 ssh2_fetch_stream — Fetch an extended data stream
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource ssh2_fetch_stream ( resource $channel , int $streamid )~
 
-Fetches an alternate substream associated with an SSH2 channel stream. The SSH2
-protocol currently defines only one substream, STDERR, which has a substream ID
-of SSH2_STREAM_STDERR (defined as 1).
+Fetches an alternate substream associated with an SSH2 channel stream. The
+SSH2 protocol currently defines only one substream, STDERR, which has a
+substream ID of SSH2_STREAM_STDERR (defined as 1).
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {channel}
@@ -22,12 +22,12 @@ of SSH2_STREAM_STDERR (defined as 1).
 
     An SSH2 channel stream.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the requested stream resource.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Opening a shell and retrieving the stderr stream associated with it
@@ -40,7 +40,7 @@ Example #1 Opening a shell and retrieving the stderr stream associated with it
     $stderr_stream = ssh2_fetch_stream($stdio_stream, SSH2_STREAM_STDERR);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ssh2_shell| - Request an interactive shell

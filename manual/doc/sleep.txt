@@ -4,21 +4,21 @@ sleep
 
 sleep — Delay execution
 
-===============================================================================
+==============================================================================
 *Description*
 
     int sleep ( int $seconds )~
 
 Delays the program execution for the given number of {seconds}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {seconds}
 
     Halt time in seconds.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns zero on success, or FALSE on error.
@@ -28,20 +28,20 @@ Windows, this value will always be 192 (the value of the WAIT_IO_COMPLETION
 constant within the Windows API). On other platforms, the return value will be
 the number of seconds left to sleep.
 
-===============================================================================
+==============================================================================
 *Errors/Exceptions*
 
-If the specified number of {seconds} is negative, this function will generate a
-E_WARNING.
+If the specified number of {seconds} is negative, this function will generate
+a E_WARNING.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 5.3.4   Before PHP 5.3.4, on Windows, sleep() always returns NULL when sleep
         has occurred, regardless of whether the sleep was interrupted or not.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 sleep() example
@@ -64,7 +64,7 @@ This example will output (after 10 seconds)
 05:31:23
 05:31:33
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |usleep| - Delay execution in microseconds

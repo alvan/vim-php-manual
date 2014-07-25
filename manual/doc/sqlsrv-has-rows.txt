@@ -4,27 +4,27 @@ sqlsrv_has_rows
 
 sqlsrv_has_rows — Indicates whether the specified statement has rows
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool sqlsrv_has_rows ( resource $stmt )~
 
 Indicates whether the specified statement has rows.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {stmt}
 
     A statement resource returned by |sqlsrv_query| or |sqlsrv_execute|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE if the specified statement has rows and FALSE if the statement
 does not have rows or if an error occurred.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 sqlsrv_has_rows() example
@@ -46,7 +46,7 @@ Example #1 sqlsrv_has_rows() example
     }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |sqlsrv_num_rows| - Retrieves the number of rows in a result set

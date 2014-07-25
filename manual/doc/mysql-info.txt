@@ -8,19 +8,19 @@ Warning
 
 This extension is deprecated as of PHP 5.5.0, and will be removed in the
 future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
-MySQL: choosing an API guide and related FAQ for more information. Alternatives
-to this function include:
+MySQL: choosing an API guide and related FAQ for more information.
+Alternatives to this function include:
 
   * mysqli_info()
 
-===============================================================================
+==============================================================================
 *Description*
 
     string mysql_info ([ resource $link_identifier = NULL ] )~
 
 Returns detailed information about the last query.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { link_identifier}
@@ -31,14 +31,15 @@ Returns detailed information about the last query.
     If no connection is found or established, an E_WARNING level error is
     generated.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns information about the statement on success, or FALSE on failure. See
 the example below for which statements provide information, and what the
-returned value may look like. Statements that are not listed will return FALSE.
+returned value may look like. Statements that are not listed will return FALSE
+.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Relevant MySQL Statements
@@ -57,7 +58,7 @@ String format: Records: 60 Duplicates: 0 Warnings: 0
 UPDATE
 String format: Rows matched: 65 Changed: 65 Warnings: 0
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -65,7 +66,7 @@ String format: Rows matched: 65 Changed: 65 Warnings: 0
     mysql_info() returns a non-FALSE value for the INSERT ... VALUES statement
     only if multiple value lists are specified in the statement.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mysql_affected_rows| - Get number of affected rows in previous MySQL

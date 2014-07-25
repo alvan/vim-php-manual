@@ -4,7 +4,7 @@ oci_rollback
 
 oci_rollback — Rolls back the outstanding database transaction
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool oci_rollback ( resource $connection )~
@@ -12,16 +12,17 @@ oci_rollback — Rolls back the outstanding database transaction
 Reverts all uncommitted changes for the Oracle {connection} and ends the
 transaction. It releases all locks held. All Oracle SAVEPOINTS are erased.
 
-A transaction begins when the first SQL statement that changes data is executed
-with |oci_execute| using the OCI_NO_AUTO_COMMIT flag. Further data changes made
-by other statements become part of the same transaction. Data changes made in a
-transaction are temporary until the transaction is committed or rolled back.
-Other users of the database will not see the changes until they are committed.
+A transaction begins when the first SQL statement that changes data is
+executed with |oci_execute| using the OCI_NO_AUTO_COMMIT flag. Further data
+changes made by other statements become part of the same transaction. Data
+changes made in a transaction are temporary until the transaction is committed
+or rolled back. Other users of the database will not see the changes until
+they are committed.
 
 When inserting or updating data, using transactions is recommended for
 relational data consistency and for performance reasons.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
@@ -29,12 +30,12 @@ relational data consistency and for performance reasons.
     An Oracle connection identifier, returned by |oci_connect|, |oci_pconnect|
     or |oci_new_connect|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 oci_rollback() example
@@ -94,13 +95,13 @@ Example #2 Rolling back to a SAVEPOINT example
     oci_commit($conn);  // mytab now has id of 1111
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
 
     Transactions are automatically rolled back when you close the connection,
-    or when the script ends, whichever is soonest. You need to explicitly call 
+    or when the script ends, whichever is soonest. You need to explicitly call
     |oci_commit| to commit the transaction.
 
     Any call to |oci_execute| that uses OCI_COMMIT_ON_SUCCESS mode explicitly
@@ -109,7 +110,7 @@ Example #2 Rolling back to a SAVEPOINT example
     Any Oracle DDL statement such as CREATE or DROP will automatically commit
     any uncommitted transaction.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |oci_commit| - Commits the outstanding database transaction

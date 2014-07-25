@@ -4,16 +4,16 @@ ingres_set_environment
 
 ingres_set_environment — Set environment features controlling output options
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool ingres_set_environment ( resource $link , array $options )~
 
-ingres_set_environment() is called to set environmental options that affect the
-output of certain values from Ingres, such as the timezone, date format,
+ingres_set_environment() is called to set environmental options that affect
+the output of certain values from Ingres, such as the timezone, date format,
 decimal character separator, and float precision.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {link}
@@ -83,12 +83,12 @@ decimal character separator, and float precision.
                                   Defaults to 4096 bytes when
                                   not set explicitly
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Set date_format to ISO4
@@ -122,7 +122,7 @@ Example #2 Set timezone to HONG-KONG
     }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ingres_connect| - Open a connection to an Ingres database

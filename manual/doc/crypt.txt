@@ -4,13 +4,13 @@ crypt
 
 crypt — One-way string hashing
 
-===============================================================================
+==============================================================================
 *Description*
 
     string crypt ( string $str [, string $salt ] )~
 
-crypt() will return a hashed string using the standard Unix DES-based algorithm
-or alternative algorithms that may be available on the system.
+crypt() will return a hashed string using the standard Unix DES-based
+algorithm or alternative algorithms that may be available on the system.
 
 The {salt} parameter is optional. However, crypt() creates weak password
 without {salt}. PHP 5.6 or later raise E_NOTICE error without it. Make sure
@@ -31,8 +31,8 @@ valid salt allowed by the available hashes.
 
 The standard DES-based crypt() returns the salt as the first two characters of
 the output. It also only uses the first eight characters of {str}, so longer
-strings that start with the same eight characters will generate the same result
-(when the same salt is used).
+strings that start with the same eight characters will generate the same
+result (when the same salt is used).
 
 On systems where the crypt() function supports multiple hash types, the
 following constants are set to 0 or 1 depending on whether the given type is
@@ -41,25 +41,25 @@ available:
   * CRYPT_STD_DES - Standard DES-based hash with a two character salt from the
     alphabet "./0-9A-Za-z". Using invalid characters in the salt will cause
     crypt() to fail.
-  * CRYPT_EXT_DES - Extended DES-based hash. The "salt" is a 9-character string
-    consisting of an underscore followed by 4 bytes of iteration count and 4
-    bytes of salt. These are encoded as printable characters, 6 bits per
+  * CRYPT_EXT_DES - Extended DES-based hash. The "salt" is a 9-character
+    string consisting of an underscore followed by 4 bytes of iteration count
+    and 4 bytes of salt. These are encoded as printable characters, 6 bits per
     character, least significant character first. The values 0 to 63 are
     encoded as "./0-9A-Za-z". Using invalid characters in the salt will cause
     crypt() to fail.
   * CRYPT_MD5 - MD5 hashing with a twelve character salt starting with $1$
-  * CRYPT_BLOWFISH - Blowfish hashing with a salt as follows: "$2a$", "$2x$" or
-    "$2y$", a two digit cost parameter, "$", and 22 characters from the
+  * CRYPT_BLOWFISH - Blowfish hashing with a salt as follows: "$2a$", "$2x$"
+    or "$2y$", a two digit cost parameter, "$", and 22 characters from the
     alphabet "./0-9A-Za-z". Using characters outside of this range in the salt
     will cause crypt() to return a zero-length string. The two digit cost
-    parameter is the base-2 logarithm of the iteration count for the underlying
-    Blowfish-based hashing algorithmeter and must be in range 04-31, values
-    outside this range will cause crypt() to fail. Versions of PHP before 5.3.7
-    only support "$2a$" as the salt prefix: PHP 5.3.7 introduced the new
-    prefixes to fix a security weakness in the Blowfish implementation. Please
-    refer to » this document for full details of the security fix, but to
-    summarise, developers targeting only PHP 5.3.7 and later should use "$2y$"
-    in preference to "$2a$".
+    parameter is the base-2 logarithm of the iteration count for the
+    underlying Blowfish-based hashing algorithmeter and must be in range
+    04-31, values outside this range will cause crypt() to fail. Versions of
+    PHP before 5.3.7 only support "$2a$" as the salt prefix: PHP 5.3.7
+    introduced the new prefixes to fix a security weakness in the Blowfish
+    implementation. Please refer to » this document for full details of the
+    security fix, but to summarise, developers targeting only PHP 5.3.7 and
+    later should use "$2y$" in preference to "$2a$".
   * CRYPT_SHA256 - SHA-256 hash with a sixteen character salt prefixed with
     $5$. If the salt string starts with 'rounds=<N>$', the numeric value of N
     is used to indicate how many times the hashing loop should be executed,
@@ -78,7 +78,7 @@ available:
     As of PHP 5.3.0, PHP contains its own implementation and will use that if
     the system lacks of support for one or more of the algorithms.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {str}
@@ -96,16 +96,16 @@ available:
     behaviour is defined by the algorithm implementation and can lead to
     unexpected results.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns the hashed string or a string that is shorter than 13 characters and is
-guaranteed to differ from the salt on failure.
+Returns the hashed string or a string that is shorter than 13 characters and
+is guaranteed to differ from the salt on failure.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 5.6.0   Raise E_NOTICE security warning if {salt} is omitted.
 5.3.7   Added $2x$ and $2y$ Blowfish modes to deal with potential high-bit
         attacks.
@@ -117,7 +117,7 @@ Version                               Description
 5.3.0   DES, Extended DES and the Blowfish algorithms and will use that if the
         system lacks of support for one or more of the algorithms.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 crypt() examples
@@ -148,7 +148,8 @@ Example #2 Using crypt() with htpasswd
 Example #3 Using crypt() with different hash types
 
 <?php >
-    /* These salts are examples only, and should not be used verbatim in your code.
+    /
+    * These salts are examples only, and should not be used verbatim in your code.
        You should generate a distinct, correctly-formatted salt for each password.
     */
     if (CRYPT_STD_DES == 1) {
@@ -188,12 +189,13 @@ Blowfish:     $2a$07$usesomesillystringfore2uDLvp1Ii2e./U9C8sBjqp8I90dH6hi
 SHA-256:      $5$rounds=5000$usesomesillystri$KqJWpanXZHKq2BOB43TSaYhEWsQ1Lr5QNyPCDH/Tp.6
 SHA-512:      $6$rounds=5000$usesomesillystri$D4IrlXatmP7rx3P3InaxBeoomnAihCKRVQP22JZ6EY47Wc6BkroIuUUBOov1i.S5KPgErtP/EN5mcO.ChWQW21
 
-===============================================================================
+==============================================================================
 *Notes*
 
-    Note: There is no decrypt function, since crypt() uses a one-way algorithm.
+    Note: There is no decrypt function, since crypt() uses a one-way
+    algorithm.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |password_hash| - Creates a password hash

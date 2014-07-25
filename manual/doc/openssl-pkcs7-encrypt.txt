@@ -4,7 +4,7 @@ openssl_pkcs7_encrypt
 
 openssl_pkcs7_encrypt — Encrypt an S/MIME message
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool openssl_pkcs7_encrypt ( string $infile , string $outfile , mixed~
@@ -15,7 +15,7 @@ openssl_pkcs7_encrypt() takes the contents of the file named {infile} and
 encrypts them using an RC2 40-bit cipher so that they can only be read by the
 intended recipients specified by {recipcerts}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {infile}
@@ -43,18 +43,18 @@ intended recipients specified by {recipcerts}.
 
     One of cipher constants.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version             Description
 5.0.0   The {cipherid} parameter was added.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 openssl_pkcs7_encrypt() example

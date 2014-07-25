@@ -5,7 +5,7 @@ geoip_time_zone_by_country_and_region
 geoip_time_zone_by_country_and_region — Returns the time zone for some country
 and region code combo
 
-===============================================================================
+==============================================================================
 *Description*
 
     string geoip_time_zone_by_country_and_region ( string $country_code [,~
@@ -18,15 +18,15 @@ In the United States, the region code corresponds to the two-letter
 abbreviation of each state. In Canada, the region code corresponds to the
 two-letter province or territory code as attributed by Canada Post.
 
-For the rest of the world, GeoIP uses FIPS 10-4 codes to represent regions. You
-can check » http://www.maxmind.com/app/fips10_4 for a detailed list of FIPS
-10-4 codes.
+For the rest of the world, GeoIP uses FIPS 10-4 codes to represent regions.
+You can check » http://www.maxmind.com/app/fips10_4 for a detailed list of
+FIPS 10-4 codes.
 
 This function is always available if using GeoIP Library version 1.4.1 or
 newer. The data is taken directly from the GeoIP Library and not from any
 database.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {country_code}
@@ -37,13 +37,13 @@ database.
 
     The two-letter (or digit) region code (see |geoip_region_by_name|)
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns the time zone on success, or FALSE if the country and region code combo
-cannot be found.
+Returns the time zone on success, or FALSE if the country and region code
+combo cannot be found.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A geoip_time_zone_by_country_and_region() example using region code

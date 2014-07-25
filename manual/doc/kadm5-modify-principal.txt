@@ -5,15 +5,15 @@ kadm5_modify_principal
 kadm5_modify_principal — Modifies a kerberos principal with the given
 parameters
 
-===============================================================================
+==============================================================================
 *Description*
 
-    bool kadm5_modify_principal ( resource $handle , string $principal , array~
-    $options )~
+    bool kadm5_modify_principal ( resource $handle , string $principal ,~
+    array $options )~
 
 Modifies a {principal} according to the given {options}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {handle}
@@ -31,12 +31,12 @@ Modifies a {principal} according to the given {options}.
     KADM5_PW_EXPIRATION, KADM5_ATTRIBUTES, KADM5_MAX_LIFE, KADM5_KVNO,
     KADM5_POLICY, KADM5_CLEARPOLICY, KADM5_MAX_RLIFE. KADM5_FAIL_AUTH_COUNT.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Example of modifying principal
@@ -56,7 +56,7 @@ Example #1 Example of modifying principal
     kadm5_destroy($handle);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |kadm5_create_principal| - Creates a kerberos principal with the given

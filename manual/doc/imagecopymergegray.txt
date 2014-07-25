@@ -4,12 +4,12 @@ imagecopymergegray
 
 imagecopymergegray — Copy and merge part of an image with gray scale
 
-===============================================================================
+==============================================================================
 *Description*
 
-    bool imagecopymergegray ( resource $dst_im , resource $src_im , int $dst_x~
-    , int $dst_y , int $src_x , int $src_y , int $src_w , int $src_h , int~
-    $pct )~
+    bool imagecopymergegray ( resource $dst_im , resource $src_im , int~
+    $dst_x , int $dst_y , int $src_x , int $src_y , int $src_w , int $src_h ,~
+    int $pct )~
 
 imagecopymergegray() copy a part of {src_im} onto {dst_im} starting at the x,y
 coordinates {src_x}, {src_y } with a width of {src_w} and a height of {src_h}.
@@ -20,7 +20,7 @@ This function is identical to |imagecopymerge| except that when merging it
 preserves the hue of the source by converting the destination pixels to gray
 scale before the copy operation.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {dst_im}
@@ -63,12 +63,12 @@ scale before the copy operation.
     alpha components, while it implements alpha transparency for true colour
     images.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 imagecopymergegray() usage

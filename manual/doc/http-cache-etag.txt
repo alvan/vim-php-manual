@@ -4,7 +4,7 @@ http_cache_etag
 
 http_cache_etag — Caching by ETag
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool http_cache_etag ([ string $etag ] )~
@@ -25,20 +25,20 @@ set and the cache attempt was successful.
 If this function is used outside the http_send_*() API, it facilitates the |
 ob_etaghandler|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {etag}
 
     custom ETag
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns FALSE or exits on success with 304 Not Modified if the entity is
 cached. See the INI setting http.force_exit for what "exits" means.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A http_cache_etag() example
@@ -48,7 +48,7 @@ Example #1 A http_cache_etag() example
     http_send_data("data");
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |http_cache_last_modified| - Caching by last modification

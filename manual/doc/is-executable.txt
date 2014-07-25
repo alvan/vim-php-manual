@@ -4,32 +4,32 @@ is_executable
 
 is_executable — Tells whether the filename is executable
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool is_executable ( string $filename )~
 
 Tells whether the filename is executable.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {filename}
 
     Path to the file.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE if the filename exists and is executable, or FALSE on error.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version                  Description
 5.0.0   is_executable() became available with Windows
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 is_executable() example
@@ -46,12 +46,12 @@ Example #1 is_executable() example
 
 <?>
 
-===============================================================================
+==============================================================================
 *Errors/Exceptions*
 
 Upon failure, an E_WARNING is emitted.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: The results of this function are cached. See |clearstatcache| for
@@ -63,7 +63,7 @@ As of PHP 5.0.0, this function can also be used with some URL wrappers. Refer
 to Supported Protocols and Wrappers to determine which wrappers support |stat|
 family of functionality.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |is_file| - Tells whether the filename is a regular file

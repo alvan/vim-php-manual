@@ -7,7 +7,7 @@ SQLiteDatabase::createAggregate
 sqlite_create_aggregate -- SQLiteDatabase::createAggregate — Register an
 aggregating UDF for use in SQL statements
 
-===============================================================================
+==============================================================================
 *Description*
 
     void sqlite_create_aggregate ( resource $dbhandle , string $function_name~
@@ -18,9 +18,9 @@ Object oriented style (method):
     public void SQLiteDatabase::createAggregate ( string $function_name ,~
     callable $step_func , callable $finalize_func [, int $num_args = -1 ] )~
 
-sqlite_create_aggregate() is similar to |sqlite_create_function| except that it
-registers functions that can be used to calculate a result aggregated across
-all the rows of a query.
+sqlite_create_aggregate() is similar to |sqlite_create_function| except that
+it registers functions that can be used to calculate a result aggregated
+across all the rows of a query.
 
 The key difference between this function and |sqlite_create_function| is that
 two functions are required to manage the aggregate; {step_func} is called for
@@ -30,14 +30,14 @@ store it into the aggregation context. Once all the rows have been processed,
 aggregation context and return the result. Callback functions should return a
 type understood by SQLite (i.e. scalar type).
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {dbhandle}
 
     The SQLite Database resource; returned from |sqlite_open| when used
-    procedurally. This parameter is not required when using the object-oriented
-    method.
+    procedurally. This parameter is not required when using the
+    object-oriented method.
 
 {function_name}
 
@@ -59,12 +59,12 @@ type understood by SQLite (i.e. scalar type).
     Hint to the SQLite parser if the callback function accepts a predetermined
     number of arguments.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 No value is returned.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 max_length aggregation function example
@@ -118,8 +118,8 @@ than the current maximum, we update the context to hold this new maximum
 length.
 
 After all of the rows have been processed, SQLite calls the max_len_finalize
-function to determine the aggregate result. Here, we could perform some kind of
-calculation based on the data found in the {context}. In our simple example
+function to determine the aggregate result. Here, we could perform some kind
+of calculation based on the data found in the {context}. In our simple example
 though, we have been calculating the result as the query progressed, so we
 simply need to return the context value.
 
@@ -127,8 +127,8 @@ simply need to return the context value.
 
     The example above will not work correctly if the column contains binary
     data. Take a look at the manual page for |sqlite_udf_decode_binary| for an
-    explanation of why this is so, and an example of how to make it respect the
-    binary encoding.
+    explanation of why this is so, and an example of how to make it respect
+    the binary encoding.
 
 Tip
 
@@ -143,13 +143,13 @@ Tip
 You can use |sqlite_create_function| and sqlite_create_aggregate() to override
 SQLite native SQL functions.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |sqlite_create_function| - Registers a "regular" User Defined Function for
     use in SQL statements
-  * |sqlite_udf_encode_binary| - Encode binary data before returning it from an
-    UDF
+  * |sqlite_udf_encode_binary| - Encode binary data before returning it from
+    an UDF
   * |sqlite_udf_decode_binary| - Decode binary data passed as parameters to an
     UDF
 

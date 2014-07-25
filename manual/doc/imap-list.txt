@@ -4,14 +4,14 @@ imap_list
 
 imap_list — Read the list of mailboxes
 
-===============================================================================
+==============================================================================
 *Description*
 
     array imap_list ( resource $imap_stream , string $ref , string $pattern )~
 
 Read the list of mailboxes.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { imap_stream}
@@ -27,19 +27,19 @@ Read the list of mailboxes.
 
     Specifies where in the mailbox hierarchy to start searching.
 
-    There are two special characters you can pass as part of the {pattern}: '*'
-    and '%'. '*' means to return all mailboxes. If you pass {pattern} as '*',
-    you will get a list of the entire mailbox hierarchy. '%' means to return
-    the current level only. '%' as the {pattern} parameter will return only the
-    top level mailboxes; '~/mail/%' on UW_IMAPD will return every mailbox in
-    the ~/mail directory, but none in subfolders of that directory.
+    There are two special characters you can pass as part of the {pattern}: '*
+    ' and '%'. '*' means to return all mailboxes. If you pass {pattern} as '*
+    ', you will get a list of the entire mailbox hierarchy. '%' means to
+    return the current level only. '%' as the {pattern} parameter will return
+    only the top level mailboxes; '~/mail/%' on UW_IMAPD will return every
+    mailbox in the ~/mail directory, but none in subfolders of that directory.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an array containing the names of the mailboxes.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 imap_list() example
@@ -60,7 +60,7 @@ Example #1 imap_list() example
     imap_close($mbox);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |imap_getmailboxes| - Read the list of mailboxes, returning detailed

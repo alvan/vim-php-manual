@@ -4,14 +4,14 @@ rsort
 
 rsort — Sort an array in reverse order
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool rsort ( array &$array [, int $sort_flags = SORT_REGULAR ] )~
 
 This function sorts an array in reverse order (highest to lowest).
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {array}
@@ -23,12 +23,12 @@ This function sorts an array in reverse order (highest to lowest).
     You may modify the behavior of the sort using the optional parameter
     {sort_flags}, for details see |sort|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 rsort() example
@@ -50,14 +50,14 @@ The above example will output:
 
 The fruits have been sorted in reverse alphabetical order.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: This function assigns new keys to the elements in {array}. It will
     remove any existing keys that may have been assigned, rather than just
     reordering the keys.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |arsort| - Sort an array in reverse order and maintain index association

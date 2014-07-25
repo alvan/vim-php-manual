@@ -4,29 +4,29 @@ cubrid_get_query_timeout
 
 cubrid_get_query_timeout — Get the query timeout value of the request
 
-===============================================================================
+==============================================================================
 *Description*
 
     int cubrid_get_query_timeout ( resource $req_identifier )~
 
-The cubrid_get_query_timeout() function is used to get the query timeout of the
-request.
+The cubrid_get_query_timeout() function is used to get the query timeout of
+the request.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {req_identifier}
 
     Request identifier.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Success: the query timeout value of the current request. Units of msec.
 
 Failure: FALSE
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_get_query_timeout() example
@@ -58,7 +58,7 @@ The above example will output:
 int(5000)
 int(1000)
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |cubrid_set_query_timeout| - Set the timeout time of query execution

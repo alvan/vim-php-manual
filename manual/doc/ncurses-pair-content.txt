@@ -5,16 +5,16 @@ ncurses_pair_content
 ncurses_pair_content — Retrieves foreground and background colors of a color
 pair
 
-===============================================================================
+==============================================================================
 *Description*
 
     int ncurses_pair_content ( int $pair , int &$f , int &$b )~
 
 Retrieves the foreground and background colors that constitute the given color
-pair. Terminal color capabilities must be initialized with |ncurses_start_color
-| prior to calling this function.
+pair. Terminal color capabilities must be initialized with |
+ncurses_start_color| prior to calling this function.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {pair}
@@ -25,23 +25,23 @@ pair. Terminal color capabilities must be initialized with |ncurses_start_color
 
     A reference to which to return the foreground color of the color pair. The
     information returned will be a color number referring to one of the
-    pre-defined colors or a color defined previously by |ncurses_init_color| if
-    the terminal supports color changing.
+    pre-defined colors or a color defined previously by |ncurses_init_color|
+    if the terminal supports color changing.
 
 {b}
 
     A reference to which to return the background color of the color pair. The
     information returned will be a color number referring to one of the
-    pre-defined colors or a color defined previously by |ncurses_init_color| if
-    the terminal supports color changing.
+    pre-defined colors or a color defined previously by |ncurses_init_color|
+    if the terminal supports color changing.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns -1 if the function was successful, and 0 if ncurses or terminal color
 capabilities have not been initialized.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ncurses_init_pair| - Define a color pair

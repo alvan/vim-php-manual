@@ -4,14 +4,14 @@ db2_field_name
 
 db2_field_name — Returns the name of the column in the result set
 
-===============================================================================
+==============================================================================
 *Description*
 
     string db2_field_name ( resource $stmt , mixed $column )~
 
 Returns the name of the specified column in the result set.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {stmt}
@@ -24,13 +24,13 @@ Returns the name of the specified column in the result set.
     representing the 0-indexed position of the column, or a string containing
     the name of the column.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a string containing the name of the specified column. If the specified
 column does not exist in the result set, db2_field_name() returns FALSE.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |db2_field_display_size| - Returns the maximum number of bytes required to
@@ -42,8 +42,8 @@ column does not exist in the result set, db2_field_name() returns FALSE.
     set
   * |db2_field_type| - Returns the data type of the indicated column in a
     result set
-  * |db2_field_width| - Returns the width of the current value of the indicated
-    column in a result set
+  * |db2_field_width| - Returns the width of the current value of the
+    indicated column in a result set
 
 
 vim:ft=help:

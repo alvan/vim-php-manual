@@ -4,7 +4,7 @@ strptime
 
 strptime — Parse a time/date generated with |strftime|
 
-===============================================================================
+==============================================================================
 *Description*
 
     array strptime ( string $date , string $format )~
@@ -14,7 +14,7 @@ strptime() returns an array with the {date} parsed, or FALSE on error.
 Month and weekday names and other language dependent strings respect the
 current locale set with |setlocale| (LC_TIME).
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {date} (string)
@@ -30,7 +30,7 @@ current locale set with |setlocale| (LC_TIME).
 
     For more information about the format options, read the |strftime| page.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an array or FALSE on failure.
@@ -48,7 +48,7 @@ parameters                             Description
 "unparsed" the {date} part which was not recognized using the specified
            {format}
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 strptime() example
@@ -79,7 +79,7 @@ Array
     [unparsed] =>
 )
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: This function is not implemented on Windows platforms.
@@ -103,13 +103,13 @@ Array
     Notably, the "tm_sec", "tm_min" and "tm_hour" entries would return
     undefined values.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |checkdate| - Validate a Gregorian date
   * |strftime| - Format a local time/date according to locale settings
-  * |date_parse_from_format| - Get info about given date formatted according to
-    the specified format
+  * |date_parse_from_format| - Get info about given date formatted according
+    to the specified format
   * DateTime::createFromFormat() - Returns new DateTime object formatted
     according to the specified format
 

@@ -4,7 +4,7 @@ cubrid_lock_read
 
 cubrid_lock_read — Set a read lock on the given OID
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool cubrid_lock_read ( resource $conn_identifier , string $oid )~
@@ -12,7 +12,7 @@ cubrid_lock_read — Set a read lock on the given OID
 The cubrid_lock_read() function is used to put read lock on the instance
 pointed by given {oid}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {conn_identifier}
@@ -23,14 +23,14 @@ pointed by given {oid}.
 
     OID of the instance that you want to put read lock on.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 TRUE, when process is successful.
 
 FALSE, when process is unsuccessful.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_lock_read() example
@@ -93,7 +93,7 @@ array(4) {
   string(10) "a         "
 }
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |cubrid_lock_write| - Set a write lock on the given OID

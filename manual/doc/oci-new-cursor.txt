@@ -4,27 +4,27 @@ oci_new_cursor
 
 oci_new_cursor — Allocates and returns a new cursor (statement handle)
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource oci_new_cursor ( resource $connection )~
 
 Allocates a new statement handle on the specified connection.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
 
-    An Oracle connection identifier, returned by |oci_connect| or |oci_pconnect
-    |.
+    An Oracle connection identifier, returned by |oci_connect| or |
+    oci_pconnect|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a new statement handle, or FALSE on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Binding a REF CURSOR in an Oracle stored procedure call
@@ -59,14 +59,14 @@ Example #1 Binding a REF CURSOR in an Oracle stored procedure call
 
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
 
-    In PHP versions before 5.0.0 you must use |ocinewcursor| instead. This name
-    still can be used, it was left as alias of oci_new_cursor() for downwards
-    compatability. This, however, is deprecated and not recommended.
+    In PHP versions before 5.0.0 you must use |ocinewcursor| instead. This
+    name still can be used, it was left as alias of oci_new_cursor() for
+    downwards compatability. This, however, is deprecated and not recommended.
 
 
 vim:ft=help:

@@ -5,7 +5,7 @@ fann_train
 fann_train — Train one iteration with a set of inputs, and a set of desired
 outputs
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool fann_train ( resource $ann , array $input , array $desired_output )~
@@ -13,7 +13,7 @@ outputs
 Train one iteration with a set of inputs, and a set of desired outputs. This
 training is always incremental training, since only one pattern is presented.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {ann}
@@ -29,12 +29,12 @@ training is always incremental training, since only one pattern is presented.
     An array of desired outputs. This array must be exactly |
     fann_get_num_output| long.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success, or FALSE otherwise.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |fann_train_on_data| - Trains on an entire dataset for a period of time

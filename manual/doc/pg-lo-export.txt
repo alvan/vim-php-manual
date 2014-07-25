@@ -4,10 +4,11 @@ pg_lo_export
 
 pg_lo_export — Export a large object to file
 
-===============================================================================
+==============================================================================
 *Description*
 
-    bool pg_lo_export ([ resource $connection ], int $oid , string $pathname )~
+    bool pg_lo_export ([ resource $connection ], int $oid , string $pathname~
+)~
 
 pg_lo_export() takes a large object in a PostgreSQL database and saves its
 contents to a file on the local filesystem.
@@ -19,7 +20,7 @@ transaction block.
 
     This function used to be called pg_loexport().
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
@@ -37,12 +38,12 @@ transaction block.
     The full path and file name of the file in which to write the large object
     on the client filesystem.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 pg_lo_export() example
@@ -58,7 +59,7 @@ Example #1 pg_lo_export() example
        pg_query($database, "commit");
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |pg_lo_import| - Import a large object from file

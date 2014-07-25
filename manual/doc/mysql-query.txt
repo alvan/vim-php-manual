@@ -8,13 +8,13 @@ Warning
 
 This extension is deprecated as of PHP 5.5.0, and will be removed in the
 future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
-MySQL: choosing an API guide and related FAQ for more information. Alternatives
-to this function include:
+MySQL: choosing an API guide and related FAQ for more information.
+Alternatives to this function include:
 
   * mysqli_query()
   * PDO::query()
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed mysql_query ( string $query [, resource $link_identifier = NULL ] )~
@@ -23,7 +23,7 @@ mysql_query() sends a unique query (multiple queries are not supported) to the
 currently active database on the server that's associated with the specified
 {link_identifier}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {query}
@@ -41,7 +41,7 @@ currently active database on the server that's associated with the specified
     If no connection is found or established, an E_WARNING level error is
     generated.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 For SELECT, SHOW, DESCRIBE, EXPLAIN and other statements returning resultset, 
@@ -50,17 +50,17 @@ mysql_query() returns a resource on success, or FALSE on error.
 For other type of SQL statements, INSERT, UPDATE, DELETE, DROP, etc, 
 mysql_query() returns TRUE on success or FALSE on error.
 
-The returned result resource should be passed to |mysql_fetch_array|, and other
-functions for dealing with result tables, to access the returned data.
+The returned result resource should be passed to |mysql_fetch_array|, and
+other functions for dealing with result tables, to access the returned data.
 
 Use |mysql_num_rows| to find out how many rows were returned for a SELECT
-statement or |mysql_affected_rows| to find out how many rows were affected by a
-DELETE, INSERT, REPLACE, or UPDATE statement.
+statement or |mysql_affected_rows| to find out how many rows were affected by
+a DELETE, INSERT, REPLACE, or UPDATE statement.
 
 mysql_query() will also fail and return FALSE if the user does not have
 permission to access the table(s) referenced by the query.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Invalid Query
@@ -122,14 +122,14 @@ The following query is valid, so mysql_query() returns a resource.
     mysql_free_result($result);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mysql_connect| - Open a connection to a MySQL Server
   * |mysql_error| - Returns the text of the error message from previous MySQL
     operation
-  * |mysql_real_escape_string| - Escapes special characters in a string for use
-    in an SQL statement
+  * |mysql_real_escape_string| - Escapes special characters in a string for
+    use in an SQL statement
   * |mysql_result| - Get result data
   * |mysql_fetch_assoc| - Fetch a result row as an associative array
   * |mysql_unbuffered_query| - Send an SQL query to MySQL without fetching and

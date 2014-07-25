@@ -4,7 +4,7 @@ debug_backtrace
 
 debug_backtrace — Generates a backtrace
 
-===============================================================================
+==============================================================================
 *Description*
 
     array debug_backtrace ([ int $options = DEBUG_BACKTRACE_PROVIDE_OBJECT [,~
@@ -12,19 +12,19 @@ debug_backtrace — Generates a backtrace
 
 debug_backtrace() generates a PHP backtrace.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {options}
 
     As of 5.3.6, this parameter is a bitmask for the following options:
 
-                           debug_backtrace() options
+                          debug_backtrace() options
     DEBUG_BACKTRACE_PROVIDE_OBJECT Whether or not to populate the "object"
                                    index.
-                                   Whether or not to omit the "args" index, and
-    DEBUG_BACKTRACE_IGNORE_ARGS    thus all the function/method arguments, to
-                                   save memory.
+                                   Whether or not to omit the "args" index,
+    DEBUG_BACKTRACE_IGNORE_ARGS    and thus all the function/method arguments,
+                                   to save memory.
 
     Before 5.3.6, the only values recognized are TRUE or FALSE, which are the
     same as setting or not setting the DEBUG_BACKTRACE_PROVIDE_OBJECT option
@@ -32,16 +32,16 @@ debug_backtrace() generates a PHP backtrace.
 
 {limit}
 
-    As of 5.4.0, this parameter can be used to limit the number of stack frames
-    returned. By default ({limit}=0) it returns all stack frames.
+    As of 5.4.0, this parameter can be used to limit the number of stack
+    frames returned. By default ({limit}=0) it returns all stack frames.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an array of associative arrays. The possible returned elements are as
 follows:
 
-               Possible returned elements from debug_backtrace()
+              Possible returned elements from debug_backtrace()
   Name    Type                            Description
 function string  The current function name. See also __FUNCTION__.
 line     integer The current line number. See also __LINE__.
@@ -51,20 +51,21 @@ object   object  The current object.
                  The current call type. If a method call, "->" is returned. If
 type     string  a static method call, "::" is returned. If a function call,
                  nothing is returned.
-args     array   If inside a function, this lists the functions arguments. If
-                 inside an included file, this lists the included file name(s).
+                 If inside a function, this lists the functions arguments. If
+args     array   inside an included file, this lists the included file name
+                 (s).
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 5.4.0   Added the optional parameter {limit}.
 5.3.6   The parameter {provide_object} changed to {options} and additional
         option DEBUG_BACKTRACE_IGNORE_ARGS is added.
 5.2.5   Added the optional parameter {provide_object}.
 5.1.1   Added the current object as a possible return element.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 debug_backtrace() example
@@ -112,7 +113,7 @@ array(4) {
   }
 }
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |trigger_error| - Generates a user-level error/warning/notice message

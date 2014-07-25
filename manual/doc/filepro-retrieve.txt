@@ -4,7 +4,7 @@ filepro_retrieve
 
 filepro_retrieve — Retrieves data from a filePro database
 
-===============================================================================
+==============================================================================
 *Description*
 
     string filepro_retrieve ( int $row_number , int $field_number )~
@@ -15,20 +15,20 @@ Returns the data from the specified location in the database.
     directories being operated upon have the same UID (owner) as the script
     that is being executed.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {row_number}
 
-    The row number. Must be between zero and the total number of rows minus one
-    (0..|filepro_rowcount| - 1)
+    The row number. Must be between zero and the total number of rows minus
+    one (0..|filepro_rowcount| - 1)
 
 {field_number}
 
     The field number. Accepts values between zero and the total number of
     fields minus one (0..|filepro_fieldcount| - 1)
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the specified data, or FALSE on errors.

@@ -4,7 +4,7 @@ fann_set_callback
 
 fann_set_callback — Sets the callback function for use during training
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool fann_set_callback ( resource $ann , collable $callback )~
@@ -12,7 +12,7 @@ fann_set_callback — Sets the callback function for use during training
 Sets the callback function for use during training. It means that it is called
 from |fann_train_on_data| or |fann_train_on_file|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {ann}
@@ -29,18 +29,19 @@ from |fann_train_on_data| or |fann_train_on_file|.
       + epochs_between_reports - The number of epochs between calling this
         function
       + desired_error - The desired |fann_get_MSE| or |fann_get_bit_fail|,
-        depending on the stop function chosen by |fann_set_train_stop_function|
+        depending on the stop function chosen by |fann_set_train_stop_function
+        |
       + epochs - The current epoch
 
     The callback should return TRUE. If it returns FALSE, the training will
     terminate.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success, or FALSE otherwise.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |fann_train_on_data| - Trains on an entire dataset for a period of time

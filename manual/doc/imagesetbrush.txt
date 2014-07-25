@@ -4,7 +4,7 @@ imagesetbrush
 
 imagesetbrush — Set the brush image for line drawing
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool imagesetbrush ( resource $image , resource $brush )~
@@ -13,24 +13,24 @@ imagesetbrush() sets the brush image to be used by all line drawing functions
 (such as |imageline| and |imagepolygon|) when drawing with the special colors
 IMG_COLOR_BRUSHED or IMG_COLOR_STYLEDBRUSHED.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { image}
 
-    An image resource, returned by one of the image creation functions, such as
-    |imagecreatetruecolor|.
+    An image resource, returned by one of the image creation functions, such
+    as |imagecreatetruecolor|.
 
 {brush}
 
     An image resource.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 imagesetbrush() example
@@ -64,13 +64,13 @@ The above example will output something similar to:
 
 Output of example : imagesetbrush()
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
 
-    You need not take special action when you are finished with a brush, but if
-    you destroy the brush image, you must not use the IMG_COLOR_BRUSHED or
+    You need not take special action when you are finished with a brush, but
+    if you destroy the brush image, you must not use the IMG_COLOR_BRUSHED or
     IMG_COLOR_STYLEDBRUSHED colors until you have set a new brush image!
 
 

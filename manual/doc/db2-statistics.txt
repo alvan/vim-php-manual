@@ -5,7 +5,7 @@ db2_statistics
 db2_statistics — Returns a result set listing the index and statistics for a
 table
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource db2_statistics ( resource $connection , string $qualifier ,~
@@ -13,7 +13,7 @@ table
 
 Returns a result set listing the index and statistics for a table.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
@@ -27,8 +27,9 @@ Returns a result set listing the index and statistics for a table.
 
 {schema}
 
-    The schema that contains the targeted table. If this parameter is NULL, the
-    statistics and indexes are returned for the schema of the current user.
+    The schema that contains the targeted table. If this parameter is NULL,
+    the statistics and indexes are returned for the schema of the current
+    user.
 
 {table_name}
 
@@ -46,7 +47,7 @@ Returns a result set listing the index and statistics for a table.
 
         Return the information for all indexes on the table.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a statement resource with a result set containing rows describing the
@@ -54,15 +55,15 @@ statistics and indexes for the base tables matching the specified parameters.
 The rows are composed of the following columns:
 
   Column name                             Description
-TABLE_CAT        The catalog that contains the table. The value is NULL if this
-                 table does not have catalogs.
+TABLE_CAT        The catalog that contains the table. The value is NULL if
+                 this table does not have catalogs.
 TABLE_SCHEM      Name of the schema that contains the table.
 TABLE_NAME       Name of the table.
                  An integer value representing whether the index prohibits
-                 unique values, or whether the row represents statistics on the
-                 table itself:
+                 unique values, or whether the row represents statistics on
+                 the table itself:
 
-                   Return                      Parameter type
+                   Return                     Parameter type
                     value
 NON_UNIQUE       0           The index allows duplicate values.
                  (SQL_FALSE)
@@ -77,7 +78,7 @@ INDEX_NAME       A string representing the name of the index.
                  An integer value representing the type of information
                  contained in this row of the result set:
 
-                     Return value                   Parameter type
+                     Return value                  Parameter type
                  0 (SQL_TABLE_STAT)    The row contains statistics about the
                                        table itself.
 TYPE             1                     The row contains information about a
@@ -88,8 +89,9 @@ TYPE             1                     The row contains information about a
                  3 (SQL_INDEX_OTHER)   type of index that is neither clustered
                                        nor hashed.
 
-ORDINAL_POSITION The 1-indexed position of the column in the index. NULL if the
-                 row contains statistics information about the table itself.
+                 The 1-indexed position of the column in the index. NULL if
+ORDINAL_POSITION the row contains statistics information about the table
+                 itself.
 COLUMN_NAME      The name of the column in the index. NULL if the row contains
                  statistics information about the table itself.
                  A if the column is sorted in ascending order, D if the column
@@ -113,7 +115,7 @@ PAGES
 
 FILTER_CONDITION Always returns NULL.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |db2_column_privileges| - Returns a result set listing the columns and

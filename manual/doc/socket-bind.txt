@@ -4,16 +4,17 @@ socket_bind
 
 socket_bind — Binds a name to a socket
 
-===============================================================================
+==============================================================================
 *Description*
 
-    bool socket_bind ( resource $socket , string $address [, int $port = 0 ] )~
+    bool socket_bind ( resource $socket , string $address [, int $port = 0 ]~
+)~
 
-Binds the name given in {address} to the socket described by {socket}. This has
-to be done before a connection is be established using |socket_connect| or |
-socket_listen|.
+Binds the name given in {address} to the socket described by {socket}. This
+has to be done before a connection is be established using |socket_connect| or
+|socket_listen|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {socket}
@@ -33,7 +34,7 @@ socket_listen|.
     The {port} parameter is only used when binding an AF_INET socket, and
     designates the port on which to listen for connections.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
@@ -41,7 +42,7 @@ Returns TRUE on success or FALSE on failure.
 The error code can be retrieved with |socket_last_error|. This code may be
 passed to |socket_strerror| to get a textual explanation of the error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Using socket_bind() to set the source address
@@ -70,7 +71,7 @@ Example #1 Using socket_bind() to set the source address
 
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -79,11 +80,11 @@ Example #1 Using socket_bind() to set the source address
 
     Note:
 
-    Windows 9x/ME compatibility note: |socket_last_error| may return an invalid
-    error code if trying to bind the socket to a wrong address that does not
-    belong to your machine.
+    Windows 9x/ME compatibility note: |socket_last_error| may return an
+    invalid error code if trying to bind the socket to a wrong address that
+    does not belong to your machine.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |socket_connect| - Initiates a connection on a socket

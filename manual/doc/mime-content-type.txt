@@ -4,7 +4,7 @@ mime_content_type
 
 mime_content_type — Detect MIME Content-type for a file (deprecated)
 
-===============================================================================
+==============================================================================
 *Description*
 
     string mime_content_type ( string $filename )~
@@ -12,20 +12,20 @@ mime_content_type — Detect MIME Content-type for a file (deprecated)
 Returns the MIME content type for a file as determined by using information
 from the magic.mime file.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {filename}
 
     Path to the tested file.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the content type in MIME format, like text/plain or application/
 octet-stream.
 
-===============================================================================
+==============================================================================
 *Notes*
 
 Warning
@@ -33,7 +33,7 @@ Warning
 This function has been deprecated as the PECL extension Fileinfo provides the
 same functionality (and more) in a much cleaner way.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mime_content_type() Example
@@ -48,7 +48,7 @@ The above example will output:
 image/gif
 text/plain
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * Fileinfo for a replacement

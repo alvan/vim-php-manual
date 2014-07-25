@@ -4,7 +4,7 @@ dechex
 
 dechex — Decimal to hexadecimal
 
-===============================================================================
+==============================================================================
 *Description*
 
     string dechex ( int $number )~
@@ -13,25 +13,25 @@ Returns a string containing a hexadecimal representation of the given unsigned
 {number} argument.
 
 The largest number that can be converted is PHP_INT_MAX * 2 + 1 (or -1): on
-32-bit platforms, this will be 4294967295 in decimal, which results in dechex()
-returning ffffffff.
+32-bit platforms, this will be 4294967295 in decimal, which results in dechex
+() returning ffffffff.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {number}
 
     The decimal value to convert.
 
-    As PHP's integer type is signed, but dechex() deals with unsigned integers,
-    negative integers will be treated as though they were unsigned.
+    As PHP's integer type is signed, but dechex() deals with unsigned
+    integers, negative integers will be treated as though they were unsigned.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Hexadecimal string representation of {number}.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 dechex() example
@@ -62,7 +62,7 @@ ffffffff
 ffffffff
 ffffffff
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |hexdec| - Hexadecimal to decimal

@@ -5,7 +5,7 @@ ip2long
 ip2long — Converts a string containing an (IPv4) Internet Protocol dotted
 address into a proper address
 
-===============================================================================
+==============================================================================
 *Description*
 
     int ip2long ( string $ip_address )~
@@ -17,28 +17,28 @@ ip2long() will also work with non-complete IP addresses. Read » http://
 publibn.boulder.ibm.com/doc_link/en_US/a_doc_lib/libs/commtrf2/inet_addr.htm
 for more info.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {ip_address}
 
     A standard format address.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the IPv4 address or FALSE if {ip_address} is invalid.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
         Prior to this version, ip2long() would sometimes return a valid number
 5.2.10  even if passed an value which was not an (IPv4) Internet Protocol
         dotted address.
 5.0.0   Prior to this version, ip2long() returned -1 on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 ip2long() Example
@@ -69,7 +69,7 @@ function in both PHP 4 and PHP 5:
     }
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -84,7 +84,7 @@ function in both PHP 4 and PHP 5:
     ip2long() will return FALSE for the IP 255.255.255.255 in PHP 5 <= 5.0.2.
     It was fixed in PHP 5.0.3 where it returns -1 (same as PHP 4).
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |long2ip| - Converts an (IPv4) Internet network address into a string in

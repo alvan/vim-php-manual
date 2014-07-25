@@ -4,7 +4,7 @@ posix_mknod
 
 posix_mknod — Create a special or ordinary file (POSIX.1)
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool posix_mknod ( string $pathname , int $mode [, int $major = 0 [, int~
@@ -12,7 +12,7 @@ posix_mknod — Create a special or ordinary file (POSIX.1)
 
 Creates a special or ordinary file.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {pathname}
@@ -21,8 +21,8 @@ Creates a special or ordinary file.
 
 {mode}
 
-    This parameter is constructed by a bitwise OR between file type (one of the
-    following constants: POSIX_S_IFREG, POSIX_S_IFCHR, POSIX_S_IFBLK,
+    This parameter is constructed by a bitwise OR between file type (one of
+    the following constants: POSIX_S_IFREG, POSIX_S_IFCHR, POSIX_S_IFBLK,
     POSIX_S_IFIFO or POSIX_S_IFSOCK) and permissions.
 
 {major}
@@ -34,12 +34,12 @@ Creates a special or ordinary file.
 
     The minor device kernel identifier.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A posix_mknod() example
@@ -59,7 +59,7 @@ Example #1 A posix_mknod() example
 
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |posix_mkfifo| - Create a fifo special file (a named pipe)

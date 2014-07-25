@@ -4,14 +4,14 @@ ftp_chdir
 
 ftp_chdir — Changes the current directory on a FTP server
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool ftp_chdir ( resource $ftp_stream , string $directory )~
 
 Changes the current directory to the specified one.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {ftp_stream}
@@ -22,13 +22,13 @@ Changes the current directory to the specified one.
 
     The target directory.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure. If changing directory fails, PHP
 will also throw a warning.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 ftp_chdir() example
@@ -59,7 +59,7 @@ Example #1 ftp_chdir() example
     ftp_close($conn_id);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ftp_cdup| - Changes to the parent directory

@@ -4,17 +4,17 @@ pcntl_sigwaitinfo
 
 pcntl_sigwaitinfo — Waits for signals
 
-===============================================================================
+==============================================================================
 *Description*
 
     int pcntl_sigwaitinfo ( array $set [, array &$siginfo ] )~
 
-The pcntl_sigwaitinfo() function suspends execution of the calling script until
-one of the signals given in {set} are delivered. If one of the signal is
-already pending (e.g. blocked by |pcntl_sigprocmask|), pcntl_sigwaitinfo() will
-return immediately.
+The pcntl_sigwaitinfo() function suspends execution of the calling script
+until one of the signals given in {set} are delivered. If one of the signal is
+already pending (e.g. blocked by |pcntl_sigprocmask|), pcntl_sigwaitinfo()
+will return immediately.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {set}
@@ -46,12 +46,12 @@ return immediately.
       + band: Band event
       + fd: File descriptor number
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 On success, pcntl_sigwaitinfo() returns a signal number.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 pcntl_sigwaitinfo() example
@@ -68,7 +68,7 @@ Example #1 pcntl_sigwaitinfo() example
     pcntl_sigwaitinfo(array(SIGHUP), $info);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |pcntl_sigprocmask| - Sets and retrieves blocked signals

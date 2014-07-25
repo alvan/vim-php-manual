@@ -7,7 +7,7 @@ maxdb_result::fetch_assoc
 maxdb_fetch_assoc -- maxdb_result::fetch_assoc — Fetch a result row as an
 associative array
 
-===============================================================================
+==============================================================================
 *Description*
 
 Procedural style
@@ -26,22 +26,22 @@ representing the next row in the result set for the result represented by the
 {result} parameter, where each key in the array represents the name of one of
 the result set's columns.
 
-If two or more columns of the result have the same field names, the last column
-will take precedence. To access the other column(s) of the same name, you
-either need to access the result with numeric indices by using |maxdb_fetch_row
-| or add alias names.
+If two or more columns of the result have the same field names, the last
+column will take precedence. To access the other column(s) of the same name,
+you either need to access the result with numeric indices by using |
+maxdb_fetch_row| or add alias names.
 
     Note: Field names returned by this function are case-sensitive.
 
     Note: This function sets NULL fields to the PHP NULL value.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an array that corresponds to the fetched row or NULL if there are no
 more rows in resultset.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Object oriented style
@@ -128,7 +128,7 @@ Irvine (CA)
 Santa Clara (CA)
 Portland (OR)
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |maxdb_fetch_array| - Fetch a result row as an associative, a numeric

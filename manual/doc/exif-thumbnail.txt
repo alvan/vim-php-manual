@@ -4,11 +4,11 @@ exif_thumbnail
 
 exif_thumbnail — Retrieve the embedded thumbnail of a TIFF or JPEG image
 
-===============================================================================
+==============================================================================
 *Description*
 
-    string exif_thumbnail ( string $filename [, int &$width [, int &$height [,~
-    int &$imagetype ]]] )~
+    string exif_thumbnail ( string $filename [, int &$width [, int &$height~
+    [, int &$imagetype ]]] )~
 
 exif_thumbnail() reads the embedded thumbnail of a TIFF or JPEG image.
 
@@ -19,7 +19,7 @@ It is possible that exif_thumbnail() cannot create an image but can determine
 its size. In this case, the return value is FALSE but {width} and {height} are
 set.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {filename}
@@ -40,20 +40,20 @@ set.
     The returned image type of the returned thumbnail. This is either TIFF or 
     JPEG.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the embedded thumbnail, or FALSE if the image contains no thumbnail.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 4.3.0   The optional parameters {width}, {height}, and {imagetype} all became
         available.
 4.3.0   May return thumbnails in the TIFF format.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 exif_thumbnail() example
@@ -74,7 +74,7 @@ Example #1 exif_thumbnail() example
     }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |exif_read_data| - Reads the EXIF headers from JPEG or TIFF

@@ -2,16 +2,16 @@ filter_input
 
 (PHP 5 >= 5.2.0)
 
-filter_input — Gets a specific external variable by name and optionally filters
-it
+filter_input — Gets a specific external variable by name and optionally
+filters it
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed filter_input ( int $type , string $variable_name [, int $filter =~
     FILTER_DEFAULT [, mixed $options ]] )~
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {type}
@@ -32,7 +32,7 @@ it
     Associative array of options or bitwise disjunction of flags. If filter
     accepts options, flags can be provided in "flags" field of array.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Value of the requested variable on success, FALSE if the filter fails, or NULL
@@ -40,7 +40,7 @@ if the {variable_name} variable is not set. If the flag FILTER_NULL_ON_FAILURE
 is used, it returns FALSE if the variable is not set and NULL if the filter
 fails.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A filter_input() example
@@ -58,7 +58,7 @@ The above example will output something similar to:
 You have searched for Me &#38; son.
 <a href='?search=Me%20%26%20son'>Search again.</a>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |filter_var| - Filters a variable with a specified filter

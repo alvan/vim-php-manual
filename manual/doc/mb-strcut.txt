@@ -4,7 +4,7 @@ mb_strcut
 
 mb_strcut — Get part of string
 
-===============================================================================
+==============================================================================
 *Description*
 
     string mb_strcut ( string $str , int $start [, int $length = NULL [,~
@@ -12,12 +12,12 @@ mb_strcut — Get part of string
 
 mb_strcut() extracts a substring from a string similarly to |mb_substr|, but
 operates on bytes instead of characters. If the cut position happens to be
-between two bytes of a multi-byte character, the cut is performed starting from
-the first byte of that character. This is also the difference to the |substr|
-function, which would simply cut the string between the bytes and thus result
-in a malformed byte sequence.
+between two bytes of a multi-byte character, the cut is performed starting
+from the first byte of that character. This is also the difference to the |
+substr| function, which would simply cut the string between the bytes and thus
+result in a malformed byte sequence.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {str}
@@ -30,21 +30,21 @@ in a malformed byte sequence.
 
 {length}
 
-    Length in bytes. If omitted or NULL is passed, extract all bytes to the end
-    of the string.
+    Length in bytes. If omitted or NULL is passed, extract all bytes to the
+    end of the string.
 
 {encoding}
 
     The {encoding} parameter is the character encoding. If it is omitted, the
     internal character encoding value will be used.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 mb_strcut() returns the portion of {str} specified by the {start} and {length}
 parameters.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mb_substr| - Get part of string

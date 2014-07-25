@@ -4,14 +4,14 @@ usort
 
 usort — Sort an array by values using a user-defined comparison function
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool usort ( array &$array , callable $value_compare_func )~
 
-This function will sort an array by its values using a user-supplied comparison
-function. If the array you wish to sort needs to be sorted by some non-trivial
-criteria, you should use this function.
+This function will sort an array by its values using a user-supplied
+comparison function. If the array you wish to sort needs to be sorted by some
+non-trivial criteria, you should use this function.
 
     Note:
 
@@ -22,7 +22,7 @@ criteria, you should use this function.
     remove any existing keys that may have been assigned, rather than just
     reordering the keys.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {array}
@@ -44,19 +44,19 @@ criteria, you should use this function.
     So values such as 0.99 and 0.1 will both be cast to an integer value of 0,
     which will compare such values as equal.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 4.1.0   A new sort algorithm was introduced. The {value_compare_func} doesn't
         keep the original order for elements comparing as equal.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 usort() example
@@ -186,7 +186,7 @@ y, a
 x, b
 z, c
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |uasort| - Sort an array with a user-defined comparison function and

@@ -4,7 +4,7 @@ db2_num_rows
 
 db2_num_rows — Returns the number of rows affected by an SQL statement
 
-===============================================================================
+==============================================================================
 *Description*
 
     int db2_num_rows ( resource $stmt )~
@@ -17,9 +17,9 @@ statement and retrieve the value.
 
 If your application logic checks the number of rows returned by a SELECT
 statement and branches if the number of rows is 0, consider modifying your
-application to attempt to return the first row with one of |db2_fetch_assoc|, |
-db2_fetch_both|, |db2_fetch_array|, or |db2_fetch_row|, and branch if the fetch
-function returns FALSE.
+application to attempt to return the first row with one of |db2_fetch_assoc|, 
+|db2_fetch_both|, |db2_fetch_array|, or |db2_fetch_row|, and branch if the
+fetch function returns FALSE.
 
     Note:
 
@@ -32,14 +32,14 @@ function returns FALSE.
     fetch functions to achieve the equivalent functionality with much better
     performance.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {stmt}
 
     A valid stmt resource containing a result set.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the number of rows affected by the last SQL statement issued by the

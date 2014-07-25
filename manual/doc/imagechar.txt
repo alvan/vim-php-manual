@@ -4,22 +4,23 @@ imagechar
 
 imagechar — Draw a character horizontally
 
-===============================================================================
+==============================================================================
 *Description*
 
-    bool imagechar ( resource $image , int $font , int $x , int $y , string $c~
-    , int $color )~
+    bool imagechar ( resource $image , int $font , int $x , int $y , string~
+    $c , int $color )~
 
-imagechar() draws the first character of {c} in the image identified by {image}
-with its upper-left at {x},{y} (top left is 0, 0) with the color {color}.
+imagechar() draws the first character of {c} in the image identified by
+{image} with its upper-left at {x},{y} (top left is 0, 0) with the color
+{color}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { image}
 
-    An image resource, returned by one of the image creation functions, such as
-    |imagecreatetruecolor|.
+    An image resource, returned by one of the image creation functions, such
+    as |imagecreatetruecolor|.
 
 { font}
 
@@ -43,12 +44,12 @@ with its upper-left at {x},{y} (top left is 0, 0) with the color {color}.
 
     A color identifier created with |imagecolorallocate|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 imagechar() example
@@ -74,7 +75,7 @@ The above example will output something similar to:
 
 Output of example : imagechar()
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |imagecharup| - Draw a character vertically

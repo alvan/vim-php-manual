@@ -4,14 +4,14 @@ posix_setpgid
 
 posix_setpgid — Set process group id for job control
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool posix_setpgid ( int $pid , int $pgid )~
 
 Let the process {pid} join the process group {pgid}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {pid}
@@ -22,12 +22,12 @@ Let the process {pid} join the process group {pgid}.
 
     The process group id.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * See POSIX.1 and the setsid(2) manual page on the POSIX system for more

@@ -5,21 +5,21 @@ shell_exec
 shell_exec — Execute command via shell and return the complete output as a
 string
 
-===============================================================================
+==============================================================================
 *Description*
 
     string shell_exec ( string $cmd )~
 
 This function is identical to the backtick operator.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {cmd}
 
     The command that will be executed.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The output from the executed command or NULL if an error occurred or the
@@ -32,7 +32,7 @@ command produces no output.
     this function. |exec| should be used when access to the program exit code
     is required.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A shell_exec() example
@@ -42,14 +42,14 @@ Example #1 A shell_exec() example
     echo "<pre>$output</pre>";
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
 
     This function is disabled when PHP is running in safe mode.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |exec| - Execute an external program

@@ -4,7 +4,7 @@ cubrid_lob2_seek
 
 cubrid_lob2_seek — Move the cursor of a lob object.
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool cubrid_lob2_seek ( resource $lob_identifier , int $offset [, int~
@@ -14,9 +14,9 @@ The cubrid_lob2_seek() function is used to move the cursor position of a lob
 object by the value set in the {offset} argument, to the direction set in the
 {origin} argument.
 
-To set the {origin} argument, you can use CUBRID_CURSOR_FIRST to set the cursor
-position moving forward {offset} units from the first beginning. In this case,
-{offset} must be a positive value.
+To set the {origin} argument, you can use CUBRID_CURSOR_FIRST to set the
+cursor position moving forward {offset} units from the first beginning. In
+this case, {offset} must be a positive value.
 
 If you use CUBRID_CURSOR_CURRENT for {origin}, you can move forward or
 backward. and {offset} can be positive or negative.
@@ -24,12 +24,13 @@ backward. and {offset} can be positive or negative.
 If you use CUBRID_CURSOR_LAST for {origin}, you can move backward {offset}
 units from the end of LOB object and {offset} only can be positive.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {lob_identifier}
 
-    Lob identifier as a result of |cubrid_lob2_new| or get from the result set.
+    Lob identifier as a result of |cubrid_lob2_new| or get from the result
+    set.
 
 {offset}
 
@@ -45,12 +46,12 @@ units from the end of LOB object and {offset} only can be positive.
 
     CUBRID_CURSOR_LAST: move backward at the end of LOB object.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 TRUE if the process is successful and FALSE for failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_lob2_seek() example
@@ -80,7 +81,7 @@ Example #1 cubrid_lob2_seek() example
     cubrid_disconnect($conn);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |cubrid_lob2_read| - Read from BLOB/CLOB data.

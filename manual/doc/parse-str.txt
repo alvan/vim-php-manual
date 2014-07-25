@@ -4,13 +4,13 @@ parse_str
 
 parse_str — Parses the string into variables
 
-===============================================================================
+==============================================================================
 *Description*
 
     void parse_str ( string $str [, array &$arr ] )~
 
-Parses {str} as if it were the query string passed via a URL and sets variables
-in the current scope.
+Parses {str} as if it were the query string passed via a URL and sets
+variables in the current scope.
 
     Note:
 
@@ -24,7 +24,7 @@ in the current scope.
     parse_str() uses the same mechanism that PHP uses to populate the $_GET,
     $_POST, etc. variables.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {str}
@@ -36,18 +36,18 @@ in the current scope.
     If the second parameter {arr} is present, variables are stored in this
     variable as array elements instead.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 No value is returned.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version          Description
 4.0.3   The {arr} parameter was added
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Using parse_str()
@@ -66,7 +66,7 @@ Example #1 Using parse_str()
 
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |parse_url| - Parse a URL and return its components

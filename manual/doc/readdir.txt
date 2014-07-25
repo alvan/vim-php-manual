@@ -4,7 +4,7 @@ readdir
 
 readdir — Read entry from directory handle
 
-===============================================================================
+==============================================================================
 *Description*
 
     string readdir ([ resource $dir_handle ] )~
@@ -12,7 +12,7 @@ readdir — Read entry from directory handle
 Returns the name of the next entry in the directory. The entries are returned
 in the order in which they are stored by the filesystem.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {dir_handle}
@@ -21,28 +21,28 @@ in the order in which they are stored by the filesystem.
     directory handle is not specified, the last link opened by |opendir| is
     assumed.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the entry name on success or FALSE on failure.
 
 Warning
 
-This function may return Boolean FALSE, but may also return a non-Boolean value
-which evaluates to FALSE. Please read the section on Booleans for more
+This function may return Boolean FALSE, but may also return a non-Boolean
+value which evaluates to FALSE. Please read the section on Booleans for more
 information. Use the === operator for testing the return value of this
 function.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 List all entries in a directory
 
 Please note the fashion in which readdir()'s return value is checked in the
-examples below. We are explicitly testing whether the return value is identical
-to (equal to and of the same type as--see Comparison Operators for more
-information) FALSE since otherwise, any directory entry whose name evaluates to
-FALSE will stop the loop (e.g. a directory named "0").
+examples below. We are explicitly testing whether the return value is
+identical to (equal to and of the same type as--see Comparison Operators for
+more information) FALSE since otherwise, any directory entry whose name
+evaluates to FALSE will stop the loop (e.g. a directory named "0").
 
 <?php >
 
@@ -77,7 +77,7 @@ Example #2 List all entries in the current directory and strip out . and ..
     }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |is_dir| - Tells whether the filename is a directory

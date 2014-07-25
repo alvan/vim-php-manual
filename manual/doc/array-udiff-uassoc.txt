@@ -5,7 +5,7 @@ array_udiff_uassoc
 array_udiff_uassoc — Computes the difference of arrays with additional index
 check, compares data and indexes by a callback function
 
-===============================================================================
+==============================================================================
 *Description*
 
     array array_udiff_uassoc ( array $array1 , array $array2 [, array $... ],~
@@ -17,7 +17,7 @@ and indexes by a callback function.
 Note that the keys are used in the comparison unlike |array_diff| and |
 array_udiff|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {array1}
@@ -39,16 +39,16 @@ array_udiff|.
 {key_compare_func}
 
     The comparison of keys (indices) is done also by the callback function
-    {key_compare_func}. This behaviour is unlike what |array_udiff_assoc| does,
-    since the latter compares the indices by using an internal function.
+    {key_compare_func}. This behaviour is unlike what |array_udiff_assoc|
+    does, since the latter compares the indices by using an internal function.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an array containing all the values from {array1} that are not present
 in any of the other arguments.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 array_udiff_uassoc() example
@@ -73,10 +73,10 @@ Example #1 array_udiff_uassoc() example
             return ($a > $b)? 1:-1;
         }
     }
-    $a = array("0.1" => new cr(9), "0.5" => new cr(12), 0 => new cr(23), 1=> new cr
+    $a = array("0.1" => new cr(9), "0.5" => new cr(12), 0 => new cr(23), 1=> new 
+    cr(4), 2 => new cr(-15),);
+    $b = array("0.2" => new cr(9), "0.5" => new cr(22), 0 => new cr(3), 1=> new cr
     (4), 2 => new cr(-15),);
-    $b = array("0.2" => new cr(9), "0.5" => new cr(22), 0 => new cr(3), 1=> new cr(
-    4), 2 => new cr(-15),);
 
     $result = array_udiff_uassoc($a, $b, array("cr", "comp_func_cr"), array("cr", 
     "comp_func_key"));
@@ -107,7 +107,7 @@ In our example above you see the "1" => new cr(4) pair is present in both
 arrays and thus it is not in the output from the function. Keep in mind that
 you have to supply 2 callback functions.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: Please note that this function only checks one dimension of a
@@ -115,7 +115,7 @@ you have to supply 2 callback functions.
     for example, array_udiff_uassoc($array1[0], $array2[0],
     "data_compare_func", "key_compare_func");.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |array_diff| - Computes the difference of arrays

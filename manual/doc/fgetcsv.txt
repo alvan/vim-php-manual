@@ -4,30 +4,30 @@ fgetcsv
 
 fgetcsv — Gets line from file pointer and parse for CSV fields
 
-===============================================================================
+==============================================================================
 *Description*
 
-    array fgetcsv ( resource $handle [, int $length = 0 [, string $delimiter =~
-    "," [, string $enclosure = '"' [, string $escape~
-    = "\\" ]]]] )~
+    array fgetcsv ( resource $handle [, int $length = 0 [, string $delimiter~
+    = "," [, string $enclosure = '"' [, string~
+    $escape = "\\" ]]]] )~
 
-Similar to |fgets| except that fgetcsv() parses the line it reads for fields in
-CSV format and returns an array containing the fields read.
+Similar to |fgets| except that fgetcsv() parses the line it reads for fields
+in CSV format and returns an array containing the fields read.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {handle}
 
-    A valid file pointer to a file successfully opened by |fopen|, |popen|, or 
+    A valid file pointer to a file successfully opened by |fopen|, |popen|, or
     |fsockopen|.
 
 {length}
 
     Must be greater than the longest line (in characters) to be found in the
-    CSV file (allowing for trailing line-end characters). It became optional in
-    PHP 5. Omitting this parameter (or setting it to 0 in PHP 5.1.0 and later)
-    the maximum line length is not limited, which is slightly slower.
+    CSV file (allowing for trailing line-end characters). It became optional
+    in PHP 5. Omitting this parameter (or setting it to 0 in PHP 5.1.0 and
+    later) the maximum line length is not limited, which is slightly slower.
 
 {delimiter}
 
@@ -41,25 +41,25 @@ CSV format and returns an array containing the fields read.
 
     Set the escape character (one character only). Defaults as a backslash.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an indexed array containing the fields read.
 
     Note:
 
-    A blank line in a CSV file will be returned as an array comprising a single
-    null field, and will not be treated as an error.
+    A blank line in a CSV file will be returned as an array comprising a
+    single null field, and will not be treated as an error.
 
     Note: If PHP is not properly recognizing the line endings when reading
     files either on or created by a Macintosh computer, enabling the
-    auto_detect_line_endings run-time configuration option may help resolve the
-    problem.
+    auto_detect_line_endings run-time configuration option may help resolve
+    the problem.
 
 fgetcsv() returns NULL if an invalid {handle} is supplied or FALSE on other
 errors, including end of file.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version                             Description
@@ -68,7 +68,7 @@ Version                             Description
 4.3.5   fgetcsv() is now binary safe
 4.3.0   The {enclosure} parameter was added
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Read and print the entire contents of a CSV file
@@ -88,7 +88,7 @@ Example #1 Read and print the entire contents of a CSV file
     }
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -96,7 +96,7 @@ Example #1 Read and print the entire contents of a CSV file
     Locale setting is taken into account by this function. If LANG is e.g.
     en_US.UTF-8, files in one-byte encoding are read wrong by this function.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |str_getcsv| - Parse a CSV string into an array

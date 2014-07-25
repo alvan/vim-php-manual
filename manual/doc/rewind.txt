@@ -4,7 +4,7 @@ rewind
 
 rewind — Rewind the position of a file pointer
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool rewind ( resource $handle )~
@@ -15,9 +15,10 @@ stream.
     Note:
 
     If you have opened the file in append ("a" or "a+") mode, any data you
-    write to the file will always be appended, regardless of the file position.
+    write to the file will always be appended, regardless of the file
+    position.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {handle}
@@ -25,12 +26,12 @@ stream.
     The file pointer must be valid, and must point to a file successfully
     opened by |fopen|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 rewind() overwriting example
@@ -52,7 +53,7 @@ The above example will output something similar to:
 
 Foolly long sentence.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |fread| - Binary-safe file read

@@ -9,7 +9,7 @@ SQLiteUnbuffered::fetch
 sqlite_fetch_array -- SQLiteResult::fetch -- SQLiteUnbuffered::fetch — Fetches
 the next row from a result set as an array
 
-===============================================================================
+==============================================================================
 *Description*
 
     array sqlite_fetch_array ( resource $result [, int $result_type =~
@@ -22,11 +22,11 @@ Object oriented style (method):
     array SQLiteUnbuffered::fetch ([ int $result_type = SQLITE_BOTH [, bool~
     $decode_binary = true ]] )~
 
-Fetches the next row from the given {result} handle. If there are no more rows,
-returns FALSE, otherwise returns an associative array representing the row
-data.
+Fetches the next row from the given {result} handle. If there are no more
+rows, returns FALSE, otherwise returns an associative array representing the
+row data.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
@@ -51,7 +51,7 @@ data.
     default, unless you are interoperating with databases created by other
     sqlite capable applications.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an array of the next row from a result set; FALSE if the next position
@@ -60,7 +60,7 @@ is beyond the final row.
 The column names returned by SQLITE_ASSOC and SQLITE_BOTH will be case-folded
 according to the value of the sqlite.assoc_case configuration option.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Procedural example
@@ -80,19 +80,19 @@ Example #2 Object-oriented example
 
     $query = $dbhandle->query('SELECT name, email FROM users LIMIT 25'); //
      buffered result set
-    $query = $dbhandle->unbufferedQuery('SELECT name, email FROM users LIMIT 25'); 
-    // unbuffered result set
+    $query = $dbhandle->unbufferedQuery('SELECT name, email FROM users LIMIT 25');
+     // unbuffered result set
 
     while ($entry = $query->fetch(SQLITE_ASSOC)) {
         echo 'Name: ' . $entry['name'] . '  E-mail: ' . $entry['email'];
     }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
-  * |sqlite_array_query| - Execute a query against a given database and returns
-    an array
+  * |sqlite_array_query| - Execute a query against a given database and
+    returns an array
   * |sqlite_fetch_string| - Alias of sqlite_fetch_single
 
 

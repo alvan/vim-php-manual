@@ -4,7 +4,7 @@ ibase_blob_import
 
 ibase_blob_import — Create blob, copy file in it, and close it
 
-===============================================================================
+==============================================================================
 *Description*
 
     string ibase_blob_import ( resource $link_identifier , resource~
@@ -14,7 +14,7 @@ ibase_blob_import — Create blob, copy file in it, and close it
 This function creates a BLOB, reads an entire file into it, closes it and
 returns the assigned BLOB id.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {link_identifier}
@@ -25,12 +25,12 @@ returns the assigned BLOB id.
 
     The file handle is a handle returned by |fopen|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the BLOB id on success, or FALSE on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 ibase_blob_import() example
@@ -59,7 +59,7 @@ Example #1 ibase_blob_import() example
     }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ibase_blob_add| - Add data into a newly created blob

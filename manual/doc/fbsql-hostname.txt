@@ -4,20 +4,21 @@ fbsql_hostname
 
 fbsql_hostname — Get or set the host name used with a connection
 
-===============================================================================
+==============================================================================
 *Description*
 
-    string fbsql_hostname ( resource $link_identifier [, string $host_name ] )~
+    string fbsql_hostname ( resource $link_identifier [, string $host_name ]~
+)~
 
 Gets or sets the host name used with a connection.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { link_identifier}
 
-    A FrontBase link identifier returned by |fbsql_connect| or |fbsql_pconnect|
-    .
+    A FrontBase link identifier returned by |fbsql_connect| or |fbsql_pconnect
+    |.
 
     If optional and not specified, the function will try to find an open link
     to the FrontBase server and if no such link is found it will try to create
@@ -27,12 +28,12 @@ Gets or sets the host name used with a connection.
 
     If provided, this will be the new connection host name.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the current host name used for the connection.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |fbsql_username| - Get or set the username for the connection

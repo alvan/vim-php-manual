@@ -4,7 +4,7 @@ iptcembed
 
 iptcembed — Embeds binary IPTC data into a JPEG image
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed iptcembed ( string $iptcdata , string $jpeg_file_name [, int $spool~
@@ -12,7 +12,7 @@ iptcembed — Embeds binary IPTC data into a JPEG image
 
 Embeds binary IPTC data into a JPEG image.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {iptcdata}
@@ -25,16 +25,16 @@ Embeds binary IPTC data into a JPEG image.
 
 {spool}
 
-    Spool flag. If the spool flag is over 2 then the JPEG will be returned as a
-    string.
+    Spool flag. If the spool flag is over 2 then the JPEG will be returned as
+    a string.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-If success and spool flag is lower than 2 then the JPEG will not be returned as
-a string, FALSE on errors.
+If success and spool flag is lower than 2 then the JPEG will not be returned
+as a string, FALSE on errors.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Embedding IPTC data into a JPEG
@@ -101,7 +101,7 @@ Example #1 Embedding IPTC data into a JPEG
     fclose($fp);
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:

@@ -5,7 +5,7 @@ socket_select
 socket_select — Runs the select() system call on the given arrays of sockets
 with a specified timeout
 
-===============================================================================
+==============================================================================
 *Description*
 
     int socket_select ( array &$read , array &$write , array &$except , int~
@@ -16,15 +16,16 @@ Those coming with BSD sockets background will recognize that those socket
 resource arrays are in fact the so-called file descriptor sets. Three
 independent arrays of socket resources are watched.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {read}
 
-    The sockets listed in the {read} array will be watched to see if characters
-    become available for reading (more precisely, to see if a read will not
-    block - in particular, a socket resource is also ready on end-of-file, in
-    which case a |socket_read| will return a zero length string).
+    The sockets listed in the {read} array will be watched to see if
+    characters become available for reading (more precisely, to see if a read
+    will not block - in particular, a socket resource is also ready on
+    end-of-file, in which case a |socket_read| will return a zero length
+    string).
 
 {write}
 
@@ -37,11 +38,11 @@ independent arrays of socket resources are watched.
 
 {tv_sec}
 
-    The {tv_sec} and {tv_usec} together form the timeout parameter. The timeout
-    is an upper bound on the amount of time elapsed before socket_select()
-    return. {tv_sec} may be zero , causing socket_select() to return
-    immediately. This is useful for polling. If {tv_sec} is NULL (no timeout), 
-    socket_select() can block indefinitely.
+    The {tv_sec} and {tv_usec} together form the timeout parameter. The
+    timeout is an upper bound on the amount of time elapsed before 
+    socket_select() return. {tv_sec} may be zero , causing socket_select() to
+    return immediately. This is useful for polling. If {tv_sec} is NULL (no
+    timeout), socket_select() can block indefinitely.
 
 {tv_usec}
 
@@ -69,7 +70,7 @@ are passed by reference and will be modified after socket_select() returns.
     socket_select($r, $w, $e, 0);
 <    ?>
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 On success socket_select() returns the number of socket resources contained in
@@ -80,7 +81,8 @@ retrieved with |socket_last_error|.
     Note:
 
     Be sure to use the === operator when checking for an error. Since the 
-    socket_select() may return 0 the comparison with == would evaluate to TRUE:
+    socket_select() may return 0 the comparison with == would evaluate to TRUE
+    :
    
     Example #2 Understanding socket_select()'s result
 
@@ -92,7 +94,7 @@ retrieved with |socket_last_error|.
     }
 <    ?>
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #3 socket_select() example
@@ -111,7 +113,7 @@ Example #3 socket_select() example
     }
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -136,7 +138,7 @@ Example #3 socket_select() example
         caught with the {except} array is out-of-bound data received on a
         socket.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |socket_read| - Reads a maximum of length bytes from a socket

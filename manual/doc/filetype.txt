@@ -4,30 +4,30 @@ filetype
 
 filetype — Gets file type
 
-===============================================================================
+==============================================================================
 *Description*
 
     string filetype ( string $filename )~
 
 Returns the type of the given file.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {filename}
 
     Path to the file.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns the type of the file. Possible values are fifo, char, dir, block, link,
-file, socket and unknown.
+Returns the type of the file. Possible values are fifo, char, dir, block,
+link, file, socket and unknown.
 
 Returns FALSE if an error occurs. filetype() will also produce an E_NOTICE
 message if the stat call fails or if the file type is unknown.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 filetype() example
@@ -39,12 +39,12 @@ Example #1 filetype() example
 
 <?>
 
-===============================================================================
+==============================================================================
 *Errors/Exceptions*
 
 Upon failure, an E_WARNING is emitted.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: The results of this function are cached. See |clearstatcache| for
@@ -56,7 +56,7 @@ As of PHP 5.0.0, this function can also be used with some URL wrappers. Refer
 to Supported Protocols and Wrappers to determine which wrappers support |stat|
 family of functionality.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |is_dir| - Tells whether the filename is a directory

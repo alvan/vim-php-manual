@@ -4,7 +4,7 @@ oci_set_client_info
 
 oci_set_client_info — Sets the client information
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool oci_set_client_info ( resource $connection , string $client_info )~
@@ -12,32 +12,32 @@ oci_set_client_info — Sets the client information
 Sets the client information for Oracle tracing.
 
 The client information is registered with the database when the next
-'roundtrip' from PHP to the database occurs, typically when an SQL statement is
-executed.
+'roundtrip' from PHP to the database occurs, typically when an SQL statement
+is executed.
 
-The client information can subsequently be queried from database administration
-views such as V$SESSION.
+The client information can subsequently be queried from database
+administration views such as V$SESSION.
 
 The value may be retained across persistent connections.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
 
-    An Oracle connection identifier, returned by |oci_connect|, |oci_pconnect|,
-    or |oci_new_connect|.
+    An Oracle connection identifier, returned by |oci_connect|, |oci_pconnect|
+    , or |oci_new_connect|.
 
 {client_info}
 
     User chosen string up to 64 bytes long.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Setting the client information
@@ -64,7 +64,7 @@ Example #1 Setting the client information
 sqlplus system/welcome
 SQL> select client_info from v$session;
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: Oracle version requirement
@@ -87,7 +87,7 @@ Roundtrip Gotcha
 Some but not all OCI8 functions cause roundtrips. Roundtrips to the database
 may not occur with queries when result caching is enabled.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |oci_set_module_name| - Sets the module name

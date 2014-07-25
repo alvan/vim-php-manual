@@ -4,14 +4,14 @@ wincache_ucache_get
 
 wincache_ucache_get — Gets a variable stored in the user cache
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed wincache_ucache_get ( mixed $key [, bool &$success ] )~
 
 Gets a variable stored in the user cache.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {key}
@@ -26,11 +26,12 @@ Gets a variable stored in the user cache.
 
     Will be set to TRUE on success and FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 If {key} is a string, the function returns the value of the variable stored
-with that key. The {success} is set to TRUE on success and to FALSE on failure.
+with that key. The {success} is set to TRUE on success and to FALSE on
+failure.
 
 The {key} is an array, the parameter {success} is always set to TRUE. The
 returned array (name => value pairs) will contain only those name => value
@@ -38,7 +39,7 @@ pairs for which the get operation in user cache was successful. If none of the
 keys in the key array finds a match in the user cache an empty array will be
 returned.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 wincache_ucache_get() with {key} as a string
@@ -57,7 +58,8 @@ bool(true)
 Example #2 wincache_ucache_get() with {key} as an array
 
 <?php >
-    $array1 = array('green' => '5', 'Blue' => '6', 'yellow' => '7', 'cyan' => '8');
+    $array1 = array('green' => '5', 'Blue' => '6', 'yellow' => '7', 'cyan' => '8'
+    );
     wincache_ucache_set($array1);
     $array2 = array('green', 'Blue', 'yellow', 'cyan');
     var_dump(wincache_ucache_get($array2, $success));
@@ -72,11 +74,11 @@ array(4) { ["green"]=> string(1) "5"
            ["cyan"]=> string(1) "8" }
 bool(true)
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
-  * |wincache_ucache_add| - Adds a variable in user cache only if variable does
-    not already exist in the cache
+  * |wincache_ucache_add| - Adds a variable in user cache only if variable
+    does not already exist in the cache
   * |wincache_ucache_set| - Adds a variable in user cache and overwrites a
     variable if it already exists in the cache
   * |wincache_ucache_delete| - Deletes variables from the user cache

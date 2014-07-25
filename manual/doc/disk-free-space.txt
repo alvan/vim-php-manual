@@ -4,7 +4,7 @@ disk_free_space
 
 disk_free_space — Returns available space on filesystem or disk partition
 
-===============================================================================
+==============================================================================
 *Description*
 
     float disk_free_space ( string $directory )~
@@ -12,7 +12,7 @@ disk_free_space — Returns available space on filesystem or disk partition
 Given a string containing a directory, this function will return the number of
 bytes available on the corresponding filesystem or disk partition.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {directory}
@@ -21,16 +21,16 @@ bytes available on the corresponding filesystem or disk partition.
 
         Note:
 
-        Given a file name instead of a directory, the behaviour of the function
-        is unspecified and may differ between operating systems and PHP
-        versions.
+        Given a file name instead of a directory, the behaviour of the
+        function is unspecified and may differ between operating systems and
+        PHP versions.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the number of available bytes as a float or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 disk_free_space() example
@@ -44,13 +44,13 @@ Example #1 disk_free_space() example
     $df_d = disk_free_space("D:");
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: This function will not work on remote files as the file to be
     examined must be accessible via the server's filesystem.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |disk_total_space| - Returns the total size of a filesystem or disk

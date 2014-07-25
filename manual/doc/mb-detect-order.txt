@@ -4,14 +4,14 @@ mb_detect_order
 
 mb_detect_order — Set/Get character encoding detection order
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed mb_detect_order ([ mixed $encoding_list = mb_detect_order() ] )~
 
 Sets the automatic character encoding detection order to {encoding_list}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {encoding_list}
@@ -34,12 +34,12 @@ Sets the automatic character encoding detection order to {encoding_list}.
 
     For UTF-16, UTF-32, UCS2 and UCS4, encoding detection will fail always.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mb_detect_order() examples
@@ -67,7 +67,7 @@ detect_order = ISO-8859-1, UTF-8
 ; valid for UTF-8
 detect_order = UTF-8, ASCII, UTF-7
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mb_internal_encoding| - Set/Get internal character encoding

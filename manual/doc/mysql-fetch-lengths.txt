@@ -8,13 +8,13 @@ Warning
 
 This extension is deprecated as of PHP 5.5.0, and will be removed in the
 future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
-MySQL: choosing an API guide and related FAQ for more information. Alternatives
-to this function include:
+MySQL: choosing an API guide and related FAQ for more information.
+Alternatives to this function include:
 
   * mysqli_fetch_lengths()
   * PDOStatement::getColumnMeta()
 
-===============================================================================
+==============================================================================
 *Description*
 
     array mysql_fetch_lengths ( resource $result )~
@@ -26,7 +26,7 @@ mysql_fetch_lengths() stores the lengths of each result column in the last row
 returned by |mysql_fetch_row|, |mysql_fetch_assoc|, |mysql_fetch_array|, and |
 mysql_fetch_object| in an array, starting at offset 0.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { result}
@@ -34,12 +34,12 @@ mysql_fetch_object| in an array, starting at offset 0.
     The result resource that is being evaluated. This result comes from a call
     to |mysql_query|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 An array of lengths on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A mysql_fetch_lengths() example
@@ -70,7 +70,7 @@ Array
     [1] => 16
 )
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mysql_field_len| - Returns the length of the specified field

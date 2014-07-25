@@ -5,13 +5,13 @@ cubrid_fetch_field
 cubrid_fetch_field — Get column information from a result and return as an
 object
 
-===============================================================================
+==============================================================================
 *Description*
 
     object cubrid_fetch_field ( resource $result [, int $field_offset = 0 ] )~
 
-This function returns an object with certain properties of the specific column.
-The properties of the object are:
+This function returns an object with certain properties of the specific
+column. The properties of the object are:
 
 {name}
 
@@ -65,7 +65,7 @@ The properties of the object are:
 
     1 if the column is zero-filled
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
@@ -78,7 +78,7 @@ The properties of the object are:
     field (that was not yet retrieved by this function) is retrieved. The
     {field_offset} starts at 0.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Object with certain properties of the specific column, when process is
@@ -86,7 +86,7 @@ successful.
 
 FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_fetch_field() example

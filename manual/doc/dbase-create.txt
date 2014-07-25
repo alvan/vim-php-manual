@@ -4,7 +4,7 @@ dbase_create
 
 dbase_create — Creates a database
 
-===============================================================================
+==============================================================================
 *Description*
 
     int dbase_create ( string $filename , array $fields )~
@@ -19,13 +19,13 @@ dbase_create() creates a dBase database with the given definition.
 
     This function is affected by open_basedir.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {filename}
 
-    The name of the database. It can be a relative or absolute path to the file
-    where dBase will store your data.
+    The name of the database. It can be a relative or absolute path to the
+    file where dBase will store your data.
 
 {fields}
 
@@ -37,13 +37,13 @@ dbase_create() creates a dBase database with the given definition.
 
         The fieldnames are limited in length and must not exceed 10 chars.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a database link identifier if the database is successfully created, or
 FALSE if an error occurred.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Creating a dBase database file
@@ -66,7 +66,7 @@ Example #1 Creating a dBase database file
 
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |dbase_open| - Opens a database

@@ -5,16 +5,16 @@ mssql_bind
 mssql_bind — Adds a parameter to a stored procedure or a remote stored
 procedure
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool mssql_bind ( resource $stmt , string $param_name , mixed &$var , int~
-    $type [, bool $is_output = false [, bool $is_null = false [, int $maxlen =~
-    -1 ]]] )~
+    $type [, bool $is_output = false [, bool $is_null = false [, int $maxlen~
+    = -1 ]]] )~
 
 Binds a parameter to a stored procedure or a remote stored procedure.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {stmt}
@@ -58,12 +58,12 @@ Binds a parameter to a stored procedure or a remote stored procedure.
     so if the parameter is a varchar(50), the type must be SQLVARCHAR and this
     value 50.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mssql_bind() example
@@ -88,7 +88,7 @@ Example #1 mssql_bind() example
     mssql_free_statement($stmt);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mssql_execute| - Executes a stored procedure on a MS SQL server database

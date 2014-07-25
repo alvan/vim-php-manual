@@ -4,14 +4,14 @@ yp_first
 
 yp_first — Returns the first key-value pair from the named map
 
-===============================================================================
+==============================================================================
 *Description*
 
     array yp_first ( string $domain , string $map )~
 
 Gets the first key-value pair from the named {map} in the named {domain}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {domain}
@@ -22,12 +22,12 @@ Gets the first key-value pair from the named {map} in the named {domain}.
 
     The NIS map.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the first key-value pair as an array on success, or FALSE on errors.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Example for the NIS first
@@ -41,7 +41,7 @@ Example #1 Example for the NIS first
     echo "First entry in this map has key " . $key . " and value " . $value;
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |yp_next| - Returns the next key-value pair in the named map

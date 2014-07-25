@@ -4,15 +4,15 @@ oci_set_edition
 
 oci_set_edition — Sets the database edition
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool oci_set_edition ( string $edition )~
 
 Sets the database "edition" of objects to be used by a subsequent connections.
 
-Oracle Editions allow concurrent versions of applications to run using the same
-schema and object names. This is useful for upgrading live systems.
+Oracle Editions allow concurrent versions of applications to run using the
+same schema and object names. This is useful for upgrading live systems.
 
 Call oci_set_edition() before calling |oci_connect|, |oci_pconnect| or |
 oci_new_connect|.
@@ -24,7 +24,7 @@ When using persistent connections, if a connection with the requested edition
 setting already exists, it is reused. Otherwise, a different persistent
 connection is created
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {edition}
@@ -32,7 +32,7 @@ connection is created
     Oracle Database edition name previously created with the SQL "CREATE
     EDITION" command.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: Oracle version requirement
@@ -56,12 +56,12 @@ oci8.connection_class and the edition name used by applications. Each pooled
 server of a given connection class should only be used with one edition. This
 restriction has been removed with Oracle 11.2.0.2.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Two scripts can use different versions of myfunc() at the same time

@@ -4,17 +4,17 @@ ps_setmiterlimit
 
 ps_setmiterlimit — Sets the miter limit
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool ps_setmiterlimit ( resource $psdoc , float $value )~
 
 If two lines join in a small angle and the line join is set to
 PS_LINEJOIN_MITER, then the resulting spike will be very long. The miter limit
-is the maximum ratio of the miter length (the length of the spike) and the line
-width.
+is the maximum ratio of the miter length (the length of the spike) and the
+line width.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {psdoc}
@@ -27,12 +27,12 @@ width.
     values (> 10) will result in very long spikes when two lines meet in a
     small angle. Keep the default unless you know what you are doing.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ps_setlinecap| - Sets appearance of line ends

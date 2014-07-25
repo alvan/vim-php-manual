@@ -4,7 +4,7 @@ ingres_result_seek
 
 ingres_result_seek — Set the row position before fetching data
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool ingres_result_seek ( resource $result , int $position )~
@@ -20,7 +20,7 @@ ingres_unbuffered_query|.
     See also the ingres.scrollable and ingres.array_index_start directives in
     Runtime Configuration.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
@@ -29,15 +29,15 @@ ingres_unbuffered_query|.
 
 {position}
 
-    The row to position the cursor on. If ingres.array_index_start is set to 0,
-    then the first row is 0, else it is 1
+    The row to position the cursor on. If ingres.array_index_start is set to
+    0, then the first row is 0, else it is 1
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Position the cursor on the 3rd row
@@ -65,7 +65,7 @@ Example #1 Position the cursor on the 3rd row
 
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ingres_query| - Send an SQL query to Ingres

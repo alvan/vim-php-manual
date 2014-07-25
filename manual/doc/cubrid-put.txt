@@ -4,21 +4,22 @@ cubrid_put
 
 cubrid_put — Update a column using OID
 
-===============================================================================
+==============================================================================
 *Description*
 
     int cubrid_put ( resource $conn_identifier , string $oid [, string $attr~
     ], mixed $value )~
 
-The cubrid_put() function is used to update an attribute of the instance of the
-given {oid}.
+The cubrid_put() function is used to update an attribute of the instance of
+the given {oid}.
 
 You can update single attribute by using string data type to set {attr}. In
 such case, you can use integer, floating point or string type data for the
 {value} argument. To update multiple number of attributes, you can disregard
-the {attr} argument, and set {value} argument with associative array data type.
+the {attr} argument, and set {value} argument with associative array data
+type.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {conn_identifier}
@@ -37,14 +38,14 @@ the {attr} argument, and set {value} argument with associative array data type.
 
     New value that you want to assign to the attribute.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 TRUE, when process is successful.
 
 FALSE, when process is unsuccessful.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_put() example
@@ -96,13 +97,14 @@ array(3) {
   string(1) "8"
 }
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |cubrid_get| - Get a column using OID
   * |cubrid_set_add| - Insert a single element to set type column using OID
   * |cubrid_set_drop| - Delete an element from set type column using OID
-  * |cubrid_seq_insert| - Insert an element to a sequence type column using OID
+  * |cubrid_seq_insert| - Insert an element to a sequence type column using
+    OID
   * |cubrid_seq_drop| - Delete an element from sequence type column using OID
   * |cubrid_seq_put| - Update the element value of sequence type column using
     OID

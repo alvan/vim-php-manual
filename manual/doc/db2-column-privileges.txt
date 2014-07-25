@@ -2,18 +2,20 @@ db2_column_privileges
 
 (PECL ibm_db2 >= 1.0.0)
 
-db2_column_privileges — Returns a result set listing the columns and associated
-privileges for a table
+db2_column_privileges — Returns a result set listing the columns and
+associated privileges for a table
 
-===============================================================================
+==============================================================================
 *Description*
 
-    resource db2_column_privileges ( resource $connection [, string $qualifier~
-    [, string $schema [, string $table-name [, string $column-name ]]]] )~
+    resource db2_column_privileges ( resource $connection [, string~
+    $qualifier [, string $schema [, string $table-name [, string $column-name~
+    ]]]] )~
 
-Returns a result set listing the columns and associated privileges for a table.
+Returns a result set listing the columns and associated privileges for a
+table.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
@@ -27,8 +29,8 @@ Returns a result set listing the columns and associated privileges for a table.
 
 {schema}
 
-    The schema which contains the tables. To match all schemas, pass NULL or an
-    empty string.
+    The schema which contains the tables. To match all schemas, pass NULL or
+    an empty string.
 
 {table-name}
 
@@ -40,7 +42,7 @@ Returns a result set listing the columns and associated privileges for a table.
     The name of the column. To match all columns in the table, pass NULL or an
     empty string.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a statement resource with a result set containing rows describing the
@@ -48,8 +50,8 @@ column privileges for columns matching the specified parameters. The rows are
 composed of the following columns:
 
 Column name                             Description
-TABLE_CAT    Name of the catalog. The value is NULL if this table does not have
-             catalogs.
+TABLE_CAT    Name of the catalog. The value is NULL if this table does not
+             have catalogs.
 TABLE_SCHEM  Name of the schema.
 TABLE_NAME   Name of the table or view.
 COLUMN_NAME  Name of the column.
@@ -59,7 +61,7 @@ PRIVILEGE    The privilege for the column.
 IS_GRANTABLE Whether the GRANTEE is permitted to grant this privilege to other
              users.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |db2_columns| - Returns a result set listing the columns and associated

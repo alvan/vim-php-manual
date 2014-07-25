@@ -4,7 +4,7 @@ svn_update
 
 svn_update — Update working copy
 
-===============================================================================
+==============================================================================
 *Description*
 
     int svn_update ( string $path [, int $revno = SVN_REVISION_HEAD [, bool~
@@ -13,7 +13,7 @@ svn_update — Update working copy
 Update working copy at {path} to revision {revno}. If {recurse} is true,
 directories will be recursively updated.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {path}
@@ -32,21 +32,21 @@ directories will be recursively updated.
 
     Whether or not to recursively update directories.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns new revision number on success, returns FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Notes*
 
 Warning
 
 This function is EXPERIMENTAL. The behaviour of this function, its name, and
-surrounding documentation may change without notice in a future release of PHP.
-This function should be used at your own risk.
+surrounding documentation may change without notice in a future release of
+PHP. This function should be used at your own risk.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Basic example
@@ -61,7 +61,7 @@ The above example will output something similar to:
 
 234
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |svn_checkout| - Checks out a working copy from the repository

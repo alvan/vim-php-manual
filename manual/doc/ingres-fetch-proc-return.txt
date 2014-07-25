@@ -4,7 +4,7 @@ ingres_fetch_proc_return
 
 ingres_fetch_proc_return — Get the return value from a procedure call
 
-===============================================================================
+==============================================================================
 *Description*
 
     int ingres_fetch_proc_return ( resource $result )~
@@ -17,22 +17,22 @@ an Ingres database procedure (stored procedure).
     If used with a row-producing procedure, this function should be called
     after all the rows from the procedure have been fetched using |
     ingres_fetch_array|, |ingres_fetch_object| or |ingres_fetch_row|. This
-    function will eliminate any rows yet to be fetched should there be any left
-    over.
+    function will eliminate any rows yet to be fetched should there be any
+    left over.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
 
     The result identifier for a query
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an integer if there is a return value otherwise it will return NULL.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Get the return value from a procedure call
@@ -59,7 +59,7 @@ Example #1 Get the return value from a procedure call
 
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ingres_query| - Send an SQL query to Ingres

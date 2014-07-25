@@ -4,7 +4,7 @@ sqlsrv_num_rows
 
 sqlsrv_num_rows — Retrieves the number of rows in a result set
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed sqlsrv_num_rows ( resource $stmt )~
@@ -14,23 +14,24 @@ statment resource be created with a static or keyset cursor. For more
 information, see |sqlsrv_query|, |sqlsrv_prepare|, or » Specifying a Cursor
 Type and Selecting Rows in the Microsoft SQLSRV documentation.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {stmt}
 
     The statement for which the row count is returned. The statment resource
-    must be created with a static or keyset cursor. For more information, see |
-    sqlsrv_query|, |sqlsrv_prepare|, or » Specifying a Cursor Type and
+    must be created with a static or keyset cursor. For more information, see 
+    |sqlsrv_query|, |sqlsrv_prepare|, or » Specifying a Cursor Type and
     Selecting Rows in the Microsoft SQLSRV documentation.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns the number of rows retrieved on success and FALSE if an error occurred.
-If a forward cursor (the default) or dynamic cursor is used, FALSE is returned.
+Returns the number of rows retrieved on success and FALSE if an error
+occurred. If a forward cursor (the default) or dynamic cursor is used, FALSE
+is returned.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 sqlsrv_num_rows() example
@@ -54,7 +55,7 @@ Example #1 sqlsrv_num_rows() example
        echo $row_count;
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |sqlsrv_has_rows| - Indicates whether the specified statement has rows

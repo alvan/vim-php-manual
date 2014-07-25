@@ -4,7 +4,7 @@ imagecopyresampled
 
 imagecopyresampled — Copy and resize part of an image with resampling
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool imagecopyresampled ( resource $dst_image , resource $src_image , int~
@@ -12,8 +12,8 @@ imagecopyresampled — Copy and resize part of an image with resampling
     int $src_w , int $src_h )~
 
 imagecopyresampled() copies a rectangular portion of one image to another
-image, smoothly interpolating pixel values so that, in particular, reducing the
-size of an image still retains a great deal of clarity.
+image, smoothly interpolating pixel values so that, in particular, reducing
+the size of an image still retains a great deal of clarity.
 
 In other words, imagecopyresampled() will take a rectangular area from
 {src_image} of width {src_w} and height {src_h} at position ({src_x},{src_y})
@@ -26,7 +26,7 @@ The coordinates refer to the upper left corner. This function can be used to
 copy regions within the same image (if {dst_image} is the same as {src_image})
 but if the regions overlap the results will be unpredictable.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {dst_image}
@@ -69,12 +69,12 @@ but if the regions overlap the results will be unpredictable.
 
     Source height.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Simple example
@@ -138,8 +138,8 @@ pixels.
     // Resample
     $image_p = imagecreatetruecolor($width, $height);
     $image = imagecreatefromjpeg($filename);
-    imagecopyresampled($image_p, $image, 0, 0, 0, 0, $width, $height, $width_orig, 
-    $height_orig);
+    imagecopyresampled($image_p, $image, 0, 0, 0, 0, $width, $height, $width_orig
+    , $height_orig);
 
     // Output
     imagejpeg($image_p, null, 100);
@@ -149,7 +149,7 @@ The above example will output something similar to:
 
 Output of example : Resampling an image proportionally
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -157,13 +157,14 @@ Output of example : Resampling an image proportionally
     There is a problem due to palette image limitations (255+1 colors).
     Resampling or filtering an image commonly needs more colors than 255, a
     kind of approximation is used to calculate the new resampled pixel and its
-    color. With a palette image we try to allocate a new color, if that failed,
-    we choose the closest (in theory) computed color. This is not always the
-    closest visual color. That may produce a weird result, like blank (or
-    visually blank) images. To skip this problem, please use a truecolor image
-    as a destination image, such as one created by |imagecreatetruecolor|.
+    color. With a palette image we try to allocate a new color, if that
+    failed, we choose the closest (in theory) computed color. This is not
+    always the closest visual color. That may produce a weird result, like
+    blank (or visually blank) images. To skip this problem, please use a
+    truecolor image as a destination image, such as one created by |
+    imagecreatetruecolor|.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
 |imagecopyresized| - Copy and resize part of an image

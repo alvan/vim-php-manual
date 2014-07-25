@@ -4,14 +4,14 @@ floatval
 
 floatval — Get float value of a variable
 
-===============================================================================
+==============================================================================
 *Description*
 
     float floatval ( mixed $var )~
 
 Gets the float value of {var}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {var}
@@ -19,7 +19,7 @@ Gets the float value of {var}.
     May be any scalar type. floatval() should not be used on objects, as doing
     so will emit an E_NOTICE level error and return 1.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The float value of the given variable. Empty arrays return 0, non-empty arrays
@@ -28,7 +28,7 @@ return 1.
 Strings will most likely return 0 although this depends on the leftmost
 characters of the string. The common rules of float casting apply.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 floatval() Example
@@ -47,7 +47,7 @@ Example #2 floatval() non-numeric leftmost characters Example
     echo $float_value_of_var; // 0
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |boolval| - Get the boolean value of a variable

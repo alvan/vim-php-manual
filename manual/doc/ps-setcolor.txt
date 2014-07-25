@@ -4,7 +4,7 @@ ps_setcolor
 
 ps_setcolor — Sets current color
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool ps_setcolor ( resource $psdoc , string $type , string $colorspace ,~
@@ -12,7 +12,7 @@ ps_setcolor — Sets current color
 
 Sets the color for drawing, filling, or both.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {psdoc}
@@ -47,15 +47,16 @@ Sets the color for drawing, filling, or both.
 
 {c4}
 
-    This must only be set in cmyk colorspace and specifies the black component.
+    This must only be set in cmyk colorspace and specifies the black
+    component.
 
-===============================================================================
+==============================================================================
 *Bugs*
 
 The second parameter is currently not always evaluated. The color is sometimes
 set for filling and drawing just as if fillstroke were passed.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.

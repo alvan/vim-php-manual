@@ -4,7 +4,7 @@ fann_get_activation_function
 
 fann_get_activation_function — Returns the activation function
 
-===============================================================================
+==============================================================================
 *Description*
 
     int fann_get_activation_function ( resource $ann , int $layer , int~
@@ -18,7 +18,7 @@ layer.
 
 The return value is one of the activation functions constants.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {ann}
@@ -33,17 +33,17 @@ The return value is one of the activation functions constants.
 
     Neuron number.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Learning functions constant or -1 if the neuron is not defined in the neural
 network, or FALSE on error.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
-  * |fann_set_activation_function_layer| - Sets the activation function for all
-    the neurons in the supplied layer.
+  * |fann_set_activation_function_layer| - Sets the activation function for
+    all the neurons in the supplied layer.
   * |fann_set_activation_function_hidden| - Sets the activation function for
     all of the hidden layers
   * |fann_set_activation_function_output| - Sets the activation function for

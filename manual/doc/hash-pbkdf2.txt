@@ -4,13 +4,13 @@ hash_pbkdf2
 
 hash_pbkdf2 — Generate a PBKDF2 key derivation of a supplied password
 
-===============================================================================
+==============================================================================
 *Description*
 
     string hash_pbkdf2 ( string $algo , string $password , string $salt , int~
     $iterations [, int $length = 0 [, bool $raw_output = false ]] )~
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {algo}
@@ -44,21 +44,21 @@ hash_pbkdf2 — Generate a PBKDF2 key derivation of a supplied password
 
     When set to TRUE, outputs raw binary data. FALSE outputs lowercase hexits.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a string containing the derived key as lowercase hexits unless
 {raw_output} is set to TRUE in which case the raw binary representation of the
 derived key is returned.
 
-===============================================================================
+==============================================================================
 *Errors/Exceptions*
 
 An E_WARNING will be raised if the algorithm is unknown, the {iterations}
-parameter is less than or equal to 0, the {length} is less than 0 or the {salt}
-is too long (greater than INT_MAX - 4).
+parameter is less than or equal to 0, the {length} is less than 0 or the
+{salt} is too long (greater than INT_MAX - 4).
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 hash_pbkdf2() example, basic usage
@@ -79,7 +79,7 @@ The above example will output something similar to:
 
 120fb6cffcf8b32c43e7
 
-===============================================================================
+==============================================================================
 *Notes*
 
 Caution
@@ -88,7 +88,7 @@ The PBKDF2 method can be used for hashing passwords for storage. However, it
 should be noted that |password_hash| or |crypt| with CRYPT_BLOWFISH are better
 suited for password storage.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |crypt| - One-way string hashing

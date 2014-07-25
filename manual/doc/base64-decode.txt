@@ -4,14 +4,14 @@ base64_decode
 
 base64_decode — Decodes data encoded with MIME base64
 
-===============================================================================
+==============================================================================
 *Description*
 
     string base64_decode ( string $data [, bool $strict = false ] )~
 
 Decodes a base64 encoded {data}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {data}
@@ -20,20 +20,22 @@ Decodes a base64 encoded {data}.
 
 {strict}
 
-    Returns FALSE if input contains character from outside the base64 alphabet.
+    Returns FALSE if input contains character from outside the base64
+    alphabet.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns the original data or FALSE on failure. The returned data may be binary.
+Returns the original data or FALSE on failure. The returned data may be
+binary.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version   Description
 5.2.0   {strict} added
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 base64_decode() example
@@ -47,7 +49,7 @@ The above example will output:
 
 This is an encoded string
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |base64_encode| - Encodes data with MIME base64

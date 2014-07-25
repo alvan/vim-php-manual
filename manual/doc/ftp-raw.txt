@@ -4,14 +4,14 @@ ftp_raw
 
 ftp_raw — Sends an arbitrary command to an FTP server
 
-===============================================================================
+==============================================================================
 *Description*
 
     array ftp_raw ( resource $ftp_stream , string $command )~
 
 Sends an arbitrary {command} to the FTP server.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {ftp_stream}
@@ -22,13 +22,13 @@ Sends an arbitrary {command} to the FTP server.
 
     The command to execute.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the server's response as an array of strings. No parsing is performed
 on the response string, nor does ftp_raw() determine if the command succeeded.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Using ftp_raw() to login to an FTP server manually.
@@ -42,7 +42,7 @@ Example #1 Using ftp_raw() to login to an FTP server manually.
     ftp_raw($fp, "PASS secret");
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ftp_exec| - Requests execution of a command on the FTP server

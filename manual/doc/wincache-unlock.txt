@@ -4,7 +4,7 @@ wincache_unlock
 
 wincache_unlock — Releases an exclusive lock on a given key
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool wincache_unlock ( string $key )~
@@ -21,19 +21,19 @@ these functions unless you are absolutely sure you need to use them. For the
 majority of the operations on the user cache it is not necessary to use these
 functions.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {key}
 
     Name of the key in the cache to release the lock on.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Using wincache_unlock()
@@ -50,7 +50,7 @@ Example #1 Using wincache_unlock()
     fclose($fp);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |wincache_lock| - Acquires an exclusive lock on a given key

@@ -4,7 +4,7 @@ eio_close
 
 eio_close — Close file
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource eio_close ( mixed $fd [, int $pri = EIO_PRI_DEFAULT [, callable~
@@ -12,7 +12,7 @@ eio_close — Close file
 
 eio_close() closes file specified by {fd}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {fd}
@@ -26,8 +26,8 @@ eio_close() closes file specified by {fd}.
 
 {callback}
 
-    {callback} function is called when the request is done. It should match the
-    following prototype:
+    {callback} function is called when the request is done. It should match
+    the following prototype:
     void callback(mixed $data, int $result[, resource $req]);
 
     {data}
@@ -48,12 +48,12 @@ eio_close() closes file specified by {fd}.
 
     Arbitrary variable passed to {callback}.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 eio_close() returns request resource on success or FALSE on error.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * eio_open

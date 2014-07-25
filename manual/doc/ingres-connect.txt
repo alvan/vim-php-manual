@@ -4,7 +4,7 @@ ingres_connect
 
 ingres_connect — Open a connection to an Ingres database
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource ingres_connect ([ string $database [, string $username [, string~
@@ -15,11 +15,12 @@ ingres_connect() opens a connection with the given Ingres {database}.
 The connection is closed when the script ends or when |ingres_close| is called
 on this link.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
-If some parameters are missing, ingres_connect() uses the values in php.ini for
-{ingres.default_database}, {ingres.default_user} and {ingres.default_password}.
+If some parameters are missing, ingres_connect() uses the values in php.ini
+for {ingres.default_database}, {ingres.default_user} and
+{ingres.default_password}.
 
 {database}
 
@@ -156,12 +157,12 @@ If some parameters are missing, ingres_connect() uses the values in php.ini for
                                   defaults to 4096 bytes when
                                   not explicitly set
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a Ingres link resource on success or FALSE on failure
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Open a connection to an Ingres database
@@ -173,7 +174,7 @@ Example #1 Open a connection to an Ingres database
     ingres_close($link);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ingres_pconnect| - Open a persistent connection to an Ingres database

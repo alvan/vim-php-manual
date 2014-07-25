@@ -4,7 +4,7 @@ eio_ftruncate
 
 eio_ftruncate — Truncate a file
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource eio_ftruncate ( mixed $fd [, int $offset = 0 [, int $pri =~
@@ -13,7 +13,7 @@ eio_ftruncate — Truncate a file
 eio_ftruncate() causes a regular file referenced by {fd} file descriptor to be
 truncated to precisely {length} bytes.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {fd}
@@ -31,8 +31,8 @@ truncated to precisely {length} bytes.
 
 {callback}
 
-    {callback} function is called when the request is done. It should match the
-    following prototype:
+    {callback} function is called when the request is done. It should match
+    the following prototype:
     void callback(mixed $data, int $result[, resource $req]);
 
     {data}
@@ -53,12 +53,12 @@ truncated to precisely {length} bytes.
 
     Arbitrary variable passed to {callback}.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 eio_ftruncate() returns request resource on success or FALSE on error.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * eio_truncate

@@ -4,7 +4,7 @@ event_buffer_new
 
 event_buffer_new — Create new buffered event
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource event_buffer_new ( resource $stream , mixed $readcb , mixed~
@@ -14,7 +14,7 @@ Libevent provides an abstraction layer on top of the regular event API. Using
 buffered event you don't need to deal with the I/O manually, instead it
 provides input and output buffers that get filled and drained automatically.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {stream}
@@ -28,8 +28,8 @@ provides input and output buffers that get filled and drained automatically.
 
 {writecb}
 
-    Callback to invoke where the descriptor is ready for writing, or NULL if no
-    callback is desired.
+    Callback to invoke where the descriptor is ready for writing, or NULL if
+    no callback is desired.
 
 {errorcb}
 
@@ -40,7 +40,7 @@ provides input and output buffers that get filled and drained automatically.
 
     An argument that will be passed to each of the callbacks (optional).
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 event_buffer_new() returns new buffered event resource on success or FALSE on

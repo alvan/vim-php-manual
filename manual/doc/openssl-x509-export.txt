@@ -4,16 +4,16 @@ openssl_x509_export
 
 openssl_x509_export — Exports a certificate as a string
 
-===============================================================================
+==============================================================================
 *Description*
 
-    bool openssl_x509_export ( mixed $x509 , string &$output [, bool $notext =~
-    TRUE ] )~
+    bool openssl_x509_export ( mixed $x509 , string &$output [, bool $notext~
+    = TRUE ] )~
 
 openssl_x509_export() stores {x509} into a string named by {output} in a PEM
 encoded format.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {x509}
@@ -30,7 +30,7 @@ encoded format.
     is FALSE, then additional human-readable information is included in the
     output. The default value of {notext} is TRUE.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.

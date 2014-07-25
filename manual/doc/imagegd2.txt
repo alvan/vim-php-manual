@@ -4,7 +4,7 @@ imagegd2
 
 imagegd2 — Output GD2 image to browser or file
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool imagegd2 ( resource $image [, string $filename [, int $chunk_size [,~
@@ -12,18 +12,18 @@ imagegd2 — Output GD2 image to browser or file
 
 Outputs a GD2 image to the given {filename}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { image}
 
-    An image resource, returned by one of the image creation functions, such as
-    |imagecreatetruecolor|.
+    An image resource, returned by one of the image creation functions, such
+    as |imagecreatetruecolor|.
 
 {filename}
 
-    The path to save the file to. If not set or NULL, the raw image stream will
-    be outputted directly.
+    The path to save the file to. If not set or NULL, the raw image stream
+    will be outputted directly.
 
 {chunk_size}
 
@@ -33,12 +33,12 @@ Outputs a GD2 image to the given {filename}.
 
     Either IMG_GD2_RAW or IMG_GD2_COMPRESSED. Default is IMG_GD2_RAW.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Outputting a GD2 image
@@ -73,7 +73,7 @@ Example #2 Saving a GD2 image
     imagedestroy($im);
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: This function requires GD 2.0.1 or later (2.0.28 or later is
@@ -84,13 +84,13 @@ Example #2 Saving a GD2 image
     The GD2 format is commonly used to allow fast loading of parts of images.
     Note that the GD2 format is only usable in GD2-compatible applications.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version             Description
 4.3.2   {chunk_size} and {type} were added.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |imagegd| - Output GD image to browser or file

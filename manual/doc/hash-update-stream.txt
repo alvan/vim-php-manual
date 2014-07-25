@@ -5,13 +5,13 @@ hash_update_stream
 hash_update_stream — Pump data into an active hashing context from an open
 stream
 
-===============================================================================
+==============================================================================
 *Description*
 
     int hash_update_stream ( resource $context , resource $handle [, int~
     $length = -1 ] )~
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {context}
@@ -27,12 +27,12 @@ stream
     Maximum number of characters to copy from {handle} into the hashing
     context.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Actual number of bytes added to the hashing context from {handle}.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 hash_update_stream() example
@@ -51,7 +51,7 @@ The above example will output:
 
 5c6ffbdd40d9556b73a21e63c3e0e904
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |hash_init| - Initialize an incremental hashing context

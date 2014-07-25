@@ -4,7 +4,7 @@ radius_add_server
 
 radius_add_server — Adds a server
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool radius_add_server ( resource $radius_handle , string $hostname , int~
@@ -12,10 +12,11 @@ radius_add_server — Adds a server
 
 radius_add_server() may be called multiple times, and it may be used together
 with |radius_config|. At most 10 servers may be specified. When multiple
-servers are given, they are tried in round-robin fashion until a valid response
-is received, or until each server's {max_tries} limit has been reached.
+servers are given, they are tried in round-robin fashion until a valid
+response is received, or until each server's {max_tries} limit has been
+reached.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {radius_handle}
@@ -49,24 +50,25 @@ is received, or until each server's {max_tries} limit has been reached.
     The maximum number of repeated requests to make before giving up is passed
     into the {max_tries}.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 radius_add_server() example
 
 <?php >
-    if (!radius_add_server($res, 'radius.example.com', 1812, 'testing123', 3, 3)) {
+    if (!radius_add_server($res, 'radius.example.com', 1812, 'testing123', 3, 3)) 
+    {
         echo 'RadiusError:' . radius_strerror($res). "\n<br>";
         exit;
     }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |radius_config| - Causes the library to read the given configuration file

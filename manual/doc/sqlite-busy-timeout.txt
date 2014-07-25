@@ -4,10 +4,10 @@ SQLiteDatabase::busyTimeout
 
 (PHP 5 < 5.4.0, PECL sqlite >= 1.0.0)
 
-sqlite_busy_timeout -- SQLiteDatabase::busyTimeout — Set busy timeout duration,
-or disable busy handlers
+sqlite_busy_timeout -- SQLiteDatabase::busyTimeout — Set busy timeout
+duration, or disable busy handlers
 
-===============================================================================
+==============================================================================
 *Description*
 
     void sqlite_busy_timeout ( resource $dbhandle , int $milliseconds )~
@@ -19,14 +19,14 @@ Object oriented style (method):
 Set the maximum time, in milliseconds, that SQLite will wait for a {dbhandle}
 to become ready for use.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {dbhandle}
 
     The SQLite Database resource; returned from |sqlite_open| when used
-    procedurally. This parameter is not required when using the object-oriented
-    method.
+    procedurally. This parameter is not required when using the
+    object-oriented method.
 
 {milliseconds}
 
@@ -41,12 +41,12 @@ to become ready for use.
 
         There are one thousand (1000) milliseconds in one second.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 No value is returned.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Procedural style
@@ -65,11 +65,11 @@ Example #2 Object oriented style
     $dbhandle->busyTimeout(0); // disable
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
-  * |sqlite_open| - Opens an SQLite database and create the database if it does
-    not exist
+  * |sqlite_open| - Opens an SQLite database and create the database if it
+    does not exist
 
 
 vim:ft=help:

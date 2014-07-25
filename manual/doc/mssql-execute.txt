@@ -4,14 +4,14 @@ mssql_execute
 
 mssql_execute — Executes a stored procedure on a MS SQL server database
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed mssql_execute ( resource $stmt [, bool $skip_results = false ] )~
 
 Executes a stored procedure on a MS SQL server database
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {stmt}
@@ -22,7 +22,7 @@ Executes a stored procedure on a MS SQL server database
 
     Whenever to skip the results or not.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mssql_execute() example
@@ -33,8 +33,8 @@ Example #1 mssql_execute() example
 
     // Some data strings
     $title = 'Test of blogging system';
-    $content = 'If you can read this, then the new system is compatible with MSSQL'
-    ;
+    $content = 
+    'If you can read this, then the new system is compatible with MSSQL';
 
     // Bind values
     mssql_bind($stmt, '@author',    'Felipe Pena',  SQLVARCHAR,     false,  false
@@ -52,7 +52,7 @@ Example #1 mssql_execute() example
     mssql_free_statement($stmt);
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -63,7 +63,7 @@ Example #1 mssql_execute() example
     shift through the results. When the last result has been processed the
     output parameters and return values will be available.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mssql_bind| - Adds a parameter to a stored procedure or a remote stored

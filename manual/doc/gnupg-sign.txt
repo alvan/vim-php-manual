@@ -4,7 +4,7 @@ gnupg_sign
 
 gnupg_sign — Signs a given text
 
-===============================================================================
+==============================================================================
 *Description*
 
     string gnupg_sign ( resource $identifier , string $plaintext )~
@@ -13,7 +13,7 @@ Signs the given {plaintext} with the keys, which were set with |
 gnupg_addsignkey| before and returns the signed text or the signature,
 depending on what was set with |gnupg_setsignmode|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {identifier}
@@ -24,13 +24,13 @@ depending on what was set with |gnupg_setsignmode|.
 
     The plain text being signed.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-On success, this function returns the signed text or the signature. On failure,
-this function returns FALSE.
+On success, this function returns the signed text or the signature. On
+failure, this function returns FALSE.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Procedural gnupg_sign() example

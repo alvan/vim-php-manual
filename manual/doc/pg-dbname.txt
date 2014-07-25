@@ -4,7 +4,7 @@ pg_dbname
 
 pg_dbname — Get the database name
 
-===============================================================================
+==============================================================================
 *Description*
 
     string pg_dbname ([ resource $connection ] )~
@@ -12,7 +12,7 @@ pg_dbname — Get the database name
 pg_dbname() returns the name of the database that the given PostgreSQL
 {connection} resource.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
@@ -21,13 +21,13 @@ pg_dbname() returns the name of the database that the given PostgreSQL
     the default connection is used. The default connection is the last
     connection made by |pg_connect| or |pg_pconnect|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 A string containing the name of the database the {connection} is to, or FALSE
 on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 pg_dbname() example

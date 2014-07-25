@@ -4,7 +4,7 @@ ps_rect
 
 ps_rect — Draws a rectangle
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool ps_rect ( resource $psdoc , float $x , float $y , float $width ,~
@@ -13,10 +13,10 @@ ps_rect — Draws a rectangle
 Draws a rectangle with its lower left corner at ({x}, {y}). The rectangle
 starts and ends in its lower left corner. If this function is called outside a
 path it will start a new path. If it is called within a path it will add the
-rectangle as a subpath. If the last drawing operation does not end in the lower
-left corner then there will be a gap in the path.
+rectangle as a subpath. If the last drawing operation does not end in the
+lower left corner then there will be a gap in the path.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {psdoc}
@@ -39,12 +39,12 @@ left corner then there will be a gap in the path.
 
     The height of the image.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ps_arc| - Draws an arc counterclockwise

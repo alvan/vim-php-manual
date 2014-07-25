@@ -4,17 +4,17 @@ openssl_pkcs7_verify
 
 openssl_pkcs7_verify — Verifies the signature of an S/MIME signed message
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed openssl_pkcs7_verify ( string $filename , int $flags [, string~
     $outfilename [, array $cainfo [, string $extracerts [, string $content~
     ]]]] )~
 
-openssl_pkcs7_verify() reads the S/MIME message contained in the given file and
-examines the digital signature.
+openssl_pkcs7_verify() reads the S/MIME message contained in the given file
+and examines the digital signature.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {filename}
@@ -40,28 +40,28 @@ examines the digital signature.
 
 {extracerts}
 
-    If the {extracerts} is specified, it is the filename of a file containing a
-    bunch of certificates to use as untrusted CAs.
+    If the {extracerts} is specified, it is the filename of a file containing
+    a bunch of certificates to use as untrusted CAs.
 
 {content}
 
     You can specify a filename with {content} that will be filled with the
     verified data, but with the signature information stripped.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE if the signature is verified, FALSE if it is not correct (the
 message has been tampered with, or the signing certificate is invalid), or -1
 on error.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version            Description
 5.1.0   The {content} parameter was added.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: As specified in RFC 2045, lines may not be longer than 76 characters

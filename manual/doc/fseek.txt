@@ -4,7 +4,7 @@ fseek
 
 fseek — Seeks on a file pointer
 
-===============================================================================
+==============================================================================
 *Description*
 
     int fseek ( resource $handle , int $offset [, int $whence = SEEK_SET ] )~
@@ -19,7 +19,7 @@ position will yield bytes with value 0. However, certain streams may not
 support this behavior, especially when they have an underlying fixed size
 storage.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {handle}
@@ -40,12 +40,12 @@ storage.
       + SEEK_CUR - Set position to current location plus {offset}.
       + SEEK_END - Set position to end-of-file plus {offset}.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Upon success, returns 0; otherwise, returns -1.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 fseek() example
@@ -63,14 +63,14 @@ Example #1 fseek() example
 
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
 
-    If you have opened the file in append (a or a+) mode, any data you write to
-    the file will always be appended, regardless of the file position, and the
-    result of calling fseek() will be undefined.
+    If you have opened the file in append (a or a+) mode, any data you write
+    to the file will always be appended, regardless of the file position, and
+    the result of calling fseek() will be undefined.
 
     Note:
 
@@ -78,7 +78,7 @@ Example #1 fseek() example
     forward seeking from the current position is accomplished by reading and
     discarding data; other forms of seeking will fail.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ftell| - Returns the current position of the file read/write pointer

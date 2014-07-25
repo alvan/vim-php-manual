@@ -4,7 +4,7 @@ px_set_blob_file
 
 px_set_blob_file — Sets the file where blobs are read from
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool px_set_blob_file ( resource $pxdoc , string $filename )~
@@ -16,13 +16,13 @@ stored in the blob file. Blob data is stored in the record if it is small
 enough to fit in the size of the blob field.
 
 Calling |px_put_record|, |px_insert_record|, or |px_update_record| without
-calling px_set_blob_file() will result in truncated blob fields unless the data
-fits into the database file.
+calling px_set_blob_file() will result in truncated blob fields unless the
+data fits into the database file.
 
 Calling this function twice will close the first blob file and open the new
 one.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {pxdoc}
@@ -33,7 +33,7 @@ one.
 
     The name of the file. Its extension should be .MB.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.

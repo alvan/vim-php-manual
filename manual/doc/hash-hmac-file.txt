@@ -5,13 +5,13 @@ hash_hmac_file
 hash_hmac_file — Generate a keyed hash value using the HMAC method and the
 contents of a given file
 
-===============================================================================
+==============================================================================
 *Description*
 
     string hash_hmac_file ( string $algo , string $filename , string $key [,~
     bool $raw_output = false ] )~
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {algo}
@@ -32,14 +32,14 @@ contents of a given file
 
     When set to TRUE, outputs raw binary data. FALSE outputs lowercase hexits.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a string containing the calculated message digest as lowercase hexits
 unless {raw_output} is set to true in which case the raw binary representation
 of the message digest is returned.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 hash_hmac_file() example
@@ -56,7 +56,7 @@ The above example will output:
 
 7eb2b5c37443418fc77c136dd20e859c
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |hash_algos| - Return a list of registered hashing algorithms

@@ -4,7 +4,7 @@ pcntl_signal
 
 pcntl_signal — Installs a signal handler
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool pcntl_signal ( int $signo , callable|int $handler [, bool~
@@ -13,7 +13,7 @@ pcntl_signal — Installs a signal handler
 The pcntl_signal() function installs a new signal handler or replaces the
 current signal handler for the signal indicated by {signo}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {signo}
@@ -22,10 +22,10 @@ current signal handler for the signal indicated by {signo}.
 
 {handler}
 
-    The signal handler. This may be either a callable, which will be invoked to
-    handle the signal, or either of the two global constants SIG_IGN or SIG_DFL
-    , which will ignore the signal or restore the default signal handler
-    respectively.
+    The signal handler. This may be either a callable, which will be invoked
+    to handle the signal, or either of the two global constants SIG_IGN or
+    SIG_DFL, which will ignore the signal or restore the default signal
+    handler respectively.
 
     If a callable is given, it must implement the following signature:
 
@@ -46,15 +46,15 @@ current signal handler for the signal indicated by {signo}.
     Specifies whether system call restarting should be used when this signal
     arrives.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 4.3.0   The {restart_syscalls} parameter was added.
 4.3.0   The ability to use an object method as a callback became available.
         As of PHP 4.3.0 PCNTL uses ticks as the signal handle callback
@@ -64,7 +64,7 @@ Version                               Description
         callbacks are allowed to occur for the signal handler to function
         properly (as used in the example below).
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 pcntl_signal() example
@@ -113,12 +113,12 @@ Example #1 pcntl_signal() example
 
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
 pcntl_signal() doesn't stack the signal handlers, but replaces them.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |pcntl_fork| - Forks the currently running process

@@ -5,7 +5,7 @@ strspn
 strspn — Finds the length of the initial segment of a string consisting
 entirely of characters contained within a given mask.
 
-===============================================================================
+==============================================================================
 *Description*
 
     int strspn ( string $subject , string $mask [, int $start [, int $length~
@@ -14,9 +14,10 @@ entirely of characters contained within a given mask.
 Finds the length of the initial segment of {subject} that contains only
 characters from {mask}.
 
-If {start} and {length} are omitted, then all of {subject} will be examined. If
-they are included, then the effect will be the same as calling strspn(substr
-($subject, $start, $length), $mask) (see |substr| for more information).
+If {start} and {length} are omitted, then all of {subject} will be examined.
+If they are included, then the effect will be the same as calling strspn
+(substr($subject, $start, $length), $mask) (see |substr| for more
+information).
 
 The line of code:
 <?php >
@@ -25,7 +26,7 @@ The line of code:
 will assign 2 to $var, because the string "42" is the initial segment of
 {subject} that consists only of characters contained within "1234567890".
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {subject}
@@ -40,10 +41,10 @@ will assign 2 to $var, because the string "42" is the initial segment of
 
     The position in {subject} to start searching.
 
-    If {start} is given and is non-negative, then strspn() will begin examining
-    {subject} at the {start}'th position. For instance, in the string 'abcdef',
-    the character at position 0 is 'a', the character at position 2 is 'c', and
-    so forth.
+    If {start} is given and is non-negative, then strspn() will begin
+    examining {subject} at the {start}'th position. For instance, in the
+    string 'abcdef', the character at position 0 is 'a', the character at
+    position 2 is 'c', and so forth.
 
     If {start} is given and is negative, then strspn() will begin examining
     {subject} at the {start}'th position from the end of {subject}.
@@ -58,19 +59,19 @@ will assign 2 to $var, because the string "42" is the initial segment of
     If {length}is given and is negative, then {subject} will be examined from
     the starting position up to {length} characters from the end of {subject}.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the length of the initial segment of {subject} which consists entirely
 of characters in {mask}.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version                  Description
 4.3.0   The {start} and {length} parameters were added
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 strspn() example
@@ -92,12 +93,12 @@ int(0)
 int(2)
 int(1)
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: This function is binary-safe.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |strcspn| - Find length of initial segment not matching mask

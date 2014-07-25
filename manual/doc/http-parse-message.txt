@@ -4,14 +4,14 @@ http_parse_message
 
 http_parse_message — Parse HTTP messages
 
-===============================================================================
+==============================================================================
 *Description*
 
     object http_parse_message ( string $message )~
 
 Parses the HTTP {message} into a simple recursive object.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {message}
@@ -19,12 +19,12 @@ Parses the HTTP {message} into a simple recursive object.
     string containing a single HTTP message or several consecutive HTTP
     messages
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a hierarchical object structure of the parsed messages.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Using http_parse_message()
@@ -62,7 +62,7 @@ stdClass object
   )
 )
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |http_parse_headers| - Parse HTTP headers

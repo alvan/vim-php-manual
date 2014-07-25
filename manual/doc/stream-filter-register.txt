@@ -4,16 +4,16 @@ stream_filter_register
 
 stream_filter_register — Register a user defined stream filter
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool stream_filter_register ( string $filtername , string $classname )~
 
 stream_filter_register() allows you to implement your own filter on any
-registered stream used with all the other filesystem functions (such as |fopen|
-, |fread| etc.).
+registered stream used with all the other filesystem functions (such as |fopen
+|, |fread| etc.).
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {filtername}
@@ -26,11 +26,11 @@ registered stream used with all the other filesystem functions (such as |fopen|
     php_user_filter with a number of member functions. When performing read/
     write operations on the stream to which your filter is attached, PHP will
     pass the data through your filter (and any other filters attached to that
-    stream) so that the data may be modified as desired. You must implement the
-    methods exactly as described in php_user_filter - doing otherwise will lead
-    to undefined behaviour.
+    stream) so that the data may be modified as desired. You must implement
+    the methods exactly as described in php_user_filter - doing otherwise will
+    lead to undefined behaviour.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
@@ -38,7 +38,7 @@ Returns TRUE on success or FALSE on failure.
 stream_filter_register() will return FALSE if the {filtername} is already
 defined.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Filter for capitalizing characters on foo-bar.txt stream
@@ -155,7 +155,7 @@ LINE1
 WORD - 2
 EASY AS 123
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |stream_wrapper_register| - Register a URL wrapper implemented as a PHP

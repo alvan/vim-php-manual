@@ -4,7 +4,7 @@ stream_context_set_default
 
 stream_context_set_default — Set the default stream context
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource stream_context_set_default ( array $options )~
@@ -13,7 +13,7 @@ Set the default stream context which will be used whenever file operations (|
 fopen|, |file_get_contents|, etc...) are called without a context parameter.
 Uses the same syntax as |stream_context_create|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {options}
@@ -25,12 +25,12 @@ Uses the same syntax as |stream_context_create|.
         {options} must be an associative array of associative arrays in the
         format $arr['wrapper']['option'] = $value.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the default stream context.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 stream_context_set_default() example
@@ -53,13 +53,13 @@ Example #1 stream_context_set_default() example
     readfile('http://www.example.com');
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |stream_context_create| - Creates a stream context
   * |stream_context_get_default| - Retrieve the default stream context
-  * Listing of supported wrappers with context options (Supported Protocols and
-    Wrappers).
+  * Listing of supported wrappers with context options (Supported Protocols
+    and Wrappers).
 
 
 vim:ft=help:

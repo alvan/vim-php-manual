@@ -4,7 +4,7 @@ odbc_columns
 
 odbc_columns — Lists the column names in specified tables
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource odbc_columns ( resource $connection_id [, string $qualifier [,~
@@ -12,7 +12,7 @@ odbc_columns — Lists the column names in specified tables
 
 Lists all columns in the requested range.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection_id}
@@ -38,7 +38,7 @@ Lists all columns in the requested range.
 The {schema}, {table_name}, and {column_name} accept search patterns ('%' to
 match zero or more characters and '_' to match a single character).
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an ODBC result identifier or FALSE on failure.
@@ -60,7 +60,7 @@ The result set has the following columns:
 
 The result set is ordered by TABLE_QUALIFIER, TABLE_SCHEM and TABLE_NAME.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |odbc_columnprivileges| - Lists columns and associated privileges for the

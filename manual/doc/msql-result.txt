@@ -4,7 +4,7 @@ msql_result
 
 msql_result — Get result data
 
-===============================================================================
+==============================================================================
 *Description*
 
     string msql_result ( resource $result , int $row [, mixed $field ] )~
@@ -12,14 +12,14 @@ msql_result — Get result data
 msql_result() returns the contents of one cell from a mSQL result set.
 
 When working on large result sets, you should consider using one of the
-functions that fetch an entire row (specified below). As these functions return
-the contents of multiple cells in one function call, they are often much
-quicker than msql_result().
+functions that fetch an entire row (specified below). As these functions
+return the contents of multiple cells in one function call, they are often
+much quicker than msql_result().
 
-Recommended high-performance alternatives: |msql_fetch_row|, |msql_fetch_array|
-, and |msql_fetch_object|.
+Recommended high-performance alternatives: |msql_fetch_row|, |msql_fetch_array
+|, and |msql_fetch_object|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { result}
@@ -42,7 +42,7 @@ Recommended high-performance alternatives: |msql_fetch_row|, |msql_fetch_array|
         Specifying a numeric field offset is much quicker than specifying a
         fieldname or tablename.fieldname.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the contents of the cell at the row and offset in the specified mSQL

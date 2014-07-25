@@ -7,22 +7,22 @@ maxdb_stmt::bind_result
 maxdb_stmt_bind_result -- maxdb_stmt::bind_result — Binds variables to a
 prepared statement for result storage
 
-===============================================================================
+==============================================================================
 *Description*
 
 Procedural style
 
-    bool maxdb_stmt_bind_result ( resource $stmt , mixed &$var1 [, mixed &$...~
-    ] )~
+    bool maxdb_stmt_bind_result ( resource $stmt , mixed &$var1 [, mixed~
+    &$... ] )~
 
 Object oriented style
 
     bool maxdb_stmt::bind_result ( mixed &$var1 [, mixed &$... ] )~
 
 maxdb_stmt_bind_result() is used to associate (bind) columns in the result set
-to variables. When |maxdb_stmt_fetch| is called to fetch data, the MaxDB client
-/server protocol places the data for the bound columns into the specified
-variables {var1, ...}.
+to variables. When |maxdb_stmt_fetch| is called to fetch data, the MaxDB
+client/server protocol places the data for the bound columns into the
+specified variables {var1, ...}.
 
     Note:
 
@@ -34,12 +34,12 @@ variables {var1, ...}.
     been partially retrieved. The new binding takes effect the next time |
     maxdb_stmt_fetch| is called.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Object oriented style
@@ -53,8 +53,8 @@ Example #1 Object oriented style
     }
 
     /* prepare statement */
-    if ($stmt = $maxdb->prepare("SELECT zip, name FROM hotel.city ORDER BY name")) 
-    {
+    if ($stmt = $maxdb->prepare("SELECT zip, name FROM hotel.city ORDER BY name"))
+     {
        $stmt->execute();
 
        /* bind variables to prepared statement */
@@ -133,18 +133,18 @@ The above example will output something similar to:
 20019 Washington
 20037 Washington
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |maxdb_stmt_bind_param| - Binds variables to a prepared statement as
     parameters
   * |maxdb_stmt_execute| - Executes a prepared Query
-  * |maxdb_stmt_fetch| - Fetch results from a prepared statement into the bound
-    variables
+  * |maxdb_stmt_fetch| - Fetch results from a prepared statement into the
+    bound variables
   * |maxdb_prepare| - Prepare an SQL statement for execution
   * |maxdb_stmt_prepare| - Prepare an SQL statement for execution
-  * |maxdb_stmt_init| - Initializes a statement and returns an resource for use
-    with maxdb_stmt_prepare
+  * |maxdb_stmt_init| - Initializes a statement and returns an resource for
+    use with maxdb_stmt_prepare
   * |maxdb_stmt_errno| - Returns the error code for the most recent statement
     call
   * |maxdb_stmt_error| - Returns a string description for last statement error

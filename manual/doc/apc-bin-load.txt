@@ -4,14 +4,14 @@ apc_bin_load
 
 apc_bin_load — Load a binary dump into the APC file/user cache
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool apc_bin_load ( string $data [, int $flags = 0 ] )~
 
 Loads the given binary dump into the APC file/user cache.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {data}
@@ -22,14 +22,14 @@ Loads the given binary dump into the APC file/user cache.
 
     Either APC_BIN_VERIFY_CRC32, APC_BIN_VERIFY_MD5, or both.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns TRUE if the binary dump {data} was loaded with success, otherwise FALSE
-is returned. FALSE is returned if APC is not enabled, or if the {data} is not a
-valid APC binary dump (e.g., unexpected size).
+Returns TRUE if the binary dump {data} was loaded with success, otherwise
+FALSE is returned. FALSE is returned if APC is not enabled, or if the {data}
+is not a valid APC binary dump (e.g., unexpected size).
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 apc_bin_load() example
@@ -39,7 +39,7 @@ Example #1 apc_bin_load() example
     apc_bin_load($data, APC_BIN_VERIFY_MD5 | APC_BIN_VERIFY_CRC32);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |apc_bin_dump| - Get a binary dump of the given files and user variables

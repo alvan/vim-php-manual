@@ -4,7 +4,7 @@ cubrid_field_name
 
 cubrid_field_name — Return the name of the specified field index
 
-===============================================================================
+==============================================================================
 *Description*
 
     string cubrid_field_name ( resource $result , int $field_offset )~
@@ -12,7 +12,7 @@ cubrid_field_name — Return the name of the specified field index
 This function returns the name of the specified field index on success or it
 returns FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
@@ -24,14 +24,14 @@ returns FALSE on failure.
     The numerical field offset. The {field_offset} starts at 0. If
     {field_offset} does not exist, an error of level E_WARNING is also issued.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Name of specified field index, on success.
 
 FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_field_name() example

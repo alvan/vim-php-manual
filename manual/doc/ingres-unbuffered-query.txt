@@ -4,7 +4,7 @@ ingres_unbuffered_query
 
 ingres_unbuffered_query — Send an unbuffered SQL query to Ingres
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed ingres_unbuffered_query ( resource $link , string $query [, array~
@@ -17,8 +17,8 @@ transaction, ingres_unbuffered_query() opens a new transaction. To close the
 transaction, you can call either |ingres_commit| to commit the changes made to
 the database or |ingres_rollback| to cancel these changes. When the script
 ends, any open transaction is rolled back (by calling |ingres_rollback|). You
-can also use |ingres_autocommit| before opening a new transaction to have every
-SQL query immediately committed. Ingres allows only a single unbuffered
+can also use |ingres_autocommit| before opening a new transaction to have
+every SQL query immediately committed. Ingres allows only a single unbuffered
 statement to be active at any one time. The extension will close any active
 unbuffered statements before executing any SQL. In addition you cannot use |
 ingres_result_seek| to position the row before fetching.
@@ -28,7 +28,7 @@ ingres_result_seek| to position the row before fetching.
     See also the ingres.describe and ingres.utf8 directives in Runtime
     Configuration.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {link}
@@ -52,15 +52,15 @@ ingres_result_seek| to position the row before fetching.
     A string containing a sequence of types for the parameter values passed.
     See the types parameter in |ingres_query| for the list of type codes.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-ingres_unbuffered_query() returns a query result identifier when there are rows
-to fetch; else it returns FALSE when there are no rows, as is the case of an
-INSERT, UPDATE, or DELETE statement. To see if an error occurred, use |
+ingres_unbuffered_query() returns a query result identifier when there are
+rows to fetch; else it returns FALSE when there are no rows, as is the case of
+an INSERT, UPDATE, or DELETE statement. To see if an error occurred, use |
 ingres_errno|, |ingres_error|, or |ingres_errsqlstate|.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Issue a simple un-buffered select
@@ -115,7 +115,7 @@ Example #3 Inserting a BLOB with parameter types
     }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ingres_query| - Send an SQL query to Ingres

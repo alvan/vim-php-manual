@@ -4,26 +4,26 @@ is_link
 
 is_link — Tells whether the filename is a symbolic link
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool is_link ( string $filename )~
 
 Tells whether the given file is a symbolic link.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {filename}
 
     Path to the file.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE if the filename exists and is a symbolic link, FALSE otherwise.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Create and confirm if a file is a symbolic link
@@ -38,12 +38,12 @@ Example #1 Create and confirm if a file is a symbolic link
     }
 <?>
 
-===============================================================================
+==============================================================================
 *Errors/Exceptions*
 
 Upon failure, an E_WARNING is emitted.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: The results of this function are cached. See |clearstatcache| for
@@ -55,7 +55,7 @@ As of PHP 5.0.0, this function can also be used with some URL wrappers. Refer
 to Supported Protocols and Wrappers to determine which wrappers support |stat|
 family of functionality.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |is_dir| - Tells whether the filename is a directory

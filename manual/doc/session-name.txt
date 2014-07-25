@@ -4,7 +4,7 @@ session_name
 
 session_name — Get and/or set the current session name
 
-===============================================================================
+==============================================================================
 *Description*
 
     string session_name ([ string $name ] )~
@@ -16,28 +16,28 @@ The session name is reset to the default value stored in session.name at
 request startup time. Thus, you need to call session_name() for every request
 (and before |session_start| or |session_register| are called).
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {name}
 
     The session name references the name of the session, which is used in
     cookies and URLs (e.g. PHPSESSID). It should contain only alphanumeric
-    characters; it should be short and descriptive (i.e. for users with enabled
-    cookie warnings). If {name} is specified, the name of the current session
-    is changed to its value.
+    characters; it should be short and descriptive (i.e. for users with
+    enabled cookie warnings). If {name} is specified, the name of the current
+    session is changed to its value.
 
     Warning
 
     The session name can't consist of digits only, at least one letter must be
     present. Otherwise a new session id is generated every time.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the name of the current session.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 session_name() example
@@ -51,7 +51,7 @@ Example #1 session_name() example
     echo "The previous session name was $previous_name<br />";
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * The session.name configuration directive

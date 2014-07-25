@@ -4,7 +4,7 @@ imap_clearflag_full
 
 imap_clearflag_full — Clears flags on messages
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool imap_clearflag_full ( resource $imap_stream , string $sequence ,~
@@ -13,7 +13,7 @@ imap_clearflag_full — Clears flags on messages
 This function causes a store to delete the specified {flag} to the flags set
 for the messages in the specified {sequence}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { imap_stream}
@@ -23,7 +23,8 @@ for the messages in the specified {sequence}.
 {sequence}
 
     A sequence of message numbers. You can enumerate desired messages with the
-    X,Y syntax, or retrieve all messages within an interval with the X:Y syntax
+    X,Y syntax, or retrieve all messages within an interval with the X:Y
+    syntax
 
 {flag}
 
@@ -36,12 +37,12 @@ for the messages in the specified {sequence}.
       + ST_UID - The sequence argument contains UIDs instead of sequence
         numbers
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |imap_setflag_full| - Sets flags on messages

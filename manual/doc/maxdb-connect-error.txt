@@ -4,7 +4,7 @@ maxdb_connect_error
 
 maxdb_connect_error — Returns a string description of the last connect error
 
-===============================================================================
+==============================================================================
 *Description*
 
     string maxdb_connect_error ( void )~
@@ -12,15 +12,15 @@ maxdb_connect_error — Returns a string description of the last connect error
 The maxdb_connect_error() function is identical to the corresponding |
 maxdb_connect_errno| function in every way, except instead of returning an
 integer error code the maxdb_connect_error() function will return a string
-representation of the last error to occur for the last |maxdb_connect| call. If
-no error has occurred, this function will return an empty string.
+representation of the last error to occur for the last |maxdb_connect| call.
+If no error has occurred, this function will return an empty string.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 A string that describes the error. An empty string if no error occurred.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 maxdb_connect_error sample
@@ -39,14 +39,15 @@ The above example will output something similar to:
 PHP Warning:  maxdb_connect(): -4008 POS(1) Unknown user name/password combination <...>
 Can't connect to localhost. Error: POS(1) Unknown user name/password combination
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |maxdb_connect| - Open a new connection to the MaxDB server
   * |maxdb_connect_errno| - Returns the error code from last connect call
   * |maxdb_errno| - Returns the error code for the most recent function call
   * |maxdb_error| - Returns a string description of the last error
-  * |maxdb_sqlstate| - Returns the SQLSTATE error from previous MaxDB operation
+  * |maxdb_sqlstate| - Returns the SQLSTATE error from previous MaxDB
+    operation
 
 
 vim:ft=help:

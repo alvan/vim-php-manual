@@ -4,29 +4,29 @@ ldap_err2str
 
 ldap_err2str — Convert LDAP error number into string error message
 
-===============================================================================
+==============================================================================
 *Description*
 
     string ldap_err2str ( int $errno )~
 
 Returns the string error message explaining the error number {errno}. While
 LDAP errno numbers are standardized, different libraries return different or
-even localized textual error messages. Never check for a specific error message
-text, but always use an error number to check.
+even localized textual error messages. Never check for a specific error
+message text, but always use an error number to check.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {errno}
 
     The error number.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the error message, as a string.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Enumerating all LDAP error messages
@@ -37,7 +37,7 @@ Example #1 Enumerating all LDAP error messages
       }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ldap_errno| - Return the LDAP error number of the last LDAP command

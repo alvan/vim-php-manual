@@ -4,7 +4,7 @@ wincache_ucache_dec
 
 wincache_ucache_dec — Decrements the value associated with the key
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed wincache_ucache_dec ( string $key [, int $dec_by = 1 [, bool~
@@ -13,7 +13,7 @@ wincache_ucache_dec — Decrements the value associated with the key
 Decrements the value associated with the {key} by 1 or as specified by
 {dec_by}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {key}
@@ -25,19 +25,19 @@ Decrements the value associated with the {key} by 1 or as specified by
 
     The value by which the variable associated with the {key} will get
     decremented. If the argument is a floating point number it will be
-    truncated to nearest integer. The variable associated with the {key} should
-    be of type long, otherwise the function fails and returns FALSE.
+    truncated to nearest integer. The variable associated with the {key}
+    should be of type long, otherwise the function fails and returns FALSE.
 
 {success}
 
     Will be set to TRUE on success and FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the decremented value on success and FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Using wincache_ucache_dec()
@@ -53,7 +53,7 @@ The above example will output:
 int(2922)
 bool(true)
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |wincache_ucache_inc| - Increments the value associated with the key

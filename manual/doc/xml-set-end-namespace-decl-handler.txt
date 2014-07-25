@@ -4,7 +4,7 @@ xml_set_end_namespace_decl_handler
 
 xml_set_end_namespace_decl_handler — Set up end namespace declaration handler
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool xml_set_end_namespace_decl_handler ( resource $parser , callable~
@@ -14,7 +14,7 @@ Set a handler to be called when leaving the scope of a namespace declaration.
 This will be called, for each namespace declaration, after the handler for the
 end tag of the element in which the namespace was declared.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {parser}
@@ -47,23 +47,23 @@ end tag of the element in which the namespace was declared.
         Note: Instead of a function name, an array containing an object
         reference and a method name can also be supplied.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
 
     This event is not supported under LibXML.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
-  * |xml_set_start_namespace_decl_handler| - Set up start namespace declaration
-    handler
+  * |xml_set_start_namespace_decl_handler| - Set up start namespace
+    declaration handler
 
 
 vim:ft=help:

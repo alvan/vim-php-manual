@@ -4,7 +4,7 @@ recode_file
 
 recode_file — Recode from file to file according to recode request
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool recode_file ( string $request , resource $input , resource $output )~
@@ -12,7 +12,7 @@ recode_file — Recode from file to file according to recode request
 Recode the file referenced by file handle {input} into the file referenced by
 file handle {output} according to the recode {request}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {request}
@@ -27,12 +27,12 @@ file handle {output} according to the recode {request}.
 
     A local file handle resource for the {output}
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns FALSE, if unable to comply, TRUE otherwise.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Basic recode_file() example
@@ -43,13 +43,13 @@ Example #1 Basic recode_file() example
     recode_file("us..flat", $input, $output);
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
 This function does not currently process file handles referencing remote files
 (URLs). Both file handles must refer to local files.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |fopen| - Opens file or URL

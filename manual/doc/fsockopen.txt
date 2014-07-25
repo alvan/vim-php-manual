@@ -4,7 +4,7 @@ fsockopen
 
 fsockopen — Open Internet or Unix domain socket connection
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource fsockopen ( string $hostname [, int $port = -1 [, int &$errno [,~
@@ -24,7 +24,7 @@ The function |stream_socket_client| is similar but provides a richer set of
 options, including non-blocking connection and the ability to provide a stream
 context.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {hostname}
@@ -44,8 +44,8 @@ context.
     system-level connect() call.
 
     If the value returned in {errno} is 0 and the function returned FALSE, it
-    is an indication that the error occurred before the connect() call. This is
-    most likely due to a problem initializing the socket.
+    is an indication that the error occurred before the connect() call. This
+    is most likely due to a problem initializing the socket.
 
 {errstr}
 
@@ -61,26 +61,26 @@ context.
         use |stream_set_timeout|, as the {timeout} parameter to fsockopen()
         only applies while connecting the socket.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 fsockopen() returns a file pointer which may be used together with the other
 file functions (such as |fgets|, |fgetss|, |fwrite|, |fclose|, and |feof|). If
 the call fails, it will return FALSE
 
-===============================================================================
+==============================================================================
 *Errors/Exceptions*
 
 Throws E_WARNING if {hostname} is not a valid domain.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version                     Description
 4.3.0   Added support for the {timeout} parameter on win32.
 4.3.0   SSL and TLS over TCP/IP support was added.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 fsockopen() Example
@@ -117,7 +117,7 @@ The example below shows how to retrieve the day and time from the UDP service
     }
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -137,7 +137,7 @@ data.
     Note: When specifying a numerical IPv6 address (e.g. fe80::1), you must
     enclose the IP in square brackets—for example, tcp://[fe80::1]:80.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |pfsockopen| - Open persistent Internet or Unix domain socket connection

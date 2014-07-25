@@ -4,7 +4,7 @@ ps_setpolydash
 
 ps_setpolydash — Sets appearance of a dashed line
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool ps_setpolydash ( resource $psdoc , float $arr )~
@@ -12,7 +12,7 @@ ps_setpolydash — Sets appearance of a dashed line
 Sets the length of the black and white portions of a dashed line. 
 ps_setpolydash() is used to set more complicated dash patterns.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {psdoc}
@@ -24,12 +24,12 @@ ps_setpolydash() is used to set more complicated dash patterns.
     {arr} is a list of length elements alternately for the black and white
     portion.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Drawing a dashed line
@@ -58,7 +58,7 @@ Example #1 Drawing a dashed line
 This example draws a line with a 10 and 2 points long line, and gaps of 5
 points inbetween.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ps_setdash| - Sets appearance of a dashed line

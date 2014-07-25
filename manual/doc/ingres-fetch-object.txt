@@ -4,7 +4,7 @@ ingres_fetch_object
 
 ingres_fetch_object — Fetch a row of result into an object
 
-===============================================================================
+==============================================================================
 *Description*
 
     object ingres_fetch_object ( resource $result [, int $result_type ] )~
@@ -19,10 +19,10 @@ almost as quick as |ingres_fetch_row| (the difference is insignificant).
 
     Note: Related Configurations
 
-    See also the ingres.fetch_buffer_size and ingres.utf8 directives in Runtime
-    Configuration.
+    See also the ingres.fetch_buffer_size and ingres.utf8 directives in
+    Runtime Configuration.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {link}
@@ -31,16 +31,16 @@ almost as quick as |ingres_fetch_row| (the difference is insignificant).
 
 {result_type}
 
-    (Optional argument.) {result_type} is a constant and can take the following
-    values: INGRES_ASSOC, INGRES_NUM, and INGRES_BOTH.
+    (Optional argument.) {result_type} is a constant and can take the
+    following values: INGRES_ASSOC, INGRES_NUM, and INGRES_BOTH.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns an object that corresponds to the fetched row, or FALSE if there are no
-more rows
+Returns an object that corresponds to the fetched row, or FALSE if there are
+no more rows
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Fetch a row into an object
@@ -54,7 +54,7 @@ Example #1 Fetch a row into an object
     }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ingres_query| - Send an SQL query to Ingres

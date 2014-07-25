@@ -4,7 +4,7 @@ eio_readdir
 
 eio_readdir — Reads through a whole directory
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource eio_readdir ( string $path , int $flags , int $pri , callable~
@@ -14,7 +14,7 @@ Reads through a whole directory(via the opendir, readdir and closedir system
 calls) and returns either the names or an array in {result} argument of
 {callback} function, depending on the {flags} argument.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {path}
@@ -32,8 +32,8 @@ calls) and returns either the names or an array in {result} argument of
 
 {callback}
 
-    {callback} function is called when the request is done. It should match the
-    following prototype:
+    {callback} function is called when the request is done. It should match
+    the following prototype:
     void callback(mixed $data, int $result[, resource $req]);
 
     {data}
@@ -54,7 +54,7 @@ calls) and returns either the names or an array in {result} argument of
 
     Arbitrary variable passed to {callback}.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 eio_readdir() returns request resource on success, or FALSE on error. Sets
@@ -63,9 +63,10 @@ eio_readdir() returns request resource on success, or FALSE on error. Sets
 EIO_READDIR_DENTS (integer)
     eio_readdir() flag. If specified, the result argument of the callback
     becomes an array with the following keys: 'names' - array of directory
-    names 'dents' - array of struct eio_dirent-like arrays having the following
-    keys each: 'name' - the directory name; 'type' - one of EIO_DT_* constants;
-    'inode' - the inode number, if available, otherwise unspecified;
+    names 'dents' - array of struct eio_dirent-like arrays having the
+    following keys each: 'name' - the directory name; 'type' - one of EIO_DT_*
+    constants; 'inode' - the inode number, if available, otherwise
+    unspecified;
 EIO_READDIR_DIRS_FIRST (integer)
     When this flag is specified, the names will be returned in an order where
     likely directories come first, in optimal stat order.
@@ -109,7 +110,7 @@ EIO_DT_WHT (integer)
 EIO_DT_MAX (integer)
     Highest node type value
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 eio_readdir() example
@@ -123,7 +124,8 @@ Example #1 eio_readdir() example
         echo "\n";
     }
 
-    eio_readdir("/var/spool/news", EIO_READDIR_STAT_ORDER | EIO_READDIR_DIRS_FIRST,
+    eio_readdir("/var/spool/news", EIO_READDIR_STAT_ORDER | EIO_READDIR_DIRS_FIRST
+    ,
       EIO_PRI_DEFAULT, "my_readdir_callback");
     eio_event_loop();
 <?>

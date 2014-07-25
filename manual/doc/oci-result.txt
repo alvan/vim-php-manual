@@ -4,7 +4,7 @@ oci_result
 
 oci_result — Returns field's value from the fetched row
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed oci_result ( resource $statement , mixed $field )~
@@ -14,7 +14,7 @@ Returns the data from {field} in the current row, fetched by |oci_fetch|.
 For details on the data type mapping performed by the OCI8 extension, see the
 datatypes supported by the driver
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {statement}
@@ -25,13 +25,13 @@ datatypes supported by the driver
     of the column name must be the case that Oracle meta data describes the
     column as, which is uppercase for columns created case insensitively.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns everything as strings except for abstract types (ROWIDs, LOBs and
 FILEs). Returns FALSE on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 |oci_fetch| with oci_result()
@@ -62,7 +62,7 @@ Example #1 |oci_fetch| with oci_result()
 
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -71,7 +71,7 @@ Example #1 |oci_fetch| with oci_result()
     still can be used, it was left as alias of oci_result() for downwards
     compatability. This, however, is deprecated and not recommended.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |oci_fetch_array| - Returns the next row from a query as an associative or
@@ -80,8 +80,8 @@ Example #1 |oci_fetch| with oci_result()
     array
   * |oci_fetch_object| - Returns the next row from a query as an object
   * |oci_fetch_row| - Returns the next row from a query as a numeric array
-  * |oci_fetch_all| - Fetches multiple rows from a query into a two-dimensional
-    array
+  * |oci_fetch_all| - Fetches multiple rows from a query into a
+    two-dimensional array
 
 
 vim:ft=help:

@@ -8,13 +8,13 @@ Warning
 
 This extension is deprecated as of PHP 5.5.0, and will be removed in the
 future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
-MySQL: choosing an API guide and related FAQ for more information. Alternatives
-to this function include:
+MySQL: choosing an API guide and related FAQ for more information.
+Alternatives to this function include:
 
   * |mysqli_connect|
   * PDO::__construct()
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource mysql_connect ([ string $server =~
@@ -25,7 +25,7 @@ to this function include:
 
 Opens or reuses a connection to a MySQL server.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {server}
@@ -50,10 +50,10 @@ Opens or reuses a connection to a MySQL server.
 
 {new_link}
 
-    If a second call is made to mysql_connect() with the same arguments, no new
-    link will be established, but instead, the link identifier of the already
-    opened link will be returned. The {new_link} parameter modifies this
-    behavior and makes mysql_connect() always open a new link, even if 
+    If a second call is made to mysql_connect() with the same arguments, no
+    new link will be established, but instead, the link identifier of the
+    already opened link will be returned. The {new_link} parameter modifies
+    this behavior and makes mysql_connect() always open a new link, even if 
     mysql_connect() was called before with the same parameters. In SQL safe
     mode, this parameter is ignored.
 
@@ -62,15 +62,15 @@ Opens or reuses a connection to a MySQL server.
     The {client_flags} parameter can be a combination of the following
     constants: 128 (enable LOAD DATA LOCAL handling), MYSQL_CLIENT_SSL,
     MYSQL_CLIENT_COMPRESS, MYSQL_CLIENT_IGNORE_SPACE or
-    MYSQL_CLIENT_INTERACTIVE. Read the section about MySQL client constants for
-    further information. In SQL safe mode, this parameter is ignored.
+    MYSQL_CLIENT_INTERACTIVE. Read the section about MySQL client constants
+    for further information. In SQL safe mode, this parameter is ignored.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a MySQL link identifier on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version                    Description
@@ -78,7 +78,7 @@ Version                    Description
 4.3.0   Added the {client_flags} parameter.
 4.2.0   Added the {new_link} parameter.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mysql_connect() example
@@ -136,23 +136,23 @@ Example #3 mysql_connect() example using ":/path/to/socket" syntax
     mysql_close($link);
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
 
     Whenever you specify "localhost" or "localhost:port" as server, the MySQL
     client library will override this and try to connect to a local socket
-    (named pipe on Windows). If you want to use TCP/IP, use "127.0.0.1" instead
-    of "localhost". If the MySQL client library tries to connect to the wrong
-    local socket, you should set the correct path as  in your PHP configuration
-    and leave the server field blank.
+    (named pipe on Windows). If you want to use TCP/IP, use "127.0.0.1"
+    instead of "localhost". If the MySQL client library tries to connect to
+    the wrong local socket, you should set the correct path as  in your PHP
+    configuration and leave the server field blank.
 
     Note:
 
     The link to the server will be closed as soon as the execution of the
-    script ends, unless it's closed earlier by explicitly calling |mysql_close|
-    .
+    script ends, unless it's closed earlier by explicitly calling |mysql_close
+    |.
 
     Note:
 
@@ -166,7 +166,7 @@ Example #3 mysql_connect() example using ":/path/to/socket" syntax
     Windows, if the environment is not copied the SYSTEMROOT environment
     variable won't be available and PHP will have problems loading Winsock.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mysql_pconnect| - Open a persistent connection to a MySQL server

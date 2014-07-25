@@ -4,10 +4,10 @@ SQLiteDatabase::fetchColumnTypes
 
 (PHP 5 < 5.4.0)
 
-sqlite_fetch_column_types -- SQLiteDatabase::fetchColumnTypes — Return an array
-of column types from a particular table
+sqlite_fetch_column_types -- SQLiteDatabase::fetchColumnTypes — Return an
+array of column types from a particular table
 
-===============================================================================
+==============================================================================
 *Description*
 
     array sqlite_fetch_column_types ( string $table_name , resource $dbhandle~
@@ -21,7 +21,7 @@ Object oriented style (method):
 sqlite_fetch_column_types() returns an array of column data types from the
 specified {table_name} table.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {table_name}
@@ -31,8 +31,8 @@ specified {table_name} table.
 {dbhandle}
 
     The SQLite Database resource; returned from |sqlite_open| when used
-    procedurally. This parameter is not required when using the object-oriented
-    method.
+    procedurally. This parameter is not required when using the
+    object-oriented method.
 
 {result_type}
 
@@ -42,7 +42,7 @@ specified {table_name} table.
     numerical indices (ordinal field numbers). SQLITE_ASSOC is the default for
     this function.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an array of column data types; FALSE on error.
@@ -50,13 +50,13 @@ Returns an array of column data types; FALSE on error.
 The column names returned by SQLITE_ASSOC and SQLITE_BOTH will be case-folded
 according to the value of the sqlite.assoc_case configuration option.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version     Description
 5.1.0   Added {result_type}
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Procedural example

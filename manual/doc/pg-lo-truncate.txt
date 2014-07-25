@@ -4,7 +4,7 @@ pg_lo_truncate
 
 pg_lo_truncate — Truncates a large object
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool pg_lo_truncate ( resource $large_object , int $size )~
@@ -14,7 +14,7 @@ pg_lo_truncate() truncates a large object resource.
 To use the large object interface, it is necessary to enclose it within a
 transaction block.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {large_object}
@@ -25,12 +25,12 @@ transaction block.
 
     The number of bytes to truncate.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 pg_lo_truncate() example
@@ -46,15 +46,15 @@ Example #1 pg_lo_truncate() example
        echo $data;
 <?>
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
         Added truncate function. It supports PostgreSQL 9.3's 64bit large
-5.6.0   object. Both client and server must support PostgreSQL 9.3 and PHP must
-        be 64bit build to use 64bit large object.
+5.6.0   object. Both client and server must support PostgreSQL 9.3 and PHP
+        must be 64bit build to use 64bit large object.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |pg_lo_tell| - Returns current seek position a of large object

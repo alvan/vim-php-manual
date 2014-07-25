@@ -4,7 +4,7 @@ pg_field_num
 
 pg_field_num — Returns the field number of the named field
 
-===============================================================================
+==============================================================================
 *Description*
 
     int pg_field_num ( resource $result , string $field_name )~
@@ -16,24 +16,24 @@ the {field_name} in the given PostgreSQL {result} resource.
 
     This function used to be called pg_fieldnum().
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
 
-    PostgreSQL query result resource, returned by |pg_query|, |pg_query_params|
-    or |pg_execute| (among others).
+    PostgreSQL query result resource, returned by |pg_query|, |pg_query_params
+    | or |pg_execute| (among others).
 
 {field_name}
 
     The name of the field.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The field number (numbered from 0), or -1 on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Getting information about fields
@@ -51,7 +51,7 @@ The above example will output:
 
 Column 'title' is field number: 2
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |pg_field_name| - Returns the name of a field

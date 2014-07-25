@@ -4,7 +4,7 @@ apache_note
 
 apache_note — Get and set apache request notes
 
-===============================================================================
+==============================================================================
 *Description*
 
     string apache_note ( string $note_name [, string $note_value =~
@@ -17,7 +17,7 @@ Apache modules to communicate.
 The main use for apache_note() is to pass information from one module to
 another within the same request.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {note_name}
@@ -28,15 +28,15 @@ another within the same request.
 
     The value of the note.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-If called with one argument, it returns the current value of note note_name. If
-called with two arguments, it sets the value of note note_name to note_value
-and returns the previous value of note note_name. If the note cannot be
-retrieved, FALSE is returned.
+If called with one argument, it returns the current value of note note_name.
+If called with two arguments, it sets the value of note note_name to
+note_value and returns the previous value of note note_name. If the note
+cannot be retrieved, FALSE is returned.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Passing information between PHP and Perl
@@ -72,7 +72,7 @@ Example #2 Logging values in access.log
 
 # "%{sessionID}n" can be used in the LogFormat directive
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |virtual| - Perform an Apache sub-request

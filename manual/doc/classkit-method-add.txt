@@ -4,18 +4,18 @@ classkit_method_add
 
 classkit_method_add — Dynamically adds a new method to a given class
 
-===============================================================================
+==============================================================================
 *Description*
 
-    bool classkit_method_add ( string $classname , string $methodname , string~
-    $args , string $code [, int $flags = CLASSKIT_ACC_PUBLIC ] )~
+    bool classkit_method_add ( string $classname , string $methodname ,~
+    string $args , string $code [, int $flags = CLASSKIT_ACC_PUBLIC ] )~
 Warning
 
 This function is EXPERIMENTAL. The behaviour of this function, its name, and
-surrounding documentation may change without notice in a future release of PHP.
-This function should be used at your own risk.
+surrounding documentation may change without notice in a future release of
+PHP. This function should be used at your own risk.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {classname}
@@ -44,12 +44,12 @@ This function should be used at your own risk.
         This parameter is only used as of PHP 5, because, prior to this, all
         methods were public.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 classkit_method_add() example
@@ -81,14 +81,15 @@ The above example will output:
 
 16
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |classkit_method_copy| - Copies a method from class to another
   * |classkit_method_redefine| - Dynamically changes the code of the given
     method
   * |classkit_method_remove| - Dynamically removes the given method
-  * |classkit_method_rename| - Dynamically changes the name of the given method
+  * |classkit_method_rename| - Dynamically changes the name of the given
+    method
   * |create_function| - Create an anonymous (lambda-style) function
 
 

@@ -7,7 +7,7 @@ maxdb_stmt::data_seek
 maxdb_stmt_data_seek -- maxdb_stmt::data_seek — Seeks to an arbitray row in
 statement result set
 
-===============================================================================
+==============================================================================
 *Description*
 
 Procedural style
@@ -23,12 +23,12 @@ specified by the {offset} in the statement result set represented by
 {statement}. The {offset} parameter must be between zero and the total number
 of rows minus one (0..|maxdb_stmt_num_rows| - 1).
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Object oriented style
@@ -115,7 +115,7 @@ The above example will output something similar to:
 
 City: Dallas  Zip: 75243
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |maxdb_prepare| - Prepare an SQL statement for execution

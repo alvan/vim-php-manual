@@ -4,7 +4,7 @@ cubrid_pconnect_with_url
 
 cubrid_pconnect_with_url — Open a persistent connection to CUBRID server
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource cubrid_pconnect_with_url ( string $conn_url [, string $userid [,~
@@ -16,8 +16,8 @@ cubrid_pconnect_with_url() acts very much like |cubrid_connect_with_url| with
 two major differences.
 
 First, when connecting, the function would first try to find a (persistent)
-link that's already open with the same host, port, dbname and userid. If one is
-found, an identifier for it will be returned instead of opening a new
+link that's already open with the same host, port, dbname and userid. If one
+is found, an identifier for it will be returned instead of opening a new
 connection.
 
 Second, the connection to the SQL server will not be closed when the execution
@@ -39,8 +39,8 @@ This type of link is therefore called 'persistent'.
 
 <properties> ::= disconnect_on_query_timeout=true|false
 
-<alternative_hosts> ::= <standby_broker1_host>:<port> [,<standby_broker2_host>:
-<port>]
+<alternative_hosts> ::= <standby_broker1_host>:<port> [,
+<standby_broker2_host>:<port>]
 
 <host> := HOSTNAME | IP_ADDR
 
@@ -59,10 +59,10 @@ This type of link is therefore called 'persistent'.
   * rctime : An interval between the attempts to connect to the active broker
     in which failure occurred. After a failure occurs, the system connects to
     the broker specified by althosts (failover), terminates the transaction,
-    and then attempts to connect to the active broker of the master database at
-    every rctime. The default value is 600 seconds.
-  * login_timeout : Timeout value (unit: msec.) for database login. The default
-    value is 0, which means infinite postponement.
+    and then attempts to connect to the active broker of the master database
+    at every rctime. The default value is 600 seconds.
+  * login_timeout : Timeout value (unit: msec.) for database login. The
+    default value is 0, which means infinite postponement.
   * query_timeout : Timeout value (unit: msec.) for query request. Upon
     timeout, a message to cancel requesting a query transferred to server is
     sent. The return value can depend on the disconnect_on_query_timeout
@@ -75,8 +75,8 @@ This type of link is therefore called 'persistent'.
     Note:
 
     ? and : that are used as identifiers in PHP connection URL can't be
-    included in the password. The following is an example of a password that is
-    invalid to use as connection URL because it contains "?:".
+    included in the password. The following is an example of a password that
+    is invalid to use as connection URL because it contains "?:".
 
     $url = "CUBRID:localhost:33000:tdb:dba:12?:?login_timeout=100";
 
@@ -91,7 +91,7 @@ This type of link is therefore called 'persistent'.
 
     $url = "CUBRID:localhost:33000:demodb:::";
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {conn_url}
@@ -106,14 +106,14 @@ This type of link is therefore called 'persistent'.
 
     User password.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Connection identifier, when process is successful.
 
 FALSE, when process is unsuccessful.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_pconnect_with_url() url without properties example
@@ -158,7 +158,7 @@ Example #2 cubrid_pconnect_with_url() url with properties example
     }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |cubrid_connect| - Open a connection to a CUBRID Server

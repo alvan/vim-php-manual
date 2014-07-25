@@ -4,7 +4,7 @@ gzcompress
 
 gzcompress — Compress a string
 
-===============================================================================
+==============================================================================
 *Description*
 
     string gzcompress ( string $data [, int $level = -1 [, int $encoding =~
@@ -20,7 +20,7 @@ Compressed Data Format Specification version 3.3" (RFC 1950).
     This is not the same as gzip compression, which includes some header data.
     See |gzencode| for gzip compression.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {data}
@@ -32,19 +32,19 @@ Compressed Data Format Specification version 3.3" (RFC 1950).
     The level of compression. Can be given as 0 for no compression up to 9 for
     maximum compression.
 
-    If -1 is used, the default compression of the zlib library is used which is
-    6.
+    If -1 is used, the default compression of the zlib library is used which
+    is 6.
 
 {encoding}
 
     One of ZLIB_ENCODING_* constants.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The compressed string or FALSE if an error occurred.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 gzcompress() example
@@ -54,13 +54,13 @@ Example #1 gzcompress() example
     echo $compressed;
 <?>
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version         Description
 5.4.0   Added {encoding} parameter.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |gzdeflate| - Deflate a string

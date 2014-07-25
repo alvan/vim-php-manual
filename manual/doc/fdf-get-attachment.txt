@@ -4,16 +4,16 @@ fdf_get_attachment
 
 fdf_get_attachment — Extracts uploaded file embedded in the FDF
 
-===============================================================================
+==============================================================================
 *Description*
 
     array fdf_get_attachment ( resource $fdf_document , string $fieldname ,~
     string $savepath )~
 
-Extracts a file uploaded by means of the "file selection" field {fieldname} and
-stores it under {savepath}.
+Extracts a file uploaded by means of the "file selection" field {fieldname}
+and stores it under {savepath}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {fdf_document}
@@ -31,11 +31,11 @@ stores it under {savepath}.
 
         Note:
 
-        There seems to be no other way to find out the original filename but to
-        store the file using a directory as {savepath} and check for the
+        There seems to be no other way to find out the original filename but
+        to store the file using a directory as {savepath} and check for the
         basename it was stored under.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The returned array contains the following fields:
@@ -44,7 +44,7 @@ The returned array contains the following fields:
   * {size} - size of the stored file in bytes
   * {type} - mimetype if given in the FDF
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Storing an uploaded file

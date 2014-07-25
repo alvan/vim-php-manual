@@ -4,7 +4,7 @@ yaz_record
 
 yaz_record — Returns a record
 
-===============================================================================
+==============================================================================
 *Description*
 
     string yaz_record ( resource $id , int $pos , string $type )~
@@ -12,7 +12,7 @@ yaz_record — Returns a record
 The yaz_record() function inspects a record in the current result set at the
 position specified by parameter {pos}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {id}
@@ -32,8 +32,8 @@ position specified by parameter {pos}.
 
         It is the application which is responsible for actually ensuring that
         the records are returned from the Z39.50/SRW server in the proper
-        format. The type given only specifies a conversion to take place on the
-        client side (in PHP/YAZ).
+        format. The type given only specifies a conversion to take place on
+        the client side (in PHP/YAZ).
 
     Besides conversion of the transfer record to a string/array, PHP/YAZ it is
     also possible to perform a character set conversion of the record.
@@ -50,8 +50,8 @@ position specified by parameter {pos}.
         is hardly readable. XML records and SUTRS are returned in their
         original format. GRS-1 are returned in a (ugly) line-by-line format.
 
-        This format is suitable if records are to be displayed in a quick way -
-        for debugging - or because it is not feasible to perform proper
+        This format is suitable if records are to be displayed in a quick way
+        - for debugging - or because it is not feasible to perform proper
         display.
 
     xml
@@ -81,8 +81,8 @@ position specified by parameter {pos}.
 
     database
 
-        The name of database associated with record at the position is returned
-        as a string.
+        The name of database associated with record at the position is
+        returned as a string.
 
     array
 
@@ -102,15 +102,16 @@ position specified by parameter {pos}.
         String tags normally has a corresponding tag type 3. MARC can also be
         returned as an array (they are converted to GRS-1 internally).
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the record at position {pos} or an empty string if no record exists at
 the given position.
 
-If no database record exists at the given position an empty string is returned.
+If no database record exists at the given position an empty string is
+returned.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Array for GRS-1 record

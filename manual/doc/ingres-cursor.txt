@@ -4,7 +4,7 @@ ingres_cursor
 
 ingres_cursor — Get a cursor name for a given result resource
 
-===============================================================================
+==============================================================================
 *Description*
 
     string ingres_cursor ( resource $result )~
@@ -12,20 +12,20 @@ ingres_cursor — Get a cursor name for a given result resource
 Returns a string with the active cursor name. If no cursor is active then NULL
 is returned.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
 
     The query result identifier
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns a string containing the active cursor name. If no cursor is active then
-NULL is returned.
+Returns a string containing the active cursor name. If no cursor is active
+then NULL is returned.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Get cursor name for a query resource
@@ -41,7 +41,7 @@ Example #1 Get cursor name for a query resource
 
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ingres_prepare| - Prepare a query for later execution

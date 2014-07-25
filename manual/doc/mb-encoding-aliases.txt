@@ -4,32 +4,32 @@ mb_encoding_aliases
 
 mb_encoding_aliases — Get aliases of a known encoding type
 
-===============================================================================
+==============================================================================
 *Description*
 
     array mb_encoding_aliases ( string $encoding )~
 
 Returns an array of aliases for a known {encoding} type.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {encoding}
 
     The encoding type being checked, for aliases.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns a numerically indexed array of encoding aliases on success, or FALSE on
-failure
+Returns a numerically indexed array of encoding aliases on success, or FALSE
+on failure
 
-===============================================================================
+==============================================================================
 *Errors/Exceptions*
 
 Emits an E_WARNING level error if {encoding} is unknown.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mb_encoding_aliases() example
@@ -66,7 +66,7 @@ Array
     [9] => csASCII
 )
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mb_list_encodings| - Returns an array of all supported encodings

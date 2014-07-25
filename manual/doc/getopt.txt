@@ -4,21 +4,21 @@ getopt
 
 getopt — Gets options from the command line argument list
 
-===============================================================================
+==============================================================================
 *Description*
 
     array getopt ( string $options [, array $longopts ] )~
 
 Parses options passed to the script.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {options}
-    Each character in this string will be used as option characters and matched
-    against options passed to the script starting with a single hyphen (-). For
-    example, an option string "x" recognizes an option -x. Only a-z, A-Z and
-    0-9 are allowed.
+    Each character in this string will be used as option characters and
+    matched against options passed to the script starting with a single hyphen
+    (-). For example, an option string "x" recognizes an option -x. Only a-z,
+    A-Z and 0-9 are allowed.
 {longopts}
     An array of options. Each element in this array will be used as option
     strings and matched against options passed to the script starting with two
@@ -40,11 +40,11 @@ value has leading white space or not.
     Note:
 
     The format for the {options} and {longopts} is almost the same, the only
-    difference is that {longopts} takes an array of options (where each element
-    is the option) whereas {options} takes a string (where each character is
-    the option).
+    difference is that {longopts} takes an array of options (where each
+    element is the option) whereas {options} takes a string (where each
+    character is the option).
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 This function will return an array of option / argument pairs or FALSE on
@@ -55,17 +55,17 @@ failure.
     The parsing of options will end at the first non-option found, anything
     that follows is discarded.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 5.3.0   Added support for "=" as argument/value separator.
 5.3.0   Added support for optional values (specified with "::").
 5.3.0   Parameter {longopts} is available on all systems.
 5.3.0   This function is no longer system dependent, and now works on Windows,
         too.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 getopt() example
@@ -145,7 +145,7 @@ array(2) {
   bool(false)
 }
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   *  $argv

@@ -4,7 +4,7 @@ yaz_ccl_conf
 
 yaz_ccl_conf — Configure CCL parser
 
-===============================================================================
+==============================================================================
 *Description*
 
     void yaz_ccl_conf ( resource $id , array $config )~
@@ -15,7 +15,7 @@ access points (CCL qualifiers) and their mapping to RPN.
 To map a specific CCL query to RPN afterwards call the |yaz_ccl_parse|
 function.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {id}
@@ -24,8 +24,9 @@ function.
 
 {config}
 
-    An array of configuration. Each key of the array is the name of a CCL field
-    and the corresponding value holds a string that specifies a mapping to RPN.
+    An array of configuration. Each key of the array is the name of a CCL
+    field and the corresponding value holds a string that specifies a mapping
+    to RPN.
 
     The mapping is a sequence of attribute-type, attribute-value pairs.
     Attribute-type and attribute-value is separated by an equal sign (=). Each
@@ -33,17 +34,17 @@ function.
 
     Additional information can be found on the » CCL page.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 No value is returned.
 
-===============================================================================
+==============================================================================
 *Examples*
 
-In the example below, the CCL parser is configured to support three CCL fields:
-ti, au and isbn. Each field is mapped to their BIB-1 equivalent. It is assumed
-that variable $id is the connection ID.
+In the example below, the CCL parser is configured to support three CCL
+fields: ti, au and isbn. Each field is mapped to their BIB-1 equivalent. It is
+assumed that variable $id is the connection ID.
 
 Example #1 CCL configuration
 
@@ -56,7 +57,7 @@ Example #1 CCL configuration
     yaz_ccl_conf($id, $fields);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |yaz_ccl_parse| - Invoke CCL Parser

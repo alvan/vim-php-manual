@@ -4,20 +4,20 @@ ncurses_doupdate
 
 ncurses_doupdate — Write all prepared refreshes to terminal
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool ncurses_doupdate ( void )~
 Warning
 
 This function is EXPERIMENTAL. The behaviour of this function, its name, and
-surrounding documentation may change without notice in a future release of PHP.
-This function should be used at your own risk.
+surrounding documentation may change without notice in a future release of
+PHP. This function should be used at your own risk.
 
 Compares the virtual screen to the physical screen and updates the physical
 screen. This way is more effective than using multiple refresh calls.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.

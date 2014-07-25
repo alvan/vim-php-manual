@@ -4,23 +4,23 @@ px_get_info
 
 px_get_info — Return lots of information about a paradox file
 
-===============================================================================
+==============================================================================
 *Description*
 
     array px_get_info ( resource $pxdoc )~
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {pxdoc}
 
     Resource identifier of the paradox database as returned by |px_new|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns an associated array with lots of information about a paradox file. This
-array is likely to be extended in the future.
+Returns an associated array with lots of information about a paradox file.
+This array is likely to be extended in the future.
 
 fileversion
 
@@ -67,12 +67,12 @@ numindexfields
 
 codepage
 
-    The DOS codepage which was used for encoding fields with character data. If
-    the target encoding is not set with |px_set_targetencoding| this will be
-    the encoding for character fields when records are being accessed with |
-    px_get_record| or |px_retrieve_record|.
+    The DOS codepage which was used for encoding fields with character data.
+    If the target encoding is not set with |px_set_targetencoding| this will
+    be the encoding for character fields when records are being accessed with 
+    |px_get_record| or |px_retrieve_record|.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |px_numfields| - Returns number of fields in a database

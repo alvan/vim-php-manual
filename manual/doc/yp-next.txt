@@ -4,14 +4,14 @@ yp_next
 
 yp_next — Returns the next key-value pair in the named map
 
-===============================================================================
+==============================================================================
 *Description*
 
     array yp_next ( string $domain , string $map , string $key )~
 
 Returns the next key-value pair in the named {map} after the specified {key}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {domain}
@@ -20,12 +20,12 @@ Returns the next key-value pair in the named {map} after the specified {key}.
 
 {key}
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the next key-value pair as an array, or FALSE on errors.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Example for NIS next
@@ -44,7 +44,7 @@ Example #1 Example for NIS next
           . " and value " . $entry[$key];
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |yp_first| - Returns the first key-value pair from the named map

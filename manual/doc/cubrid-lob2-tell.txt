@@ -4,7 +4,7 @@ cubrid_lob2_tell
 
 cubrid_lob2_tell — Tell the cursor position of the LOB object.
 
-===============================================================================
+==============================================================================
 *Description*
 
     int cubrid_lob2_tell ( resource $lob_identifier )~
@@ -12,14 +12,15 @@ cubrid_lob2_tell — Tell the cursor position of the LOB object.
 The cubrid_lob2_tell() function is used to tell the cursor position of the LOB
 object.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {lob_identifier}
 
-    Lob identifier as a result of |cubrid_lob2_new| or get from the result set.
+    Lob identifier as a result of |cubrid_lob2_new| or get from the result
+    set.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 It will return the cursor position on the LOB object when it processes
@@ -27,7 +28,7 @@ successfully.
 
 FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |cubrid_lob2_read| - Read from BLOB/CLOB data.

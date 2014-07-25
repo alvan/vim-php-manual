@@ -5,7 +5,7 @@ parsekit_compile_file
 parsekit_compile_file — Compile a string of PHP code and return the resulting
 op array
 
-===============================================================================
+==============================================================================
 *Description*
 
     array parsekit_compile_file ( string $filename [, array &$errors [, int~
@@ -13,10 +13,10 @@ op array
 Warning
 
 This function is EXPERIMENTAL. The behaviour of this function, its name, and
-surrounding documentation may change without notice in a future release of PHP.
-This function should be used at your own risk.
+surrounding documentation may change without notice in a future release of
+PHP. This function should be used at your own risk.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {filename}
@@ -31,15 +31,15 @@ This function should be used at your own risk.
 
 {options}
 
-    One of either PARSEKIT_QUIET or PARSEKIT_SIMPLE. To produce varying degrees
-    of verbosity in the returned output.
+    One of either PARSEKIT_QUIET or PARSEKIT_SIMPLE. To produce varying
+    degrees of verbosity in the returned output.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a complex multi-layer array structure as detailed below.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 parsekit_compile_file() example
@@ -63,7 +63,7 @@ array(5) {
   NULL
 }
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |parsekit_compile_string| - Compile a string of PHP code and return the

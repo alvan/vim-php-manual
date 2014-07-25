@@ -4,7 +4,7 @@ imap_append
 
 imap_append — Append a string message to a specified mailbox
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool imap_append ( resource $imap_stream , string $mailbox , string~
@@ -12,7 +12,7 @@ imap_append — Append a string message to a specified mailbox
 
 Appends a string {message} to the specified {mailbox}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { imap_stream}
@@ -37,21 +37,21 @@ Appends a string {message} to the specified {mailbox}.
 {internal_date}
 
     If this parameter is set, it will set the INTERNALDATE on the appended
-    message. The parameter should be a date string that conforms to the rfc2060
-    specifications for a date_time value.
+    message. The parameter should be a date string that conforms to the
+    rfc2060 specifications for a date_time value.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version                Description
 5.3.2   Added INTERNALDATE support to imap_append.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 imap_append() example

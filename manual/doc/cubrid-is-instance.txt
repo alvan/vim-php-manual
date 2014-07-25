@@ -4,15 +4,15 @@ cubrid_is_instance
 
 cubrid_is_instance — Check whether the instance pointed by OID exists
 
-===============================================================================
+==============================================================================
 *Description*
 
     int cubrid_is_instance ( resource $conn_identifier , string $oid )~
 
-The cubrid_is_instance() function is used to check whether the instance pointed
-by the given {oid} exists or not.
+The cubrid_is_instance() function is used to check whether the instance
+pointed by the given {oid} exists or not.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {conn_identifier}
@@ -23,7 +23,7 @@ by the given {oid} exists or not.
 
     OID of the instance that you want to check the existence.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 1, if such instance exists;
@@ -32,7 +32,7 @@ by the given {oid} exists or not.
 
 -1, in case of error
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_is_instance() example
@@ -66,7 +66,7 @@ The above example will output:
 
 Instance pointed by @0|0|0 doesn't exist.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |cubrid_drop| - Delete an instance using OID

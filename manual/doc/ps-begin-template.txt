@@ -4,18 +4,18 @@ ps_begin_template
 
 ps_begin_template — Start a new template
 
-===============================================================================
+==============================================================================
 *Description*
 
     int ps_begin_template ( resource $psdoc , float $width , float $height )~
 
 Starts a new template. A template is called a form in the postscript language.
 It is created similar to a pattern but used like an image. Templates are often
-used for drawings which are placed several times through out the document, e.g.
-like a company logo. All drawing functions may be used within a template. The
-template will not be drawn until it is placed by |ps_place_image|.
+used for drawings which are placed several times through out the document,
+e.g. like a company logo. All drawing functions may be used within a template.
+The template will not be drawn until it is placed by |ps_place_image|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {psdoc}
@@ -30,12 +30,12 @@ template will not be drawn until it is placed by |ps_place_image|.
 
     The height of the template in pixel.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Creating and using a template
@@ -72,7 +72,7 @@ Example #1 Creating and using a template
     ps_delete($ps);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ps_end_template| - End a template

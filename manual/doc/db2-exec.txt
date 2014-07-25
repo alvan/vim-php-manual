@@ -4,7 +4,7 @@ db2_exec
 
 db2_exec — Executes an SQL statement directly
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource db2_exec ( resource $connection , string $statement [, array~
@@ -23,13 +23,13 @@ parameters, consider calling |db2_prepare| and |db2_execute| to enable the
 database server to reuse its access plan and increase the efficiency of your
 database access.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
 
-    A valid database connection resource variable as returned from |db2_connect
-    | or |db2_pconnect|.
+    A valid database connection resource variable as returned from |
+    db2_connect| or |db2_pconnect|.
 
 {statement}
 
@@ -43,13 +43,13 @@ database access.
 
     For a description of valid statement options, see |db2_set_option|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a statement resource if the SQL statement was issued successfully, or
 FALSE if the database failed to execute the SQL statement.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Creating a table with db2_exec()
@@ -156,10 +156,10 @@ The above example will output:
 
 Example #4 Performing a "JOIN" with XML data
 
-The following example works with documents stored in 2 different XML columns in
-the SAMPLE database. It creates 2 temporary tables from the XML documents from
-2 different columns and returns an SQL ResultSet with information regarding
-shipping status for the customer.
+The following example works with documents stored in 2 different XML columns
+in the SAMPLE database. It creates 2 temporary tables from the XML documents
+from 2 different columns and returns an SQL ResultSet with information
+regarding shipping status for the customer.
 
 <?php >
 
@@ -192,8 +192,8 @@ shipping status for the customer.
     $stmt = db2_exec($conn, $query);
 
     while($row = db2_fetch_object($stmt)){
-        printf("$row->CID     $row->NAME     $row->PHONE     $row->PONUM     $row->
-    STATUS\n");
+        printf("$row->CID     $row->NAME     $row->PHONE     $row->PONUM     $row
+    ->STATUS\n");
     }
 
     db2_close($conn);
@@ -206,8 +206,8 @@ The above example will output:
 
 Example #5 Returning SQL data as part of a larger XML document
 
-The following example works with a portion of the PRODUCT.DESCRIPTION documents
-in the SAMPLE database. It creates a XML document containing product
+The following example works with a portion of the PRODUCT.DESCRIPTION
+documents in the SAMPLE database. It creates a XML document containing product
 description (XML data) and pricing info (SQL data).
 
 <?php >
@@ -271,7 +271,7 @@ The above example will output:
     </promoitem>
 </promoList>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |db2_execute| - Executes a prepared SQL statement

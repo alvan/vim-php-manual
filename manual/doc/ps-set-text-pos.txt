@@ -4,7 +4,7 @@ ps_set_text_pos
 
 ps_set_text_pos — Sets position for text output
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool ps_set_text_pos ( resource $psdoc , float $x , float $y )~
@@ -13,10 +13,10 @@ Set the position for the next text output. You may alternatively set the x and
 y value separately by calling |ps_set_value| and choosing textx respectively
 texty as the value name.
 
-If you want to output text at a certain position it is more convenient to use |
-ps_show_xy| instead of setting the text position and calling |ps_show|.
+If you want to output text at a certain position it is more convenient to use 
+|ps_show_xy| instead of setting the text position and calling |ps_show|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {psdoc}
@@ -31,12 +31,12 @@ ps_show_xy| instead of setting the text position and calling |ps_show|.
 
     y-coordinate of the new text position.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Placing text at a given position
@@ -65,7 +65,7 @@ Example #1 Placing text at a given position
     ps_delete($ps);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ps_set_value| - Sets certain values

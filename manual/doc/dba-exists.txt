@@ -4,14 +4,14 @@ dba_exists
 
 dba_exists — Check whether key exists
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool dba_exists ( string $key , resource $handle )~
 
 dba_exists() checks whether the specified {key} exists in the database.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {key}
@@ -22,12 +22,12 @@ dba_exists() checks whether the specified {key} exists in the database.
 
     The database handler, returned by |dba_open| or |dba_popen|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE if the key exists, FALSE otherwise.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |dba_delete| - Delete DBA entry specified by key

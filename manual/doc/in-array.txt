@@ -4,15 +4,16 @@ in_array
 
 in_array — Checks if a value exists in an array
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool in_array ( mixed $needle , array $haystack [, bool $strict = FALSE ]~
 )~
 
-Searches {haystack} for {needle} using loose comparison unless {strict} is set.
+Searches {haystack} for {needle} using loose comparison unless {strict} is
+set.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {needle}
@@ -30,21 +31,21 @@ Searches {haystack} for {needle} using loose comparison unless {strict} is set.
 
 {strict}
 
-    If the third parameter {strict} is set to TRUE then the in_array() function
-    will also check the types of the {needle} in the {haystack}.
+    If the third parameter {strict} is set to TRUE then the in_array()
+    function will also check the types of the {needle} in the {haystack}.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE if {needle} is found in the array, FALSE otherwise.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version          Description
 4.2.0   {needle} may now be an array.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 in_array() example
@@ -59,8 +60,8 @@ Example #1 in_array() example
     }
 <?>
 
-The second condition fails because in_array() is case-sensitive, so the program
-above will display:
+The second condition fails because in_array() is case-sensitive, so the
+program above will display:
 
 Got Irix
 
@@ -105,7 +106,7 @@ The above example will output:
   'ph' was found
   'o' was found
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |array_search| - Searches the array for a given value and returns the

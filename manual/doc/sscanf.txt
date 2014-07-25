@@ -4,7 +4,7 @@ sscanf
 
 sscanf — Parses input from a string according to a format
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed sscanf ( string $str , string $format [, mixed &$... ] )~
@@ -13,11 +13,11 @@ The function sscanf() is the input analog of |printf|. sscanf() reads from the
 string {str} and interprets it according to the specified {format}, which is
 described in the documentation for |sprintf|.
 
-Any whitespace in the format string matches any whitespace in the input string.
-This means that even a tab \t in the format string can match a single space
-character in the input string.
+Any whitespace in the format string matches any whitespace in the input
+string. This means that even a tab \t in the format string can match a single
+space character in the input string.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {str}
@@ -39,7 +39,7 @@ character in the input string.
     Optionally pass in variables by reference that will contain the parsed
     values.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 If only two parameters were passed to this function, the values parsed will be
@@ -50,7 +50,7 @@ must be passed by reference.
 If there are more substrings expected in the {format} than there are available
 within {str}, -1 will be returned.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 sscanf() Example
@@ -61,8 +61,8 @@ Example #1 sscanf() Example
     // and the date of manufacturing
     $mandate = "January 01 2000";
     list($month, $day, $year) = sscanf($mandate, "%s %d %d");
-    echo "Item $serial was manufactured on: $year-" . substr($month, 0, 3) . "-$day
-    \n";
+    echo "Item $serial was manufactured on: $year-" . substr($month, 0, 3) . "-
+    $day\n";
 <?>
 
 If optional parameters are passed, the function will return the number of
@@ -80,7 +80,7 @@ Example #2 sscanf() - using optional parameters
     </author>\n";
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |fscanf| - Parses input from a file according to a format

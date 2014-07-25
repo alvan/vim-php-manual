@@ -4,26 +4,26 @@ mb_ereg_search_getpos
 
 mb_ereg_search_getpos — Returns start point for next regular expression match
 
-===============================================================================
+==============================================================================
 *Description*
 
     int mb_ereg_search_getpos ( void )~
 
 Returns the start point for the next regular expression match.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 This function has no parameters.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-mb_ereg_search_getpos() returns the point to start regular expression match for
-|mb_ereg_search|, |mb_ereg_search_pos|, |mb_ereg_search_regs|. The position is
-represented by bytes from the head of string.
+mb_ereg_search_getpos() returns the point to start regular expression match
+for |mb_ereg_search|, |mb_ereg_search_pos|, |mb_ereg_search_regs|. The
+position is represented by bytes from the head of string.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -32,7 +32,7 @@ represented by bytes from the head of string.
     mb_regex_encoding| will be used as the character encoding for this
     function.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mb_regex_encoding| - Set/Get character encoding for multibyte regex

@@ -4,14 +4,14 @@ ssh2_sftp_rename
 
 ssh2_sftp_rename — Rename a remote file
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool ssh2_sftp_rename ( resource $sftp , string $from , string $to )~
 
 Renames a file on the remote filesystem.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {sftp}
@@ -26,12 +26,12 @@ Renames a file on the remote filesystem.
 
     The new file name that replaces {from}.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Renaming a file via sftp
@@ -44,7 +44,7 @@ Example #1 Renaming a file via sftp
     ssh2_sftp_rename($sftp, '/home/username/oldname', '/home/username/newname');
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |rename| - Renames a file or directory

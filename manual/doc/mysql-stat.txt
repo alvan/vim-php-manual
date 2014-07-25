@@ -8,20 +8,20 @@ Warning
 
 This extension is deprecated as of PHP 5.5.0, and will be removed in the
 future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
-MySQL: choosing an API guide and related FAQ for more information. Alternatives
-to this function include:
+MySQL: choosing an API guide and related FAQ for more information.
+Alternatives to this function include:
 
   * mysqli_stat()
   * PDO::getAttribute(PDO::ATTR_SERVER_INFO)
 
-===============================================================================
+==============================================================================
 *Description*
 
     string mysql_stat ([ resource $link_identifier = NULL ] )~
 
 mysql_stat() returns the current server status.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { link_identifier}
@@ -32,15 +32,15 @@ mysql_stat() returns the current server status.
     If no connection is found or established, an E_WARNING level error is
     generated.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a string with the status for uptime, threads, queries, open tables,
 flush tables and queries per second. For a complete list of other status
-variables, you have to use the SHOW STATUS SQL command. If {link_identifier} is
-invalid, NULL is returned.
+variables, you have to use the SHOW STATUS SQL command. If {link_identifier}
+is invalid, NULL is returned.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mysql_stat() example
@@ -88,7 +88,7 @@ bdb_shared_data = OFF
 bdb_tmpdir = /var/tmp/
 ...
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mysql_get_server_info| - Get MySQL server info

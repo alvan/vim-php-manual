@@ -4,7 +4,7 @@ yaml_emit_file
 
 yaml_emit_file — Send the YAML representation of a value to a file
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool yaml_emit_file ( string $filename , mixed $data [, int $encoding =~
@@ -13,7 +13,7 @@ yaml_emit_file — Send the YAML representation of a value to a file
 
 Generate a YAML representation of the provided {data} in the {filename}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {filename}
@@ -26,8 +26,8 @@ Generate a YAML representation of the provided {data} in the {filename}.
 
 {encoding}
 
-    Output character encoding chosen from YAML_ANY_ENCODING, YAML_UTF8_ENCODING
-    , YAML_UTF16LE_ENCODING, YAML_UTF16BE_ENCODING.
+    Output character encoding chosen from YAML_ANY_ENCODING,
+    YAML_UTF8_ENCODING, YAML_UTF16LE_ENCODING, YAML_UTF16BE_ENCODING.
 
 {linebreak}
 
@@ -36,21 +36,21 @@ Generate a YAML representation of the provided {data} in the {filename}.
 
 {callbacks}
 
-    Content handlers for emitting YAML nodes. Associative array of classname =>
-    callable mappings. See emit callbacks for more details.
+    Content handlers for emitting YAML nodes. Associative array of classname
+    => callable mappings. See emit callbacks for more details.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version             Description
 1.1.0   The {callbacks} parameter was added.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |yaml_emit| - Returns the YAML representation of a value

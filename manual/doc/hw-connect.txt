@@ -4,7 +4,7 @@ hw_Connect
 
 hw_Connect — Opens a connection
 
-===============================================================================
+==============================================================================
 *Description*
 
     int hw_connect ( string $host , int $port [, string $username ], string~
@@ -13,7 +13,7 @@ hw_Connect — Opens a connection
 Opens a connection to a Hyperwave server. You can have multiple connections
 open at once.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {host}
@@ -26,21 +26,21 @@ open at once.
 
 {username}
 
-    The Hyperwave user name. If omitted, no identification with the server will
-    be done. It is similar to identify as user anonymous.
+    The Hyperwave user name. If omitted, no identification with the server
+    will be done. It is similar to identify as user anonymous.
 
 {password}
 
     The password for {username}. Keep in mind, that the password is not
     encrypted.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a connection index on success, or FALSE if the connection could not be
 made.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |hw_pconnect| - Make a persistent database connection

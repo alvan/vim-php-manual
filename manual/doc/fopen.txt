@@ -4,15 +4,15 @@ fopen
 
 fopen — Opens file or URL
 
-===============================================================================
+==============================================================================
 *Description*
 
-    resource fopen ( string $filename , string $mode [, bool $use_include_path~
-    = false [, resource $context ]] )~
+    resource fopen ( string $filename , string $mode [, bool~
+    $use_include_path = false [, resource $context ]] )~
 
 fopen() binds a named resource, specified by {filename}, to a stream.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {filename}
@@ -23,10 +23,11 @@ fopen() binds a named resource, specified by {filename}, to a stream.
     notice to help you track potential problems in your script and then
     continue as though {filename} specifies a regular file.
 
-    If PHP has decided that {filename} specifies a local file, then it will try
-    to open a stream on that file. The file must be accessible to PHP, so you
-    need to ensure that the file access permissions allow this access. If you
-    have enabled safe mode, or open_basedir further restrictions may apply.
+    If PHP has decided that {filename} specifies a local file, then it will
+    try to open a stream on that file. The file must be accessible to PHP, so
+    you need to ensure that the file access permissions allow this access. If
+    you have enabled safe mode, or open_basedir further restrictions may
+    apply.
 
     If PHP has decided that {filename} specifies a registered protocol, and
     that protocol is registered as a network URL, PHP will check to make sure
@@ -35,11 +36,11 @@ fopen() binds a named resource, specified by {filename}, to a stream.
 
         Note:
 
-        The list of supported protocols can be found in Supported Protocols and
-        Wrappers. Some protocols (also referred to as wrappers) support context
-        and/or php.ini options. Refer to the specific page for the protocol in
-        use for a list of options which can be set. (e.g. php.ini value
-        user_agent used by the http wrapper).
+        The list of supported protocols can be found in Supported Protocols
+        and Wrappers. Some protocols (also referred to as wrappers) support
+        context and/or php.ini options. Refer to the specific page for the
+        protocol in use for a list of options which can be set. (e.g. php.ini
+        value user_agent used by the http wrapper).
 
     On the Windows platform, be careful to escape any backslashes used in the
     path to the file, or use forward slashes.
@@ -52,7 +53,7 @@ fopen() binds a named resource, specified by {filename}, to a stream.
     The {mode} parameter specifies the type of access you require to the
     stream. It may be any of the following:
 
-               A list of possible modes for fopen() using {mode}
+              A list of possible modes for fopen() using {mode}
     {mode}                             Description
     'r'    Open for reading only; place the file pointer at the beginning of
            the file.
@@ -71,19 +72,19 @@ fopen() binds a named resource, specified by {filename}, to a stream.
            Create and open for writing only; place the file pointer at the
            beginning of the file. If the file already exists, the fopen() call
     'x'    will fail by returning FALSE and generating an error of level
-           E_WARNING. If the file does not exist, attempt to create it. This is
-           equivalent to specifying O_EXCL|O_CREAT flags for the underlying
+           E_WARNING. If the file does not exist, attempt to create it. This
+           is equivalent to specifying O_EXCL|O_CREAT flags for the underlying
            open(2) system call.
     'x+'   Create and open for reading and writing; otherwise it has the same
            behavior as 'x'.
            Open the file for writing only. If the file does not exist, it is
            created. If it exists, it is neither truncated (as opposed to 'w'),
            nor the call to this function fails (as is the case with 'x'). The
-    'c'    file pointer is positioned on the beginning of the file. This may be
-           useful if it's desired to get an advisory lock (see |flock|) before
-           attempting to modify the file, as using 'w' could truncate the file
-           before the lock was obtained (if truncation is desired, |ftruncate|
-           can be used after the lock is requested).
+    'c'    file pointer is positioned on the beginning of the file. This may
+           be useful if it's desired to get an advisory lock (see |flock|)
+           before attempting to modify the file, as using 'w' could truncate
+           the file before the lock was obtained (if truncation is desired, |
+           ftruncate| can be used after the lock is requested).
     'c+'   Open the file for reading and writing; otherwise it has the same
            behavior as 'c'.
 
@@ -93,12 +94,13 @@ fopen() binds a named resource, specified by {filename}, to a stream.
         conventions. When you write a text file and want to insert a line
         break, you need to use the correct line-ending character(s) for your
         operating system. Unix based systems use \n as the line ending
-        character, Windows based systems use \r\n as the line ending characters
-        and Macintosh based systems use \r as the line ending character.
+        character, Windows based systems use \r\n as the line ending
+        characters and Macintosh based systems use \r as the line ending
+        character.
 
         If you use the wrong line ending characters when writing your files,
-        you might find that other applications that open those files will "look
-        funny".
+        you might find that other applications that open those files will
+        "look funny".
 
         Windows offers a text-mode translation flag ('t') which will
         transparently translate \n to \r\n when working with the file. In
@@ -109,9 +111,9 @@ fopen() binds a named resource, specified by {filename}, to a stream.
         The default translation mode depends on the SAPI and version of PHP
         that you are using, so you are encouraged to always specify the
         appropriate flag for portability reasons. You should use the 't' mode
-        if you are working with plain-text files and you use \n to delimit your
-        line endings in your script, but expect your files to be readable with
-        applications such as notepad. You should use the 'b' in all other
+        if you are working with plain-text files and you use \n to delimit
+        your line endings in your script, but expect your files to be readable
+        with applications such as notepad. You should use the 'b' in all other
         cases.
 
         If you do not specify the 'b' flag when working with binary files, you
@@ -120,14 +122,14 @@ fopen() binds a named resource, specified by {filename}, to a stream.
 
         Note:
 
-        For portability, it is strongly recommended that you always use the 'b'
-        flag when opening files with fopen().
+        For portability, it is strongly recommended that you always use the
+        'b' flag when opening files with fopen().
 
         Note:
 
         Again, for portability, it is also strongly recommended that you
-        re-write code that uses or relies upon the 't' mode so that it uses the
-        correct line endings and 'b' mode instead.
+        re-write code that uses or relies upon the 't' mode so that it uses
+        the correct line endings and 'b' mode instead.
 
 {use_include_path}
 
@@ -140,30 +142,30 @@ fopen() binds a named resource, specified by {filename}, to a stream.
         Note: Context support was added with PHP 5.0.0. For a description of
         contexts, refer to Streams.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a file pointer resource on success, or FALSE on error.
 
-===============================================================================
+==============================================================================
 *Errors/Exceptions*
 
 If the open fails, an error of level E_WARNING is generated. You may use @ to
 suppress this warning.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 5.2.6   The 'c' and 'c+' options were added
         As of PHP 4.3.2, the default mode is set to binary for all platforms
         that distinguish between binary and text mode. If you are having
-4.3.2   problems with your scripts after upgrading, try using the 't' flag as a
-        workaround until you have made your script more portable as mentioned
-        before
+4.3.2   problems with your scripts after upgrading, try using the 't' flag as
+        a workaround until you have made your script more portable as
+        mentioned before
 4.3.2   The 'x' and 'x+' options were added
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 fopen() examples
@@ -175,7 +177,7 @@ Example #1 fopen() examples
     $handle = fopen("ftp://user:password@example.com/somefile.txt", "w");
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
 Warning
@@ -203,10 +205,10 @@ responsible for detecting and suppressing this warning.
     Note:
 
     This function may also succeed when {filename} is a directory. If you are
-    unsure whether {filename} is a file or a directory, you may need to use the
-    |is_dir| function before calling fopen().
+    unsure whether {filename} is a file or a directory, you may need to use
+    the |is_dir| function before calling fopen().
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * Supported Protocols and Wrappers

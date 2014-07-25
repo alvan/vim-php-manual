@@ -4,7 +4,7 @@ ldap_bind
 
 ldap_bind — Bind to LDAP directory
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool ldap_bind ( resource $link_identifier [, string $bind_rdn = NULL [,~
@@ -12,7 +12,7 @@ ldap_bind — Bind to LDAP directory
 
 Binds to the LDAP directory with specified RDN and password.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {link_identifier}
@@ -26,12 +26,12 @@ Binds to the LDAP directory with specified RDN and password.
 If {bind_rdn} and {bind_password} are not specified, an anonymous bind is
 attempted.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Using LDAP Bind
@@ -87,7 +87,7 @@ Example #2 Using LDAP Bind Anonymously
 
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ldap_unbind| - Unbind from LDAP directory

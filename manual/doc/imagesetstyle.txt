@@ -4,7 +4,7 @@ imagesetstyle
 
 imagesetstyle — Set the style for line drawing
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool imagesetstyle ( resource $image , array $style )~
@@ -13,25 +13,25 @@ imagesetstyle() sets the style to be used by all line drawing functions (such
 as |imageline| and |imagepolygon|) when drawing with the special color
 IMG_COLOR_STYLED or lines of images with color IMG_COLOR_STYLEDBRUSHED.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { image}
 
-    An image resource, returned by one of the image creation functions, such as
-    |imagecreatetruecolor|.
+    An image resource, returned by one of the image creation functions, such
+    as |imagecreatetruecolor|.
 
 {style}
 
-    An array of pixel colors. You can use the IMG_COLOR_TRANSPARENT constant to
-    add a transparent pixel.
+    An array of pixel colors. You can use the IMG_COLOR_TRANSPARENT constant
+    to add a transparent pixel.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Following example script draws a dashed line from upper left to lower right
@@ -69,7 +69,7 @@ The above example will output something similar to:
 
 Output of example : imagesetstyle()
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |imagesetbrush| - Set the brush image for line drawing

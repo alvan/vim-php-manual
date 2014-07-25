@@ -4,7 +4,7 @@ ibase_blob_cancel
 
 ibase_blob_cancel — Cancel creating blob
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool ibase_blob_cancel ( resource $blob_handle )~
@@ -12,19 +12,19 @@ ibase_blob_cancel — Cancel creating blob
 This function will discard a BLOB if it has not yet been closed by |
 ibase_blob_close|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {blob_handle}
 
     A BLOB handle opened with |ibase_blob_create|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ibase_blob_close| - Close blob

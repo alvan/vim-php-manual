@@ -4,7 +4,7 @@ oci_close
 
 oci_close — Closes an Oracle connection
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool oci_close ( resource $connection )~
@@ -16,7 +16,7 @@ oci_new_connect|.
 It is recommended to close connections that are no longer needed because this
 makes database resources available for other users.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
@@ -24,12 +24,12 @@ makes database resources available for other users.
     An Oracle connection identifier returned by |oci_connect|, |oci_pconnect|,
     or |oci_new_connect|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Closing a connection
@@ -115,7 +115,8 @@ the underlying database connection is closed.
     oci_close($conn1); // doesn't close the underlying database connection
     var_dump($conn1);  //
      prints NULL because the variable $conn1 is no longer usable
-    var_dump($conn2);  // displays that $conn2 is still a valid connection resource
+    var_dump($conn2);  //
+     displays that $conn2 is still a valid connection resource
 
 <?>
 
@@ -147,7 +148,7 @@ database is closed.
 
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -158,17 +159,17 @@ database is closed.
 
     Note:
 
-    Prior to version PHP 5.1.2 (PECL OCI8 1.1) oci_close() was a no-op. In more
-    recent versions it correctly closes the Oracle connection. Use
+    Prior to version PHP 5.1.2 (PECL OCI8 1.1) oci_close() was a no-op. In
+    more recent versions it correctly closes the Oracle connection. Use
     oci8.old_oci_close_semantics option to restore old behavior of this
     function.
 
     Note:
 
-    The oci_close() function does not close the underlying database connections
-    created with |oci_pconnect|.
+    The oci_close() function does not close the underlying database
+    connections created with |oci_pconnect|.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |oci_connect| - Connect to an Oracle database

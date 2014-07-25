@@ -4,14 +4,14 @@ mb_http_input
 
 mb_http_input — Detect HTTP input character encoding
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed mb_http_input ([ string $type = "" ] )~
 
 Detects the HTTP input character encoding.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {type}
@@ -21,13 +21,13 @@ Detects the HTTP input character encoding.
     return array). If type is omitted, it returns the last input type
     processed.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The character encoding name, as per the {type}. If mb_http_input() does not
 process specified HTTP input, it returns FALSE.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mb_internal_encoding| - Set/Get internal character encoding

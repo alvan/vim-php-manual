@@ -4,7 +4,7 @@ fbsql_list_dbs
 
 fbsql_list_dbs — List databases available on a FrontBase server
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource fbsql_list_dbs ([ resource $link_identifier ] )~
@@ -12,24 +12,24 @@ fbsql_list_dbs — List databases available on a FrontBase server
 Return a result pointer containing the databases available from the current
 fbsql daemon. Use the |fbsql_tablename| to traverse this result pointer.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { link_identifier}
 
-    A FrontBase link identifier returned by |fbsql_connect| or |fbsql_pconnect|
-    .
+    A FrontBase link identifier returned by |fbsql_connect| or |fbsql_pconnect
+    |.
 
     If optional and not specified, the function will try to find an open link
     to the FrontBase server and if no such link is found it will try to create
     one as if |fbsql_connect| was called with no arguments.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a result pointer or FALSE on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 fbsql_list_dbs() example
@@ -55,7 +55,7 @@ database3
     The above code would just as easily work with |fbsql_fetch_row| or other
     similar functions.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |fbsql_list_fields| - List FrontBase result fields

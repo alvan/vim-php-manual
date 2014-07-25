@@ -9,12 +9,12 @@ Warning
 
 This extension is deprecated as of PHP 5.5.0, and will be removed in the
 future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
-MySQL: choosing an API guide and related FAQ for more information. Alternatives
-to this function include:
+MySQL: choosing an API guide and related FAQ for more information.
+Alternatives to this function include:
 
   * See: Buffered and Unbuffered queries
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource mysql_unbuffered_query ( string $query [, resource~
@@ -29,7 +29,7 @@ query has been performed. To use mysql_unbuffered_query() while multiple
 database connections are open, you must specify the optional parameter
 {link_identifier} to identify which connection you want to use.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {query}
@@ -46,7 +46,7 @@ database connections are open, you must specify the optional parameter
     If no connection is found or established, an E_WARNING level error is
     generated.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 For SELECT, SHOW, DESCRIBE or EXPLAIN statements, mysql_unbuffered_query()
@@ -55,7 +55,7 @@ returns a resource on success, or FALSE on error.
 For other type of SQL statements, UPDATE, DELETE, DROP, etc, 
 mysql_unbuffered_query() returns TRUE on success or FALSE on error.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -66,7 +66,7 @@ mysql_unbuffered_query() returns TRUE on success or FALSE on error.
     fetch all result rows from an unbuffered SQL query before you can send a
     new SQL query to MySQL, using the same {link_identifier}.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mysql_query| - Send a MySQL query

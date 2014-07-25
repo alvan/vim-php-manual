@@ -7,7 +7,7 @@ SQLiteDatabase::exec
 sqlite_exec -- SQLiteDatabase::exec — Executes a result-less query against a
 given database
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool sqlite_exec ( resource $dbhandle , string $query [, string~
@@ -24,18 +24,18 @@ Executes an SQL statement given by the {query} against a given database handle
 
 Warning
 
-SQLite will execute multiple queries separated by semicolons, so you can use it
-to execute a batch of SQL that you have loaded from a file or have embedded in
-a script.
+SQLite will execute multiple queries separated by semicolons, so you can use
+it to execute a batch of SQL that you have loaded from a file or have embedded
+in a script.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {dbhandle}
 
     The SQLite Database resource; returned from |sqlite_open| when used
-    procedurally. This parameter is not required when using the object-oriented
-    method.
+    procedurally. This parameter is not required when using the
+    object-oriented method.
 
 {query}
 
@@ -45,15 +45,15 @@ a script.
 
 {error_msg}
 
-    The specified variable will be filled if an error occurs. This is specially
-    important because SQL syntax errors can't be fetched using the |
+    The specified variable will be filled if an error occurs. This is
+    specially important because SQL syntax errors can't be fetched using the |
     sqlite_last_error| function.
 
     Note: Two alternative syntaxes are supported for compatibility with other
-    database extensions (such as MySQL). The preferred form is the first, where
-    the {dbhandle} parameter is the first parameter to the function.
+    database extensions (such as MySQL). The preferred form is the first,
+    where the {dbhandle} parameter is the first parameter to the function.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 This function will return a boolean result; TRUE for success or FALSE for
@@ -62,13 +62,13 @@ failure. If you need to run a query that returns rows, see |sqlite_query|.
 The column names returned by SQLITE_ASSOC and SQLITE_BOTH will be case-folded
 according to the value of the sqlite.assoc_case configuration option.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version           Description
 5.1.0   Added the {error_msg} parameter
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Procedural example
@@ -97,15 +97,15 @@ Example #2 Object-oriented example
     }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |sqlite_query| - Executes a query against a given database and returns a
     result handle
   * |sqlite_unbuffered_query| - Execute a query that does not prefetch and
     buffer all data
-  * |sqlite_array_query| - Execute a query against a given database and returns
-    an array
+  * |sqlite_array_query| - Execute a query against a given database and
+    returns an array
 
 
 vim:ft=help:

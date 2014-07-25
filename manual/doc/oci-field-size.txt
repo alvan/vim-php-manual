@@ -4,14 +4,14 @@ oci_field_size
 
 oci_field_size — Returns field's size
 
-===============================================================================
+==============================================================================
 *Description*
 
     int oci_field_size ( resource $statement , mixed $field )~
 
 Returns the size of a {field}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {statement}
@@ -22,12 +22,12 @@ Returns the size of a {field}.
 
     Can be the field's index (1-based) or name.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the size of a {field} in bytes, or FALSE on errors.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 oci_field_size() example
@@ -83,7 +83,7 @@ Example #1 oci_field_size() example
 
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -92,7 +92,7 @@ Example #1 oci_field_size() example
     name still can be used, it was left as alias of oci_field_size() for
     downwards compatability. This, however, is deprecated and not recommended.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |oci_num_fields| - Returns the number of result columns in a statement

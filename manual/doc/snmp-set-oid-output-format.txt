@@ -4,15 +4,15 @@ snmp_set_oid_output_format
 
 snmp_set_oid_output_format — Set the OID output format
 
-===============================================================================
+==============================================================================
 *Description*
 
-    bool snmp_set_oid_output_format ( int $oid_format = SNMP_OID_OUTPUT_MODULE~
-)~
+    bool snmp_set_oid_output_format ( int $oid_format =~
+    SNMP_OID_OUTPUT_MODULE )~
 
 snmp_set_oid_output_format() sets the output format to be full or numeric.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {oid_format}
@@ -28,12 +28,12 @@ snmp_set_oid_output_format() sets the output format to be full or numeric.
     SNMP_OID_OUTPUT_UCD    system.sysUpTime.sysUpTimeInstance
     SNMP_OID_OUTPUT_NONE   Undefined
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 No value is returned.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -42,7 +42,7 @@ No value is returned.
     library. This function is not available when using the Windows SNMP
     library.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Using |snmprealwalk|

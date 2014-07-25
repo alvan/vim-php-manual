@@ -4,7 +4,7 @@ ingres_error
 
 ingres_error — Get a meaningful error message for the last error generated
 
-===============================================================================
+==============================================================================
 *Description*
 
     string ingres_error ([ resource $link ] )~
@@ -19,19 +19,19 @@ The function, ingres_error(), should always be called after executing any
 database query. Calling another function before ingres_error() is called will
 reset or change any error message from the last Ingres function call.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {link}
 
     The connection link identifier
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a string containing the last error, or NULL if no error has occurred.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Get a message for the last error generated
@@ -48,7 +48,7 @@ Example #1 Get a message for the last error generated
     }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ingres_errno| - Get the last Ingres error number generated

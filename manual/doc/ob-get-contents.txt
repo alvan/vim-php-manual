@@ -4,20 +4,20 @@ ob_get_contents
 
 ob_get_contents — Return the contents of the output buffer
 
-===============================================================================
+==============================================================================
 *Description*
 
     string ob_get_contents ( void )~
 
 Gets the contents of the output buffer without clearing it.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 This will return the contents of the output buffer or FALSE, if output
 buffering isn't active.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A simple ob_get_contents() example
@@ -44,7 +44,7 @@ The above example will output:
 string(6) "Hello "
 string(11) "Hello World"
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ob_start| - Turn on output buffering

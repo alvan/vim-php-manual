@@ -4,7 +4,7 @@ mssql_data_seek
 
 mssql_data_seek — Moves internal row pointer
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool mssql_data_seek ( resource $result_identifier , int $row_number )~
@@ -14,7 +14,7 @@ associated with the specified result identifier to point to the specified row
 number, first row being number 0. The next call to |mssql_fetch_row| would
 return that row.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result_identifier}
@@ -25,12 +25,12 @@ return that row.
 
     The desired row number of the new result pointer.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mssql_data_seek() example
@@ -41,7 +41,8 @@ Example #1 mssql_data_seek() example
     mssql_select_db('php', $link);
 
     // Select all people
-    $result = mssql_query('SELECT [name], [age] FROM [persons] WHERE [age] >= 13');
+    $result = mssql_query('SELECT [name], [age] FROM [persons] WHERE [age] >= 13'
+    );
 
     if (!$result) {
         die('Query failed.');

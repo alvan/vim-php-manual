@@ -4,16 +4,16 @@ localtime
 
 localtime — Get the local time
 
-===============================================================================
+==============================================================================
 *Description*
 
-    array localtime ([ int $timestamp = time() [, bool $is_associative = false~
-    ]] )~
+    array localtime ([ int $timestamp = time() [, bool $is_associative =~
+    false ]] )~
 
 The localtime() function returns an array identical to that of the structure
 returned by the C function call.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {timestamp}
@@ -41,20 +41,20 @@ returned by the C function call.
       + "tm_isdst" - is daylight savings time in effect? Positive if yes, 0 if
         not, negative if unknown.
 
-===============================================================================
+==============================================================================
 *Errors/Exceptions*
 
-Every call to a date/time function will generate a E_NOTICE if the time zone is
-not valid, and/or a E_STRICT or E_WARNING message if using the system settings
-or the TZ environment variable. See also |date_default_timezone_set|
+Every call to a date/time function will generate a E_NOTICE if the time zone
+is not valid, and/or a E_STRICT or E_WARNING message if using the system
+settings or the TZ environment variable. See also |date_default_timezone_set|
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version                      Description
 5.1.0   Now issues the E_STRICT and E_NOTICE time zone errors.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 localtime() example
@@ -94,7 +94,7 @@ Array
     [tm_isdst] => 1
 )
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |getdate| - Get date/time information

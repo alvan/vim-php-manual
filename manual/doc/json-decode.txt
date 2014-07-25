@@ -4,7 +4,7 @@ json_decode
 
 json_decode — Decodes a JSON string
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed json_decode ( string $json [, bool $assoc = false [, int $depth =~
@@ -12,7 +12,7 @@ json_decode — Decodes a JSON string
 
 Takes a JSON encoded string and converts it into a PHP variable.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {json}
@@ -40,15 +40,15 @@ Takes a JSON encoded string and converts it into a PHP variable.
     Bitmask of JSON decode options. Currently only JSON_BIGINT_AS_STRING is
     supported (default is to cast large integers as floats)
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns the value encoded in {json} in appropriate PHP type. Values true, false
-and null are returned as TRUE, FALSE and NULL respectively. NULL is returned if
-the {json} cannot be decoded or if the encoded data is deeper than the
-recursion limit.
+Returns the value encoded in {json} in appropriate PHP type. Values true,
+false and null are returned as TRUE, FALSE and NULL respectively. NULL is
+returned if the {json} cannot be decoded or if the encoded data is deeper than
+the recursion limit.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 json_decode() examples
@@ -81,9 +81,9 @@ array(5) {
 
 Example #2 Accessing invalid object properties
 
-Accessing elements within an object that contain characters not permitted under
-PHP's naming convention (e.g. the hyphen) can be accomplished by encapsulating
-the element name within braces and the apostrophe.
+Accessing elements within an object that contain characters not permitted
+under PHP's naming convention (e.g. the hyphen) can be accomplished by
+encapsulating the element name within braces and the apostrophe.
 
 <?php >
 
@@ -197,7 +197,7 @@ object(stdClass)#1 (1) {
   string(20) "12345678901234567890"
 }
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -209,10 +209,10 @@ object(stdClass)#1 (1) {
     In the event of a failure to decode, |json_last_error| can be used to
     determine the exact nature of the error.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 5.6.0   Invalid non-lowercased variants of the true, false and null literals
         are no longer accepted as valid input, and will generate warnings.
 5.4.0   The {options} parameter was added.
@@ -221,7 +221,7 @@ Version                               Description
 5.2.3   The nesting limit was increased from 20 to 128
 5.2.1   Added support for JSON decoding of basic types.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |json_encode| - Returns the JSON representation of a value

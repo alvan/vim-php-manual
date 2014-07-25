@@ -4,26 +4,26 @@ pg_connection_status
 
 pg_connection_status — Get connection status
 
-===============================================================================
+==============================================================================
 *Description*
 
     int pg_connection_status ( resource $connection )~
 
 pg_connection_status() returns the status of the specified {connection}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
 
     PostgreSQL database connection resource.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 PGSQL_CONNECTION_OK or PGSQL_CONNECTION_BAD.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 pg_connection_status() example
@@ -38,7 +38,7 @@ Example #1 pg_connection_status() example
       }    
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |pg_connection_busy| - Get connection is busy or not

@@ -4,7 +4,7 @@ imap_fetchstructure
 
 imap_fetchstructure — Read the structure of a particular message
 
-===============================================================================
+==============================================================================
 *Description*
 
     object imap_fetchstructure ( resource $imap_stream , int $msg_number [,~
@@ -12,7 +12,7 @@ imap_fetchstructure — Read the structure of a particular message
 
 Fetches all the structured information for a given message.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { imap_stream}
@@ -28,7 +28,7 @@ Fetches all the structured information for a given message.
     This optional parameter only has a single option, FT_UID, which tells the
     function to treat the {msg_number} argument as a UID.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an object includes the envelope, internal date, size, flags and body
@@ -81,7 +81,7 @@ Transfer encodings
 4 QUOTED-PRINTABLE
 5 OTHER
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |imap_fetchbody| - Fetch a particular section of the body of the message

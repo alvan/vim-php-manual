@@ -4,7 +4,7 @@ imagealphablending
 
 imagealphablending — Set the blending mode for an image
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool imagealphablending ( resource $image , bool $blendmode )~
@@ -15,29 +15,29 @@ all drawing function, such as |imagesetpixel| determines how much of the
 underlying color should be allowed to shine through. As a result, gd
 automatically blends the existing color at that point with the drawing color,
 and stores the result in the image. The resulting pixel is opaque. In
-non-blending mode, the drawing color is copied literally with its alpha channel
-information, replacing the destination pixel. Blending mode is not available
-when drawing on palette images.
+non-blending mode, the drawing color is copied literally with its alpha
+channel information, replacing the destination pixel. Blending mode is not
+available when drawing on palette images.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { image}
 
-    An image resource, returned by one of the image creation functions, such as
-    |imagecreatetruecolor|.
+    An image resource, returned by one of the image creation functions, such
+    as |imagecreatetruecolor|.
 
 {blendmode}
 
     Whether to enable the blending mode or not. On true color images the
     default value is TRUE otherwise the default value is FALSE
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 imagealphablending() usage example
@@ -59,7 +59,7 @@ Example #1 imagealphablending() usage example
     imagedestroy($im);
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: This function requires GD 2.0.1 or later (2.0.28 or later is

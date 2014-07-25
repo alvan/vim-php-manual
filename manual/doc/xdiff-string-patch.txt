@@ -4,7 +4,7 @@ xdiff_string_patch
 
 xdiff_string_patch — Patch a string with an unified diff
 
-===============================================================================
+==============================================================================
 *Description*
 
     string xdiff_string_patch ( string $str , string $patch [, int $flags [,~
@@ -16,7 +16,7 @@ xdiff_string_diff| function. An optional {flags} parameter specifies mode of
 operation. Any rejected parts of the patch will be stored inside {error}
 variable if it is provided.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {str}
@@ -25,8 +25,8 @@ variable if it is provided.
 
 {patch}
 
-    The unified patch string. It has to be created using |xdiff_string_diff|, |
-    xdiff_file_diff| functions or compatible tools.
+    The unified patch string. It has to be created using |xdiff_string_diff|, 
+    |xdiff_file_diff| functions or compatible tools.
 
 {flags}
 
@@ -40,12 +40,12 @@ variable if it is provided.
 
     If provided then rejected parts are stored inside this variable.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the patched string, or FALSE on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 xdiff_string_patch() example
@@ -73,7 +73,7 @@ The following code applies changes to some article.
 
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |xdiff_string_diff| - Make unified diff of two strings

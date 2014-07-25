@@ -4,7 +4,7 @@ msg_stat_queue
 
 msg_stat_queue — Returns information from the message queue data structure
 
-===============================================================================
+==============================================================================
 *Description*
 
     array msg_stat_queue ( resource $queue )~
@@ -13,17 +13,18 @@ msg_stat_queue() returns the message queue meta data for the message queue
 specified by the {queue}. This is useful, for example, to determine which
 process sent the message that was just received.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {queue}
 
     Message queue resource handle
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-The return value is an array whose keys and values have the following meanings:
+The return value is an array whose keys and values have the following
+meanings:
 
                       Array structure for msg_stat_queue
 msg_perm.uid  The uid of the owner of the queue.
@@ -40,7 +41,7 @@ msg_lspid     The pid of the process that sent the last message to the queue.
 msg_lrpid     The pid of the process that received the last message from the
               queue.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |msg_remove_queue| - Destroy a message queue

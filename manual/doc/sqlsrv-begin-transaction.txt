@@ -4,7 +4,7 @@ sqlsrv_begin_transaction
 
 sqlsrv_begin_transaction — Begins a database transaction
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool sqlsrv_begin_transaction ( resource $conn )~
@@ -12,23 +12,23 @@ sqlsrv_begin_transaction — Begins a database transaction
 The transaction begun by sqlsrv_begin_transaction() includes all statements
 that were executed after the call to sqlsrv_begin_transaction() and before
 calls to |sqlsrv_rollback| or |sqlsrv_commit|. Explicit transactions should be
-started and committed or rolled back using these functions instead of executing
-SQL statements that begin and committ/roll back transactions. For more
-information, see » SQLSRV Transactions.
+started and committed or rolled back using these functions instead of
+executing SQL statements that begin and committ/roll back transactions. For
+more information, see » SQLSRV Transactions.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {conn}
 
     The connection resource returned by a call to |sqlsrv_connect|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 sqlsrv_begin_transaction() example
@@ -79,7 +79,7 @@ together with |sqlsrv_commit| and |sqlsrv_rollback|.
 
 The above example will output something similar to:
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |sqlsrv_commit| - Commits a transaction that was begun with

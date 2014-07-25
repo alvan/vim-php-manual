@@ -4,37 +4,37 @@ sqlsrv_next_result
 
 sqlsrv_next_result — Makes the next result of the specified statement active
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed sqlsrv_next_result ( resource $stmt )~
 
-Makes the next result of the specified statement active. Results include result
-sets, row counts, and output parameters.
+Makes the next result of the specified statement active. Results include
+result sets, row counts, and output parameters.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {stmt}
 
     The statment on which the next result is being called.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE if the next result was successfully retrieved, FALSE if an error
 occurred, and NULL if there are no more results to retrieve.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 sqlsrv_next_result() example
 
-The following example executes a batch query that inserts into a table and then
-selects from the table. This produces two results on the statement: one for the
-rows affected by the INSERT and one for the rows returned by the SELECT. To get
-to the rows returned by the SELECT, sqlsrv_next_result() must be called to move
-past the first result.
+The following example executes a batch query that inserts into a table and
+then selects from the table. This produces two results on the statement: one
+for the rows affected by the INSERT and one for the rows returned by the
+SELECT. To get to the rows returned by the SELECT, sqlsrv_next_result() must
+be called to move past the first result.
 
 <?php >
     $serverName = "serverName\sqlexpress";
@@ -42,7 +42,8 @@ past the first result.
     "password");
     $conn = sqlsrv_connect( $serverName, $connectionInfo);
 
-    $query = "INSERT INTO Table_1 (id, data) VALUES (?,?); SELECT * FROM TABLE_1;";
+    $query = "INSERT INTO Table_1 (id, data) VALUES (?,?); SELECT * FROM TABLE_1;"
+    ;
     $params = array(1, "some data");
     $stmt = sqlsrv_query($conn, $query, $params);
 
@@ -63,7 +64,7 @@ past the first result.
     }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |sqlsrv_query| - Prepares and executes a query.

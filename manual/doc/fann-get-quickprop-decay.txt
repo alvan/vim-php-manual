@@ -5,7 +5,7 @@ fann_get_quickprop_decay
 fann_get_quickprop_decay — Returns the decay which is a factor that weights
 should decrease in each iteration during quickprop training
 
-===============================================================================
+==============================================================================
 *Description*
 
     float fann_get_quickprop_decay ( resource $ann )~
@@ -16,19 +16,19 @@ make sure that the weights do not become too high during training.
 
 The default decay is -0.0001.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {ann}
 
     Neural network resource.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The decay, or FALSE on error.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |fann_set_quickprop_decay| - Sets the quickprop decay factor

@@ -4,7 +4,7 @@ bcompiler_write_header
 
 bcompiler_write_header — Writes the bcompiler header
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool bcompiler_write_header ( resource $filehandle [, string $write_ver ]~
@@ -12,7 +12,7 @@ bcompiler_write_header — Writes the bcompiler header
 
 Writes the header part of a bcompiler file.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {filehandle}
@@ -24,12 +24,12 @@ Writes the header part of a bcompiler file.
     Can be used to write bytecode in a previously used format, so that you can
     use it with older versions of bcompiler.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 bcompiler_write_header() example
@@ -43,20 +43,20 @@ Example #1 bcompiler_write_header() example
 
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
 Warning
 
 This function is EXPERIMENTAL. The behaviour of this function, its name, and
-surrounding documentation may change without notice in a future release of PHP.
-This function should be used at your own risk.
+surrounding documentation may change without notice in a future release of
+PHP. This function should be used at your own risk.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
-  * |bcompiler_write_footer| - Writes the single character \x00 to indicate End
-    of compiled data
+  * |bcompiler_write_footer| - Writes the single character \x00 to indicate
+    End of compiled data
 
 
 vim:ft=help:

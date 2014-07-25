@@ -5,22 +5,22 @@ imagecolorclosestalpha
 imagecolorclosestalpha — Get the index of the closest color to the specified
 color + alpha
 
-===============================================================================
+==============================================================================
 *Description*
 
-    int imagecolorclosestalpha ( resource $image , int $red , int $green , int~
-    $blue , int $alpha )~
+    int imagecolorclosestalpha ( resource $image , int $red , int $green ,~
+    int $blue , int $alpha )~
 
 Returns the index of the color in the palette of the image which is "closest"
 to the specified RGB value and {alpha} level.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { image}
 
-    An image resource, returned by one of the image creation functions, such as
-    |imagecreatetruecolor|.
+    An image resource, returned by one of the image creation functions, such
+    as |imagecreatetruecolor|.
 
 {red}
 
@@ -42,12 +42,12 @@ to the specified RGB value and {alpha} level.
 The colors parameters are integers between 0 and 255 or hexadecimals between
 0x00 and 0xFF.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the index of the closest color in the palette.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Search for a set of colors in an image
@@ -88,13 +88,13 @@ The above example will output something similar to:
 #2: Search (153, 90, 145, 0); Closest match: (148, 90, 156, 0).
 #3: Search (255, 137, 92, 84); Closest match: (252, 150, 92, 0).
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: This function requires GD 2.0.1 or later (2.0.28 or later is
     recommended).
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |imagecolorexactalpha| - Get the index of the specified color + alpha

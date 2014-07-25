@@ -4,16 +4,17 @@ event_buffer_write
 
 event_buffer_write — Write data to a buffered event
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool event_buffer_write ( resource $bevent , string $data [, int~
     $data_size = -1 ] )~
 
-Writes data to the specified buffered event. The data is appended to the output
-buffer and written to the descriptor when it becomes available for writing.
+Writes data to the specified buffered event. The data is appended to the
+output buffer and written to the descriptor when it becomes available for
+writing.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {bevent}
@@ -29,7 +30,7 @@ buffer and written to the descriptor when it becomes available for writing.
     Optional size parameter. event_buffer_write() writes all the {data} by
     default.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 event_buffer_write() returns TRUE on success or FALSE on error.

@@ -4,25 +4,25 @@ yaml_parse_url
 
 yaml_parse_url — Parse a Yaml stream from a URL
 
-===============================================================================
+==============================================================================
 *Description*
 
-    mixed yaml_parse_url ( string $url [, int $pos = 0 [, int &$ndocs [, array~
-    $callbacks ]]] )~
+    mixed yaml_parse_url ( string $url [, int $pos = 0 [, int &$ndocs [,~
+    array $callbacks ]]] )~
 
 Convert all or part of a YAML document stream read from a URL to a PHP
 variable.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {url}
 
     {url} should be of the form "scheme://...". PHP will search for a protocol
     handler (also known as a wrapper) for that scheme. If no wrappers for that
-    protocol are registered, PHP will emit a notice to help you track potential
-    problems in your script and then continue as though filename specifies a
-    regular file.
+    protocol are registered, PHP will emit a notice to help you track
+    potential problems in your script and then continue as though filename
+    specifies a regular file.
 
 {pos}
 
@@ -39,14 +39,14 @@ variable.
     Content handlers for YAML nodes. Associative array of YAML tag => callable
     mappings. See parse callbacks for more
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the value encoded in {input} in appropriate PHP type or FALSE on
 failure. If {pos} is -1 an array will be returned with one entry for each
 document found in the stream.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |yaml_parse| - Parse a YAML stream

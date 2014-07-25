@@ -4,7 +4,7 @@ ibase_drop_db
 
 ibase_drop_db — Drops a database
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool ibase_drop_db ([ resource $connection = NULL ] )~
@@ -12,19 +12,19 @@ ibase_drop_db — Drops a database
 This functions drops a database that was opened by either |ibase_connect| or |
 ibase_pconnect|. The database is closed and deleted from the server.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
 
     An InterBase link identifier. If omitted, the last opened link is assumed.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ibase_connect| - Open a connection to a database

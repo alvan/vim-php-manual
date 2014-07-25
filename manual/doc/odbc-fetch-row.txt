@@ -4,16 +4,16 @@ odbc_fetch_row
 
 odbc_fetch_row — Fetch a row
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool odbc_fetch_row ( resource $result_id [, int $row_number ] )~
 
-Fetches a row of the data that was returned by |odbc_do| or |odbc_exec|. After 
+Fetches a row of the data that was returned by |odbc_do| or |odbc_exec|. After
 odbc_fetch_row() is called, the fields of that row can be accessed with |
 odbc_result|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result_id}
@@ -31,7 +31,7 @@ odbc_result|.
     {row_number} to review the result. If a driver doesn't support fetching
     rows by number, the {row_number} parameter is ignored.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE if there was a row, FALSE otherwise.

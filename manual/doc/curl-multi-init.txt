@@ -4,30 +4,30 @@ curl_multi_init
 
 curl_multi_init — Returns a new cURL multi handle
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource curl_multi_init ( void )~
 
 Allows the processing of multiple cURL handles in parallel.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 This function has no parameters.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a cURL multi handle resource on success, FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 curl_multi_init() example
 
-This example will create two cURL handles, add them to a multi handle, and then
-run them in parallel.
+This example will create two cURL handles, add them to a multi handle, and
+then run them in parallel.
 
 <?php >
     // create both cURL resources
@@ -68,7 +68,7 @@ run them in parallel.
 
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |curl_init| - Initialize a cURL session

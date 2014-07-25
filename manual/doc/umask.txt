@@ -4,7 +4,7 @@ umask
 
 umask — Changes the current umask
 
-===============================================================================
+==============================================================================
 *Description*
 
     int umask ([ int $mask ] )~
@@ -13,20 +13,20 @@ umask() sets PHP's umask to {mask} & 0777 and returns the old umask. When PHP
 is being used as a server module, the umask is restored when each request is
 finished.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {mask}
 
     The new umask.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 umask() without arguments simply returns the current umask otherwise the old
 umask is returned.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 umask() example
@@ -42,15 +42,15 @@ Example #1 umask() example
     }
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
 
     Avoid using this function in multithreaded webservers. It is better to
     change the file permissions with |chmod| after creating the file. Using 
-    umask() can lead to unexpected behavior of concurrently running scripts and
-    the webserver itself because they all use the same umask.
+    umask() can lead to unexpected behavior of concurrently running scripts
+    and the webserver itself because they all use the same umask.
 
 
 vim:ft=help:

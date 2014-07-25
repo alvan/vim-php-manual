@@ -4,14 +4,14 @@ xslt_set_scheme_handlers
 
 xslt_set_scheme_handlers — Set the scheme handlers for the XSLT processor
 
-===============================================================================
+==============================================================================
 *Description*
 
     void xslt_set_scheme_handlers ( resource $xh , array $handlers )~
 
 Registers the scheme handlers (XPath handlers) for the document.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { xh}
@@ -39,12 +39,12 @@ Registers the scheme handlers (XPath handlers) for the document.
     int      put(resource processor, resource fp, string data)
     void     close(resource processor, resource fp)
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 No value is returned.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 xslt_set_scheme_handlers() example
@@ -87,7 +87,7 @@ Then, inside the stylesheet, you can test whether a certain file exists with:
  <!-- The file exist -->
 </xsl:if>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |xslt_set_scheme_handler| - Set Scheme handlers for a XSLT processor

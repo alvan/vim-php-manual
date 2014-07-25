@@ -4,7 +4,7 @@ pg_insert
 
 pg_insert — Insert array into table
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed pg_insert ( resource $connection , string $table_name , array~
@@ -14,7 +14,7 @@ pg_insert() inserts the values of {assoc_array} into the table specified by
 {table_name}. If {options} is specified, |pg_convert| is applied to
 {assoc_array} with the specified options.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
@@ -23,8 +23,8 @@ pg_insert() inserts the values of {assoc_array} into the table specified by
 
 {table_name}
 
-    Name of the table into which to insert rows. The table {table_name} must at
-    least have as many columns as {assoc_array} has elements.
+    Name of the table into which to insert rows. The table {table_name} must
+    at least have as many columns as {assoc_array} has elements.
 
 {assoc_array}
 
@@ -39,13 +39,13 @@ pg_insert() inserts the values of {assoc_array} into the table specified by
     When PGSQL_DML_NO_CONV or PGSQL_DML_ESCAPE is set, it does not call |
     pg_convert| internally.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns TRUE on success or FALSE on failure. Returns string if PGSQL_DML_STRING
-is passed via {options}.
+Returns TRUE on success or FALSE on failure. Returns string if
+PGSQL_DML_STRING is passed via {options}.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 pg_insert() example
@@ -61,16 +61,16 @@ Example #1 pg_insert() example
       }
 <?>
 
-===============================================================================
+==============================================================================
 *Changelog*
 
- Version                               Description
+ Version                              Description
 5.6.0     No longer experimental. Added PGSQL_DML_ESCAPE constant, TRUE/FALSE
           and NULL data type support.
 5.5.3/    Direct SQL injection to {table_name} and Indirect SQL injection to
 5.4.19    identifiers are fixed.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |pg_convert| - Convert associative array values into suitable for SQL

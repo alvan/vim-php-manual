@@ -4,7 +4,7 @@ ps_show_boxed
 
 ps_show_boxed — Output text in a box
 
-===============================================================================
+==============================================================================
 *Description*
 
     int ps_show_boxed ( resource $psdoc , string $text , float $left , float~
@@ -18,12 +18,12 @@ treated as one. Tabulators are treated as spaces.
 The text will be hyphenated if the parameter {hyphenation} is set to TRUE and
 the parameter {hyphendict} contains a valid filename for a hyphenation file.
 The line spacing is taken from the value leading. Paragraphs can be separated
-by an empty line just like in TeX. If the value parindent is set to value > 0.0
-then the first n lines will be indented. The number n of lines is set by the
-parameter numindentlines. In order to prevent indenting of the first m
+by an empty line just like in TeX. If the value parindent is set to value >
+0.0 then the first n lines will be indented. The number n of lines is set by
+the parameter numindentlines. In order to prevent indenting of the first m
 paragraphs set the value parindentskip to a positive number.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {psdoc}
@@ -60,7 +60,7 @@ paragraphs set the value parindentskip to a positive number.
 
 {feature}
 
-===============================================================================
+==============================================================================
 *Used* *parameters*
 
 The output of ps_show_boxed() can be configured with several parameters and
@@ -79,8 +79,8 @@ linebreak (parameter)
 
 parbreak (parameter)
 
-    Set to "true" if you want a carriage return on a single line to start a new
-    paragraph instead of treating it as a space. Defaults to "true".
+    Set to "true" if you want a carriage return on a single line to start a
+    new paragraph instead of treating it as a space. Defaults to "true".
 
 hyphenation (parameter)
 
@@ -117,8 +117,8 @@ parindentskip (value)
 
     Number of paragraphs in the box whose first lines will not be indented.
     This defaults to 0. This is useful for paragraphs right after a section
-    heading or text being continued in a second box. In both case one would set
-    this to 1.
+    heading or text being continued in a second box. In both case one would
+    set this to 1.
 
 linenumbermode (parameter)
 
@@ -137,14 +137,14 @@ linenumbersep (value)
     The space between the column with line numbers and the line itself.
     Defaults to 5.
 
-===============================================================================
+==============================================================================
 *Hyphenation*
 
 Text is hyphenated if the parameter hyphenation is set to true and a valid
 hyphenation dictionary is set. pslib does not ship its own hyphenation
-dictionary but uses one from openoffice, scribus or koffice. You can find their
-dictionaries for different languages in one of the following directories if the
-software is installed:
+dictionary but uses one from openoffice, scribus or koffice. You can find
+their dictionaries for different languages in one of the following directories
+if the software is installed:
 
   * /usr/share/apps/koffice/hyphdicts/
   * /usr/lib/scribus/dicts/
@@ -152,12 +152,12 @@ software is installed:
 
 Currently scribus appears to have the most complete hyphenation dictionaries.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Number of characters that could not be written.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ps_continue_text| - Continue text in next line

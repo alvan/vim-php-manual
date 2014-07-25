@@ -5,16 +5,16 @@ array_reduce
 array_reduce — Iteratively reduce the array to a single value using a callback
 function
 
-===============================================================================
+==============================================================================
 *Description*
 
-    mixed array_reduce ( array $array , callable $callback [, mixed $initial =~
-    NULL ] )~
+    mixed array_reduce ( array $array , callable $callback [, mixed $initial~
+    = NULL ] )~
 
 array_reduce() applies iteratively the {callback} function to the elements of
 the {array}, so as to reduce the array to a single value.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {array}
@@ -36,23 +36,24 @@ the {array}, so as to reduce the array to a single value.
 
 {initial}
 
-    If the optional {initial} is available, it will be used at the beginning of
-    the process, or as a final result in case the array is empty.
+    If the optional {initial} is available, it will be used at the beginning
+    of the process, or as a final result in case the array is empty.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the resulting value.
 
-If the array is empty and {initial} is not passed, array_reduce() returns NULL.
+If the array is empty and {initial} is not passed, array_reduce() returns NULL
+.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version                      Description
 5.3.0   Changed {initial} to allow mixed, previously integer.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 array_reduce() example
@@ -80,7 +81,7 @@ Example #1 array_reduce() example
      "No data to reduce"
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |array_filter| - Filters elements of an array using a callback function

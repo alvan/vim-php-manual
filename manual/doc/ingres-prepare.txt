@@ -4,7 +4,7 @@ ingres_prepare
 
 ingres_prepare — Prepare a query for later execution
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed ingres_prepare ( resource $link , string $query )~
@@ -24,7 +24,7 @@ immediately committed.
     See also the ingres.describe, ingres.scrollable and ingres.utf8 directives
     in Runtime Configuration.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {link}
@@ -37,14 +37,14 @@ immediately committed.
     documentation. See the query parameter in |ingres_query| for a list of SQL
     statements which cannot be executed using ingres_prepare()
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 ingres_prepare() returns a query result identifier that is used with |
 ingres_execute| to execute the query. To see if an error occurred, use |
 ingres_errno|, |ingres_error|, or |ingres_errsqlstate|.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ingres_unbuffered_query| - Send an unbuffered SQL query to Ingres

@@ -4,7 +4,7 @@ odbc_next_result
 
 odbc_next_result — Checks if multiple results are available
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool odbc_next_result ( resource $result_id )~
@@ -13,19 +13,19 @@ Checks if there are more result sets available as well as allowing access to
 the next result set via |odbc_fetch_array|, |odbc_fetch_row|, |odbc_result|,
 etc.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result_id}
 
     The result identifier.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE if there are more result sets, FALSE otherwise.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 odbc_next_result()

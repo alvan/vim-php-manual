@@ -4,14 +4,15 @@ ldap_connect
 
 ldap_connect — Connect to an LDAP server
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource ldap_connect ([ string $hostname = NULL [, int $port = 389 ]] )~
 
-Establishes a connection to a LDAP server on a specified {hostname} and {port}.
+Establishes a connection to a LDAP server on a specified {hostname} and
+{port}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {hostname}
@@ -24,24 +25,25 @@ Establishes a connection to a LDAP server on a specified {hostname} and {port}.
 
     The port to connect to. Not used when using URLs.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a positive LDAP link identifier on success, or FALSE on error. When
-OpenLDAP 2.x.x is used, ldap_connect() will always return a resource as it does
-not actually connect but just initializes the connecting parameters. The actual
-connect happens with the next calls to ldap_* funcs, usually with |ldap_bind|.
+OpenLDAP 2.x.x is used, ldap_connect() will always return a resource as it
+does not actually connect but just initializes the connecting parameters. The
+actual connect happens with the next calls to ldap_* funcs, usually with |
+ldap_bind|.
 
 If no arguments are specified then the link identifier of the already opened
 link will be returned.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version          Description
 4.0.4   URL and SSL support was added.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Example of connecting to LDAP server.
@@ -72,7 +74,7 @@ Example #2 Example of connecting securely to LDAP server.
 
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ldap_bind| - Bind to LDAP directory

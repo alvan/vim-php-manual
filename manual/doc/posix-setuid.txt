@@ -4,28 +4,28 @@ posix_setuid
 
 posix_setuid — Set the UID of the current process
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool posix_setuid ( int $uid )~
 
-Set the real user ID of the current process. This is a privileged function that
-needs appropriate privileges (usually root) on the system to be able to perform
-this function.
+Set the real user ID of the current process. This is a privileged function
+that needs appropriate privileges (usually root) on the system to be able to
+perform this function.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {uid}
 
     The user id.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 posix_setuid() example
@@ -41,7 +41,7 @@ value.
     echo posix_geteuid()."\n"; //10000
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |posix_setgid| - Set the GID of the current process

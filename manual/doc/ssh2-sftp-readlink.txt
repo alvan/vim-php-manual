@@ -4,14 +4,14 @@ ssh2_sftp_readlink
 
 ssh2_sftp_readlink — Return the target of a symbolic link
 
-===============================================================================
+==============================================================================
 *Description*
 
     string ssh2_sftp_readlink ( resource $sftp , string $link )~
 
 Returns the target of a symbolic link.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {sftp}
@@ -22,12 +22,12 @@ Returns the target of a symbolic link.
 
     Path of the symbolic link.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the target of the symbolic {link}.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Reading a symbolic link
@@ -41,7 +41,7 @@ Example #1 Reading a symbolic link
     /* $target is now (e.g.): '/var/run/mysql.sock' */
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |readlink| - Returns the target of a symbolic link

@@ -4,7 +4,7 @@ eval
 
 eval — Evaluate a string as PHP code
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed eval ( string $code )~
@@ -14,12 +14,12 @@ Evaluates the given {code} as PHP.
 Caution
 
 The eval() language construct is very dangerous because it allows execution of
-arbitrary PHP code. Its use thus is discouraged. If you have carefully verified
-that there is no other option than to use this construct, pay special attention
-not to pass any user provided data into it without properly validating it
-beforehand.
+arbitrary PHP code. Its use thus is discouraged. If you have carefully
+verified that there is no other option than to use this construct, pay special
+attention not to pass any user provided data into it without properly
+validating it beforehand.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {code}
@@ -37,20 +37,20 @@ beforehand.
 
     A return statement will immediately terminate the evaluation of the code.
 
-    The code will be executed in the scope of the code calling eval(). Thus any
-    variables defined or changed in the eval() call will remain visible after
-    it terminates.
+    The code will be executed in the scope of the code calling eval(). Thus
+    any variables defined or changed in the eval() call will remain visible
+    after it terminates.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 eval() returns NULL unless return is called in the evaluated code, in which
 case the value passed to return is returned. If there is a parse error in the
 evaluated code, eval() returns FALSE and execution of the following code
-continues normally. It is not possible to catch a parse error in eval() using |
-set_error_handler|.
+continues normally. It is not possible to catch a parse error in eval() using 
+|set_error_handler|.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 eval() example - simple text merge
@@ -69,11 +69,11 @@ The above example will output:
 This is a $string with my $name in it.
 This is a cup with my coffee in it.
 
-===============================================================================
+==============================================================================
 *Notes*
 
-    Note: Because this is a language construct and not a function, it cannot be
-    called using variable functions.
+    Note: Because this is a language construct and not a function, it cannot
+    be called using variable functions.
 
 Tip
 
@@ -85,7 +85,7 @@ and save it in a string (for example).
 
     In case of a fatal error in the evaluated code, the whole script exits.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |call_user_func| - Call the callback given by the first parameter

@@ -5,7 +5,7 @@ imagecolorclosesthwb
 imagecolorclosesthwb — Get the index of the color which has the hue, white and
 blackness
 
-===============================================================================
+==============================================================================
 *Description*
 
     int imagecolorclosesthwb ( resource $image , int $red , int $green , int~
@@ -14,13 +14,13 @@ blackness
 Get the index of the color which has the hue, white and blackness nearest the
 given color.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { image}
 
-    An image resource, returned by one of the image creation functions, such as
-    |imagecreatetruecolor|.
+    An image resource, returned by one of the image creation functions, such
+    as |imagecreatetruecolor|.
 
 {red}
 
@@ -34,13 +34,13 @@ given color.
 
     Value of blue component.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an integer with the index of the color which has the hue, white and
 blackness nearest the given color.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Example of using imagecolorclosesthwb()
@@ -57,13 +57,13 @@ The above example will output something similar to:
 
 HWB: 33
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version                Description
 5.3.0   This function is now available on Windows
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |imagecolorclosest| - Get the index of the closest color to the specified

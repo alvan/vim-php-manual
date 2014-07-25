@@ -4,14 +4,14 @@ eio_cancel
 
 eio_cancel — Cancels a request
 
-===============================================================================
+==============================================================================
 *Description*
 
     void eio_cancel ( resource $req )~
 
 eio_cancel() cancels a request specified by {req}
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {req}
@@ -25,8 +25,8 @@ eio_cancel() cancels a request specified by {req}
 
 {callback}
 
-    {callback} function is called when the request is done. It should match the
-    following prototype:
+    {callback} function is called when the request is done. It should match
+    the following prototype:
     void callback(mixed $data, int $result[, resource $req]);
 
     {data}
@@ -47,12 +47,12 @@ eio_cancel() cancels a request specified by {req}
 
     Arbitrary variable passed to {callback}.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 No value is returned.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 eio_cancel() example
@@ -80,7 +80,7 @@ The above example will output something similar to:
 resource(4) of type (EIO Request Descriptor)
 my_nop 2
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * eio_grp_cancel

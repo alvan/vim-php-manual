@@ -4,7 +4,7 @@ html_entity_decode
 
 html_entity_decode — Convert all HTML entities to their applicable characters
 
-===============================================================================
+==============================================================================
 *Description*
 
     string html_entity_decode ( string $string [, int $flags = ENT_COMPAT |~
@@ -20,7 +20,7 @@ some DTD — and b) whose character or characters are in the coded character set
 associated with the chosen encoding and are permitted in the chosen document
 type. All other entities are left as is.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {string}
@@ -52,7 +52,7 @@ type. All other entities are left as is.
     The following character sets are supported:
 
                               Supported charsets
-      Charset      Aliases                       Description
+      Charset      Aliases                      Description
     ISO-8859-1  ISO8859-1     Western European, Latin-1.
     ISO-8859-5  ISO8859-5     Little used cyrillic charset (Latin/Cyrillic).
                               Western European, Latin-9. Adds the Euro sign,
@@ -80,27 +80,27 @@ type. All other entities are left as is.
     MacRoman                  Charset that was used by Mac OS.
                               An empty string activates detection from script
     ''                        encoding (Zend multibyte), default_charset and
-                              current locale (see |nl_langinfo| and |setlocale|
-                              ), in this order. Not recommended.
+                              current locale (see |nl_langinfo| and |setlocale
+                              |), in this order. Not recommended.
 
-        Note: Any other character sets are not recognized. The default encoding
-        will be used instead and a warning will be emitted.
+        Note: Any other character sets are not recognized. The default
+        encoding will be used instead and a warning will be emitted.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the decoded string.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 5.4.0   Default encoding changed from ISO-8859-1 to UTF-8.
 5.4.0   The constants ENT_HTML401, ENT_XML1, ENT_XHTML and ENT_HTML5 were
         added.
 5.0.0   Support for multi-byte encodings was added.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Decoding HTML entities
@@ -117,17 +117,17 @@ Example #1 Decoding HTML entities
     echo $b; // I'll "walk" the <b>dog</b> now
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
 
-    You might wonder why trim(html_entity_decode('&nbsp;')); doesn't reduce the
-    string to an empty string, that's because the '&nbsp;' entity is not ASCII
-    code 32 (which is stripped by |trim|) but ASCII code 160 (0xa0) in the
-    default ISO 8859-1 encoding.
+    You might wonder why trim(html_entity_decode('&nbsp;')); doesn't reduce
+    the string to an empty string, that's because the '&nbsp;' entity is not
+    ASCII code 32 (which is stripped by |trim|) but ASCII code 160 (0xa0) in
+    the default ISO 8859-1 encoding.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |htmlentities| - Convert all applicable characters to HTML entities

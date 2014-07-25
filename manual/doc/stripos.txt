@@ -5,17 +5,17 @@ stripos
 stripos — Find the position of the first occurrence of a case-insensitive
 substring in a string
 
-===============================================================================
+==============================================================================
 *Description*
 
     int stripos ( string $haystack , string $needle [, int $offset = 0 ] )~
 
-Find the numeric position of the first occurrence of {needle} in the {haystack}
-string.
+Find the numeric position of the first occurrence of {needle} in the
+{haystack} string.
 
 Unlike the |strpos|, stripos() is case-insensitive.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {haystack}
@@ -32,10 +32,10 @@ Unlike the |strpos|, stripos() is case-insensitive.
 {offset}
 
     If specified, search will start this number of characters counted from the
-    beginning of the string. Unlike |strrpos| and |strripos|, the offset cannot
-    be negative.
+    beginning of the string. Unlike |strrpos| and |strripos|, the offset
+    cannot be negative.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the position of where the needle exists relative to the beginnning of
@@ -46,12 +46,12 @@ Returns FALSE if the needle was not found.
 
 Warning
 
-This function may return Boolean FALSE, but may also return a non-Boolean value
-which evaluates to FALSE. Please read the section on Booleans for more
+This function may return Boolean FALSE, but may also return a non-Boolean
+value which evaluates to FALSE. Please read the section on Booleans for more
 information. Use the === operator for testing the return value of this
 function.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 stripos() examples
@@ -76,12 +76,12 @@ Example #1 stripos() examples
     }
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: This function is binary-safe.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mb_stripos| - Finds position of first occurrence of a string within
@@ -90,8 +90,8 @@ Example #1 stripos() examples
     string
   * |strrpos| - Find the position of the last occurrence of a substring in a
     string
-  * |strripos| - Find the position of the last occurrence of a case-insensitive
-    substring in a string
+  * |strripos| - Find the position of the last occurrence of a
+    case-insensitive substring in a string
   * |stristr| - Case-insensitive strstr
   * |substr| - Return part of a string
   * |str_ireplace| - Case-insensitive version of str_replace.

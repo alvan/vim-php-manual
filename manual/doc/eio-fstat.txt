@@ -4,7 +4,7 @@ eio_fstat
 
 eio_fstat — Get file status
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource eio_fstat ( mixed $fd , int $pri , callable $callback [, mixed~
@@ -12,7 +12,7 @@ eio_fstat — Get file status
 
 eio_fstat() returns file status information in {result} argument of {callback}
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {fd}
@@ -26,8 +26,8 @@ eio_fstat() returns file status information in {result} argument of {callback}
 
 {callback}
 
-    {callback} function is called when the request is done. It should match the
-    following prototype:
+    {callback} function is called when the request is done. It should match
+    the following prototype:
     void callback(mixed $data, int $result[, resource $req]);
 
     {data}
@@ -48,12 +48,12 @@ eio_fstat() returns file status information in {result} argument of {callback}
 
     Arbitrary variable passed to {callback}.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 |eio_busy| returns request resource on success or FALSE on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 |eio_lstat| example
@@ -125,7 +125,7 @@ array(12) {
   int(1318239506)
 }
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * eio_lstat

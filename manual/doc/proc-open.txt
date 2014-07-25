@@ -4,16 +4,16 @@ proc_open
 
 proc_open — Execute a command and open file pointers for input/output
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource proc_open ( string $cmd , array $descriptorspec , array &$pipes~
     [, string $cwd [, array $env [, array $other_options ]]] )~
 
-proc_open() is similar to |popen| but provides a much greater degree of control
-over the program execution.
+proc_open() is similar to |popen| but provides a much greater degree of
+control over the program execution.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {cmd}
@@ -35,13 +35,13 @@ over the program execution.
       + A stream resource representing a real file descriptor (e.g. opened
         file, a socket, STDIN).
 
-    The file descriptor numbers are not limited to 0, 1 and 2 - you may specify
-    any valid file descriptor number and it will be passed to the child
-    process. This allows your script to interoperate with other scripts that
-    run as "co-processes". In particular, this is useful for passing
+    The file descriptor numbers are not limited to 0, 1 and 2 - you may
+    specify any valid file descriptor number and it will be passed to the
+    child process. This allows your script to interoperate with other scripts
+    that run as "co-processes". In particular, this is useful for passing
     passphrases to programs like PGP, GPG and openssl in a more secure manner.
-    It is also useful for reading status information provided by those programs
-    on auxiliary file descriptors.
+    It is also useful for reading status information provided by those
+    programs on auxiliary file descriptors.
 
 {pipes}
 
@@ -50,9 +50,9 @@ over the program execution.
 
 {cwd}
 
-    The initial working dir for the command. This must be an absolute directory
-    path, or NULL if you want to use the default value (the working dir of the
-    current PHP process)
+    The initial working dir for the command. This must be an absolute
+    directory path, or NULL if you want to use the default value (the working
+    dir of the current PHP process)
 
 {env}
 
@@ -67,20 +67,20 @@ over the program execution.
         function when it's set to TRUE
       + bypass_shell (windows only): bypass cmd.exe shell when set to TRUE
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a resource representing the process, which should be freed using |
 proc_close| when you are finished with it. On failure returns FALSE.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version                           Description
 5.2.1   Added the bypass_shell option to the {other_options} parameter.
 5.0.0   Added the {cwd}, {env} and {other_options} parameters.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A proc_open() example
@@ -129,7 +129,7 @@ Array
 )
 command returned 0
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -145,7 +145,7 @@ command returned 0
     If you only need a uni-directional (one-way) process pipe, use |popen|
     instead, as it is much easier to use.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |popen| - Opens process file pointer

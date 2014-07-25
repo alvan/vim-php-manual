@@ -4,7 +4,7 @@ event_base_loopexit
 
 event_base_loopexit — Exit loop after a time
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool event_base_loopexit ( resource $event_base [, int $timeout = -1 ] )~
@@ -12,7 +12,7 @@ event_base_loopexit — Exit loop after a time
 The next event loop iteration after the given timer expires will complete
 normally, then exit without blocking for events again.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {event_base}
@@ -23,7 +23,7 @@ normally, then exit without blocking for events again.
 
     Optional timeout parameter (in microseconds).
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 event_base_loopexit() returns TRUE on success or FALSE on error.

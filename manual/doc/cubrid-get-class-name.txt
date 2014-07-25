@@ -4,7 +4,7 @@ cubrid_get_class_name
 
 cubrid_get_class_name — Get the class name using OID
 
-===============================================================================
+==============================================================================
 *Description*
 
     string cubrid_get_class_name ( resource $conn_identifier , string $oid )~
@@ -13,7 +13,7 @@ The cubrid_get_class_name() function is used to get the class name from {oid}.
 It doesn't work when selecting data from the system tables, for example
 db_class.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {conn_identifier}
@@ -24,14 +24,14 @@ db_class.
 
     OID of the instance that you want to check the existence.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Class name when process is successful.
 
 FALSE, when process is unsuccessful.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_get_class_name() example
@@ -52,7 +52,7 @@ The above example will output:
 
 code
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |cubrid_is_instance| - Check whether the instance pointed by OID exists

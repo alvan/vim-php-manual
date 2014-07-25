@@ -4,32 +4,32 @@ openssl_spki_verify
 
 openssl_spki_verify — Verifies a signed public key and challenge
 
-===============================================================================
+==============================================================================
 *Description*
 
     string openssl_spki_verify ( string &$spkac )~
 
 Validates the supplied signed public key and challenge
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {spkac}
 
     Expects a valid signed public key and challenge
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a boolean on success or failure.
 
-===============================================================================
+==============================================================================
 *Errors/Exceptions*
 
-Emits an E_WARNING level error if an invalid argument is passed via the {spkac}
-parameter.
+Emits an E_WARNING level error if an invalid argument is passed via the
+{spkac} parameter.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 openssl_spki_verify() example
@@ -61,7 +61,7 @@ element
 <?>
 <keygen name="spkac" challenge="challenge string" keytype="RSA">
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |openssl_spki_new| - Generate a new signed public key and challenge

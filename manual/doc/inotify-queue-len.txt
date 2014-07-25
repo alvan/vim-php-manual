@@ -2,9 +2,10 @@ inotify_queue_len
 
 (PECL inotify >= 0.1.2)
 
-inotify_queue_len — Return a number upper than zero if there are pending events
+inotify_queue_len — Return a number upper than zero if there are pending
+events
 
-===============================================================================
+==============================================================================
 *Description*
 
     int inotify_queue_len ( resource $inotify_instance )~
@@ -13,19 +14,19 @@ This function allows to know if |inotify_read| will block or not. If a number
 upper than zero is returned, there are pending events and |inotify_read| will
 not block.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {inotify_instance}
 
     Resource returned by |inotify_init|
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a number upper than zero if there are pending events.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |inotify_init| - Initialize an inotify instance

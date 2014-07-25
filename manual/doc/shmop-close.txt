@@ -4,26 +4,26 @@ shmop_close
 
 shmop_close — Close shared memory block
 
-===============================================================================
+==============================================================================
 *Description*
 
     void shmop_close ( int $shmid )~
 
 shmop_close() is used to close a shared memory block.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {shmid}
 
     The shared memory block identifier created by |shmop_open|
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 No value is returned.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Closing shared memory block
@@ -34,7 +34,7 @@ Example #1 Closing shared memory block
 
 This example will close shared memory block identified by $shm_id.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |shmop_open| - Create or open shared memory block

@@ -4,36 +4,37 @@ imagegif
 
 imagegif — Output image to browser or file
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool imagegif ( resource $image [, string $filename ] )~
 
-imagegif() creates the GIF file in filename from the image {image}. The {image}
-argument is the return from the |imagecreate| or imagecreatefrom* function.
+imagegif() creates the GIF file in filename from the image {image}. The
+{image} argument is the return from the |imagecreate| or imagecreatefrom*
+function.
 
-The image format will be GIF87a unless the image has been made transparent with
-|imagecolortransparent|, in which case the image format will be GIF89a.
+The image format will be GIF87a unless the image has been made transparent
+with |imagecolortransparent|, in which case the image format will be GIF89a.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { image}
 
-    An image resource, returned by one of the image creation functions, such as
-    |imagecreatetruecolor|.
+    An image resource, returned by one of the image creation functions, such
+    as |imagecreatetruecolor|.
 
 {filename}
 
-    The path to save the file to. If not set or NULL, the raw image stream will
-    be outputted directly.
+    The path to save the file to. If not set or NULL, the raw image stream
+    will be outputted directly.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Outputting an image using imagegif()
@@ -72,7 +73,7 @@ Example #2 Converting a PNG image to GIF using imagegif()
     echo 'Converted PNG image to GIF with success!';
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -83,8 +84,8 @@ Example #2 Converting a PNG image to GIF using imagegif()
 
     The following code snippet allows you to write more portable PHP
     applications by auto-detecting the type of GD support which is available.
-    Replace the sequence header ("Content-Type: image/gif"); imagegif ($im); by
-    the more flexible sequence:
+    Replace the sequence header ("Content-Type: image/gif"); imagegif ($im);
+    by the more flexible sequence:
     <?php >
     // Create a new image instance
     $im = imagecreatetruecolor(100, 100);
@@ -152,7 +153,7 @@ Example #2 Converting a PNG image to GIF using imagegif()
     }
 <    ?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |imagepng| - Output a PNG image to either the browser or a file

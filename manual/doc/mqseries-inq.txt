@@ -4,7 +4,7 @@ mqseries_inq
 
 mqseries_inq — MQSeries MQINQ
 
-===============================================================================
+==============================================================================
 *Description*
 
     void mqseries_inq ( resource $hconn , resource $hobj , int $selectorCount~
@@ -15,7 +15,7 @@ mqseries_inq — MQSeries MQINQ
 The mqseries_inq() (MQINQ) call returns an array of integers and a set of
 character strings containing the attributes of an object.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {hConn}
@@ -62,12 +62,12 @@ character strings containing the attributes of an object.
 
     Reason code qualifying the compCode.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 No value is returned.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mqseries_inq() example
@@ -80,14 +80,14 @@ Example #1 mqseries_inq() example
     , 48, $char_attr, $comp_code, $reason);
         
         if ($comp_code !== MQSERIES_MQCC_OK) {
-            printf("INQ CompCode:%d Reason:%d Text:%s<br>\n", $comp_code, $reason, 
-    mqseries_strerror($reason));
+            printf("INQ CompCode:%d Reason:%d Text:%s<br>\n", $comp_code, $reason
+    , mqseries_strerror($reason));
         } else {
             echo "INQ QManager name result ".$char_attr."<br>\n";
         }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mqseries_conn| - MQSeries MQCONN

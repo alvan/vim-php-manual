@@ -4,7 +4,7 @@ sqlsrv_prepare
 
 sqlsrv_prepare — Prepares a query for execution
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed sqlsrv_prepare ( resource $conn , string $sql [, array $params [,~
@@ -13,7 +13,7 @@ sqlsrv_prepare — Prepares a query for execution
 Prepares a query for execution. This function is ideal for preparing a query
 that will be executed multiple times with different parameter values.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {conn}
@@ -30,13 +30,14 @@ that will be executed multiple times with different parameter values.
     query. Array elements can be any of the following:
       + A literal value
       + A PHP variable
-      + An array with this structure: array($value [, $direction [, $phpType [,
-        $sqlType]]])
+      + An array with this structure: array($value [, $direction [, $phpType
+        [, $sqlType]]])
     The following table describes the elements in the array structure above:
 
-                                Array structure
+                               Array structure
      Element                             Description
-    $value     A literal value, a PHP variable, or a PHP by-reference variable.
+    $value     A literal value, a PHP variable, or a PHP by-reference
+               variable.
     $direction One of the following SQLSRV constants used to indicate the
     (optional) parameter direction: SQLSRV_PARAM_IN, SQLSRV_PARAM_OUT,
                SQLSRV_PARAM_INOUT. The default value is SQLSRV_PARAM_IN.
@@ -47,35 +48,35 @@ that will be executed multiple times with different parameter values.
 
 {options}
 
-    An array specifing query property options. The supported keys are described
-    in the following table:
+    An array specifing query property options. The supported keys are
+    described in the following table:
 
-                                 Query Options
-             Key                   Values                  Description
+                                Query Options
+             Key                   Values                 Description
                                                   Sets the query timeout in
     QueryTimeout           A positive integer     seconds. By default, the
-                           value.                 driver will wait indefinitely
-                                                  for results.
-                                                  Configures the driver to send
-                                                  all stream data at execution
-                                                  (TRUE), or to send stream
-    SendStreamParamsAtExec TRUE or FALSE (the     data in chunks (FALSE). By
-                           default is TRUE)       default, the value is set to
-                                                  TRUE. For more information,
-                                                  see |sqlsrv_send_stream_data|
-                                                  .
+                           value.                 driver will wait
+                                                  indefinitely for results.
+                                                  Configures the driver to
+                                                  send all stream data at
+                                                  execution (TRUE), or to send
+    SendStreamParamsAtExec TRUE or FALSE (the     stream data in chunks (FALSE
+                           default is TRUE)       ). By default, the value is
+                                                  set to TRUE. For more
+                                                  information, see |
+                                                  sqlsrv_send_stream_data|.
                            SQLSRV_CURSOR_FORWARD, See » Specifying a Cursor
                            SQLSRV_CURSOR_STATIC,  Type and Selecting Rows in
     Scrollable             SQLSRV_CURSOR_DYNAMIC, the Microsoft SQLSRV
                            or                     documentation.
                            SQLSRV_CURSOR_KEYSET
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a statement resource on success and FALSE if an error occurred.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 sqlsrv_prepare() example
@@ -119,7 +120,7 @@ sqlsrv_execute|.
     }
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
 When you prepare a statement that uses variables as parameters, the variables
@@ -128,7 +129,7 @@ variables, the next time you execute the statement it will run with updated
 parameter values. For statements that you plan to execute only once, use |
 sqlsrv_query|.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |sqlsrv_execute| - Executes a statement prepared with sqlsrv_prepare

@@ -4,19 +4,19 @@ ingres_fetch_array
 
 ingres_fetch_array — Fetch a row of result into an array
 
-===============================================================================
+==============================================================================
 *Description*
 
     array ingres_fetch_array ( resource $result [, int $result_type ] )~
 
 This function is an extended version of |ingres_fetch_row|. In addition to
-storing the data in the numeric indices of the result array, it also stores the
-data in associative indices, using the field names as keys.
+storing the data in the numeric indices of the result array, it also stores
+the data in associative indices, using the field names as keys.
 
-If two or more columns of the result have the same field names, the last column
-will take precedence. To access the another column or columns of the same name,
-you must use the numeric index of the column or make an alias for the column.
-For example:
+If two or more columns of the result have the same field names, the last
+column will take precedence. To access the another column or columns of the
+same name, you must use the numeric index of the column or make an alias for
+the column. For example:
 <?php >
 
     $result = ingres_query($link, 
@@ -32,15 +32,15 @@ With regard to speed, the function is identical to |ingres_fetch_object|, and
 almost as quick as |ingres_fetch_row| (the difference is insignificant).
 
 By default, arrays created by ingres_fetch_array() start from position 1 and
-not 0 as with other DBMS extensions. The starting position can be adjusted to 0
-using the configuration parameter ingres.array_index_start.
+not 0 as with other DBMS extensions. The starting position can be adjusted to
+0 using the configuration parameter ingres.array_index_start.
 
     Note: Related Configurations
 
     See also the ingres.array_index_start, ingres.fetch_buffer_size and
     ingres.utf8 directives in Runtime Configuration.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
@@ -49,16 +49,16 @@ using the configuration parameter ingres.array_index_start.
 
 {result_type}
 
-    The result type. This {result_type} can be INGRES_NUM for enumerated array,
-    INGRES_ASSOC for associative array, or INGRES_BOTH (default).
+    The result type. This {result_type} can be INGRES_NUM for enumerated
+    array, INGRES_ASSOC for associative array, or INGRES_BOTH (default).
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an array that corresponds to the fetched row, or FALSE if there are no
 more rows
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Fetch a row of result into an array
@@ -75,7 +75,7 @@ Example #1 Fetch a row of result into an array
     }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ingres_query| - Send an SQL query to Ingres

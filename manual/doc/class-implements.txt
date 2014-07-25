@@ -5,7 +5,7 @@ class_implements
 class_implements — Return the interfaces which are implemented by the given
 class
 
-===============================================================================
+==============================================================================
 *Description*
 
     array class_implements ( mixed $class [, bool $autoload = true ] )~
@@ -13,7 +13,7 @@ class
 This function returns an array with the names of the interfaces that the given
 {class} and its parents implement.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {class}
@@ -22,22 +22,22 @@ This function returns an array with the names of the interfaces that the given
 
 {autoload}
 
-    Whether to allow this function to load the class automatically through the 
+    Whether to allow this function to load the class automatically through the
     |__autoload| magic method.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 An array on success, or FALSE on error.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 5.1.0   Added the option to pass the {class} parameter as a string. Added the
         {autoload} parameter.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 class_implements() example
@@ -74,7 +74,7 @@ Array
     [interface_of_not_loaded] => interface_of_not_loaded
 )
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |class_parents| - Return the parent classes of the given class

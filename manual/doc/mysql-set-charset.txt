@@ -8,13 +8,13 @@ Warning
 
 This extension is deprecated as of PHP 5.5.0, and will be removed in the
 future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
-MySQL: choosing an API guide and related FAQ for more information. Alternatives
-to this function include:
+MySQL: choosing an API guide and related FAQ for more information.
+Alternatives to this function include:
 
   * mysqli_set_charset()
   * PDO: Add charset to the connection string, such as charset=utf8
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool mysql_set_charset ( string $charset [, resource $link_identifier =~
@@ -22,7 +22,7 @@ to this function include:
 
 Sets the default character set for the current connection.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {charset}
@@ -37,12 +37,12 @@ Sets the default character set for the current connection.
     If no connection is found or established, an E_WARNING level error is
     generated.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -51,11 +51,11 @@ Returns TRUE on success or FALSE on failure.
 
     Note:
 
-    This is the preferred way to change the charset. Using |mysql_query| to set
-    it (such as SET NAMES utf8) is not recommended. See the MySQL character set
-    concepts section for more information.
+    This is the preferred way to change the charset. Using |mysql_query| to
+    set it (such as SET NAMES utf8) is not recommended. See the MySQL
+    character set concepts section for more information.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mysql_client_encoding| - Returns the name of the character set

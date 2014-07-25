@@ -4,7 +4,7 @@ imap_fetchheader
 
 imap_fetchheader — Returns header for a message
 
-===============================================================================
+==============================================================================
 *Description*
 
     string imap_fetchheader ( resource $imap_stream , int $msg_number [, int~
@@ -13,7 +13,7 @@ imap_fetchheader — Returns header for a message
 This function causes a fetch of the complete, unfiltered » RFC2822 format
 header of the specified message.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { imap_stream}
@@ -34,12 +34,12 @@ header of the specified message.
         time. This avoids an extra RTT on an IMAP connection if a full message
         text is desired (e.g. in a "save to local file" operation)
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the header of the specified message as a text string.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |imap_fetch_overview| - Read an overview of the information in the headers

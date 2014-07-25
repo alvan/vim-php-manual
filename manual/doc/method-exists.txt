@@ -4,14 +4,14 @@ method_exists
 
 method_exists — Checks if the class method exists
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool method_exists ( mixed $object , string $method_name )~
 
 Checks if the class method exists in the given {object}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {object}
@@ -22,21 +22,21 @@ Checks if the class method exists in the given {object}.
 
     The method name
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE if the method given by {method_name} has been defined for the
 given {object}, FALSE otherwise.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
 
-    Using this function will use any registered autoloaders if the class is not
-    already known.
+    Using this function will use any registered autoloaders if the class is
+    not already known.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 method_exists() example
@@ -60,7 +60,7 @@ The above example will output:
 
 bool(true)
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |function_exists| - Return TRUE if the given function has been defined

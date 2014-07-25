@@ -5,7 +5,7 @@ socket_recvfrom
 socket_recvfrom — Receives data from a socket whether or not it is
 connection-oriented
 
-===============================================================================
+==============================================================================
 *Description*
 
     int socket_recvfrom ( resource $socket , string &$buf , int $len , int~
@@ -14,17 +14,17 @@ connection-oriented
 The socket_recvfrom() function receives {len} bytes of data in {buf} from
 {name} on port {port} (if the socket is not of type AF_UNIX) using {socket}. 
 socket_recvfrom() can be used to gather data from both connected and
-unconnected sockets. Additionally, one or more flags can be specified to modify
-the behaviour of the function.
+unconnected sockets. Additionally, one or more flags can be specified to
+modify the behaviour of the function.
 
 The {name} and {port} must be passed by reference. If the socket is not
-connection-oriented, {name} will be set to the internet protocol address of the
-remote host or the path to the UNIX socket. If the socket is
+connection-oriented, {name} will be set to the internet protocol address of
+the remote host or the path to the UNIX socket. If the socket is
 connection-oriented, {name} is NULL. Additionally, the {port} will contain the
 port of the remote host in the case of an unconnected AF_INET or AF_INET6
 socket.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {socket}
@@ -45,7 +45,7 @@ socket.
     The value of {flags} can be any combination of the following flags, joined
     with the binary OR (|) operator.
 
-                          Possible values for {flags}
+                         Possible values for {flags}
         Flag                              Description
     MSG_OOB      Process out-of-band data.
     MSG_PEEK     Receive data from the beginning of the receive queue without
@@ -68,15 +68,15 @@ socket.
     the remote port from which the data is received. If the socket is
     connection-oriented, {port} will be NULL.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 socket_recvfrom() returns the number of bytes received, or FALSE if there was
-an error. The actual error code can be retrieved by calling |socket_last_error|
-. This error code may be passed to |socket_strerror| to get a textual
+an error. The actual error code can be retrieved by calling |socket_last_error
+|. This error code may be passed to |socket_strerror| to get a textual
 explanation of the error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 socket_recvfrom() example
@@ -91,19 +91,20 @@ Example #1 socket_recvfrom() example
     $port = 0;
     socket_recvfrom($socket, $buf, 12, 0, $from, $port);
 
-    echo "Received $buf from remote address $from and remote port $port" . PHP_EOL;
+    echo "Received $buf from remote address $from and remote port $port" . PHP_EOL
+    ;
 <?>
 
 This example will initiate a UDP socket on port 1223 of 127.0.0.1 and print at
 most 12 characters received from a remote host.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version              Description
 4.3.0   socket_recvfrom() is now binary safe.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |socket_recv| - Receives data from a connected socket

@@ -5,14 +5,14 @@ tidy_setopt
 tidy_setopt — Updates the configuration settings for the specified tidy
 document
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool tidy_setopt ( string $option , mixed $value )~
 
 tidy_setopt() updates the specified {option} with a new {value}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {option}
@@ -24,12 +24,12 @@ tidy_setopt() updates the specified {option} with a new {value}.
 
     The tidy option name.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 tidy_setopt() example
@@ -42,17 +42,17 @@ Example #1 tidy_setopt() example
     tidy_setopt('indent', FALSE);
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: This function is only available in Tidy 1.0. It became obsolete in
     Tidy 2.0, and thus has been removed.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
-  * tidy_getopt() - Returns the value of the specified configuration option for
-    the tidy document
+  * tidy_getopt() - Returns the value of the specified configuration option
+    for the tidy document
   * tidy_get_config() - Get current Tidy configuration
   * |tidy_reset_config| - Restore Tidy configuration to default values
   * |tidy_save_config| - Save current settings to named file

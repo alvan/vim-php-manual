@@ -5,31 +5,32 @@ cubrid_insert_id
 cubrid_insert_id — Return the ID generated for the last updated AUTO_INCREMENT
 column
 
-===============================================================================
+==============================================================================
 *Description*
 
     string cubrid_insert_id ([ resource $conn_identifier ] )~
 
 The cubrid_insert_id() function retrieves the ID generated for the
-AUTO_INCREMENT column which is updated by the previous INSERT query. It returns
-0 if the previous query does not generate new rows, or FALSE on failure.
+AUTO_INCREMENT column which is updated by the previous INSERT query. It
+returns 0 if the previous query does not generate new rows, or FALSE on
+failure.
 
     Note:
 
     CUBRID supports AUTO_INCREMENT for more than one columns in a table. In
     most cases, there will be a single AUTO_INCREMENT column in a table. If
-    there are multiple AUTO_INCREMENT columns, this function should not be used
-    even if it will return a value.
+    there are multiple AUTO_INCREMENT columns, this function should not be
+    used even if it will return a value.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {conn_identifier}
 
-    The connection identifier previously obtained by a call to |cubrid_connect|
-    .
+    The connection identifier previously obtained by a call to |cubrid_connect
+    |.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 A string representing the ID generated for an AUTO_INCREMENT column by the
@@ -39,14 +40,14 @@ previous query, on success.
 
 FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 8.4.0   Change the return value from an array to string; Remove the first
         parameter class_name.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_insert_id() example

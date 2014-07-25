@@ -4,7 +4,7 @@ radius_get_attr
 
 radius_get_attr — Extracts an attribute
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed radius_get_attr ( resource $radius_handle )~
@@ -15,13 +15,13 @@ attributes can be extracted one by one using radius_get_attr(). Each time
 radius_get_attr() is called, it gets the next attribute from the current
 response.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an associative array containing the attribute-type and the data, or
 error number <= 0.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 radius_get_attr() example
@@ -40,7 +40,7 @@ Example #1 radius_get_attr() example
     }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |radius_put_attr| - Attaches a binary attribute

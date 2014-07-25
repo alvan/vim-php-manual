@@ -4,24 +4,24 @@ oci_server_version
 
 oci_server_version — Returns the Oracle Database version
 
-===============================================================================
+==============================================================================
 *Description*
 
     string oci_server_version ( resource $connection )~
 
 Returns a string with the Oracle Database version and available options
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the version information as a string or FALSE on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 oci_server_version() example
@@ -34,13 +34,14 @@ Example #1 oci_server_version() example
     // Displays:
     //
      Server Version: Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production
-    // With the Partitioning, OLAP, Data Mining and Real Application Testing option
+    //
+     With the Partitioning, OLAP, Data Mining and Real Application Testing option
 
     oci_close($conn);
 
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -48,7 +49,7 @@ Example #1 oci_server_version() example
     In PHP versions before 5.0.0 you must use |ociserverversion| instead. This
     old name still can be used. However it is deprecated and not recommended.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |oci_client_version| - Returns the Oracle client library version

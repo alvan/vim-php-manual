@@ -4,13 +4,13 @@ timezone_name_from_abbr
 
 timezone_name_from_abbr — Returns the timezone name from abbreviation
 
-===============================================================================
+==============================================================================
 *Description*
 
     string timezone_name_from_abbr ( string $abbr [, int $gmtOffset = -1 [,~
     int $isdst = -1 ]] )~
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {abbr}
@@ -29,16 +29,17 @@ timezone_name_from_abbr — Returns the timezone name from abbreviation
     Daylight saving time indicator. Defaults to -1, which means that whether
     the time zone has daylight saving or not is not taken into consideration
     when searching. If this is set to 1, then the {gmtOffset} is assumed to be
-    an offset with daylight saving in effect; if 0, then {gmtOffset} is assumed
-    to be an offset without daylight saving in effect. If {abbr} doesn't exist
-    then the time zone is searched solely by the {gmtOffset} and {isdst}.
+    an offset with daylight saving in effect; if 0, then {gmtOffset} is
+    assumed to be an offset without daylight saving in effect. If {abbr}
+    doesn't exist then the time zone is searched solely by the {gmtOffset} and
+    {isdst}.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns time zone name on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A timezone_name_from_abbr() example
@@ -53,7 +54,7 @@ The above example will output something similar to:
 Europe/Berlin
 Europe/Paris
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |timezone_abbreviations_list| - Alias of DateTimeZone::listAbbreviations

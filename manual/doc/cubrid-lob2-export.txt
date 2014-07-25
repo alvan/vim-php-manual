@@ -4,35 +4,36 @@ cubrid_lob2_export
 
 cubrid_lob2_export — Export the lob object to a file.
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool cubrid_lob2_export ( resource $lob_identifier , string $file_name )~
 
 The cubrid_lob2_export() function is used to save the contents of BLOB/CLOB
-data to a file. To use this function, you must use |cubrid_lob2_new| or fetch a
-lob object from CUBRID database first. If the file already exists, the
+data to a file. To use this function, you must use |cubrid_lob2_new| or fetch
+a lob object from CUBRID database first. If the file already exists, the
 operation will fail. This function will not influence the cursor position of
 the lob object. It operates the entire lob object.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {lob_identifier}
 
-    Lob identifier as a result of |cubrid_lob2_new| or get from the result set.
+    Lob identifier as a result of |cubrid_lob2_new| or get from the result
+    set.
 
 {filename}
 
     File name you want to store BLOB/CLOB data. It also supports the path of
     the file.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 TRUE if the process is successful and FALSE for failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_lob2_export() example
@@ -60,7 +61,7 @@ Example #1 cubrid_lob2_export() example
     cubrid_disconnect($conn);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |cubrid_lob2_new| - Create a lob object.

@@ -5,7 +5,7 @@ sybase_set_message_handler
 sybase_set_message_handler — Sets the handler called when a server message is
 raised
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool sybase_set_message_handler ( callable $handler [, resource~
@@ -15,7 +15,7 @@ sybase_set_message_handler() sets a user function to handle messages generated
 by the server. You may specify the name of a global function, or use an array
 to specify an object reference and a method name.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {handler}
@@ -29,18 +29,18 @@ to specify an object reference and a method name.
 
     If the link identifier isn't specified, the last opened link is assumed.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version                Description
 4.3.5   The {link_identifier} parameter was added.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 sybase_set_message_handler() callback function
@@ -85,7 +85,7 @@ Example #3 sybase_set_message_handler() unhandled messages
         sybase_set_message_handler('msg_handler');
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: This function is only available when using the CT library interface

@@ -4,14 +4,14 @@ range
 
 range — Create an array containing a range of elements
 
-===============================================================================
+==============================================================================
 *Description*
 
     array range ( mixed $start , mixed $end [, number $step = 1 ] )~
 
 Create an array containing a range of elements.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {start}
@@ -28,25 +28,26 @@ Create an array containing a range of elements.
     elements in the sequence. {step} should be given as a positive number. If
     not specified, {step} will default to 1.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an array of elements from {start} to {end}, inclusive.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 5.0.0   The optional {step} parameter was added.
 4.1.0   In PHP versions 4.1.0 through 4.3.2, range() sees numeric strings as
 to      strings and not integers. Instead, they will be used for character
 4.3.2   sequences. For example, "4242" is treated as "4".
-        Prior to PHP 4.1.0, range() only generated incrementing integer arrays.
-4.1.0   Support for character sequences and decrementing arrays was added in
-        4.1.0. Character sequence values are limited to a length of one. If a
-        length greater than one is entered, only the first character is used.
+        Prior to PHP 4.1.0, range() only generated incrementing integer
+        arrays. Support for character sequences and decrementing arrays was
+4.1.0   added in 4.1.0. Character sequence values are limited to a length of
+        one. If a length greater than one is entered, only the first character
+        is used.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 range() examples
@@ -74,7 +75,7 @@ Example #1 range() examples
     }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |shuffle| - Shuffle an array

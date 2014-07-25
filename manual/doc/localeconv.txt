@@ -4,7 +4,7 @@ localeconv
 
 localeconv — Get numeric formatting information
 
-===============================================================================
+==============================================================================
 *Description*
 
     array localeconv ( void )~
@@ -12,13 +12,13 @@ localeconv — Get numeric formatting information
 Returns an associative array containing localized numeric and monetary
 formatting information.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 localeconv() returns data based upon the current locale as set by |setlocale|.
 The associative array that is returned contains the following fields:
 
-  Array element                            Description
+  Array element                           Description
 decimal_point     Decimal point character
 thousands_sep     Thousands separator
 grouping          Array containing numeric groupings
@@ -39,7 +39,8 @@ n_cs_precedes     TRUE if currency_symbol precedes a negative value, FALSE if
                   it succeeds one
 n_sep_by_space    TRUE if a space separates currency_symbol from a negative
                   value, FALSE otherwise
-                    * 0 - Parentheses surround the quantity and currency_symbol
+                    * 0 - Parentheses surround the quantity and
+                      currency_symbol
                     * 1 - The sign string precedes the quantity and
                       currency_symbol
                     * 2 - The sign string succeeds the quantity and
@@ -49,11 +50,12 @@ p_sign_posn           currency_symbol
                     * 4 - The sign string immediately succeeds the
                       currency_symbol
 
-                    * 0 - Parentheses surround the quantity and currency_symbol
+                    * 0 - Parentheses surround the quantity and
+                      currency_symbol
                     * 1 - The sign string precedes the quantity and
                       currency_symbol
-                    * 2 - The sign string succeeds the quantity and
-n_sign_posn           currency_symbol
+n_sign_posn         * 2 - The sign string succeeds the quantity and
+                      currency_symbol
                     * 3 - The sign string immediately precedes the
                       currency_symbol
                     * 4 - The sign string immediately succeeds the
@@ -66,10 +68,10 @@ The grouping fields contain arrays that define the way numbers should be
 grouped. For example, the monetary grouping field for the nl_NL locale (in
 UTF-8 mode with the euro sign), would contain a 2 item array with the values 3
 and 3. The higher the index in the array, the farther left the grouping is. If
-an array element is equal to CHAR_MAX, no further grouping is done. If an array
-element is equal to 0, the previous element should be used.
+an array element is equal to CHAR_MAX, no further grouping is done. If an
+array element is equal to 0, the previous element should be used.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 localeconv() example
@@ -113,7 +115,7 @@ Array
 
 )
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |setlocale| - Set locale information

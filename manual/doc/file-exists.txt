@@ -4,14 +4,14 @@ file_exists
 
 file_exists — Checks whether a file or directory exists
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool file_exists ( string $filename )~
 
 Checks whether a file or directory exists.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {filename}
@@ -21,7 +21,7 @@ Checks whether a file or directory exists.
     On windows, use //computername/share/filename or \\computername\share\
     filename to check files on network shares.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE if the file or directory specified by {filename} exists; FALSE
@@ -43,10 +43,10 @@ in safe_mode_include_dir.
     The check is done using the real UID/GID instead of the effective one.
 
     Note: Because PHP's integer type is signed and many platforms use 32bit
-    integers, some filesystem functions may return unexpected results for files
-    which are larger than 2GB.
+    integers, some filesystem functions may return unexpected results for
+    files which are larger than 2GB.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Testing whether a file exists
@@ -61,12 +61,12 @@ Example #1 Testing whether a file exists
     }
 <?>
 
-===============================================================================
+==============================================================================
 *Errors/Exceptions*
 
 Upon failure, an E_WARNING is emitted.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: The results of this function are cached. See |clearstatcache| for
@@ -78,7 +78,7 @@ As of PHP 5.0.0, this function can also be used with some URL wrappers. Refer
 to Supported Protocols and Wrappers to determine which wrappers support |stat|
 family of functionality.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |is_readable| - Tells whether a file exists and is readable

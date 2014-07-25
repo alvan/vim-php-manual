@@ -4,26 +4,26 @@ JulianToJD
 
 JulianToJD — Converts a Julian Calendar date to Julian Day Count
 
-===============================================================================
+==============================================================================
 *Description*
 
     int juliantojd ( int $month , int $day , int $year )~
 
 Valid Range for Julian Calendar 4713 B.C. to 9999 A.D.
 
-Although this function can handle dates all the way back to 4713 B.C., such use
-may not be meaningful. The calendar was created in 46 B.C., but the details did
-not stabilize until at least 8 A.D., and perhaps as late at the 4th century.
-Also, the beginning of a year varied from one culture to another - not all
-accepted January as the first month.
+Although this function can handle dates all the way back to 4713 B.C., such
+use may not be meaningful. The calendar was created in 46 B.C., but the
+details did not stabilize until at least 8 A.D., and perhaps as late at the
+4th century. Also, the beginning of a year varied from one culture to another
+- not all accepted January as the first month.
 
 Caution
 
 Remember, the current calendar system being used worldwide is the Gregorian
-calendar. |gregoriantojd| can be used to convert such dates to their Julian Day
-count.
+calendar. |gregoriantojd| can be used to convert such dates to their Julian
+Day count.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {month}
@@ -38,12 +38,12 @@ count.
 
     The year as a number between -4713 and 9999
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The julian day for the given julian date as an integer.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |jdtojulian| - Converts a Julian Day Count to a Julian Calendar Date

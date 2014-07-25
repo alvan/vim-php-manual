@@ -4,7 +4,7 @@ socket_set_nonblock
 
 socket_set_nonblock — Sets nonblocking mode for file descriptor fd
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool socket_set_nonblock ( resource $socket )~
@@ -14,22 +14,22 @@ specified by the {socket} parameter.
 
 When an operation (e.g. receive, send, connect, accept, ...) is performed on a
 non-blocking socket, the script will not pause its execution until it receives
-a signal or it can perform the operation. Rather, if the operation would result
-in a block, the called function will fail.
+a signal or it can perform the operation. Rather, if the operation would
+result in a block, the called function will fail.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {socket}
 
     A valid socket resource created with |socket_create| or |socket_accept|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 socket_set_nonblock() example
@@ -41,11 +41,11 @@ Example #1 socket_set_nonblock() example
     socket_accept($socket);
 <?>
 
-This example creates a listening socket on all interfaces on port 1223 and sets
-the socket to O_NONBLOCK mode. |socket_accept| will immediately fail unless
-there is a pending connection exactly at this moment.
+This example creates a listening socket on all interfaces on port 1223 and
+sets the socket to O_NONBLOCK mode. |socket_accept| will immediately fail
+unless there is a pending connection exactly at this moment.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |socket_set_block| - Sets blocking mode on a socket resource

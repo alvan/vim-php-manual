@@ -4,15 +4,15 @@ explode
 
 explode — Split a string by string
 
-===============================================================================
+==============================================================================
 *Description*
 
     array explode ( string $delimiter , string $string [, int $limit ] )~
 
-Returns an array of strings, each of which is a substring of {string} formed by
-splitting it on boundaries formed by the string {delimiter}.
+Returns an array of strings, each of which is a substring of {string} formed
+by splitting it on boundaries formed by the string {delimiter}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {delimiter}
@@ -39,7 +39,7 @@ splitting it on boundaries formed by the string {delimiter}.
     either order, explode() cannot. You must ensure that the {delimiter}
     argument comes before the {string} argument.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an array of strings created by splitting the {string} parameter on
@@ -50,14 +50,14 @@ If {delimiter} is an empty string (""), explode() will return FALSE. If
 {limit} is used, then an empty array will be returned, otherwise an array
 containing {string} will be returned.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version               Description
 5.1.0   Support for negative {limit}s was added
 4.0.1   The {limit} parameter was added
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 explode() examples
@@ -129,12 +129,12 @@ Array
     [2] => three
 )
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: This function is binary-safe.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |preg_split| - Split string by a regular expression

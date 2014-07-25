@@ -7,7 +7,7 @@ SQLiteResult::hasPrev
 sqlite_has_prev -- SQLiteResult::hasPrev — Returns whether or not a previous
 row is available
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool sqlite_has_prev ( resource $result )~
@@ -18,7 +18,7 @@ Object oriented style (method):
 
 Find whether there are more previous rows from the given result handle.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
@@ -30,13 +30,13 @@ Find whether there are more previous rows from the given result handle.
 
         This function cannot be used with unbuffered result handles.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE if there are more previous rows available from the {result}
 handle, or FALSE otherwise.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |sqlite_prev| - Seek to the previous row number of a result set

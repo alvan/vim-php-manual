@@ -4,7 +4,7 @@ imagepsencodefont
 
 imagepsencodefont — Change the character encoding vector of a font
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool imagepsencodefont ( resource $font_index , string $encodingfile )~
@@ -16,10 +16,10 @@ language other than English.
 
 If you find yourself using this function all the time, a much better way to
 define the encoding is to set ps.default_encoding in the configuration file to
-point to the right encoding file and all fonts you load will automatically have
-the right encoding.
+point to the right encoding file and all fonts you load will automatically
+have the right encoding.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {font_index}
@@ -31,12 +31,12 @@ the right encoding.
     The exact format of this file is described in T1libs documentation. T1lib
     comes with two ready-to-use files, IsoLatin1.enc and IsoLatin2.enc.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 imagepsencodefont() example
@@ -54,11 +54,11 @@ Example #1 imagepsencodefont() example
     imagepsfreefont($font);
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
-    Note: This function is only available if PHP is compiled using --with-t1lib
-    [=DIR] .
+    Note: This function is only available if PHP is compiled using
+    --with-t1lib[=DIR] .
 
 
 vim:ft=help:

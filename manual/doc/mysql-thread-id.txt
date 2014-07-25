@@ -8,12 +8,12 @@ Warning
 
 This extension is deprecated as of PHP 5.5.0, and will be removed in the
 future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
-MySQL: choosing an API guide and related FAQ for more information. Alternatives
-to this function include:
+MySQL: choosing an API guide and related FAQ for more information.
+Alternatives to this function include:
 
   * mysqli_thread_id()
 
-===============================================================================
+==============================================================================
 *Description*
 
     int mysql_thread_id ([ resource $link_identifier = NULL ] )~
@@ -22,7 +22,7 @@ Retrieves the current thread ID. If the connection is lost, and a reconnect
 with |mysql_ping| is executed, the thread ID will change. This means only
 retrieve the thread ID when needed.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { link_identifier}
@@ -33,12 +33,12 @@ retrieve the thread ID when needed.
     If no connection is found or established, an E_WARNING level error is
     generated.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The thread ID on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mysql_thread_id() example
@@ -55,7 +55,7 @@ The above example will output something similar to:
 
 current thread id is 73
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mysql_ping| - Ping a server connection or reconnect if there is no

@@ -4,10 +4,10 @@ maxdb::select_db
 
 (PECL maxdb >= 1.0)
 
-maxdb_select_db -- maxdb::select_db — Selects the default database for database
-queries
+maxdb_select_db -- maxdb::select_db — Selects the default database for
+database queries
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool maxdb_select_db ( resource $link , string $dbname )~
@@ -22,12 +22,12 @@ connection represented by the {link} parameter.
     connection. You can select the default database with 4th parameter in |
     maxdb_connect|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Object oriented style
@@ -106,7 +106,7 @@ Warning: maxdb_query(): -10821 Session not connected [] <...>
 
 Warning: maxdb_close(): -10821 Session not connected [] <...>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |maxdb_connect| - Open a new connection to the MaxDB server

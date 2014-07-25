@@ -4,7 +4,7 @@ win32_query_service_status
 
 win32_query_service_status — Queries the status of a service
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed win32_query_service_status ( string $servicename [, string $machine~
@@ -12,7 +12,7 @@ win32_query_service_status — Queries the status of a service
 
 Queries the current status for a service, returning an array of information.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {servicename}
@@ -23,7 +23,7 @@ Queries the current status for a service, returning an array of information.
 
     The optional machine name. If omitted, the local machine will be used.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an array consisting of the following information on success, FALSE if
@@ -53,8 +53,8 @@ there is a problem with the parameters or a Win32 Error Code on failure.
 
 {CheckPoint}
 
-    If the service is shutting down, holds the current check point number. This
-    is used by the SCM as a kind of heart-beat to detect a wedged service
+    If the service is shutting down, holds the current check point number.
+    This is used by the SCM as a kind of heart-beat to detect a wedged service
     process. The value of the check point is best interpreted in conjunction
     with the WaitHint value.
 
@@ -72,7 +72,7 @@ there is a problem with the parameters or a Win32 Error Code on failure.
 
     The dwServiceFlags. See Win32Service Service Service Flag Constants.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * Win32Service Predefined Constants

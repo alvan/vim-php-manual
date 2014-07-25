@@ -4,7 +4,7 @@ number_format
 
 number_format — Format a number with grouped thousands
 
-===============================================================================
+==============================================================================
 *Description*
 
     string number_format ( float $number [, int $decimals = 0 ] )~
@@ -24,7 +24,7 @@ If all four parameters are given, {number} will be formatted with {decimals}
 decimals, {dec_point} instead of a dot (".") before the decimals and
 {thousands_sep} instead of a comma (",") between every group of thousands.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {number}
@@ -43,20 +43,20 @@ decimals, {dec_point} instead of a dot (".") before the decimals and
 
     Sets the thousands separator.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 A formatted version of {number}.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
         This function now supports multiple bytes in {dec_point} and
 5.4.0   {thousands_sep}. Only the first byte of each separator was used in
         older versions.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 number_format() Example
@@ -85,7 +85,7 @@ line :
 
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |money_format| - Formats a number as a currency string

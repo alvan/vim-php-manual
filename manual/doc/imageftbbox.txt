@@ -4,22 +4,22 @@ imageftbbox
 
 imageftbbox — Give the bounding box of a text using fonts via freetype2
 
-===============================================================================
+==============================================================================
 *Description*
 
-    array imageftbbox ( float $size , float $angle , string $fontfile , string~
-    $text [, array $extrainfo ] )~
+    array imageftbbox ( float $size , float $angle , string $fontfile ,~
+    string $text [, array $extrainfo ] )~
 
 This function calculates and returns the bounding box in pixels for a FreeType
 text.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {size}
 
-    The font size. Depending on your version of GD, this should be specified as
-    the pixel size (GD1) or point size (GD2).
+    The font size. Depending on your version of GD, this should be specified
+    as the pixel size (GD1) or point size (GD2).
 
 {angle}
 
@@ -42,7 +42,7 @@ text.
         Key     Type            Meaning
     linespacing float Defines drawing linespacing
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 imageftbbox() returns an array with 8 elements representing four points making
@@ -60,7 +60,7 @@ the bounding box of the text:
 The points are relative to the text regardless of the {angle}, so "upper left"
 means in the top left-hand corner seeing the text horizontally.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 imageftbbox() example
@@ -93,7 +93,7 @@ Example #1 imageftbbox() example
     imagedestroy($im);
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: This function requires GD 2.0.1 or later (2.0.28 or later is
@@ -102,7 +102,7 @@ Example #1 imageftbbox() example
     Note: This function is only available if PHP is compiled with freetype
     support (--with-freetype-dir=DIR )
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version          Description

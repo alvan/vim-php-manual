@@ -4,16 +4,16 @@ mb_strimwidth
 
 mb_strimwidth — Get truncated string with specified width
 
-===============================================================================
+==============================================================================
 *Description*
 
     string mb_strimwidth ( string $str , int $start , int $width [, string~
-    $trimmarker = "" [, string $encoding = mb_internal_encoding() ]]~
-)~
+    $trimmarker = "" [, string $encoding = mb_internal_encoding()~
+    ]] )~
 
 Truncates string {str} to specified {width}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {str}
@@ -38,13 +38,13 @@ Truncates string {str} to specified {width}.
     The {encoding} parameter is the character encoding. If it is omitted, the
     internal character encoding value will be used.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The truncated string. If {trimmarker} is set, {trimmarker} is appended to the
 return value.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mb_strimwidth() example
@@ -54,7 +54,7 @@ Example #1 mb_strimwidth() example
     // outputs Hello W...
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mb_strwidth| - Return width of string

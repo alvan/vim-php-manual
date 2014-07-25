@@ -4,7 +4,7 @@ cubrid_error_code
 
 cubrid_error_code — Get error code for the most recent function call
 
-===============================================================================
+==============================================================================
 *Description*
 
     int cubrid_error_code ( void )~
@@ -13,17 +13,17 @@ The cubrid_error_code() function is used to get the error code of the error
 that occurred during the API execution. Usually, it gets the error code when
 API returns false as its return value.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 This function has no parameters.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Error code of the error that occurred, or 0 (zero) if no error occurred.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_error_code() example
@@ -35,7 +35,8 @@ Example #1 cubrid_error_code() example
     $req = @cubrid_execute($req);
     if (!$req) {
         printf("Error facility: %d\nError code: %d\nError msg: %s\n", 
-            cubrid_error_code_facility(), cubrid_error_code(), cubrid_error_msg());
+            cubrid_error_code_facility(), cubrid_error_code(), cubrid_error_msg
+    ());
 
         cubrid_disconnect($conn);
         exit;
@@ -48,7 +49,7 @@ Error facility: 4
 Error code: -30015
 Error msg: Some parameter not binded
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |cubrid_error_code_facility| - Get the facility code of error

@@ -4,29 +4,29 @@ cubrid_lob_close
 
 cubrid_lob_close — Close BLOB/CLOB data
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool cubrid_lob_close ( array $lob_identifier_array )~
 
-cubrid_lob_close() is used to close all BLOB/CLOB returned from |cubrid_lob_get
-|.
+cubrid_lob_close() is used to close all BLOB/CLOB returned from |
+cubrid_lob_get|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {lob_identifier_array}
 
     LOB identifier array return from cubrid_lob_get.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 TRUE, when process is successful.
 
 FALSE, when process is unsuccessful.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_lob_close() example
@@ -45,7 +45,7 @@ Example #1 cubrid_lob_close() example
     cubrid_disconnect($conn);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |cubrid_lob_get| - Get BLOB/CLOB data

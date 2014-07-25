@@ -4,7 +4,7 @@ mcrypt_encrypt
 
 mcrypt_encrypt — Encrypts plaintext with given parameters
 
-===============================================================================
+==============================================================================
 *Description*
 
     string mcrypt_encrypt ( string $cipher , string $key , string $data ,~
@@ -12,7 +12,7 @@ mcrypt_encrypt — Encrypts plaintext with given parameters
 
 Encrypts the data and returns it.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {cipher}
@@ -26,7 +26,8 @@ Encrypts the data and returns it.
     required keysize, it is padded with '\0'. It is better not to use ASCII
     strings for keys.
 
-    It is recommended to use the mhash functions to create a key from a string.
+    It is recommended to use the mhash functions to create a key from a
+    string.
 
 {data}
 
@@ -38,8 +39,8 @@ Encrypts the data and returns it.
 
 {mode}
 
-    One of the MCRYPT_MODE_modename constants, or one of the following strings:
-    "ecb", "cbc", "cfb", "ofb", "nofb" or "stream".
+    One of the MCRYPT_MODE_modename constants, or one of the following
+    strings: "ecb", "cbc", "cfb", "ofb", "nofb" or "stream".
 
 {iv}
 
@@ -48,12 +49,12 @@ Encrypts the data and returns it.
     algorithm, the function issues a warning and uses an IV with all its bytes
     set to "\0".
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the encrypted data, as a string.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mcrypt_encrypt() Example
@@ -110,7 +111,8 @@ Example #1 mcrypt_encrypt() Example
 
         # may remove 00h valued characters from end of plain text
         $plaintext_dec = mcrypt_decrypt(MCRYPT_RIJNDAEL_128, $key,
-                                        $ciphertext_dec, MCRYPT_MODE_CBC, $iv_dec);
+                                        $ciphertext_dec, MCRYPT_MODE_CBC, $iv_dec
+    );
         
         echo  $plaintext_dec . "\n";
 <?>

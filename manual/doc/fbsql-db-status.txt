@@ -4,15 +4,15 @@ fbsql_db_status
 
 fbsql_db_status — Get the status for a given database
 
-===============================================================================
+==============================================================================
 *Description*
 
-    int fbsql_db_status ( string $database_name [, resource $link_identifier ]~
-)~
+    int fbsql_db_status ( string $database_name [, resource $link_identifier~
+    ] )~
 
 Gets the current status of the specified database.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {database_name}
@@ -21,14 +21,14 @@ Gets the current status of the specified database.
 
 { link_identifier}
 
-    A FrontBase link identifier returned by |fbsql_connect| or |fbsql_pconnect|
-    .
+    A FrontBase link identifier returned by |fbsql_connect| or |fbsql_pconnect
+    |.
 
     If optional and not specified, the function will try to find an open link
     to the FrontBase server and if no such link is found it will try to create
     one as if |fbsql_connect| was called with no arguments.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an integer value with the current status. This can be one of the
@@ -48,7 +48,7 @@ following constants:
   * FBSQL_NOEXEC - FBExec is not running on the server and it is not possible
     to get the status of the database.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |fbsql_start_db| - Start a database on local or remote server

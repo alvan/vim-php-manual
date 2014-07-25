@@ -4,14 +4,14 @@ dba_delete
 
 dba_delete — Delete DBA entry specified by key
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool dba_delete ( string $key , resource $handle )~
 
 dba_delete() deletes the specified entry from the database.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {key}
@@ -22,12 +22,12 @@ dba_delete() deletes the specified entry from the database.
 
     The database handler, returned by |dba_open| or |dba_popen|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |dba_exists| - Check whether key exists

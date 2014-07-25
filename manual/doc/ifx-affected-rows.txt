@@ -4,7 +4,7 @@ ifx_affected_rows
 
 ifx_affected_rows — Get number of rows affected by a query
 
-===============================================================================
+==============================================================================
 *Description*
 
     int ifx_affected_rows ( resource $result_id )~
@@ -19,19 +19,19 @@ returned by a SELECT because it has not even begun fetching them at this stage
 
 Useful after |ifx_prepare| to limit queries to reasonable result sets.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result_id}
 
     A valid result id returned by |ifx_query| or |ifx_prepare|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the number of rows as an integer.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Informix affected rows
@@ -49,7 +49,7 @@ Example #1 Informix affected rows
     }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ifx_num_rows| - Count the rows already fetched from a query

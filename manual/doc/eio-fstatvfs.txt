@@ -4,15 +4,15 @@ eio_fstatvfs
 
 eio_fstatvfs — Get file system statistics
 
-===============================================================================
+==============================================================================
 *Description*
 
-    resource eio_fstatvfs ( mixed $fd , int $pri , callable $callback [, mixed~
-    $data ] )~
+    resource eio_fstatvfs ( mixed $fd , int $pri , callable $callback [,~
+    mixed $data ] )~
 
 eio_fstatvfs() returns file system statistics in {result} of {callback}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {fd}
@@ -26,8 +26,8 @@ eio_fstatvfs() returns file system statistics in {result} of {callback}.
 
 {callback}
 
-    {callback} function is called when the request is done. It should match the
-    following prototype:
+    {callback} function is called when the request is done. It should match
+    the following prototype:
     void callback(mixed $data, int $result[, resource $req]);
 
     {data}
@@ -48,12 +48,12 @@ eio_fstatvfs() returns file system statistics in {result} of {callback}.
 
     Arbitrary variable passed to {callback}.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 eio_fstatvfs() returns request resource on success or FALSE on error.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * eio_statvfs

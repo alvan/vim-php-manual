@@ -4,7 +4,7 @@ ps_clip
 
 ps_clip — Clips drawing to current path
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool ps_clip ( resource $psdoc )~
@@ -12,19 +12,19 @@ ps_clip — Clips drawing to current path
 Takes the current path and uses it to define the border of a clipping area.
 Everything drawn outside of that area will not be visible.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {psdoc}
 
     Resource identifier of the postscript file as returned by |ps_new|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ps_closepath| - Closes path

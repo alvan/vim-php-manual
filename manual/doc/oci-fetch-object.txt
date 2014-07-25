@@ -4,19 +4,20 @@ oci_fetch_object
 
 oci_fetch_object — Returns the next row from a query as an object
 
-===============================================================================
+==============================================================================
 *Description*
 
     object oci_fetch_object ( resource $statement )~
 
-Returns an object containing the next result-set row of a query. Each attribute
-of the object corresponds to a column of the row. This function is typically
-called in a loop until it returns FALSE, indicating no more rows exist.
+Returns an object containing the next result-set row of a query. Each
+attribute of the object corresponds to a column of the row. This function is
+typically called in a loop until it returns FALSE, indicating no more rows
+exist.
 
 For details on the data type mapping performed by the OCI8 extension, see the
 datatypes supported by the driver
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {statement}
@@ -24,7 +25,7 @@ datatypes supported by the driver
     A valid OCI8 statement identifier created by |oci_parse| and executed by |
     oci_execute|, or a REF CURSOR statement identifier.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an object. Each attribute of the object corresponds to a column of the
@@ -34,16 +35,17 @@ Any LOB columns are returned as LOB descriptors.
 
 DATE columns are returned as strings formatted to the current date format. The
 default format can be changed with Oracle environment variables such as
-NLS_LANG or by a previously executed ALTER SESSION SET NLS_DATE_FORMAT command.
+NLS_LANG or by a previously executed ALTER SESSION SET NLS_DATE_FORMAT
+command.
 
-Oracle's default, non-case sensitive column names will have uppercase attribute
-names. Case-sensitive column names will have attribute names using the exact
-column case. Use |var_dump| on the result object to verify the appropriate case
-for attribute access.
+Oracle's default, non-case sensitive column names will have uppercase
+attribute names. Case-sensitive column names will have attribute names using
+the exact column case. Use |var_dump| on the result object to verify the
+appropriate case for attribute access.
 
 Attribute values will be NULL for any NULL data fields.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 oci_fetch_object() example
@@ -152,12 +154,12 @@ Example #3 oci_fetch_object() with LOBs
 
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |oci_fetch| - Fetches the next row from a query into internal buffers
-  * |oci_fetch_all| - Fetches multiple rows from a query into a two-dimensional
-    array
+  * |oci_fetch_all| - Fetches multiple rows from a query into a
+    two-dimensional array
   * |oci_fetch_assoc| - Returns the next row from a query as an associative
     array
   * |oci_fetch_array| - Returns the next row from a query as an associative or

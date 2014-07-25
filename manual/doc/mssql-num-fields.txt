@@ -4,14 +4,14 @@ mssql_num_fields
 
 mssql_num_fields — Gets the number of fields in result
 
-===============================================================================
+==============================================================================
 *Description*
 
     int mssql_num_fields ( resource $result )~
 
 mssql_num_fields() returns the number of fields in a result set.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
@@ -19,12 +19,12 @@ mssql_num_fields() returns the number of fields in a result set.
     The result resource that is being evaluated. This result comes from a call
     to |mssql_query|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the number of fields, as an integer.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mssql_num_fields() example
@@ -79,7 +79,7 @@ Example #1 mssql_num_fields() example
     mssql_close($link);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mssql_query| - Send MS SQL query

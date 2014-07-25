@@ -4,7 +4,7 @@ pg_fetch_all
 
 pg_fetch_all — Fetches all rows from a result as an array
 
-===============================================================================
+==============================================================================
 *Description*
 
     array pg_fetch_all ( resource $result )~
@@ -14,15 +14,15 @@ resource.
 
     Note: This function sets NULL fields to the PHP NULL value.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
 
-    PostgreSQL query result resource, returned by |pg_query|, |pg_query_params|
-    or |pg_execute| (among others).
+    PostgreSQL query result resource, returned by |pg_query|, |pg_query_params
+    | or |pg_execute| (among others).
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 An array with all rows in the result. Each row is an array of field values
@@ -30,7 +30,7 @@ indexed by field name.
 
 FALSE is returned if there are no rows in the result, or on any other error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 PostgreSQL fetch all
@@ -72,7 +72,7 @@ Array
 
 )
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |pg_fetch_row| - Get a row as an enumerated array

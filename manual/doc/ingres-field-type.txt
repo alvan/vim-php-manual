@@ -4,7 +4,7 @@ ingres_field_type
 
 ingres_field_type — Get the type of a field in a query result
 
-===============================================================================
+==============================================================================
 *Description*
 
     string ingres_field_type ( resource $result , int $index )~
@@ -15,7 +15,7 @@ Get the type of a field in a query result.
 
     See ingres.array_index_start in Runtime Configuration
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
@@ -28,11 +28,11 @@ Get the type of a field in a query result.
 
     The possible values of {index} depend upon the value of
     ingres.array_index_start. If ingres.array_index_start is 1 (the default)
-    then {index} must be between 1 and the value returned by |ingres_num_fields
-    |. If ingres.array_index_start is 0 then {index} must be between 0 and |
-    ingres_num_fields| - 1.
+    then {index} must be between 1 and the value returned by |
+    ingres_num_fields|. If ingres.array_index_start is 0 then {index} must be
+    between 0 and |ingres_num_fields| - 1.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 ingres_field_type() returns the type of a field in a query result or FALSE on
@@ -43,7 +43,7 @@ types can map to more than one SQL type depending on the length of the field
 float8. For detailed information, see the Ingres OpenAPI User Guide, Appendix
 "Data Types" in the Ingres documentation.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ingres_query| - Send an SQL query to Ingres

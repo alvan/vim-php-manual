@@ -5,7 +5,7 @@ db2_fetch_object
 db2_fetch_object — Returns an object with properties representing columns in
 the fetched row
 
-===============================================================================
+==============================================================================
 *Description*
 
     object db2_fetch_object ( resource $stmt [, int $row_number = -1 ] )~
@@ -13,7 +13,7 @@ the fetched row
 Returns an object in which each property represents a column returned in the
 row fetched from a result set.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {stmt}
@@ -26,7 +26,7 @@ row fetched from a result set.
     parameter results in a PHP warning if the result set uses a forward-only
     cursor.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an object representing a single row in the result set. The properties
@@ -36,14 +36,14 @@ The IBM DB2, Cloudscape, and Apache Derby database servers typically fold
 column names to upper-case, so the object properties will reflect that case.
 
 If your SELECT statement calls a scalar function to modify the value of a
-column, the database servers return the column number as the name of the column
-in the result set. If you prefer a more descriptive column name and object
-property, you can use the AS clause to assign a name to the column in the
-result set.
+column, the database servers return the column number as the name of the
+column in the result set. If you prefer a more descriptive column name and
+object property, you can use the AS clause to assign a name to the column in
+the result set.
 
 Returns FALSE if no row was retrieved.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A db2_fetch_object() example
@@ -51,8 +51,8 @@ Example #1 A db2_fetch_object() example
 The following example issues a SELECT statement with a scalar function, RTRIM,
 that removes whitespace from the end of the column. Rather than creating an
 object with the properties "BREED" and "2", we use the AS clause in the SELECT
-statement to assign the name "name" to the modified column. The database server
-folds the column names to upper-case, resulting in an object with the
+statement to assign the name "name" to the modified column. The database
+server folds the column names to upper-case, resulting in an object with the
 properties "BREED" and "NAME".
 
 <?php >
@@ -77,7 +77,7 @@ The above example will output:
 
 Come here, Pook, my little cat!
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |db2_fetch_array| - Returns an array, indexed by column position,

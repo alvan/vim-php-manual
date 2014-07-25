@@ -4,7 +4,7 @@ sybase_connect
 
 sybase_connect — Opens a Sybase server connection
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource sybase_connect ([ string $servername [, string $username [,~
@@ -20,13 +20,13 @@ opened link will be returned.
 The link to the server will be closed as soon as the execution of the script
 ends, unless it's closed earlier by explicitly calling |sybase_close|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {servername}
 
-    The servername argument has to be a valid servername that is defined in the
-    'interfaces' file.
+    The servername argument has to be a valid servername that is defined in
+    the 'interfaces' file.
 
 {username}
 
@@ -43,21 +43,21 @@ ends, unless it's closed earlier by explicitly calling |sybase_close|.
 {appname}
 
     Specifies an appname for the Sybase connection. This allow you to make
-    separate connections in the same script to the same database. This may come
-    handy when you have started a transaction in your current connection, and
-    you need to be able to do a separate query which cannot be performed inside
-    this transaction.
+    separate connections in the same script to the same database. This may
+    come handy when you have started a transaction in your current connection,
+    and you need to be able to do a separate query which cannot be performed
+    inside this transaction.
 
 {new}
 
     Whether to open a new connection or use the existing one.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a positive Sybase link identifier on success, or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version            Description
@@ -65,7 +65,7 @@ Version            Description
 4.2.0   The {appname} parameter was added.
 4.0.2   The {charset} parameter was added.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 sybase_connect() example
@@ -77,7 +77,7 @@ Example #1 sybase_connect() example
     sybase_close($link);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |sybase_pconnect| - Open persistent Sybase connection

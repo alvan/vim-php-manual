@@ -4,17 +4,17 @@ pg_end_copy
 
 pg_end_copy — Sync with PostgreSQL backend
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool pg_end_copy ([ resource $connection ] )~
 
-pg_end_copy() syncs the PostgreSQL frontend (usually a web server process) with
-the PostgreSQL server after doing a copy operation performed by |pg_put_line|. 
-pg_end_copy() must be issued, otherwise the PostgreSQL server may get out of
-sync with the frontend and will report an error.
+pg_end_copy() syncs the PostgreSQL frontend (usually a web server process)
+with the PostgreSQL server after doing a copy operation performed by |
+pg_put_line|. pg_end_copy() must be issued, otherwise the PostgreSQL server
+may get out of sync with the frontend and will report an error.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
@@ -23,12 +23,12 @@ sync with the frontend and will report an error.
     the default connection is used. The default connection is the last
     connection made by |pg_connect| or |pg_pconnect|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 pg_end_copy() example
@@ -43,7 +43,7 @@ Example #1 pg_end_copy() example
       pg_end_copy($conn);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |pg_put_line| - Send a NULL-terminated string to PostgreSQL backend

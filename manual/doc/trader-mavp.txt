@@ -4,13 +4,13 @@ trader_mavp
 
 trader_mavp — Moving average with variable period
 
-===============================================================================
+==============================================================================
 *Description*
 
     array trader_mavp ( array $real , array $periods [, integer $minPeriod [,~
     integer $maxPeriod [, integer $mAType ]]] )~
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {real}
@@ -23,8 +23,8 @@ trader_mavp — Moving average with variable period
 
 {minPeriod}
 
-    Value less than minimum will be changed to Minimum period. Valid range from
-    2 to 100000
+    Value less than minimum will be changed to Minimum period. Valid range
+    from 2 to 100000
 
 {maxPeriod}
 
@@ -36,7 +36,7 @@ trader_mavp — Moving average with variable period
     Type of Moving Average. TRADER_MA_TYPE_* series of constants should be
     used.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an array with calculated data or false on failure.

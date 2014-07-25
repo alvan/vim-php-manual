@@ -4,7 +4,7 @@ headers_list
 
 headers_list — Returns a list of response headers sent (or ready to send)
 
-===============================================================================
+==============================================================================
 *Description*
 
     array headers_list ( void )~
@@ -13,12 +13,12 @@ headers_list() will return a list of headers to be sent to the browser /
 client. To determine whether or not these headers have been sent yet, use |
 headers_sent|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a numerically indexed array of headers.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Examples using headers_list()
@@ -54,7 +54,7 @@ array(4) {
 }
 
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -62,7 +62,7 @@ array(4) {
     Headers will only be accessible and output when a SAPI that supports them
     is in use.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |headers_sent| - Checks if or where headers have been sent

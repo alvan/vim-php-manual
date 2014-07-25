@@ -4,28 +4,28 @@ ini_get
 
 ini_get — Gets the value of a configuration option
 
-===============================================================================
+==============================================================================
 *Description*
 
     string ini_get ( string $varname )~
 
 Returns the value of the configuration option on success.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {varname}
 
     The configuration option name.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the value of the configuration option as a string on success, or an
-empty string for null values. Returns FALSE if the configuration option doesn't
-exist.
+empty string for null values. Returns FALSE if the configuration option
+doesn't exist.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A few ini_get() examples
@@ -73,32 +73,32 @@ post_max_size+1 = 9
 post_max_size in bytes = 8388608
 
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: When querying boolean values
 
-    A boolean ini value of off will be returned as an empty string or "0" while
-    a boolean ini value of on will be returned as "1". The function can also
-    return the literal string of INI value.
+    A boolean ini value of off will be returned as an empty string or "0"
+    while a boolean ini value of on will be returned as "1". The function can
+    also return the literal string of INI value.
 
     Note: When querying memory size values
 
-    Many ini memory size values, such as upload_max_filesize, are stored in the
-    php.ini file in shorthand notation. ini_get() will return the exact string
-    stored in the php.ini file and NOT its integer equivalent. Attempting
-    normal arithmetic functions on these values will not have otherwise
-    expected results. The example above shows one way to convert shorthand
-    notation into bytes, much like how the PHP source does it.
+    Many ini memory size values, such as upload_max_filesize, are stored in
+    the php.ini file in shorthand notation. ini_get() will return the exact
+    string stored in the php.ini file and NOT its integer equivalent.
+    Attempting normal arithmetic functions on these values will not have
+    otherwise expected results. The example above shows one way to convert
+    shorthand notation into bytes, much like how the PHP source does it.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 5.3.0   Previously, the empty string was returned if the configuration option
         didn't exist. now, FALSE is returned instead.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |get_cfg_var| - Gets the value of a PHP configuration option

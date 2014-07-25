@@ -4,7 +4,7 @@ sybase_pconnect
 
 sybase_pconnect — Open persistent Sybase connection
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource sybase_pconnect ([ string $servername [, string $username [,~
@@ -24,13 +24,13 @@ sybase_close| will not close links established by sybase_pconnect()).
 
 This type of links is therefore called 'persistent'.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {servername}
 
-    The servername argument has to be a valid servername that is defined in the
-    'interfaces' file.
+    The servername argument has to be a valid servername that is defined in
+    the 'interfaces' file.
 
 {username}
 
@@ -47,25 +47,25 @@ This type of links is therefore called 'persistent'.
 {appname}
 
     Specifies an appname for the Sybase connection. This allow you to make
-    separate connections in the same script to the same database. This may come
-    handy when you have started a transaction in your current connection, and
-    you need to be able to do a separate query which cannot be performed inside
-    this transaction.
+    separate connections in the same script to the same database. This may
+    come handy when you have started a transaction in your current connection,
+    and you need to be able to do a separate query which cannot be performed
+    inside this transaction.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a positive Sybase persistent link identifier on success, or FALSE on
 error.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version            Description
 4.2.0   The {appname} parameter was added.
 4.0.2   The {charset} parameter was added.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |sybase_connect| - Opens a Sybase server connection

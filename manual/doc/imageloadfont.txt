@@ -4,14 +4,14 @@ imageloadfont
 
 imageloadfont — Load a new font
 
-===============================================================================
+==============================================================================
 *Description*
 
     int imageloadfont ( string $file )~
 
 imageloadfont() loads a user-defined bitmap and returns its identifier.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {file}
@@ -21,7 +21,7 @@ imageloadfont() loads a user-defined bitmap and returns its identifier.
     machine you are running PHP on.
 
                                Font file format
-      byte   C data                         description
+      byte   C data                        description
     position  type
     byte 0-3 int    number of characters in the font
     byte 4-7 int    value of first character in the font (often 32 for space)
@@ -32,13 +32,13 @@ imageloadfont() loads a user-defined bitmap and returns its identifier.
     byte 16- char   array with character data, one byte per pixel in each
                     character, for a total of (nchars*width*height) bytes.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The font identifier which is always bigger than 5 to avoid conflicts with
 built-in fonts or FALSE on errors.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 imageloadfont() usage example
@@ -63,7 +63,7 @@ Example #1 imageloadfont() usage example
     imagedestroy($im);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |imagefontwidth| - Get font width

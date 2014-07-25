@@ -7,7 +7,7 @@ SQLiteDatabase::changes
 sqlite_changes -- SQLiteDatabase::changes — Returns the number of rows that
 were changed by the most recent SQL statement
 
-===============================================================================
+==============================================================================
 *Description*
 
     int sqlite_changes ( resource $dbhandle )~
@@ -19,21 +19,21 @@ Object oriented style (method):
 Returns the numbers of rows that were changed by the most recent SQL statement
 executed against the {dbhandle} database handle.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {dbhandle}
 
     The SQLite Database resource; returned from |sqlite_open| when used
-    procedurally. This parameter is not required when using the object-oriented
-    method.
+    procedurally. This parameter is not required when using the
+    object-oriented method.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the number of changed rows.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Procedural style
@@ -62,11 +62,11 @@ Example #2 Object oriented style
     }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
-  * |sqlite_open| - Opens an SQLite database and create the database if it does
-    not exist
+  * |sqlite_open| - Opens an SQLite database and create the database if it
+    does not exist
 
 
 vim:ft=help:

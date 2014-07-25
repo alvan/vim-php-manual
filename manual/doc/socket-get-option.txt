@@ -4,7 +4,7 @@ socket_get_option
 
 socket_get_option — Gets socket options for the socket
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed socket_get_option ( resource $socket , int $level , int $optname )~
@@ -12,7 +12,7 @@ socket_get_option — Gets socket options for the socket
 The socket_get_option() function retrieves the value for the option specified
 by the {optname} parameter for the specified {socket}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {socket}
@@ -30,7 +30,7 @@ by the {optname} parameter for the specified {socket}.
 {optname}
 
                            Available Socket Options
-             Option                Description                  Type
+             Option                Description                 Type
                              Reports whether
     SO_DEBUG                 debugging information   int
                              is being recorded.
@@ -138,58 +138,59 @@ by the {optname} parameter for the specified {socket}.
                                                      an IPv4 or IPv6 multicast
                                                      address and "interface",
                                                      specifying either an
-                             Joins a multicast       interface number (type int
-    MCAST_JOIN_GROUP         group. (added in PHP    ) or a string with the
+                             Joins a multicast       interface number (type 
+    MCAST_JOIN_GROUP         group. (added in PHP    int) or a string with the
                              5.4)                    interface name, like
-                                                     "eth0". 0 can be specified
-                                                     to indicate the interface
-                                                     should be selected using
-                                                     routing rules. (can only
-                                                     be used in |
-                                                     socket_set_option|)
+                                                     "eth0". 0 can be
+                                                     specified to indicate the
+                                                     interface should be
+                                                     selected using routing
+                                                     rules. (can only be used
+                                                     in |socket_set_option|)
                                                      array. See
                              Leaves a multicast      MCAST_JOIN_GROUP for more
     MCAST_LEAVE_GROUP        group. (added in PHP    information. (can only be
-                             5.4)                    used in |socket_set_option
-                                                     |)
+                             5.4)                    used in |
+                                                     socket_set_option|)
                                                      array with the same keys
                              Blocks packets arriving as MCAST_JOIN_GROUP, plus
                              from a specific source  one extra key, source,
                              to a specific multicast which maps to a string
-    MCAST_BLOCK_SOURCE       group, which must have  specifying an IPv4 or IPv6
-                             been previously joined. address of the source to
-                             (added in PHP 5.4)      be blocked. (can only be
-                                                     used in |socket_set_option
-                                                     |)
+    MCAST_BLOCK_SOURCE       group, which must have  specifying an IPv4 or
+                             been previously joined. IPv6 address of the
+                             (added in PHP 5.4)      source to be blocked.
+                                                     (can only be used in |
+                                                     socket_set_option|)
                              Unblocks (start
-                             receiving again)
-                             packets arriving from a array with the same format
-    MCAST_UNBLOCK_SOURCE     specific source address as MCAST_BLOCK_SOURCE.
-                             to a specific multicast (can only be used in |
+                             receiving again)        array with the same
+                             packets arriving from a format as
+    MCAST_UNBLOCK_SOURCE     specific source address MCAST_BLOCK_SOURCE. (can
+                             to a specific multicast only be used in |
                              group, which must have  socket_set_option|)
                              been previously joined.
                              (added in PHP 5.4)
-                             Receive packets
-                             destined to a specific  array with the same format
-    MCAST_JOIN_SOURCE_GROUP  multicast group whose   as MCAST_BLOCK_SOURCE.
-                             source address matches  (can only be used in |
+                             Receive packets         array with the same
+                             destined to a specific  format as
+    MCAST_JOIN_SOURCE_GROUP  multicast group whose   MCAST_BLOCK_SOURCE. (can
+                             source address matches  only be used in |
                              a specific value.       socket_set_option|)
                              (added in PHP 5.4)
-                             Stop receiving packets
-                             destined to a specific  array with the same format
-    MCAST_LEAVE_SOURCE_GROUP multicast group whose   as MCAST_BLOCK_SOURCE.
-                             soure address matches a (can only be used in |
+                             Stop receiving packets  array with the same
+                             destined to a specific  format as
+    MCAST_LEAVE_SOURCE_GROUP multicast group whose   MCAST_BLOCK_SOURCE. (can
+                             soure address matches a only be used in |
                              specific value. (added  socket_set_option|)
                              in PHP 5.4)
                                                      Either int specifying the
                                                      interface number or a 
                                                      string with an interface
-                                                     name, like eth0. The value
-                                                     0 can be used to indicate
-                                                     the routing table is to
-                             The outgoing interface  used in the interface
-                             for IPv4 multicast      selection. The function 
-    IP_MULTICAST_IF          packets. (added in PHP  socket_get_option()
+                                                     name, like eth0. The
+                                                     value 0 can be used to
+                                                     indicate the routing
+                                                     table is to used in the
+                             The outgoing interface  interface selection. The
+    IP_MULTICAST_IF          for IPv4 multicast      function 
+                             packets. (added in PHP  socket_get_option()
                              5.4)                    returns an interface
                                                      index. Note that, unlike
                                                      the C API, this option
@@ -206,19 +207,19 @@ by the {optname} parameter for the specified {socket}.
                              policy for IPv4
                              packets, which
                              determines whether
-                             multicast packets sent  int (either 0 or 1). For |
-                             by this socket also     socket_set_option| any
-    IP_MULTICAST_LOOP        reach receivers in the  value will be accepted and
-                             same host that have     will be converted to a
-                             joined the same         boolean following the
+                             multicast packets sent  int (either 0 or 1). For 
+                             by this socket also     |socket_set_option| any
+    IP_MULTICAST_LOOP        reach receivers in the  value will be accepted
+                             same host that have     and will be converted to
+                             joined the same         a boolean following the
                              multicast group on the  usual PHP rules.
                              outgoing interface used
                              by this socket. This is
                              the case by default.
                              (added in PHP 5.4)
                              Analogous to
-    IPV6_MULTICAST_LOOP      IP_MULTICAST_LOOP, but  int. See IP_MULTICAST_LOOP
-                             for IPv6. (added in PHP .
+    IPV6_MULTICAST_LOOP      IP_MULTICAST_LOOP, but  int. See
+                             for IPv6. (added in PHP IP_MULTICAST_LOOP.
                              5.4)
                              The time-to-live of
                              outgoing IPv4 multicast
@@ -239,12 +240,12 @@ by the {optname} parameter for the specified {socket}.
                              used. (added in PHP
                              5.4)
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the value of the given option, or FALSE on errors.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 |socket_set_option| example
@@ -258,10 +259,10 @@ Example #1 |socket_set_option| example
     var_dump(socket_get_option($socket, SOL_SOCKET, SO_REUSEADDR));
 <?>
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 4.3.0   The name of this function was changed. It used to be called
         socket_getopt().
 

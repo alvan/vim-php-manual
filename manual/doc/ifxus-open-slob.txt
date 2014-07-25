@@ -4,14 +4,14 @@ ifxus_open_slob
 
 ifxus_open_slob — Opens an slob object
 
-===============================================================================
+==============================================================================
 *Description*
 
     int ifxus_open_slob ( int $bid , int $mode )~
 
 Opens an slob object. {bid} should be an existing slob id.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {bid}
@@ -23,12 +23,12 @@ Opens an slob object. {bid} should be an existing slob id.
     A combination of IFX_LO_RDONLY, IFX_LO_WRONLY, IFX_LO_APPEND IFX_LO_RDWR,
     IFX_LO_BUFFER, IFX_LO_NOBUFFER.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the new slob object-id, or FALSE on errors.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ifxus_close_slob| - Deletes the slob object

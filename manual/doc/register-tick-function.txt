@@ -4,7 +4,7 @@ register_tick_function
 
 register_tick_function — Register a function for execution on each tick
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool register_tick_function ( callable $function [, mixed $arg [, mixed~
@@ -12,7 +12,7 @@ register_tick_function — Register a function for execution on each tick
 
 Registers the given {function} to be executed when a tick is called.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {function}
@@ -24,12 +24,12 @@ Registers the given {function} to be executed when a tick is called.
 
 {...}
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 register_tick_function() example
@@ -45,13 +45,13 @@ Example #1 register_tick_function() example
     register_tick_function(array(&$object, 'my_method'), true);
 <?>
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version                       Description
 5.3.0   Ticks are now supported on threaded web server modules.
 
-===============================================================================
+==============================================================================
 *Notes*
 
 Warning
@@ -59,7 +59,7 @@ Warning
 register_tick_function() should not be used with threaded web server modules
 with PHP 5.2 or lower.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * declare

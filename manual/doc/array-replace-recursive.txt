@@ -5,7 +5,7 @@ array_replace_recursive
 array_replace_recursive — Replaces elements from passed arrays into the first
 array recursively
 
-===============================================================================
+==============================================================================
 *Description*
 
     array array_replace_recursive ( array $array1 , array $array2 [, array~
@@ -13,10 +13,10 @@ array recursively
 
 array_replace_recursive() replaces the values of {array1} with the same values
 from all the following arrays. If a key from the first array exists in the
-second array, its value will be replaced by the value from the second array. If
-the key exists in the second array, and not the first, it will be created in
-the first array. If a key only exists in the first array, it will be left as
-is. If several arrays are passed for replacement, they will be processed in
+second array, its value will be replaced by the value from the second array.
+If the key exists in the second array, and not the first, it will be created
+in the first array. If a key only exists in the first array, it will be left
+as is. If several arrays are passed for replacement, they will be processed in
 order, the later array overwriting the previous values.
 
 array_replace_recursive() is recursive : it will recurse into arrays and apply
@@ -27,7 +27,7 @@ When the value in {array1} is scalar, it will be replaced by the value in
 are both arrays, array_replace_recursive() will replace their respective value
 recursively.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {array1}
@@ -42,12 +42,12 @@ recursively.
 
     Optional. More arrays from which elements will be extracted.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an array, or NULL if an error occurs.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 array_replace_recursive() example
@@ -129,10 +129,11 @@ Array
     [others] => litchis
 )
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
-  * |array_replace| - Replaces elements from passed arrays into the first array
+  * |array_replace| - Replaces elements from passed arrays into the first
+    array
   * |array_merge_recursive| - Merge two or more arrays recursively
 
 

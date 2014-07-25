@@ -4,20 +4,20 @@ imageflip
 
 imageflip — Flips an image using a given mode
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool imageflip ( resource $image , int $mode )~
 
 Flips the {image} image using the given {mode}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { image}
 
-    An image resource, returned by one of the image creation functions, such as
-    |imagecreatetruecolor|.
+    An image resource, returned by one of the image creation functions, such
+    as |imagecreatetruecolor|.
 
 {mode}
 
@@ -28,12 +28,12 @@ Flips the {image} image using the given {mode}.
     IMG_FLIP_VERTICAL   Flips the image vertically.
     IMG_FLIP_BOTH       Flips the image both horizontally and vertically.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Flips an image vertically
@@ -88,7 +88,7 @@ The above example will output something similar to:
 
 Output of example: Horizontally flipped image
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: This function is only available if PHP is compiled with the bundled

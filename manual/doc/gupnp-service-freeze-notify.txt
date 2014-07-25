@@ -4,7 +4,7 @@ gupnp_service_freeze_notify
 
 gupnp_service_freeze_notify — Freeze new notifications
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool gupnp_service_freeze_notify ( resource $service )~
@@ -12,24 +12,24 @@ gupnp_service_freeze_notify — Freeze new notifications
 Causes new notifications to be queued up until |gupnp_service_thaw_notify| is
 called.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {service}
 
     A service identifier.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |gupnp_service_notify| - Notifies listening clients
-  * |gupnp_service_thaw_notify| - Sends out any pending notifications and stops
-    queuing of new ones.
+  * |gupnp_service_thaw_notify| - Sends out any pending notifications and
+    stops queuing of new ones.
 
 
 vim:ft=help:

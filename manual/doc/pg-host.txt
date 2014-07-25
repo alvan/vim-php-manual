@@ -4,7 +4,7 @@ pg_host
 
 pg_host — Returns the host name associated with the connection
 
-===============================================================================
+==============================================================================
 *Description*
 
     string pg_host ([ resource $connection ] )~
@@ -12,7 +12,7 @@ pg_host — Returns the host name associated with the connection
 pg_host() returns the host name of the given PostgreSQL {connection} resource
 is connected to.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
@@ -21,13 +21,13 @@ is connected to.
     the default connection is used. The default connection is the last
     connection made by |pg_connect| or |pg_pconnect|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 A string containing the name of the host the {connection} is to, or FALSE on
 error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 pg_host() example
@@ -43,7 +43,7 @@ Example #1 pg_host() example
     }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |pg_connect| - Open a PostgreSQL connection

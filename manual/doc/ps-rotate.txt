@@ -4,14 +4,14 @@ ps_rotate
 
 ps_rotate — Sets rotation factor
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool ps_rotate ( resource $psdoc , float $rot )~
 
 Sets the rotation of the coordinate system.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {psdoc}
@@ -22,12 +22,12 @@ Sets the rotation of the coordinate system.
 
     Angle of rotation in degree.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Rotation of the coordinate system
@@ -71,18 +71,18 @@ Example #1 Rotation of the coordinate system
 
 The above example illustrates a very common way of rotating a graphic (in this
 case just a rectangle) by simply rotating the coordinate system. Since the
-graphic's coordinate system assumes (0,0) to be the origin, the page coordinate
-system is also translated to place the graphics not on the edge of the page.
-Pay attention to the order of |ps_translate| and ps_rotate(). In the above case
-the rectancle is rotated around the point (100, 100) in the untranslated
-coordinate system. Switching the two statements has a completely different
-result.
+graphic's coordinate system assumes (0,0) to be the origin, the page
+coordinate system is also translated to place the graphics not on the edge of
+the page. Pay attention to the order of |ps_translate| and ps_rotate(). In the
+above case the rectancle is rotated around the point (100, 100) in the
+untranslated coordinate system. Switching the two statements has a completely
+different result.
 
 In order to output the following text at the original position, all
 modifications of the coordinate system are encapsulated in |ps_save| and |
 ps_restore|.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ps_scale| - Sets scaling factor

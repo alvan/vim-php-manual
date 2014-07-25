@@ -4,21 +4,21 @@ get_defined_vars
 
 get_defined_vars — Returns an array of all defined variables
 
-===============================================================================
+==============================================================================
 *Description*
 
     array get_defined_vars ( void )~
 
-This function returns a multidimensional array containing a list of all defined
-variables, be them environment, server or user-defined variables, within the
-scope that get_defined_vars() is called.
+This function returns a multidimensional array containing a list of all
+defined variables, be them environment, server or user-defined variables,
+within the scope that get_defined_vars() is called.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 A multidimensional array with all the variables.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 get_defined_vars() Example
@@ -45,13 +45,14 @@ Example #1 get_defined_vars() Example
     print_r(array_keys(get_defined_vars()));
 <?>
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
-5.0.0   The $GLOBALS variable is included in the results of the array returned.
+Version                              Description
+5.0.0   The $GLOBALS variable is included in the results of the array
+        returned.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |isset| - Determine if a variable is set and is not NULL

@@ -4,7 +4,7 @@ cubrid_lock_write
 
 cubrid_lock_write — Set a write lock on the given OID
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool cubrid_lock_write ( resource $conn_identifier , string $oid )~
@@ -12,7 +12,7 @@ cubrid_lock_write — Set a write lock on the given OID
 The cubrid_lock_write() function is used to put write lock on the instance
 pointed by the given {oid}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {conn_identifier}
@@ -23,14 +23,14 @@ pointed by the given {oid}.
 
     OID of the instance that you want to put write lock on.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 TRUE, when process is successful.
 
 FALSE, when process is unsuccessful.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_lock_write() example
@@ -84,7 +84,7 @@ array(3) {
   string(1) "8"
 }
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |cubrid_lock_read| - Set a read lock on the given OID

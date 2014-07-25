@@ -7,7 +7,7 @@ SQLiteResult::numRows
 sqlite_num_rows -- SQLiteResult::numRows — Returns the number of rows in a
 buffered result set
 
-===============================================================================
+==============================================================================
 *Description*
 
     int sqlite_num_rows ( resource $result )~
@@ -18,7 +18,7 @@ Object oriented style (method):
 
 Returns the number of rows in the buffered {result} set.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
@@ -30,12 +30,12 @@ Returns the number of rows in the buffered {result} set.
 
         This function cannot be used with unbuffered result handles.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the number of rows, as an integer.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Procedural example
@@ -58,11 +58,11 @@ Example #2 Object-oriented example
     echo "Number of rows: $rows";
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
-  * |sqlite_changes| - Returns the number of rows that were changed by the most
-    recent SQL statement
+  * |sqlite_changes| - Returns the number of rows that were changed by the
+    most recent SQL statement
   * |sqlite_query| - Executes a query against a given database and returns a
     result handle
   * |sqlite_num_fields| - Returns the number of fields in a result set

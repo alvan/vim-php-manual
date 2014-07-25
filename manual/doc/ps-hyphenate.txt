@@ -4,20 +4,20 @@ ps_hyphenate
 
 ps_hyphenate — Hyphenates a word
 
-===============================================================================
+==============================================================================
 *Description*
 
     array ps_hyphenate ( resource $psdoc , string $text )~
 
 Hyphenates the passed word. ps_hyphenate() evaluates the value hyphenminchars
-(set by |ps_set_value|) and the parameter hyphendict (set by |ps_set_parameter|
-). hyphendict must be set before calling this function.
+(set by |ps_set_value|) and the parameter hyphendict (set by |ps_set_parameter
+|). hyphendict must be set before calling this function.
 
-This function requires the locale category LC_CTYPE to be set properly. This is
-done when the extension is initialized by using the environment variables. On
-Unix systems read the man page of locale for more information.
+This function requires the locale category LC_CTYPE to be set properly. This
+is done when the extension is initialized by using the environment variables.
+On Unix systems read the man page of locale for more information.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {psdoc}
@@ -30,13 +30,13 @@ Unix systems read the man page of locale for more information.
     breaks are returned in an array of interger numbers. Each number is the
     position of the char in {text} after which a hyphenation can take place.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 An array of integers indicating the position of possible breaks in the text or
 FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Hyphennate a text
@@ -58,7 +58,7 @@ The above example will output:
 
 Ko-ordi-na-ten-sys-tem
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ps_show_boxed| - Output text in a box

@@ -4,16 +4,16 @@ svn_checkout
 
 svn_checkout — Checks out a working copy from the repository
 
-===============================================================================
+==============================================================================
 *Description*
 
-    bool svn_checkout ( string $repos , string $targetpath [, int $revision [,~
-    int $flags = 0 ]] )~
+    bool svn_checkout ( string $repos , string $targetpath [, int $revision~
+    [, int $flags = 0 ]] )~
 
 Checks out a working copy from the repository at {repos} to {targetpath} at
 revision {revision}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {repos}
@@ -37,21 +37,21 @@ revision {revision}.
 
     Any combination of SVN_NON_RECURSIVE and SVN_IGNORE_EXTERNALS.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Notes*
 
 Warning
 
 This function is EXPERIMENTAL. The behaviour of this function, its name, and
-surrounding documentation may change without notice in a future release of PHP.
-This function should be used at your own risk.
+surrounding documentation may change without notice in a future release of
+PHP. This function should be used at your own risk.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Basic example
@@ -60,15 +60,15 @@ This example demonstrates how to check out a directory from a repository to a
 directory named calc:
 
 <?php >
-    svn_checkout('http://www.example.com/svnroot/calc/trunk', dirname(__FILE__) . '
-    /calc');
+    svn_checkout('http://www.example.com/svnroot/calc/trunk', dirname(__FILE__) . 
+    '/calc');
 <?>
 
 The dirname(__FILE__) call is necessary in order to convert the calc relative
 path into an absolute one. If calc exists, you can also use |realpath| to
 retrieve an absolute path.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |svn_add| - Schedules the addition of an item in a working directory

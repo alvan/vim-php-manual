@@ -4,7 +4,7 @@ yaz_scan
 
 yaz_scan — Prepares for a scan
 
-===============================================================================
+==============================================================================
 *Description*
 
     void yaz_scan ( resource $id , string $type , string $startterm [, array~
@@ -16,7 +16,7 @@ To actually transfer the Scan Request to the server and receive the Scan
 Response, |yaz_wait| must be called. Upon completion of |yaz_wait| call |
 yaz_error| and |yaz_scan_result| to handle the response.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {id}
@@ -45,12 +45,12 @@ yaz_error| and |yaz_scan_result| to handle the response.
     flags array: number (number of terms requested), position (preferred
     position of term) and stepSize (preferred step size).
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 No value is returned.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 PHP function that scans titles

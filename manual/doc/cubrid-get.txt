@@ -4,7 +4,7 @@ cubrid_get
 
 cubrid_get — Get a column using OID
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed cubrid_get ( resource $conn_identifier , string $oid [, mixed $attr~
@@ -15,7 +15,7 @@ given {oid}. You can get single attribute by using string data type for the
 {attr} argument, or many attributes by using array data type for the {attr}
 argument.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {conn_identifier}
@@ -30,20 +30,20 @@ argument.
 
     Name of the attribute that you want to read.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Content of the requested attribute, when process is successful; When {attr} is
 set with string data type, the result is returned as a string; when {attr} is
-set with array data type (0-based numerical array), then the result is returned
-in associative array. When {attr} is omitted, then all attributes are received
-in array form.
+set with array data type (0-based numerical array), then the result is
+returned in associative array. When {attr} is omitted, then all attributes are
+received in array form.
 
 FALSE when process is unsuccessful or result is NULL (If error occurs to
-distinguish empty string from NULL, then it prints the warning message. You can
-check the error by using |cubrid_error_code|)
+distinguish empty string from NULL, then it prints the warning message. You
+can check the error by using |cubrid_error_code|)
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_get() example
@@ -104,7 +104,7 @@ array(4) {
   string(10) "a         "
 }
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |cubrid_put| - Update a column using OID

@@ -7,7 +7,7 @@ maxdb_result::data_seek
 maxdb_data_seek -- maxdb_result::data_seek — Adjusts the result pointer to an
 arbitary row in the result
 
-===============================================================================
+==============================================================================
 *Description*
 
 Procedural style
@@ -23,12 +23,12 @@ by the {offset} in the result set represented by {result}. The {offset}
 parameter must be between zero and the total number of rows minus one (0..|
 maxdb_num_rows| - 1).
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Object oriented style
@@ -97,7 +97,7 @@ The above example will output something similar to:
 
 City: Irvine  State: CA
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |maxdb_store_result| - Transfers a result set from the last query

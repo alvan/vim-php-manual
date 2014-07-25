@@ -4,7 +4,7 @@ is_writable
 
 is_writable — Tells whether the filename is writable
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool is_writable ( string $filename )~
@@ -16,19 +16,19 @@ Keep in mind that PHP may be accessing the file as the user id that the web
 server runs as (often 'nobody'). Safe mode limitations are not taken into
 account.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {filename}
 
     The filename being checked.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE if the {filename} exists and is writable.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 is_writable() example
@@ -42,12 +42,12 @@ Example #1 is_writable() example
     }
 <?>
 
-===============================================================================
+==============================================================================
 *Errors/Exceptions*
 
 Upon failure, an E_WARNING is emitted.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: The results of this function are cached. See |clearstatcache| for
@@ -59,7 +59,7 @@ As of PHP 5.0.0, this function can also be used with some URL wrappers. Refer
 to Supported Protocols and Wrappers to determine which wrappers support |stat|
 family of functionality.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |is_readable| - Tells whether a file exists and is readable

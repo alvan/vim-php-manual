@@ -5,26 +5,27 @@ zip_entry_compressionmethod
 zip_entry_compressionmethod — Retrieve the compression method of a directory
 entry
 
-===============================================================================
+==============================================================================
 *Description*
 
     string zip_entry_compressionmethod ( resource $zip_entry )~
 
-Returns the compression method of the directory entry specified by {zip_entry}.
+Returns the compression method of the directory entry specified by
+{zip_entry}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {zip_entry}
 
     A directory entry returned by |zip_read|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The compression method.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |zip_open| - Open a ZIP file archive

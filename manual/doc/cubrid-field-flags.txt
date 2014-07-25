@@ -4,7 +4,7 @@ cubrid_field_flags
 
 cubrid_field_flags — Return a string with the flags of the given field offset
 
-===============================================================================
+==============================================================================
 *Description*
 
     string cubrid_field_flags ( resource $result , int $field_offset )~
@@ -14,7 +14,7 @@ separated by space. You can split the returned value using explode. The
 possible flags could be: not_null, primary_key, unique_key, foreign_key,
 auto_increment, shared, reverse_index, reverse_unique and timestamp.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
@@ -26,7 +26,7 @@ auto_increment, shared, reverse_index, reverse_unique and timestamp.
     The numerical field offset. The {field_offset} starts at 0. If
     {field_offset} does not exist, an error of level E_WARNING is also issued.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 A string with flags, when process is successful.
@@ -35,7 +35,7 @@ FALSE when invalid field_offset value.
 
 -1 if SQL sentence is not SELECT.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_field_flags() example

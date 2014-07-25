@@ -4,7 +4,7 @@ ifx_pconnect
 
 ifx_pconnect — Open persistent Informix connection
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource ifx_pconnect ([ string $database [, string $userid [, string~
@@ -23,7 +23,7 @@ ifx_close| will not close links established by ifx_pconnect()).
 
 This type of links is therefore called 'persistent'.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 All of the arguments are optional, and if they're missing, defaults are taken
@@ -44,13 +44,13 @@ defined).
 
     The password, as a string.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns: valid Informix persistent link identifier on success, or FALSE on
 errors.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ifx_connect| - Open Informix server connection

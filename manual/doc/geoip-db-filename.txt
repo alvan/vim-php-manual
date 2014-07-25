@@ -4,7 +4,7 @@ geoip_db_filename
 
 geoip_db_filename — Returns the filename of the corresponding GeoIP Database
 
-===============================================================================
+==============================================================================
 *Description*
 
     string geoip_db_filename ( int $database )~
@@ -15,7 +15,7 @@ GeoIP Database.
 It does not indicate if the file exists or not on disk, only where the library
 is looking for the database.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {database}
@@ -23,12 +23,12 @@ is looking for the database.
     The database type as an integer. You can use the various constants defined
     with this extension (ie: GEOIP_*_EDITION).
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the filename of the corresponding database, or NULL on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A geoip_db_filename() example

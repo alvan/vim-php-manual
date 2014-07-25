@@ -4,14 +4,15 @@ fbsql_blob_size
 
 fbsql_blob_size — Get the size of a BLOB
 
-===============================================================================
+==============================================================================
 *Description*
 
-    int fbsql_blob_size ( string $blob_handle [, resource $link_identifier ] )~
+    int fbsql_blob_size ( string $blob_handle [, resource $link_identifier ]~
+)~
 
 Returns the size of the given BLOB.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {blob_handle}
@@ -20,19 +21,19 @@ Returns the size of the given BLOB.
 
 { link_identifier}
 
-    A FrontBase link identifier returned by |fbsql_connect| or |fbsql_pconnect|
-    .
+    A FrontBase link identifier returned by |fbsql_connect| or |fbsql_pconnect
+    |.
 
     If optional and not specified, the function will try to find an open link
     to the FrontBase server and if no such link is found it will try to create
     one as if |fbsql_connect| was called with no arguments.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the BLOB size as an integer, or FALSE on error.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |fbsql_clob_size| - Get the size of a CLOB

@@ -2,9 +2,10 @@ xdiff_string_bdiff_size
 
 (PECL xdiff >= 1.5.0)
 
-xdiff_string_bdiff_size — Read a size of file created by applying a binary diff
+xdiff_string_bdiff_size — Read a size of file created by applying a binary
+diff
 
-===============================================================================
+==============================================================================
 *Description*
 
     int xdiff_string_bdiff_size ( string $patch )~
@@ -12,7 +13,7 @@ xdiff_string_bdiff_size — Read a size of file created by applying a binary dif
 Returns a size of a result file that would be created after applying binary
 {patch} to the original file.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {patch}
@@ -20,12 +21,12 @@ Returns a size of a result file that would be created after applying binary
     The binary patch created by |xdiff_string_bdiff| or |xdiff_string_rabdiff|
     function.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the size of file that would be created.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 xdiff_string_bdiff_size() example
@@ -39,7 +40,7 @@ applying a binary diff.
     echo "Resulting file will be $length bytes long";
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |xdiff_string_bdiff| - Make binary diff of two strings

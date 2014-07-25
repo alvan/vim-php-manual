@@ -4,7 +4,7 @@ chdb_create
 
 chdb_create — Creates a chdb file
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool chdb_create ( string $pathname , array $data )~
@@ -18,7 +18,7 @@ chdb_create() creates a chdb file containing the specified key-value pairs.
     architectures. Also compatibility across different versions of chdb is not
     guaranteed.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {pathname}
@@ -35,17 +35,17 @@ chdb_create() creates a chdb file containing the specified key-value pairs.
     as chdb only support the string type. Note that binary strings are
     supported as well, both as keys and values.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Errors/Exceptions*
 
 Throws an exception in case the chdb file hasn't been successfully created.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 chdb_create() example

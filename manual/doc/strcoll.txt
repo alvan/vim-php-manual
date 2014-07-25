@@ -4,7 +4,7 @@ strcoll
 
 strcoll — Locale based string comparison
 
-===============================================================================
+==============================================================================
 *Description*
 
     int strcoll ( string $str1 , string $str2 )~
@@ -15,7 +15,7 @@ is not binary safe.
 strcoll() uses the current locale for doing the comparisons. If the current
 locale is C or POSIX, this function is equivalent to |strcmp|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {str1}
@@ -26,19 +26,19 @@ locale is C or POSIX, this function is equivalent to |strcmp|.
 
     The second string.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns < 0 if {str1} is less than {str2}; > 0 if {str1} is greater than
 {str2}, and 0 if they are equal.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version            Description
 4.2.3   This function now works on win32.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |preg_match| - Perform a regular expression match
@@ -46,8 +46,8 @@ Version            Description
   * |strcasecmp| - Binary safe case-insensitive string comparison
   * |substr| - Return part of a string
   * |stristr| - Case-insensitive strstr
-  * |strncasecmp| - Binary safe case-insensitive string comparison of the first
-    n characters
+  * |strncasecmp| - Binary safe case-insensitive string comparison of the
+    first n characters
   * |strncmp| - Binary safe string comparison of the first n characters
   * |strstr| - Find the first occurrence of a string
   * |setlocale| - Set locale information

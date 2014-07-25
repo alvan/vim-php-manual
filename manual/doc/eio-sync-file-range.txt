@@ -4,17 +4,17 @@ eio_sync_file_range
 
 eio_sync_file_range — Sync a file segment with disk
 
-===============================================================================
+==============================================================================
 *Description*
 
-    resource eio_sync_file_range ( mixed $fd , int $offset , int $nbytes , int~
-    $flags [, int $pri = EIO_PRI_DEFAULT [, callable $callback = NULL [, mixed~
-    $data = NULL ]]] )~
+    resource eio_sync_file_range ( mixed $fd , int $offset , int $nbytes ,~
+    int $flags [, int $pri = EIO_PRI_DEFAULT [, callable $callback = NULL [,~
+    mixed $data = NULL ]]] )~
 
 eio_sync_file_range() permits fine control when synchronizing the open file
 referred to by the file descriptor {fd} with disk.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {fd}
@@ -27,9 +27,9 @@ referred to by the file descriptor {fd} with disk.
 
 {nbytes}
 
-    Specifies the length of the range to be synchronized, in bytes. If {nbytes}
-    is zero, then all bytes from {offset} through to the end of file are
-    synchronized.
+    Specifies the length of the range to be synchronized, in bytes. If
+    {nbytes} is zero, then all bytes from {offset} through to the end of file
+    are synchronized.
 
 {flags}
 
@@ -45,8 +45,8 @@ referred to by the file descriptor {fd} with disk.
 
 {callback}
 
-    {callback} function is called when the request is done. It should match the
-    following prototype:
+    {callback} function is called when the request is done. It should match
+    the following prototype:
     void callback(mixed $data, int $result[, resource $req]);
 
     {data}
@@ -67,7 +67,7 @@ referred to by the file descriptor {fd} with disk.
 
     Arbitrary variable passed to {callback}.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 eio_sync_file_range() returns request resource on success or FALSE on error.

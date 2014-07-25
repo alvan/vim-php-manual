@@ -4,7 +4,7 @@ ifx_fetch_row
 
 ifx_fetch_row — Get row as an associative array
 
-===============================================================================
+==============================================================================
 *Description*
 
     array ifx_fetch_row ( resource $result_id [, mixed $position ] )~
@@ -15,7 +15,7 @@ identifier.
 Subsequent calls to ifx_fetch_row() would return the next row in the result
 set, or FALSE if there are no more rows.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result_id}
@@ -30,7 +30,7 @@ set, or FALSE if there are no more rows.
     "absolute" row fetch is executed. This parameter is optional, and only
     valid for SCROLL cursors.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an associative array that corresponds to the fetched row, or FALSE if
@@ -40,7 +40,7 @@ Blob columns are returned as integer blob id values for use in |ifx_get_blob|
 unless you have used ifx_textasvarchar(1) or ifx_byteasvarchar(1), in which
 case blobs are returned as string values.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Informix fetch rows

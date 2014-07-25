@@ -4,7 +4,7 @@ mqseries_connx
 
 mqseries_connx — MQSeries MQCONNX
 
-===============================================================================
+==============================================================================
 *Description*
 
     void mqseries_connx ( string $qManagerName , array &$connOptions ,~
@@ -14,7 +14,7 @@ The mqseries_connx() (MQCONNX) call connects an application program to a queue
 manager. It provides a queue manager connection handle, which is used by the
 application on subsequent MQ calls.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {qManagerName}
@@ -43,12 +43,12 @@ application on subsequent MQ calls.
 
     Reason code qualifying the compCode.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 No value is returned.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mqseries_connx() example
@@ -64,8 +64,8 @@ Example #1 mqseries_connx() example
 
         mqseries_connx('MQNX9420', $mqcno, $conn, $comp_code,$reason);
         if ($comp_code !== MQSERIES_MQCC_OK) {
-            printf("Connx CompCode:%d Reason:%d Text:%s<br>\n", $comp_code, $reason
-    , mqseries_strerror($reason));
+            printf("Connx CompCode:%d Reason:%d Text:%s<br>\n", $comp_code, 
+    $reason, mqseries_strerror($reason));
             exit;
         }
      
@@ -97,14 +97,14 @@ Example #2 mqseries_connx() example using SSL connection & OCSP Responder URL
 
         mqseries_connx('QUEUEMGR', $mqcno, $conn, $comp_code,$reason);
         if ($comp_code !== MQSERIES_MQCC_OK) {
-            printf("Connx CompCode:%d Reason:%d Text:%s<br>\n", $comp_code, $reason
-    , mqseries_strerror($reason));
+            printf("Connx CompCode:%d Reason:%d Text:%s<br>\n", $comp_code, 
+    $reason, mqseries_strerror($reason));
             exit;
         }
      
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mqseries_disc| - MQSeries MQDISC

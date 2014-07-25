@@ -4,7 +4,7 @@ imagettfbbox
 
 imagettfbbox — Give the bounding box of a text using TrueType fonts
 
-===============================================================================
+==============================================================================
 *Description*
 
     array imagettfbbox ( float $size , float $angle , string $fontfile ,~
@@ -13,7 +13,7 @@ imagettfbbox — Give the bounding box of a text using TrueType fonts
 This function calculates and returns the bounding box in pixels for a TrueType
 text.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {size}
@@ -21,8 +21,8 @@ text.
     The font size.
 
 
-        Note: In GD 1, this is measured in pixels. In GD 2, this is measured in
-        points.
+        Note: In GD 1, this is measured in pixels. In GD 2, this is measured
+        in points.
 
 {angle}
 
@@ -39,11 +39,11 @@ text.
 
     The string to be measured.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-imagettfbbox() returns an array with 8 elements representing four points making
-the bounding box of the text on success and FALSE on error.
+imagettfbbox() returns an array with 8 elements representing four points
+making the bounding box of the text on success and FALSE on error.
 
 key            contents
 0   lower left corner, X position
@@ -58,7 +58,7 @@ key            contents
 The points are relative to the text regardless of the {angle}, so "upper left"
 means in the top left-hand corner seeing the text horizontally.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 imagettfbbox() example
@@ -83,8 +83,8 @@ Example #1 imagettfbbox() example
     $y = $bbox[1] + (imagesy($im) / 2) - ($bbox[5] / 2) - 5;
 
     // Write it
-    imagettftext($im, 10, 45, $x, $y, $black, $font, 'Powered by PHP ' . phpversion
-    ());
+    imagettftext($im, 10, 45, $x, $y, $black, $font, 'Powered by PHP ' . 
+    phpversion());
 
     // Create the next bounding box for the second text
     $bbox = imagettfbbox(10, 45, $font, 'and Zend Engine ' . zend_version());
@@ -104,14 +104,14 @@ Example #1 imagettfbbox() example
     imagedestroy($im);
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
 
     This function requires both the GD library and the » FreeType library.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |imagettftext| - Write text to the image using TrueType fonts

@@ -4,7 +4,7 @@ ldap_first_entry
 
 ldap_first_entry — Return first result id
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource ldap_first_entry ( resource $link_identifier , resource~
@@ -17,7 +17,7 @@ entries from the result.
 Entries in the LDAP result are read sequentially using the ldap_first_entry()
 and |ldap_next_entry| functions.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {link_identifier}
@@ -26,13 +26,13 @@ and |ldap_next_entry| functions.
 
 {result_identifier}
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns the result entry identifier for the first entry on success and FALSE on
-error.
+Returns the result entry identifier for the first entry on success and FALSE
+on error.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ldap_get_entries| - Get all result entries

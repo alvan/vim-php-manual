@@ -4,7 +4,7 @@ crc32
 
 crc32 — Calculates the crc32 polynomial of a string
 
-===============================================================================
+==============================================================================
 *Description*
 
     int crc32 ( string $str )~
@@ -35,25 +35,25 @@ this even if it breaks direct decimal comparisons in about 50% of the cases
 when moving from 32 to 64bits.
 
 In retrospect having the function return an integer maybe wasn't the best idea
-and returning a hex string representation right away (as e.g. |md5| does) might
-have been a better plan to begin with.
+and returning a hex string representation right away (as e.g. |md5| does)
+might have been a better plan to begin with.
 
 For a more portable solution you may also consider the generic |hash|. hash
 ("crc32b", $str) will return the same string as dechex(crc32($str)).
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {str}
 
     The data.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the crc32 checksum of {str} as an integer.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Displaying a crc32 checksum
@@ -66,7 +66,7 @@ function:
     printf("%u\n", $checksum);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |hash| - Generate a hash value (message digest)

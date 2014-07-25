@@ -4,7 +4,7 @@ imap_mail_move
 
 imap_mail_move — Move specified messages to a mailbox
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool imap_mail_move ( resource $imap_stream , string $msglist , string~
@@ -12,7 +12,7 @@ imap_mail_move — Move specified messages to a mailbox
 
 Moves mail messages specified by {msglist} to the specified {mailbox}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { imap_stream}
@@ -32,12 +32,12 @@ Moves mail messages specified by {msglist} to the specified {mailbox}.
     {options} is a bitmask and may contain the single option:
       + CP_UID - the sequence numbers contain UIDS
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -45,7 +45,7 @@ Returns TRUE on success or FALSE on failure.
     imap_mail_move() will flag the original mail with a delete flag, to
     successfully delete it a call to the |imap_expunge| function must be made.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |imap_mail_copy| - Copy specified messages to a mailbox

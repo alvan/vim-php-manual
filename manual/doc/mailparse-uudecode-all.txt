@@ -5,7 +5,7 @@ mailparse_uudecode_all
 mailparse_uudecode_all — Scans the data from fp and extract each embedded
 uuencoded file
 
-===============================================================================
+==============================================================================
 *Description*
 
     array mailparse_uudecode_all ( resource $fp )~
@@ -13,14 +13,14 @@ uuencoded file
 Scans the data from the given file pointer and extract each embedded uuencoded
 file into a temporary file.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {fp}
 
     A valid file pointer.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an array of associative arrays listing filename information.
@@ -31,7 +31,7 @@ origfilename The original filename, for uuencoded parts only
 The first filename entry is the message body. The next entries are the decoded
 uuencoded files.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mailparse_uudecode_all() example

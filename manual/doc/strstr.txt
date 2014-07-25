@@ -4,7 +4,7 @@ strstr
 
 strstr — Find the first occurrence of a string
 
-===============================================================================
+==============================================================================
 *Description*
 
     string strstr ( string $haystack , mixed $needle [, bool $before_needle =~
@@ -24,7 +24,7 @@ occurrence of {needle} to the end of {haystack}.
     {haystack}, use the faster and less memory intensive function |strpos|
     instead.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {haystack}
@@ -41,19 +41,19 @@ occurrence of {needle} to the end of {haystack}.
     If TRUE, strstr() returns the part of the {haystack} before the first
     occurrence of the {needle} (excluding the needle).
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the portion of string, or FALSE if {needle} is not found.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version                  Description
 5.3.0   Added the optional parameter {before_needle}.
 4.3.0   strstr() was made binary safe.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 strstr() example
@@ -67,7 +67,7 @@ Example #1 strstr() example
     echo $user; // prints name
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |stristr| - Case-insensitive strstr

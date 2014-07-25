@@ -4,20 +4,21 @@ pspell_config_runtogether
 
 pspell_config_runtogether — Consider run-together words as valid compounds
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool pspell_config_runtogether ( int $dictionary_link , bool $flag )~
 
 This function determines whether run-together words will be treated as legal
-compounds. That is, "thecat" will be a legal compound, although there should be
-a space between the two words. Changing this setting only affects the results
-returned by |pspell_check|; |pspell_suggest| will still return suggestions.
+compounds. That is, "thecat" will be a legal compound, although there should
+be a space between the two words. Changing this setting only affects the
+results returned by |pspell_check|; |pspell_suggest| will still return
+suggestions.
 
 pspell_config_runtogether() should be used on a config before calling |
 pspell_new_config|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {dictionary_link}
@@ -27,12 +28,12 @@ pspell_new_config|.
     TRUE if run-together words should be treated as legal compounds, FALSE
     otherwise.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 pspell_config_runtogether()

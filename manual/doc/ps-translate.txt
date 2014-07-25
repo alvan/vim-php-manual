@@ -4,14 +4,14 @@ ps_translate
 
 ps_translate — Sets translation
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool ps_translate ( resource $psdoc , float $x , float $y )~
 
 Sets a new initial point of the coordinate system.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {psdoc}
@@ -26,12 +26,12 @@ Sets a new initial point of the coordinate system.
 
     y-coordinate of the origin of the translated coordinate system.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Translation of the coordinate system
@@ -92,7 +92,7 @@ Instead of undoing the translation with a second call of ps_translate() the
 graphics context is saved before modifying the coordinate system and restored
 after drawing the rectangle.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ps_scale| - Sets scaling factor

@@ -4,17 +4,17 @@ cubrid_lob_send
 
 cubrid_lob_send — Read BLOB/CLOB data and send straight to browser
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool cubrid_lob_send ( resource $conn_identifier , resource~
     $lob_identifier )~
 
 cubrid_lob_send() reads BLOB/CLOB data and passes it straight through to the
-browser. To use this function, you must use |cubrid_lob_get| first to get BLOB/
-CLOB info from CUBRID.
+browser. To use this function, you must use |cubrid_lob_get| first to get BLOB
+/CLOB info from CUBRID.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {conn_identifier}
@@ -25,14 +25,14 @@ CLOB info from CUBRID.
 
     LOB identifier.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 TRUE, when process is successful.
 
 FALSE, when process is unsuccessful.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_lob_send() example
@@ -51,7 +51,7 @@ Example #1 cubrid_lob_send() example
     cubrid_disconnect($conn);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |cubrid_lob_get| - Get BLOB/CLOB data

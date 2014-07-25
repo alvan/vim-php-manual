@@ -4,14 +4,14 @@ mssql_num_rows
 
 mssql_num_rows — Gets the number of rows in result
 
-===============================================================================
+==============================================================================
 *Description*
 
     int mssql_num_rows ( resource $result )~
 
 mssql_num_rows() returns the number of rows in a result set.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
@@ -19,12 +19,12 @@ mssql_num_rows() returns the number of rows in a result set.
     The result resource that is being evaluated. This result comes from a call
     to |mssql_query|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the number of rows, as an integer.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mssql_num_rows() example
@@ -43,7 +43,7 @@ Example #1 mssql_num_rows() example
     mssql_free_result($query);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mssql_query| - Send MS SQL query

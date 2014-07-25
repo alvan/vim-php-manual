@@ -4,14 +4,14 @@ dio_write
 
 dio_write — Writes data to fd with optional truncation at length
 
-===============================================================================
+==============================================================================
 *Description*
 
     int dio_write ( resource $fd , string $data [, int $len = 0 ] )~
 
 dio_write() writes up to {len} bytes from {data} to file {fd}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {fd}
@@ -24,15 +24,15 @@ dio_write() writes up to {len} bytes from {data} to file {fd}.
 
 {len}
 
-    The length of data to write in bytes. If not specified, the function writes
-    all the data to the specified file.
+    The length of data to write in bytes. If not specified, the function
+    writes all the data to the specified file.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the number of bytes written to {fd}.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |dio_read| - Reads bytes from a file descriptor

@@ -4,7 +4,7 @@ preg_match
 
 preg_match — Perform a regular expression match
 
-===============================================================================
+==============================================================================
 *Description*
 
     int preg_match ( string $pattern , string $subject [, array &$matches [,~
@@ -12,7 +12,7 @@ preg_match — Perform a regular expression match
 
 Searches {subject} for a match to the regular expression given in {pattern}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {pattern}
@@ -44,8 +44,8 @@ Searches {subject} for a match to the regular expression given in {pattern}.
 {offset}
 
     Normally, the search starts from the beginning of the subject string. The
-    optional parameter {offset} can be used to specify the alternate place from
-    which to start the search (in bytes).
+    optional parameter {offset} can be used to specify the alternate place
+    from which to start the search (in bytes).
 
         Note:
 
@@ -87,7 +87,7 @@ Searches {subject} for a match to the regular expression given in {pattern}.
 
         )
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 preg_match() returns 1 if the {pattern} matches given {subject}, 0 if it does
@@ -95,23 +95,23 @@ not, or FALSE if an error occurred.
 
 Warning
 
-This function may return Boolean FALSE, but may also return a non-Boolean value
-which evaluates to FALSE. Please read the section on Booleans for more
+This function may return Boolean FALSE, but may also return a non-Boolean
+value which evaluates to FALSE. Please read the section on Booleans for more
 information. Use the === operator for testing the return value of this
 function.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 5.3.6   Returns FALSE if {offset} is higher than {subject} length.
-5.2.2   Named subpatterns now accept the syntax (?<name>) and (?'name') as well
-        as (?P<name>). Previous versions accepted only (?P<name>).
+5.2.2   Named subpatterns now accept the syntax (?<name>) and (?'name') as
+        well as (?P<name>). Previous versions accepted only (?P<name>).
 4.3.3   The {offset} parameter was added
 4.3.0   The PREG_OFFSET_CAPTURE flag was added
 4.3.0   The {flags} parameter was added
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Find the string of text "php"
@@ -130,14 +130,15 @@ Example #2 Find the word "web"
 <?php >
     /* The \b in the pattern indicates a word boundary, so only the distinct
      * word "web" is matched, and not a word partial like "webbing" or "cobweb" */
-    if (preg_match("/\bweb\b/i", "PHP is the web scripting language of choice.")) {
+    if (preg_match("/\bweb\b/i", "PHP is the web scripting language of choice.")) 
+    {
         echo "A match was found.";
     } else {
         echo "A match was not found.";
     }
 
-    if (preg_match("/\bweb\b/i", "PHP is the website scripting language of choice."
-    )) {
+    if (preg_match("/\bweb\b/i", 
+    "PHP is the website scripting language of choice.")) {
         echo "A match was found.";
     } else {
         echo "A match was not found.";
@@ -188,22 +189,23 @@ Array
     [2] => 2008
 )
 
-===============================================================================
+==============================================================================
 *Notes*
 
 Tip
 
-Do not use preg_match() if you only want to check if one string is contained in
-another string. Use |strpos| or |strstr| instead as they will be faster.
+Do not use preg_match() if you only want to check if one string is contained
+in another string. Use |strpos| or |strstr| instead as they will be faster.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * PCRE Patterns
   * |preg_match_all| - Perform a global regular expression match
   * |preg_replace| - Perform a regular expression search and replace
   * |preg_split| - Split string by a regular expression
-  * |preg_last_error| - Returns the error code of the last PCRE regex execution
+  * |preg_last_error| - Returns the error code of the last PCRE regex
+    execution
 
 
 vim:ft=help:

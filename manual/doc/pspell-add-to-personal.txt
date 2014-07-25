@@ -4,7 +4,7 @@ pspell_add_to_personal
 
 pspell_add_to_personal — Add the word to a personal wordlist
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool pspell_add_to_personal ( int $dictionary_link , string $word )~
@@ -13,7 +13,7 @@ pspell_add_to_personal() adds a word to the personal wordlist. If you used |
 pspell_new_config| with |pspell_config_personal| to open the dictionary, you
 can save the wordlist later with |pspell_save_wordlist|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {dictionary_link}
@@ -22,12 +22,12 @@ can save the wordlist later with |pspell_save_wordlist|.
 
     The added word.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 pspell_add_to_personal()
@@ -41,7 +41,7 @@ Example #1 pspell_add_to_personal()
     pspell_save_wordlist($pspell_link);
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:

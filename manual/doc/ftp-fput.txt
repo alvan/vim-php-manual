@@ -4,7 +4,7 @@ ftp_fput
 
 ftp_fput — Uploads from an open file to the FTP server
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool ftp_fput ( resource $ftp_stream , string $remote_file , resource~
@@ -13,7 +13,7 @@ ftp_fput — Uploads from an open file to the FTP server
 ftp_fput() uploads the data from a file pointer to a remote file on the FTP
 server.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {ftp_stream}
@@ -36,12 +36,12 @@ server.
 
     The position in the remote file to start uploading to.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 ftp_fput() example
@@ -71,13 +71,13 @@ Example #1 ftp_fput() example
 
 <?>
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version      Description
 4.3.0   {startpos} was added.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ftp_put| - Uploads a file to the FTP server

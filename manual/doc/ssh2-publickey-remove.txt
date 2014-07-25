@@ -4,7 +4,7 @@ ssh2_publickey_remove
 
 ssh2_publickey_remove — Remove an authorized publickey
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool ssh2_publickey_remove ( resource $pkey , string $algoname , string~
@@ -12,7 +12,7 @@ ssh2_publickey_remove — Remove an authorized publickey
 
 Removes an authorized publickey.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {pkey}
@@ -27,20 +27,20 @@ Removes an authorized publickey.
 
     Publickey blob as raw binary data
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Notes*
 
-    Note: The public key subsystem is used for managing public keys on a server
-    to which the client is already authenticated. To authenticate to a remote
-    system using public key authentication, use the |ssh2_auth_pubkey_file|
-    function instead.
+    Note: The public key subsystem is used for managing public keys on a
+    server to which the client is already authenticated. To authenticate to a
+    remote system using public key authentication, use the |
+    ssh2_auth_pubkey_file| function instead.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ssh2_publickey_init| - Initialize Publickey subsystem

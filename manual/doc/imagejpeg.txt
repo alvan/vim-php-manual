@@ -4,28 +4,28 @@ imagejpeg
 
 imagejpeg — Output image to browser or file
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool imagejpeg ( resource $image [, string $filename [, int $quality ]] )~
 
 imagejpeg() creates a JPEG file from the given {image}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { image}
 
-    An image resource, returned by one of the image creation functions, such as
-    |imagecreatetruecolor|.
+    An image resource, returned by one of the image creation functions, such
+    as |imagecreatetruecolor|.
 
 {filename}
 
-    The path to save the file to. If not set or NULL, the raw image stream will
-    be outputted directly.
+    The path to save the file to. If not set or NULL, the raw image stream
+    will be outputted directly.
 
-    To skip this argument in order to provide the {quality} parameter, use NULL
-    .
+    To skip this argument in order to provide the {quality} parameter, use
+    NULL.
 
 {quality}
 
@@ -33,12 +33,12 @@ imagejpeg() creates a JPEG file from the given {image}.
     100 (best quality, biggest file). The default is the default IJG quality
     value (about 75).
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Outputting a JPEG image
@@ -96,7 +96,7 @@ Example #3 Outputting the image at 75% quality
     imagedestroy($im);
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: JPEG support is only available if PHP was compiled against GD-1.8 or
@@ -107,7 +107,7 @@ Example #3 Outputting the image at 75% quality
     If you want to output Progressive JPEGs, you need to set interlacing on
     with |imageinterlace|.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |imagepng| - Output a PNG image to either the browser or a file

@@ -4,7 +4,7 @@ sqlite_close
 
 sqlite_close — Closes an open SQLite database
 
-===============================================================================
+==============================================================================
 *Description*
 
     void sqlite_close ( resource $dbhandle )~
@@ -12,7 +12,7 @@ sqlite_close — Closes an open SQLite database
 Closes the given {db_handle} database handle. If the database was persistent,
 it will be closed and removed from the persistent list.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {dbhandle}
@@ -20,12 +20,12 @@ it will be closed and removed from the persistent list.
     The SQLite Database resource; returned from |sqlite_open| when used
     procedurally.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 No value is returned.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 sqlite_close() example
@@ -35,13 +35,13 @@ Example #1 sqlite_close() example
     sqlite_close($dbhandle);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
-  * |sqlite_open| - Opens an SQLite database and create the database if it does
-    not exist
-  * |sqlite_popen| - Opens a persistent handle to an SQLite database and create
-    the database if it does not exist
+  * |sqlite_open| - Opens an SQLite database and create the database if it
+    does not exist
+  * |sqlite_popen| - Opens a persistent handle to an SQLite database and
+    create the database if it does not exist
 
 
 vim:ft=help:

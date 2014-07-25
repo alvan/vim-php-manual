@@ -4,7 +4,7 @@ rpm_get_tag
 
 rpm_get_tag — Retrieves a header tag from an RPM file
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed rpm_get_tag ( resource $rpmr , int $tagnum )~
@@ -12,7 +12,7 @@ rpm_get_tag — Retrieves a header tag from an RPM file
 rpm_get_tag() will retrieve a given tag from the RPM file's header and return
 it.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {rpmr}
@@ -21,16 +21,16 @@ it.
 
 {tagnum}
 
-    The tag number to retrieve from the RPM header. This value can be specified
-    using the list of constants defined by this module.
+    The tag number to retrieve from the RPM header. This value can be
+    specified using the list of constants defined by this module.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The return value can be of various types depending on the {tagnum} supplied to
 the function.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 rpm_get_tag() example
@@ -47,7 +47,7 @@ Example #1 rpm_get_tag() example
 
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |rpm_open| - Opens an RPM file

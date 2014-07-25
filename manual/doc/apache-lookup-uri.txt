@@ -5,7 +5,7 @@ apache_lookup_uri
 apache_lookup_uri — Perform a partial request for the specified URI and return
 all info about it
 
-===============================================================================
+==============================================================================
 *Description*
 
     object apache_lookup_uri ( string $filename )~
@@ -15,14 +15,14 @@ all the important information about the given resource.
 
 This function is only supported when PHP is installed as an Apache module.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {filename}
 
     The filename (URI) that's being requested.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 An object of related URI information. The properties of this object are:
@@ -49,7 +49,7 @@ An object of related URI information. The properties of this object are:
   * mtime
   * request_time
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 apache_lookup_uri() example

@@ -5,7 +5,7 @@ bcpowmod
 bcpowmod — Raise an arbitrary precision number to another, reduced by a
 specified modulus
 
-===============================================================================
+==============================================================================
 *Description*
 
     string bcpowmod ( string $left_operand = "" , string~
@@ -15,7 +15,7 @@ specified modulus
 Use the fast-exponentiation method to raise {left_operand} to the power
 {right_operand} with respect to the modulus {modulus}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {left_operand}
@@ -36,12 +36,12 @@ Use the fast-exponentiation method to raise {left_operand} to the power
     decimal place in the result. You can also set the global default scale for
     all functions by using |bcscale|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the result as a string, or NULL if {modulus} is 0.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -49,11 +49,11 @@ Returns the result as a string, or NULL if {modulus} is 0.
     Because this method uses the modulus operation, numbers which are not
     positive integers may give unexpected results.
 
-===============================================================================
+==============================================================================
 *Examples*
 
-The following two statements are functionally identical. The bcpowmod() version
-however, executes in less time and can accept larger parameters.
+The following two statements are functionally identical. The bcpowmod()
+version however, executes in less time and can accept larger parameters.
 <?php >
     $a = bcpowmod($x, $y, $mod);
 
@@ -63,7 +63,7 @@ however, executes in less time and can accept larger parameters.
 
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |bcpow| - Raise an arbitrary precision number to another

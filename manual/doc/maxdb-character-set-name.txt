@@ -7,7 +7,7 @@ maxdb::character_set_name
 maxdb_character_set_name -- maxdb::character_set_name — Returns the default
 character set for the database connection
 
-===============================================================================
+==============================================================================
 *Description*
 
 Procedural style
@@ -21,12 +21,12 @@ Object oriented style
 Returns the current character set for the database connection specified by the
 {link} parameter.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The default character set for the current connection, either ascii or unicode.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Object oriented style
@@ -71,12 +71,12 @@ The above example will output something similar to:
 
 Current character set is ascii
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |maxdb_client_encoding| - Alias of maxdb_character_set_name
-  * |maxdb_real_escape_string| - Escapes special characters in a string for use
-    in an SQL statement, taking into account the current charset of the
+  * |maxdb_real_escape_string| - Escapes special characters in a string for
+    use in an SQL statement, taking into account the current charset of the
     connection
 
 

@@ -5,7 +5,7 @@ get_magic_quotes_gpc
 get_magic_quotes_gpc — Gets the current configuration setting of
 magic_quotes_gpc
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool get_magic_quotes_gpc ( void )~
@@ -16,20 +16,20 @@ Keep in mind that attempting to set magic_quotes_gpc at runtime will not work.
 
 For more information about magic_quotes, see this security section.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns 0 if magic_quotes_gpc is off, 1 otherwise. Or always returns FALSE as
 of PHP 5.4.0.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 5.4.0   Always returns FALSE because the magic quotes feature was removed from
         PHP.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 get_magic_quotes_gpc() example
@@ -54,7 +54,7 @@ Example #1 get_magic_quotes_gpc() example
     $sql = "INSERT INTO lastnames (lastname) VALUES ('$lastname')";
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -64,7 +64,7 @@ Example #1 get_magic_quotes_gpc() example
     double quotes, backslashes or NUL's will be escaped. Only single quotes
     will be escaped. In this case they'll look like: ''
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |addslashes| - Quote string with slashes

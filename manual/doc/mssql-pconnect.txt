@@ -4,7 +4,7 @@ mssql_pconnect
 
 mssql_pconnect — Open persistent MS SQL connection
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource mssql_pconnect ([ string $servername [, string $username [,~
@@ -24,7 +24,7 @@ mssql_close| will not close links established by mssql_pconnect()).
 
 This type of links is therefore called 'persistent'.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {servername}
@@ -43,17 +43,17 @@ This type of links is therefore called 'persistent'.
 
     If a second call is made to mssql_pconnect() with the same arguments, no
     new link will be established, but instead, the link identifier of the
-    already opened link will be returned. This parameter modifies this behavior
-    and makes mssql_pconnect() always open a new link, even if mssql_pconnect()
-    was called before with the same parameters.
+    already opened link will be returned. This parameter modifies this
+    behavior and makes mssql_pconnect() always open a new link, even if 
+    mssql_pconnect() was called before with the same parameters.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a positive MS SQL persistent link identifier on success, or FALSE on
 error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mssql_pconnect() using the {new_link} parameter

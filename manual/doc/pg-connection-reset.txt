@@ -4,26 +4,26 @@ pg_connection_reset
 
 pg_connection_reset — Reset connection (reconnect)
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool pg_connection_reset ( resource $connection )~
 
 pg_connection_reset() resets the connection. It is useful for error recovery.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
 
     PostgreSQL database connection resource.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 pg_connection_reset() example
@@ -38,7 +38,7 @@ Example #1 pg_connection_reset() example
       }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |pg_connect| - Open a PostgreSQL connection

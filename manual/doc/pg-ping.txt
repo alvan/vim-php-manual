@@ -4,7 +4,7 @@ pg_ping
 
 pg_ping — Ping database connection
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool pg_ping ([ resource $connection ] )~
@@ -12,7 +12,7 @@ pg_ping — Ping database connection
 pg_ping() pings a database connection and tries to reconnect it if it is
 broken.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
@@ -21,12 +21,12 @@ broken.
     the default connection is used. The default connection is the last
     connection made by |pg_connect| or |pg_pconnect|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 pg_ping() example
@@ -42,7 +42,7 @@ Example #1 pg_ping() example
       die("Connection is broken\n");
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |pg_connection_status| - Get connection status

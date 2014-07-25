@@ -4,7 +4,7 @@ dio_fcntl
 
 dio_fcntl — Performs a c library fcntl on fd
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed dio_fcntl ( resource $fd , int $cmd [, mixed $args ] )~
@@ -13,7 +13,7 @@ The dio_fcntl() function performs the operation specified by {cmd} on the file
 descriptor {fd}. Some commands require additional arguments {args} to be
 supplied.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {fd}
@@ -26,12 +26,12 @@ supplied.
       + F_SETLK - Lock is set or cleared. If the lock is held by someone else 
         dio_fcntl() returns -1.
 
-      + F_SETLKW - like F_SETLK, but in case the lock is held by someone else, 
+      + F_SETLKW - like F_SETLK, but in case the lock is held by someone else,
         dio_fcntl() waits until the lock is released.
 
-      + F_GETLK - dio_fcntl() returns an associative array (as described above)
-        if someone else prevents lock. If there is no obstruction key "type"
-        will set to F_UNLCK.
+      + F_GETLK - dio_fcntl() returns an associative array (as described
+        above) if someone else prevents lock. If there is no obstruction key
+        "type" will set to F_UNLCK.
 
       + F_DUPFD - finds the lowest numbered available file descriptor greater
         than or equal to {args} and returns them.
@@ -42,8 +42,8 @@ supplied.
 
 {args}
 
-    {args} is an associative array, when {cmd} is F_SETLK or F_SETLLW, with the
-    following keys:
+    {args} is an associative array, when {cmd} is F_SETLK or F_SETLLW, with
+    the following keys:
       + start - offset where lock begins
 
       + length - size of locked area. zero means to end of file
@@ -54,12 +54,12 @@ supplied.
       + type - type of lock: can be F_RDLCK (read lock), F_WRLCK (write lock)
         or F_UNLCK (unlock)
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the result of the C call.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Setting and clearing a lock
@@ -78,7 +78,7 @@ Example #1 Setting and clearing a lock
     dio_close($fd);
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: This function is not implemented on Windows platforms.

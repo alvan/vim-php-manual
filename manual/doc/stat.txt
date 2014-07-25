@@ -4,7 +4,7 @@ stat
 
 stat — Gives information about a file
 
-===============================================================================
+==============================================================================
 *Description*
 
     array stat ( string $filename )~
@@ -15,33 +15,34 @@ symbolic link, statistics are from the file itself, not the symlink.
 |lstat| is identical to stat() except it would instead be based off the
 symlinks status.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {filename}
 
     Path to the file.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
                        stat() and |fstat| result format
-Numeric Associative (since PHP 4.0.6)                Description
-0       dev                           device number
-1       ino                           inode number *
-2       mode                          inode protection mode
-3       nlink                         number of links
-4       uid                           userid of owner *
-5       gid                           groupid of owner *
-6       rdev                          device type, if inode device
-7       size                          size in bytes
-8       atime                         time of last access (Unix timestamp)
-9       mtime                         time of last modification (Unix
-                                      timestamp)
-10      ctime                         time of last inode change (Unix
-                                      timestamp)
-11      blksize                       blocksize of filesystem IO **
-12      blocks                        number of 512-byte blocks allocated **
+Numeric    Associative (since PHP                   Description
+                   4.0.6)
+0       dev                          device number
+1       ino                          inode number *
+2       mode                         inode protection mode
+3       nlink                        number of links
+4       uid                          userid of owner *
+5       gid                          groupid of owner *
+6       rdev                         device type, if inode device
+7       size                         size in bytes
+8       atime                        time of last access (Unix timestamp)
+9       mtime                        time of last modification (Unix
+                                     timestamp)
+10      ctime                        time of last inode change (Unix
+                                     timestamp)
+11      blksize                      blocksize of filesystem IO **
+12      blocks                       number of 512-byte blocks allocated **
 
 * On Windows this will always be 0.
 
@@ -51,22 +52,22 @@ Windows) return -1.
 In case of error, stat() returns FALSE.
 
     Note: Because PHP's integer type is signed and many platforms use 32bit
-    integers, some filesystem functions may return unexpected results for files
-    which are larger than 2GB.
+    integers, some filesystem functions may return unexpected results for
+    files which are larger than 2GB.
 
-===============================================================================
+==============================================================================
 *Errors/Exceptions*
 
 Upon failure, an E_WARNING is emitted.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 4.0.6   In addition to returning these attributes in a numeric array, they can
         be accessed with associative indices, as noted next to each parameter
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 stat() example
@@ -116,7 +117,7 @@ Example #2 Using stat() information together with |touch|
     }
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -132,7 +133,7 @@ As of PHP 5.0.0, this function can also be used with some URL wrappers. Refer
 to Supported Protocols and Wrappers to determine which wrappers support stat()
 family of functionality.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |lstat| - Gives information about a file or symbolic link

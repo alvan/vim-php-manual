@@ -4,7 +4,7 @@ http_negotiate_charset
 
 http_negotiate_charset — Negotiate client's preferred character set
 
-===============================================================================
+==============================================================================
 *Description*
 
     string http_negotiate_charset ( array $supported [, array &$result ] )~
@@ -13,7 +13,7 @@ This function negotiates the clients preferred charset based on its
 Accept-Charset HTTP header. The qualifier is recognized and charsets without
 qualifier are rated highest.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {supported}
@@ -24,13 +24,13 @@ qualifier are rated highest.
 
     will be filled with an array containing the negotiation results
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the negotiated charset or the default charset (i.e. first array entry)
 if none match.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Using http_negotiate_charset()

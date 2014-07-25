@@ -2,20 +2,20 @@ preg_replace_callback
 
 (PHP 4 >= 4.0.5, PHP 5)
 
-preg_replace_callback — Perform a regular expression search and replace using a
-callback
+preg_replace_callback — Perform a regular expression search and replace using
+a callback
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed preg_replace_callback ( mixed $pattern , callable $callback , mixed~
     $subject [, int $limit = -1 [, int &$count ]] )~
 
-The behavior of this function is almost identical to |preg_replace|, except for
-the fact that instead of {replacement} parameter, one should specify a
+The behavior of this function is almost identical to |preg_replace|, except
+for the fact that instead of {replacement} parameter, one should specify a
 {callback}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {pattern}
@@ -73,7 +73,7 @@ the fact that instead of {replacement} parameter, one should specify a
     If specified, this variable will be filled with the number of replacements
     done.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 preg_replace_callback() returns an array if the {subject} parameter is an
@@ -82,13 +82,13 @@ array, or a string otherwise. On errors the return value is NULL
 If matches are found, the new subject will be returned, otherwise {subject}
 will be returned unchanged.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version           Description
 5.1.0   The {count} parameter was added
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #2 preg_replace_callback() example
@@ -141,12 +141,13 @@ encapsulated BB code
     echo $output;
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * PCRE Patterns
   * |preg_replace| - Perform a regular expression search and replace
-  * |preg_last_error| - Returns the error code of the last PCRE regex execution
+  * |preg_last_error| - Returns the error code of the last PCRE regex
+    execution
   * Anonymous functions
   * information about the callback type
 

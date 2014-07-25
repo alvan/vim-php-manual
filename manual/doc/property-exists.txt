@@ -4,7 +4,7 @@ property_exists
 
 property_exists — Checks if the object or class has a property
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool property_exists ( mixed $class , string $property )~
@@ -16,7 +16,7 @@ This function checks if the given {property} exists in the specified class.
     As opposed with |isset|, property_exists() returns TRUE even if the
     property has the value NULL.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {class}
@@ -27,33 +27,33 @@ This function checks if the given {property} exists in the specified class.
 
     The name of the property
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE if the property exists, FALSE if it doesn't exist or NULL in case
 of an error.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
 
-    Using this function will use any registered autoloaders if the class is not
-    already known.
+    Using this function will use any registered autoloaders if the class is
+    not already known.
 
     Note:
 
     The property_exists() function cannot detect properties that are magically
     accessible using the __get magic method.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 5.3.0   This function checks the existence of a property independent of
         accessibility.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A property_exists() example
@@ -79,7 +79,7 @@ Example #1 A property_exists() example
 
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |method_exists| - Checks if the class method exists

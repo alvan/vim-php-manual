@@ -4,26 +4,26 @@ set_include_path
 
 set_include_path — Sets the include_path configuration option
 
-===============================================================================
+==============================================================================
 *Description*
 
     string set_include_path ( string $new_include_path )~
 
 Sets the include_path configuration option for the duration of the script.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {new_include_path}
 
     The new value for the include_path
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the old include_path on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 set_include_path() example
@@ -38,8 +38,8 @@ Example #1 set_include_path() example
 
 Example #2 Adding to the include path
 
-Making use of the PATH_SEPARATOR constant, it is possible to extend the include
-path regardless of the operating system.
+Making use of the PATH_SEPARATOR constant, it is possible to extend the
+include path regardless of the operating system.
 
 In this example we add /usr/lib/pear to the end of the existing include_path.
 
@@ -48,7 +48,7 @@ In this example we add /usr/lib/pear to the end of the existing include_path.
     set_include_path(get_include_path() . PATH_SEPARATOR . $path);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ini_set| - Sets the value of a configuration option

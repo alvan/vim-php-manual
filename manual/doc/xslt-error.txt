@@ -4,7 +4,7 @@ xslt_error
 
 xslt_error — Returns an error string
 
-===============================================================================
+==============================================================================
 *Description*
 
     string xslt_error ( resource $xh )~
@@ -12,19 +12,19 @@ xslt_error — Returns an error string
 Returns a string describing the last error that occurred on the passed XSLT
 processor.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { xh}
 
     The XSLT processor link identifier, created with |xslt_create|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the error message, as a string.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Handling errors using the xslt_error() and |xslt_errno| functions.
@@ -43,7 +43,7 @@ Example #1 Handling errors using the xslt_error() and |xslt_errno| functions.
     xslt_free($xh);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |xslt_errno| - Returns an error number

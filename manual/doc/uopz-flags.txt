@@ -4,7 +4,7 @@ uopz_flags
 
 uopz_flags — Get or set flags on function or class
 
-===============================================================================
+==============================================================================
 *Description*
 
     int uopz_flags ( string $class , string $function , int $flags )~
@@ -12,7 +12,7 @@ uopz_flags — Get or set flags on function or class
 
 Get or set the flags on a class or function entry at runtime
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {class}
@@ -27,12 +27,12 @@ Get or set the flags on a class or function entry at runtime
 
     A valid set of ZEND_ACC_ flags, ZEND_ACC_FETCH to read flags
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 If setting, returns old flags, else returns flags
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 uopz_flags() example
@@ -48,16 +48,16 @@ Example #1 uopz_flags() example
 
     var_dump((bool) (uopz_flags("Test", "method", ZEND_ACC_FETCH) & 
     ZEND_ACC_PRIVATE));
-    var_dump((bool) (uopz_flags("Test", "method", ZEND_ACC_FETCH) & ZEND_ACC_STATIC
-    ));
+    var_dump((bool) (uopz_flags("Test", "method", ZEND_ACC_FETCH) & 
+    ZEND_ACC_STATIC));
 
     var_dump(uopz_flags("Test", "method", $flags|ZEND_ACC_STATIC|ZEND_ACC_PRIVATE
     ));
 
     var_dump((bool) (uopz_flags("Test", "method", ZEND_ACC_FETCH) & 
     ZEND_ACC_PRIVATE));
-    var_dump((bool) (uopz_flags("Test", "method", ZEND_ACC_FETCH) & ZEND_ACC_STATIC
-    ));
+    var_dump((bool) (uopz_flags("Test", "method", ZEND_ACC_FETCH) & 
+    ZEND_ACC_STATIC));
 <?>
 
 The above example will output something similar to:

@@ -4,14 +4,14 @@ chmod
 
 chmod — Changes file mode
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool chmod ( string $filename , int $mode )~
 
 Attempts to change the mode of the specified file to that given in {mode}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {filename}
@@ -31,13 +31,13 @@ Attempts to change the mode of the specified file to that given in {mode}.
 <    ?>
 
     The {mode} parameter consists of three octal number components specifying
-    access restrictions for the owner, the user group in which the owner is in,
-    and to everybody else in this order. One component can be computed by
+    access restrictions for the owner, the user group in which the owner is
+    in, and to everybody else in this order. One component can be computed by
     adding up the needed permissions for that target user base. Number 1 means
     that you grant execute rights, number 2 means that you make the file
     writeable, number 4 means that you make the file readable. Add up these
     numbers to specify needed rights. You can also read more about modes on
-    Unix systems with 'man 1 chmod' and 'man 2 chmod'.
+    Unix systems with '`man` `1` `chmod`' and '`man` `2` `chmod`'.
 
     <?php >
     // Read and write for owner, nothing for everybody else
@@ -53,12 +53,12 @@ Attempts to change the mode of the specified file to that given in {mode}.
     chmod("/somedir/somefile", 0750);
 <    ?>
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -74,9 +74,10 @@ Returns TRUE on success or FALSE on failure.
 
     When safe mode is enabled, PHP checks whether the files or directories you
     are about to operate on have the same UID (owner) as the script that is
-    being executed. In addition, you cannot set the SUID, SGID and sticky bits.
+    being executed. In addition, you cannot set the SUID, SGID and sticky
+    bits.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |chown| - Changes file owner

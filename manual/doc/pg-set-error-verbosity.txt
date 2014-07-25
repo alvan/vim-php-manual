@@ -5,7 +5,7 @@ pg_set_error_verbosity
 pg_set_error_verbosity — Determines the verbosity of messages returned by |
 pg_last_error| and |pg_result_error|.
 
-===============================================================================
+==============================================================================
 *Description*
 
     int pg_set_error_verbosity ([ resource $connection ], int $verbosity )~
@@ -22,7 +22,7 @@ lines). The PGSQL_ERRORS_VERBOSE mode includes all available fields. Changing
 the verbosity does not affect the messages available from already-existing
 result objects, only subsequently-created ones.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
@@ -36,13 +36,13 @@ result objects, only subsequently-created ones.
     The required verbosity: PGSQL_ERRORS_TERSE, PGSQL_ERRORS_DEFAULT or
     PGSQL_ERRORS_VERBOSE.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The previous verbosity level: PGSQL_ERRORS_TERSE, PGSQL_ERRORS_DEFAULT or
 PGSQL_ERRORS_VERBOSE.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 pg_set_error_verbosity() example
@@ -59,7 +59,7 @@ Example #1 pg_set_error_verbosity() example
       echo pg_result_error($res1);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |pg_last_error| - Get the last error message string of a connection

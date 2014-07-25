@@ -4,7 +4,7 @@ pg_field_name
 
 pg_field_name — Returns the name of a field
 
-===============================================================================
+==============================================================================
 *Description*
 
     string pg_field_name ( resource $result , int $field_number )~
@@ -17,24 +17,24 @@ starts from 0.
 
     This function used to be called pg_fieldname().
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
 
-    PostgreSQL query result resource, returned by |pg_query|, |pg_query_params|
-    or |pg_execute| (among others).
+    PostgreSQL query result resource, returned by |pg_query|, |pg_query_params
+    | or |pg_execute| (among others).
 
 {field_number}
 
     Field number, starting from 0.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The field name, or FALSE on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Getting information about fields
@@ -75,7 +75,7 @@ printed length: 24 characters
 storage length: -1 bytes
 field type: varchar
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |pg_field_num| - Returns the field number of the named field

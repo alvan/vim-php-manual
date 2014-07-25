@@ -2,9 +2,10 @@ mysqlnd_ms_xa_commit
 
 (PECL mysqlnd_ms < 1.6.0)
 
-mysqlnd_ms_xa_commit — Commits a distributed/XA transaction among MySQL servers
+mysqlnd_ms_xa_commit — Commits a distributed/XA transaction among MySQL
+servers
 
-===============================================================================
+==============================================================================
 *Description*
 
     int mysqlnd_ms_xa_commit ( mixed $connection , string $gtrid )~
@@ -23,25 +24,25 @@ cases that cannot easily be rolled back is left to the garbage collection.
     The feature is currently under development. There may be issues and/or
     feature limitations. Do not use in production environments.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {connection}
 
-    A MySQL connection handle obtained from any of the connect functions of the
-    mysqli, mysql or PDO_MYSQL extensions.
+    A MySQL connection handle obtained from any of the connect functions of
+    the mysqli, mysql or PDO_MYSQL extensions.
 
 {gtrid}
 
     Global transaction identifier (gtrid).
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE if the global transaction has been comitted. Otherwise, returns
 FALSE
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * Quickstart XA/Distributed transactions

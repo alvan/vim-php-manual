@@ -5,30 +5,30 @@ cubrid_next_result
 cubrid_next_result — Get result of next query when executing multiple SQL
 statements
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool cubrid_next_result ( resource $result )~
 
 The cubrid_next_result() function is used to get results of next query if
-multiple SQL statements are executed and CUBRID_EXEC_QUERY_ALL flag is set upon
-|cubrid_execute|.
+multiple SQL statements are executed and CUBRID_EXEC_QUERY_ALL flag is set
+upon |cubrid_execute|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
 
     {result} comes from a call to |cubrid_execute|
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 TRUE, when process is successful.
 
 FALSE, when process is unsuccessful.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_next_result() example
@@ -75,8 +75,8 @@ Example #1 cubrid_next_result() example
         $size = count($column_name_list);
         for($i = 0; $i < $size; $i++) {
             $column_len = cubrid_field_len($req, $i);
-            printf("%-30s %-30s %-15s\n", $column_name_list[$i], $column_type_list[
-    $i], $column_len); 
+            printf("%-30s %-30s %-15s\n", $column_name_list[$i], $column_type_list
+    [$i], $column_len); 
         }
         printf("\n\n");
 
@@ -129,7 +129,7 @@ Last Column Type:              varchar
 Last Column Len:               5
 Second Column Flags:           not_null primary_key unique_key
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |cubrid_execute| - Execute a prepared SQL statement

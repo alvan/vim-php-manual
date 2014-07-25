@@ -4,15 +4,15 @@ bcdiv
 
 bcdiv — Divide two arbitrary precision numbers
 
-===============================================================================
+==============================================================================
 *Description*
 
-    string bcdiv ( string $left_operand = "" , string $right_operand~
-    = "" [, int $scale = int ] )~
+    string bcdiv ( string $left_operand = "" , string~
+    $right_operand = "" [, int $scale = int ] )~
 
 Divides the {left_operand} by the {right_operand}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {left_operand}
@@ -29,13 +29,13 @@ Divides the {left_operand} by the {right_operand}.
     decimal place in the result. You can also set the global default scale for
     all functions by using |bcscale|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the result of the division as a string, or NULL if {right_operand} is
 0.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 bcdiv() example
@@ -46,7 +46,7 @@ Example #1 bcdiv() example
 
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |bcmul| - Multiply two arbitrary precision numbers

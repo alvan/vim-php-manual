@@ -4,7 +4,7 @@ imagepsextendfont
 
 imagepsextendfont — Extend or condense a font
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool imagepsextendfont ( resource $font_index , float $extend )~
@@ -12,7 +12,7 @@ imagepsextendfont — Extend or condense a font
 Extend or condense a font ({font_index}), if the value of the {extend}
 parameter is less than one you will be condensing the font.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {font_index}
@@ -23,12 +23,12 @@ parameter is less than one you will be condensing the font.
 
     Extension value, must be greater than 0.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 imagepsextendfont() example
@@ -46,11 +46,11 @@ Example #1 imagepsextendfont() example
     imagepsfreefont($font);
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
-    Note: This function is only available if PHP is compiled using --with-t1lib
-    [=DIR] .
+    Note: This function is only available if PHP is compiled using
+    --with-t1lib[=DIR] .
 
 
 vim:ft=help:

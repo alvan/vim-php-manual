@@ -5,7 +5,7 @@ array_diff_uassoc
 array_diff_uassoc — Computes the difference of arrays with additional index
 check which is performed by a user supplied callback function
 
-===============================================================================
+==============================================================================
 *Description*
 
     array array_diff_uassoc ( array $array1 , array $array2 [, array $... ],~
@@ -17,7 +17,7 @@ array_diff| the array keys are used in the comparison.
 Unlike |array_diff_assoc| an user supplied callback function is used for the
 indices comparison, not internal function.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {array1}
@@ -41,13 +41,13 @@ indices comparison, not internal function.
 
     int callback ( mixed $a, mixed $b )~
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an array containing all the entries from {array1} that are not present
 in any of the other arrays.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 array_diff_uassoc() example
@@ -82,16 +82,16 @@ Array
 
 The equality of 2 indices is checked by the user supplied callback function.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
 
-    This function only checks one dimension of a n-dimensional array. Of course
-    you can check deeper dimensions by using, for example, array_diff_uassoc
-    ($array1[0], $array2[0], "key_compare_func");.
+    This function only checks one dimension of a n-dimensional array. Of
+    course you can check deeper dimensions by using, for example,
+    array_diff_uassoc($array1[0], $array2[0], "key_compare_func");.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |array_diff| - Computes the difference of arrays

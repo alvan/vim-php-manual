@@ -4,7 +4,7 @@ inotify_add_watch
 
 inotify_add_watch — Add a watch to an initialized inotify instance
 
-===============================================================================
+==============================================================================
 *Description*
 
     int inotify_add_watch ( resource $inotify_instance , string $pathname ,~
@@ -16,7 +16,7 @@ or directory specified in {pathname}.
 Using inotify_add_watch() on a watched object replaces the existing watch.
 Using the IN_MASK_ADD constant adds (OR) events to the existing watch.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {inotify_instance}
@@ -31,12 +31,12 @@ Using the IN_MASK_ADD constant adds (OR) events to the existing watch.
 
     Events to watch for. See Predefined Constants.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The return value is a unique (inotify instance wide) watch descriptor.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |inotify_init| - Initialize an inotify instance

@@ -4,11 +4,11 @@ openssl_random_pseudo_bytes
 
 openssl_random_pseudo_bytes — Generate a pseudo-random string of bytes
 
-===============================================================================
+==============================================================================
 *Description*
 
-    string openssl_random_pseudo_bytes ( int $length [, bool &$crypto_strong ]~
-)~
+    string openssl_random_pseudo_bytes ( int $length [, bool &$crypto_strong~
+    ] )~
 
 Generates a string of pseudo-random bytes, with the number of bytes determined
 by the {length} parameter.
@@ -18,7 +18,7 @@ the pseudo-random bytes, and does this via the optional {crypto_strong}
 parameter. It's rare for this to be FALSE, but some systems may be broken or
 old.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {length}
@@ -28,16 +28,16 @@ old.
 
 {crypto_strong}
 
-    If passed into the function, this will hold a boolean value that determines
-    if the algorithm used was "cryptographically strong", e.g., safe for usage
-    with GPG, passwords, etc. TRUE if it did, otherwise FALSE
+    If passed into the function, this will hold a boolean value that
+    determines if the algorithm used was "cryptographically strong", e.g.,
+    safe for usage with GPG, passwords, etc. TRUE if it did, otherwise FALSE
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the generated string of bytes on success, or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 openssl_random_pseudo_bytes() example
@@ -81,7 +81,7 @@ string(8) "ab86d144"
 bool(true)
 
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |bin2hex| - Convert binary data into hexadecimal representation

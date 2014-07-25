@@ -4,20 +4,20 @@ apc_store
 
 apc_store — Cache a variable in the data store
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool apc_store ( string $key , mixed $var [, int $ttl = 0 ] )~
-    array apc_store ( array $values [, mixed $unused = NULL [, int $ttl = 0 ]]~
-)~
+    array apc_store ( array $values [, mixed $unused = NULL [, int $ttl = 0~
+    ]] )~
 
 Cache a variable in the data store.
 
-    Note: Unlike many other mechanisms in PHP, variables stored using apc_store
-    () will persist between requests (until the value is removed from the
-    cache).
+    Note: Unlike many other mechanisms in PHP, variables stored using 
+    apc_store() will persist between requests (until the value is removed from
+    the cache).
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {key}
@@ -41,13 +41,13 @@ Cache a variable in the data store.
 
     Names in key, variables in value.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure. Second syntax returns array with
 error keys.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A apc_store() example
@@ -62,7 +62,7 @@ The above example will output:
 
 string(3) "BAR"
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |apc_add| - Cache a new variable in the data store

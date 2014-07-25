@@ -4,7 +4,7 @@ sybase_result
 
 sybase_result — Get result data
 
-===============================================================================
+==============================================================================
 *Description*
 
     string sybase_result ( resource $result , int $row , mixed $field )~
@@ -13,16 +13,16 @@ Returns the contents of the cell at the row and offset in the specified Sybase
 result set.
 
 When working on large result sets, you should consider using one of the
-functions that fetch an entire row (specified below). As these functions return
-the contents of multiple cells in one function call, they're MUCH quicker than
-sybase_result(). Also, note that specifying a numeric offset for the field
-argument is much quicker than specifying a fieldname or tablename.fieldname
-argument.
+functions that fetch an entire row (specified below). As these functions
+return the contents of multiple cells in one function call, they're MUCH
+quicker than sybase_result(). Also, note that specifying a numeric offset for
+the field argument is much quicker than specifying a fieldname or
+tablename.fieldname argument.
 
 Recommended high-performance alternatives: |sybase_fetch_row|, |
 sybase_fetch_array| and |sybase_fetch_object|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
@@ -36,7 +36,7 @@ sybase_fetch_array| and |sybase_fetch_object|.
     has been aliased ('select foo as bar from...'), use the alias instead of
     the column name.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 sybase_result() returns the contents of one cell from a Sybase result set.

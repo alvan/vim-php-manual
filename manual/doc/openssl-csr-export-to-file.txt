@@ -4,7 +4,7 @@ openssl_csr_export_to_file
 
 openssl_csr_export_to_file — Exports a CSR to a file
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool openssl_csr_export_to_file ( resource $csr , string $outfilename [,~
@@ -14,7 +14,7 @@ openssl_csr_export_to_file() takes the Certificate Signing Request represented
 by {csr} and saves it as ascii-armoured text into the file named by
 {outfilename}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {csr}
@@ -29,12 +29,12 @@ by {csr} and saves it as ascii-armoured text into the file named by
     is FALSE, then additional human-readable information is included in the
     output. The default value of {notext} is TRUE.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |openssl_csr_export| - Exports a CSR as a string

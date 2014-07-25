@@ -5,7 +5,7 @@ geoip_db_get_all_info
 geoip_db_get_all_info — Returns detailed information about all GeoIP database
 types
 
-===============================================================================
+==============================================================================
 *Description*
 
     array geoip_db_get_all_info ( void )~
@@ -23,12 +23,12 @@ follows:
   * "description" -- The database description
   * "filename" -- The database filename on disk (see |geoip_db_filename|)
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the associative array.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A geoip_db_get_all_info() example
@@ -70,7 +70,8 @@ array(11) {
 
 Example #2 A geoip_db_get_all_info() example
 
-You can use the various constants as keys to get only parts of the information.
+You can use the various constants as keys to get only parts of the
+information.
 
 <?php >
     $infos = geoip_db_get_all_info();

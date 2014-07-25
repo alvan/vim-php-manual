@@ -5,26 +5,26 @@ debug_zval_dump
 debug_zval_dump — Dumps a string representation of an internal zend value to
 output
 
-===============================================================================
+==============================================================================
 *Description*
 
     void debug_zval_dump ( mixed $variable [, mixed $... ] )~
 
 Dumps a string representation of an internal zend value to output.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {variable}
 
     The variable being evaluated.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 No value is returned.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 debug_zval_dump() example
@@ -50,8 +50,8 @@ The above example will output:
     calling debug_zval_dump().
 
     This behavior is further compounded when a variable is not passed to 
-    debug_zval_dump() by reference. To illustrate, consider a slightly modified
-    version of the above example:
+    debug_zval_dump() by reference. To illustrate, consider a slightly
+    modified version of the above example:
 
     <?php >
     $var1 = 'Hello World';
@@ -82,8 +82,8 @@ The above example will output:
 
     string(11) "Hello World" refcount(2)
 
-    A refcount of 2, here, is extremely non-obvious. Especially considering the
-    above examples. So what's happening?
+    A refcount of 2, here, is extremely non-obvious. Especially considering
+    the above examples. So what's happening?
 
     When a variable has a single reference (as did $var1 before it was used as
     an argument to debug_zval_dump()), PHP's engine optimizes the manner in
@@ -95,10 +95,10 @@ The above example will output:
 
     So, if debug_zval_dump() happened to write to its sole parameter (and it
     doesn't), then a copy would be made. Until then, the parameter remains a
-    reference, causing the refcount to be incremented to 2 for the scope of the
-    function call.
+    reference, causing the refcount to be incremented to 2 for the scope of
+    the function call.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |var_dump| - Dumps information about a variable

@@ -5,7 +5,7 @@ is_callable
 is_callable — Verify that the contents of a variable can be called as a
 function
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool is_callable ( callable $name [, bool $syntax_only = false [, string~
@@ -15,7 +15,7 @@ Verify that the contents of a variable can be called as a function. This can
 check that a simple variable contains the name of a valid function, or that an
 array contains a properly encoded object and function name.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {name}
@@ -25,10 +25,10 @@ array contains a properly encoded object and function name.
 {syntax_only}
 
     If set to TRUE the function only verifies that {name} might be a function
-    or method. It will only reject simple variables that are not strings, or an
-    array that does not have a valid structure to be used as a callback. The
-    valid ones are supposed to have only 2 entries, the first of which is an
-    object or a string, and the second a string.
+    or method. It will only reject simple variables that are not strings, or
+    an array that does not have a valid structure to be used as a callback.
+    The valid ones are supposed to have only 2 entries, the first of which is
+    an object or a string, and the second a string.
 
 {callable_name}
 
@@ -36,12 +36,12 @@ array contains a properly encoded object and function name.
     "someClass::someMethod". Note, however, that despite the implication that
     someClass::SomeMethod() is a callable static method, this is not the case.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE if {name} is callable, FALSE otherwise.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 is_callable() example
@@ -60,7 +60,8 @@ Example #1 is_callable() example
 
     $functionVariable = 'someFunction';
 
-    var_dump(is_callable($functionVariable, false, $callable_name));  // bool(true)
+    var_dump(is_callable($functionVariable, false, $callable_name));  // bool
+    (true)
 
     echo $callable_name, "\n";  // someFunction
 
@@ -86,7 +87,7 @@ Example #1 is_callable() example
 
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |function_exists| - Return TRUE if the given function has been defined

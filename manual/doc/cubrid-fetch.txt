@@ -4,7 +4,7 @@ cubrid_fetch
 
 cubrid_fetch — Fetch the next row from a result set
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed cubrid_fetch ( resource $result [, int $type = CUBRID_BOTH ] )~
@@ -12,7 +12,7 @@ cubrid_fetch — Fetch the next row from a result set
 The cubrid_fetch() function is used to get a single row from the query result.
 The cursor automatically moves to the next row after getting the result.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
@@ -25,7 +25,7 @@ The cursor automatically moves to the next row after getting the result.
     CUBRID_OBJECT. If you want to operate the lob object, you can use
     CUBRID_LOB.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Result array or object, when process is successful.
@@ -48,7 +48,7 @@ the column name of the result must obey the naming rules for identifiers in
 PHP. For example, column name such as "count(*)" cannot be received in object
 type.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_fetch() example
@@ -85,7 +85,7 @@ Faliro Coastal Zone Olympic Complex      34650.00   12171  Faliro, Athens, Greec
 Athens Olympic Stadium                   120400.00  71030  Maroussi, Athens, Greece
 Ano Liossia                              34000.00   12000  Ano Liosia, Athens, Greece
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |cubrid_execute| - Execute a prepared SQL statement
@@ -93,8 +93,8 @@ Ano Liossia                              34000.00   12000  Ano Liosia, Athens, G
     numeric array, or both
   * |cubrid_fetch_row| - Return a numerical array with the values of the
     current row
-  * |cubrid_fetch_assoc| - Return the associative array that corresponds to the
-    fetched row
+  * |cubrid_fetch_assoc| - Return the associative array that corresponds to
+    the fetched row
   * |cubrid_fetch_object| - Fetche the next row and returns it as an object
 
 

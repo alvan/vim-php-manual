@@ -4,7 +4,7 @@ mssql_select_db
 
 mssql_select_db — Select MS SQL database
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool mssql_select_db ( string $database_name [, resource $link_identifier~
@@ -15,7 +15,7 @@ associated with the specified link identifier.
 
 Every subsequent call to |mssql_query| will be made on the active database.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {database_name}
@@ -36,12 +36,12 @@ Every subsequent call to |mssql_query| will be made on the active database.
     link is open, the function will try to establish a link as if |
     mssql_connect| was called, and use it.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mssql_select_db() example
@@ -64,7 +64,7 @@ Example #2 Escaping the database name with square brackets
     mssql_select_db('[my.database-name]', $link);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mssql_connect| - Open MS SQL server connection

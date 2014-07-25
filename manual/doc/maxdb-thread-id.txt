@@ -7,7 +7,7 @@ maxdb::thread_id
 maxdb_thread_id -- maxdb::thread_id — Returns the thread ID for the current
 connection
 
-===============================================================================
+==============================================================================
 *Description*
 
 Procedural style
@@ -18,10 +18,10 @@ Object oriented style
 
 int $maxdb->thread_id;
 
-The maxdb_thread_id() function returns the thread ID for the current connection
-which can then be killed using the |maxdb_kill| function. If the connection is
-lost and you reconnect with |maxdb_ping|, the thread ID will be other.
-Therefore you should get the thread ID only when you need it.
+The maxdb_thread_id() function returns the thread ID for the current
+connection which can then be killed using the |maxdb_kill| function. If the
+connection is lost and you reconnect with |maxdb_ping|, the thread ID will be
+other. Therefore you should get the thread ID only when you need it.
 
     Note:
 
@@ -29,12 +29,12 @@ Therefore you should get the thread ID only when you need it.
     the connection is broken and then re-established a new thread ID will be
     assigned.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 maxdb_thread_id() returns the Thread ID for the current connection.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Object oriented style
@@ -96,7 +96,7 @@ The above example will output something similar to:
 Warning: maxdb_query(): -10821 Session not connected <...>
 Error: Session not connected
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |maxdb_kill| - Disconnects from a MaxDB server

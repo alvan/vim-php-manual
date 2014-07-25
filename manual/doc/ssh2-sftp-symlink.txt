@@ -4,7 +4,7 @@ ssh2_sftp_symlink
 
 ssh2_sftp_symlink — Create a symlink
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool ssh2_sftp_symlink ( resource $sftp , string $target , string $link )~
@@ -12,7 +12,7 @@ ssh2_sftp_symlink — Create a symlink
 Creates a symbolic link named {link} on the remote filesystem pointing to
 {target}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {sftp}
@@ -25,12 +25,12 @@ Creates a symbolic link named {link} on the remote filesystem pointing to
 
 {link}
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Creating a symbolic link
@@ -43,7 +43,7 @@ Example #1 Creating a symbolic link
     ssh2_sftp_symlink($sftp, '/var/run/mysql.sock', '/tmp/mysql.sock');
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ssh2_sftp_readlink| - Return the target of a symbolic link

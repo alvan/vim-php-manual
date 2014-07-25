@@ -5,7 +5,7 @@ db2_last_insert_id
 db2_last_insert_id — Returns the auto generated ID of the last insert query
 that successfully executed on this connection
 
-===============================================================================
+==============================================================================
 *Description*
 
     string db2_last_insert_id ( resource $resource )~
@@ -24,22 +24,22 @@ The result of this function is not affected by any of the following:
 
   * A ROLLBACK TO SAVEPOINT statement.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {resource}
 
-    A valid connection resource as returned from |db2_connect| or |db2_pconnect
-    |. The value of this parameter cannot be a statement resource or result set
-    resource.
+    A valid connection resource as returned from |db2_connect| or |
+    db2_pconnect|. The value of this parameter cannot be a statement resource
+    or result set resource.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the auto generated ID of last insert query that successfully executed
 on this connection.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A db2_last_insert_id() example

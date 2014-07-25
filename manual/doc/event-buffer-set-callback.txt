@@ -4,7 +4,7 @@ event_buffer_set_callback
 
 event_buffer_set_callback — Set or reset callbacks for a buffered event
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool event_buffer_set_callback ( resource $event , mixed $readcb , mixed~
@@ -12,7 +12,7 @@ event_buffer_set_callback — Set or reset callbacks for a buffered event
 
 Sets or changes existing callbacks for the buffered {event}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {event}
@@ -26,8 +26,8 @@ Sets or changes existing callbacks for the buffered {event}.
 
 {writecb}
 
-    Callback to invoke where the descriptor is ready for writing, or NULL if no
-    callback is desired.
+    Callback to invoke where the descriptor is ready for writing, or NULL if
+    no callback is desired.
 
 {errorcb}
 
@@ -38,7 +38,7 @@ Sets or changes existing callbacks for the buffered {event}.
 
     An argument that will be passed to each of the callbacks (optional).
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.

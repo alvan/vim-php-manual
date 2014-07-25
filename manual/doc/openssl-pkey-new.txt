@@ -4,7 +4,7 @@ openssl_pkey_new
 
 openssl_pkey_new — Generates a new private key
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource openssl_pkey_new ([ array $configargs ] )~
@@ -16,16 +16,16 @@ component of the key can be obtained using |openssl_pkey_get_public|.
     operate correctly. See the notes under the installation section for more
     information.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {configargs}
 
-    You can finetune the key generation (such as specifying the number of bits)
-    using {configargs}. See |openssl_csr_new| for more information about
+    You can finetune the key generation (such as specifying the number of
+    bits) using {configargs}. See |openssl_csr_new| for more information about
     {configargs}.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a resource identifier for the pkey on success, or FALSE on error.

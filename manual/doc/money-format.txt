@@ -4,16 +4,16 @@ money_format
 
 money_format — Formats a number as a currency string
 
-===============================================================================
+==============================================================================
 *Description*
 
     string money_format ( string $format , float $number )~
 
-money_format() returns a formatted version of {number}. This function wraps the
-C library function strfmon(), with the difference that this implementation
+money_format() returns a formatted version of {number}. This function wraps
+the C library function strfmon(), with the difference that this implementation
 converts only one number at a time.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {format}
@@ -47,10 +47,10 @@ converts only one number at a time.
 
     + or (
 
-        Specify the formatting style for positive and negative numbers. If + is
-        used, the locale's equivalent for + and - will be used. If ( is used,
-        negative amounts are enclosed in parenthesis. If no specification is
-        given, the default is +.
+        Specify the formatting style for positive and negative numbers. If +
+        is used, the locale's equivalent for + and - will be used. If ( is
+        used, negative amounts are enclosed in parenthesis. If no
+        specification is given, the default is +.
 
     !
 
@@ -81,8 +81,8 @@ converts only one number at a time.
 
         If grouping has not been suppressed using the ^ flag, grouping
         separators will be inserted before the fill characters (if any) are
-        added. Grouping separators will not be applied to fill characters, even
-        if the fill character is a digit.
+        added. Grouping separators will not be applied to fill characters,
+        even if the fill character is a digit.
 
         To ensure alignment, any characters appearing before or after the
         number in the formatted output such as currency or sign symbols are
@@ -94,11 +94,11 @@ converts only one number at a time.
     .p
 
         A period followed by the number of digits (p) after the decimal
-        character. If the value of p is 0 (zero), the decimal character and the
-        digits to its right will be omitted. If no right precision is included,
-        the default will dictated by the current local in use. The amount being
-        formatted is rounded to the specified number of digits prior to
-        formatting.
+        character. If the value of p is 0 (zero), the decimal character and
+        the digits to its right will be omitted. If no right precision is
+        included, the default will dictated by the current local in use. The
+        amount being formatted is rounded to the specified number of digits
+        prior to formatting.
 
     Conversion characters
 
@@ -120,21 +120,21 @@ converts only one number at a time.
 
     The number to be formatted.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns the formatted string. Characters before and after the formatting string
-will be returned unchanged. Non-numeric {number} causes returning NULL and
-emitting E_WARNING.
+Returns the formatted string. Characters before and after the formatting
+string will be returned unchanged. Non-numeric {number} causes returning NULL
+and emitting E_WARNING.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
 
     The function money_format() is only defined if the system has strfmon
-    capabilities. For example, Windows does not, so money_format() is undefined
-    in Windows.
+    capabilities. For example, Windows does not, so money_format() is
+    undefined in Windows.
 
     Note:
 
@@ -142,7 +142,7 @@ emitting E_WARNING.
     this function. Use |setlocale| to set to the appropriate default locale
     before using this function.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 money_format() Example
@@ -193,7 +193,7 @@ of this function.
 
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |setlocale| - Set locale information

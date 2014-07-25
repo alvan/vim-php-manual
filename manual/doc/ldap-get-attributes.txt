@@ -4,7 +4,7 @@ ldap_get_attributes
 
 ldap_get_attributes — Get attributes from a search result entry
 
-===============================================================================
+==============================================================================
 *Description*
 
     array ldap_get_attributes ( resource $link_identifier , resource~
@@ -27,7 +27,7 @@ return_value["attribute"]["count"] = number of values for attribute
 return_value["attribute"][0] = first value of the attribute
 return_value["attribute"][i] = (i+1)th value of the attribute
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {link_identifier}
@@ -36,13 +36,13 @@ return_value["attribute"][i] = (i+1)th value of the attribute
 
 {result_entry_identifier}
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a complete entry information in a multi-dimensional array on success
 and FALSE on error.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Show the list of attributes held for a particular directory entry
@@ -64,7 +64,7 @@ Example #1 Show the list of attributes held for a particular directory entry
     }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ldap_first_attribute| - Return first attribute

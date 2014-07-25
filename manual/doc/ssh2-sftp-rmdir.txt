@@ -4,7 +4,7 @@ ssh2_sftp_rmdir
 
 ssh2_sftp_rmdir — Remove a directory
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool ssh2_sftp_rmdir ( resource $sftp , string $dirname )~
@@ -13,7 +13,7 @@ Removes a directory from the remote file server.
 
 This function is similar to using |rmdir| with the ssh2.sftp:// wrapper.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {sftp}
@@ -22,12 +22,12 @@ This function is similar to using |rmdir| with the ssh2.sftp:// wrapper.
 
 {dirname}
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Removing a directory on a remote server
@@ -41,7 +41,7 @@ Example #1 Removing a directory on a remote server
     /* Or:  rmdir("ssh2.sftp://$sftp/home/username/dirtodel"); */
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |rmdir| - Removes directory

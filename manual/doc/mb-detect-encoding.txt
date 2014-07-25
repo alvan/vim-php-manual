@@ -4,7 +4,7 @@ mb_detect_encoding
 
 mb_detect_encoding — Detect character encoding
 
-===============================================================================
+==============================================================================
 *Description*
 
     string mb_detect_encoding ( string $str [, mixed $encoding_list =~
@@ -12,7 +12,7 @@ mb_detect_encoding — Detect character encoding
 
 Detects character encoding in string {str}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {str}
@@ -31,13 +31,13 @@ Detects character encoding in string {str}.
     {strict} specifies whether to use the strict encoding detection or not.
     Default is FALSE.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 The detected character encoding or FALSE if the encoding cannot be detected
 from the given string.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mb_detect_encoding() example
@@ -59,7 +59,7 @@ Example #1 mb_detect_encoding() example
     echo mb_detect_encoding($str, $ary);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mb_detect_order| - Set/Get character encoding detection order

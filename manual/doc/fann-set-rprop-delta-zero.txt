@@ -4,14 +4,15 @@ fann_set_rprop_delta_zero
 
 fann_set_rprop_delta_zero — Sets the initial step-size
 
-===============================================================================
+==============================================================================
 *Description*
 
-    bool fann_set_rprop_delta_zero ( resource $ann , float $rprop_delta_zero )~
+    bool fann_set_rprop_delta_zero ( resource $ann , float $rprop_delta_zero~
+)~
 
 The initial step-size is a positive number determining the initial step size.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {ann}
@@ -22,12 +23,12 @@ The initial step-size is a positive number determining the initial step size.
 
     The initial step-size.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success, or FALSE otherwise.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |fann_get_rprop_delta_zero| - Returns the initial step-size

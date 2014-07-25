@@ -4,7 +4,7 @@ yaz_syntax
 
 yaz_syntax — Specifies the preferred record syntax for retrieval
 
-===============================================================================
+==============================================================================
 *Description*
 
     void yaz_syntax ( resource $id , string $syntax )~
@@ -13,7 +13,7 @@ yaz_syntax() specifies the preferred record syntax for retrieval
 
 This function should be called before |yaz_search| or |yaz_present|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {id}
@@ -26,7 +26,7 @@ This function should be called before |yaz_search| or |yaz_present|.
     dot-notation (like 1.2.840.10003.5.10) or as one of the known registered
     record syntaxes (sutrs, usmarc, grs1, xml, etc.).
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 No value is returned.

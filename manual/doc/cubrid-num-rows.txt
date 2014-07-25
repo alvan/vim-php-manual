@@ -4,20 +4,20 @@ cubrid_num_rows
 
 cubrid_num_rows — Get the number of rows in the result set
 
-===============================================================================
+==============================================================================
 *Description*
 
     int cubrid_num_rows ( resource $result )~
 
-The cubrid_num_rows() function is used to get the number of rows from the query
-result. You can use it only when the query executed is a select statement. When
-you want to know such value for INSERT, UPDATE, or DELETE query, you have to
-use the |cubrid_affected_rows| function.
+The cubrid_num_rows() function is used to get the number of rows from the
+query result. You can use it only when the query executed is a select
+statement. When you want to know such value for INSERT, UPDATE, or DELETE
+query, you have to use the |cubrid_affected_rows| function.
 
-Note: The cubrid_num_rows() function can only be used for synchronous query; it
-returns 0 when it is used for asynchronous query.
+Note: The cubrid_num_rows() function can only be used for synchronous query;
+it returns 0 when it is used for asynchronous query.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
@@ -25,7 +25,7 @@ returns 0 when it is used for asynchronous query.
     {result} comes from a call to |cubrid_execute|, |cubrid_query| and |
     cubrid_prepare|
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Number of rows, when process is successful.
@@ -36,7 +36,7 @@ Number of rows, when process is successful.
 
 FALSE when process is unsuccessful.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_num_rows() example
@@ -59,13 +59,13 @@ The above example will output:
 Row Num: 6
 Column Num: 2
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |cubrid_execute| - Execute a prepared SQL statement
   * |cubrid_num_cols| - Return the number of columns in the result set
-  * |cubrid_affected_rows| - Return the number of rows affected by the last SQL
-    statement
+  * |cubrid_affected_rows| - Return the number of rows affected by the last
+    SQL statement
 
 
 vim:ft=help:

@@ -4,7 +4,7 @@ ps_open_image
 
 ps_open_image — Reads an image for later placement
 
-===============================================================================
+==============================================================================
 *Description*
 
     int ps_open_image ( resource $psdoc , string $type , string $source ,~
@@ -17,7 +17,7 @@ of pixels starting in th upper left corner and ending in the lower right
 corner. Each pixel consists of {components} color components, and each
 component has {bpc} bits.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {psdoc}
@@ -50,8 +50,8 @@ component has {bpc} bits.
 
 {components}
 
-    The number of components for each pixel. This can be 1 (gray scale images),
-    3 (rgb images), or 4 (cmyk, rgba images).
+    The number of components for each pixel. This can be 1 (gray scale
+    images), 3 (rgb images), or 4 (cmyk, rgba images).
 
 {bpc}
 
@@ -59,13 +59,13 @@ component has {bpc} bits.
 
 {params}
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns identifier of image or zero in case of an error. The identifier is a
 positive number greater than 0.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |ps_open_image_file| - Opens image from file

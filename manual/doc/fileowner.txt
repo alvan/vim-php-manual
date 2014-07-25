@@ -4,28 +4,28 @@ fileowner
 
 fileowner — Gets file owner
 
-===============================================================================
+==============================================================================
 *Description*
 
     int fileowner ( string $filename )~
 
 Gets the file owner.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {filename}
 
     Path to the file.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the user ID of the owner of the file, or FALSE on failure. The user ID
 is returned in numerical format, use |posix_getpwuid| to resolve it to a
 username.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Finding the owner of a file
@@ -35,12 +35,12 @@ Example #1 Finding the owner of a file
     print_r(posix_getpwuid(fileowner($filename)));
 <?>
 
-===============================================================================
+==============================================================================
 *Errors/Exceptions*
 
 Upon failure, an E_WARNING is emitted.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: The results of this function are cached. See |clearstatcache| for
@@ -52,7 +52,7 @@ As of PHP 5.0.0, this function can also be used with some URL wrappers. Refer
 to Supported Protocols and Wrappers to determine which wrappers support |stat|
 family of functionality.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |filegroup| - Gets file group

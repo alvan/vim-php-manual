@@ -4,7 +4,7 @@ restore_error_handler
 
 restore_error_handler — Restores the previous error handler function
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool restore_error_handler ( void )~
@@ -13,12 +13,12 @@ Used after changing the error handler function using |set_error_handler|, to
 revert to the previous error handler (which could be the built-in or a user
 defined function).
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 This function always returns TRUE.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 restore_error_handler() example
@@ -42,7 +42,7 @@ The above example will output:
 
 Invalid serialized value.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |error_reporting| - Sets which PHP errors are reported

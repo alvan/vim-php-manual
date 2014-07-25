@@ -4,14 +4,14 @@ dbplus_getlock
 
 dbplus_getlock — Get a write lock on a tuple
 
-===============================================================================
+==============================================================================
 *Description*
 
     int dbplus_getlock ( resource $relation , string $tuple )~
 
 Requests a write lock on the specified {tuple}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {relation}
@@ -20,22 +20,22 @@ Requests a write lock on the specified {tuple}.
 
 {tuple}
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns zero on success or a non-zero error code, especially DBPLUS_ERR_WLOCKED
-on failure.
+Returns zero on success or a non-zero error code, especially
+DBPLUS_ERR_WLOCKED on failure.
 
-===============================================================================
+==============================================================================
 *Notes*
 
 Warning
 
 This function is EXPERIMENTAL. The behaviour of this function, its name, and
-surrounding documentation may change without notice in a future release of PHP.
-This function should be used at your own risk.
+surrounding documentation may change without notice in a future release of
+PHP. This function should be used at your own risk.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |dbplus_freelock| - Release write lock on tuple

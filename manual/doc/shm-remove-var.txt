@@ -4,14 +4,14 @@ shm_remove_var
 
 shm_remove_var — Removes a variable from shared memory
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool shm_remove_var ( resource $shm_identifier , int $variable_key )~
 
 Removes a variable with a given {variable_key} and frees the occupied memory.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {shm_identifier}
@@ -22,12 +22,12 @@ Removes a variable with a given {variable_key} and frees the occupied memory.
 
     The variable key.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |shm_remove| - Removes shared memory from Unix systems

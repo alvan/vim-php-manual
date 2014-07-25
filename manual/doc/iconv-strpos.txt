@@ -2,22 +2,23 @@ iconv_strpos
 
 (PHP 5)
 
-iconv_strpos — Finds position of first occurrence of a needle within a haystack
+iconv_strpos — Finds position of first occurrence of a needle within a
+haystack
 
-===============================================================================
+==============================================================================
 *Description*
 
-    int iconv_strpos ( string $haystack , string $needle [, int $offset = 0 [,~
-    string $charset = ini_get("iconv.internal_encoding") ]] )~
+    int iconv_strpos ( string $haystack , string $needle [, int $offset = 0~
+    [, string $charset = ini_get("iconv.internal_encoding") ]] )~
 
 Finds position of first occurrence of a {needle} within a {haystack}.
 
 In contrast to |strpos|, the return value of iconv_strpos() is the number of
 characters that appear before the needle, rather than the offset in bytes to
-the position where the needle has been found. The characters are counted on the
-basis of the specified character set {charset}.
+the position where the needle has been found. The characters are counted on
+the basis of the specified character set {charset}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {haystack}
@@ -41,21 +42,22 @@ basis of the specified character set {charset}.
 If {haystack} or {needle} is not a string, it is converted to a string and
 applied as the ordinal value of a character.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns the numeric position of the first occurrence of {needle} in {haystack}.
+Returns the numeric position of the first occurrence of {needle} in
+{haystack}.
 
 If {needle} is not found, iconv_strpos() will return FALSE.
 
 Warning
 
-This function may return Boolean FALSE, but may also return a non-Boolean value
-which evaluates to FALSE. Please read the section on Booleans for more
+This function may return Boolean FALSE, but may also return a non-Boolean
+value which evaluates to FALSE. Please read the section on Booleans for more
 information. Use the === operator for testing the return value of this
 function.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |strpos| - Find the position of the first occurrence of a substring in a

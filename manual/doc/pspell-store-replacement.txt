@@ -4,7 +4,7 @@ pspell_store_replacement
 
 pspell_store_replacement — Store a replacement pair for a word
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool pspell_store_replacement ( int $dictionary_link , string $misspelled~
@@ -15,10 +15,10 @@ replacement can be returned by |pspell_suggest| later. In order to be able to
 take advantage of this function, you have to use |pspell_new_personal| to open
 the dictionary. In order to permanently save the replacement pair, you have to
 use |pspell_config_personal| and |pspell_config_repl| to set the path where to
-save your custom wordlists, and then use |pspell_save_wordlist| for the changes
-to be written to disk.
+save your custom wordlists, and then use |pspell_save_wordlist| for the
+changes to be written to disk.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {dictionary_link}
@@ -33,12 +33,12 @@ to be written to disk.
 
     The fixed spelling for the {misspelled} word.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 pspell_store_replacement()
@@ -53,7 +53,7 @@ Example #1 pspell_store_replacement()
     pspell_save_wordlist($pspell_link);
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:

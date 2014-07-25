@@ -4,7 +4,7 @@ imagesetthickness
 
 imagesetthickness — Set the thickness for line drawing
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool imagesetthickness ( resource $image , int $thickness )~
@@ -12,24 +12,24 @@ imagesetthickness — Set the thickness for line drawing
 imagesetthickness() sets the thickness of the lines drawn when drawing
 rectangles, polygons, ellipses etc. etc. to {thickness} pixels.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { image}
 
-    An image resource, returned by one of the image creation functions, such as
-    |imagecreatetruecolor|.
+    An image resource, returned by one of the image creation functions, such
+    as |imagecreatetruecolor|.
 
 {thickness}
 
     Thickness, in pixels.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 imagesetthickness() example
@@ -60,7 +60,7 @@ The above example will output something similar to:
 
 Output of example : imagesetthickness()
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: This function requires GD 2.0.1 or later (2.0.28 or later is

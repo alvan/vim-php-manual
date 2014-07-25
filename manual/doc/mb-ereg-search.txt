@@ -5,7 +5,7 @@ mb_ereg_search
 mb_ereg_search — Multibyte regular expression match for predefined multibyte
 string
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool mb_ereg_search ([ string $pattern [, string $option = "ms"~
@@ -14,7 +14,7 @@ string
 Performs a multibyte regular expression match for a predefined multibyte
 string.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {pattern}
@@ -25,14 +25,14 @@ string.
 
     The search option.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 mb_ereg_search() returns TRUE if the multibyte string matches with the regular
 expression, or FALSE otherwise. The string for matching is set by |
 mb_ereg_search_init|. If {pattern} is not specified, the previous one is used.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -41,12 +41,12 @@ mb_ereg_search_init|. If {pattern} is not specified, the previous one is used.
     mb_regex_encoding| will be used as the character encoding for this
     function.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mb_regex_encoding| - Set/Get character encoding for multibyte regex
-  * |mb_ereg_search_init| - Setup string and regular expression for a multibyte
-    regular expression match
+  * |mb_ereg_search_init| - Setup string and regular expression for a
+    multibyte regular expression match
 
 
 vim:ft=help:

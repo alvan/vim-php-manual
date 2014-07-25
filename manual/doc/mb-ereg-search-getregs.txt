@@ -5,19 +5,19 @@ mb_ereg_search_getregs
 mb_ereg_search_getregs — Retrieve the result from the last multibyte regular
 expression match
 
-===============================================================================
+==============================================================================
 *Description*
 
     array mb_ereg_search_getregs ( void )~
 
 Retrieve the result from the last multibyte regular expression match
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 This function has no parameters.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 An array including the sub-string of matched part by last |mb_ereg_search|, |
@@ -26,7 +26,7 @@ first element will have the matched sub-string, the second element will have
 the first part grouped with brackets, the third element will have the second
 part grouped with brackets, and so on. It returns FALSE on error;
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note:
@@ -35,12 +35,12 @@ part grouped with brackets, and so on. It returns FALSE on error;
     mb_regex_encoding| will be used as the character encoding for this
     function.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |mb_regex_encoding| - Set/Get character encoding for multibyte regex
-  * |mb_ereg_search_init| - Setup string and regular expression for a multibyte
-    regular expression match
+  * |mb_ereg_search_init| - Setup string and regular expression for a
+    multibyte regular expression match
 
 
 vim:ft=help:

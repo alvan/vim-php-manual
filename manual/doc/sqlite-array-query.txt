@@ -7,7 +7,7 @@ SQLiteDatabase::arrayQuery
 sqlite_array_query -- SQLiteDatabase::arrayQuery — Execute a query against a
 given database and returns an array
 
-===============================================================================
+==============================================================================
 *Description*
 
     array sqlite_array_query ( resource $dbhandle , string $query [, int~
@@ -31,7 +31,7 @@ sqlite_array_query() is best suited to queries returning 45 rows or less. If
 you have more data than that, it is recommended that you write your scripts to
 use |sqlite_unbuffered_query| instead for more optimal performance.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {query}
@@ -43,8 +43,8 @@ use |sqlite_unbuffered_query| instead for more optimal performance.
 {dbhandle}
 
     The SQLite Database resource; returned from |sqlite_open| when used
-    procedurally. This parameter is not required when using the object-oriented
-    method.
+    procedurally. This parameter is not required when using the
+    object-oriented method.
 
 {result_type}
 
@@ -64,10 +64,10 @@ use |sqlite_unbuffered_query| instead for more optimal performance.
     sqlite capable applications.
 
     Note: Two alternative syntaxes are supported for compatibility with other
-    database extensions (such as MySQL). The preferred form is the first, where
-    the {dbhandle} parameter is the first parameter to the function.
+    database extensions (such as MySQL). The preferred form is the first,
+    where the {dbhandle} parameter is the first parameter to the function.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an array of the entire result set; FALSE otherwise.
@@ -75,7 +75,7 @@ Returns an array of the entire result set; FALSE otherwise.
 The column names returned by SQLITE_ASSOC and SQLITE_BOTH will be case-folded
 according to the value of the sqlite.assoc_case configuration option.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Procedural style
@@ -100,7 +100,7 @@ Example #2 Object-oriented style
     }
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |sqlite_query| - Executes a query against a given database and returns a

@@ -5,7 +5,7 @@ array_combine
 array_combine — Creates an array by using one array for keys and another for
 its values
 
-===============================================================================
+==============================================================================
 *Description*
 
     array array_combine ( array $keys , array $values )~
@@ -13,7 +13,7 @@ its values
 Creates an array by using the values from the {keys} array as keys and the
 values from the {values} array as the corresponding values.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {keys}
@@ -25,25 +25,26 @@ values from the {values} array as the corresponding values.
 
     Array of values to be used
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the combined array, FALSE if the number of elements for each array
 isn't equal.
 
-===============================================================================
+==============================================================================
 *Errors/Exceptions*
 
 Throws E_WARNING if the number of elements in {keys} and {values} does not
 match.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
-5.4.0   Previous versions issued E_WARNING and returned FALSE for empty arrays.
+Version                              Description
+5.4.0   Previous versions issued E_WARNING and returned FALSE for empty
+        arrays.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 A simple array_combine() example
@@ -65,7 +66,7 @@ Array
     [yellow] => banana
 )
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |array_merge| - Merge one or more arrays

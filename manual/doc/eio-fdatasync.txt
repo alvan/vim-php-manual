@@ -4,7 +4,7 @@ eio_fdatasync
 
 eio_fdatasync — Synchronize a file's in-core state with storage device.
 
-===============================================================================
+==============================================================================
 *Description*
 
     resource eio_fdatasync ( mixed $fd [, int $pri = EIO_PRI_DEFAULT [,~
@@ -12,7 +12,7 @@ eio_fdatasync — Synchronize a file's in-core state with storage device.
 
 eio_fdatasync() synchronizes a file's in-core state with storage device.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {fd}
@@ -27,8 +27,8 @@ eio_fdatasync() synchronizes a file's in-core state with storage device.
 
 {callback}
 
-    {callback} function is called when the request is done. It should match the
-    following prototype:
+    {callback} function is called when the request is done. It should match
+    the following prototype:
     void callback(mixed $data, int $result[, resource $req]);
 
     {data}
@@ -49,7 +49,7 @@ eio_fdatasync() synchronizes a file's in-core state with storage device.
 
     Arbitrary variable passed to {callback}.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 eio_fdatasync() returns request resource on success or FALSE on error.

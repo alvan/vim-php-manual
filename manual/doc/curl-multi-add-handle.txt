@@ -4,14 +4,14 @@ curl_multi_add_handle
 
 curl_multi_add_handle — Add a normal cURL handle to a cURL multi handle
 
-===============================================================================
+==============================================================================
 *Description*
 
     int curl_multi_add_handle ( resource $mh , resource $ch )~
 
 Adds the {ch} handle to the multi handle {mh}
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {mh}
@@ -22,18 +22,18 @@ Adds the {ch} handle to the multi handle {mh}
 
     A cURL handle returned by |curl_init|.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns 0 on success, or one of the CURLM_XXX errors code.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 curl_multi_add_handle() example
 
-This example will create two cURL handles, add them to a multi handle, and then
-run them in parallel.
+This example will create two cURL handles, add them to a multi handle, and
+then run them in parallel.
 
 <?php >
     // create both cURL resources
@@ -65,7 +65,7 @@ run them in parallel.
     curl_multi_close($mh);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |curl_multi_remove_handle| - Remove a multi handle from a set of cURL

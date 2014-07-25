@@ -4,7 +4,7 @@ fbsql_set_transaction
 
 fbsql_set_transaction — Set the transaction locking and isolation
 
-===============================================================================
+==============================================================================
 *Description*
 
     void fbsql_set_transaction ( resource $link_identifier , int $locking ,~
@@ -12,13 +12,13 @@ fbsql_set_transaction — Set the transaction locking and isolation
 
 Sets the transaction {locking} and {isolation}.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { link_identifier}
 
-    A FrontBase link identifier returned by |fbsql_connect| or |fbsql_pconnect|
-    .
+    A FrontBase link identifier returned by |fbsql_connect| or |fbsql_pconnect
+    |.
 
     If optional and not specified, the function will try to find an open link
     to the FrontBase server and if no such link is found it will try to create
@@ -35,7 +35,7 @@ Sets the transaction {locking} and {isolation}.
     FBSQL_ISO_READ_UNCOMMITTED, FBSQL_ISO_READ_COMMITTED,
     FBSQL_ISO_REPEATABLE_READ, FBSQL_ISO_SERIALIZABLE, or FBSQL_ISO_VERSIONED.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 No value is returned.

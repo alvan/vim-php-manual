@@ -7,7 +7,7 @@ maxdb::info
 maxdb_info -- maxdb::info — Retrieves information about the most recently
 executed query
 
-===============================================================================
+==============================================================================
 *Description*
 
 Procedural style
@@ -18,16 +18,16 @@ Object oriented style
 
 string $maxdb->info;
 
-The maxdb_info() function returns a string providing information about the last
-query executed. The nature of this string is provided below:
+The maxdb_info() function returns a string providing information about the
+last query executed. The nature of this string is provided below:
 
-                       Possible maxdb_info return values
+                      Possible maxdb_info return values
              Query type                        Example result string
 INSERT INTO...SELECT...              Records: 100 Duplicates: 0 Warnings: 0
 INSERT INTO...VALUES (...),(...),    Records: 3 Duplicates: 0 Warnings: 0
 (...)
-LOAD DATA INFILE ...                 Records: 1 Deleted: 0 Skipped: 0 Warnings:
-                                     0
+LOAD DATA INFILE ...                 Records: 1 Deleted: 0 Skipped: 0
+                                     Warnings: 0
 ALTER TABLE ...                      Records: 3 Duplicates: 0 Warnings: 0
 UPDATE ...                           Rows matched: 40 Changed: 40 Warnings: 0
 
@@ -36,13 +36,13 @@ UPDATE ...                           Rows matched: 40 Changed: 40 Warnings: 0
     Queries which do not fall into one of the above formats are not supported.
     In these situations, maxdb_info() will return an empty string.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 A character string representing additional information about the most recently
 executed query.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 Object oriented style
@@ -91,7 +91,7 @@ The above example will output something similar to:
 
 Records: 25 Duplicates: 0 Warnings: 0
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |maxdb_affected_rows| - Gets the number of affected rows in a previous

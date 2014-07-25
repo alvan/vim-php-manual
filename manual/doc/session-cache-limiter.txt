@@ -4,7 +4,7 @@ session_cache_limiter
 
 session_cache_limiter — Get and/or set the current cache limiter
 
-===============================================================================
+==============================================================================
 *Description*
 
     string session_cache_limiter ([ string $cache_limiter ] )~
@@ -26,11 +26,12 @@ mode.
 Setting the cache limiter to '' will turn off automatic sending of cache
 headers entirely.
 
-The cache limiter is reset to the default value stored in session.cache_limiter
-at request startup time. Thus, you need to call session_cache_limiter() for
-every request (and before |session_start| is called).
+The cache limiter is reset to the default value stored in
+session.cache_limiter at request startup time. Thus, you need to call 
+session_cache_limiter() for every request (and before |session_start| is
+called).
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {cache_limiter}
@@ -55,18 +56,18 @@ every request (and before |session_start| is called).
     nocache           Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
                       Pragma: no-cache
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns the name of the current cache limiter.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version                  Description
 4.2.0   The private_no_expire cache limiter was added.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 session_cache_limiter() example
@@ -81,7 +82,7 @@ Example #1 session_cache_limiter() example
     echo "The cache limiter is now set to $cache_limiter<br />";
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * session.cache_limiter

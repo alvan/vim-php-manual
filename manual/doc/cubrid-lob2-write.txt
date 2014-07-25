@@ -4,31 +4,32 @@ cubrid_lob2_write
 
 cubrid_lob2_write — Write to a lob object.
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool cubrid_lob2_write ( resource $lob_identifier , string $buf )~
 
-The cubrid_lob2_write() function reads as much as data from {buf} and stores it
-to the LOB object. Note that this function can only append characters now.
+The cubrid_lob2_write() function reads as much as data from {buf} and stores
+it to the LOB object. Note that this function can only append characters now.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {lob_identifier}
 
-    Lob identifier as a result of |cubrid_lob2_new| or get from the result set.
+    Lob identifier as a result of |cubrid_lob2_new| or get from the result
+    set.
 
 {buf}
 
     Data that need to be written to the lob object.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 TRUE if the process is successful and FALSE for failure.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_lob2_write() example 1
@@ -85,7 +86,7 @@ Example #2 cubrid_lob2_write() example 2
     cubrid_disconnect($conn);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |cubrid_lob2_read| - Read from BLOB/CLOB data.

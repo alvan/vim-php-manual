@@ -4,7 +4,7 @@ cubrid_rollback
 
 cubrid_rollback — Roll back a transaction
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool cubrid_rollback ( resource $conn_identifier )~
@@ -15,21 +15,21 @@ The cubrid_rollback() function executes rollback on the transaction pointed by
 Connection to server is closed after calling cubrid_rollback(). Connection
 handle, however, is still valid.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {conn_identifier}
 
     Connection identifier.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 TRUE, when process is successful.
 
 FALSE, when process is unsuccessful.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 cubrid_rollback() example
@@ -102,7 +102,7 @@ P02 Core Dump Books      San Francisco   CA  USA
 P03 Schadenfreude Press  Hamburg             Germany
 P04 Tenterhooks Press    Berkeley        CA  USA
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |cubrid_commit| - Commit a transaction

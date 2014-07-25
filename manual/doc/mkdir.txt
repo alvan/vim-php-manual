@@ -4,7 +4,7 @@ mkdir
 
 mkdir — Makes directory
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool mkdir ( string $pathname [, int $mode = 0777 [, bool $recursive =~
@@ -12,7 +12,7 @@ mkdir — Makes directory
 
 Attempts to create the directory specified by pathname.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {pathname}
@@ -42,22 +42,22 @@ Attempts to create the directory specified by pathname.
         Note: Context support was added with PHP 5.0.0. For a description of
         contexts, refer to Streams.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
-Version                               Description
+Version                              Description
 5.0.0   The {recursive} parameter was added
         As of PHP 5.0.0 mkdir() can also be used with some URL wrappers. Refer
 5.0.0   to Supported Protocols and Wrappers for a listing of which wrappers
         support mkdir()
 4.2.0   The {mode} parameter became optional.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 mkdir() example
@@ -82,22 +82,22 @@ Example #2 mkdir() using the {recursive} parameter
     // ...
 <?>
 
-===============================================================================
+==============================================================================
 *Errors/Exceptions*
 
 Emits an E_WARNING level error if the directory already exists.
 
-Emits an E_WARNING level error if the relevant permissions prevent creating the
-directory.
+Emits an E_WARNING level error if the relevant permissions prevent creating
+the directory.
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: When safe mode is enabled, PHP checks whether the directory in which
     the script is operating has the same UID (owner) as the script that is
     being executed.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |is_dir| - Tells whether the filename is a directory

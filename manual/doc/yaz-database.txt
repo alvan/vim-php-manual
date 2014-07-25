@@ -4,16 +4,16 @@ yaz_database
 
 yaz_database — Specifies the databases within a session
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool yaz_database ( resource $id , string $databases )~
 
-This function allows you to change databases within a session by specifying one
-or more databases to be used in search, retrieval, etc. - overriding databases
-specified in call to |yaz_connect|.
+This function allows you to change databases within a session by specifying
+one or more databases to be used in search, retrieval, etc. - overriding
+databases specified in call to |yaz_connect|.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {id}
@@ -22,10 +22,10 @@ specified in call to |yaz_connect|.
 
 {databases}
 
-    A string containing one or more databases. Multiple databases are separated
-    by a plus sign +.
+    A string containing one or more databases. Multiple databases are
+    separated by a plus sign +.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.

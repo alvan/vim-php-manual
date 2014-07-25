@@ -4,7 +4,7 @@ shm_put_var
 
 shm_put_var — Inserts or updates a variable in shared memory
 
-===============================================================================
+==============================================================================
 *Description*
 
     bool shm_put_var ( resource $shm_identifier , int $variable_key , mixed~
@@ -16,7 +16,7 @@ Warnings (E_WARNING level) will be issued if {shm_identifier} is not a valid
 SysV shared memory index or if there was not enough shared memory remaining to
 complete your request.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {shm_identifier}
@@ -33,12 +33,12 @@ complete your request.
     generally this means all types except for resources and some internal
     objects that cannot be serialized.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |shm_get_var| - Returns a variable from shared memory

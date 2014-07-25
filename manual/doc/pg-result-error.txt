@@ -4,7 +4,7 @@ pg_result_error
 
 pg_result_error — Get error message associated with result
 
-===============================================================================
+==============================================================================
 *Description*
 
     string pg_result_error ( resource $result )~
@@ -19,21 +19,21 @@ errors than pg_result_error().
 Because |pg_query| returns FALSE if the query fails, you must use |
 pg_send_query| and |pg_get_result| to get the result handle.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {result}
 
-    PostgreSQL query result resource, returned by |pg_query|, |pg_query_params|
-    or |pg_execute| (among others).
+    PostgreSQL query result resource, returned by |pg_query|, |pg_query_params
+    | or |pg_execute| (among others).
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns a string. Returns empty string if there is no error. If there is an
 error associated with the {result} parameter, returns FALSE.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 pg_result_error() example
@@ -49,7 +49,7 @@ Example #1 pg_result_error() example
       echo pg_result_error($res1);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |pg_result_error_field| - Returns an individual field of an error report.

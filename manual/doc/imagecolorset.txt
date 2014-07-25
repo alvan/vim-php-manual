@@ -4,7 +4,7 @@ imagecolorset
 
 imagecolorset — Set the color for the specified palette index
 
-===============================================================================
+==============================================================================
 *Description*
 
     void imagecolorset ( resource $image , int $index , int $red , int $green~
@@ -14,13 +14,13 @@ This sets the specified index in the palette to the specified color. This is
 useful for creating flood-fill-like effects in palleted images without the
 overhead of performing the actual flood-fill.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 { image}
 
-    An image resource, returned by one of the image creation functions, such as
-    |imagecreatetruecolor|.
+    An image resource, returned by one of the image creation functions, such
+    as |imagecreatetruecolor|.
 
 {index}
 
@@ -42,18 +42,18 @@ overhead of performing the actual flood-fill.
 
     Value of alpha component.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 No value is returned.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version           Description
 5.4.0   The {alpha} parameter was added.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 imagecolorset() example
@@ -78,7 +78,7 @@ Example #1 imagecolorset() example
     imagedestroy($im);
 <?>
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |imagecolorat| - Get the index of the color of a pixel

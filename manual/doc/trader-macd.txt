@@ -4,13 +4,13 @@ trader_macd
 
 trader_macd — Moving Average Convergence/Divergence
 
-===============================================================================
+==============================================================================
 *Description*
 
     array trader_macd ( array $real [, integer $fastPeriod [, integer~
     $slowPeriod [, integer $signalPeriod ]]] )~
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {real}
@@ -27,9 +27,10 @@ trader_macd — Moving Average Convergence/Divergence
 
 {signalPeriod}
 
-    Smoothing for the signal line (nb of period). Valid range from 1 to 100000.
+    Smoothing for the signal line (nb of period). Valid range from 1 to
+    100000.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
 Returns an array with calculated data or false on failure.

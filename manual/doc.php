@@ -3,7 +3,7 @@
  *           File:  doc.php
  *         Author:  Alvan
  *       Modifier:  Alvan
- *       Modified:  2014-07-24
+ *       Modified:  2014-07-25
  *    Description:  Generate PHP manual for Vim
  *          Usage:  1. Download PHP manual from http://php.net/get/php_manual_en.tar.gz/from/a/mirror
  *                  2. Extract all files into an directory src/
@@ -16,7 +16,7 @@ ini_set('display_errors', 'on');
 define('DIR_SRC', __DIR__ . '/src/');
 define('DIR_TMP', __DIR__ . '/tmp/');
 define('DIR_DOC', __DIR__ . '/doc/');
-define('NUM_COL', 79);
+define('NUM_COL', 78);
 define('STR_TAB', "    ");
 
 $dir = dir(DIR_SRC);
@@ -51,13 +51,16 @@ while (false !== ($src = $dir->read()))
 		$htm = preg_replace_callback('#(<h3[^>]*>)(.+?)(</h3>)#', function($mas) {
 			return $mas[1] . str_repeat('=', NUM_COL) . '<br>*' . implode('* *', explode(' ', $mas[2])) . '*' . $mas[3];
 		}, $htm);
+		$htm = preg_replace_callback('#(<strong[^>]+class="command"[^>]*>)(.+?)(</strong>)#', function($mas) {
+			return $mas[1] . '`' . implode('` `', explode(' ', $mas[2])) . '`' . $mas[3];
+		}, $htm);
 		$htm = preg_replace('#(<code class="parameter">)([^$]+?)(</code>)#', '\1{\2}\3', $htm);
 		$htm = preg_replace('#(<a[^>]*href="function\.[^.]+\.html"[^>]*>)([^\(]+?)(?:\(\))?(</a>)#', '\1|\2|\3', $htm);
 		$htm = preg_replace('#<div[^>]+class="manualnavbar".*?</div><hr(?: /)?>#s', '', $htm);
 		$htm = preg_replace('#<hr(?: /)?><div[^>]+class="manualnavbar".*?</div></body>#s', '</body>', $htm);
 		
 		file_put_contents($tmp, $htm);
-		system(sprintf("w3m -cols %d -s -no-graph %s > %s", NUM_COL + 1, $tmp, $doc));
+		system(sprintf("w3m -cols %d -t %d -o indent_incr=%d -s -no-graph %s > %s", NUM_COL + 1, strlen(STR_TAB), strlen(STR_TAB), $tmp, $doc));
 
 		$txt = file_get_contents($doc);
 		$txt = preg_replace('#^\s?([^\s].+~)$#m', STR_TAB . '\1', $txt);

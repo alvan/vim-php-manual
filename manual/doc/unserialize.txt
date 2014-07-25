@@ -4,7 +4,7 @@ unserialize
 
 unserialize — Creates a PHP value from a stored representation
 
-===============================================================================
+==============================================================================
 *Description*
 
     mixed unserialize ( string $str )~
@@ -12,7 +12,7 @@ unserialize — Creates a PHP value from a stored representation
 unserialize() takes a single serialized variable and converts it back into a
 PHP value.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {str}
@@ -33,22 +33,22 @@ PHP value.
         instantiated, it'll be called. To disable this feature just empty this
         setting.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-The converted value is returned, and can be a boolean, integer, float, string, 
+The converted value is returned, and can be a boolean, integer, float, string,
 array or object.
 
 In case the passed string is not unserializeable, FALSE is returned and
 E_NOTICE is issued.
 
-===============================================================================
+==============================================================================
 *Changelog*
 
 Version                        Description
 4.2.0   The directive unserialize_callback_func became available.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 unserialize() example
@@ -90,7 +90,7 @@ Example #2 unserialize_callback_func example
     }
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
 Warning
@@ -107,7 +107,7 @@ and a malicious user may be able to exploit this. Use a safe, standard data
 interchange format such as JSON (via |json_decode| and |json_encode|) if you
 need to pass serialized data to the user.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
   * |serialize| - Generates a storable representation of a value

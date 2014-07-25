@@ -4,28 +4,28 @@ getrusage
 
 getrusage — Gets the current resource usages
 
-===============================================================================
+==============================================================================
 *Description*
 
     array getrusage ([ int $who = 0 ] )~
 
-This is an interface to getrusage(2). It gets data returned from the system
+This is an interface to `getrusage(2)`. It gets data returned from the system
 call.
 
-===============================================================================
+==============================================================================
 *Parameters*
 
 {who}
 
     If {who} is 1, getrusage will be called with RUSAGE_CHILDREN.
 
-===============================================================================
+==============================================================================
 *Return* *Values*
 
-Returns an associative array containing the data returned from the system call.
-All entries are accessible by using their documented field names.
+Returns an associative array containing the data returned from the system
+call. All entries are accessible by using their documented field names.
 
-===============================================================================
+==============================================================================
 *Examples*
 
 Example #1 getrusage() example
@@ -38,15 +38,15 @@ Example #1 getrusage() example
     echo $dat["ru_utime.tv_usec"]; // user time used (microseconds)
 <?>
 
-===============================================================================
+==============================================================================
 *Notes*
 
     Note: This function is not implemented on Windows platforms.
 
-===============================================================================
+==============================================================================
 *See* *Also*
 
-  * Your system's man page on getrusage(2)
+  * Your system's man page on `getrusage(2)`
 
 
 vim:ft=help:
