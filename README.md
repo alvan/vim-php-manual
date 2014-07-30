@@ -30,4 +30,4 @@ Screenshots
 -----------
 
 GVim PHP help doc:
-![doc.png](/screenshots/20140725/doc.png)
+![doc.png](/screenshots/20140730/doc.png)
