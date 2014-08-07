@@ -50,8 +50,8 @@ Sends a query and fetch all results.
         ['field_name_for_first_column'] is modified as well.
     DBX_RESULT_UNBUFFERED
         This flag will not create the data property, and the rows property
-        will initially be 0. Use this flag for large datasets, and use |
-        dbx_fetch_row| to retrieve the results row by row. The |dbx_fetch_row|
+        will initially be 0. Use this flag for large datasets, and use 
+        |dbx_fetch_row| to retrieve the results row by row. The |dbx_fetch_row|
         function will return rows that are conformant to the flags set with
         this query. Incidentally, it will also update the rows each time it is
         called.

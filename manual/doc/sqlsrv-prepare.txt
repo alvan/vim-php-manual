@@ -63,8 +63,8 @@ that will be executed multiple times with different parameter values.
     SendStreamParamsAtExec TRUE or FALSE (the     stream data in chunks (FALSE
                            default is TRUE)       ). By default, the value is
                                                   set to TRUE. For more
-                                                  information, see |
-                                                  sqlsrv_send_stream_data|.
+                                                  information, see 
+                                                  |sqlsrv_send_stream_data|.
                            SQLSRV_CURSOR_FORWARD, See » Specifying a Cursor
                            SQLSRV_CURSOR_STATIC,  Type and Selecting Rows in
     Scrollable             SQLSRV_CURSOR_DYNAMIC, the Microsoft SQLSRV
@@ -82,8 +82,8 @@ Returns a statement resource on success and FALSE if an error occurred.
 Example #1 sqlsrv_prepare() example
 
 This example demonstrates how to prepare a statement with sqlsrv_prepare() and
-re-execute it multiple times (with different parameter values) using |
-sqlsrv_execute|.
+re-execute it multiple times (with different parameter values) using 
+|sqlsrv_execute|.
 
 <?php >
     $serverName = "serverName\sqlexpress";
@@ -126,8 +126,8 @@ sqlsrv_execute|.
 When you prepare a statement that uses variables as parameters, the variables
 are bound to the statement. This means that if you update the values of the
 variables, the next time you execute the statement it will run with updated
-parameter values. For statements that you plan to execute only once, use |
-sqlsrv_query|.
+parameter values. For statements that you plan to execute only once, use 
+|sqlsrv_query|.
 
 ==============================================================================
 *See* *Also*

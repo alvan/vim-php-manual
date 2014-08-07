@@ -83,8 +83,8 @@ fopen() binds a named resource, specified by {filename}, to a stream.
     'c'    file pointer is positioned on the beginning of the file. This may
            be useful if it's desired to get an advisory lock (see |flock|)
            before attempting to modify the file, as using 'w' could truncate
-           the file before the lock was obtained (if truncation is desired, |
-           ftruncate| can be used after the lock is requested).
+           the file before the lock was obtained (if truncation is desired, 
+           |ftruncate| can be used after the lock is requested).
     'c+'   Open the file for reading and writing; otherwise it has the same
            behavior as 'c'.
 

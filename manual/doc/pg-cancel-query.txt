@@ -9,8 +9,8 @@ pg_cancel_query — Cancel an asynchronous query
 
     bool pg_cancel_query ( resource $connection )~
 
-pg_cancel_query() cancels an asynchronous query sent with |pg_send_query|, |
-pg_send_query_params| or |pg_send_execute|. You cannot cancel a query executed
+pg_cancel_query() cancels an asynchronous query sent with |pg_send_query|, 
+|pg_send_query_params| or |pg_send_execute|. You cannot cancel a query executed
 using |pg_query|.
 
 ==============================================================================

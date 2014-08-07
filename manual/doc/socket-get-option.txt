@@ -55,8 +55,8 @@ by the {optname} parameter for the specified {socket}.
                              notified with a SIGPIPE
                              signal.
                              Reports whether the
-                             {socket} lingers on |
-                             socket_close| if data
+                             {socket} lingers on 
+                             |socket_close| if data
                              is present. By default,
                              when the socket is
                              closed, it attempts to
@@ -79,15 +79,15 @@ by the {optname} parameter for the specified {socket}.
 
                              On the other hand, if
                              l_onoff is non-zero and
-                             l_linger is non-zero, |
-                             socket_close| will
+                             l_linger is non-zero, 
+                             |socket_close| will
                              block until all the
                              data is sent or the
                              time specified in
                              l_linger elapses. If
                              the socket is
-                             non-blocking, |
-                             socket_close| will fail
+                             non-blocking, 
+                             |socket_close| will fail
                              and return an error.
 
                              Reports whether the
@@ -150,8 +150,8 @@ by the {optname} parameter for the specified {socket}.
                                                      array. See
                              Leaves a multicast      MCAST_JOIN_GROUP for more
     MCAST_LEAVE_GROUP        group. (added in PHP    information. (can only be
-                             5.4)                    used in |
-                                                     socket_set_option|)
+                             5.4)                    used in 
+                                                     |socket_set_option|)
                                                      array with the same keys
                              Blocks packets arriving as MCAST_JOIN_GROUP, plus
                              from a specific source  one extra key, source,
@@ -159,8 +159,8 @@ by the {optname} parameter for the specified {socket}.
     MCAST_BLOCK_SOURCE       group, which must have  specifying an IPv4 or
                              been previously joined. IPv6 address of the
                              (added in PHP 5.4)      source to be blocked.
-                                                     (can only be used in |
-                                                     socket_set_option|)
+                                                     (can only be used in 
+                                                     |socket_set_option|)
                              Unblocks (start
                              receiving again)        array with the same
                              packets arriving from a format as

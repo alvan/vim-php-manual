@@ -12,8 +12,8 @@ ingres_result_seek — Set the row position before fetching data
 This function is used to position the cursor associated with the result
 resource before issuing a fetch. If ingres.array_index_start is set to 0 then
 the first row is 0 else it is 1. ingres_result_seek() can be used only with
-queries that make use of scrollable cursors. It cannot be used with |
-ingres_unbuffered_query|.
+queries that make use of scrollable cursors. It cannot be used with 
+|ingres_unbuffered_query|.
 
     Note: Related Configurations
 

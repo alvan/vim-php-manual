@@ -11,8 +11,8 @@ session_destroy — Destroys all data registered to a session
 
 session_destroy() destroys all of the data associated with the current
 session. It does not unset any of the global variables associated with the
-session, or unset the session cookie. To use the session variables again, |
-session_start| has to be called.
+session, or unset the session cookie. To use the session variables again, 
+|session_start| has to be called.
 
 In order to kill the session altogether, like to log the user out, the session
 id must also be unset. If a cookie is used to propagate the session id

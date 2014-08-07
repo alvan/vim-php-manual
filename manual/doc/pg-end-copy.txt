@@ -10,8 +10,8 @@ pg_end_copy — Sync with PostgreSQL backend
     bool pg_end_copy ([ resource $connection ] )~
 
 pg_end_copy() syncs the PostgreSQL frontend (usually a web server process)
-with the PostgreSQL server after doing a copy operation performed by |
-pg_put_line|. pg_end_copy() must be issued, otherwise the PostgreSQL server
+with the PostgreSQL server after doing a copy operation performed by 
+|pg_put_line|. pg_end_copy() must be issued, otherwise the PostgreSQL server
 may get out of sync with the frontend and will report an error.
 
 ==============================================================================

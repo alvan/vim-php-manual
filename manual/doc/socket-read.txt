@@ -38,8 +38,8 @@ the |socket_create| or |socket_accept| functions.
 
 socket_read() returns the data as a string on success, or FALSE on error
 (including if the remote host has closed the connection). The error code can
-be retrieved with |socket_last_error|. This code may be passed to |
-socket_strerror| to get a textual representation of the error.
+be retrieved with |socket_last_error|. This code may be passed to 
+|socket_strerror| to get a textual representation of the error.
 
     Note:
 

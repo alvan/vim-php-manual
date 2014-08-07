@@ -19,8 +19,8 @@ found, an identifier for it will be returned instead of opening a new
 connection.
 
 Second, the connection to the SQL server will not be closed when the execution
-of the script ends. Instead, the link will remain open for future use (|
-mssql_close| will not close links established by mssql_pconnect()).
+of the script ends. Instead, the link will remain open for future use (
+|mssql_close| will not close links established by mssql_pconnect()).
 
 This type of links is therefore called 'persistent'.
 

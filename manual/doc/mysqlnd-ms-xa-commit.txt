@@ -10,8 +10,8 @@ servers
 
     int mysqlnd_ms_xa_commit ( mixed $connection , string $gtrid )~
 
-Commits a global transaction among MySQL servers started by |
-mysqlnd_ms_xa_begin|.
+Commits a global transaction among MySQL servers started by 
+|mysqlnd_ms_xa_begin|.
 
 If any of the global transaction participants fails to commit an implicit
 rollback is performed. It may happen that not all cases can be handled during

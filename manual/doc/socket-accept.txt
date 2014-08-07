@@ -10,8 +10,8 @@ socket_accept — Accepts a connection on a socket
     resource socket_accept ( resource $socket )~
 
 After the socket {socket} has been created using |socket_create|, bound to a
-name with |socket_bind|, and told to listen for connections with |
-socket_listen|, this function will accept incoming connections on that socket.
+name with |socket_bind|, and told to listen for connections with 
+|socket_listen|, this function will accept incoming connections on that socket.
 Once a successful connection is made, a new socket resource is returned, which
 may be used for communication. If there are multiple connections queued on the
 socket, the first will be used. If there are no pending connections, 

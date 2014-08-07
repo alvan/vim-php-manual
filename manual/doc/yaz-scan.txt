@@ -13,8 +13,8 @@ yaz_scan — Prepares for a scan
 This function prepares for a Z39.50 Scan Request on the specified connection.
 
 To actually transfer the Scan Request to the server and receive the Scan
-Response, |yaz_wait| must be called. Upon completion of |yaz_wait| call |
-yaz_error| and |yaz_scan_result| to handle the response.
+Response, |yaz_wait| must be called. Upon completion of |yaz_wait| call 
+|yaz_error| and |yaz_scan_result| to handle the response.
 
 ==============================================================================
 *Parameters*
@@ -34,8 +34,8 @@ yaz_error| and |yaz_scan_result| to handle the response.
     The form in which the starting term is specified is given by parameter
     {type}.
 
-    The syntax this parameter is similar to the RPN query as described in |
-    yaz_search|. It consists of zero or more @attr-operator specifications,
+    The syntax this parameter is similar to the RPN query as described in 
+    |yaz_search|. It consists of zero or more @attr-operator specifications,
     then followed by exactly one token.
 
 {flags}

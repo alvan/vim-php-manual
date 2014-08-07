@@ -13,8 +13,8 @@ stream_set_timeout — Set timeout period on a stream
 Sets the timeout value on {stream}, expressed in the sum of {seconds} and
 {microseconds}.
 
-When the stream times out, the 'timed_out' key of the array returned by |
-stream_get_meta_data| is set to TRUE, although no error/warning is generated.
+When the stream times out, the 'timed_out' key of the array returned by 
+|stream_get_meta_data| is set to TRUE, although no error/warning is generated.
 
 ==============================================================================
 *Parameters*
@@ -77,12 +77,12 @@ Example #1 stream_set_timeout() example
 
     Note:
 
-    This function doesn't work with advanced operations like |
-    stream_socket_recvfrom|, use |stream_select| with timeout parameter
+    This function doesn't work with advanced operations like 
+    |stream_socket_recvfrom|, use |stream_select| with timeout parameter
     instead.
 
-This function was previously called as set_socket_timeout() and later |
-socket_set_timeout| but this usage is deprecated.
+This function was previously called as set_socket_timeout() and later 
+|socket_set_timeout| but this usage is deprecated.
 
 ==============================================================================
 *See* *Also*

@@ -18,8 +18,8 @@ is evaluated by PHP. For example, O'reilly is stored in $str, you need to
 escape $str. (e.g. eval("echo '".addslashes($str)."';"); )
 
 To escape database parameters, DBMS specific escape function (e.g. 
-mysqli_real_escape_string() for MySQL or |pg_escape_literal|, |
-pg_escape_string| for PostgreSQL) should be used for security reasons. DBMSes
+mysqli_real_escape_string() for MySQL or |pg_escape_literal|, 
+|pg_escape_string| for PostgreSQL) should be used for security reasons. DBMSes
 have differect escape specification for identifiers (e.g. Table name, field
 name) than parameters. Some DBMS such as PostgreSQL provides identifier escape
 function, |pg_escape_identifier|, but not all DBMS provides identifier escape

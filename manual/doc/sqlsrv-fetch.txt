@@ -9,16 +9,16 @@ sqlsrv_fetch — Makes the next row in a result set available for reading
 
     mixed sqlsrv_fetch ( resource $stmt [, int $row [, int $offset ]] )~
 
-Makes the next row in a result set available for reading. Use |
-sqlsrv_get_field| to read the fields of the row.
+Makes the next row in a result set available for reading. Use 
+|sqlsrv_get_field| to read the fields of the row.
 
 ==============================================================================
 *Parameters*
 
 {stmt}
 
-    A statement resource created by executing |sqlsrv_query| or |
-    sqlsrv_execute|.
+    A statement resource created by executing |sqlsrv_query| or 
+    |sqlsrv_execute|.
 
 {row}
 

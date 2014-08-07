@@ -10,8 +10,8 @@ pcntl_sigtimedwait — Waits for signals, with a timeout
     int pcntl_sigtimedwait ( array $set [, array &$siginfo [, int $seconds =~
     0 [, int $nanoseconds = 0 ]]] )~
 
-The pcntl_sigtimedwait() function operates in exactly the same way as |
-pcntl_sigwaitinfo| except that it takes two additional parameters, {seconds}
+The pcntl_sigtimedwait() function operates in exactly the same way as 
+|pcntl_sigwaitinfo| except that it takes two additional parameters, {seconds}
 and {nanoseconds}, which enable an upper bound to be placed on the time for
 which the script is suspended.
 

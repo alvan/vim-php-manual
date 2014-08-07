@@ -15,9 +15,9 @@ stored or anonymous Oracle PL/SQL block where that block returns query results
 with Oracle's DBMS_SQL.RETURN_RESULT PL/SQL function. This allows PL/SQL
 blocks to easily return query results.
 
-The child statement can be used with any of the OCI8 fetching functions: |
-oci_fetch|, |oci_fetch_all|, |oci_fetch_array|, |oci_fetch_object|, |
-oci_fetch_assoc| or |oci_fetch_row|
+The child statement can be used with any of the OCI8 fetching functions: 
+|oci_fetch|, |oci_fetch_all|, |oci_fetch_array|, |oci_fetch_object|, 
+|oci_fetch_assoc| or |oci_fetch_row|
 
 Child statements inherit their parent statement's prefetch value, or it can be
 explicitly set with |oci_set_prefetch|.
@@ -27,8 +27,8 @@ explicitly set with |oci_set_prefetch|.
 
 {statement}
 
-    A valid OCI8 statement identifier created by |oci_parse| and executed by |
-    oci_execute|. The statement identifier may or may not be associated with a
+    A valid OCI8 statement identifier created by |oci_parse| and executed by 
+    |oci_execute|. The statement identifier may or may not be associated with a
     SQL statement that returns Implicit Result Sets.
 
 ==============================================================================
@@ -257,8 +257,8 @@ All results from all queries are returned consecutively.
     Note:
 
     For queries returning a large number of rows, performance can be
-    significantly improved by increasing oci8.default_prefetch or using |
-    oci_set_prefetch|.
+    significantly improved by increasing oci8.default_prefetch or using 
+    |oci_set_prefetch|.
 
 
 vim:ft=help:

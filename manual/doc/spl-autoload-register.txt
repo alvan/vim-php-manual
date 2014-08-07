@@ -15,8 +15,8 @@ not yet activated it will be activated.
 
 If your code has an existing |__autoload| function then this function must be
 explicitly registered on the __autoload stack. This is because 
-spl_autoload_register() will effectively replace the engine cache for the |
-__autoload| function by either |spl_autoload| or |spl_autoload_call|.
+spl_autoload_register() will effectively replace the engine cache for the 
+|__autoload| function by either |spl_autoload| or |spl_autoload_call|.
 
 If there must be multiple autoload functions, spl_autoload_register() allows
 for this. It effectively creates a queue of autoload functions, and runs

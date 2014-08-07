@@ -60,8 +60,8 @@ error_log() is not binary safe. {message} will be truncated by null character.
 Tip
 
 {message} should not contain null character. Note that {message} may be sent
-to file, mail, syslog, etc. Use appropriate conversion/escape function, |
-base64_encode|, |rawurlencode| or |addslashes| before calling error_log().
+to file, mail, syslog, etc. Use appropriate conversion/escape function, 
+|base64_encode|, |rawurlencode| or |addslashes| before calling error_log().
 
 ==============================================================================
 *Examples*

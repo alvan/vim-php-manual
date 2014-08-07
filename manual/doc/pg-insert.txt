@@ -36,8 +36,8 @@ pg_insert() inserts the values of {assoc_array} into the table specified by
     Any number of PGSQL_CONV_OPTS, PGSQL_DML_NO_CONV, PGSQL_DML_ESCAPE,
     PGSQL_DML_EXEC, PGSQL_DML_ASYNC or PGSQL_DML_STRING combined. If
     PGSQL_DML_STRING is part of the {options} then query string is returned.
-    When PGSQL_DML_NO_CONV or PGSQL_DML_ESCAPE is set, it does not call |
-    pg_convert| internally.
+    When PGSQL_DML_NO_CONV or PGSQL_DML_ESCAPE is set, it does not call 
+    |pg_convert| internally.
 
 ==============================================================================
 *Return* *Values*

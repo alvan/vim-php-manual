@@ -62,8 +62,8 @@ read(string $sessionId)
     The value this callback returns must be in exactly the same serialized
     format that was originally passed for storage to the {write} callback. The
     value returned will be unserialized automatically by PHP and used to
-    populate the $_SESSION superglobal. While the data looks similar to |
-    serialize| please note it is a different format which is speficied in the
+    populate the $_SESSION superglobal. While the data looks similar to 
+    |serialize| please note it is a different format which is speficied in the
     session.serialize_handler ini setting.
 
 write(string $sessionId, string $data)
@@ -78,8 +78,8 @@ write(string $sessionId, string $data)
     callback must return the exact value that was originally passed to the
     {write} callback.
 
-    This callback is invoked when PHP shuts down or explicitly when |
-    session_write_close| is called. Note that after executing this function
+    This callback is invoked when PHP shuts down or explicitly when 
+    |session_write_close| is called. Note that after executing this function
     PHP will internally execute the {close} callback.
 
 
@@ -92,8 +92,8 @@ write(string $sessionId, string $data)
 
 destroy($sessionId)
 
-    This callback is executed when a session is destroyed with |
-    session_destroy| or with |session_regenerate_id| with the destroy
+    This callback is executed when a session is destroyed with 
+    |session_destroy| or with |session_regenerate_id| with the destroy
     parameter set to TRUE. Return value should be TRUE for success, FALSE for
     failure.
 
@@ -250,8 +250,8 @@ function as described above.
 Warning
 
 Current working directory is changed with some SAPIs if session is closed in
-the script termination. It is possible to close the session earlier with |
-session_write_close|.
+the script termination. It is possible to close the session earlier with 
+|session_write_close|.
 
 ==============================================================================
 *Changelog*

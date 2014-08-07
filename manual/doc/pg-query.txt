@@ -9,8 +9,8 @@ pg_query — Execute a query
 
     resource pg_query ([ resource $connection ], string $query )~
 
-pg_query() executes the {query} on the specified database {connection}. |
-pg_query_params| should be preferred in most cases.
+pg_query() executes the {query} on the specified database {connection}. 
+|pg_query_params| should be preferred in most cases.
 
 If an error occurs, and FALSE is returned, details of the error can be
 retrieved using the |pg_last_error| function if the connection is valid.
@@ -43,8 +43,8 @@ retrieved using the |pg_last_error| function if the connection is valid.
     Warning
 
     String interpolation of user-supplied data is extremely dangerous and is
-    likely to lead to SQL injection vulnerabilities. In most cases |
-    pg_query_params| should be preferred, passing user-supplied values as
+    likely to lead to SQL injection vulnerabilities. In most cases 
+    |pg_query_params| should be preferred, passing user-supplied values as
     parameters rather than substituting them into the query string.
 
     Any user-supplied data substituted directly into a query string should be

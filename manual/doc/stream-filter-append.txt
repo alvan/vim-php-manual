@@ -99,8 +99,8 @@ Example #1 Controlling where filters are applied
     Note: Stream data is read from resources (both local and remote) in
     chunks, with any unconsumed data kept in internal buffers. When a new
     filter is appended to a stream, data in the internal buffers is processed
-    through the new filter at that time. This differs from the behavior of |
-    stream_filter_prepend|.
+    through the new filter at that time. This differs from the behavior of 
+    |stream_filter_prepend|.
 
     Note: When a filter is added for read and write, two instances of the
     filter are created. stream_filter_append() must be called twice with

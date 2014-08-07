@@ -22,8 +22,8 @@ Gets information on the mailboxes.
 
 {ref}
 
-    {ref} should normally be just the server specification as described in |
-    imap_open|
+    {ref} should normally be just the server specification as described in 
+    |imap_open|
 
 {pattern}
 
@@ -45,8 +45,8 @@ which is the hierarchy delimiter for the part of the hierarchy this mailbox is
 in; and {attributes}. {Attributes} is a bitmask that can be tested against:
 
   * LATT_NOINFERIORS - This mailbox contains, and may not contain any
-    "children" (there are no mailboxes below this one). Calling |
-    imap_createmailbox| will not work on this mailbox.
+    "children" (there are no mailboxes below this one). Calling 
+    |imap_createmailbox| will not work on this mailbox.
 
   * LATT_NOSELECT - This is only a container, not a mailbox - you cannot open
     it.

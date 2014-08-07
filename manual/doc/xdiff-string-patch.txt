@@ -11,8 +11,8 @@ xdiff_string_patch — Patch a string with an unified diff
     string &$error ]] )~
 
 Patches a {str} string with an unified patch in {patch} parameter and returns
-the result. {patch} has to be an unified diff created by |xdiff_file_diff|/|
-xdiff_string_diff| function. An optional {flags} parameter specifies mode of
+the result. {patch} has to be an unified diff created by |xdiff_file_diff|/
+|xdiff_string_diff| function. An optional {flags} parameter specifies mode of
 operation. Any rejected parts of the patch will be stored inside {error}
 variable if it is provided.
 

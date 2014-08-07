@@ -13,8 +13,8 @@ db2_exec — Executes an SQL statement directly
 Executes an SQL statement directly.
 
 If you plan to interpolate PHP variables into the SQL statement, understand
-that this is one of the more common security exposures. Consider calling |
-db2_prepare| to prepare an SQL statement with parameter markers for input
+that this is one of the more common security exposures. Consider calling 
+|db2_prepare| to prepare an SQL statement with parameter markers for input
 values. Then you can call |db2_execute| to pass in the input values and avoid
 SQL injection attacks.
 
@@ -28,8 +28,8 @@ database access.
 
 {connection}
 
-    A valid database connection resource variable as returned from |
-    db2_connect| or |db2_pconnect|.
+    A valid database connection resource variable as returned from 
+    |db2_connect| or |db2_pconnect|.
 
 {statement}
 

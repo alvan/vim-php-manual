@@ -18,8 +18,8 @@ found, an identifier for it will be returned instead of opening a new
 connection.
 
 Second, the connection to the SQL server will not be closed when the execution
-of the script ends. Instead, the link will remain open for future use (|
-ifx_close| will not close links established by ifx_pconnect()).
+of the script ends. Instead, the link will remain open for future use (
+|ifx_close| will not close links established by ifx_pconnect()).
 
 This type of links is therefore called 'persistent'.
 

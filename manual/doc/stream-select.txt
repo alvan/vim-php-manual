@@ -145,8 +145,8 @@ or $stream2. Since the timeout value is 0 it will return immediately:
 
     Note:
 
-    Windows compatibility: stream_select() used on a pipe returned from |
-    proc_open| may cause data loss under Windows 98.
+    Windows compatibility: stream_select() used on a pipe returned from 
+    |proc_open| may cause data loss under Windows 98.
 
     Use of stream_select() on file descriptors returned by |proc_open| will
     fail and return FALSE under Windows.

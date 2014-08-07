@@ -16,8 +16,8 @@ Returns information about an existing {stream}.
 
 {stream}
 
-    The stream can be any stream created by |fopen|, |fsockopen| and |
-    pfsockopen|.
+    The stream can be any stream created by |fopen|, |fsockopen| and 
+    |pfsockopen|.
 
 ==============================================================================
 *Return* *Values*
@@ -27,8 +27,8 @@ The result array contains the following items:
   * timed_out (bool) - TRUE if the stream timed out while waiting for data on
     the last call to |fread| or |fgets|.
 
-  * blocked (bool) - TRUE if the stream is in blocking IO mode. See |
-    stream_set_blocking|.
+  * blocked (bool) - TRUE if the stream is in blocking IO mode. See 
+    |stream_set_blocking|.
 
   * eof (bool) - TRUE if the stream has reached end-of-file. Note that for
     socket streams this member can be TRUE even when unread_bytes is non-zero.

@@ -28,8 +28,8 @@ file is overwritten, unless the FILE_APPEND flag is set.
     The data to write. Can be either a string, an array or a stream resource.
 
     If {data} is a stream resource, the remaining buffer of that stream will
-    be copied to the specified file. This is similar with using |
-    stream_copy_to_stream|.
+    be copied to the specified file. This is similar with using 
+    |stream_copy_to_stream|.
 
     You can also specify the {data} parameter as a single dimension array.
     This is equivalent to file_put_contents($filename, implode('', $array)).

@@ -31,8 +31,8 @@ Establishes a connection to a LDAP server on a specified {hostname} and
 Returns a positive LDAP link identifier on success, or FALSE on error. When
 OpenLDAP 2.x.x is used, ldap_connect() will always return a resource as it
 does not actually connect but just initializes the connecting parameters. The
-actual connect happens with the next calls to ldap_* funcs, usually with |
-ldap_bind|.
+actual connect happens with the next calls to ldap_* funcs, usually with 
+|ldap_bind|.
 
 If no arguments are specified then the link identifier of the already opened
 link will be returned.

@@ -11,15 +11,15 @@ change fraction
     float fann_get_cascade_candidate_change_fraction ( resource $ann )~
 
 The cascade candidate change fraction is a number between 0 and 1 determining
-how large a fraction the |fann_get_MSE| value should change within |
-fann_get_cascade_candidate_stagnation_epochs| during training of the candidate
+how large a fraction the |fann_get_MSE| value should change within 
+|fann_get_cascade_candidate_stagnation_epochs| during training of the candidate
 neurons, in order for the training not to stagnate. If the training stagnates,
 the training of the candidate neurons will be ended and the best candidate
 will be selected.
 
 It means that if the MSE does not change by a fraction of 
-fann_get_cascade_candidate_change_fraction() during a period of |
-fann_get_cascade_candidate_stagnation_epochs|, the training of the candidate
+fann_get_cascade_candidate_change_fraction() during a period of 
+|fann_get_cascade_candidate_stagnation_epochs|, the training of the candidate
 neurons is stopped because the training has stagnated.
 
 If the cascade candidate change fraction is low, the candidate neurons will be

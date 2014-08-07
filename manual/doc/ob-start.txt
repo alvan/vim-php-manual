@@ -37,8 +37,8 @@ output is being filtered sequentially through each of them in nesting order.
 
     An optional {output_callback} function may be specified. This function
     takes a string as a parameter and should return a string. The function
-    will be called when the output buffer is flushed (sent) or cleaned (with |
-    ob_flush|, |ob_clean| or similar function) or when the output buffer is
+    will be called when the output buffer is flushed (sent) or cleaned (with 
+    |ob_flush|, |ob_clean| or similar function) or when the output buffer is
     flushed to the browser at the end of the request. When {output_callback}
     is called, it will receive the contents of the output buffer as its
     parameter and is expected to return a new output buffer as a result, which
@@ -68,8 +68,8 @@ output is being filtered sequentially through each of them in nesting order.
         Note:
 
         In PHP 4.0.4, |ob_gzhandler| was introduced to facilitate sending
-        gz-encoded data to web browsers that support compressed web pages. |
-        ob_gzhandler| determines what type of content encoding the browser
+        gz-encoded data to web browsers that support compressed web pages. 
+        |ob_gzhandler| determines what type of content encoding the browser
         will accept and will return its output accordingly.
 
 {chunk_size}
@@ -97,8 +97,8 @@ output is being filtered sequentially through each of them in nesting order.
                                  |.
     PHP_OUTPUT_HANDLER_FLUSHABLE |ob_end_flush|, |ob_flush|, and |ob_get_flush
                                  |.
-    PHP_OUTPUT_HANDLER_REMOVABLE |ob_end_clean|, |ob_end_flush|, and |
-                                 ob_get_flush|.
+    PHP_OUTPUT_HANDLER_REMOVABLE |ob_end_clean|, |ob_end_flush|, and 
+                                 |ob_get_flush|.
 
 ==============================================================================
 *Return* *Values*

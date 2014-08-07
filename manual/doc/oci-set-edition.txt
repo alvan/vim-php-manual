@@ -14,8 +14,8 @@ Sets the database "edition" of objects to be used by a subsequent connections.
 Oracle Editions allow concurrent versions of applications to run using the
 same schema and object names. This is useful for upgrading live systems.
 
-Call oci_set_edition() before calling |oci_connect|, |oci_pconnect| or |
-oci_new_connect|.
+Call oci_set_edition() before calling |oci_connect|, |oci_pconnect| or 
+|oci_new_connect|.
 
 If an edition is set that is not valid in the database, connection will fail
 even if oci_set_edition() returns success.

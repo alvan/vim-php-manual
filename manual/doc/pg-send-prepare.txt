@@ -17,8 +17,8 @@ without waiting for completion.
 This is an asynchronous version of |pg_prepare|: it returns TRUE if it was
 able to dispatch the request, and FALSE if not. After a successful call, call 
 |pg_get_result| to determine whether the server successfully created the
-prepared statement. The function's parameters are handled identically to |
-pg_prepare|. Like |pg_prepare|, it will not work on pre-7.4 versions of
+prepared statement. The function's parameters are handled identically to 
+|pg_prepare|. Like |pg_prepare|, it will not work on pre-7.4 versions of
 PostgreSQL.
 
 ==============================================================================

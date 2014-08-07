@@ -36,8 +36,8 @@ set. Returns NULL if the field does not exist, and issues a warning.
 
 Example #1 A db2_result() example
 
-The following example demonstrates how to iterate through a result set with |
-db2_fetch_row| and retrieve columns from the result set with db2_result().
+The following example demonstrates how to iterate through a result set with 
+|db2_fetch_row| and retrieve columns from the result set with db2_result().
 
 <?php >
     $sql = 'SELECT name, breed FROM animals WHERE weight < ?';

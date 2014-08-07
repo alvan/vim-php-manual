@@ -22,8 +22,8 @@ Alternatives to this function include:
     $link_identifier = NULL ] )~
 
 Escapes special characters in the {unescaped_string}, taking into account the
-current character set of the connection so that it is safe to place it in a |
-mysql_query|. If binary data is to be inserted, this function must be used.
+current character set of the connection so that it is safe to place it in a 
+|mysql_query|. If binary data is to be inserted, this function must be used.
 
 mysql_real_escape_string() calls MySQL's library function
 mysql_real_escape_string, which prepends backslashes to the following

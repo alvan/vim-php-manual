@@ -50,8 +50,8 @@ handle.
 {error_msg}
 
     The specified variable will be filled if an error occurs. This is
-    specially important because SQL syntax errors can't be fetched using the |
-    sqlite_last_error| function.
+    specially important because SQL syntax errors can't be fetched using the 
+    |sqlite_last_error| function.
 
     Note: Two alternative syntaxes are supported for compatibility with other
     database extensions (such as MySQL). The preferred form is the first,
@@ -61,8 +61,8 @@ handle.
 *Return* *Values*
 
 This function will return a result handle or FALSE on failure. For queries
-that return rows, the result handle can then be used with functions such as |
-sqlite_fetch_array| and |sqlite_seek|.
+that return rows, the result handle can then be used with functions such as 
+|sqlite_fetch_array| and |sqlite_seek|.
 
 Regardless of the query type, this function will return FALSE if the query
 failed.

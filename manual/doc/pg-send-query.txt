@@ -13,8 +13,8 @@ pg_send_query() sends a query or queries asynchronously to the {connection}.
 Unlike |pg_query|, it can send multiple queries at once to PostgreSQL and get
 the results one by one using |pg_get_result|.
 
-Script execution is not blocked while the queries are executing. Use |
-pg_connection_busy| to check if the connection is busy (i.e. the query is
+Script execution is not blocked while the queries are executing. Use 
+|pg_connection_busy| to check if the connection is busy (i.e. the query is
 executing). Queries may be cancelled using |pg_cancel_query|.
 
 Although the user can send multiple queries at once, multiple queries cannot

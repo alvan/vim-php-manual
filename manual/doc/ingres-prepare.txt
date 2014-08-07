@@ -15,8 +15,8 @@ The query becomes part of the currently open transaction. If there is no open
 transaction, |ingres_query| opens a new transaction. To close the transaction,
 you can call either |ingres_commit| to commit the changes made to the database
 or |ingres_rollback| to cancel these changes. When the script ends, any open
-transaction is rolled back (by calling |ingres_rollback|). You can also use |
-ingres_autocommit| before opening a new transaction to have every SQL query
+transaction is rolled back (by calling |ingres_rollback|). You can also use 
+|ingres_autocommit| before opening a new transaction to have every SQL query
 immediately committed.
 
     Note: Related Configurations
@@ -40,9 +40,9 @@ immediately committed.
 ==============================================================================
 *Return* *Values*
 
-ingres_prepare() returns a query result identifier that is used with |
-ingres_execute| to execute the query. To see if an error occurred, use |
-ingres_errno|, |ingres_error|, or |ingres_errsqlstate|.
+ingres_prepare() returns a query result identifier that is used with 
+|ingres_execute| to execute the query. To see if an error occurred, use 
+|ingres_errno|, |ingres_error|, or |ingres_errsqlstate|.
 
 ==============================================================================
 *See* *Also*

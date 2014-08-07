@@ -10,8 +10,8 @@ ingres_autocommit — Switch autocommit on or off
     bool ingres_autocommit ( resource $link )~
 
 ingres_autocommit() is called before opening a transaction (before the first
-call to |ingres_query| or just after a call to |ingres_rollback| or |
-ingres_commit|) to switch the autocommit mode of the server on or off (when
+call to |ingres_query| or just after a call to |ingres_rollback| or 
+|ingres_commit|) to switch the autocommit mode of the server on or off (when
 the script begins the autocommit mode is off).
 
 When autocommit mode is on, every query is automatically committed by the

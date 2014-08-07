@@ -15,8 +15,8 @@ Error messages may be overwritten by internal PostgreSQL (libpq) function
 calls. It may not return an appropriate error message if multiple errors occur
 inside a PostgreSQL module function.
 
-Use |pg_result_error|, |pg_result_error_field|, |pg_result_status| and |
-pg_connection_status| for better error handling.
+Use |pg_result_error|, |pg_result_error_field|, |pg_result_status| and 
+|pg_connection_status| for better error handling.
 
     Note:
 

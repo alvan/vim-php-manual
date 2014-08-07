@@ -12,8 +12,8 @@ ps_close — Closes a PostScript document
 Closes the PostScript document.
 
 This function writes the trailer of the PostScript document. It also writes
-the bookmark tree. ps_close() does not free any resources, which is done by |
-ps_delete|.
+the bookmark tree. ps_close() does not free any resources, which is done by 
+|ps_delete|.
 
 This function is also called by |ps_delete| if it has not been called before.
 

@@ -27,8 +27,8 @@ datatypes supported by the driver
 
 {statement}
 
-    A valid OCI8 statement identifier created by |oci_parse| and executed by |
-    oci_execute|, or a REF CURSOR statement identifier.
+    A valid OCI8 statement identifier created by |oci_parse| and executed by 
+    |oci_execute|, or a REF CURSOR statement identifier.
 
     Can also be a statement identifier returned by |oci_get_implicit_resultset
     |.
@@ -532,13 +532,13 @@ Example #11 oci_fetch_array() with Oracle Database 12c Implicit Result Sets
     Note:
 
     For queries returning a large number of rows, performance can be
-    significantly improved by increasing oci8.default_prefetch or using |
-    oci_set_prefetch|.
+    significantly improved by increasing oci8.default_prefetch or using 
+    |oci_set_prefetch|.
 
     Note:
 
-    The function oci_fetch_array() is insignificantly slower than |
-    oci_fetch_assoc| or |oci_fetch_row|, but is more flexible.
+    The function oci_fetch_array() is insignificantly slower than 
+    |oci_fetch_assoc| or |oci_fetch_row|, but is more flexible.
 
 ==============================================================================
 *See* *Also*

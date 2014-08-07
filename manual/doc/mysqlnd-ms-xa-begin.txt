@@ -15,8 +15,8 @@ transaction coordinator the distributed transaction.
 
 Once a global transaction has been started, the plugin injects appropriate XA
 BEGIN SQL statements on all MySQL servers used in the following. The global
-transaction is either ended by calling |mysqlnd_ms_xa_commit|, |
-mysqlnd_ms_xa_rollback| or by an implicit rollback in case of an error.
+transaction is either ended by calling |mysqlnd_ms_xa_commit|, 
+|mysqlnd_ms_xa_rollback| or by an implicit rollback in case of an error.
 
 During a global transaction, the plugin tracks all server switches, for
 example, when switching from one MySQL shard to another MySQL shard.

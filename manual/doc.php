@@ -3,7 +3,7 @@
  *           File:  doc.php
  *         Author:  Alvan
  *       Modifier:  Alvan
- *       Modified:  2014-07-25
+ *       Modified:  2014-08-07
  *    Description:  Generate PHP manual for Vim
  *          Usage:  1. Download PHP manual from http://php.net/get/php_manual_en.tar.gz/from/a/mirror
  *                  2. Extract all files into an directory src/
@@ -70,9 +70,57 @@ while (false !== ($src = $dir->read()))
 		}, $txt);
 		$txt = preg_replace('#^([\t ]*\?>\s*?)$#m', '<\1', $txt);
 
+		$lns = explode("\n", str_replace("\r\n", "\n", $txt));
+		$pre = 0;
+		for ($i = 0, $c = count($lns); $i < $c; $i++)
+		{
+			if ($pre > 0 && isset($lns[$i][0]) && preg_match('/[^\s]/', $lns[$i][0]))
+			{
+				--$pre;
+				continue;
+			}
+			else if (preg_match('/.>$/', $lns[$i]))
+			{
+				++$pre;
+				continue;
+			}
+
+			if ($pre > 0)
+			{
+				continue;
+			}
+
+			foreach (array('`' => '`', '|' => '|', '*' => '*', '{' => '}') as $key => $val)
+			{
+				$num = $pos = 0;
+				for ($x = 0, $l = strlen($lns[$i]); $x < $l; $x++)
+				{
+					if ($lns[$i][$x] == $key)
+					{
+						$pos = $x;
+						++$num;
+					}
+				}
+
+				if ($pos && ($num % 2) > 0 && $c - $i > 1 && ($s = strpos($lns[$i+1], $val)))
+				{
+					$end = substr($lns[$i], $pos + 1);
+					if (preg_match('/^[-a-zA-Z0-9_]*$/', $end)
+						&& preg_match('/^(\s*)[-a-zA-Z0-9_]+$/', substr($lns[$i+1], 0, $s), $mas))
+					{
+						$lns[$i] = substr($lns[$i], 0, $pos);
+						$lns[$i+1] = $mas[1] . $key . $end . ltrim($lns[$i+1]);
+					}
+				}
+			}
+		}
+		$txt = implode(PHP_EOL, $lns);
+
 		$txt .= PHP_EOL . "vim:ft=help:";
 		file_put_contents($doc, $txt);
 
 		file_put_contents(DIR_DOC . 'tags', "${tag}\t" . basename($doc) . "\t/^${tag}\n", FILE_APPEND | LOCK_EX);
 	}
 }
+
+file_exists(DIR_DOC . 'tags') AND system('vim +%sort +wq ' . DIR_DOC . 'tags');

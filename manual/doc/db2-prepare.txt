@@ -12,8 +12,8 @@ db2_prepare — Prepares an SQL statement to be executed
 
 db2_prepare() creates a prepared SQL statement which can include 0 or more
 parameter markers (? characters) representing parameters for input, output, or
-input/output. You can pass parameters to the prepared statement using |
-db2_bind_param|, or for input values only, as an array passed to |db2_execute|
+input/output. You can pass parameters to the prepared statement using 
+|db2_bind_param|, or for input values only, as an array passed to |db2_execute|
 .
 
 There are three main advantages to using prepared statements in your
@@ -39,8 +39,8 @@ application:
 
 {connection}
 
-    A valid database connection resource variable as returned from |
-    db2_connect| or |db2_pconnect|.
+    A valid database connection resource variable as returned from 
+    |db2_connect| or |db2_pconnect|.
 
 {statement}
 
@@ -59,8 +59,8 @@ application:
 
 Returns a statement resource if the SQL statement was successfully parsed and
 prepared by the database server. Returns FALSE if the database server returned
-an error. You can determine which error was returned by calling |
-db2_stmt_error| or |db2_stmt_errormsg|.
+an error. You can determine which error was returned by calling 
+|db2_stmt_error| or |db2_stmt_errormsg|.
 
 ==============================================================================
 *Examples*

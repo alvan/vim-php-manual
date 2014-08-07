@@ -34,13 +34,13 @@ name {name} registered in the current session, FALSE otherwise.
 
     Note:
 
-    If $_SESSION (or $HTTP_SESSION_VARS for PHP 4.0.6 or less) is used, use |
-    isset| to check a variable is registered in $_SESSION.
+    If $_SESSION (or $HTTP_SESSION_VARS for PHP 4.0.6 or less) is used, use 
+    |isset| to check a variable is registered in $_SESSION.
 
 Caution
 
-If you are using $_SESSION (or $HTTP_SESSION_VARS), do not use |
-session_register|, session_is_registered() and |session_unregister|.
+If you are using $_SESSION (or $HTTP_SESSION_VARS), do not use 
+|session_register|, session_is_registered() and |session_unregister|.
 
 
 vim:ft=help:

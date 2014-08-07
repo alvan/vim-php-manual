@@ -9,8 +9,8 @@ xhprof_sample_enable — Start XHProf profiling in sampling mode
 
     void xhprof_sample_enable ( void )~
 
-Starts profiling in sample mode, which is a lighter weight version of |
-xhprof_enable|. The sampling interval is 0.1 seconds, and samples record the
+Starts profiling in sample mode, which is a lighter weight version of 
+|xhprof_enable|. The sampling interval is 0.1 seconds, and samples record the
 full function call stack. The main use case is when lower overhead is required
 when doing performance monitoring and diagnostics.
 

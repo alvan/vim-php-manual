@@ -9,8 +9,8 @@ wincache_unlock — Releases an exclusive lock on a given key
 
     bool wincache_unlock ( string $key )~
 
-Releases an exclusive lock that was obtained on a given key by using |
-wincache_lock|. If any other process was blocked waiting for the lock on this
+Releases an exclusive lock that was obtained on a given key by using 
+|wincache_lock|. If any other process was blocked waiting for the lock on this
 key, that process will be able to obtain the lock.
 
 Warning

@@ -30,8 +30,8 @@ Adds {filtername} to the list of filters attached to {stream}.
     +). The filter will also be attached to the write filter chain if the file
     was opened for writing (i.e. File Mode: w, a, and/or +).
     STREAM_FILTER_READ, STREAM_FILTER_WRITE, and/or STREAM_FILTER_ALL can also
-    be passed to the {read_write} parameter to override this behavior. See |
-    stream_filter_append| for an example of using this parameter.
+    be passed to the {read_write} parameter to override this behavior. See 
+    |stream_filter_append| for an example of using this parameter.
 
 {params}
 
@@ -63,8 +63,8 @@ Version                              Description
     chunks, with any unconsumed data kept in internal buffers. When a new
     filter is prepended to a stream, data in the internal buffers, which has
     already been processed through other filters will not be reprocessed
-    through the new filter at that time. This differs from the behavior of |
-    stream_filter_append|.
+    through the new filter at that time. This differs from the behavior of 
+    |stream_filter_append|.
 
     Note: When a filter is added for read and write, two instances of the
     filter are created. stream_filter_prepend() must be called twice with

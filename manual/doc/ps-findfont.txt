@@ -14,8 +14,8 @@ Loads a font for later use. Before text is output with a loaded font it must
 be set with |ps_setfont|. This function needs the adobe font metric file in
 order to calculate the space used up by the characters. A font which is loaded
 within a page will only be available on that page. Fonts which are to be used
-in the complete document have to be loaded before the first call of |
-ps_begin_page|. Calling ps_findfont() between pages will make that font
+in the complete document have to be loaded before the first call of 
+|ps_begin_page|. Calling ps_findfont() between pages will make that font
 available for all following pages.
 
 The name of the afm file must be {fontname}.afm. If the font shall be embedded

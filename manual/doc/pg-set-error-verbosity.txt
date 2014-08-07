@@ -2,16 +2,16 @@ pg_set_error_verbosity
 
 (PHP 5 >= 5.1.0)
 
-pg_set_error_verbosity — Determines the verbosity of messages returned by |
-pg_last_error| and |pg_result_error|.
+pg_set_error_verbosity — Determines the verbosity of messages returned by 
+|pg_last_error| and |pg_result_error|.
 
 ==============================================================================
 *Description*
 
     int pg_set_error_verbosity ([ resource $connection ], int $verbosity )~
 
-Determines the verbosity of messages returned by |pg_last_error| and |
-pg_result_error|.
+Determines the verbosity of messages returned by |pg_last_error| and 
+|pg_result_error|.
 
 pg_set_error_verbosity() sets the verbosity mode, returning the connection's
 previous setting. In PGSQL_ERRORS_TERSE mode, returned messages include

@@ -60,8 +60,8 @@ mysql_unbuffered_query() returns TRUE on success or FALSE on error.
 
     Note:
 
-    The benefits of mysql_unbuffered_query() come at a cost: you cannot use |
-    mysql_num_rows| and |mysql_data_seek| on a result set returned from 
+    The benefits of mysql_unbuffered_query() come at a cost: you cannot use 
+    |mysql_num_rows| and |mysql_data_seek| on a result set returned from 
     mysql_unbuffered_query(), until all rows are fetched. You also have to
     fetch all result rows from an unbuffered SQL query before you can send a
     new SQL query to MySQL, using the same {link_identifier}.

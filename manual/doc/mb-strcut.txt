@@ -13,8 +13,8 @@ mb_strcut — Get part of string
 mb_strcut() extracts a substring from a string similarly to |mb_substr|, but
 operates on bytes instead of characters. If the cut position happens to be
 between two bytes of a multi-byte character, the cut is performed starting
-from the first byte of that character. This is also the difference to the |
-substr| function, which would simply cut the string between the bytes and thus
+from the first byte of that character. This is also the difference to the 
+|substr| function, which would simply cut the string between the bytes and thus
 result in a malformed byte sequence.
 
 ==============================================================================

@@ -13,13 +13,13 @@ db2_execute() executes an SQL statement that was prepared by |db2_prepare|.
 
 If the SQL statement returns a result set, for example, a SELECT statement or
 a CALL to a stored procedure that returns one or more result sets, you can
-retrieve a row as an array from the stmt resource using |db2_fetch_assoc|, |
-db2_fetch_both|, or |db2_fetch_array|. Alternatively, you can use |
-db2_fetch_row| to move the result set pointer to the next row and fetch a
+retrieve a row as an array from the stmt resource using |db2_fetch_assoc|, 
+|db2_fetch_both|, or |db2_fetch_array|. Alternatively, you can use 
+|db2_fetch_row| to move the result set pointer to the next row and fetch a
 column at a time from that row with |db2_result|.
 
-Refer to |db2_prepare| for a brief discussion of the advantages of using |
-db2_prepare| and db2_execute() rather than |db2_exec|.
+Refer to |db2_prepare| for a brief discussion of the advantages of using 
+|db2_prepare| and db2_execute() rather than |db2_exec|.
 
 ==============================================================================
 *Parameters*

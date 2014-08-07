@@ -51,8 +51,8 @@ Recursively diffs two paths, {path1} and {path2}.
 *Return* *Values*
 
 Returns an array-list consisting of two streams: the first is the diff output
-and the second contains error stream output. The streams can be read using |
-fread|. Returns FALSE or NULL on error.
+and the second contains error stream output. The streams can be read using 
+|fread|. Returns FALSE or NULL on error.
 
 The diff output will, by default, be in the form of Subversion's custom
 unified diff format, but an » external diff engine may be used depending on

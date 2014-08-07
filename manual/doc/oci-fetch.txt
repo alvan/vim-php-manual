@@ -10,8 +10,8 @@ oci_fetch — Fetches the next row from a query into internal buffers
     bool oci_fetch ( resource $statement )~
 
 Fetches the next row from a query into internal buffers accessible either with
-|oci_result|, or by using variables previously defined with |
-oci_define_by_name|.
+|oci_result|, or by using variables previously defined with 
+|oci_define_by_name|.
 
 See |oci_fetch_array| for general information about fetching data.
 
@@ -20,8 +20,8 @@ See |oci_fetch_array| for general information about fetching data.
 
 {statement}
 
-    A valid OCI8 statement identifier created by |oci_parse| and executed by |
-    oci_execute|, or a REF CURSOR statement identifier.
+    A valid OCI8 statement identifier created by |oci_parse| and executed by 
+    |oci_execute|, or a REF CURSOR statement identifier.
 
 ==============================================================================
 *Return* *Values*
@@ -98,8 +98,8 @@ Example #2 oci_fetch() with |oci_result|
 
     Note:
 
-    Will not return rows from Oracle Database 12c Implicit Result Sets. Use |
-    oci_fetch_array| instead.
+    Will not return rows from Oracle Database 12c Implicit Result Sets. Use 
+    |oci_fetch_array| instead.
 
 ==============================================================================
 *See* *Also*

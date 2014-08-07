@@ -36,15 +36,15 @@ page for specific details as to how waitpid works on your system.
 
         Note:
 
-        Specifying -1 as the {pid} is equivalent to the functionality |
-        pcntl_wait| provides (minus {options}).
+        Specifying -1 as the {pid} is equivalent to the functionality 
+        |pcntl_wait| provides (minus {options}).
 
 {status}
 
     pcntl_waitpid() will store status information in the {status} parameter
-    which can be evaluated using the following functions: |pcntl_wifexited|, |
-    pcntl_wifstopped|, |pcntl_wifsignaled|, |pcntl_wexitstatus|, |
-    pcntl_wtermsig| and |pcntl_wstopsig|.
+    which can be evaluated using the following functions: |pcntl_wifexited|, 
+    |pcntl_wifstopped|, |pcntl_wifsignaled|, |pcntl_wexitstatus|, 
+    |pcntl_wtermsig| and |pcntl_wstopsig|.
 
 {options}
 

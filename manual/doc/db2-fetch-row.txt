@@ -69,9 +69,9 @@ On i5/OS it is recommended that you use |db2_fetch_both|, |db2_fetch_array|,
 or |db2_fetch_object| over db2_fetch_row()/|db2_result|. In general 
 db2_fetch_row()/|db2_result| have more issues with various column types in
 EBCIDIC to ASCII translation, including possible truncation in DBCS
-applications. You may also find the performance of |db2_fetch_both|, |
-db2_fetch_array|, and |db2_fetch_object| to be superior to db2_fetch_row()/|
-db2_result|.
+applications. You may also find the performance of |db2_fetch_both|, 
+|db2_fetch_array|, and |db2_fetch_object| to be superior to db2_fetch_row()/
+|db2_result|.
 
 <?php >
       $conn = db2_connect("","","");

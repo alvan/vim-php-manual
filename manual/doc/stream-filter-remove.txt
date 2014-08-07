@@ -9,8 +9,8 @@ stream_filter_remove — Remove a filter from a stream
 
     bool stream_filter_remove ( resource $stream_filter )~
 
-Removes a stream filter previously added to a stream with |
-stream_filter_prepend| or |stream_filter_append|. Any data remaining in the
+Removes a stream filter previously added to a stream with 
+|stream_filter_prepend| or |stream_filter_append|. Any data remaining in the
 filter's internal buffer will be flushed through to the next filter before
 removing it.
 

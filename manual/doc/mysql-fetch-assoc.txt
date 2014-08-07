@@ -20,8 +20,8 @@ Alternatives to this function include:
     array mysql_fetch_assoc ( resource $result )~
 
 Returns an associative array that corresponds to the fetched row and moves the
-internal data pointer ahead. mysql_fetch_assoc() is equivalent to calling |
-mysql_fetch_array| with MYSQL_ASSOC for the optional second parameter. It only
+internal data pointer ahead. mysql_fetch_assoc() is equivalent to calling 
+|mysql_fetch_array| with MYSQL_ASSOC for the optional second parameter. It only
 returns an associative array.
 
 ==============================================================================
@@ -40,8 +40,8 @@ or FALSE if there are no more rows.
 
 If two or more columns of the result have the same field names, the last
 column will take precedence. To access the other column(s) of the same name,
-you either need to access the result with numeric indices by using |
-mysql_fetch_row| or add alias names. See the example at the |mysql_fetch_array
+you either need to access the result with numeric indices by using 
+|mysql_fetch_row| or add alias names. See the example at the |mysql_fetch_array
 | description about aliases.
 
 ==============================================================================

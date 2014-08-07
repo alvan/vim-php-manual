@@ -10,8 +10,8 @@ oci_close — Closes an Oracle connection
     bool oci_close ( resource $connection )~
 
 Unsets {connection}. The underlying database connection is closed if no other
-resources are using it and if it was created with |oci_connect| or |
-oci_new_connect|.
+resources are using it and if it was created with |oci_connect| or 
+|oci_new_connect|.
 
 It is recommended to close connections that are no longer needed because this
 makes database resources available for other users.

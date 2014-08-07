@@ -11,8 +11,8 @@ yaz_errno — Returns error number
 
 Returns an error number for the server (last request) identified by {id}.
 
-yaz_errno() should be called after network activity for each server - (after |
-yaz_wait| returns) to determine the success or failure of the last operation
+yaz_errno() should be called after network activity for each server - (after 
+|yaz_wait| returns) to determine the success or failure of the last operation
 (e.g. search).
 
 ==============================================================================

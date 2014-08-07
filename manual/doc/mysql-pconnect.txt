@@ -34,8 +34,8 @@ found, an identifier for it will be returned instead of opening a new
 connection.
 
 Second, the connection to the SQL server will not be closed when the execution
-of the script ends. Instead, the link will remain open for future use (|
-mysql_close| will not close links established by mysql_pconnect()).
+of the script ends. Instead, the link will remain open for future use (
+|mysql_close| will not close links established by mysql_pconnect()).
 
 This type of link is therefore called 'persistent'.
 

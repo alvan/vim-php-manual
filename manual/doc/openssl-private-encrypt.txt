@@ -11,8 +11,8 @@ openssl_private_encrypt — Encrypts data with private key
     $key [, int $padding = OPENSSL_PKCS1_PADDING ] )~
 
 openssl_private_encrypt() encrypts {data} with private {key} and stores the
-result into {crypted}. Encrypted data can be decrypted via |
-openssl_public_decrypt|.
+result into {crypted}. Encrypted data can be decrypted via 
+|openssl_public_decrypt|.
 
 This function can be used e.g. to sign data (or its hash) to prove that it is
 not written by someone else.
