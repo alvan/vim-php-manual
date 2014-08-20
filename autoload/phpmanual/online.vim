@@ -4,7 +4,7 @@
 "          Path:  ~/.vim/autoload/phpmanual/
 "        Author:  Alvan
 "      Modifier:  Alvan
-"      Modified:  2014-07-22
+"      Modified:  2014-08-20
 "   Description:  PHP online manual for Vim
 "
 " --}}}
@@ -51,7 +51,13 @@ func! phpmanual#online#open(...)
         return
     en
 
-    call system('xdg-open '.shellescape('http://php.net/' . key).' &')
+    let url = shellescape('http://php.net/' . key)
+
+    if has("win32") || has("win95") || has("win64") || has("win16")
+        call system("explorer " . url)
+    else
+        call system('xdg-open ' . url .' &')
+    endif
 endf
 
 " vim:ft=vim:ff=unix:tabstop=4:shiftwidth=4:softtabstop=4:expandtab
