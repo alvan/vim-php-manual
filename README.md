@@ -22,7 +22,7 @@ a. Copy these files to runtimepath.(~/.vim,..)
 
 b. Use vundle:
 
-        Plugin 'alvan/vim-phpmanual'
+        Plugin 'alvan/vim-php-manual'
 
 c. Use other package manager.
 
@@ -30,4 +30,4 @@ Screenshots
 -----------
 
 GVim PHP help doc:
-![doc.png](screenshots/20140730/doc.png)
+![doc.png](screenshots/20140829/doc.png)

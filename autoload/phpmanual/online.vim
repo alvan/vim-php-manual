@@ -1,7 +1,6 @@
 " == "acomment" == {{{
 "
 "          File:  online.vim
-"          Path:  ~/.vim/autoload/phpmanual/
 "        Author:  Alvan
 "      Modifier:  Alvan
 "      Modified:  2014-08-20

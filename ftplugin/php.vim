@@ -1,7 +1,6 @@
 " == "acomment" == {{{
 "
 "          File:  php.vim
-"          Path:  ~/.vim/ftplugin
 "        Author:  Alvan
 "      Modifier:  Alvan
 "      Modified:  2014-07-22

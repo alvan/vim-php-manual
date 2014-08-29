@@ -8,7 +8,6 @@
  *          Usage:  1. Download PHP manual from http://php.net/get/php_manual_en.tar.gz/from/a/mirror
  *                  2. Extract all files into an directory src/
  *                  3. Run in terminal: php doc.php
- *                  4. Use Vim to open doc/tags, do :%sort and :wq
  */
 error_reporting(E_ALL);
 ini_set('display_errors', 'on');
