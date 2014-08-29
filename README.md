@@ -1,4 +1,4 @@
-PHP manual
+PHP Manual
 ==========
 
 This is php manual plugin for vim with help keyword doc.
