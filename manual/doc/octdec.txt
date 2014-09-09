@@ -25,14 +25,6 @@ Returns the decimal equivalent of the octal number represented by the
 The decimal representation of {octal_string}
 
 ==============================================================================
-*Changelog*
-
-Version                              Description
-        The function can now convert numbers that are too large to fit into
-4.1.0   the platforms integer type, larger values are returned as float in
-        that case.
-
-==============================================================================
 *Examples*
 
 Example #1 octdec() example
@@ -46,6 +38,14 @@ The above example will output:
 
 63
 45
+
+==============================================================================
+*Notes*
+
+    Note:
+
+    The function can convert numbers that are too large to fit into the
+    platforms integer type, larger values are returned as float in that case.
 
 ==============================================================================
 *See* *Also*

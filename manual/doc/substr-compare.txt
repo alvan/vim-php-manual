@@ -45,13 +45,14 @@ substr_compare() compares {main_str} from position {offset} with {str} up to
 
 Returns < 0 if {main_str} from position {offset} is less than {str}, > 0 if it
 is greater than {str}, and 0 if they are equal. If {offset} is equal to or
-greater than the length of {main_str} or {length} is set and is less than 1, 
-substr_compare() prints a warning and returns FALSE.
+greater than the length of {main_str}, or the {length} is set and is less than
+1 (prior to PHP 5.6), substr_compare() prints a warning and returns FALSE.
 
 ==============================================================================
 *Changelog*
 
 Version                    Description
+5.6.0   {length} may now be 0.
 5.1.0   Added the possibility to use a negative {offset}.
 
 ==============================================================================

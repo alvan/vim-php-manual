@@ -47,18 +47,6 @@ If the passed callback is not callable a E_WARNING level error will be
 generated.
 
 ==============================================================================
-*Changelog*
-
-Version                              Description
-        The shutdown functions are now called as a part of the request. In
-        earlier versions under Apache, the registered shutdown functions were
-        called after the request has been completed (including sending any
-4.1.0   output buffers), so it was not possible to send output to the browser
-        using |echo| or |print|, or retrieve the contents of any output
-        buffers using |ob_get_contents|. Headers were also always already
-        sent.
-
-==============================================================================
 *Examples*
 
 Example #1 register_shutdown_function() example

@@ -43,7 +43,9 @@ custom error handler cannot be called since it is not registered at that time.
 {error_handler}
 
     A callback with the following signature. NULL may be passed instead, to
-    reset this handler to its default state.
+    reset this handler to its default state. Instead of a function name, an
+    array containing an object reference and a method name can also be
+    supplied.
 
 
     bool handler ( int $errno , string $errstr [, string $errfile [, int~
@@ -89,14 +91,9 @@ and the method name.
 ==============================================================================
 *Changelog*
 
-Version                              Description
+Version                          Description
 5.5.0   {error_handler} now accepts NULL.
 5.2.0   The error handler must return FALSE to populate $php_errormsg.
-5.0.0   The {error_types} parameter was introduced.
-4.3.0   Instead of a function name, an array containing an object reference
-        and a method name can also be supplied as the {error_handler}.
-4.0.2   Three optional parameters for the {error_handler} user function was
-        introduced. These are the filename, the line number, and the context.
 
 ==============================================================================
 *Examples*

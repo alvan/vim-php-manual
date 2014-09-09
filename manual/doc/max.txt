@@ -16,10 +16,11 @@ biggest of these values.
 
     Note:
 
-    PHP will evaluate a non-numeric string as 0 if compared to integer, but
-    still return the string if it's seen as the numerically highest value. If
-    multiple arguments evaluate to 0, max() will return a numeric 0 if given,
-    else the alphabetical highest string value will be returned.
+    Values of different types will be compared using the standard comparison
+    rules. For instance, a non-numeric string will be compared to an integer
+    as though it were 0, but multiple string values will be compared
+    alphanumerically. The actual value returned will be of the original type
+    with no conversion applied.
 
 ==============================================================================
 *Parameters*
@@ -43,15 +44,9 @@ biggest of these values.
 ==============================================================================
 *Return* *Values*
 
-max() returns the numerically highest of the parameter values. If multiple
-values can be considered of the same size, the one that is listed first will
-be returned.
-
-When max() is given multiple arrays, the longest array is returned. If all the
-arrays have the same length, max() will use lexicographic ordering to find the
-return value.
-
-When given a string it will be cast as an integer when comparing.
+max() returns the parameter value considered "highest" according to standard
+comparisons. If multiple values of different types evaluate as equal (e.g. 0
+and 'abc') the first provided to the function will be returned.
 
 ==============================================================================
 *Examples*
@@ -59,30 +54,38 @@ When given a string it will be cast as an integer when comparing.
 Example #1 Example uses of max()
 
 <?php >
-    echo max(1, 3, 5, 6, 7);  // 7
+    echo max(2, 3, 1, 6, 7);  // 7
     echo max(array(2, 4, 5)); // 5
 
+    // The string 'hello' when compared to an int is treated as 0
     //
-     When 'hello' is cast as integer it will be 0. Both the parameters are equally
-    // long, so the order they are given in determines the result
+     Since the two values are equal, the order they are provided determines the result
     echo max(0, 'hello');     // 0
     echo max('hello', 0);     // hello
 
-    echo max('42', 3); // '42'
-
-    // Here 0 > -1, so 'hello' is the return value.
-    echo max(-1, 'hello');    // hello
+    // Here we are comparing -1 < 0, so 'hello' is the highest value
+    echo max('hello', -1);    // hello
 
     // With multiple arrays of different lengths, max returns the longest
     $val = max(array(2, 2, 2), array(1, 1, 1, 1)); // array(1, 1, 1, 1)
 
-    // With multiple arrays of the same length, max compares from left to right
-    // using lexicographic order, so in our example: 2 == 2, but 4 < 5
-    $val = max(array(2, 4, 8), array(2, 5, 7)); // array(2, 5, 7)
+    // Multiple arrays of the same length are compared from left to right
+    // so in our example: 2 == 2, but 5 > 4
+    $val = max(array(2, 4, 8), array(2, 5, 1)); // array(2, 5, 1)
 
-    // If both an array and non-array are given, the array
-    // is always returned as it's seen as the largest
+    // If both an array and non-array are given, the array will be returned
+    // as comparisons treat arrays as greater than any other value
     $val = max('string', array(2, 5, 7), 42);   // array(2, 5, 7)
+
+    // If one argument is NULL or a boolean, it will be compared against
+    // other values using the rule FALSE 
+    < TRUE regardless of the other types involved
+    // In the below examples, -10 is treated as TRUE in the comparison
+    $val = max(-10, FALSE); // -10
+    $val = max(-10, FALSE); // -10
+
+    // 0, on the other hand, is treated as FALSE, so is "lower than" TRUE
+    $val = max(0, TRUE); // TRUE
 <?>
 
 ==============================================================================

@@ -282,6 +282,56 @@ fabric_sharding_lookup_servers_xml_failure understood. Please note, the current 
                                            experimental implementation does not       1.6.0.
                                            distinguish between valid errors returned
                                            and malformed replies.
+xa_begin                                   How many XA/distributed transactions have  Since
+                                           been started using |mysqlnd_ms_xa_begin|.  1.6.0.
+                                           How many XA/distributed transactions have  Since
+xa_commit_success                          been successfully committed using |        1.6.0.
+                                           mysqlnd_ms_xa_commit|.
+                                           How many XA/distributed transactions       Since
+xa_commit_failure                          failed to commit during |                  1.6.0.
+                                           mysqlnd_ms_xa_commit|.
+                                           How many XA/distributed transactions have
+                                           been successfully rolled back using |
+xa_rollback_success                        mysqlnd_ms_xa_rollback|. The figure does   Since
+                                           not include implict rollbacks performed as 1.6.0.
+                                           a result of |mysqlnd_ms_xa_commit|
+                                           failure.
+                                           How many XA/distributed transactions could
+                                           not be rolled back. This includes failures
+                                           of |mysqlnd_ms_xa_rollback| but also       Since
+xa_rollback_failure                        failured during rollback when closing a    1.6.0.
+                                           connection, if rollback_on_close is set.
+                                           Please, see also xa_rollback_on_close
+                                           below.
+                                           Total number of participants in any XA     Since
+xa_participants                            transaction started with |                 1.6.0.
+                                           mysqlnd_ms_xa_begin|.
+                                           How many XA transactions have been rolled
+                                           back implicitly when a connection was
+xa_rollback_on_close                       close and rollback_on_close is set.        Since
+                                           Depending on your coding policies, this    1.6.0.
+                                           may hint a flaw in your code as you may
+                                           prefer to explicitly clean up resources.
+pool_masters_total                         Number of master servers (connections) in  Since
+                                           the internal connection pool.              1.6.0.
+pool_slaves_total                          Number of slave servers (connections) in   Since
+                                           the internal connection pool.              1.6.0.
+                                           Number of master servers (connections)
+pool_masters_active                        from the internal connection pool which    Since
+                                           are currently used for picking a           1.6.0.
+                                           connection.
+                                           Number of slave servers (connections) from Since
+pool_slaves_active                         the internal connection pool which are     1.6.0.
+                                           currently used for picking a connection.
+                                           How often the active connection list has   Since
+pool_updates                               been replaced and a new set of master and  1.6.0.
+                                           slave servers had been installed.
+                                           How often a master connection has been     Since
+pool_master_reactivated                    reused after being flushed from the active 1.6.0.
+                                           list.
+                                           How often a slave connection has been      Since
+pool_slave_reactivated                     reused after being flushed from the active 1.6.0.
+                                           list.
 
 ==============================================================================
 *Examples*

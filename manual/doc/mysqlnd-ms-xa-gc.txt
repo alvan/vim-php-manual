@@ -8,7 +8,8 @@ errors
 ==============================================================================
 *Description*
 
-    int mysqlnd_ms_xa_gc ( mixed $connection [, string $gtrid ] )~
+    int mysqlnd_ms_xa_gc ( mixed $connection [, string $gtrid [, boolean~
+    $ignore_max_retries ]] )~
 
 Garbage collects unfinished XA transactions.
 
@@ -50,11 +51,19 @@ the plugin configuration directive garbage_collection for details.
     considers the transaction only. Otherwise, the state store is scanned for
     any unfinished transaction.
 
+{ignore_max_retries}
+
+    Whether to ignore the plugin configuration max_retries setting. If garbage
+    collection continously fails and the max_retries limit is reached prior to
+    finishing the failed global transaction, you can attempt further runs
+    prior to investigating the cause and solving the issue manually by
+    issueing appropriate SQL statements on the participants. Setting the
+    parameter has the same effect as temporarily setting max_retries = 0.
+
 ==============================================================================
 *Return* *Values*
 
-Returns TRUE if the global transaction has been rolled back. Otherwise,
-returns FALSE
+Returns TRUE if garbage collection was successful. Otherwise, returns FALSE
 
 ==============================================================================
 *See* *Also*
@@ -62,6 +71,8 @@ returns FALSE
   * Quickstart XA/Distributed transactions
   * Runtime configuration
   * State store configuration
+  * |mysqlnd_ms_get_stats| - Returns query distribution and connection
+    statistics
 
 
 vim:ft=help:

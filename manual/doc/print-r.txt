@@ -47,18 +47,6 @@ Otherwise, the return value is TRUE.
     buffering so it cannot be used inside an |ob_start| callback function.
 
 ==============================================================================
-*Changelog*
-
-Version                              Description
-        The {return} parameter was added. If you need to capture the output of
-4.3.0   print_r() with an older version of PHP prior, use the output-control
-        functions.
-        Prior to PHP 4.0.4, print_r() will continue forever if given an array
-4.0.4   or object that contains a direct or indirect reference to itself. An
-        example is print_r($GLOBALS) because $GLOBALS is itself a global
-        variable that contains a reference to itself.
-
-==============================================================================
 *Examples*
 
 Example #1 print_r() example

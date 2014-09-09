@@ -58,20 +58,6 @@ last.
 This function returns a string or an array with the replaced values.
 
 ==============================================================================
-*Changelog*
-
-Version                              Description
-5.0.0   The {count} parameter was added.
-        The behaviour of this function changed. In older versions a bug
-        existed when using arrays as both {search} and {replace} parameters
-        which caused empty {search} indexes to be skipped without advancing
-4.3.3   the internal pointer on the {replace} array. This has been corrected
-        in PHP 4.3.3, any scripts which relied on this bug should remove empty
-        search values prior to calling this function in order to mimic the
-        original behavior.
-4.0.5   Most parameters can now be an array.
-
-==============================================================================
 *Examples*
 
 Example #1 Basic str_replace() examples

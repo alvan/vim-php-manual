@@ -102,6 +102,13 @@ available:
 Returns the hashed string or a string that is shorter than 13 characters and
 is guaranteed to differ from the salt on failure.
 
+Warning
+
+When validating passwords, a string comparison function that isn't vulnerable
+to timing attacks should be used to compare the output of crypt() to the
+previously known hash. PHP 5.6 onwards provides |hash_equals| for this
+purpose.
+
 ==============================================================================
 *Changelog*
 
@@ -130,7 +137,7 @@ Example #1 crypt() examples
        password, to avoid problems when different hashing algorithms are used. (As
        it says above, standard DES-based password hashing uses a 2-character salt,
        but MD5-based hashing uses 12.) */
-    if (crypt($user_input, $hashed_password) == $hashed_password) {
+    if (hash_equals($hashed_password, crypt($user_input, $hashed_password)) {
        echo "Password verified!";
     }
 <?>
@@ -198,6 +205,7 @@ SHA-512:      $6$rounds=5000$usesomesillystri$D4IrlXatmP7rx3P3InaxBeoomnAihCKRVQ
 ==============================================================================
 *See* *Also*
 
+  * |hash_equals| - Timing attack safe string comparison
   * |password_hash| - Creates a password hash
   * |md5| - Calculate the md5 hash of a string
   * The Mcrypt extension

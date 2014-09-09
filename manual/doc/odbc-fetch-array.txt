@@ -9,8 +9,7 @@ odbc_fetch_array — Fetch a result row as an associative array
 
     array odbc_fetch_array ( resource $result [, int $rownumber ] )~
 
-Fetch an associative array from an ODBC query. See the changelog below for
-when this function is available.
+Fetch an associative array from an ODBC query.
 
 ==============================================================================
 *Parameters*
@@ -30,12 +29,10 @@ Returns an array that corresponds to the fetched row, or FALSE if there are no
 more rows.
 
 ==============================================================================
-*Changelog*
+*Notes*
 
-Version                             Description
-4.3.3   This function exists when compiled with IBM DB2 or UnixODBC support.
-4.3.2   This function exists when compiled for Windows.
-4.0.2   This function exists when compiled with DBMaker support.
+    Note: This function exists when compiled with DBMaker, IBM DB2 or UnixODBC
+    support.
 
 ==============================================================================
 *See* *Also*

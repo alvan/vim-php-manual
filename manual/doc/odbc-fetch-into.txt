@@ -35,17 +35,6 @@ Fetch one result row into array.
 Returns the number of columns in the result; FALSE on error.
 
 ==============================================================================
-*Changelog*
-
-Version                              Description
-4.2.0   The {result_array} and {rownumber} parameters have been swapped. This
-        allows the rownumber to be a constant again.
-4.0.6   The {rownumber} can no longer be passed in as a constant, but rather
-        as a variable. This again changed in 4.2.0.
-4.0.5   The {result_array} parameter no longer needs to be passed in by
-        reference.
-
-==============================================================================
 *Examples*
 
 Example #1 odbc_fetch_into() examples

@@ -7,7 +7,7 @@ set_time_limit — Limits the maximum execution time
 ==============================================================================
 *Description*
 
-    void set_time_limit ( int $seconds )~
+    bool set_time_limit ( int $seconds )~
 
 Set the number of seconds a script is allowed to run. If this is reached, the
 script returns a fatal error. The default limit is 30 seconds or, if it
@@ -29,7 +29,7 @@ total of 45 seconds before timing out.
 ==============================================================================
 *Return* *Values*
 
-No value is returned.
+Returns TRUE on success, or FALSE on failure.
 
 ==============================================================================
 *Notes*

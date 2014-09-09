@@ -8,7 +8,8 @@ html_entity_decode — Convert all HTML entities to their applicable characters
 *Description*
 
     string html_entity_decode ( string $string [, int $flags = ENT_COMPAT |~
-    ENT_HTML401 [, string $encoding = "UTF-8" ]] )~
+    ENT_HTML401 [, string $encoding = ini_get("default_charset") ]]~
+)~
 
 html_entity_decode() is the opposite of |htmlentities| in that it converts all
 HTML entities in the {string} to their applicable characters.
@@ -45,9 +46,18 @@ type. All other entities are left as is.
 
 {encoding}
 
-    Encoding to use. If omitted, the default value for this argument is
-    ISO-8859-1 in versions of PHP prior to 5.4.0, and UTF-8 from PHP 5.4.0
-    onwards.
+    An optional argument defining the encoding used when converting
+    characters.
+
+    If omitted, the default value of the {encoding} varies depending on the
+    PHP version in use. In PHP 5.6 and later, the default_charset
+    configuration option is used as the default value. PHP 5.4 and 5.5 will
+    use UTF-8 as the default. Earlier versions of PHP use ISO-8859-1.
+
+    Although this argument is technically optional, you are highly encouraged
+    to specify the correct value for your code if you are using PHP 5.5 or
+    earlier, or if your default_charset configuration option may be set
+    incorrectly for the given input.
 
     The following character sets are supported:
 
@@ -95,10 +105,11 @@ Returns the decoded string.
 *Changelog*
 
 Version                              Description
+5.6.0   The default value for the {encoding} parameter was changed to be the
+        value of the default_charset configuration option.
 5.4.0   Default encoding changed from ISO-8859-1 to UTF-8.
 5.4.0   The constants ENT_HTML401, ENT_XML1, ENT_XHTML and ENT_HTML5 were
         added.
-5.0.0   Support for multi-byte encodings was added.
 
 ==============================================================================
 *Examples*

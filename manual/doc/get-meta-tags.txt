@@ -52,12 +52,6 @@ rest is converted to lower case. If two meta tags have the same name, only the
 last one is returned.
 
 ==============================================================================
-*Changelog*
-
-Version                   Description
-4.0.5   Support for unquoted HTML attributes was added.
-
-==============================================================================
 *Examples*
 
 Example #2 What get_meta_tags() returns
@@ -79,7 +73,8 @@ Example #2 What get_meta_tags() returns
 
     Note:
 
-    Only meta tags with name attributes will be parsed.
+    Only meta tags with name attributes will be parsed. Quotes are not
+    required.
 
 ==============================================================================
 *See* *Also*

@@ -37,18 +37,6 @@ A string containing the last notice on the given {connection}, or FALSE on
 error.
 
 ==============================================================================
-*Changelog*
-
-Version                              Description
-4.3.0   This function is now fully implemented. Earlier versions ignores
-        database connection parameter.
-4.3.0   The pgsql.ignore_notice and pgsql.log_notice php.ini directives were
-        added.
-        PHP 4.0.6 has problem with notice message handling. Use of the
-4.0.6   PostgreSQL module with PHP 4.0.6 is not recommended even if you are
-        not using pg_last_notice().
-
-==============================================================================
 *Examples*
 
 Example #1 pg_last_notice() example

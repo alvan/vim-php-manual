@@ -40,13 +40,6 @@ Takes the filepointer, {handle}, and truncates the file to length, {size}.
 Returns TRUE on success or FALSE on failure.
 
 ==============================================================================
-*Changelog*
-
-Version                              Description
-4.3.3   Prior to this release ftruncate() returned an integer value of 1 on
-        success, instead of boolean TRUE.
-
-==============================================================================
 *Examples*
 
 Example #1 File truncation example

@@ -25,16 +25,6 @@ Files that are included or required multiple times only show up once in the
 returned array.
 
 ==============================================================================
-*Changelog*
-
-Version                              Description
-        In PHP 4.0.1 and previous versions this function assumed that the
-        required files ended in the extension .php; other extensions would not
-4.0.1   be returned. The array returned by get_included_files() was an
-        associative array and only listed files included by |include| and 
-        |include_once|.
-
-==============================================================================
 *Examples*
 
 Example #1 get_included_files() example

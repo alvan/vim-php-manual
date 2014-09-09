@@ -66,8 +66,6 @@ Version                              Description
 5.0.2   computed from today's midnight. This differs from other versions where
         it is correctly computed from current time.
 5.0.0   Microseconds began to be allowed, but they are ignored.
-4.4.0   In PHP versions prior to 4.4.0, "next" is incorrectly computed as +2.
-        A typical solution to this is to use "+1".
 
 ==============================================================================
 *Examples*
@@ -112,11 +110,11 @@ Example #2 Checking for failure
     The valid range of a timestamp is typically from Fri, 13 Dec 1901 20:45:54
     UTC to Tue, 19 Jan 2038 03:14:07 UTC. (These are the dates that correspond
     to the minimum and maximum values for a 32-bit signed integer.)
-    Additionally, not all platforms support negative timestamps, therefore
-    your date range may be limited to no earlier than the Unix epoch. This
-    means that e.g. dates prior to Jan 1, 1970 will not work on Windows, some
-    Linux distributions, and a few other operating systems. PHP 5.1.0 and
-    newer versions overcome this limitation though.
+
+    Prior to PHP 5.1.0, not all platforms support negative timestamps,
+    therefore your date range may be limited to no earlier than the Unix
+    epoch. This means that e.g. dates prior to Jan 1, 1970 will not work on
+    Windows, some Linux distributions, and a few other operating systems.
 
     For 64-bit versions of PHP, the valid range of a timestamp is effectively
     infinite, as 64 bits can represent approximately 293 billion years in

@@ -16,7 +16,7 @@ Finds out whether the extension is loaded.
 
 {name}
 
-    The extension name.
+    The extension name. This parameter is case-insensitive.
 
     You can see the names of various extensions by using |phpinfo| or if
     you're using the CGI or CLI version of PHP you can use the -m switch to
@@ -55,16 +55,6 @@ Example #1 extension_loaded() example
         }
     }
 <?>
-
-==============================================================================
-*Changelog*
-
-Version                              Description
-        extension_loaded() uses the internal extension name to test whether a
-        certain extension is available or not. Most internal extension names
-5.0.0   are written in lower case but there may be extensions available which
-        also use uppercase letters. Prior to PHP 5, this function compared the
-        names case sensitively.
 
 ==============================================================================
 *See* *Also*

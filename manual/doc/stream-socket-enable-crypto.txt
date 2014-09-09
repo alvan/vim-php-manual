@@ -39,6 +39,9 @@ off dynamically by passing TRUE or FALSE in the {enable} parameter.
       + STREAM_CRYPTO_METHOD_SSLv23_SERVER
       + STREAM_CRYPTO_METHOD_TLS_SERVER
 
+    If omitted, the {crypto_type} context option on the stream's SSL context
+    will be used instead.
+
 {session_stream}
 
     Seed the stream with settings from {session_stream}.
@@ -48,6 +51,12 @@ off dynamically by passing TRUE or FALSE in the {enable} parameter.
 
 Returns TRUE on success, FALSE if negotiation has failed or 0 if there isn't
 enough data and you should try again (only for non-blocking sockets).
+
+==============================================================================
+*Changelog*
+
+Version            Description
+5.6.0   The {crypto_type} is now optional.
 
 ==============================================================================
 *Examples*

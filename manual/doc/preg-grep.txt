@@ -34,17 +34,6 @@ the given {pattern}.
 Returns an array indexed using the keys from the {input} array.
 
 ==============================================================================
-*Changelog*
-
-Version                              Description
-4.2.0   The {flags} parameter was added.
-        Prior to this version, the returned array was indexed regardless of
-        the keys of the {input} array.
-4.0.4
-        If you want to reproduce this old behavior, use |array_values| on the
-        returned array to reindex the values.
-
-==============================================================================
 *Examples*
 
 Example #1 preg_grep() example

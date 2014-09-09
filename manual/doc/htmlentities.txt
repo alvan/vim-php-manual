@@ -8,8 +8,8 @@ htmlentities — Convert all applicable characters to HTML entities
 *Description*
 
     string htmlentities ( string $string [, int $flags = ENT_COMPAT |~
-    ENT_HTML401 [, string $encoding = "UTF-8" [, bool~
-    $double_encode = true ]]] )~
+    ENT_HTML401 [, string $encoding = ini_get("default_charset") [,~
+    bool $double_encode = true ]]] )~
 
 This function is identical to |htmlspecialchars| in all ways, except with 
 htmlentities(), all characters which have HTML character entity equivalents
@@ -53,12 +53,18 @@ If you want to decode instead (the reverse) you can use |html_entity_decode|.
 
 {encoding}
 
-    Like |htmlspecialchars|, htmlentities() takes an optional third argument
-    {encoding} which defines encoding used in conversion. From PHP 5.6.0,
-    default_charset value is used as default. From PHP 5.4.0, UTF-8 is the
-    default. PHP prior to 5.4.0, ISO-8859-1 is used as the default. Although
-    this argument is technically optional, you are highly encouraged to
-    specify the correct value for your code.
+    An optional argument defining the encoding used when converting
+    characters.
+
+    If omitted, the default value of the {encoding} varies depending on the
+    PHP version in use. In PHP 5.6 and later, the default_charset
+    configuration option is used as the default value. PHP 5.4 and 5.5 will
+    use UTF-8 as the default. Earlier versions of PHP use ISO-8859-1.
+
+    Although this argument is technically optional, you are highly encouraged
+    to specify the correct value for your code if you are using PHP 5.5 or
+    earlier, or if your default_charset configuration option may be set
+    incorrectly for the given input.
 
     The following character sets are supported:
 
@@ -115,13 +121,13 @@ ENT_SUBSTITUTE flags are set.
 *Changelog*
 
 Version                              Description
+5.6.0   The default value for the {encoding} parameter was changed to be the
+        value of the default_charset configuration option.
 5.4.0   The default value for the {encoding} parameter was changed to UTF-8.
 5.4.0   The constants ENT_SUBSTITUTE, ENT_DISALLOWED, ENT_HTML401, ENT_XML1,
         ENT_XHTML and ENT_HTML5 were added.
 5.3.0   The constant ENT_IGNORE was added.
 5.2.3   The {double_encode} parameter was added.
-4.1.0   The {encoding} parameter was added.
-4.0.3   The {flags} parameter was added.
 
 ==============================================================================
 *Examples*

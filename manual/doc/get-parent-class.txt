@@ -16,7 +16,8 @@ Retrieves the parent class name for object or class.
 
 {object}
 
-    The tested object or class name
+    The tested object or class name. This parameter is optional if called from
+    the object's method.
 
 ==============================================================================
 *Return* *Values*
@@ -37,9 +38,6 @@ If called without parameter outside object, this function returns FALSE.
 Version                              Description
 5.1.0   If called without parameter outside object, this function would have
         returned NULL with a warning, but now returns FALSE.
-5.0.0   The {object} parameter is optional if called from the object's method.
-4.0.5   If {object} is a string, returns the name of the parent class of the
-        class with that name.
 
 ==============================================================================
 *Examples*

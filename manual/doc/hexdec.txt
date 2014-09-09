@@ -28,13 +28,6 @@ hexdec() will ignore any non-hexadecimal characters it encounters.
 The decimal representation of {hex_string}
 
 ==============================================================================
-*Changelog*
-
-Version                              Description
-4.1.0   The function can now convert values that are too big for the platforms
-        integer type, it will return the value as float instead in that case.
-
-==============================================================================
 *Examples*
 
 Example #1 hexdec() example
@@ -47,6 +40,14 @@ Example #1 hexdec() example
     var_dump(hexdec("that")); // print "int(10)"
     var_dump(hexdec("a0")); // print "int(160)"
 <?>
+
+==============================================================================
+*Notes*
+
+    Note:
+
+    The function can convert numbers that are too large to fit into the
+    platforms integer type, larger values are returned as float in that case.
 
 ==============================================================================
 *See* *Also*

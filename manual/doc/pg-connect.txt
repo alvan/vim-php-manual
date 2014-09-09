@@ -46,10 +46,21 @@ The old syntax with multiple parameters $conn = pg_connect("host", "port",
     If PGSQL_CONNECT_FORCE_NEW is passed, then a new connection is created,
     even if the {connection_string} is identical to an existing connection.
 
+    If PGSQL_CONNECT_ASYNC is given, then the connection is established
+    asynchronously. The state of the connection can then be checked via 
+    |pg_connect_poll| or |pg_connection_status|.
+
 ==============================================================================
 *Return* *Values*
 
 PostgreSQL connection resource on success, FALSE on failure.
+
+==============================================================================
+*Changelog*
+
+Version                              Description
+5.6.0   Support for giving the PGSQL_CONNECT_ASYNC constant as the
+        {connect_type} was added.
 
 ==============================================================================
 *Examples*

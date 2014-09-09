@@ -59,18 +59,6 @@ The result array contains the following items:
   * uri (string) - the URI/filename associated with this stream.
 
 ==============================================================================
-*Changelog*
-
-Version                              Description
-5.0.0   The following entries were added in the returned array: mode, seekable
-        , and uri.
-4.3.0   The following entries were added in the returned array: stream_type,
-        wrapper_type, wrapper_data, and filters.
-        |socket_get_status| is an alias for this function. Prior to PHP 4.3.0,
-4.3.0   it was used to retrieve the first four items, for socket based streams
-        only.
-
-==============================================================================
 *Examples*
 
 Example #1 stream_get_meta_data() example

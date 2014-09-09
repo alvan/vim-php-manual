@@ -37,37 +37,9 @@ incrementing keys starting from zero in the result array.
 Returns the resulting array.
 
 ==============================================================================
-*Changelog*
-
-Version                              Description
-        Warning
-
-        The behavior of array_merge() was modified in PHP 5. Unlike PHP 4, 
-        array_merge() now only accepts parameters of type array. However, you
-        can use typecasting to merge other types. See the example below for
-        details.
-
-        Example #1 array_merge() PHP 5 example
-
-        <?php >
-        $beginning = 'foo';
-5.0.0   $end = array(1 => 'bar');
-        $result = array_merge((array)$beginning, (array)$end);
-        print_r($result);
-<        ?>
-
-        The above example will output:
-
-            Array
-            (
-                [0] => foo
-                [1] => bar
-            )
-
-==============================================================================
 *Examples*
 
-Example #2 array_merge() example
+Example #1 array_merge() example
 
 <?php >
     $array1 = array("color" => "red", 2, 4);
@@ -89,7 +61,7 @@ Array
     [4] => 4
 )
 
-Example #3 Simple array_merge() example
+Example #2 Simple array_merge() example
 
 <?php >
     $array1 = array();
@@ -131,6 +103,23 @@ array(5) {
   [4]=>
   string(6) "four_b"
 }
+
+Example #3 array_merge() with non-array types
+
+<?php >
+    $beginning = 'foo';
+    $end = array(1 => 'bar');
+    $result = array_merge((array)$beginning, (array)$end);
+    print_r($result);
+<?>
+
+The above example will output:
+
+    Array
+    (
+        [0] => foo
+        [1] => bar
+    )
 
 ==============================================================================
 *See* *Also*

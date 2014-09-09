@@ -212,12 +212,12 @@ Sets an option on the given cURL session handle.
                                     outputting it out
                                     directly.
                                     TRUE to disable support
-                                    for the @ prefix for     Added in PHP 5.5.0.
-                                    uploading files in       Currenly FALSE by
-                                    CURLOPT_POSTFIELDS,      default, but this is
-    CURLOPT_SAFE_UPLOAD             which means that values  likely to be changed
-                                    starting with @ can be   in a future version of
-                                    safely passed as fields. PHP.
+                                    for the @ prefix for
+                                    uploading files in       Added in PHP 5.5.0
+                                    CURLOPT_POSTFIELDS,      with FALSE as the
+    CURLOPT_SAFE_UPLOAD             which means that values  default value. PHP
+                                    starting with @ can be   5.6.0 changes the
+                                    safely passed as fields. default value to TRUE.
                                     CURLFile may be used for
                                     uploads instead.
                                     FALSE to stop cURL from
@@ -770,6 +770,7 @@ Returns TRUE on success or FALSE on failure.
 *Changelog*
 
 Version                              Description
+5.6.0   CURL_SAFE_UPLOAD is now TRUE by default.
 5.6.0   Removed CURLOPT_CLOSEPOLICY and associated values.
 5.5.0   Added the cURL resource as the first argument to the
         CURLOPT_PROGRESSFUNCTION callback.

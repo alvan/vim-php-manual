@@ -7,7 +7,7 @@ mcrypt_create_iv — Creates an initialization vector (IV) from a random source
 ==============================================================================
 *Description*
 
-    string mcrypt_create_iv ( int $size [, int $source = MCRYPT_DEV_RANDOM ]~
+    string mcrypt_create_iv ( int $size [, int $source = MCRYPT_DEV_URANDOM ]~
 )~
 
 Creates an initialization vector (IV) from a random source.
@@ -30,6 +30,9 @@ even can send it along with your ciphertext without losing security.
     MCRYPT_DEV_URANDOM (read data from /dev/urandom). Prior to 5.3.0,
     MCRYPT_RAND was the only one supported on Windows.
 
+    Note that the default value of this parameter was MCRYPT_DEV_RANDOM prior
+    to PHP 5.6.0.
+
 ==============================================================================
 *Return* *Values*
 
@@ -39,6 +42,7 @@ Returns the initialization vector, or FALSE on error.
 *Changelog*
 
 Version                              Description
+5.6.0   MCRYPT_DEV_URANDOM is now the default value of {source}.
 5.3.0   MCRYPT_DEV_RANDOM and MCRYPT_DEV_URANDOM became available on Windows
         platforms.
 5.3.0   It is no longer required to call |srand| first. This is now done

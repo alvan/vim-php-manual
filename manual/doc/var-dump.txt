@@ -13,8 +13,9 @@ This function displays structured information about one or more expressions
 that includes its type and value. Arrays and objects are explored recursively
 with values indented to show structure.
 
-In PHP 5 all public, private and protected properties of objects will be
-returned in the output.
+All public, private and protected properties of objects will be returned in
+the output unless the object implements a __debugInfo() method (implemented in
+PHP 5.6.0).
 
 Tip
 
@@ -83,6 +84,7 @@ bool(true)
     value to output
   * |var_export| - Outputs or returns a parsable string representation of a
     variable
+  * __debugInfo()
 
 
 vim:ft=help:

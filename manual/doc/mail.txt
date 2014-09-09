@@ -113,15 +113,10 @@ it does NOT mean the mail will actually reach the intended destination.
 ==============================================================================
 *Changelog*
 
-Version                               Description
-4.3.0    All custom headers (like From, Cc, Bcc and Date) are supported, and
-(Windows are not case-sensitive. (As custom headers are not interpreted by the
-only)    MTA in the first place, but are parsed by PHP, PHP < 4.3 only
-         supported the Cc header element and was case-sensitive).
-         The {additional_parameters} parameter is disabled in safe_mode and
-4.2.3    the mail() function will expose a warning message and return FALSE
-         when used.
-4.0.5    The {additional_parameters} parameter was added.
+Version                              Description
+        The {additional_parameters} parameter is disabled in safe_mode and the
+4.2.3   mail() function will expose a warning message and return FALSE when
+        used.
 
 ==============================================================================
 *Examples*

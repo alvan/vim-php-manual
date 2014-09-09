@@ -14,7 +14,7 @@ These characters are single quote ('), double quote ("), backslash (\) and NUL
 (the NULL byte).
 
 An example use of addslashes() is when you're entering data into string that
-is evaluated by PHP. For example, O'reilly is stored in $str, you need to
+is evaluated by PHP. For example, O'Reilly is stored in $str, you need to
 escape $str. (e.g. eval("echo '".addslashes($str)."';"); )
 
 To escape database parameters, DBMS specific escape function (e.g. 
@@ -55,9 +55,9 @@ Returns the escaped string.
 Example #1 An addslashes() example
 
 <?php >
-    $str = "Is your name O'reilly?";
+    $str = "Is your name O'Reilly?";
 
-    // Outputs: Is your name O\'reilly?
+    // Outputs: Is your name O\'Reilly?
     echo addslashes($str);
 <?>
 

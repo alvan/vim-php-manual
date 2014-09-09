@@ -88,14 +88,6 @@ Version                              Description
 4.3.0   connection will be locked instead of the resource itself. This is
         important to know since in such cases locking is simply ignored on the
         resource and other solutions have to be found.
-        Locking and the {mode} modifiers "l", "d", "-" and "t" were added. In
-4.3.0   previous PHP versions, you must use semaphores to guard against
-        simultaneous database access for any database handler with the
-        exception of GDBM. See System V semaphore support.
-        The open mode "c" was broken for several internal handlers and
-4.3.5   truncated the database instead of appending data to an existent
-        database. Also dbm and ndbm failed on mode "c" in typical
-        configurations (this cannot be fixed).
 
 ==============================================================================
 *See* *Also*
