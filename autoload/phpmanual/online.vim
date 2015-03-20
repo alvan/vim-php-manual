@@ -50,12 +50,14 @@ func! phpmanual#online#open(...)
         return
     en
 
-    let url = shellescape('http://php.net/' . key)
+    let url = 'http://php.net/' . substitute(key, '[\r\n]', '', 'g')
 
     if has("win32") || has("win95") || has("win64") || has("win16")
-        call system("explorer " . url)
+        call system("explorer " . shellescape(url))
+    elseif has("mac")
+        call system('open ' . shellescape(url))
     else
-        call system('xdg-open ' . url .' &')
+        call system('xdg-open ' . shellescape(url))
     endif
 endf
 
