@@ -8,12 +8,12 @@ You can do these with this plugin:
 _in normal mode,_
 
 * press <kbd>SHIFT-k</kbd> to view the Explanation of the keyword under the cursor
-* press <kbd>CTRL-ALT-k</kbd> to see the online manual of the keyword under the cursor
+* press <kbd>CTRL-h</kbd> to see the online manual of the keyword under the cursor
 
 _in visual mode,_
 
 * select content, and then press <kbd>SHIFT-k</kbd> to view the Explanation of the content
-* select content, and then press <kbd>CTRL-ALT-k</kbd> to see the online manual of the content
+* select content, and then press <kbd>CTRL-h</kbd> to see the online manual of the content
 
 Install
 -------
