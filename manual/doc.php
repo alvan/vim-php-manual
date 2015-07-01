@@ -3,7 +3,7 @@
  *           File:  doc.php
  *         Author:  Alvan
  *       Modifier:  Alvan
- *       Modified:  2014-08-07
+ *       Modified:  2015-07-01
  *    Description:  Generate PHP manual for Vim
  *          Usage:  1. Download PHP manual from http://php.net/get/php_manual_en.tar.gz/from/a/mirror
  *                  2. Extract all files into an directory src/
@@ -11,6 +11,9 @@
  */
 error_reporting(E_ALL);
 ini_set('display_errors', 'on');
+
+date_default_timezone_set(@date_default_timezone_get());
+mb_internal_encoding("UTF-8");
 
 define('DIR_SRC', __DIR__ . '/src/');
 define('DIR_TMP', __DIR__ . '/tmp/');
@@ -59,7 +62,7 @@ while (false !== ($src = $dir->read()))
 		$htm = preg_replace('#<hr(?: /)?><div[^>]+class="manualnavbar".*?</div></body>#s', '</body>', $htm);
 		
 		file_put_contents($tmp, $htm);
-		system(sprintf("w3m -cols %d -t %d -o indent_incr=%d -s -no-graph %s > %s", NUM_COL + 1, strlen(STR_TAB), strlen(STR_TAB), $tmp, $doc));
+		system(sprintf("w3m -cols %d -t %d -o indent_incr=%d -no-graph %s > %s", NUM_COL + 1, strlen(STR_TAB), strlen(STR_TAB), $tmp, $doc));
 
 		$txt = file_get_contents($doc);
 		$txt = preg_replace('#^\s?([^\s].+~)$#m', STR_TAB . '\1', $txt);
