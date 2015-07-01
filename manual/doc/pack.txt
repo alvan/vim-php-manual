@@ -34,8 +34,8 @@ and unsigned format codes.
 
     Currently implemented formats are:
 
-                    pack() format characters
-    Code                       Description
+                      pack() format characters
+    Code                         Description
     a    NUL-padded string
     A    SPACE-padded string
     h    Hex string, low nibble first
@@ -52,6 +52,10 @@ and unsigned format codes.
     L    unsigned long (always 32 bit, machine byte order)
     N    unsigned long (always 32 bit, big endian byte order)
     V    unsigned long (always 32 bit, little endian byte order)
+    q    signed long long (always 64 bit, machine byte order)
+    Q    unsigned long long (always 64 bit, machine byte order)
+    J    unsigned long long (always 64 bit, big endian byte order)
+    P    unsigned long long (always 64 bit, little endian byte order)
     f    float (machine dependent size and representation)
     d    double (machine dependent size and representation)
     x    NUL byte
@@ -70,6 +74,8 @@ Returns a binary string containing data.
 *Changelog*
 
 Version                              Description
+5.6.3   The "q", "Q", "J" and "P" codes were added to enable working with
+        64-bit numbers.
 5.5.0   The "Z" code was added with equivalent functionality to "a" for Perl
         compatibility.
 

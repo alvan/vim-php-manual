@@ -1,6 +1,6 @@
 fgetcsv
 
-(PHP 4, PHP 5)
+(PHP 4, PHP 5, PHP 7)
 
 fgetcsv — Gets line from file pointer and parse for CSV fields
 
@@ -9,7 +9,7 @@ fgetcsv — Gets line from file pointer and parse for CSV fields
 
     array fgetcsv ( resource $handle [, int $length = 0 [, string $delimiter~
     = "," [, string $enclosure = '"' [, string~
-    $escape = "\\" ]]]] )~
+    $escape = "\" ]]]] )~
 
 Similar to |fgets| except that fgetcsv() parses the line it reads for fields
 in CSV format and returns an array containing the fields read.
@@ -31,15 +31,18 @@ in CSV format and returns an array containing the fields read.
 
 {delimiter}
 
-    Set the field delimiter (one character only).
+    The optional {delimiter} parameter sets the field delimiter (one character
+    only).
 
 {enclosure}
 
-    Set the field enclosure character (one character only).
+    The optional {enclosure} parameter sets the field enclosure character (one
+    character only).
 
 {escape}
 
-    Set the escape character (one character only). Defaults as a backslash.
+    The optional {escape} parameter sets the escape character (one character
+    only).
 
 ==============================================================================
 *Return* *Values*

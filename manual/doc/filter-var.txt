@@ -22,6 +22,10 @@ filter_var — Filters a variable with a specified filter
     The ID of the filter to apply. The Types of filters manual page lists the
     available filters.
 
+    If omitted, FILTER_DEFAULT will be used, which is equivalent to
+    FILTER_UNSAFE_RAW. This will result in no filtering taking place by
+    default.
+
 {options}
 
     Associative array of options or bitwise disjunction of flags. If filter

@@ -26,7 +26,8 @@ calling |ibase_close|.
 
     The {database} argument has to be a valid path to database file on the
     server it resides on. If the server is not local, it must be prefixed with
-    either 'hostname:' (TCP/IP), '//hostname/' (NetBEUI), depending on the
+    either 'hostname:' (TCP/IP), 'hostname/port:' (TCP/IP with interbase
+    server on custom TCP port), '//hostname/' (NetBEUI), depending on the
     connection protocol used.
 
 {username}

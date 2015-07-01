@@ -30,8 +30,10 @@ Wraps a string to a given number of characters using a string break character.
 {cut}
 
     If the {cut} is set to TRUE, the string is always wrapped at or before the
-    specified width. So if you have a word that is larger than the given
-    width, it is broken apart. (See second example).
+    specified {width}. So if you have a word that is larger than the given
+    width, it is broken apart. (See second example). When FALSE the function
+    does not split the word even if the {width} is smaller than the word
+    width.
 
 ==============================================================================
 *Return* *Values*
@@ -71,6 +73,23 @@ A very
 long
 wooooooo
 ooooord.
+
+Example #3 wordwrap() example
+
+<?php >
+    $text = "A very long woooooooooooooooooord. and something";
+    $newtext = wordwrap($text, 8, "\n", false);
+
+    echo "$newtext\n";
+<?>
+
+The above example will output:
+
+A very
+long
+woooooooooooooooooord.
+and
+something
 
 ==============================================================================
 *See* *Also*

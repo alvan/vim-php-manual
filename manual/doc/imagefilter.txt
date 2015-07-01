@@ -1,6 +1,6 @@
 imagefilter
 
-(PHP 5)
+(PHP 5, PHP 7)
 
 imagefilter — Applies a filter to an image
 
@@ -26,7 +26,8 @@ imagefilter() applies the given filter {filtertype} on the {image}.
       + IMG_FILTER_NEGATE: Reverses all colors of the image.
       + IMG_FILTER_GRAYSCALE: Converts the image into grayscale.
       + IMG_FILTER_BRIGHTNESS: Changes the brightness of the image. Use {arg1}
-        to set the level of brightness.
+        to set the level of brightness. The range for the brightness is -255
+        to 255.
       + IMG_FILTER_CONTRAST: Changes the contrast of the image. Use {arg1} to
         set the level of contrast.
       + IMG_FILTER_COLORIZE: Like IMG_FILTER_GRAYSCALE, except you can specify

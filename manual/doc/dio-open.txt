@@ -34,7 +34,7 @@ dio_open() opens a file and returns a new file descriptor for it.
       + O_CREAT - creates the file, if it doesn't already exist.
 
       + O_EXCL - if both O_CREAT and O_EXCL are set and the file already
-        exists, causes dio_open() to fail.
+        exists, dio_open() will fail.
 
       + O_TRUNC - if the file exists and is opened for write access, the file
         will be truncated to zero length.
@@ -49,8 +49,8 @@ dio_open() opens a file and returns a new file descriptor for it.
 {mode}
 
     If {flags} contains O_CREAT, {mode} will set the permissions of the file
-    (creation permissions). {Mode} is required for correct operation when
-    O_CREAT is specified in mode and is ignored otherwise.
+    (creation permissions). {mode} is required for correct operation when
+    O_CREAT is specified in {flags} and is ignored otherwise.
 
     The actual permissions assigned to the created file will be affected by
     the process's umask setting as per usual.

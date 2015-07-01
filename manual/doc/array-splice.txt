@@ -40,8 +40,9 @@ Note that numeric keys in {input} are not preserved.
     array. If {length} is specified and is positive, then that many elements
     will be removed. If {length} is specified and is negative then the end of
     the removed portion will be that many elements from the end of the array.
-    Tip: to remove everything from {offset} to the end of the array when
-    {replacement} is also specified, use count($input) for {length}.
+    If {length} is specified and is zero, no elements will be removed. Tip: to
+    remove everything from {offset} to the end of the array when {replacement}
+    is also specified, use count($input) for {length}.
 
 {replacement}
 

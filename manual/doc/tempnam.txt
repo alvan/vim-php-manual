@@ -1,6 +1,6 @@
 tempnam
 
-(PHP 4, PHP 5)
+(PHP 4, PHP 5, PHP 7)
 
 tempnam — Create file with unique file name
 
@@ -10,9 +10,9 @@ tempnam — Create file with unique file name
     string tempnam ( string $dir , string $prefix )~
 
 Creates a file with a unique filename, with access permission set to 0600, in
-the specified directory. If the directory does not exist, tempnam() may
-generate a file in the system's temporary directory, and return the full path
-to that file, including its name.
+the specified directory. If the directory does not exist or is not writable, 
+tempnam() may generate a file in the system's temporary directory, and return
+the full path to that file, including its name.
 
 ==============================================================================
 *Parameters*

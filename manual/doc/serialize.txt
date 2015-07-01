@@ -1,6 +1,6 @@
 serialize
 
-(PHP 4, PHP 5)
+(PHP 4, PHP 5, PHP 7)
 
 serialize — Generates a storable representation of a value
 
@@ -88,8 +88,8 @@ Example #1 serialize() example
 
 Warning
 
-When serialize() serializes objects, the leading slash is not included in the
-class name of namespaced classes for maximum compatibility.
+When serialize() serializes objects, the leading backslash is not included in
+the class name of namespaced classes for maximum compatibility.
 
 ==============================================================================
 *See* *Also*

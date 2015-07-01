@@ -1,12 +1,7 @@
-FrenchToJD	frenchtojd.txt	/^FrenchToJD
-GregorianToJD	gregoriantojd.txt	/^GregorianToJD
-JDDayOfWeek	jddayofweek.txt	/^JDDayOfWeek
-JDMonthName	jdmonthname.txt	/^JDMonthName
-JDToFrench	jdtofrench.txt	/^JDToFrench
-JDToGregorian	jdtogregorian.txt	/^JDToGregorian
-JDToJulian	jdtojulian.txt	/^JDToJulian
-JewishToJD	jewishtojd.txt	/^JewishToJD
-JulianToJD	juliantojd.txt	/^JulianToJD
+BSON\fromArray	bson-fromarray.txt	/^BSON\fromArray
+BSON\fromJSON	bson-fromjson.txt	/^BSON\fromJSON
+BSON\toArray	bson-toarray.txt	/^BSON\toArray
+BSON\toJSON	bson-tojson.txt	/^BSON\toJSON
 PDF_activate_item	pdf-activate-item.txt	/^PDF_activate_item
 PDF_add_annotation	pdf-add-annotation.txt	/^PDF_add_annotation
 PDF_add_bookmark	pdf-add-bookmark.txt	/^PDF_add_bookmark
@@ -1329,6 +1324,7 @@ fprintf	fprintf.txt	/^fprintf
 fputcsv	fputcsv.txt	/^fputcsv
 fputs	fputs.txt	/^fputs
 fread	fread.txt	/^fread
+frenchtojd	frenchtojd.txt	/^frenchtojd
 fribidi_log2vis	fribidi-log2vis.txt	/^fribidi_log2vis
 fscanf	fscanf.txt	/^fscanf
 fseek	fseek.txt	/^fseek
@@ -1466,10 +1462,12 @@ gmp_div_q	gmp-div-q.txt	/^gmp_div_q
 gmp_div_qr	gmp-div-qr.txt	/^gmp_div_qr
 gmp_div_r	gmp-div-r.txt	/^gmp_div_r
 gmp_divexact	gmp-divexact.txt	/^gmp_divexact
+gmp_export	gmp-export.txt	/^gmp_export
 gmp_fact	gmp-fact.txt	/^gmp_fact
 gmp_gcd	gmp-gcd.txt	/^gmp_gcd
 gmp_gcdext	gmp-gcdext.txt	/^gmp_gcdext
 gmp_hamdist	gmp-hamdist.txt	/^gmp_hamdist
+gmp_import	gmp-import.txt	/^gmp_import
 gmp_init	gmp-init.txt	/^gmp_init
 gmp_intval	gmp-intval.txt	/^gmp_intval
 gmp_invert	gmp-invert.txt	/^gmp_invert
@@ -1486,6 +1484,8 @@ gmp_pow	gmp-pow.txt	/^gmp_pow
 gmp_powm	gmp-powm.txt	/^gmp_powm
 gmp_prob_prime	gmp-prob-prime.txt	/^gmp_prob_prime
 gmp_random	gmp-random.txt	/^gmp_random
+gmp_random_bits	gmp-random-bits.txt	/^gmp_random_bits
+gmp_random_range	gmp-random-range.txt	/^gmp_random_range
 gmp_root	gmp-root.txt	/^gmp_root
 gmp_rootrem	gmp-rootrem.txt	/^gmp_rootrem
 gmp_scan0	gmp-scan0.txt	/^gmp_scan0
@@ -1530,6 +1530,7 @@ grapheme_strripos	grapheme-strripos.txt	/^grapheme_strripos
 grapheme_strrpos	grapheme-strrpos.txt	/^grapheme_strrpos
 grapheme_strstr	grapheme-strstr.txt	/^grapheme_strstr
 grapheme_substr	grapheme-substr.txt	/^grapheme_substr
+gregoriantojd	gregoriantojd.txt	/^gregoriantojd
 gupnp_context_get_host_ip	gupnp-context-get-host-ip.txt	/^gupnp_context_get_host_ip
 gupnp_context_get_port	gupnp-context-get-port.txt	/^gupnp_context_get_port
 gupnp_context_get_subscription_timeout	gupnp-context-get-subscription-timeout.txt	/^gupnp_context_get_subscription_timeout
@@ -2027,6 +2028,7 @@ inotify_init	inotify-init.txt	/^inotify_init
 inotify_queue_len	inotify-queue-len.txt	/^inotify_queue_len
 inotify_read	inotify-read.txt	/^inotify_read
 inotify_rm_watch	inotify-rm-watch.txt	/^inotify_rm_watch
+intdiv	intdiv.txt	/^intdiv
 interface_exists	interface-exists.txt	/^interface_exists
 intl_error_name	intl-error-name.txt	/^intl_error_name
 intl_get_error_code	intl-get-error-code.txt	/^intl_get_error_code
@@ -2070,8 +2072,14 @@ isset	isset.txt	/^isset
 iterator_apply	iterator-apply.txt	/^iterator_apply
 iterator_count	iterator-count.txt	/^iterator_count
 iterator_to_array	iterator-to-array.txt	/^iterator_to_array
+jddayofweek	jddayofweek.txt	/^jddayofweek
+jdmonthname	jdmonthname.txt	/^jdmonthname
+jdtofrench	jdtofrench.txt	/^jdtofrench
+jdtogregorian	jdtogregorian.txt	/^jdtogregorian
 jdtojewish	jdtojewish.txt	/^jdtojewish
+jdtojulian	jdtojulian.txt	/^jdtojulian
 jdtounix	jdtounix.txt	/^jdtounix
+jewishtojd	jewishtojd.txt	/^jewishtojd
 join	join.txt	/^join
 jpeg2wbmp	jpeg2wbmp.txt	/^jpeg2wbmp
 json_decode	json-decode.txt	/^json_decode
@@ -2080,6 +2088,7 @@ json_last_error	json-last-error.txt	/^json_last_error
 json_last_error_msg	json-last-error-msg.txt	/^json_last_error_msg
 judy_type	judy-type.txt	/^judy_type
 judy_version	judy-version.txt	/^judy_version
+juliantojd	juliantojd.txt	/^juliantojd
 kadm5_chpass_principal	kadm5-chpass-principal.txt	/^kadm5_chpass_principal
 kadm5_create_principal	kadm5-create-principal.txt	/^kadm5_create_principal
 kadm5_delete_principal	kadm5-delete-principal.txt	/^kadm5_delete_principal
@@ -3119,6 +3128,7 @@ opcache_compile_file	opcache-compile-file.txt	/^opcache_compile_file
 opcache_get_configuration	opcache-get-configuration.txt	/^opcache_get_configuration
 opcache_get_status	opcache-get-status.txt	/^opcache_get_status
 opcache_invalidate	opcache-invalidate.txt	/^opcache_invalidate
+opcache_is_script_cached	opcache-is-script-cached.txt	/^opcache_is_script_cached
 opcache_reset	opcache-reset.txt	/^opcache_reset
 openal_buffer_create	openal-buffer-create.txt	/^openal_buffer_create
 openal_buffer_data	openal-buffer-data.txt	/^openal_buffer_data
@@ -3555,6 +3565,8 @@ radius_send_request	radius-send-request.txt	/^radius_send_request
 radius_server_secret	radius-server-secret.txt	/^radius_server_secret
 radius_strerror	radius-strerror.txt	/^radius_strerror
 rand	rand.txt	/^rand
+random_bytes	random-bytes.txt	/^random_bytes
+random_int	random-int.txt	/^random_int
 range	range.txt	/^range
 rar_wrapper_cache_stats	rar-wrapper-cache-stats.txt	/^rar_wrapper_cache_stats
 rawurldecode	rawurldecode.txt	/^rawurldecode
@@ -3643,6 +3655,7 @@ sem_get	sem-get.txt	/^sem_get
 sem_release	sem-release.txt	/^sem_release
 sem_remove	sem-remove.txt	/^sem_remove
 serialize	serialize.txt	/^serialize
+session_abort	session-abort.txt	/^session_abort
 session_cache_expire	session-cache-expire.txt	/^session_cache_expire
 session_cache_limiter	session-cache-limiter.txt	/^session_cache_limiter
 session_commit	session-commit.txt	/^session_commit
@@ -3663,6 +3676,7 @@ session_pgsql_status	session-pgsql-status.txt	/^session_pgsql_status
 session_regenerate_id	session-regenerate-id.txt	/^session_regenerate_id
 session_register	session-register.txt	/^session_register
 session_register_shutdown	session-register-shutdown.txt	/^session_register_shutdown
+session_reset	session-reset.txt	/^session_reset
 session_save_path	session-save-path.txt	/^session_save_path
 session_set_cookie_params	session-set-cookie-params.txt	/^session_set_cookie_params
 session_set_save_handler	session-set-save-handler.txt	/^session_set_save_handler

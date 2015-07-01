@@ -10,11 +10,11 @@ spl_autoload_register — Register given function as __autoload() implementation
     bool spl_autoload_register ([ callable $autoload_function [, bool $throw~
     = true [, bool $prepend = false ]]] )~
 
-Register a function with the spl provided __autoload stack. If the stack is
+Register a function with the spl provided __autoload queue. If the queue is
 not yet activated it will be activated.
 
 If your code has an existing |__autoload| function then this function must be
-explicitly registered on the __autoload stack. This is because 
+explicitly registered on the __autoload queue. This is because 
 spl_autoload_register() will effectively replace the engine cache for the 
 |__autoload| function by either |spl_autoload| or |spl_autoload_call|.
 
@@ -39,7 +39,7 @@ may only be defined once.
 {prepend}
 
     If true, spl_autoload_register() will prepend the autoloader on the
-    autoload stack instead of appending it.
+    autoload queue instead of appending it.
 
 ==============================================================================
 *Return* *Values*

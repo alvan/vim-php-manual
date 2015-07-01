@@ -1,6 +1,6 @@
 json_encode
 
-(PHP 5 >= 5.2.0, PECL json >= 1.2.0)
+(PHP 5 >= 5.2.0, PECL json >= 1.2.0, PHP 7)
 
 json_encode — Returns the JSON representation of a value
 
@@ -23,16 +23,24 @@ Returns a string containing the JSON representation of {value}.
 
         Note:
 
-        PHP implements a superset of JSON - it will also encode and decode
-        scalar types and NULL. The JSON standard only supports these values
-        when they are nested inside an array or an object.
+        PHP implements a superset of JSON as specified in the original >> RFC
+        4627 - it will also encode and decode scalar types and NULL. RFC 4627
+        only supports these values when they are nested inside an array or an
+        object.
+
+        Although this superset is consistent with the expanded definition of
+        "JSON text" in the newer >> RFC 7159 (which aims to supersede RFC
+        4627) and >> ECMA-404, this may cause interoperability issues with
+        older JSON parsers that adhere strictly to RFC 4627 when encoding a
+        single scalar value.
 
 {options}
 
     Bitmask consisting of JSON_HEX_QUOT, JSON_HEX_TAG, JSON_HEX_AMP,
     JSON_HEX_APOS, JSON_NUMERIC_CHECK, JSON_PRETTY_PRINT,
-    JSON_UNESCAPED_SLASHES, JSON_FORCE_OBJECT, JSON_UNESCAPED_UNICODE. The
-    behaviour of these constants is described on the JSON constants page.
+    JSON_UNESCAPED_SLASHES, JSON_FORCE_OBJECT, JSON_PRESERVE_ZERO_FRACTION,
+    JSON_UNESCAPED_UNICODE. The behaviour of these constants is described on
+    the JSON constants page.
 
 {depth}
 
@@ -47,6 +55,7 @@ Returns a JSON encoded string on success or FALSE on failure.
 *Changelog*
 
 Version                              Description
+5.6.6   JSON_PRESERVE_ZERO_FRACTION {option} was added.
 5.5.0   {depth} parameter was added.
 5.4.0   JSON_PRETTY_PRINT, JSON_UNESCAPED_SLASHES, and JSON_UNESCAPED_UNICODE
         {options} were added.
@@ -120,7 +129,47 @@ Non-associative array output as object: {"0":{"0":1,"1":2,"2":3}}
 Associative array always output as object: {"foo":"bar","baz":"long"}
 Associative array always output as object: {"foo":"bar","baz":"long"}
 
-Example #3 Sequential versus non-sequential array example
+Example #3 JSON_NUMERIC_CHECK option example
+
+<?php >
+    echo "Strings representing numbers automatically turned into numbers".PHP_EOL;
+    $numbers = array('+123123', '-123123', '1.2e3', '0.00001');
+    var_dump(
+     $numbers,
+     json_encode($numbers, JSON_NUMERIC_CHECK)
+    );
+    echo "Strings containing improperly formatted numbers".PHP_EOL;
+    $strings = array('+a33123456789', 'a123');
+    var_dump(
+     $strings,
+     json_encode($strings, JSON_NUMERIC_CHECK)
+    );
+<?>
+
+The above example will output:
+
+Strings representing numbers automatically turned into numbers
+array(4) {
+  [0]=>
+  string(7) "+123123"
+  [1]=>
+  string(7) "-123123"
+  [2]=>
+  string(5) "1.2e3"
+  [3]=>
+  string(7) "0.00001"
+}
+string(28) "[123123,-123123,1200,1.0e-5]"
+Strings containing improperly formatted numbers
+array(2) {
+  [0]=>
+  string(13) "+a33123456789"
+  [1]=>
+  string(4) "a123"
+}
+string(24) "["+a33123456789","a123"]"
+
+Example #4 Sequential versus non-sequential array example
 
 <?php >
     echo "Sequential array".PHP_EOL;
@@ -183,6 +232,18 @@ array(3) {
   string(5) "blong"
 }
 string(33) "{"0":"foo","2":"baz","3":"blong"}"
+
+Example #5 JSON_PRESERVE_ZERO_FRACTION option example
+
+<?php >
+    var_dump(json_encode(12.0, JSON_PRESERVE_ZERO_FRACTION));
+    var_dump(json_encode(12.0));
+<?>
+
+The above example will output:
+
+string(4) "12.0"
+string(2) "12"
 
 ==============================================================================
 *Notes*

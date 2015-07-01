@@ -3,7 +3,7 @@ array_uintersect_uassoc
 (PHP 5)
 
 array_uintersect_uassoc — Computes the intersection of arrays with additional
-index check, compares data and indexes by a callback functions
+index check, compares data and indexes by separate callback functions
 
 ==============================================================================
 *Description*
@@ -12,9 +12,7 @@ index check, compares data and indexes by a callback functions
     $... ], callable $value_compare_func , callable $key_compare_func )~
 
 Computes the intersection of arrays with additional index check, compares data
-and indexes by a callback functions Note that the keys are used in the
-comparison unlike in |array_uintersect|. Both the data and the indexes are
-compared by using separate callback functions.
+and indexes by separate callback functions.
 
 ==============================================================================
 *Parameters*

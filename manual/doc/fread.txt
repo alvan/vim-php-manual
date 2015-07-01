@@ -1,6 +1,6 @@
 fread
 
-(PHP 4, PHP 5)
+(PHP 4, PHP 5, PHP 7)
 
 fread — Binary-safe file read
 
@@ -81,9 +81,14 @@ data together in chunks as shown in the examples below.
 <?>
 <?php >
     $handle = fopen("http://www.example.com/", "rb");
+    if (FALSE === $handle) {
+        exit("Failed to open stream to URL");
+    }
+
     $contents = '';
+
     while (!feof($handle)) {
-      $contents .= fread($handle, 8192);
+        $contents .= fread($handle, 8192);
     }
     fclose($handle);
 <?>

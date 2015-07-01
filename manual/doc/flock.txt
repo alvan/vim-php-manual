@@ -1,6 +1,6 @@
 flock
 
-(PHP 4, PHP 5)
+(PHP 4, PHP 5, PHP 7)
 
 flock — Portable advisory file locking
 
@@ -19,8 +19,7 @@ is also called automatically when script finished).
 PHP supports a portable way of locking complete files in an advisory way
 (which means all accessing programs have to use the same way of locking or it
 will not work). By default, this function will block until the requested lock
-is acquired; this may be controlled (on non-Windows platforms) with the
-LOCK_NB option documented below.
+is acquired; this may be controlled with the LOCK_NB option documented below.
 
 ==============================================================================
 *Parameters*
@@ -37,13 +36,12 @@ LOCK_NB option documented below.
       + LOCK_UN to release a lock (shared or exclusive).
 
     It is also possible to add LOCK_NB as a bitmask to one of the above
-    operations if you don't want flock() to block while locking. (not
-    supported on Windows)
+    operations if you don't want flock() to block while locking.
 
 {wouldblock}
 
     The optional third argument is set to 1 if the lock would block
-    (EWOULDBLOCK errno condition). (not supported on Windows)
+    (EWOULDBLOCK errno condition).
 
 ==============================================================================
 *Return* *Values*
@@ -53,9 +51,11 @@ Returns TRUE on success or FALSE on failure.
 ==============================================================================
 *Changelog*
 
-Version                              Description
-5.3.2   The automatic unlocking when the file's resource handle is closed was
-        removed. Unlocking now always has to be done manually.
+Version                               Description
+5.5.22,  Added support for the {wouldblock} parameter on Windows.
+5.6.6
+5.3.2    The automatic unlocking when the file's resource handle is closed was
+         removed. Unlocking now always has to be done manually.
 
 ==============================================================================
 *Examples*

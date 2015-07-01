@@ -1,6 +1,6 @@
 json_decode
 
-(PHP 5 >= 5.2.0, PECL json >= 1.2.0)
+(PHP 5 >= 5.2.0, PECL json >= 1.2.0, PHP 7)
 
 json_decode — Decodes a JSON string
 
@@ -23,9 +23,16 @@ Takes a JSON encoded string and converts it into a PHP variable.
 
         Note:
 
-        PHP implements a superset of JSON - it will also encode and decode
-        scalar types and NULL. The JSON standard only supports these values
-        when they are nested inside an array or an object.
+        PHP implements a superset of JSON as specified in the original >> RFC
+        4627 - it will also encode and decode scalar types and NULL. RFC 4627
+        only supports these values when they are nested inside an array or an
+        object.
+
+        Although this superset is consistent with the expanded definition of
+        "JSON text" in the newer >> RFC 7159 (which aims to supersede RFC
+        4627) and >> ECMA-404, this may cause interoperability issues with
+        older JSON parsers that adhere strictly to RFC 4627 when encoding a
+        single scalar value.
 
 {assoc}
 

@@ -6,10 +6,10 @@ mysql_db_query — Selects a database and executes a query on it
 
 Warning
 
-This extension is deprecated as of PHP 5.5.0, and will be removed in the
-future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
-MySQL: choosing an API guide and related FAQ for more information.
-Alternatives to this function include:
+This function was deprecated in PHP 5.3.0, and will be removed in the future,
+along with the entirety of the original MySQL extension. Instead, the MySQLi
+or PDO_MySQL extension should be used. See also MySQL: choosing an API guide
+and related FAQ for more information. Alternatives to this function include:
 
   * mysqli_select_db() then the query
   * PDO::__construct()
@@ -21,11 +21,6 @@ Alternatives to this function include:
     $link_identifier = NULL ] )~
 
 mysql_db_query() selects a database, and executes a query on it.
-
-Warning
-
-This function has been DEPRECATED as of PHP 5.3.0. Relying on this feature is
-highly discouraged.
 
 ==============================================================================
 *Parameters*

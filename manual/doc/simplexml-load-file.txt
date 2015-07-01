@@ -52,6 +52,13 @@ Convert the well-formed XML document in the given file to an object.
 Returns an object of class SimpleXMLElement with properties containing the
 data held within the XML document, or FALSE on failure.
 
+Warning
+
+This function may return Boolean FALSE, but may also return a non-Boolean
+value which evaluates to FALSE. Please read the section on Booleans for more
+information. Use the === operator for testing the return value of this
+function.
+
 ==============================================================================
 *Errors/Exceptions*
 

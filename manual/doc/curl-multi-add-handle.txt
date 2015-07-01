@@ -33,7 +33,7 @@ Returns 0 on success, or one of the CURLM_XXX errors code.
 Example #1 curl_multi_add_handle() example
 
 This example will create two cURL handles, add them to a multi handle, and
-then run them in parallel.
+process them asynchronously.
 
 <?php >
     // create both cURL resources

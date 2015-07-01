@@ -48,13 +48,16 @@ specified {connection}, or FALSE on error or no available OID.
 Example #1 pg_last_oid() example
 
 <?php >
-      $pgsql_conn = pg_connect("dbname=mark host=localhost");
-      
-      $res1 = pg_query("CREATE TABLE test (a INTEGER) WITH OIDS");
+      // Connect to the database
+      pg_connect("dbname=mark host=localhost");
 
-      $res2 = pg_query("INSERT INTO test VALUES (1)");
-      
-      $oid = pg_last_oid($res2);
+      // Create a sample table
+      pg_query("CREATE TABLE test (a INTEGER) WITH OIDS");
+
+      // Insert some data into it
+      $res = pg_query("INSERT INTO test VALUES (1)");
+
+      $oid = pg_last_oid($res);
 <?>
 
 ==============================================================================

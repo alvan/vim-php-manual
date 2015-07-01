@@ -36,7 +36,7 @@ Encodes a given string {str} by the MIME header encoding scheme.
 {linefeed}
 
     {linefeed} specifies the EOL (end-of-line) marker with which 
-    mb_encode_mimeheader() performs line-folding (a » RFC term, the act of
+    mb_encode_mimeheader() performs line-folding (a >> RFC term, the act of
     breaking a line longer than a certain length into multiple lines. The
     length is currently hard-coded to 74 characters). Falls back to "\r\n"
     (CRLF) if not given.

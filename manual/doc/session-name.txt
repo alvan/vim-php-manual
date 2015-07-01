@@ -35,7 +35,8 @@ request startup time. Thus, you need to call session_name() for every request
 ==============================================================================
 *Return* *Values*
 
-Returns the name of the current session.
+Returns the name of the current session. If {name} is given and function
+updates the session name, name of the old session is returned.
 
 ==============================================================================
 *Examples*

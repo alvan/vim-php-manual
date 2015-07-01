@@ -1,6 +1,6 @@
 imagecreatefromgif
 
-(PHP 4, PHP 5)
+(PHP 4, PHP 5, PHP 7)
 
 imagecreatefromgif — Create a new image from file or URL
 
@@ -84,11 +84,6 @@ Output of example : Example to handle an error during loading of a GIF
 
     When reading animated GIF files into memory, only the first frame is
     returned in the image resource pointer.
-
-Warning
-
-Windows versions of PHP prior to PHP 4.3.0 do not support access of remote
-files via this function, even if allow_url_fopen is enabled.
 
 
 vim:ft=help:

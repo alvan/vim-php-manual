@@ -1,6 +1,6 @@
 copy
 
-(PHP 4, PHP 5)
+(PHP 4, PHP 5, PHP 7)
 
 copy — Copies file
 
@@ -42,6 +42,8 @@ Returns TRUE on success or FALSE on failure.
 *Changelog*
 
 Version                              Description
+5.3.4   Changed the {context} parameter to actually have an effect.
+        Previously, any {context} was ignored.
 5.3.0   Added context support.
 4.3.0   Both {source} and {dest} may now be URLs if the "fopen wrappers" have
         been enabled. See |fopen| for more details.

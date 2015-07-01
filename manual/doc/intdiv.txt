@@ -1,0 +1,60 @@
+intdiv
+
+(PHP 7)
+
+intdiv — Integer division
+
+==============================================================================
+*Description*
+
+    integer intdiv ( integer $numerator , integer $divisor )~
+
+Returns the integer division of {numerator} by {divisor}.
+
+==============================================================================
+*Parameters*
+
+{numerator}
+
+    Number to be divide.
+
+{divisor}
+
+    Number which divides the {numerator}
+
+==============================================================================
+*Return* *Values*
+
+The integer division of {numerator} by {divisor}. If {divisor} is zero, it
+throws an E_WARNING and returns FALSE. If the {numerator} is LONG_MIN (-
+PHP_INT_MAX - 1) and the {divisor} is -1, it returns zero.
+
+==============================================================================
+*Examples*
+
+Example #1 intdiv() example
+
+<?php >
+    var_dump(intdiv(3, 2));
+    var_dump(intdiv(-3, 2));
+    var_dump(intdiv(3, -2));
+    var_dump(intdiv(-3, -2));
+    var_dump(intdiv(PHP_INT_MAX, PHP_INT_MAX));
+    var_dump(intdiv(-PHP_INT_MAX - 1, -PHP_INT_MAX - 1));
+    var_dump(intdiv(-PHP_INT_MAX - 1, -1));
+    var_dump(intdiv(1, 0));
+<?>
+
+int(1)
+int(-1)
+int(-1)
+int(1)
+int(1)
+int(1)
+int(0)
+
+Warning: intdiv(): Division by zero in %s on line 9
+bool(false)
+
+
+vim:ft=help:

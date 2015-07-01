@@ -1,0 +1,63 @@
+random_bytes
+
+(PHP 7)
+
+random_bytes — Generates cryptographically secure pseudo-random bytes
+
+==============================================================================
+*Description*
+
+    string random_bytes ( int $length )~
+
+Generates an arbitrary length string of cryptographic random bytes that are
+suitable for use in cryptography when generating salts, keys and
+initialization vectors.
+
+The sources of random are as follows:
+
+  * On Windows CryptGenRandom() is used exclusively
+  * arc4random_buf() is used if it is available (generally BSD specific)
+  * /dev/arandom is used where available
+  * /dev/urandom is used where none of the above is available
+
+==============================================================================
+*Parameters*
+
+{length}
+
+    The length of the random string that should be returned in bytes.
+
+==============================================================================
+*Return* *Values*
+
+Returns a string containing the crypto-secure random bytes in binary format.
+
+==============================================================================
+*Errors/Exceptions*
+
+Issues an E_WARNING and returns FALSE when a sufficient source of randomness
+is unavailable.
+
+==============================================================================
+*Examples*
+
+Example #1 random-bytes() example
+
+<?php >
+    $bytes = random_bytes(5);
+    var_dump(bin2hex($bytes));
+<?>
+
+The above example will output something similar to:
+
+string(10) "385e33f741"
+
+==============================================================================
+*See* *Also*
+
+  * |random_int| - Generates cryptographically secure pseudo-random integers
+  * |openssl_random_pseudo_bytes| - Generate a pseudo-random string of bytes
+  * |bin2hex| - Convert binary data into hexadecimal representation
+
+
+vim:ft=help:

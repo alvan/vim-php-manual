@@ -21,10 +21,11 @@ Defines a named constant at runtime.
 
 {value}
 
-    The value of the constant; only scalar and null values are allowed. Scalar
-    values are integer, float, string or boolean values. It is possible to
-    define resource constants, however it is not recommended and may cause
-    unpredictable behavior.
+    The value of the constant; only scalar and null values are allowed. As of
+    PHP 7 it also possible to use array value. Scalar values are integer, 
+    float, string or boolean values. It is possible to define resource
+    constants, however it is not recommended and may cause unpredictable
+    behavior.
 
 {case_insensitive}
 
@@ -42,6 +43,12 @@ Defines a named constant at runtime.
 Returns TRUE on success or FALSE on failure.
 
 ==============================================================================
+*Changelog*
+
+Version        Description
+7.0.0   array values are allowed.
+
+==============================================================================
 *Examples*
 
 Example #1 Defining Constants
@@ -54,6 +61,14 @@ Example #1 Defining Constants
     define("GREETING", "Hello you.", true);
     echo GREETING; // outputs "Hello you."
     echo Greeting; // outputs "Hello you."
+
+    // Works as of PHP 7
+    define('ANIMALS', array(
+        'dog',
+        'cat',
+        'bird'
+    ));
+    echo ANIMALS[1]; // outputs "cat"
 
 <?>
 

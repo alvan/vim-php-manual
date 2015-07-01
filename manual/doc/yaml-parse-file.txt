@@ -43,6 +43,15 @@ failure. If {pos} is -1 an array will be returned with one entry for each
 document found in the stream.
 
 ==============================================================================
+*Notes*
+
+Warning
+
+Processing untrusted user input with yaml_parse_file() is dangerous if the use
+of |unserialize| is enabled for nodes using the !php/object tag. This behavior
+can be disabled by using the yaml.decode_php ini setting.
+
+==============================================================================
 *See* *Also*
 
   * |yaml_parse| - Parse a YAML stream

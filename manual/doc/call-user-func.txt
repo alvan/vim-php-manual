@@ -42,8 +42,8 @@ parameters as arguments.
         call_user_func('increment', $a);
         echo $a."\n";
 
-        call_user_func_array('increment', array(&$a)); //
-         You can use this instead before PHP 5.3
+        // You can use this instead
+        call_user_func_array('increment', array(&$a));
         echo $a."\n";
 <        ?>
 

@@ -1,6 +1,6 @@
 imagejpeg
 
-(PHP 4, PHP 5)
+(PHP 4, PHP 5, PHP 7)
 
 imagejpeg — Output image to browser or file
 
@@ -106,6 +106,13 @@ Example #3 Outputting the image at 75% quality
 
     If you want to output Progressive JPEGs, you need to set interlacing on
     with |imageinterlace|.
+
+==============================================================================
+*Changelog*
+
+Version                              Description
+5.4.0   Disallowed passing an empty string to {filename} to skip this
+        argument.
 
 ==============================================================================
 *See* *Also*

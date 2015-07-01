@@ -1,6 +1,6 @@
 isset
 
-(PHP 4, PHP 5)
+(PHP 4, PHP 5, PHP 7)
 
 isset — Determine if a variable is set and is not NULL
 
@@ -13,7 +13,7 @@ Determine if a variable is set and is not NULL.
 
 If a variable has been unset with |unset|, it will no longer be set. isset()
 will return FALSE if testing a variable that has been set to NULL. Also note
-that a NULL byte ("\0") is not equivalent to the PHP NULL constant.
+that a null character ("\0") is not equivalent to the PHP NULL constant.
 
 If multiple parameters are supplied then isset() will return TRUE only if all
 of the parameters are set. Evaluation goes from left to right and stops as

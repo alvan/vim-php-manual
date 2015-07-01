@@ -1,6 +1,6 @@
 file_put_contents
 
-(PHP 5)
+(PHP 5, PHP 7)
 
 file_put_contents — Write a string to a file
 
@@ -45,8 +45,11 @@ file is overwritten, unless the FILE_APPEND flag is set.
                           include_path for more information.
     FILE_APPEND           If file {filename} already exists, append the data
                           to the file instead of overwriting it.
-    LOCK_EX               Acquire an exclusive lock on the file while
-                          proceeding to the writing.
+                          Acquire an exclusive lock on the file while
+                          proceeding to the writing. In other words, a |flock|
+    LOCK_EX               call happens between the |fopen| call and the 
+                          |fwrite| call. This is not identical to an |fopen|
+                          call with mode "x".
 
 {context}
 

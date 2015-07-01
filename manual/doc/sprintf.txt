@@ -37,11 +37,13 @@ Returns a string produced according to the formatting string {format}.
         character here will make it left-justified.
      4. An optional number, a width specifier that says how many characters
         (minimum) this conversion should result in.
-     5. An optional precision specifier in the form of a period (`.') followed
+     5. An optional precision specifier in the form of a period (.) followed
         by an optional decimal digit string that says how many decimal digits
         should be displayed for floating-point numbers. When using this
         specifier on a string, it acts as a cutoff point, setting a maximum
-        character limit to the string.
+        character limit to the string. Additionally, the character to use when
+        padding a number may optionally be specified between the period and
+        the digit.
      6. A type specifier that says what type the argument data should be
         treated as. Possible types:
           o % - a literal percent character. No argument is required.
@@ -135,7 +137,19 @@ Returns a string produced according to the formatting string {format}.
     immediately after the percent sign (%), before any other specifiers, as
     shown in the example below.
    
-    Example #5 Position specifier with other specifiers
+    Example #5 Specifying padding character
+
+    <?php >
+    echo sprintf("%'.9d\n", 123);
+    echo sprintf("%'.09d\n", 123);
+<    ?>
+
+    The above example will output:
+
+    ......123
+    000000123
+
+    Example #6 Position specifier with other specifiers
 
     <?php >
     $format = 'The %2$s contains %1$04d monkeys';
@@ -167,7 +181,7 @@ Returns a string produced according to the formatting string {format}.
 ==============================================================================
 *Examples*
 
-Example #6 |printf|: various examples
+Example #7 |printf|: various examples
 
 <?php >
     $n =  43951789;
@@ -210,7 +224,7 @@ The above example will output:
 %+d = '+43951789'
 %+d = '-43951789'
 
-Example #7 |printf|: string specifiers
+Example #8 |printf|: string specifiers
 
 <?php >
     $s = 'monkey';
@@ -234,13 +248,13 @@ The above example will output:
 [####monkey]
 [many monke]
 
-Example #8 sprintf(): zero-padded integers
+Example #9 sprintf(): zero-padded integers
 
 <?php >
     $isodate = sprintf("%04d-%02d-%02d", $year, $month, $day);
 <?>
 
-Example #9 sprintf(): formatting currency
+Example #10 sprintf(): formatting currency
 
 <?php >
     $money1 = 68.75;
@@ -251,7 +265,7 @@ Example #9 sprintf(): formatting currency
     // echo $formatted will output "123.10"
 <?>
 
-Example #10 sprintf(): scientific notation
+Example #11 sprintf(): scientific notation
 
 <?php >
     $number = 362525200;

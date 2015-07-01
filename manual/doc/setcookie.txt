@@ -29,7 +29,7 @@ replace an argument with an empty string ("") in order to skip that argument.
 Because the {expire} argument is integer, it cannot be skipped with an empty
 string, use a zero (0) instead.
 
-» RFC 6265 provides the normative reference on how each setcookie() parameter
+>> RFC 6265 provides the normative reference on how each setcookie() parameter
 is interpreted.
 
 {name}
@@ -71,7 +71,7 @@ is interpreted.
     'www.example.com' will make the cookie available in the www subdomain and
     higher subdomains. Cookies available to a lower domain, such as
     'example.com' will be available to higher subdomains, such as
-    'www.example.com'. Older browsers still implementing the deprecated » RFC
+    'www.example.com'. Older browsers still implementing the deprecated >> RFC
     2109 may require a leading . to match all subdomains.
 
 {secure}
@@ -225,8 +225,8 @@ Multiple calls to setcookie() are performed in the order called.
   * |header| - Send a raw HTTP header
   * |setrawcookie| - Send a cookie without urlencoding the cookie value
   * cookies section
-  * » RFC 6265
-  * » RFC 2109
+  * >> RFC 6265
+  * >> RFC 2109
 
 
 vim:ft=help:

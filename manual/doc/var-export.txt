@@ -1,6 +1,6 @@
 var_export
 
-(PHP 4 >= 4.2.0, PHP 5)
+(PHP 4 >= 4.2.0, PHP 5, PHP 7)
 
 var_export — Outputs or returns a parsable string representation of a variable
 
@@ -149,8 +149,8 @@ object(A)#2 (2) {
 
 Warning
 
-When var_export() exports objects, the leading slash is not included in the
-class name of namespaced classes for maximum compatibility.
+When var_export() exports objects, the leading backslash is not included in
+the class name of namespaced classes for maximum compatibility.
 
 ==============================================================================
 *See* *Also*

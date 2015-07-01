@@ -160,6 +160,15 @@ array(8) {
 }
 
 ==============================================================================
+*Notes*
+
+Warning
+
+Processing untrusted user input with yaml_parse() is dangerous if the use of |
+unserialize| is enabled for nodes using the !php/object tag. This behavior can
+be disabled by using the yaml.decode_php ini setting.
+
+==============================================================================
 *See* *Also*
 
   * |yaml_parse_file| - Parse a YAML stream from a file

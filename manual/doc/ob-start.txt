@@ -109,6 +109,10 @@ Returns TRUE on success or FALSE on failure.
 *Changelog*
 
 Version                              Description
+        In case ob_start() is used inside an output buffer callback, this
+7.0.0   function will no longer issue an E_ERROR but instead an
+        E_RECOVERABLE_ERROR, allowing custom error handlers to catch such
+        errors.
         The third parameter of ob_start() changed from a boolean parameter
         called {erase} (which, if set to FALSE, would prevent the output
         buffer from being deleted until the script finished executing) to an 

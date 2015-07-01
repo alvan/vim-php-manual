@@ -27,8 +27,8 @@ function such as mysqli_query(). Should the injection fail an error is
 reported to the caller of the query execution function. The failing server
 does not become a participant in the global transaction. The user may retry
 executing a query on the server and hereby retry injecting XA BEGIN, abort the
-global transaction because not all required servers can participat or, ignore
-continue the global without the failed server.
+global transaction because not all required servers can participate, or ignore
+and continue the global without the failed server.
 
 Reasons to fail executing XA BEGIN include but are not limited to a server
 being unreachable or the server having an open, concurrent XA transaction
@@ -62,7 +62,7 @@ yourself.
 
 {gtrid}
 
-    Global transaction identifier (gtrid). The gtrid is a binary string upto
+    Global transaction identifier (gtrid). The gtrid is a binary string up to
     64 bytes long. Please note, depending on your character set settings, 64
     characters may require more than 64 bytes to store.
 
@@ -87,7 +87,7 @@ yourself.
 
     Setting a low value may make the garbage collection check the progress too
     often. Please note, checking the status of a global transaction may
-    involve connecting to all recorded participants and possibly issueing
+    involve connecting to all recorded participants and possibly issuing
     queries on the servers.
 
 ==============================================================================

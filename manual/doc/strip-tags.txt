@@ -34,7 +34,16 @@ the |fgetss| function.
 
         This parameter should not contain whitespace. strip_tags() sees a tag
         as a case-insensitive string between < and the first whitespace or >.
-        It means that strip_tags("<br/>", "<br>") returns an empty string.
+
+        Note:
+
+        In PHP 5.3.4 and later, you will also need to include the self-closing
+        XHTML tag to strip these from {str}. For example, to strip both <br>
+        and <br/>, you should use:
+
+        <?php >
+        strip_tags($input, '<br><br/>');
+<        ?>
 
 ==============================================================================
 *Return* *Values*
@@ -44,7 +53,9 @@ Returns the stripped string.
 ==============================================================================
 *Changelog*
 
-Version           Description
+Version                              Description
+5.3.4   strip_tags() no longer strips self-closing XHTML tags unless the
+        self-closing XHTML tag is also given in {allowable_tags}.
 5.0.0   strip_tags() is now binary safe.
 
 ==============================================================================

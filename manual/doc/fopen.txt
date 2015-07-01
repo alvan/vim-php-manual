@@ -1,6 +1,6 @@
 fopen
 
-(PHP 4, PHP 5)
+(PHP 4, PHP 5, PHP 7)
 
 fopen — Opens file or URL
 
@@ -65,10 +65,14 @@ fopen() binds a named resource, specified by {filename}, to a stream.
            Open for reading and writing; place the file pointer at the
     'w+'   beginning of the file and truncate the file to zero length. If the
            file does not exist, attempt to create it.
-    'a'    Open for writing only; place the file pointer at the end of the
-           file. If the file does not exist, attempt to create it.
-    'a+'   Open for reading and writing; place the file pointer at the end of
-           the file. If the file does not exist, attempt to create it.
+           Open for writing only; place the file pointer at the end of the
+    'a'    file. If the file does not exist, attempt to create it. In this
+           mode, fseek()() only affects the reading position, writes are
+           always appended.
+           Open for reading and writing; place the file pointer at the end of
+    'a+'   the file. If the file does not exist, attempt to create it. In this
+           mode, fseek()() only affects the reading position, writes are
+           always appended.
            Create and open for writing only; place the file pointer at the
            beginning of the file. If the file already exists, the fopen() call
     'x'    will fail by returning FALSE and generating an error of level
@@ -185,10 +189,10 @@ When using SSL, Microsoft IIS will violate the protocol by closing the
 connection without sending a close_notify indicator. PHP will report this as
 "SSL: Fatal Protocol Error" when you reach the end of the data. To work around
 this, the value of error_reporting should be lowered to a level that does not
-include warnings. PHP 4.3.7 and higher can detect buggy IIS server software
-when you open the stream using the https:// wrapper and will suppress the
-warning. When using |fsockopen| to create an ssl:// socket, the developer is
-responsible for detecting and suppressing this warning.
+include warnings. PHP can detect buggy IIS server software when you open the
+stream using the https:// wrapper and will suppress the warning. When using 
+|fsockopen| to create an ssl:// socket, the developer is responsible for
+detecting and suppressing this warning.
 
     Note: When safe mode is enabled, PHP checks whether the directory in which
     the script is operating has the same UID (owner) as the script that is

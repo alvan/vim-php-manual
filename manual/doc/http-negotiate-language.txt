@@ -9,7 +9,7 @@ http_negotiate_language — Negotiate client's preferred language
 
     string http_negotiate_language ( array $supported [, array &$result ] )~
 
-This function negotiates the clients preferred language based on its
+This function negotiates the client's preferred language based on its
 Accept-Language HTTP header. The qualifier is recognized and languages without
 qualifier are rated highest. The qualifier will be decreased by 10% for
 partial matches (i.e. matching primary language).

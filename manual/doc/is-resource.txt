@@ -1,6 +1,6 @@
 is_resource
 
-(PHP 4, PHP 5)
+(PHP 4, PHP 5, PHP 7)
 
 is_resource — Finds whether a variable is a resource
 
@@ -36,6 +36,14 @@ Example #1 is_resource() example
     }
 
 <?>
+
+==============================================================================
+*Notes*
+
+    Note:
+
+    is_resource() is not a strict type-checking method: it will return FALSE
+    if {var} is a resource variable that has been closed.
 
 ==============================================================================
 *See* *Also*

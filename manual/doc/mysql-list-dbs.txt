@@ -6,10 +6,10 @@ mysql_list_dbs — List databases available on a MySQL server
 
 Warning
 
-This extension is deprecated as of PHP 5.5.0, and will be removed in the
-future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
-MySQL: choosing an API guide and related FAQ for more information.
-Alternatives to this function include:
+This function was deprecated in PHP 5.4.0, and will be removed in the future,
+along with the entirety of the original MySQL extension. Instead, the MySQLi
+or PDO_MySQL extension should be used. See also MySQL: choosing an API guide
+and related FAQ for more information. Alternatives to this function include:
 
   * SQL Query: SHOW DATABASES
 
@@ -20,11 +20,6 @@ Alternatives to this function include:
 
 Returns a result pointer containing the databases available from the current
 mysql daemon.
-
-Warning
-
-This function has been DEPRECATED as of PHP 5.4.0. Relying on this function is
-highly discouraged.
 
 ==============================================================================
 *Parameters*

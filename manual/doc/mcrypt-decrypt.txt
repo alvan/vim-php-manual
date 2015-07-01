@@ -22,8 +22,8 @@ Decrypts the {data} and returns the unencrypted data.
 
 {key}
 
-    The key with which the data was encrypted. If it's smaller than the
-    required keysize, it is padded with '\0'.
+    The key with which the data was encrypted. If the provided key size is not
+    supported by the cipher, the function will emit a warning and return FALSE
 
 {data}
 
@@ -38,14 +38,28 @@ Decrypts the {data} and returns the unencrypted data.
 {iv}
 
     Used for the initialization in CBC, CFB, OFB modes, and in some algorithms
-    in STREAM mode. If you do not supply an IV, while it is needed for an
-    algorithm, the function issues a warning and uses an IV with all its bytes
-    set to "\0".
+    in STREAM mode. If the provided IV size is not supported by the chaining
+    mode or no IV was provided, but the chaining mode requires one, the
+    function will emit a warning and return FALSE.
 
 ==============================================================================
 *Return* *Values*
 
-Returns the decrypted data as a string.
+Returns the decrypted data as a string or FALSE on failure.
+
+==============================================================================
+*Changelog*
+
+Version                              Description
+        Invalid {key} and {iv} sizes are no longer accepted. mcrypt_decrypt()
+5.6.0   will now throw a warning and return FALSE if the inputs are invalid.
+        Previously keys and IVs were padded with '\0' bytes to the next valid
+        size.
+
+==============================================================================
+*See* *Also*
+
+  * |mcrypt_encrypt| - Encrypts plaintext with given parameters
 
 
 vim:ft=help:

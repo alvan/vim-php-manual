@@ -37,8 +37,7 @@ available.
     CURLMOPT_PIPELINING  using this handle. This means that if you add a
                          second request that can use an already existing
                          connection, the second request will be "piped" on the
-                         same connection rather than being executed in
-                         parallel.
+                         same connection.
                          Pass a number that will be used as the maximum amount
                          of simultaneously open connections that libcurl may
     CURLMOPT_MAXCONNECTS cache. Default is 10. When the cache is full, curl

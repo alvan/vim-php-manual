@@ -19,7 +19,7 @@ Sends an email.
 
     Receiver, or receivers of the mail.
 
-    The formatting of this string must comply with » RFC 2822. Some examples
+    The formatting of this string must comply with >> RFC 2822. Some examples
     are:
       + user@example.com
       + user@example.com, anotheruser@example.com
@@ -32,7 +32,7 @@ Sends an email.
 
     Caution
 
-    Subject must satisfy » RFC 2047.
+    Subject must satisfy >> RFC 2047.
 
 {message}
 
@@ -61,6 +61,13 @@ Sends an email.
 
         Note:
 
+        {additional_headers} does not have mail header injection protection.
+        Therefore, users must make sure specified headers are safe and
+        contains headers only. i.e. Never start mail body by putting multiple
+        newlines.
+
+        Note:
+
         When sending mail, the mail must contain a From header. This can be
         set with the {additional_headers} parameter, or a default can be set
         in php.ini.
@@ -72,9 +79,9 @@ Sends an email.
         Note:
 
         If messages are not received, try using a LF (\n) only. Some Unix mail
-        transfer agents (most notably » qmail) replace LF by CRLF
+        transfer agents (most notably >> qmail) replace LF by CRLF
         automatically (which leads to doubling CR if CRLF is used). This
-        should be a last resort, as it does not comply with » RFC 2822.
+        should be a last resort, as it does not comply with >> RFC 2822.
 
 {additional_parameters} (optional)
 
@@ -217,7 +224,7 @@ It is also possible to send HTML email with mail().
     Note:
 
     If intending to send HTML or otherwise Complex mails, it is recommended to
-    use the PEAR package » PEAR::Mail_Mime.
+    use the PEAR package >> PEAR::Mail_Mime.
 
 ==============================================================================
 *Notes*
@@ -243,20 +250,20 @@ It is also possible to send HTML email with mail().
     volumes of email in a loop. This function opens and closes an SMTP socket
     for each email, which is not very efficient.
 
-    For the sending of large amounts of email, see the » PEAR::Mail, and
-    » PEAR::Mail_Queue packages.
+    For the sending of large amounts of email, see the >> PEAR::Mail, and >>
+     PEAR::Mail_Queue packages.
 
     Note:
 
-    The following RFCs may be useful: » RFC 1896, » RFC 2045, » RFC 2046,
-    » RFC 2047, » RFC 2048, » RFC 2049, and » RFC 2822.
+    The following RFCs may be useful: >> RFC 1896, >> RFC 2045, >> RFC 2046,
+    >> RFC 2047, >> RFC 2048, >> RFC 2049, and >> RFC 2822.
 
 ==============================================================================
 *See* *Also*
 
   * |imap_mail| - Send an email message
-  * » PEAR::Mail
-  * » PEAR::Mail_Mime
+  * >> PEAR::Mail
+  * >> PEAR::Mail_Mime
 
 
 vim:ft=help:

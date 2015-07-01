@@ -1,6 +1,6 @@
 getimagesize
 
-(PHP 4, PHP 5)
+(PHP 4, PHP 5, PHP 7)
 
 getimagesize — Get the size of an image
 
@@ -39,7 +39,7 @@ getimagesize() can also return some more information in {imageinfo} parameter.
     This optional parameter allows you to extract some extended information
     from the image file. Currently, this will return the different JPG APP
     markers as an associative array. Some programs use these APP markers to
-    embed text information in images. A very common one is to embed » IPTC
+    embed text information in images. A very common one is to embed >> IPTC
     information in the APP13 marker. You can use the |iptcparse| function to
     parse the binary APP13 marker into something readable.
 

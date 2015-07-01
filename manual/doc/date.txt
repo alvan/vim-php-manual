@@ -89,7 +89,8 @@ other words, {timestamp} is optional and defaults to the value of |time|.
                Note that date() will always generate
     u          000000 since it takes an integer      Example: 654321
                parameter, whereas DateTime::format()
-               does support microseconds.
+               does support microseconds if DateTime
+               was created with microseconds.
     Timezone   ---                                   ---
     e          Timezone identifier (added in PHP     Examples: UTC, GMT,
                5.1.0)                                Atlantic/Azores
@@ -108,7 +109,7 @@ other words, {timestamp} is optional and defaults to the value of |time|.
     Full Date/ ---                                   ---
     Time
     c          ISO 8601 date (added in PHP 5)        2004-02-12T15:19:21+00:00
-    r          » RFC 2822 formatted date             Example: Thu, 21 Dec 2000
+    r          >> RFC 2822 formatted date            Example: Thu, 21 Dec 2000
                                                      16:01:07 +0200
     U          Seconds since the Unix Epoch (January See also |time|
                1 1970 00:00:00 GMT)
@@ -248,8 +249,8 @@ To format dates in other languages, you should use the |setlocale| and
 
     To generate a timestamp from a string representation of the date, you may
     be able to use |strtotime|. Additionally, some databases have functions to
-    convert their date formats into timestamps (such as MySQL's
-    » UNIX_TIMESTAMP function).
+    convert their date formats into timestamps (such as MySQL's >>
+     UNIX_TIMESTAMP function).
 
 Tip
 

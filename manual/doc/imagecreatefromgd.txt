@@ -1,6 +1,6 @@
 imagecreatefromgd
 
-(PHP 4 >= 4.0.7, PHP 5)
+(PHP 4 >= 4.0.7, PHP 5, PHP 7)
 
 imagecreatefromgd — Create a new image from GD file or URL
 
@@ -52,14 +52,6 @@ Example #1 imagecreatefromgd() example
     imagegd($im, './test_updated.gd');
     imagedestroy($im);
 <?>
-
-==============================================================================
-*Notes*
-
-Warning
-
-Windows versions of PHP prior to PHP 4.3.0 do not support access of remote
-files via this function, even if allow_url_fopen is enabled.
 
 
 vim:ft=help:

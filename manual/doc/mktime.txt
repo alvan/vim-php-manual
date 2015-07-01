@@ -95,6 +95,10 @@ omitted will be set to the current value according to the local date and time.
         As of PHP 5.1.0, this parameter became deprecated. As a result, the
         new timezone handling features should be used instead.
 
+        Note:
+
+        This parameter has been removed in PHP 7.0.0.
+
 ==============================================================================
 *Return* *Values*
 
@@ -112,6 +116,7 @@ settings or the TZ environment variable. See also |date_default_timezone_set|
 *Changelog*
 
 Version                              Description
+7.0.0   {is_dst} parameter has been removed.
 5.3.0   mktime() now throws E_DEPRECATED notice if the {is_dst} parameter is
         used.
         The {is_dst} parameter became deprecated. Made the function return

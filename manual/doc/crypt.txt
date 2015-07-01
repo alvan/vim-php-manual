@@ -12,13 +12,14 @@ crypt — One-way string hashing
 crypt() will return a hashed string using the standard Unix DES-based
 algorithm or alternative algorithms that may be available on the system.
 
-The {salt} parameter is optional. However, crypt() creates weak password
-without {salt}. PHP 5.6 or later raise E_NOTICE error without it. Make sure
-specify strong enough salt for better security.
+The {salt} parameter is optional. However, crypt() creates a weak password
+without the {salt}. PHP 5.6 or later raise an E_NOTICE error without it. Make
+sure to specify a strong enough salt for better security.
 
-|password_hash| uses strong hash, generates strong salt, applies proper rounds
-automatically. |password_hash| is simple crypt() wrapper and compatible with
-existing password hashes. Use of |password_hash| is encouraged.
+|password_hash| uses a strong hash, generates a strong salt, and applies
+proper rounds automatically. |password_hash| is a simple crypt() wrapper and
+compatible with existing password hashes. Use of |password_hash| is
+encouraged.
 
 Some operating systems support more than one type of hash. In fact, sometimes
 the standard DES-based algorithm is replaced by an MD5-based algorithm. The
@@ -57,7 +58,7 @@ available:
     04-31, values outside this range will cause crypt() to fail. Versions of
     PHP before 5.3.7 only support "$2a$" as the salt prefix: PHP 5.3.7
     introduced the new prefixes to fix a security weakness in the Blowfish
-    implementation. Please refer to » this document for full details of the
+    implementation. Please refer to >> this document for full details of the
     security fix, but to summarise, developers targeting only PHP 5.3.7 and
     later should use "$2y$" in preference to "$2a$".
   * CRYPT_SHA256 - SHA-256 hash with a sixteen character salt prefixed with
@@ -113,11 +114,18 @@ purpose.
 *Changelog*
 
 Version                              Description
+        When the failure string "*0" is given as the {salt}, "*1" will now be
+5.6.5   returned for consistency with other crypt implementations. Prior to
+        this version, PHP 5.6 would incorrectly return a DES hash.
 5.6.0   Raise E_NOTICE security warning if {salt} is omitted.
+        When the failure string "*0" is given as the {salt}, "*1" will now be
+5.5.21  returned for consistency with other crypt implementations. Prior to
+        this version, PHP 5.5 (and earlier branches) would incorrectly return
+        a DES hash.
 5.3.7   Added $2x$ and $2y$ Blowfish modes to deal with potential high-bit
         attacks.
-5.3.2   Added SHA-256 and SHA-512 crypt based on Ulrich Drepper's
-        » implementation.
+5.3.2   Added SHA-256 and SHA-512 crypt based on Ulrich Drepper's >>
+         implementation.
 5.3.2   Fixed Blowfish behaviour on invalid rounds to return "failure" string
         ("*0" or "*1"), instead of falling back to DES.
         PHP now contains its own implementation for the MD5 crypt, Standard
@@ -137,7 +145,7 @@ Example #1 crypt() examples
        password, to avoid problems when different hashing algorithms are used. (As
        it says above, standard DES-based password hashing uses a 2-character salt,
        but MD5-based hashing uses 12.) */
-    if (hash_equals($hashed_password, crypt($user_input, $hashed_password)) {
+    if (hash_equals($hashed_password, crypt($user_input, $hashed_password))) {
        echo "Password verified!";
     }
 <?>

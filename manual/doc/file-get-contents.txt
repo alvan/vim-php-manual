@@ -1,6 +1,6 @@
 file_get_contents
 
-(PHP 4 >= 4.3.0, PHP 5)
+(PHP 4 >= 4.3.0, PHP 5, PHP 7)
 
 file_get_contents — Reads entire file into a string
 
@@ -150,10 +150,10 @@ When using SSL, Microsoft IIS will violate the protocol by closing the
 connection without sending a close_notify indicator. PHP will report this as
 "SSL: Fatal Protocol Error" when you reach the end of the data. To work around
 this, the value of error_reporting should be lowered to a level that does not
-include warnings. PHP 4.3.7 and higher can detect buggy IIS server software
-when you open the stream using the https:// wrapper and will suppress the
-warning. When using |fsockopen| to create an ssl:// socket, the developer is
-responsible for detecting and suppressing this warning.
+include warnings. PHP can detect buggy IIS server software when you open the
+stream using the https:// wrapper and will suppress the warning. When using 
+|fsockopen| to create an ssl:// socket, the developer is responsible for
+detecting and suppressing this warning.
 
 ==============================================================================
 *See* *Also*

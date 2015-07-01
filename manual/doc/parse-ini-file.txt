@@ -1,6 +1,6 @@
 parse_ini_file
 
-(PHP 4, PHP 5)
+(PHP 4, PHP 5, PHP 7)
 
 parse_ini_file — Parse a configuration file
 
@@ -33,6 +33,12 @@ The structure of the ini file is the same as the php.ini's.
     Can either be INI_SCANNER_NORMAL (default) or INI_SCANNER_RAW. If
     INI_SCANNER_RAW is supplied, then option values will not be parsed.
 
+    As of PHP 5.6.1 can also be specified as INI_SCANNER_TYPED. In this mode
+    boolean, null and integer types are preserved when possible. String values
+    "true", "on" and "yes" are converted to TRUE. "false", "off", "no" and
+    "none" are considered FALSE. "null" is converted to NULL in typed mode.
+    Also, all numeric strings are converted to integer type if it is possible.
+
 ==============================================================================
 *Return* *Values*
 
@@ -43,9 +49,11 @@ failure.
 *Changelog*
 
 Version                              Description
+7.0.0   Hash marks (#) are no longer recognized as comments.
+5.6.1   Added new INI_SCANNER_TYPED mode.
         Added optional {scanner_mode} parameter. Single quotes may now be used
-5.3.0   around variable assignments. Hash marks (#) may no longer be used as
-        comments and will throw a deprecation warning if used.
+5.3.0   around variable assignments. Hash marks (#) should no longer be used
+        as comments and will throw a deprecation warning if used.
 5.2.7   On syntax error this function will return FALSE rather than an empty
         array.
         Keys and section names consisting of numbers are now evaluated as PHP
@@ -76,6 +84,9 @@ phpversion[] = "5.0"
 phpversion[] = "5.1"
 phpversion[] = "5.2"
 phpversion[] = "5.3"
+
+urls[svn] = "http://svn.php.net"
+urls[git] = "http://git.php.net"
 
 Example #2 parse_ini_file() example
 
@@ -114,6 +125,12 @@ Array
             [3] => 5.3
         )
 
+    [urls] => Array
+        (
+            [svn] => http://svn.php.net
+            [git] => http://git.php.net
+        )
+
 )
 Array
 (
@@ -138,6 +155,12 @@ Array
                     [1] => 5.1
                     [2] => 5.2
                     [3] => 5.3
+                )
+
+            [urls] => Array
+                (
+                    [svn] => http://svn.php.net
+                    [git] => http://git.php.net
                 )
 
         )
@@ -189,9 +212,10 @@ The above example will output something similar to:
 
     Note: There are reserved words which must not be used as keys for ini
     files. These include: null, yes, no, true, false, on, off, none. Values
-    null, off, no and false result in "". Values on, yes and true result in
-    "1". Characters ?{}|&~![()^" must not be used anywhere in the key and have
-    a special meaning in the value.
+    null, off, no and false result in "", and values on, yes and true result
+    in "1", unless INI_SCANNER_TYPED mode is used (as of PHP 5.6.1).
+    Characters ?{}|&~!()^" must not be used anywhere in the key and have a
+    special meaning in the value.
 
     Note:
 

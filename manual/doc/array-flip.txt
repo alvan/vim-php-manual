@@ -37,19 +37,31 @@ Returns the flipped array on success and NULL on failure.
 Example #1 array_flip() example
 
 <?php >
-    $trans = array_flip($trans);
-    $original = strtr($str, $trans);
+    $input = array("oranges", "apples", "pears");
+    $flipped = array_flip($input);
+
+    print_r($flipped);
 <?>
+
+The above example will output:
+
+Array
+(
+    [oranges] => 0
+    [apples] => 1
+    [pears] => 2
+)
 
 Example #2 array_flip() example : collision
 
 <?php >
-    $trans = array("a" => 1, "b" => 1, "c" => 2);
-    $trans = array_flip($trans);
-    print_r($trans);
+    $input = array("a" => 1, "b" => 1, "c" => 2);
+    $flipped = array_flip($input);
+
+    print_r($flipped);
 <?>
 
-now $trans is:
+The above example will output:
 
 Array
 (

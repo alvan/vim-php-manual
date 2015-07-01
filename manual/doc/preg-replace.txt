@@ -21,8 +21,7 @@ Searches {subject} for matches to {pattern} and replaces them with
     The pattern to search for. It can be either a string or an array with
     strings.
 
-    Several PCRE modifiers are also available, including the deprecated 'e'
-    (PREG_REPLACE_EVAL), which is specific to this function.
+    Several PCRE modifiers are also available.
 
 {replacement}
 
@@ -87,12 +86,16 @@ will be returned unchanged or NULL if an error occurred.
 ==============================================================================
 *Errors/Exceptions*
 
-An E_DEPRECATED level error is emitted when passing in the "\e" modifier.
+As of PHP 5.5.0 E_DEPRECATED level error is emitted when passing in the "\e"
+modifier. As of PHP 7.0.0 E_WARNING is emited in this case and "\e" modifier
+has no effect.
 
 ==============================================================================
 *Changelog*
 
 Version                              Description
+7.0.0   Support for the /e modifier has been removed. Use 
+        |preg_replace_callback| instead.
         The /e modifier is deprecated. Use |preg_replace_callback| instead.
 5.5.0   See the PREG_REPLACE_EVAL documentation for additional information
         about security risks.
@@ -198,6 +201,7 @@ xp***to
 *See* *Also*
 
   * PCRE Patterns
+  * |preg_quote| - Quote regular expression characters
   * |preg_filter| - Perform a regular expression search and replace
   * |preg_match| - Perform a regular expression match
   * |preg_replace_callback| - Perform a regular expression search and replace

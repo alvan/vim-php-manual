@@ -20,7 +20,7 @@ earlier than the Unix epoch. This means that %e, %T, %R and, %D (and possibly
 others) - as well as dates prior to Jan 1, 1970 - will not work on Windows,
 some Linux distributions, and a few other operating systems. For Windows
 systems, a complete overview of supported conversion specifiers can be found
-at » MSDN.
+at >> MSDN.
 
 ==============================================================================
 *Parameters*
@@ -429,7 +429,7 @@ Unknown format : 'f'
 Unknown format : 'g'                       ( Two digit representation of the year going by ISO-8601:1988 standards (see %V) )
 Unknown format : 'h'                       ( Abbreviated month name, based on the locale (an alias of %b) )
 Unknown format : 'i'
-Unknown format : 'k'
+Unknown format : 'k'                       ( Hour in 24-hour format, with a space preceding single digits )
 Unknown format : 'l'                       ( Hour in 12-hour format, with a space preceding single digits )
 Unknown format : 'n'                       ( A newline character ("\n") )
 Unknown format : 'o'
@@ -450,12 +450,12 @@ Unknown format : 'v'
 ==============================================================================
 *See* *Also*
 
-  * » Online strftime() format design tool
+  * >> Online strftime() format design tool
   * |setlocale| - Set locale information
   * |mktime| - Get Unix timestamp for a date
   * |strptime| - Parse a time/date generated with strftime
   * |gmstrftime| - Format a GMT/UTC time/date according to locale settings
-  * » Open Group specification of strftime()
+  * >> Open Group specification of strftime()
 
 
 vim:ft=help:

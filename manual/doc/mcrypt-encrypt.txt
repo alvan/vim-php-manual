@@ -22,12 +22,9 @@ Encrypts the data and returns it.
 
 {key}
 
-    The key with which the data will be encrypted. If it's smaller than the
-    required keysize, it is padded with '\0'. It is better not to use ASCII
-    strings for keys.
-
-    It is recommended to use the mhash functions to create a key from a
-    string.
+    The key with which the data will be encrypted. If the provided key size is
+    not supported by the cipher, the function will emit a warning and return
+    FALSE
 
 {data}
 
@@ -45,14 +42,23 @@ Encrypts the data and returns it.
 {iv}
 
     Used for the initialization in CBC, CFB, OFB modes, and in some algorithms
-    in STREAM mode. If you do not supply an IV, while it is needed for an
-    algorithm, the function issues a warning and uses an IV with all its bytes
-    set to "\0".
+    in STREAM mode. If the provided IV size is not supported by the chaining
+    mode or no IV was provided, but the chaining mode requires one, the
+    function will emit a warning and return FALSE.
 
 ==============================================================================
 *Return* *Values*
 
-Returns the encrypted data, as a string.
+Returns the encrypted data as a string or FALSE on failure.
+
+==============================================================================
+*Changelog*
+
+Version                              Description
+        Invalid {key} and {iv} sizes are no longer accepted. mcrypt_encrypt()
+5.6.0   will now throw a warning and return FALSE if the inputs are invalid.
+        Previously keys and IVs were padded with '\0' bytes to the next valid
+        size.
 
 ==============================================================================
 *Examples*
@@ -123,7 +129,12 @@ Key size: 32
 ENJW8mS2KaJoNB5E5CoSAAu0xARgsR1bdzFWpEn+poYw45q+73az5kYi4j+0haevext1dGrcW8Qi59txfCBV8BBj3bzRP3dFCp3CPQSJ8eU=
 This string was AES-256 / CBC / ZeroBytePadding encrypted.
 
-See also |mcrypt_module_open| for a more advanced API and an example.
+==============================================================================
+*See* *Also*
+
+  * |mcrypt_decrypt| - Decrypts crypttext with given parameters
+  * |mcrypt_module_open| - Opens the module of the algorithm and the mode to
+    be used
 
 
 vim:ft=help:

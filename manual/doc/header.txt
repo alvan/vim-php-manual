@@ -10,7 +10,7 @@ header — Send a raw HTTP header
     void header ( string $string [, bool $replace = true [, int~
     $http_response_code ]] )~
 
-header() is used to send a raw HTTP header. See the » HTTP/1.1 specification
+header() is used to send a raw HTTP header. See the >> HTTP/1.1 specification
 for more information on HTTP headers.
 
 Remember that header() must be called before any actual output is sent, either
@@ -91,12 +91,12 @@ Version                              Description
 Example #1 Download dialog
 
 If you want the user to be prompted to save the data you are sending, such as
-a generated PDF file, you can use the » Content-Disposition header to supply a
-recommended filename and force the browser to display the save dialog.
+a generated PDF file, you can use the >> Content-Disposition header to supply
+a recommended filename and force the browser to display the save dialog.
 
 <?php >
     // We'll be outputting a PDF
-    header('Content-type: application/pdf');
+    header('Content-Type: application/pdf');
 
     // It will be called downloaded.pdf
     header('Content-Disposition: attachment; filename="downloaded.pdf"');
@@ -164,9 +164,9 @@ Many proxies and clients can be forced to disable caching with:
 
     Note:
 
-    HTTP/1.1 requires an absolute URI as argument to » Location: including the
-    scheme, hostname and absolute path, but some clients accept relative URIs.
-    You can usually use $_SERVER['HTTP_HOST'], $_SERVER['PHP_SELF'] and 
+    HTTP/1.1 requires an absolute URI as argument to >> Location: including
+    the scheme, hostname and absolute path, but some clients accept relative
+    URIs. You can usually use $_SERVER['HTTP_HOST'], $_SERVER['PHP_SELF'] and 
     |dirname| to make an absolute URI from a relative one yourself:
     <?php >
     /

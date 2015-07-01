@@ -14,6 +14,13 @@ If called without the optional {min}, {max} arguments rand() returns a
 pseudo-random integer between 0 and |getrandmax|. If you want a random number
 between 5 and 15 (inclusive), for example, use rand(5, 15).
 
+Caution
+
+This function does not generate cryptographically secure values, and should
+not be used for cryptographic purposes. If you need a cryptographically secure
+value, consider using |random_int|, |random_bytes|, or 
+|openssl_random_pseudo_bytes| instead.
+
     Note: On some platforms (such as Windows), |getrandmax| is only 32767. If
     you require a range larger than 32767, specifying {min} and {max} will
     allow you to create a range larger than this, or consider using |mt_rand|
@@ -55,20 +62,13 @@ The above example will output something similar to:
 11
 
 ==============================================================================
-*Notes*
-
-Caution
-
-This function does not generate cryptographically secure values, and should
-not be used for cryptographic purposes. If you need a cryptographically secure
-value, consider using |openssl_random_pseudo_bytes| instead.
-
-==============================================================================
 *See* *Also*
 
   * |srand| - Seed the random number generator
   * |getrandmax| - Show largest possible random value
   * |mt_rand| - Generate a better random value
+  * |random_int| - Generates cryptographically secure pseudo-random integers
+  * |random_bytes| - Generates cryptographically secure pseudo-random bytes
   * |openssl_random_pseudo_bytes| - Generate a pseudo-random string of bytes
 
 

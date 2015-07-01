@@ -133,12 +133,11 @@ Sets an option on the given cURL session handle.
                                     TRUE to append to the
     CURLOPT_FTPAPPEND               remote file instead of
                                     overwriting it.
-                                    Pass a long specifying
-                                    whether the TCP_NODELAY  Available since PHP
-    CURLOPT_TCP_NODELAY             option is to be set or   5.2.1 for versions
-                                    cleared (1 = set, 0 =    compiled with libcurl
-                                    clear). The option is    7.11.2 or greater.
-                                    cleared by default.
+                                    TRUE to disable TCP's    Available since PHP
+                                    Nagle algorithm, which   5.2.1 for versions
+    CURLOPT_TCP_NODELAY             tries to minimize the    compiled with libcurl
+                                    number of small packets  7.11.2 or greater.
+                                    on the network.
                                     An alias of
     CURLOPT_FTPASCII                CURLOPT_TRANSFERTEXT.
                                     Use that instead.
@@ -350,6 +349,12 @@ Sets an option on the given cURL session handle.
                                  CURLOPT_FOLLOWLOCATION.
     CURLOPT_PORT                 An alternative port number to
                                  connect to.
+                                 A bitmask of 1 (301 Moved           Added in
+                                 Permanently), 2 (302 Found) and 4   cURL
+    CURLOPT_POSTREDIR            (303 See Other) if the HTTP POST    7.19.1.
+                                 method should be maintained when    Available
+                                 CURLOPT_FOLLOWLOCATION is set and a since PHP
+                                 specific type of redirect occurs.   5.3.2.
                                  Bitmask of CURLPROTO_* values. If
                                  used, this bitmask limits what
                                  protocols libcurl may use in the
@@ -384,9 +389,10 @@ Sets an option on the given cURL session handle.
                                  The port number of the proxy to
     CURLOPT_PROXYPORT            connect to. This port number can
                                  also be set in CURLOPT_PROXY.
-                                 Either {CURLPROXY_HTTP} (default)   Added in
-    CURLOPT_PROXYTYPE            or {CURLPROXY_SOCKS5}.              cURL
-                                                                     7.10.
+                                 Either CURLPROXY_HTTP (default),    Added in
+    CURLOPT_PROXYTYPE            CURLPROXY_SOCKS4, CURLPROXY_SOCKS5, cURL
+                                 CURLPROXY_SOCKS4A or                7.10.
+                                 CURLPROXY_SOCKS5_HOSTNAME.
                                  Bitmask of CURLPROTO_* values. If
                                  used, this bitmask limits what
                                  protocols libcurl may use in a
@@ -415,10 +421,24 @@ Sets an option on the given cURL session handle.
                                  environments the value of this      7.28.1
                                  option should be kept at 2 (default
                                  value).
-                                 The SSL version (2 or 3) to use. By
-    CURLOPT_SSLVERSION           default PHP will try to determine
-                                 this itself, although in some cases
-                                 this must be set manually.
+                                 One of CURL_SSLVERSION_DEFAULT (0),
+                                 CURL_SSLVERSION_TLSv1 (1),
+                                 CURL_SSLVERSION_SSLv2 (2),
+                                 CURL_SSLVERSION_SSLv3 (3),
+                                 CURL_SSLVERSION_TLSv1_0 (4),
+                                 CURL_SSLVERSION_TLSv1_1 (5) or
+                                 CURL_SSLVERSION_TLSv1_2 (6).
+
+    CURLOPT_SSLVERSION
+                                     Note:
+
+                                     Your best bet is to not set
+                                     this and let it use the
+                                     default. Setting it to 2 or 3
+                                     is very dangerous given the
+                                     known vulnerabilities in SSLv2
+                                     and SSLv3.
+
                                  How CURLOPT_TIMEVALUE is treated.
                                  Use {CURL_TIMECOND_IFMODSINCE} to
                                  return the page only if it has been
@@ -714,7 +734,7 @@ Sets an option on the given cURL session handle.
                              A callback accepting two parameters. The first is
                              the cURL resource, the second is a string with
     CURLOPT_HEADERFUNCTION   the header data to be written. The header data
-                             must be written when by this callback. Return the
+                             must be written by this callback. Return the
                              number of bytes written.
                              A callback accepting three parameters. The first
                              is the cURL resource, the second is a string

@@ -52,14 +52,19 @@ Example #1 func_get_arg() example
     function foo()
     {
          $numargs = func_num_args();
-         echo "Number of arguments: $numargs<br />\n";
+         echo "Number of arguments: $numargs\n";
          if ($numargs >= 2) {
-             echo "Second argument is: " . func_get_arg(1) . "<br />\n";
+             echo "Second argument is: " . func_get_arg(1) . "\n";
          }
     }
 
-    foo (1, 2, 3);
+    foo(1, 2, 3);
 <?>
+
+The above example will output:
+
+Number of arguments: 3
+Second argument is: 2
 
 Example #2 func_get_arg() example before and after PHP 5.3
 

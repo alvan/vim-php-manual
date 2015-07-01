@@ -61,8 +61,9 @@ bool(false)
     Note:
 
     Both arguments must be of the same length to be compared successfully.
-    When arguments of differing length are supplied, FALSE is returned and the
-    length of the known string may be leaked in case of a timing attack.
+    When arguments of differing length are supplied, FALSE is returned
+    immediately and the length of the known string may be leaked in case of a
+    timing attack.
 
     Note:
 

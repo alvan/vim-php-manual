@@ -16,6 +16,9 @@ should be used to escape individual arguments to shell functions coming from
 user input. The shell functions include |exec|, |system| and the backtick
 operator.
 
+On Windows, escapeshellarg() instead removes percent signs, replaces double
+quotes with spaces and adds double quotes around the string.
+
 ==============================================================================
 *Parameters*
 

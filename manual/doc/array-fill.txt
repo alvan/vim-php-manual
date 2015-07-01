@@ -25,7 +25,7 @@ starting at the {start_index} parameter.
 
 {num}
 
-    Number of elements to insert. Must be greater than zero.
+    Number of elements to insert. Must be greater than or equal to zero.
 
 {value}
 
@@ -39,7 +39,14 @@ Returns the filled array
 ==============================================================================
 *Errors/Exceptions*
 
-Throws a E_WARNING if {num} is less than one.
+Throws a E_WARNING if {num} is less than zero.
+
+==============================================================================
+*Changelog*
+
+Version                              Description
+5.6.0   {num} may now be zero. Previously, {num} was required to be greater
+        than zero.
 
 ==============================================================================
 *Examples*

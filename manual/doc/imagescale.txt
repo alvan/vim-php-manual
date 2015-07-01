@@ -1,6 +1,6 @@
 imagescale
 
-(PHP 5 >= 5.5.0)
+(PHP 5 >= 5.5.0, PHP 7)
 
 imagescale — Scale an image using the given new width and height
 
@@ -10,10 +10,7 @@ imagescale — Scale an image using the given new width and height
     resource imagescale ( resource $image , int $new_width [, int $new_height~
     = -1 [, int $mode = IMG_BILINEAR_FIXED ]] )~
 
-Warning
-
-This function is currently not documented; only its argument list is
-available.
+imagescale() scales an image using the given interpolation algorithm.
 
 ==============================================================================
 *Parameters*
@@ -25,7 +22,17 @@ available.
 
 {new_width}
 
+    The width to scale the image to.
+
 {new_height}
+
+    The height to scale the image to. If omitted or negative, the aspect ratio
+    will be preserved.
+
+    Caution
+
+    You should always provide the height if using PHP 5.5.18 or earlier, or
+    PHP 5.6.2 or earlier, as the aspect ratio calculation was incorrect.
 
 {mode}
 
@@ -35,7 +42,15 @@ available.
 ==============================================================================
 *Return* *Values*
 
-Return scaled image resource on success or FALSE on failure.
+Return the scaled image resource on success or FALSE on failure.
+
+==============================================================================
+*Changelog*
+
+Version                              Description
+5.5.19/ The calculation of the height if {new_height} was negative or omitted
+5.6.3   was fixed; prior to these versions, the aspect ratio was not
+        maintained correctly.
 
 
 vim:ft=help:

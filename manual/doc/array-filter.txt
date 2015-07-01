@@ -7,7 +7,8 @@ array_filter — Filters elements of an array using a callback function
 ==============================================================================
 *Description*
 
-    array array_filter ( array $array [, callable $callback ] )~
+    array array_filter ( array $array [, callable $callback [, int $flag = 0~
+    ]] )~
 
 Iterates over each value in the {array} passing them to the {callback}
 function. If the {callback} function returns true, the current value from
@@ -27,10 +28,25 @@ function. If the {callback} function returns true, the current value from
     If no {callback} is supplied, all entries of {array} equal to FALSE (see
     converting to boolean) will be removed.
 
+{flag}
+
+    Flag determining what arguments are sent to {callback}:
+      + ARRAY_FILTER_USE_KEY - pass key as the only argument to {callback}
+        instead of the value
+      + ARRAY_FILTER_USE_BOTH - pass both value and key as arguments to
+        {callback} instead of the value
+
 ==============================================================================
 *Return* *Values*
 
 Returns the filtered array.
+
+==============================================================================
+*Changelog*
+
+Version                              Description
+5.6.0   Added optional {flag} parameter and constants ARRAY_FILTER_USE_KEY and
+        ARRAY_FILTER_USE_BOTH
 
 ==============================================================================
 *Examples*
@@ -99,6 +115,34 @@ Array
     [0] => foo
     [2] => -1
 )
+
+Example #3 array_filter() with {flag}
+
+<?php >
+
+    $arr = ['a' => 1, 'b' => 2, 'c' => 3, 'd' => 4];
+
+    var_dump(array_filter($arr, function($k) {
+        return $k == 'b';
+    }, ARRAY_FILTER_USE_KEY));
+
+    var_dump(array_filter($arr, function($v, $k) {
+        return $k == 'b' || $v == 4;
+    }, ARRAY_FILTER_USE_BOTH));
+<?>
+
+The above example will output:
+
+array(1) {
+  ["b"]=>
+  int(2)
+}
+array(2) {
+  ["b"]=>
+  int(2)
+  ["d"]=>
+  int(4)
+}
 
 ==============================================================================
 *Notes*

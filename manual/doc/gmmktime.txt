@@ -69,6 +69,10 @@ omitted arguments being set to the current corresponding GMT value.
     Parameters always represent a GMT date so {is_dst} doesn't influence the
     result.
 
+        Note:
+
+        This parameter has been removed in PHP 7.0.0.
+
 ==============================================================================
 *Return* *Values*
 
@@ -78,6 +82,7 @@ Returns a integer Unix timestamp.
 *Changelog*
 
 Version                              Description
+7.0.0   {is_dst} parameter has been removed.
 5.1.0   As of PHP 5.1.0, the {is_dst} parameter became deprecated. As a
         result, the new timezone handling features should be used instead.
 

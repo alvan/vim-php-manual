@@ -14,7 +14,9 @@ Returns the maximum value that can be returned by a call to |mt_rand|.
 ==============================================================================
 *Return* *Values*
 
-Returns the maximum random value returned by |mt_rand|
+Returns the maximum random value returned by a call to |mt_rand| without
+arguments, which is the maximum value that can be used for its {max} parameter
+without the result being scaled up (and therefore less random).
 
 ==============================================================================
 *Examples*

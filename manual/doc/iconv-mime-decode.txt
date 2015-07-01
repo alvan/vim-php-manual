@@ -29,15 +29,15 @@ Decodes a MIME header field.
     Value              Constant                         Description
                                               If set, the given header is
                                               decoded in full conformance with
-                                              the standards defined in
-                                              » RFC2047. This option is
+                                              the standards defined in >>
+                                               RFC2047. This option is
     1     ICONV_MIME_DECODE_STRICT            disabled by default because
                                               there are a lot of broken mail
                                               user agents that don't follow
                                               the specification and don't
                                               produce correct MIME headers.
-                                              If set, 
-                                              |iconv_mime_decode_headers|
+                                              If set, |
+                                              iconv_mime_decode_headers|
     2     ICONV_MIME_DECODE_CONTINUE_ON_ERROR attempts to ignore any
                                               grammatical errors and continue
                                               to process a given header.

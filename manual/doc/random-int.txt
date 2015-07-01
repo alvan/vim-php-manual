@@ -1,0 +1,65 @@
+random_int
+
+(PHP 7)
+
+random_int — Generates cryptographically secure pseudo-random integers
+
+==============================================================================
+*Description*
+
+    int random_int ( int $min , int $max )~
+
+Generates cryptographic random integers that are suitable for use where
+unbiased results are critical (i.e. shuffling a Poker deck).
+
+The sources of random are as follows:
+
+  * On Windows CryptGenRandom() is used exclusively
+  * arc4random_buf() is used if it is available (generally BSD specific)
+  * /dev/arandom is used where available
+  * /dev/urandom is used where none of the above is available
+
+==============================================================================
+*Parameters*
+
+{min}
+
+    The lowest value to be returned down to PHP_INT_MIN.
+
+{max}
+
+    The highest value to be returned up to PHP_INT_MAX.
+
+==============================================================================
+*Return* *Values*
+
+Returns a crypto-secure random integer.
+
+==============================================================================
+*Errors/Exceptions*
+
+Issues an E_WARNING and returns FALSE when a sufficient source of randomness
+is unavailable.
+
+==============================================================================
+*Examples*
+
+Example #1 random-int() example
+
+<?php >
+    var_dump(random_int(100, 999));
+    var_dump(random_int(-1000, 0));
+<?>
+
+The above example will output something similar to:
+
+int(248)
+int(-898)
+
+==============================================================================
+*See* *Also*
+
+  * |random_bytes| - Generates cryptographically secure pseudo-random bytes
+
+
+vim:ft=help:
