@@ -3,7 +3,7 @@
  *           File:  doc.php
  *         Author:  Alvan
  *       Modifier:  Alvan
- *       Modified:  2015-07-01
+ *       Modified:  2015-07-02
  *    Description:  Generate PHP manual for Vim
  *          Usage:  1. Download PHP manual from http://php.net/get/php_manual_en.tar.gz/from/a/mirror
  *                  2. Extract all files into an directory src/
@@ -13,26 +13,26 @@ error_reporting(E_ALL);
 ini_set('display_errors', 'on');
 
 date_default_timezone_set(@date_default_timezone_get());
-mb_internal_encoding("UTF-8");
+mb_internal_encoding('UTF-8');
 
 define('DIR_SRC', __DIR__ . '/src/');
 define('DIR_TMP', __DIR__ . '/tmp/');
 define('DIR_DOC', __DIR__ . '/doc/');
 define('NUM_COL', 78);
-define('STR_TAB', "    ");
+define('STR_TAB', '    ');
 
 $dir = dir(DIR_SRC);
 $dir OR exit('Failed to open src directory');
 
 file_exists(DIR_TMP) OR mkdir(DIR_TMP, 0777, true);
 file_exists(DIR_DOC) OR mkdir(DIR_DOC, 0777, true);
-file_exists(DIR_DOC . 'tags') AND unlink(DIR_DOC . 'tags');
 
+$tns = array();
 while (false !== ($src = $dir->read()))
 {
 	if (preg_match('/^function\./', $src))
 	{
-		printf("[%s] %s" . PHP_EOL, date('c'), 'Processing ' . $src);
+		printf('[%s] %s' . PHP_EOL, date('c'), 'Processing ' . $src);
 
 		$tmp = DIR_TMP . $src;
 		$doc = DIR_DOC . preg_replace('/^function\./', '', preg_replace('/html$/', 'txt', $src));
@@ -44,7 +44,7 @@ while (false !== ($src = $dir->read()))
 			continue;
 
 		$htm = preg_replace_callback('#(<div class="methodsynopsis dc-description">)(.+?)(</div>)#s', function($mas) {
-			return $mas[1] . "<br>" . wordwrap(
+			return $mas[1] . '<br>' . wordwrap(
 				preg_replace('#(?:\s+){2,}#', ' ', trim(str_replace(array("\r", "\n"), '', strip_tags($mas[2])))),
 				NUM_COL - 1 - strlen(STR_TAB),
 				'~<br>'
@@ -62,7 +62,9 @@ while (false !== ($src = $dir->read()))
 		$htm = preg_replace('#<hr(?: /)?><div[^>]+class="manualnavbar".*?</div></body>#s', '</body>', $htm);
 		
 		file_put_contents($tmp, $htm);
-		system(sprintf("w3m -cols %d -t %d -o indent_incr=%d -no-graph %s > %s", NUM_COL + 1, strlen(STR_TAB), strlen(STR_TAB), $tmp, $doc));
+
+        system(sprintf('w3m -cols %d -t %d -o indent_incr=%d -no-graph %s > %s',
+            NUM_COL + 1, strlen(STR_TAB), strlen(STR_TAB), escapeshellarg($tmp), escapeshellarg($doc)));
 
 		$txt = file_get_contents($doc);
 		$txt = preg_replace('#^\s?([^\s].+~)$#m', STR_TAB . '\1', $txt);
@@ -116,13 +118,12 @@ while (false !== ($src = $dir->read()))
 				}
 			}
 		}
-		$txt = implode(PHP_EOL, $lns);
 
-		$txt .= PHP_EOL . "vim:ft=help:";
-		file_put_contents($doc, $txt);
+		file_put_contents($doc, implode(PHP_EOL, $lns) . PHP_EOL . 'vim:ft=help:');
 
-		file_put_contents(DIR_DOC . 'tags', "${tag}\t" . basename($doc) . "\t/^${tag}\n", FILE_APPEND | LOCK_EX);
+        $tns[] = "${tag}\t" . basename($doc) . "\t/^${tag}";
 	}
 }
 
-file_exists(DIR_DOC . 'tags') AND system('vim +%sort +wq ' . DIR_DOC . 'tags');
+file_put_contents(DIR_DOC . 'tags', implode("\n", $tns), LOCK_EX);
+system('vim +%sort +wq ' . escapeshellarg(DIR_DOC . 'tags'));
