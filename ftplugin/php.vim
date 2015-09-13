@@ -3,7 +3,7 @@
 "          File:  php.vim
 "        Author:  Alvan
 "      Modifier:  Alvan
-"      Modified:  2015-05-11
+"      Modified:  2015-09-13
 "   Description:  PHP Manual for Vim
 "
 " --}}}
@@ -20,5 +20,7 @@ if !exists("g:php_manual_online_search_shortcut")
     let g:php_manual_online_search_shortcut = '<C-h>'
 endif
 
-exec 'vnoremap <silent> <buffer> '.g:php_manual_online_search_shortcut.' y:call phpmanual#online#open(@@)<CR>'
-exec 'nnoremap <silent> <buffer> '.g:php_manual_online_search_shortcut.' :call phpmanual#online#open()<CR>'
+if g:php_manual_online_search_shortcut != ''
+    exec 'vnoremap <silent> <buffer> '.g:php_manual_online_search_shortcut.' y:call phpmanual#online#open(@@)<CR>'
+    exec 'nnoremap <silent> <buffer> '.g:php_manual_online_search_shortcut.' :call phpmanual#online#open()<CR>'
+endif
