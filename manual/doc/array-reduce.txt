@@ -1,6 +1,6 @@
 array_reduce
 
-(PHP 4 >= 4.0.5, PHP 5)
+(PHP 4 >= 4.0.5, PHP 5, PHP 7)
 
 array_reduce — Iteratively reduce the array to a single value using a callback
 function
@@ -65,7 +65,7 @@ Example #1 array_reduce() example
         return $carry;
     }
 
-    function multiplication($carry, $item)
+    function product($carry, $item)
     {
         $carry *= $item;
         return $carry;
@@ -75,8 +75,7 @@ Example #1 array_reduce() example
     $x = array();
 
     var_dump(array_reduce($a, "sum")); // int(15)
-    var_dump(array_reduce($a, "multiplication", 10)); // int
-    (1200), because: 10*1*2*3*4*5
+    var_dump(array_reduce($a, "product", 10)); // int(1200), because: 10*1*2*3*4*5
     var_dump(array_reduce($x, "sum", "No data to reduce")); // string(17)
      "No data to reduce"
 <?>

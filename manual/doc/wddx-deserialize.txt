@@ -24,5 +24,14 @@ Unserializes a WDDX {packet}.
 Returns the deserialized value which can be a string, a number or an array.
 Note that structures are deserialized into associative arrays.
 
+==============================================================================
+*Notes*
+
+Warning
+
+Do not pass untrusted user input to wddx_deserialize(). Unserialization can
+result in code being loaded and executed due to object instantiation and
+autoloading, and a malicious user may be able to exploit this.
+
 
 vim:ft=help:

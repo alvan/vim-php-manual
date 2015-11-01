@@ -6,10 +6,10 @@ mysql_close — Close MySQL connection
 
 Warning
 
-This extension is deprecated as of PHP 5.5.0, and will be removed in the
-future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
-MySQL: choosing an API guide and related FAQ for more information.
-Alternatives to this function include:
+This extension was deprecated in PHP 5.5.0, and it was removed in PHP 7.0.0.
+Instead, the MySQLi or PDO_MySQL extension should be used. See also MySQL:
+choosing an API guide and related FAQ for more information. Alternatives to
+this function include:
 
   * mysqli_close()
   * PDO: Assign the value of NULL to the PDO object
@@ -23,9 +23,11 @@ mysql_close() closes the non-persistent connection to the MySQL server that's
 associated with the specified link identifier. If {link_identifier} isn't
 specified, the last opened link is used.
 
-Using mysql_close() isn't usually necessary, as non-persistent open links are
-automatically closed at the end of the script's execution. See also freeing
-resources.
+Open non-persistent MySQL connections and result sets are automatically
+destroyed when a PHP script finishes its execution. So, while explicitly
+closing open connections and freeing result sets is optional, doing so is
+recommended. This will immediately return resources to PHP and MySQL, which
+can improve performance. For related information, see freeing resources
 
 ==============================================================================
 *Parameters*
@@ -65,6 +67,7 @@ Connected successfully
     Note:
 
     mysql_close() will not close persistent links created by |mysql_pconnect|.
+    For additional details, see the manual page on persistent connections.
 
 ==============================================================================
 *See* *Also*

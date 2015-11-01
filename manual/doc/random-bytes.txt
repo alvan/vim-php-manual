@@ -10,15 +10,16 @@ random_bytes — Generates cryptographically secure pseudo-random bytes
     string random_bytes ( int $length )~
 
 Generates an arbitrary length string of cryptographic random bytes that are
-suitable for use in cryptography when generating salts, keys and
+suitable for cryptographic use, such as when generating salts, keys or
 initialization vectors.
 
-The sources of random are as follows:
+The sources of randomness used for this function are as follows:
 
-  * On Windows CryptGenRandom() is used exclusively
-  * arc4random_buf() is used if it is available (generally BSD specific)
-  * /dev/arandom is used where available
-  * /dev/urandom is used where none of the above is available
+  * On Windows, >> CryptGenRandom() will always be used.
+  * On Linux, the >> getrandom(2) syscall will be used if available.
+  * On other platforms, /dev/urandom will be used.
+  * If none of the aforementioned sources are available, then an Exception
+    will be thrown.
 
 ==============================================================================
 *Parameters*
@@ -30,18 +31,21 @@ The sources of random are as follows:
 ==============================================================================
 *Return* *Values*
 
-Returns a string containing the crypto-secure random bytes in binary format.
+Returns a string containing the requested number of cryptographically secure
+random bytes.
 
 ==============================================================================
 *Errors/Exceptions*
 
-Issues an E_WARNING and returns FALSE when a sufficient source of randomness
-is unavailable.
+  * If an appropriate source of randomness cannot be found, an Exception will
+    be thrown.
+  * If invalid parameters are given, a TypeError will be thrown.
+  * If an invalid {length} of bytes is given, an Error will be thrown.
 
 ==============================================================================
 *Examples*
 
-Example #1 random-bytes() example
+Example #1 random_bytes() example
 
 <?php >
     $bytes = random_bytes(5);

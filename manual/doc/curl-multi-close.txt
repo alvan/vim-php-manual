@@ -1,6 +1,6 @@
 curl_multi_close
 
-(PHP 5)
+(PHP 5, PHP 7)
 
 curl_multi_close — Close a set of cURL handles
 
@@ -57,7 +57,9 @@ process them asynchronously.
 
     //close the handles
     curl_multi_remove_handle($mh, $ch1);
+    curl_close($ch1);
     curl_multi_remove_handle($mh, $ch2);
+    curl_close($ch2);
     curl_multi_close($mh);
 
 <?>

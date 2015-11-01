@@ -26,10 +26,11 @@ validating it beforehand.
 
     Valid PHP code to be evaluated.
 
-    The code mustn't be wrapped in opening and closing PHP tags, i.e. 'echo
-    "Hi!";' must be passed instead of '<? echo "Hi!"; >'. It is still possible
-    to leave and reenter PHP mode though using the appropriate PHP tags, e.g.
-    'echo "In PHP mode!"; ?>In HTML mode!<? echo "Back in PHP mode!";'.
+    The code must not be wrapped in opening and closing PHP tags, i.e. 'echo
+    "Hi!";' must be passed instead of '<?php echo "Hi!"; ?>'. It is still
+    possible to leave and re-enter PHP mode though using the appropriate PHP
+    tags, e.g. 'echo "In PHP mode!"; ?>In HTML mode!<?php echo "Back in PHP
+    mode!";'.
 
     Apart from that the passed code must be valid PHP. This includes that all
     statements must be properly terminated using a semicolon. 'echo "Hi!"' for

@@ -8,7 +8,7 @@ function
 ==============================================================================
 *Description*
 
-    bool is_callable ( callable $name [, bool $syntax_only = false [, string~
+    bool is_callable ( mixed $var [, bool $syntax_only = false [, string~
     &$callable_name ]] )~
 
 Verify that the contents of a variable can be called as a function. This can
@@ -18,9 +18,9 @@ array contains a properly encoded object and function name.
 ==============================================================================
 *Parameters*
 
-{name}
+{var}
 
-    The callback function to check
+    The value to check
 
 {syntax_only}
 
@@ -39,7 +39,7 @@ array contains a properly encoded object and function name.
 ==============================================================================
 *Return* *Values*
 
-Returns TRUE if {name} is callable, FALSE otherwise.
+Returns TRUE if {var} is callable, FALSE otherwise.
 
 ==============================================================================
 *Examples*

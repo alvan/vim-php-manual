@@ -1,6 +1,6 @@
 set_exception_handler
 
-(PHP 5)
+(PHP 5, PHP 7)
 
 set_exception_handler — Sets a user-defined exception handler function
 
@@ -19,10 +19,18 @@ catch block. Execution will stop after the {exception_handler} is called.
 
     Name of the function to be called when an uncaught exception occurs. This
     handler function needs to accept one parameter, which will be the
-    exception object that was thrown. This is the handler signature:
+    exception object that was thrown. This is the handler signature before PHP
+    7:
 
 
     void handler ( Exception $ex )~
+
+    Since PHP 7, most errors are reported by throwing Error exceptions, which
+    will be caught by the handler as well. Both Error and Exception implements
+    the Throwable interface. This is the handler signature since PHP 7:
+
+
+    void handler ( Throwable $ex )~
 
     NULL may be passed instead, to reset this handler to its default state.
 
@@ -42,6 +50,8 @@ error. If no previous handler was defined, NULL is also returned.
 *Changelog*
 
 Version                              Description
+7.0.0   The type of parameter passed into {exception_handler} changed from
+        Exception to Throwable
 5.5.0   Previously, if NULL was passed then this function returned TRUE. It
         returns the previous handler since PHP 5.5.0.
 

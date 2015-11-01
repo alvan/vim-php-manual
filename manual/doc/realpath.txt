@@ -30,7 +30,8 @@ absolute pathname.
 *Return* *Values*
 
 Returns the canonicalized absolute pathname on success. The resulting path
-will have no symbolic link, '/./' or '/../' components.
+will have no symbolic link, '/./' or '/../' components. Trailing delimiters,
+such as \ and /, are also removed.
 
 realpath() returns FALSE on failure, e.g. if the file does not exist.
 
@@ -38,6 +39,11 @@ realpath() returns FALSE on failure, e.g. if the file does not exist.
 
     The running script must have executable permissions on all directories in
     the hierarchy, otherwise realpath() will return FALSE.
+
+    Note:
+
+    For case-insensitive filesystems realpath() may or may not normalize the
+    character case.
 
     Note: Because PHP's integer type is signed and many platforms use 32bit
     integers, some filesystem functions may return unexpected results for
@@ -60,12 +66,15 @@ Example #1 realpath() example
 
 <?php >
     chdir('/var/www/');
-    echo realpath('./../../etc/passwd');
+    echo realpath('./../../etc/passwd') . PHP_EOL;
+
+    echo realpath('/tmp/') . PHP_EOL;
 <?>
 
 The above example will output:
 
 /etc/passwd
+/tmp
 
 Example #2 realpath() on Windows
 
@@ -73,17 +82,20 @@ On windows realpath() will change unix style paths to windows style.
 
 <?php >
     echo realpath('/windows/system32');
+
+    echo realpath('C:\Program Files\\');
 <?>
 
 The above example will output:
 
 C:\WINDOWS\System32
+C:\Program Files
 
 ==============================================================================
 *See* *Also*
 
   * |basename| - Returns trailing name component of path
-  * |dirname| - Returns parent directory's path
+  * |dirname| - Returns a parent directory's path
   * |pathinfo| - Returns information about a file path
 
 

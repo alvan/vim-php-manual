@@ -9,11 +9,6 @@ runkit_method_add — Dynamically adds a new method to a given class
 
     bool runkit_method_add ( string $classname , string $methodname , string~
     $args , string $code [, int $flags = RUNKIT_ACC_PUBLIC ] )~
-Warning
-
-This function is EXPERIMENTAL. The behaviour of this function, its name, and
-surrounding documentation may change without notice in a future release of
-PHP. This function should be used at your own risk.
 
 ==============================================================================
 *Parameters*
@@ -37,7 +32,8 @@ PHP. This function should be used at your own risk.
 {flags}
 
     The type of method to create, can be RUNKIT_ACC_PUBLIC,
-    RUNKIT_ACC_PROTECTED or RUNKIT_ACC_PRIVATE
+    RUNKIT_ACC_PROTECTED or RUNKIT_ACC_PRIVATE optionally combined via bitwise
+    OR with RUNKIT_ACC_STATIC (since 1.0.1)
 
         Note:
 

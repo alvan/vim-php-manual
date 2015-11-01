@@ -6,10 +6,10 @@ mysql_set_charset — Sets the client character set
 
 Warning
 
-This extension is deprecated as of PHP 5.5.0, and will be removed in the
-future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
-MySQL: choosing an API guide and related FAQ for more information.
-Alternatives to this function include:
+This extension was deprecated in PHP 5.5.0, and it was removed in PHP 7.0.0.
+Instead, the MySQLi or PDO_MySQL extension should be used. See also MySQL:
+choosing an API guide and related FAQ for more information. Alternatives to
+this function include:
 
   * mysqli_set_charset()
   * PDO: Add charset to the connection string, such as charset=utf8
@@ -58,9 +58,9 @@ Returns TRUE on success or FALSE on failure.
 ==============================================================================
 *See* *Also*
 
-  * |mysql_client_encoding| - Returns the name of the character set
   * Setting character sets in MySQL
   * >> List of character sets that MySQL supports
+  * |mysql_client_encoding| - Returns the name of the character set
 
 
 vim:ft=help:

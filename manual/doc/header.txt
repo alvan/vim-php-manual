@@ -164,10 +164,11 @@ Many proxies and clients can be forced to disable caching with:
 
     Note:
 
-    HTTP/1.1 requires an absolute URI as argument to >> Location: including
-    the scheme, hostname and absolute path, but some clients accept relative
-    URIs. You can usually use $_SERVER['HTTP_HOST'], $_SERVER['PHP_SELF'] and 
-    |dirname| to make an absolute URI from a relative one yourself:
+    Most contemporary clients accept relative URIs as argument to >> Location:
+    , but some older clients require an absolute URI including the scheme,
+    hostname and absolute path. You can usually use $_SERVER['HTTP_HOST'],
+    $_SERVER['PHP_SELF'] and |dirname| to make an absolute URI from a relative
+    one yourself:
     <?php >
     /
     * Redirect to a different page in the current directory that was requested *

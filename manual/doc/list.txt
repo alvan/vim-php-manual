@@ -1,6 +1,6 @@
 list
 
-(PHP 4, PHP 5)
+(PHP 4, PHP 5, PHP 7)
 
 list — Assign variables as if they were an array
 
@@ -23,6 +23,14 @@ is used to assign a list of variables in one operation.
 *Return* *Values*
 
 Returns the assigned array.
+
+==============================================================================
+*Changelog*
+
+Version                              Description
+7.0.0   The order that the assignment operations are performed in has changed.
+7.0.0   list() expressions can no longer be completely empty.
+7.0.0   Strings can no longer be unpacked.
 
 ==============================================================================
 *Examples*
@@ -114,11 +122,16 @@ array(3) {
 
 Warning
 
-list() assigns the values starting with the right-most parameter. If you are
-using plain variables, you don't have to worry about this. But if you are
-using arrays with indices you usually expect the order of the indices in the
-array the same you wrote in the list() from left to right; which it isn't.
-It's assigned in the reverse order.
+In PHP 5, list() assigns the values starting with the right-most parameter. In
+PHP 7, list() starts with the left-most parameter.
+
+If you are using plain variables, you don't have to worry about this. But if
+you are using arrays with indices you usually expect the order of the indices
+in the array the same you wrote in the list() from left to right, which is not
+the case in PHP 5, as it's assigned in the reverse order.
+
+Generally speaking, it is advisable to avoid relying on a specific order of
+operation, as this may change again in the future.
 
 Warning
 

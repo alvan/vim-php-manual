@@ -1,6 +1,6 @@
 ini_get
 
-(PHP 4, PHP 5)
+(PHP 4, PHP 5, PHP 7)
 
 ini_get — Gets the value of a configuration option
 
@@ -90,6 +90,11 @@ post_max_size in bytes = 8388608
     Attempting normal arithmetic functions on these values will not have
     otherwise expected results. The example above shows one way to convert
     shorthand notation into bytes, much like how the PHP source does it.
+
+    Note:
+
+    ini_get() can't read "array" ini options such as pdo.dsn.*, and returns
+    FALSE in this case.
 
 ==============================================================================
 *Changelog*

@@ -27,6 +27,22 @@ Add a word to personal word list of the given dictionary.
 
 Returns TRUE on success or FALSE on failure.
 
+Example #1 Adding a word to a PWL
+
+<?php >
+
+    $filename = './my_word_list.pwl';
+    $word = 'Supercalifragilisticexpialidocious';
+
+    $broker = enchant_broker_init();
+    $dict = enchant_broker_request_pwl_dict($broker, $filename);
+
+    enchant_dict_add_to_personal($dict, $word);
+
+    enchant_broker_free($broker);
+
+<?>
+
 ==============================================================================
 *See* *Also*
 

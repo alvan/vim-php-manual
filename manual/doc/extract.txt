@@ -1,6 +1,6 @@
 extract
 
-(PHP 4, PHP 5)
+(PHP 4, PHP 5, PHP 7)
 
 extract — Import variables into the current symbol table from an array
 
@@ -111,15 +111,15 @@ variables being named $wddx_color, $wddx_size, and $wddx_shape.
 Warning
 
 Do not use extract() on untrusted data, like user input (i.e. $_GET, $_FILES,
-etc.). If you do, for example if you want to run old code that relies on
-register_globals temporarily, make sure you use one of the non-overwriting
+etc.). If you do, for example if you want to temporarily run old code that
+relied on register_globals, make sure you use one of the non-overwriting
 {flags} values such as EXTR_SKIP and be aware that you should extract in the
 same order that's defined in variables_order within the php.ini.
 
     Note:
 
-    If you have register_globals turned on and you use extract() on $_FILES
-    and specify EXTR_SKIP, you may be surprised at the results.
+    If you still have register_globals and it is turned on, if you use extract
+    () on $_FILES and specify EXTR_SKIP, you may be surprised at the results.
 
     Warning
 

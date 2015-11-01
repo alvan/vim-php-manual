@@ -7,14 +7,15 @@ ucwords — Uppercase the first character of each word in a string
 ==============================================================================
 *Description*
 
-    string ucwords ( string $str )~
+    string ucwords ( string $str [, string $delimiters = "~
+    \t\r\n\f\v" ] )~
 
 Returns a string with the first character of each word in {str} capitalized,
 if that character is alphabetic.
 
 The definition of a word is any string of characters that is immediately after
-a whitespace (These are: space, form-feed, newline, carriage return,
-horizontal tab, and vertical tab).
+any character listed in the {delimiters} parameter (By default these are:
+space, form-feed, newline, carriage return, horizontal tab, and vertical tab).
 
 ==============================================================================
 *Parameters*
@@ -23,10 +24,20 @@ horizontal tab, and vertical tab).
 
     The input string.
 
+{delimiters}
+
+    The optional {delimiters} contains the word separator characters.
+
 ==============================================================================
 *Return* *Values*
 
 Returns the modified string.
+
+==============================================================================
+*Changelog*
+
+   Version                Description
+5.4.32, 5.5.16 Added the {delimiters} parameter.
 
 ==============================================================================
 *Examples*
@@ -40,6 +51,15 @@ Example #1 ucwords() example
     $bar = 'HELLO WORLD!';
     $bar = ucwords($bar);             // HELLO WORLD!
     $bar = ucwords(strtolower($bar)); // Hello World!
+<?>
+
+Example #2 ucwords() example with custom delimiter
+
+<?php >
+    $foo = 'hello|world!';
+    $bar = ucwords($foo);             // Hello|world!
+
+    $baz = ucwords($foo, "|");        // Hello|World!
 <?>
 
 ==============================================================================

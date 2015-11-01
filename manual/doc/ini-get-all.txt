@@ -1,6 +1,6 @@
 ini_get_all
 
-(PHP 4 >= 4.2.0, PHP 5)
+(PHP 4 >= 4.2.0, PHP 5, PHP 7)
 
 ini_get_all — Gets all configuration options
 
@@ -41,6 +41,13 @@ See the manual section for information on what access levels mean.
 
     It's possible for a directive to have multiple access levels, which is why
     access shows the appropriate bitmask values.
+
+==============================================================================
+*Notes*
+
+    Note:
+
+    ini_get_all() ignores "array" ini options such as pdo.dsn.*.
 
 ==============================================================================
 *Changelog*

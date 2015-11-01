@@ -11,6 +11,9 @@ imagexbm — Output an XBM image to browser or file
 
 Outputs or save an XBM version of the given {image}.
 
+    Note: imagexbm() doesn't apply any padding, so the image width has to be a
+    multiple of 8.
+
 ==============================================================================
 *Parameters*
 
@@ -28,7 +31,7 @@ Outputs or save an XBM version of the given {image}.
 
     You can set the foreground color with this parameter by setting an
     identifier obtained from |imagecolorallocate|. The default foreground
-    color is black.
+    color is black. All other colors are treated as background.
 
 ==============================================================================
 *Return* *Values*

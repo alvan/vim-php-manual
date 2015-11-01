@@ -7,9 +7,9 @@ setcookie — Send a cookie
 ==============================================================================
 *Description*
 
-    bool setcookie ( string $name [, string $value [, int $expire = 0 [,~
-    string $path [, string $domain [, bool $secure = false [, bool $httponly~
-    = false ]]]]]] )~
+    bool setcookie ( string $name [, string $value = "" [, int~
+    $expire = 0 [, string $path = "" [, string $domain =~
+    "" [, bool $secure = false [, bool $httponly = false ]]]]]] )~
 
 setcookie() defines a cookie to be sent along with the rest of the HTTP
 headers. Like other headers, cookies must be sent before any output from your
@@ -18,16 +18,10 @@ this function prior to any output, including <html> and <head> tags as well as
 any whitespace.
 
 Once the cookies have been set, they can be accessed on the next page load
-with the $_COOKIE or $HTTP_COOKIE_VARS arrays. Note, superglobals such as
-$_COOKIE became available in PHP 4.1.0. Cookie values also exist in $_REQUEST.
+with the $_COOKIE array. Cookie values may also exist in $_REQUEST.
 
 ==============================================================================
 *Parameters*
-
-All the arguments except the {name} argument are optional. You may also
-replace an argument with an empty string ("") in order to skip that argument.
-Because the {expire} argument is integer, it cannot be skipped with an empty
-string, use a zero (0) instead.
 
 >> RFC 6265 provides the normative reference on how each setcookie() parameter
 is interpreted.
@@ -123,7 +117,6 @@ examples:
 <?php >
     // Print an individual cookie
     echo $_COOKIE["TestCookie"];
-    echo $HTTP_COOKIE_VARS["TestCookie"];
 
     // Another way to debug/test is to view all cookies
     print_r($_COOKIE);

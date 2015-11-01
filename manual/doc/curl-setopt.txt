@@ -1,6 +1,6 @@
 curl_setopt
 
-(PHP 4 >= 4.0.2, PHP 5)
+(PHP 4 >= 4.0.2, PHP 5, PHP 7)
 
 curl_setopt — Set an option for a cURL transfer
 
@@ -502,11 +502,11 @@ Sets an option on the given cURL session handle.
     parameter:
 
                 Option                       Set {value} to            Notes
-                                    The name of a file holding one or
-                                    more certificates to verify the   Requires
-    CURLOPT_CAINFO                  peer with. This only makes sense  absolute
-                                    when used in combination with     path.
-                                    CURLOPT_SSL_VERIFYPEER.
+                                    The name of a file holding one or Might
+                                    more certificates to verify the   require
+    CURLOPT_CAINFO                  peer with. This only makes sense  an
+                                    when used in combination with     absolute
+                                    CURLOPT_SSL_VERIFYPEER.           path.
                                     A directory that holds multiple
     CURLOPT_CAPATH                  CA certificates. Use this option
                                     alongside CURLOPT_SSL_VERIFYPEER.
@@ -790,7 +790,7 @@ Returns TRUE on success or FALSE on failure.
 *Changelog*
 
 Version                              Description
-5.6.0   CURL_SAFE_UPLOAD is now TRUE by default.
+5.6.0   CURLOPT_SAFE_UPLOAD is now TRUE by default.
 5.6.0   Removed CURLOPT_CLOSEPOLICY and associated values.
 5.5.0   Added the cURL resource as the first argument to the
         CURLOPT_PROGRESSFUNCTION callback.
@@ -824,7 +824,7 @@ Example #1 Initializing a new cURL session and fetching a web page
     curl_close($ch);
 <?>
 
-Example #2 Uploading file
+Example #2 Uploading file (deprecated as of PHP 5.5.0)
 
 <?php >
 
@@ -839,6 +839,7 @@ Example #2 Uploading file
 
     curl_setopt($ch, CURLOPT_URL, 'http://localhost/upload.php');
     curl_setopt($ch, CURLOPT_POST, 1);
+    curl_setopt($ch, CURLOPT_SAFE_UPLOAD, false); // required as of PHP 5.6.0
     curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
 
     curl_exec($ch);

@@ -18,6 +18,8 @@ openssl_pkcs12_read() parses the PKCS#12 certificate store supplied by
 
 {pkcs12}
 
+    The certificate store contents, not its file name.
+
 {certs}
 
     On success, this will hold the Certificate Store Data.
@@ -31,5 +33,24 @@ openssl_pkcs12_read() parses the PKCS#12 certificate store supplied by
 
 Returns TRUE on success or FALSE on failure.
 
+==============================================================================
+*Examples*
+
+Example #1 openssl_pkcs12_read() example
+
+<?php >
+    if (!$cert_store = file_get_contents("/certs/file.p12")) {
+        echo "Error: Unable to read the cert file\n";
+        exit;
+    }
+
+    if (openssl_pkcs12_read($cert_store, $cert_info, "my_secret_pass")) {
+        echo "Certificate Information\n";
+        print_r($cert_info);
+    } else {
+        echo "Error: Unable to read the cert store.\n";
+        exit;
+    }
+<?>
 
 vim:ft=help:

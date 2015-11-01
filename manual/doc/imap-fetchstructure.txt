@@ -1,6 +1,6 @@
 imap_fetchstructure
 
-(PHP 4, PHP 5)
+(PHP 4, PHP 5, PHP 7)
 
 imap_fetchstructure — Read the structure of a particular message
 
@@ -58,28 +58,30 @@ parameters    An array of objects where each object has an "attribute" and a
 parts         An array of objects identical in structure to the top-level
               object, each of which corresponds to a MIME body part.
 
- Primary body
-type (may vary
-  with used
-   library)
-0 text
-1 multipart
-2 message
-3 application
-4 audio
-5 image
-6 video
-7 other
+Primary body type (value may vary
+    with used library, use of
+    constants is recommended)
+Value    Type        Constant
+0     text        TYPETEXT
+1     multipart   TYPEMULTIPART
+2     message     TYPEMESSAGE
+3     application TYPEAPPLICATION
+4     audio       TYPEAUDIO
+5     image       TYPEIMAGE
+6     video       TYPEVIDEO
+7     model       TYPEMODEL
+8     other       TYPEOTHER
 
-Transfer encodings
-(may vary with used
-     library)
-0 7BIT
-1 8BIT
-2 BINARY
-3 BASE64
-4 QUOTED-PRINTABLE
-5 OTHER
+ Transfer encodings (value may vary with
+    used library, use of constants is
+              recommended)
+Value       Type            Constant
+0     7bit             ENC7BIT
+1     8bit             ENC8BIT
+2     Binary           ENCBINARY
+3     Base64           ENCBASE64
+4     Quoted-Printable ENCQUOTEDPRINTABLE
+5     other            ENCOTHER
 
 ==============================================================================
 *See* *Also*

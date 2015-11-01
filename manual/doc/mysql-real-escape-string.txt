@@ -7,10 +7,10 @@ an SQL statement
 
 Warning
 
-This extension is deprecated as of PHP 5.5.0, and will be removed in the
-future. Instead, the MySQLi or PDO_MySQL extension should be used. See also
-MySQL: choosing an API guide and related FAQ for more information.
-Alternatives to this function include:
+This extension was deprecated in PHP 5.5.0, and it was removed in PHP 7.0.0.
+Instead, the MySQLi or PDO_MySQL extension should be used. See also MySQL:
+choosing an API guide and related FAQ for more information. Alternatives to
+this function include:
 
   * mysqli_real_escape_string()
   * PDO::quote()
@@ -61,6 +61,13 @@ the concepts section on character sets for more information.
 Returns the escaped string, or FALSE on error.
 
 ==============================================================================
+*Errors/Exceptions*
+
+Executing this function without a MySQL connection present will also emit
+E_WARNING level PHP errors. Only execute this function with a valid MySQL
+connection present.
+
+==============================================================================
 *Examples*
 
 Example #1 Simple mysql_real_escape_string() example
@@ -76,7 +83,32 @@ Example #1 Simple mysql_real_escape_string() example
                 mysql_real_escape_string($password));
 <?>
 
-Example #2 An example SQL Injection Attack
+Example #2 mysql_real_escape_string() requires a connection example
+
+This example demonstrates what happens if a MySQL connection is not present
+when calling this function.
+
+<?php >
+    // We have not connected to MySQL
+
+    $lastname  = "O'Reilly";
+    $_lastname = mysql_real_escape_string($lastname);
+
+    $query = "SELECT * FROM actors WHERE last_name = '$_lastname'";
+
+    var_dump($_lastname);
+    var_dump($query);
+<?>
+
+The above example will output something similar to:
+
+Warning: mysql_real_escape_string(): No such file or directory in /this/test/script.php on line 5
+Warning: mysql_real_escape_string(): A link to the server could not be established in /this/test/script.php on line 5
+
+bool(false)
+string(41) "SELECT * FROM actors WHERE last_name = ''"
+
+Example #3 An example SQL Injection Attack
 
 <?php >
     // We didn't check $_POST['password'], it could be anything the user wanted!

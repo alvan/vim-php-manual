@@ -7,9 +7,10 @@ floor — Round fractions down
 ==============================================================================
 *Description*
 
-    float floor ( float $value )~
+    mixed floor ( float $value )~
 
-Returns the next lowest integer value by rounding down {value} if necessary.
+Returns the next lowest integer value (as float) by rounding down {value} if
+necessary.
 
 ==============================================================================
 *Parameters*
@@ -23,7 +24,8 @@ Returns the next lowest integer value by rounding down {value} if necessary.
 
 {value} rounded to the next lowest integer. The return value of floor() is
 still of type float because the value range of float is usually bigger than
-that of integer.
+that of integer. This function returns FALSE in case of an error (e.g. passing
+an array).
 
 ==============================================================================
 *Examples*

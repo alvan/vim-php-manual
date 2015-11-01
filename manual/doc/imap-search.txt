@@ -1,6 +1,6 @@
 imap_search
 
-(PHP 4, PHP 5)
+(PHP 4, PHP 5, PHP 7)
 
 imap_search — This function returns an array of messages matching the given
 search criteria
@@ -9,7 +9,7 @@ search criteria
 *Description*
 
     array imap_search ( resource $imap_stream , string $criteria [, int~
-    $options = SE_FREE [, string $charset = NIL ]] )~
+    $options = SE_FREE [, string $charset = NULL ]] )~
 
 This function performs a search on the mailbox currently opened in the given 
 IMAP stream.
@@ -65,6 +65,8 @@ incomplete or inaccurate (see also >> RFC2060, section 6.4.4).
     contain UIDs instead of messages sequence numbers.
 
 {charset}
+
+    MIME character set to use when searching strings.
 
 ==============================================================================
 *Return* *Values*

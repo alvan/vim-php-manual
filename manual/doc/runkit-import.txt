@@ -14,7 +14,7 @@ overwriting where appropriate
 Similar to |include| however any code residing outside of a function or class
 is simply ignored. Additionally, depending on the value of {flags}, any
 functions or classes which already exist in the currently running environment
-will be automatically overwritten by their new definitions.
+may be automatically overwritten by their new definitions.
 
 ==============================================================================
 *Parameters*
@@ -31,6 +31,25 @@ will be automatically overwritten by their new definitions.
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
+
+==============================================================================
+*Examples*
+
+Example #1 runkit_import() example
+
+<?php >
+    // import classes entirely
+    runkit_import('myfile.inc', RUNKIT_IMPORT_CLASSES);
+
+    /* import classes, but not imports their static properties
+       (RUNKIT_IMPORT_CLASS_STATIC_PROPS is available since 1.0.1) */
+        runkit_import('myfile.inc', RUNKIT_IMPORT_CLASSES & ~
+    RUNKIT_IMPORT_CLASS_STATIC_PROPS);
+
+    /* import only static properties of classes
+       (RUNKIT_IMPORT_CLASS_STATIC_PROPS is available since 1.0.1) */
+    runkit_import('myfile.inc', RUNKIT_IMPORT_CLASS_STATIC_PROPS);
+<?>
 
 
 vim:ft=help:

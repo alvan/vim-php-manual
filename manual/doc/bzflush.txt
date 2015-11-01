@@ -1,13 +1,13 @@
 bzflush
 
-(PHP 4 >= 4.0.4, PHP 5)
+(PHP 4 >= 4.0.4, PHP 5, PHP 7)
 
 bzflush — Force a write of all buffered data
 
 ==============================================================================
 *Description*
 
-    int bzflush ( resource $bz )~
+    bool bzflush ( resource $bz )~
 
 Forces a write of all buffered bzip2 data for the file pointer {bz}.
 

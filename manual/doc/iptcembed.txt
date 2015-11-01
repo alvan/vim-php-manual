@@ -8,7 +8,7 @@ iptcembed — Embeds binary IPTC data into a JPEG image
 *Description*
 
     mixed iptcembed ( string $iptcdata , string $jpeg_file_name [, int $spool~
-    ] )~
+    = 0 ] )~
 
 Embeds binary IPTC data into a JPEG image.
 
@@ -25,14 +25,14 @@ Embeds binary IPTC data into a JPEG image.
 
 {spool}
 
-    Spool flag. If the spool flag is over 2 then the JPEG will be returned as
-    a string.
+    Spool flag. If the spool flag is less than 2 then the JPEG will be
+    returned as a string. Otherwise the JPEG will be printed to STDOUT.
 
 ==============================================================================
 *Return* *Values*
 
-If success and spool flag is lower than 2 then the JPEG will not be returned
-as a string, FALSE on errors.
+If {spool} is less than 2, the JPEG will be returned, or FALSE on failure.
+Otherwise returns TRUE on success or FALSE on failure.
 
 ==============================================================================
 *Examples*
@@ -66,16 +66,6 @@ Example #1 Embedding IPTC data into a JPEG
 
     // Path to jpeg file
     $path = './phplogo.jpg';
-
-    //
-     We need to check if theres any IPTC data in the jpeg image. If there is then 
-    // bail out because we cannot embed any image that already has some IPTC data!
-    $image = getimagesize($path, $info);
-
-    if(isset($info['APP13']))
-    {
-        die('Error: IPTC data found in source image, cannot continue');
-    }
 
     // Set the IPTC tags
     $iptc = array(

@@ -7,7 +7,7 @@ unserialize — Creates a PHP value from a stored representation
 ==============================================================================
 *Description*
 
-    mixed unserialize ( string $str )~
+    mixed unserialize ( string $str [, array $options ] )~
 
 unserialize() takes a single serialized variable and converts it back into a
 PHP value.
@@ -33,6 +33,22 @@ PHP value.
         instantiated, it'll be called. To disable this feature just empty this
         setting.
 
+{options}
+
+    Any options to be provided to unserialize(), as an associative array.
+
+                                Valid options
+         Name       Type                      Description
+                          Either an array of class names which should be
+                          accepted, FALSE to accept no classes, or TRUE to
+                          accept all classes. If this option is defined and 
+                          unserialize() encounters an object of a class that
+    allowed_classes mixed isn't to be accepted, then the object will be
+                          instantiated as __PHP_Incomplete_Class instead. 
+                          Omitting this option is the same as defining it as
+                          TRUE: PHP will attempt to instantiate objects of any
+                          class.
+
 ==============================================================================
 *Return* *Values*
 
@@ -46,6 +62,7 @@ E_NOTICE is issued.
 *Changelog*
 
 Version                              Description
+7.0.0   The {options} parameter has been added.
 5.6.0   Manipulating the serialised data by replacing C: with O: to force
         object instantiation without calling the constructor will now fail.
 
@@ -112,7 +129,7 @@ need to pass serialized data to the user.
 *See* *Also*
 
   * |serialize| - Generates a storable representation of a value
-  * Autoloading Objects
+  * Autoloading Classes
   * unserialize_callback_func
   * __wakeup()
 

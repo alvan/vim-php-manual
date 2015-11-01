@@ -1,8 +1,9 @@
 is_subclass_of
 
-(PHP 4, PHP 5)
+(PHP 4, PHP 5, PHP 7)
 
-is_subclass_of — Checks if the object has this class as one of its parents
+is_subclass_of — Checks if the object has this class as one of its parents or
+implements it.
 
 ==============================================================================
 *Description*
@@ -10,7 +11,8 @@ is_subclass_of — Checks if the object has this class as one of its parents
     bool is_subclass_of ( mixed $object , string $class_name [, bool~
     $allow_string = TRUE ] )~
 
-Checks if the given {object} has the class {class_name} as one of its parents.
+Checks if the given {object} has the class {class_name} as one of its parents
+or implements it.
 
 ==============================================================================
 *Parameters*

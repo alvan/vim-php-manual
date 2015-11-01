@@ -7,7 +7,7 @@ session_start — Start new or resume existing session
 ==============================================================================
 *Description*
 
-    bool session_start ( void )~
+    bool session_start ([ array $options = [] ] )~
 
 session_start() creates a session or resumes the current one based on a
 session identifier passed via a GET or POST request, or passed via a cookie.
@@ -31,6 +31,20 @@ important for proper output. For example, ob_gzhandler must be registered
 before starting the session.
 
 ==============================================================================
+*Parameters*
+
+{options}
+
+    If provided, this is an associative array of options that will override
+    the currently set session configuration directives. The keys should not
+    include the session. prefix.
+
+    In addition to the normal set of configuration directives, a
+    read_and_close option may also be provided. If set to TRUE, this will
+    result in the session being closed immediately after being read, thereby
+    avoiding unnecessary locking if the session data won't be changed.
+
+==============================================================================
 *Return* *Values*
 
 This function returns TRUE if a session was successfully started, otherwise
@@ -40,6 +54,7 @@ FALSE.
 *Changelog*
 
 Version                              Description
+7.0.0   The {options} parameter was added.
 5.3.0   If a session fails to start, then FALSE is returned. Previously TRUE
         was returned.
         As of PHP 4.3.3, calling session_start() after the session was
@@ -49,7 +64,9 @@ Version                              Description
 ==============================================================================
 *Examples*
 
-Example #1 A session example: page1.php
+A basic session example
+
+Example #1 page1.php
 
 <?php >
     // page1.php
@@ -73,7 +90,7 @@ After viewing page1.php, the second page page2.php will magically contain the
 session data. Read the session reference for information on propagating
 session ids as it, for example, explains what the constant SID is all about.
 
-Example #2 A session example: page2.php
+Example #2 page2.php
 
 <?php >
     // page2.php
@@ -89,6 +106,28 @@ Example #2 A session example: page2.php
     // You may want to use SID here, like we did in page1.php
     echo '<br /><a href="page1.php">page 1</a>';
 <?>
+
+Providing options to session_start()
+
+Example #3 Overriding the cookie lifetime
+
+<?php >
+    // This sends a persistent cookie that lasts a day.
+    session_start([
+        'cookie_lifetime' => 86400,
+    ]);
+<?>
+
+Example #4 Reading the session and closing it
+
+<?php >
+// If we know we don't need to change anything in the
+// session, we can just read and close rightaway to avoid
+// locking the session file and blocking other pages
+session_start([
+    'cookie_lifetime' => 86400,
+    'read_and_close'  => true,
+]);
 
 ==============================================================================
 *Notes*

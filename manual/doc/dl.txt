@@ -1,6 +1,6 @@
 dl
 
-(PHP 4, PHP 5)
+(PHP 4, PHP 5, PHP 7)
 
 dl — Loads a PHP extension at runtime
 
@@ -17,7 +17,8 @@ or not. This works on both built-in extensions and dynamically loaded ones
 
 Warning
 
-This function has been removed from some SAPIs in PHP 5.3.
+This function was removed from most SAPIs in PHP 5.3.0, and was removed from
+PHP-FPM in PHP 7.0.0.
 
 ==============================================================================
 *Parameters*
@@ -83,6 +84,8 @@ Example #1 dl() examples
 *Changelog*
 
 Version                              Description
+7.0.0   dl() is disabled in PHP-FPM.
+5.3.9   dl() is enabled in PHP-FPM, albeit discouraged.
         dl() is now disabled in some SAPIs due to stability issues. The only
 5.3.0   SAPIs that allow dl() are CLI and Embed. Use the Extension Loading
         Directives instead.

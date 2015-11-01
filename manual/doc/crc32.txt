@@ -39,7 +39,8 @@ and returning a hex string representation right away (as e.g. |md5| does)
 might have been a better plan to begin with.
 
 For a more portable solution you may also consider the generic |hash|. hash
-("crc32b", $str) will return the same string as dechex(crc32($str)).
+("crc32b", $str) will return the same string as str_pad(dechex(crc32($str)),
+8, '0', STR_PAD_LEFT).
 
 ==============================================================================
 *Parameters*

@@ -26,7 +26,13 @@ result in a malformed byte sequence.
 
 {start}
 
-    Starting position in bytes.
+    If {start} is non-negative, the returned string will start at the {start}
+    'th byte position in {string}, counting from zero. For instance, in the
+    string 'abcdef', the byte at position 0 is 'a', the byte at position 2 is
+    'c', and so forth.
+
+    If {start} is negative, the returned string will start at the {start}'th
+    byte from the end of {string}.
 
 {length}
 
@@ -43,6 +49,13 @@ result in a malformed byte sequence.
 
 mb_strcut() returns the portion of {str} specified by the {start} and {length}
 parameters.
+
+==============================================================================
+*Changelog*
+
+Version                              Description
+5.4.8   Passing NULL as {length} extracts all bytes to the end of the string.
+        Prior to this version NULL was treated the same as 0.
 
 ==============================================================================
 *See* *Also*

@@ -21,11 +21,14 @@ Defines a named constant at runtime.
 
 {value}
 
-    The value of the constant; only scalar and null values are allowed. As of
-    PHP 7 it also possible to use array value. Scalar values are integer, 
-    float, string or boolean values. It is possible to define resource
-    constants, however it is not recommended and may cause unpredictable
-    behavior.
+    The value of the constant. In PHP 5, {value} must be a scalar value (
+    integer, float, string, boolean, or NULL). In PHP 7, array values are also
+    accepted.
+
+    Warning
+
+    While it is possible to define resource constants, it is not recommended
+    and may cause unpredictable behavior.
 
 {case_insensitive}
 

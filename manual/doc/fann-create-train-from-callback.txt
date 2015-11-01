@@ -9,7 +9,7 @@ supplied function
 *Description*
 
     resource fann_create_train_from_callback ( int $num_data , int $num_input~
-    , int $num_output , collable $user_function )~
+    , int $num_output , callable $user_function )~
 
 Creates the training data struct from a user supplied function. As the
 training data are numerable (data 1, data 2...), the user must write a

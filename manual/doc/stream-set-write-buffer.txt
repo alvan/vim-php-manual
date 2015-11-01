@@ -32,7 +32,7 @@ paused after 8K of data to allow the other to write.
 ==============================================================================
 *Return* *Values*
 
-Returns 0 on success, or EOF if the request cannot be honored.
+Returns 0 on success, or another value if the request cannot be honored.
 
 ==============================================================================
 *Examples*
@@ -45,7 +45,9 @@ create an unbuffered stream.
 <?php >
     $fp = fopen($file, "w");
     if ($fp) {
-      stream_set_write_buffer($fp, 0);
+      if (stream_set_write_buffer($fp, 0) !== 0) {
+          // changing the buffering failed
+      }
       fwrite($fp, $output);
       fclose($fp);
     }

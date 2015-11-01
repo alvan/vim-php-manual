@@ -7,7 +7,7 @@ stream_bucket_prepend — Prepend bucket to brigade
 ==============================================================================
 *Description*
 
-    void stream_bucket_prepend ( resource $brigade , resource $bucket )~
+    void stream_bucket_prepend ( resource $brigade , object $bucket )~
 
 This function can be called to prepend a bucket to a bucket brigade. It is
 typically called from php_user_filter::filter().

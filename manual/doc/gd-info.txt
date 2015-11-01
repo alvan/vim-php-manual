@@ -60,9 +60,9 @@ Example #1 Using gd_info()
 
 The above example will output something similar to:
 
-array(9) {
+array(10) {
   ["GD Version"]=>
-  string(24) "bundled (2.0 compatible)"
+  string(24) "bundled (2.1.0 compatible)"
   ["FreeType Support"]=>
   bool(false)
   ["T1Lib Support"]=>
@@ -79,13 +79,15 @@ array(9) {
   bool(true)
   ["XBM Support"]=>
   bool(false)
+  ["WebP Support"]=>
+  bool(false)
 }
 
 ==============================================================================
 *Changelog*
 
 Version                  Description
-5.5.0   WebP Support added.
+5.6.12  WebP Support added.
 5.3.0   JPG Support attribute renamed to JPEG Support.
 
 ==============================================================================
@@ -95,6 +97,7 @@ Version                  Description
   * |imagejpeg| - Output image to browser or file
   * |imagegif| - Output image to browser or file
   * |imagewbmp| - Output image to browser or file
+  * |imagewebp| - Output an WebP image to browser or file
   * |imagetypes| - Return the image types supported by this PHP build
 
 

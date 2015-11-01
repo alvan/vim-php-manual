@@ -1,6 +1,6 @@
 imap_sort
 
-(PHP 4, PHP 5)
+(PHP 4, PHP 5, PHP 7)
 
 imap_sort — Gets and sort messages
 
@@ -9,7 +9,7 @@ imap_sort — Gets and sort messages
 
     array imap_sort ( resource $imap_stream , int $criteria , int $reverse [,~
     int $options = 0 [, string $search_criteria = NULL [, string $charset =~
-    NIL ]]] )~
+    NULL ]]] )~
 
 Gets and sorts message numbers by the given parameters.
 
@@ -43,7 +43,11 @@ Gets and sorts message numbers by the given parameters.
 
 {search_criteria}
 
+    IMAP2-format search criteria string. For details see |imap_search|.
+
 {charset}
+
+    MIME character set to use when sorting strings.
 
 ==============================================================================
 *Return* *Values*

@@ -1,6 +1,6 @@
 ngettext
 
-(PHP 4 >= 4.2.0, PHP 5)
+(PHP 4 >= 4.2.0, PHP 5, PHP 7)
 
 ngettext — Plural version of gettext
 
@@ -17,9 +17,16 @@ plural messages dependent on the count.
 
 {msgid1}
 
+    The singular message ID.
+
 {msgid2}
 
+    The plural message ID.
+
 {n}
+
+    The number (e.g. item count) to determine the translation for the
+    respective grammatical number.
 
 ==============================================================================
 *Return* *Values*

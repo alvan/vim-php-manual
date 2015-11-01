@@ -149,6 +149,15 @@ Example #4 getimagesize() returning IPTC
 
     This function does not require the GD image library.
 
+    Note:
+
+    This function expects {filename} to be a valid image file. If a non-image
+    file is supplied, it may be incorrectly detected as an image and the
+    function will return successfully.
+
+    Do not use getimagesize() to check that a given file is a valid image. Use
+    a purpose-built solution such as the Fileinfo extension instead.
+
 ==============================================================================
 *See* *Also*
 

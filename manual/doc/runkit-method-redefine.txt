@@ -14,12 +14,6 @@ runkit_method_redefine — Dynamically changes the code of the given method
     Note: This function cannot be used to manipulate the currently running (or
     chained) method.
 
-Warning
-
-This function is EXPERIMENTAL. The behaviour of this function, its name, and
-surrounding documentation may change without notice in a future release of
-PHP. This function should be used at your own risk.
-
 ==============================================================================
 *Parameters*
 
@@ -42,7 +36,8 @@ PHP. This function should be used at your own risk.
 {flags}
 
     The redefined method can be RUNKIT_ACC_PUBLIC, RUNKIT_ACC_PROTECTED or
-    RUNKIT_ACC_PRIVATE
+    RUNKIT_ACC_PRIVATE optionally combined via bitwise OR with
+    RUNKIT_ACC_STATIC (since 1.0.1)
 
         Note:
 
