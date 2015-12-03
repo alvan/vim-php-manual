@@ -21,7 +21,15 @@ Converts a BSON string to its >> extended JSON representation.
 ==============================================================================
 *Return* *Values*
 
-The converted JSON value. NULL is returned on error.
+The converted JSON value.
+
+==============================================================================
+*Errors/Exceptions*
+
+Throws MongoDB\Driver\Exception\UnexpectedValueException if the input did not
+contain exactly one BSON document. Possible reasons include, but are not
+limited to, invalid BSON, extra data (after reading one BSON document), or an
+unexpected >> libbson error.
 
 ==============================================================================
 *Examples*

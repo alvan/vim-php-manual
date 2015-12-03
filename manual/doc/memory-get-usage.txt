@@ -17,8 +17,12 @@ your PHP script.
 
 {real_usage}
 
-    Set this to TRUE to get the real size of memory allocated from system. If
-    not set or FALSE only the memory used by emalloc() is reported.
+    Set this to TRUE to get total memory allocated from system, including
+    unused pages. If not set or FALSE only the used memory is reported.
+
+    Note:
+
+    PHP does not track memory that is not allocated by emalloc()
 
 ==============================================================================
 *Return* *Values*

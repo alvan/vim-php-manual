@@ -21,7 +21,13 @@ Converts an >> extended JSON string to its BSON representation.
 ==============================================================================
 *Return* *Values*
 
-The serialized BSON document as a binary string. NULL is returned on error.
+The serialized BSON document as a binary string.
+
+==============================================================================
+*Errors/Exceptions*
+
+Throws MongoDB\Driver\Exception\UnexpectedValueException if the JSON value
+cannot be converted to BSON (e.g. due to a syntax error).
 
 ==============================================================================
 *Examples*

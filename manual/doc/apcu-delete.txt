@@ -1,0 +1,45 @@
+apcu_delete
+
+(PECL apcu >= 4.0.0)
+
+apcu_delete — Removes a stored variable from the cache
+
+==============================================================================
+*Description*
+
+    mixed apcu_delete ( string $key )~
+
+Removes a stored variable from the cache.
+
+==============================================================================
+*Parameters*
+
+{key}
+
+    The {key} used to store the value (with |apcu_store|).
+
+==============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+==============================================================================
+*Examples*
+
+Example #1 A apcu_delete() example
+
+<?php >
+    $bar = 'BAR';
+    apcu_store('foo', $bar);
+    apcu_delete('foo');
+    // this is obviously useless in this form
+<?>
+
+==============================================================================
+*See* *Also*
+
+  * |apcu_store| - Cache a variable in the data store
+  * |apcu_fetch| - Fetch a stored variable from the cache
+
+
+vim:ft=help:
