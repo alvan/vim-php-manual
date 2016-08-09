@@ -118,7 +118,23 @@ Example #3 func_get_args() example of byref and byval arguments
     byRef($arg);
 <?>
 
-The above example will output:
+Output of the above example in PHP 7:
+
+
+As passed : array (
+0 => 'bar',
+)
+After change : array (
+0 => 'baz',
+)
+As passed : array (
+0 => 'bar',
+)
+After change : array (
+0 => 'baz',
+)
+
+Output of the above example in PHP 5:
 
 
 As passed : array (
@@ -147,7 +163,8 @@ After change : array (
     Note:
 
     If the arguments are passed by reference, any changes to the arguments
-    will be reflected in the values returned by this function.
+    will be reflected in the values returned by this function. As of PHP 7 the
+    current values will also be returned if the arguments are passed by value.
 
     Note: This function returns a copy of the passed arguments only, and does
     not account for default (non-passed) arguments.

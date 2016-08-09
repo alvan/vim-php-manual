@@ -7,9 +7,9 @@ imagegd — Output GD image to browser or file
 ==============================================================================
 *Description*
 
-    bool imagegd ( resource $image [, string $filename ] )~
+    bool imagegd ( resource $image [, mixed $to ] )~
 
-Outputs a GD image to the given {filename}.
+Outputs a GD image to the given {to}.
 
 ==============================================================================
 *Parameters*
@@ -19,15 +19,22 @@ Outputs a GD image to the given {filename}.
     An image resource, returned by one of the image creation functions, such
     as |imagecreatetruecolor|.
 
-{filename}
+{to}
 
-    The path to save the file to. If not set or NULL, the raw image stream
-    will be outputted directly.
+    The path or an open stream resource (which is automatically being closed
+    after this function returns) to save the file to. If not set or NULL, the
+    raw image stream will be outputted directly.
 
 ==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
+
+==============================================================================
+*Changelog*
+
+Version                     Description
+5.4.0   Added support for passing a stream resource to {to}.
 
 ==============================================================================
 *Examples*

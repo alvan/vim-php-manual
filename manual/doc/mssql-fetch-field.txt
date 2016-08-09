@@ -4,6 +4,16 @@ mssql_fetch_field
 
 mssql_fetch_field — Get field information
 
+Warning
+
+This function was REMOVED in PHP 7.0.0.
+
+Alternatives to this function include:
+
+  * PDOStatement::getColumnMeta()
+  * |sqlsrv_field_metadata|
+  * The various odbc_field_* functions in the unified ODBC driver.
+
 ==============================================================================
 *Description*
 

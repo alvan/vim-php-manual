@@ -4,17 +4,22 @@ split
 
 split — Split string into array by regular expression
 
+Warning
+
+This function was DEPRECATED in PHP 5.3.0, and REMOVED in PHP 7.0.0.
+
+Alternatives to this function include:
+
+  * |preg_split|
+  * |explode|
+  * |str_split|
+
 ==============================================================================
 *Description*
 
     array split ( string $pattern , string $string [, int $limit = -1 ] )~
 
 Splits a {string} into array by regular expression.
-
-Warning
-
-This function has been DEPRECATED as of PHP 5.3.0. Relying on this feature is
-highly discouraged.
 
 ==============================================================================
 *Parameters*
@@ -77,12 +82,6 @@ To parse a date which may be delimited with slashes, dots, or hyphens:
 
 ==============================================================================
 *Notes*
-
-    Note:
-
-    As of PHP 5.3.0, the regex extension is deprecated in favor of the PCRE
-    extension. Calling this function will issue an E_DEPRECATED notice. See
-    the list of differences for help on converting to PCRE.
 
 Tip
 

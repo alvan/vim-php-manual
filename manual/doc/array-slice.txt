@@ -44,7 +44,8 @@ specified by the {offset} and {length} parameters.
 ==============================================================================
 *Return* *Values*
 
-Returns the slice.
+Returns the slice. If the offset is larger than the size of the array then
+returns an empty array.
 
 ==============================================================================
 *Changelog*

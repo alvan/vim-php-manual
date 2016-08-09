@@ -7,7 +7,7 @@ imagejpeg — Output image to browser or file
 ==============================================================================
 *Description*
 
-    bool imagejpeg ( resource $image [, string $filename [, int $quality ]] )~
+    bool imagejpeg ( resource $image [, mixed $to [, int $quality ]] )~
 
 imagejpeg() creates a JPEG file from the given {image}.
 
@@ -19,10 +19,11 @@ imagejpeg() creates a JPEG file from the given {image}.
     An image resource, returned by one of the image creation functions, such
     as |imagecreatetruecolor|.
 
-{filename}
+{to}
 
-    The path to save the file to. If not set or NULL, the raw image stream
-    will be outputted directly.
+    The path or an open stream resource (which is automatically being closed
+    after this function returns) to save the file to. If not set or NULL, the
+    raw image stream will be outputted directly.
 
     To skip this argument in order to provide the {quality} parameter, use
     NULL.
@@ -89,7 +90,7 @@ Example #3 Outputting the image at 75% quality
     // Set the content type header - in this case image/jpeg
     header('Content-Type: image/jpeg');
 
-    // Skip the filename parameter using NULL, then set the quality to 75%
+    // Skip the to parameter using NULL, then set the quality to 75%
     imagejpeg($im, NULL, 75);
 
     // Free up memory
@@ -110,9 +111,9 @@ Example #3 Outputting the image at 75% quality
 ==============================================================================
 *Changelog*
 
-Version                              Description
-5.4.0   Disallowed passing an empty string to {filename} to skip this
-        argument.
+Version                            Description
+5.4.0   Added support for passing a stream resource to {to}.
+5.4.0   Disallowed passing an empty string to {to} to skip this argument.
 
 ==============================================================================
 *See* *Also*

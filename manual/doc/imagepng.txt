@@ -7,8 +7,8 @@ imagepng — Output a PNG image to either the browser or a file
 ==============================================================================
 *Description*
 
-    bool imagepng ( resource $image [, string $filename [, int $quality [,~
-    int $filters ]]] )~
+    bool imagepng ( resource $image [, mixed $to [, int $quality [, int~
+    $filters ]]] )~
 
 Outputs or saves a PNG image from the given {image}.
 
@@ -20,10 +20,11 @@ Outputs or saves a PNG image from the given {image}.
     An image resource, returned by one of the image creation functions, such
     as |imagecreatetruecolor|.
 
-{filename}
+{to}
 
-    The path to save the file to. If not set or NULL, the raw image stream
-    will be outputted directly.
+    The path or an open stream resource (which is automatically being closed
+    after this function returns) to save the file to. If not set or NULL, the
+    raw image stream will be outputted directly.
 
         Note:
 
@@ -48,7 +49,8 @@ Returns TRUE on success or FALSE on failure.
 ==============================================================================
 *Changelog*
 
-Version          Description
+Version                     Description
+5.4.0   Added support for passing a stream resource to {to}.
 5.1.3   Added the {filters} parameter.
 5.1.2   Added the {quality} parameter.
 

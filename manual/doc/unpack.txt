@@ -1,6 +1,6 @@
 unpack
 
-(PHP 4, PHP 5)
+(PHP 4, PHP 5, PHP 7)
 
 unpack — Unpack data from binary string
 
@@ -54,19 +54,33 @@ Example #1 unpack() example
 <?php >
     $binarydata = "\x04\x00\xa0\x00";
     $array = unpack("cchars/nint", $binarydata);
+    print_r($array);
 <?>
 
-The resulting array will contain the entries "chars" with value 4 and "int"
-with 160.
+The above example will output:
+
+Array
+(
+    [chars] => 4
+    [int] => 160
+)
 
 Example #2 unpack() example with a repeater
 
 <?php >
     $binarydata = "\x04\x00\xa0\x00";
     $array = unpack("c2chars/nint", $binarydata);
+    print_r($array);
 <?>
 
-The resulting array will contain the entries "chars1", "chars2" and "int".
+The above example will output:
+
+Array
+(
+    [chars1] => 4
+    [chars2] => 0
+    [int] => 40960
+)
 
 ==============================================================================
 *Notes*
@@ -92,9 +106,17 @@ Example #3 unpack() example with unnamed keys
     var_dump($array);
 <?>
 
-The resulting array will contain the entries "1" with value 160 and "2" with
-66. The first value from the c specifier is overwritten by the first value
-from the n specifier.
+The above example will output:
+
+array(2) {
+  [1]=>
+  int(160)
+  [2]=>
+  int(66)
+}
+
+Note that the first value from the c specifier is overwritten by the first
+value from the n specifier.
 
 ==============================================================================
 *See* *Also*

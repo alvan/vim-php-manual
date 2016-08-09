@@ -1,6 +1,6 @@
 iterator_to_array
 
-(PHP 5 >= 5.1.0)
+(PHP 5 >= 5.1.0, PHP 7)
 
 iterator_to_array — Copy the iterator into an array
 
@@ -28,6 +28,12 @@ Copy the elements of an iterator into an array.
     will be truncated to their integer counterpart, resource keys will
     generate a warning and be converted to their resource ID, and boolean keys
     will be converted to integers.
+
+        Note:
+
+        If this parameter is not set or set to TRUE, duplicate keys will be
+        overwritten. The last value with a given key will be in the returned 
+        array. Set this paramater to FALSE to get all the values in any case.
 
 ==============================================================================
 *Return* *Values*

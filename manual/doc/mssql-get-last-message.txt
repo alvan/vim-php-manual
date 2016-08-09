@@ -4,6 +4,16 @@ mssql_get_last_message
 
 mssql_get_last_message — Returns the last message from the server
 
+Warning
+
+This function was REMOVED in PHP 7.0.0.
+
+Alternatives to this function include:
+
+  * PDOStatement::errorInfo()
+  * |sqlsrv_errors|
+  * |odbc_errormsg|
+
 ==============================================================================
 *Description*
 

@@ -7,11 +7,10 @@ imagegif — Output image to browser or file
 ==============================================================================
 *Description*
 
-    bool imagegif ( resource $image [, string $filename ] )~
+    bool imagegif ( resource $image [, mixed $to ] )~
 
-imagegif() creates the GIF file in filename from the image {image}. The
-{image} argument is the return from the |imagecreate| or imagecreatefrom*
-function.
+imagegif() creates the GIF file in {to} from the image {image}. The {image}
+argument is the return from the |imagecreate| or imagecreatefrom* function.
 
 The image format will be GIF87a unless the image has been made transparent
 with |imagecolortransparent|, in which case the image format will be GIF89a.
@@ -24,15 +23,22 @@ with |imagecolortransparent|, in which case the image format will be GIF89a.
     An image resource, returned by one of the image creation functions, such
     as |imagecreatetruecolor|.
 
-{filename}
+{to}
 
-    The path to save the file to. If not set or NULL, the raw image stream
-    will be outputted directly.
+    The path or an open stream resource (which is automatically being closed
+    after this function returns) to save the file to. If not set or NULL, the
+    raw image stream will be outputted directly.
 
 ==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
+
+==============================================================================
+*Changelog*
+
+Version                     Description
+5.4.0   Added support for passing a stream resource to {to}.
 
 ==============================================================================
 *Examples*

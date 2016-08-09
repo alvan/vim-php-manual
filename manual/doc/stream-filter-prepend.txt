@@ -1,6 +1,6 @@
 stream_filter_prepend
 
-(PHP 4 >= 4.3.0, PHP 5)
+(PHP 4 >= 4.3.0, PHP 5, PHP 7)
 
 stream_filter_prepend — Attach a filter to a stream
 
@@ -42,8 +42,11 @@ Adds {filtername} to the list of filters attached to {stream}.
 ==============================================================================
 *Return* *Values*
 
-Returns a resource which can be used to refer to this filter instance during a
-call to |stream_filter_remove|.
+Returns a resource on success or FALSE on failure. The resource can be used to
+refer to this filter instance during a call to |stream_filter_remove|.
+
+FALSE is returned if {stream} is not a resource or if {filtername} cannot be
+located.
 
 ==============================================================================
 *Changelog*

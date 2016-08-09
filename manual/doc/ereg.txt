@@ -4,6 +4,14 @@ ereg
 
 ereg — Regular expression match
 
+Warning
+
+This function was DEPRECATED in PHP 5.3.0, and REMOVED in PHP 7.0.0.
+
+Alternatives to this function include:
+
+  * |preg_match|
+
 ==============================================================================
 *Description*
 
@@ -11,11 +19,6 @@ ereg — Regular expression match
 
 Searches a {string} for matches to the regular expression given in {pattern}
 in a case-sensitive way.
-
-Warning
-
-This function has been DEPRECATED as of PHP 5.3.0. Relying on this feature is
-highly discouraged.
 
 ==============================================================================
 *Parameters*
@@ -72,20 +75,6 @@ it in DD.MM.YYYY format:
         echo "Invalid date format: $date";
     }
 <?>
-
-==============================================================================
-*Notes*
-
-    Note:
-
-    As of PHP 5.3.0, the regex extension is deprecated in favor of the PCRE
-    extension. Calling this function will issue an E_DEPRECATED notice. See
-    the list of differences for help on converting to PCRE.
-
-Tip
-
-ereg() is deprecated as of PHP 5.3.0. |preg_match| is the suggested
-alternative to this function.
 
 ==============================================================================
 *See* *Also*

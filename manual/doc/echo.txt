@@ -1,6 +1,6 @@
 echo
 
-(PHP 4, PHP 5)
+(PHP 4, PHP 5, PHP 7)
 
 echo — Output one or more strings
 
@@ -9,7 +9,7 @@ echo — Output one or more strings
 
     void echo ( string $arg1 [, string $... ] )~
 
-Outputs all parameters.
+Outputs all parameters. No additional newline is appended.
 
 echo is not actually a function (it is a language construct), so you are not
 required to use parentheses with it. echo (unlike some other language
@@ -70,7 +70,8 @@ Example #1 echo examples
     echo $foo;          // foobar
     echo $foo,$bar;     // foobarbarbaz
 
-    // Some people prefer passing multiple parameters to echo over concatenation.
+    // Strings can either be passed individually as multiple arguments or
+    // concatenated together and passed as a single argument
     echo 'This ', 'string ', 'was ', 'made ', 'with multiple parameters.', chr(10
     );
     echo 'This ' . 'string ' . 'was ' . 'made ' . 'with concatenation.' . "\n";
@@ -98,6 +99,24 @@ Example #1 echo examples
 
     Note: Because this is a language construct and not a function, it cannot
     be called using variable functions.
+
+Tip
+
+A benefit to passing in multiple arguments over using concatenation in echo
+regards the precedence of the period operator in PHP. If multiple arguments
+are passed in, then parentheses will not be required to enforce precedence:
+
+<?php >
+echo "Sum: ", 1 + 2;
+echo "Hello ", isset($name) ? $name : "John Doe", "!";
+
+With concatenation, the period operator has a higher precedence than both the
+addition and ternary operators, and so parentheses must be used for the
+correct behaviour:
+
+<?php >
+echo 'Sum: ' . (1 + 2);
+echo 'Hello ' . (isset($name) ? $name : 'John Doe') . '!';
 
 ==============================================================================
 *See* *Also*

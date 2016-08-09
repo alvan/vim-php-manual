@@ -151,7 +151,7 @@ volume | edition
     67 |       7
 
 The data as an array, called data. This would usually, for example, be
-obtained by looping with |mysql_fetch_assoc|.
+obtained by looping with mysqli_fetch_assoc().
 
 <?php >
     $data[] = array('volume' => 67, 'edition' => 2);
@@ -195,7 +195,7 @@ Example #4 Case insensitive sorting
 Both SORT_STRING and SORT_REGULAR are case sensitive, strings starting with a
 capital letter will come before strings starting with a lowercase letter.
 
-To perform a case insensitive search, force the sorting order to be determined
+To perform a case insensitive sort, force the sorting order to be determined
 by a lowercase copy of the original array.
 
 <?php >

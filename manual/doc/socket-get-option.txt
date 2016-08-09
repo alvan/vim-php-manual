@@ -1,6 +1,6 @@
 socket_get_option
 
-(PHP 4 >= 4.3.0, PHP 5)
+(PHP 4 >= 4.3.0, PHP 5, PHP 7)
 
 socket_get_option — Gets socket options for the socket
 
@@ -248,7 +248,7 @@ Returns the value of the given option, or FALSE on errors.
 ==============================================================================
 *Examples*
 
-Example #1 |socket_set_option| example
+Example #1 socket_get_option() example
 
 <?php >
     $socket = socket_create_listen(1223);
@@ -258,6 +258,12 @@ Example #1 |socket_set_option| example
 
     var_dump(socket_get_option($socket, SOL_SOCKET, SO_REUSEADDR));
 <?>
+
+==============================================================================
+*See* *Also*
+
+  * |socket_create_listen| - Opens a socket on port to accept connections
+  * |socket_set_option| - Sets socket options for the socket
 
 
 vim:ft=help:

@@ -66,8 +66,7 @@ fopen() binds a named resource, specified by {filename}, to a stream.
            file does not exist, attempt to create it.
            Open for writing only; place the file pointer at the end of the
     'a'    file. If the file does not exist, attempt to create it. In this
-           mode, |fseek| only affects the reading position, writes are always
-           appended.
+           mode, |fseek| has no effect, writes are always appended.
            Open for reading and writing; place the file pointer at the end of
     'a+'   the file. If the file does not exist, attempt to create it. In this
            mode, |fseek| only affects the reading position, writes are always

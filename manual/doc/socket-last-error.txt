@@ -1,6 +1,6 @@
 socket_last_error
 
-(PHP 4 >= 4.1.0, PHP 5)
+(PHP 4 >= 4.1.0, PHP 5, PHP 7)
 
 socket_last_error — Returns the last error on the socket
 
@@ -16,6 +16,9 @@ particularly helpful for functions like |socket_create| which don't return a
 socket on failure and |socket_select| which can fail for reasons not directly
 tied to a particular socket. The error code is suitable to be fed to 
 |socket_strerror| which returns a string describing the given error code.
+
+If no error had occurred, or the error had been cleared with 
+|socket_clear_error|, the function returns 0.
 
 ==============================================================================
 *Parameters*

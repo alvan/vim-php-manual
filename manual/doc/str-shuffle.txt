@@ -1,6 +1,6 @@
 str_shuffle
 
-(PHP 4 >= 4.3.0, PHP 5)
+(PHP 4 >= 4.3.0, PHP 5, PHP 7)
 
 str_shuffle — Randomly shuffles a string
 
@@ -10,6 +10,13 @@ str_shuffle — Randomly shuffles a string
     string str_shuffle ( string $str )~
 
 str_shuffle() shuffles a string. One permutation of all possible is created.
+
+Caution
+
+This function does not generate cryptographically secure values, and should
+not be used for cryptographic purposes. If you need a cryptographically secure
+value, consider using |random_int|, |random_bytes|, or 
+|openssl_random_pseudo_bytes| instead.
 
 ==============================================================================
 *Parameters*

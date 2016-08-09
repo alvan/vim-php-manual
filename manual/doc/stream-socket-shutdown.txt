@@ -1,6 +1,6 @@
 stream_socket_shutdown
 
-(PHP 5 >= 5.2.1)
+(PHP 5 >= 5.2.1, PHP 7)
 
 stream_socket_shutdown — Shutdown a full-duplex connection
 
@@ -10,6 +10,10 @@ stream_socket_shutdown — Shutdown a full-duplex connection
     bool stream_socket_shutdown ( resource $stream , int $how )~
 
 Shutdowns (partially or not) a full-duplex connection.
+
+    Note:
+
+    The associated buffer, or buffers, may or may not be emptied.
 
 ==============================================================================
 *Parameters*

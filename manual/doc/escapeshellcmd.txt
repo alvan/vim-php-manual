@@ -17,7 +17,7 @@ operator.
 
 Following characters are preceded by a backslash: #&;`|*?~<>^()[]{}$\, \x0A
 and \xFF. ' and " are escaped only if they are not paired. In Windows, all
-these characters plus % are replaced by a space instead.
+these characters plus % and ! are replaced by a space instead.
 
 ==============================================================================
 *Parameters*
@@ -50,6 +50,16 @@ Warning
 escapeshellcmd() should be used on the whole command string, and it still
 allows the attacker to pass arbitrary number of arguments. For escaping a
 single argument |escapeshellarg| should be used instead.
+
+==============================================================================
+*Changelog*
+
+   Version                              Description
+5.6.0         The default value for the {encoding} parameter was changed to be
+              the value of the default_charset configuration option.
+5.4.43,
+5.5.27,       Exclamation marks are replaced by spaces.
+5.6.11
 
 ==============================================================================
 *See* *Also*

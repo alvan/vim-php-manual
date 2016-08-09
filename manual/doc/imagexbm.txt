@@ -12,7 +12,8 @@ imagexbm — Output an XBM image to browser or file
 Outputs or save an XBM version of the given {image}.
 
     Note: imagexbm() doesn't apply any padding, so the image width has to be a
-    multiple of 8.
+    multiple of 8. This restriction does no longer apply as of PHP 5.6.24 and
+    7.0.9, respectively.
 
 ==============================================================================
 *Parameters*
@@ -26,6 +27,11 @@ Outputs or save an XBM version of the given {image}.
 
     The path to save the file to. If not set or NULL, the raw image stream
     will be outputted directly.
+
+    The {filename} (without the .xbm extension) is also used for the C
+    identifiers of the XBM, whereby non alphanumeric characters of the current
+    locale are substituted by underscores. If {filename} is set to NULL, image
+    is used to build the C identifiers.
 
 {foreground}
 

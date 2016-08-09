@@ -4,17 +4,21 @@ sql_regcase
 
 sql_regcase — Make regular expression for case insensitive match
 
+Warning
+
+This function was DEPRECATED in PHP 5.3.0, and REMOVED in PHP 7.0.0.
+
+Alternatives to this function include:
+
+  * |preg_match|
+  * |preg_quote|
+
 ==============================================================================
 *Description*
 
     string sql_regcase ( string $string )~
 
 Creates a regular expression for a case insensitive match.
-
-Warning
-
-This function has been DEPRECATED as of PHP 5.3.0. Relying on this feature is
-highly discouraged.
 
 ==============================================================================
 *Parameters*
@@ -46,15 +50,6 @@ The above example will output:
 
 This can be used to achieve case insensitive pattern matching in products
 which support only case sensitive regular expressions.
-
-==============================================================================
-*Notes*
-
-    Note:
-
-    As of PHP 5.3.0, the regex extension is deprecated in favor of the PCRE
-    extension. Calling this function will issue an E_DEPRECATED notice. See
-    the list of differences for help on converting to PCRE.
 
 
 vim:ft=help:

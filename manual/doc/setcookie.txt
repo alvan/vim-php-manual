@@ -1,6 +1,6 @@
 setcookie
 
-(PHP 4, PHP 5)
+(PHP 4, PHP 5, PHP 7)
 
 setcookie — Send a cookie
 
@@ -61,12 +61,15 @@ is interpreted.
 
 {domain}
 
-    The domain that the cookie is available to. Setting the domain to
-    'www.example.com' will make the cookie available in the www subdomain and
-    higher subdomains. Cookies available to a lower domain, such as
-    'example.com' will be available to higher subdomains, such as
-    'www.example.com'. Older browsers still implementing the deprecated >> RFC
-    2109 may require a leading . to match all subdomains.
+    The (sub)domain that the cookie is available to. Setting this to a
+    subdomain (such as 'www.example.com') will make the cookie available to
+    that subdomain and all other sub-domains of it (i.e. w2.www.example.com).
+    To make the cookie available to the whole domain (including all subdomains
+    of it), simply set the value to the domain name ('example.com', in this
+    case).
+
+    Older browsers still implementing the deprecated >> RFC 2109 may require a
+    leading . to match all subdomains.
 
 {secure}
 
@@ -130,8 +133,8 @@ delete cookies sent in previous example:
 
 <?php >
     // set the expiration date to one hour ago
-    setcookie ("TestCookie", "", time() - 3600);
-    setcookie ("TestCookie", "", time() - 3600, "/~rasmus/", "example.com", 1);
+    setcookie("TestCookie", "", time() - 3600);
+    setcookie("TestCookie", "", time() - 3600, "/~rasmus/", "example.com", 1);
 <?>
 
 Example #3 setcookie() and arrays

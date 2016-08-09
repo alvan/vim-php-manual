@@ -1,6 +1,6 @@
 stream_set_write_buffer
 
-(PHP 4 >= 4.3.0, PHP 5)
+(PHP 4 >= 4.3.0, PHP 5, PHP 7)
 
 stream_set_write_buffer — Sets write file buffering on the given stream
 
@@ -11,10 +11,6 @@ stream_set_write_buffer — Sets write file buffering on the given stream
 
 Sets the buffering for write operations on the given {stream} to {buffer}
 bytes.
-
-Output using |fwrite| is normally buffered at 8K. This means that if there are
-two processes wanting to write to the same output stream (a file), each is
-paused after 8K of data to allow the other to write.
 
 ==============================================================================
 *Parameters*

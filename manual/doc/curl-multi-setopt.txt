@@ -30,28 +30,58 @@ available.
     {value} should be an int for the following values of the {option}
     parameter:
 
-           Option                           Set {value} to
-                         Pass 1 to enable or 0 to disable. Enabling pipelining
-                         on a multi handle will make it attempt to perform
-                         HTTP Pipelining as far as possible for transfers
-                         using this handle. This means that if you add a
-                         second request that can use an already existing
-    CURLMOPT_PIPELINING  connection, the second request will be "piped" on the
-                         same connection. As of cURL 7.43.0 you can also pass
-                         2 to try to multiplex the new transfer over an
-                         existing HTTP/2 connection if possible. Instead of
-                         integer literals, you can also use the CURLPIPE_*
-                         constants if available.
-                         Pass a number that will be used as the maximum amount
-                         of simultaneously open connections that libcurl may
-    CURLMOPT_MAXCONNECTS cache. Default is 10. When the cache is full, curl
-                         closes the oldest one in the cache to prevent the
-                         number of open connections from increasing.
+                   Option                           Set {value} to
+                                         Pass 1 to enable or 0 to disable.
+                                         Enabling pipelining on a multi handle
+                                         will make it attempt to perform HTTP
+                                         Pipelining as far as possible for
+                                         transfers using this handle. This
+                                         means that if you add a second
+                                         request that can use an already
+    CURLMOPT_PIPELINING                  existing connection, the second
+                                         request will be "piped" on the same
+                                         connection. As of cURL 7.43.0 you can
+                                         also pass 2 to try to multiplex the
+                                         new transfer over an existing HTTP/2
+                                         connection if possible. Instead of
+                                         integer literals, you can also use
+                                         the CURLPIPE_* constants if
+                                         available.
+                                         Pass a number that will be used as
+                                         the maximum amount of simultaneously
+                                         open connections that libcurl may
+    CURLMOPT_MAXCONNECTS                 cache. Default is 10. When the cache
+                                         is full, curl closes the oldest one
+                                         in the cache to prevent the number of
+                                         open connections from increasing.
+                                         Pass a number that specifies the
+    CURLMOPT_CHUNK_LENGTH_PENALTY_SIZE   chunk length threshold for pipelining
+                                         in bytes.
+                                         Pass a number that specifies the size
+    CURLMOPT_CONTENT_LENGTH_PENALTY_SIZE threshold for pipelining penalty in
+                                         bytes.
+                                         Pass a number that specifies the
+    CURLMOPT_MAX_HOST_CONNECTIONS        maximum number of connections to a
+                                         single host.
+                                         Pass a number that specifies the
+    CURLMOPT_MAX_PIPELINE_LENGTH         maximum number of requests in a
+                                         pipeline.
+                                         Pass a number that specifies the
+    CURLMOPT_MAX_TOTAL_CONNECTIONS       maximum number of simultaneously open
+                                         connections.
 
 ==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
+
+==============================================================================
+*Changelog*
+
+Version                              Description
+        Introduced CURLMOPT_CHUNK_LENGTH_PENALTY_SIZE,
+7.0.7   CURLMOPT_CONTENT_LENGTH_PENALTY_SIZE, CURLMOPT_MAX_HOST_CONNECTIONS,
+        CURLMOPT_MAX_PIPELINE_LENGTH and CURLMOPT_MAX_TOTAL_CONNECTIONS.
 
 
 vim:ft=help:

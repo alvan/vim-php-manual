@@ -1,6 +1,6 @@
 decoct
 
-(PHP 4, PHP 5)
+(PHP 4, PHP 5, PHP 7)
 
 decoct — Decimal to octal
 
@@ -10,8 +10,10 @@ decoct — Decimal to octal
     string decoct ( int $number )~
 
 Returns a string containing an octal representation of the given {number}
-argument. The largest number that can be converted is 4294967295 in decimal
-resulting to "37777777777".
+argument. The largest number that can be converted depends on the platform in
+use. For 32-bit platforms this is usually 4294967295 in decimal resulting in
+37777777777. For 64-bit platforms this is usually 9223372036854775807 in
+decimal resulting in 777777777777777777777.
 
 ==============================================================================
 *Parameters*

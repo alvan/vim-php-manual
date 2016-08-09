@@ -1,6 +1,6 @@
 strip_tags
 
-(PHP 4, PHP 5)
+(PHP 4, PHP 5, PHP 7)
 
 strip_tags — Strip HTML and PHP tags from a string
 
@@ -33,8 +33,8 @@ the |fgetss| function.
         Note:
 
         In PHP 5.3.4 and later, self-closing XHTML tags are ignored and only
-        non-self-closing tags should be used in {str}. For example, to allow
-        both <br> and <br/>, you should use:
+        non-self-closing tags should be used in {allowable_tags}. For example,
+        to allow both <br> and <br/>, you should use:
 
         <?php >
         strip_tags($input, '<br>');

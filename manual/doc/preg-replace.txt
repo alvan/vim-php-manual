@@ -1,6 +1,6 @@
 preg_replace
 
-(PHP 4, PHP 5)
+(PHP 4, PHP 5, PHP 7)
 
 preg_replace — Perform a regular expression search and replace
 
@@ -47,7 +47,7 @@ Searches {subject} for matches to {pattern} and replaces them with
     notation for your backreference. \\11, for example, would confuse 
     preg_replace() since it does not know whether you want the \\1
     backreference followed by a literal 1, or the \\11 backreference followed
-    by nothing. In this case the solution is to use \${1}1. This creates an
+    by nothing. In this case the solution is to use ${1}1. This creates an
     isolated $1 backreference, leaving the 1 as a literal.
 
     When using the deprecated e modifier, this function escapes some
@@ -120,7 +120,7 @@ April1,2003
 Example #2 Using indexed arrays with preg_replace()
 
 <?php >
-    $string = 'The quick brown fox jumped over the lazy dog.';
+    $string = 'The quick brown fox jumps over the lazy dog.';
     $patterns = array();
     $patterns[0] = '/quick/';
     $patterns[1] = '/brown/';
@@ -134,7 +134,7 @@ Example #2 Using indexed arrays with preg_replace()
 
 The above example will output:
 
-The bear black slow jumped over the lazy dog.
+The bear black slow jumps over the lazy dog.
 
 By ksorting patterns and replacements, we should get what we wanted.
 
@@ -146,7 +146,7 @@ By ksorting patterns and replacements, we should get what we wanted.
 
 The above example will output:
 
-The slow black bear jumped over the lazy dog.
+The slow black bear jumps over the lazy dog.
 
 Example #3 Replacing several values
 

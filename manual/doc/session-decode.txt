@@ -1,6 +1,6 @@
 session_decode
 
-(PHP 4, PHP 5)
+(PHP 4, PHP 5, PHP 7)
 
 session_decode — Decodes session data from a session encoded string
 
@@ -12,8 +12,8 @@ session_decode — Decodes session data from a session encoded string
 session_decode() decodes the serialized session data provided in $data, and
 populates the $_SESSION superglobal with the result.
 
-Please note the unserialization method is not the same as |unserialize|. The
-serialization method is internal to PHP and can be set using
+By default, the unserialization method used is internal to PHP, and is not the
+same as |unserialize|. The serialization method can be set using
 session.serialize_handler.
 
 ==============================================================================

@@ -1,6 +1,6 @@
 uniqid
 
-(PHP 4, PHP 5)
+(PHP 4, PHP 5, PHP 7)
 
 uniqid — Generate a unique ID
 
@@ -12,12 +12,12 @@ uniqid — Generate a unique ID
 
 Gets a prefixed unique identifier based on the current time in microseconds.
 
-Warning
+Caution
 
-This function does not create random nor unpredictable strings. This function
-must not be used for security purposes. Use a cryptographically secure random
-function/generator and cryptographically secure hash functions to create
-unpredictable secure IDs.
+This function does not generate cryptographically secure values, and should
+not be used for cryptographic purposes. If you need a cryptographically secure
+value, consider using |random_int|, |random_bytes|, or 
+|openssl_random_pseudo_bytes| instead.
 
 ==============================================================================
 *Parameters*
@@ -68,13 +68,6 @@ Example #1 uniqid() Example
 
 ==============================================================================
 *Notes*
-
-Caution
-
-This function does not generate cryptographically secure tokens, in fact
-without being passed any additional parameters the return value is little
-different from |microtime|. If you need to generate cryptographically secure
-tokens use |openssl_random_pseudo_bytes|.
 
     Note:
 

@@ -4,6 +4,14 @@ eregi
 
 eregi — Case insensitive regular expression match
 
+Warning
+
+This function was DEPRECATED in PHP 5.3.0, and REMOVED in PHP 7.0.0.
+
+Alternatives to this function include:
+
+  * |preg_match| (with the i (PCRE_CASELESS) modifier)
+
 ==============================================================================
 *Description*
 
@@ -11,11 +19,6 @@ eregi — Case insensitive regular expression match
 
 This function is identical to |ereg| except that it ignores case distinction
 when matching alphabetic characters.
-
-Warning
-
-This function has been DEPRECATED as of PHP 5.3.0. Relying on this feature is
-highly discouraged.
 
 ==============================================================================
 *Parameters*
@@ -58,20 +61,6 @@ Example #1 eregi() example
         echo "'$string' contains a 'z' or 'Z'!";
     }
 <?>
-
-==============================================================================
-*Notes*
-
-    Note:
-
-    As of PHP 5.3.0, the regex extension is deprecated in favor of the PCRE
-    extension. Calling this function will issue an E_DEPRECATED notice. See
-    the list of differences for help on converting to PCRE.
-
-Tip
-
-eregi() is deprecated as of PHP 5.3.0. |preg_match| with the i (PCRE_CASELESS)
-modifier is the suggested alternative.
 
 ==============================================================================
 *See* *Also*

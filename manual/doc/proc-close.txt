@@ -29,5 +29,10 @@ child process may not be able to exit while the pipes are open.
 Returns the termination status of the process that was run. In case of an
 error then -1 is returned.
 
+    Note:
+
+    If PHP has been compiled with --enable-sigchild, the return value of this
+    function is undefined.
+
 
 vim:ft=help:

@@ -1,6 +1,6 @@
 str_ireplace
 
-(PHP 5)
+(PHP 5, PHP 7)
 
 str_ireplace — Case-insensitive version of |str_replace|.
 
@@ -62,6 +62,7 @@ Example #1 str_ireplace() example
 
 <?php >
     $bodytag = str_ireplace("%body%", "black", "<body text=%BODY%>");
+    echo $bodytag; // <body text=black>
 <?>
 
 ==============================================================================

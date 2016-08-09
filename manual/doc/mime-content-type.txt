@@ -1,8 +1,8 @@
 mime_content_type
 
-(PHP 4 >= 4.3.0, PHP 5)
+(PHP 4 >= 4.3.0, PHP 5, PHP 7)
 
-mime_content_type — Detect MIME Content-type for a file (deprecated)
+mime_content_type — Detect MIME Content-type for a file
 
 ==============================================================================
 *Description*
@@ -26,14 +26,6 @@ Returns the content type in MIME format, like text/plain or application/
 octet-stream.
 
 ==============================================================================
-*Notes*
-
-Warning
-
-This function has been deprecated as the PECL extension Fileinfo provides the
-same functionality (and more) in a much cleaner way.
-
-==============================================================================
 *Examples*
 
 Example #1 mime_content_type() Example
@@ -51,7 +43,8 @@ text/plain
 ==============================================================================
 *See* *Also*
 
-  * Fileinfo for a replacement
+  * finfo_file() - Alias of finfo_file()
+  * finfo_buffer() - Alias of finfo_buffer()
 
 
 vim:ft=help:

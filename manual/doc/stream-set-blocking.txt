@@ -1,13 +1,13 @@
 stream_set_blocking
 
-(PHP 4 >= 4.3.0, PHP 5)
+(PHP 4 >= 4.3.0, PHP 5, PHP 7)
 
 stream_set_blocking — Set blocking/non-blocking mode on a stream
 
 ==============================================================================
 *Description*
 
-    bool stream_set_blocking ( resource $stream , int $mode )~
+    bool stream_set_blocking ( resource $stream , bool $mode )~
 
 Sets blocking or non-blocking mode on a {stream}.
 
@@ -23,11 +23,11 @@ regular files and socket streams).
 
 {mode}
 
-    If {mode} is 0, the given stream will be switched to non-blocking mode,
-    and if 1, it will be switched to blocking mode. This affects calls like 
-    |fgets| and |fread| that read from the stream. In non-blocking mode an 
-    |fgets| call will always return right away while in blocking mode it will
-    wait for data to become available on the stream.
+    If {mode} is FALSE, the given stream will be switched to non-blocking
+    mode, and if TRUE, it will be switched to blocking mode. This affects
+    calls like |fgets| and |fread| that read from the stream. In non-blocking
+    mode an |fgets| call will always return right away while in blocking mode
+    it will wait for data to become available on the stream.
 
 ==============================================================================
 *Return* *Values*

@@ -8,7 +8,7 @@ file_get_contents — Reads entire file into a string
 *Description*
 
     string file_get_contents ( string $filename [, bool $use_include_path =~
-    false [, resource $context [, int $offset = -1 [, int $maxlen ]]]] )~
+    false [, resource $context [, int $offset = 0 [, int $maxlen ]]]] )~
 
 This function is similar to |file|, except that file_get_contents() returns
 the file in a string, starting at the specified {offset} up to {maxlen} bytes.

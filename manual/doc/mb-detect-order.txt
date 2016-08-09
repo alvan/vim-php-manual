@@ -1,6 +1,6 @@
 mb_detect_order
 
-(PHP 4 >= 4.0.6, PHP 5)
+(PHP 4 >= 4.0.6, PHP 5, PHP 7)
 
 mb_detect_order — Set/Get character encoding detection order
 
@@ -37,7 +37,11 @@ Sets the automatic character encoding detection order to {encoding_list}.
 ==============================================================================
 *Return* *Values*
 
-Returns TRUE on success or FALSE on failure.
+When setting the encoding detection order, TRUE is returned on success or
+FALSE on failure.
+
+When getting the encoding detection order, an ordered array of the encodings
+is returned.
 
 ==============================================================================
 *Examples*

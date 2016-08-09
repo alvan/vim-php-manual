@@ -1,6 +1,6 @@
 session_encode
 
-(PHP 4, PHP 5)
+(PHP 4, PHP 5, PHP 7)
 
 session_encode — Encodes the current session data as a session encoded string
 
@@ -12,8 +12,8 @@ session_encode — Encodes the current session data as a session encoded string
 session_encode() returns a serialized string of the contents of the current
 session data stored in the $_SESSION superglobal.
 
-Please note, the serialization method is not the same as |serialize|. The
-serialization method is internal to PHP and can be set using
+By default, the serialization method used is internal to PHP, and is not the
+same as |serialize|. The serialization method can be set using
 session.serialize_handler.
 
 ==============================================================================

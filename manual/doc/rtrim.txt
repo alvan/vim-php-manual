@@ -1,6 +1,6 @@
 rtrim
 
-(PHP 4, PHP 5)
+(PHP 4, PHP 5, PHP 7)
 
 rtrim — Strip whitespace (or other characters) from the end of a string
 
@@ -9,7 +9,8 @@ rtrim — Strip whitespace (or other characters) from the end of a string
 
     string rtrim ( string $str [, string $character_mask ] )~
 
-This function returns a string with whitespace stripped from the end of {str}.
+This function returns a string with whitespace (or other characters) stripped
+from the end of {str}.
 
 Without the second parameter, rtrim() will strip these characters:
 

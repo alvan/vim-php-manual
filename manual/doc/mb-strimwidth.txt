@@ -1,6 +1,6 @@
 mb_strimwidth
 
-(PHP 4 >= 4.0.6, PHP 5)
+(PHP 4 >= 4.0.6, PHP 5, PHP 7)
 
 mb_strimwidth — Get truncated string with specified width
 
@@ -41,8 +41,8 @@ Truncates string {str} to specified {width}.
 ==============================================================================
 *Return* *Values*
 
-The truncated string. If {trimmarker} is set, {trimmarker} is appended to the
-return value.
+The truncated string. If {trimmarker} is set, {trimmarker} replaces the last
+chars to match the {width}.
 
 ==============================================================================
 *Examples*
@@ -51,7 +51,7 @@ Example #1 mb_strimwidth() example
 
 <?php >
     echo mb_strimwidth("Hello World", 0, 10, "...");
-    // outputs Hello W...
+    // output: "Hello W..."
 <?>
 
 ==============================================================================

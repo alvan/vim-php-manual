@@ -1,6 +1,6 @@
 chr
 
-(PHP 4, PHP 5)
+(PHP 4, PHP 5, PHP 7)
 
 chr — Return a specific character
 
@@ -18,7 +18,14 @@ This function complements |ord|.
 
 {ascii}
 
-    The ascii code.
+    The extended ASCII code.
+
+    Values outside the valid range (0..255) will be bitwise and'ed with 255,
+    which is equivalent to the following algorithm:
+    while ($ascii < 0) {
+        $ascii += 256;
+    }
+    $ascii %= 256;
 
 ==============================================================================
 *Return* *Values*
@@ -38,6 +45,16 @@ Example #1 chr() example
 
     $str = sprintf("The string ends in escape: %c", 27);
 <?>
+
+Example #2 Overflow behavior
+
+<?php >
+    echo chr(-159), chr(833), PHP_EOL;
+<?>
+
+The above example will output:
+
+aA
 
 ==============================================================================
 *See* *Also*

@@ -1,14 +1,13 @@
 socket_write
 
-(PHP 4 >= 4.1.0, PHP 5)
+(PHP 4 >= 4.1.0, PHP 5, PHP 7)
 
 socket_write — Write to a socket
 
 ==============================================================================
 *Description*
 
-    int socket_write ( resource $socket , string $buffer [, int $length = 0 ]~
-)~
+    int socket_write ( resource $socket , string $buffer [, int $length ] )~
 
 The function socket_write() writes to the {socket} from the given {buffer}.
 

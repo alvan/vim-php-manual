@@ -9,7 +9,14 @@ shuffle — Shuffle an array
 
     bool shuffle ( array &$array )~
 
-This function shuffles (randomizes the order of the elements in) an array.
+This function shuffles (randomizes the order of the elements in) an array. It
+uses a pseudo random number generator that is not suitable for cryptographic
+purposes.
+
+    Note:
+
+    If two members compare as equal, their relative order in the sorted array
+    is undefined.
 
 ==============================================================================
 *Parameters*

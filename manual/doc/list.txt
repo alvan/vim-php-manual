@@ -12,6 +12,29 @@ list — Assign variables as if they were an array
 Like |array|, this is not really a function, but a language construct. list()
 is used to assign a list of variables in one operation.
 
+    Note:
+
+    list() only works on numerical arrays and assumes the numerical indices
+    start at 0.
+
+Warning
+
+In PHP 5, list() assigns the values starting with the right-most parameter. In
+PHP 7, list() starts with the left-most parameter.
+
+If you are using plain variables, you don't have to worry about this. But if
+you are using arrays with indices you usually expect the order of the indices
+in the array the same you wrote in the list() from left to right, which is not
+the case in PHP 5, as it's assigned in the reverse order.
+
+Generally speaking, it is advisable to avoid relying on a specific order of
+operation, as this may change again in the future.
+
+Warning
+
+Modification of the array during list() execution (e.g. using list($a, $b) =
+$b) results in undefined behavior.
+
 ==============================================================================
 *Parameters*
 
@@ -117,31 +140,33 @@ array(3) {
   string(6) "coffee"
 }
 
-==============================================================================
-*Notes*
+Example #5 list() and order of index definitions
 
-Warning
+The order in which the indices of the array to be consumed by list() are
+defined is irrelevant.
 
-In PHP 5, list() assigns the values starting with the right-most parameter. In
-PHP 7, list() starts with the left-most parameter.
+<?php >
+$foo = array(2 => 'a', 'foo' => 'b', 0 => 'c');
+$foo[1] = 'd';
+list($x, $y, $z) = $foo;
+var_dump($foo, $x, $y, $z);
 
-If you are using plain variables, you don't have to worry about this. But if
-you are using arrays with indices you usually expect the order of the indices
-in the array the same you wrote in the list() from left to right, which is not
-the case in PHP 5, as it's assigned in the reverse order.
+Gives the following output (note the order of the elements compared in which
+order they were written in the list() syntax):
 
-Generally speaking, it is advisable to avoid relying on a specific order of
-operation, as this may change again in the future.
-
-Warning
-
-Modification of the array during list() execution (e.g. using list($a, $b) =
-$b) results in undefined behavior.
-
-    Note:
-
-    list() only works on numerical arrays and assumes the numerical indices
-    start at 0.
+array(4) {
+  [2]=>
+  string(1) "a"
+  ["foo"]=>
+  string(1) "b"
+  [0]=>
+  string(1) "c"
+  [1]=>
+  string(1) "d"
+}
+string(1) "c"
+string(1) "d"
+string(1) "a"
 
 ==============================================================================
 *See* *Also*

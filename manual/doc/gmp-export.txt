@@ -1,6 +1,6 @@
 gmp_export
 
-(PHP 5, PHP 7 >= 5.6.1)
+(PHP 5 >= 5.6.1, PHP 7)
 
 gmp_export — Export to a binary string
 
@@ -39,7 +39,7 @@ Returns a string or FALSE on failure.
 Example #1 gmp_export() example
 
 <?php >
-    $number = gmp_init(6565);
+    $number = gmp_init(16705);
     echo gmp_export($number) . "\n";
 <?>
 

@@ -12,7 +12,7 @@ developed MySQLi or PDO_MySQL extensions. See also the MySQL: choosing an API
 guide and its related FAQ entry for additional information. Alternatives to
 this function include:
 
-  * SQL Query: SHOW TABLES FROM sometable
+  * SQL Query: SHOW TABLES FROM dbname
 
 ==============================================================================
 *Description*
@@ -36,9 +36,9 @@ SQL SHOW TABLES [FROM db_name] [LIKE 'pattern'] statement instead.
 
     The MySQL connection. If the link identifier is not specified, the last
     link opened by |mysql_connect| is assumed. If no such link is found, it
-    will try to create one as if |mysql_connect| was called with no arguments.
-    If no connection is found or established, an E_WARNING level error is
-    generated.
+    will try to create one as if |mysql_connect| had been called with no
+    arguments. If no connection is found or established, an E_WARNING level
+    error is generated.
 
 ==============================================================================
 *Return* *Values*

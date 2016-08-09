@@ -55,6 +55,8 @@ Returns a JSON encoded string on success or FALSE on failure.
 *Changelog*
 
 Version                              Description
+7.1.0   serialize_precision is used instead of precision when encoding double
+        values.
 5.6.6   JSON_PRESERVE_ZERO_FRACTION {option} was added.
 5.5.0   {depth} parameter was added.
 5.4.0   JSON_PRETTY_PRINT, JSON_UNESCAPED_SLASHES, and JSON_UNESCAPED_UNICODE
@@ -146,7 +148,7 @@ Example #3 JSON_NUMERIC_CHECK option example
     );
 <?>
 
-The above example will output:
+The above example will output something similar to:
 
 Strings representing numbers automatically turned into numbers
 array(4) {

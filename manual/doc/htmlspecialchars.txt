@@ -1,6 +1,6 @@
 htmlspecialchars
 
-(PHP 4, PHP 5)
+(PHP 4, PHP 5, PHP 7)
 
 htmlspecialchars — Convert special characters to HTML entities
 
@@ -26,14 +26,18 @@ and |htmlentities| (which only encodes substrings that have named entity
 equivalents) may be insufficient. You may have to use |mb_encode_numericentity
 | instead.
 
-The translations performed are:
-
-  * '&' (ampersand) becomes '&amp;'
-  * '"' (double quote) becomes '&quot;' when ENT_NOQUOTES is not set.
-  * "'" (single quote) becomes '&#039;' (or &apos;) only when ENT_QUOTES is
-    set.
-  * '<' (less than) becomes '&lt;'
-  * '>' (greater than) becomes '&gt;'
+                            Performed translations
+ Character                             Replacement
+&           &amp;
+(ampersand)
+" (double   &quot; when ENT_NOQUOTES
+quote)
+' (single   &#039; (for ENT_HTML401) or &apos; (for ENT_XML1, ENT_XHTML or
+quote)      ENT_HTML5), but only when ENT_QUOTES is set
+< (less     &lt;
+than)
+> (greater  &gt;
+than)
 
 ==============================================================================
 *Parameters*
@@ -57,11 +61,11 @@ The translations performed are:
     ENT_IGNORE     returning an empty string. Using this flag is discouraged
                    as it >> may have security implications.
                    Replace invalid code unit sequences with a Unicode
-    ENT_SUBSTITUTE Replacement Character U+FFFD (UTF-8) or &#FFFD; (otherwise)
-                   instead of returning an empty string.
+    ENT_SUBSTITUTE Replacement Character U+FFFD (UTF-8) or &#xFFFD;
+                   (otherwise) instead of returning an empty string.
                    Replace invalid code points for the given document type
                    with a Unicode Replacement Character U+FFFD (UTF-8) or &#
-    ENT_DISALLOWED FFFD; (otherwise) instead of leaving them as is. This may
+    ENT_DISALLOWED xFFFD; (otherwise) instead of leaving them as is. This may
                    be useful, for instance, to ensure the well-formedness of
                    XML documents with embedded external content.
     ENT_HTML401    Handle code as HTML 4.01.

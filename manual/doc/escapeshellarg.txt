@@ -16,8 +16,9 @@ should be used to escape individual arguments to shell functions coming from
 user input. The shell functions include |exec|, |system| and the backtick
 operator.
 
-On Windows, escapeshellarg() instead removes percent signs, replaces double
-quotes with spaces and adds double quotes around the string.
+On Windows, escapeshellarg() instead replaces percent signs, exclamation marks
+(delayed variable substitution) and double quotes with spaces and adds double
+quotes around the string.
 
 ==============================================================================
 *Parameters*
@@ -39,6 +40,16 @@ Example #1 escapeshellarg() example
 <?php >
     system('ls '.escapeshellarg($dir));
 <?>
+
+==============================================================================
+*Changelog*
+
+   Version                              Description
+5.6.0         The default value for the {encoding} parameter was changed to be
+              the value of the default_charset configuration option.
+5.4.43,
+5.5.27,       Exclamation marks are replaced by spaces.
+5.6.11
 
 ==============================================================================
 *See* *Also*

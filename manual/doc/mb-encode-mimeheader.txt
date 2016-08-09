@@ -1,15 +1,15 @@
 mb_encode_mimeheader
 
-(PHP 4 >= 4.0.6, PHP 5)
+(PHP 4 >= 4.0.6, PHP 5, PHP 7)
 
 mb_encode_mimeheader — Encode string for MIME header
 
 ==============================================================================
 *Description*
 
-    string mb_encode_mimeheader ( string $str [, string $charset =~
-    mb_internal_encoding() [, string $transfer_encoding = "B" [,~
-    string $linefeed = "\r\n" [, int $indent = 0 ]]]] )~
+    string mb_encode_mimeheader ( string $str [, string $charset = determined~
+    by mb_language() [, string $transfer_encoding = "B" [, string~
+    $linefeed = "\r\n" [, int $indent = 0 ]]]] )~
 
 Encodes a given string {str} by the MIME header encoding scheme.
 
@@ -18,14 +18,14 @@ Encodes a given string {str} by the MIME header encoding scheme.
 
 {str}
 
-    The string being encoded.
+    The string being encoded. Its encoding should be same as 
+    |mb_internal_encoding|.
 
 {charset}
 
     {charset} specifies the name of the character set in which {str} is
     represented in. The default value is determined by the current NLS setting
-    (mbstring.language). |mb_internal_encoding| should be set to same
-    encoding.
+    (mbstring.language).
 
 {transfer_encoding}
 

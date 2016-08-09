@@ -4,6 +4,15 @@ mcrypt_ecb
 
 mcrypt_ecb — Deprecated: Encrypts/decrypts data in ECB mode
 
+Warning
+
+This function was DEPRECATED in PHP 5.5.0, and REMOVED in PHP 7.0.0.
+
+Alternatives to this function include:
+
+  * |mcrypt_decrypt|
+  * |mcrypt_encrypt|
+
 ==============================================================================
 *Description*
 
@@ -15,13 +24,6 @@ mcrypt_ecb — Deprecated: Encrypts/decrypts data in ECB mode
 The first prototype is when linked against libmcrypt 2.2.x, the second when
 linked against libmcrypt 2.4.x or higher. The {mode} should be either
 MCRYPT_ENCRYPT or MCRYPT_DECRYPT.
-
-This function is deprecated and should not be used anymore, see 
-|mcrypt_encrypt| and |mcrypt_decrypt| for replacements.
-
-Warning
-
-This function was DEPRECATED in PHP 5.5.0, and REMOVED as of PHP 7.0.0.
 
 
 vim:ft=help:

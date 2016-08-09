@@ -59,12 +59,25 @@ Example #1 Updating a record in the database
       // Update the date field with the current timestamp
       $row['date'] = date('Ymd');
       
+      // convert the row to an indexed array
+      $row = array_values($row);
+
       // Replace the record
       dbase_replace_record($db, $row, 1);
       dbase_close($db);
     }
 
 <?>
+
+==============================================================================
+*Notes*
+
+    Note:
+
+    Boolean fields result in an integer element value (0 or 1) when retrieved
+    via |dbase_get_record| or |dbase_get_record_with_names|. If they are
+    written back, this results in the value becoming 0, so care has to be
+    taken to properly adjust the values.
 
 ==============================================================================
 *See* *Also*

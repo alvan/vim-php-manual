@@ -1,6 +1,6 @@
 socket_set_option
 
-(PHP 4 >= 4.3.0, PHP 5)
+(PHP 4 >= 4.3.0, PHP 5, PHP 7)
 
 socket_set_option — Sets socket options for the socket
 
@@ -75,6 +75,15 @@ Example #1 socket_set_option() example
         echo 'SO_REUSEADDR is set on socket !' . PHP_EOL;
     }
 <?>
+
+==============================================================================
+*See* *Also*
+
+  * |socket_create| - Create a socket (endpoint for communication)
+  * |socket_bind| - Binds a name to a socket
+  * |socket_strerror| - Return a string describing a socket error
+  * |socket_last_error| - Returns the last error on the socket
+  * |socket_get_option| - Gets socket options for the socket
 
 
 vim:ft=help:

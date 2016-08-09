@@ -1,8 +1,8 @@
 ldap_sort
 
-(PHP 4 >= 4.2.0, PHP 5)
+(PHP 4 >= 4.2.0, PHP 5, PHP 7)
 
-ldap_sort — Sort LDAP result entries
+ldap_sort — Sort LDAP result entries on the client side
 
 ==============================================================================
 *Description*
@@ -10,6 +10,15 @@ ldap_sort — Sort LDAP result entries
     bool ldap_sort ( resource $link , resource $result , string $sortfilter )~
 
 Sort the result of a LDAP search, returned by |ldap_search|.
+
+As this function sorts the returned values on the client side it is possible
+that you might not get the expected results in case you reach the {sizelimit}
+either of the server or defined within |ldap_search|.
+
+Warning
+
+This feature has been DEPRECATED as of PHP 7.0.0. Relying on this feature is
+highly discouraged.
 
 ==============================================================================
 *Parameters*

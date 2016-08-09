@@ -1,6 +1,6 @@
 eval
 
-(PHP 4, PHP 5)
+(PHP 4, PHP 5, PHP 7)
 
 eval — Evaluate a string as PHP code
 
@@ -46,9 +46,10 @@ validating it beforehand.
 *Return* *Values*
 
 eval() returns NULL unless return is called in the evaluated code, in which
-case the value passed to return is returned. If there is a parse error in the
-evaluated code, eval() returns FALSE and execution of the following code
-continues normally. It is not possible to catch a parse error in eval() using 
+case the value passed to return is returned. As of PHP 7, if there is a parse
+error in the evaluated code, eval() throws a ParseError exception. Before PHP
+7, in this case eval() returned FALSE and execution of the following code
+continued normally. It is not possible to catch a parse error in eval() using 
 |set_error_handler|.
 
 ==============================================================================

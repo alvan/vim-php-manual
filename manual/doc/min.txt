@@ -1,6 +1,6 @@
 min
 
-(PHP 4, PHP 5)
+(PHP 4, PHP 5, PHP 7)
 
 min — Find lowest value
 
@@ -47,6 +47,9 @@ smallest of these values.
 min() returns the parameter value considered "lowest" according to standard
 comparisons. If multiple values of different types evaluate as equal (e.g. 0
 and 'abc') the first provided to the function will be returned.
+
+If an empty array is passed, then FALSE will be returned and an E_WARNING
+error will be emitted.
 
 ==============================================================================
 *Examples*

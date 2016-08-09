@@ -46,6 +46,12 @@ filename.
     If the {path} does not have an extension, no extension element will be
     returned (see second example below).
 
+    Note:
+
+    If the basename of the {path} starts with a dot, the following characters
+    are interpreted as extension, and the filename is empty (see third example
+    below).
+
 If {options} is present, returns a string containing the requested element.
 
 ==============================================================================
@@ -91,6 +97,22 @@ string(0) ""
 
 Notice: Undefined index: extension in test.php on line 6
 NULL
+
+Example #3 pathinfo() example for a dot-file
+
+<?php >
+    print_r(pathinfo('/some/path/.test'));
+<?>
+
+The above example will output something similar to:
+
+Array
+(
+    [dirname] => /some/path
+    [basename] => .test
+    [extension] => test
+    [filename] =>
+)
 
 ==============================================================================
 *Notes*

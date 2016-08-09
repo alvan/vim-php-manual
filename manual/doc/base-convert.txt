@@ -1,6 +1,6 @@
 base_convert
 
-(PHP 4, PHP 5)
+(PHP 4, PHP 5, PHP 7)
 
 base_convert — Convert a number between arbitrary bases
 
@@ -13,7 +13,8 @@ Returns a string containing {number} represented in base {tobase}. The base in
 which {number} is given is specified in {frombase}. Both {frombase} and
 {tobase} have to be between 2 and 36, inclusive. Digits in numbers with a base
 higher than 10 will be represented with the letters a-z, with a meaning 10, b
-meaning 11 and z meaning 35.
+meaning 11 and z meaning 35. The case of the letters doesn't matter, i.e.
+{number} is interpreted case-insensitively.
 
 Warning
 
@@ -26,7 +27,8 @@ numbers section in the manual for more specific information and limitations.
 
 {number}
 
-    The number to convert
+    The number to convert. Any invalid characters in {number} are silently
+    ignored.
 
 {frombase}
 
@@ -47,7 +49,7 @@ numbers section in the manual for more specific information and limitations.
 Example #1 base_convert() example
 
 <?php >
-    $hexadecimal = 'A37334';
+    $hexadecimal = 'a37334';
     echo base_convert($hexadecimal, 16, 2);
 <?>
 

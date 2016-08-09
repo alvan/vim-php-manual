@@ -1,6 +1,6 @@
 mt_rand
 
-(PHP 4, PHP 5)
+(PHP 4, PHP 5, PHP 7)
 
 mt_rand — Generate a better random value
 
@@ -72,12 +72,11 @@ The above example will output something similar to:
 ==============================================================================
 *Notes*
 
-Caution
+Warning
 
-The distribution of mt_rand() return values is biased towards even numbers on
-64-bit builds of PHP when {max} is beyond 2^32. This is because if {max} is
-greater than the value returned by |mt_getrandmax|, the output of the random
-number generator must be scaled up.
+{min} {max} range must be within the range |mt_getrandmax|. i.e. ({max} -
+{min}) <= |mt_getrandmax| Otherwise, mt_rand() may return poor random numbers
+than it should be.
 
 ==============================================================================
 *See* *Also*

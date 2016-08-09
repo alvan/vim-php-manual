@@ -7,8 +7,7 @@ imagewbmp — Output image to browser or file
 ==============================================================================
 *Description*
 
-    bool imagewbmp ( resource $image [, string $filename [, int $foreground~
-    ]] )~
+    bool imagewbmp ( resource $image [, mixed $to [, int $foreground ]] )~
 
 imagewbmp() outputs or save a WBMP version of the given {image}.
 
@@ -20,10 +19,11 @@ imagewbmp() outputs or save a WBMP version of the given {image}.
     An image resource, returned by one of the image creation functions, such
     as |imagecreatetruecolor|.
 
-{filename}
+{to}
 
-    The path to save the file to. If not set or NULL, the raw image stream
-    will be outputted directly.
+    The path or an open stream resource (which is automatically being closed
+    after this function returns) to save the file to. If not set or NULL, the
+    raw image stream will be outputted directly.
 
 {foreground}
 
@@ -35,6 +35,12 @@ imagewbmp() outputs or save a WBMP version of the given {image}.
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
+
+==============================================================================
+*Changelog*
+
+Version                     Description
+5.4.0   Added support for passing a stream resource to {to}.
 
 ==============================================================================
 *Examples*

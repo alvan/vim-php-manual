@@ -61,11 +61,11 @@ other words, {timestamp} is optional and defaults to the value of |time|.
     Year       ---                                   ---
     L          Whether it's a leap year              1 if it is a leap year, 0
                                                      otherwise.
-               ISO-8601 year number. This has the
-               same value as Y, except that if the
-    o          ISO week number (W) belongs to the    Examples: 1999 or 2003
-               previous or next year, that year is
-               used instead. (added in PHP 5.1.0)
+               ISO-8601 week-numbering year. This
+               has the same value as Y, except that
+    o          if the ISO week number (W) belongs to Examples: 1999 or 2003
+               the previous or next year, that year
+               is used instead. (added in PHP 5.1.0)
     Y          A full numeric representation of a    Examples: 1999 or 2003
                year, 4 digits
     y          A two digit representation of a year  Examples: 99 or 03

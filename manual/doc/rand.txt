@@ -1,6 +1,6 @@
 rand
 
-(PHP 4, PHP 5)
+(PHP 4, PHP 5, PHP 7)
 
 rand — Generate a random integer
 
@@ -60,6 +60,15 @@ The above example will output something similar to:
 7771
 22264
 11
+
+==============================================================================
+*Notes*
+
+Warning
+
+{min} {max} range must be within the range |getrandmax|. i.e. ({max} - {min})
+<= |getrandmax| Otherwise, rand() may return poor random numbers than it
+should be.
 
 ==============================================================================
 *See* *Also*
