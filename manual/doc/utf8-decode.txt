@@ -10,14 +10,27 @@ to single-byte ISO-8859-1
 
     string utf8_decode ( string $data )~
 
-This function decodes {data}, assumed to be UTF-8 encoded, to ISO-8859-1.
+This function converts the string {data} from the UTF-8 encoding to ISO-8859-1
+. Bytes in the string which are not valid UTF-8, and UTF-8 characters which do
+not exist in ISO-8859-1 (that is, characters above U+00FF) are replaced with ?
+.
+
+    Note:
+
+    Many web pages marked as using the ISO-8859-1 character encoding actually
+    use the similar Windows-1252 encoding, and web browsers will interpret
+    ISO-8859-1 web pages as Windows-1252. Windows-1252 features additional
+    printable characters, such as the Euro sign (€) and curly quotes (“ ”),
+    instead of certain ISO-8859-1 control characters. This function will not
+    convert such Windows-1252 characters correctly. Use a different function
+    if Windows-1252 conversion is required.
 
 ==============================================================================
 *Parameters*
 
 {data}
 
-    An UTF-8 encoded string.
+    A UTF-8 encoded string.
 
 ==============================================================================
 *Return* *Values*
@@ -27,8 +40,14 @@ Returns the ISO-8859-1 translation of {data}.
 ==============================================================================
 *See* *Also*
 
-  * |utf8_encode| - Encodes an ISO-8859-1 string to UTF-8 (contains an
-    explanation of UTF-8 encoding)
+  * |utf8_encode| - Encodes an ISO-8859-1 string to UTF-8 - Performs the
+    reverse conversion
+  * |mb_convert_encoding| - Convert character encoding - Converts between
+    various character encodings, including UTF-8, ISO-8859-1 and Windows-1252
+  * |iconv| - Convert string to requested character encoding - Converts
+    between various character encodings
+  * |recode_string| - Recode a string according to a recode request - Converts
+    between various character encodings
 
 
 vim:ft=help:

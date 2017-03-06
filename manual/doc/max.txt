@@ -18,9 +18,14 @@ biggest of these values.
 
     Values of different types will be compared using the standard comparison
     rules. For instance, a non-numeric string will be compared to an integer
-    as though it were 0, but multiple string values will be compared
-    alphanumerically. The actual value returned will be of the original type
-    with no conversion applied.
+    as though it were 0, but multiple non-numeric string values will be
+    compared alphanumerically. The actual value returned will be of the
+    original type with no conversion applied.
+
+Caution
+
+Be careful when passing arguments with mixed types values because max() can
+produce unpredictable results.
 
 ==============================================================================
 *Parameters*

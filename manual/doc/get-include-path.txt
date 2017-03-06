@@ -22,10 +22,9 @@ Returns the path, as a string.
 Example #1 get_include_path() example
 
 <?php >
-    // Works as of PHP 4.3.0
     echo get_include_path();
 
-    // Works in all PHP versions
+    // Or using ini_get()
     echo ini_get('include_path');
 <?>
 

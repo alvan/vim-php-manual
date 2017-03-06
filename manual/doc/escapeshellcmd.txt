@@ -15,7 +15,7 @@ be used to make sure that any data coming from user input is escaped before
 this data is passed to the |exec| or |system| functions, or to the backtick
 operator.
 
-Following characters are preceded by a backslash: #&;`|*?~<>^()[]{}$\, \x0A
+Following characters are preceded by a backslash: &#;`|*?~<>^()[]{}$\, \x0A
 and \xFF. ' and " are escaped only if they are not paired. In Windows, all
 these characters plus % and ! are replaced by a space instead.
 

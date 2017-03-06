@@ -30,7 +30,8 @@ ftp_rename() renames a file or a directory on the FTP server.
 ==============================================================================
 *Return* *Values*
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or FALSE on failure. Upon failure (such as attempting
+to rename a non-existent file), an E_WARNING error will be emitted.
 
 ==============================================================================
 *Examples*

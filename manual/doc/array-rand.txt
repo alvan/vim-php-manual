@@ -36,7 +36,10 @@ E_WARNING level error, and NULL will be returned.
 ==============================================================================
 *Changelog*
 
-Version                    Description
+Version                              Description
+        The internal randomization algorithm has been changed to use the >>
+7.1.0    Mersenne Twister Random Number Generator instead of the libc rand
+        function.
 5.2.10  The resulting array of keys is no longer shuffled.
 
 ==============================================================================

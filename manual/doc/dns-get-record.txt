@@ -8,7 +8,7 @@ dns_get_record — Fetch DNS Resource Records associated with a hostname
 *Description*
 
     array dns_get_record ( string $hostname [, int $type = DNS_ANY [, array~
-    &$authns [, array &$addtl [, bool &$raw = false ]]]] )~
+    &$authns [, array &$addtl [, bool $raw = false ]]]] )~
 
 Fetch DNS Resource Records associated with the given {hostname}.
 
@@ -33,8 +33,8 @@ Fetch DNS Resource Records associated with the given {hostname}.
     By default, dns_get_record() will search for any resource records
     associated with {hostname}. To limit the query, specify the optional
     {type} parameter. May be any one of the following: DNS_A, DNS_CNAME,
-    DNS_HINFO, DNS_MX, DNS_NS, DNS_PTR, DNS_SOA, DNS_TXT, DNS_AAAA, DNS_SRV,
-    DNS_NAPTR, DNS_A6, DNS_ALL or DNS_ANY.
+    DNS_HINFO, DNS_CAA, DNS_MX, DNS_NS, DNS_PTR, DNS_SOA, DNS_TXT, DNS_AAAA,
+    DNS_SRV, DNS_NAPTR, DNS_A6, DNS_ALL or DNS_ANY.
 
         Note:
 
@@ -92,8 +92,13 @@ TXT    txt: Arbitrary string data associated with this record.
 HINFO  record. os: IANA number designating the Operating System on the machine
        referenced by this record. See IANA's >> Operating System Names for the
        meaning of these values.
+       flags: A one-byte bitfield; currently only bit 0 is defined, meaning
+       'critical'; other bits are reserved and should be ignored. tag: The CAA
+CAA    tag name (alphanumeric ASCII string). value: The CAA tag value (binary
+       string, may use subformats). For additional information see: >> RFC
+       6844
        mname: FQDN of the machine from which the resource records originated.
-       rname: Email address of the administrative contain for this domain.
+       rname: Email address of the administrative contact for this domain.
        serial: Serial # of this revision of the requested domain. refresh:
        Refresh interval (seconds) secondary name servers should use when
        updating remote copies of this domain. retry: Length of time (seconds)
@@ -119,6 +124,7 @@ NAPTR  order and pref: Equivalent to {pri} and {weight} above. flags, services
 *Changelog*
 
 Version                              Description
+7.0.16  Added support for CAA record type.
 5.4.0   Added {raw} parameter.
 5.3.0   This function is now available on Windows platforms.
 5.3.0   Prior to this release, if the {authns} parameter was given, the

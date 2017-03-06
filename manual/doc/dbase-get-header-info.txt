@@ -1,13 +1,13 @@
 dbase_get_header_info
 
-(PHP 5, PHP 7)
+(PHP 5 < 5.3.0, dbase 5, dbase 7)
 
 dbase_get_header_info — Gets the header info of a database
 
 ==============================================================================
 *Description*
 
-    array dbase_get_header_info ( int $dbase_identifier )~
+    array dbase_get_header_info ( resource $dbase_identifier )~
 
 Returns information on the column structure of the given database link
 identifier.
@@ -32,7 +32,8 @@ name
     The name of the column
 type
     The human-readable name for the dbase type of the column (i.e. date,
-    boolean, etc.)
+    boolean, etc.) The supported field types are listed in the introduction
+    section.
 length
     The number of bytes this column can hold
 precision
@@ -43,6 +44,12 @@ offset
     The byte offset of the column from the start of the row
 
 If the database header information cannot be read, FALSE is returned.
+
+==============================================================================
+*Changelog*
+
+  Version                         Description
+dbase 7.0.0 {dbase_identifier} is now a resource instead of an int.
 
 ==============================================================================
 *Examples*

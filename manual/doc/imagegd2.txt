@@ -7,8 +7,8 @@ imagegd2 — Output GD2 image to browser or file
 ==============================================================================
 *Description*
 
-    bool imagegd2 ( resource $image [, mixed $to [, int $chunk_size [, int~
-    $type = IMG_GD2_RAW ]]] )~
+    bool imagegd2 ( resource $image [, mixed $to = NULL [, int $chunk_size =~
+    128 [, int $type = IMG_GD2_RAW ]]] )~
 
 Outputs a GD2 image to the given {to}.
 
@@ -82,9 +82,6 @@ Example #2 Saving a GD2 image
 
 ==============================================================================
 *Notes*
-
-    Note: This function requires GD 2.0.1 or later (2.0.28 or later is
-    recommended).
 
     Note:
 

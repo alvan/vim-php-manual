@@ -7,7 +7,7 @@ getopt — Gets options from the command line argument list
 ==============================================================================
 *Description*
 
-    array getopt ( string $options [, array $longopts ] )~
+    array getopt ( string $options [, array $longopts [, int &$optind ]] )~
 
 Parses options passed to the script.
 
@@ -24,6 +24,9 @@ Parses options passed to the script.
     strings and matched against options passed to the script starting with two
     hyphens (--). For example, an longopts element "opt" recognizes an option
     --opt.
+{optind}
+    If the {optind} parameter is present, then the index where argument
+    parsing stopped will be written to this variable.
 
 The {options} parameter may contain the following elements:
 
@@ -59,6 +62,7 @@ failure.
 *Changelog*
 
 Version                              Description
+7.1.0   Added the {optind} parameter.
 5.3.0   Added support for "=" as argument/value separator.
 5.3.0   Added support for optional values (specified with "::").
 5.3.0   Parameter {longopts} is available on all systems.
@@ -149,6 +153,24 @@ array(2) {
   }
   ["c"]=>
   bool(false)
+}
+
+Example #4 getopt() example: Using {optind}
+
+<?php >
+// Script example.php
+$optind = null;
+$opts = getopt('a:b:', [], $optind);
+$pos_args = array_slice($argv, $optind);
+var_dump($pos_args);
+
+shell> php example.php -a 1 -b 2 -- test
+
+The above example will output:
+
+array(1) {
+  [0]=>
+  string(4) "test"
 }
 
 ==============================================================================

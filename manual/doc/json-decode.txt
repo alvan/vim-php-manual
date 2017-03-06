@@ -24,15 +24,7 @@ Takes a JSON encoded string and converts it into a PHP variable.
         Note:
 
         PHP implements a superset of JSON as specified in the original >> RFC
-        4627 - it will also encode and decode scalar types and NULL. RFC 4627
-        only supports these values when they are nested inside an array or an
-        object.
-
-        Although this superset is consistent with the expanded definition of
-        "JSON text" in the newer >> RFC 7159 (which aims to supersede RFC
-        4627) and >> ECMA-404, this may cause interoperability issues with
-        older JSON parsers that adhere strictly to RFC 4627 when encoding a
-        single scalar value.
+        7159.
 
 {assoc}
 
@@ -44,8 +36,10 @@ Takes a JSON encoded string and converts it into a PHP variable.
 
 {options}
 
-    Bitmask of JSON decode options. Currently only JSON_BIGINT_AS_STRING is
-    supported (default is to cast large integers as floats)
+    Bitmask of JSON decode options. Currently there are two supported options.
+    The first is JSON_BIGINT_AS_STRING that allows casting big integers to
+    string instead of floats which is the default. The second option is
+    JSON_OBJECT_AS_ARRAY that has the same effect as setting {assoc} to TRUE.
 
 ==============================================================================
 *Return* *Values*
@@ -220,6 +214,12 @@ object(stdClass)#1 (1) {
 *Changelog*
 
 Version                              Description
+7.1.0   An empty JSON key ("") can be encoded to the empty object property
+        instead of using a key with value _empty_.
+7.0.0   Rejected RFC 7159 incompatible number formats - top level (07, 0xff,
+        .1, -.1) and all levels ([1.], [1.e1])
+7.0.0   An empty PHP string or value that after casting to string is an empty
+        string (NULL, FALSE) results in JSON syntax error.
 5.6.0   Invalid non-lowercased variants of the true, false and null literals
         are no longer accepted as valid input, and will generate warnings.
 5.4.0   The {options} parameter was added.

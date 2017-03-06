@@ -29,7 +29,8 @@ case-insensitive. If {needle} is not found, it returns FALSE.
 
 {offset}
 
-    The position in {haystack} to start searching
+    The position in {haystack} to start searching. A negative offset counts
+    from the end of the string.
 
 {encoding}
 
@@ -41,6 +42,12 @@ case-insensitive. If {needle} is not found, it returns FALSE.
 
 Return the numeric position of the first occurrence of {needle} in the
 {haystack} string, or FALSE if {needle} is not found.
+
+==============================================================================
+*Changelog*
+
+Version                  Description
+7.1.0   Support for negative {offset}s has been added.
 
 ==============================================================================
 *See* *Also*

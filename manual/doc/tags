@@ -182,6 +182,9 @@ PDF_utf16_to_utf8	pdf-utf16-to-utf8.txt	/^PDF_utf16_to_utf8
 PDF_utf32_to_utf16	pdf-utf32-to-utf16.txt	/^PDF_utf32_to_utf16
 PDF_utf8_to_utf16	pdf-utf8-to-utf16.txt	/^PDF_utf8_to_utf16
 Security warning	include.txt	/^Security warning
+UI\Draw\Text\Font\fontFamilies	ui-draw-text-font-fontfamilies.txt	/^UI\Draw\Text\Font\fontFamilies
+UI\quit	ui-quit.txt	/^UI\quit
+UI\run	ui-run.txt	/^UI\run
 XMLWriter::endAttribute	xmlwriter-end-attribute.txt	/^XMLWriter::endAttribute
 XMLWriter::endCData	xmlwriter-end-cdata.txt	/^XMLWriter::endCData
 XMLWriter::endComment	xmlwriter-end-comment.txt	/^XMLWriter::endComment
@@ -497,8 +500,6 @@ cal_days_in_month	cal-days-in-month.txt	/^cal_days_in_month
 cal_from_jd	cal-from-jd.txt	/^cal_from_jd
 cal_info	cal-info.txt	/^cal_info
 cal_to_jd	cal-to-jd.txt	/^cal_to_jd
-calcul_hmac	calcul-hmac.txt	/^calcul_hmac
-calculhmac	calculhmac.txt	/^calculhmac
 call_user_func	call-user-func.txt	/^call_user_func
 call_user_func_array	call-user-func-array.txt	/^call_user_func_array
 call_user_method	call-user-method.txt	/^call_user_method
@@ -1615,6 +1616,7 @@ hash_copy	hash-copy.txt	/^hash_copy
 hash_equals	hash-equals.txt	/^hash_equals
 hash_file	hash-file.txt	/^hash_file
 hash_final	hash-final.txt	/^hash_final
+hash_hkdf	hash-hkdf.txt	/^hash_hkdf
 hash_hmac	hash-hmac.txt	/^hash_hmac
 hash_hmac_file	hash-hmac-file.txt	/^hash_hmac_file
 hash_init	hash-init.txt	/^hash_init
@@ -1778,6 +1780,7 @@ imageaffinematrixget	imageaffinematrixget.txt	/^imageaffinematrixget
 imagealphablending	imagealphablending.txt	/^imagealphablending
 imageantialias	imageantialias.txt	/^imageantialias
 imagearc	imagearc.txt	/^imagearc
+imagebmp	imagebmp.txt	/^imagebmp
 imagechar	imagechar.txt	/^imagechar
 imagecharup	imagecharup.txt	/^imagecharup
 imagecolorallocate	imagecolorallocate.txt	/^imagecolorallocate
@@ -1803,6 +1806,7 @@ imagecopymergegray	imagecopymergegray.txt	/^imagecopymergegray
 imagecopyresampled	imagecopyresampled.txt	/^imagecopyresampled
 imagecopyresized	imagecopyresized.txt	/^imagecopyresized
 imagecreate	imagecreate.txt	/^imagecreate
+imagecreatefrombmp	imagecreatefrombmp.txt	/^imagecreatefrombmp
 imagecreatefromgd	imagecreatefromgd.txt	/^imagecreatefromgd
 imagecreatefromgd2	imagecreatefromgd2.txt	/^imagecreatefromgd2
 imagecreatefromgd2part	imagecreatefromgd2part.txt	/^imagecreatefromgd2part
@@ -1835,6 +1839,7 @@ imagefttext	imagefttext.txt	/^imagefttext
 imagegammacorrect	imagegammacorrect.txt	/^imagegammacorrect
 imagegd	imagegd.txt	/^imagegd
 imagegd2	imagegd2.txt	/^imagegd2
+imagegetclip	imagegetclip.txt	/^imagegetclip
 imagegif	imagegif.txt	/^imagegif
 imagegrabscreen	imagegrabscreen.txt	/^imagegrabscreen
 imagegrabwindow	imagegrabwindow.txt	/^imagegrabwindow
@@ -1844,6 +1849,7 @@ imagejpeg	imagejpeg.txt	/^imagejpeg
 imagelayereffect	imagelayereffect.txt	/^imagelayereffect
 imageline	imageline.txt	/^imageline
 imageloadfont	imageloadfont.txt	/^imageloadfont
+imageopenpolygon	imageopenpolygon.txt	/^imageopenpolygon
 imagepalettecopy	imagepalettecopy.txt	/^imagepalettecopy
 imagepalettetotruecolor	imagepalettetotruecolor.txt	/^imagepalettetotruecolor
 imagepng	imagepng.txt	/^imagepng
@@ -1856,10 +1862,12 @@ imagepsloadfont	imagepsloadfont.txt	/^imagepsloadfont
 imagepsslantfont	imagepsslantfont.txt	/^imagepsslantfont
 imagepstext	imagepstext.txt	/^imagepstext
 imagerectangle	imagerectangle.txt	/^imagerectangle
+imageresolution	imageresolution.txt	/^imageresolution
 imagerotate	imagerotate.txt	/^imagerotate
 imagesavealpha	imagesavealpha.txt	/^imagesavealpha
 imagescale	imagescale.txt	/^imagescale
 imagesetbrush	imagesetbrush.txt	/^imagesetbrush
+imagesetclip	imagesetclip.txt	/^imagesetclip
 imagesetinterpolation	imagesetinterpolation.txt	/^imagesetinterpolation
 imagesetpixel	imagesetpixel.txt	/^imagesetpixel
 imagesetstyle	imagesetstyle.txt	/^imagesetstyle
@@ -2931,7 +2939,6 @@ nl_langinfo	nl-langinfo.txt	/^nl_langinfo
 nsapi_request_headers	nsapi-request-headers.txt	/^nsapi_request_headers
 nsapi_response_headers	nsapi-response-headers.txt	/^nsapi_response_headers
 nsapi_virtual	nsapi-virtual.txt	/^nsapi_virtual
-nthmac	nthmac.txt	/^nthmac
 number_format	number-format.txt	/^number_format
 oauth_get_sbs	oauth-get-sbs.txt	/^oauth_get_sbs
 oauth_urlencode	oauth-urlencode.txt	/^oauth_urlencode
@@ -3207,6 +3214,7 @@ pcntl_getpriority	pcntl-getpriority.txt	/^pcntl_getpriority
 pcntl_setpriority	pcntl-setpriority.txt	/^pcntl_setpriority
 pcntl_signal	pcntl-signal.txt	/^pcntl_signal
 pcntl_signal_dispatch	pcntl-signal-dispatch.txt	/^pcntl_signal_dispatch
+pcntl_signal_get_handler	pcntl-signal-get-handler.txt	/^pcntl_signal_get_handler
 pcntl_sigprocmask	pcntl-sigprocmask.txt	/^pcntl_sigprocmask
 pcntl_sigtimedwait	pcntl-sigtimedwait.txt	/^pcntl_sigtimedwait
 pcntl_sigwaitinfo	pcntl-sigwaitinfo.txt	/^pcntl_sigwaitinfo
@@ -3631,9 +3639,11 @@ session_abort	session-abort.txt	/^session_abort
 session_cache_expire	session-cache-expire.txt	/^session_cache_expire
 session_cache_limiter	session-cache-limiter.txt	/^session_cache_limiter
 session_commit	session-commit.txt	/^session_commit
+session_create_id	session-create-id.txt	/^session_create_id
 session_decode	session-decode.txt	/^session_decode
 session_destroy	session-destroy.txt	/^session_destroy
 session_encode	session-encode.txt	/^session_encode
+session_gc	session-gc.txt	/^session_gc
 session_get_cookie_params	session-get-cookie-params.txt	/^session_get_cookie_params
 session_id	session-id.txt	/^session_id
 session_is_registered	session-is-registered.txt	/^session_is_registered
@@ -3688,7 +3698,6 @@ shmop_size	shmop-size.txt	/^shmop_size
 shmop_write	shmop-write.txt	/^shmop_write
 show_source	show-source.txt	/^show_source
 shuffle	shuffle.txt	/^shuffle
-signeurlpaiement	signeurlpaiement.txt	/^signeurlpaiement
 similar_text	similar-text.txt	/^similar_text
 simplexml_import_dom	simplexml-import-dom.txt	/^simplexml_import_dom
 simplexml_load_file	simplexml-load-file.txt	/^simplexml_load_file

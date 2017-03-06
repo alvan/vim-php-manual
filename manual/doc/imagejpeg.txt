@@ -42,7 +42,7 @@ Returns TRUE on success or FALSE on failure.
 ==============================================================================
 *Examples*
 
-Example #1 Outputting a JPEG image
+Example #1 Outputting a JPEG image to the browser
 
 <?php >
     // Create a blank image and add some text
@@ -64,7 +64,7 @@ The above example will output something similar to:
 
 Output of example : Outputting a JPEG image
 
-Example #2 Saving a JPEG image
+Example #2 Saving a JPEG image to a file
 
 <?php >
     // Create a blank image and add some text
@@ -79,7 +79,7 @@ Example #2 Saving a JPEG image
     imagedestroy($im);
 <?>
 
-Example #3 Outputting the image at 75% quality
+Example #3 Outputting the image at 75% quality to the browser
 
 <?php >
     // Create a blank image and add some text
@@ -99,9 +99,6 @@ Example #3 Outputting the image at 75% quality
 
 ==============================================================================
 *Notes*
-
-    Note: JPEG support is only available if PHP was compiled against GD-1.8 or
-    later.
 
     Note:
 

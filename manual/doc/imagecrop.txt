@@ -2,18 +2,15 @@ imagecrop
 
 (PHP 5 >= 5.5.0, PHP 7)
 
-imagecrop — Crop an image using the given coordinates and size, x, y, width
-and height
+imagecrop — Crop an image to the given rectangle
 
 ==============================================================================
 *Description*
 
     resource imagecrop ( resource $image , array $rect )~
 
-Warning
-
-This function is currently not documented; only its argument list is
-available.
+Crops an image to the given rectangular area and returns the resulting image.
+The given {image} is not modified.
 
 ==============================================================================
 *Parameters*
@@ -25,12 +22,35 @@ available.
 
 {rect}
 
-    Array with keys "x", "y", "width" and "height".
+    The cropping rectangle as array with keys x, y, width and height.
 
 ==============================================================================
 *Return* *Values*
 
 Return cropped image resource on success or FALSE on failure.
+
+==============================================================================
+*Examples*
+
+Example #1 imagecrop() example
+
+This example shows how to crop an image to a square area.
+
+<?php >
+    $im = imagecreatefrompng('example.png');
+    $size = min(imagesx($im), imagesy($im));
+    $im2 = imagecrop($im, ['x' => 0, 'y' => 0, 'width' => $size, 'height' => $size
+    ]);
+    if ($im2 !== FALSE) {
+        imagepng($im2, 'example-cropped.png');
+    }
+<?>
+
+==============================================================================
+*See* *Also*
+
+  * |imagecropauto| - Crop an image automatically using one of the available
+    modes
 
 
 vim:ft=help:

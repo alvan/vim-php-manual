@@ -30,6 +30,13 @@ Performs a character set conversion on the string {str} from {in_charset} to
     cannot be represented in the target charset are silently discarded.
     Otherwise, E_NOTICE is generated and the function will return FALSE.
 
+    Caution
+
+    If and how //TRANSLIT works exactly depends on the system's iconv()
+    implementation (cf. ICONV_IMPL). Some implementations are known to ignore
+    //TRANSLIT, so the conversion is likely to fail for characters which are
+    illegal for the {out_charset}.
+
 {str}
 
     The string to be converted.

@@ -86,8 +86,10 @@ Example #2 explode() return examples
     */
     $input1 = "hello";
     $input2 = "hello,there";
+    $input3 = ',';
     var_dump( explode( ',', $input1 ) );
     var_dump( explode( ',', $input2 ) );
+    var_dump( explode( ',', $input3 ) );
 
 <?>
 
@@ -101,6 +103,11 @@ array(2)
 (
     [0] => string(5) "hello"
     [1] => string(5) "there"
+)
+array(2)
+(
+    [0] => string(0) ""
+    [1] => string(0) ""
 )
 
 Example #3 {limit} parameter examples

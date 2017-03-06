@@ -1,16 +1,17 @@
 dbase_pack
 
-(PHP 4, PHP 5, PHP 7)
+(PHP 5 < 5.3.0, dbase 5, dbase 7)
 
 dbase_pack — Packs a database
 
 ==============================================================================
 *Description*
 
-    bool dbase_pack ( int $dbase_identifier )~
+    bool dbase_pack ( resource $dbase_identifier )~
 
 Packs the specified database by permanently deleting all records marked for
-deletion using |dbase_delete_record|.
+deletion using |dbase_delete_record|. Note that the file will be truncated
+after successful packing (contrary to dBASE III's PACK command).
 
 ==============================================================================
 *Parameters*
@@ -23,6 +24,12 @@ deletion using |dbase_delete_record|.
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
+
+==============================================================================
+*Changelog*
+
+  Version                         Description
+dbase 7.0.0 {dbase_identifier} is now a resource instead of an int.
 
 ==============================================================================
 *Examples*

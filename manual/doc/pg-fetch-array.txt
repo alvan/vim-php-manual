@@ -78,9 +78,9 @@ Example #1 pg_fetch_array() example
     echo $arr[0] . " <- Row 1 Author\n";
     echo $arr[1] . " <- Row 1 E-mail\n";
 
-    // As of PHP 4.1.0, the row parameter is optional; NULL can be passed instead,
-    // to pass a result_type.  Successive calls to pg_fetch_array will return the
-    // next row.
+    // The row parameter is optional; NULL can be passed instead,
+    // to pass a result_type.  Successive calls to pg_fetch_array
+    // will return the next row.
     $arr = pg_fetch_array($result, NULL, PGSQL_ASSOC);
     echo $arr["author"] . " <- Row 2 Author\n";
     echo $arr["email"] . " <- Row 2 E-mail\n";

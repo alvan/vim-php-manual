@@ -42,8 +42,8 @@ pg_insert() inserts the values of {assoc_array} into the table specified by
 ==============================================================================
 *Return* *Values*
 
-Returns TRUE on success or FALSE on failure. Returns string if
-PGSQL_DML_STRING is passed via {options}.
+Returns the connection resource on success, or FALSE on failure. Returns 
+string if PGSQL_DML_STRING is passed via {options}.
 
 ==============================================================================
 *Examples*
@@ -64,11 +64,13 @@ Example #1 pg_insert() example
 ==============================================================================
 *Changelog*
 
- Version                              Description
-5.6.0     No longer experimental. Added PGSQL_DML_ESCAPE constant, TRUE/FALSE
-          and NULL data type support.
-5.5.3/    Direct SQL injection to {table_name} and Indirect SQL injection to
-5.4.19    identifiers are fixed.
+Version                               Description
+5.6.0    Unless PGSQL_DML_STRING is passed, the function now returns the
+         connection resource instead of TRUE on success.
+5.6.0    No longer experimental. Added PGSQL_DML_ESCAPE constant, TRUE/FALSE
+         and NULL data type support.
+5.5.3/   Direct SQL injection to {table_name} and Indirect SQL injection to
+5.4.19   identifiers are fixed.
 
 ==============================================================================
 *See* *Also*

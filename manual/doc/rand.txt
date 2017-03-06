@@ -26,6 +26,8 @@ value, consider using |random_int|, |random_bytes|, or
     allow you to create a range larger than this, or consider using |mt_rand|
     instead.
 
+    Note: As of PHP 7.1.0, rand() has been made an alias of |mt_rand|.
+
 ==============================================================================
 *Parameters*
 
@@ -42,6 +44,12 @@ value, consider using |random_int|, |random_bytes|, or
 
 A pseudo random value between {min} (or 0) and {max} (or |getrandmax|,
 inclusive).
+
+==============================================================================
+*Changelog*
+
+Version                 Description
+7.1.0   rand() has been made an alias of |mt_rand|.
 
 ==============================================================================
 *Examples*
@@ -67,15 +75,15 @@ The above example will output something similar to:
 Warning
 
 {min} {max} range must be within the range |getrandmax|. i.e. ({max} - {min})
-<= |getrandmax| Otherwise, rand() may return poor random numbers than it
-should be.
+<= |getrandmax| Otherwise, rand() may return poor-quality random numbers.
 
 ==============================================================================
 *See* *Also*
 
   * |srand| - Seed the random number generator
   * |getrandmax| - Show largest possible random value
-  * |mt_rand| - Generate a better random value
+  * |mt_rand| - Generate a random value via the Mersenne Twister Random Number
+    Generator
   * |random_int| - Generates cryptographically secure pseudo-random integers
   * |random_bytes| - Generates cryptographically secure pseudo-random bytes
   * |openssl_random_pseudo_bytes| - Generate a pseudo-random string of bytes

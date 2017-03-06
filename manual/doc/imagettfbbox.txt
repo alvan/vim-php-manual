@@ -107,14 +107,14 @@ Example #1 imagettfbbox() example
 ==============================================================================
 *Notes*
 
-    Note:
-
-    This function requires both the GD library and the >> FreeType library.
+    Note: This function is only available if PHP is compiled with freetype
+    support (--with-freetype-dir=DIR )
 
 ==============================================================================
 *See* *Also*
 
   * |imagettftext| - Write text to the image using TrueType fonts
+  * |imageftbbox| - Give the bounding box of a text using fonts via freetype2
 
 
 vim:ft=help:

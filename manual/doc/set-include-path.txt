@@ -29,10 +29,9 @@ Returns the old include_path on success or FALSE on failure.
 Example #1 set_include_path() example
 
 <?php >
-    // Works as of PHP 4.3.0
     set_include_path('/usr/lib/pear');
 
-    // Works in all PHP versions
+    // Or using ini_set()
     ini_set('include_path', '/usr/lib/pear');
 <?>
 

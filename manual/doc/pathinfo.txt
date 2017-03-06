@@ -13,6 +13,17 @@ pathinfo — Returns information about a file path
 pathinfo() returns information about {path}: either an associative array or a
 string, depending on {options}.
 
+    Note:
+
+    For information on retrieving the current path info, read the section on
+    predefined reserved variables.
+
+Caution
+
+pathinfo() is locale aware, so for it to parse a path containing multibyte
+characters correctly, the matching locale must be set using the |setlocale|
+function.
+
 ==============================================================================
 *Parameters*
 
@@ -113,20 +124,6 @@ Array
     [extension] => test
     [filename] =>
 )
-
-==============================================================================
-*Notes*
-
-    Note:
-
-    For information on retrieving the current path info, read the section on
-    predefined reserved variables.
-
-    Note:
-
-    pathinfo() is locale aware, so for it to parse a path containing multibyte
-    characters correctly, the matching locale must be set using the |setlocale
-    | function.
 
 ==============================================================================
 *See* *Also*

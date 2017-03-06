@@ -23,6 +23,16 @@ Prepare a query for later binding of parameter placeholders and execution (via
 
     An InterBase query.
 
+{link_identifier}
+
+    An InterBase link identifier returned from |ibase_connect|. If omitted,
+    the last opened link is assumed.
+
+{trans}
+
+    An InterBase transaction handle the query should be associated with. If
+    omitted, the default transaction of the connection is assumed.
+
 ==============================================================================
 *Return* *Values*
 

@@ -30,10 +30,13 @@ current signal handler for the signal indicated by {signo}.
     If a callable is given, it must implement the following signature:
 
 
-    void handler ( int $signo )~
+    void handler ( int $signo , mixed $signinfo )~
 
     {signo}
         The signal being handled.
+    {siginfo}
+        If operating systems supports siginfo_t structures, this will be an
+        array of signal information dependent on the signal.
 
         Note:
 
@@ -61,6 +64,10 @@ Version                              Description
         the declare() statement to specify the locations in your program where
         callbacks are allowed to occur for the signal handler to function
         properly (as used in the example below).
+        As of PHP 7.1.0 the handler callback is given a second argument
+7.1.0   containing the signinfo of the specific signal. This data is only
+        supplied if the operating system has the signinfo_t structure. If the
+        OS does not implement siginfo_t NULL is supplied.
 
 ==============================================================================
 *Examples*

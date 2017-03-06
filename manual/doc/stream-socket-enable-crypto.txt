@@ -33,11 +33,19 @@ off dynamically by passing TRUE or FALSE in the {enable} parameter.
       + STREAM_CRYPTO_METHOD_SSLv2_CLIENT
       + STREAM_CRYPTO_METHOD_SSLv3_CLIENT
       + STREAM_CRYPTO_METHOD_SSLv23_CLIENT
+      + STREAM_CRYPTO_METHOD_ANY_CLIENT
       + STREAM_CRYPTO_METHOD_TLS_CLIENT
+      + STREAM_CRYPTO_METHOD_TLSv1_0_CLIENT
+      + STREAM_CRYPTO_METHOD_TLSv1_1_CLIENT
+      + STREAM_CRYPTO_METHOD_TLSv1_2_CLIENT
       + STREAM_CRYPTO_METHOD_SSLv2_SERVER
       + STREAM_CRYPTO_METHOD_SSLv3_SERVER
       + STREAM_CRYPTO_METHOD_SSLv23_SERVER
+      + STREAM_CRYPTO_METHOD_ANY_SERVER
       + STREAM_CRYPTO_METHOD_TLS_SERVER
+      + STREAM_CRYPTO_METHOD_TLSv1_0_SERVER
+      + STREAM_CRYPTO_METHOD_TLSv1_1_SERVER
+      + STREAM_CRYPTO_METHOD_TLSv1_2_SERVER
 
     If omitted, the {crypto_type} context option on the stream's SSL context
     will be used instead.
@@ -55,7 +63,14 @@ enough data and you should try again (only for non-blocking sockets).
 ==============================================================================
 *Changelog*
 
-Version            Description
+Version                              Description
+        Introduce STREAM_CRYPTO_METHOD_ANY_CLIENT,
+        STREAM_CRYPTO_METHOD_TLSv1_0_CLIENT,
+        STREAM_CRYPTO_METHOD_TLSv1_1_CLIENT,
+5.6.0   STREAM_CRYPTO_METHOD_TLSv1_2_CLIENT, STREAM_CRYPTO_METHOD_ANY_SERVER,
+        STREAM_CRYPTO_METHOD_TLSv1_0_SERVER,
+        STREAM_CRYPTO_METHOD_TLSv1_1_SERVER,
+        STREAM_CRYPTO_METHOD_TLSv1_2_SERVER.
 5.6.0   The {crypto_type} is now optional.
 
 ==============================================================================

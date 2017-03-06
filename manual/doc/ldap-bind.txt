@@ -23,8 +23,9 @@ Binds to the LDAP directory with specified RDN and password.
 
 {bind_password}
 
-If {bind_rdn} and {bind_password} are not specified, an anonymous bind is
-attempted.
+If {bind_password} is not specified or is empty, an anonymous bind is
+attempted. The {bind_dn} can also be left empty for an anonymous bind. This is
+defined in https://tools.ietf.org/html/rfc2251#section-4.2.2
 
 ==============================================================================
 *Return* *Values*

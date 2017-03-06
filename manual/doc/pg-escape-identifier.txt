@@ -14,7 +14,7 @@ quering the database. It returns an escaped identifier string for PostgreSQL
 server. pg_escape_identifier() adds double quotes before and after data. Users
 should not add double quotes. Use of this function is recommended for
 identifier parameters in query. For SQL literals (i.e. parameters except
-bytea), |pg_escape_literal| or |pg_escape_string| muse be used. For bytea type
+bytea), |pg_escape_literal| or |pg_escape_string| must be used. For bytea type
 fields, |pg_escape_bytea| must be used instead.
 
     Note:

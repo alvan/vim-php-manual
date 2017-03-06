@@ -31,6 +31,14 @@ purposes.
 Returns TRUE on success or FALSE on failure.
 
 ==============================================================================
+*Changelog*
+
+Version                              Description
+        The internal randomization algorithm has been changed to use the >>
+7.1.0    Mersenne Twister Random Number Generator instead of the libc rand
+        function.
+
+==============================================================================
 *Examples*
 
 Example #1 shuffle() example

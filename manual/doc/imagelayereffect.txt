@@ -2,15 +2,14 @@ imagelayereffect
 
 (PHP 4 >= 4.3.0, PHP 5, PHP 7)
 
-imagelayereffect — Set the alpha blending flag to use the bundled libgd
-layering effects
+imagelayereffect — Set the alpha blending flag to use layering effects
 
 ==============================================================================
 *Description*
 
     bool imagelayereffect ( resource $image , int $effect )~
 
-Set the alpha blending flag to use the bundled libgd layering effects.
+Set the alpha blending flag to use layering effects.
 
 ==============================================================================
 *Parameters*
@@ -36,11 +35,20 @@ Set the alpha blending flag to use the bundled libgd layering effects.
         Overlay has the effect that black background pixels will remain black,
         white background pixels will remain white, but grey background pixels
         will take the colour of the foreground pixel.
+    IMG_EFFECT_MULTIPLY
+        Overlays with a multiply effect.
 
 ==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
+
+==============================================================================
+*Changelog*
+
+Version                              Description
+7.2.0   Added IMG_EFFECT_MULTIPLY (requires system libgd >= 2.1.1 or the
+        bundled libgd).
 
 ==============================================================================
 *Examples*
@@ -80,8 +88,8 @@ Output of example : imagelayereffect()
 ==============================================================================
 *Notes*
 
-    Note: This function requires GD 2.0.1 or later (2.0.28 or later is
-    recommended).
+Before PHP 5.5.0, this function is only available if PHP is compiled with the
+bundled version of the GD library.
 
 
 vim:ft=help:

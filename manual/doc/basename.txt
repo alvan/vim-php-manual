@@ -12,6 +12,17 @@ basename — Returns trailing name component of path
 Given a string containing the path to a file or directory, this function will
 return the trailing name component.
 
+    Note:
+
+    basename() operates naively on the input string, and is not aware of the
+    actual filesystem, or path components such as "..".
+
+Caution
+
+basename() is locale aware, so for it to see the correct basename with
+multibyte character paths, the matching locale must be set using the 
+|setlocale| function.
+
 ==============================================================================
 *Parameters*
 
@@ -53,20 +64,6 @@ The above example will output:
 4) etc
 5) .
 6)
-
-==============================================================================
-*Notes*
-
-    Note:
-
-    basename() operates naively on the input string, and is not aware of the
-    actual filesystem, or path components such as "..".
-
-    Note:
-
-    basename() is locale aware, so for it to see the correct basename with
-    multibyte character paths, the matching locale must be set using the 
-    |setlocale| function.
 
 ==============================================================================
 *See* *Also*

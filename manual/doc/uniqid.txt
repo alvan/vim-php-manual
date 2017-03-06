@@ -19,6 +19,13 @@ not be used for cryptographic purposes. If you need a cryptographically secure
 value, consider using |random_int|, |random_bytes|, or 
 |openssl_random_pseudo_bytes| instead.
 
+Warning
+
+This function does not guarantee uniqueness of return value. Since most
+systems adjust system clock by NTP or like, system time is changed constantly.
+Therefore, it is possible that this function does not return unique ID for the
+process/thread. Use {more_entropy} to increase likelihood of uniqueness.
+
 ==============================================================================
 *Parameters*
 
@@ -40,7 +47,12 @@ value, consider using |random_int|, |random_bytes|, or
 ==============================================================================
 *Return* *Values*
 
-Returns the unique identifier, as a string.
+Returns timestamp based unique identifier as a string.
+
+Warning
+
+This function tries to create unique identifier, but it does not guarantee
+100% uniqueness of return value.
 
 ==============================================================================
 *Examples*

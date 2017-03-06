@@ -14,6 +14,10 @@ The mqseries_connx() (MQCONNX) call connects an application program to a queue
 manager. It provides a queue manager connection handle, which is used by the
 application on subsequent MQ calls.
 
+The mqseries_connx() call is like the |mqseries_conn| (MQCONN) call, except
+that MQCONNX allows options to be specified to control the way that the call
+works.
+
 ==============================================================================
 *Parameters*
 

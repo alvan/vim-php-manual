@@ -13,6 +13,17 @@ Given a string containing the path of a file or directory, this function will
 return the parent directory's path that is {levels} up from the current
 directory.
 
+    Note:
+
+    dirname() operates naively on the input string, and is not aware of the
+    actual filesystem, or path components such as "..".
+
+Caution
+
+dirname() is locale aware, so for it to see the correct directory name with
+multibyte character paths, the matching locale must be set using the 
+|setlocale| function.
+
 ==============================================================================
 *Parameters*
 
@@ -49,50 +60,19 @@ Version              Description
 Example #1 dirname() example
 
 <?php >
-    echo dirname("/etc/passwd") . PHP_EOL;
-    echo dirname("/etc/") . PHP_EOL;
-    echo dirname(".") . PHP_EOL;
-    echo dirname("/usr/local/lib", 2);
+echo dirname("/etc/passwd") . PHP_EOL;
+echo dirname("/etc/") . PHP_EOL;
+echo dirname(".") . PHP_EOL;
+echo dirname("C:\\") . PHP_EOL;
+echo dirname("/usr/local/lib", 2);
 
-    The above example will output something similar to:
+The above example will output something similar to:
 
-    /etc
-    / (or \ on Windows)
-    .
-    /usr
-
-    ==============================================================================
-    *Notes*
-
-        Note:
-
-        dirname() operates naively on the input string, and is not aware of the
-        actual filesystem, or path components such as "..".
-
-        Note:
-
-        dirname() is locale aware, so for it to see the correct directory name
-        with multibyte character paths, the matching locale must be set using the 
-        |setlocale| function.
-
-        Note:
-
-        Since PHP 4.3.0, you will often get a slash or a dot back from dirname()
-        in situations where the older functionality would have given you the empty
-        string.
-
-    Check the following change example:
-    <?php >
-
-    //before PHP 4.3.0
-    dirname('c:/'); // returned '.'
-
-    //after PHP 4.3.0
-    dirname('c:/x'); // returns 'c:\'
-    dirname('c:/Temp/x'); // returns 'c:/Temp'
-    dirname('/x'); // returns '\'
-
-<?>
+/etc
+/ (or \ on Windows)
+.
+C:\
+/usr
 
 ==============================================================================
 *See* *Also*

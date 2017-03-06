@@ -12,11 +12,10 @@ output_add_rewrite_var — Add URL rewriter values
 This function adds another name/value pair to the URL rewrite mechanism. The
 name and value will be added to URLs (as GET parameter) and forms (as hidden
 input fields) the same way as the session ID when transparent URL rewriting is
-enabled with session.use_trans_sid. Please note that absolute URLs (http://
-example.com/..) aren't rewritten.
+enabled with session.use_trans_sid.
 
-This function's behavior is controlled by the url_rewriter.tags php.ini
-parameter.
+This function's behaviour is controlled by the url_rewriter.tags and
+url_rewriter.hosts php.ini parameters.
 
     Note: Calling this function will implicitly start output buffering if it
     is not active already.
@@ -36,6 +35,15 @@ parameter.
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
+
+==============================================================================
+*Changelog*
+
+Version                              Description
+        Before PHP 7.1.0, rewrite vars set by output_add_rewrite_var() use the
+7.1.0   same Session module trans sid output buffer. Since PHP 7.1.0,
+        dedicated output buffer is used, url_rewriter.tags is used solely for
+        output functions, url_rewriter.hosts is addedd.
 
 ==============================================================================
 *Examples*
@@ -78,6 +86,10 @@ Array
   * |output_reset_rewrite_vars| - Reset URL rewriter values
   * |ob_flush| - Flush (send) the output buffer
   * |ob_list_handlers| - List all output handlers in use
+  * url_rewriter.tags
+  * url_rewriter.hosts
+  * session.trans_sid_tags
+  * session.trans_sid_hosts
 
 
 vim:ft=help:

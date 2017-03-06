@@ -21,7 +21,19 @@ way.
 
 {increment}
 
-    The increment value of the priority change.
+    The new priority value, the value of this may differ on platforms.
+
+    on Unix, a low value, such as -20 means high priority wheras a positive
+    value have a lower priority.
+
+    For Windows the {increment} parameter have the following meanings:
+
+       Priority class              Possible values
+    High priority         {increment} < -9
+    Above normal priority {increment} < -4
+    Normal priority       {increment} < 5 & {increment} > -5
+    Below normal priority {increment} > 5
+    Idle priority         {increment} > 9
 
 ==============================================================================
 *Return* *Values*
@@ -31,13 +43,33 @@ lacks permission to change the priority, an error of level E_WARNING is also
 generated.
 
 ==============================================================================
+*Examples*
+
+Example #1 Using |proc_open| to set the process priority to high
+
+<?php >
+    // Highest priority
+    proc_nice(-20);
+<?>
+
+==============================================================================
+*Changelog*
+
+Version                Description
+7.2.0   This function is now available on Windows.
+
+==============================================================================
 *Notes*
 
     Note: Availability
 
     proc_nice() will only exist if your system has 'nice' capabilities. 'nice'
-    conforms to: SVr4, SVID EXT, AT&T, X/OPEN, BSD 4.3. This means that 
-    proc_nice() is not available on Windows.
+    conforms to: SVr4, SVID EXT, AT&T, X/OPEN, BSD 4.3.
+
+    Note: Windows only
+
+    proc_nice() will change the current process priority, even if PHP was
+    compiled using thread safety.
 
 
 vim:ft=help:

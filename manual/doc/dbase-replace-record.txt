@@ -1,14 +1,14 @@
 dbase_replace_record
 
-(PHP 4, PHP 5, PHP 7)
+(PHP 5 < 5.3.0, dbase 5, dbase 7)
 
 dbase_replace_record — Replaces a record in a database
 
 ==============================================================================
 *Description*
 
-    bool dbase_replace_record ( int $dbase_identifier , array $record , int~
-    $record_number )~
+    bool dbase_replace_record ( resource $dbase_identifier , array $record ,~
+    int $record_number )~
 
 Replaces the given record in the database with the given data.
 
@@ -38,6 +38,12 @@ Replaces the given record in the database with the given data.
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
+
+==============================================================================
+*Changelog*
+
+  Version                         Description
+dbase 7.0.0 {dbase_identifier} is now a resource instead of an int.
 
 ==============================================================================
 *Examples*

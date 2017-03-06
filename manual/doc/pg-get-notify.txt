@@ -31,8 +31,9 @@ receive notifications, the LISTEN SQL command must be issued.
 ==============================================================================
 *Return* *Values*
 
-An array containing the NOTIFY message name and backend PID. Otherwise if no
-NOTIFY is waiting, then FALSE is returned.
+An array containing the NOTIFY message name and backend PID. As of PHP 5.4.0
+and if supported by the server, the array also contains the server version and
+the payload. Otherwise if no NOTIFY is waiting, then FALSE is returned.
 
 ==============================================================================
 *Examples*

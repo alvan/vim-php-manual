@@ -25,8 +25,15 @@ If the given {handle} is a resource, this function will return a string
 representing its type. If the type is not identified by this function, the
 return value will be the string Unknown.
 
-This function will return FALSE and generate an error if {handle} is not a 
+This function will return NULL and generate an error if {handle} is not a 
 resource.
+
+==============================================================================
+*Changelog*
+
+Version                              Description
+PHP     If {handle} is not a resource this functions returns NULL. Formerly,
+5.3.0   FALSE has been returned.
 
 ==============================================================================
 *Examples*

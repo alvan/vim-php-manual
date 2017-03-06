@@ -7,7 +7,7 @@ apcu_delete — Removes a stored variable from the cache
 ==============================================================================
 *Description*
 
-    mixed apcu_delete ( string $key )~
+    bool apcu_delete ( mixed $key )~
 
 Removes a stored variable from the cache.
 
@@ -16,7 +16,8 @@ Removes a stored variable from the cache.
 
 {key}
 
-    The {key} used to store the value (with |apcu_store|).
+    A {key} used to store the value as a string for a single key, or as an 
+    array of strings for several keys, or as an APCUIterator object.
 
 ==============================================================================
 *Return* *Values*
@@ -33,6 +34,12 @@ Example #1 A apcu_delete() example
     apcu_store('foo', $bar);
     apcu_delete('foo');
     // this is obviously useless in this form
+
+    // Alternatively delete multiple keys.
+    apcu_delete(['foo', 'bar', 'baz']);
+
+    // Or use an Iterator with a regular expression.
+    apcu_delete(new APCUIterator('#^myprefix_#'));
 <?>
 
 ==============================================================================
@@ -40,6 +47,8 @@ Example #1 A apcu_delete() example
 
   * |apcu_store| - Cache a variable in the data store
   * |apcu_fetch| - Fetch a stored variable from the cache
+  * |apcu_clear_cache| - Clears the APCu cache
+  * APCUIterator
 
 
 vim:ft=help:

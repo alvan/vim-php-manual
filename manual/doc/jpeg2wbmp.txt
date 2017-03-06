@@ -4,6 +4,11 @@ jpeg2wbmp
 
 jpeg2wbmp — Convert JPEG image file to WBMP image file
 
+Warning
+
+jpeg2wbmp() has been deprecated as of PHP 7.2.0, and will be removed as of PHP
+8.0.0. Use |imagecreatefromjpeg| and |imagewbmp| instead.
+
 ==============================================================================
 *Description*
 
@@ -55,15 +60,6 @@ Example #1 jpeg2wbmp() example
     // Convert image
     jpeg2wbmp($path, './test.wbmp', $image[1], $image[0], 5);
 <?>
-
-==============================================================================
-*Notes*
-
-    Note: WBMP support is only available if PHP was compiled against GD-1.8 or
-    later.
-
-    Note: JPEG support is only available if PHP was compiled against GD-1.8 or
-    later.
 
 ==============================================================================
 *See* *Also*

@@ -12,14 +12,15 @@ Procedural style
     string idn_to_ascii ( string $domain [, int $options = 0 [, int $variant~
     = INTL_IDNA_VARIANT_2003 [, array &$idna_info ]]] )~
 
-This function converts Unicode domain name to IDNA ASCII-compatible format.
+This function converts a Unicode domain name to an IDNA ASCII-compatible
+format.
 
 ==============================================================================
 *Parameters*
 
 {domain}
 
-    Domain to convert. In PHP 5 must be UTF-8 encoded.
+    The domain to convert, which must be UTF-8 encoded.
 
 {options}
 
@@ -44,14 +45,16 @@ This function converts Unicode domain name to IDNA ASCII-compatible format.
 ==============================================================================
 *Return* *Values*
 
-Domain name encoded in ASCII-compatible form. or FALSE on failure
+The domain name encoded in ASCII-compatible form, or FALSE on failure
 
 ==============================================================================
 *Changelog*
 
-     Version                              Description
-5.4.0/PECL        Added the parameters {variant} and {idna_info}; UTS #46
-2.0.0b1           support.
+   Version                               Description
+7.2.0          INTL_IDNA_VARIANT_2003 has been deprecated; use
+               INTL_IDNA_VARIANT_UTS46 instead.
+5.4.0/PECL     Added the parameters {variant} and {idna_info}; UTS #46
+2.0.0b1        support.
 
 ==============================================================================
 *Examples*
@@ -71,7 +74,7 @@ xn--tst-qla.de
 ==============================================================================
 *See* *Also*
 
-  * idn_to_unicode()
+  * |idn_to_utf8| - Convert domain name from IDNA ASCII to Unicode.
 
 
 vim:ft=help:

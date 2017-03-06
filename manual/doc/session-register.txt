@@ -16,17 +16,14 @@ variable names or other arrays. For each name, session_register() registers
 the global variable with that name in the current session.
 
 You can also create a session variable by simply setting the appropriate
-member of the $_SESSION or $HTTP_SESSION_VARS (PHP < 4.1.0) array.
+member of the $_SESSION array.
 <?php >
     // Use of session_register() is deprecated
     $barney = "A big purple dinosaur.";
     session_register("barney");
 
-    // Use of $_SESSION is preferred, as of PHP 4.1.0
+    // Use of $_SESSION is preferred
     $_SESSION["zim"] = "An invader from another planet.";
-
-    // The old way was to use $HTTP_SESSION_VARS
-    $HTTP_SESSION_VARS["spongebob"] = "He's got square pants.";
 <?>
 
 If |session_start| was not called before this function is called, an implicit
@@ -78,8 +75,8 @@ noted below.
 
 Caution
 
-If you are using $_SESSION (or $HTTP_SESSION_VARS), do not use 
-session_register(), |session_is_registered|, and |session_unregister|.
+If you are using $_SESSION, do not use session_register(), 
+|session_is_registered|, and |session_unregister|.
 
     Note:
 
@@ -91,8 +88,8 @@ session_register(), |session_is_registered|, and |session_unregister|.
     function definition. A list of functions that return resources are
     available in the resource types appendix.
 
-    If $_SESSION (or $HTTP_SESSION_VARS for PHP 4.0.6 or less) is used, assign
-    values to $_SESSION. For example: $_SESSION['var'] = 'ABC';
+    If $_SESSION is used, assign values to $_SESSION. For example: $_SESSION
+    ['var'] = 'ABC';
 
 ==============================================================================
 *See* *Also*

@@ -56,7 +56,15 @@ Cuts a portion of {str} specified by the {offset} and {length} parameters.
 Returns the portion of {str} specified by the {offset} and {length}
 parameters.
 
-If {str} is shorter than {offset} characters long, FALSE will be returned.
+If {str} is shorter than {offset} characters long, FALSE will be returned. If
+{str} is exactly {offset} characters long, an empty string will be returned.
+
+==============================================================================
+*Changelog*
+
+Version                              Description
+7.0.11  If {str} is equal to {offset} characters long, an empty string will be
+        returned. Prior to this version, FALSE was returned in this case.
 
 ==============================================================================
 *See* *Also*

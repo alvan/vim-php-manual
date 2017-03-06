@@ -22,12 +22,32 @@ available.
 
 {data}
 
+    The data to compress.
+
 {encoding}
+
+    The compression algorithm. Either ZLIB_ENCODING_RAW, ZLIB_ENCODING_DEFLATE
+    or ZLIB_ENCODING_GZIP.
 
 {level}
 
 ==============================================================================
 *Return* *Values*
+
+==============================================================================
+*Examples*
+
+Example #1 zlib_encode() example
+
+<?php >
+    $str = 'hello world';
+    $enc = zlib_encode($str, ZLIB_ENCODING_DEFLATE);
+    echo bin2hex($enc);
+<?>
+
+The above example will output:
+
+789ccb48cdc9c95728cf2fca4901001a0b045d
 
 ==============================================================================
 *See* *Also*

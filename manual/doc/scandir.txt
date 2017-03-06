@@ -80,44 +80,6 @@ Array
     [4] => .
 )
 
-Example #2 PHP 4 alternatives to scandir()
-
-<?php >
-    $dir = "/tmp";
-    $dh  = opendir($dir);
-    while (false !== ($filename = readdir($dh))) {
-        $files[] = $filename;
-    }
-
-    sort($files);
-
-    print_r($files);
-
-    rsort($files);
-
-    print_r($files);
-
-<?>
-
-The above example will output something similar to:
-
-Array
-(
-    [0] => .
-    [1] => ..
-    [2] => bar.php
-    [3] => foo.txt
-    [4] => somedir
-)
-Array
-(
-    [0] => somedir
-    [1] => foo.txt
-    [2] => bar.php
-    [3] => ..
-    [4] => .
-)
-
 ==============================================================================
 *Notes*
 

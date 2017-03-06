@@ -38,6 +38,14 @@ based antialiasing method.
 Returns TRUE on success or FALSE on failure.
 
 ==============================================================================
+*Changelog*
+
+Version                              Description
+        imageantialias() is now generally available. Formerly it was only
+7.2.0   available if PHP was compiled with the bundled version of the GD
+        library.
+
+==============================================================================
 *Examples*
 
 Example #1 A comparison of two lines, one with anti-aliasing switched on
@@ -73,9 +81,6 @@ The above example will output something similar to:
 
 Output of example : A comparison of two lines, one with anti-aliasing switched
 on
-
-==============================================================================
-*Notes*
 
 ==============================================================================
 *See* *Also*

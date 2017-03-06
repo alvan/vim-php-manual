@@ -14,6 +14,11 @@ Set a handler to be called when leaving the scope of a namespace declaration.
 This will be called, for each namespace declaration, after the handler for the
 end tag of the element in which the namespace was declared.
 
+Caution
+
+This event is not supported under libXML, so a registered handler wouldn't be
+called.
+
 ==============================================================================
 *Parameters*
 
@@ -51,13 +56,6 @@ end tag of the element in which the namespace was declared.
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
-
-==============================================================================
-*Notes*
-
-    Note:
-
-    This event is not supported under LibXML.
 
 ==============================================================================
 *See* *Also*

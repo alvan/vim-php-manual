@@ -17,6 +17,13 @@ special regex characters.
 The special regular expression characters are: . \ + * ? [ ^ ] $ ( ) { } = ! <
 > | : -
 
+Note that / is not a special regular expression character.
+
+    Note:
+
+    Note that preg_quote() is not meant to be applied to the $replacement
+    string(s) of |preg_replace| etc.
+
 ==============================================================================
 *Parameters*
 

@@ -12,6 +12,19 @@ unserialize — Creates a PHP value from a stored representation
 unserialize() takes a single serialized variable and converts it back into a
 PHP value.
 
+Warning
+
+Do not pass untrusted user input to unserialize() regardless of the {options}
+value of allowed_classes. Unserialization can result in code being loaded and
+executed due to object instantiation and autoloading, and a malicious user may
+be able to exploit this. Use a safe, standard data interchange format such as
+JSON (via |json_decode| and |json_encode|) if you need to pass serialized data
+to the user.
+
+If you need to unserialize externally stored serialized data, consider to use 
+|hash_hmac| for data validation. Make sure data is not modified by anyone, but
+you.
+
 ==============================================================================
 *Parameters*
 
@@ -62,6 +75,9 @@ E_NOTICE is issued.
 *Changelog*
 
 Version                              Description
+        The allowed_classes element of {options}) is now strictly typed, i.e.
+7.1.0   if anything other than an array or a boolean is given, unserialize()
+        returns FALSE and issues an E_WARNING.
 7.0.0   The {options} parameter has been added.
 5.6.0   Manipulating the serialised data by replacing C: with O: to force
         object instantiation without calling the constructor will now fail.
@@ -97,7 +113,6 @@ Example #2 unserialize_callback_func example
 <?php >
     $serialized_object='O:1:"a":1:{s:5:"value";s:3:"100";}';
 
-    // unserialize_callback_func directive available as of PHP 4.2.0
     ini_set('unserialize_callback_func', 'mycallback'); //
      set your callback_function
 
@@ -117,17 +132,12 @@ FALSE is returned both in the case of an error and if unserializing the
 serialized FALSE value. It is possible to catch this special case by comparing
 {str} with serialize(false) or by catching the issued E_NOTICE.
 
-Warning
-
-Do not pass untrusted user input to unserialize(). Unserialization can result
-in code being loaded and executed due to object instantiation and autoloading,
-and a malicious user may be able to exploit this. Use a safe, standard data
-interchange format such as JSON (via |json_decode| and |json_encode|) if you
-need to pass serialized data to the user.
-
 ==============================================================================
 *See* *Also*
 
+  * |json_encode| - Returns the JSON representation of a value
+  * |json_decode| - Decodes a JSON string
+  * |hash_hmac| - Generate a keyed hash value using the HMAC method
   * |serialize| - Generates a storable representation of a value
   * Autoloading Classes
   * unserialize_callback_func

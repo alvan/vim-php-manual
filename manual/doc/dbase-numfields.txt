@@ -1,13 +1,13 @@
 dbase_numfields
 
-(PHP 4, PHP 5, PHP 7)
+(PHP 5 < 5.3.0, dbase 5, dbase 7)
 
 dbase_numfields — Gets the number of fields of a database
 
 ==============================================================================
 *Description*
 
-    int dbase_numfields ( int $dbase_identifier )~
+    int dbase_numfields ( resource $dbase_identifier )~
 
 Gets the number of fields (columns) in the specified database.
 
@@ -27,6 +27,12 @@ Gets the number of fields (columns) in the specified database.
 *Return* *Values*
 
 The number of fields in the database, or FALSE if an error occurs.
+
+==============================================================================
+*Changelog*
+
+  Version                         Description
+dbase 7.0.0 {dbase_identifier} is now a resource instead of an int.
 
 ==============================================================================
 *Examples*

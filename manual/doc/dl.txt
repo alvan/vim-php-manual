@@ -33,7 +33,7 @@ PHP-FPM in PHP 7.0.0.
     The directory where the extension is loaded from depends on your platform:
 
     Windows - If not explicitly set in the php.ini, the extension is loaded
-    from C:\php4\extensions\ (PHP 4) or C:\php5\ (PHP 5) by default.
+    from C:\php5\ by default.
 
     Unix - If not explicitly set in the php.ini, the default extension
     directory depends on
@@ -73,7 +73,7 @@ Example #1 dl() examples
         }
     }
 
-    // Or, the PHP_SHLIB_SUFFIX constant is available as of PHP 4.3.0
+    // Or using PHP_SHLIB_SUFFIX constant
     if (!extension_loaded('sqlite')) {
         $prefix = (PHP_SHLIB_SUFFIX === 'dll') ? 'php_' : '';
         dl($prefix . 'sqlite.' . PHP_SHLIB_SUFFIX);

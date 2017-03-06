@@ -148,14 +148,14 @@ Output of example : imagettftext()
 ==============================================================================
 *Notes*
 
-    Note:
-
-    This function requires both the GD library and the >> FreeType library.
+    Note: This function is only available if PHP is compiled with freetype
+    support (--with-freetype-dir=DIR )
 
 ==============================================================================
 *See* *Also*
 
   * |imagettfbbox| - Give the bounding box of a text using TrueType fonts
+  * |imagefttext| - Write text to the image using fonts using FreeType 2
 
 
 vim:ft=help:

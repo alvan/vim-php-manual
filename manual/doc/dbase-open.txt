@@ -1,13 +1,13 @@
 dbase_open
 
-(PHP 4, PHP 5, PHP 7)
+(PHP 5 < 5.3.0, dbase 5, dbase 7)
 
 dbase_open — Opens a database
 
 ==============================================================================
 *Description*
 
-    int dbase_open ( string $filename , int $mode )~
+    resource dbase_open ( string $filename , int $mode )~
 
 dbase_open() opens a dBase database with the given access mode.
 
@@ -38,6 +38,15 @@ dbase_open() opens a dBase database with the given access mode.
         You can't open a dBase file in write-only mode as the function will
         fail to read the headers information and thus you can't use 1 as
         {mode}.
+
+    As of dbase 7.0.0 you can use DBASE_RDONLY and DBASE_RDWR, respectively,
+    to specify the {mode}.
+
+==============================================================================
+*Changelog*
+
+  Version                        Description
+dbase 7.0.0 The return value is now a resource instead of an int.
 
 ==============================================================================
 *Examples*

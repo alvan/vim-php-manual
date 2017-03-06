@@ -1,13 +1,13 @@
 dbase_add_record
 
-(PHP 4, PHP 5, PHP 7)
+(PHP 5 < 5.3.0, dbase 5, dbase 7)
 
 dbase_add_record — Adds a record to a database
 
 ==============================================================================
 *Description*
 
-    bool dbase_add_record ( int $dbase_identifier , array $record )~
+    bool dbase_add_record ( resource $dbase_identifier , array $record )~
 
 Adds the given data to the database.
 
@@ -32,6 +32,12 @@ Adds the given data to the database.
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
+
+==============================================================================
+*Changelog*
+
+  Version                         Description
+dbase 7.0.0 {dbase_identifier} is now a resource instead of an int.
 
 ==============================================================================
 *Examples*

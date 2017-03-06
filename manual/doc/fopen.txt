@@ -89,6 +89,8 @@ fopen() binds a named resource, specified by {filename}, to a stream.
            |ftruncate| can be used after the lock is requested).
     'c+'   Open the file for reading and writing; otherwise it has the same
            behavior as 'c'.
+    'e'    Set close-on-exec flag on the opened file descriptor. Only
+           available in PHP compiled on POSIX.1-2008 conform systems.
 
         Note:
 
@@ -159,6 +161,8 @@ suppress this warning.
 *Changelog*
 
 Version                              Description
+7.0.16, The 'e' option were added.
+7.1.2
 5.2.6   The 'c' and 'c+' options were added
         As of PHP 4.3.2, the default mode is set to binary for all platforms
         that distinguish between binary and text mode. If you are having

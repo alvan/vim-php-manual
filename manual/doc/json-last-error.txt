@@ -23,22 +23,26 @@ This function has no parameters.
 Returns an integer, the value can be one of the following constants:
 
                                JSON error codes
-         Constant                          Meaning                Availability
-JSON_ERROR_NONE             No error has occurred                  
-JSON_ERROR_DEPTH            The maximum stack depth has been       
-                            exceeded
-JSON_ERROR_STATE_MISMATCH   Invalid or malformed JSON              
-JSON_ERROR_CTRL_CHAR        Control character error, possibly      
-                            incorrectly encoded
-JSON_ERROR_SYNTAX           Syntax error                           
-JSON_ERROR_UTF8             Malformed UTF-8 characters, possibly  PHP 5.3.3
-                            incorrectly encoded
-JSON_ERROR_RECURSION        One or more recursive references in   PHP 5.5.0
-                            the value to be encoded
-JSON_ERROR_INF_OR_NAN       One or more NAN or |INF| values in    PHP 5.5.0
-                            the value to be encoded
-JSON_ERROR_UNSUPPORTED_TYPE A value of a type that cannot be      PHP 5.5.0
-                            encoded was given
+            Constant                         Meaning              Availability
+JSON_ERROR_NONE                  No error has occurred             
+JSON_ERROR_DEPTH                 The maximum stack depth has been  
+                                 exceeded
+JSON_ERROR_STATE_MISMATCH        Invalid or malformed JSON         
+JSON_ERROR_CTRL_CHAR             Control character error,          
+                                 possibly incorrectly encoded
+JSON_ERROR_SYNTAX                Syntax error                      
+JSON_ERROR_UTF8                  Malformed UTF-8 characters,      PHP 5.3.3
+                                 possibly incorrectly encoded
+JSON_ERROR_RECURSION             One or more recursive references PHP 5.5.0
+                                 in the value to be encoded
+JSON_ERROR_INF_OR_NAN            One or more NAN or |INF| values  PHP 5.5.0
+                                 in the value to be encoded
+JSON_ERROR_UNSUPPORTED_TYPE      A value of a type that cannot be PHP 5.5.0
+                                 encoded was given
+JSON_ERROR_INVALID_PROPERTY_NAME A property name that cannot be   PHP 7.0.0
+                                 encoded was given
+JSON_ERROR_UTF16                 Malformed UTF-16 characters,     PHP 7.0.0
+                                 possibly incorrectly encoded
 
 ==============================================================================
 *Examples*

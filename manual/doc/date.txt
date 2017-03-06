@@ -45,9 +45,8 @@ other words, {timestamp} is optional and defaults to the value of |time|.
                the week                              (for Saturday)
     z          The day of the year (starting from 0) 0 through 365
     Week       ---                                   ---
-               ISO-8601 week number of year, weeks   Example: 42 (the 42nd
-    W          starting on Monday (added in PHP      week in the year)
-               4.1.0)
+    W          ISO-8601 week number of year, weeks   Example: 42 (the 42nd
+               starting on Monday                    week in the year)
     Month      ---                                   ---
     F          A full textual representation of a    January through December
                month, such as January or March
@@ -91,6 +90,8 @@ other words, {timestamp} is optional and defaults to the value of |time|.
                parameter, whereas DateTime::format()
                does support microseconds if DateTime
                was created with microseconds.
+    v          Milliseconds (added in PHP 7.0.0).    Example: 654
+               Same note applies as for u.
     Timezone   ---                                   ---
     e          Timezone identifier (added in PHP     Examples: UTC, GMT,
                5.1.0)                                Atlantic/Azores

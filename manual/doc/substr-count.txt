@@ -30,13 +30,14 @@ the {haystack} string. Please note that {needle} is case sensitive.
 
 {offset}
 
-    The offset where to start counting
+    The offset where to start counting. If the offset is negative, counting
+    starts from the end of the string.
 
 {length}
 
     The maximum length after the specified offset to search for the substring.
     It outputs a warning if the offset plus the length is greater than the
-    {haystack} length.
+    {haystack} length. A negative length counts from the end of {haystack}.
 
 ==============================================================================
 *Return* *Values*
@@ -46,7 +47,8 @@ This function returns an integer.
 ==============================================================================
 *Changelog*
 
-Version                  Description
+Version                         Description
+7.1.0   Support for negative {offset}s and {length}s has been added.
 5.1.0   Added the {offset} and the {length} parameters
 
 ==============================================================================

@@ -27,8 +27,8 @@ Find the numeric position of the first occurrence of {needle} in the
 {offset}
 
     If specified, search will start this number of characters counted from the
-    beginning of the string. Unlike |strrpos| and |strripos|, the offset
-    cannot be negative.
+    beginning of the string. If the offset is negative, the search will start
+    this number of characters counted from the end of the string.
 
 ==============================================================================
 *Return* *Values*
@@ -45,6 +45,12 @@ This function may return Boolean FALSE, but may also return a non-Boolean
 value which evaluates to FALSE. Please read the section on Booleans for more
 information. Use the === operator for testing the return value of this
 function.
+
+==============================================================================
+*Changelog*
+
+Version                  Description
+7.1.0   Support for negative {offset}s has been added.
 
 ==============================================================================
 *Examples*

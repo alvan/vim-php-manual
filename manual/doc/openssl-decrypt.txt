@@ -8,7 +8,8 @@ openssl_decrypt — Decrypts data
 *Description*
 
     string openssl_decrypt ( string $data , string $method , string $password~
-    [, int $options = 0 [, string $iv = "" ]] )~
+    [, int $options = 0 [, string $iv = "" [, string $tag =~
+    "" [, string $aad = "" ]]]] )~
 
 Takes a raw or base64 encoded string and decrypts it using a given method and
 key.
@@ -41,6 +42,15 @@ available.
 
     A non-NULL Initialization Vector.
 
+{tag}
+
+    The authentication tag in AEAD cipher mode. If it is incorrect, the
+    authentication fails and the function returns FALSE.
+
+{aad}
+
+    Additional authentication data.
+
 ==============================================================================
 *Return* *Values*
 
@@ -61,6 +71,7 @@ parameter.
 Version                Description
 5.3.3   The {iv} parameter was added.
 5.4.0   The {raw_output} was changed to {options}.
+7.1.0   The {tag} and {aad} parameters were added.
 
 ==============================================================================
 *See* *Also*

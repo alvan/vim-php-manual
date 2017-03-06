@@ -28,6 +28,11 @@ can be any value possible for an array index.
 
 Returns TRUE on success or FALSE on failure.
 
+    Note:
+
+    array_key_exists() will search for the keys in the first dimension only.
+    Nested keys in multidimensional arrays will not be found.
+
 ==============================================================================
 *Examples*
 

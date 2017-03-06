@@ -32,7 +32,8 @@ the basis of the specified character set {charset}.
 {offset}
 
     The optional {offset} parameter specifies the position from which the
-    search should be performed.
+    search should be performed. If the offset is negative, it is counted from
+    the end of the string.
 
 {charset}
 
@@ -56,6 +57,12 @@ This function may return Boolean FALSE, but may also return a non-Boolean
 value which evaluates to FALSE. Please read the section on Booleans for more
 information. Use the === operator for testing the return value of this
 function.
+
+==============================================================================
+*Changelog*
+
+Version                  Description
+7.1.0   Support for negative {offset}s has been added.
 
 ==============================================================================
 *See* *Also*

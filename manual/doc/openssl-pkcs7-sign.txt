@@ -66,7 +66,7 @@ Example #1 openssl_pkcs7_sign() example
     fwrite($fp, $data);
     fclose($fp);
     // encrypt it
-    if (openssl_pkcs7_sign("msg.txt", "signed.txt", "mycert.pem",
+    if (openssl_pkcs7_sign("msg.txt", "signed.txt", "file://mycert.pem",
         array("file://mycert.pem", "mypassphrase"),
         array("To" => "joes@example.com", // keyed syntax
               "From: HQ <ceo@example.com>", // indexed syntax

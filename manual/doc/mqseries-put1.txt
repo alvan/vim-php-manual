@@ -14,6 +14,13 @@ mqseries_put1 — MQSeries MQPUT1
 The mqseries_put1() (MQPUT1) call puts one message on a queue. The queue need
 not be open.
 
+You can use both the |mqseries_put| and mqseries_put1() calls to put messages
+on a queue; which call to use depends on the circumstances. Use the 
+|mqseries_put| (MQPUT) call to place multiple messages on the same queue. Use
+the mqseries_put1() (MQPUT1) call to put only one message on a queue. This
+call encapsulates the MQOPEN, MQPUT, and MQCLOSE calls into a single call,
+minimizing the number of calls that must be issued.
+
 ==============================================================================
 *Parameters*
 

@@ -33,13 +33,13 @@ Searches {subject} for matches to {pattern} and replaces them with
     in the {pattern} array, any extra {pattern}s will be replaced by an empty
     string.
 
-    {replacement} may contain references of the form \\n or (since PHP 4.0.4)
-    $n, with the latter form being the preferred one. Every such reference
-    will be replaced by the text captured by the n'th parenthesized pattern. n
-    can be from 0 to 99, and \\0 or $0 refers to the text matched by the whole
-    pattern. Opening parentheses are counted from left to right (starting from
-    1) to obtain the number of the capturing subpattern. To use backslash in
-    replacement, it must be doubled ("\\\\" PHP string).
+    {replacement} may contain references of the form \\n or $n, with the
+    latter form being the preferred one. Every such reference will be replaced
+    by the text captured by the n'th parenthesized pattern. n can be from 0 to
+    99, and \\0 or $0 refers to the text matched by the whole pattern. Opening
+    parentheses are counted from left to right (starting from 1) to obtain the
+    number of the capturing subpattern. To use backslash in replacement, it
+    must be doubled ("\\\\" PHP string).
 
     When working with a replacement pattern where a backreference is
     immediately followed by another number (i.e.: placing a literal number
@@ -87,7 +87,7 @@ will be returned unchanged or NULL if an error occurred.
 *Errors/Exceptions*
 
 As of PHP 5.5.0 E_DEPRECATED level error is emitted when passing in the "\e"
-modifier. As of PHP 7.0.0 E_WARNING is emited in this case and "\e" modifier
+modifier. As of PHP 7.0.0 E_WARNING is emitted in this case and "\e" modifier
 has no effect.
 
 ==============================================================================

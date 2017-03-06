@@ -35,11 +35,47 @@ Searches {subject} for a match to the regular expression given in {pattern}.
     {flags} can be the following flag:
 
     PREG_OFFSET_CAPTURE
+
         If this flag is passed, for every occurring match the appendant string
         offset will also be returned. Note that this changes the value of
         {matches} into an array where every element is an array consisting of
         the matched string at offset 0 and its string offset into {subject} at
         offset 1.
+        <?php >
+        preg_match('/(foo)(bar)(baz)/', 'foobarbaz', $matches, 
+        PREG_OFFSET_CAPTURE);
+        print_r($matches);
+<        ?>
+
+        The above example will output:
+
+        Array
+        (
+            [0] => Array
+                (
+                    [0] => foobarbaz
+                    [1] => 0
+                )
+
+            [1] => Array
+                (
+                    [0] => foo
+                    [1] => 0
+                )
+
+            [2] => Array
+                (
+                    [0] => bar
+                    [1] => 3
+                )
+
+            [3] => Array
+                (
+                    [0] => baz
+                    [1] => 6
+                )
+
+        )
 
 {offset}
 

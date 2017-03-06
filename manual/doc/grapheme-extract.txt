@@ -42,8 +42,9 @@ buffer, which must be encoded in UTF-8.
 
     Starting position in $haystack in bytes - if given, it must be zero or a
     positive value that is less than or equal to the length of $haystack in
-    bytes. If $start does not point to the first byte of a UTF-8 character,
-    the start position is moved to the next character boundary.
+    bytes, or a negative value that counts from the end of $haystack. If
+    $start does not point to the first byte of a UTF-8 character, the start
+    position is moved to the next character boundary.
 
 {next}
 
@@ -56,6 +57,12 @@ buffer, which must be encoded in UTF-8.
 
 A string starting at offset $start and ending on a default grapheme cluster
 boundary that conforms to the $size and $extract_type specified.
+
+==============================================================================
+*Changelog*
+
+Version                  Description
+7.1.0   Support for negative {start}s has been added.
 
 ==============================================================================
 *Examples*

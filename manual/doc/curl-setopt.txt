@@ -219,15 +219,15 @@ Sets an option on the given cURL session handle.
                                     |curl_exec| instead of
                                     outputting it out
                                     directly.
-                                    TRUE to disable support
-                                    for the @ prefix for
-                                    uploading files in       Added in PHP 5.5.0
-                                    CURLOPT_POSTFIELDS,      with FALSE as the
-    CURLOPT_SAFE_UPLOAD             which means that values  default value. PHP
-                                    starting with @ can be   5.6.0 changes the
-                                    safely passed as fields. default value to TRUE.
-                                    CURLFile may be used for
-                                    uploads instead.
+                                    TRUE to disable support  Added in PHP 5.5.0
+                                    for the @ prefix for     with FALSE as the
+                                    uploading files in       default value. PHP
+                                    CURLOPT_POSTFIELDS,      5.6.0 changes the
+    CURLOPT_SAFE_UPLOAD             which means that values  default value to TRUE.
+                                    starting with @ can be   PHP 7 removes this
+                                    safely passed as fields. option; the CURLFile
+                                    CURLFile may be used for interface must be used
+                                    uploads instead.         to upload files.
                                     TRUE to enable sending   Added in cURL 7.31.10.
     CURLOPT_SASL_IR                 the initial response in  Available since PHP
                                     the first packet.        7.0.7.
@@ -496,8 +496,9 @@ Sets an option on the given cURL session handle.
                                   certificate. 2 to check the        Support
                                   existence of a common name and     for value
     CURLOPT_SSL_VERIFYHOST        also verify that it matches the    1 removed
-                                  hostname provided. In production   in cURL
-                                  environments the value of this     7.28.1
+                                  hostname provided. 0 to not check  in cURL
+                                  the names. In production           7.28.1.
+                                  environments the value of this
                                   option should be kept at 2
                                   (default value).
                                   One of CURL_SSLVERSION_DEFAULT
@@ -719,12 +720,14 @@ Sets an option on the given cURL session handle.
                                     "AUTH=*", and should be used in  since PHP
                                     conjunction with the             7.0.7.
                                     CURLOPT_USERNAME option.
-                                                                     Added in
-                                                                     cURL
-    CURLOPT_PINNEDPUBLICKEY         Set the pinned public key.       7.39.0.
-                                                                     Available
-                                                                     since PHP
-                                                                     7.0.7.
+                                    Set the pinned public key. The
+                                    string can be the file name of   Added in
+                                    your pinned public key. The file cURL
+    CURLOPT_PINNEDPUBLICKEY         format expected is "PEM" or      7.39.0.
+                                    "DER". The string can also be    Available
+                                    any number of base64 encoded     since PHP
+                                    sha256 hashes preceded by        7.0.7.
+                                    "sha256//" and separated by ";".
                                     The full data to post in a HTTP
                                     "POST" operation. To post a
                                     file, prepend a filename with @
@@ -1004,6 +1007,8 @@ Version                              Description
         CURLOPT_TFTP_NO_OPTIONS, CURLOPT_UNIX_SOCKET_PATH,
         CURLOPT_XOAUTH2_BEARER, CURLPROTO_SMB, CURLPROTO_SMBS,
         CURLPROXY_HTTP_1_0, CURLSSH_AUTH_AGENT and CURLSSLOPT_NO_REVOKE.
+7.0.0   Support for disabling the CURLOPT_SAFE_UPLOAD option has been removed.
+        All curl file uploads must use CURLFile.
 5.6.0   CURLOPT_SAFE_UPLOAD is now TRUE by default.
 5.6.0   Removed CURLOPT_CLOSEPOLICY and associated values.
 5.5.0   Added the cURL resource as the first argument to the

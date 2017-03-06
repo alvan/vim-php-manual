@@ -30,7 +30,8 @@ so on.
 
 {offset}
 
-    The search offset. If it is not specified, 0 is used.
+    The search offset. If it is not specified, 0 is used. A negative offset
+    counts from the end of the string.
 
 {encoding}
 
@@ -42,6 +43,12 @@ so on.
 
 Returns the numeric position of the first occurrence of {needle} in the
 {haystack} string. If {needle} is not found, it returns FALSE.
+
+==============================================================================
+*Changelog*
+
+Version                  Description
+7.1.0   Support for negative {offset}s has been added.
 
 ==============================================================================
 *See* *Also*

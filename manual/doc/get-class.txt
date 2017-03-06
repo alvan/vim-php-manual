@@ -27,6 +27,9 @@ if {object} is not an object.
 If {object} is omitted when inside a class, the name of that class is
 returned.
 
+If the {object} is an instance of a class which exists in a namespace, the
+qualified namespaced name of that class is returned.
+
 ==============================================================================
 *Errors/Exceptions*
 
@@ -93,6 +96,28 @@ The above example will output:
 
 string(3) "foo"
 string(3) "bar"
+
+Example #3 Using get_class() with namespaced classes
+
+<?php >
+
+    namespace Foo\Bar;
+
+    class Baz {
+        public function __construct()
+        {
+
+        }
+    }
+
+    $baz = new \Foo\Bar\Baz;
+
+    var_dump(get_class($baz));
+<?>
+
+The above example will output:
+
+string(11) "Foo\Bar\Baz"
 
 ==============================================================================
 *See* *Also*

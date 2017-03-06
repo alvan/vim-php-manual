@@ -44,7 +44,7 @@ the attributes {name}, specifying the full name of the mailbox; {delimiter},
 which is the hierarchy delimiter for the part of the hierarchy this mailbox is
 in; and {attributes}. {Attributes} is a bitmask that can be tested against:
 
-  * LATT_NOINFERIORS - This mailbox contains, and may not contain any
+  * LATT_NOINFERIORS - This mailbox not contains, and may not contain any
     "children" (there are no mailboxes below this one). Calling 
     |imap_createmailbox| will not work on this mailbox.
 

@@ -30,7 +30,7 @@ equivalents) may be insufficient. You may have to use |mb_encode_numericentity
  Character                             Replacement
 &           &amp;
 (ampersand)
-" (double   &quot; when ENT_NOQUOTES
+" (double   &quot;, unless ENT_NOQUOTES is set
 quote)
 ' (single   &#039; (for ENT_HTML401) or &apos; (for ENT_XML1, ENT_XHTML or
 quote)      ENT_HTML5), but only when ENT_QUOTES is set

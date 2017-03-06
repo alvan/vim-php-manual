@@ -17,12 +17,19 @@ mb_ereg_search_setpos() sets the starting point of a match for |mb_ereg_search
 
 {position}
 
-    The position to set.
+    The position to set. If it is negative, it counts from the end of the
+    string.
 
 ==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
+
+==============================================================================
+*Changelog*
+
+Version                   Description
+7.1.0   Support for negative {position}s has been added.
 
 ==============================================================================
 *Notes*

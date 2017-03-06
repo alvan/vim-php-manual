@@ -94,9 +94,9 @@ specified.
 
 Caution
 
-Be aware that if you do not name an element, an empty string is used. If you
-do not name more than one element, this means that some data is overwritten as
-the keys are the same such as in:
+If you do not name an element, numeric indices starting from 1 are used. Be
+aware that if you have more than one unnamed element, some data is overwritten
+because the numbering restarts from 1 for each element.
 
 Example #3 unpack() example with unnamed keys
 

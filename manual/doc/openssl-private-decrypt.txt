@@ -10,7 +10,7 @@ openssl_private_decrypt — Decrypts data with private key
     bool openssl_private_decrypt ( string $data , string &$decrypted , mixed~
     $key [, int $padding = OPENSSL_PKCS1_PADDING ] )~
 
-openssl_private_decrypt() decrypts {data} that was previous encrypted via 
+openssl_private_decrypt() decrypts {data} that was previously encrypted via 
 |openssl_public_encrypt| and stores the result into {decrypted}.
 
 You can use this function e.g. to decrypt data which is supposed to only be

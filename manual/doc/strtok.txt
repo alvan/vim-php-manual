@@ -20,7 +20,7 @@ subsequent call to strtok only needs the token to use, as it keeps track of
 where it is in the current string. To start over, or to tokenize a new string
 you simply call strtok with the string argument again to initialize it. Note
 that you may put multiple tokens in the token parameter. The string will be
-tokenized when any one of the characters in the argument are found.
+tokenized when any one of the characters in the argument is found.
 
 ==============================================================================
 *Parameters*
@@ -54,24 +54,7 @@ Example #1 strtok() example
     }
 <?>
 
-The behavior when an empty part was found changed with PHP 4.1.0. The old
-behavior returned an empty string, while the new, correct, behavior simply
-skips the part of the string:
-
-Example #2 Old strtok() behavior
-
-<?php >
-    $first_token  = strtok('/something', '/');
-    $second_token = strtok('/');
-    var_dump($first_token, $second_token);
-<?>
-
-The above example will output:
-
-    string(0) ""
-    string(9) "something"
-
-Example #3 New strtok() behavior
+Example #2 strtok() behavior on empty part found
 
 <?php >
     $first_token  = strtok('/something', '/');

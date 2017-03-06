@@ -9,7 +9,10 @@ implementation
 *Description*
 
     bool runkit_function_redefine ( string $funcname , string $arglist ,~
-    string $code )~
+    string $code [, bool $return_by_reference = NULL [, string $doc_comment =~
+    NULL ]] )~
+    bool runkit_function_redefine ( string $funcname , Closure $closure [,~
+    string $doc_comment = NULL ] )~
 
 
     Note: By default, only userspace functions may be removed, renamed, or
@@ -31,10 +34,31 @@ implementation
 
     New code implementation
 
+{closure}
+
+    A closure that defines the function.
+
+{return_by_reference}
+
+    Whether the function should return by reference.
+
+{doc_comment}
+
+    The doc comment of the function.
+
 ==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
+
+==============================================================================
+*Changelog*
+
+ Version                               Description
+runkit     An alternative syntax expecting a {closure} has been added.
+1.0.4
+runkit     The optional parameters {return_by_reference} and {doc_comment}
+1.0.4      have been added.
 
 ==============================================================================
 *Examples*

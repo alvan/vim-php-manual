@@ -1,15 +1,18 @@
 dbase_create
 
-(PHP 4, PHP 5, PHP 7)
+(PHP 5 < 5.3.0, dbase 5, dbase 7)
 
 dbase_create — Creates a database
 
 ==============================================================================
 *Description*
 
-    int dbase_create ( string $filename , array $fields )~
+    resource dbase_create ( string $filename , array $fields , int $type =~
+    DBASE_TYPE_DBASE )~
 
-dbase_create() creates a dBase database with the given definition.
+dbase_create() creates a dBase database with the given definition. If the file
+already exists, it is not truncated. |dbase_pack| can be called to force
+truncation.
 
     Note: When safe mode is enabled, PHP checks whether the files or
     directories being operated upon have the same UID (owner) as the script
@@ -31,7 +34,17 @@ dbase_create() creates a dBase database with the given definition.
 
     An array of arrays, each array describing the format of one field of the
     database. Each field consists of a name, a character indicating the field
-    type, and optionally, a length, and a precision.
+    type, and optionally, a length, a precision and a nullable flag. The
+    supported field types are listed in the introduction section.
+
+        Note:
+
+        The fieldnames are limited in length and must not exceed 10 chars.
+
+{type}
+
+    The type of database to be created. Either DBASE_TYPE_DBASE or
+    DBASE_TYPE_FOXPRO.
 
         Note:
 
@@ -42,6 +55,12 @@ dbase_create() creates a dBase database with the given definition.
 
 Returns a database link identifier if the database is successfully created, or
 FALSE if an error occurred.
+
+==============================================================================
+*Changelog*
+
+  Version                        Description
+dbase 7.0.0 The return value is now a resource instead of an int.
 
 ==============================================================================
 *Examples*

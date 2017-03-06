@@ -7,7 +7,7 @@ shmop_write — Write data into shared memory block
 ==============================================================================
 *Description*
 
-    int shmop_write ( int $shmid , string $data , int $offset )~
+    int shmop_write ( resource $shmid , string $data , int $offset )~
 
 shmop_write() will write a string into shared memory block.
 
@@ -30,6 +30,12 @@ shmop_write() will write a string into shared memory block.
 *Return* *Values*
 
 The size of the written {data}, or FALSE on failure.
+
+==============================================================================
+*Changelog*
+
+Version                        Description
+7.0.0   The type of {shmid} has been changed from int to resource.
 
 ==============================================================================
 *Examples*

@@ -7,7 +7,7 @@ imagegd — Output GD image to browser or file
 ==============================================================================
 *Description*
 
-    bool imagegd ( resource $image [, mixed $to ] )~
+    bool imagegd ( resource $image [, mixed $to = NULL ] )~
 
 Outputs a GD image to the given {to}.
 
@@ -33,7 +33,9 @@ Returns TRUE on success or FALSE on failure.
 ==============================================================================
 *Changelog*
 
-Version                     Description
+Version                              Description
+7.2.0   imagegd() now allows to output truecolor images. Formerly, these have
+        been implicitly converted to palette.
 5.4.0   Added support for passing a stream resource to {to}.
 
 ==============================================================================

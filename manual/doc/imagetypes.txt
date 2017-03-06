@@ -15,8 +15,8 @@ Returns the image types supported by the current PHP installation.
 *Return* *Values*
 
 Returns a bit-field corresponding to the image formats supported by the
-version of GD linked into PHP. The following bits are returned, IMG_GIF |
-IMG_JPG | IMG_PNG | IMG_WBMP | IMG_XPM | IMG_WEBP.
+version of GD linked into PHP. The following bits are returned, IMG_BMP |
+IMG_GIF | IMG_JPG | IMG_PNG | IMG_WBMP | IMG_XPM | IMG_WEBP.
 
 ==============================================================================
 *Examples*
@@ -33,6 +33,7 @@ Example #1 Checking for PNG support
 *Changelog*
 
    Version       Description
+7.2.0          IMG_BMP added.
 5.6.25, 7.0.10 IMG_WEBP added.
 
 ==============================================================================

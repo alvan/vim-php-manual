@@ -50,10 +50,14 @@ available.
                                          Pass a number that will be used as
                                          the maximum amount of simultaneously
                                          open connections that libcurl may
-    CURLMOPT_MAXCONNECTS                 cache. Default is 10. When the cache
-                                         is full, curl closes the oldest one
-                                         in the cache to prevent the number of
-                                         open connections from increasing.
+                                         cache. By default the size will be
+                                         enlarged to fit four times the number
+    CURLMOPT_MAXCONNECTS                 of handles added via 
+                                         |curl_multi_add_handle|. When the
+                                         cache is full, curl closes the oldest
+                                         one in the cache to prevent the
+                                         number of open connections from
+                                         increasing.
                                          Pass a number that specifies the
     CURLMOPT_CHUNK_LENGTH_PENALTY_SIZE   chunk length threshold for pipelining
                                          in bytes.
@@ -69,6 +73,34 @@ available.
                                          Pass a number that specifies the
     CURLMOPT_MAX_TOTAL_CONNECTIONS       maximum number of simultaneously open
                                          connections.
+                                         Pass a callable that will be
+                                         registered to handle server pushes
+                                         and should have the following
+                                         signature:
+
+                                         int pushfunction ( resource
+                                         $parent_ch , resource $pushed_ch ,
+                                         array~
+                                         $headers )~
+
+                                         {parent_ch}
+
+                                             The parent cURL handle (the
+    CURLMOPT_PUSHFUNCTION                    request the client made).
+
+                                         {pushed_ch}
+
+                                             A new cURL handle for the pushed
+                                             request.
+
+                                         {headers}
+
+                                             The push promise headers.
+
+                                         The push function is supposed to
+                                         return either CURL_PUSH_OK if it can
+                                         handle the push, or CURL_PUSH_DENY to
+                                         reject it.
 
 ==============================================================================
 *Return* *Values*
@@ -79,6 +111,7 @@ Returns TRUE on success or FALSE on failure.
 *Changelog*
 
 Version                              Description
+7.1.0   Introduced CURLMOPT_PUSHFUNCTION.
         Introduced CURLMOPT_CHUNK_LENGTH_PENALTY_SIZE,
 7.0.7   CURLMOPT_CONTENT_LENGTH_PENALTY_SIZE, CURLMOPT_MAX_HOST_CONNECTIONS,
         CURLMOPT_MAX_PIPELINE_LENGTH and CURLMOPT_MAX_TOTAL_CONNECTIONS.

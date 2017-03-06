@@ -7,7 +7,7 @@ shmop_read — Read data from shared memory block
 ==============================================================================
 *Description*
 
-    string shmop_read ( int $shmid , int $start , int $count )~
+    string shmop_read ( resource $shmid , int $start , int $count )~
 
 shmop_read() will read a string from shared memory block.
 
@@ -30,6 +30,12 @@ shmop_read() will read a string from shared memory block.
 *Return* *Values*
 
 Returns the data or FALSE on failure.
+
+==============================================================================
+*Changelog*
+
+Version                        Description
+7.0.0   The type of {shmid} has been changed from int to resource.
 
 ==============================================================================
 *Examples*

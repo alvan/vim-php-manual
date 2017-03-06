@@ -8,7 +8,11 @@ runkit_method_redefine — Dynamically changes the code of the given method
 *Description*
 
     bool runkit_method_redefine ( string $classname , string $methodname ,~
-    string $args , string $code [, int $flags = RUNKIT_ACC_PUBLIC ] )~
+    string $args , string $code [, int $flags = RUNKIT_ACC_PUBLIC [, string~
+    $doc_comment = NULL ]] )~
+    bool runkit_method_redefine ( string $classname , string $methodname ,~
+    Closure $closure [, int $flags = RUNKIT_ACC_PUBLIC [, string $doc_comment~
+    = NULL ]] )~
 
 
     Note: This function cannot be used to manipulate the currently running (or
@@ -33,16 +37,31 @@ runkit_method_redefine — Dynamically changes the code of the given method
 
     The new code to be evaluated when {methodname} is called
 
+{closure}
+
+    A closure that defines the method.
+
 {flags}
 
     The redefined method can be RUNKIT_ACC_PUBLIC, RUNKIT_ACC_PROTECTED or
     RUNKIT_ACC_PRIVATE optionally combined via bitwise OR with
     RUNKIT_ACC_STATIC (since 1.0.1)
 
+{doc_comment}
+
+    The doc comment of the function.
+
 ==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
+
+==============================================================================
+*Changelog*
+
+  Version                            Description
+runkit 1.0.4 An alternative syntax expecting a {closure} has been added.
+runkit 1.0.4 The optional parameter {doc_comment} has been added.
 
 ==============================================================================
 *Examples*
