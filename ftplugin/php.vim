@@ -1,4 +1,4 @@
-" == "acomment" == {{{
+" -- {{{
 "
 "          File:  php.vim
 "        Author:  Alvan
@@ -6,7 +6,7 @@
 "      Modified:  2015-09-13
 "   Description:  PHP Manual for Vim
 "
-" --}}}
+" -- }}}
 " Only do this when not done yet for this buffer
 if exists("b:did_ftplugin_phpmanual")
     finish
