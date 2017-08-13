@@ -3,7 +3,7 @@
 "          File:  php.vim
 "        Author:  Alvan
 "      Modifier:  Alvan
-"      Modified:  2015-09-13
+"      Modified:  2017-08-13
 "   Description:  PHP Manual for Vim
 "
 " -- }}}
@@ -18,6 +18,10 @@ setlocal keywordprg=:help
 
 if !exists("g:php_manual_online_search_shortcut")
     let g:php_manual_online_search_shortcut = '<C-h>'
+endif
+
+if !exists("g:php_manual_online_search_url_format")
+    let g:php_manual_online_search_url_format = 'http://php.net/%s'
 endif
 
 if g:php_manual_online_search_shortcut != ''

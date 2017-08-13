@@ -50,7 +50,7 @@ func! phpmanual#online#open(...)
         return
     en
 
-    let url = 'http://php.net/' . substitute(key, '[\r\n]', '', 'g')
+    let url = printf(g:php_manual_online_search_url_format, substitute(key, '[\r\n]', '', 'g'))
 
     if has("win32") || has("win95") || has("win64") || has("win16")
         call system("explorer " . shellescape(url))
