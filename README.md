@@ -6,7 +6,7 @@ This is php manual plugin for vim with help keyword doc.
 You can do these with this plugin:
 
 * press <kbd>SHIFT-k</kbd> to view the Explanation of the keyword
-* press <kbd>CTRL-SHIFT-k</kbd> to open the online manual page of the keyword
+* press <kbd>CTRL-h</kbd> to open the online manual page of the keyword
 
 Install
 -------

@@ -17,7 +17,7 @@ exec 'setlocal rtp+='.fnameescape(expand('<sfile>:h:h')).'/manual'
 setlocal keywordprg=:help
 
 if !exists("g:php_manual_online_search_shortcut")
-    let g:php_manual_online_search_shortcut = '<C-S-K>'
+    let g:php_manual_online_search_shortcut = '<C-h>'
 endif
 
 if !exists("g:php_manual_online_search_url_format")
