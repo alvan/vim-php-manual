@@ -3,7 +3,7 @@
 "          File:  php.vim
 "        Author:  Alvan
 "      Modifier:  Alvan
-"      Modified:  2017-08-13
+"      Modified:  2018-01-31
 "   Description:  PHP Manual for Vim
 "
 " -- }}}
@@ -17,7 +17,7 @@ exec 'setlocal rtp+='.fnameescape(expand('<sfile>:h:h')).'/manual'
 setlocal keywordprg=:help
 
 if !exists("g:php_manual_online_search_shortcut")
-    let g:php_manual_online_search_shortcut = '<C-h>'
+    let g:php_manual_online_search_shortcut = '<C-S-K>'
 endif
 
 if !exists("g:php_manual_online_search_url_format")
