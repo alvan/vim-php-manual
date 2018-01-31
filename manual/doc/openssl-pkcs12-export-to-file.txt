@@ -27,13 +27,21 @@ in a PKCS#12 file format.
 
 {priv_key}
 
-    Private key component of PKCS#12 file.
+    Private key component of PKCS#12 file. See Public/Private Key parameters
+    for a list of valid values.
 
 {pass}
 
     Encryption password for unlocking the PKCS#12 file.
 
 {args}
+
+    Optional array, other keys will be ignored.
+
+         Key                               Description
+    "extracerts"   array of extra certificates or a single certificate to be
+                   included in the PKCS#12 file.
+    "friendlyname" string to be used for the supplied certificate and key
 
 ==============================================================================
 *Return* *Values*

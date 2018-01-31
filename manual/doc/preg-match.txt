@@ -123,6 +123,10 @@ Searches {subject} for a match to the regular expression given in {pattern}.
 
         )
 
+        Alternatively, to avoid using substr(), use the \G assertion rather
+        than the ^ anchor, or the A modifier instead, both of which work with
+        the {offset} parameter.
+
 ==============================================================================
 *Return* *Values*
 

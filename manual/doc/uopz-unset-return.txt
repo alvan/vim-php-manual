@@ -1,0 +1,48 @@
+uopz_unset_return
+
+(PECL uopz 5)
+
+uopz_unset_return — Unsets a previously set return value for a function
+
+==============================================================================
+*Description*
+
+    bool uopz_unset_return ( string $class , string $function )~
+    bool uopz_unset_return ( string $function , mixed $value )~
+
+Unsets the return value of the {function} previously set by |uopz_set_return|.
+
+==============================================================================
+*Parameters*
+
+{class}
+
+    The name of the class containing the function
+
+{function}
+
+    The name of the function
+
+==============================================================================
+*Return* *Values*
+
+True on success
+
+==============================================================================
+*Examples*
+
+Example #1 uopz_unset_return() example
+
+<?php >
+    uopz_set_return("strlen", 42);
+    $len = strlen("Banana");
+    uopz_unset_return("strlen");
+    echo $len + strlen("Banana");
+<?>
+
+The above example will output something similar to:
+
+48
+
+
+vim:ft=help:

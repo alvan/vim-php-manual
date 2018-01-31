@@ -7,8 +7,8 @@ gmp_export — Export to a binary string
 ==============================================================================
 *Description*
 
-    string gmp_export ( GMP $gmpnumber , integer $word_size , integer~
-    $options )~
+    string gmp_export ( GMP $gmpnumber [, int $word_size = 1 [, int $options~
+    = GMP_MSW_FIRST | GMP_NATIVE_ENDIAN ]] )~
 
 Export a GMP number to a binary string
 
@@ -46,6 +46,11 @@ Example #1 gmp_export() example
 The above example will output:
 
 AA
+
+==============================================================================
+*See* *Also*
+
+  * |gmp_import| - Import from a binary string
 
 
 vim:ft=help:

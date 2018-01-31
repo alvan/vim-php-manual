@@ -8,18 +8,21 @@ stats_kurtosis — Computes the kurtosis of the data in the array
 *Description*
 
     float stats_kurtosis ( array $a )~
-Warning
 
-This function is currently not documented; only its argument list is
-available.
+Returns the kurtosis of the values in {a}.
 
 ==============================================================================
 *Parameters*
 
 {a}
 
+    The input array
+
 ==============================================================================
 *Return* *Values*
+
+Returns the kurtosis of the values in {a}, or FALSE if {a} is empty or is not
+an array.
 
 
 vim:ft=help:

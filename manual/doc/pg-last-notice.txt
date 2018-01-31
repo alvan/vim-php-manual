@@ -7,7 +7,8 @@ pg_last_notice — Returns the last notice message from PostgreSQL server
 ==============================================================================
 *Description*
 
-    string pg_last_notice ( resource $connection )~
+    string pg_last_notice ( resource $connection [, int $option =~
+    PGSQL_NOTICE_LAST ] )~
 
 pg_last_notice() returns the last notice message from the PostgreSQL server on
 the specified {connection}. The PostgreSQL server sends notice messages in

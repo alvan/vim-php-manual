@@ -2,12 +2,17 @@ stats_stat_independent_t
 
 (PECL stats >= 1.0.0)
 
-stats_stat_independent_t — Not documented
+stats_stat_independent_t — Returns the t-value from the independent two-sample
+t-test
 
 ==============================================================================
 *Description*
 
     float stats_stat_independent_t ( array $arr1 , array $arr2 )~
+
+Returns the t-value of the independent two-sample t-test between {arr1} and
+{arr2}.
+
 Warning
 
 This function is currently not documented; only its argument list is
@@ -18,10 +23,16 @@ available.
 
 {arr1}
 
+    The first set of values
+
 {arr2}
+
+    The second set of values
 
 ==============================================================================
 *Return* *Values*
+
+Returns the t-value, or FALSE if failure.
 
 
 vim:ft=help:

@@ -8,7 +8,8 @@ openssl_open — Open sealed data
 *Description*
 
     bool openssl_open ( string $sealed_data , string &$open_data , string~
-    $env_key , mixed $priv_key_id [, string $method ] )~
+    $env_key , mixed $priv_key_id [, string $method = "RC4" [,~
+    string $iv ]] )~
 
 openssl_open() opens (decrypts) {sealed_data} using the private key associated
 with the key identifier {priv_key_id} and the envelope key {env_key}, and
@@ -29,10 +30,25 @@ the data are sealed and can only be used by one specific private key. See
 
 {priv_key_id}
 
+{method}
+
+    The cipher method.
+
+{iv}
+
+    The initialization vector.
+
 ==============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
+
+==============================================================================
+*Changelog*
+
+Version         Description
+7.0.0   The {iv} has been added.
+5.3.0   The {method} has been added.
 
 ==============================================================================
 *Examples*

@@ -7,7 +7,8 @@ getenv — Gets the value of an environment variable
 ==============================================================================
 *Description*
 
-    string getenv ( string $varname [, bool $local_only = false ] )~
+    string getenv ( string $varname [, bool $local_only = FALSE ] )~
+    array getenv ( void )~
 
 Gets the value of an environment variable.
 
@@ -31,7 +32,14 @@ of these variables are listed within >> RFC 3875, specifically section 4.1,
 *Return* *Values*
 
 Returns the value of the environment variable {varname}, or FALSE if the
-environment variable {varname} does not exist.
+environment variable {varname} does not exist. Returns all environment
+variables without {varname}.
+
+==============================================================================
+*Changelog*
+
+       Version                       Description
+5.5.38, 5.6.24, 7.0.9 The {local_only} parameter has been added.
 
 ==============================================================================
 *Notes*

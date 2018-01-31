@@ -8,7 +8,7 @@ ldap_compare — Compare value of attribute found in entry specified with DN
 *Description*
 
     mixed ldap_compare ( resource $link_identifier , string $dn , string~
-    $attribute , string $value )~
+    $attribute , string $value [, array $serverctrls ] )~
 
 Compare {value} of {attribute} with value of same attribute in an LDAP
 directory entry.

@@ -1,6 +1,6 @@
 json_encode
 
-(PHP 5 >= 5.2.0, PECL json >= 1.2.0, PHP 7)
+(PHP 5 >= 5.2.0, PHP 7, PECL json >= 1.2.0)
 
 json_encode — Returns the JSON representation of a value
 
@@ -10,7 +10,10 @@ json_encode — Returns the JSON representation of a value
     string json_encode ( mixed $value [, int $options = 0 [, int $depth = 512~
     ]] )~
 
-Returns a string containing the JSON representation of {value}.
+Returns a string containing the JSON representation of the supplied {value}.
+
+The encoding is affected by the supplied {options} and additionally the
+encoding of float values depends on the value of serialize_precision.
 
 ==============================================================================
 *Parameters*
@@ -51,6 +54,8 @@ Version                              Description
         values.
 5.6.6   JSON_PRESERVE_ZERO_FRACTION {option} was added.
 5.5.0   {depth} parameter was added.
+5.5.0   JSON_PARTIAL_OUTPUT_ON_ERROR option was added.
+5.5.0   The return value on failure was changed from null string to FALSE.
 5.4.0   JSON_PRETTY_PRINT, JSON_UNESCAPED_SLASHES, and JSON_UNESCAPED_UNICODE
         {options} were added.
 5.3.3   JSON_NUMERIC_CHECK {option} was added.

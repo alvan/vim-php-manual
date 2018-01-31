@@ -30,10 +30,33 @@ text.
 
 {fontfile}
 
-    The name of the TrueType font file (can be a URL). Depending on which
-    version of the GD library that PHP is using, it may attempt to search for
-    files that do not begin with a leading '/' by appending '.ttf' to the
-    filename and searching along a library-defined font path.
+    The path to the TrueType font you wish to use.
+
+    Depending on which version of the GD library PHP is using, when {fontfile}
+    does not begin with a leading / then .ttf will be appended to the filename
+    and the library will attempt to search for that filename along a
+    library-defined font path.
+
+    When using versions of the GD library lower than 2.0.18, a space
+    character, rather than a semicolon, was used as the 'path separator' for
+    different font files. Unintentional use of this feature will result in the
+    warning message: Warning: Could not find/open font. For these affected
+    versions, the only solution is moving the font to a path which does not
+    contain spaces.
+
+    In many cases where a font resides in the same directory as the script
+    using it the following trick will alleviate any include problems.
+    <?php >
+    // Set the enviroment variable for GD
+    putenv('GDFONTPATH=' . realpath('.'));
+
+    // Name the font to be used (note the lack of the .ttf extension)
+    $font = 'SomeFont';
+<    ?>
+
+        Note:
+
+        Note that open_basedir does not apply to {fontfile}.
 
 {text}
 

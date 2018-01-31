@@ -24,6 +24,11 @@ is to continue to check-in with the service control manager so that it can
 determine if it should terminate. This is achieved by periodically calling 
 |win32_get_last_control_message| and handling the return code appropriately.
 
+Caution
+
+Since version 0.2.0, this function work only in "cli" SAPI. On other SAPI this
+function is disabled.
+
 ==============================================================================
 *Parameters*
 

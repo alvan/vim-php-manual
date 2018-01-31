@@ -2,7 +2,7 @@ next
 
 (PHP 4, PHP 5, PHP 7)
 
-next — Advance the internal array pointer of an array
+next — Advance the internal pointer of an array
 
 ==============================================================================
 *Description*
@@ -51,9 +51,10 @@ Example #1 Example use of next() and friends
 ==============================================================================
 *Notes*
 
-    Note: You won't be able to distinguish the end of an array from a boolean
-    FALSE element. To properly traverse an array which may contain FALSE
-    elements, see the |each| function.
+    Note: The end of an array is indistinguishable from a boolean FALSE
+    element. To properly traverse an array which may contain FALSE elements,
+    see the foreach() function. To still use next() and properly check if the
+    end of the array has been reached, verify that the |key| is NULL.
 
 ==============================================================================
 *See* *Also*

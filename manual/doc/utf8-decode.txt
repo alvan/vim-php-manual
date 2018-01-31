@@ -38,6 +38,14 @@ not exist in ISO-8859-1 (that is, characters above U+00FF) are replaced with ?
 Returns the ISO-8859-1 translation of {data}.
 
 ==============================================================================
+*Changelog*
+
+Version                              Description
+        This function has been moved to the core of PHP, and therefore lifting
+7.2.0   the requirement on the XML extension for this function to be
+        available.
+
+==============================================================================
 *See* *Also*
 
   * |utf8_encode| - Encodes an ISO-8859-1 string to UTF-8 - Performs the

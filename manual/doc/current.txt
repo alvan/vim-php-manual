@@ -7,7 +7,7 @@ current — Return the current element in an array
 ==============================================================================
 *Description*
 
-    mixed current ( array &$array )~
+    mixed current ( array $array )~
 
 Every array has an internal pointer to its "current" element, which is
 initialized to the first element inserted into the array.
@@ -35,6 +35,13 @@ information. Use the === operator for testing the return value of this
 function.
 
 ==============================================================================
+*Changelog*
+
+Version                              Description
+7.0.0   {array} is now always passed by value. Prior to this version, it was
+        passed by reference if possible, and by value otherwise.
+
+==============================================================================
 *Examples*
 
 Example #1 Example use of current() and friends
@@ -58,9 +65,12 @@ Example #1 Example use of current() and friends
 ==============================================================================
 *Notes*
 
-    Note: You won't be able to distinguish the end of an array from a boolean
-    FALSE element. To properly traverse an array which may contain FALSE
-    elements, see the |each| function.
+    Note: The end of an array and the result of calling current() on an empty
+    array are indistinguishable from a boolean FALSE element. To properly
+    traverse an array which may contain FALSE elements, see the foreach()
+    function. To still use current() and properly check if the value is really
+    an element of the array, the |key| of the current() element should be
+    checked to be strictly different from NULL.
 
 ==============================================================================
 *See* *Also*
@@ -71,7 +81,7 @@ Example #1 Example use of current() and friends
     the array cursor
   * |prev| - Rewind the internal array pointer
   * |reset| - Set the internal pointer of an array to its first element
-  * |next| - Advance the internal array pointer of an array
+  * |next| - Advance the internal pointer of an array
 
 
 vim:ft=help:

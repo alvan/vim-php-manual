@@ -7,7 +7,7 @@ odbc_fetch_row — Fetch a row
 ==============================================================================
 *Description*
 
-    bool odbc_fetch_row ( resource $result_id [, int $row_number ] )~
+    bool odbc_fetch_row ( resource $result_id [, int $row_number = 1 ] )~
 
 Fetches a row of the data that was returned by |odbc_do| or |odbc_exec|. After
 odbc_fetch_row() is called, the fields of that row can be accessed with 

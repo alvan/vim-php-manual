@@ -8,11 +8,10 @@ ldap_mod_add — Add attribute values to current attributes
 *Description*
 
     bool ldap_mod_add ( resource $link_identifier , string $dn , array $entry~
-)~
+    [, array $serverctrls ] )~
 
-Adds one or more attributes to the specified {dn}. It performs the
-modification at the attribute level as opposed to the object level.
-Object-level additions are done by the |ldap_add| function.
+Adds one or more attribute values to the specified {dn}. To add a whole new
+object see |ldap_add| function.
 
 ==============================================================================
 *Parameters*
@@ -26,6 +25,10 @@ Object-level additions are done by the |ldap_add| function.
     The distinguished name of an LDAP entity.
 
 {entry}
+
+    An associative array listing the attirbute values to add. If an attribute
+    was not existing yet it will be added. If an attribute is existing you can
+    only add values to it if it supports multiple values.
 
 ==============================================================================
 *Return* *Values*
@@ -42,6 +45,7 @@ Returns TRUE on success or FALSE on failure.
 
   * |ldap_mod_del| - Delete attribute values from current attributes
   * |ldap_mod_replace| - Replace attribute values with new ones
+  * |ldap_modify_batch| - Batch and execute modifications on an LDAP entry
 
 
 vim:ft=help:

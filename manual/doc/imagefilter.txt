@@ -24,7 +24,11 @@ imagefilter() applies the given filter {filtertype} on the {image}.
 
     {filtertype} can be one of the following:
       + IMG_FILTER_NEGATE: Reverses all colors of the image.
-      + IMG_FILTER_GRAYSCALE: Converts the image into grayscale.
+      + IMG_FILTER_GRAYSCALE: Converts the image into grayscale by changing
+        the red, green and blue components to their weighted sum using the
+        same coefficients as the REC.601 luma (Y') calculation. The alpha
+        components are retained. For palette images the result may differ due
+        to palette limitations.
       + IMG_FILTER_BRIGHTNESS: Changes the brightness of the image. Use {arg1}
         to set the level of brightness. The range for the brightness is -255
         to 255.

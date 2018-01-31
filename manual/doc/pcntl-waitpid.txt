@@ -7,7 +7,8 @@ pcntl_waitpid — Waits on or returns the status of a forked child
 ==============================================================================
 *Description*
 
-    int pcntl_waitpid ( int $pid , int &$status [, int $options = 0 ] )~
+    int pcntl_waitpid ( int $pid , int &$status [, int $options = 0 [, array~
+    &$rusage ]] )~
 
 Suspends execution of the current process until a child as specified by the
 {pid} argument has exited, or until a signal is delivered whose action is to

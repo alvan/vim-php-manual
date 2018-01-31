@@ -1,0 +1,80 @@
+uopz_set_mock
+
+(PECL uopz 5)
+
+uopz_set_mock — Use mock instead of class for new objects
+
+==============================================================================
+*Description*
+
+    void uopz_set_mock ( string $class , mixed $mock )~
+
+If {mock} is a string containing the name of a class then it will be
+instantiated instead of {class}. {mock} can also be an object.
+
+==============================================================================
+*Parameters*
+
+{class}
+
+    The name of the class to be mocked.
+
+{mock}
+
+    The mock to use in the form of a string containing the name of the class
+    to use or an object.
+
+==============================================================================
+*Examples*
+
+Example #1 uopz_set_mock() example
+
+<?php >
+    class A {
+        public static function who() {
+            echo "A";
+        }
+    }
+
+    class mockA {
+        public static function who() {
+            echo "mockA";
+        }
+    }
+
+    uopz_set_mock(A::class, mockA::class);
+    A::who();
+<?>
+
+The above example will output something similar to:
+
+mockA
+
+Example #2 uopz_set_mock() example
+
+<?php >
+class A {
+    public static function who() {
+        echo "A";
+    }
+}
+
+uopz_set_mock(A::class, new class {
+                            public static function who() {
+                                echo "mockA";
+                            }
+                        });
+A::who();
+
+The above example will output something similar to:
+
+mockA
+
+==============================================================================
+*See* *Also*
+
+  * |uopz_get_mock| - Get the current mock for a class
+  * |uopz_unset_mock| - Unset previously set mock
+
+
+vim:ft=help:

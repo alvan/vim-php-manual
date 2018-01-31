@@ -8,7 +8,7 @@ ftp_nb_fput — Stores a file from an open file to the FTP server (non-blocking)
 *Description*
 
     int ftp_nb_fput ( resource $ftp_stream , string $remote_file , resource~
-    $handle , int $mode [, int $startpos = 0 ] )~
+    $handle [, int $mode = FTP_IMAGE [, int $startpos = 0 ]] )~
 
 ftp_nb_fput() uploads the data from a file pointer to a remote file on the FTP
 server.

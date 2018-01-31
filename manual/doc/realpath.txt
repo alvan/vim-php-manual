@@ -45,6 +45,11 @@ realpath() returns FALSE on failure, e.g. if the file does not exist.
     For case-insensitive filesystems realpath() may or may not normalize the
     character case.
 
+    Note:
+
+    The function realpath() will not work for a file which is inside a Phar as
+    such path would be a virual path, not a real one.
+
     Note: Because PHP's integer type is signed and many platforms use 32bit
     integers, some filesystem functions may return unexpected results for
     files which are larger than 2GB.

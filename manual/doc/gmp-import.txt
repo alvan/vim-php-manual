@@ -7,7 +7,8 @@ gmp_import — Import from a binary string
 ==============================================================================
 *Description*
 
-    GMP gmp_import ( string $data , integer $word_size , integer $options )~
+    GMP gmp_import ( string $data [, int $word_size = 1 [, int $options =~
+    GMP_MSW_FIRST | GMP_NATIVE_ENDIAN ]] )~
 
 Import a GMP number from a binary string
 
@@ -49,6 +50,11 @@ The above example will output:
 
 0
 258
+
+==============================================================================
+*See* *Also*
+
+  * |gmp_export| - Export to a binary string
 
 
 vim:ft=help:

@@ -7,21 +7,22 @@ bcpow — Raise an arbitrary precision number to another
 ==============================================================================
 *Description*
 
-    string bcpow ( string $left_operand , string $right_operand [, int $scale~
-    = 0 ] )~
+    string bcpow ( string $base , string $exponent [, int $scale = 0 ] )~
 
-Raise {left_operand} to the power {right_operand}.
+Raise {base} to the power {exponent}.
 
 ==============================================================================
 *Parameters*
 
-{left_operand}
+{base}
 
-    The left operand, as a string.
+    The base, as a string.
 
-{right_operand}
+{exponent}
 
-    The right operand, as a string.
+    The exponent, as a string. If the exponent is non-integral, it is
+    truncated. The valid range of the exponent is platform specific, but is at
+    least -2147483648 to 2147483647.
 
 { scale}
 
@@ -34,6 +35,13 @@ Raise {left_operand} to the power {right_operand}.
 *Return* *Values*
 
 Returns the result as a string.
+
+==============================================================================
+*Changelog*
+
+Version                              Description
+7.3.0   bcpow() now returns numbers with the requested scale. Formerly, the
+        returned numbers may have omitted trailing decimal zeroes.
 
 ==============================================================================
 *Examples*
@@ -51,9 +59,10 @@ Example #1 bcpow() example
 
     Note:
 
-    bcpow() may return a result with fewer digits after the decimal point than
-    the {scale} parameter would indicate. This only occurs when the result
-    doesn't require all of the precision allowed by the {scale}. For example:
+    Before PHP 7.3.0 bcpow() may return a result with fewer digits after the
+    decimal point than the {scale} parameter would indicate. This only occurs
+    when the result doesn't require all of the precision allowed by the
+    {scale}. For example:
    
     Example #2 bcpow() scale example
 

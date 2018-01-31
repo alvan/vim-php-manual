@@ -23,12 +23,16 @@ This function controls various runtime options for the specified FTP stream.
     Currently, the following options are supported:
 
                         Supported runtime FTP options
-                    Changes the timeout in seconds used for all network
-    FTP_TIMEOUT_SEC related functions. {value} must be an integer that is
-                    greater than 0. The default timeout is 90 seconds.
-                    When enabled, GET or PUT requests with a {resumepos} or
-    FTP_AUTOSEEK    {startpos} parameter will first seek to the requested
-                    position within the file. This is enabled by default.
+                       Changes the timeout in seconds used for all network
+    FTP_TIMEOUT_SEC    related functions. {value} must be an integer that is
+                       greater than 0. The default timeout is 90 seconds.
+                       When enabled, GET or PUT requests with a {resumepos} or
+    FTP_AUTOSEEK       {startpos} parameter will first seek to the requested
+                       position within the file. This is enabled by default.
+                       When disabled, PHP will ignore the IP address returned
+    FTP_USEPASVADDRESS by the FTP server in response to the PASV command and
+                       instead use the IP address that was supplied in the
+                       ftp_connect(). {value} must be a boolean.
 
 {value}
 

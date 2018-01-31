@@ -1,6 +1,6 @@
 openssl_x509_fingerprint
 
-(PHP 5.6, PHP 7)
+(PHP 5 >= 5.6.0, PHP 7)
 
 openssl_x509_fingerprint — Calculates the fingerprint, or digest, of a given
 X.509 certificate
@@ -8,7 +8,7 @@ X.509 certificate
 ==============================================================================
 *Description*
 
-    bool openssl_x509_fingerprint ( mixed $x509 [, string $hash_algorithm =~
+    string openssl_x509_fingerprint ( mixed $x509 [, string $hash_algorithm =~
     "sha1" [, bool $raw_output = FALSE ]] )~
 
 openssl_x509_fingerprint() returns the digest of {x509} as a string.
@@ -22,7 +22,8 @@ openssl_x509_fingerprint() returns the digest of {x509} as a string.
 
 {hash_algorithm}
 
-    The hash algorithm to use, e.g. "md5" or "sha1"
+    The digest method or hash algorithm to use, e.g. "sha256", one of 
+    |openssl_get_md_methods|.
 
 {raw_output}
 

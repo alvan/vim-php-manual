@@ -7,8 +7,8 @@ imagebmp — Output a BMP image to browser or file
 ==============================================================================
 *Description*
 
-    bool imagebmp ( resource $image , mixed $to [, bool $compressed = TRUE ]~
-)~
+    bool imagebmp ( resource $image [, mixed $to = NULL [, bool $compressed =~
+    TRUE ]] )~
 
 Outputs or saves a BMP version of the given {image}.
 
@@ -25,6 +25,10 @@ Outputs or saves a BMP version of the given {image}.
     The path or an open stream resource (which is automatically being closed
     after this function returns) to save the file to. If not set or NULL, the
     raw image stream will be outputted directly.
+
+        Note:
+
+        NULL is invalid if the {compressed} arguments is not used.
 
 {compressed}
 

@@ -1,0 +1,46 @@
+swoole_async_read
+
+(PHP 5 >= 5.2.0, PHP 7, PECL swoole >= 1.9.0)
+
+swoole_async_read — Read file stream asynchronously
+
+==============================================================================
+*Description*
+
+    bool swoole_async_read ( string $filename , callable $callback [, int~
+    $chunk_size [, int $offset ]] )~
+
+==============================================================================
+*Parameters*
+
+{filename}
+
+    The filename being read.
+
+{callback}
+
+    mixed callback ( string $filename , string $content )~
+
+    {filename}
+
+        The name of the file.
+
+    {content}
+
+        The content readed from the file stream.
+
+{chunk_size}
+
+    The chunk length.
+
+{offset}
+
+    The offset.
+
+==============================================================================
+*Return* *Values*
+
+Whether the read if succeed.
+
+
+vim:ft=help:

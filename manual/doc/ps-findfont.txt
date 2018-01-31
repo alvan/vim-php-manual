@@ -8,7 +8,7 @@ ps_findfont — Loads a font
 *Description*
 
     int ps_findfont ( resource $psdoc , string $fontname , string $encoding~
-    [, bool $embed = false ] )~
+    [, bool $embed = FALSE ] )~
 
 Loads a font for later use. Before text is output with a loaded font it must
 be set with |ps_setfont|. This function needs the adobe font metric file in

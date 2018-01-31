@@ -7,8 +7,8 @@ session_set_cookie_params — Set the session cookie parameters
 ==============================================================================
 *Description*
 
-    void session_set_cookie_params ( int $lifetime [, string $path [, string~
-    $domain [, bool $secure = false [, bool $httponly = false ]]]] )~
+    bool session_set_cookie_params ( int $lifetime [, string $path [, string~
+    $domain [, bool $secure = FALSE [, bool $httponly = FALSE ]]]] )~
 
 Set cookie parameters defined in the php.ini file. The effect of this function
 only lasts for the duration of the script. Thus, you need to call 
@@ -47,7 +47,7 @@ configuration keys which can be retrieved with the |ini_get|.
 ==============================================================================
 *Return* *Values*
 
-No value is returned.
+Returns TRUE on success or FALSE on failure.
 
 ==============================================================================
 *Changelog*

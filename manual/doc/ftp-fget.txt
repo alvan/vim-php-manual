@@ -8,7 +8,7 @@ ftp_fget — Downloads a file from the FTP server and saves to an open file
 *Description*
 
     bool ftp_fget ( resource $ftp_stream , resource $handle , string~
-    $remote_file , int $mode [, int $resumepos = 0 ] )~
+    $remote_file [, int $mode = FTP_IMAGE [, int $resumepos = 0 ]] )~
 
 ftp_fget() retrieves {remote_file} from the FTP server, and writes it to the
 given file pointer.

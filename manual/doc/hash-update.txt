@@ -7,7 +7,7 @@ hash_update — Pump data into an active hashing context
 ==============================================================================
 *Description*
 
-    bool hash_update ( resource $context , string $data )~
+    bool hash_update ( HashContext $context , string $data )~
 
 ==============================================================================
 *Parameters*
@@ -24,6 +24,12 @@ hash_update — Pump data into an active hashing context
 *Return* *Values*
 
 Returns TRUE.
+
+==============================================================================
+*Changelog*
+
+Version               Description
+7.2.0   Accept HashContext instead of resource.
 
 ==============================================================================
 *See* *Also*

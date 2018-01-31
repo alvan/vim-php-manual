@@ -7,7 +7,7 @@ header — Send a raw HTTP header
 ==============================================================================
 *Description*
 
-    void header ( string $string [, bool $replace = true [, int~
+    void header ( string $header [, bool $replace = TRUE [, int~
     $http_response_code ]] )~
 
 header() is used to send a raw HTTP header. See the >> HTTP/1.1 specification
@@ -29,7 +29,7 @@ access function, and have spaces or empty lines that are output before header
 ==============================================================================
 *Parameters*
 
-{string}
+{header}
 
     The header string.
 
@@ -71,7 +71,7 @@ access function, and have spaces or empty lines that are output before header
 {http_response_code}
 
     Forces the HTTP response code to the specified value. Note that this
-    parameter only has an effect if the {string} is not empty.
+    parameter only has an effect if the {header} is not empty.
 
 ==============================================================================
 *Return* *Values*
@@ -192,6 +192,7 @@ Many proxies and clients can be forced to disable caching with:
   * |headers_sent| - Checks if or where headers have been sent
   * |setcookie| - Send a cookie
   * |http_response_code| - Get or Set the HTTP response code
+  * |header_remove| - Remove previously set headers
   * The section on HTTP authentication
 
 

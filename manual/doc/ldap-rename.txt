@@ -8,7 +8,8 @@ ldap_rename — Modify the name of an entry
 *Description*
 
     bool ldap_rename ( resource $link_identifier , string $dn , string~
-    $newrdn , string $newparent , bool $deleteoldrdn )~
+    $newrdn , string $newparent , bool $deleteoldrdn [, array $serverctrls ]~
+)~
 
 The entry specified by {dn} is renamed/moved.
 
@@ -53,7 +54,7 @@ Returns TRUE on success or FALSE on failure.
 ==============================================================================
 *See* *Also*
 
-  * |ldap_modify| - Modify an LDAP entry
+  * |ldap_modify| - Alias of ldap_mod_replace
 
 
 vim:ft=help:

@@ -8,11 +8,10 @@ ldap_mod_replace — Replace attribute values with new ones
 *Description*
 
     bool ldap_mod_replace ( resource $link_identifier , string $dn , array~
-    $entry )~
+    $entry [, array $serverctrls ] )~
 
-Replaces one or more attributes from the specified {dn}. It performs the
-modification at the attribute level as opposed to the object level.
-Object-level modifications are done by the |ldap_modify| function.
+Replaces one or more attributes from the specified {dn}. It may also add or
+remove attributes.
 
 ==============================================================================
 *Parameters*
@@ -26,6 +25,10 @@ Object-level modifications are done by the |ldap_modify| function.
     The distinguished name of an LDAP entity.
 
 {entry}
+
+    An associative array listing the attributes to replace. Sending an empty
+    array as value will remove the attribute, while sending an attribute not
+    existing yet on this entry will add it.
 
 ==============================================================================
 *Return* *Values*
@@ -42,6 +45,7 @@ Returns TRUE on success or FALSE on failure.
 
   * |ldap_mod_del| - Delete attribute values from current attributes
   * |ldap_mod_add| - Add attribute values to current attributes
+  * |ldap_modify_batch| - Batch and execute modifications on an LDAP entry
 
 
 vim:ft=help:

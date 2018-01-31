@@ -36,6 +36,13 @@ Multiply the {left_operand} by the {right_operand}.
 Returns the result as a string.
 
 ==============================================================================
+*Changelog*
+
+Version                              Description
+7.3.0   bcmul() now returns numbers with the requested scale. Formerly, the
+        returned numbers may have omitted trailing decimal zeroes.
+
+==============================================================================
 *Examples*
 
 Example #1 bcmul() example
@@ -44,6 +51,22 @@ Example #1 bcmul() example
     echo bcmul('1.34747474747', '35', 3); // 47.161
     echo bcmul('2', '4'); // 8
 <?>
+
+==============================================================================
+*Notes*
+
+    Note:
+
+    Before PHP 7.3.0 bcmul() may return a result with fewer digits after the
+    decimal point than the {scale} parameter would indicate. This only occurs
+    when the result doesn't require all of the precision allowed by the
+    {scale}. For example:
+   
+    Example #2 bcmul() scale example
+
+    <?php >
+    echo bcmul('5', '2', 2);     // prints "10", not "10.00"
+<    ?>
 
 ==============================================================================
 *See* *Also*

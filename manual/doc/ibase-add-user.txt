@@ -10,10 +10,33 @@ ibase_add_user — Add a user to a security database
     bool ibase_add_user ( resource $service_handle , string $user_name ,~
     string $password [, string $first_name [, string $middle_name [, string~
     $last_name ]]] )~
-Warning
 
-This function is currently not documented; only its argument list is
-available.
+==============================================================================
+*Parameters*
+
+{service_handle}
+
+    The handle on the database server service.
+
+{user_name}
+
+    The login name of the new database user.
+
+{password}
+
+    The password of the new user.
+
+{first_name}
+
+    The first name of the new database user.
+
+{middle_name}
+
+    The middle name of the new database user.
+
+{last_name}
+
+    The last name of the new database user.
 
 ==============================================================================
 *Return* *Values*

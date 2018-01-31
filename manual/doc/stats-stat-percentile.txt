@@ -2,26 +2,30 @@ stats_stat_percentile
 
 (PECL stats >= 1.0.0)
 
-stats_stat_percentile — Not documented
+stats_stat_percentile — Returns the percentile value
 
 ==============================================================================
 *Description*
 
-    float stats_stat_percentile ( float $df , float $xnonc )~
-Warning
+    float stats_stat_percentile ( array $arr , float $perc )~
 
-This function is currently not documented; only its argument list is
-available.
+Returns the {perc}-th percentile value of the array {arr}.
 
 ==============================================================================
 *Parameters*
 
-{df}
+{arr}
 
-{xnonc}
+    The input array
+
+{perc}
+
+    The percentile
 
 ==============================================================================
 *Return* *Values*
+
+Returns the percentile values of the input array.
 
 
 vim:ft=help:

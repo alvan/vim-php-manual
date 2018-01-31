@@ -8,7 +8,7 @@ openssl_digest — Computes a digest
 *Description*
 
     string openssl_digest ( string $data , string $method [, bool $raw_output~
-    = false ] )~
+    = FALSE ] )~
 
 Computes a digest hash value for the given data using a given method, and
 returns a raw or binhex encoded string.
@@ -27,7 +27,8 @@ available.
 
 {method}
 
-    The digest method.
+    The digest method to use, e.g. "sha256", see |openssl_get_md_methods| for
+    a list of available digest methods.
 
 {raw_output}
 

@@ -50,13 +50,12 @@ Example #1 is_object() example
 <?>
 
 ==============================================================================
-*Notes*
+*Changelog*
 
-    Note:
-
-    This function will return FALSE if used on an unserialized object where
-    the class definition is not present (even though |gettype| returns object
-    ).
+Version                              Description
+        is_object() now returns TRUE for unserialized objects without a class
+7.2.0   definition (class of __PHP_Incomplete_Class). Previously FALSE was
+        returned.
 
 ==============================================================================
 *See* *Also*

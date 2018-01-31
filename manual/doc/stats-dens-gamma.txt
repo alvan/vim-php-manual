@@ -2,28 +2,36 @@ stats_dens_gamma
 
 (PECL stats >= 1.0.0)
 
-stats_dens_gamma — Not documented
+stats_dens_gamma — Probability density function of the gamma distribution
 
 ==============================================================================
 *Description*
 
     float stats_dens_gamma ( float $x , float $shape , float $scale )~
-Warning
 
-This function is currently not documented; only its argument list is
-available.
+Returns the probability density at {x}, where the random variable follows the
+gamma distribution of which the shape parameter is {shape} and the scale
+parameter is {scale}.
 
 ==============================================================================
 *Parameters*
 
 {x}
 
+    The value at which the probability density is calculated
+
 {shape}
+
+    The shape parameter of the distribution
 
 {scale}
 
+    The scale parameter of the distribution
+
 ==============================================================================
 *Return* *Values*
+
+The probability density at {x} or FALSE for failure.
 
 
 vim:ft=help:

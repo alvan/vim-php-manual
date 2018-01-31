@@ -7,7 +7,7 @@ socket_cmsg_space — Calculate message buffer size
 ==============================================================================
 *Description*
 
-    int socket_cmsg_space ( int $level , int $type )~
+    int socket_cmsg_space ( int $level , int $type [, int $n = 0 ] )~
 
 Calculates the size of the buffer that should be allocated for receiving the
 ancillary data.

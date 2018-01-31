@@ -1,6 +1,6 @@
 spl_autoload_register
 
-(PHP 5 >= 5.1.2, PHP 7)
+(PHP 5 >= 5.1.0, PHP 7)
 
 spl_autoload_register — Register given function as __autoload() implementation
 
@@ -8,7 +8,7 @@ spl_autoload_register — Register given function as __autoload() implementation
 *Description*
 
     bool spl_autoload_register ([ callable $autoload_function [, bool $throw~
-    = true [, bool $prepend = false ]]] )~
+    = TRUE [, bool $prepend = FALSE ]]] )~
 
 Register a function with the spl provided __autoload queue. If the queue is
 not yet activated it will be activated.

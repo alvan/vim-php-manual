@@ -7,21 +7,20 @@ bcdiv — Divide two arbitrary precision numbers
 ==============================================================================
 *Description*
 
-    string bcdiv ( string $left_operand , string $right_operand [, int $scale~
-    = 0 ] )~
+    string bcdiv ( string $dividend , string $divisor [, int $scale = 0 ] )~
 
-Divides the {left_operand} by the {right_operand}.
+Divides the {dividend} by the {divisor}.
 
 ==============================================================================
 *Parameters*
 
-{left_operand}
+{dividend}
 
-    The left operand, as a string.
+    The dividend, as a string.
 
-{right_operand}
+{divisor}
 
-    The right operand, as a string.
+    The divisor, as a string.
 
 { scale}
 
@@ -33,8 +32,7 @@ Divides the {left_operand} by the {right_operand}.
 ==============================================================================
 *Return* *Values*
 
-Returns the result of the division as a string, or NULL if {right_operand} is
-0.
+Returns the result of the division as a string, or NULL if {divisor} is 0.
 
 ==============================================================================
 *Examples*

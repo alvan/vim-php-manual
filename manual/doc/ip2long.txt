@@ -66,8 +66,9 @@ function:
     if ($long == -1 || $long === FALSE) {
         echo 'Invalid IP, please try again';
     } else {
-        echo $ip   . "\n";           // 192.0.34.166
-        echo $long . "\n";           // -1073732954
+        echo $ip   . "\n";            // 192.0.34.166
+        echo $long . "\n";            // 3221234342 
+    (-1073732954 on 32-bit systems, due to integer overflow)
         printf("%u\n", ip2long($ip)); // 3221234342
     }
 <?>
@@ -84,8 +85,10 @@ function:
 
     Note:
 
-    ip2long() will return FALSE for the IP 255.255.255.255 in PHP 5 <= 5.0.2.
-    It was fixed in PHP 5.0.3 where it returns -1.
+    ip2long() will return FALSE for the IP 255.255.255.255 in PHP 5 <= 5.0.2,
+    and -1 on 64-bits systems in PHP 5 <=5.2.4. It was fixed in PHP 5.2.5
+    where it returns 4294967295. 32-bit systems will return -1 due to the
+    integer value overflowing.
 
 ==============================================================================
 *See* *Also*

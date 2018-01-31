@@ -12,6 +12,11 @@ win32_set_service_status — Update the service status
 Informs the SCM of the current status of a running service. This call is only
 valid for a running service process.
 
+Caution
+
+Since version 0.2.0, this function work only in "cli" SAPI. On other SAPI this
+function is disabled.
+
 ==============================================================================
 *Parameters*
 

@@ -33,34 +33,44 @@ some elements may not always be available.
   * OPENSSL_KEYTYPE_RSA, an additional array key named "rsa", containing the
     key data is returned.
 
-     Key   Description
-    "n"     
-    "e"     
-    "d"     
-    "p"     
-    "q"     
-    "dmp1"  
-    "dmq1"  
-    "iqmp"  
+     Key              Description
+    "n"    modulus
+    "e"    public exponent
+    "d"    private exponent
+    "p"    prime 1
+    "q"    prime 2
+    "dmp1" exponent1, d mod (p-1)
+    "dmq1" exponent2, d mod (q-1)
+    "iqmp" coefficient, (inverse of q) mod p
 
   * OPENSSL_KEYTYPE_DSA, an additional array key named "dsa", containing the
     key data is returned.
 
-       Key     Description
-    "p"         
-    "q"         
-    "g"         
-    "priv_key"  
-    "pub_key"   
+       Key                Description
+    "p"        prime number (public)
+    "q"        160-bit subprime, q | p-1 (public)
+    "g"        generator of subgroup (public)
+    "priv_key" private key x
+    "pub_key"  public key y = g^x
 
   * OPENSSL_KEYTYPE_DH, an additional array key named "dh", containing the key
     data is returned.
 
-       Key     Description
-    "p"         
-    "g"         
-    "priv_key"  
-    "pub_key"   
+       Key            Description
+    "p"        prime number (shared)
+    "g"        generator of Z_p (shared)
+    "priv_key" private DH value x
+    "pub_key"  public DH value g^x
+
+  * OPENSSL_KEYTYPE_EC, an additional array key named "ec", containing the key
+    data is returned.
+
+        Key                      Description
+    "curve_name" name of curve, see |openssl_get_curve_names|
+    "curve_oid"  ASN1 Object identifier (OID) for EC curve.
+    "x"          x coordinate (public)
+    "y"          y coordinate (public)
+    "d"          private key
 
 
 vim:ft=help:

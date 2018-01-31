@@ -12,6 +12,12 @@ imagecreatefromgif — Create a new image from file or URL
 imagecreatefromgif() returns an image identifier representing the image
 obtained from the given filename.
 
+Caution
+
+When reading GIF files into memory, only the first frame is returned in the
+image resource pointer. The size of the image is not necessarily what is
+reported by |getimagesize|.
+
 Tip
 
 A URL can be used as a filename with this function if the fopen wrappers have
@@ -79,11 +85,6 @@ Output of example : Example to handle an error during loading of a GIF
 
     GIF support was removed from the GD library in Version 1.6, and added back
     in Version 2.0.28. This function is not available between these versions.
-
-    Note:
-
-    When reading animated GIF files into memory, only the first frame is
-    returned in the image resource pointer.
 
 
 vim:ft=help:

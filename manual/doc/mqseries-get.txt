@@ -89,7 +89,7 @@ Example #1 mqseries_get() example
         $gmo = array('Options' => MQSERIES_MQGMO_FAIL_IF_QUIESCING | 
     MQSERIES_MQGMO_WAIT, 'WaitInterval' => 3000);
 
-    // get the message from the queueu    
+    // get the message from the queue    
         mqseries_get($conn, $obj, $mdg, $gmo, 255, $msg, $data_length, $comp_code
     , $reason);
         if ($comp_code !== MQSERIES_MQCC_OK) {

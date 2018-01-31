@@ -7,7 +7,7 @@ get_class — Returns the name of the class of an object
 ==============================================================================
 *Description*
 
-    string get_class ([ object $object = NULL ] )~
+    string get_class ([ object $object ] )~
 
 Gets the name of the class of the given {object}.
 
@@ -17,6 +17,11 @@ Gets the name of the class of the given {object}.
 {object}
 
     The tested object. This parameter may be omitted when inside a class.
+
+        Note: Explicitly passing NULL as the {object} is no longer allowed as
+        of PHP 7.2.0. The parameter is still optional and calling get_class()
+        without a parameter from inside a class will work, but passing NULL
+        now emits an E_WARNING notice.
 
 ==============================================================================
 *Return* *Values*
@@ -40,6 +45,8 @@ level error is raised.
 *Changelog*
 
 Version                              Description
+7.2.0   NULL was removed as the default value for {object}, and is no longer a
+        valid input.
 5.3.0   NULL became the default value for {object}, so passing NULL to
         {object} now has the same result as not passing any value.
 
@@ -122,11 +129,11 @@ string(11) "Foo\Bar\Baz"
 ==============================================================================
 *See* *Also*
 
-  * |get_called_class| - the "Late Static Binding" class name
+  * |get_called_class| - The "Late Static Binding" class name
   * |get_parent_class| - Retrieves the parent class name for object or class
   * |gettype| - Get the type of a variable
   * |is_subclass_of| - Checks if the object has this class as one of its
-    parents or implements it.
+    parents or implements it
 
 
 vim:ft=help:

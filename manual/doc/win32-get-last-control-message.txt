@@ -14,6 +14,11 @@ Returns the control code that was last sent to this service process. When
 running as a service you should periodically check this to determine if your
 service needs to stop running.
 
+Caution
+
+Since version 0.2.0, this function work only in "cli" SAPI. On other SAPI this
+function is disabled.
+
 ==============================================================================
 *Return* *Values*
 

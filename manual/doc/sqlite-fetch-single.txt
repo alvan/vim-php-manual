@@ -14,12 +14,12 @@ string
 *Description*
 
     string sqlite_fetch_single ( resource $result [, bool $decode_binary =~
-    true ] )~
+    TRUE ] )~
 
 Object oriented style (method):
 
-    string SQLiteResult::fetchSingle ([ bool $decode_binary = true ] )~
-    string SQLiteUnbuffered::fetchSingle ([ bool $decode_binary = true ] )~
+    string SQLiteResult::fetchSingle ([ bool $decode_binary = TRUE ] )~
+    string SQLiteUnbuffered::fetchSingle ([ bool $decode_binary = TRUE ] )~
 
 sqlite_fetch_single() is identical to |sqlite_fetch_array| except that it
 returns the value of the first column of the rowset.

@@ -8,26 +8,27 @@ specified modulus
 ==============================================================================
 *Description*
 
-    string bcpowmod ( string $left_operand , string $right_operand , string~
-    $modulus [, int $scale = 0 ] )~
+    string bcpowmod ( string $base , string $exponent , string $modulus [,~
+    int $scale = 0 ] )~
 
-Use the fast-exponentiation method to raise {left_operand} to the power
-{right_operand} with respect to the modulus {modulus}.
+Use the fast-exponentiation method to raise {base} to the power {exponent}
+with respect to the modulus {modulus}.
 
 ==============================================================================
 *Parameters*
 
-{left_operand}
+{base}
 
-    The left operand, as a string.
+    The base, as an integral string (i.e. the scale has to be zero).
 
-{right_operand}
+{exponent}
 
-    The right operand, as a string.
+    The exponent, as an non-negative, integral string (i.e. the scale has to
+    be zero).
 
 {modulus}
 
-    The modulus, as a string.
+    The modulus, as an integral string (i.e. the scale has to be zero).
 
 { scale}
 
@@ -39,7 +40,8 @@ Use the fast-exponentiation method to raise {left_operand} to the power
 ==============================================================================
 *Return* *Values*
 
-Returns the result as a string, or NULL if {modulus} is 0.
+Returns the result as a string, or NULL if {modulus} is 0 or {exponent} is
+negative.
 
 ==============================================================================
 *Notes*

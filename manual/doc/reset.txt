@@ -24,6 +24,13 @@ the value of the first array element.
 
 Returns the value of the first array element, or FALSE if the array is empty.
 
+Warning
+
+This function may return Boolean FALSE, but may also return a non-Boolean
+value which evaluates to FALSE. Please read the section on Booleans for more
+information. Use the === operator for testing the return value of this
+function.
+
 ==============================================================================
 *Examples*
 
@@ -48,13 +55,22 @@ Example #1 reset() example
 <?>
 
 ==============================================================================
+*Notes*
+
+    Note: The return value for an empty array is indistinguishable from the
+    return value in case of an array which has a boolean FALSE first element.
+    To properly check the value of the first element of an array which may
+    contain FALSE elements, first check the |count| of the array, or check
+    that |key| is not NULL, after calling reset().
+
+==============================================================================
 *See* *Also*
 
   * |current| - Return the current element in an array
   * |each| - Return the current key and value pair from an array and advance
     the array cursor
   * |end| - Set the internal pointer of an array to its last element
-  * |next| - Advance the internal array pointer of an array
+  * |next| - Advance the internal pointer of an array
   * |prev| - Rewind the internal array pointer
 
 

@@ -8,11 +8,10 @@ ldap_mod_del — Delete attribute values from current attributes
 *Description*
 
     bool ldap_mod_del ( resource $link_identifier , string $dn , array $entry~
-)~
+    [, array $serverctrls ] )~
 
-Removes one or more attributes from the specified {dn}. It performs the
-modification at the attribute level as opposed to the object level.
-Object-level deletions are done by the |ldap_delete| function.
+Removes one or more attribute values from the specified {dn}. Object deletions
+are done by the |ldap_delete| function.
 
 ==============================================================================
 *Parameters*
@@ -37,6 +36,7 @@ Returns TRUE on success or FALSE on failure.
 
   * |ldap_mod_add| - Add attribute values to current attributes
   * |ldap_mod_replace| - Replace attribute values with new ones
+  * |ldap_modify_batch| - Batch and execute modifications on an LDAP entry
 
 
 vim:ft=help:

@@ -17,7 +17,7 @@ Returns a string produced according to the formatting string {format}.
 {format}
 
     The format string is composed of zero or more directives: ordinary
-    characters (excluding %) that are copied directly to the result, and
+    characters (excluding %) that are copied directly to the result and
     conversion specifications, each of which results in fetching its own
     parameter. This applies to both sprintf() and |printf|.
 
@@ -47,28 +47,28 @@ Returns a string produced according to the formatting string {format}.
      6. A type specifier that says what type the argument data should be
         treated as. Possible types:
           o % - a literal percent character. No argument is required.
-          o b - the argument is treated as an integer, and presented as a
+          o b - the argument is treated as an integer and presented as a
             binary number.
-          o c - the argument is treated as an integer, and presented as the
+          o c - the argument is treated as an integer and presented as the
             character with that ASCII value.
-          o d - the argument is treated as an integer, and presented as a
+          o d - the argument is treated as an integer and presented as a
             (signed) decimal number.
           o e - the argument is treated as scientific notation (e.g. 1.2e+2).
             The precision specifier stands for the number of digits after the
             decimal point since PHP 5.2.1. In earlier versions, it was taken
             as number of significant digits (one less).
           o E - like %e but uses uppercase letter (e.g. 1.2E+2).
-          o f - the argument is treated as a float, and presented as a
+          o f - the argument is treated as a float and presented as a
             floating-point number (locale aware).
-          o F - the argument is treated as a float, and presented as a
+          o F - the argument is treated as a float and presented as a
             floating-point number (non-locale aware). Available since PHP
             5.0.3.
           o g - shorter of %e and %f.
           o G - shorter of %E and %f.
-          o o - the argument is treated as an integer, and presented as an
+          o o - the argument is treated as an integer and presented as an
             octal number.
           o s - the argument is treated as and presented as a string.
-          o u - the argument is treated as an integer, and presented as an
+          o u - the argument is treated as an integer and presented as an
             unsigned decimal number.
           o x - the argument is treated as an integer and presented as a
             hexadecimal number (with lowercase letters).

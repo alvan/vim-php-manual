@@ -7,32 +7,28 @@ openssl_decrypt — Decrypts data
 ==============================================================================
 *Description*
 
-    string openssl_decrypt ( string $data , string $method , string $password~
-    [, int $options = 0 [, string $iv = "" [, string $tag =~
+    string openssl_decrypt ( string $data , string $method , string $key [,~
+    int $options = 0 [, string $iv = "" [, string $tag =~
     "" [, string $aad = "" ]]]] )~
 
 Takes a raw or base64 encoded string and decrypts it using a given method and
 key.
-
-Warning
-
-This function is currently not documented; only its argument list is
-available.
 
 ==============================================================================
 *Parameters*
 
 {data}
 
-    The data.
+    The encrypted message to be decrypted.
 
 {method}
 
-    The cipher method.
+    The cipher method. For a list of available cipher methods, use 
+    |openssl_get_cipher_methods|.
 
-{password}
+{key}
 
-    The password.
+    The key.
 
 {options}
 

@@ -27,10 +27,10 @@ The serialized BSON document as a binary string.
 ==============================================================================
 *Errors/Exceptions*
 
-Throws MongoDB\Driver\Exception\UnexpectedValueException if the PHP value
-cannot be converted to BSON. Possible reasons include, but are not limited to,
-encountering an unexpected MongoDB\BSON\Type instance or MongoDB\BSON\
-Serializable::bsonSerialize() failing to return an array or stdClass.
+  * Throws MongoDB\Driver\Exception\UnexpectedValueException if the PHP value
+    cannot be converted to BSON. Possible reasons include, but are not limited
+    to, encountering an unexpected MongoDB\BSON\Type instance or MongoDB\BSON\
+    Serializable::bsonSerialize() failing to return an array or stdClass.
 
 ==============================================================================
 *Examples*

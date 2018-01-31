@@ -7,7 +7,7 @@ session_abort — Discard session array changes and finish session
 ==============================================================================
 *Description*
 
-    void session_abort ( void )~
+    bool session_abort ( void )~
 
 session_abort() finishes session without saving data. Thus the original values
 in session data are kept.
@@ -15,7 +15,7 @@ in session data are kept.
 ==============================================================================
 *Return* *Values*
 
-No value is returned.
+Returns TRUE on success or FALSE on failure.
 
 ==============================================================================
 *See* *Also*

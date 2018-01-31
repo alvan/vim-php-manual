@@ -2,26 +2,31 @@ stats_variance
 
 (PECL stats >= 1.0.0)
 
-stats_variance — Returns the population variance
+stats_variance — Returns the variance
 
 ==============================================================================
 *Description*
 
-    float stats_variance ( array $a [, bool $sample = false ] )~
-Warning
+    float stats_variance ( array $a [, bool $sample = FALSE ] )~
 
-This function is currently not documented; only its argument list is
-available.
+Returns the variance of the values in {a}.
 
 ==============================================================================
 *Parameters*
 
 {a}
 
+    The array of data to find the standard deviation for. Note that all values
+    of the array will be cast to float.
+
 {sample}
+
+    Indicates if {a} represents a sample of the population; defaults to FALSE.
 
 ==============================================================================
 *Return* *Values*
+
+Returns the variance on success; FALSE on failure.
 
 
 vim:ft=help:

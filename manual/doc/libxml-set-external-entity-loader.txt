@@ -7,7 +7,7 @@ libxml_set_external_entity_loader — Changes the default external entity loader
 ==============================================================================
 *Description*
 
-    void libxml_set_external_entity_loader ( callable $resolver_function )~
+    bool libxml_set_external_entity_loader ( callable $resolver_function )~
 
 Changes the default external entity loader.
 
@@ -24,7 +24,7 @@ Changes the default external entity loader.
 ==============================================================================
 *Return* *Values*
 
-No value is returned.
+Returns TRUE on success or FALSE on failure.
 
 ==============================================================================
 *Examples*

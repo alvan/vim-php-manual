@@ -2,15 +2,15 @@ stats_rand_gen_gamma
 
 (PECL stats >= 1.0.0)
 
-stats_rand_gen_gamma — Generates random deviates from a gamma distribution
+stats_rand_gen_gamma — Generates a random deviate from the gamma distribution
 
 ==============================================================================
 *Description*
 
     float stats_rand_gen_gamma ( float $a , float $r )~
 
-Generates random deviates from the gamma distribution whose density is (A**R)/
-Gamma(R) * X**(R-1) * Exp(-A*X).
+Generates a random deviate from the gamma distribution whose density is (A**R)
+/Gamma(R) * X**(R-1) * Exp(-A*X).
 
 ==============================================================================
 *Parameters*
@@ -25,6 +25,8 @@ Gamma(R) * X**(R-1) * Exp(-A*X).
 
 ==============================================================================
 *Return* *Values*
+
+A random deviate
 
 
 vim:ft=help:

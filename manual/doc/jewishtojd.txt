@@ -20,11 +20,14 @@ first observed.
 
 {month}
 
-    The month as a number from 1 to 13
+    The month as a number from 1 to 13, where 1 means Tishri, 13 means Elul,
+    and 6 and 7 mean Adar in regular years, but Adar I and Adar II,
+    respectively, in leap years.
 
 {day}
 
-    The day as a number from 1 to 30
+    The day as a number from 1 to 30. If the month has only 29 days, the first
+    day of the following month is assumed.
 
 {year}
 

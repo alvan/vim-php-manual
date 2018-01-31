@@ -8,7 +8,7 @@ ldap_modify_batch — Batch and execute modifications on an LDAP entry
 *Description*
 
     bool ldap_modify_batch ( resource $link_identifier , string $dn , array~
-    $entry )~
+    $entry [, array $serverctrls ] )~
 
 Modifies an existing entry in the LDAP directory. Allows detailed
 specification of the modifications to perform.

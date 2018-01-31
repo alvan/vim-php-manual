@@ -11,10 +11,9 @@ array_unique — Removes duplicate values from an array
 
 Takes an input {array} and returns a new array without duplicate values.
 
-Note that keys are preserved. array_unique() sorts the values treated as
-string at first, then will keep the first key encountered for every value, and
-ignore all following keys. It does not mean that the key of the first related
-value from the unsorted {array} will be kept.
+Note that keys are preserved. If multiple elements compare equal under the
+given {sort_flags}, then the key and value of the first equal element will be
+retained.
 
     Note: Two elements are considered equal if and only if (string) $elem1 ===
     (string) $elem2 i.e. when the string representation is the same, the first

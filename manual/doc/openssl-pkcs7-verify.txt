@@ -8,8 +8,8 @@ openssl_pkcs7_verify — Verifies the signature of an S/MIME signed message
 *Description*
 
     mixed openssl_pkcs7_verify ( string $filename , int $flags [, string~
-    $outfilename [, array $cainfo [, string $extracerts [, string $content~
-    ]]]] )~
+    $outfilename [, array $cainfo [, string $extracerts [, string $content [,~
+    string $p7bfilename ]]]]] )~
 
 openssl_pkcs7_verify() reads the S/MIME message contained in the given file
 and examines the digital signature.

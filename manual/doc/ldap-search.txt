@@ -9,7 +9,7 @@ ldap_search — Search LDAP tree
 
     resource ldap_search ( resource $link_identifier , string $base_dn ,~
     string $filter [, array $attributes [, int $attrsonly [, int $sizelimit~
-    [, int $timelimit [, int $deref ]]]]] )~
+    [, int $timelimit [, int $deref [, array $serverctrls ]]]]]] )~
 
 Performs the search for a specified filter on the directory with the scope of
 LDAP_SCOPE_SUBTREE. This is equivalent to searching the entire directory.

@@ -8,7 +8,7 @@ ldap_control_paged_result — Send LDAP pagination control
 *Description*
 
     bool ldap_control_paged_result ( resource $link , int $pagesize [, bool~
-    $iscritical = false [, string $cookie = "" ]] )~
+    $iscritical = FALSE [, string $cookie = "" ]] )~
 
 Enable LDAP pagination by sending the pagination control (page size,
 cookie...).

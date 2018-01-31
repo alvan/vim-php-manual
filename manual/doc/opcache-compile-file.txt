@@ -7,7 +7,7 @@ opcache_compile_file — Compiles and caches a PHP script without executing it
 ==============================================================================
 *Description*
 
-    boolean opcache_compile_file ( string $file )~
+    bool opcache_compile_file ( string $file )~
 
 This function compiles a PHP script and adds it to the opcode cache without
 executing it. This can be used to prime the cache after a Web server restart

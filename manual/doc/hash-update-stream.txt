@@ -8,7 +8,7 @@ stream
 ==============================================================================
 *Description*
 
-    int hash_update_stream ( resource $context , resource $handle [, int~
+    int hash_update_stream ( HashContext $context , resource $handle [, int~
     $length = -1 ] )~
 
 ==============================================================================
@@ -31,6 +31,12 @@ stream
 *Return* *Values*
 
 Actual number of bytes added to the hashing context from {handle}.
+
+==============================================================================
+*Changelog*
+
+Version               Description
+7.2.0   Accept HashContext instead of resource.
 
 ==============================================================================
 *Examples*

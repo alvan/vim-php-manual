@@ -1,0 +1,65 @@
+uopz_get_exit_status
+
+(PECL uopz 5)
+
+uopz_get_exit_status — Retrieve the last set exit status
+
+==============================================================================
+*Description*
+
+    mixed uopz_get_exit_status ( void )~
+
+Retrieves the last set exit status, i.e. the value passed to |exit|.
+
+==============================================================================
+*Parameters*
+
+This function has no parameters.
+
+==============================================================================
+*Return* *Values*
+
+This function returns the last exit status, or NULL if |exit| has not been
+called.
+
+==============================================================================
+*Examples*
+
+Example #1 uopz_get_exit_status() example
+
+<?php >
+exit(123); 
+echo uopz_get_exit_status();?>
+
+The above example will output:
+
+123
+
+==============================================================================
+*Notes*
+
+Caution
+
+OPcache optimizes away dead code after unconditional exit.
+
+    Note: Because this is a language construct and not a function, it cannot
+    be called using variable functions.
+
+Warning
+
+This function is not (yet) binary safe!
+
+    Note: register_globals: important note
+
+    As of PHP 4.2.0, the default value for the PHP directive register_globals
+    is off. The PHP community discourages developers from relying on this
+    directive, and encourages the use of other means, such as the superglobals
+    .
+
+==============================================================================
+*See* *Also*
+
+  * |uopz_allow_exit| - Allows control over disabled exit opcode
+
+
+vim:ft=help:

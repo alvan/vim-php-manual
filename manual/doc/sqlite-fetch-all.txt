@@ -13,14 +13,14 @@ Fetches all rows from a result set as an array of arrays
 *Description*
 
     array sqlite_fetch_all ( resource $result [, int $result_type =~
-    SQLITE_BOTH [, bool $decode_binary = true ]] )~
+    SQLITE_BOTH [, bool $decode_binary = TRUE ]] )~
 
 Object oriented style (method):
 
     array SQLiteResult::fetchAll ([ int $result_type = SQLITE_BOTH [, bool~
-    $decode_binary = true ]] )~
+    $decode_binary = TRUE ]] )~
     array SQLiteUnbuffered::fetchAll ([ int $result_type = SQLITE_BOTH [,~
-    bool $decode_binary = true ]] )~
+    bool $decode_binary = TRUE ]] )~
 
 sqlite_fetch_all() returns an array of the entire result set from the {result}
 resource. It is similar to calling |sqlite_query| (or |sqlite_unbuffered_query

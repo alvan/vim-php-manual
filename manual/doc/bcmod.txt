@@ -7,16 +7,16 @@ bcmod — Get modulus of an arbitrary precision number
 ==============================================================================
 *Description*
 
-    string bcmod ( string $left_operand , string $modulus )~
+    string bcmod ( string $dividend , string $modulus )~
 
-Get the modulus of the {left_operand} using {modulus}.
+Get the modulus of the {dividend} using {modulus}.
 
 ==============================================================================
 *Parameters*
 
-{left_operand}
+{dividend}
 
-    The left operand, as a string.
+    The dividend, as a string.
 
 {modulus}
 
@@ -26,6 +26,13 @@ Get the modulus of the {left_operand} using {modulus}.
 *Return* *Values*
 
 Returns the modulus as a string, or NULL if {modulus} is 0.
+
+==============================================================================
+*Changelog*
+
+Version                              Description
+7.2.0   {dividend} and {modulus} are no longer truncated to integer, so now
+        the behavior of bcmod() follows |fmod| rather than the % operator.
 
 ==============================================================================
 *Examples*

@@ -7,7 +7,7 @@ session_reset — Re-initialize session array with original values
 ==============================================================================
 *Description*
 
-    void session_reset ( void )~
+    bool session_reset ( void )~
 
 session_reset() reinitializes a session with original values stored in session
 storage. This function requires an active session and discards changes in
@@ -16,7 +16,7 @@ $_SESSION.
 ==============================================================================
 *Return* *Values*
 
-No value is returned.
+Returns TRUE on success or FALSE on failure.
 
 ==============================================================================
 *See* *Also*

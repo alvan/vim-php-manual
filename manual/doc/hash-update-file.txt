@@ -7,8 +7,8 @@ hash_update_file — Pump data into an active hashing context from a file
 ==============================================================================
 *Description*
 
-    bool hash_update_file ( resource $hcontext , string $filename [, resource~
-    $scontext = NULL ] )~
+    bool hash_update_file ( HashContext $hcontext , string $filename [,~
+    resource $scontext = NULL ] )~
 
 ==============================================================================
 *Parameters*
@@ -29,6 +29,12 @@ hash_update_file — Pump data into an active hashing context from a file
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
+
+==============================================================================
+*Changelog*
+
+Version               Description
+7.2.0   Accept HashContext instead of resource.
 
 ==============================================================================
 *See* *Also*

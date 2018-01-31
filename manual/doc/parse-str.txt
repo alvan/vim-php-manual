@@ -26,9 +26,11 @@ sets variables in the current scope (or in the array if {result} is provided).
 
     Warning
 
-    Using this function without second parameter is DISCOURAGED. Dynamically
-    setting variables in function's scope suffers from exactly same problems
-    as register_globals.
+    Using this function without the {result} parameter is highly DISCOURAGED
+    and DEPRECATED as of PHP 7.2.
+
+    Dynamically setting variables in function's scope suffers from exactly
+    same problems as register_globals.
 
     Read section on security of Using Register Globals explaining why it is
     dangerous.
@@ -37,6 +39,13 @@ sets variables in the current scope (or in the array if {result} is provided).
 *Return* *Values*
 
 No value is returned.
+
+==============================================================================
+*Changelog*
+
+Version                              Description
+7.2.0   Usage of parse_str() without a second parameter now emits an
+        E_DEPRECATED notice.
 
 ==============================================================================
 *Examples*
@@ -66,10 +75,10 @@ case of using this function with {result} parameter.
 Example #2 parse_str() name mangling
 
 <?php >
-    parse_str($"My Value=Something");
+    parse_str("My Value=Something");
     echo $My_Value; // Something
 
-    parse_str($"My Value=Something", $output);
+    parse_str("My Value=Something", $output);
     echo $output['My_Value']; // Something
 <?>
 

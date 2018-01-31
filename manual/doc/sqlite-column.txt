@@ -13,11 +13,11 @@ column from the current row of a result set
 *Description*
 
     mixed sqlite_column ( resource $result , mixed $index_or_name [, bool~
-    $decode_binary = true ] )~
+    $decode_binary = TRUE ] )~
     mixed SQLiteResult::column ( mixed $index_or_name [, bool $decode_binary~
-    = true ] )~
+    = TRUE ] )~
     mixed SQLiteUnbuffered::column ( mixed $index_or_name [, bool~
-    $decode_binary = true ] )~
+    $decode_binary = TRUE ] )~
 
 Fetches the value of a column named {index_or_name} (if it is a string), or of
 the ordinal column numbered {index_or_name} (if it is an integer) from the

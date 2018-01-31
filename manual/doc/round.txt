@@ -40,9 +40,9 @@ after the decimal point). {precision} can also be negative or zero (default).
     PHP_ROUND_HALF_DOWN zero, when it is half way there. Making 1.5 into 1 and
                         -1.5 into -1.
     PHP_ROUND_HALF_EVEN Round {val} to {precision} decimal places towards the
-                        next even value.
+                        nearest even value.
     PHP_ROUND_HALF_ODD  Round {val} to {precision} decimal places towards the
-                        next odd value.
+                        nearest odd value.
 
 ==============================================================================
 *Return* *Values*
@@ -79,7 +79,7 @@ Example #2 {mode} examples
     echo round(8.5, 0, PHP_ROUND_HALF_ODD);  // 9
 <?>
 
-Example #3 {mode} with precision examples
+Example #3 {mode} with {precision} examples
 
 <?php >
     /* Using PHP_ROUND_HALF_UP with 1 decimal digit precision */

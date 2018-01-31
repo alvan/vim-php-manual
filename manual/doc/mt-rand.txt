@@ -48,8 +48,11 @@ inclusive), or FALSE if {max} is less than {min}.
 *Changelog*
 
 Version                              Description
-7.1.0    |rand| has been made an alias of mt_rand().
-        mt_rand()has been updated to use the fixed, correct, version of the
+        mt_rand() has received a bug fix for a modulo bias bug. This means
+7.2.0   that sequences generated with a specific seed may differ from PHP 7.1
+        on 64-bit machines.
+7.1.0   |rand| has been made an alias of mt_rand().
+        mt_rand() has been updated to use the fixed, correct, version of the
 7.1.0   Mersenne Twister algorithm. To fall back to the old behaviour, use 
         |mt_srand| with MT_RAND_PHP as the second paramter.
 5.3.4   Issues an E_WARNING and returns FALSE if {max} < {min}.
@@ -78,8 +81,8 @@ The above example will output something similar to:
 Warning
 
 {min} {max} range must be within the range |mt_getrandmax|. i.e. ({max} -
-{min}) <= |mt_getrandmax| Otherwise, mt_rand() may return poor random numbers
-than it should be.
+{min}) <= |mt_getrandmax| Otherwise, mt_rand() may return poorer random
+numbers than it should.
 
 ==============================================================================
 *See* *Also*

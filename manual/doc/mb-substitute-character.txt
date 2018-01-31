@@ -7,7 +7,7 @@ mb_substitute_character — Set/Get substitution character
 ==============================================================================
 *Description*
 
-    mixed mb_substitute_character ([ mixed $substrchar =~
+    mixed mb_substitute_character ([ mixed $substchar =~
     mb_substitute_character() ] )~
 
 Specifies a substitution character when input character encoding is invalid or
@@ -21,13 +21,13 @@ This setting affects |mb_convert_encoding|, |mb_convert_variables|,
 ==============================================================================
 *Parameters*
 
-{substrchar}
+{substchar}
 
     Specify the Unicode value as an integer, or as one of the following string
     s:
       + "none": no output
       + "long": Output character code value (Example: U+3000, JIS+7E7E)
-      + "entity": Output character entity (Example: Ȁ)
+      + "entity": Output character entity (Example: &#x200;)
 
 ==============================================================================
 *Return* *Values*

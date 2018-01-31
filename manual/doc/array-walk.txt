@@ -60,8 +60,11 @@ Returns TRUE on success or FALSE on failure.
 ==============================================================================
 *Errors/Exceptions*
 
-If function {callback} requires more parameters than given to it, an error of
-level E_WARNING will be generated each time array_walk() calls {callback}.
+As of PHP 7.1.0, an ArgumentCountError will be thrown if the {callback}
+function requires more than 2 parameters (the value and key of the array
+member). Previously, if the {callback} function required more than 2
+parameters, an error of level E_WARNING would be generated each time 
+array_walk() calls {callback}.
 
 ==============================================================================
 *Examples*

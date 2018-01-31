@@ -7,14 +7,14 @@ session_unset — Free all session variables
 ==============================================================================
 *Description*
 
-    void session_unset ( void )~
+    bool session_unset ( void )~
 
 The session_unset() function frees all session variables currently registered.
 
 ==============================================================================
 *Return* *Values*
 
-No value is returned.
+Returns TRUE on success or FALSE on failure.
 
 ==============================================================================
 *Notes*

@@ -8,8 +8,7 @@ odbc_specialcolumns — Retrieves special columns
 *Description*
 
     resource odbc_specialcolumns ( resource $connection_id , int $type ,~
-    string $qualifier , string $owner , string $table , int $scope , int~
-    $nullable )~
+    string $qualifier , string $table , int $scope , int $nullable )~
 
 Retrieves either the optimal set of columns that uniquely identifies a row in
 the table, or columns that are automatically updated when any value in the row
@@ -32,10 +31,6 @@ is updated by a transaction.
 {qualifier}
 
     The qualifier.
-
-{owner}
-
-    The owner.
 
 {table}
 

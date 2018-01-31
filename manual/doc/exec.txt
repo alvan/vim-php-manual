@@ -70,6 +70,12 @@ system into executing arbitrary commands.
     a file or another output stream. Failing to do so will cause PHP to hang
     until the execution of the program ends.
 
+    Note:
+
+    On Windows exec() will first start cmd.exe to launch the command. If you
+    want to start an external program without starting cmd.exe use |proc_open|
+    with the {bypass_shell} option set.
+
     Note: When safe mode is enabled, you can only execute files within the
     safe_mode_exec_dir. For practical reasons, it is currently not allowed to
     have .. components in the path to the executable.

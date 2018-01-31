@@ -1,0 +1,32 @@
+swoole_async_dns_lookup
+
+(PHP 5 >= 5.2.0, PHP 7, PECL swoole >= 1.9.0)
+
+swoole_async_dns_lookup — Async and non-blocking hostname to IP lookup
+
+==============================================================================
+*Description*
+
+    void swoole_async_dns_lookup ( string $hostname , callable $callback )~
+
+==============================================================================
+*Parameters*
+
+{hostname}
+
+    The host name.
+
+{callback}
+
+    mixed callback ( string $hostname , string $ip )~
+
+    {hostname}
+
+        The host name.
+
+    {IP}
+
+        The IP address.
+
+
+vim:ft=help:

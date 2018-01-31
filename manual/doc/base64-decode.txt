@@ -7,7 +7,7 @@ base64_decode — Decodes data encoded with MIME base64
 ==============================================================================
 *Description*
 
-    string base64_decode ( string $data [, bool $strict = false ] )~
+    string base64_decode ( string $data [, bool $strict = FALSE ] )~
 
 Decodes a base64 encoded {data}.
 
@@ -20,8 +20,9 @@ Decodes a base64 encoded {data}.
 
 {strict}
 
-    Returns FALSE if input contains character from outside the base64
-    alphabet.
+    If the {strict} parameter is set to TRUE then the base64_decode() function
+    will return FALSE if the input contains character from outside the base64
+    alphabet. Otherwise invalid characters will be silently discarded.
 
 ==============================================================================
 *Return* *Values*

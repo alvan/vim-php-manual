@@ -39,7 +39,8 @@ Gets information about the given message number by reading its headers.
 ==============================================================================
 *Return* *Values*
 
-Returns the information in an object with following properties:
+Returns FALSE on error or, if successful, the information in an object with
+following properties:
 
   * toaddress - full to: line, up to 1024 characters
   * to - an array of objects from the To: line, with the following properties:

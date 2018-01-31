@@ -4,10 +4,16 @@ md5
 
 md5 — Calculate the md5 hash of a string
 
+Warning
+
+It is not recommended to use this function to secure passwords, due to the
+fast nature of this hashing algorithm. See the Password Hashing FAQ for
+details and best practices.
+
 ==============================================================================
 *Description*
 
-    string md5 ( string $str [, bool $raw_output = false ] )~
+    string md5 ( string $str [, bool $raw_output = FALSE ] )~
 
 Calculates the MD5 hash of {str} using the >> RSA Data Security, Inc. MD5
 Message-Digest Algorithm, and returns that hash.
@@ -41,14 +47,6 @@ Example #1 A md5() example
         echo "Would you like a green or red apple?";
     }
 <?>
-
-==============================================================================
-*Notes*
-
-    Note: Secure password hashing
-
-    It is not recommended to use this function to secure passwords, due to the
-    fast nature of this hashing algorithm. See here for details.
 
 ==============================================================================
 *See* *Also*

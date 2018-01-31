@@ -32,6 +32,7 @@ Possible values for the returned string are:
   * "array"
   * "object"
   * "resource"
+  * "resource (closed)" as of PHP 7.2.0
   * "NULL"
   * "unknown type"
 
@@ -57,6 +58,13 @@ double
 NULL
 object
 string
+
+==============================================================================
+*Changelog*
+
+Version                              Description
+7.2.0   Closed resources are now reported as 'resource (closed)'. Previously
+        the returned value for closed resources were 'unknown type'.
 
 ==============================================================================
 *See* *Also*

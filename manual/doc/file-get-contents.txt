@@ -8,7 +8,7 @@ file_get_contents — Reads entire file into a string
 *Description*
 
     string file_get_contents ( string $filename [, bool $use_include_path =~
-    false [, resource $context [, int $offset = 0 [, int $maxlen ]]]] )~
+    FALSE [, resource $context [, int $offset = 0 [, int $maxlen ]]]] )~
 
 This function is similar to |file|, except that file_get_contents() returns
 the file in a string, starting at the specified {offset} up to {maxlen} bytes.
@@ -36,7 +36,8 @@ enhance performance.
         Note:
 
         As of PHP 5 the FILE_USE_INCLUDE_PATH constant can be used to trigger
-        include path search.
+        include path search. This is not possible if strict typing is enabled,
+        since FILE_USE_INCLUDE_PATH is an int. Use TRUE instead.
 
 {context}
 

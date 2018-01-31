@@ -7,7 +7,8 @@ pg_fetch_all — Fetches all rows from a result as an array
 ==============================================================================
 *Description*
 
-    array pg_fetch_all ( resource $result )~
+    array pg_fetch_all ( resource $result [, int $result_type = PGSQL_ASSOC ]~
+)~
 
 pg_fetch_all() returns an array that contains all rows (records) in the result
 resource.

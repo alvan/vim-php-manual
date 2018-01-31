@@ -69,6 +69,10 @@ custom error handler cannot be called since it is not registered at that time.
         other words, {errcontext} will contain an array of every variable that
         existed in the scope the error was triggered in. User error handler
         must not modify error context.
+        Warning
+
+        This parameter has been DEPRECATED as of PHP 7.2.0. Relying on it is
+        highly discouraged.
 
     If the function returns FALSE then the normal error handler continues.
 
@@ -91,7 +95,9 @@ and the method name.
 ==============================================================================
 *Changelog*
 
-Version                          Description
+Version                              Description
+7.2.0   {errcontext} became deprecated. Usage of this parameter now emits an
+        E_DEPRECATED notice.
 5.5.0   {error_handler} now accepts NULL.
 5.2.0   The error handler must return FALSE to populate $php_errormsg.
 

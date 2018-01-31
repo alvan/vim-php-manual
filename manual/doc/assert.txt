@@ -21,13 +21,10 @@ result is FALSE.
 Traditional assertions (PHP 5 and 7)
 
 If the {assertion} is given as a string it will be evaluated as PHP code by 
-assert(). The advantages of a string {assertion} are less overhead when
-assertion checking is off and messages containing the {assertion} expression
-when an assertion fails. This means that if you pass a boolean condition as
-{assertion} this condition will not show up as parameter to the assertion
-function which you may have defined with the |assert_options| function, the
-condition is converted to a string before calling that handler function, and
-the boolean FALSE is converted as the empty string.
+assert(). If you pass a boolean condition as {assertion}, this condition will
+not show up as parameter to the assertion function which you may have defined
+with |assert_options|. The condition is converted to a string before calling
+that handler function, and the boolean FALSE is converted as the empty string.
 
 Assertions should be used as a debugging feature only. You may use them for
 sanity-checks that test for conditions that should always be TRUE and that
@@ -96,6 +93,10 @@ assert.exception 0           {exception} wasn't provided
     returns a value, which will be executed and the result used to indicate
     whether the assertion succeeded or failed.
 
+    Warning
+
+    Using string as the {assertion} is DEPRECATED as of PHP 7.2.
+
 {description}
 
     An optional description that will be included in the failure message if
@@ -117,7 +118,10 @@ FALSE if the assertion is false, TRUE otherwise.
 *Changelog*
 
 Version                              Description
-        assert() is now a language construct and not a function. assertion()
+        Usage of a string as the {assertion} became deprecated. It now emits
+7.2.0   an E_DEPRECATED notice when both assert.active and zend.assertions are
+        set to 1.
+        assert() is now a language construct and not a function. {assertion}
 7.0.0   can now be an expression. The second parameter is now interpreted
         either as an {exception} (if a Throwable object is given), or as the
         {description} supported from PHP 5.4.8 onwards.

@@ -7,7 +7,7 @@ fann_test — Test with a set of inputs, and a set of desired outputs
 ==============================================================================
 *Description*
 
-    bool fann_test ( resource $ann , array $input , array $desired_output )~
+    array fann_test ( resource $ann , array $input , array $desired_output )~
 
 Test with a set of inputs, and a set of desired outputs. This operation
 updates the mean square error, but does not change the network in any way.
@@ -31,7 +31,7 @@ updates the mean square error, but does not change the network in any way.
 ==============================================================================
 *Return* *Values*
 
-Returns TRUE on success, or FALSE otherwise.
+Returns test outputs on success, or FALSE on error.
 
 ==============================================================================
 *See* *Also*

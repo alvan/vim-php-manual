@@ -11,14 +11,14 @@ given database and returns an array
 *Description*
 
     array sqlite_array_query ( resource $dbhandle , string $query [, int~
-    $result_type = SQLITE_BOTH [, bool $decode_binary = true ]] )~
+    $result_type = SQLITE_BOTH [, bool $decode_binary = TRUE ]] )~
     array sqlite_array_query ( string $query , resource $dbhandle [, int~
-    $result_type = SQLITE_BOTH [, bool $decode_binary = true ]] )~
+    $result_type = SQLITE_BOTH [, bool $decode_binary = TRUE ]] )~
 
 Object oriented style (method):
 
     public array SQLiteDatabase::arrayQuery ( string $query [, int~
-    $result_type = SQLITE_BOTH [, bool $decode_binary = true ]] )~
+    $result_type = SQLITE_BOTH [, bool $decode_binary = TRUE ]] )~
 
 sqlite_array_query() executes the given query and returns an array of the
 entire result set. It is similar to calling |sqlite_query| and then 

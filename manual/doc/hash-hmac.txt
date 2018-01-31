@@ -8,7 +8,7 @@ hash_hmac — Generate a keyed hash value using the HMAC method
 *Description*
 
     string hash_hmac ( string $algo , string $data , string $key [, bool~
-    $raw_output = false ] )~
+    $raw_output = FALSE ] )~
 
 ==============================================================================
 *Parameters*
@@ -16,7 +16,7 @@ hash_hmac — Generate a keyed hash value using the HMAC method
 {algo}
 
     Name of selected hashing algorithm (i.e. "md5", "sha256", "haval160,4",
-    etc..) See |hash_algos| for a list of supported algorithms.
+    etc..) See |hash_hmac_algos| for a list of supported algorithms.
 
 {data}
 
@@ -39,6 +39,13 @@ unless {raw_output} is set to true in which case the raw binary representation
 of the message digest is returned. Returns FALSE when {algo} is unknown.
 
 ==============================================================================
+*Changelog*
+
+Version                              Description
+7.2.0   Usage of non-cryptographic hash functions (adler32, crc32, crc32b,
+        fnv132, fnv1a32, fnv164, fnv1a64, joaat) was disabled.
+
+==============================================================================
 *Examples*
 
 Example #1 hash_hmac() example
@@ -56,7 +63,8 @@ b8e7ae12510bdfb1812e463a7f086122cf37e4f7
 *See* *Also*
 
   * |hash| - Generate a hash value (message digest)
-  * |hash_algos| - Return a list of registered hashing algorithms
+  * |hash_hmac_algos| - Return a list of registered hashing algorithms
+    suitable for hash_hmac
   * |hash_init| - Initialize an incremental hashing context
   * |hash_hmac_file| - Generate a keyed hash value using the HMAC method and
     the contents of a given file

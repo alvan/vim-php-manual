@@ -20,11 +20,21 @@ signs them using the certificate and its matching private key specified by
 
 {infilename}
 
+    The input file you are intending to digitally sign.
+
 {outfilename}
+
+    The file which the digital signature will be written to.
 
 {signcert}
 
+    The X.509 certificate used to digitally sign infilename. See Key/
+    Certificate parameters for a list of valid values.
+
 {privkey}
+
+    {privkey} is the private key corresponding to signcert. See Public/Private
+    Key parameters for a list of valid values.
 
 {headers}
 

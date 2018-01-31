@@ -13,14 +13,14 @@ the next row from a result set as an array
 *Description*
 
     array sqlite_fetch_array ( resource $result [, int $result_type =~
-    SQLITE_BOTH [, bool $decode_binary = true ]] )~
+    SQLITE_BOTH [, bool $decode_binary = TRUE ]] )~
 
 Object oriented style (method):
 
     array SQLiteResult::fetch ([ int $result_type = SQLITE_BOTH [, bool~
-    $decode_binary = true ]] )~
+    $decode_binary = TRUE ]] )~
     array SQLiteUnbuffered::fetch ([ int $result_type = SQLITE_BOTH [, bool~
-    $decode_binary = true ]] )~
+    $decode_binary = TRUE ]] )~
 
 Fetches the next row from the given {result} handle. If there are no more
 rows, returns FALSE, otherwise returns an associative array representing the

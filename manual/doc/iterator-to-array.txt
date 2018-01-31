@@ -7,7 +7,7 @@ iterator_to_array — Copy the iterator into an array
 ==============================================================================
 *Description*
 
-    array iterator_to_array ( Traversable $iterator [, bool $use_keys = true~
+    array iterator_to_array ( Traversable $iterator [, bool $use_keys = TRUE~
     ] )~
 
 Copy the elements of an iterator into an array.
@@ -24,10 +24,10 @@ Copy the elements of an iterator into an array.
     Whether to use the iterator element keys as index.
 
     In PHP 5.5 and later, if a key is an array or object, a warning will be
-    generated. NULL keys will be converted to an empty string, double keys
-    will be truncated to their integer counterpart, resource keys will
-    generate a warning and be converted to their resource ID, and boolean keys
-    will be converted to integers.
+    generated. NULL keys will be converted to an empty string, float keys will
+    be truncated to their integer counterpart, resource keys will generate a
+    warning and be converted to their resource ID, and boolean keys will be
+    converted to integers.
 
         Note:
 

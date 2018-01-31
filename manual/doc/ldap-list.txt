@@ -9,7 +9,7 @@ ldap_list — Single-level search
 
     resource ldap_list ( resource $link_identifier , string $base_dn , string~
     $filter [, array $attributes [, int $attrsonly [, int $sizelimit [, int~
-    $timelimit [, int $deref ]]]]] )~
+    $timelimit [, int $deref [, array $serverctrls ]]]]]] )~
 
 Performs the search for a specified {filter} on the directory with the scope
 LDAP_SCOPE_ONELEVEL.

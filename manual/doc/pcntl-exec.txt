@@ -7,7 +7,7 @@ pcntl_exec — Executes specified program in current process space
 ==============================================================================
 *Description*
 
-    bool pcntl_exec ( string $path [, array $args [, array $envs ]] )~
+    void pcntl_exec ( string $path [, array $args [, array $envs ]] )~
 
 Executes the program with the given arguments.
 
@@ -35,7 +35,7 @@ Executes the program with the given arguments.
 ==============================================================================
 *Return* *Values*
 
-Returns FALSE on error and does not return on success.
+Returns NULL on success or FALSE on failure.
 
 
 vim:ft=help:

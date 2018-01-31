@@ -12,7 +12,7 @@ jdtounix — Convert Julian Day to Unix timestamp
 This function will return a Unix timestamp corresponding to the Julian Day
 given in {jday} or FALSE if {jday} is not inside the Unix epoch (Gregorian
 years between 1970 and 2037 or 2440588 <= {jday} <= 2465342 ). The time
-returned is localtime (and not GMT).
+returned is UTC.
 
 ==============================================================================
 *Parameters*
@@ -24,7 +24,7 @@ returned is localtime (and not GMT).
 ==============================================================================
 *Return* *Values*
 
-The unix timestamp for the start of the given julian day.
+The unix timestamp for the start (midnight, not noon) of the given Julian day.
 
 ==============================================================================
 *See* *Also*

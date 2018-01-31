@@ -8,7 +8,7 @@ tcpwrap_check — Performs a tcpwrap check
 *Description*
 
     bool tcpwrap_check ( string $daemon , string $address [, string $user [,~
-    bool $nodns = false ]] )~
+    bool $nodns = FALSE ]] )~
 
 This function consults the /etc/hosts.allow and /etc/hosts.deny files to check
 if access to service {daemon} should be granted or denied for a client.

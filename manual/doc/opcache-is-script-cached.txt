@@ -1,13 +1,13 @@
 opcache_is_script_cached
 
-(PHP 5 >= 5.6.0, PHP 7, PECL ZendOpcache >= 7.0.4)
+(PHP 5 >= 5.5.11, PHP 7, PECL ZendOpcache >= 7.0.4)
 
 opcache_is_script_cached — Tells whether a script is cached in OPCache
 
 ==============================================================================
 *Description*
 
-    boolean opcache_is_script_cached ( string $file )~
+    bool opcache_is_script_cached ( string $file )~
 
 This function checks if a PHP script has been cached in OPCache. This can be
 used to more easily detect the "warming" of the cache for a particular script.

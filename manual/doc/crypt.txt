@@ -12,9 +12,9 @@ crypt — One-way string hashing
 crypt() will return a hashed string using the standard Unix DES-based
 algorithm or alternative algorithms that may be available on the system.
 
-The {salt} parameter is optional. However, crypt() creates a weak password
-without the {salt}. PHP 5.6 or later raise an E_NOTICE error without it. Make
-sure to specify a strong enough salt for better security.
+The {salt} parameter is optional. However, crypt() creates a weak hash without
+the {salt}. PHP 5.6 or later raise an E_NOTICE error without it. Make sure to
+specify a strong enough salt for better security.
 
 |password_hash| uses a strong hash, generates a strong salt, and applies
 proper rounds automatically. |password_hash| is a simple crypt() wrapper and

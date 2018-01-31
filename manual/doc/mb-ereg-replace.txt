@@ -31,13 +31,7 @@ Scans {string} for matches to {pattern}, then replaces the matched text with
     The string being checked.
 
 {option}
-    Matching condition can be set by {option} parameter. If i is specified for
-    this parameter, the case will be ignored. If x is specified, white space
-    will be ignored. If m is specified, match will be executed in multiline
-    mode and line break will be included in '.'. If p is specified, match will
-    be executed in POSIX mode, line break will be considered as normal
-    character. If e is specified, {replacement} string will be evaluated as
-    PHP expression.
+    The search option. See |mb_regex_set_options| for explanation.
 
 ==============================================================================
 *Return* *Values*

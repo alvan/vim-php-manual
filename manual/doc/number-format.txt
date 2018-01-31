@@ -62,8 +62,8 @@ Version                              Description
 Example #1 number_format() Example
 
 For instance, French notation usually use two decimals, comma (',') as decimal
-separator, and space (' ') as thousand separator. This is achieved with this
-line :
+separator, and space (' ') as thousand separator. The following example
+demonstrates various way to format a number:
 
 <?php >
 
@@ -84,6 +84,13 @@ line :
     // 1234.57
 
 <?>
+
+==============================================================================
+*Changelog*
+
+Version                              Description
+7.2.0   number_format() was changed to not being able to return -0, previously
+        -0 could be returned for cases like where {number} would be -0.01.
 
 ==============================================================================
 *See* *Also*

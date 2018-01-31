@@ -7,7 +7,7 @@ hash_copy — Copy hashing context
 ==============================================================================
 *Description*
 
-    resource hash_copy ( resource $context )~
+    HashContext hash_copy ( HashContext $context )~
 
 ==============================================================================
 *Parameters*
@@ -19,7 +19,13 @@ hash_copy — Copy hashing context
 ==============================================================================
 *Return* *Values*
 
-Returns a copy of Hashing Context resource.
+Returns a copy of Hashing Context.
+
+==============================================================================
+*Changelog*
+
+Version                    Description
+7.2.0   Accept and return HashContext instead of resource.
 
 ==============================================================================
 *Examples*

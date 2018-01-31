@@ -7,7 +7,7 @@ unpack — Unpack data from binary string
 ==============================================================================
 *Description*
 
-    array unpack ( string $format , string $data )~
+    array unpack ( string $format , string $data [, int $offset = 0 ] )~
 
 Unpacks from a binary string into an array according to the given {format}.
 
@@ -27,6 +27,10 @@ number behind the given name.
 
     The packed data.
 
+{offset}
+
+    The offset to begin unpacking from.
+
 ==============================================================================
 *Return* *Values*
 
@@ -36,6 +40,8 @@ Returns an associative array containing unpacked elements of binary string.
 *Changelog*
 
 Version                              Description
+7.2.0   float and double types supports both Big Endian and Little Endian.
+7.1.0   The optional {offset} has been added.
         Changes were made to bring this function into line with Perl:
 
         The "a" code now retains trailing NULL bytes.

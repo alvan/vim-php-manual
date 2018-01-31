@@ -1,6 +1,6 @@
 mcrypt_list_algorithms
 
-(PHP 4 >= 4.0.2, PHP 5, PHP 7)
+(PHP 4 >= 4.0.2, PHP 5, PHP 7 < 7.2.0, PECL mcrypt >= 1.0.0)
 
 mcrypt_list_algorithms — Gets an array of all supported ciphers
 
@@ -37,15 +37,34 @@ Returns an array with all the supported algorithms.
 Example #1 mcrypt_list_algorithms() Example
 
 <?php >
-        $algorithms = mcrypt_list_algorithms("/usr/local/lib/libmcrypt");
-
-        foreach ($algorithms as $cipher) {
-            echo "$cipher<br />\n";
-        }
+    $algorithms = mcrypt_list_algorithms();
+    print_r($algorithms);
 <?>
 
-The example above will produce a list with all supported algorithms in the "/
-usr/local/lib/libmcrypt" directory.
+The above example will output something similar to:
+
+Array
+(
+    [0] => cast-128
+    [1] => gost
+    [2] => rijndael-128
+    [3] => twofish
+    [4] => arcfour
+    [5] => cast-256
+    [6] => loki97
+    [7] => rijndael-192
+    [8] => saferplus
+    [9] => wake
+    [10] => blowfish-compat
+    [11] => des
+    [12] => rijndael-256
+    [13] => serpent
+    [14] => xtea
+    [15] => blowfish
+    [16] => enigma
+    [17] => rc2
+    [18] => tripledes
+)
 
 
 vim:ft=help:

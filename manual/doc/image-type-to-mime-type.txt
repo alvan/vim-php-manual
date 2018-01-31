@@ -44,6 +44,7 @@ IMAGETYPE_IFF                           image/iff
 IMAGETYPE_WBMP                          image/vnd.wap.wbmp
 IMAGETYPE_XBM                           image/xbm
 IMAGETYPE_ICO                           image/vnd.microsoft.icon
+IMAGETYPE_WEBP                          image/webp
 
 ==============================================================================
 *Examples*
@@ -66,8 +67,8 @@ Example #1 image_type_to_mime_type() example
 
   * |getimagesize| - Get the size of an image
   * |exif_imagetype| - Determine the type of an image
-  * |exif_read_data| - Reads the EXIF headers from JPEG or TIFF
-  * |exif_thumbnail| - Retrieve the embedded thumbnail of a TIFF or JPEG image
+  * |exif_read_data| - Reads the EXIF headers from an image file
+  * |exif_thumbnail| - Retrieve the embedded thumbnail of an image
 
 
 vim:ft=help:

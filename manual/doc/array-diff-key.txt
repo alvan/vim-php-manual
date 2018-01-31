@@ -31,8 +31,8 @@ on the keys instead of the values.
 ==============================================================================
 *Return* *Values*
 
-Returns an array containing all the entries from {array1} whose keys are not
-present in any of the other arrays.
+Returns an array containing all the entries from {array1} whose keys are
+absent from all of the other arrays.
 
 ==============================================================================
 *Examples*
@@ -44,10 +44,29 @@ $key1 === (string) $key2 . In other words a strict type check is executed so
 the string representation must be the same.
 
 <?php >
-    $array1 = array('blue'  => 1, 'red'  => 2, 'green'  => 3, 'purple' => 4);
-    $array2 = array('green' => 5, 'blue' => 6, 'yellow' => 7, 'cyan'   => 8);
+    $array1 = array('blue' => 1, 'red' => 2, 'green' => 3, 'purple' => 4);
+    $array2 = array('green' => 5, 'yellow' => 7, 'cyan' => 8);
 
     var_dump(array_diff_key($array1, $array2));
+<?>
+
+The above example will output:
+
+array(3) {
+  ["blue"]=>
+  int(1)
+  ["red"]=>
+  int(2)
+  ["purple"]=>
+  int(4)
+}
+
+<?php >
+    $array1 = array('blue' => 1, 'red'  => 2, 'green' => 3, 'purple' => 4);
+    $array2 = array('green' => 5, 'yellow' => 7, 'cyan' => 8);
+    $array3 = array('blue' => 6, 'yellow' => 7, 'mauve' => 8);
+
+    var_dump(array_diff_key($array1, $array2, $array3));
 <?>
 
 The above example will output:

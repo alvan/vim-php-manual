@@ -7,7 +7,7 @@ pcntl_wait — Waits on or returns the status of a forked child
 ==============================================================================
 *Description*
 
-    int pcntl_wait ( int &$status [, int $options = 0 ] )~
+    int pcntl_wait ( int &$status [, int $options = 0 [, array &$rusage ]] )~
 
 The wait function suspends execution of the current process until a child has
 exited, or until a signal is delivered whose action is to terminate the

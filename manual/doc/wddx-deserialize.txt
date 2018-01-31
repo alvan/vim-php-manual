@@ -11,6 +11,14 @@ wddx_deserialize — Unserializes a WDDX packet
 
 Unserializes a WDDX {packet}.
 
+Warning
+
+Do not pass untrusted user input to wddx_deserialize(). Unserialization can
+result in code being loaded and executed due to object instantiation and
+autoloading, and a malicious user may be able to exploit this. Use a safe,
+standard data interchange format such as JSON (via |json_decode| and 
+|json_encode|) if you need to pass serialized data to the user.
+
 ==============================================================================
 *Parameters*
 
@@ -23,15 +31,6 @@ Unserializes a WDDX {packet}.
 
 Returns the deserialized value which can be a string, a number or an array.
 Note that structures are deserialized into associative arrays.
-
-==============================================================================
-*Notes*
-
-Warning
-
-Do not pass untrusted user input to wddx_deserialize(). Unserialization can
-result in code being loaded and executed due to object instantiation and
-autoloading, and a malicious user may be able to exploit this.
 
 
 vim:ft=help:

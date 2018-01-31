@@ -26,7 +26,9 @@ value, consider using |random_int|, |random_bytes|, or
     allow you to create a range larger than this, or consider using |mt_rand|
     instead.
 
-    Note: As of PHP 7.1.0, rand() has been made an alias of |mt_rand|.
+    Note: As of PHP 7.1.0, rand() uses the same random number generator as 
+    |mt_rand|. To preserve backwards compatibility rand() allows {max} to be
+    smaller than {min} as opposed to returning FALSE as |mt_rand|.
 
 ==============================================================================
 *Parameters*
@@ -48,7 +50,10 @@ inclusive).
 ==============================================================================
 *Changelog*
 
-Version                 Description
+Version                              Description
+        rand() has received a bug fix for a modulo bias bug. This means that
+7.2.0   sequences generated with a specific seed may differ from PHP 7.1 on
+        64-bit machines.
 7.1.0   rand() has been made an alias of |mt_rand|.
 
 ==============================================================================

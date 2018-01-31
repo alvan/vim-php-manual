@@ -3,26 +3,31 @@ stats_rand_gen_noncentral_t
 (PECL stats >= 1.0.0)
 
 stats_rand_gen_noncentral_t — Generates a single random deviate from a
-noncentral T distribution
+non-central t-distribution
 
 ==============================================================================
 *Description*
 
     float stats_rand_gen_noncentral_t ( float $df , float $xnonc )~
-Warning
 
-This function is currently not documented; only its argument list is
-available.
+Returns a random deviate from the non-central t-distribution with the degrees
+of freedom, {df}, and the non-centrality parameter, {xnonc}.
 
 ==============================================================================
 *Parameters*
 
 {df}
 
+    The degrees of freedom
+
 {xnonc}
+
+    The non-centrality parameter
 
 ==============================================================================
 *Return* *Values*
+
+A random deviate
 
 
 vim:ft=help:

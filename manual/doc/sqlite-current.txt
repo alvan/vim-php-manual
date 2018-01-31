@@ -13,14 +13,14 @@ the current row from a result set as an array
 *Description*
 
     array sqlite_current ( resource $result [, int $result_type = SQLITE_BOTH~
-    [, bool $decode_binary = true ]] )~
+    [, bool $decode_binary = TRUE ]] )~
 
 Object oriented style (method):
 
     array SQLiteResult::current ([ int $result_type = SQLITE_BOTH [, bool~
-    $decode_binary = true ]] )~
+    $decode_binary = TRUE ]] )~
     array SQLiteUnbuffered::current ([ int $result_type = SQLITE_BOTH [, bool~
-    $decode_binary = true ]] )~
+    $decode_binary = TRUE ]] )~
 
 sqlite_current() is identical to |sqlite_fetch_array| except that it does not
 advance to the next row prior to returning the data; it returns the data from

@@ -2,26 +2,31 @@ stats_dens_pmf_poisson
 
 (PECL stats >= 1.0.0)
 
-stats_dens_pmf_poisson — Not documented
+stats_dens_pmf_poisson — Probability mass function of the Poisson distribution
 
 ==============================================================================
 *Description*
 
     float stats_dens_pmf_poisson ( float $x , float $lb )~
-Warning
 
-This function is currently not documented; only its argument list is
-available.
+Returns the probability mass at {x}, where the random variable follows the
+Poisson distribution whose parameter is {lb}.
 
 ==============================================================================
 *Parameters*
 
 {x}
 
+    The value at which the probability mass is calculated
+
 {lb}
+
+    The parameter of the Poisson distribution
 
 ==============================================================================
 *Return* *Values*
+
+The probability mass at {x} or FALSE for failure.
 
 
 vim:ft=help:

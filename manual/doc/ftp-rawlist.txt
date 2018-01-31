@@ -7,8 +7,8 @@ ftp_rawlist — Returns a detailed list of files in the given directory
 ==============================================================================
 *Description*
 
-    mixed ftp_rawlist ( resource $ftp_stream , string $directory [, bool~
-    $recursive = false ] )~
+    array ftp_rawlist ( resource $ftp_stream , string $directory [, bool~
+    $recursive = FALSE ] )~
 
 ftp_rawlist() executes the FTP `LIST` command, and returns the result as an
 array.
@@ -75,6 +75,7 @@ array(3) {
 *See* *Also*
 
   * |ftp_nlist| - Returns a list of files in the given directory
+  * |ftp_mlsd| - Returns a list of files in the given directory
 
 
 vim:ft=help:

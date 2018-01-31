@@ -7,7 +7,7 @@ session_write_close — Write session data and end session
 ==============================================================================
 *Description*
 
-    void session_write_close ( void )~
+    bool session_write_close ( void )~
 
 End the current session and store session data.
 
@@ -22,7 +22,7 @@ done.
 ==============================================================================
 *Return* *Values*
 
-No value is returned.
+Returns TRUE on success or FALSE on failure.
 
 ==============================================================================
 *See* *Also*

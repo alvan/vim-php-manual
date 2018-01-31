@@ -7,7 +7,7 @@ sem_acquire — Acquire a semaphore
 ==============================================================================
 *Description*
 
-    bool sem_acquire ( resource $sem_identifier [, bool $nowait = false ] )~
+    bool sem_acquire ( resource $sem_identifier [, bool $nowait = FALSE ] )~
 
 sem_acquire() by default blocks (if necessary) until the semaphore can be
 acquired. A process attempting to acquire a semaphore which it has already

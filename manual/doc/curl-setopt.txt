@@ -910,6 +910,12 @@ Sets an option on the given cURL session handle.
                                                                       7.0.7.
     CURLOPT_QUOTE          An array of FTP commands to execute on the
                            server prior to the FTP request.
+                           Provide a custom address for a specific    Added in
+                           host and port pair. An array of hostname,  cURL
+    CURLOPT_RESOLVE        port, and IP address strings, each element 7.21.3.
+                           separated by a colon. In the format: array Available
+                           ("example.com:80:127.0.0.1")               since PHP
+                                                                      5.5.0.
 
     {value} should be a stream resource (using |fopen|, for example) for the
     following values of the {option} parameter:

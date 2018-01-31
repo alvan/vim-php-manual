@@ -7,7 +7,8 @@ ldap_delete — Delete an entry from a directory
 ==============================================================================
 *Description*
 
-    bool ldap_delete ( resource $link_identifier , string $dn )~
+    bool ldap_delete ( resource $link_identifier , string $dn [, array~
+    $serverctrls ] )~
 
 Deletes a particular entry in LDAP directory.
 

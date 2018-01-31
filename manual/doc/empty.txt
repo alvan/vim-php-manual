@@ -36,7 +36,7 @@ does not generate a warning if the variable does not exist.
 Returns FALSE if {var} exists and has a non-empty, non-zero value. Otherwise
 returns TRUE.
 
-The following things are considered to be empty:
+The following values are considered to be empty:
 
   * "" (an empty string)
   * 0 (0 as an integer)
@@ -45,7 +45,6 @@ The following things are considered to be empty:
   * NULL
   * FALSE
   * array() (an empty array)
-  * $var; (a variable declared, but without a value)
 
 ==============================================================================
 *Changelog*

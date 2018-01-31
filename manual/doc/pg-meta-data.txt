@@ -8,7 +8,7 @@ pg_meta_data — Get meta data for table
 *Description*
 
     array pg_meta_data ( resource $connection , string $table_name [, bool~
-    $extended ] )~
+    $extended = FALSE ] )~
 
 pg_meta_data() returns table definition for table_name as an array.
 
@@ -102,8 +102,8 @@ Version                              Description
 ==============================================================================
 *See* *Also*
 
-  * |pg_convert| - Convert associative array values into suitable for SQL
-    statement
+  * |pg_convert| - Convert associative array values into forms suitable for
+    SQL statements
 
 
 vim:ft=help:

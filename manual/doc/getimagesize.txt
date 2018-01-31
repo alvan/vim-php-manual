@@ -16,6 +16,15 @@ correspondent HTTP content type.
 
 getimagesize() can also return some more information in {imageinfo} parameter.
 
+Caution
+
+This function expects {filename} to be a valid image file. If a non-image file
+is supplied, it may be incorrectly detected as an image and the function will
+return successfully, but the array may contain nonsensical values.
+
+Do not use getimagesize() to check that a given file is a valid image. Use a
+purpose-built solution such as the Fileinfo extension instead.
+
     Note: Note that JPC and JP2 are capable of having components with
     different bit depths. In this case, the value for "bits" is the highest
     bit depth encountered. Also, JP2 files may contain multiple JPEG 2000
@@ -24,6 +33,11 @@ getimagesize() can also return some more information in {imageinfo} parameter.
 
     Note: The information about icons are retrieved from the icon with the
     highest bitrate.
+
+    Note: GIF images consist of one or more frames, where each frame may only
+    occupy part of the image. The size of the image which is reported by 
+    getimagesize() is the overall size (read from the logical screen
+    descriptor).
 
 ==============================================================================
 *Parameters*
@@ -150,23 +164,16 @@ Example #4 getimagesize() returning IPTC
 
     This function does not require the GD image library.
 
-    Note:
-
-    This function expects {filename} to be a valid image file. If a non-image
-    file is supplied, it may be incorrectly detected as an image and the
-    function will return successfully.
-
-    Do not use getimagesize() to check that a given file is a valid image. Use
-    a purpose-built solution such as the Fileinfo extension instead.
-
 ==============================================================================
 *See* *Also*
 
   * |image_type_to_mime_type| - Get Mime-Type for image-type returned by
     getimagesize, exif_read_data, exif_thumbnail, exif_imagetype
   * |exif_imagetype| - Determine the type of an image
-  * |exif_read_data| - Reads the EXIF headers from JPEG or TIFF
-  * |exif_thumbnail| - Retrieve the embedded thumbnail of a TIFF or JPEG image
+  * |exif_read_data| - Reads the EXIF headers from an image file
+  * |exif_thumbnail| - Retrieve the embedded thumbnail of an image
+  * |imagesx| - Get image width
+  * |imagesy| - Get image height
 
 
 vim:ft=help:

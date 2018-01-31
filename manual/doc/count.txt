@@ -40,8 +40,8 @@ arrays are implemented and used in PHP.
 ==============================================================================
 *Return* *Values*
 
-Returns the number of elements in {array_or_countable}. If the parameter is
-not an array or not an object with implemented Countable interface, 1 will be
+Returns the number of elements in {array_or_countable}. When the parameter is
+neither an array nor an object with implemented Countable interface, 1 will be
 returned. There is one exception, if {array_or_countable} is NULL, 0 will be
 returned.
 
@@ -60,21 +60,28 @@ Example #1 count() example
     $a[0] = 1;
     $a[1] = 3;
     $a[2] = 5;
-    $result = count($a);
-    // $result == 3
+    var_dump(count($a));
 
     $b[0]  = 7;
     $b[5]  = 9;
     $b[10] = 11;
-    $result = count($b);
-    // $result == 3
+    var_dump(count($b));
 
-    $result = count(null);
-    // $result == 0
+    var_dump(count(null));
 
-    $result = count(false);
-    // $result == 1
+    var_dump(count(false));
 <?>
+
+The above example will output:
+
+int(3)
+int(3)
+
+Warning: count(): Parameter must be an array or an object that implements Countable in … on line 12 // as of PHP 7.2
+int(0)
+
+Warning: count(): Parameter must be an array or an object that implements Countable in … on line 14 // as of PHP 7.2
+int(1)
 
 Example #2 Recursive count() example
 
@@ -89,6 +96,13 @@ Example #2 Recursive count() example
     echo count($food); // output 2
 
 <?>
+
+==============================================================================
+*Changelog*
+
+Version                              Description
+7.2.0   count() will now yield a warning on invalid countable types passed to
+        the {array_or_countable} parameter.
 
 ==============================================================================
 *See* *Also*

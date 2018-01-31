@@ -8,7 +8,7 @@ one
 ==============================================================================
 *Description*
 
-    bool session_regenerate_id ([ bool $delete_old_session = false ] )~
+    bool session_regenerate_id ([ bool $delete_old_session = FALSE ] )~
 
 session_regenerate_id() will replace the current session id with a new one,
 and keep the current session information.
@@ -125,7 +125,7 @@ Example #2 Avoiding lost session by session_regenerate_id()
                session_commit();
                session_id($_SESSION['new_session_id']);
                // New session ID should exist
-               settion_start();
+               session_start();
                return;
            }
        }

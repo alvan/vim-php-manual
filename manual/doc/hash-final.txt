@@ -7,7 +7,7 @@ hash_final — Finalize an incremental hash and return resulting digest
 ==============================================================================
 *Description*
 
-    string hash_final ( resource $context [, bool $raw_output = false ] )~
+    string hash_final ( HashContext $context [, bool $raw_output = FALSE ] )~
 
 ==============================================================================
 *Parameters*
@@ -26,6 +26,12 @@ hash_final — Finalize an incremental hash and return resulting digest
 Returns a string containing the calculated message digest as lowercase hexits
 unless {raw_output} is set to true in which case the raw binary representation
 of the message digest is returned.
+
+==============================================================================
+*Changelog*
+
+Version               Description
+7.2.0   Accept HashContext instead of resource.
 
 ==============================================================================
 *Examples*

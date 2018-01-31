@@ -1,13 +1,13 @@
 pcntl_signal_get_handler
 
-(PHP 7.1)
+(PHP 7 >= 7.1.0)
 
 pcntl_signal_get_handler — Get the current handler for specified signal
 
 ==============================================================================
 *Description*
 
-    int|string pcntl_signal_get_handler ( int $signo )~
+    mixed pcntl_signal_get_handler ( int $signo )~
 
 The pcntl_signal_get_handler() function will get the current handler for the
 specified {signo}.

@@ -2,24 +2,27 @@ stats_rand_gen_t
 
 (PECL stats >= 1.0.0)
 
-stats_rand_gen_t — Generates a single random deviate from a T distribution
+stats_rand_gen_t — Generates a single random deviate from a t-distribution
 
 ==============================================================================
 *Description*
 
     float stats_rand_gen_t ( float $df )~
-Warning
 
-This function is currently not documented; only its argument list is
-available.
+Returns a random deviate from the t-distribution with the degrees of freedom,
+{df}.
 
 ==============================================================================
 *Parameters*
 
 {df}
 
+    The degrees of freedom
+
 ==============================================================================
 *Return* *Values*
+
+A random deviate
 
 
 vim:ft=help:

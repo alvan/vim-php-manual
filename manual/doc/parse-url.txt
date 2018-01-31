@@ -10,7 +10,8 @@ parse_url — Parse a URL and return its components
     mixed parse_url ( string $url [, int $component = -1 ] )~
 
 This function parses a URL and returns an associative array containing any of
-the various components of the URL that are present.
+the various components of the URL that are present. The values of the array
+elements are not URL decoded.
 
 This function is not meant to validate the given URL, it only breaks it up
 into the above listed parts. Partial URLs are also accepted, parse_url() tries
@@ -134,7 +135,7 @@ array(3) {
 
     Note:
 
-    This function doesn't work with relative URLs.
+    This function may not give correct results for relative URLs.
 
     Note:
 
