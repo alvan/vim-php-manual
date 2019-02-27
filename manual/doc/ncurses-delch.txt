@@ -4,31 +4,30 @@ ncurses_delch
 
 ncurses_delch — Delete character at current position, move rest of line left
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool ncurses_delch ( void )~
+  ncurses_delch ( void ) : bool~
 Warning
 
 This function is EXPERIMENTAL. The behaviour of this function, its name, and
-surrounding documentation may change without notice in a future release of
-PHP. This function should be used at your own risk.
+surrounding documentation may change without notice in a future release of PHP.
+This function should be used at your own risk.
 
 Deletes the character under the cursor. All characters to the right of the
 cursor on the same line are moved to the left one position and the last
 character on the line is filled with a blank. The cursor position does not
 change.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns FALSE on success, TRUE otherwise.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |ncurses_deleteln| - Delete line at current position, move rest of screen
-    up
+ * |ncurses_deleteln| - Delete line at current position, move rest of screen up
 
 
 vim:ft=help:

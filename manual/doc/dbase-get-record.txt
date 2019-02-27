@@ -4,26 +4,25 @@ dbase_get_record
 
 dbase_get_record — Gets a record from a database as an indexed array
 
-==============================================================================
+===============================================================================
 *Description*
 
-    array dbase_get_record ( resource $dbase_identifier , int $record_number~
-)~
+  dbase_get_record ( resource $dbase_identifier , int $record_number ) : array~
 
 Gets a record from a database as an indexed array.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {dbase_identifier}
 
-    The database link identifier, returned by |dbase_open| or |dbase_create|.
+  The database link identifier, returned by |dbase_open| or |dbase_create|.
 
 {record_number}
 
-    The index of the record between 1 and dbase_numrecords($dbase_identifier).
+  The index of the record between 1 and dbase_numrecords($dbase_identifier).
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 An indexed array with the record. This array will also include an associative
@@ -32,25 +31,24 @@ key named deleted which is set to 1 if the record has been marked for deletion
 
 Each field is converted to the appropriate PHP type, except:
 
-  * Dates are left as strings.
-  * DateTime values are converted to strings.
-  * Integers outside the range PHP_INT_MIN..PHP_INT_MAX are returned as
-    strings.
-  * Before dbase 7.0.0, booleans (L) were converted to 1 or 0.
+ * Dates are left as strings.
+ * DateTime values are converted to strings.
+ * Integers outside the range PHP_INT_MIN..PHP_INT_MAX are returned as strings.
+ * Before dbase 7.0.0, booleans (L) were converted to 1 or 0.
 
 On error, dbase_get_record() will return FALSE.
 
-==============================================================================
+===============================================================================
 *Changelog*
 
   Version                         Description
 dbase 7.0.0 {dbase_identifier} is now a resource instead of an int.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |dbase_get_record_with_names| - Gets a record from a database as an
-    associative array
+ * |dbase_get_record_with_names| - Gets a record from a database as an
+  associative array
 
 
 vim:ft=help:

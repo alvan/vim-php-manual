@@ -4,11 +4,11 @@ stream_get_line
 
 stream_get_line — Gets line from stream resource up to a given delimiter
 
-==============================================================================
+===============================================================================
 *Description*
 
-    string stream_get_line ( resource $handle , int $length [, string $ending~
-    ] )~
+  stream_get_line ( resource $handle , int $length [, string $ending ] ) :~
+  string~
 
 Gets a line from the given handle.
 
@@ -20,22 +20,22 @@ This function is nearly identical to |fgets| except in that it allows end of
 line delimiters other than the standard \n, \r, and \r\n, and does not return
 the delimiter itself.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {handle}
 
-    A valid file handle.
+  A valid file handle.
 
 {length}
 
-    The number of bytes to read from the handle.
+  The number of bytes to read from the handle.
 
 {ending}
 
-    An optional string delimiter.
+  An optional string delimiter.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns a string of up to {length} bytes read from the file pointed to by
@@ -43,12 +43,12 @@ Returns a string of up to {length} bytes read from the file pointed to by
 
 If an error occurs, returns FALSE.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |fread| - Binary-safe file read
-  * |fgets| - Gets line from file pointer
-  * |fgetc| - Gets character from file pointer
+ * |fread| - Binary-safe file read
+ * |fgets| - Gets line from file pointer
+ * |fgetc| - Gets character from file pointer
 
 
 vim:ft=help:

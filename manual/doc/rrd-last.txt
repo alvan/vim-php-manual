@@ -4,21 +4,21 @@ rrd_last
 
 rrd_last — Gets unix timestamp of the last sample
 
-==============================================================================
+===============================================================================
 *Description*
 
-    int rrd_last ( string $filename )~
+  rrd_last ( string $filename ) : int~
 
 Returns the UNIX timestamp of the most recent update of the RRD database.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {filename}
 
-    RRD database file name.
+  RRD database file name.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Integer as unix timestamp of the most recent data from the RRD database.

@@ -4,34 +4,34 @@ yaz_scan_result
 
 yaz_scan_result — Returns Scan Response result
 
-==============================================================================
+===============================================================================
 *Description*
 
-    array yaz_scan_result ( resource $id [, array &$result ] )~
+  yaz_scan_result ( resource $id [, array &$result ] ) : array~
 
-yaz_scan_result() returns terms and associated information as received from
-the server in the last performed |yaz_scan|.
+yaz_scan_result() returns terms and associated information as received from the
+server in the last performed |yaz_scan|.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {id}
 
-    The connection resource returned by |yaz_connect|.
+  The connection resource returned by |yaz_connect|.
 
 {result}
 
-    If given, this array will be modified to hold additional information taken
-    from the Scan Response:
-      + number - Number of entries returned
+  If given, this array will be modified to hold additional information taken
+  from the Scan Response:
+   + number - Number of entries returned
 
-      + stepsize - Step size
+   + stepsize - Step size
 
-      + position - Position of term
+   + position - Position of term
 
-      + status - Scan status
+   + status - Scan status
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns an array (0..n-1) where n is the number of terms returned. Each value

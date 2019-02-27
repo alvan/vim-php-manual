@@ -4,11 +4,11 @@ PDF_setcolor
 
 PDF_setcolor — Set fill and stroke color
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool PDF_setcolor ( resource $p , string $fstype , string $colorspace ,~
-    float $c1 , float $c2 , float $c3 , float $c4 )~
+  PDF_setcolor ( resource $p , string $fstype , string $colorspace , float $c1~
+  , float $c2 , float $c3 , float $c4 ) : bool~
 
 Sets the current color space and color. Returns TRUE on success or FALSE on
 failure.

@@ -4,30 +4,32 @@ hash_algos
 
 hash_algos — Return a list of registered hashing algorithms
 
-==============================================================================
+===============================================================================
 *Description*
 
-    array hash_algos ( void )~
+  hash_algos ( void ) : array~
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns a numerically indexed array containing the list of supported hashing
 algorithms.
 
-==============================================================================
+===============================================================================
 *Changelog*
 
-Version                              Description
+Version                               Description
+7.1.0   Support for sha512/224, sha512/256, sha3-224, sha3-256, sha3-384 and
+        sha3-512 has been added.
         Support for gost-crypto was added. This implements the GOST hash
-5.6.0   function using the CryptoPro S-box tables as specified by >> RFC 4357,
+5.6.0   function using the CryptoPro S-box tables as specified by » RFC 4357,
         section 11.2.
-5.4.0   Support for joaat, fnv132 and fnv164 was added. Support for Salsa10
-        and Salsa20 was removed.
+5.4.0   Support for joaat, fnv132 and fnv164 was added. Support for Salsa10 and
+        Salsa20 was removed.
 5.3.0   Support for md2, ripemd256, ripemd320, salsa10, salsa20, snefru256 and
         sha224 was added
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 hash_algos() example
@@ -36,7 +38,7 @@ As of PHP 5.6.0, hash_algos() will return the following list of algorithm
 names.
 
 <?php >
-    print_r(hash_algos());
+  print_r(hash_algos());
 <?>
 
 The above example will output something similar to:
@@ -91,11 +93,11 @@ Array
     [45] => haval256,5
 )
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |hash_hmac_algos| - Return a list of registered hashing algorithms
-    suitable for hash_hmac
+ * |hash_hmac_algos| - Return a list of registered hashing algorithms suitable
+  for hash_hmac
 
 
 vim:ft=help:

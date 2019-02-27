@@ -1,0 +1,38 @@
+ldap_add_ext
+
+(PHP 7 >= 7.3.0)
+
+ldap_add_ext — Add entries to LDAP directory
+
+===============================================================================
+*Description*
+
+  ldap_add_ext ( resource $link_identifier , string $dn , array $entry [,~
+  array $serverctrls = array() ] ) : resource~
+
+Does the same thing as |ldap_add| but returns the LDAP result resource to be
+parsed with |ldap_parse_result|.
+
+===============================================================================
+*Parameters*
+
+See |ldap_add|
+
+===============================================================================
+*Return* *Values*
+
+Returns an LDAP result identifier or FALSE on error.
+
+===============================================================================
+*Notes*
+
+  Note: This function is binary-safe.
+
+===============================================================================
+*See* *Also*
+
+ * |ldap_add| - Add entries to LDAP directory
+ * |ldap_parse_result| - Extract information from result
+
+
+vim:ft=help:

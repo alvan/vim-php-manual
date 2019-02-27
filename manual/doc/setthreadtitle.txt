@@ -4,26 +4,26 @@ setthreadtitle
 
 setthreadtitle — Set the thread title
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool setthreadtitle ( string $title )~
+  setthreadtitle ( string $title ) : bool~
 
 Sets the thread title.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {title}
 
-    The title to use as the thread title.
+  The title to use as the thread title.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 setthreadtitle() example
@@ -32,7 +32,7 @@ Running the example below will change the thread title (visible with ps c for
 example).
 
 <?php >
-    setthreadtitle("myscript");
+  setthreadtitle("myscript");
 <?>
 
 The above example will output something similar to:
@@ -41,11 +41,11 @@ $ ps c
   PID TTY      STAT   TIME COMMAND
  1178 pts/3    S      0:00 myscript
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |pcntl_fork| - Forks the currently running process
-  * |setproctitle| - Set the process title
+ * |pcntl_fork| - Forks the currently running process
+ * |setproctitle| - Set the process title
 
 
 vim:ft=help:

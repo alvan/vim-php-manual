@@ -5,22 +5,22 @@ pg_connect_poll
 pg_connect_poll — Poll the status of an in-progress asynchronous PostgreSQL
 connection attempt
 
-==============================================================================
+===============================================================================
 *Description*
 
-    int pg_connect_poll ( resource $connection )~
+  pg_connect_poll ( resource $connection ) : int~
 
 pg_connect_poll() polls the status of a PostgreSQL connection created by
 calling |pg_connect| with the PGSQL_CONNECT_ASYNC option.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {connection}
 
-    PostgreSQL database connection resource.
+  PostgreSQL database connection resource.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns PGSQL_POLLING_FAILED, PGSQL_POLLING_READING, PGSQL_POLLING_WRITING,

@@ -4,36 +4,36 @@ xhprof_disable
 
 xhprof_disable — Stops xhprof profiler
 
-==============================================================================
+===============================================================================
 *Description*
 
-    array xhprof_disable ( void )~
+  xhprof_disable ( void ) : array~
 
 Stops the profiler, and returns xhprof data from the run.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 This function has no parameters.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 An array of xhprof data, from the run.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 xhprof_disable() example
 
 <?php >
-    xhprof_enable();
+  xhprof_enable();
 
-    $foo = strlen("foo bar");
+  $foo = strlen("foo bar");
 
-    $xhprof_data = xhprof_disable();
+  $xhprof_data = xhprof_disable();
 
-    print_r($xhprof_data);
+  print_r($xhprof_data);
 <?>
 
 The above example will output something similar to:

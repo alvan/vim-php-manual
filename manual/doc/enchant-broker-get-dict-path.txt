@@ -4,34 +4,33 @@ enchant_broker_get_dict_path
 
 enchant_broker_get_dict_path — Get the directory path for a given backend
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool enchant_broker_get_dict_path ( resource $broker , int $dict_type )~
+  enchant_broker_get_dict_path ( resource $broker , int $dict_type ) : bool~
 
 Get the directory path for a given backend.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {broker}
 
-    Broker resource.
+  Broker resource.
 
 {dict_type}
 
-    The type of the dictionaries, i.e. ENCHANT_MYSPELL or ENCHANT_ISPELL.
+  The type of the dictionaries, i.e. ENCHANT_MYSPELL or ENCHANT_ISPELL.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns the path of the dictionary directory on success or FALSE on failure.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |enchant_broker_set_dict_path| - Set the directory path for a given
-    backend
+ * |enchant_broker_set_dict_path| - Set the directory path for a given backend
 
 
 vim:ft=help:

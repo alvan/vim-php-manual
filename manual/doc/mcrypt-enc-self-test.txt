@@ -9,22 +9,22 @@ Warning
 This function has been DEPRECATED as of PHP 7.1.0. Relying on this function is
 highly discouraged.
 
-==============================================================================
+===============================================================================
 *Description*
 
-    int mcrypt_enc_self_test ( resource $td )~
+  mcrypt_enc_self_test ( resource $td ) : int~
 
 This function runs the self test on the algorithm specified by the descriptor
 {td}.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {td}
 
-    The encryption descriptor.
+  The encryption descriptor.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 If the self test succeeds it returns FALSE. In case of an error, it returns

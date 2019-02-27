@@ -4,23 +4,23 @@ ob_get_status
 
 ob_get_status — Get status of output buffers
 
-==============================================================================
+===============================================================================
 *Description*
 
-    array ob_get_status ([ bool $full_status = FALSE ] )~
+  ob_get_status ([ bool $full_status = FALSE ] ) : array~
 
 ob_get_status() returns status information on either the top level output
 buffer or all active output buffer levels if {full_status} is set to TRUE.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {full_status}
 
-    TRUE to return all active output buffer levels. If FALSE or not set, only
-    the top level output buffer is returned.
+  TRUE to return all active output buffer levels. If FALSE or not set, only the
+  top level output buffer is returned.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 If called without the {full_status} parameter or with {full_status} = FALSE a
@@ -85,12 +85,11 @@ chunk_size Chunk size as set by |ob_start|
 size       ...
 blocksize  ...
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |ob_get_level| - Return the nesting level of the output buffering
-    mechanism
-  * |ob_list_handlers| - List all output handlers in use
+ * |ob_get_level| - Return the nesting level of the output buffering mechanism
+ * |ob_list_handlers| - List all output handlers in use
 
 
 vim:ft=help:

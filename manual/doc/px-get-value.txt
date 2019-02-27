@@ -4,30 +4,30 @@ px_get_value
 
 px_get_value — Gets a value
 
-==============================================================================
+===============================================================================
 *Description*
 
-    float px_get_value ( resource $pxdoc , string $name )~
+  px_get_value ( resource $pxdoc , string $name ) : float~
 
 Gets various values.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {pxdoc}
 
-    Resource identifier of the paradox database as returned by |px_new|.
+  Resource identifier of the paradox database as returned by |px_new|.
 
 {name}
 
-    {name} can be one of the following.
+  {name} can be one of the following.
 
-    numprimkeys
+  numprimkeys
 
-        The number of primary keys. Paradox databases always use the first
-        numprimkeys fields for the primary index.
+    The number of primary keys. Paradox databases always use the first
+    numprimkeys fields for the primary index.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns the value of the parameter or FALSE on failure.

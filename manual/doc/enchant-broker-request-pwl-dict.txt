@@ -4,39 +4,39 @@ enchant_broker_request_pwl_dict
 
 enchant_broker_request_pwl_dict — Creates a dictionary using a PWL file
 
-==============================================================================
+===============================================================================
 *Description*
 
-    resource enchant_broker_request_pwl_dict ( resource $broker , string~
-    $filename )~
+  enchant_broker_request_pwl_dict ( resource $broker , string $filename ) :~
+  resource~
 
 Creates a dictionary using a PWL file. A PWL file is personal word file one
 word per line.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {broker}
 
-    Broker resource
+  Broker resource
 
 {filename}
 
-    Path to the PWL file. If there is no such file, a new one will be created
-    if possible.
+  Path to the PWL file. If there is no such file, a new one will be created if
+  possible.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns a dictionary resource on success or FALSE on failure.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |enchant_dict_describe| - Describes an individual dictionary
-  * |enchant_broker_dict_exists| - Whether a dictionary exists or not. Using
-    non-empty tag
-  * |enchant_broker_free_dict| - Free a dictionary resource
+ * |enchant_dict_describe| - Describes an individual dictionary
+ * |enchant_broker_dict_exists| - Whether a dictionary exists or not. Using
+  non-empty tag
+ * |enchant_broker_free_dict| - Free a dictionary resource
 
 
 vim:ft=help:

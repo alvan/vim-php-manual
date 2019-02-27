@@ -4,22 +4,22 @@ gettimeofday
 
 gettimeofday — Get current time
 
-==============================================================================
+===============================================================================
 *Description*
 
-    mixed gettimeofday ([ bool $return_float = FALSE ] )~
+  gettimeofday ([ bool $return_float = FALSE ] ) : mixed~
 
 This is an interface to gettimeofday(2). It returns an associative array
 containing the data returned from the system call.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {return_float}
 
-    When set to TRUE, a float instead of an array is returned.
+  When set to TRUE, a float instead of an array is returned.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 By default an array is returned. If {return_float} is set, then a float is
@@ -27,26 +27,26 @@ returned.
 
 Array keys:
 
-  * "sec" - seconds since the Unix Epoch
-  * "usec" - microseconds
-  * "minuteswest" - minutes west of Greenwich
-  * "dsttime" - type of dst correction
+ * "sec" - seconds since the Unix Epoch
+ * "usec" - microseconds
+ * "minuteswest" - minutes west of Greenwich
+ * "dsttime" - type of dst correction
 
-==============================================================================
+===============================================================================
 *Changelog*
 
 Version               Description
 5.1.0   The {return_float} parameter was added.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 gettimeofday() example
 
 <?php >
-    print_r(gettimeofday());
+  print_r(gettimeofday());
 
-    echo gettimeofday(true);
+  echo gettimeofday(true);
 <?>
 
 The above example will output something similar to:

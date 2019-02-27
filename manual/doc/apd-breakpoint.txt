@@ -4,34 +4,34 @@ apd_breakpoint
 
 apd_breakpoint — Stops the interpreter and waits on a CR from the socket
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool apd_breakpoint ( int $debug_level )~
+  apd_breakpoint ( int $debug_level ) : bool~
 
-This can be used to stop the running of your script, and await responses on
-the connected socket. To step the program, just send enter (a blank line), or
-enter a php command to be executed.
+This can be used to stop the running of your script, and await responses on the
+connected socket. To step the program, just send enter (a blank line), or enter
+a php command to be executed.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 { debug_level}
 
-    An integer which is formed by adding together the XXX_TRACE constants.
+  An integer which is formed by adding together the XXX_TRACE constants.
 
-    It is not recommended to use MEMORY_TRACE. It is very slow and does not
-    appear to be accurate. ASSIGNMENT_TRACE is not implemented yet.
+  It is not recommended to use MEMORY_TRACE. It is very slow and does not
+  appear to be accurate. ASSIGNMENT_TRACE is not implemented yet.
 
-    To turn on all functional traces (TIMING, FUNCTIONS, ARGS SUMMARY (like
-    strace -c)) use the value 99
+  To turn on all functional traces (TIMING, FUNCTIONS, ARGS SUMMARY (like
+  strace -c)) use the value 99
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 Typical session using tcplisten

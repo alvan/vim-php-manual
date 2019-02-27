@@ -4,21 +4,21 @@ enchant_broker_get_error
 
 enchant_broker_get_error — Returns the last error of the broker
 
-==============================================================================
+===============================================================================
 *Description*
 
-    string enchant_broker_get_error ( resource $broker )~
+  enchant_broker_get_error ( resource $broker ) : string~
 
 Returns the last error which occurred in this broker.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {broker}
 
-    Broker resource.
+  Broker resource.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Return the msg string if an error was found or FALSE

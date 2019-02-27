@@ -4,22 +4,22 @@ fann_shuffle_train_data
 
 fann_shuffle_train_data — Shuffles training data, randomizing the order
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool fann_shuffle_train_data ( resource $train_data )~
+  fann_shuffle_train_data ( resource $train_data ) : bool~
 
 Shuffles training data, randomizing the order. This is recommended for
 incremental training, while it have no influence during batch training.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {train_data}
 
-    Neural network training data resource.
+  Neural network training data resource.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success, or FALSE otherwise.

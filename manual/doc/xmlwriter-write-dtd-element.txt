@@ -7,47 +7,47 @@ xmlwriter_write_dtd_element
 XMLWriter::writeDtdElement -- xmlwriter_write_dtd_element — Write full DTD
 element tag
 
-==============================================================================
+===============================================================================
 *Description*
 
 Object oriented style
 
-    bool XMLWriter::writeDtdElement ( string $name , string $content )~
+  XMLWriter::writeDtdElement ( string $name , string $content ) : bool~
 
 Procedural style
 
-    bool xmlwriter_write_dtd_element ( resource $xmlwriter , string $name ,~
-    string $content )~
+  xmlwriter_write_dtd_element ( resource $xmlwriter , string $name , string~
+  $content ) : bool~
 
 Writes a full DTD element.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 { xmlwriter}
 
-    Only for procedural calls. The XMLWriter resource that is being modified.
-    This resource comes from a call to |xmlwriter_open_uri| or 
-    |xmlwriter_open_memory|.
+  Only for procedural calls. The XMLWriter resource that is being modified.
+  This resource comes from a call to |xmlwriter_open_uri| or 
+  |xmlwriter_open_memory|.
 
 {name}
 
-    The name of the DTD element.
+  The name of the DTD element.
 
 {content}
 
-    The content of the element.
+  The content of the element.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |XMLWriter::startDtdElement| - Create start DTD element
-  * |XMLWriter::endDtdElement| - End current DTD element
+ * |XMLWriter::startDtdElement| - Create start DTD element
+ * |XMLWriter::endDtdElement| - End current DTD element
 
 
 vim:ft=help:

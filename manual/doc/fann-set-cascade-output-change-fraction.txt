@@ -5,35 +5,35 @@ fann_set_cascade_output_change_fraction
 fann_set_cascade_output_change_fraction — Sets the cascade output change
 fraction
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool fann_set_cascade_output_change_fraction ( resource $ann , float~
-    $cascade_output_change_fraction )~
+  fann_set_cascade_output_change_fraction ( resource $ann , float~
+  $cascade_output_change_fraction ) : bool~
 
 Sets the cascade output change fraction.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {ann}
 
-    Neural network resource.
+  Neural network resource.
 
 {cascade_output_change_fraction}
 
-    The cascade output change fraction.
+  The cascade output change fraction.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success, or FALSE otherwise.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |fann_get_cascade_output_change_fraction| - Returns the cascade output
-    change fraction
+ * |fann_get_cascade_output_change_fraction| - Returns the cascade output
+  change fraction
 
 
 vim:ft=help:

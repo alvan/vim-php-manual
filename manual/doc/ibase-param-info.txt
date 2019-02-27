@@ -4,36 +4,36 @@ ibase_param_info
 
 ibase_param_info — Return information about a parameter in a prepared query
 
-==============================================================================
+===============================================================================
 *Description*
 
-    array ibase_param_info ( resource $query , int $param_number )~
+  ibase_param_info ( resource $query , int $param_number ) : array~
 
 Returns an array with information about a parameter after a query has been
 prepared.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {query}
 
-    An InterBase prepared query handle.
+  An InterBase prepared query handle.
 
 {param_number}
 
-    Parameter offset.
+  Parameter offset.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns an array with the following keys: name, alias, relation, length and
 type.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |ibase_field_info| - Get information about a field
-  * |ibase_num_params| - Return the number of parameters in a prepared query
+ * |ibase_field_info| - Get information about a field
+ * |ibase_num_params| - Return the number of parameters in a prepared query
 
 
 vim:ft=help:

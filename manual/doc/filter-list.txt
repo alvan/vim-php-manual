@@ -4,25 +4,25 @@ filter_list
 
 filter_list — Returns a list of all supported filters
 
-==============================================================================
+===============================================================================
 *Description*
 
-    array filter_list ( void )~
+  filter_list ( void ) : array~
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
-Returns an array of names of all supported filters, empty array if there are
-no such filters. Indexes of this array are not filter IDs, they can be
-obtained with |filter_id| from a name instead.
+Returns an array of names of all supported filters, empty array if there are no
+such filters. Indexes of this array are not filter IDs, they can be obtained
+with |filter_id| from a name instead.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 A filter_list() example
 
 <?php >
-    print_r(filter_list());
+  print_r(filter_list());
 <?>
 
 The above example will output something similar to:

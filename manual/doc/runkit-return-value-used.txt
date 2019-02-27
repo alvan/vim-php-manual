@@ -5,29 +5,29 @@ runkit_return_value_used
 runkit_return_value_used — Determines if the current functions return value
 will be used
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool runkit_return_value_used ( void )~
+  runkit_return_value_used ( void ) : bool~
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE if the function's return value is used by the calling scope,
 otherwise FALSE
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 runkit_return_value_used() example
 
 <?php >
-    function foo() {
-      var_dump(runkit_return_value_used());
-    }
+  function foo() {
+    var_dump(runkit_return_value_used());
+  }
 
-    foo();
-    $f = foo();
+  foo();
+  $f = foo();
 <?>
 
 The above example will output:

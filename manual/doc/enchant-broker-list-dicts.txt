@@ -4,34 +4,34 @@ enchant_broker_list_dicts
 
 enchant_broker_list_dicts — Returns a list of available dictionaries
 
-==============================================================================
+===============================================================================
 *Description*
 
-    mixed enchant_broker_list_dicts ( resource $broker )~
+  enchant_broker_list_dicts ( resource $broker ) : mixed~
 
 Returns a list of available dictionaries with their details.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {broker}
 
-    Broker resource
+  Broker resource
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 List all available dictionaries for one broker
 
 <?php >
-    $r = enchant_broker_init();
-    $dicts = enchant_broker_list_dicts($r);
-    print_r($dicts);
+  $r = enchant_broker_init();
+  $dicts = enchant_broker_list_dicts($r);
+  print_r($dicts);
 <?>
 
 The above example will output something similar to:
@@ -88,10 +88,10 @@ Array
 
 )
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |enchant_broker_describe| - Enumerates the Enchant providers
+ * |enchant_broker_describe| - Enumerates the Enchant providers
 
 
 vim:ft=help:

@@ -4,26 +4,26 @@ ibase_blob_info
 
 ibase_blob_info — Return blob length and other useful info
 
-==============================================================================
+===============================================================================
 *Description*
 
-    array ibase_blob_info ( resource $link_identifier , string $blob_id )~
-    array ibase_blob_info ( string $blob_id )~
+  ibase_blob_info ( resource $link_identifier , string $blob_id ) : array~
+  ibase_blob_info ( string $blob_id ) : array~
 
 Returns the BLOB length and other useful information.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {link_identifier}
 
-    An InterBase link identifier. If omitted, the last opened link is assumed.
+  An InterBase link identifier. If omitted, the last opened link is assumed.
 
 {blob_id}
 
-    A BLOB id.
+  A BLOB id.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns an array containing information about a BLOB. The information returned

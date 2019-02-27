@@ -4,34 +4,34 @@ fann_set_cascade_min_out_epochs
 
 fann_set_cascade_min_out_epochs — Sets the minimum out epochs
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool fann_set_cascade_min_out_epochs ( resource $ann , int~
-    $cascade_min_out_epochs )~
+  fann_set_cascade_min_out_epochs ( resource $ann , int~
+  $cascade_min_out_epochs ) : bool~
 
 Sets the minimum out epochs.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {ann}
 
-    Neural network resource.
+  Neural network resource.
 
 {cascade_min_out_epochs}
 
-    The minimum out epochs.
+  The minimum out epochs.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success, or FALSE otherwise.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |fann_get_cascade_min_out_epochs| - Returns the minimum out epochs
+ * |fann_get_cascade_min_out_epochs| - Returns the minimum out epochs
 
 
 vim:ft=help:

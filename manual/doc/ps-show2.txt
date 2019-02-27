@@ -4,29 +4,29 @@ ps_show2
 
 ps_show2 — Output a text at current position
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool ps_show2 ( resource $psdoc , string $text , int $len )~
+  ps_show2 ( resource $psdoc , string $text , int $len ) : bool~
 
 Output text at the current position. Do not print more than {len} characters.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {psdoc}
 
-    Resource identifier of the postscript file as returned by |ps_new|.
+  Resource identifier of the postscript file as returned by |ps_new|.
 
 {text}
 
-    The text to be output.
+  The text to be output.
 
 {len}
 
-    The maximum number of characters to print.
+  The maximum number of characters to print.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.

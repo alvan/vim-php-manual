@@ -4,40 +4,39 @@ ifx_create_blob
 
 ifx_create_blob — Creates an blob object
 
-==============================================================================
+===============================================================================
 *Description*
 
-    int ifx_create_blob ( int $type , int $mode , string $param )~
+  ifx_create_blob ( int $type , int $mode , string $param ) : int~
 
 Creates a blob object.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {type}
 
-    1 = TEXT, 0 = BYTE
+  1 = TEXT, 0 = BYTE
 
 {mode}
 
-    0 = blob-object holds the content in memory, 1 = blob-object holds the
-    content in file.
+  0 = blob-object holds the content in memory, 1 = blob-object holds the
+  content in file.
 
 {param}
 
-    if mode = 0: pointer to the content, if mode = 1: pointer to the
-    filestring.
+  if mode = 0: pointer to the content, if mode = 1: pointer to the filestring.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns the new BLOB object-id, or FALSE on errors.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |ifx_copy_blob| - Duplicates the given blob object
-  * |ifx_free_blob| - Deletes the blob object
+ * |ifx_copy_blob| - Duplicates the given blob object
+ * |ifx_free_blob| - Deletes the blob object
 
 
 vim:ft=help:

@@ -4,26 +4,26 @@ stream_is_local
 
 stream_is_local — Checks if a stream is a local stream
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool stream_is_local ( mixed $stream_or_url )~
+  stream_is_local ( mixed $stream_or_url ) : bool~
 
 Checks if a stream, or a URL, is a local one or not.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {stream_or_url}
 
-    The stream resource or URL to check.
+  The stream resource or URL to check.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 stream_is_local() example
@@ -31,8 +31,8 @@ Example #1 stream_is_local() example
 Basic usage example.
 
 <?php >
-    var_dump(stream_is_local("http://example.com"));
-    var_dump(stream_is_local("/etc"));
+  var_dump(stream_is_local("http://example.com"));
+  var_dump(stream_is_local("/etc"));
 <?>
 
 The above example will output something similar to:

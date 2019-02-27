@@ -4,13 +4,12 @@ fbsql_connect
 
 fbsql_connect — Open a connection to a FrontBase Server
 
-==============================================================================
+===============================================================================
 *Description*
 
-    resource fbsql_connect ([ string $hostname =~
-    ini_get("fbsql.default_host") [, string $username =~
-    ini_get("fbsql.default_user") [, string $password =~
-    ini_get("fbsql.default_password") ]]] )~
+  fbsql_connect ([ string $hostname = ini_get("fbsql.default_host")~
+  [, string $username = ini_get("fbsql.default_user") [, string~
+  $password = ini_get("fbsql.default_password") ]]] ) : resource~
 
 fbsql_connect() establishes a connection to a FrontBase server.
 
@@ -21,45 +20,45 @@ opened link will be returned.
 The link to the server will be closed as soon as the execution of the script
 ends, unless it's closed earlier by explicitly calling |fbsql_close|.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {hostname}
 
-    The server host name.
+  The server host name.
 
 {username}
 
-    The user name for the connection.
+  The user name for the connection.
 
 {password}
 
-    The password for the connection.
+  The password for the connection.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns a positive FrontBase link identifier on success, or FALSE on errors.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 fbsql_connect() example
 
 <?php >
 
-    $link = fbsql_connect("localhost", "_SYSTEM", "secret")
-        or die("Could not connect");
-    echo "Connected successfully";
-    fbsql_close($link);
+  $link = fbsql_connect("localhost", "_SYSTEM", "secret")
+      or die("Could not connect");
+  echo "Connected successfully";
+  fbsql_close($link);
 
 <?>
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |fbsql_pconnect| - Open a persistent connection to a FrontBase Server
-  * |fbsql_close| - Close FrontBase connection
+ * |fbsql_pconnect| - Open a persistent connection to a FrontBase Server
+ * |fbsql_close| - Close FrontBase connection
 
 
 vim:ft=help:

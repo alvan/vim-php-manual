@@ -4,27 +4,27 @@ rrd_update
 
 rrd_update — Updates the RRD database
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool rrd_update ( string $filename , array $options )~
+  rrd_update ( string $filename , array $options ) : bool~
 
-Updates the RRD database file. The input data is time interpolated according
-to the properties of the RRD database file.
+Updates the RRD database file. The input data is time interpolated according to
+the properties of the RRD database file.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {filename}
 
-    RRD database file name. This database will be updated.
+  RRD database file name. This database will be updated.
 
 {options}
 
-    Options for updating the RRD database. This is list of strings. See man
-    page of rrd update for whole list of options.
+  Options for updating the RRD database. This is list of strings. See man page
+  of rrd update for whole list of options.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success, FALSE when error occurs.

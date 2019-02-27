@@ -4,22 +4,22 @@ ifx_blobinfile_mode
 
 ifx_blobinfile_mode — Set the default blob mode for all select queries
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool ifx_blobinfile_mode ( int $mode )~
+  ifx_blobinfile_mode ( int $mode ) : bool~
 
 Set the default blob mode for all select queries.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {mode}
 
-    Mode "0" means save Byte-Blobs in memory, and mode "1" means save
-    Byte-Blobs in a file.
+  Mode "0" means save Byte-Blobs in memory, and mode "1" means save Byte-Blobs
+  in a file.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.

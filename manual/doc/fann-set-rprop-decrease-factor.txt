@@ -5,35 +5,35 @@ fann_set_rprop_decrease_factor
 fann_set_rprop_decrease_factor — Sets the decrease factor used during RPROP
 training
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool fann_set_rprop_decrease_factor ( resource $ann , float~
-    $rprop_decrease_factor )~
+  fann_set_rprop_decrease_factor ( resource $ann , float~
+  $rprop_decrease_factor ) : bool~
 
 Sets the decrease factor used during RPROP training.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {ann}
 
-    Neural network resource.
+  Neural network resource.
 
 {rprop_decrease_factor}
 
-    The decrease factor.
+  The decrease factor.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success, or FALSE otherwise.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |fann_get_rprop_decrease_factor| - Returns the increase factor used during
-    RPROP training
+ * |fann_get_rprop_decrease_factor| - Returns the increase factor used during
+  RPROP training
 
 
 vim:ft=help:

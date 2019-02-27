@@ -4,42 +4,42 @@ ldap_parse_exop
 
 ldap_parse_exop — Parse result object from an LDAP extended operation
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool ldap_parse_exop ( resource $link , resource $result [, string~
-    &$retdata [, string &$retoid ]] )~
+  ldap_parse_exop ( resource $link , resource $result [, string &$retdata [,~
+  string &$retoid ]] ) : bool~
 
 Parse LDAP extended operation data from result object {result}
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {link}
 
-    An LDAP link identifier, returned by |ldap_connect|.
+  An LDAP link identifier, returned by |ldap_connect|.
 
 {result}
 
-    An LDAP result resource, returned by |ldap_exop|.
+  An LDAP result resource, returned by |ldap_exop|.
 
 {retdata}
 
-    Will be filled by the response data.
+  Will be filled by the response data.
 
 {retoid}
 
-    Will be filled by the response OID.
+  Will be filled by the response OID.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |ldap_exop| - Performs an extended operation
+ * |ldap_exop| - Performs an extended operation
 
 
 vim:ft=help:

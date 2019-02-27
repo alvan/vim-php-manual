@@ -4,10 +4,10 @@ nsapi_virtual
 
 nsapi_virtual — Perform an NSAPI sub-request
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool nsapi_virtual ( string $uri )~
+  nsapi_virtual ( string $uri ) : bool~
 
 nsapi_virtual() is an NSAPI-specific function which is equivalent to <!--#
 include virtual...--> in SSI (.shtml files). It does an NSAPI sub-request. It
@@ -20,24 +20,24 @@ pending headers are sent too.
 You cannot make recursive requests with this function to other PHP scripts. If
 you want to include PHP scripts, use |include| or |require|.
 
-    Note:
+  Note:
 
-    This function depends on a undocumented feature of the Netscape/iPlanet/
-    Sun webservers. Use |phpinfo| to determine if it is available. In the Unix
-    environment it should always work, in Windows it depends on the name of a
-    ns-httpdXX.dll file.
+  This function depends on a undocumented feature of the Netscape/iPlanet/Sun
+  webservers. Use |phpinfo| to determine if it is available. In the Unix
+  environment it should always work, in Windows it depends on the name of a
+  ns-httpdXX.dll file.
 
-    Read the note about subrequests in the NSAPI section (UNIX, Windows) if
-    you experience this problem.
+  Read the note about subrequests in the NSAPI section (UNIX, Windows) if you
+  experience this problem.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {uri}
 
-    The URI of the script.
+  The URI of the script.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.

@@ -4,35 +4,35 @@ dio_read
 
 dio_read — Reads bytes from a file descriptor
 
-==============================================================================
+===============================================================================
 *Description*
 
-    string dio_read ( resource $fd [, int $len = 1024 ] )~
+  dio_read ( resource $fd [, int $len = 1024 ] ) : string~
 
-The function dio_read() reads and returns {len} bytes from file with
-descriptor {fd}.
+The function dio_read() reads and returns {len} bytes from file with descriptor
+{fd}.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {fd}
 
-    The file descriptor returned by |dio_open|.
+  The file descriptor returned by |dio_open|.
 
 {len}
 
-    The number of bytes to read. If not specified, dio_read() reads 1K sized
-    block.
+  The number of bytes to read. If not specified, dio_read() reads 1K sized
+  block.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 The bytes read from {fd}.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |dio_write| - Writes data to fd with optional truncation at length
+ * |dio_write| - Writes data to fd with optional truncation at length
 
 
 vim:ft=help:

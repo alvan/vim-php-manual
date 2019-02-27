@@ -4,10 +4,10 @@ unpack
 
 unpack — Unpack data from binary string
 
-==============================================================================
+===============================================================================
 *Description*
 
-    array unpack ( string $format , string $data [, int $offset = 0 ] )~
+  unpack ( string $format , string $data [, int $offset = 0 ] ) : array~
 
 Unpacks from a binary string into an array according to the given {format}.
 
@@ -16,30 +16,30 @@ have to name the different format codes and separate them by a slash /. If a
 repeater argument is present, then each of the array keys will have a sequence
 number behind the given name.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {format}
 
-    See |pack| for an explanation of the format codes.
+  See |pack| for an explanation of the format codes.
 
 {data}
 
-    The packed data.
+  The packed data.
 
 {offset}
 
-    The offset to begin unpacking from.
+  The offset to begin unpacking from.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns an associative array containing unpacked elements of binary string.
 
-==============================================================================
+===============================================================================
 *Changelog*
 
-Version                              Description
+Version                               Description
 7.2.0   float and double types supports both Big Endian and Little Endian.
 7.1.0   The optional {offset} has been added.
         Changes were made to bring this function into line with Perl:
@@ -52,15 +52,15 @@ Version                              Description
         The "Z" code was added for NULL-padded strings, and removes trailing
         NULL bytes.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 unpack() example
 
 <?php >
-    $binarydata = "\x04\x00\xa0\x00";
-    $array = unpack("cchars/nint", $binarydata);
-    print_r($array);
+  $binarydata = "\x04\x00\xa0\x00";
+  $array = unpack("cchars/nint", $binarydata);
+  print_r($array);
 <?>
 
 The above example will output:
@@ -74,9 +74,9 @@ Array
 Example #2 unpack() example with a repeater
 
 <?php >
-    $binarydata = "\x04\x00\xa0\x00";
-    $array = unpack("c2chars/nint", $binarydata);
-    print_r($array);
+  $binarydata = "\x04\x00\xa0\x00";
+  $array = unpack("c2chars/nint", $binarydata);
+  print_r($array);
 <?>
 
 The above example will output:
@@ -88,7 +88,7 @@ Array
     [int] => 40960
 )
 
-==============================================================================
+===============================================================================
 *Notes*
 
 Caution
@@ -107,9 +107,9 @@ because the numbering restarts from 1 for each element.
 Example #3 unpack() example with unnamed keys
 
 <?php >
-    $binarydata = "\x32\x42\x00\xa0";
-    $array = unpack("c2/n", $binarydata);
-    var_dump($array);
+  $binarydata = "\x32\x42\x00\xa0";
+  $array = unpack("c2/n", $binarydata);
+  var_dump($array);
 <?>
 
 The above example will output:
@@ -124,10 +124,10 @@ array(2) {
 Note that the first value from the c specifier is overwritten by the first
 value from the n specifier.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |pack| - Pack data into binary string
+ * |pack| - Pack data into binary string
 
 
 vim:ft=help:

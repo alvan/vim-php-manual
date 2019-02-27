@@ -4,29 +4,29 @@ oci_free_descriptor
 
 oci_free_descriptor — Frees a descriptor
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool oci_free_descriptor ( resource $descriptor )~
+  oci_free_descriptor ( resource $descriptor ) : bool~
 
 Frees a descriptor allocated by |oci_new_descriptor|.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-==============================================================================
+===============================================================================
 *Notes*
 
-    Note:
+  Note:
 
-    This function is commonly used as a method OCI-LOB::free.
+  This function is commonly used as a method OCI-LOB::free.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * OCI-LOB::free
+ * OCI-LOB::free
 
 
 vim:ft=help:

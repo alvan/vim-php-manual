@@ -2,53 +2,53 @@ parsekit_compile_string
 
 (PECL parsekit >= 0.2.0)
 
-parsekit_compile_string — Compile a string of PHP code and return the
-resulting op array
+parsekit_compile_string — Compile a string of PHP code and return the resulting
+op array
 
-==============================================================================
+===============================================================================
 *Description*
 
-    array parsekit_compile_string ( string $phpcode [, array &$errors [, int~
-    $options = PARSEKIT_QUIET ]] )~
+  parsekit_compile_string ( string $phpcode [, array &$errors [, int $options~
+  = PARSEKIT_QUIET ]] ) : array~
 Warning
 
 This function is EXPERIMENTAL. The behaviour of this function, its name, and
-surrounding documentation may change without notice in a future release of
-PHP. This function should be used at your own risk.
+surrounding documentation may change without notice in a future release of PHP.
+This function should be used at your own risk.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {phpcode}
 
-    A string containing phpcode. Similar to the argument to |eval|.
+  A string containing phpcode. Similar to the argument to |eval|.
 
 {errors}
 
-    A 2D hash of errors (including fatal errors) encountered during
-    compilation. Returned by reference.
+  A 2D hash of errors (including fatal errors) encountered during compilation.
+  Returned by reference.
 
 {options}
 
-    One of either PARSEKIT_QUIET or PARSEKIT_SIMPLE. To produce varying
-    degrees of verbosity in the returned output.
+  One of either PARSEKIT_QUIET or PARSEKIT_SIMPLE. To produce varying degrees
+  of verbosity in the returned output.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns a complex multi-layer array structure as detailed below.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 parsekit_compile_string() example
 
 <?php >
-      $ops = parsekit_compile_string('
-    echo "Foo\n";
-    ', $errors, PARSEKIT_QUIET);
+    $ops = parsekit_compile_string('
+  echo "Foo\n";
+  ', $errors, PARSEKIT_QUIET);
 
-      var_dump($ops);
+    var_dump($ops);
 <?>
 
 The above example will output:
@@ -151,11 +151,11 @@ array(20) {
   }
 }
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |parsekit_compile_file| - Compile a PHP file and return the resulting op
-    array
+ * |parsekit_compile_file| - Compile a PHP file and return the resulting op
+  array
 
 
 vim:ft=help:

@@ -4,39 +4,45 @@ convert_uudecode
 
 convert_uudecode — Decode a uuencoded string
 
-==============================================================================
+===============================================================================
 *Description*
 
-    string convert_uudecode ( string $data )~
+  convert_uudecode ( string $data ) : string~
 
 convert_uudecode() decodes a uuencoded string.
 
-==============================================================================
+  Note: convert_uudecode() neither accepts the begin nor the end line, which
+  are part of uuencoded files.
+
+===============================================================================
 *Parameters*
 
 {data}
 
-    The uuencoded data.
+  The uuencoded data.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns the decoded data as a string or FALSE on failure.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 convert_uudecode() example
 
 <?php >
-    /* Can you imagine what this will print? :) */
-    echo convert_uudecode("+22!L;W9E(%!(4\"$`\n`");
+  echo convert_uudecode("+22!L;W9E(%!(4\"$`\n`");
 <?>
 
-==============================================================================
+The above example will output:
+
+I love PHP!
+
+===============================================================================
 *See* *Also*
 
-  * |convert_uuencode| - Uuencode a string
+ * |convert_uuencode| - Uuencode a string
 
 
 vim:ft=help:

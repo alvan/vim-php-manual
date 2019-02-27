@@ -5,13 +5,13 @@ swoole_select
 swoole_select — Select the file descriptions which are ready to read/write or
 error in the eventloop
 
-==============================================================================
+===============================================================================
 *Description*
 
-    int swoole_select ( array &$read_array , array &$write_array , array~
-    &$error_array [, float $timeout ] )~
+  swoole_select ( array &$read_array , array &$write_array , array~
+  &$error_array [, float $timeout ] ) : int~
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {read_array}
@@ -22,7 +22,7 @@ error in the eventloop
 
 {timeout}
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 

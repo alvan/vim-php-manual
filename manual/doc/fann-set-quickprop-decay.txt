@@ -4,34 +4,34 @@ fann_set_quickprop_decay
 
 fann_set_quickprop_decay — Sets the quickprop decay factor
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool fann_set_quickprop_decay ( resource $ann , float $quickprop_decay )~
+  fann_set_quickprop_decay ( resource $ann , float $quickprop_decay ) : bool~
 
 Sets the quickprop decay factor.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {ann}
 
-    Neural network resource.
+  Neural network resource.
 
 {quickprop_decay}
 
-    The quickprop decay factor.
+  The quickprop decay factor.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success, or FALSE otherwise.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |fann_get_quickprop_decay| - Returns the decay which is a factor that
-    weights should decrease in each iteration during quickprop training
+ * |fann_get_quickprop_decay| - Returns the decay which is a factor that
+  weights should decrease in each iteration during quickprop training
 
 
 vim:ft=help:

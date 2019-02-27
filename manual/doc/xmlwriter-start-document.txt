@@ -6,51 +6,51 @@ xmlwriter_start_document
 
 XMLWriter::startDocument -- xmlwriter_start_document — Create document tag
 
-==============================================================================
+===============================================================================
 *Description*
 
 Object oriented style
 
-    bool XMLWriter::startDocument ([ string $version = 1.0 [, string~
-    $encoding = NULL [, string $standalone ]]] )~
+  XMLWriter::startDocument ([ string $version = 1.0 [, string $encoding = NULL~
+  [, string $standalone ]]] ) : bool~
 
 Procedural style
 
-    bool xmlwriter_start_document ( resource $xmlwriter [, string $version =~
-    1.0 [, string $encoding = NULL [, string $standalone ]]] )~
+  xmlwriter_start_document ( resource $xmlwriter [, string $version = 1.0 [,~
+  string $encoding = NULL [, string $standalone ]]] ) : bool~
 
 Starts a document.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 { xmlwriter}
 
-    Only for procedural calls. The XMLWriter resource that is being modified.
-    This resource comes from a call to |xmlwriter_open_uri| or 
-    |xmlwriter_open_memory|.
+  Only for procedural calls. The XMLWriter resource that is being modified.
+  This resource comes from a call to |xmlwriter_open_uri| or 
+  |xmlwriter_open_memory|.
 
 {version}
 
-    The version number of the document as part of the XML declaration.
+  The version number of the document as part of the XML declaration.
 
 {encoding}
 
-    The encoding of the document as part of the XML declaration.
+  The encoding of the document as part of the XML declaration.
 
 {standalone}
 
-    yes or no.
+  yes or no.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |XMLWriter::endDocument| - End current document
+ * |XMLWriter::endDocument| - End current document
 
 
 vim:ft=help:

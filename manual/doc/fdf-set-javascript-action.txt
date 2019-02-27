@@ -4,39 +4,39 @@ fdf_set_javascript_action
 
 fdf_set_javascript_action — Sets an javascript action of a field
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool fdf_set_javascript_action ( resource $fdf_document , string~
-    $fieldname , int $trigger , string $script )~
+  fdf_set_javascript_action ( resource $fdf_document , string $fieldname , int~
+  $trigger , string $script ) : bool~
 
 Sets a javascript action for the given field.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {fdf_document}
 
-    The FDF document handle, returned by |fdf_create|, |fdf_open| or 
-    |fdf_open_string|.
+  The FDF document handle, returned by |fdf_create|, |fdf_open| or 
+  |fdf_open_string|.
 
 {fieldname}
 
-    Name of the FDF field, as a string.
+  Name of the FDF field, as a string.
 
 {trigger}
 
 {script}
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |fdf_set_submit_form_action| - Sets a submit form action of a field
+ * |fdf_set_submit_form_action| - Sets a submit form action of a field
 
 
 vim:ft=help:

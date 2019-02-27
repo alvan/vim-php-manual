@@ -4,21 +4,21 @@ eio_realpath
 
 eio_realpath — Get the canonicalized absolute pathname
 
-==============================================================================
+===============================================================================
 *Description*
 
-    resource eio_realpath ( string $path , int $pri , callable $callback [,~
-    string $data = NULL ] )~
+  eio_realpath ( string $path , int $pri , callable $callback [, string $data~
+  = NULL ] ) : resource~
 
-eio_realpath() returns the canonicalized absolute pathname in {result}
-argument of {callback} function.
+eio_realpath() returns the canonicalized absolute pathname in {result} argument
+of {callback} function.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {path}
 
-    Short pathname
+  Short pathname
 
 {pri}
 
@@ -26,23 +26,23 @@ argument of {callback} function.
 
 {data}
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 eio_realpath() example
 
 <?php >
-    var_dump(getcwd());
+  var_dump(getcwd());
 
-    function my_realpath_allback($data, $result) {
-        var_dump($result);
-    }
+  function my_realpath_allback($data, $result) {
+      var_dump($result);
+  }
 
-    eio_realpath("../", EIO_PRI_DEFAULT, "my_realpath_allback");
-    eio_event_loop();
+  eio_realpath("../", EIO_PRI_DEFAULT, "my_realpath_allback");
+  eio_event_loop();
 <?>
 
 The above example will output something similar to:

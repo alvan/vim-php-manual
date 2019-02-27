@@ -11,41 +11,41 @@ Instead, the MySQLi or PDO_MySQL extension should be used. See also MySQL:
 choosing an API guide and related FAQ for more information. Alternatives to
 this function include:
 
-  * mysqli_get_client_info()
-  * PDO::getAttribute(PDO::ATTR_CLIENT_VERSION)
+ * mysqli_get_client_info()
+ * PDO::getAttribute(PDO::ATTR_CLIENT_VERSION)
 
-==============================================================================
+===============================================================================
 *Description*
 
-    string mysql_get_client_info ( void )~
+  mysql_get_client_info ( void ) : string~
 
 mysql_get_client_info() returns a string that represents the client library
 version.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 The MySQL client version.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 mysql_get_client_info() example
 
 <?php >
-    printf("MySQL client info: %s\n", mysql_get_client_info());
+  printf("MySQL client info: %s\n", mysql_get_client_info());
 <?>
 
 The above example will output something similar to:
 
 MySQL client info: 3.23.39
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |mysql_get_host_info| - Get MySQL host info
-  * |mysql_get_proto_info| - Get MySQL protocol info
-  * |mysql_get_server_info| - Get MySQL server info
+ * |mysql_get_host_info| - Get MySQL host info
+ * |mysql_get_proto_info| - Get MySQL protocol info
+ * |mysql_get_server_info| - Get MySQL server info
 
 
 vim:ft=help:

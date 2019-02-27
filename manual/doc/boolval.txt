@@ -4,42 +4,42 @@ boolval
 
 boolval — Get the boolean value of a variable
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool boolval ( mixed $var )~
+  boolval ( mixed $var ) : bool~
 
 Returns the boolean value of {var}.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {var}
 
-    The scalar value being converted to a boolean.
+  The scalar value being converted to a boolean.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 The boolean value of {var}.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 boolval() examples
 
 <?php >
-    echo '0:        '.(boolval(0) ? 'true' : 'false')."\n";
-    echo '42:       '.(boolval(42) ? 'true' : 'false')."\n";
-    echo '0.0:      '.(boolval(0.0) ? 'true' : 'false')."\n";
-    echo '4.2:      '.(boolval(4.2) ? 'true' : 'false')."\n";
-    echo '"":       '.(boolval("") ? 'true' : 'false')."\n";
-    echo '"string": '.(boolval("string") ? 'true' : 'false')."\n";
-    echo '"0":      '.(boolval("0") ? 'true' : 'false')."\n";
-    echo '"1":      '.(boolval("1") ? 'true' : 'false')."\n";
-    echo '[1, 2]:   '.(boolval([1, 2]) ? 'true' : 'false')."\n";
-    echo '[]:       '.(boolval([]) ? 'true' : 'false')."\n";
-    echo 'stdClass: '.(boolval(new stdClass) ? 'true' : 'false')."\n";
+  echo '0:        '.(boolval(0) ? 'true' : 'false')."\n";
+  echo '42:       '.(boolval(42) ? 'true' : 'false')."\n";
+  echo '0.0:      '.(boolval(0.0) ? 'true' : 'false')."\n";
+  echo '4.2:      '.(boolval(4.2) ? 'true' : 'false')."\n";
+  echo '"":       '.(boolval("") ? 'true' : 'false')."\n";
+  echo '"string": '.(boolval("string") ? 'true' : 'false')."\n";
+  echo '"0":      '.(boolval("0") ? 'true' : 'false')."\n";
+  echo '"1":      '.(boolval("1") ? 'true' : 'false')."\n";
+  echo '[1, 2]:   '.(boolval([1, 2]) ? 'true' : 'false')."\n";
+  echo '[]:       '.(boolval([]) ? 'true' : 'false')."\n";
+  echo 'stdClass: '.(boolval(new stdClass) ? 'true' : 'false')."\n";
 <?>
 
 The above example will output:
@@ -56,15 +56,15 @@ The above example will output:
 []:       false
 stdClass: true
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |floatval| - Get float value of a variable
-  * |intval| - Get the integer value of a variable
-  * |strval| - Get string value of a variable
-  * |settype| - Set the type of a variable
-  * |is_bool| - Finds out whether a variable is a boolean
-  * Type juggling
+ * |floatval| - Get float value of a variable
+ * |intval| - Get the integer value of a variable
+ * |strval| - Get string value of a variable
+ * |settype| - Set the type of a variable
+ * |is_bool| - Finds out whether a variable is a boolean
+ * Type juggling
 
 
 vim:ft=help:

@@ -4,38 +4,38 @@ ps_scale
 
 ps_scale — Sets scaling factor
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool ps_scale ( resource $psdoc , float $x , float $y )~
+  ps_scale ( resource $psdoc , float $x , float $y ) : bool~
 
 Sets horizontal and vertical scaling of the coordinate system.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {psdoc}
 
-    Resource identifier of the postscript file as returned by |ps_new|.
+  Resource identifier of the postscript file as returned by |ps_new|.
 
 {x}
 
-    Scaling factor in horizontal direction.
+  Scaling factor in horizontal direction.
 
 {y}
 
-    Scaling factor in vertical direction.
+  Scaling factor in vertical direction.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |ps_rotate| - Sets rotation factor
-  * |ps_translate| - Sets translation
+ * |ps_rotate| - Sets rotation factor
+ * |ps_translate| - Sets translation
 
 
 vim:ft=help:

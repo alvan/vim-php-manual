@@ -4,38 +4,38 @@ gnupg_clearsignkeys
 
 gnupg_clearsignkeys — Removes all keys which were set for signing before
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool gnupg_clearsignkeys ( resource $identifier )~
+  gnupg_clearsignkeys ( resource $identifier ) : bool~
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {identifier}
 
-    The gnupg identifier, from a call to |gnupg_init| or gnupg.
+  The gnupg identifier, from a call to |gnupg_init| or gnupg.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 Procedural gnupg_clearsignkeys() example
 
 <?php >
-    $res = gnupg_init();
-    gnupg_clearsignkeys($res);
+  $res = gnupg_init();
+  gnupg_clearsignkeys($res);
 <?>
 
 Example #2 OO gnupg_clearsignkeys() example
 
 <?php >
-    $gpg = new gnupg();
-    $gpg -> clearsignkeys();
+  $gpg = new gnupg();
+  $gpg -> clearsignkeys();
 <?>
 
 

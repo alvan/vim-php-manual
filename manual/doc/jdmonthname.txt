@@ -4,46 +4,50 @@ jdmonthname
 
 jdmonthname — Returns a month name
 
-==============================================================================
+===============================================================================
 *Description*
 
-    string jdmonthname ( int $julianday , int $mode )~
+  jdmonthname ( int $julianday , int $mode ) : string~
 
 Returns a string containing a month name. {mode} tells this function which
 calendar to convert the Julian Day Count to, and what type of month names are
 to be returned.
 
                                 Calendar modes
-Mode   Meaning                               Values
-0    Gregorian -  Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec
-     abbreviated
-1    Gregorian    January, February, March, April, May, June, July, August,
-                  September, October, November, December
-2    Julian -     Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec
-     abbreviated
-3    Julian       January, February, March, April, May, June, July, August,
-                  September, October, November, December
-4    Jewish       Tishri, Heshvan, Kislev, Tevet, Shevat, AdarI, AdarII,
-                  Nisan, Iyyar, Sivan, Tammuz, Av, Elul
-     French       Vendemiaire, Brumaire, Frimaire, Nivose, Pluviose, Ventose,
-5    Republican   Germinal, Floreal, Prairial, Messidor, Thermidor, Fructidor,
-                  Extra
+          Mode              Meaning                    Values
+CAL_MONTH_GREGORIAN_SHORT Gregorian - Jan, Feb, Mar, Apr, May, Jun, Jul, Aug,
+                          abbreviated Sep, Oct, Nov, Dec
+                                      January, February, March, April, May,
+CAL_MONTH_GREGORIAN_LONG  Gregorian   June, July, August, September, October,
+                                      November, December
+CAL_MONTH_JULIAN_SHORT    Julian -    Jan, Feb, Mar, Apr, May, Jun, Jul, Aug,
+                          abbreviated Sep, Oct, Nov, Dec
+                                      January, February, March, April, May,
+CAL_MONTH_JULIAN_LONG     Julian      June, July, August, September, October,
+                                      November, December
+                                      Tishri, Heshvan, Kislev, Tevet, Shevat,
+CAL_MONTH_JEWISH          Jewish      AdarI, AdarII, Nisan, Iyyar, Sivan,
+                                      Tammuz, Av, Elul
+                                      Vendemiaire, Brumaire, Frimaire, Nivose,
+CAL_MONTH_FRENCH          French      Pluviose, Ventose, Germinal, Floreal,
+                          Republican  Prairial, Messidor, Thermidor, Fructidor,
+                                      Extra
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {jday}
 
-    The Julian Day to operate on
+  The Julian Day to operate on
 
-{calendar}
+{mode}
 
-    The calendar to take the month name from
+  The calendar mode (see table above).
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
-The month name for the given Julian Day and {calendar}.
+The month name for the given Julian Day and {mode}.
 
 
 vim:ft=help:

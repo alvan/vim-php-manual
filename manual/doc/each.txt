@@ -10,26 +10,26 @@ Warning
 This function has been DEPRECATED as of PHP 7.2.0. Relying on this function is
 highly discouraged.
 
-==============================================================================
+===============================================================================
 *Description*
 
-    array each ( array &$array )~
+  each ( array &$array ) : array~
 
 Return the current key and value pair from an array and advance the array
 cursor.
 
-After each() has executed, the array cursor will be left on the next element
-of the array, or past the last element if it hits the end of the array. You
-have to use |reset| if you want to traverse the array again using each.
+After each() has executed, the array cursor will be left on the next element of
+the array, or past the last element if it hits the end of the array. You have
+to use |reset| if you want to traverse the array again using each.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {array}
 
-    The input array.
+  The input array.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns the current key and value pair from the array {array}. This pair is
@@ -40,15 +40,15 @@ the data.
 If the internal pointer for the array points past the end of the array
 contents, each() returns FALSE.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 each() examples
 
 <?php >
-    $foo = array("bob", "fred", "jussi", "jouni", "egon", "marliese");
-    $bar = each($foo);
-    print_r($bar);
+  $foo = array("bob", "fred", "jussi", "jouni", "egon", "marliese");
+  $bar = each($foo);
+  print_r($bar);
 <?>
 
 $bar now contains the following key/value pairs:
@@ -62,9 +62,9 @@ Array
 )
 
 <?php >
-    $foo = array("Robert" => "Bob", "Seppo" => "Sepi");
-    $bar = each($foo);
-    print_r($bar);
+  $foo = array("Robert" => "Bob", "Seppo" => "Sepi");
+  $bar = each($foo);
+  print_r($bar);
 <?>
 
 $bar now contains the following key/value pairs:
@@ -83,12 +83,12 @@ here's an example:
 Example #2 Traversing an array with each()
 
 <?php >
-    $fruit = array('a' => 'apple', 'b' => 'banana', 'c' => 'cranberry');
+  $fruit = array('a' => 'apple', 'b' => 'banana', 'c' => 'cranberry');
 
-    reset($fruit);
-    while (list($key, $val) = each($fruit)) {
-        echo "$key => $val\n";
-    }
+  reset($fruit);
+  while (list($key, $val) = each($fruit)) {
+      echo "$key => $val\n";
+  }
 <?>
 
 The above example will output:
@@ -108,17 +108,17 @@ Warning
 each() will also accept objects, but may return unexpected results. It's
 therefore not recommended to iterate though object properties with each().
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |key| - Fetch a key from an array
-  * |list| - Assign variables as if they were an array
-  * |current| - Return the current element in an array
-  * |reset| - Set the internal pointer of an array to its first element
-  * |next| - Advance the internal pointer of an array
-  * |prev| - Rewind the internal array pointer
-  * foreach
-  * Object Iteration
+ * |key| - Fetch a key from an array
+ * |list| - Assign variables as if they were an array
+ * |current| - Return the current element in an array
+ * |reset| - Set the internal pointer of an array to its first element
+ * |next| - Advance the internal pointer of an array
+ * |prev| - Rewind the internal array pointer
+ * foreach
+ * Object Iteration
 
 
 vim:ft=help:

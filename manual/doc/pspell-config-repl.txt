@@ -4,10 +4,10 @@ pspell_config_repl
 
 pspell_config_repl — Set a file that contains replacement pairs
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool pspell_config_repl ( int $dictionary_link , string $file )~
+  pspell_config_repl ( int $dictionary_link , string $file ) : bool~
 
 Set a file that contains replacement pairs.
 
@@ -19,40 +19,40 @@ misspelled, and a proper suggestion was not found in the list,
 pspell_config_repl() should be used on a config before calling 
 |pspell_new_config|.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {dictionary_link}
 
 {file}
 
-    The file should be writable by whoever PHP runs as (e.g. nobody).
+  The file should be writable by whoever PHP runs as (e.g. nobody).
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 pspell_config_repl()
 
 <?php >
-    $pspell_config = pspell_config_create("en");
-    pspell_config_personal($pspell_config, "/var/dictionaries/custom.pws");
-    pspell_config_repl($pspell_config, "/var/dictionaries/custom.repl");
-    $pspell_link = pspell_new_config($pspell_config);
-    pspell_check($pspell_link, "thecat");
+  $pspell_config = pspell_config_create("en");
+  pspell_config_personal($pspell_config, "/var/dictionaries/custom.pws");
+  pspell_config_repl($pspell_config, "/var/dictionaries/custom.repl");
+  $pspell_link = pspell_new_config($pspell_config);
+  pspell_check($pspell_link, "thecat");
 <?>
 
-==============================================================================
+===============================================================================
 *Notes*
 
-    Note:
+  Note:
 
-    This function will not work unless you have pspell .11.2 and aspell .32.5
-    or later.
+  This function will not work unless you have pspell .11.2 and aspell .32.5 or
+  later.
 
 
 vim:ft=help:

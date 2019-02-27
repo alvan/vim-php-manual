@@ -5,33 +5,33 @@ enchant_dict_is_in_session
 enchant_dict_is_in_session — Whether or not 'word' exists in this
 spelling-session
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool enchant_dict_is_in_session ( resource $dict , string $word )~
+  enchant_dict_is_in_session ( resource $dict , string $word ) : bool~
 
 Tells whether or not a word already exists in the current session.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {dict}
 
-    Dictionary resource
+  Dictionary resource
 
 {word}
 
-    The word to lookup
+  The word to lookup
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE if the word exists or FALSE
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |enchant_dict_add_to_session| - Add 'word' to this spell-checking session
+ * |enchant_dict_add_to_session| - Add 'word' to this spell-checking session
 
 
 vim:ft=help:

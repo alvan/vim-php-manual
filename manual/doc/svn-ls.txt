@@ -5,40 +5,40 @@ svn_ls
 svn_ls — Returns list of directory contents in repository URL, optionally at
 revision number
 
-==============================================================================
+===============================================================================
 *Description*
 
-    array svn_ls ( string $repos_url [, int $revision_no = SVN_REVISION_HEAD~
-    [, bool $recurse = FALSE [, bool $peg = FALSE ]]] )~
+  svn_ls ( string $repos_url [, int $revision_no = SVN_REVISION_HEAD [, bool~
+  $recurse = FALSE [, bool $peg = FALSE ]]] ) : array~
 
 This function queries the repository URL and returns a list of files and
 directories, optionally from a specific revision. This is equivalent to svn
 list $repos_url[@$revision_no]
 
-    Note:
+  Note:
 
-    This function does not work with working copies. {repos_url} must be a
-    repository URL.
+  This function does not work with working copies. {repos_url} must be a
+  repository URL.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {url}
 
-    URL of the repository, eg. http://www.example.com/svnroot. To access a
-    local Subversion repository via filesystem, use the file URI scheme, eg.
-    file:///home/user/svn-repos
+  URL of the repository, eg. http://www.example.com/svnroot. To access a local
+  Subversion repository via filesystem, use the file URI scheme, eg. file:///
+  home/user/svn-repos
 
 {revision}
 
-    Integer revision number to retrieve listing of. When omitted, the HEAD
-    revision is used.
+  Integer revision number to retrieve listing of. When omitted, the HEAD
+  revision is used.
 
 {recurse}
 
-    Enables recursion.
+  Enables recursion.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 On success, this function returns an array file listing in the format of:
@@ -56,22 +56,22 @@ On success, this function returns an array file listing in the format of:
     )
 [1] => ...
 
-==============================================================================
+===============================================================================
 *Notes*
 
 Warning
 
 This function is EXPERIMENTAL. The behaviour of this function, its name, and
-surrounding documentation may change without notice in a future release of
-PHP. This function should be used at your own risk.
+surrounding documentation may change without notice in a future release of PHP.
+This function should be used at your own risk.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 svn_ls() example
 
 <?php >
-    print_r( svn_ls('http://www.example.com/svnroot/') );
+  print_r( svn_ls('http://www.example.com/svnroot/') );
 <?>
 
 The above example will output something similar to:
@@ -100,10 +100,10 @@ Array
         )
 )
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * >> SVN documentation on svn list
+ * » SVN documentation on svn list
 
 
 vim:ft=help:

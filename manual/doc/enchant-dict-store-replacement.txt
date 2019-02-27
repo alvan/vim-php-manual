@@ -4,32 +4,32 @@ enchant_dict_store_replacement
 
 enchant_dict_store_replacement — Add a correction for a word
 
-==============================================================================
+===============================================================================
 *Description*
 
-    void enchant_dict_store_replacement ( resource $dict , string $mis ,~
-    string $cor )~
+  enchant_dict_store_replacement ( resource $dict , string $mis , string $cor~
+  ) : void~
 
-Add a correction for 'mis' using 'cor'. Notes that you replaced @mis with
-@cor, so it's possibly more likely that future occurrences of @mis will be
-replaced with @cor. So it might bump @cor up in the suggestion list.
+Add a correction for 'mis' using 'cor'. Notes that you replaced @mis with @cor,
+so it's possibly more likely that future occurrences of @mis will be replaced
+with @cor. So it might bump @cor up in the suggestion list.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {dict}
 
-    Dictionary resource
+  Dictionary resource
 
 {mis}
 
-    The work to fix
+  The work to fix
 
 {cor}
 
-    The correct word
+  The correct word
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.

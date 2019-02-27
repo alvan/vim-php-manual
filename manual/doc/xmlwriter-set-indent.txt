@@ -6,41 +6,41 @@ xmlwriter_set_indent
 
 XMLWriter::setIndent -- xmlwriter_set_indent — Toggle indentation on/off
 
-==============================================================================
+===============================================================================
 *Description*
 
 Object oriented style
 
-    bool XMLWriter::setIndent ( bool $indent )~
+  XMLWriter::setIndent ( bool $indent ) : bool~
 
 Procedural style
 
-    bool xmlwriter_set_indent ( resource $xmlwriter , bool $indent )~
+  xmlwriter_set_indent ( resource $xmlwriter , bool $indent ) : bool~
 
 Toggles indentation on or off.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 { xmlwriter}
 
-    Only for procedural calls. The XMLWriter resource that is being modified.
-    This resource comes from a call to |xmlwriter_open_uri| or 
-    |xmlwriter_open_memory|.
+  Only for procedural calls. The XMLWriter resource that is being modified.
+  This resource comes from a call to |xmlwriter_open_uri| or 
+  |xmlwriter_open_memory|.
 
 {indent}
 
-    Whether indentation is enabled.
+  Whether indentation is enabled.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |XMLWriter::setIndentString| - Set string used for indenting
+ * |XMLWriter::setIndentString| - Set string used for indenting
 
 
 vim:ft=help:

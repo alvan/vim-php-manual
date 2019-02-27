@@ -4,64 +4,64 @@ ftp_mdtm
 
 ftp_mdtm — Returns the last modified time of the given file
 
-==============================================================================
+===============================================================================
 *Description*
 
-    int ftp_mdtm ( resource $ftp_stream , string $remote_file )~
+  ftp_mdtm ( resource $ftp_stream , string $remote_file ) : int~
 
 ftp_mdtm() gets the last modified time for a remote file.
 
-    Note:
+  Note:
 
-    Not all servers support this feature!
+  Not all servers support this feature!
 
-    Note:
+  Note:
 
-    ftp_mdtm() does not work with directories.
+  ftp_mdtm() does not work with directories.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {ftp_stream}
 
-    The link identifier of the FTP connection.
+  The link identifier of the FTP connection.
 
 {remote_file}
 
-    The file from which to extract the last modification time.
+  The file from which to extract the last modification time.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns the last modified time as a Unix timestamp on success, or -1 on error.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 ftp_mdtm() example
 
 <?php >
 
-    $file = 'somefile.txt';
+  $file = 'somefile.txt';
 
-    // set up basic connection
-    $conn_id = ftp_connect($ftp_server);
+  // set up basic connection
+  $conn_id = ftp_connect($ftp_server);
 
-    // login with username and password
-    $login_result = ftp_login($conn_id, $ftp_user_name, $ftp_user_pass);
+  // login with username and password
+  $login_result = ftp_login($conn_id, $ftp_user_name, $ftp_user_pass);
 
-    //  get the last modified time
-    $buff = ftp_mdtm($conn_id, $file);
+  //  get the last modified time
+  $buff = ftp_mdtm($conn_id, $file);
 
-    if ($buff != -1) {
-        // somefile.txt was last modified on: March 26 2003 14:16:41.
-        echo "$file was last modified on : " . date("F d Y H:i:s.", $buff);
-    } else {
-        echo "Couldn't get mdtime";
-    }
+  if ($buff != -1) {
+      // somefile.txt was last modified on: March 26 2003 14:16:41.
+      echo "$file was last modified on : " . date("F d Y H:i:s.", $buff);
+  } else {
+      echo "Couldn't get mdtime";
+  }
 
-    // close the connection
-    ftp_close($conn_id);
+  // close the connection
+  ftp_close($conn_id);
 
 <?>
 

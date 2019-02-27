@@ -4,36 +4,36 @@ enchant_broker_describe
 
 enchant_broker_describe — Enumerates the Enchant providers
 
-==============================================================================
+===============================================================================
 *Description*
 
-    array enchant_broker_describe ( resource $broker )~
+  enchant_broker_describe ( resource $broker ) : array~
 
 Enumerates the Enchant providers and tells you some rudimentary information
 about them. The same info is provided through phpinfo().
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {broker}
 
-    Broker resource
+  Broker resource
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 List the backends provided by the given broker
 
 <?php >
-    $r = enchant_broker_init();
-    $bprovides = enchant_broker_describe($r);
-    echo "Current broker provides the following backend(s):\n";
-    print_r($bprovides);
+  $r = enchant_broker_init();
+  $bprovides = enchant_broker_describe($r);
+  echo "Current broker provides the following backend(s):\n";
+  print_r($bprovides);
 
 <?>
 

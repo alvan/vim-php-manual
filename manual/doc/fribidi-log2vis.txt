@@ -4,29 +4,29 @@ fribidi_log2vis
 
 fribidi_log2vis — Convert a logical string to a visual one
 
-==============================================================================
+===============================================================================
 *Description*
 
-    string fribidi_log2vis ( string $str , string $direction , int $charset )~
+  fribidi_log2vis ( string $str , string $direction , int $charset ) : string~
 
 Converts a logical string to a visual one.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {str}
 
-    The logical string.
+  The logical string.
 
 {direction}
 
-    One of FRIBIDI_RTL, FRIBIDI_LTR or FRIBIDI_AUTO.
+  One of FRIBIDI_RTL, FRIBIDI_LTR or FRIBIDI_AUTO.
 
 {charset}
 
-    One of the FRIBIDI_CHARSET_XXX constants.
+  One of the FRIBIDI_CHARSET_XXX constants.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns the visual string on success or FALSE on failure.

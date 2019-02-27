@@ -7,42 +7,42 @@ xmlwriter_start_dtd_attlist
 XMLWriter::startDtdAttlist -- xmlwriter_start_dtd_attlist — Create start DTD
 AttList
 
-==============================================================================
+===============================================================================
 *Description*
 
 Object oriented style
 
-    bool XMLWriter::startDtdAttlist ( string $name )~
+  XMLWriter::startDtdAttlist ( string $name ) : bool~
 
 Procedural style
 
-    bool xmlwriter_start_dtd_attlist ( resource $xmlwriter , string $name )~
+  xmlwriter_start_dtd_attlist ( resource $xmlwriter , string $name ) : bool~
 
 Starts a DTD attribute list.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 { xmlwriter}
 
-    Only for procedural calls. The XMLWriter resource that is being modified.
-    This resource comes from a call to |xmlwriter_open_uri| or 
-    |xmlwriter_open_memory|.
+  Only for procedural calls. The XMLWriter resource that is being modified.
+  This resource comes from a call to |xmlwriter_open_uri| or 
+  |xmlwriter_open_memory|.
 
 {name}
 
-    The attribute list name.
+  The attribute list name.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |XMLWriter::endDtdAttlist| - End current DTD AttList
-  * |XMLWriter::writeDtdAttlist| - Write full DTD AttList tag
+ * |XMLWriter::endDtdAttlist| - End current DTD AttList
+ * |XMLWriter::writeDtdAttlist| - Write full DTD AttList tag
 
 
 vim:ft=help:

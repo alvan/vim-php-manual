@@ -4,45 +4,45 @@ hash_copy
 
 hash_copy — Copy hashing context
 
-==============================================================================
+===============================================================================
 *Description*
 
-    HashContext hash_copy ( HashContext $context )~
+  hash_copy ( HashContext $context ) : HashContext~
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {context}
 
-    Hashing context returned by |hash_init|.
+  Hashing context returned by |hash_init|.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns a copy of Hashing Context.
 
-==============================================================================
+===============================================================================
 *Changelog*
 
 Version                    Description
 7.2.0   Accept and return HashContext instead of resource.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 hash_copy() example
 
 <?php >
-    $context = hash_init("md5");
-    hash_update($context, "data");
+  $context = hash_init("md5");
+  hash_update($context, "data");
 
-    /* copy context to be able to continue using it */
-    $copy_context = hash_copy($context);
+  /* copy context to be able to continue using it */
+  $copy_context = hash_copy($context);
 
-    echo hash_final($context), "\n";
+  echo hash_final($context), "\n";
 
-    hash_update($copy_context, "data");
-    echo hash_final($copy_context), "\n";
+  hash_update($copy_context, "data");
+  echo hash_final($copy_context), "\n";
 <?>
 
 The above example will output:

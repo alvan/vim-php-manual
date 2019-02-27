@@ -4,21 +4,21 @@ fbsql_rows_fetched
 
 fbsql_rows_fetched — Get the number of rows affected by the last statement
 
-==============================================================================
+===============================================================================
 *Description*
 
-    int fbsql_rows_fetched ( resource $result )~
+  fbsql_rows_fetched ( resource $result ) : int~
 
 Gets the number of rows affected by the last statement.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 { result}
 
-    A result identifier returned by |fbsql_query| or |fbsql_db_query|.
+  A result identifier returned by |fbsql_query| or |fbsql_db_query|.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns the number of rows, as an integer.

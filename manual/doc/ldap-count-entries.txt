@@ -4,32 +4,32 @@ ldap_count_entries
 
 ldap_count_entries — Count the number of entries in a search
 
-==============================================================================
+===============================================================================
 *Description*
 
-    int ldap_count_entries ( resource $link_identifier , resource~
-    $result_identifier )~
+  ldap_count_entries ( resource $link_identifier , resource $result_identifier~
+  ) : int~
 
 Returns the number of entries stored in the result of previous search
 operations.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {link_identifier}
 
-    An LDAP link identifier, returned by |ldap_connect|.
+  An LDAP link identifier, returned by |ldap_connect|.
 
 {result_identifier}
 
-    The internal LDAP result.
+  The internal LDAP result.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns number of entries in the result or FALSE on error.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 ldap-count-entries() example

@@ -4,30 +4,30 @@ fdf_get_file
 
 fdf_get_file — Get the value of the /F key
 
-==============================================================================
+===============================================================================
 *Description*
 
-    string fdf_get_file ( resource $fdf_document )~
+  fdf_get_file ( resource $fdf_document ) : string~
 
 Gets the value of the /F key.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {fdf_document}
 
-    The FDF document handle, returned by |fdf_create|, |fdf_open| or 
-    |fdf_open_string|.
+  The FDF document handle, returned by |fdf_create|, |fdf_open| or 
+  |fdf_open_string|.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns the key value, as a string.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |fdf_set_file| - Set PDF document to display FDF data in
+ * |fdf_set_file| - Set PDF document to display FDF data in
 
 
 vim:ft=help:

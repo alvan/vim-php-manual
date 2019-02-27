@@ -6,37 +6,37 @@ xmlwriter_full_end_element
 
 XMLWriter::fullEndElement -- xmlwriter_full_end_element — End current element
 
-==============================================================================
+===============================================================================
 *Description*
 
 Object oriented style
 
-    bool XMLWriter::fullEndElement ( void )~
+  XMLWriter::fullEndElement ( void ) : bool~
 
 Procedural style
 
-    bool xmlwriter_full_end_element ( resource $xmlwriter )~
+  xmlwriter_full_end_element ( resource $xmlwriter ) : bool~
 
 End the current xml element. Writes an end tag even if the element is empty.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 { xmlwriter}
 
-    Only for procedural calls. The XMLWriter resource that is being modified.
-    This resource comes from a call to |xmlwriter_open_uri| or 
-    |xmlwriter_open_memory|.
+  Only for procedural calls. The XMLWriter resource that is being modified.
+  This resource comes from a call to |xmlwriter_open_uri| or 
+  |xmlwriter_open_memory|.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |XMLWriter::endElement| - End current element
+ * |XMLWriter::endElement| - End current element
 
 
 vim:ft=help:

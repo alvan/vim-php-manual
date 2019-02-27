@@ -5,22 +5,22 @@ mailparse_uudecode_all
 mailparse_uudecode_all — Scans the data from fp and extract each embedded
 uuencoded file
 
-==============================================================================
+===============================================================================
 *Description*
 
-    array mailparse_uudecode_all ( resource $fp )~
+  mailparse_uudecode_all ( resource $fp ) : array~
 
 Scans the data from the given file pointer and extract each embedded uuencoded
 file into a temporary file.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {fp}
 
-    A valid file pointer.
+  A valid file pointer.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns an array of associative arrays listing filename information.
@@ -31,39 +31,39 @@ origfilename The original filename, for uuencoded parts only
 The first filename entry is the message body. The next entries are the decoded
 uuencoded files.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 mailparse_uudecode_all() example
 
 <?php >
 
-    $text = <<<EOD
-    To: fred@example.com
+  $text = <<<EOD
+  To: fred@example.com
 
-    hello, this is some text hello.
-    blah blah blah.
+  hello, this is some text hello.
+  blah blah blah.
 
-    begin 644 test.txt
-    /=&AI<R!I<R!A('1E<W0*
-    `
-    end
+  begin 644 test.txt
+  /=&AI<R!I<R!A('1E<W0*
+  `
+  end
 
-    EOD;
+  EOD;
 
-    $fp = tmpfile();
-    fwrite($fp, $text);
+  $fp = tmpfile();
+  fwrite($fp, $text);
 
-    $data = mailparse_uudecode_all($fp);
+  $data = mailparse_uudecode_all($fp);
 
-    echo "BODY\n";
-    readfile($data[0]["filename"]);
-    echo "UUE ({$data[1]['origfilename']})\n";
-    readfile($data[1]["filename"]);
+  echo "BODY\n";
+  readfile($data[0]["filename"]);
+  echo "UUE ({$data[1]['origfilename']})\n";
+  readfile($data[1]["filename"]);
 
-    // Clean up
-    unlink($data[0]["filename"]);
-    unlink($data[1]["filename"]);
+  // Clean up
+  unlink($data[0]["filename"]);
+  unlink($data[1]["filename"]);
 
 <?>
 

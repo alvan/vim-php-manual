@@ -4,13 +4,12 @@ fbsql_pconnect
 
 fbsql_pconnect — Open a persistent connection to a FrontBase Server
 
-==============================================================================
+===============================================================================
 *Description*
 
-    resource fbsql_pconnect ([ string $hostname =~
-    ini_get("fbsql.default_host") [, string $username =~
-    ini_get("fbsql.default_user") [, string $password =~
-    ini_get("fbsql.default_password") ]]] )~
+  fbsql_pconnect ([ string $hostname = ini_get("fbsql.default_host")~
+  [, string $username = ini_get("fbsql.default_user") [, string~
+  $password = ini_get("fbsql.default_password") ]]] ) : resource~
 
 Establishes a persistent connection to a FrontBase server.
 
@@ -29,31 +28,31 @@ of the script ends. Instead, the link will remain open for future use.
 
 This type of links is therefore called 'persistent'.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {hostname}
 
-    The server host name.
+  The server host name.
 
 {username}
 
-    The user name for the connection.
+  The user name for the connection.
 
 {password}
 
-    The password for the connection.
+  The password for the connection.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
-Returns a positive FrontBase persistent link identifier on success, or FALSE
-on error.
+Returns a positive FrontBase persistent link identifier on success, or FALSE on
+error.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |fbsql_connect| - Open a connection to a FrontBase Server
+ * |fbsql_connect| - Open a connection to a FrontBase Server
 
 
 vim:ft=help:

@@ -5,27 +5,26 @@ pg_socket
 pg_socket — Get a read only handle to the socket underlying a PostgreSQL
 connection
 
-==============================================================================
+===============================================================================
 *Description*
 
-    resource pg_socket ( resource $connection )~
+  pg_socket ( resource $connection ) : resource~
 
-pg_socket() returns a read only resource corresponding to the socket
-underlying the given PostgreSQL connection.
+pg_socket() returns a read only resource corresponding to the socket underlying
+the given PostgreSQL connection.
 
 Warning
 
-This function is currently not documented; only its argument list is
-available.
+This function is currently not documented; only its argument list is available.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {connection}
 
-    PostgreSQL database connection resource.
+  PostgreSQL database connection resource.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 A socket resource on success or FALSE on failure.

@@ -4,27 +4,27 @@ trader_aroon
 
 trader_aroon — Aroon
 
-==============================================================================
+===============================================================================
 *Description*
 
-    array trader_aroon ( array $high , array $low [, int $timePeriod ] )~
+  trader_aroon ( array $high , array $low [, int $timePeriod ] ) : array~
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {high}
 
-    High price, array of real values.
+  High price, array of real values.
 
 {low}
 
-    Low price, array of real values.
+  Low price, array of real values.
 
 {timePeriod}
 
-    Number of period. Valid range from 2 to 100000.
+  Number of period. Valid range from 2 to 100000.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns an array with calculated data or false on failure.

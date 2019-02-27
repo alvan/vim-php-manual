@@ -4,44 +4,49 @@ wddx_serialize_vars
 
 wddx_serialize_vars — Serialize variables into a WDDX packet
 
-==============================================================================
+Warning
+
+This function has been DEPRECATED as of PHP 7.4.0. Relying on this function is
+highly discouraged.
+
+===============================================================================
 *Description*
 
-    string wddx_serialize_vars ( mixed $var_name [, mixed $... ] )~
+  wddx_serialize_vars ( mixed $var_name [, mixed $... ] ) : string~
 
 Creates a WDDX packet with a structure that contains the serialized
 representation of the passed variables.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 This function takes a variable number of parameters.
 
 {var_name}
 
-    Can be either a string naming a variable or an array containing strings
-    naming the variables or another array, etc.
+  Can be either a string naming a variable or an array containing strings
+  naming the variables or another array, etc.
 
 {...}
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns the WDDX packet, or FALSE on error.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 wddx_serialize_vars() example
 
 <?php >
-    $a = 1;
-    $b = 5.5;
-    $c = array("blue", "orange", "violet");
-    $d = "colors";
+  $a = 1;
+  $b = 5.5;
+  $c = array("blue", "orange", "violet");
+  $d = "colors";
 
-    $clvars = array("c", "d");
-    echo wddx_serialize_vars("a", "b", $clvars);
+  $clvars = array("c", "d");
+  echo wddx_serialize_vars("a", "b", $clvars);
 <?>
 
 The above example will output:

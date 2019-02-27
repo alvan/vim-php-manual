@@ -6,58 +6,58 @@ finfo::file
 
 finfo_file -- finfo::file — Return information about a file
 
-==============================================================================
+===============================================================================
 *Description*
 
 Procedural style
 
-    string finfo_file ( resource $finfo , string $file_name = NULL [, int~
-    $options = FILEINFO_NONE [, resource $context = NULL ]] )~
+  finfo_file ( resource $finfo , string $file_name = NULL [, int $options =~
+  FILEINFO_NONE [, resource $context = NULL ]] ) : string~
 
 Object oriented style
 
-    public string finfo::file ( string $file_name = NULL [, int $options =~
-    FILEINFO_NONE [, resource $context = NULL ]] )~
+  public finfo::file ( string $file_name = NULL [, int $options =~
+  FILEINFO_NONE [, resource $context = NULL ]] ) : string~
 
 This function is used to get information about a file.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {finfo}
 
-    Fileinfo resource returned by |finfo_open|.
+  Fileinfo resource returned by |finfo_open|.
 
 {file_name}
 
-    Name of a file to be checked.
+  Name of a file to be checked.
 
 {options}
 
-    One or disjunction of more Fileinfo constants.
+  One or disjunction of more Fileinfo constants.
 
 {context}
 
-    For a description of contexts, refer to Stream Functions.
+  For a description of contexts, refer to Stream Functions.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns a textual description of the contents of the {file_name} argument, or
 FALSE if an error occurred.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 A finfo_file() example
 
 <?php >
-    $finfo = finfo_open(FILEINFO_MIME_TYPE); //
-     return mime type ala mimetype extension
-    foreach (glob("*") as $filename) {
-        echo finfo_file($finfo, $filename) . "\n";
-    }
-    finfo_close($finfo);
+  $finfo = finfo_open(FILEINFO_MIME_TYPE); //
+   return mime type ala mimetype extension
+  foreach (glob("*") as $filename) {
+      echo finfo_file($finfo, $filename) . "\n";
+  }
+  finfo_close($finfo);
 <?>
 
 The above example will output something similar to:
@@ -66,10 +66,10 @@ text/html
 image/gif
 application/vnd.ms-excel
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * finfo_buffer() - Alias of finfo_buffer()
+ * finfo_buffer() - Alias of finfo_buffer()
 
 
 vim:ft=help:

@@ -7,23 +7,23 @@ xmlwriter_open_memory
 XMLWriter::openMemory -- xmlwriter_open_memory — Create new xmlwriter using
 memory for string output
 
-==============================================================================
+===============================================================================
 *Description*
 
 Object oriented style
 
-    bool XMLWriter::openMemory ( void )~
+  XMLWriter::openMemory ( void ) : bool~
 
 Procedural style
 
-    resource xmlwriter_open_memory ( void )~
+  xmlwriter_open_memory ( void ) : resource~
 
 Creates a new XMLWriter using memory for string output.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Object oriented style: Returns TRUE on success or FALSE on failure.
@@ -31,10 +31,10 @@ Object oriented style: Returns TRUE on success or FALSE on failure.
 Procedural style: Returns a new xmlwriter resource for later use with the
 xmlwriter functions on success, FALSE on error.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |XMLWriter::openUri| - Create new xmlwriter using source uri for output
+ * |XMLWriter::openUri| - Create new xmlwriter using source uri for output
 
 
 vim:ft=help:

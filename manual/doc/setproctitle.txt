@@ -4,26 +4,26 @@ setproctitle
 
 setproctitle — Set the process title
 
-==============================================================================
+===============================================================================
 *Description*
 
-    void setproctitle ( string $title )~
+  setproctitle ( string $title ) : void~
 
 Sets the process title of the current process.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {title}
 
-    The title to use as the process title.
+  The title to use as the process title.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 No value is returned.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 setproctitle() example
@@ -32,7 +32,7 @@ Running the example below will change the process title (visible with ps a for
 example).
 
 <?php >
-    setproctitle("myscript");
+  setproctitle("myscript");
 <?>
 
 The above example will output something similar to:
@@ -41,12 +41,12 @@ $ ps a
   PID TTY      STAT   TIME COMMAND
  1168 pts/3    S      0:00 myscript
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |cli_set_process_title| - Sets the process title
-  * |pcntl_fork| - Forks the currently running process
-  * |setthreadtitle| - Set the thread title
+ * |cli_set_process_title| - Sets the process title
+ * |pcntl_fork| - Forks the currently running process
+ * |setthreadtitle| - Set the thread title
 
 
 vim:ft=help:

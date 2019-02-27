@@ -4,15 +4,15 @@ ncurses_getmaxyx
 
 ncurses_getmaxyx — Returns the size of a window
 
-==============================================================================
+===============================================================================
 *Description*
 
-    void ncurses_getmaxyx ( resource $window , int &$y , int &$x )~
+  ncurses_getmaxyx ( resource $window , int &$y , int &$x ) : void~
 Warning
 
 This function is EXPERIMENTAL. The behaviour of this function, its name, and
-surrounding documentation may change without notice in a future release of
-PHP. This function should be used at your own risk.
+surrounding documentation may change without notice in a future release of PHP.
+This function should be used at your own risk.
 
 Gets the horizontal and vertical size of the given {window} into the given
 variables.
@@ -20,22 +20,22 @@ variables.
 Variables must be passed as reference, so they are updated when the user
 changes the terminal size.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {window}
 
-    The measured window
+  The measured window
 
 {y}
 
-    This will be set to the window height
+  This will be set to the window height
 
 {x}
 
-    This will be set to the window width
+  This will be set to the window width
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 No value is returned.

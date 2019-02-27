@@ -4,41 +4,41 @@ gmp_fact
 
 gmp_fact — Factorial
 
-==============================================================================
+===============================================================================
 *Description*
 
-    GMP gmp_fact ( mixed $a )~
+  gmp_fact ( mixed $a ) : GMP~
 
 Calculates factorial (a!) of {a}.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {a}
 
-    The factorial number.
+  The factorial number.
 
-    Either a GMP number resource in PHP 5.5 and earlier, a GMP object in PHP
-    5.6 and later, or a numeric string provided that it is possible to convert
-    the latter to a number.
+  Either a GMP number resource in PHP 5.5 and earlier, a GMP object in PHP 5.6
+  and later, or a numeric string provided that it is possible to convert the
+  latter to a number.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 A GMP number resource in PHP 5.5 and earlier, or a GMP object in PHP 5.6 and
 later.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 gmp_fact() example
 
 <?php >
-    $fact1 = gmp_fact(5); // 5 * 4 * 3 * 2 * 1
-    echo gmp_strval($fact1) . "\n";
+  $fact1 = gmp_fact(5); // 5 * 4 * 3 * 2 * 1
+  echo gmp_strval($fact1) . "\n";
 
-    $fact2 = gmp_fact(50); // 50 * 49 * 48, ... etc
-    echo gmp_strval($fact2) . "\n";
+  $fact2 = gmp_fact(50); // 50 * 49 * 48, ... etc
+  echo gmp_strval($fact2) . "\n";
 <?>
 
 The above example will output:

@@ -4,42 +4,42 @@ MongoDB\BSON\fromJSON
 
 MongoDB\BSON\fromJSON — Returns the BSON representation of a JSON value
 
-==============================================================================
+===============================================================================
 *Description*
 
-    string MongoDB\BSON\fromJSON ( string $json )~
+  MongoDB\BSON\fromJSON ( string $json ) : string~
 
-Converts an >> extended JSON string to its BSON representation.
+Converts an » extended JSON string to its BSON representation.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {json} (string)
 
-    JSON value to be converted.
+  JSON value to be converted.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 The serialized BSON document as a binary string.
 
-==============================================================================
+===============================================================================
 *Errors/Exceptions*
 
-  * Throws MongoDB\Driver\Exception\UnexpectedValueException if the JSON value
-    cannot be converted to BSON (e.g. due to a syntax error).
+ * Throws MongoDB\Driver\Exception\UnexpectedValueException if the JSON value
+  cannot be converted to BSON (e.g. due to a syntax error).
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 MongoDB\BSON\fromJSON() example
 
 <?php >
 
-    $json = '{ "_id": { "$oid": "563143b280d2387c91807965" } }';
-    $bson = MongoDB\BSON\fromJSON($json);
-    $value = MongoDB\BSON\toPHP($bson);
-    var_dump($value);
+  $json = '{ "_id": { "$oid": "563143b280d2387c91807965" } }';
+  $bson = MongoDB\BSON\fromJSON($json);
+  $value = MongoDB\BSON\toPHP($bson);
+  var_dump($value);
 
 <?>
 
@@ -53,13 +53,13 @@ object(stdClass)#2 (1) {
   }
 }
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * MongoDB\BSON\toJSON() - Returns the Legacy Extended JSON representation of
-    a BSON value
-  * >> MongoDB Extended JSON
-  * >> MongoDB BSON
+ * MongoDB\BSON\toJSON() - Returns the Legacy Extended JSON representation of a
+  BSON value
+ * » MongoDB Extended JSON
+ * » MongoDB BSON
 
 
 vim:ft=help:

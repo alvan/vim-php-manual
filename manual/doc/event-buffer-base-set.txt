@@ -4,25 +4,25 @@ event_buffer_base_set
 
 event_buffer_base_set — Associate buffered event with an event base
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool event_buffer_base_set ( resource $bevent , resource $event_base )~
+  event_buffer_base_set ( resource $bevent , resource $event_base ) : bool~
 
 Assign the specified {bevent} to the {event_base}.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {bevent}
 
-    Valid buffered event resource.
+  Valid buffered event resource.
 
 {event_base}
 
-    Valid event base resource.
+  Valid event base resource.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 event_buffer_base_set() returns TRUE on success or FALSE on error.

@@ -4,23 +4,23 @@ bson_decode
 
 bson_decode — Deserializes a BSON object into a PHP array
 
-==============================================================================
+===============================================================================
 *Description*
 
-    array bson_decode ( string $bson )~
+  bson_decode ( string $bson ) : array~
 
 This function is very beta and entirely useless for 99% of users. It is only
 useful if you're doing something weird, such as writing your own driver on top
 of the PHP driver.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {bson}
 
-    The BSON to be deserialized.
+  The BSON to be deserialized.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns the deserialized BSON object.

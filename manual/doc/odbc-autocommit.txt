@@ -4,30 +4,29 @@ odbc_autocommit
 
 odbc_autocommit — Toggle autocommit behaviour
 
-==============================================================================
+===============================================================================
 *Description*
 
-    mixed odbc_autocommit ( resource $connection_id [, bool $OnOff = FALSE ]~
-)~
+  odbc_autocommit ( resource $connection_id [, bool $OnOff = FALSE ] ) : mixed~
 
 Toggles autocommit behaviour.
 
 By default, auto-commit is on for a connection. Disabling auto-commit is
 equivalent with starting a transaction.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {connection_id}
 
-    The ODBC connection identifier, see |odbc_connect| for details.
+  The ODBC connection identifier, see |odbc_connect| for details.
 
 {OnOff}
 
-    If {OnOff} is TRUE, auto-commit is enabled, if it is FALSE auto-commit is
-    disabled.
+  If {OnOff} is TRUE, auto-commit is enabled, if it is FALSE auto-commit is
+  disabled.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Without the {OnOff} parameter, this function returns auto-commit status for
@@ -36,11 +35,11 @@ FALSE if an error occurs.
 
 If {OnOff} is set, this function returns TRUE on success and FALSE on failure.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |odbc_commit| - Commit an ODBC transaction
-  * |odbc_rollback| - Rollback a transaction
+ * |odbc_commit| - Commit an ODBC transaction
+ * |odbc_rollback| - Rollback a transaction
 
 
 vim:ft=help:

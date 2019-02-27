@@ -5,28 +5,28 @@ libxml_use_internal_errors
 libxml_use_internal_errors — Disable libxml errors and allow user to fetch
 error information as needed
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool libxml_use_internal_errors ([ bool $use_errors = FALSE ] )~
+  libxml_use_internal_errors ([ bool $use_errors = FALSE ] ) : bool~
 
 libxml_use_internal_errors() allows you to disable standard libxml errors and
 enable user error handling.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {use_errors}
 
-    Enable (TRUE) user error handling or disable (FALSE) user error handling.
-    Disabling will also clear any existing libxml errors.
+  Enable (TRUE) user error handling or disable (FALSE) user error handling.
+  Disabling will also clear any existing libxml errors.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 This function returns the previous value of {use_errors}.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 A libxml_use_internal_errors() example
@@ -36,19 +36,19 @@ returned by this function.
 
 <?php >
 
-    // enable user error handling
-    var_dump(libxml_use_internal_errors(true));
+  // enable user error handling
+  var_dump(libxml_use_internal_errors(true));
 
-    // load the document
-    $doc = new DOMDocument;
+  // load the document
+  $doc = new DOMDocument;
 
-    if (!$doc->load('file.xml')) {
-        foreach (libxml_get_errors() as $error) {
-            // handle errors here
-        }
+  if (!$doc->load('file.xml')) {
+      foreach (libxml_get_errors() as $error) {
+          // handle errors here
+      }
 
-        libxml_clear_errors();
-    }
+      libxml_clear_errors();
+  }
 
 <?>
 
@@ -56,11 +56,11 @@ The above example will output:
 
 bool(false)
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |libxml_clear_errors| - Clear libxml error buffer
-  * |libxml_get_errors| - Retrieve array of errors
+ * |libxml_clear_errors| - Clear libxml error buffer
+ * |libxml_get_errors| - Retrieve array of errors
 
 
 vim:ft=help:

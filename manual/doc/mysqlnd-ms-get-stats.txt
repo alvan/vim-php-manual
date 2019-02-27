@@ -4,10 +4,10 @@ mysqlnd_ms_get_stats
 
 mysqlnd_ms_get_stats — Returns query distribution and connection statistics
 
-==============================================================================
+===============================================================================
 *Description*
 
-    array mysqlnd_ms_get_stats ( void )~
+  mysqlnd_ms_get_stats ( void ) : array~
 
 Returns an array of statistics collected by the replication and load balancing
 plugin.
@@ -23,12 +23,12 @@ Statistics are aggregated for all connections and all storage handler. It is
 not possible to tell how much queries originating from mysqli, PDO_MySQL or
 mysql API calls have contributed to the aggregated data values.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 This function has no parameters.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns NULL if the PHP configuration directive mysqlnd_ms.enable has disabled
@@ -333,16 +333,16 @@ pool_master_reactivated                    reused after being flushed from the a
 pool_slave_reactivated                     reused after being flushed from the active 1.6.0.
                                            list.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 mysqlnd_ms_get_stats() example
 
 <?php >
-    printf("mysqlnd_ms.enable = %d\n", ini_get("mysqlnd_ms.enable"));
-    printf("mysqlnd_ms.collect_statistics = %d\n", ini_get(
-    "mysqlnd_ms.collect_statistics"));
-    var_dump(mysqlnd_ms_get_stats());
+  printf("mysqlnd_ms.enable = %d\n", ini_get("mysqlnd_ms.enable"));
+  printf("mysqlnd_ms.collect_statistics = %d\n", ini_get(
+  "mysqlnd_ms.collect_statistics"));
+  var_dump(mysqlnd_ms_get_stats());
 <?>
 
 The above example will output:
@@ -406,13 +406,13 @@ array(26) {
   string(1) "0"
 }
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * Runtime configuration
-  * mysqlnd_ms.collect_statistics
-  * mysqlnd_ms.enable
-  * Monitoring
+ * Runtime configuration
+ * mysqlnd_ms.collect_statistics
+ * mysqlnd_ms.enable
+ * Monitoring
 
 
 vim:ft=help:

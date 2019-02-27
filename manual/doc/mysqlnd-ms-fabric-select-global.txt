@@ -5,44 +5,43 @@ mysqlnd_ms_fabric_select_global
 mysqlnd_ms_fabric_select_global — Switch to global sharding server for a given
 table
 
-==============================================================================
+===============================================================================
 *Description*
 
-    array mysqlnd_ms_fabric_select_global ( mixed $connection , mixed~
-    $table_name )~
+  mysqlnd_ms_fabric_select_global ( mixed $connection , mixed $table_name ) :~
+  array~
 Warning
 
-This function is currently not documented; only its argument list is
-available.
+This function is currently not documented; only its argument list is available.
 
 MySQL Fabric related.
 
 Switch the connection to the nodes handling global sharding queries for the
 given table name.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {connection}
 
-    A MySQL connection handle obtained from any of the connect functions of
-    the mysqli, mysql or PDO_MYSQL extensions.
+  A MySQL connection handle obtained from any of the connect functions of the
+  mysqli, mysql or PDO_MYSQL extensions.
 
 {table_name}
 
-    The table name to ask Fabric about.
+  The table name to ask Fabric about.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 FALSE on error. Otherwise, TRUE
 
-==============================================================================
+===============================================================================
 *Notes*
 
-    Note:
+  Note:
 
-    mysqlnd_ms_fabric_select_global() requires PECL mysqlnd_ms >> 1.6.0.
+  mysqlnd_ms_fabric_select_global() requires PECL mysqlnd_ms >> 1.6.0.
 
 
 vim:ft=help:

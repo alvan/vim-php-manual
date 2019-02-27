@@ -4,10 +4,10 @@ func_get_arg
 
 func_get_arg — Return an item from the argument list
 
-==============================================================================
+===============================================================================
 *Description*
 
-    mixed func_get_arg ( int $arg_num )~
+  func_get_arg ( int $arg_num ) : mixed~
 
 Gets the specified argument from a user-defined function's argument list.
 
@@ -15,50 +15,49 @@ This function may be used in conjunction with |func_get_args| and
 |func_num_args| to allow user-defined functions to accept variable-length
 argument lists.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {arg_num}
 
-    The argument offset. Function arguments are counted starting from zero.
+  The argument offset. Function arguments are counted starting from zero.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns the specified argument, or FALSE on error.
 
-==============================================================================
+===============================================================================
 *Changelog*
 
-Version                              Description
+Version                               Description
 5.3.0   This function can now be used in parameter lists.
-        If this function is called from the outermost scope of a file which
-5.3.0   has been included by calling |include| or |require| from within a
-        function in the calling file, it now generates a warning and returns
-        FALSE.
+        If this function is called from the outermost scope of a file which has
+5.3.0   been included by calling |include| or |require| from within a function
+        in the calling file, it now generates a warning and returns FALSE.
 
-==============================================================================
+===============================================================================
 *Errors/Exceptions*
 
 Generates a warning if called from outside of a user-defined function, or if
 {arg_num} is greater than the number of arguments actually passed.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 func_get_arg() example
 
 <?php >
-    function foo()
-    {
-         $numargs = func_num_args();
-         echo "Number of arguments: $numargs\n";
-         if ($numargs >= 2) {
-             echo "Second argument is: " . func_get_arg(1) . "\n";
-         }
-    }
+  function foo()
+  {
+       $numargs = func_num_args();
+       echo "Number of arguments: $numargs\n";
+       if ($numargs >= 2) {
+           echo "Second argument is: " . func_get_arg(1) . "\n";
+       }
+  }
 
-    foo(1, 2, 3);
+  foo(1, 2, 3);
 <?>
 
 The above example will output:
@@ -70,18 +69,18 @@ Example #2 func_get_arg() example before and after PHP 5.3
 
 test.php
 <?php >
-    function foo() {
-        include './fga.inc';
-    }
+  function foo() {
+      include './fga.inc';
+  }
 
-    foo('First arg', 'Second arg');
+  foo('First arg', 'Second arg');
 <?>
 
 fga.inc
 <?php >
 
-    $arg = func_get_arg(1);
-    var_export($arg);
+  $arg = func_get_arg(1);
+  var_export($arg);
 
 <?>
 
@@ -98,21 +97,21 @@ false
 Example #3 func_get_arg() example of byref and byval arguments
 
 <?php >
-    function byVal($arg) {
-        echo 'As passed     : ', var_export(func_get_arg(0)), PHP_EOL;
-        $arg = 'baz';
-        echo 'After change  : ', var_export(func_get_arg(0)), PHP_EOL;
-    }
+  function byVal($arg) {
+      echo 'As passed     : ', var_export(func_get_arg(0)), PHP_EOL;
+      $arg = 'baz';
+      echo 'After change  : ', var_export(func_get_arg(0)), PHP_EOL;
+  }
 
-    function byRef(&$arg) {
-        echo 'As passed     : ', var_export(func_get_arg(0)), PHP_EOL;
-        $arg = 'baz';
-        echo 'After change  : ', var_export(func_get_arg(0)), PHP_EOL;
-    }
+  function byRef(&$arg) {
+      echo 'As passed     : ', var_export(func_get_arg(0)), PHP_EOL;
+      $arg = 'baz';
+      echo 'After change  : ', var_export(func_get_arg(0)), PHP_EOL;
+  }
 
-    $arg = 'bar';
-    byVal($arg);
-    byRef($arg);
+  $arg = 'bar';
+  byVal($arg);
+  byRef($arg);
 <?>
 
 Output of the above example in PHP 7:
@@ -131,31 +130,31 @@ After change : 'bar'
 As passed : 'bar'
 After change : 'baz'
 
-==============================================================================
+===============================================================================
 *Notes*
 
-    Note:
+  Note:
 
-    Because this function depends on the current scope to determine parameter
-    details, it cannot be used as a function parameter in versions prior to
-    5.3.0. If this value must be passed, the results should be assigned to a
-    variable, and that variable should be passed.
+  Because this function depends on the current scope to determine parameter
+  details, it cannot be used as a function parameter in versions prior to
+  5.3.0. If this value must be passed, the results should be assigned to a
+  variable, and that variable should be passed.
 
-    Note:
+  Note:
 
-    If the arguments are passed by reference, any changes to the arguments
-    will be reflected in the values returned by this function. As of PHP 7 the
-    current values will also be returned if the arguments are passed by value.
+  If the arguments are passed by reference, any changes to the arguments will
+  be reflected in the values returned by this function. As of PHP 7 the current
+  values will also be returned if the arguments are passed by value.
 
-    Note: This function returns a copy of the passed arguments only, and does
-    not account for default (non-passed) arguments.
+  Note: This function returns a copy of the passed arguments only, and does not
+  account for default (non-passed) arguments.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * ... syntax in PHP 5.6+
-  * |func_get_args|
-  * |func_num_args|
+ * ... syntax in PHP 5.6+
+ * |func_get_args|
+ * |func_num_args|
 
 
 vim:ft=help:

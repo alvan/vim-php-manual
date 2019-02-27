@@ -4,21 +4,21 @@ posix_getcwd
 
 posix_getcwd — Pathname of current directory
 
-==============================================================================
+===============================================================================
 *Description*
 
-    string posix_getcwd ( void )~
+  posix_getcwd ( void ) : string~
 
-Gets the absolute pathname of the script's current working directory. On
-error, it sets errno which can be checked using |posix_get_last_error|
+Gets the absolute pathname of the script's current working directory. On error,
+it sets errno which can be checked using |posix_get_last_error|
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns a string of the absolute pathname on success. On error, returns FALSE
 and sets errno which can be checked with |posix_get_last_error|.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 posix_getcwd() example
@@ -27,17 +27,17 @@ This example will return the absolute path of the current working directory of
 the script.
 
 <?php >
-    echo 'My current working directory is '.posix_getcwd();
+  echo 'My current working directory is '.posix_getcwd();
 <?>
 
-==============================================================================
+===============================================================================
 *Notes*
 
-    Note:
+  Note:
 
-    This function can fail on
-      + Read or Search permission was denied
-      + Pathname no longer exists
+  This function can fail on
+   + Read or Search permission was denied
+   + Pathname no longer exists
 
 
 vim:ft=help:

@@ -6,41 +6,41 @@ xmlwriter_write_raw
 
 XMLWriter::writeRaw -- xmlwriter_write_raw — Write a raw XML text
 
-==============================================================================
+===============================================================================
 *Description*
 
 Object oriented style
 
-    bool XMLWriter::writeRaw ( string $content )~
+  XMLWriter::writeRaw ( string $content ) : bool~
 
 Procedural style
 
-    bool xmlwriter_write_raw ( resource $xmlwriter , string $content )~
+  xmlwriter_write_raw ( resource $xmlwriter , string $content ) : bool~
 
 Writes a raw xml text.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 { xmlwriter}
 
-    Only for procedural calls. The XMLWriter resource that is being modified.
-    This resource comes from a call to |xmlwriter_open_uri| or 
-    |xmlwriter_open_memory|.
+  Only for procedural calls. The XMLWriter resource that is being modified.
+  This resource comes from a call to |xmlwriter_open_uri| or 
+  |xmlwriter_open_memory|.
 
 {content}
 
-    The text string to write.
+  The text string to write.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |XMLWriter::text| - Write text
+ * |XMLWriter::text| - Write text
 
 
 vim:ft=help:

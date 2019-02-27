@@ -4,42 +4,42 @@ odbc_procedurecolumns
 
 odbc_procedurecolumns — Retrieve information about parameters to procedures
 
-==============================================================================
+===============================================================================
 *Description*
 
-    resource odbc_procedurecolumns ( resource $connection_id )~
-    resource odbc_procedurecolumns ( resource $connection_id , string~
-    $qualifier , string $owner , string $proc , string $column )~
+  odbc_procedurecolumns ( resource $connection_id ) : resource~
+  odbc_procedurecolumns ( resource $connection_id , string $qualifier , string~
+  $owner , string $proc , string $column ) : resource~
 
 Retrieve information about parameters to procedures.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {connection_id}
 
-    The ODBC connection identifier, see |odbc_connect| for details.
+  The ODBC connection identifier, see |odbc_connect| for details.
 
 {qualifier}
 
-    The qualifier.
+  The qualifier.
 
 {owner}
 
-    The owner. This parameter accepts the following search patterns: "%" to
-    match zero or more characters, and "_" to match a single character.
+  The owner. This parameter accepts the following search patterns: "%" to match
+  zero or more characters, and "_" to match a single character.
 
 {proc}
 
-    The proc. This parameter accepts the following search patterns: "%" to
-    match zero or more characters, and "_" to match a single character.
+  The proc. This parameter accepts the following search patterns: "%" to match
+  zero or more characters, and "_" to match a single character.
 
 {column}
 
-    The column. This parameter accepts the following search patterns: "%" to
-    match zero or more characters, and "_" to match a single character.
+  The column. This parameter accepts the following search patterns: "%" to
+  match zero or more characters, and "_" to match a single character.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns the list of input and output parameters, as well as the columns that
@@ -48,19 +48,19 @@ identifier or FALSE on failure.
 
 The result set has the following columns:
 
-  * PROCEDURE_QUALIFIER
-  * PROCEDURE_OWNER
-  * PROCEDURE_NAME
-  * COLUMN_NAME
-  * COLUMN_TYPE
-  * DATA_TYPE
-  * TYPE_NAME
-  * PRECISION
-  * LENGTH
-  * SCALE
-  * RADIX
-  * NULLABLE
-  * REMARKS
+ * PROCEDURE_QUALIFIER
+ * PROCEDURE_OWNER
+ * PROCEDURE_NAME
+ * COLUMN_NAME
+ * COLUMN_TYPE
+ * DATA_TYPE
+ * TYPE_NAME
+ * PRECISION
+ * LENGTH
+ * SCALE
+ * RADIX
+ * NULLABLE
+ * REMARKS
 
 The result set is ordered by PROCEDURE_QUALIFIER, PROCEDURE_OWNER,
 PROCEDURE_NAME and COLUMN_TYPE.

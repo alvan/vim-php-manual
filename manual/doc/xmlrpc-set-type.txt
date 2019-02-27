@@ -4,46 +4,46 @@ xmlrpc_set_type
 
 xmlrpc_set_type — Sets xmlrpc type, base64 or datetime, for a PHP string value
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool xmlrpc_set_type ( string &$value , string $type )~
+  xmlrpc_set_type ( string &$value , string $type ) : bool~
 
 Sets xmlrpc type, base64 or datetime, for a PHP string value.
 
 Warning
 
 This function is EXPERIMENTAL. The behaviour of this function, its name, and
-surrounding documentation may change without notice in a future release of
-PHP. This function should be used at your own risk.
+surrounding documentation may change without notice in a future release of PHP.
+This function should be used at your own risk.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {value}
 
-    Value to set the type
+  Value to set the type
 
 {type}
 
-    'base64' or 'datetime'
+  'base64' or 'datetime'
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure. If successful, {value} is
 converted to an object.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 A xmlrpc_set_type() example
 
 <?php >
 
-    $params = date("Ymd\TH:i:s", time());
-    xmlrpc_set_type($params, 'datetime');
-    echo xmlrpc_encode($params);
+  $params = date("Ymd\TH:i:s", time());
+  xmlrpc_set_type($params, 'datetime');
+  echo xmlrpc_encode($params);
 
 <?>
 
@@ -58,7 +58,7 @@ The above example will output something similar to:
 </param>
 </params>
 
-==============================================================================
+===============================================================================
 *Errors/Exceptions*
 
 Issues E_WARNING with type unsupported by XMLRPC.

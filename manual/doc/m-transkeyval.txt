@@ -5,22 +5,21 @@ m_transkeyval
 m_transkeyval — Add key/value pair to a transaction. Replaces deprecated
 transparam()
 
-==============================================================================
+===============================================================================
 *Description*
 
-    int m_transkeyval ( resource $conn , int $identifier , string $key ,~
-    string $value )~
+  m_transkeyval ( resource $conn , int $identifier , string $key , string~
+  $value ) : int~
 Warning
 
-This function is currently not documented; only its argument list is
-available.
+This function is currently not documented; only its argument list is available.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 { conn}
 
-    An MCVE_CONN resource returned by |m_initengine|.
+  An MCVE_CONN resource returned by |m_initengine|.
 
 {identifier}
 
@@ -28,7 +27,7 @@ available.
 
 {value}
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 

@@ -5,50 +5,50 @@ enchant_dict_quick_check
 enchant_dict_quick_check — Check the word is correctly spelled and provide
 suggestions
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool enchant_dict_quick_check ( resource $dict , string $word [, array~
-    &$suggestions ] )~
+  enchant_dict_quick_check ( resource $dict , string $word [, array~
+  &$suggestions ] ) : bool~
 
 If the word is correctly spelled return TRUE, otherwise return FALSE, if
 suggestions variable is provided, fill it with spelling alternatives.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {dict}
 
-    Dictionary resource
+  Dictionary resource
 
 {word}
 
-    The word to check
+  The word to check
 
 {suggestions}
 
-    If the word is not correctly spelled, this variable will contain an array
-    of suggestions.
+  If the word is not correctly spelled, this variable will contain an array of
+  suggestions.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE if the word is correctly spelled or FALSE
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 A enchant_dict_quick_check() example
 
 <?php >
-    $tag = 'en_US';
-    $r = enchant_broker_init();
+  $tag = 'en_US';
+  $r = enchant_broker_init();
 
-    if (enchant_broker_dict_exists($r,$tag)) {
-        $d = enchant_broker_request_dict($r, $tag);
-        enchant_dict_quick_check($d, 'soong', $suggs);
-        print_r($suggs);
-    }
+  if (enchant_broker_dict_exists($r,$tag)) {
+      $d = enchant_broker_request_dict($r, $tag);
+      enchant_dict_quick_check($d, 'soong', $suggs);
+      print_r($suggs);
+  }
 <?>
 
 The above example will output something similar to:
@@ -82,12 +82,12 @@ Array
     [24] => song's
 )
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |enchant_dict_check| - Check whether a word is correctly spelled or not
-  * |enchant_dict_suggest| - Will return a list of values if any of those
-    pre-conditions are not met
+ * |enchant_dict_check| - Check whether a word is correctly spelled or not
+ * |enchant_dict_suggest| - Will return a list of values if any of those
+  pre-conditions are not met
 
 
 vim:ft=help:

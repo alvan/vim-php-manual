@@ -4,19 +4,23 @@ imagegrabscreen
 
 imagegrabscreen — Captures the whole screen
 
-==============================================================================
+===============================================================================
 *Description*
 
-    resource imagegrabscreen ( void )~
+  imagegrabscreen ( void ) : resource~
 
 Grabs a screenshot of the whole screen.
 
-==============================================================================
+  Note:
+
+  This function is only available on Windows.
+
+===============================================================================
 *Return* *Values*
 
 Returns an image resource identifier on success, FALSE on failure.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 imagegrabscreen() example
@@ -25,22 +29,15 @@ This example demonstrates how to take a screenshot of the current screen and
 save it as a png image.
 
 <?php >
-    $im = imagegrabscreen();
-    imagepng($im, "myscreenshot.png");
-    imagedestroy($im);
+  $im = imagegrabscreen();
+  imagepng($im, "myscreenshot.png");
+  imagedestroy($im);
 <?>
 
-==============================================================================
-*Notes*
-
-    Note:
-
-    This function is only available on Windows.
-
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |imagegrabwindow| - Captures a window
+ * |imagegrabwindow| - Captures a window
 
 
 vim:ft=help:

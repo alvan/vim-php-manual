@@ -4,10 +4,10 @@ base_convert
 
 base_convert — Convert a number between arbitrary bases
 
-==============================================================================
+===============================================================================
 *Description*
 
-    string base_convert ( string $number , int $frombase , int $tobase )~
+  base_convert ( string $number , int $frombase , int $tobase ) : string~
 
 Returns a string containing {number} represented in base {tobase}. The base in
 which {number} is given is specified in {frombase}. Both {frombase} and
@@ -18,49 +18,49 @@ meaning 11 and z meaning 35. The case of the letters doesn't matter, i.e.
 
 Warning
 
-base_convert() may lose precision on large numbers due to properties related
-to the internal "double" or "float" type used. Please see the Floating point
+base_convert() may lose precision on large numbers due to properties related to
+the internal "double" or "float" type used. Please see the Floating point
 numbers section in the manual for more specific information and limitations.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {number}
 
-    The number to convert. Any invalid characters in {number} are silently
-    ignored.
+  The number to convert. Any invalid characters in {number} are silently
+  ignored.
 
 {frombase}
 
-    The base {number} is in
+  The base {number} is in
 
 {tobase}
 
-    The base to convert {number} to
+  The base to convert {number} to
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 {number} converted to base {tobase}
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 base_convert() example
 
 <?php >
-    $hexadecimal = 'a37334';
-    echo base_convert($hexadecimal, 16, 2);
+  $hexadecimal = 'a37334';
+  echo base_convert($hexadecimal, 16, 2);
 <?>
 
 The above example will output:
 
 101000110111001100110100
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |intval| - Get the integer value of a variable
+ * |intval| - Get the integer value of a variable
 
 
 vim:ft=help:

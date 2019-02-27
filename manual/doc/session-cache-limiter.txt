@@ -4,10 +4,10 @@ session_cache_limiter
 
 session_cache_limiter — Get and/or set the current cache limiter
 
-==============================================================================
+===============================================================================
 *Description*
 
-    string session_cache_limiter ([ string $cache_limiter ] )~
+  session_cache_limiter ([ string $cache_limiter ] ) : string~
 
 session_cache_limiter() returns the name of the current cache limiter.
 
@@ -26,60 +26,59 @@ mode.
 Setting the cache limiter to '' will turn off automatic sending of cache
 headers entirely.
 
-The cache limiter is reset to the default value stored in
-session.cache_limiter at request startup time. Thus, you need to call 
-session_cache_limiter() for every request (and before |session_start| is
-called).
+The cache limiter is reset to the default value stored in session.cache_limiter
+at request startup time. Thus, you need to call session_cache_limiter() for
+every request (and before |session_start| is called).
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {cache_limiter}
 
-    If {cache_limiter} is specified, the name of the current cache limiter is
-    changed to the new value.
+  If {cache_limiter} is specified, the name of the current cache limiter is
+  changed to the new value.
 
-                                                             Possible values
-          Value                                                           Headers sent
-                      Expires: (sometime in the future, according session.cache_expire)
-    public            Cache-Control: public, max-age=(sometime in the future, according to session.cache_expire)
-                      Last-Modified: (the timestamp of when the session was last saved)
+                                                            Possible values
+        Value                                                           Headers sent
+                    Expires: (sometime in the future, according session.cache_expire)
+  public            Cache-Control: public, max-age=(sometime in the future, according to session.cache_expire)
+                    Last-Modified: (the timestamp of when the session was last saved)
 
-                      Cache-Control: private, max-age=(session.cache_expire in the future), pre-check=(session.cache_expire in the future)
-    private_no_expire Last-Modified: (the timestamp of when the session was last saved)
+                    Cache-Control: private, max-age=(session.cache_expire in the future), pre-check=(session.cache_expire in the future)
+  private_no_expire Last-Modified: (the timestamp of when the session was last saved)
 
-                      Expires: Thu, 19 Nov 1981 08:52:00 GMT
-    private           Cache-Control: private, max-age=(session.cache_expire in the future), pre-check=(session.cache_expire in the future)
-                      Last-Modified: (the timestamp of when the session was last saved)
+                    Expires: Thu, 19 Nov 1981 08:52:00 GMT
+  private           Cache-Control: private, max-age=(session.cache_expire in the future), pre-check=(session.cache_expire in the future)
+                    Last-Modified: (the timestamp of when the session was last saved)
 
-                      Expires: Thu, 19 Nov 1981 08:52:00 GMT
-    nocache           Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
-                      Pragma: no-cache
+                    Expires: Thu, 19 Nov 1981 08:52:00 GMT
+  nocache           Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+                    Pragma: no-cache
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns the name of the current cache limiter.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 session_cache_limiter() example
 
 <?php >
 
-    /* set the cache limiter to 'private' */
+  /* set the cache limiter to 'private' */
 
-    session_cache_limiter('private');
-    $cache_limiter = session_cache_limiter();
+  session_cache_limiter('private');
+  $cache_limiter = session_cache_limiter();
 
-    echo "The cache limiter is now set to $cache_limiter<br />";
+  echo "The cache limiter is now set to $cache_limiter<br />";
 <?>
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * session.cache_limiter
+ * session.cache_limiter
 
 
 vim:ft=help:

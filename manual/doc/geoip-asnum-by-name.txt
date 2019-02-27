@@ -4,28 +4,28 @@ geoip_asnum_by_name
 
 geoip_asnum_by_name — Get the Autonomous System Numbers (ASN)
 
-==============================================================================
+===============================================================================
 *Description*
 
-    string geoip_asnum_by_name ( string $hostname )~
+  geoip_asnum_by_name ( string $hostname ) : string~
 
 The geoip_asnum_by_name() function will return the Autonomous System Numbers
 (ASN) associated with an IP address.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {hostname}
 
-    The hostname or IP address.
+  The hostname or IP address.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns the ASN on success, or FALSE if the address cannot be found in the
 database.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 A geoip_asnum_by_name() example
@@ -33,11 +33,11 @@ Example #1 A geoip_asnum_by_name() example
 This will output the ASN of the host www.example.com.
 
 <?php >
-    $asn = geoip_asnum_by_name('www.example.com');
+  $asn = geoip_asnum_by_name('www.example.com');
 
-    if ($asn) {
-        echo 'The ASN is: ' $asn;
-    }
+  if ($asn) {
+      echo 'The ASN is: ' . $asn;
+  }
 <?>
 
 The above example will output:

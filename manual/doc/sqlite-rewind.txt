@@ -6,40 +6,40 @@ SQLiteResult::rewind
 
 sqlite_rewind -- SQLiteResult::rewind — Seek to the first row number
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool sqlite_rewind ( resource $result )~
+  sqlite_rewind ( resource $result ) : bool~
 
 Object oriented style (method):
 
-    bool SQLiteResult::rewind ( void )~
+  SQLiteResult::rewind ( void ) : bool~
 
 sqlite_rewind() seeks back to the first row in the given result set.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {result}
 
-    The SQLite result resource. This parameter is not required when using the
-    object-oriented method.
+  The SQLite result resource. This parameter is not required when using the
+  object-oriented method.
 
-        Note:
+    Note:
 
-        This function cannot be used with unbuffered result handles.
+    This function cannot be used with unbuffered result handles.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns FALSE if there are no rows in the result set, TRUE otherwise.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |sqlite_next| - Seek to the next row number
-  * |sqlite_current| - Fetches the current row from a result set as an array
-  * |sqlite_seek| - Seek to a particular row number of a buffered result set
+ * |sqlite_next| - Seek to the next row number
+ * |sqlite_current| - Fetches the current row from a result set as an array
+ * |sqlite_seek| - Seek to a particular row number of a buffered result set
 
 
 vim:ft=help:

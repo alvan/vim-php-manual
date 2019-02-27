@@ -4,51 +4,51 @@ imagecolorsforindex
 
 imagecolorsforindex — Get the colors for an index
 
-==============================================================================
+===============================================================================
 *Description*
 
-    array imagecolorsforindex ( resource $image , int $index )~
+  imagecolorsforindex ( resource $image , int $index ) : array~
 
 Gets the color for a specified index.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 { image}
 
-    An image resource, returned by one of the image creation functions, such
-    as |imagecreatetruecolor|.
+  An image resource, returned by one of the image creation functions, such as 
+  |imagecreatetruecolor|.
 
 {index}
 
-    The color index.
+  The color index.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns an associative array with red, green, blue and alpha keys that contain
 the appropriate values for the specified color index.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 imagecolorsforindex() example
 
 <?php >
 
-    // open an image
-    $im = imagecreatefrompng('nexen.png');
+  // open an image
+  $im = imagecreatefrompng('nexen.png');
 
-    // get a color
-    $start_x = 40;
-    $start_y = 50;
-    $color_index = imagecolorat($im, $start_x, $start_y);
+  // get a color
+  $start_x = 40;
+  $start_y = 50;
+  $color_index = imagecolorat($im, $start_x, $start_y);
 
-    // make it human readable
-    $color_tran = imagecolorsforindex($im, $color_index);
+  // make it human readable
+  $color_tran = imagecolorsforindex($im, $color_index);
 
-    // what is it ?
-    print_r($color_tran);
+  // what is it ?
+  print_r($color_tran);
 
 <?>
 
@@ -62,11 +62,11 @@ Array
    [alpha] => 0
 )
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |imagecolorat| - Get the index of the color of a pixel
-  * |imagecolorexact| - Get the index of the specified color
+ * |imagecolorat| - Get the index of the color of a pixel
+ * |imagecolorexact| - Get the index of the specified color
 
 
 vim:ft=help:

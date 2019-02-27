@@ -4,29 +4,28 @@ cyrus_query
 
 cyrus_query — Send a query to a Cyrus IMAP server
 
-==============================================================================
+===============================================================================
 *Description*
 
-    array cyrus_query ( resource $connection , string $query )~
+  cyrus_query ( resource $connection , string $query ) : array~
 
 Sends a query to a Cyrus IMAP server.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {connection}
 
-    The connection handle.
+  The connection handle.
 
 {query}
 
-    The query string.
+  The query string.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
-Returns an associative array with the following keys: text, msgno, and keyword
-.
+Returns an associative array with the following keys: text, msgno, and keyword.
 
 
 vim:ft=help:

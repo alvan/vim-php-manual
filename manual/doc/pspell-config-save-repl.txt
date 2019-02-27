@@ -5,10 +5,10 @@ pspell_config_save_repl
 pspell_config_save_repl — Determine whether to save a replacement pairs list
 along with the wordlist
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool pspell_config_save_repl ( int $dictionary_link , bool $flag )~
+  pspell_config_save_repl ( int $dictionary_link , bool $flag ) : bool~
 
 pspell_config_save_repl() determines whether |pspell_save_wordlist| will save
 the replacement pairs along with the wordlist. Usually there is no need to use
@@ -19,27 +19,27 @@ replacement pairs will not be saved.
 pspell_config_save_repl() should be used on a config before calling 
 |pspell_new_config|.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {dictionary_link}
 
 {flag}
 
-    TRUE if replacement pairs should be saved, FALSE otherwise.
+  TRUE if replacement pairs should be saved, FALSE otherwise.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-==============================================================================
+===============================================================================
 *Notes*
 
-    Note:
+  Note:
 
-    This function will not work unless you have pspell .11.2 and aspell .32.5
-    or later.
+  This function will not work unless you have pspell .11.2 and aspell .32.5 or
+  later.
 
 
 vim:ft=help:

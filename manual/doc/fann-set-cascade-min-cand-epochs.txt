@@ -4,34 +4,34 @@ fann_set_cascade_min_cand_epochs
 
 fann_set_cascade_min_cand_epochs — Sets the min candidate epochs
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool fann_set_cascade_min_cand_epochs ( resource $ann , int~
-    $cascade_min_cand_epochs )~
+  fann_set_cascade_min_cand_epochs ( resource $ann , int~
+  $cascade_min_cand_epochs ) : bool~
 
 Sets the min candidate epochs.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {ann}
 
-    Neural network resource.
+  Neural network resource.
 
 {cascade_min_cand_epochs}
 
-    The minimum candidate epochs.
+  The minimum candidate epochs.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success, or FALSE otherwise.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |fann_get_cascade_min_cand_epochs| - Returns the minimum candidate epochs
+ * |fann_get_cascade_min_cand_epochs| - Returns the minimum candidate epochs
 
 
 vim:ft=help:

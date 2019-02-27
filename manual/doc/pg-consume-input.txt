@@ -4,22 +4,22 @@ pg_consume_input
 
 pg_consume_input — Reads input on the connection
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool pg_consume_input ( resource $connection )~
+  pg_consume_input ( resource $connection ) : bool~
 
 pg_consume_input() consumes any input waiting to be read from the database
 server.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {connection}
 
-    PostgreSQL database connection resource.
+  PostgreSQL database connection resource.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 TRUE if no error occurred, or FALSE if there was an error. Note that TRUE does

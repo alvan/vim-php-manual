@@ -4,27 +4,27 @@ gupnp_control_point_new
 
 gupnp_control_point_new — Create a new control point
 
-==============================================================================
+===============================================================================
 *Description*
 
-    resource gupnp_control_point_new ( resource $context , string $target )~
+  gupnp_control_point_new ( resource $context , string $target ) : resource~
 
 Create a new control point with the specified target.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {context}
 
-    A context identifier, returned by |gupnp_context_new|.
+  A context identifier, returned by |gupnp_context_new|.
 
 {target}
 
-    The search target. {target} should be a service or device name, such as
-    urn:schemas-upnp-org:service:WANIPConnection:1 or
-    urn:schemas-upnp-org:device:MediaRenderer:1.
+  The search target. {target} should be a service or device name, such as
+  urn:schemas-upnp-org:service:WANIPConnection:1 or
+  urn:schemas-upnp-org:device:MediaRenderer:1.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 A control point identifier.

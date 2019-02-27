@@ -1,0 +1,33 @@
+ldap_mod_del_ext
+
+(PHP 7 >= 7.3.0)
+
+ldap_mod_del_ext — Delete attribute values from current attributes
+
+===============================================================================
+*Description*
+
+  ldap_mod_del_ext ( resource $link_identifier , string $dn , array $entry [,~
+  array $serverctrls = array() ] ) : resource~
+
+Does the same thing as |ldap_mod_del| but returns the LDAP result resource to
+be parsed with |ldap_parse_result|.
+
+===============================================================================
+*Parameters*
+
+See |ldap_mod_del|
+
+===============================================================================
+*Return* *Values*
+
+Returns an LDAP result identifier or FALSE on error.
+
+===============================================================================
+*See* *Also*
+
+ * |ldap_mod_del| - Delete attribute values from current attributes
+ * |ldap_parse_result| - Extract information from result
+
+
+vim:ft=help:

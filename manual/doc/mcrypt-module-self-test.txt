@@ -10,39 +10,39 @@ Warning
 This function has been DEPRECATED as of PHP 7.1.0. Relying on this function is
 highly discouraged.
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool mcrypt_module_self_test ( string $algorithm [, string $lib_dir ] )~
+  mcrypt_module_self_test ( string $algorithm [, string $lib_dir ] ) : bool~
 
 This function runs the self test on the algorithm specified.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {algorithm}
 
-    One of the MCRYPT_ciphername constants, or the name of the algorithm as
-    string.
+  One of the MCRYPT_ciphername constants, or the name of the algorithm as
+  string.
 
 {lib_dir}
 
-    The optional {lib_dir} parameter can contain the location where the
-    algorithm module is on the system.
+  The optional {lib_dir} parameter can contain the location where the algorithm
+  module is on the system.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 The function returns TRUE if the self test succeeds, or FALSE when it fails.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 mcrypt_module_self_test() example
 
 <?php >
-    var_dump(mcrypt_module_self_test(MCRYPT_RIJNDAEL_128)) . "\n";
-    var_dump(mcrypt_module_self_test(MCRYPT_BOGUS_CYPHER));
+  var_dump(mcrypt_module_self_test(MCRYPT_RIJNDAEL_128)) . "\n";
+  var_dump(mcrypt_module_self_test(MCRYPT_BOGUS_CYPHER));
 <?>
 
 The above example will output:

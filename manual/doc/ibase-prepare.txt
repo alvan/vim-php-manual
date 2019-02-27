@@ -2,38 +2,38 @@ ibase_prepare
 
 (PHP 5, PHP 7)
 
-ibase_prepare — Prepare a query for later binding of parameter placeholders
-and execution
+ibase_prepare — Prepare a query for later binding of parameter placeholders and
+execution
 
-==============================================================================
+===============================================================================
 *Description*
 
-    resource ibase_prepare ( string $query )~
-    resource ibase_prepare ( resource $link_identifier , string $query )~
-    resource ibase_prepare ( resource $link_identifier , string $trans ,~
-    string $query )~
+  ibase_prepare ( string $query ) : resource~
+  ibase_prepare ( resource $link_identifier , string $query ) : resource~
+  ibase_prepare ( resource $link_identifier , string $trans , string $query )~
+  : resource~
 
-Prepare a query for later binding of parameter placeholders and execution (via
+Prepare a query for later binding of parameter placeholders and execution (via 
 |ibase_execute|).
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {query}
 
-    An InterBase query.
+  An InterBase query.
 
 {link_identifier}
 
-    An InterBase link identifier returned from |ibase_connect|. If omitted,
-    the last opened link is assumed.
+  An InterBase link identifier returned from |ibase_connect|. If omitted, the
+  last opened link is assumed.
 
 {trans}
 
-    An InterBase transaction handle the query should be associated with. If
-    omitted, the default transaction of the connection is assumed.
+  An InterBase transaction handle the query should be associated with. If
+  omitted, the default transaction of the connection is assumed.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns a prepared query handle, or FALSE on error.

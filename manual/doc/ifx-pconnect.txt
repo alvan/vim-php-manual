@@ -4,11 +4,11 @@ ifx_pconnect
 
 ifx_pconnect — Open persistent Informix connection
 
-==============================================================================
+===============================================================================
 *Description*
 
-    resource ifx_pconnect ([ string $database [, string $userid [, string~
-    $password ]]] )~
+  ifx_pconnect ([ string $database [, string $userid [, string $password ]]] )~
+  : resource~
 
 ifx_pconnect() acts very much like |ifx_connect| with two major differences.
 
@@ -23,7 +23,7 @@ of the script ends. Instead, the link will remain open for future use (
 
 This type of links is therefore called 'persistent'.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 All of the arguments are optional, and if they're missing, defaults are taken
@@ -34,26 +34,26 @@ defined).
 
 {database}
 
-    The database name, as a string.
+  The database name, as a string.
 
 {userid}
 
-    The username, as a string.
+  The username, as a string.
 
 {password}
 
-    The password, as a string.
+  The password, as a string.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns: valid Informix persistent link identifier on success, or FALSE on
 errors.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |ifx_connect| - Open Informix server connection
+ * |ifx_connect| - Open Informix server connection
 
 
 vim:ft=help:

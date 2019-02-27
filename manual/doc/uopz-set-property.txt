@@ -1,0 +1,76 @@
+uopz_set_property
+
+(PECL uopz 5, PECL uopz 6)
+
+uopz_set_property — Sets value of existing class or instance property
+
+===============================================================================
+*Description*
+
+  uopz_set_property ( string $class , string $property , mixed $value ) : void~
+  uopz_set_property ( object $instance , string $property , mixed $value ) :~
+  void~
+
+Sets the value of an existing static class property, if {class} is given, or
+the value of an instance property (regardless whether the instance property
+already exists), if {instance} is given.
+
+===============================================================================
+*Parameters*
+
+{class}
+
+  The name of the class.
+
+{instance}
+
+  The object instance.
+
+{property}
+
+  The name of the property.
+
+{value}
+
+  The value to assign to the property.
+
+===============================================================================
+*Return* *Values*
+
+No value is returned.
+
+===============================================================================
+*Examples*
+
+Example #1 Basic uopz_set_property() Usage
+
+<?php >
+  class Foo {
+     private static $staticBar;
+     private $bar;
+     public static function testStaticBar() {
+        return self::$staticBar;
+     }
+     public function testBar() {
+        return $this->bar;
+     }
+  }
+  $foo = new Foo;
+  uopz_set_property('Foo', 'staticBar', 10);
+  uopz_set_property($foo, 'bar', 100);
+  var_dump(Foo::testStaticBar());
+  var_dump($foo->testBar());
+<?>
+
+The above example will output:
+
+int(10)
+
+
+===============================================================================
+*See* *Also*
+
+ * |uopz_get_property| - Gets value of class or instance property
+
+
+vim:ft=help:

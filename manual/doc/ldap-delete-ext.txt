@@ -1,0 +1,33 @@
+ldap_delete_ext
+
+(PHP 7 >= 7.3.0)
+
+ldap_delete_ext — Delete an entry from a directory
+
+===============================================================================
+*Description*
+
+  ldap_delete_ext ( resource $link_identifier , string $dn [, array~
+  $serverctrls = array() ] ) : resource~
+
+Does the same thing as |ldap_delete| but returns the LDAP result resource to be
+parsed with |ldap_parse_result|.
+
+===============================================================================
+*Parameters*
+
+See |ldap_delete|
+
+===============================================================================
+*Return* *Values*
+
+Returns an LDAP result identifier or FALSE on error.
+
+===============================================================================
+*See* *Also*
+
+ * |ldap_delete| - Delete an entry from a directory
+ * |ldap_parse_result| - Extract information from result
+
+
+vim:ft=help:

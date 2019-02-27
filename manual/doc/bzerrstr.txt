@@ -4,31 +4,31 @@ bzerrstr
 
 bzerrstr — Returns a bzip2 error string
 
-==============================================================================
+===============================================================================
 *Description*
 
-    string bzerrstr ( resource $bz )~
+  bzerrstr ( resource $bz ) : string~
 
 Gets the error string of any bzip2 error returned by the given file pointer.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {bz}
 
-    The file pointer. It must be valid and must point to a file successfully
-    opened by |bzopen|.
+  The file pointer. It must be valid and must point to a file successfully
+  opened by |bzopen|.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns a string containing the error message.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |bzerrno| - Returns a bzip2 error number
-  * |bzerror| - Returns the bzip2 error number and error string in an array
+ * |bzerrno| - Returns a bzip2 error number
+ * |bzerror| - Returns the bzip2 error number and error string in an array
 
 
 vim:ft=help:

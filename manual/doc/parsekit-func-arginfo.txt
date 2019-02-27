@@ -4,38 +4,38 @@ parsekit_func_arginfo
 
 parsekit_func_arginfo — Return information regarding function argument(s)
 
-==============================================================================
+===============================================================================
 *Description*
 
-    array parsekit_func_arginfo ( mixed $function )~
+  parsekit_func_arginfo ( mixed $function ) : array~
 Warning
 
 This function is EXPERIMENTAL. The behaviour of this function, its name, and
-surrounding documentation may change without notice in a future release of
-PHP. This function should be used at your own risk.
+surrounding documentation may change without notice in a future release of PHP.
+This function should be used at your own risk.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {function}
 
-    A string describing a function, or an array describing a class/method.
+  A string describing a function, or an array describing a class/method.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns an array containing argument information.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 parsekit_func_arginfo() example
 
 <?php >
-    function foo($bar, stdClass $baz, &$bomb, $bling = false) {
-    }
+  function foo($bar, stdClass $baz, &$bomb, $bling = false) {
+  }
 
-    var_dump(parsekit_func_arginfo('foo'));
+  var_dump(parsekit_func_arginfo('foo'));
 <?>
 
 The above example will output:

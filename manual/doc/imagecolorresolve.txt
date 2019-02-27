@@ -5,11 +5,11 @@ imagecolorresolve
 imagecolorresolve — Get the index of the specified color or its closest
 possible alternative
 
-==============================================================================
+===============================================================================
 *Description*
 
-    int imagecolorresolve ( resource $image , int $red , int $green , int~
-    $blue )~
+  imagecolorresolve ( resource $image , int $red , int $green , int $blue ) :~
+  int~
 
 This function is guaranteed to return a color index for a requested color,
 either the exact color or the closest possible alternative.
@@ -17,49 +17,49 @@ either the exact color or the closest possible alternative.
 If you created the image from a file, only colors used in the image are
 resolved. Colors present only in the palette are not resolved.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 { image}
 
-    An image resource, returned by one of the image creation functions, such
-    as |imagecreatetruecolor|.
+  An image resource, returned by one of the image creation functions, such as 
+  |imagecreatetruecolor|.
 
 {red}
 
-    Value of red component.
+  Value of red component.
 
 {green}
 
-    Value of green component.
+  Value of green component.
 
 {blue}
 
-    Value of blue component.
+  Value of blue component.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns a color index.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 Using imagecoloresolve() to get colors from an image
 
 <?php >
-    // Load an image
-    $im = imagecreatefromgif('phplogo.gif');
+  // Load an image
+  $im = imagecreatefromgif('phplogo.gif');
 
-    // Get closest colors from the image
-    $colors = array();
-    $colors[] = imagecolorresolve($im, 255, 255, 255);
-    $colors[] = imagecolorresolve($im, 0, 0, 200);
+  // Get closest colors from the image
+  $colors = array();
+  $colors[] = imagecolorresolve($im, 255, 255, 255);
+  $colors[] = imagecolorresolve($im, 0, 0, 200);
 
-    // Output
-    print_r($colors);
+  // Output
+  print_r($colors);
 
-    imagedestroy($im);
+  imagedestroy($im);
 <?>
 
 The above example will output something similar to:
@@ -70,11 +70,11 @@ Array
     [1] => 85
 )
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |imagecolorclosest| - Get the index of the closest color to the specified
-    color
+ * |imagecolorclosest| - Get the index of the closest color to the specified
+  color
 
 
 vim:ft=help:

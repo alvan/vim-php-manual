@@ -4,27 +4,26 @@ openssl_get_md_methods
 
 openssl_get_md_methods — Gets available digest methods
 
-==============================================================================
+===============================================================================
 *Description*
 
-    array openssl_get_md_methods ([ bool $aliases = FALSE ] )~
+  openssl_get_md_methods ([ bool $aliases = FALSE ] ) : array~
 
 Gets a list of available digest methods.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {aliases}
 
-    Set to TRUE if digest aliases should be included within the returned array
-    .
+  Set to TRUE if digest aliases should be included within the returned array.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 An array of available digest methods.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 openssl_get_md_methods() example
@@ -33,13 +32,13 @@ Shows how the available digests might look, and also which aliases might be
 available.
 
 <?php >
-    $digests             = openssl_get_md_methods();
-    $digests_and_aliases = openssl_get_md_methods(true);
-    $digest_aliases      = array_diff($digests_and_aliases, $digests);
+  $digests             = openssl_get_md_methods();
+  $digests_and_aliases = openssl_get_md_methods(true);
+  $digest_aliases      = array_diff($digests_and_aliases, $digests);
 
-    print_r($digests);
+  print_r($digests);
 
-    print_r($digest_aliases);
+  print_r($digest_aliases);
 
 <?>
 
@@ -108,11 +107,11 @@ Array
     [55] => ssl3-sha1
 )
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |openssl_digest| - Computes a digest
-  * |openssl_get_cipher_methods| - Gets available cipher methods
+ * |openssl_digest| - Computes a digest
+ * |openssl_get_cipher_methods| - Gets available cipher methods
 
 
 vim:ft=help:

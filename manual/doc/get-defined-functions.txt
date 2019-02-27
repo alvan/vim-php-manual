@@ -4,21 +4,21 @@ get_defined_functions
 
 get_defined_functions — Returns an array of all defined functions
 
-==============================================================================
+===============================================================================
 *Description*
 
-    array get_defined_functions ([ bool $exclude_disabled = FALSE ] )~
+  get_defined_functions ([ bool $exclude_disabled = FALSE ] ) : array~
 
 Gets an array of all defined functions.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {exclude_disabled}
 
-    Whether disabled functions should be excluded from the return value.
+  Whether disabled functions should be excluded from the return value.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns a multidimensional array containing a list of all defined functions,
@@ -26,26 +26,26 @@ both built-in (internal) and user-defined. The internal functions will be
 accessible via $arr["internal"], and the user defined ones using $arr["user"]
 (see example below).
 
-==============================================================================
+===============================================================================
 *Changelog*
 
-       Version                          Description
-PHP 7.0.15, PHP 7.1.1 The {exclude_disabled} parameter has been added.
+   Version                      Description
+7.0.15, 7.1.1 The {exclude_disabled} parameter has been added.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 get_defined_functions() example
 
 <?php >
-    function myrow($id, $data)
-    {
-        return "<tr><th>$id</th><td>$data</td></tr>\n";
-    }
+  function myrow($id, $data)
+  {
+      return "<tr><th>$id</th><td>$data</td></tr>\n";
+  }
 
-    $arr = get_defined_functions();
+  $arr = get_defined_functions();
 
-    print_r($arr);
+  print_r($arr);
 <?>
 
 The above example will output something similar to:
@@ -73,15 +73,15 @@ Array
 
 )
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |function_exists| - Return TRUE if the given function has been defined
-  * |get_defined_vars| - Returns an array of all defined variables
-  * |get_defined_constants| - Returns an associative array with the names of
-    all the constants and their values
-  * |get_declared_classes| - Returns an array with the name of the defined
-    classes
+ * |function_exists| - Return TRUE if the given function has been defined
+ * |get_defined_vars| - Returns an array of all defined variables
+ * |get_defined_constants| - Returns an associative array with the names of all
+  the constants and their values
+ * |get_declared_classes| - Returns an array with the name of the defined
+  classes
 
 
 vim:ft=help:

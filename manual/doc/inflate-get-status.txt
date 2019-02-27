@@ -4,19 +4,19 @@ inflate_get_status
 
 inflate_get_status — Get decompression status
 
-==============================================================================
+===============================================================================
 *Description*
 
-    int inflate_get_status ( resource $resource )~
+  inflate_get_status ( resource $resource ) : int~
 
 Usually returns either ZLIB_OK or ZLIB_STREAM_END.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {resource}
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns decompression status or FALSE on failure.

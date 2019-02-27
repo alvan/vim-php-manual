@@ -4,50 +4,50 @@ dio_stat
 
 dio_stat — Gets stat information about the file descriptor fd
 
-==============================================================================
+===============================================================================
 *Description*
 
-    array dio_stat ( resource $fd )~
+  dio_stat ( resource $fd ) : array~
 
 dio_stat() returns information about the given file descriptor.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {fd}
 
-    The file descriptor returned by |dio_open|.
+  The file descriptor returned by |dio_open|.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns an associative array with the following keys:
 
-  * "device" - device
+ * "device" - device
 
-  * "inode" - inode
+ * "inode" - inode
 
-  * "mode" - mode
+ * "mode" - mode
 
-  * "nlink" - number of hard links
+ * "nlink" - number of hard links
 
-  * "uid" - user id
+ * "uid" - user id
 
-  * "gid" - group id
+ * "gid" - group id
 
-  * "device_type" - device type (if inode device)
+ * "device_type" - device type (if inode device)
 
-  * "size" - total size in bytes
+ * "size" - total size in bytes
 
-  * "blocksize" - blocksize
+ * "blocksize" - blocksize
 
-  * "blocks" - number of blocks allocated
+ * "blocks" - number of blocks allocated
 
-  * "atime" - time of last access
+ * "atime" - time of last access
 
-  * "mtime" - time of last modification
+ * "mtime" - time of last modification
 
-  * "ctime" - time of last change
+ * "ctime" - time of last change
 
 On error dio_stat() returns NULL.
 

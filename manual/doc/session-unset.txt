@@ -4,30 +4,42 @@ session_unset
 
 session_unset — Free all session variables
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool session_unset ( void )~
+  session_unset ( void ) : bool~
 
 The session_unset() function frees all session variables currently registered.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-==============================================================================
+===============================================================================
+*Changelog*
+
+Version                               Description
+7.2.0   The return type of this function is bool now. Formerly, it has been 
+        void.
+
+===============================================================================
 *Notes*
 
-    Note:
+  Note:
 
-    If $_SESSION is used, use |unset| to unregister a session variable, i.e.
-    unset ($_SESSION['varname']);.
+  If $_SESSION is used, use |unset| to unregister a session variable, i.e.
+  unset ($_SESSION['varname']);.
 
 Caution
 
-Do NOT unset the whole $_SESSION with unset($_SESSION) as this will disable
-the registering of session variables through the $_SESSION superglobal.
+Do NOT unset the whole $_SESSION with unset($_SESSION) as this will disable the
+registering of session variables through the $_SESSION superglobal.
+
+  Note:
+
+  Only use session_unset() for older deprecated code that does not use
+  $_SESSION.
 
 
 vim:ft=help:

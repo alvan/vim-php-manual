@@ -4,29 +4,29 @@ udm_clear_search_limits
 
 udm_clear_search_limits — Clear all mnoGoSearch search restrictions
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool udm_clear_search_limits ( resource $agent )~
+  udm_clear_search_limits ( resource $agent ) : bool~
 
 udm_clear_search_limits() resets defined search limitations.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {agent}
 
-    A link to Agent, received after call to |udm_alloc_agent|.
+  A link to Agent, received after call to |udm_alloc_agent|.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |udm_add_search_limit| - Add various search limits
+ * |udm_add_search_limit| - Add various search limits
 
 
 vim:ft=help:

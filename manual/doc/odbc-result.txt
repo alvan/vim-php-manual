@@ -4,33 +4,33 @@ odbc_result
 
 odbc_result — Get result data
 
-==============================================================================
+===============================================================================
 *Description*
 
-    mixed odbc_result ( resource $result_id , mixed $field )~
+  odbc_result ( resource $result_id , mixed $field ) : mixed~
 
 Get result data
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {result_id}
 
-    The ODBC resource.
+  The ODBC resource.
 
 {field}
 
-    The field name being retrieved. It can either be an integer containing the
-    column number of the field you want; or it can be a string containing the
-    name of the field.
+  The field name being retrieved. It can either be an integer containing the
+  column number of the field you want; or it can be a string containing the
+  name of the field.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns the string contents of the field, FALSE on error, NULL for NULL data,
 or TRUE for binary data.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 The first call to odbc_result() returns the value of the third field in the
@@ -44,11 +44,11 @@ the fieldnames of the table(s) that is(are) being queried.
 Example #1 odbc_result() examples
 
 <?php >
-    $item_3   = odbc_result($Query_ID, 3);
-    $item_val = odbc_result($Query_ID, "val");
+  $item_3   = odbc_result($Query_ID, 3);
+  $item_val = odbc_result($Query_ID, "val");
 <?>
 
-==============================================================================
+===============================================================================
 *Notes*
 
 Field indices start from 1. Regarding the way binary or long column data is

@@ -4,23 +4,23 @@ event_buffer_read
 
 event_buffer_read — Read data from a buffered event
 
-==============================================================================
+===============================================================================
 *Description*
 
-    string event_buffer_read ( resource $bevent , int $data_size )~
+  event_buffer_read ( resource $bevent , int $data_size ) : string~
 
 Reads data from the input buffer of the buffered event.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {bevent}
 
-    Valid buffered event resource.
+  Valid buffered event resource.
 
 {data_size}
 
-    Data size in bytes.
+  Data size in bytes.
 
 
 vim:ft=help:

@@ -4,18 +4,17 @@ ftp_append
 
 ftp_append — Append content of a file a another file on the FTP server
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool ftp_append ( resource $ftp , string $remote_file , string~
-    $local_file [, int $mode = FTP_IMAGE ] )~
+  ftp_append ( resource $ftp , string $remote_file , string $local_file [, int~
+  $mode = FTP_IMAGE ] ) : bool~
 
 Warning
 
-This function is currently not documented; only its argument list is
-available.
+This function is currently not documented; only its argument list is available.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {ftp}
@@ -26,7 +25,7 @@ available.
 
 {mode}
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.

@@ -4,10 +4,10 @@ imagecreatefromgd
 
 imagecreatefromgd — Create a new image from GD file or URL
 
-==============================================================================
+===============================================================================
 *Description*
 
-    resource imagecreatefromgd ( string $filename )~
+  imagecreatefromgd ( string $filename ) : resource~
 
 Create a new image from GD file or URL.
 
@@ -19,38 +19,38 @@ the Supported Protocols and Wrappers for links to information about what
 abilities the various wrappers have, notes on their usage, and information on
 any predefined variables they may provide.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {filename}
 
-    Path to the GD file.
+  Path to the GD file.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns an image resource identifier on success, FALSE on errors.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 imagecreatefromgd() example
 
 <?php >
-    // Load the gd image
-    $im = @imagecreatefromgd('./test.gd');
+  // Load the gd image
+  $im = @imagecreatefromgd('./test.gd');
 
-    // Test if the image was loaded
-    if(!is_resource($im))
-    {
-         die('Unable to load gd image!');
-    }
+  // Test if the image was loaded
+  if(!is_resource($im))
+  {
+       die('Unable to load gd image!');
+  }
 
-    // Do image operations here
+  // Do image operations here
 
-    // Save the image
-    imagegd($im, './test_updated.gd');
-    imagedestroy($im);
+  // Save the image
+  imagegd($im, './test_updated.gd');
+  imagedestroy($im);
 <?>
 
 

@@ -4,10 +4,10 @@ natcasesort
 
 natcasesort — Sort an array using a case insensitive "natural order" algorithm
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool natcasesort ( array &$array )~
+  natcasesort ( array &$array ) : bool~
 
 natcasesort() is a case insensitive version of |natsort|.
 
@@ -15,39 +15,39 @@ This function implements a sort algorithm that orders alphanumeric strings in
 the way a human being would while maintaining key/value associations. This is
 described as a "natural ordering".
 
-    Note:
+  Note:
 
-    If two members compare as equal, their relative order in the sorted array
-    is undefined.
+  If two members compare as equal, their relative order in the sorted array is
+  undefined.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {array}
 
-    The input array.
+  The input array.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 natcasesort() example
 
 <?php >
-    $array1 = $array2 = array('IMG0.png', 'img12.png', 'img10.png', 'img2.png', 
-    'img1.png', 'IMG3.png');
+  $array1 = $array2 = array('IMG0.png', 'img12.png', 'img10.png', 'img2.png', 
+  'img1.png', 'IMG3.png');
 
-    sort($array1);
-    echo "Standard sorting\n";
-    print_r($array1);
+  sort($array1);
+  echo "Standard sorting\n";
+  print_r($array1);
 
-    natcasesort($array2);
-    echo "\nNatural order sorting (case-insensitive)\n";
-    print_r($array2);
+  natcasesort($array2);
+  echo "\nNatural order sorting (case-insensitive)\n";
+  print_r($array2);
 <?>
 
 The above example will output:
@@ -74,17 +74,16 @@ Array
     [1] => img12.png
 )
 
-For more information see: Martin Pool's >> Natural Order String Comparison
-page.
+For more information see: Martin Pool's » Natural Order String Comparison page.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |natsort| - Sort an array using a "natural order" algorithm
-  * The comparison of array sorting functions
-  * |strnatcmp| - String comparisons using a "natural order" algorithm
-  * |strnatcasecmp| - Case insensitive string comparisons using a "natural
-    order" algorithm
+ * |natsort| - Sort an array using a "natural order" algorithm
+ * The comparison of array sorting functions
+ * |strnatcmp| - String comparisons using a "natural order" algorithm
+ * |strnatcasecmp| - Case insensitive string comparisons using a "natural
+  order" algorithm
 
 
 vim:ft=help:

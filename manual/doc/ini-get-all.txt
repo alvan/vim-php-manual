@@ -4,27 +4,27 @@ ini_get_all
 
 ini_get_all — Gets all configuration options
 
-==============================================================================
+===============================================================================
 *Description*
 
-    array ini_get_all ([ string $extension [, bool $details = TRUE ]] )~
+  ini_get_all ([ string $extension [, bool $details = TRUE ]] ) : array~
 
 Returns all the registered configuration options.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {extension}
 
-    An optional extension name. If set, the function return only options
-    specific for that extension.
+  An optional extension name. If set, the function return only options specific
+  for that extension.
 
 {details}
 
-    Retrieve details settings or only the current value for each setting.
-    Default is TRUE (retrieve details).
+  Retrieve details settings or only the current value for each setting. Default
+  is TRUE (retrieve details).
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns an associative array with directive name as the array key.
@@ -37,32 +37,32 @@ When {details} is FALSE the value will be the current value of the option.
 
 See the manual section for information on what access levels mean.
 
-    Note:
+  Note:
 
-    It's possible for a directive to have multiple access levels, which is why
-    access shows the appropriate bitmask values.
+  It's possible for a directive to have multiple access levels, which is why
+  access shows the appropriate bitmask values.
 
-==============================================================================
+===============================================================================
 *Notes*
 
-    Note:
+  Note:
 
-    ini_get_all() ignores "array" ini options such as pdo.dsn.*.
+  ini_get_all() ignores "array" ini options such as pdo.dsn.*.
 
-==============================================================================
+===============================================================================
 *Changelog*
 
 Version    Description
 5.3.0   Added {details}.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 ini_get_all() examples
 
 <?php >
-    print_r(ini_get_all("pcre"));
-    print_r(ini_get_all());
+  print_r(ini_get_all("pcre"));
+  print_r(ini_get_all());
 <?>
 
 The above example will output something similar to:
@@ -107,8 +107,8 @@ Array
 Example #2 Disabling {details}
 
 <?php >
-    print_r(ini_get_all("pcre", false)); // Added in PHP 5.3.0
-    print_r(ini_get_all(null, false)); // Added in PHP 5.3.0
+  print_r(ini_get_all("pcre", false)); // Added in PHP 5.3.0
+  print_r(ini_get_all(null, false)); // Added in PHP 5.3.0
 <?>
 
 The above example will output something similar to:
@@ -125,17 +125,17 @@ Array
     ...
 )
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * How to change configuration settings
-  * |ini_get| - Gets the value of a configuration option
-  * |ini_restore| - Restores the value of a configuration option
-  * |ini_set| - Sets the value of a configuration option
-  * |get_loaded_extensions| - Returns an array with the names of all modules
-    compiled and loaded
-  * |phpinfo| - Outputs information about PHP's configuration
-  * ReflectionExtension::getINIEntries() - Gets extension ini entries
+ * How to change configuration settings
+ * |ini_get| - Gets the value of a configuration option
+ * |ini_restore| - Restores the value of a configuration option
+ * |ini_set| - Sets the value of a configuration option
+ * |get_loaded_extensions| - Returns an array with the names of all modules
+  compiled and loaded
+ * |phpinfo| - Outputs information about PHP's configuration
+ * ReflectionExtension::getINIEntries() - Gets extension ini entries
 
 
 vim:ft=help:

@@ -5,25 +5,25 @@ mysqlnd_memcache_get_config
 mysqlnd_memcache_get_config — Returns information about the plugin
 configuration
 
-==============================================================================
+===============================================================================
 *Description*
 
-    array mysqlnd_memcache_get_config ( mixed $connection )~
+  mysqlnd_memcache_get_config ( mixed $connection ) : array~
 
 This function returns an array of all mysqlnd_memcache related configuration
 information that is attached to the MySQL connection. This includes MySQL, the
 Memcache object provided via |mysqlnd_memcache_set|, and the table mapping
 configuration that was automatically collected from the MySQL Server.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {connection}
 
-    A handle to a MySQL Server using one of the MySQL API extensions for PHP,
-    which are PDO_MYSQL, mysqli or ext/mysql.
+  A handle to a MySQL Server using one of the MySQL API extensions for PHP,
+  which are PDO_MYSQL, mysqli or ext/mysql.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 An array of mysqlnd_memcache configuration information on success, otherwise
@@ -31,19 +31,19 @@ FALSE.
 
 The returned array has these elements:
 
-                mysqlnd_memcache_get_config() array structure
-  Array Key                             Description
+                 mysqlnd_memcache_get_config() array structure
+  Array Key                              Description
               Instance of Memcached associated to this MySQL connection by |
-memcached     mysqlnd_memcache_set|. You can use this to change settings of
-              the memcache connection, or directly by querying the server on
-              this connection.
+memcached     mysqlnd_memcache_set|. You can use this to change settings of the
+              memcache connection, or directly by querying the server on this
+              connection.
               The PCRE regular expression used to match the SQL query sent to
               the server. Queries matching this pattern will be further
               analyzed to decide whether the query can be intercepted and sent
-pattern       via the memcache interface or whether the query is sent using
-              the general MySQL protocol to the server. The pattern is either
-              the default pattern (MYSQLND_MEMCACHE_DEFAULT_REGEXP) or it is
-              set via |mysqlnd_memcache_set|.
+pattern       via the memcache interface or whether the query is sent using the
+              general MySQL protocol to the server. The pattern is either the
+              default pattern (MYSQLND_MEMCACHE_DEFAULT_REGEXP) or it is set
+              via |mysqlnd_memcache_set|.
               An associative array with a list of all configured containers as
               they were discovered by this plugin. The key for these elements
 mappings      is the name of the container in the MySQL configuration. The
@@ -54,16 +54,16 @@ mappings      is the name of the container in the MySQL configuration. The
 mapping_query available containers and mappings. The result of that query is
               provided in the mappings element.
 
-                           Mapping entry structure
-  Array Key                             Description
+                            Mapping entry structure
+  Array Key                              Description
               A prefix used while accessing data via memcache. With the MySQL
 prefix        InnoDB Memcache Deamon plugin, this usually begins with @@ and
               ends with a configurable separator. This prefix is placed in
               front of the key value while using the memcache protocol.
 schema_name   Name of the schema (database) which contains the table being
               accessed.
-table_name    Name of the table which contains the data accessible via
-              memcache protocol.
+table_name    Name of the table which contains the data accessible via memcache
+              protocol.
               Name of the database field (column) with the id used as key when
 id_field_name accessing the table via memcache. Often this is the database
               field having a primary key.
@@ -72,26 +72,26 @@ id_field_name accessing the table via memcache. Often this is the database
               MySQL can map multiple columns to this value.
 
 
-separator         Note:
+separator       Note:
 
-                  The separator, which can be set in the MySQL Server
-                  configuration, should not be part of any value retrieved via
-                  memcache because proper mapping can't be guaranteed.
+                The separator, which can be set in the MySQL Server
+                configuration, should not be part of any value retrieved via
+                memcache because proper mapping can't be guaranteed.
 
 fields        An array with the name of all fields available for this mapping.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 mysqlnd_memcache_get_config() example
 
 <?php >
-    $mysqli = new mysqli("host", "user", "passwd", "database");
-    $memc = new Memcached();
-    $memc->addServer("host", 11211);
-    mysqlnd_memcache_set($mysqli, $memc);
+  $mysqli = new mysqli("host", "user", "passwd", "database");
+  $memc = new Memcached();
+  $memc->addServer("host", 11211);
+  mysqlnd_memcache_set($mysqli, $memc);
 
-    var_dump(mysqlnd_memcache_get_config($mysqli));
+  var_dump(mysqlnd_memcache_get_config($mysqli));
 <?>
 
 The above example will output:
@@ -138,11 +138,11 @@ array(4) {
                      FROM innodb_memcache.containers c"
 }
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |mysqlnd_memcache_set| - Associate a MySQL connection with a Memcache
-    connection
+ * |mysqlnd_memcache_set| - Associate a MySQL connection with a Memcache
+  connection
 
 
 vim:ft=help:

@@ -4,54 +4,54 @@ php_strip_whitespace
 
 php_strip_whitespace — Return source with stripped comments and whitespace
 
-==============================================================================
+===============================================================================
 *Description*
 
-    string php_strip_whitespace ( string $filename )~
+  php_strip_whitespace ( string $filename ) : string~
 
 Returns the PHP source code in {filename} with PHP comments and whitespace
 removed. This may be useful for determining the amount of actual code in your
 scripts compared with the amount of comments. This is similar to using `php`
 `-w` from the commandline.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {filename}
 
-    Path to the PHP file.
+  Path to the PHP file.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 The stripped source code will be returned on success, or an empty string on
 failure.
 
-    Note:
+  Note:
 
-    This function respects the value of the short_open_tag ini directive.
+  This function respects the value of the short_open_tag ini directive.
 
-    Note:
+  Note:
 
-    This function works as described as of PHP 5.0.1. Before this it would
-    only return an empty string. For more information on this bug and its
-    prior behavior, see bug report >> #29606.
+  This function works as described as of PHP 5.0.1. Before this it would only
+  return an empty string. For more information on this bug and its prior
+  behavior, see bug report » #29606.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 php_strip_whitespace() example
 
 <?php >
-    // PHP comment here
+  // PHP comment here
 
-    /*
-     * Another PHP comment
-     */
+  /*
+   * Another PHP comment
+   */
 
-    echo        php_strip_whitespace(__FILE__);
-    // Newlines are considered whitespace, and are removed too:
-    do_nothing();
+  echo        php_strip_whitespace(__FILE__);
+  // Newlines are considered whitespace, and are removed too:
+  do_nothing();
 <?>
 
 The above example will output:

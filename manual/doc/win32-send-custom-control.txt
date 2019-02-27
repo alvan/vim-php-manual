@@ -1,0 +1,52 @@
+win32_send_custom_control
+
+(PECL win32service >=0.4.0)
+
+win32_send_custom_control — Send a custom control to the service
+
+===============================================================================
+*Description*
+
+  win32_send_custom_control ( string $servicename , int $control [, string~
+  $machine ] ) : int~
+
+See » Microsoft ControlService function for more details
+
+===============================================================================
+*Parameters*
+
+{servicename}
+
+  The short name of the service.
+
+{control}
+
+  The custom contole value between 128 and 255.
+
+{machine}
+
+  Optional machine name. If omitted, the local machine is used.
+
+===============================================================================
+*Return* *Values*
+
+Returns WIN32_NO_ERROR on success, FALSE if there is a problem with the
+parameters or a Win32 Error Code on failure.
+
+===============================================================================
+*Errors/Exceptions*
+
+If the control value is not between 128 and 255, this function emits an E_ERROR
+level error.
+
+===============================================================================
+*See* *Also*
+
+ * |win32_start_service| - Starts a service
+ * |win32_stop_service| - Stops a service
+ * |win32_pause_service| - Pauses a service
+ * |win32_continue_service| - Resumes a paused service
+ * Win32 Error Codes
+
+
+vim:ft=help:

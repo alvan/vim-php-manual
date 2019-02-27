@@ -33,48 +33,48 @@ Example #1 Basic include example
 vars.php
 <?php >
 
-    $color = 'green';
-    $fruit = 'apple';
+  $color = 'green';
+  $fruit = 'apple';
 
 <?>
 
 test.php
 <?php >
 
-    echo "A $color $fruit"; // A
+  echo "A $color $fruit"; // A
 
-    include 'vars.php';
+  include 'vars.php';
 
-    echo "A $color $fruit"; // A green apple
+  echo "A $color $fruit"; // A green apple
 
 <?>
 
 If the include occurs inside a function within the calling file, then all of
-the code contained in the called file will behave as though it had been
-defined inside that function. So, it will follow the variable scope of that
-function. An exception to this rule are magic constants which are evaluated by
-the parser before the include occurs.
+the code contained in the called file will behave as though it had been defined
+inside that function. So, it will follow the variable scope of that function.
+An exception to this rule are magic constants which are evaluated by the parser
+before the include occurs.
 
 Example #2 Including within functions
 
 <?php >
 
-    function foo()
-    {
-        global $color;
+  function foo()
+  {
+      global $color;
 
-        include 'vars.php';
+      include 'vars.php';
 
-        echo "A $color $fruit";
-    }
+      echo "A $color $fruit";
+  }
 
-    /* vars.php is in the scope of foo() so     *
-    * $fruit is NOT available outside of this  *
-    * scope.  $color is because we declared it *
-    * as global.                               */
+  /* vars.php is in the scope of foo() so     *
+  * $fruit is NOT available outside of this  *
+  * scope.  $color is because we declared it *
+  * as global.                               */
 
-    foo();                    // A green apple
-    echo "A $color $fruit";   // A green
+  foo();                    // A green apple
+  echo "A $color $fruit";   // A green
 
 <?>
 
@@ -85,8 +85,8 @@ must be enclosed within valid PHP start and end tags.
 
 If "URL include wrappers" are enabled in PHP, you can specify the file to be
 included using a URL (via HTTP or other supported wrapper - see Supported
-Protocols and Wrappers for a list of protocols) instead of a local pathname.
-If the target server interprets the target file as PHP code, variables may be
+Protocols and Wrappers for a list of protocols) instead of a local pathname. If
+the target server interprets the target file as PHP code, variables may be
 passed to the included file using a URL request string as used with HTTP GET.
 This is not strictly speaking the same thing as including the file and having
 it inherit the parent file's variable scope; the script is actually being run
@@ -97,24 +97,24 @@ Example #3 include through HTTP
 
 <?php >
 
-    /* This example assumes that www.example.com is configured to parse .php
-    * files and not .txt files. Also, 'Works' here means that the variables
-    * $foo and $bar are available within the included file. */
+  /* This example assumes that www.example.com is configured to parse .php
+  * files and not .txt files. Also, 'Works' here means that the variables
+  * $foo and $bar are available within the included file. */
 
-    // Won't work; file.txt wasn't handled by www.example.com as PHP
-    include 'http://www.example.com/file.txt?foo=1&bar=2';
+  // Won't work; file.txt wasn't handled by www.example.com as PHP
+  include 'http://www.example.com/file.txt?foo=1&bar=2';
 
-    // Won't work; looks for a file named 'file.php?foo=1&bar=2' on the
-    // local filesystem.
-    include 'file.php?foo=1&bar=2';
+  // Won't work; looks for a file named 'file.php?foo=1&bar=2' on the
+  // local filesystem.
+  include 'file.php?foo=1&bar=2';
 
-    // Works.
-    include 'http://www.example.com/file.php?foo=1&bar=2';
+  // Works.
+  include 'http://www.example.com/file.php?foo=1&bar=2';
 
-    $foo = 1;
-    $bar = 2;
-    include 'file.txt';  // Works.
-    include 'file.php';  // Works.
+  $foo = 1;
+  $bar = 2;
+  include 'file.txt';  // Works.
+  include 'file.php';  // Works.
 
 <?>
 
@@ -124,11 +124,10 @@ Security warning
 
 Remote file may be processed at the remote server (depending on the file
 extension and the fact if the remote server runs PHP or not) but it still has
-to produce a valid PHP script because it will be processed at the local
-server. If the file from the remote server should be processed there and
-outputted only, |readfile| is much better function to use. Otherwise, special
-care should be taken to secure the remote script to produce a valid and
-desired code.
+to produce a valid PHP script because it will be processed at the local server.
+If the file from the remote server should be processed there and outputted
+only, |readfile| is much better function to use. Otherwise, special care should
+be taken to secure the remote script to produce a valid and desired code.
 
 See also Remote files, |fopen| and |file| for related information.
 
@@ -139,9 +138,9 @@ terminate processing in that file and return to the script which called it.
 Also, it's possible to return values from included files. You can take the
 value of the include call as you would for a normal function. This is not,
 however, possible when including remote files unless the output of the remote
-file has valid PHP start and end tags (as with any local file). You can
-declare the needed variables within those tags and they will be introduced at
-whichever point the file was included.
+file has valid PHP start and end tags (as with any local file). You can declare
+the needed variables within those tags and they will be introduced at whichever
+point the file was included.
 
 Because include is a special language construct, parentheses are not needed
 around its argument. Take care when comparing return value.
@@ -149,15 +148,15 @@ around its argument. Take care when comparing return value.
 Example #4 Comparing return value of include
 
 <?php >
-    // won't work, evaluated as include(('vars.php') == TRUE), i.e. include('')
-    if (include('vars.php') == TRUE) {
-        echo 'OK';
-    }
+  // won't work, evaluated as include(('vars.php') == TRUE), i.e. include('')
+  if (include('vars.php') == TRUE) {
+      echo 'OK';
+  }
 
-    // works
-    if ((include 'vars.php') == TRUE) {
-        echo 'OK';
-    }
+  // works
+  if ((include 'vars.php') == TRUE) {
+      echo 'OK';
+  }
 <?>
 
 Example #5 include and the |return| statement
@@ -165,29 +164,29 @@ Example #5 include and the |return| statement
 return.php
 <?php >
 
-    $var = 'PHP';
+  $var = 'PHP';
 
-    return $var;
+  return $var;
 
 <?>
 
 noreturn.php
 <?php >
 
-    $var = 'PHP';
+  $var = 'PHP';
 
 <?>
 
 testreturns.php
 <?php >
 
-    $foo = include 'return.php';
+  $foo = include 'return.php';
 
-    echo $foo; // prints 'PHP'
+  echo $foo; // prints 'PHP'
 
-    $bar = include 'noreturn.php';
+  $bar = include 'noreturn.php';
 
-    echo $bar; // prints 1
+  echo $bar; // prints 1
 
 <?>
 
@@ -203,30 +202,30 @@ declared, while PHP 4 doesn't complain about functions defined after |return|.
 It is recommended to use |include_once| instead of checking if the file was
 already included and conditionally return inside the included file.
 
-Another way to "include" a PHP file into a variable is to capture the output
-by using the Output Control Functions with include. For example:
+Another way to "include" a PHP file into a variable is to capture the output by
+using the Output Control Functions with include. For example:
 
 Example #6 Using output buffering to include a PHP file into a string
 
 <?php >
-    $string = get_include_contents('somefile.php');
+  $string = get_include_contents('somefile.php');
 
-    function get_include_contents($filename) {
-        if (is_file($filename)) {
-            ob_start();
-            include $filename;
-            return ob_get_clean();
-        }
-        return false;
-    }
+  function get_include_contents($filename) {
+      if (is_file($filename)) {
+          ob_start();
+          include $filename;
+          return ob_get_clean();
+      }
+      return false;
+  }
 
 <?>
 
 In order to automatically include files within scripts, see also the
 auto_prepend_file and auto_append_file configuration options in php.ini.
 
-    Note: Because this is a language construct and not a function, it cannot
-    be called using variable functions.
+  Note: Because this is a language construct and not a function, it cannot be
+  called using variable functions.
 
 See also |require|, |require_once|, |include_once|, |get_included_files|, 
 |readfile|, |virtual|, and include_path.

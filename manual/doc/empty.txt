@@ -4,33 +4,33 @@ empty
 
 empty — Determine whether a variable is empty
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool empty ( mixed $var )~
+  empty ( mixed $var ) : bool~
 
 Determine whether a variable is considered to be empty. A variable is
 considered empty if it does not exist or if its value equals FALSE. empty()
 does not generate a warning if the variable does not exist.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {var}
 
-    Variable to be checked
+  Variable to be checked
 
-        Note:
+    Note:
 
-        Prior to PHP 5.5, empty() only supports variables; anything else will
-        result in a parse error. In other words, the following will not work:
-        `empty(trim($name))`. Instead, use `trim($name)` `==` `false`.
+    Prior to PHP 5.5, empty() only supports variables; anything else will
+    result in a parse error. In other words, the following will not work:
+    `empty(trim($name))`. Instead, use `trim($name)` `==` `false`.
 
-    No warning is generated if the variable does not exist. That means empty()
-    is essentially the concise equivalent to `!isset($var)` `||` `$var` `==`
-    `false`.
+  No warning is generated if the variable does not exist. That means empty() is
+  essentially the concise equivalent to `!isset($var)` `||` `$var` `==` `false`
+  .
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns FALSE if {var} exists and has a non-empty, non-zero value. Otherwise
@@ -38,15 +38,15 @@ returns TRUE.
 
 The following values are considered to be empty:
 
-  * "" (an empty string)
-  * 0 (0 as an integer)
-  * 0.0 (0 as a float)
-  * "0" (0 as a string)
-  * NULL
-  * FALSE
-  * array() (an empty array)
+ * "" (an empty string)
+ * 0 (0 as an integer)
+ * 0.0 (0 as a float)
+ * "0" (0 as a string)
+ * NULL
+ * FALSE
+ * array() (an empty array)
 
-==============================================================================
+===============================================================================
 *Changelog*
 
 Version                          Description
@@ -54,23 +54,23 @@ Version                          Description
 
 5.4.0   Checking non-numeric offsets of strings returns TRUE.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 A simple empty() / |isset| comparison.
 
 <?php >
-    $var = 0;
+  $var = 0;
 
-    // Evaluates to true because $var is empty
-    if (empty($var)) {
-        echo '$var is either 0, empty, or not set at all';
-    }
+  // Evaluates to true because $var is empty
+  if (empty($var)) {
+      echo '$var is either 0, empty, or not set at all';
+  }
 
-    // Evaluates as true because $var is set
-    if (isset($var)) {
-        echo '$var is set even though it is empty';
-    }
+  // Evaluates as true because $var is set
+  if (isset($var)) {
+      echo '$var is set even though it is empty';
+  }
 <?>
 
 Example #2 empty() on String Offsets
@@ -78,13 +78,13 @@ Example #2 empty() on String Offsets
 PHP 5.4 changes how empty() behaves when passed string offsets.
 
 <?php >
-    $expected_array_got_string = 'somestring';
-    var_dump(empty($expected_array_got_string['some_key']));
-    var_dump(empty($expected_array_got_string[0]));
-    var_dump(empty($expected_array_got_string['0']));
-    var_dump(empty($expected_array_got_string[0.5]));
-    var_dump(empty($expected_array_got_string['0.5']));
-    var_dump(empty($expected_array_got_string['0 Mostel']));
+  $expected_array_got_string = 'somestring';
+  var_dump(empty($expected_array_got_string['some_key']));
+  var_dump(empty($expected_array_got_string[0]));
+  var_dump(empty($expected_array_got_string['0']));
+  var_dump(empty($expected_array_got_string[0.5]));
+  var_dump(empty($expected_array_got_string['0.5']));
+  var_dump(empty($expected_array_got_string['0 Mostel']));
 <?>
 
 Output of the above example in PHP 5.3:
@@ -105,27 +105,27 @@ bool(false)
 bool(true)
 bool(true)
 
-==============================================================================
+===============================================================================
 *Notes*
 
-    Note: Because this is a language construct and not a function, it cannot
-    be called using variable functions.
+  Note: Because this is a language construct and not a function, it cannot be
+  called using variable functions.
 
-    Note:
+  Note:
 
-    When using empty() on inaccessible object properties, the __isset()
-    overloading method will be called, if declared.
+  When using empty() on inaccessible object properties, the __isset()
+  overloading method will be called, if declared.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |isset| - Determine if a variable is set and is not NULL
-  * __isset()
-  * |unset| - Unset a given variable
-  * |array_key_exists| - Checks if the given key or index exists in the array
-  * |count| - Count all elements in an array, or something in an object
-  * |strlen| - Get string length
-  * The type comparison tables
+ * |isset| - Determine if a variable is set and is not NULL
+ * __isset()
+ * |unset| - Unset a given variable
+ * |array_key_exists| - Checks if the given key or index exists in the array
+ * |count| - Count all elements in an array, or something in an object
+ * |strlen| - Get string length
+ * The type comparison tables
 
 
 vim:ft=help:

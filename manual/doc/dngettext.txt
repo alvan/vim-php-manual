@@ -4,21 +4,21 @@ dngettext
 
 dngettext — Plural version of dgettext
 
-==============================================================================
+===============================================================================
 *Description*
 
-    string dngettext ( string $domain , string $msgid1 , string $msgid2 , int~
-    $n )~
+  dngettext ( string $domain , string $msgid1 , string $msgid2 , int $n ) :~
+  string~
 
 The dngettext() function allows you to override the current {domain} for a
 single plural message lookup.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {domain}
 
-    The domain
+  The domain
 
 {msgid1}
 
@@ -26,15 +26,15 @@ single plural message lookup.
 
 {n}
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 A string on success.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |ngettext| - Plural version of gettext
+ * |ngettext| - Plural version of gettext
 
 
 vim:ft=help:

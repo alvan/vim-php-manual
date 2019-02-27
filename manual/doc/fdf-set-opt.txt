@@ -4,25 +4,25 @@ fdf_set_opt
 
 fdf_set_opt — Sets an option of a field
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool fdf_set_opt ( resource $fdf_document , string $fieldname , int~
-    $element , string $str1 , string $str2 )~
+  fdf_set_opt ( resource $fdf_document , string $fieldname , int $element ,~
+  string $str1 , string $str2 ) : bool~
 
 Sets options of the given field.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {fdf_document}
 
-    The FDF document handle, returned by |fdf_create|, |fdf_open| or 
-    |fdf_open_string|.
+  The FDF document handle, returned by |fdf_create|, |fdf_open| or 
+  |fdf_open_string|.
 
 {fieldname}
 
-    Name of the FDF field, as a string.
+  Name of the FDF field, as a string.
 
 {element}
 
@@ -30,15 +30,15 @@ Sets options of the given field.
 
 {str2}
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |fdf_set_flags| - Sets a flag of a field
+ * |fdf_set_flags| - Sets a flag of a field
 
 
 vim:ft=help:

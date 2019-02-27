@@ -5,50 +5,50 @@ odbc_tableprivileges
 odbc_tableprivileges — Lists tables and the privileges associated with each
 table
 
-==============================================================================
+===============================================================================
 *Description*
 
-    resource odbc_tableprivileges ( resource $connection_id , string~
-    $qualifier , string $owner , string $name )~
+  odbc_tableprivileges ( resource $connection_id , string $qualifier , string~
+  $owner , string $name ) : resource~
 
 Lists tables in the requested range and the privileges associated with each
 table.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {connection_id}
 
-    The ODBC connection identifier, see |odbc_connect| for details.
+  The ODBC connection identifier, see |odbc_connect| for details.
 
 {qualifier}
 
-    The qualifier.
+  The qualifier.
 
 {owner}
 
-    The owner. Accepts the following search patterns: ('%' to match zero or
-    more characters and '_' to match a single character)
+  The owner. Accepts the following search patterns: ('%' to match zero or more
+  characters and '_' to match a single character)
 
 {name}
 
-    The name. Accepts the following search patterns: ('%' to match zero or
-    more characters and '_' to match a single character)
+  The name. Accepts the following search patterns: ('%' to match zero or more
+  characters and '_' to match a single character)
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 An ODBC result identifier or FALSE on failure.
 
 The result set has the following columns:
 
-  * TABLE_QUALIFIER
-  * TABLE_OWNER
-  * TABLE_NAME
-  * GRANTOR
-  * GRANTEE
-  * PRIVILEGE
-  * IS_GRANTABLE
+ * TABLE_QUALIFIER
+ * TABLE_OWNER
+ * TABLE_NAME
+ * GRANTOR
+ * GRANTEE
+ * PRIVILEGE
+ * IS_GRANTABLE
 
 The result set is ordered by TABLE_QUALIFIER, TABLE_OWNER and TABLE_NAME.
 

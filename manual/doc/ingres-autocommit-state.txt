@@ -4,31 +4,31 @@ ingres_autocommit_state
 
 ingres_autocommit_state — Test if the connection is using autocommit
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool ingres_autocommit_state ( resource $link )~
+  ingres_autocommit_state ( resource $link ) : bool~
 
 ingres_autocommit_state() is called to determine whether the current link has
 autocommit enabled or not.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {link}
 
-    The connection link identifier
+  The connection link identifier
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE if autocommit is enabled or FALSE when autocommit is disabled
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |ingres_autocommit| - Switch autocommit on or off
-  * |ingres_query| - Send an SQL query to Ingres
+ * |ingres_autocommit| - Switch autocommit on or off
+ * |ingres_query| - Send an SQL query to Ingres
 
 
 vim:ft=help:

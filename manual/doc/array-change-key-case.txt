@@ -4,44 +4,44 @@ array_change_key_case
 
 array_change_key_case — Changes the case of all keys in an array
 
-==============================================================================
+===============================================================================
 *Description*
 
-    array array_change_key_case ( array $array [, int $case = CASE_LOWER ] )~
+  array_change_key_case ( array $array [, int $case = CASE_LOWER ] ) : array~
 
 Returns an array with all keys from {array} lowercased or uppercased. Numbered
 indices are left as is.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {array}
 
-    The array to work on
+  The array to work on
 
 {case}
 
-    Either CASE_UPPER or CASE_LOWER (default)
+  Either CASE_UPPER or CASE_LOWER (default)
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns an array with its keys lower or uppercased, or FALSE if {array} is not
 an array.
 
-==============================================================================
+===============================================================================
 *Errors/Exceptions*
 
 Throws E_WARNING if {array} is not an array.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 array_change_key_case() example
 
 <?php >
-    $input_array = array("FirSt" => 1, "SecOnd" => 4);
-    print_r(array_change_key_case($input_array, CASE_UPPER));
+  $input_array = array("FirSt" => 1, "SecOnd" => 4);
+  print_r(array_change_key_case($input_array, CASE_UPPER));
 <?>
 
 The above example will output:
@@ -52,14 +52,14 @@ Array
     [SECOND] => 4
 )
 
-==============================================================================
+===============================================================================
 *Notes*
 
-    Note:
+  Note:
 
-    If an array has indices that will be the same once run through this
-    function (e.g. "keY" and "kEY"), the value that is later in the array will
-    override other indices.
+  If an array has indices that will be the same once run through this function
+  (e.g. "keY" and "kEY"), the value that is later in the array will override
+  other indices.
 
 
 vim:ft=help:

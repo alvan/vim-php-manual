@@ -5,13 +5,13 @@ swoole_client_select
 swoole_client_select — Get the file description which are ready to read/write
 or error
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool swoole_client_select ( array &$read_array , array &$write_array ,~
-    array &$error_array [, float $timeout ] )~
+  swoole_client_select ( array &$read_array , array &$write_array , array~
+  &$error_array [, float $timeout = 0.5 ] ) : int~
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {read_array}
@@ -22,7 +22,7 @@ or error
 
 {timeout}
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 

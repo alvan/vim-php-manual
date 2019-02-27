@@ -5,10 +5,10 @@ mysqlnd_qc_get_normalized_query_trace_log
 mysqlnd_qc_get_normalized_query_trace_log — Returns a normalized query trace
 log for each query inspected by the query cache
 
-==============================================================================
+===============================================================================
 *Description*
 
-    array mysqlnd_qc_get_normalized_query_trace_log ( void )~
+  mysqlnd_qc_get_normalized_query_trace_log ( void ) : array~
 
 Returns a normalized query trace log for each query inspected by the query
 cache. The collection of the trace log is disabled by default. To collect the
@@ -23,16 +23,16 @@ normalized as SELECT id FROM test WHERE id = ?. Whenever a statement is
 inspected by the query cache which matches the normalized statement pattern,
 its statistics are grouped by the normalized statement string.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 This function has no parameters.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
-An array of query log. Every list entry contains the normalized query
-stringand further detail information.
+An array of query log. Every list entry contains the normalized query stringand
+further detail information.
 
         Key                                 Description
 query                Normalized statement string.
@@ -65,7 +65,7 @@ max_run_time         The maximum run time of all queries contributing to the
 max_store_time       The maximum store time of all queries contributing to the
                      query log entry.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 mysqlnd_qc_get_normalized_query_trace_log() example
@@ -73,30 +73,30 @@ Example #1 mysqlnd_qc_get_normalized_query_trace_log() example
 mysqlnd_qc.collect_normalized_query_trace=1
 
 <?php >
-    /* Connect, create and populate test table */
-    $mysqli = new mysqli("host", "user", "password", "schema", "port", "socket");
-    $mysqli->query("DROP TABLE IF EXISTS test");
-    $mysqli->query("CREATE TABLE test(id INT)");
-    $mysqli->query("INSERT INTO test(id) VALUES (1), (2)");
+  /* Connect, create and populate test table */
+  $mysqli = new mysqli("host", "user", "password", "schema", "port", "socket");
+  $mysqli->query("DROP TABLE IF EXISTS test");
+  $mysqli->query("CREATE TABLE test(id INT)");
+  $mysqli->query("INSERT INTO test(id) VALUES (1), (2)");
 
-    /* not cached */
-    $res = $mysqli->query("SELECT id FROM test WHERE id = 1");
-    var_dump($res->fetch_assoc());
-    $res->free();
+  /* not cached */
+  $res = $mysqli->query("SELECT id FROM test WHERE id = 1");
+  var_dump($res->fetch_assoc());
+  $res->free();
 
-    /* cache put */
-    $res = $mysqli->query("/*" . MYSQLND_QC_ENABLE_SWITCH . "*/" . 
-    "SELECT id FROM test WHERE id = 2");
-    var_dump($res->fetch_assoc());
-    $res->free();
+  /* cache put */
+  $res = $mysqli->query("/*" . MYSQLND_QC_ENABLE_SWITCH . "*/" . 
+  "SELECT id FROM test WHERE id = 2");
+  var_dump($res->fetch_assoc());
+  $res->free();
 
-    /* cache hit */
-    $res = $mysqli->query("/*" . MYSQLND_QC_ENABLE_SWITCH . "*/" . 
-    "SELECT id FROM test WHERE id = 2");
-    var_dump($res->fetch_assoc());
-    $res->free();
+  /* cache hit */
+  $res = $mysqli->query("/*" . MYSQLND_QC_ENABLE_SWITCH . "*/" . 
+  "SELECT id FROM test WHERE id = 2");
+  var_dump($res->fetch_assoc());
+  $res->free();
 
-    var_dump(mysqlnd_qc_get_normalized_query_trace_log());
+  var_dump(mysqlnd_qc_get_normalized_query_trace_log());
 <?>
 
 The above examples will output:
@@ -200,14 +200,14 @@ array(4) {
   }
 }
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * Runtime configuration
-  * mysqlnd_qc.collect_normalized_query_trace
-  * mysqlnd_qc.time_statistics
-  * |mysqlnd_qc_get_query_trace_log| - Returns a backtrace for each query
-    inspected by the query cache
+ * Runtime configuration
+ * mysqlnd_qc.collect_normalized_query_trace
+ * mysqlnd_qc.time_statistics
+ * |mysqlnd_qc_get_query_trace_log| - Returns a backtrace for each query
+  inspected by the query cache
 
 
 vim:ft=help:

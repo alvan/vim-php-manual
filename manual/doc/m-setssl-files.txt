@@ -5,28 +5,27 @@ m_setssl_files
 m_setssl_files — Set certificate key files and certificates if server requires
 client certificate verification
 
-==============================================================================
+===============================================================================
 *Description*
 
-    int m_setssl_files ( resource $conn , string $sslkeyfile , string~
-    $sslcertfile )~
+  m_setssl_files ( resource $conn , string $sslkeyfile , string $sslcertfile )~
+  : int~
 Warning
 
-This function is currently not documented; only its argument list is
-available.
+This function is currently not documented; only its argument list is available.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 { conn}
 
-    An MCVE_CONN resource returned by |m_initengine|.
+  An MCVE_CONN resource returned by |m_initengine|.
 
 {sslkeyfile}
 
 {sslcertfile}
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 

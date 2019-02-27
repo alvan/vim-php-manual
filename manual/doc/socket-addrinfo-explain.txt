@@ -4,23 +4,33 @@ socket_addrinfo_explain
 
 socket_addrinfo_explain — Get information about addrinfo
 
-==============================================================================
+===============================================================================
 *Description*
 
-    array socket_addrinfo_explain ( resource $addr )~
+  socket_addrinfo_explain ( resource $addr ) : array~
 
-Warning
+socket_addrinfo_explain()() exposed the underlying addrinfo structure.
 
-This function is currently not documented; only its argument list is
-available.
-
-==============================================================================
+===============================================================================
 *Parameters*
 
 {addr}
 
-==============================================================================
+  Resource created from socket_addrinfo_lookup()()
+
+===============================================================================
 *Return* *Values*
+
+Returns an array containing the fields in the addrinfo structure.
+
+===============================================================================
+*See* *Also*
+
+ * |socket_addrinfo_bind| - Create and bind to a socket from a given addrinfo
+ * |socket_addrinfo_connect| - Create and connect to a socket from a given
+  addrinfo
+ * |socket_addrinfo_lookup| - Get array with contents of getaddrinfo about the
+  given hostname
 
 
 vim:ft=help:

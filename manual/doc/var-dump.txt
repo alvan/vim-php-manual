@@ -4,18 +4,18 @@ var_dump
 
 var_dump — Dumps information about a variable
 
-==============================================================================
+===============================================================================
 *Description*
 
-    void var_dump ( mixed $expression [, mixed $... ] )~
+  var_dump ( mixed $expression [, mixed $... ] ) : void~
 
 This function displays structured information about one or more expressions
 that includes its type and value. Arrays and objects are explored recursively
 with values indented to show structure.
 
-All public, private and protected properties of objects will be returned in
-the output unless the object implements a __debugInfo() method (implemented in
-PHP 5.6.0).
+All public, private and protected properties of objects will be returned in the
+output unless the object implements a __debugInfo() method (implemented in PHP
+5.6.0).
 
 Tip
 
@@ -23,26 +23,26 @@ As with anything that outputs its result directly to the browser, the
 output-control functions can be used to capture the output of this function,
 and save it in a string (for example).
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {expression}
 
-    The variable you want to dump.
+  The variable you want to dump.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 No value is returned.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 var_dump() example
 
 <?php >
-    $a = array(1, 2, array("a", "b", "c"));
-    var_dump($a);
+  $a = array(1, 2, array("a", "b", "c"));
+  var_dump($a);
 <?>
 
 The above example will output:
@@ -65,9 +65,9 @@ array(3) {
 
 <?php >
 
-    $b = 3.1;
-    $c = true;
-    var_dump($b, $c);
+  $b = 3.1;
+  $c = true;
+  var_dump($b, $c);
 
 <?>
 
@@ -76,15 +76,15 @@ The above example will output:
 float(3.1)
 bool(true)
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |print_r| - Prints human-readable information about a variable
-  * |debug_zval_dump| - Dumps a string representation of an internal zend
-    value to output
-  * |var_export| - Outputs or returns a parsable string representation of a
-    variable
-  * __debugInfo()
+ * |print_r| - Prints human-readable information about a variable
+ * |debug_zval_dump| - Dumps a string representation of an internal zend value
+  to output
+ * |var_export| - Outputs or returns a parsable string representation of a
+  variable
+ * __debugInfo()
 
 
 vim:ft=help:

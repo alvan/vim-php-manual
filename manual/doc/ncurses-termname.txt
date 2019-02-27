@@ -4,28 +4,28 @@ ncurses_termname
 
 ncurses_termname — Returns terminals (short)-name
 
-==============================================================================
+===============================================================================
 *Description*
 
-    string ncurses_termname ( void )~
+  ncurses_termname ( void ) : string~
 Warning
 
 This function is EXPERIMENTAL. The behaviour of this function, its name, and
-surrounding documentation may change without notice in a future release of
-PHP. This function should be used at your own risk.
+surrounding documentation may change without notice in a future release of PHP.
+This function should be used at your own risk.
 
 Returns terminals shortname.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns the shortname of the terminal, truncated to 14 characters. On errors,
 returns NULL.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |ncurses_longname| - Returns terminals description
+ * |ncurses_longname| - Returns terminals description
 
 
 vim:ft=help:

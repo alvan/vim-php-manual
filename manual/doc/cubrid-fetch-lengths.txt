@@ -5,50 +5,50 @@ cubrid_fetch_lengths
 cubrid_fetch_lengths — Return an array with the lengths of the values of each
 field from the current row
 
-==============================================================================
+===============================================================================
 *Description*
 
-    array cubrid_fetch_lengths ( resource $result )~
+  cubrid_fetch_lengths ( resource $result ) : array~
 
 This function returns an numeric array with the lengths of the values of each
 field from the current row of the result set or it returns FALSE on failure.
 
-    Note:
+  Note:
 
-    If field data type is BLOB/CLOB, you should get its length by using 
-    |cubrid_lob_size|.
+  If field data type is BLOB/CLOB, you should get its length by using 
+  |cubrid_lob_size|.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {result}
 
-    {result} comes from a call to |cubrid_execute|
+  {result} comes from a call to |cubrid_execute|
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 An numeric array, when process is successful.
 
 FALSE on failure.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 cubrid_fetch_lengths() example
 
 <?php >
-    $conn = cubrid_connect("localhost", 33000, "demodb");
-    $result = cubrid_execute($conn, "SELECT * FROM game WHERE host_year=
-    2004 AND nation_code='AUS' AND medal='G'");
+  $conn = cubrid_connect("localhost", 33000, "demodb");
+  $result = cubrid_execute($conn, "SELECT * FROM game WHERE host_year=
+  2004 AND nation_code='AUS' AND medal='G'");
 
-    $row = cubrid_fetch_row($result);
-    print_r($row);
+  $row = cubrid_fetch_row($result);
+  print_r($row);
 
-    $lens = cubrid_fetch_lengths($result);
-    print_r($lens);
+  $lens = cubrid_fetch_lengths($result);
+  print_r($lens);
 
-    cubrid_disconnect($conn);
+  cubrid_disconnect($conn);
 <?>
 
 The above example will output:

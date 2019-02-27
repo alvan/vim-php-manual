@@ -4,10 +4,10 @@ id3_get_genre_list
 
 id3_get_genre_list — Get all possible genre values
 
-==============================================================================
+===============================================================================
 *Description*
 
-    array id3_get_genre_list ( void )~
+  id3_get_genre_list ( void ) : array~
 
 id3_get_genre_list() returns an array containing all possible genres that may
 be stored in an ID3 tag. This list has been created by Eric Kemp and later
@@ -17,20 +17,20 @@ This function is useful to provide you users a list of genres from which they
 may choose one. When updating the ID3 tag you will always have to specify the
 genre as an integer ranging from 0 to 147.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns an array containing all possible genres that may be stored in an ID3
 tag.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 id3_get_genre_list() example
 
 <?php >
-    $genres = id3_get_genre_list();
-    print_r($genres);
+  $genres = id3_get_genre_list();
+  print_r($genres);
 <?>
 
 The above example will output:
@@ -187,11 +187,11 @@ Array
     [147] => SynthPop
 )
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |id3_get_genre_name| - Get the name for a genre id
-  * |id3_get_genre_id| - Get the id for a genre
+ * |id3_get_genre_name| - Get the name for a genre id
+ * |id3_get_genre_id| - Get the id for a genre
 
 
 vim:ft=help:

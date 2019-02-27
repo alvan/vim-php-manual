@@ -4,32 +4,32 @@ apd_echo
 
 apd_echo — Echo to the debugging socket
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool apd_echo ( string $output )~
+  apd_echo ( string $output ) : bool~
 
 Usually sent via the socket to request information about the running script.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {output}
 
-    The debugged variable.
+  The debugged variable.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 apd_echo() example
 
 <?php >
-    apd_echo($i);
+  apd_echo($i);
 <?>
 
 

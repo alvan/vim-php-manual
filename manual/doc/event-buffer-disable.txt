@@ -4,25 +4,25 @@ event_buffer_disable
 
 event_buffer_disable — Disable a buffered event
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool event_buffer_disable ( resource $bevent , int $events )~
+  event_buffer_disable ( resource $bevent , int $events ) : bool~
 
 Disables the specified buffered event.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {bevent}
 
-    Valid buffered event resource.
+  Valid buffered event resource.
 
 {events}
 
-    Any combination of EV_READ and EV_WRITE.
+  Any combination of EV_READ and EV_WRITE.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 event_buffer_disable() returns TRUE on success or FALSE on error.

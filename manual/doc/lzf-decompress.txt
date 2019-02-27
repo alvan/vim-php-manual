@@ -4,30 +4,30 @@ lzf_decompress
 
 lzf_decompress — LZF decompression
 
-==============================================================================
+===============================================================================
 *Description*
 
-    string lzf_decompress ( string $data )~
+  lzf_decompress ( string $data ) : string~
 
 |lzf_compress| decompresses the given {data} string containing lzf encoded
 data.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {data}
 
-    The compressed string.
+  The compressed string.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns the decompressed data or FALSE if an error occurred.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |lzf_compress| - LZF compression
+ * |lzf_compress| - LZF compression
 
 
 vim:ft=help:

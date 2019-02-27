@@ -4,33 +4,38 @@ imap_unsubscribe
 
 imap_unsubscribe — Unsubscribe from a mailbox
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool imap_unsubscribe ( resource $imap_stream , string $mailbox )~
+  imap_unsubscribe ( resource $imap_stream , string $mailbox ) : bool~
 
 Unsubscribe from the specified {mailbox}.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 { imap_stream}
 
-    An IMAP stream returned by |imap_open|.
+  An IMAP stream returned by |imap_open|.
 
 {mailbox}
 
-    The mailbox name, see |imap_open| for more information
+  The mailbox name, see |imap_open| for more information
 
-==============================================================================
+  Warning
+
+  Passing untrusted data to this parameter is insecure, unless
+  imap.enable_insecure_rsh is disabled.
+
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |imap_subscribe| - Subscribe to a mailbox
+ * |imap_subscribe| - Subscribe to a mailbox
 
 
 vim:ft=help:

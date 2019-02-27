@@ -5,34 +5,34 @@ newt_push_help_line
 newt_push_help_line — Saves the current help line on a stack, and displays the
 new line
 
-==============================================================================
+===============================================================================
 *Description*
 
-    void newt_push_help_line ([ string $text ] )~
+  newt_push_help_line ([ string $text ] ) : void~
 
 Saves the current help line on a stack, and displays the new line.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {text}
 
-    New help text message
+  New help text message
 
-        Note:
+    Note:
 
-        If not specified, the help line is cleared.
+    If not specified, the help line is cleared.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 No value is returned.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |newt_pop_help_line| - Replaces the current help line with the one from
-    the stack
+ * |newt_pop_help_line| - Replaces the current help line with the one from the
+  stack
 
 
 vim:ft=help:

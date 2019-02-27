@@ -5,22 +5,22 @@ spl_autoload_call
 spl_autoload_call — Try all registered __autoload() functions to load the
 requested class
 
-==============================================================================
+===============================================================================
 *Description*
 
-    void spl_autoload_call ( string $class_name )~
+  spl_autoload_call ( string $class_name ) : void~
 
-This function can be used to manually search for a class or interface using
-the registered __autoload functions.
+This function can be used to manually search for a class or interface using the
+registered __autoload functions.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {class_name}
 
-    The class name being searched.
+  The class name being searched.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 No value is returned.

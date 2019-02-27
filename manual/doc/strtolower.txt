@@ -4,10 +4,10 @@ strtolower
 
 strtolower — Make a string lowercase
 
-==============================================================================
+===============================================================================
 *Description*
 
-    string strtolower ( string $string )~
+  strtolower ( string $string ) : string~
 
 Returns {string} with all alphabetic characters converted to lowercase.
 
@@ -15,41 +15,41 @@ Note that 'alphabetic' is determined by the current locale. This means that
 e.g. in the default "C" locale, characters such as umlaut-A (Ä) will not be
 converted.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {string}
 
-    The input string.
+  The input string.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns the lowercased string.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 strtolower() example
 
 <?php >
-    $str = "Mary Had A Little Lamb and She LOVED It So";
-    $str = strtolower($str);
-    echo $str; // Prints mary had a little lamb and she loved it so
+  $str = "Mary Had A Little Lamb and She LOVED It So";
+  $str = strtolower($str);
+  echo $str; // Prints mary had a little lamb and she loved it so
 <?>
 
-==============================================================================
+===============================================================================
 *Notes*
 
-    Note: This function is binary-safe.
+  Note: This function is binary-safe.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |strtoupper| - Make a string uppercase
-  * |ucfirst| - Make a string's first character uppercase
-  * |ucwords| - Uppercase the first character of each word in a string
-  * |mb_strtolower| - Make a string lowercase
+ * |strtoupper| - Make a string uppercase
+ * |ucfirst| - Make a string's first character uppercase
+ * |ucwords| - Uppercase the first character of each word in a string
+ * |mb_strtolower| - Make a string lowercase
 
 
 vim:ft=help:

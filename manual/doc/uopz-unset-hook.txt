@@ -1,0 +1,59 @@
+uopz_unset_hook
+
+(PECL uopz 5, PECL uopz 6)
+
+uopz_unset_hook — Removes previously set hook on function or method
+
+===============================================================================
+*Description*
+
+  uopz_unset_hook ( string $function ) : bool~
+  uopz_unset_hook ( string $class , string $function ) : bool~
+
+Removes the previously set hook on a function or method.
+
+===============================================================================
+*Parameters*
+
+{class}
+
+  The name of the class.
+
+{function}
+
+  The name of the function or method.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*Examples*
+
+Example #1 Basic uopz_unset_hook() Usage
+
+<?php >
+  function foo() {
+      echo 'foo';
+  }
+  uopz_set_hook('foo', function () {echo 'bar';});
+  foo();
+  echo PHP_EOL;
+  uopz_unset_hook('foo');
+  foo();
+<?>
+
+The above example will output:
+
+barfoo
+foo
+
+===============================================================================
+*See* *Also*
+
+ * |uopz_set_hook| - Sets hook to execute when entering a function or method
+ * |uopz_get_hook| - Gets previously set hook on function or method
+
+
+vim:ft=help:

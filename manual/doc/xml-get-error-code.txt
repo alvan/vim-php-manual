@@ -4,30 +4,30 @@ xml_get_error_code
 
 xml_get_error_code — Get XML parser error code
 
-==============================================================================
+===============================================================================
 *Description*
 
-    int xml_get_error_code ( resource $parser )~
+  xml_get_error_code ( resource $parser ) : int~
 
 Gets the XML parser error code.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {parser}
 
-    A reference to the XML parser to get error code from.
+  A reference to the XML parser to get error code from.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 This function returns FALSE if {parser} does not refer to a valid parser, or
 else it returns one of the error codes listed in the error codes section.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |xml_error_string| - Get XML parser error string
+ * |xml_error_string| - Get XML parser error string
 
 
 vim:ft=help:

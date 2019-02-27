@@ -6,33 +6,33 @@ xmlwriter_text
 
 XMLWriter::text -- xmlwriter_text — Write text
 
-==============================================================================
+===============================================================================
 *Description*
 
 Object oriented style
 
-    bool XMLWriter::text ( string $content )~
+  XMLWriter::text ( string $content ) : bool~
 
 Procedural style
 
-    bool xmlwriter_text ( resource $xmlwriter , string $content )~
+  xmlwriter_text ( resource $xmlwriter , string $content ) : bool~
 
 Writes a text.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 { xmlwriter}
 
-    Only for procedural calls. The XMLWriter resource that is being modified.
-    This resource comes from a call to |xmlwriter_open_uri| or 
-    |xmlwriter_open_memory|.
+  Only for procedural calls. The XMLWriter resource that is being modified.
+  This resource comes from a call to |xmlwriter_open_uri| or 
+  |xmlwriter_open_memory|.
 
 {content}
 
-    The contents of the text.
+  The contents of the text.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.

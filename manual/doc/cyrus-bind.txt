@@ -4,25 +4,25 @@ cyrus_bind
 
 cyrus_bind — Bind callbacks to a Cyrus IMAP connection
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool cyrus_bind ( resource $connection , array $callbacks )~
+  cyrus_bind ( resource $connection , array $callbacks ) : bool~
 
 Binds callbacks to a Cyrus IMAP connection.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {connection}
 
-    The connection handle.
+  The connection handle.
 
 {callbacks}
 
-    An array of callbacks.
+  An array of callbacks.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.

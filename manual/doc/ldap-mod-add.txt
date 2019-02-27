@@ -4,48 +4,59 @@ ldap_mod_add
 
 ldap_mod_add — Add attribute values to current attributes
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool ldap_mod_add ( resource $link_identifier , string $dn , array $entry~
-    [, array $serverctrls ] )~
+  ldap_mod_add ( resource $link_identifier , string $dn , array $entry [,~
+  array $serverctrls = array() ] ) : bool~
 
 Adds one or more attribute values to the specified {dn}. To add a whole new
 object see |ldap_add| function.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {link_identifier}
 
-    An LDAP link identifier, returned by |ldap_connect|.
+  An LDAP link identifier, returned by |ldap_connect|.
 
 {dn}
 
-    The distinguished name of an LDAP entity.
+  The distinguished name of an LDAP entity.
 
 {entry}
 
-    An associative array listing the attirbute values to add. If an attribute
-    was not existing yet it will be added. If an attribute is existing you can
-    only add values to it if it supports multiple values.
+  An associative array listing the attirbute values to add. If an attribute was
+  not existing yet it will be added. If an attribute is existing you can only
+  add values to it if it supports multiple values.
 
-==============================================================================
+{serverctrls}
+
+  Array of LDAP Controls to send with the request.
+
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-==============================================================================
+===============================================================================
+*Changelog*
+
+Version           Description
+7.3     Support for {serverctrls} added
+
+===============================================================================
 *Notes*
 
-    Note: This function is binary-safe.
+  Note: This function is binary-safe.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |ldap_mod_del| - Delete attribute values from current attributes
-  * |ldap_mod_replace| - Replace attribute values with new ones
-  * |ldap_modify_batch| - Batch and execute modifications on an LDAP entry
+ * |ldap_mod_add_ext| - Add attribute values to current attributes
+ * |ldap_mod_del| - Delete attribute values from current attributes
+ * |ldap_mod_replace| - Replace attribute values with new ones
+ * |ldap_modify_batch| - Batch and execute modifications on an LDAP entry
 
 
 vim:ft=help:

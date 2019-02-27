@@ -4,25 +4,25 @@ fbsql_field_table
 
 fbsql_field_table — Get name of the table the specified field is in
 
-==============================================================================
+===============================================================================
 *Description*
 
-    string fbsql_field_table ( resource $result [, int $field_offset ] )~
+  fbsql_field_table ( resource $result [, int $field_offset ] ) : string~
 
 Returns the name of the table that the specified field is in.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 { result}
 
-    A result identifier returned by |fbsql_query| or |fbsql_db_query|.
+  A result identifier returned by |fbsql_query| or |fbsql_db_query|.
 
 {field_offset}
 
-    The numerical offset of the field. The field index starts at 0.
+  The numerical offset of the field. The field index starts at 0.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns the name of the table, as a string.

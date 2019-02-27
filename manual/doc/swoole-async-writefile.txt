@@ -4,30 +4,31 @@ swoole_async_writefile
 
 swoole_async_writefile — Write data to a file asynchronously
 
-==============================================================================
+===============================================================================
 *Description*
 
-    void swoole_async_writefile ( string $filename , string $content [,~
-    string $callback [, string $flags ]] )~
+  swoole_async_writefile ( string $filename , string $content [, callable~
+  $callback [, int $flags = 0 ]] ) : bool~
 
-Warning
-
-This function is currently not documented; only its argument list is
-available.
-
-==============================================================================
+===============================================================================
 *Parameters*
 
 {filename}
 
+  The filename being written.
+
 {content}
+
+  The content writing to the file.
 
 {callback}
 
 {flags}
 
-==============================================================================
+===============================================================================
 *Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
 
 
 vim:ft=help:

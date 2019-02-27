@@ -4,34 +4,34 @@ svn_revert
 
 svn_revert — Revert changes to the working copy
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool svn_revert ( string $path [, bool $recursive = FALSE ] )~
+  svn_revert ( string $path [, bool $recursive = FALSE ] ) : bool~
 
 Revert any local changes to the path in a working copy.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {path}
 
-    The path to the working repository.
+  The path to the working repository.
 
 {recursive}
 
-    Optionally make recursive changes.
+  Optionally make recursive changes.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |svn_delete| - Delete items from a working copy or repository
-  * |svn_export| - Export the contents of a SVN directory
+ * |svn_delete| - Delete items from a working copy or repository
+ * |svn_export| - Export the contents of a SVN directory
 
 
 vim:ft=help:

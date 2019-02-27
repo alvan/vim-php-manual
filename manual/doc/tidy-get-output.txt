@@ -4,38 +4,38 @@ tidy_get_output
 
 tidy_get_output — Return a string representing the parsed tidy markup
 
-==============================================================================
+===============================================================================
 *Description*
 
-    string tidy_get_output ( tidy $object )~
+  tidy_get_output ( tidy $object ) : string~
 
 Gets a string with the repaired html.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {object}
 
-    The Tidy object.
+  The Tidy object.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns the parsed tidy markup.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 tidy_get_output() example
 
 <?php >
 
-    $html = '<p>paragraph</i>';
-    $tidy = tidy_parse_string($html);
+  $html = '<p>paragraph</i>';
+  $tidy = tidy_parse_string($html);
 
-    $tidy->cleanRepair();
+  $tidy->cleanRepair();
 
-    echo tidy_get_output($tidy);
+  echo tidy_get_output($tidy);
 <?>
 
 The above example will output:

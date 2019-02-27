@@ -4,10 +4,10 @@ fann_get_learning_momentum
 
 fann_get_learning_momentum — Returns the learning momentum
 
-==============================================================================
+===============================================================================
 *Description*
 
-    float fann_get_learning_momentum ( resource $ann )~
+  fann_get_learning_momentum ( resource $ann ) : float~
 
 The learning momentum can be used to speed up FANN_TRAIN_INCREMENTAL training.
 A too high momentum will however not benefit training. Setting momentum to 0
@@ -16,25 +16,25 @@ this parameter is between 0.0 and 1.0.
 
 The default momentum is 0.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {ann}
 
-    Neural network resource.
+  Neural network resource.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success, or FALSE otherwise.
 
 The learning momentum, or FALSE on error.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |fann_set_learning_momentum| - Sets the learning momentum
-  * |fann_set_training_algorithm| - Sets the training algorithm
+ * |fann_set_learning_momentum| - Sets the learning momentum
+ * |fann_set_training_algorithm| - Sets the training algorithm
 
 
 vim:ft=help:

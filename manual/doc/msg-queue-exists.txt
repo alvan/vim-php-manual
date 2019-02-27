@@ -4,32 +4,31 @@ msg_queue_exists
 
 msg_queue_exists — Check whether a message queue exists
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool msg_queue_exists ( int $key )~
+  msg_queue_exists ( int $key ) : bool~
 
 Checks whether the message queue {key} exists.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {key}
 
-    Queue key.
+  Queue key.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |msg_remove_queue| - Destroy a message queue
-  * |msg_receive| - Receive a message from a message queue
-  * |msg_stat_queue| - Returns information from the message queue data
-    structure
+ * |msg_remove_queue| - Destroy a message queue
+ * |msg_receive| - Receive a message from a message queue
+ * |msg_stat_queue| - Returns information from the message queue data structure
 
 
 vim:ft=help:

@@ -4,31 +4,31 @@ stats_dens_cauchy
 
 stats_dens_cauchy — Probability density function of the Cauchy distribution
 
-==============================================================================
+===============================================================================
 *Description*
 
-    float stats_dens_cauchy ( float $x , float $ave , float $stdev )~
+  stats_dens_cauchy ( float $x , float $ave , float $stdev ) : float~
 
 Returns the probability density at {x}, where the random variable follows the
 Cauchy distribution whose location and scale are {ave} and {stdev},
 respectively.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {x}
 
-    The value at which the probability density is calculated
+  The value at which the probability density is calculated
 
 {ave}
 
-    The location parameter of the distribution
+  The location parameter of the distribution
 
 {stdev}
 
-    The scale parameter of the distribution
+  The scale parameter of the distribution
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 The probability density at {x} or FALSE for failure.

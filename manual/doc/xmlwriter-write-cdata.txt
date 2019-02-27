@@ -6,42 +6,42 @@ xmlwriter_write_cdata
 
 XMLWriter::writeCdata -- xmlwriter_write_cdata — Write full CDATA tag
 
-==============================================================================
+===============================================================================
 *Description*
 
 Object oriented style
 
-    bool XMLWriter::writeCdata ( string $content )~
+  XMLWriter::writeCdata ( string $content ) : bool~
 
 Procedural style
 
-    bool xmlwriter_write_cdata ( resource $xmlwriter , string $content )~
+  xmlwriter_write_cdata ( resource $xmlwriter , string $content ) : bool~
 
 Writes a full CDATA.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 { xmlwriter}
 
-    Only for procedural calls. The XMLWriter resource that is being modified.
-    This resource comes from a call to |xmlwriter_open_uri| or 
-    |xmlwriter_open_memory|.
+  Only for procedural calls. The XMLWriter resource that is being modified.
+  This resource comes from a call to |xmlwriter_open_uri| or 
+  |xmlwriter_open_memory|.
 
 {content}
 
-    The contents of the CDATA.
+  The contents of the CDATA.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |XMLWriter::startCdata| - Create start CDATA tag
-  * |XMLWriter::endCdata| - End current CDATA
+ * |XMLWriter::startCdata| - Create start CDATA tag
+ * |XMLWriter::endCdata| - End current CDATA
 
 
 vim:ft=help:

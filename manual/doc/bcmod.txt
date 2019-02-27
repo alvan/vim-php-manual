@@ -4,50 +4,62 @@ bcmod
 
 bcmod — Get modulus of an arbitrary precision number
 
-==============================================================================
+===============================================================================
 *Description*
 
-    string bcmod ( string $dividend , string $modulus )~
+  bcmod ( string $dividend , string $divisor [, int $scale = 0 ] ) : string~
 
-Get the modulus of the {dividend} using {modulus}.
+Get the remainder of dividing {dividend} by {divisor}. Unless {divisor} is
+zero, the result has the same sign as {dividend}.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {dividend}
 
-    The dividend, as a string.
+  The dividend, as a string.
 
-{modulus}
+{divisor}
 
-    The modulus, as a string.
+  The divisor, as a string.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
-Returns the modulus as a string, or NULL if {modulus} is 0.
+Returns the modulus as a string, or NULL if {divisor} is 0.
 
-==============================================================================
+===============================================================================
 *Changelog*
 
-Version                              Description
-7.2.0   {dividend} and {modulus} are no longer truncated to integer, so now
-        the behavior of bcmod() follows |fmod| rather than the % operator.
+Version                               Description
+7.2.0   {dividend} and {divisor} are no longer truncated to integer, so now the
+        behavior of bcmod() follows |fmod| rather than the % operator.
+7.2.0   The {scale} parameter was added.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 bcmod() example
 
 <?php >
-    echo bcmod('4', '2'); // 0
-    echo bcmod('2', '4'); // 2
+  bcscale(0);
+  echo bcmod( '5',  '3'); //  2
+  echo bcmod( '5', '-3'); //  2
+  echo bcmod('-5',  '3'); // -2
+  echo bcmod('-5', '-3'); // -2
 <?>
 
-==============================================================================
+Example #2 bcmod() with decimals
+
+<?php >
+  bcscale(1);
+  echo bcmod('5.7', '1.3'); // 0.5 as of PHP 7.2.0; 0 previously
+<?>
+
+===============================================================================
 *See* *Also*
 
-  * |bcdiv| - Divide two arbitrary precision numbers
+ * |bcdiv| - Divide two arbitrary precision numbers
 
 
 vim:ft=help:

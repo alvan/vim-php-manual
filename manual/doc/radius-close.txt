@@ -4,15 +4,15 @@ radius_close
 
 radius_close — Frees all ressources
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool radius_close ( resource $radius_handle )~
+  radius_close ( resource $radius_handle ) : bool~
 
 It is not needed to call this function because php frees all resources at the
 end of each request.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.

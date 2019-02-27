@@ -4,11 +4,11 @@ ifx_prepare
 
 ifx_prepare — Prepare an SQL-statement for execution
 
-==============================================================================
+===============================================================================
 *Description*
 
-    resource ifx_prepare ( string $query , resource $link_identifier [, int~
-    $cursor_def ], mixed $blobidarray )~
+  ifx_prepare ( string $query , resource $link_identifier [, int $cursor_def~
+  ], mixed $blobidarray ) : resource~
 
 Prepares a {query} for later use with |ifx_do|.
 
@@ -28,38 +28,38 @@ select queries will return BLOB columns as blob id's (integer value). You can
 get the value of the blob as a string or file with the blob functions (see
 below).
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {query}
 
-    The query string.
+  The query string.
 
 {link_identifier}
 
-    The link identifier.
+  The link identifier.
 
 {cursor_def}
 
-    This optional parameter allows you to make this a scroll and/or hold
-    cursor. It's a bitmask and can be either IFX_SCROLL, IFX_HOLD, or both
-    or'ed together.
+  This optional parameter allows you to make this a scroll and/or hold cursor.
+  It's a bitmask and can be either IFX_SCROLL, IFX_HOLD, or both or'ed
+  together.
 
 {blobidarray}
 
-    If you have BLOB (BYTE or TEXT) columns in the query, you can add a
-    {blobidarray} parameter containing the corresponding "blob ids", and you
-    should replace those columns with a "?" in the query text.
+  If you have BLOB (BYTE or TEXT) columns in the query, you can add a
+  {blobidarray} parameter containing the corresponding "blob ids", and you
+  should replace those columns with a "?" in the query text.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns a valid result identifier for use by |ifx_do|, or FALSE on errors.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |ifx_do| - Execute a previously prepared SQL-statement
+ * |ifx_do| - Execute a previously prepared SQL-statement
 
 
 vim:ft=help:

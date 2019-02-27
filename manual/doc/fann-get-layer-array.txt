@@ -4,23 +4,23 @@ fann_get_layer_array
 
 fann_get_layer_array — Get the number of neurons in each layer in the network
 
-==============================================================================
+===============================================================================
 *Description*
 
-    array fann_get_layer_array ( resource $ann )~
+  fann_get_layer_array ( resource $ann ) : array~
 
 Get the number of neurons in each layer in the neural network.
 
 Bias is not included so the layers match the fann_create functions.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {ann}
 
-    Neural network resource.
+  Neural network resource.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 An array of numbers of neurons in each leayer

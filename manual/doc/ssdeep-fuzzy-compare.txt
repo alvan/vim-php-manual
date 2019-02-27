@@ -5,26 +5,26 @@ ssdeep_fuzzy_compare
 ssdeep_fuzzy_compare — Calculates the match score between two fuzzy hash
 signatures
 
-==============================================================================
+===============================================================================
 *Description*
 
-    int ssdeep_fuzzy_compare ( string $signature1 , string $signature2 )~
+  ssdeep_fuzzy_compare ( string $signature1 , string $signature2 ) : int~
 
-Calculates the match score between {signature1} and {signature2} using >> 
+Calculates the match score between {signature1} and {signature2} using » 
 context-triggered piecewise hashing, and returns the match score.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {signature1}
 
-    The first fuzzy hash signature string.
+  The first fuzzy hash signature string.
 
 {signature2}
 
-    The second fuzzy hash signature string.
+  The second fuzzy hash signature string.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns an integer from 0 to 100 on success, FALSE otherwise.

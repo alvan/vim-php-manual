@@ -8,38 +8,38 @@ Warning
 
 This function has been REMOVED in PECL uopz 5.0.0.
 
-==============================================================================
+===============================================================================
 *Description*
 
-    void uopz_overload ( int $opcode , Callable $callable )~
+  uopz_overload ( int $opcode , Callable $callable ) : void~
 
 Overloads the specified {opcode} with the user defined function
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {opcode}
 
-    A valid opcode, see constants for details of supported codes
+  A valid opcode, see constants for details of supported codes
 
 {callable}
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 uopz_overload() example
 
 <?php >
-    uopz_overload(ZEND_EXIT, function(){});
+  uopz_overload(ZEND_EXIT, function(){});
 
-    exit();
-    echo "Hello World";
+  exit();
+  echo "Hello World";
 <?>
 
-The above example will output something similar to:
+The above example will output:
 
 Hello World
 

@@ -4,11 +4,11 @@ ldap_get_attributes
 
 ldap_get_attributes — Get attributes from a search result entry
 
-==============================================================================
+===============================================================================
 *Description*
 
-    array ldap_get_attributes ( resource $link_identifier , resource~
-    $result_entry_identifier )~
+  ldap_get_attributes ( resource $link_identifier , resource~
+  $result_entry_identifier ) : array~
 
 Reads attributes and values from an entry in the search result.
 
@@ -27,48 +27,48 @@ return_value["attribute"]["count"] = number of values for attribute
 return_value["attribute"][0] = first value of the attribute
 return_value["attribute"][i] = (i+1)th value of the attribute
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {link_identifier}
 
-    An LDAP link identifier, returned by |ldap_connect|.
+  An LDAP link identifier, returned by |ldap_connect|.
 
 {result_entry_identifier}
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns a complete entry information in a multi-dimensional array on success
 and FALSE on error.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 Show the list of attributes held for a particular directory entry
 
 <?php >
-    // $ds is the link identifier for the directory
+  // $ds is the link identifier for the directory
 
-    // $sr is a valid search result from a prior call to
-    // one of the ldap directory search calls
+  // $sr is a valid search result from a prior call to
+  // one of the ldap directory search calls
 
-    $entry = ldap_first_entry($ds, $sr);
+  $entry = ldap_first_entry($ds, $sr);
 
-    $attrs = ldap_get_attributes($ds, $entry);
+  $attrs = ldap_get_attributes($ds, $entry);
 
-    echo $attrs["count"] . " attributes held for this entry:<p>";
+  echo $attrs["count"] . " attributes held for this entry:<p>";
 
-    for ($i=0; $i < $attrs["count"]; $i++) {
-        echo $attrs[$i] . "<br />";
-    }
+  for ($i=0; $i < $attrs["count"]; $i++) {
+      echo $attrs[$i] . "<br />";
+  }
 <?>
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |ldap_first_attribute| - Return first attribute
-  * |ldap_next_attribute| - Get the next attribute in result
+ * |ldap_first_attribute| - Return first attribute
+ * |ldap_next_attribute| - Get the next attribute in result
 
 
 vim:ft=help:

@@ -6,37 +6,37 @@ xmlwriter_end_document
 
 XMLWriter::endDocument -- xmlwriter_end_document — End current document
 
-==============================================================================
+===============================================================================
 *Description*
 
 Object oriented style
 
-    bool XMLWriter::endDocument ( void )~
+  XMLWriter::endDocument ( void ) : bool~
 
 Procedural style
 
-    bool xmlwriter_end_document ( resource $xmlwriter )~
+  xmlwriter_end_document ( resource $xmlwriter ) : bool~
 
 Ends the current document.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 { xmlwriter}
 
-    Only for procedural calls. The XMLWriter resource that is being modified.
-    This resource comes from a call to |xmlwriter_open_uri| or 
-    |xmlwriter_open_memory|.
+  Only for procedural calls. The XMLWriter resource that is being modified.
+  This resource comes from a call to |xmlwriter_open_uri| or 
+  |xmlwriter_open_memory|.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |XMLWriter::startDocument| - Create document tag
+ * |XMLWriter::startDocument| - Create document tag
 
 
 vim:ft=help:

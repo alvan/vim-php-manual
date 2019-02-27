@@ -4,34 +4,34 @@ imagegetclip
 
 imagegetclip — Get the clipping rectangle
 
-==============================================================================
+===============================================================================
 *Description*
 
-    array imagegetclip ( resource $im )~
+  imagegetclip ( resource $im ) : array~
 
 imagegetclip() retrieves the current clipping rectangle, i.e. the area beyond
 which no pixels will be drawn.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 { image}
 
-    An image resource, returned by one of the image creation functions, such
-    as |imagecreatetruecolor|.
+  An image resource, returned by one of the image creation functions, such as 
+  |imagecreatetruecolor|.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 The function returns an indexed array with the coordinates of the clipping
 rectangle which has the following entries:
 
-  * x-coordinate of the upper left corner
-  * y-coordinate of the upper left corner
-  * x-coordinate of the lower right corner
-  * y-coordinate of the lower right corner
+ * x-coordinate of the upper left corner
+ * y-coordinate of the upper left corner
+ * x-coordinate of the lower right corner
+ * y-coordinate of the lower right corner
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 imagegetclip() example
@@ -53,10 +53,10 @@ Array
     [3] => 89
 )
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |imagesetclip| - Set the clipping rectangle
+ * |imagesetclip| - Set the clipping rectangle
 
 
 vim:ft=help:

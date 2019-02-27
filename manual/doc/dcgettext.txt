@@ -4,38 +4,38 @@ dcgettext
 
 dcgettext — Overrides the domain for a single lookup
 
-==============================================================================
+===============================================================================
 *Description*
 
-    string dcgettext ( string $domain , string $message , int $category )~
+  dcgettext ( string $domain , string $message , int $category ) : string~
 
 This function allows you to override the current domain for a single message
 lookup.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {domain}
 
-    The domain
+  The domain
 
 {message}
 
-    The message
+  The message
 
 {category}
 
-    The category
+  The category
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 A string on success.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |gettext| - Lookup a message in the current domain
+ * |gettext| - Lookup a message in the current domain
 
 
 vim:ft=help:

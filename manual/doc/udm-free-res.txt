@@ -4,21 +4,21 @@ udm_free_res
 
 udm_free_res — Free mnoGoSearch result
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool udm_free_res ( resource $res )~
+  udm_free_res ( resource $res ) : bool~
 
 Freeing up memory allocated for results.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {res}
 
-    A link to a result identifier, received after call to |udm_find|.
+  A link to a result identifier, received after call to |udm_find|.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.

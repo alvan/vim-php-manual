@@ -4,30 +4,30 @@ unregister_tick_function
 
 unregister_tick_function — De-register a function for execution on each tick
 
-==============================================================================
+===============================================================================
 *Description*
 
-    void unregister_tick_function ( string $function_name )~
+  unregister_tick_function ( callable $function ) : void~
 
-De-registers the function named by {function_name} so it is no longer executed
-when a tick is called.
+De-registers the function {function} so it is no longer executed when a tick is
+called.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {function_name}
 
-    The function name, as a string.
+  The function to de-register.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 No value is returned.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |register_tick_function| - Register a function for execution on each tick
+ * |register_tick_function| - Register a function for execution on each tick
 
 
 vim:ft=help:

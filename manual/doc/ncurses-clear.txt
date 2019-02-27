@@ -4,31 +4,30 @@ ncurses_clear
 
 ncurses_clear — Clear screen
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool ncurses_clear ( void )~
+  ncurses_clear ( void ) : bool~
 Warning
 
 This function is EXPERIMENTAL. The behaviour of this function, its name, and
-surrounding documentation may change without notice in a future release of
-PHP. This function should be used at your own risk.
+surrounding documentation may change without notice in a future release of PHP.
+This function should be used at your own risk.
 
 Clears the screen completely without setting blanks.
 
 Note: ncurses_clear() clears the screen without setting blanks, which have the
-current background rendition. To clear screen with blanks, use |ncurses_erase|
-.
+current background rendition. To clear screen with blanks, use |ncurses_erase|.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |ncurses_erase| - Erase terminal screen
+ * |ncurses_erase| - Erase terminal screen
 
 
 vim:ft=help:

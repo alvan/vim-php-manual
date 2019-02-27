@@ -4,52 +4,52 @@ rawurldecode
 
 rawurldecode — Decode URL-encoded strings
 
-==============================================================================
+===============================================================================
 *Description*
 
-    string rawurldecode ( string $str )~
+  rawurldecode ( string $str ) : string~
 
 Returns a string in which the sequences with percent (%) signs followed by two
 hex digits have been replaced with literal characters.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {str}
 
-    The URL to be decoded.
+  The URL to be decoded.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns the decoded URL, as a string.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 rawurldecode() example
 
 <?php >
 
-    echo rawurldecode('foo%20bar%40baz'); // foo bar@baz
+  echo rawurldecode('foo%20bar%40baz'); // foo bar@baz
 
 <?>
 
-==============================================================================
+===============================================================================
 *Notes*
 
-    Note:
+  Note:
 
-    rawurldecode() does not decode plus symbols ('+') into spaces. |urldecode|
-    does.
+  rawurldecode() does not decode plus symbols ('+') into spaces. |urldecode|
+  does.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |rawurlencode| - URL-encode according to RFC 3986
-  * |urldecode| - Decodes URL-encoded string
-  * |urlencode| - URL-encodes string
-  * >> RFC 3986
+ * |rawurlencode| - URL-encode according to RFC 3986
+ * |urldecode| - Decodes URL-encoded string
+ * |urlencode| - URL-encodes string
+ * » RFC 3986
 
 
 vim:ft=help:

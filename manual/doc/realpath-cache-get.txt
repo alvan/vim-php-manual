@@ -4,27 +4,27 @@ realpath_cache_get
 
 realpath_cache_get — Get realpath cache entries
 
-==============================================================================
+===============================================================================
 *Description*
 
-    array realpath_cache_get ( void )~
+  realpath_cache_get ( void ) : array~
 
 Get the contents of the realpath cache.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
-Returns an array of realpath cache entries. The keys are original path
-entries, and the values are arrays of data items, containing the resolved
-path, expiration date, and other options kept in the cache.
+Returns an array of realpath cache entries. The keys are original path entries,
+and the values are arrays of data items, containing the resolved path,
+expiration date, and other options kept in the cache.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 realpath_cache_get() example
 
 <?php >
-    var_dump(realpath_cache_get());
+  var_dump(realpath_cache_get());
 <?>
 
 The above example will output something similar to:
@@ -54,10 +54,10 @@ array(2) {
   }
 }
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |realpath_cache_size| - Get realpath cache size
+ * |realpath_cache_size| - Get realpath cache size
 
 
 vim:ft=help:

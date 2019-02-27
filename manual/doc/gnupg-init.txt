@@ -4,34 +4,34 @@ gnupg_init
 
 gnupg_init — Initialize a connection
 
-==============================================================================
+===============================================================================
 *Description*
 
-    resource gnupg_init ( void )~
+  gnupg_init ( void ) : resource~
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 This function has no parameters.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 A GnuPG resource connection used by other GnuPG functions.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 Procedural gnupg_init() example
 
 <?php >
-    $res = gnupg_init();
+  $res = gnupg_init();
 <?>
 
 Example #2 OO gnupg initializer example
 
 <?php >
-    $gpg = new gnupg();
+  $gpg = new gnupg();
 <?>
 
 

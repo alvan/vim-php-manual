@@ -4,27 +4,27 @@ ifx_error
 
 ifx_error — Returns error code of last Informix call
 
-==============================================================================
+===============================================================================
 *Description*
 
-    string ifx_error ([ resource $link_identifier ] )~
+  ifx_error ([ resource $link_identifier ] ) : string~
 
-Returns in a string one character describing the general results of a
-statement and both SQLSTATE and SQLCODE associated with the most recent SQL
-statement executed.
+Returns in a string one character describing the general results of a statement
+and both SQLSTATE and SQLCODE associated with the most recent SQL statement
+executed.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {link_identifier}
 
-    The link identifier.
+  The link identifier.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
-The Informix error codes (SQLSTATE & SQLCODE) formatted as x [SQLSTATE = aa
-bbb SQLCODE=cccc].
+The Informix error codes (SQLSTATE & SQLCODE) formatted as x [SQLSTATE = aa bbb
+SQLCODE=cccc].
 
 where x = space : no error
 
@@ -41,10 +41,10 @@ describe the error in more detail.
 
 See the Informix manual for the description of SQLSTATE and SQLCODE
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |ifx_errormsg| - Returns error message of last Informix call
+ * |ifx_errormsg| - Returns error message of last Informix call
 
 
 vim:ft=help:

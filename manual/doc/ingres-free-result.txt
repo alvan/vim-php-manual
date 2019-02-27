@@ -4,47 +4,47 @@ ingres_free_result
 
 ingres_free_result — Free the resources associated with a result identifier
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool ingres_free_result ( resource $result )~
+  ingres_free_result ( resource $result ) : bool~
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {result}
 
-    The query result identifier
+  The query result identifier
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 Free a result resource
 
 <?php >
-    $link = ingres_connect($database, $user, $password);
+  $link = ingres_connect($database, $user, $password);
 
-    $result = ingres_query($link, "select * from table");
+  $result = ingres_query($link, "select * from table");
 
-    while ($row = ingres_fetch_row($result)) {
-        echo $row[1];
-        echo $row[2];
-    }
-    ingres_free_result($result);
+  while ($row = ingres_fetch_row($result)) {
+      echo $row[1];
+      echo $row[2];
+  }
+  ingres_free_result($result);
 
-    ingres_close($link)
+  ingres_close($link)
 
 <?>
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |ingres_query| - Send an SQL query to Ingres
+ * |ingres_query| - Send an SQL query to Ingres
 
 
 vim:ft=help:

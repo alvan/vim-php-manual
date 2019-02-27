@@ -4,28 +4,28 @@ trader_mama
 
 trader_mama — MESA Adaptive Moving Average
 
-==============================================================================
+===============================================================================
 *Description*
 
-    array trader_mama ( array $real [, float $fastLimit [, float $slowLimit~
-    ]] )~
+  trader_mama ( array $real [, float $fastLimit [, float $slowLimit ]] ) :~
+  array~
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {real}
 
-    Array of real values.
+  Array of real values.
 
 {fastLimit}
 
-    Upper limit use in the adaptive algorithm. Valid range from 0.01 to 0.99.
+  Upper limit use in the adaptive algorithm. Valid range from 0.01 to 0.99.
 
 {slowLimit}
 
-    Lower limit use in the adaptive algorithm. Valid range from 0.01 to 0.99.
+  Lower limit use in the adaptive algorithm. Valid range from 0.01 to 0.99.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns an array with calculated data or false on failure.

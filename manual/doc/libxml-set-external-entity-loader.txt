@@ -4,59 +4,59 @@ libxml_set_external_entity_loader
 
 libxml_set_external_entity_loader — Changes the default external entity loader
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool libxml_set_external_entity_loader ( callable $resolver_function )~
+  libxml_set_external_entity_loader ( callable $resolver_function ) : bool~
 
 Changes the default external entity loader.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {resolver_function}
 
-    A callable that takes three arguments. Two strings, a public id and system
-    id, and a context (an array with four keys) as the third argument. This
-    callback should return a resource, a string from which a resource can be
-    opened, or NULL.
+  A callable that takes three arguments. Two strings, a public id and system
+  id, and a context (an array with four keys) as the third argument. This
+  callback should return a resource, a string from which a resource can be
+  opened, or NULL.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 libxml_set_external_entity_loader() example
 
 <?php >
-    $xml = <<<XML
-    <!DOCTYPE foo PUBLIC "-//FOO/BAR" "http://example.com/foobar">
-    <foo>bar</foo>
-    XML;
+  $xml = <<<XML
+  <!DOCTYPE foo PUBLIC "-//FOO/BAR" "http://example.com/foobar">
+  <foo>bar</foo>
+  XML;
 
-    $dtd = <<<DTD
-    <!ELEMENT foo (#PCDATA)>
-    DTD;
+  $dtd = <<<DTD
+  <!ELEMENT foo (#PCDATA)>
+  DTD;
 
-    libxml_set_external_entity_loader(
-        function ($public, $system, $context) use($dtd) {
-            var_dump($public);
-            var_dump($system);
-            var_dump($context);
-            $f = fopen("php://temp", "r+");
-            fwrite($f, $dtd);
-            rewind($f);
-            return $f;
-        }
-    );
+  libxml_set_external_entity_loader(
+      function ($public, $system, $context) use($dtd) {
+          var_dump($public);
+          var_dump($system);
+          var_dump($context);
+          $f = fopen("php://temp", "r+");
+          fwrite($f, $dtd);
+          rewind($f);
+          return $f;
+      }
+  );
 
-    $dd = new DOMDocument;
-    $r  = $dd->loadXML($xml);
+  $dd = new DOMDocument;
+  $r  = $dd->loadXML($xml);
 
-    var_dump($dd->validate());
+  var_dump($dd->validate());
 <?>
 
 The above example will output:
@@ -71,11 +71,11 @@ array(4) {
 }
 bool(true)
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |libxml_disable_entity_loader| - Disable the ability to load external
-    entities
+ * |libxml_disable_entity_loader| - Disable the ability to load external
+  entities
 
 
 vim:ft=help:

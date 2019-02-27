@@ -4,11 +4,11 @@ PDF_curveto
 
 PDF_curveto — Draw Bezier curve
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool PDF_curveto ( resource $p , float $x1 , float $y1 , float $x2 ,~
-    float $y2 , float $x3 , float $y3 )~
+  PDF_curveto ( resource $p , float $x1 , float $y1 , float $x2 , float $y2 ,~
+  float $x3 , float $y3 ) : bool~
 
 Draws a Bezier curve from the current point, using 3 more control points.
 Returns TRUE on success or FALSE on failure.

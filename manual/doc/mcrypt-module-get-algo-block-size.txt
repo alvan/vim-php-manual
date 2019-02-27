@@ -10,27 +10,27 @@ Warning
 This function has been DEPRECATED as of PHP 7.1.0. Relying on this function is
 highly discouraged.
 
-==============================================================================
+===============================================================================
 *Description*
 
-    int mcrypt_module_get_algo_block_size ( string $algorithm [, string~
-    $lib_dir ] )~
+  mcrypt_module_get_algo_block_size ( string $algorithm [, string $lib_dir ] )~
+  : int~
 
 Gets the blocksize of the specified algorithm.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {algorithm}
 
-    The algorithm name.
+  The algorithm name.
 
 {lib_dir}
 
-    This optional parameter can contain the location where the mode module is
-    on the system.
+  This optional parameter can contain the location where the mode module is on
+  the system.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns the block size of the algorithm specified in bytes.

@@ -5,22 +5,22 @@ image_type_to_mime_type
 image_type_to_mime_type — Get Mime-Type for image-type returned by
 getimagesize, exif_read_data, exif_thumbnail, exif_imagetype
 
-==============================================================================
+===============================================================================
 *Description*
 
-    string image_type_to_mime_type ( int $imagetype )~
+  image_type_to_mime_type ( int $imagetype ) : string~
 
 The image_type_to_mime_type() function will determine the Mime-Type for an
 IMAGETYPE constant.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {imagetype}
 
-    One of the IMAGETYPE_XXX constants.
+  One of the IMAGETYPE_XXX constants.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 The returned values are as follows
@@ -46,29 +46,29 @@ IMAGETYPE_XBM                           image/xbm
 IMAGETYPE_ICO                           image/vnd.microsoft.icon
 IMAGETYPE_WEBP                          image/webp
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 image_type_to_mime_type() example
 
 <?php >
-    header("Content-type: " . image_type_to_mime_type(IMAGETYPE_PNG));
+  header("Content-type: " . image_type_to_mime_type(IMAGETYPE_PNG));
 <?>
 
-==============================================================================
+===============================================================================
 *Notes*
 
-    Note:
+  Note:
 
-    This function does not require the GD image library.
+  This function does not require the GD image library.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |getimagesize| - Get the size of an image
-  * |exif_imagetype| - Determine the type of an image
-  * |exif_read_data| - Reads the EXIF headers from an image file
-  * |exif_thumbnail| - Retrieve the embedded thumbnail of an image
+ * |getimagesize| - Get the size of an image
+ * |exif_imagetype| - Determine the type of an image
+ * |exif_read_data| - Reads the EXIF headers from an image file
+ * |exif_thumbnail| - Retrieve the embedded thumbnail of an image
 
 
 vim:ft=help:

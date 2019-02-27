@@ -4,39 +4,40 @@ ob_get_clean
 
 ob_get_clean — Get current buffer contents and delete current output buffer
 
-==============================================================================
+===============================================================================
 *Description*
 
-    string ob_get_clean ( void )~
+  ob_get_clean ( void ) : string~
 
 Gets the current buffer contents and delete current output buffer.
 
 ob_get_clean() essentially executes both |ob_get_contents| and |ob_end_clean|.
 
 The output buffer must be started by |ob_start| with
-PHP_OUTPUT_HANDLER_CLEANABLE flag. Otherwise ob_get_clean() will not work.
+PHP_OUTPUT_HANDLER_CLEANABLE and PHP_OUTPUT_HANDLER_REMOVABLE flags. Otherwise 
+ob_get_clean() will not work.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns the contents of the output buffer and end output buffering. If output
 buffering isn't active then FALSE is returned.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 A simple ob_get_clean() example
 
 <?php >
 
-    ob_start();
+  ob_start();
 
-    echo "Hello World";
+  echo "Hello World";
 
-    $out = ob_get_clean();
-    $out = strtolower($out);
+  $out = ob_get_clean();
+  $out = strtolower($out);
 
-    var_dump($out);
+  var_dump($out);
 <?>
 
 The above example will output:
@@ -45,11 +46,11 @@ The above example will output:
 string(11) "hello world"
 
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |ob_get_contents| - Return the contents of the output buffer
-  * |ob_start| - Turn on output buffering
+ * |ob_get_contents| - Return the contents of the output buffer
+ * |ob_start| - Turn on output buffering
 
 
 vim:ft=help:

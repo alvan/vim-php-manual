@@ -4,29 +4,29 @@ dba_optimize
 
 dba_optimize — Optimize database
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool dba_optimize ( resource $handle )~
+  dba_optimize ( resource $handle ) : bool~
 
 dba_optimize() optimizes the underlying database.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {handle}
 
-    The database handler, returned by |dba_open| or |dba_popen|.
+  The database handler, returned by |dba_open| or |dba_popen|.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |dba_sync| - Synchronize database
+ * |dba_sync| - Synchronize database
 
 
 vim:ft=help:

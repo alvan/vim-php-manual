@@ -4,31 +4,31 @@ openssl_get_cert_locations
 
 openssl_get_cert_locations — Retrieve the available certificate locations
 
-==============================================================================
+===============================================================================
 *Description*
 
-    array openssl_get_cert_locations ( void )~
+  openssl_get_cert_locations ( void ) : array~
 
 openssl_get_cert_locations() returns an array with information about the
 available certificate locations that will be searched for SSL certificates.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 This function has no parameters.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns an array with the available certificate locations.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 openssl_get_cert_locations() example
 
 <?php >
-    var_dump(openssl_get_cert_locations());
+  var_dump(openssl_get_cert_locations());
 <?>
 
 The above example will output:

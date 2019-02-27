@@ -4,59 +4,59 @@ ftp_mkdir
 
 ftp_mkdir — Creates a directory
 
-==============================================================================
+===============================================================================
 *Description*
 
-    string ftp_mkdir ( resource $ftp_stream , string $directory )~
+  ftp_mkdir ( resource $ftp_stream , string $directory ) : string~
 
 Creates the specified {directory} on the FTP server.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {ftp_stream}
 
-    The link identifier of the FTP connection.
+  The link identifier of the FTP connection.
 
 {directory}
 
-    The name of the directory that will be created.
+  The name of the directory that will be created.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns the newly created directory name on success or FALSE on error.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 ftp_mkdir() example
 
 <?php >
 
-    $dir = 'www';
+  $dir = 'www';
 
-    // set up basic connection
-    $conn_id = ftp_connect($ftp_server);
+  // set up basic connection
+  $conn_id = ftp_connect($ftp_server);
 
-    // login with username and password
-    $login_result = ftp_login($conn_id, $ftp_user_name, $ftp_user_pass);
+  // login with username and password
+  $login_result = ftp_login($conn_id, $ftp_user_name, $ftp_user_pass);
 
-    // try to create the directory $dir
-    if (ftp_mkdir($conn_id, $dir)) {
-     echo "successfully created $dir\n";
-    } else {
-     echo "There was a problem while creating $dir\n";
-    }
+  // try to create the directory $dir
+  if (ftp_mkdir($conn_id, $dir)) {
+   echo "successfully created $dir\n";
+  } else {
+   echo "There was a problem while creating $dir\n";
+  }
 
-    // close the connection
-    ftp_close($conn_id);
+  // close the connection
+  ftp_close($conn_id);
 <?>
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |ftp_rmdir| - Removes a directory
+ * |ftp_rmdir| - Removes a directory
 
 
 vim:ft=help:

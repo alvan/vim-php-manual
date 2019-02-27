@@ -4,25 +4,33 @@ swoole_async_write
 
 swoole_async_write — Write data to a file stream asynchronously
 
-==============================================================================
+===============================================================================
 *Description*
 
-    void swoole_async_write ( string $filename , string $content [, int~
-    $offset [, callable $callback ]] )~
+  swoole_async_write ( string $filename , string $content [, integer $offset~
+  [, callable $callback ]] ) : bool~
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {filename}
 
+  The filename being written.
+
 {content}
+
+  The content writing to the file.
 
 {offset}
 
+  The offset.
+
 {callback}
 
-==============================================================================
+===============================================================================
 *Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
 
 
 vim:ft=help:

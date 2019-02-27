@@ -4,51 +4,51 @@ array_map
 
 array_map — Applies the callback to the elements of the given arrays
 
-==============================================================================
+===============================================================================
 *Description*
 
-    array array_map ( callable $callback , array $array1 [, array $... ] )~
+  array_map ( callable $callback , array $array1 [, array $... ] ) : array~
 
 array_map() returns an array containing all the elements of {array1} after
-applying the {callback} function to each one. The number of parameters that
-the {callback} function accepts should match the number of arrays passed to
-the array_map()
+applying the {callback} function to each one. The number of parameters that the
+{callback} function accepts should match the number of arrays passed to the 
+array_map()
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {callback}
 
-    Callback function to run for each element in each array.
+  Callback function to run for each element in each array.
 
 {array1}
 
-    An array to run through the {callback} function.
+  An array to run through the {callback} function.
 
 {...}
 
-    Variable list of array arguments to run through the {callback} function.
+  Variable list of array arguments to run through the {callback} function.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns an array containing all the elements of {array1} after applying the
 {callback} function to each one.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 array_map() example
 
 <?php >
-    function cube($n)
-    {
-        return($n * $n * $n);
-    }
+  function cube($n)
+  {
+      return($n * $n * $n);
+  }
 
-    $a = array(1, 2, 3, 4, 5);
-    $b = array_map("cube", $a);
-    print_r($b);
+  $a = array(1, 2, 3, 4, 5);
+  $b = array_map("cube", $a);
+  print_r($b);
 <?>
 
 This makes $b have:
@@ -65,11 +65,11 @@ Array
 Example #2 array_map() using a lambda function (as of PHP 5.3.0)
 
 <?php >
-    $func = function($value) {
-        return $value * 2;
-    };
+  $func = function($value) {
+      return $value * 2;
+  };
 
-    print_r(array_map($func, range(1, 5)));
+  print_r(array_map($func, range(1, 5)));
 <?>
 
 Array
@@ -84,24 +84,24 @@ Array
 Example #3 array_map() - using more arrays
 
 <?php >
-    function show_Spanish($n, $m)
-    {
-        return("The number $n is called $m in Spanish");
-    }
+  function show_Spanish($n, $m)
+  {
+      return("The number $n is called $m in Spanish");
+  }
 
-    function map_Spanish($n, $m)
-    {
-        return(array($n => $m));
-    }
+  function map_Spanish($n, $m)
+  {
+      return(array($n => $m));
+  }
 
-    $a = array(1, 2, 3, 4, 5);
-    $b = array("uno", "dos", "tres", "cuatro", "cinco");
+  $a = array(1, 2, 3, 4, 5);
+  $b = array("uno", "dos", "tres", "cuatro", "cinco");
 
-    $c = array_map("show_Spanish", $a, $b);
-    print_r($c);
+  $c = array_map("show_Spanish", $a, $b);
+  print_r($c);
 
-    $d = array_map("map_Spanish", $a , $b);
-    print_r($d);
+  $d = array_map("map_Spanish", $a , $b);
+  print_r($d);
 <?>
 
 The above example will output:
@@ -157,12 +157,12 @@ can be easily performed by using NULL as the name of the callback function
 Example #4 Creating an array of arrays
 
 <?php >
-    $a = array(1, 2, 3, 4, 5);
-    $b = array("one", "two", "three", "four", "five");
-    $c = array("uno", "dos", "tres", "cuatro", "cinco");
+  $a = array(1, 2, 3, 4, 5);
+  $b = array("one", "two", "three", "four", "five");
+  $c = array("uno", "dos", "tres", "cuatro", "cinco");
 
-    $d = array_map(null, $a, $b, $c);
-    print_r($d);
+  $d = array_map(null, $a, $b, $c);
+  print_r($d);
 <?>
 
 The above example will output:
@@ -213,17 +213,17 @@ array will have sequential integer keys.
 Example #5 array_map() - with string keys
 
 <?php >
-    $arr = array("stringkey" => "value");
-    function cb1($a) {
-        return array ($a);
-    }
-    function cb2($a, $b) {
-        return array ($a, $b);
-    }
-    var_dump(array_map("cb1", $arr));
-    var_dump(array_map("cb2", $arr, $arr));
-    var_dump(array_map(null,  $arr));
-    var_dump(array_map(null, $arr, $arr));
+  $arr = array("stringkey" => "value");
+  function cb1($a) {
+      return array ($a);
+  }
+  function cb2($a, $b) {
+      return array ($a, $b);
+  }
+  var_dump(array_map("cb1", $arr));
+  var_dump(array_map("cb2", $arr, $arr));
+  var_dump(array_map(null,  $arr));
+  var_dump(array_map(null, $arr, $arr));
 <?>
 
 The above example will output:
@@ -258,14 +258,14 @@ array(1) {
   }
 }
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |array_filter| - Filters elements of an array using a callback function
-  * |array_reduce| - Iteratively reduce the array to a single value using a
-    callback function
-  * |array_walk| - Apply a user supplied function to every member of an array
-  * information about the callback type
+ * |array_filter| - Filters elements of an array using a callback function
+ * |array_reduce| - Iteratively reduce the array to a single value using a
+  callback function
+ * |array_walk| - Apply a user supplied function to every member of an array
+ * information about the callback type
 
 
 vim:ft=help:

@@ -4,54 +4,54 @@ gmp_powm
 
 gmp_powm — Raise number into power with modulo
 
-==============================================================================
+===============================================================================
 *Description*
 
-    GMP gmp_powm ( GMP $base , GMP $exp , GMP $mod )~
+  gmp_powm ( GMP $base , GMP $exp , GMP $mod ) : GMP~
 
 Calculate ({base} raised into power {exp}) modulo {mod}. If {exp} is negative,
 result is undefined.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {base}
 
-    The base number.
+  The base number.
 
-    Either a GMP number resource in PHP 5.5 and earlier, a GMP object in PHP
-    5.6 and later, or a numeric string provided that it is possible to convert
-    the latter to a number.
+  Either a GMP number resource in PHP 5.5 and earlier, a GMP object in PHP 5.6
+  and later, or a numeric string provided that it is possible to convert the
+  latter to a number.
 
 {exp}
 
-    The positive power to raise the {base}.
+  The positive power to raise the {base}.
 
-    Either a GMP number resource in PHP 5.5 and earlier, a GMP object in PHP
-    5.6 and later, or a numeric string provided that it is possible to convert
-    the latter to a number.
+  Either a GMP number resource in PHP 5.5 and earlier, a GMP object in PHP 5.6
+  and later, or a numeric string provided that it is possible to convert the
+  latter to a number.
 
 {mod}
 
-    The modulo.
+  The modulo.
 
-    Either a GMP number resource in PHP 5.5 and earlier, a GMP object in PHP
-    5.6 and later, or a numeric string provided that it is possible to convert
-    the latter to a number.
+  Either a GMP number resource in PHP 5.5 and earlier, a GMP object in PHP 5.6
+  and later, or a numeric string provided that it is possible to convert the
+  latter to a number.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 The new (raised) number, as a GMP number.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 gmp_powm() example
 
 <?php >
-    $pow1 = gmp_powm("2", "31", "2147483649");
-    echo gmp_strval($pow1) . "\n";
+  $pow1 = gmp_powm("2", "31", "2147483649");
+  echo gmp_strval($pow1) . "\n";
 <?>
 
 The above example will output:

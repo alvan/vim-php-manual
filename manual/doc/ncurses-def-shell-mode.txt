@@ -4,28 +4,28 @@ ncurses_def_shell_mode
 
 ncurses_def_shell_mode — Saves terminals (shell) mode
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool ncurses_def_shell_mode ( void )~
+  ncurses_def_shell_mode ( void ) : bool~
 Warning
 
 This function is EXPERIMENTAL. The behaviour of this function, its name, and
-surrounding documentation may change without notice in a future release of
-PHP. This function should be used at your own risk.
+surrounding documentation may change without notice in a future release of PHP.
+This function should be used at your own risk.
 
 Saves the current terminal modes for shell (not in curses) for use by 
 |ncurses_reset_shell_mode|.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns FALSE on success, TRUE otherwise.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |ncurses_reset_shell_mode| - Resets the shell mode saved by def_shell_mode
+ * |ncurses_reset_shell_mode| - Resets the shell mode saved by def_shell_mode
 
 
 vim:ft=help:

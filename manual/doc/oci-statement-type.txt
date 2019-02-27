@@ -4,21 +4,21 @@ oci_statement_type
 
 oci_statement_type — Returns the type of a statement
 
-==============================================================================
+===============================================================================
 *Description*
 
-    string oci_statement_type ( resource $statement )~
+  oci_statement_type ( resource $statement ) : string~
 
 Returns a keyword identifying the type of the OCI8 {statement}.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {statement}
 
-    A valid OCI8 statement identifier from |oci_parse|.
+  A valid OCI8 statement identifier from |oci_parse|.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns the type of {statement} as one of the following strings.
@@ -39,27 +39,26 @@ UNKNOWN
 
 Returns FALSE on error.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 oci_statement_type() example
 
 <?php >
 
-    $conn = oci_connect('hr', 'welcome', 'localhost/XE');
+  $conn = oci_connect('hr', 'welcome', 'localhost/XE');
 
-    $stid = oci_parse($conn, 'DELETE FROM departments WHERE department_id = 130;'
-    );
-    if (oci_statement_type($stid) == "DELETE") {
-        trigger_error('You are not allowed to delete from this table', 
-    E_USER_ERROR);
-    }
-    else {
-        oci_execute($stid);  // delete the row
-    }
+  $stid = oci_parse($conn, 'DELETE FROM departments WHERE department_id = 130;');
+  if (oci_statement_type($stid) == "DELETE") {
+      trigger_error('You are not allowed to delete from this table', E_USER_ERROR
+  );
+  }
+  else {
+      oci_execute($stid);  // delete the row
+  }
 
-    oci_free_statement($stid);
-    oci_close($conn);
+  oci_free_statement($stid);
+  oci_close($conn);
 
 <?>
 

@@ -6,42 +6,42 @@ xmlwriter_start_element
 
 XMLWriter::startElement -- xmlwriter_start_element — Create start element tag
 
-==============================================================================
+===============================================================================
 *Description*
 
 Object oriented style
 
-    bool XMLWriter::startElement ( string $name )~
+  XMLWriter::startElement ( string $name ) : bool~
 
 Procedural style
 
-    bool xmlwriter_start_element ( resource $xmlwriter , string $name )~
+  xmlwriter_start_element ( resource $xmlwriter , string $name ) : bool~
 
 Starts an element.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 { xmlwriter}
 
-    Only for procedural calls. The XMLWriter resource that is being modified.
-    This resource comes from a call to |xmlwriter_open_uri| or 
-    |xmlwriter_open_memory|.
+  Only for procedural calls. The XMLWriter resource that is being modified.
+  This resource comes from a call to |xmlwriter_open_uri| or 
+  |xmlwriter_open_memory|.
 
 {name}
 
-    The element name.
+  The element name.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |XMLWriter::endElement| - End current element
-  * |XMLWriter::writeElement| - Write full element tag
+ * |XMLWriter::endElement| - End current element
+ * |XMLWriter::writeElement| - Write full element tag
 
 
 vim:ft=help:

@@ -5,62 +5,61 @@ uasort
 uasort — Sort an array with a user-defined comparison function and maintain
 index association
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool uasort ( array &$array , callable $value_compare_func )~
+  uasort ( array &$array , callable $value_compare_func ) : bool~
 
-This function sorts an array such that array indices maintain their
-correlation with the array elements they are associated with, using a
-user-defined comparison function.
+This function sorts an array such that array indices maintain their correlation
+with the array elements they are associated with, using a user-defined
+comparison function.
 
 This is used mainly when sorting associative arrays where the actual element
 order is significant.
 
-    Note:
+  Note:
 
-    If two members compare as equal, their relative order in the sorted array
-    is undefined.
+  If two members compare as equal, their relative order in the sorted array is
+  undefined.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {array}
 
-    The input array.
+  The input array.
 
 {value_compare_func}
 
-    See |usort| and |uksort| for examples of user-defined comparison
-    functions.
+  See |usort| and |uksort| for examples of user-defined comparison functions.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 Basic uasort() example
 
 <?php >
-    // Comparison function
-    function cmp($a, $b) {
-        if ($a == $b) {
-            return 0;
-        }
-        return ($a < $b) ? -1 : 1;
-    }
+  // Comparison function
+  function cmp($a, $b) {
+      if ($a == $b) {
+          return 0;
+      }
+      return ($a < $b) ? -1 : 1;
+  }
 
-    // Array to be sorted
-    $array = array('a' => 4, 'b' => 8, 'c' => -1, 'd' => -9, 'e' => 2, 'f' => 5, 
-    'g' => 3, 'h' => -4);
-    print_r($array);
+  // Array to be sorted
+  $array = array('a' => 4, 'b' => 8, 'c' => -1, 'd' => -9, 'e' => 2, 'f' => 5, 
+  'g' => 3, 'h' => -4);
+  print_r($array);
 
-    // Sort and print the resulting array
-    uasort($array, 'cmp');
-    print_r($array);
+  // Sort and print the resulting array
+  uasort($array, 'cmp');
+  print_r($array);
 <?>
 
 The above example will output:
@@ -88,11 +87,11 @@ Array
     [b] => 8
 )
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |usort| - Sort an array by values using a user-defined comparison function
-  * The comparison of array sorting functions
+ * |usort| - Sort an array by values using a user-defined comparison function
+ * The comparison of array sorting functions
 
 
 vim:ft=help:

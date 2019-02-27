@@ -4,31 +4,31 @@ udm_alloc_agent_array
 
 udm_alloc_agent_array — Allocate mnoGoSearch session
 
-==============================================================================
+===============================================================================
 *Description*
 
-    resource udm_alloc_agent_array ( array $databases )~
+  udm_alloc_agent_array ( array $databases ) : resource~
 
 udm_alloc_agent_array() will create an agent with multiple database
 connections.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {databases}
 
-    The array {databases} must contain one database URL per element, analog to
-    the first parameter of |udm_alloc_agent|.
+  The array {databases} must contain one database URL per element, analog to
+  the first parameter of |udm_alloc_agent|.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns a resource link identifier on success or FALSE on failure.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |udm_alloc_agent| - Allocate mnoGoSearch session
+ * |udm_alloc_agent| - Allocate mnoGoSearch session
 
 
 vim:ft=help:

@@ -4,39 +4,39 @@ zip_entry_read
 
 zip_entry_read — Read from an open directory entry
 
-==============================================================================
+===============================================================================
 *Description*
 
-    string zip_entry_read ( resource $zip_entry [, int $length = 1024 ] )~
+  zip_entry_read ( resource $zip_entry [, int $length = 1024 ] ) : string~
 
 Reads from an open directory entry.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {zip_entry}
 
-    A directory entry returned by |zip_read|.
+  A directory entry returned by |zip_read|.
 
 {length}
 
-    The number of bytes to return.
+  The number of bytes to return.
 
-        Note:
+    Note:
 
-        This should be the uncompressed length you wish to read.
+    This should be the uncompressed length you wish to read.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns the data read, empty string on end of a file, or FALSE on error.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |zip_entry_open| - Open a directory entry for reading
-  * |zip_entry_close| - Close a directory entry
-  * |zip_entry_filesize| - Retrieve the actual file size of a directory entry
+ * |zip_entry_open| - Open a directory entry for reading
+ * |zip_entry_close| - Close a directory entry
+ * |zip_entry_filesize| - Retrieve the actual file size of a directory entry
 
 
 vim:ft=help:

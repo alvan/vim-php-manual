@@ -4,49 +4,49 @@ gnupg_setsignmode
 
 gnupg_setsignmode — Sets the mode for signing
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool gnupg_setsignmode ( resource $identifier , int $signmode )~
+  gnupg_setsignmode ( resource $identifier , int $signmode ) : bool~
 
 Sets the mode for signing.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {identifier}
 
-    The gnupg identifier, from a call to |gnupg_init| or gnupg.
+  The gnupg identifier, from a call to |gnupg_init| or gnupg.
 
 {sigmode}
 
-    The mode for signing.
+  The mode for signing.
 
-    {signmode} takes a constant indicating what type of signature should be
-    produced. The possible values are GNUPG_SIG_MODE_NORMAL,
-    GNUPG_SIG_MODE_DETACH and GNUPG_SIG_MODE_CLEAR. By default
-    GNUPG_SIG_MODE_CLEAR is used.
+  {signmode} takes a constant indicating what type of signature should be
+  produced. The possible values are GNUPG_SIG_MODE_NORMAL,
+  GNUPG_SIG_MODE_DETACH and GNUPG_SIG_MODE_CLEAR. By default
+  GNUPG_SIG_MODE_CLEAR is used.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 Procedural gnupg_setsignmode() example
 
 <?php >
-    $res = gnupg_init();
-    gnupg_setsignmode($res,GNUPG_SIG_MODE_DETACH); // produce a detached signature
+  $res = gnupg_init();
+  gnupg_setsignmode($res,GNUPG_SIG_MODE_DETACH); // produce a detached signature
 <?>
 
 Example #2 OO gnupg_setsignmode() example
 
 <?php >
-    $gpg = new gnupg();
-    $gpg -> setsignmode(gnupg::SIG_MODE_DETACH); // produce a detached signature
+  $gpg = new gnupg();
+  $gpg -> setsignmode(gnupg::SIG_MODE_DETACH); // produce a detached signature
 <?>
 
 

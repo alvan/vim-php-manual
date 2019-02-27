@@ -4,23 +4,23 @@ trait_exists
 
 trait_exists — Checks if the trait exists
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool trait_exists ( string $traitname [, bool $autoload ] )~
+  trait_exists ( string $traitname [, bool $autoload ] ) : bool~
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {traitname}
 
-    Name of the trait to check
+  Name of the trait to check
 
 {autoload}
 
-    Whether to autoload if not already loaded.
+  Whether to autoload if not already loaded.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE if trait exists, FALSE if not, NULL in case of an error.

@@ -4,43 +4,43 @@ vsprintf
 
 vsprintf — Return a formatted string
 
-==============================================================================
+===============================================================================
 *Description*
 
-    string vsprintf ( string $format , array $args )~
+  vsprintf ( string $format , array $args ) : string~
 
-Operates as |sprintf| but accepts an array of arguments, rather than a
-variable number of arguments.
+Operates as |sprintf| but accepts an array of arguments, rather than a variable
+number of arguments.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {format}
 
-    See |sprintf| for a description of {format}.
+  See |sprintf| for a description of {format}.
 
 {args}
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Return array values as a formatted string according to {format} (which is
 described in the documentation for |sprintf|).
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 vsprintf(): zero-padded integers
 
 <?php >
-    print vsprintf("%04d-%02d-%02d", explode('-', '1988-8-1')); // 1988-08-01
+  print vsprintf("%04d-%02d-%02d", explode('-', '1988-8-1')); // 1988-08-01
 <?>
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |sprintf| - Return a formatted string
-  * |vprintf| - Output a formatted string
+ * |sprintf| - Return a formatted string
+ * |vprintf| - Output a formatted string
 
 
 vim:ft=help:

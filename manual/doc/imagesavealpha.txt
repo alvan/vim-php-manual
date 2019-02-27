@@ -2,66 +2,66 @@ imagesavealpha
 
 (PHP 4 >= 4.3.2, PHP 5, PHP 7)
 
-imagesavealpha — Set the flag to save full alpha channel information (as
-opposed to single-color transparency) when saving PNG images
+imagesavealpha — Whether to retain full alpha channel information when saving
+PNG images
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool imagesavealpha ( resource $image , bool $saveflag )~
+  imagesavealpha ( resource $image , bool $saveflag ) : bool~
 
-imagesavealpha() sets the flag to attempt to save full alpha channel
-information (as opposed to single-color transparency) when saving PNG images.
+imagesavealpha() sets the flag which determines whether to retain full alpha
+channel information (as opposed to single-color transparency) when saving PNG
+images.
 
-You have to unset alphablending (imagealphablending($im, false)), to use it.
+Alphablending has to be disabled (imagealphablending($im, false)) to retain the
+alpha-channel in the first place.
 
-Alpha channel is not supported by all browsers, if you have problem with your
-browser, try to load your script with an alpha channel compliant browser, e.g.
-latest Mozilla.
-
-==============================================================================
+===============================================================================
 *Parameters*
 
 { image}
 
-    An image resource, returned by one of the image creation functions, such
-    as |imagecreatetruecolor|.
+  An image resource, returned by one of the image creation functions, such as 
+  |imagecreatetruecolor|.
 
 {saveflag}
 
-    Whether to save the alpha channel or not. Default to FALSE.
+  Whether to save the alpha channel or not. Defaults to FALSE.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-==============================================================================
+===============================================================================
 *Examples*
 
-Example #1 imagesavealpha() example
+Example #1 Basic imagesavealpha() Usage
 
 <?php >
-    // Load a png image with alpha channels
-    $png = imagecreatefrompng('./alphachannel_example.png');
+  // Load a png image with alpha channel
+  $png = imagecreatefrompng('./alphachannel_example.png');
 
-    // Do required operations
+  // Turn off alpha blending
+  imagealphablending($png, false);
 
-    // Turn off alpha blending and set alpha flag
-    imagealphablending($png, false);
-    imagesavealpha($png, true);
+  // Do desired operations
 
-    // Output image to browser
-    header('Content-Type: image/png');
+  // Set alpha flag
+  imagesavealpha($png, true);
 
-    imagepng($png);
-    imagedestroy($png);
+  // Output image to browser
+  header('Content-Type: image/png');
+
+  imagepng($png);
+  imagedestroy($png);
 <?>
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |imagealphablending| - Set the blending mode for an image
+ * |imagealphablending| - Set the blending mode for an image
 
 
 vim:ft=help:

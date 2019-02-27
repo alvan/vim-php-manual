@@ -4,57 +4,57 @@ apcu_exists
 
 apcu_exists — Checks if entry exists
 
-==============================================================================
+===============================================================================
 *Description*
 
-    mixed apcu_exists ( mixed $keys )~
+  apcu_exists ( mixed $keys ) : mixed~
 
 Checks if one or more APCu entries exist.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {keys}
 
-    A string, or an array of strings, that contain keys.
+  A string, or an array of strings, that contain keys.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE if the key exists, otherwise FALSE Or if an array was passed to
 {keys}, then an array is returned that contains all existing keys, or an empty
 array if none exist.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 apcu_exists() example
 
 <?php >
-    $fruit  = 'apple';
-    $veggie = 'carrot';
+  $fruit  = 'apple';
+  $veggie = 'carrot';
 
-    apcu_store('foo', $fruit);
-    apcu_store('bar', $veggie);
+  apcu_store('foo', $fruit);
+  apcu_store('bar', $veggie);
 
-    if (apcu_exists('foo')) {
-        echo "Foo exists: ";
-        echo apcu_fetch('foo');
-    } else {
-        echo "Foo does not exist";
-    }
+  if (apcu_exists('foo')) {
+      echo "Foo exists: ";
+      echo apcu_fetch('foo');
+  } else {
+      echo "Foo does not exist";
+  }
 
-    echo PHP_EOL;
-    if (apcu_exists('baz')) {
-        echo "Baz exists.";
-    } else {
-        echo "Baz does not exist";
-    }
+  echo PHP_EOL;
+  if (apcu_exists('baz')) {
+      echo "Baz exists.";
+  } else {
+      echo "Baz does not exist";
+  }
 
-    echo PHP_EOL;
+  echo PHP_EOL;
 
-    $ret = apcu_exists(array('foo', 'donotexist', 'bar'));
-    var_dump($ret);
+  $ret = apcu_exists(array('foo', 'donotexist', 'bar'));
+  var_dump($ret);
 
 <?>
 
@@ -69,11 +69,11 @@ array(2) {
   bool(true)
 }
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |apcu_cache_info| - Retrieves cached information from APCu's data store
-  * |apcu_fetch| - Fetch a stored variable from the cache
+ * |apcu_cache_info| - Retrieves cached information from APCu's data store
+ * |apcu_fetch| - Fetch a stored variable from the cache
 
 
 vim:ft=help:

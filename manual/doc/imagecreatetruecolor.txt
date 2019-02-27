@@ -4,54 +4,54 @@ imagecreatetruecolor
 
 imagecreatetruecolor — Create a new true color image
 
-==============================================================================
+===============================================================================
 *Description*
 
-    resource imagecreatetruecolor ( int $width , int $height )~
+  imagecreatetruecolor ( int $width , int $height ) : resource~
 
 imagecreatetruecolor() returns an image identifier representing a black image
 of the specified size.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {width}
 
-    Image width.
+  Image width.
 
 {height}
 
-    Image height.
+  Image height.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns an image resource identifier on success, FALSE on errors.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 Creating a new GD image stream and outputting an image.
 
 <?php >
-    header ('Content-Type: image/png');
-    $im = @imagecreatetruecolor(120, 20)
-          or die('Cannot Initialize new GD image stream');
-    $text_color = imagecolorallocate($im, 233, 14, 91);
-    imagestring($im, 1, 5, 5,  'A Simple Text String', $text_color);
-    imagepng($im);
-    imagedestroy($im);
+  header ('Content-Type: image/png');
+  $im = @imagecreatetruecolor(120, 20)
+        or die('Cannot Initialize new GD image stream');
+  $text_color = imagecolorallocate($im, 233, 14, 91);
+  imagestring($im, 1, 5, 5,  'A Simple Text String', $text_color);
+  imagepng($im);
+  imagedestroy($im);
 <?>
 
 The above example will output something similar to:
 
 Output of example : Creating a new GD image stream and outputting an image.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |imagedestroy| - Destroy an image
-  * |imagecreate| - Create a new palette based image
+ * |imagedestroy| - Destroy an image
+ * |imagecreate| - Create a new palette based image
 
 
 vim:ft=help:

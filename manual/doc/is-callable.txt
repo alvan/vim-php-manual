@@ -5,85 +5,84 @@ is_callable
 is_callable — Verify that the contents of a variable can be called as a
 function
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool is_callable ( mixed $var [, bool $syntax_only = FALSE [, string~
-    &$callable_name ]] )~
+  is_callable ( mixed $var [, bool $syntax_only = FALSE [, string~
+  &$callable_name ]] ) : bool~
 
 Verify that the contents of a variable can be called as a function. This can
 check that a simple variable contains the name of a valid function, or that an
 array contains a properly encoded object and function name.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {var}
 
-    The value to check
+  The value to check
 
 {syntax_only}
 
-    If set to TRUE the function only verifies that {name} might be a function
-    or method. It will only reject simple variables that are not strings, or
-    an array that does not have a valid structure to be used as a callback.
-    The valid ones are supposed to have only 2 entries, the first of which is
-    an object or a string, and the second a string.
+  If set to TRUE the function only verifies that {name} might be a function or
+  method. It will only reject simple variables that are not strings, or an
+  array that does not have a valid structure to be used as a callback. The
+  valid ones are supposed to have only 2 entries, the first of which is an
+  object or a string, and the second a string.
 
 {callable_name}
 
-    Receives the "callable name". In the example below it is
-    "someClass::someMethod". Note, however, that despite the implication that
-    someClass::SomeMethod() is a callable static method, this is not the case.
+  Receives the "callable name". In the example below it is
+  "someClass::someMethod". Note, however, that despite the implication that
+  someClass::SomeMethod() is a callable static method, this is not the case.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE if {var} is callable, FALSE otherwise.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 is_callable() example
 
 <?php >
-    //  How to check a variable to see if it can be called
-    //  as a function.
+  //  How to check a variable to see if it can be called
+  //  as a function.
 
-    //
-    //  Simple variable containing a function
-    //
+  //
+  //  Simple variable containing a function
+  //
 
-    function someFunction() 
+  function someFunction() 
+  {
+  }
+
+  $functionVariable = 'someFunction';
+
+  var_dump(is_callable($functionVariable, false, $callable_name));  // bool(true)
+
+  echo $callable_name, "\n";  // someFunction
+
+  //
+  //  Array containing a method
+  //
+
+  class someClass {
+
+    function someMethod() 
     {
     }
 
-    $functionVariable = 'someFunction';
+  }
 
-    var_dump(is_callable($functionVariable, false, $callable_name));  // bool
-    (true)
+  $anObject = new someClass();
 
-    echo $callable_name, "\n";  // someFunction
+  $methodVariable = array($anObject, 'someMethod');
 
-    //
-    //  Array containing a method
-    //
+  var_dump(is_callable($methodVariable, true, $callable_name));  //  bool(true)
 
-    class someClass {
-
-      function someMethod() 
-      {
-      }
-
-    }
-
-    $anObject = new someClass();
-
-    $methodVariable = array($anObject, 'someMethod');
-
-    var_dump(is_callable($methodVariable, true, $callable_name));  //  bool(true)
-
-    echo $callable_name, "\n";  //  someClass::someMethod
+  echo $callable_name, "\n";  //  someClass::someMethod
 
 <?>
 
@@ -112,11 +111,11 @@ The above example will output:
 bool(false)
 bool(false)
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |function_exists| - Return TRUE if the given function has been defined
-  * |method_exists| - Checks if the class method exists
+ * |function_exists| - Return TRUE if the given function has been defined
+ * |method_exists| - Checks if the class method exists
 
 
 vim:ft=help:

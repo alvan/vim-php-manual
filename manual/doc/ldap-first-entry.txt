@@ -4,11 +4,11 @@ ldap_first_entry
 
 ldap_first_entry — Return first result id
 
-==============================================================================
+===============================================================================
 *Description*
 
-    resource ldap_first_entry ( resource $link_identifier , resource~
-    $result_identifier )~
+  ldap_first_entry ( resource $link_identifier , resource $result_identifier )~
+  : resource~
 
 Returns the entry identifier for first entry in the result. This entry
 identifier is then supplied to |ldap_next_entry| routine to get successive
@@ -17,25 +17,25 @@ entries from the result.
 Entries in the LDAP result are read sequentially using the ldap_first_entry()
 and |ldap_next_entry| functions.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {link_identifier}
 
-    An LDAP link identifier, returned by |ldap_connect|.
+  An LDAP link identifier, returned by |ldap_connect|.
 
 {result_identifier}
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
-Returns the result entry identifier for the first entry on success and FALSE
-on error.
+Returns the result entry identifier for the first entry on success and FALSE on
+error.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |ldap_get_entries| - Get all result entries
+ * |ldap_get_entries| - Get all result entries
 
 
 vim:ft=help:

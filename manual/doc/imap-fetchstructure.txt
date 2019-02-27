@@ -4,31 +4,31 @@ imap_fetchstructure
 
 imap_fetchstructure — Read the structure of a particular message
 
-==============================================================================
+===============================================================================
 *Description*
 
-    object imap_fetchstructure ( resource $imap_stream , int $msg_number [,~
-    int $options = 0 ] )~
+  imap_fetchstructure ( resource $imap_stream , int $msg_number [, int~
+  $options = 0 ] ) : object~
 
 Fetches all the structured information for a given message.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 { imap_stream}
 
-    An IMAP stream returned by |imap_open|.
+  An IMAP stream returned by |imap_open|.
 
 {msg_number}
 
-    The message number
+  The message number
 
 {options}
 
-    This optional parameter only has a single option, FT_UID, which tells the
-    function to treat the {msg_number} argument as a UID.
+  This optional parameter only has a single option, FT_UID, which tells the
+  function to treat the {msg_number} argument as a UID.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns an object includes the envelope, internal date, size, flags and body
@@ -83,12 +83,12 @@ Value       Type            Constant
 4     Quoted-Printable ENCQUOTEDPRINTABLE
 5     other            ENCOTHER
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |imap_fetchbody| - Fetch a particular section of the body of the message
-  * |imap_bodystruct| - Read the structure of a specified body section of a
-    specific message
+ * |imap_fetchbody| - Fetch a particular section of the body of the message
+ * |imap_bodystruct| - Read the structure of a specified body section of a
+  specific message
 
 
 vim:ft=help:

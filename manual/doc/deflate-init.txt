@@ -4,10 +4,10 @@ deflate_init
 
 deflate_init — Initialize an incremental deflate context
 
-==============================================================================
+===============================================================================
 *Description*
 
-    resource deflate_init ( int $encoding [, array $options = array() ] )~
+  deflate_init ( int $encoding [, array $options = array() ] ) : resource~
 
 Initializes an incremental deflate context using the specified {encoding}.
 
@@ -17,59 +17,59 @@ encoding to use; the encoding must be set with the {encoding} parameter.
 
 Limitation: there is currently no way to set the header information on a GZIP
 compressed stream, which are set as follows: GZIP signature (\x1f\x8B);
-compression method (\x08 == DEFLATE); 6 zero bytes; the operating system set
-to the current system (\x00 = Windows, \x03 = Unix, etc.)
+compression method (\x08 == DEFLATE); 6 zero bytes; the operating system set to
+the current system (\x00 = Windows, \x03 = Unix, etc.)
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {encoding}
 
-    One of the ZLIB_ENCODING_* constants.
+  One of the ZLIB_ENCODING_* constants.
 
 {options}
 
-    An associative array which may contain the following elements:
+  An associative array which may contain the following elements:
 
-    level
+  level
 
-        The compression level in range -1..9; defaults to -1.
+    The compression level in range -1..9; defaults to -1.
 
-    memory
+  memory
 
-        The compression memory level in range 1..9; defaults to 8.
+    The compression memory level in range 1..9; defaults to 8.
 
-    window
+  window
 
-        The zlib window size (logarithmic) in range 8..15; defaults to 15.
+    The zlib window size (logarithmic) in range 8..15; defaults to 15.
 
-    strategy
+  strategy
 
-        One of ZLIB_FILTERED, ZLIB_HUFFMAN_ONLY, ZLIB_RLE, ZLIB_FIXED or
-        ZLIB_DEFAULT_STRATEGY (the default).
+    One of ZLIB_FILTERED, ZLIB_HUFFMAN_ONLY, ZLIB_RLE, ZLIB_FIXED or
+    ZLIB_DEFAULT_STRATEGY (the default).
 
-    dictionary
+  dictionary
 
-        A string or an array of strings of the preset dictionary (default: no
-        preset dictionary).
+    A string or an array of strings of the preset dictionary (default: no
+    preset dictionary).
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns a deflate context resource (zlib.deflate) on success, or FALSE on
 failure.
 
-==============================================================================
+===============================================================================
 *Errors/Exceptions*
 
-If an invalid option is passed to {options} or the context couldn't be
-created, an error of level E_WARNING is generated.
+If an invalid option is passed to {options} or the context couldn't be created,
+an error of level E_WARNING is generated.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |deflate_add| - Incrementally deflate data
-  * |inflate_init| - Initialize an incremental inflate context
+ * |deflate_add| - Incrementally deflate data
+ * |inflate_init| - Initialize an incremental inflate context
 
 
 vim:ft=help:

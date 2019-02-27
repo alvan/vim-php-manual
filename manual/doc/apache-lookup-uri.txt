@@ -5,10 +5,10 @@ apache_lookup_uri
 apache_lookup_uri — Perform a partial request for the specified URI and return
 all info about it
 
-==============================================================================
+===============================================================================
 *Description*
 
-    object apache_lookup_uri ( string $filename )~
+  apache_lookup_uri ( string $filename ) : object~
 
 This performs a partial request for a URI. It goes just far enough to obtain
 all the important information about the given resource.
@@ -16,52 +16,52 @@ all the important information about the given resource.
 This function is supported when PHP is installed as an Apache module or by the
 NSAPI server module in Netscape/iPlanet/SunONE webservers.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {filename}
 
-    The filename (URI) that's being requested.
+  The filename (URI) that's being requested.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 An object of related URI information. The properties of this object are:
 
-  * status
-  * the_request
-  * status_line
-  * method
-  * content_type
-  * handler
-  * uri
-  * filename
-  * path_info
-  * args
-  * boundary
-  * no_cache
-  * no_local_copy
-  * allowed
-  * send_bodyct
-  * bytes_sent
-  * byterange
-  * clength
-  * unparsed_uri
-  * mtime
-  * request_time
+ * status
+ * the_request
+ * status_line
+ * method
+ * content_type
+ * handler
+ * uri
+ * filename
+ * path_info
+ * args
+ * boundary
+ * no_cache
+ * no_local_copy
+ * allowed
+ * send_bodyct
+ * bytes_sent
+ * byterange
+ * clength
+ * unparsed_uri
+ * mtime
+ * request_time
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 apache_lookup_uri() example
 
 <?php >
-    $info = apache_lookup_uri('index.php?var=value');
-    print_r($info);
+  $info = apache_lookup_uri('index.php?var=value');
+  print_r($info);
 
-    if (file_exists($info->filename)) {
-        echo 'file exists!';
-    }
+  if (file_exists($info->filename)) {
+      echo 'file exists!';
+  }
 <?>
 
 The above example will output something similar to:

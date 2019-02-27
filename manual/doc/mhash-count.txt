@@ -4,33 +4,33 @@ mhash_count
 
 mhash_count — Gets the highest available hash ID
 
-==============================================================================
+===============================================================================
 *Description*
 
-    int mhash_count ( void )~
+  mhash_count ( void ) : int~
 
 Gets the highest available hash ID.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns the highest available hash ID. Hashes are numbered from 0 to this hash
 ID.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 Traversing all hashes
 
 <?php >
 
-    $nr = mhash_count();
+  $nr = mhash_count();
 
-    for ($i = 0; $i <= $nr; $i++) {
-        echo sprintf("The blocksize of %s is %d\n",
-            mhash_get_hash_name($i),
-            mhash_get_block_size($i));
-    }
+  for ($i = 0; $i <= $nr; $i++) {
+      echo sprintf("The blocksize of %s is %d\n",
+          mhash_get_hash_name($i),
+          mhash_get_block_size($i));
+  }
 <?>
 
 

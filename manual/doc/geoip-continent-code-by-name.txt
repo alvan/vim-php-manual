@@ -4,22 +4,22 @@ geoip_continent_code_by_name
 
 geoip_continent_code_by_name — Get the two letter continent code
 
-==============================================================================
+===============================================================================
 *Description*
 
-    string geoip_continent_code_by_name ( string $hostname )~
+  geoip_continent_code_by_name ( string $hostname ) : string~
 
 The geoip_continent_code_by_name() function will return the two letter
 continent code corresponding to a hostname or an IP address.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {hostname}
 
-    The hostname or IP address whose location is to be looked-up.
+  The hostname or IP address whose location is to be looked-up.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns the two letter continent code on success, or FALSE if the address
@@ -35,7 +35,7 @@ NA   North america
 OC   Oceania
 SA   South america
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 A geoip_continent_code_by_name() example
@@ -43,20 +43,20 @@ Example #1 A geoip_continent_code_by_name() example
 This will print where the host example.com is located.
 
 <?php >
-    $continent = geoip_continent_code_by_name('www.example.com');
-    if ($continent) {
-        echo 'This host is located in: ' . $continent;
-    }
+  $continent = geoip_continent_code_by_name('www.example.com');
+  if ($continent) {
+      echo 'This host is located in: ' . $continent;
+  }
 <?>
 
 The above example will output:
 
  This host is located in: NA
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |geoip_country_code_by_name| - Get the two letter country code
+ * |geoip_country_code_by_name| - Get the two letter country code
 
 
 vim:ft=help:

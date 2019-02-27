@@ -4,30 +4,30 @@ ifx_byteasvarchar
 
 ifx_byteasvarchar — Set the default byte mode
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool ifx_byteasvarchar ( int $mode )~
+  ifx_byteasvarchar ( int $mode ) : bool~
 
 Sets the default byte mode for all select-queries.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {mode}
 
-    Mode "0" will return a blob id, and mode "1" will return a varchar with
-    text content.
+  Mode "0" will return a blob id, and mode "1" will return a varchar with text
+  content.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |ifx_textasvarchar| - Set the default text mode
+ * |ifx_textasvarchar| - Set the default text mode
 
 
 vim:ft=help:

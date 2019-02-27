@@ -4,34 +4,33 @@ svn_status
 
 svn_status — Returns the status of working copy files and directories
 
-==============================================================================
+===============================================================================
 *Description*
 
-    array svn_status ( string $path [, int $flags = 0 ] )~
+  svn_status ( string $path [, int $flags = 0 ] ) : array~
 
-Returns the status of working copy files and directories, giving
-modifications, additions, deletions and other changes to items in the working
-copy.
+Returns the status of working copy files and directories, giving modifications,
+additions, deletions and other changes to items in the working copy.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {path}
 
-    Local path to file or directory to retrieve status of.
+  Local path to file or directory to retrieve status of.
 
-        Note: Relative paths will be resolved as if the current working
-        directory was the one that contains the PHP binary. To use the calling
-        script's working directory, use |realpath| or dirname(__FILE__).
+    Note: Relative paths will be resolved as if the current working directory
+    was the one that contains the PHP binary. To use the calling script's
+    working directory, use |realpath| or dirname(__FILE__).
 
 {flags}
 
-    Any combination of SVN_NON_RECURSIVE, SVN_ALL (regardless of modification
-    status), SVN_SHOW_UPDATES (entries will be added for items that are
-    out-of-date), SVN_NO_IGNORE (disregard svn:ignore properties when scanning
-    for new files) and SVN_IGNORE_EXTERNALS.
+  Any combination of Svn::NON_RECURSIVE, Svn::ALL (regardless of modification
+  status), Svn::SHOW_UPDATES (entries will be added for items that are
+  out-of-date), Svn::NO_IGNORE (disregard svn:ignore properties when scanning
+  for new files) and Svn::IGNORE_EXTERNALS.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns a numerically indexed array of associative arrays detailing the status
@@ -48,82 +47,80 @@ The information on the item is an associative array that can contain the
 following keys:
 
 path
-    String path to file/directory of this entry on local filesystem.
+  String path to file/directory of this entry on local filesystem.
 text_status
-    Status of item's text. Refer to status constants for possible values.
+  Status of item's text. Refer to status constants for possible values.
 repos_text_status
-    Status of item's text in repository. Only accurate if {update} was set to
-    TRUE. Refer to status constants for possible values.
+  Status of item's text in repository. Only accurate if {update} was set to
+  TRUE. Refer to status constants for possible values.
 prop_status
-    Status of item's properties. Refer to status constants for possible
-    values.
+  Status of item's properties. Refer to status constants for possible values.
 repos_prop_status
-    Status of item's property in repository. Only accurate if {update} was set
-    to TRUE. Refer to status constants for possible values.
+  Status of item's property in repository. Only accurate if {update} was set to
+  TRUE. Refer to status constants for possible values.
 locked
-    Whether or not the item is locked. (Only set if TRUE.)
+  Whether or not the item is locked. (Only set if TRUE.)
 copied
-    Whether or not the item was copied (scheduled for addition with history).
-    (Only set if TRUE.)
+  Whether or not the item was copied (scheduled for addition with history).
+  (Only set if TRUE.)
 switched
-    Whether or not the item was switched using the switch command. (Only set
-    if TRUE)
+  Whether or not the item was switched using the switch command. (Only set if
+  TRUE)
 
 These keys are only set if the item is versioned:
 
 name
-    Base name of item in repository.
+  Base name of item in repository.
 url
-    URL of item in repository.
+  URL of item in repository.
 repos
-    Base URL of repository.
+  Base URL of repository.
 revision
-    Integer revision of item in working copy.
+  Integer revision of item in working copy.
 kind
-    Type of item, i.e. file or directory. Refer to type constants for possible
-    values.
+  Type of item, i.e. file or directory. Refer to type constants for possible
+  values.
 schedule
-    Scheduled action for item, i.e. addition or deletion. Constants for these
-    magic numbers are not available, they can be emulated by using:
-    <?php >
-    if (!defined('svn_wc_schedule_normal')) {
-        define('svn_wc_schedule_normal',  0); // nothing special
-        define('svn_wc_schedule_add',     1); // item will be added
-        define('svn_wc_schedule_delete',  2); // item will be deleted
-        define('svn_wc_schedule_replace', 3); //
-     item will be added and deleted
-    }
-<    ?>
+  Scheduled action for item, i.e. addition or deletion. Constants for these
+  magic numbers are not available, they can be emulated by using:
+  <?php >
+  if (!defined('svn_wc_schedule_normal')) {
+      define('svn_wc_schedule_normal',  0); // nothing special
+      define('svn_wc_schedule_add',     1); // item will be added
+      define('svn_wc_schedule_delete',  2); // item will be deleted
+      define('svn_wc_schedule_replace', 3); // item will be added and deleted
+  }
+<  ?>
 deleted
-    Whether or not the item was deleted, but parent revision lags behind.
-    (Only set if TRUE.)
+  Whether or not the item was deleted, but parent revision lags behind. (Only
+  set if TRUE.)
 absent
-    Whether or not the item is absent, that is, Subversion knows that there
-    should be something there but there isn't. (Only set if TRUE.)
+  Whether or not the item is absent, that is, Subversion knows that there
+  should be something there but there isn't. (Only set if TRUE.)
 incomplete
-    Whether or not the entries file for a directory is incomplete. (Only set
-    if TRUE.)
+  Whether or not the entries file for a directory is incomplete. (Only set if
+  TRUE.)
 cmt_date
-    Integer Unix timestamp of last commit date. (Unaffected by {update}.)
+  Integer Unix timestamp of last commit date. (Unaffected by {update}.)
 cmt_rev
-    Integer revision of last commit. (Unaffected by {update}.)
+  Integer revision of last commit. (Unaffected by {update}.)
 cmt_author
-    String author of last commit. (Unaffected by {update}.)
+  String author of last commit. (Unaffected by {update}.)
 prop_time
-    Integer Unix timestamp of last up-to-date time for properties
+  Integer Unix timestamp of last up-to-date time for properties
 text_time
-    Integer Unix timestamp of last up-to-date time for text
+  Integer Unix timestamp of last up-to-date time for text
 
-==============================================================================
+===============================================================================
 *Notes*
 
 Warning
 
 This function is EXPERIMENTAL. The behaviour of this function, its name, and
-surrounding documentation may change without notice in a future release of
-PHP. This function should be used at your own risk.
+surrounding documentation may change without notice in a future release of PHP.
+This function should be used at your own risk.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 Basic example
@@ -131,7 +128,7 @@ Example #1 Basic example
 This example demonstrates a basic, theoretical usage of this function.
 
 <?php >
-    print_r(svn_status(realpath('wc')));
+  print_r(svn_status(realpath('wc')));
 <?>
 
 The above example will output something similar to:
@@ -157,12 +154,12 @@ Array (
     )
 )
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |svn_update| - Update working copy
-  * |svn_log| - Returns the commit log messages of a repository URL
-  * >> SVN documentation for svn status
+ * |svn_update| - Update working copy
+ * |svn_log| - Returns the commit log messages of a repository URL
+ * » SVN documentation for svn status
 
 
 vim:ft=help:

@@ -4,32 +4,34 @@ swoole_async_readfile
 
 swoole_async_readfile — Read a file asynchronously
 
-==============================================================================
+===============================================================================
 *Description*
 
-    void swoole_async_readfile ( string $filename , string $callback )~
+  swoole_async_readfile ( string $filename , callable $callback ) : bool~
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {filename}
 
-    The filename being read.
+  The filename of the file being read.
 
 {callback}
 
-    mixed callback ( string $filename , string $content )~
+  callback ( string $filename , string $content ) : mixed~
 
-    {filename}
+  {filename}
 
-        The name of the file.
+    The name of the file.
 
-    {content}
+  {content}
 
-        The content readed from the file.
+    The content readed from the file.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
 
 
 vim:ft=help:

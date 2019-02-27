@@ -4,29 +4,29 @@ mysqli_get_client_stats
 
 mysqli_get_client_stats — Returns client per-process statistics
 
-==============================================================================
+===============================================================================
 *Description*
 
-    array mysqli_get_client_stats ( void )~
+  mysqli_get_client_stats ( void ) : array~
 
 Returns client per-process statistics. Available only with mysqlnd.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns an array with client stats if success, FALSE otherwise.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 A mysqli_get_client_stats() example
 
 <?php >
-    $link = mysqli_connect();
-    print_r(mysqli_get_client_stats());
+  $link = mysqli_connect();
+  print_r(mysqli_get_client_stats());
 <?>
 
 The above example will output something similar to:
@@ -154,10 +154,10 @@ Array
     [proto_binary_fetched_other] => 0
 )
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * Stats description
+ * Stats description
 
 
 vim:ft=help:

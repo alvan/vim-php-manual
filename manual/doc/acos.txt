@@ -4,34 +4,34 @@ acos
 
 acos — Arc cosine
 
-==============================================================================
+===============================================================================
 *Description*
 
-    float acos ( float $arg )~
+  acos ( float $arg ) : float~
 
-Returns the arc cosine of {arg} in radians. acos() is the complementary
-function of |cos|, which means that a==cos(acos(a)) for every value of a that
-is within acos()' range.
+Returns the arc cosine of {arg} in radians. acos() is the inverse function of 
+|cos|, which means that a==cos(acos(a)) for every value of a that is within acos
+()' range.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {arg}
 
-    The argument to process
+  The argument to process
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 The arc cosine of {arg} in radians.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |cos| - Cosine
-  * |acosh| - Inverse hyperbolic cosine
-  * |asin| - Arc sine
-  * |atan| - Arc tangent
+ * |cos| - Cosine
+ * |acosh| - Inverse hyperbolic cosine
+ * |asin| - Arc sine
+ * |atan| - Arc tangent
 
 
 vim:ft=help:

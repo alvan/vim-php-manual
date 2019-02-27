@@ -4,21 +4,21 @@ finfo_close
 
 finfo_close — Close fileinfo resource
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool finfo_close ( resource $finfo )~
+  finfo_close ( resource $finfo ) : bool~
 
 This function closes the resource opened by |finfo_open|.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {finfo}
 
-    Fileinfo resource returned by |finfo_open|.
+  Fileinfo resource returned by |finfo_open|.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.

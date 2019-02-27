@@ -5,38 +5,38 @@ get_extension_funcs
 get_extension_funcs — Returns an array with the names of the functions of a
 module
 
-==============================================================================
+===============================================================================
 *Description*
 
-    array get_extension_funcs ( string $module_name )~
+  get_extension_funcs ( string $module_name ) : array~
 
 This function returns the names of all the functions defined in the module
 indicated by {module_name}.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {module_name}
 
-    The module name.
+  The module name.
 
-        Note:
+    Note:
 
-        This parameter must be in lowercase.
+    This parameter must be in lowercase.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns an array with all the functions, or FALSE if {module_name} is not a
 valid extension.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 Prints the XML functions
 
 <?php >
-    print_r(get_extension_funcs("xml"));
+  print_r(get_extension_funcs("xml"));
 <?>
 
 The above example will output something similar to:
@@ -69,12 +69,12 @@ Array
     [23] => utf8_decode
 )
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |get_loaded_extensions| - Returns an array with the names of all modules
-    compiled and loaded
-  * ReflectionExtension::getFunctions() - Gets extension functions
+ * |get_loaded_extensions| - Returns an array with the names of all modules
+  compiled and loaded
+ * ReflectionExtension::getFunctions() - Gets extension functions
 
 
 vim:ft=help:

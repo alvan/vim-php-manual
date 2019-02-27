@@ -5,40 +5,39 @@ expm1
 expm1 — Returns exp(number) - 1, computed in a way that is accurate even when
 the value of number is close to zero
 
-==============================================================================
+===============================================================================
 *Description*
 
-    float expm1 ( float $arg )~
+  expm1 ( float $arg ) : float~
 
 expm1() returns the equivalent to 'exp({arg}) - 1' computed in a way that is
 accurate even if the value of {arg} is near zero, a case where 'exp ({arg}) -
-1' would be inaccurate due to subtraction of two numbers that are nearly
-equal.
+1' would be inaccurate due to subtraction of two numbers that are nearly equal.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {arg}
 
-    The argument to process
+  The argument to process
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 'e' to the power of {arg} minus one
 
-==============================================================================
+===============================================================================
 *Changelog*
 
 Version                   Description
 5.3.0   This function is now available on all platforms
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |log1p| - Returns log(1 + number), computed in a way that is accurate even
-    when the value of number is close to zero
-  * |exp| - Calculates the exponent of e
+ * |log1p| - Returns log(1 + number), computed in a way that is accurate even
+  when the value of number is close to zero
+ * |exp| - Calculates the exponent of e
 
 
 vim:ft=help:

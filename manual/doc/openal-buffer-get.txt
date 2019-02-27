@@ -4,33 +4,32 @@ openal_buffer_get
 
 openal_buffer_get — Retrieve an OpenAL buffer property
 
-==============================================================================
+===============================================================================
 *Description*
 
-    int openal_buffer_get ( resource $buffer , int $property )~
+  openal_buffer_get ( resource $buffer , int $property ) : int~
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {buffer}
 
-    An Open AL(Buffer) resource (previously created by |openal_buffer_create|
-    ).
+  An Open AL(Buffer) resource (previously created by |openal_buffer_create|).
 
 {property}
 
-    Specific property, one of: AL_FREQUENCY, AL_BITS, AL_CHANNELS and AL_SIZE.
+  Specific property, one of: AL_FREQUENCY, AL_BITS, AL_CHANNELS and AL_SIZE.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns an integer value appropriate to the {property} requested or FALSE on
 failure.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |openal_buffer_create| - Generate OpenAL buffer
+ * |openal_buffer_create| - Generate OpenAL buffer
 
 
 vim:ft=help:

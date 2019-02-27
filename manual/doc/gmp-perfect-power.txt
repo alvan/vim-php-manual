@@ -1,0 +1,34 @@
+gmp_perfect_power
+
+(PHP 7 >= 7.3.0)
+
+gmp_perfect_power — Perfect power check
+
+===============================================================================
+*Description*
+
+  gmp_perfect_power ( mixed $a ) : bool~
+
+Checks whether {a} is a perfect power.
+
+===============================================================================
+*Parameters*
+
+{a}
+
+  Either a GMP number resource in PHP 5.5 and earlier, a GMP object in PHP 5.6
+  and later, or a numeric string provided that it is possible to convert the
+  latter to a number.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE if {a} is a perfect power, FALSE otherwise.
+
+===============================================================================
+*See* *Also*
+
+ * |gmp_perfect_square| - Perfect square check
+
+
+vim:ft=help:

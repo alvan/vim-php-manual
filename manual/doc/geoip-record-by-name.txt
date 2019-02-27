@@ -2,13 +2,13 @@ geoip_record_by_name
 
 (PECL geoip >= 0.2.0)
 
-geoip_record_by_name — Returns the detailed City information found in the
-GeoIP Database
+geoip_record_by_name — Returns the detailed City information found in the GeoIP
+Database
 
-==============================================================================
+===============================================================================
 *Description*
 
-    array geoip_record_by_name ( string $hostname )~
+  geoip_record_by_name ( string $hostname ) : array~
 
 The geoip_record_by_name() function will return the record information
 corresponding to a hostname or an IP address.
@@ -20,42 +20,41 @@ located.
 The names of the different keys of the returning associative array are as
 follows:
 
-  * "continent_code" -- Two letter continent code (as of version 1.0.4 with
-    libgeoip 1.4.3 or newer)
-  * "country_code" -- Two letter country code (see |geoip_country_code_by_name
-    |)
-  * "country_code3" -- Three letter country code (see 
-    |geoip_country_code3_by_name|)
-  * "country_name" -- The country name (see |geoip_country_name_by_name|)
-  * "region" -- The region code (ex: CA for California)
-  * "city" -- The city.
-  * "postal_code" -- The Postal Code, FSA or Zip Code.
-  * "latitude" -- The Latitude as signed double.
-  * "longitude" -- The Longitude as signed double.
-  * "dma_code" -- Designated Market Area code (USA and Canada only)
-  * "area_code" -- The PSTN area code (ex: 212)
+ * "continent_code" -- Two letter continent code (as of version 1.0.4 with
+  libgeoip 1.4.3 or newer)
+ * "country_code" -- Two letter country code (see |geoip_country_code_by_name|)
+ * "country_code3" -- Three letter country code (see 
+  |geoip_country_code3_by_name|)
+ * "country_name" -- The country name (see |geoip_country_name_by_name|)
+ * "region" -- The region code (ex: CA for California)
+ * "city" -- The city.
+ * "postal_code" -- The Postal Code, FSA or Zip Code.
+ * "latitude" -- The Latitude as signed double.
+ * "longitude" -- The Longitude as signed double.
+ * "dma_code" -- Designated Market Area code (USA and Canada only)
+ * "area_code" -- The PSTN area code (ex: 212)
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {hostname}
 
-    The hostname or IP address whose record is to be looked-up.
+  The hostname or IP address whose record is to be looked-up.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns the associative array on success, or FALSE if the address cannot be
 found in the database.
 
-==============================================================================
+===============================================================================
 *Changelog*
 
 Version                           Description
 1.0.4   Adding the continent_code with GeoIP Library 1.4.3 or newer only
 1.0.3   Adding country_code3 and country_name
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 A geoip_record_by_name() example
@@ -63,10 +62,10 @@ Example #1 A geoip_record_by_name() example
 This will print the array containing the record of host example.com.
 
 <?php >
-    $record = geoip_record_by_name('www.example.com');
-    if ($record) {
-        print_r($record);
-    }
+  $record = geoip_record_by_name('www.example.com');
+  if ($record) {
+      print_r($record);
+  }
 <?>
 
 The above example will output:

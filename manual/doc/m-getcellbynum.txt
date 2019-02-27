@@ -5,22 +5,21 @@ m_getcellbynum
 m_getcellbynum — Get a specific cell from a comma delimited response by column
 number
 
-==============================================================================
+===============================================================================
 *Description*
 
-    string m_getcellbynum ( resource $conn , int $identifier , int $column ,~
-    int $row )~
+  m_getcellbynum ( resource $conn , int $identifier , int $column , int $row )~
+  : string~
 Warning
 
-This function is currently not documented; only its argument list is
-available.
+This function is currently not documented; only its argument list is available.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 { conn}
 
-    An MCVE_CONN resource returned by |m_initengine|.
+  An MCVE_CONN resource returned by |m_initengine|.
 
 {identifier}
 
@@ -28,7 +27,7 @@ available.
 
 {row}
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 

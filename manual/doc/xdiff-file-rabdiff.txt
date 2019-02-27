@@ -2,14 +2,14 @@ xdiff_file_rabdiff
 
 (PECL xdiff >= 1.5.0)
 
-xdiff_file_rabdiff — Make binary diff of two files using the Rabin's
-polynomial fingerprinting algorithm
+xdiff_file_rabdiff — Make binary diff of two files using the Rabin's polynomial
+fingerprinting algorithm
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool xdiff_file_rabdiff ( string $old_file , string $new_file , string~
-    $dest )~
+  xdiff_file_rabdiff ( string $old_file , string $new_file , string $dest ) :~
+  bool~
 
 Makes a binary diff of two files and stores the result in a patch file. The
 difference between this function and |xdiff_file_bdiff| is different algorithm
@@ -17,32 +17,31 @@ used which should result in faster execution and smaller diff produced. This
 function works with both text and binary files. Resulting patch file can be
 later applied using |xdiff_file_bpatch|/|xdiff_string_bpatch|.
 
-For more details about differences between algorithm used please check >>
- libxdiff website.
+For more details about differences between algorithm used please check
+» libxdiff website.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {old_file}
 
-    Path to the first file. This file acts as "old" file.
+  Path to the first file. This file acts as "old" file.
 
 {new_file}
 
-    Path to the second file. This file acts as "new" file.
+  Path to the second file. This file acts as "new" file.
 
 {dest}
 
-    Path of the resulting patch file. Resulting file contains differences
-    between "old" and "new" files. It is in binary format and is
-    human-unreadable.
+  Path of the resulting patch file. Resulting file contains differences between
+  "old" and "new" files. It is in binary format and is human-unreadable.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 xdiff_file_rabdiff() example
@@ -50,24 +49,24 @@ Example #1 xdiff_file_rabdiff() example
 The following code makes binary diff of two archives.
 
 <?php >
-    $old_version = 'my_script_1.0.tgz';
-    $new_version = 'my_script_1.1.tgz';
+  $old_version = 'my_script_1.0.tgz';
+  $new_version = 'my_script_1.1.tgz';
 
-    xdiff_file_rabdiff($old_version, $new_version, 'my_script.bdiff');
+  xdiff_file_rabdiff($old_version, $new_version, 'my_script.bdiff');
 <?>
 
-==============================================================================
+===============================================================================
 *Notes*
 
-    Note:
+  Note:
 
-    Both files will be loaded into memory so ensure that your memory_limit is
-    set high enough.
+  Both files will be loaded into memory so ensure that your memory_limit is set
+  high enough.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |xdiff_file_bpatch| - Patch a file with a binary diff
+ * |xdiff_file_bpatch| - Patch a file with a binary diff
 
 
 vim:ft=help:

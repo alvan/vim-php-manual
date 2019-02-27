@@ -5,18 +5,18 @@ hash_hmac_algos
 hash_hmac_algos — Return a list of registered hashing algorithms suitable for
 hash_hmac
 
-==============================================================================
+===============================================================================
 *Description*
 
-    array hash_hmac_algos ( void )~
+  hash_hmac_algos ( void ) : array~
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns a numerically indexed array containing the list of supported hashing
 algorithms suitable for |hash_hmac|.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 hash_hmac_algos() example
@@ -74,20 +74,20 @@ Array
     [43] => haval256,5
 )
 
-==============================================================================
+===============================================================================
 *Notes*
 
-    Note:
+  Note:
 
-    Before PHP 7.2.0 the only means to get a list of supported hash algorithms
-    has been to call |hash_algos| which also returns hash algorithms that are
-    not suitable for |hash_hmac|.
+  Before PHP 7.2.0 the only means to get a list of supported hash algorithms
+  has been to call |hash_algos| which also returns hash algorithms that are not
+  suitable for |hash_hmac|.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |hash_hmac| - Generate a keyed hash value using the HMAC method
-  * |hash_algos| - Return a list of registered hashing algorithms
+ * |hash_hmac| - Generate a keyed hash value using the HMAC method
+ * |hash_algos| - Return a list of registered hashing algorithms
 
 
 vim:ft=help:

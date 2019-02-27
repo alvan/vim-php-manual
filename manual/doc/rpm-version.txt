@@ -5,29 +5,29 @@ rpm_version
 rpm_version — Returns a string representing the current version of the
 rpmreader extension
 
-==============================================================================
+===============================================================================
 *Description*
 
-    string rpm_version ( void )~
+  rpm_version ( void ) : string~
 
 rpm_version() will return the current version of the rpmreader extension.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
-rpm_version() will return a string representing the rpmreader version
-currently loaded in PHP.
+rpm_version() will return a string representing the rpmreader version currently
+loaded in PHP.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 rpm_version() example
 
 <?php >
 
-    $rpmr_ver = rpm_version();
+  $rpmr_ver = rpm_version();
 
-    echo "$rpmr_ver<br />\n";
+  echo "$rpmr_ver<br />\n";
 
 <?>
 

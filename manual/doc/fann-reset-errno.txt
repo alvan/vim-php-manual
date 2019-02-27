@@ -4,30 +4,30 @@ fann_reset_errno
 
 fann_reset_errno — Resets the last error number
 
-==============================================================================
+===============================================================================
 *Description*
 
-    void fann_reset_errno ( resource $errdat )~
+  fann_reset_errno ( resource $errdat ) : void~
 
 Resets the last error number.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {errdat}
 
-    Either neural network resource or neural network trainining data resource.
+  Either neural network resource or neural network trainining data resource.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 No value is returned.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |fann_get_errno| - Returns the last error number
-  * |fann_reset_errstr| - Resets the last error string
+ * |fann_get_errno| - Returns the last error number
+ * |fann_reset_errstr| - Resets the last error string
 
 
 vim:ft=help:

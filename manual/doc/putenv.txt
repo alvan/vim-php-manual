@@ -4,10 +4,10 @@ putenv
 
 putenv — Sets the value of an environment variable
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool putenv ( string $setting )~
+  putenv ( string $setting ) : bool~
 
 Adds {setting} to the server environment. The environment variable will only
 exist for the duration of the current request. At the end of the request the
@@ -22,44 +22,44 @@ PHP_FOO=BAR). Note: if this directive is empty, PHP will let the user modify
 ANY environment variable!
 
 The safe_mode_protected_env_vars directive contains a comma-delimited list of
-environment variables, that the end user won't be able to change using putenv
-(). These variables will be protected even if safe_mode_allowed_env_vars is
-set to allow to change them.
+environment variables, that the end user won't be able to change using putenv()
+. These variables will be protected even if safe_mode_allowed_env_vars is set
+to allow to change them.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {setting}
 
-    The setting, like "FOO=BAR"
+  The setting, like "FOO=BAR"
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 Setting an environment variable
 
 <?php >
-    putenv("UNIQID=$uniqid");
+  putenv("UNIQID=$uniqid");
 <?>
 
-==============================================================================
+===============================================================================
 *Notes*
 
 Warning
 
-The safe_mode_allowed_env_vars and safe_mode_protected_env_vars directives
-only take effect when safe_mode is enabled.
+The safe_mode_allowed_env_vars and safe_mode_protected_env_vars directives only
+take effect when safe_mode is enabled.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |getenv| - Gets the value of an environment variable
-  * |apache_setenv| - Set an Apache subprocess_env variable
+ * |getenv| - Gets the value of an environment variable
+ * |apache_setenv| - Set an Apache subprocess_env variable
 
 
 vim:ft=help:

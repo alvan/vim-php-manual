@@ -4,10 +4,10 @@ dbplus_tcl
 
 dbplus_tcl — Execute TCL code on server side
 
-==============================================================================
+===============================================================================
 *Description*
 
-    string dbplus_tcl ( int $sid , string $script )~
+  dbplus_tcl ( int $sid , string $script ) : string~
 
 A db++ server will prepare a TCL interpreter for each client connection. This
 interpreter will enable the server to execute TCL code provided by the client
@@ -19,29 +19,29 @@ should be executed by. |dbplus_resolve| will provide this connection id. The
 function will return whatever the TCL code returns or a TCL error message if
 the TCL code fails.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {sid}
 
 {script}
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
-==============================================================================
+===============================================================================
 *Notes*
 
 Warning
 
 This function is EXPERIMENTAL. The behaviour of this function, its name, and
-surrounding documentation may change without notice in a future release of
-PHP. This function should be used at your own risk.
+surrounding documentation may change without notice in a future release of PHP.
+This function should be used at your own risk.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |dbplus_resolve| - Resolve host information for relation
+ * |dbplus_resolve| - Resolve host information for relation
 
 
 vim:ft=help:

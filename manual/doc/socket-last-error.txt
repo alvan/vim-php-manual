@@ -4,10 +4,10 @@ socket_last_error
 
 socket_last_error — Returns the last error on the socket
 
-==============================================================================
+===============================================================================
 *Description*
 
-    int socket_last_error ([ resource $socket ] )~
+  socket_last_error ([ resource $socket ] ) : int~
 
 If a socket resource is passed to this function, the last error which occurred
 on this particular socket is returned. If the socket resource is omitted, the
@@ -20,41 +20,41 @@ tied to a particular socket. The error code is suitable to be fed to
 If no error had occurred, or the error had been cleared with 
 |socket_clear_error|, the function returns 0.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {socket}
 
-    A valid socket resource created with |socket_create|.
+  A valid socket resource created with |socket_create|.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 This function returns a socket error code.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 socket_last_error() example
 
 <?php >
-    $socket = @socket_create(AF_INET, SOCK_STREAM, SOL_TCP);
+  $socket = @socket_create(AF_INET, SOCK_STREAM, SOL_TCP);
 
-    if ($socket === false) {
-        $errorcode = socket_last_error();
-        $errormsg = socket_strerror($errorcode);
-        
-        die("Couldn't create socket: [$errorcode] $errormsg");
-    }
+  if ($socket === false) {
+      $errorcode = socket_last_error();
+      $errormsg = socket_strerror($errorcode);
+      
+      die("Couldn't create socket: [$errorcode] $errormsg");
+  }
 <?>
 
-==============================================================================
+===============================================================================
 *Notes*
 
-    Note:
+  Note:
 
-    socket_last_error() does not clear the error code, use |socket_clear_error
-    | for this purpose.
+  socket_last_error() does not clear the error code, use |socket_clear_error|
+  for this purpose.
 
 
 vim:ft=help:

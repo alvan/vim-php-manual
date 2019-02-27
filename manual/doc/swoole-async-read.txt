@@ -4,43 +4,43 @@ swoole_async_read
 
 swoole_async_read — Read file stream asynchronously
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool swoole_async_read ( string $filename , callable $callback [, int~
-    $chunk_size [, int $offset ]] )~
+  swoole_async_read ( string $filename , callable $callback [, int $chunk_size~
+  = 65536 [, int $offset = 0 ]] ) : bool~
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {filename}
 
-    The filename being read.
+  The filename of the file being read.
 
 {callback}
 
-    mixed callback ( string $filename , string $content )~
+  callback ( string $filename , string $content ) : mixed~
 
-    {filename}
+  {filename}
 
-        The name of the file.
+    The name of the file.
 
-    {content}
+  {content}
 
-        The content readed from the file stream.
+    The content readed from the file stream.
 
 {chunk_size}
 
-    The chunk length.
+  The chunk length.
 
 {offset}
 
-    The offset.
+  The offset.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
-Whether the read if succeed.
+Whether the read is succeed.
 
 
 vim:ft=help:

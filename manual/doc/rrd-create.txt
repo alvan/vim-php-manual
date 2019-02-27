@@ -4,26 +4,26 @@ rrd_create
 
 rrd_create — Creates rrd database file
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool rrd_create ( string $filename , array $options )~
+  rrd_create ( string $filename , array $options ) : bool~
 
 Creates the rdd database file.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {filename}
 
-    Filename for newly created rrd file.
+  Filename for newly created rrd file.
 
 {options}
 
-    Options for rrd create - list of strings. See man page of rrd create for
-    whole list of options.
+  Options for rrd create - list of strings. See man page of rrd create for
+  whole list of options.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.

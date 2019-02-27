@@ -5,10 +5,10 @@ geoip_db_get_all_info
 geoip_db_get_all_info — Returns detailed information about all GeoIP database
 types
 
-==============================================================================
+===============================================================================
 *Description*
 
-    array geoip_db_get_all_info ( void )~
+  geoip_db_get_all_info ( void ) : array~
 
 The geoip_db_get_all_info() function will return detailed information as a
 multi-dimensional array about all the GeoIP database types.
@@ -19,16 +19,16 @@ list them as non-available.
 The names of the different keys of the returning associative array are as
 follows:
 
-  * "available" -- Boolean, indicate if DB is available (see |geoip_db_avail|)
-  * "description" -- The database description
-  * "filename" -- The database filename on disk (see |geoip_db_filename|)
+ * "available" -- Boolean, indicate if DB is available (see |geoip_db_avail|)
+ * "description" -- The database description
+ * "filename" -- The database filename on disk (see |geoip_db_filename|)
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns the associative array.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 A geoip_db_get_all_info() example
@@ -36,10 +36,10 @@ Example #1 A geoip_db_get_all_info() example
 This will print the array containing all the information.
 
 <?php >
-    $infos = geoip_db_get_all_info();
-    if (is_array($infos)) {
-        var_dump($infos);
-    }
+  $infos = geoip_db_get_all_info();
+  if (is_array($infos)) {
+      var_dump($infos);
+  }
 <?>
 
 The above example will output:
@@ -70,14 +70,13 @@ array(11) {
 
 Example #2 A geoip_db_get_all_info() example
 
-You can use the various constants as keys to get only parts of the
-information.
+You can use the various constants as keys to get only parts of the information.
 
 <?php >
-    $infos = geoip_db_get_all_info();
-    if ($infos[GEOIP_COUNTRY_EDITION]['available']) {
-        echo $infos[GEOIP_COUNTRY_EDITION]['description'];
-    }
+  $infos = geoip_db_get_all_info();
+  if ($infos[GEOIP_COUNTRY_EDITION]['available']) {
+      echo $infos[GEOIP_COUNTRY_EDITION]['description'];
+  }
 <?>
 
 The above example will output:

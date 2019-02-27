@@ -6,35 +6,35 @@ maxdb::real_query
 
 maxdb_real_query -- maxdb::real_query — Execute an SQL query
 
-==============================================================================
+===============================================================================
 *Description*
 
 Procedural style
 
-    bool maxdb_real_query ( resource $link , string $query )~
+  maxdb_real_query ( resource $link , string $query ) : bool~
 
 Object oriented style
 
-    bool maxdb::real_query ( string $query )~
+  maxdb::real_query ( string $query ) : bool~
 
 The maxdb_real_query() is functionally identical with the |maxdb_query|.
 
-    Note:
+  Note:
 
-    In order to determine if a given query should return a result set or not,
-    see |maxdb_field_count|.
+  In order to determine if a given query should return a result set or not, see
+  |maxdb_field_count|.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |maxdb_query| - Performs a query on the database
-  * |maxdb_store_result| - Transfers a result set from the last query
-  * |maxdb_use_result| - Initiate a result set retrieval
+ * |maxdb_query| - Performs a query on the database
+ * |maxdb_store_result| - Transfers a result set from the last query
+ * |maxdb_use_result| - Initiate a result set retrieval
 
 
 vim:ft=help:

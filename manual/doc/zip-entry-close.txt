@@ -4,30 +4,30 @@ zip_entry_close
 
 zip_entry_close — Close a directory entry
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool zip_entry_close ( resource $zip_entry )~
+  zip_entry_close ( resource $zip_entry ) : bool~
 
 Closes the specified directory entry.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {zip_entry}
 
-    A directory entry previously opened |zip_entry_open|.
+  A directory entry previously opened |zip_entry_open|.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |zip_entry_open| - Open a directory entry for reading
-  * |zip_entry_read| - Read from an open directory entry
+ * |zip_entry_open| - Open a directory entry for reading
+ * |zip_entry_read| - Read from an open directory entry
 
 
 vim:ft=help:

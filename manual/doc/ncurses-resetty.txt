@@ -4,28 +4,28 @@ ncurses_resetty
 
 ncurses_resetty — Restores saved terminal state
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool ncurses_resetty ( void )~
+  ncurses_resetty ( void ) : bool~
 Warning
 
 This function is EXPERIMENTAL. The behaviour of this function, its name, and
-surrounding documentation may change without notice in a future release of
-PHP. This function should be used at your own risk.
+surrounding documentation may change without notice in a future release of PHP.
+This function should be used at your own risk.
 
 Restores the terminal state, which was previously saved by calling 
 |ncurses_savetty|.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Always returns FALSE.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |ncurses_savetty| - Saves terminal state
+ * |ncurses_savetty| - Saves terminal state
 
 
 vim:ft=help:

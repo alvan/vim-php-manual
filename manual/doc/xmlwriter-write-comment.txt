@@ -6,42 +6,42 @@ xmlwriter_write_comment
 
 XMLWriter::writeComment -- xmlwriter_write_comment — Write full comment tag
 
-==============================================================================
+===============================================================================
 *Description*
 
 Object oriented style
 
-    bool XMLWriter::writeComment ( string $content )~
+  XMLWriter::writeComment ( string $content ) : bool~
 
 Procedural style
 
-    bool xmlwriter_write_comment ( resource $xmlwriter , string $content )~
+  xmlwriter_write_comment ( resource $xmlwriter , string $content ) : bool~
 
 Writes a full comment.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 { xmlwriter}
 
-    Only for procedural calls. The XMLWriter resource that is being modified.
-    This resource comes from a call to |xmlwriter_open_uri| or 
-    |xmlwriter_open_memory|.
+  Only for procedural calls. The XMLWriter resource that is being modified.
+  This resource comes from a call to |xmlwriter_open_uri| or 
+  |xmlwriter_open_memory|.
 
 {content}
 
-    The contents of the comment.
+  The contents of the comment.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |XMLWriter::startComment| - Create start comment
-  * |XMLWriter::endComment| - Create end comment
+ * |XMLWriter::startComment| - Create start comment
+ * |XMLWriter::endComment| - Create end comment
 
 
 vim:ft=help:

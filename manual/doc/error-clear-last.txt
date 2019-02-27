@@ -4,32 +4,32 @@ error_clear_last
 
 error_clear_last — Clear the most recent error
 
-==============================================================================
+===============================================================================
 *Description*
 
-    void error_clear_last ( void )~
+  error_clear_last ( void ) : void~
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Clears the most recent errors, making it unable to be retrieved with 
 |error_get_last|.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 An error_clear_last() example
 
 <?php >
-    var_dump(error_get_last());
-    error_clear_last();
-    var_dump(error_get_last());
+  var_dump(error_get_last());
+  error_clear_last();
+  var_dump(error_get_last());
 
-    @$a = $b;
+  @$a = $b;
 
-    var_dump(error_get_last());
-    error_clear_last();
-    var_dump(error_get_last());
+  var_dump(error_get_last());
+  error_clear_last();
+  var_dump(error_get_last());
 <?>
 
 The above example will output something similar to:
@@ -48,10 +48,10 @@ array(4) {
 }
 NULL
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * Error constants
+ * Error constants
 
 
 vim:ft=help:

@@ -4,29 +4,29 @@ stream_supports_lock
 
 stream_supports_lock — Tells whether the stream supports locking
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool stream_supports_lock ( resource $stream )~
+  stream_supports_lock ( resource $stream ) : bool~
 
 Tells whether the stream supports locking through |flock|.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {stream}
 
-    The stream to check.
+  The stream to check.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |flock| - Portable advisory file locking
+ * |flock| - Portable advisory file locking
 
 
 vim:ft=help:

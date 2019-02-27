@@ -4,33 +4,33 @@ mhash_get_hash_name
 
 mhash_get_hash_name — Gets the name of the specified hash
 
-==============================================================================
+===============================================================================
 *Description*
 
-    string mhash_get_hash_name ( int $hash )~
+  mhash_get_hash_name ( int $hash ) : string~
 
 Gets the name of the specified {hash}.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {hash}
 
-    The hash ID. One of the MHASH_hashname constants.
+  The hash ID. One of the MHASH_hashname constants.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns the name of the hash or FALSE, if the hash does not exist.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 mhash_get_hash_name() Example
 
 <?php >
 
-    echo mhash_get_hash_name(MHASH_MD5); // MD5
+  echo mhash_get_hash_name(MHASH_MD5); // MD5
 
 <?>
 

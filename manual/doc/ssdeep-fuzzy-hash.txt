@@ -4,22 +4,22 @@ ssdeep_fuzzy_hash
 
 ssdeep_fuzzy_hash — Create a fuzzy hash from a string
 
-==============================================================================
+===============================================================================
 *Description*
 
-    string ssdeep_fuzzy_hash ( string $to_hash )~
+  ssdeep_fuzzy_hash ( string $to_hash ) : string~
 
-ssdeep_fuzzy_hash() calculates the hash of {to_hash} using >> 
-context-triggered piecewise hashing, and returns that hash.
+ssdeep_fuzzy_hash() calculates the hash of {to_hash} using »  context-triggered
+piecewise hashing, and returns that hash.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {to_hash}
 
-    The input string.
+  The input string.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns a string on success, FALSE otherwise.

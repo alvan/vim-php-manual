@@ -4,21 +4,21 @@ px_delete
 
 px_delete — Deletes resource of paradox database
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool px_delete ( resource $pxdoc )~
+  px_delete ( resource $pxdoc ) : bool~
 
 Deletes the resource of the paradox file and frees all memory.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {pxdoc}
 
-    Resource identifier of the paradox database as returned by |px_new|.
+  Resource identifier of the paradox database as returned by |px_new|.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.

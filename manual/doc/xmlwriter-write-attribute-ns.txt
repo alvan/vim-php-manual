@@ -7,58 +7,58 @@ xmlwriter_write_attribute_ns
 XMLWriter::writeAttributeNs -- xmlwriter_write_attribute_ns — Write full
 namespaced attribute
 
-==============================================================================
+===============================================================================
 *Description*
 
 Object oriented style
 
-    bool XMLWriter::writeAttributeNs ( string $prefix , string $name , string~
-    $uri , string $content )~
+  XMLWriter::writeAttributeNs ( string $prefix , string $name , string $uri ,~
+  string $content ) : bool~
 
 Procedural style
 
-    bool xmlwriter_write_attribute_ns ( resource $xmlwriter , string $prefix~
-    , string $name , string $uri , string $content )~
+  xmlwriter_write_attribute_ns ( resource $xmlwriter , string $prefix , string~
+  $name , string $uri , string $content ) : bool~
 
 Writes a full namespaced attribute.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 { xmlwriter}
 
-    Only for procedural calls. The XMLWriter resource that is being modified.
-    This resource comes from a call to |xmlwriter_open_uri| or 
-    |xmlwriter_open_memory|.
+  Only for procedural calls. The XMLWriter resource that is being modified.
+  This resource comes from a call to |xmlwriter_open_uri| or 
+  |xmlwriter_open_memory|.
 
 {prefix}
 
-    The namespace prefix.
+  The namespace prefix.
 
 {name}
 
-    The attribute name.
+  The attribute name.
 
 {uri}
 
-    The namespace URI.
+  The namespace URI.
 
 {content}
 
-    The attribute value.
+  The attribute value.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |XMLWriter::writeAttribute| - Write full attribute
-  * |XMLWriter::startAttribute| - Create start attribute
-  * |XMLWriter::startAttributeNs| - Create start namespaced attribute
-  * |XMLWriter::endAttribute| - End attribute
+ * |XMLWriter::writeAttribute| - Write full attribute
+ * |XMLWriter::startAttribute| - Create start attribute
+ * |XMLWriter::startAttributeNs| - Create start namespaced attribute
+ * |XMLWriter::endAttribute| - End attribute
 
 
 vim:ft=help:

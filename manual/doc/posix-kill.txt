@@ -4,35 +4,35 @@ posix_kill
 
 posix_kill — Send a signal to a process
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool posix_kill ( int $pid , int $sig )~
+  posix_kill ( int $pid , int $sig ) : bool~
 
 Send the signal {sig} to the process with the process identifier {pid}.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {pid}
 
-    The process identifier.
+  The process identifier.
 
 {sig}
 
-    One of the PCNTL signals constants.
+  One of the PCNTL signals constants.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * The kill(2) manual page of the POSIX system, which contains additional
-    information about negative process identifiers, the special pid 0, the
-    special pid -1, and the signal number 0.
+ * The kill(2) manual page of the POSIX system, which contains additional
+  information about negative process identifiers, the special pid 0, the
+  special pid -1, and the signal number 0.
 
 
 vim:ft=help:

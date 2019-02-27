@@ -4,26 +4,26 @@ rrdc_disconnect
 
 rrdc_disconnect — Close any outstanding connection to rrd caching daemon
 
-==============================================================================
+===============================================================================
 *Description*
 
-    void rrdc_disconnect ( void )~
+  rrdc_disconnect ( void ) : void~
 
 Close any outstanding connection to rrd caching daemon.
 
-This function is automatically called when the whole PHP process is
-terminated. It depends on used SAPI. For example, it's called automatically at
-the end of command line script.
+This function is automatically called when the whole PHP process is terminated.
+It depends on used SAPI. For example, it's called automatically at the end of
+command line script.
 
-It's up user whether he wants to call this function at the end of every
-request or otherwise.
+It's up user whether he wants to call this function at the end of every request
+or otherwise.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 This function has no parameters.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 No value is returned.

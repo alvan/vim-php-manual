@@ -4,13 +4,13 @@ swoole_event_add
 
 swoole_event_add — Add new callback functions of a socket into the EventLoop
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool swoole_event_add ( int $fd , callable $read_callback [, callable~
-    $write_callback [, int $events ]] )~
+  swoole_event_add ( int $fd [, callable $read_callback [, callable~
+  $write_callback [, int $events = 0 ]]] ) : int~
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {fd}
@@ -21,7 +21,7 @@ swoole_event_add — Add new callback functions of a socket into the EventLoop
 
 {events}
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 

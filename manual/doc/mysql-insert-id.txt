@@ -11,52 +11,51 @@ Instead, the MySQLi or PDO_MySQL extension should be used. See also MySQL:
 choosing an API guide and related FAQ for more information. Alternatives to
 this function include:
 
-  * mysqli_insert_id()
-  * PDO::lastInsertId()
+ * mysqli_insert_id()
+ * PDO::lastInsertId()
 
-==============================================================================
+===============================================================================
 *Description*
 
-    int mysql_insert_id ([ resource $link_identifier = NULL ] )~
+  mysql_insert_id ([ resource $link_identifier = NULL ] ) : int~
 
 Retrieves the ID generated for an AUTO_INCREMENT column by the previous query
 (usually INSERT).
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 { link_identifier}
 
-    The MySQL connection. If the link identifier is not specified, the last
-    link opened by |mysql_connect| is assumed. If no such link is found, it
-    will try to create one as if |mysql_connect| had been called with no
-    arguments. If no connection is found or established, an E_WARNING level
-    error is generated.
+  The MySQL connection. If the link identifier is not specified, the last link
+  opened by |mysql_connect| is assumed. If no such link is found, it will try
+  to create one as if |mysql_connect| had been called with no arguments. If no
+  connection is found or established, an E_WARNING level error is generated.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
-The ID generated for an AUTO_INCREMENT column by the previous query on
-success, 0 if the previous query does not generate an AUTO_INCREMENT value, or
-FALSE if no MySQL connection was established.
+The ID generated for an AUTO_INCREMENT column by the previous query on success,
+0 if the previous query does not generate an AUTO_INCREMENT value, or FALSE if
+no MySQL connection was established.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 mysql_insert_id() example
 
 <?php >
-    $link = mysql_connect('localhost', 'mysql_user', 'mysql_password');
-    if (!$link) {
-        die('Could not connect: ' . mysql_error());
-    }
-    mysql_select_db('mydb');
+  $link = mysql_connect('localhost', 'mysql_user', 'mysql_password');
+  if (!$link) {
+      die('Could not connect: ' . mysql_error());
+  }
+  mysql_select_db('mydb');
 
-    mysql_query("INSERT INTO mytable (product) values ('kossu')");
-    printf("Last inserted record has id %d\n", mysql_insert_id());
+  mysql_query("INSERT INTO mytable (product) values ('kossu')");
+  printf("Last inserted record has id %d\n", mysql_insert_id());
 <?>
 
-==============================================================================
+===============================================================================
 *Notes*
 
 Caution
@@ -68,23 +67,21 @@ result in an incorrect value. Instead, use the internal MySQL SQL function
 LAST_INSERT_ID() in an SQL query. For more information about PHP's maximum
 integer values, please see the integer documentation.
 
-    Note:
+  Note:
 
-    Because mysql_insert_id() acts on the last performed query, be sure to
-    call mysql_insert_id() immediately after the query that generates the
-    value.
+  Because mysql_insert_id() acts on the last performed query, be sure to call 
+  mysql_insert_id() immediately after the query that generates the value.
 
-    Note:
+  Note:
 
-    The value of the MySQL SQL function LAST_INSERT_ID() always contains the
-    most recently generated AUTO_INCREMENT value, and is not reset between
-    queries.
+  The value of the MySQL SQL function LAST_INSERT_ID() always contains the most
+  recently generated AUTO_INCREMENT value, and is not reset between queries.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |mysql_query| - Send a MySQL query
-  * |mysql_info| - Get information about the most recent query
+ * |mysql_query| - Send a MySQL query
+ * |mysql_info| - Get information about the most recent query
 
 
 vim:ft=help:

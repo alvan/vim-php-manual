@@ -4,26 +4,26 @@ odbc_field_type
 
 odbc_field_type — Datatype of a field
 
-==============================================================================
+===============================================================================
 *Description*
 
-    string odbc_field_type ( resource $result_id , int $field_number )~
+  odbc_field_type ( resource $result_id , int $field_number ) : string~
 
 Gets the SQL type of the field referenced by number in the given result
 identifier.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {result_id}
 
-    The result identifier.
+  The result identifier.
 
 {field_number}
 
-    The field number. Field numbering starts at 1.
+  The field number. Field numbering starts at 1.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns the field type as a string, or FALSE on error.

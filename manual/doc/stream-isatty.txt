@@ -4,25 +4,45 @@ stream_isatty
 
 stream_isatty — Check if a stream is a TTY
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool stream_isatty ( resource $stream )~
+  stream_isatty ( resource $stream ) : bool~
 
-Warning
+Determines if stream {stream} refers to a valid terminal type device. This is a
+more portable version of |posix_isatty|, since it works on Windows systems too.
 
-This function is currently not documented; only its argument list is
-available.
-
-==============================================================================
+===============================================================================
 *Parameters*
 
 {stream}
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+*Examples*
+
+Example #1 stream_isatty() example
+
+This command can be used to determine if a standard output / standard error
+stream is redirected to a file.
+
+php -r "var_export(stream_isatty(STDERR));"
+
+The above example will output something similar to:
+
+
+true
+
+php -r "var_export(stream_isatty(STDERR));" 2>output.txt
+
+The above example will output something similar to:
+
+
+false
 
 
 vim:ft=help:

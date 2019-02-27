@@ -1,0 +1,41 @@
+gmp_kronecker
+
+(PHP 7 >= 7.3.0)
+
+gmp_kronecker — Kronecker symbol
+
+===============================================================================
+*Description*
+
+  gmp_kronecker ( mixed $a , mixed $b ) : int~
+
+This function computes the Kronecker symbol of {a} and {b}.
+
+===============================================================================
+*Parameters*
+
+{a}
+
+  Either a GMP number resource in PHP 5.5 and earlier, a GMP object in PHP 5.6
+  and later, or a numeric string provided that it is possible to convert the
+  latter to a number.
+
+{b}
+
+  Either a GMP number resource in PHP 5.5 and earlier, a GMP object in PHP 5.6
+  and later, or a numeric string provided that it is possible to convert the
+  latter to a number.
+
+===============================================================================
+*Return* *Values*
+
+Returns the Kronecker symbol of {a} and {b}
+
+===============================================================================
+*See* *Also*
+
+ * |gmp_jacobi| - Jacobi symbol
+ * |gmp_legendre| - Legendre symbol
+
+
+vim:ft=help:

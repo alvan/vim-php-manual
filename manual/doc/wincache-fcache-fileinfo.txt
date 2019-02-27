@@ -2,59 +2,58 @@ wincache_fcache_fileinfo
 
 (PECL wincache >= 1.0.0)
 
-wincache_fcache_fileinfo — Retrieves information about files cached in the
-file cache
+wincache_fcache_fileinfo — Retrieves information about files cached in the file
+cache
 
-==============================================================================
+===============================================================================
 *Description*
 
-    array wincache_fcache_fileinfo ([ bool $summaryonly = FALSE ] )~
+  wincache_fcache_fileinfo ([ bool $summaryonly = FALSE ] ) : array~
 
 Retrieves information about file cache content and its usage.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {summaryonly}
 
-    Controls whether the returned array will contain information about
-    individual cache entries along with the file cache summary.
+  Controls whether the returned array will contain information about individual
+  cache entries along with the file cache summary.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Array of meta data about file cache or FALSE on failure
 
 The array returned by this function contains the following elements:
 
-  * total_cache_uptime - total time in seconds that the file cache has been
-    active
-  * total_file_count - total number of files that are currently in the file
+ * total_cache_uptime - total time in seconds that the file cache has been
+  active
+ * total_file_count - total number of files that are currently in the file
+  cache
+ * total_hit_count - number of times the files have been served from the file
+  cache
+ * total_miss_count - number of times the files have not been found in the file
+  cache
+ * file_entries - an array that contains the information about all the cached
+  files:
+   + file_name - absolute file name of the cached file
+   + add_time - time in seconds since the file has been added to the file cache
+   + use_time - time in seconds since the file has been accessed in the file
     cache
-  * total_hit_count - number of times the files have been served from the file
-    cache
-  * total_miss_count - number of times the files have not been found in the
-    file cache
-  * file_entries - an array that contains the information about all the cached
-    files:
-      + file_name - absolute file name of the cached file
-      + add_time - time in seconds since the file has been added to the file
-        cache
-      + use_time - time in seconds since the file has been accessed in the
-        file cache
-      + last_check - time in seconds since the file has been checked for
-        modifications
-      + hit_count - number of times the file has been served from the cache
-      + file_size - size of the cached file in bytes
+   + last_check - time in seconds since the file has been checked for
+    modifications
+   + hit_count - number of times the file has been served from the cache
+   + file_size - size of the cached file in bytes
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 A wincache_fcache_fileinfo() example
 
 <pre>
 <?php >
-    print_r(wincache_fcache_fileinfo());
+  print_r(wincache_fcache_fileinfo());
 <?>
 </pre>
 
@@ -80,29 +79,29 @@ Array
         )
 )
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |wincache_fcache_meminfo| - Retrieves information about file cache memory
-    usage
-  * |wincache_ocache_fileinfo| - Retrieves information about files cached in
-    the opcode cache
-  * |wincache_ocache_meminfo| - Retrieves information about opcode cache
-    memory usage
-  * |wincache_rplist_fileinfo| - Retrieves information about resolve file path
-    cache
-  * |wincache_rplist_meminfo| - Retrieves information about memory usage by
-    the resolve file path cache
-  * |wincache_refresh_if_changed| - Refreshes the cache entries for the cached
-    files
-  * |wincache_ucache_meminfo| - Retrieves information about user cache memory
-    usage
-  * |wincache_ucache_info| - Retrieves information about data stored in the
-    user cache
-  * |wincache_scache_info| - Retrieves information about files cached in the
-    session cache
-  * |wincache_scache_meminfo| - Retrieves information about session cache
-    memory usage
+ * |wincache_fcache_meminfo| - Retrieves information about file cache memory
+  usage
+ * |wincache_ocache_fileinfo| - Retrieves information about files cached in the
+  opcode cache
+ * |wincache_ocache_meminfo| - Retrieves information about opcode cache memory
+  usage
+ * |wincache_rplist_fileinfo| - Retrieves information about resolve file path
+  cache
+ * |wincache_rplist_meminfo| - Retrieves information about memory usage by the
+  resolve file path cache
+ * |wincache_refresh_if_changed| - Refreshes the cache entries for the cached
+  files
+ * |wincache_ucache_meminfo| - Retrieves information about user cache memory
+  usage
+ * |wincache_ucache_info| - Retrieves information about data stored in the user
+  cache
+ * |wincache_scache_info| - Retrieves information about files cached in the
+  session cache
+ * |wincache_scache_meminfo| - Retrieves information about session cache memory
+  usage
 
 
 vim:ft=help:

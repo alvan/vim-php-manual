@@ -5,39 +5,39 @@ tidy_error_count
 tidy_error_count — Returns the Number of Tidy errors encountered for specified
 document
 
-==============================================================================
+===============================================================================
 *Description*
 
-    int tidy_error_count ( tidy $object )~
+  tidy_error_count ( tidy $object ) : int~
 
 Returns the number of Tidy errors encountered for the specified document.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {object}
 
-    The Tidy object.
+  The Tidy object.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns the number of errors.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 tidy_error_count() example
 
 <?php >
-    $html = '<p>test</i>
-    <bogustag>bogus</bogustag>';
+  $html = '<p>test</i>
+  <bogustag>bogus</bogustag>';
 
-    $tidy = tidy_parse_string($html);
+  $tidy = tidy_parse_string($html);
 
-    echo tidy_error_count($tidy) . "\n"; //1
+  echo tidy_error_count($tidy) . "\n"; //1
 
-    echo $tidy->errorBuffer;
+  echo $tidy->errorBuffer;
 <?>
 
 The above example will output:
@@ -50,13 +50,13 @@ line 2 column 1 - Warning: discarding unexpected <bogustag>
 line 2 column 16 - Warning: discarding unexpected </bogustag>
 line 1 column 1 - Warning: inserting missing 'title' element
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |tidy_access_count| - Returns the Number of Tidy accessibility warnings
-    encountered for specified document
-  * |tidy_warning_count| - Returns the Number of Tidy warnings encountered for
-    specified document
+ * |tidy_access_count| - Returns the Number of Tidy accessibility warnings
+  encountered for specified document
+ * |tidy_warning_count| - Returns the Number of Tidy warnings encountered for
+  specified document
 
 
 vim:ft=help:

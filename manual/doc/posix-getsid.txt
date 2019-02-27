@@ -4,44 +4,44 @@ posix_getsid
 
 posix_getsid — Get the current sid of the process
 
-==============================================================================
+===============================================================================
 *Description*
 
-    int posix_getsid ( int $pid )~
+  posix_getsid ( int $pid ) : int~
 
 Return the session id of the process {pid}. The session id of a process is the
 process group id of the session leader.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {pid}
 
-    The process identifier. If set to 0, the current process is assumed. If an
-    invalid {pid} is specified, then FALSE is returned and an error is set
-    which can be checked with |posix_get_last_error|.
+  The process identifier. If set to 0, the current process is assumed. If an
+  invalid {pid} is specified, then FALSE is returned and an error is set which
+  can be checked with |posix_get_last_error|.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns the identifier, as an integer.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 Example use of posix_getsid()
 
 <?php >
-    $pid = posix_getpid();
-    echo posix_getsid($pid); //8805
+  $pid = posix_getpid();
+  echo posix_getsid($pid); //8805
 <?>
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |posix_getpgid| - Get process group id for job control
-  * |posix_setsid| - Make the current process a session leader
-  * POSIX man page GETSID(2)
+ * |posix_getpgid| - Get process group id for job control
+ * |posix_setsid| - Make the current process a session leader
+ * POSIX man page GETSID(2)
 
 
 vim:ft=help:

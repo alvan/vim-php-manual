@@ -4,36 +4,36 @@ odbc_longreadlen
 
 odbc_longreadlen — Handling of LONG columns
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool odbc_longreadlen ( resource $result_id , int $length )~
+  odbc_longreadlen ( resource $result_id , int $length ) : bool~
 
 Enables handling of LONG and LONGVARBINARY columns.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {result_id}
 
-    The result identifier.
+  The result identifier.
 
 {length}
 
-    The number of bytes returned to PHP is controlled by the parameter length.
-    If it is set to 0, Long column data is passed through to the client.
+  The number of bytes returned to PHP is controlled by the parameter length. If
+  it is set to 0, Long column data is passed through to the client.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-==============================================================================
+===============================================================================
 *Notes*
 
-    Note:
+  Note:
 
-    Handling of LONGVARBINARY columns is also affected by |odbc_binmode|.
+  Handling of LONGVARBINARY columns is also affected by |odbc_binmode|.
 
 
 vim:ft=help:

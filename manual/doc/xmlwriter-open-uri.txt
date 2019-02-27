@@ -7,27 +7,27 @@ xmlwriter_open_uri
 XMLWriter::openUri -- xmlwriter_open_uri — Create new xmlwriter using source
 uri for output
 
-==============================================================================
+===============================================================================
 *Description*
 
 Object oriented style
 
-    bool XMLWriter::openUri ( string $uri )~
+  XMLWriter::openUri ( string $uri ) : bool~
 
 Procedural style
 
-    resource xmlwriter_open_uri ( string $uri )~
+  xmlwriter_open_uri ( string $uri ) : resource~
 
 Creates a new XMLWriter using {uri} for the output.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {uri}
 
-    The URI of the resource for the output.
+  The URI of the resource for the output.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Object oriented style: Returns TRUE on success or FALSE on failure.
@@ -35,11 +35,11 @@ Object oriented style: Returns TRUE on success or FALSE on failure.
 Procedural style: Returns a new xmlwriter resource for later use with the
 xmlwriter functions on success, FALSE on error.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |XMLWriter::openMemory| - Create new xmlwriter using memory for string
-    output
+ * |XMLWriter::openMemory| - Create new xmlwriter using memory for string
+  output
 
 
 vim:ft=help:

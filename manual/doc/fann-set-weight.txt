@@ -4,34 +4,34 @@ fann_set_weight
 
 fann_set_weight — Set a connection in the network
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool fann_set_weight ( resource $ann , int $from_neuron , int $to_neuron~
-    , float $weight )~
+  fann_set_weight ( resource $ann , int $from_neuron , int $to_neuron , float~
+  $weight ) : bool~
 
 Set a connections in the network.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {ann}
 
-    Neural network resource.
+  Neural network resource.
 
 {from_neuron}
 
-    The neuron where the connection starts
+  The neuron where the connection starts
 
 {to_neuron}
 
-    The neuron where the connection ends
+  The neuron where the connection ends
 
 {weight}
 
-    Connection weight
+  Connection weight
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success, or FALSE otherwise.

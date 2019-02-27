@@ -4,26 +4,26 @@ enchant_dict_describe
 
 enchant_dict_describe — Describes an individual dictionary
 
-==============================================================================
+===============================================================================
 *Description*
 
-    mixed enchant_dict_describe ( resource $dict )~
+  enchant_dict_describe ( resource $dict ) : mixed~
 
 Returns the details of the dictionary.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {dict}
 
-    Dictionary resource
+  Dictionary resource
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 A enchant_dict_describe() example
@@ -32,13 +32,13 @@ Check if a dictionary exists using |enchant_broker_dict_exists| and show the
 detail of it.
 
 <?php >
-    $tag = 'en_US';
-    $broker = enchant_broker_init();
-    if (enchant_broker_dict_exists($broker,$tag)) {
-        $dict = enchant_broker_request_dict($r, $tag);
-        $dict_details = enchant_dict_describe($dict);
-        print_r($dict_details);
-    }
+  $tag = 'en_US';
+  $broker = enchant_broker_init();
+  if (enchant_broker_dict_exists($broker,$tag)) {
+      $dict = enchant_broker_request_dict($r, $tag);
+      $dict_details = enchant_dict_describe($dict);
+      print_r($dict_details);
+  }
 <?>
 
 The above example will output something similar to:

@@ -4,77 +4,77 @@ stream_get_meta_data
 
 stream_get_meta_data — Retrieves header/meta data from streams/file pointers
 
-==============================================================================
+===============================================================================
 *Description*
 
-    array stream_get_meta_data ( resource $stream )~
+  stream_get_meta_data ( resource $stream ) : array~
 
 Returns information about an existing {stream}.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {stream}
 
-    The stream can be any stream created by |fopen|, |fsockopen| and 
-    |pfsockopen|.
+  The stream can be any stream created by |fopen|, |fsockopen| and |pfsockopen|
+  .
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 The result array contains the following items:
 
-  * timed_out (bool) - TRUE if the stream timed out while waiting for data on
-    the last call to |fread| or |fgets|.
+ * timed_out (bool) - TRUE if the stream timed out while waiting for data on
+  the last call to |fread| or |fgets|.
 
-  * blocked (bool) - TRUE if the stream is in blocking IO mode. See 
-    |stream_set_blocking|.
+ * blocked (bool) - TRUE if the stream is in blocking IO mode. See 
+  |stream_set_blocking|.
 
-  * eof (bool) - TRUE if the stream has reached end-of-file. Note that for
-    socket streams this member can be TRUE even when unread_bytes is non-zero.
-    To determine if there is more data to be read, use |feof| instead of
-    reading this item.
+ * eof (bool) - TRUE if the stream has reached end-of-file. Note that for
+  socket streams this member can be TRUE even when unread_bytes is non-zero. To
+  determine if there is more data to be read, use |feof| instead of reading
+  this item.
 
-  * unread_bytes (int) - the number of bytes currently contained in the PHP's
-    own internal buffer.
+ * unread_bytes (int) - the number of bytes currently contained in the PHP's
+  own internal buffer.
 
-        Note: You shouldn't use this value in a script.
+    Note: You shouldn't use this value in a script.
 
-  * stream_type (string) - a label describing the underlying implementation of
-    the stream.
+ * stream_type (string) - a label describing the underlying implementation of
+  the stream.
 
-  * wrapper_type (string) - a label describing the protocol wrapper
-    implementation layered over the stream. See Supported Protocols and
-    Wrappers for more information about wrappers.
+ * wrapper_type (string) - a label describing the protocol wrapper
+  implementation layered over the stream. See Supported Protocols and Wrappers
+  for more information about wrappers.
 
-  * wrapper_data (mixed) - wrapper specific data attached to this stream. See
-    Supported Protocols and Wrappers for more information about wrappers and
-    their wrapper data.
+ * wrapper_data (mixed) - wrapper specific data attached to this stream. See
+  Supported Protocols and Wrappers for more information about wrappers and
+  their wrapper data.
 
-  * mode (string) - the type of access required for this stream (see Table 1
-    of the |fopen| reference)
+ * mode (string) - the type of access required for this stream (see Table 1 of
+  the |fopen| reference)
 
-  * seekable (bool) - whether the current stream can be seeked.
+ * seekable (bool) - whether the current stream can be seeked.
 
-  * uri (string) - the URI/filename associated with this stream.
+ * uri (string) - the URI/filename associated with this stream.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 stream_get_meta_data() example
 
 <?php >
-    $url = 'http://www.example.com/';
+  $url = 'http://www.example.com/';
 
-    if (!$fp = fopen($url, 'r')) {
-        trigger_error("Unable to open URL ($url)", E_USER_ERROR);
-    }
+  if (!$fp = fopen($url, 'r')) {
+      trigger_error("Unable to open URL ($url)", E_USER_ERROR);
+  }
 
-    $meta = stream_get_meta_data($fp);
+  $meta = stream_get_meta_data($fp);
 
-    print_r($meta);
+  print_r($meta);
 
-    fclose($fp);
+  fclose($fp);
 <?>
 
 The above example will output something similar to:
@@ -107,19 +107,19 @@ Array
     [eof] =>
 )
 
-==============================================================================
+===============================================================================
 *Notes*
 
-    Note:
+  Note:
 
-    This function does NOT work on sockets created by the Socket extension.
+  This function does NOT work on sockets created by the Socket extension.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |get_headers| - Fetches all the headers sent by the server in response to
-    a HTTP request
-  * $http_response_header
+ * |get_headers| - Fetches all the headers sent by the server in response to an
+  HTTP request
+ * $http_response_header
 
 
 vim:ft=help:

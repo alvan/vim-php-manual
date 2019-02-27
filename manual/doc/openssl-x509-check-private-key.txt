@@ -5,10 +5,10 @@ openssl_x509_check_private_key
 openssl_x509_check_private_key — Checks if a private key corresponds to a
 certificate
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool openssl_x509_check_private_key ( mixed $cert , mixed $key )~
+  openssl_x509_check_private_key ( mixed $cert , mixed $key ) : bool~
 
 Checks whether the given {key} is the private key that corresponds to {cert}.
 
@@ -21,18 +21,18 @@ key parameters (e.g. EC params of an EC key) of a key pair.
 This means, for example, that a public key could be given for {key} and the
 function may return TRUE.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {cert}
 
-    The certificate.
+  The certificate.
 
 {key}
 
-    The private key.
+  The private key.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE if {key} is the private key that corresponds to {cert}, or FALSE

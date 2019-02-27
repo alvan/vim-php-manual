@@ -4,38 +4,38 @@ bindtextdomain
 
 bindtextdomain — Sets the path for a domain
 
-==============================================================================
+===============================================================================
 *Description*
 
-    string bindtextdomain ( string $domain , string $directory )~
+  bindtextdomain ( string $domain , string $directory ) : string~
 
 The bindtextdomain() function sets the path for a domain.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {domain}
 
-    The domain
+  The domain
 
 {directory}
 
-    The directory path
+  The directory path
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 The full pathname for the {domain} currently being set.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 bindtextdomain() example
 
 <?php >
 
-    $domain = 'myapp';
-    echo bindtextdomain($domain, '/usr/share/myapp/locale');
+  $domain = 'myapp';
+  echo bindtextdomain($domain, '/usr/share/myapp/locale');
 
 <?>
 

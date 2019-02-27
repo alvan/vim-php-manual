@@ -4,27 +4,27 @@ rrd_tune
 
 rrd_tune — Tunes some RRD database file header options
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool rrd_tune ( string $filename , array $options )~
+  rrd_tune ( string $filename , array $options ) : bool~
 
 Change some options in the RRD dabase header file. E.g. renames the source for
 the data etc.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {filename}
 
-    RRD database file name.
+  RRD database file name.
 
 {options}
 
-    Options with RRD database file properties which will be changed. See rrd
-    tune man page for details.
+  Options with RRD database file properties which will be changed. See rrd tune
+  man page for details.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success, FALSE otherwise.

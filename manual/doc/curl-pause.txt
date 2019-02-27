@@ -4,28 +4,27 @@ curl_pause
 
 curl_pause — Pause and unpause a connection
 
-==============================================================================
+===============================================================================
 *Description*
 
-    int curl_pause ( resource $ch , int $bitmask )~
+  curl_pause ( resource $ch , int $bitmask ) : int~
 
 Warning
 
-This function is currently not documented; only its argument list is
-available.
+This function is currently not documented; only its argument list is available.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {ch}
 
-    A cURL handle returned by |curl_init|.
+  A cURL handle returned by |curl_init|.
 
 {bitmask}
 
-    One of CURLPAUSE_* constants.
+  One of CURLPAUSE_* constants.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns an error code (CURLE_OK for no error).

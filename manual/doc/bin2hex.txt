@@ -4,31 +4,31 @@ bin2hex
 
 bin2hex — Convert binary data into hexadecimal representation
 
-==============================================================================
+===============================================================================
 *Description*
 
-    string bin2hex ( string $str )~
+  bin2hex ( string $str ) : string~
 
-Returns an ASCII string containing the hexadecimal representation of {str}.
-The conversion is done byte-wise with the high-nibble first.
+Returns an ASCII string containing the hexadecimal representation of {str}. The
+conversion is done byte-wise with the high-nibble first.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {str}
 
-    A string.
+  A string.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns the hexadecimal representation of the given string.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |hex2bin| - Decodes a hexadecimally encoded binary string
-  * |pack| - Pack data into binary string
+ * |hex2bin| - Decodes a hexadecimally encoded binary string
+ * |pack| - Pack data into binary string
 
 
 vim:ft=help:

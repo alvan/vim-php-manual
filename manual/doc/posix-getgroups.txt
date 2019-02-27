@@ -4,29 +4,29 @@ posix_getgroups
 
 posix_getgroups — Return the group set of the current process
 
-==============================================================================
+===============================================================================
 *Description*
 
-    array posix_getgroups ( void )~
+  posix_getgroups ( void ) : array~
 
 Gets the group set of the current process.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns an array of integers containing the numeric group ids of the group set
 of the current process.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 Example use of posix_getgroups()
 
 <?php >
 
-    $groups = posix_getgroups();
+  $groups = posix_getgroups();
 
-    print_r($groups);
+  print_r($groups);
 <?>
 
 The above example will output something similar to:
@@ -48,10 +48,10 @@ Array
     [12] => 1000
 )
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |posix_getgrgid| - Return info about a group by group id
+ * |posix_getgrgid| - Return info about a group by group id
 
 
 vim:ft=help:

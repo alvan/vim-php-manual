@@ -4,18 +4,17 @@ socket_sendmsg
 
 socket_sendmsg — Send a message
 
-==============================================================================
+===============================================================================
 *Description*
 
-    int socket_sendmsg ( resource $socket , array $message [, int $flags = 0~
-    ] )~
+  socket_sendmsg ( resource $socket , array $message [, int $flags = 0 ] ) :~
+  int~
 
 Warning
 
-This function is currently not documented; only its argument list is
-available.
+This function is currently not documented; only its argument list is available.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {socket}
@@ -24,16 +23,16 @@ available.
 
 {flags}
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns the number of bytes sent, or FALSE on failure.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |socket_recvmsg| - Read a message
-  * |socket_cmsg_space| - Calculate message buffer size
+ * |socket_recvmsg| - Read a message
+ * |socket_cmsg_space| - Calculate message buffer size
 
 
 vim:ft=help:

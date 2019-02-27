@@ -4,23 +4,23 @@ filter_has_var
 
 filter_has_var — Checks if variable of specified type exists
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool filter_has_var ( int $type , string $variable_name )~
+  filter_has_var ( int $type , string $variable_name ) : bool~
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {type}
 
-    One of INPUT_GET, INPUT_POST, INPUT_COOKIE, INPUT_SERVER, or INPUT_ENV.
+  One of INPUT_GET, INPUT_POST, INPUT_COOKIE, INPUT_SERVER, or INPUT_ENV.
 
 {variable_name}
 
-    Name of a variable to check.
+  Name of a variable to check.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.

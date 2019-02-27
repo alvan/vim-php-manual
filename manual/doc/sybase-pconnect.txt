@@ -8,11 +8,11 @@ Warning
 
 This function was REMOVED in PHP 7.0.0.
 
-==============================================================================
+===============================================================================
 *Description*
 
-    resource sybase_pconnect ([ string $servername [, string $username [,~
-    string $password [, string $charset [, string $appname ]]]]] )~
+  sybase_pconnect ([ string $servername [, string $username [, string~
+  $password [, string $charset [, string $appname ]]]]] ) : resource~
 
 sybase_pconnect() acts very much like |sybase_connect| with two major
 differences.
@@ -28,44 +28,44 @@ of the script ends. Instead, the link will remain open for future use (
 
 This type of links is therefore called 'persistent'.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {servername}
 
-    The servername argument has to be a valid servername that is defined in
-    the 'interfaces' file.
+  The servername argument has to be a valid servername that is defined in the
+  'interfaces' file.
 
 {username}
 
-    Sybase user name
+  Sybase user name
 
 {password}
 
-    Password associated with {username}.
+  Password associated with {username}.
 
 {charset}
 
-    Specifies the charset for the connection
+  Specifies the charset for the connection
 
 {appname}
 
-    Specifies an appname for the Sybase connection. This allow you to make
-    separate connections in the same script to the same database. This may
-    come handy when you have started a transaction in your current connection,
-    and you need to be able to do a separate query which cannot be performed
-    inside this transaction.
+  Specifies an appname for the Sybase connection. This allow you to make
+  separate connections in the same script to the same database. This may come
+  handy when you have started a transaction in your current connection, and you
+  need to be able to do a separate query which cannot be performed inside this
+  transaction.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns a positive Sybase persistent link identifier on success, or FALSE on
 error.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |sybase_connect| - Opens a Sybase server connection
+ * |sybase_connect| - Opens a Sybase server connection
 
 
 vim:ft=help:

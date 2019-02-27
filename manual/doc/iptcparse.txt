@@ -4,46 +4,46 @@ iptcparse
 
 iptcparse — Parse a binary IPTC block into single tags
 
-==============================================================================
+===============================================================================
 *Description*
 
-    array iptcparse ( string $iptcblock )~
+  iptcparse ( string $iptcblock ) : array~
 
-Parses an >> IPTC block into its single tags.
+Parses an » IPTC block into its single tags.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {iptcblock}
 
-    A binary IPTC block.
+  A binary IPTC block.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
-Returns an array using the tagmarker as an index and the value as the value.
-It returns FALSE on error or if no IPTC data was found.
+Returns an array using the tagmarker as an index and the value as the value. It
+returns FALSE on error or if no IPTC data was found.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 iptcparse() used together with |getimagesize|
 
 <?php >
-    $size = getimagesize('./test.jpg', $info);
-    if(isset($info['APP13']))
-    {
-        $iptc = iptcparse($info['APP13']);
-        var_dump($iptc);
-    }
+  $size = getimagesize('./test.jpg', $info);
+  if(isset($info['APP13']))
+  {
+      $iptc = iptcparse($info['APP13']);
+      var_dump($iptc);
+  }
 <?>
 
-==============================================================================
+===============================================================================
 *Notes*
 
-    Note:
+  Note:
 
-    This function does not require the GD image library.
+  This function does not require the GD image library.
 
 
 vim:ft=help:

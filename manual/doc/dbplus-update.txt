@@ -4,40 +4,40 @@ dbplus_update
 
 dbplus_update — Update specified tuple in relation
 
-==============================================================================
+===============================================================================
 *Description*
 
-    int dbplus_update ( resource $relation , array $old , array $new )~
+  dbplus_update ( resource $relation , array $old , array $new ) : int~
 
-dbplus_update() replaces the {old} tuple with the data from the {new} one,
-only if the {old} completely matches a tuple within {relation}.
+dbplus_update() replaces the {old} tuple with the data from the {new} one, only
+if the {old} completely matches a tuple within {relation}.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {relation}
 
-    A relation opened by |dbplus_open|.
+  A relation opened by |dbplus_open|.
 
 {old}
 
-    The old tuple.
+  The old tuple.
 
 {new}
 
-    The new tuple.
+  The new tuple.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
-==============================================================================
+===============================================================================
 *Notes*
 
 Warning
 
 This function is EXPERIMENTAL. The behaviour of this function, its name, and
-surrounding documentation may change without notice in a future release of
-PHP. This function should be used at your own risk.
+surrounding documentation may change without notice in a future release of PHP.
+This function should be used at your own risk.
 
 
 vim:ft=help:

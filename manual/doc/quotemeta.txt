@@ -4,45 +4,45 @@ quotemeta
 
 quotemeta — Quote meta characters
 
-==============================================================================
+===============================================================================
 *Description*
 
-    string quotemeta ( string $str )~
+  quotemeta ( string $str ) : string~
 
 Returns a version of str with a backslash character (\) before every character
 that is among these:
 . \ + * ? [ ^ ] ( $ )
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {str}
 
-    The input string.
+  The input string.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns the string with meta characters quoted, or FALSE if an empty string is
 given as {str}.
 
-==============================================================================
+===============================================================================
 *Notes*
 
-    Note: This function is binary-safe.
+  Note: This function is binary-safe.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |addslashes| - Quote string with slashes
-  * |addcslashes| - Quote string with slashes in a C style
-  * |htmlentities| - Convert all applicable characters to HTML entities
-  * |htmlspecialchars| - Convert special characters to HTML entities
-  * |nl2br| - Inserts HTML line breaks before all newlines in a string
-  * |stripslashes| - Un-quotes a quoted string
-  * |stripcslashes| - Un-quote string quoted with addcslashes
-  * |ereg| - Regular expression match
-  * |preg_quote| - Quote regular expression characters
+ * |addslashes| - Quote string with slashes
+ * |addcslashes| - Quote string with slashes in a C style
+ * |htmlentities| - Convert all applicable characters to HTML entities
+ * |htmlspecialchars| - Convert special characters to HTML entities
+ * |nl2br| - Inserts HTML line breaks before all newlines in a string
+ * |stripslashes| - Un-quotes a quoted string
+ * |stripcslashes| - Un-quote string quoted with addcslashes
+ * |ereg| - Regular expression match
+ * |preg_quote| - Quote regular expression characters
 
 
 vim:ft=help:

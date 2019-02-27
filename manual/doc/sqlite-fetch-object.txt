@@ -10,22 +10,21 @@ sqlite_fetch_object -- SQLiteResult::fetchObject --
 SQLiteUnbuffered::fetchObject — Fetches the next row from a result set as an
 object
 
-==============================================================================
+===============================================================================
 *Description*
 
-    object sqlite_fetch_object ( resource $result [, string $class_name [,~
-    array $ctor_params [, bool $decode_binary = TRUE ]]] )~
+  sqlite_fetch_object ( resource $result [, string $class_name [, array~
+  $ctor_params [, bool $decode_binary = TRUE ]]] ) : object~
 
 Object oriented style (method):
 
-    object SQLiteResult::fetchObject ([ string $class_name [, array~
-    $ctor_params [, bool $decode_binary = TRUE ]]] )~
-    object SQLiteUnbuffered::fetchObject ([ string $class_name [, array~
-    $ctor_params [, bool $decode_binary = TRUE ]]] )~
+  SQLiteResult::fetchObject ([ string $class_name [, array $ctor_params [,~
+  bool $decode_binary = TRUE ]]] ) : object~
+  SQLiteUnbuffered::fetchObject ([ string $class_name [, array $ctor_params [,~
+  bool $decode_binary = TRUE ]]] ) : object~
 Warning
 
-This function is currently not documented; only its argument list is
-available.
+This function is currently not documented; only its argument list is available.
 
 
 vim:ft=help:

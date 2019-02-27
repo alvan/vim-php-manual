@@ -4,12 +4,12 @@ PDF_add_locallink
 
 PDF_add_locallink — Add link annotation for current page [deprecated]
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool PDF_add_locallink ( resource $pdfdoc , float $lowerleftx , float~
-    $lowerlefty , float $upperrightx , float $upperrighty , int $page ,~
-    string $dest )~
+  PDF_add_locallink ( resource $pdfdoc , float $lowerleftx , float $lowerlefty~
+  , float $upperrightx , float $upperrighty , int $page , string $dest ) :~
+  bool~
 
 Add a link annotation to a target within the current PDF file. Returns TRUE on
 success or FALSE on failure.

@@ -4,15 +4,15 @@ PDF_begin_page_ext
 
 PDF_begin_page_ext — Start new page
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool PDF_begin_page_ext ( resource $pdfdoc , float $width , float $height~
-    , string $optlist )~
+  PDF_begin_page_ext ( resource $pdfdoc , float $width , float $height ,~
+  string $optlist ) : bool~
 
 Adds a new page to the document, and specifies various options. The parameters
-{width} and {height} are the dimensions of the new page in points. Returns
-TRUE on success or FALSE on failure.
+{width} and {height} are the dimensions of the new page in points. Returns TRUE
+on success or FALSE on failure.
 
   Common Page Sizes in Points
        name            size

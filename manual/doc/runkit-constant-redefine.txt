@@ -4,34 +4,34 @@ runkit_constant_redefine
 
 runkit_constant_redefine — Redefine an already defined constant
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool runkit_constant_redefine ( string $constname , mixed $newvalue )~
+  runkit_constant_redefine ( string $constname , mixed $newvalue ) : bool~
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {constname}
 
-    Constant to redefine. Either string indicating global constant, or
-    classname::constname indicating class constant.
+  Constant to redefine. Either string indicating global constant, or
+  classname::constname indicating class constant.
 
 {newvalue}
 
-    New value to assign to constant.
+  New value to assign to constant.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |runkit_constant_add| - Similar to define(), but allows defining in class
-    definitions as well
-  * |runkit_constant_remove| - Remove/Delete an already defined constant
+ * |runkit_constant_add| - Similar to define(), but allows defining in class
+  definitions as well
+ * |runkit_constant_remove| - Remove/Delete an already defined constant
 
 
 vim:ft=help:

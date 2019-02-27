@@ -4,10 +4,10 @@ ldap_sort
 
 ldap_sort — Sort LDAP result entries on the client side
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool ldap_sort ( resource $link , resource $result , string $sortfilter )~
+  ldap_sort ( resource $link , resource $result , string $sortfilter ) : bool~
 
 Sort the result of a LDAP search, returned by |ldap_search|.
 
@@ -20,22 +20,22 @@ Warning
 This feature has been DEPRECATED as of PHP 7.0.0. Relying on this feature is
 highly discouraged.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {link}
 
-    An LDAP link identifier, returned by |ldap_connect|.
+  An LDAP link identifier, returned by |ldap_connect|.
 
 {result}
 
-    An search result identifier, returned by |ldap_search|.
+  An search result identifier, returned by |ldap_search|.
 
 {sortfilter}
 
-    The attribute to use as a key in the sort.
+  The attribute to use as a key in the sort.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Sorting the result of a search.

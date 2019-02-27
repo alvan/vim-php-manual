@@ -4,29 +4,34 @@ swoole_async_dns_lookup
 
 swoole_async_dns_lookup — Async and non-blocking hostname to IP lookup
 
-==============================================================================
+===============================================================================
 *Description*
 
-    void swoole_async_dns_lookup ( string $hostname , callable $callback )~
+  swoole_async_dns_lookup ( string $hostname , callable $callback ) : bool~
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {hostname}
 
-    The host name.
+  The host name.
 
 {callback}
 
-    mixed callback ( string $hostname , string $ip )~
+  callback ( string $hostname , string $ip ) : mixed~
 
-    {hostname}
+  {hostname}
 
-        The host name.
+    The host name.
 
-    {IP}
+  {IP}
 
-        The IP address.
+    The IP address.
+
+===============================================================================
+*Return* *Values*
+
+Returns TRUE on success or FALSE on failure.
 
 
 vim:ft=help:

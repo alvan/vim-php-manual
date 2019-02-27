@@ -4,50 +4,50 @@ mb_encoding_aliases
 
 mb_encoding_aliases — Get aliases of a known encoding type
 
-==============================================================================
+===============================================================================
 *Description*
 
-    array mb_encoding_aliases ( string $encoding )~
+  mb_encoding_aliases ( string $encoding ) : array~
 
 Returns an array of aliases for a known {encoding} type.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {encoding}
 
-    The encoding type being checked, for aliases.
+  The encoding type being checked, for aliases.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
-Returns a numerically indexed array of encoding aliases on success, or FALSE
-on failure
+Returns a numerically indexed array of encoding aliases on success, or FALSE on
+failure
 
-==============================================================================
+===============================================================================
 *Errors/Exceptions*
 
 Emits an E_WARNING level error if {encoding} is unknown.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 mb_encoding_aliases() example
 
 <?php >
-    $encoding        = 'ASCII';
-    $known_encodings = mb_list_encodings();
+  $encoding        = 'ASCII';
+  $known_encodings = mb_list_encodings();
 
-    if (in_array($encoding, $known_encodings)) {
+  if (in_array($encoding, $known_encodings)) {
 
-        $aliases = mb_encoding_aliases($encoding);
-        print_r($aliases);
+      $aliases = mb_encoding_aliases($encoding);
+      print_r($aliases);
 
-    } else {
+  } else {
 
-        echo "Unknown ($encoding) encoding.\n";
+      echo "Unknown ($encoding) encoding.\n";
 
-    }
+  }
 <?>
 
 The above example will output something similar to:
@@ -66,10 +66,10 @@ Array
     [9] => csASCII
 )
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |mb_list_encodings| - Returns an array of all supported encodings
+ * |mb_list_encodings| - Returns an array of all supported encodings
 
 
 vim:ft=help:

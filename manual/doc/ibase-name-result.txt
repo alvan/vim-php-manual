@@ -4,53 +4,53 @@ ibase_name_result
 
 ibase_name_result — Assigns a name to a result set
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool ibase_name_result ( resource $result , string $name )~
+  ibase_name_result ( resource $result , string $name ) : bool~
 
 This function assigns a name to a result set. This name can be used later in
 UPDATE|DELETE ... WHERE CURRENT OF {name} statements.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {result}
 
-    An InterBase result set.
+  An InterBase result set.
 
 {name}
 
-    The name to be assigned.
+  The name to be assigned.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 ibase_name_result() example
 
 <?php >
-    $result = ibase_query("SELECT field1,field2 FROM table FOR UPDATE");
-    ibase_name_result($result, "my_cursor");
+  $result = ibase_query("SELECT field1,field2 FROM table FOR UPDATE");
+  ibase_name_result($result, "my_cursor");
 
-    $updateqry = ibase_prepare("UPDATE table SET field2 = ?
-     WHERE CURRENT OF my_cursor");
+  $updateqry = ibase_prepare("UPDATE table SET field2 = ?
+   WHERE CURRENT OF my_cursor");
 
-    for ($i = 0; ibase_fetch_row($result); ++$i) {
-        ibase_execute($updateqry, $i);
-    }
+  for ($i = 0; ibase_fetch_row($result); ++$i) {
+      ibase_execute($updateqry, $i);
+  }
 <?>
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |ibase_prepare| - Prepare a query for later binding of parameter
-    placeholders and execution
-  * |ibase_execute| - Execute a previously prepared query
+ * |ibase_prepare| - Prepare a query for later binding of parameter
+  placeholders and execution
+ * |ibase_execute| - Execute a previously prepared query
 
 
 vim:ft=help:

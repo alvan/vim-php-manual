@@ -4,10 +4,10 @@ odbc_binmode
 
 odbc_binmode — Handling of binary column data
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool odbc_binmode ( resource $result_id , int $mode )~
+  odbc_binmode ( resource $result_id , int $mode ) : bool~
 
 Enables handling of binary column data. ODBC SQL types affected are BINARY,
 VARBINARY, and LONGVARBINARY.
@@ -31,28 +31,28 @@ ODBC_BINMODE_CONVERT  >0          return as char
 If |odbc_fetch_into| is used, passthru means that an empty string is returned
 for these columns.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {result_id}
 
-    The result identifier.
+  The result identifier.
 
-    If {result_id} is 0, the settings apply as default for new results.
+  If {result_id} is 0, the settings apply as default for new results.
 
 
-        Note: Default for longreadlen is 4096 and {mode} defaults to
-        ODBC_BINMODE_RETURN. Handling of binary long columns is also affected
-        by |odbc_longreadlen|.
+    Note: Default for longreadlen is 4096 and {mode} defaults to
+    ODBC_BINMODE_RETURN. Handling of binary long columns is also affected by 
+    |odbc_longreadlen|.
 
 {mode}
 
-    Possible values for {mode} are:
-      + ODBC_BINMODE_PASSTHRU: Passthru BINARY data
-      + ODBC_BINMODE_RETURN: Return as is
-      + ODBC_BINMODE_CONVERT: Convert to char and return
+  Possible values for {mode} are:
+   + ODBC_BINMODE_PASSTHRU: Passthru BINARY data
+   + ODBC_BINMODE_RETURN: Return as is
+   + ODBC_BINMODE_CONVERT: Convert to char and return
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.

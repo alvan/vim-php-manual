@@ -4,67 +4,67 @@ strip_tags
 
 strip_tags — Strip HTML and PHP tags from a string
 
-==============================================================================
+===============================================================================
 *Description*
 
-    string strip_tags ( string $str [, string $allowable_tags ] )~
+  strip_tags ( string $str [, string $allowable_tags ] ) : string~
 
 This function tries to return a string with all NULL bytes, HTML and PHP tags
 stripped from a given {str}. It uses the same tag stripping state machine as
 the |fgetss| function.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {str}
 
-    The input string.
+  The input string.
 
 {allowable_tags}
 
-    You can use the optional second parameter to specify tags which should not
-    be stripped.
+  You can use the optional second parameter to specify tags which should not be
+  stripped.
 
-        Note:
+    Note:
 
-        HTML comments and PHP tags are also stripped. This is hardcoded and
-        can not be changed with {allowable_tags}.
+    HTML comments and PHP tags are also stripped. This is hardcoded and can not
+    be changed with {allowable_tags}.
 
-        Note:
+    Note:
 
-        In PHP 5.3.4 and later, self-closing XHTML tags are ignored and only
-        non-self-closing tags should be used in {allowable_tags}. For example,
-        to allow both <br> and <br/>, you should use:
+    In PHP 5.3.4 and later, self-closing XHTML tags are ignored and only
+    non-self-closing tags should be used in {allowable_tags}. For example, to
+    allow both <br> and <br/>, you should use:
 
-        <?php >
-        strip_tags($input, '<br>');
-<        ?>
+    <?php >
+    strip_tags($input, '<br>');
+<    ?>
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns the stripped string.
 
-==============================================================================
+===============================================================================
 *Changelog*
 
 Version                            Description
 5.3.4   strip_tags() ignores self-closing XHTML tags in {allowable_tags}.
 5.0.0   strip_tags() is now binary safe.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 strip_tags() example
 
 <?php >
-    $text = '<p>Test paragraph.</p><!-- Comment --> <a href="#fragment">Other text
-    </a>';
-    echo strip_tags($text);
-    echo "\n";
+  $text = '<p>Test paragraph.</p><!-- Comment --> <a href="#fragment">Other text
+  </a>';
+  echo strip_tags($text);
+  echo "\n";
 
-    // Allow <p> and <a>
-    echo strip_tags($text, '<p><a>');
+  // Allow <p> and <a>
+  echo strip_tags($text, '<p><a>');
 <?>
 
 The above example will output:
@@ -72,7 +72,7 @@ The above example will output:
 Test paragraph. Other text
 <p>Test paragraph.</p> <a href="#fragment">Other text</a>
 
-==============================================================================
+===============================================================================
 *Notes*
 
 Warning
@@ -84,19 +84,18 @@ Warning
 
 This function does not modify any attributes on the tags that you allow using
 {allowable_tags}, including the style and onmouseover attributes that a
-mischievous user may abuse when posting text that will be shown to other
-users.
+mischievous user may abuse when posting text that will be shown to other users.
 
-    Note:
+  Note:
 
-    Tag names within the input HTML that are greater than 1023 bytes in length
-    will be treated as though they are invalid, regardless of the
-    {allowable_tags} parameter.
+  Tag names within the input HTML that are greater than 1023 bytes in length
+  will be treated as though they are invalid, regardless of the
+  {allowable_tags} parameter.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |htmlspecialchars| - Convert special characters to HTML entities
+ * |htmlspecialchars| - Convert special characters to HTML entities
 
 
 vim:ft=help:

@@ -4,22 +4,22 @@ event_base_loopbreak
 
 event_base_loopbreak — Abort event loop
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool event_base_loopbreak ( resource $event_base )~
+  event_base_loopbreak ( resource $event_base ) : bool~
 
 Abort the active event loop immediately. The behaviour is similar to break
 statement.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {event_base}
 
-    Valid event base resource.
+  Valid event base resource.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 event_base_loopbreak() returns TRUE on success or FALSE on error.

@@ -4,10 +4,10 @@ fann_get_train_stop_function
 
 fann_get_train_stop_function — Returns the stop function used during training
 
-==============================================================================
+===============================================================================
 *Description*
 
-    int fann_get_train_stop_function ( resource $ann )~
+  fann_get_train_stop_function ( resource $ann ) : int~
 
 Returns the stop function used during training.
 
@@ -15,23 +15,22 @@ The stop functions are described further in stop functions constants.
 
 The default stop function is FANN_STOPFUNC_MSE.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {ann}
 
-    Neural network resource.
+  Neural network resource.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 The stop function constant, or FALSE on error.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |fann_set_train_stop_function| - Sets the stop function used during
-    training
+ * |fann_set_train_stop_function| - Sets the stop function used during training
 
 
 vim:ft=help:

@@ -4,53 +4,53 @@ ssh2_publickey_list
 
 ssh2_publickey_list — List currently authorized publickeys
 
-==============================================================================
+===============================================================================
 *Description*
 
-    array ssh2_publickey_list ( resource $pkey )~
+  ssh2_publickey_list ( resource $pkey ) : array~
 
 List currently authorized publickeys.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {pkey}
 
-    Publickey Subsystem resource
+  Publickey Subsystem resource
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns a numerically indexed array of keys, each of which is an associative
 array containing: name, blob, and attrs elements.
 
                               Publickey elements
-Array                                 Meaning
+Array                                  Meaning
  Key
-name  Name of algorithm used by this publickey, for example: ssh-dss or
-      ssh-rsa.
+name  Name of algorithm used by this publickey, for example: ssh-dss or ssh-rsa
+      .
 blob  Publickey blob as raw binary data.
-      Attributes assigned to this publickey. The most common attribute, and
-attrs the only one supported by publickey version 1 servers, is comment, which
-      may be any freeform string.
+      Attributes assigned to this publickey. The most common attribute, and the
+attrs only one supported by publickey version 1 servers, is comment, which may
+      be any freeform string.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 Listing authorized keys with ssh2_publickey_list()
 
 <?php >
-    $ssh2 = ssh2_connect('shell.example.com', 22);
-    ssh2_auth_password($ssh2, 'jdoe', 'secret');
-    $pkey = ssh2_publickey_init($ssh2);
+  $ssh2 = ssh2_connect('shell.example.com', 22);
+  ssh2_auth_password($ssh2, 'jdoe', 'secret');
+  $pkey = ssh2_publickey_init($ssh2);
 
-    $list = ssh2_publickey_list($pkey);
+  $list = ssh2_publickey_list($pkey);
 
-    foreach($list as $key) {
-      echo "Key: {$key['name']}\n";
-      echo "Blob: " . chunk_split(base64_encode($key['blob']), 40, "\n") . "\n";
-      echo "Comment: {$key['attrs']['comment']}\n\n";
-    }
+  foreach($list as $key) {
+    echo "Key: {$key['name']}\n";
+    echo "Blob: " . chunk_split(base64_encode($key['blob']), 40, "\n") . "\n";
+    echo "Comment: {$key['attrs']['comment']}\n\n";
+  }
 <?>
 
 The above example will output:
@@ -72,20 +72,20 @@ SGd5sDHwfL351xjzaLpipu\BGB3NzaC1yc2EA/1T
 Comment: Alice's Key
 
 
-==============================================================================
+===============================================================================
 *Notes*
 
-    Note: The public key subsystem is used for managing public keys on a
-    server to which the client is already authenticated. To authenticate to a
-    remote system using public key authentication, use the 
-    |ssh2_auth_pubkey_file| function instead.
+  Note: The public key subsystem is used for managing public keys on a server
+  to which the client is already authenticated. To authenticate to a remote
+  system using public key authentication, use the |ssh2_auth_pubkey_file|
+  function instead.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |ssh2_publickey_init| - Initialize Publickey subsystem
-  * |ssh2_publickey_add| - Add an authorized publickey
-  * |ssh2_publickey_remove| - Remove an authorized publickey
+ * |ssh2_publickey_init| - Initialize Publickey subsystem
+ * |ssh2_publickey_add| - Add an authorized publickey
+ * |ssh2_publickey_remove| - Remove an authorized publickey
 
 
 vim:ft=help:

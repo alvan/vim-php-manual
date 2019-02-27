@@ -4,13 +4,13 @@ swoole_event_set
 
 swoole_event_set — Update the event callback functions of a socket
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool swoole_event_set ( int $fd [, callable $read_callback [, callable~
-    $write_callback [, int $events ]]] )~
+  swoole_event_set ( int $fd [, callable $read_callback [, callable~
+  $write_callback [, int $events = 0 ]]] ) : bool~
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {fd}
@@ -21,7 +21,7 @@ swoole_event_set — Update the event callback functions of a socket
 
 {events}
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 

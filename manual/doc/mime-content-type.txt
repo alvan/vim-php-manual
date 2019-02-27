@@ -4,35 +4,40 @@ mime_content_type
 
 mime_content_type — Detect MIME Content-type for a file
 
-==============================================================================
+===============================================================================
 *Description*
 
-    string mime_content_type ( string $filename )~
+  mime_content_type ( string $filename ) : string~
 
 Returns the MIME content type for a file as determined by using information
 from the magic.mime file.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {filename}
 
-    Path to the tested file.
+  Path to the tested file.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns the content type in MIME format, like text/plain or application/
-octet-stream.
+octet-stream, or FALSE on failure.
 
-==============================================================================
+===============================================================================
+*Errors/Exceptions*
+
+Upon failure, an E_WARNING is emitted.
+
+===============================================================================
 *Examples*
 
 Example #1 mime_content_type() Example
 
 <?php >
-    echo mime_content_type('php.gif') . "\n";
-    echo mime_content_type('test.php');
+  echo mime_content_type('php.gif') . "\n";
+  echo mime_content_type('test.php');
 <?>
 
 The above example will output:
@@ -40,11 +45,11 @@ The above example will output:
 image/gif
 text/plain
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * finfo_file() - Alias of finfo_file()
-  * finfo_buffer() - Alias of finfo_buffer()
+ * finfo_file() - Alias of finfo_file()
+ * finfo_buffer() - Alias of finfo_buffer()
 
 
 vim:ft=help:

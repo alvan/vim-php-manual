@@ -4,25 +4,25 @@ fann_merge_train_data
 
 fann_merge_train_data — Merges the train data
 
-==============================================================================
+===============================================================================
 *Description*
 
-    resource fann_merge_train_data ( resource $data1 , resource $data2 )~
+  fann_merge_train_data ( resource $data1 , resource $data2 ) : resource~
 
 Merges the data from data1 and data2 into a new train data resource.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {data1}
 
-    Neural network training data resource.
+  Neural network training data resource.
 
 {data2}
 
-    Neural network training data resource.
+  Neural network training data resource.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 New merged train data resource, or FALSE on error.

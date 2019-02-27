@@ -4,49 +4,49 @@ pg_ping
 
 pg_ping — Ping database connection
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool pg_ping ([ resource $connection ] )~
+  pg_ping ([ resource $connection ] ) : bool~
 
 pg_ping() pings a database connection and tries to reconnect it if it is
 broken.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {connection}
 
-    PostgreSQL database connection resource. When {connection} is not present,
-    the default connection is used. The default connection is the last
-    connection made by |pg_connect| or |pg_pconnect|.
+  PostgreSQL database connection resource. When {connection} is not present,
+  the default connection is used. The default connection is the last connection
+  made by |pg_connect| or |pg_pconnect|.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 pg_ping() example
 
 <?php  >
-    $conn = pg_pconnect("dbname=publisher");
-    if (!$conn) {
-      echo "An error occurred.\n";
-      exit;
-    }
+  $conn = pg_pconnect("dbname=publisher");
+  if (!$conn) {
+    echo "An error occurred.\n";
+    exit;
+  }
 
-    if (!pg_ping($conn))
-      die("Connection is broken\n");
+  if (!pg_ping($conn))
+    die("Connection is broken\n");
 <?>
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |pg_connection_status| - Get connection status
-  * |pg_connection_reset| - Reset connection (reconnect)
+ * |pg_connection_status| - Get connection status
+ * |pg_connection_reset| - Reset connection (reconnect)
 
 
 vim:ft=help:

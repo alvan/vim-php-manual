@@ -4,10 +4,10 @@ is_soap_fault
 
 is_soap_fault — Checks if a SOAP call has failed
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool is_soap_fault ( mixed $object )~
+  is_soap_fault ( mixed $object ) : bool~
 
 This function is useful to check if the SOAP call failed, but without using
 exceptions. To use it, create a SoapClient object with the exceptions option
@@ -18,49 +18,49 @@ faultactor and faultdetails).
 If exceptions is not set then SOAP call will throw an exception on error. 
 is_soap_fault() checks if the given parameter is a SoapFault object.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {object}
 
-    The object to test.
+  The object to test.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 This will return TRUE on error, and FALSE otherwise.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 is_soap_fault() example
 
 <?php >
-    $client = new SoapClient("some.wsdl", array('exceptions' => 0));
-    $result = $client->SomeFunction();
-    if (is_soap_fault($result)) {
-        trigger_error("SOAP Fault: (faultcode: {$result->faultcode}, faultstring: 
-    {$result->faultstring})", E_USER_ERROR);
-    }
+  $client = new SoapClient("some.wsdl", array('exceptions' => 0));
+  $result = $client->SomeFunction();
+  if (is_soap_fault($result)) {
+      trigger_error("SOAP Fault: (faultcode: {$result->faultcode}, faultstring: {
+  $result->faultstring})", E_USER_ERROR);
+  }
 <?>
 
 Example #2 SOAP's standard method for error reporting is exceptions
 
 <?php >
-    try {
-        $client = new SoapClient("some.wsdl");
-        $result = $client->SomeFunction(/* ... */);
-    } catch (SoapFault $fault) {
-        trigger_error("SOAP Fault: (faultcode: {$fault->faultcode}, faultstring: {
-    $fault->faultstring})", E_USER_ERROR);
-    }
+  try {
+      $client = new SoapClient("some.wsdl");
+      $result = $client->SomeFunction(/* ... */);
+  } catch (SoapFault $fault) {
+      trigger_error("SOAP Fault: (faultcode: {$fault->faultcode}, faultstring: {
+  $fault->faultstring})", E_USER_ERROR);
+  }
 <?>
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * SoapClient::SoapClient() - SoapClient constructor
-  * SoapFault::SoapFault() - SoapFault constructor
+ * SoapClient::SoapClient() - SoapClient constructor
+ * SoapFault::SoapFault() - SoapFault constructor
 
 
 vim:ft=help:

@@ -4,47 +4,47 @@ mb_split
 
 mb_split — Split multibyte string using regular expression
 
-==============================================================================
+===============================================================================
 *Description*
 
-    array mb_split ( string $pattern , string $string [, int $limit = -1 ] )~
+  mb_split ( string $pattern , string $string [, int $limit = -1 ] ) : array~
 
 Split a multibyte {string} using regular expression {pattern} and returns the
 result as an array.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {pattern}
 
-    The regular expression pattern.
+  The regular expression pattern.
 
 {string}
 
-    The string being split.
+  The string being split.
 
 {limit}
-    If optional parameter {limit} is specified, it will be split in {limit}
-    elements as maximum.
+  If optional parameter {limit} is specified, it will be split in {limit}
+  elements as maximum.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 The result as an array.
 
-==============================================================================
+===============================================================================
 *Notes*
 
-    Note:
+  Note:
 
-    The character encoding specified by |mb_regex_encoding| will be used as
-    the character encoding for this function by default.
+  The character encoding specified by |mb_regex_encoding| will be used as the
+  character encoding for this function by default.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |mb_regex_encoding| - Set/Get character encoding for multibyte regex
-  * |mb_ereg| - Regular expression match with multibyte support
+ * |mb_regex_encoding| - Set/Get character encoding for multibyte regex
+ * |mb_ereg| - Regular expression match with multibyte support
 
 
 vim:ft=help:

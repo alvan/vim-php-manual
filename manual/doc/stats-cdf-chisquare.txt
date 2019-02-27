@@ -5,10 +5,10 @@ stats_cdf_chisquare
 stats_cdf_chisquare — Calculates any one parameter of the chi-square
 distribution given values for the others
 
-==============================================================================
+===============================================================================
 *Description*
 
-    float stats_cdf_chisquare ( float $par1 , float $par2 , int $which )~
+  stats_cdf_chisquare ( float $par1 , float $par2 , int $which ) : float~
 
 Returns the cumulative distribution function, its inverse, or one of its
 parameters, of the chi-square distribution. The kind of the return value and
@@ -25,22 +25,22 @@ respectively.
 2       x            CDF    k
 3       k            x      CDF
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {par1}
 
-    The first parameter
+  The first parameter
 
 {par2}
 
-    The second parameter
+  The second parameter
 
 {which}
 
-    The flag to determine what to be calculated
+  The flag to determine what to be calculated
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns CDF, x, or k, determined by {which}.

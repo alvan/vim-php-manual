@@ -4,34 +4,34 @@ ibase_num_params
 
 ibase_num_params — Return the number of parameters in a prepared query
 
-==============================================================================
+===============================================================================
 *Description*
 
-    int ibase_num_params ( resource $query )~
+  ibase_num_params ( resource $query ) : int~
 
 This function returns the number of parameters in the prepared query specified
 by {query}. This is the number of binding arguments that must be present when
 calling |ibase_execute|.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {query}
 
-    The prepared query handle.
+  The prepared query handle.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns the number of parameters as an integer.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |ibase_prepare| - Prepare a query for later binding of parameter
-    placeholders and execution
-  * |ibase_param_info| - Return information about a parameter in a prepared
-    query
+ * |ibase_prepare| - Prepare a query for later binding of parameter
+  placeholders and execution
+ * |ibase_param_info| - Return information about a parameter in a prepared
+  query
 
 
 vim:ft=help:

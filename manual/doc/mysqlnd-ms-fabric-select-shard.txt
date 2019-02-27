@@ -4,48 +4,47 @@ mysqlnd_ms_fabric_select_shard
 
 mysqlnd_ms_fabric_select_shard — Switch to shard
 
-==============================================================================
+===============================================================================
 *Description*
 
-    array mysqlnd_ms_fabric_select_shard ( mixed $connection , mixed~
-    $table_name , mixed $shard_key )~
+  mysqlnd_ms_fabric_select_shard ( mixed $connection , mixed $table_name ,~
+  mixed $shard_key ) : array~
 Warning
 
-This function is currently not documented; only its argument list is
-available.
+This function is currently not documented; only its argument list is available.
 
 MySQL Fabric related.
 
 Switch the connection to the shards responsible for the given table name and
 shard key.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {connection}
 
-    A MySQL connection handle obtained from any of the connect functions of
-    the mysqli, mysql or PDO_MYSQL extensions.
+  A MySQL connection handle obtained from any of the connect functions of the
+  mysqli, mysql or PDO_MYSQL extensions.
 
 {table_name}
 
-    The table name to ask Fabric about.
+  The table name to ask Fabric about.
 
 {shard_key}
 
-    The shard key to ask Fabric about.
+  The shard key to ask Fabric about.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 FALSE on error. Otherwise, TRUE
 
-==============================================================================
+===============================================================================
 *Notes*
 
-    Note:
+  Note:
 
-    mysqlnd_ms_fabric_select_shard() requires PECL mysqlnd_ms >> 1.6.0.
+  mysqlnd_ms_fabric_select_shard() requires PECL mysqlnd_ms >> 1.6.0.
 
 
 vim:ft=help:

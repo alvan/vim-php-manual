@@ -4,33 +4,33 @@ strptime
 
 strptime — Parse a time/date generated with |strftime|
 
-==============================================================================
+===============================================================================
 *Description*
 
-    array strptime ( string $date , string $format )~
+  strptime ( string $date , string $format ) : array~
 
 strptime() returns an array with the {date} parsed, or FALSE on error.
 
 Month and weekday names and other language dependent strings respect the
 current locale set with |setlocale| (LC_TIME).
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {date} (string)
 
-    The string to parse (e.g. returned from |strftime|).
+  The string to parse (e.g. returned from |strftime|).
 
 {format} (string)
 
-    The format used in {date} (e.g. the same as used in |strftime|). Note that
-    some of the format options available to |strftime| may not have any effect
-    within strptime(); the exact subset that are supported will vary based on
-    the operating system and C library in use.
+  The format used in {date} (e.g. the same as used in |strftime|). Note that
+  some of the format options available to |strftime| may not have any effect
+  within strptime(); the exact subset that are supported will vary based on the
+  operating system and C library in use.
 
-    For more information about the format options, read the |strftime| page.
+  For more information about the format options, read the |strftime| page.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns an array or FALSE on failure.
@@ -48,18 +48,18 @@ parameters                             Description
 "unparsed" the {date} part which was not recognized using the specified
            {format}
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 strptime() example
 
 <?php >
-    $format = '%d/%m/%Y %H:%M:%S';
-    $strf = strftime($format);
+  $format = '%d/%m/%Y %H:%M:%S';
+  $strf = strftime($format);
 
-    echo "$strf\n";
+  echo "$strf\n";
 
-    print_r(strptime($strf, $format));
+  print_r(strptime($strf, $format));
 <?>
 
 The above example will output something similar to:
@@ -79,39 +79,38 @@ Array
     [unparsed] =>
 )
 
-==============================================================================
+===============================================================================
 *Notes*
 
-    Note: This function is not implemented on Windows platforms.
+  Note: This function is not implemented on Windows platforms.
 
-    Note:
+  Note:
 
-    Internally, this function calls the strptime() function provided by the
-    system's C library. This function can exhibit noticeably different
-    behaviour across different operating systems. The use of 
-    |date_parse_from_format|, which does not suffer from these issues, is
-    recommended on PHP 5.3.0 and later.
+  Internally, this function calls the strptime() function provided by the
+  system's C library. This function can exhibit noticeably different behaviour
+  across different operating systems. The use of |date_parse_from_format|,
+  which does not suffer from these issues, is recommended on PHP 5.3.0 and
+  later.
 
-    Note:
+  Note:
 
-    "tm_sec" includes any leap seconds (currently upto 2 a year). For more
-    information on leap seconds, see the >> Wikipedia article on leap seconds.
+  "tm_sec" includes any leap seconds (currently upto 2 a year). For more
+  information on leap seconds, see the » Wikipedia article on leap seconds.
 
-    Note:
+  Note:
 
-    Prior to PHP 5.2.0, this function could return undefined behaviour.
-    Notably, the "tm_sec", "tm_min" and "tm_hour" entries would return
-    undefined values.
+  Prior to PHP 5.2.0, this function could return undefined behaviour. Notably,
+  the "tm_sec", "tm_min" and "tm_hour" entries would return undefined values.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |checkdate| - Validate a Gregorian date
-  * |strftime| - Format a local time/date according to locale settings
-  * |date_parse_from_format| - Get info about given date formatted according
-    to the specified format
-  * DateTime::createFromFormat() - Parses a time string according to a
-    specified format
+ * |checkdate| - Validate a Gregorian date
+ * |strftime| - Format a local time/date according to locale settings
+ * |date_parse_from_format| - Get info about given date formatted according to
+  the specified format
+ * DateTime::createFromFormat() - Parses a time string according to a specified
+  format
 
 
 vim:ft=help:

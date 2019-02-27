@@ -4,18 +4,17 @@ socket_recvmsg
 
 socket_recvmsg — Read a message
 
-==============================================================================
+===============================================================================
 *Description*
 
-    int socket_recvmsg ( resource $socket , string &$message [, int $flags =~
-    0 ] )~
+  socket_recvmsg ( resource $socket , array &$message [, int $flags = 0 ] ) :~
+  int~
 
 Warning
 
-This function is currently not documented; only its argument list is
-available.
+This function is currently not documented; only its argument list is available.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {socket}
@@ -24,14 +23,14 @@ available.
 
 {flags}
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |socket_sendmsg| - Send a message
-  * |socket_cmsg_space| - Calculate message buffer size
+ * |socket_sendmsg| - Send a message
+ * |socket_cmsg_space| - Calculate message buffer size
 
 
 vim:ft=help:

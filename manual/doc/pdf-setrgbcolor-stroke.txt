@@ -4,17 +4,16 @@ PDF_setrgbcolor_stroke
 
 PDF_setrgbcolor_stroke — Set stroke rgb color values [deprecated]
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool PDF_setrgbcolor_stroke ( resource $p , float $red , float $green ,~
-    float $blue )~
+  PDF_setrgbcolor_stroke ( resource $p , float $red , float $green , float~
+  $blue ) : bool~
 
 Sets the current stroke color to the supplied RGB values. Returns TRUE on
 success or FALSE on failure.
 
-This function is deprecated since PDFlib version 4, use |PDF_setcolor|
-instead.
+This function is deprecated since PDFlib version 4, use |PDF_setcolor| instead.
 
 
 vim:ft=help:

@@ -8,42 +8,42 @@ Warning
 
 This function has been REMOVED in PECL uopz 5.0.0.
 
-==============================================================================
+===============================================================================
 *Description*
 
-    void uopz_backup ( string $class , string $function )~
-    void uopz_backup ( string $function )~
+  uopz_backup ( string $function ) : void~
+  uopz_backup ( string $class , string $function ) : void~
 
 Backup a function at runtime, to be restored on shutdown
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {class}
 
-    The name of the class containing the function to backup
+  The name of the class containing the function to backup
 
 {function}
 
-    The name of the function
+  The name of the function
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 uopz_backup() example
 
 <?php >
-    uopz_backup("fgets");
-    uopz_function("fgets", function(){
-        return true;
-    });
-    var_dump(fgets());
+  uopz_backup("fgets");
+  uopz_function("fgets", function(){
+      return true;
+  });
+  var_dump(fgets());
 <?>
 
-The above example will output something similar to:
+The above example will output:
 
 bool(true)
 

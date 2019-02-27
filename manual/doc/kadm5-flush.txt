@@ -4,22 +4,22 @@ kadm5_flush
 
 kadm5_flush — Flush all changes to the Kerberos database
 
-==============================================================================
+===============================================================================
 *Description*
 
-    bool kadm5_flush ( resource $handle )~
+  kadm5_flush ( resource $handle ) : bool~
 
 Flush all changes to the Kerberos database, leaving the connection to the
 Kerberos admin server open.
 
-==============================================================================
+===============================================================================
 *Parameters*
 
 {handle}
 
-    A KADM5 handle.
+  A KADM5 handle.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns TRUE on success or FALSE on failure.

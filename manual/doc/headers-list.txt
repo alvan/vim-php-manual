@@ -4,39 +4,39 @@ headers_list
 
 headers_list — Returns a list of response headers sent (or ready to send)
 
-==============================================================================
+===============================================================================
 *Description*
 
-    array headers_list ( void )~
+  headers_list ( void ) : array~
 
 headers_list() will return a list of headers to be sent to the browser /
 client. To determine whether or not these headers have been sent yet, use 
 |headers_sent|.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
 Returns a numerically indexed array of headers.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 Examples using headers_list()
 
 <?php >
 
-    /* setcookie() will add a response header on its own */
-    setcookie('foo', 'bar');
+  /* setcookie() will add a response header on its own */
+  setcookie('foo', 'bar');
 
-    /* Define a custom response header
-       This will be ignored by most clients */
-    header("X-Sample-Test: foo");
+  /* Define a custom response header
+     This will be ignored by most clients */
+  header("X-Sample-Test: foo");
 
-    /* Specify plain text content in our response */
-    header('Content-type: text/plain');
+  /* Specify plain text content in our response */
+  header('Content-type: text/plain');
 
-    /* What headers are going to be sent? */
-    var_dump(headers_list());
+  /* What headers are going to be sent? */
+  var_dump(headers_list());
 
 <?>
 
@@ -54,22 +54,22 @@ array(4) {
 }
 
 
-==============================================================================
+===============================================================================
 *Notes*
 
-    Note:
+  Note:
 
-    Headers will only be accessible and output when a SAPI that supports them
-    is in use.
+  Headers will only be accessible and output when a SAPI that supports them is
+  in use.
 
-==============================================================================
+===============================================================================
 *See* *Also*
 
-  * |headers_sent| - Checks if or where headers have been sent
-  * |header| - Send a raw HTTP header
-  * |setcookie| - Send a cookie
-  * |apache_response_headers| - Fetch all HTTP response headers
-  * |http_response_code| - Get or Set the HTTP response code
+ * |headers_sent| - Checks if or where headers have been sent
+ * |header| - Send a raw HTTP header
+ * |setcookie| - Send a cookie
+ * |apache_response_headers| - Fetch all HTTP response headers
+ * |http_response_code| - Get or Set the HTTP response code
 
 
 vim:ft=help:

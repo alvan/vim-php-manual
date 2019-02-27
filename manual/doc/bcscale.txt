@@ -2,50 +2,54 @@ bcscale
 
 (PHP 4, PHP 5, PHP 7)
 
-bcscale — Set default scale parameter for all bc math functions
+bcscale — Set or get default scale parameter for all bc math functions
 
-==============================================================================
+===============================================================================
 *Description*
 
-    int bcscale ([ int $scale ] )~
+  bcscale ( int $scale ) : int~
 
 Sets the default scale parameter for all subsequent calls to bc math functions
-that do not explicitly specify a scale parameter. If {scale} is omitted, the
-function gets the current scale factor.
+that do not explicitly specify a scale parameter.
 
-==============================================================================
+  bcscale ( void ) : int~
+
+Gets the current scale factor.
+
+===============================================================================
 *Parameters*
 
 {scale}
 
-    The scale factor.
+  The scale factor.
 
-==============================================================================
+===============================================================================
 *Return* *Values*
 
-Returns the old scale.
+Returns the old scale when used as setter. Otherwise the current scale is
+returned.
 
-==============================================================================
+===============================================================================
 *Changelog*
 
-Version                              Description
-        bcscale() can now be used to get the current scale factor; when used
-7.3.0   as setter, it now returns the old scale value. Formerly, {scale} was
+Version                               Description
+        bcscale() can now be used to get the current scale factor; when used as
+7.3.0   setter, it now returns the old scale value. Formerly, {scale} was
         mandatory, and bcscale() always returned TRUE.
 
-==============================================================================
+===============================================================================
 *Examples*
 
 Example #1 bcscale() example
 
 <?php >
 
-    // default scale : 3
-    bcscale(3);
-    echo bcdiv('105', '6.55957'); // 16.007
+  // default scale : 3
+  bcscale(3);
+  echo bcdiv('105', '6.55957'); // 16.007
 
-    // this is the same without bcscale()
-    echo bcdiv('105', '6.55957', 3); // 16.007
+  // this is the same without bcscale()
+  echo bcdiv('105', '6.55957', 3); // 16.007
 
 <?>
 
