@@ -1,0 +1,37 @@
+*stats_dens_normal*
+
+(PECL stats >= 1.0.0)
+
+stats_dens_normal — Probability density function of the normal distribution
+
+===============================================================================
+[ Description ]
+
+  stats_dens_normal ( float $x , float $ave , float $stdev ) : float~
+
+Returns the probability density at {x}, where the random variable follows the
+normal distribution of which the mean is {ave} and the standard deviation is
+{stdev}.
+
+===============================================================================
+[ Parameters ]
+
+{x}
+
+  The value at which the probability density is calculated
+
+{ave}
+
+  The mean of the distribution
+
+{stdev}
+
+  The standard deviation of the distribution
+
+===============================================================================
+[ Return Values ]
+
+The probability density at {x} or FALSE for failure.
+
+
+vim:ft=help:

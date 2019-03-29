@@ -1,0 +1,53 @@
+*uopz_restore*
+
+(PECL uopz 1 >= 1.0.3, PECL uopz 2)
+
+uopz_restore — Restore a previously backed up function
+
+Warning
+
+This function has been REMOVED in PECL uopz 5.0.0.
+
+===============================================================================
+[ Description ]
+
+  uopz_restore ( string $function ) : void~
+  uopz_restore ( string $class , string $function ) : void~
+
+Restore a previously backed up function
+
+===============================================================================
+[ Parameters ]
+
+{class}
+
+  The name of the class containing the function to restore
+
+{function}
+
+  The name of the function
+
+===============================================================================
+[ Return Values ]
+
+===============================================================================
+[ Examples ]
+
+Example #1 uopz_restore() example
+
+<?php >
+  uopz_backup("fgets");
+  uopz_function("fgets", function(){
+      return true;
+  });
+  var_dump(fgets());
+  uopz_restore('fgets');
+  fgets();
+<?>
+
+The above example will output something similar to:
+
+Warning: fgets() expects at least 1 parameter, 0 given in /path/to/script.php on line 8
+
+
+vim:ft=help:

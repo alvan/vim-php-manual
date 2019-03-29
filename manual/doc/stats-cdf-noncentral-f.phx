@@ -1,0 +1,60 @@
+*stats_cdf_noncentral_f*
+
+(PECL stats >= 1.0.0)
+
+stats_cdf_noncentral_f — Calculates any one parameter of the non-central F
+distribution given values for the others
+
+===============================================================================
+[ Description ]
+
+  stats_cdf_noncentral_f ( float $par1 , float $par2 , float $par3 , float~
+  $par4 , int $which ) : float~
+
+Returns the cumulative distribution function, its inverse, or one of its
+parameters, of the non-central F distribution. The kind of the return value and
+parameters ({par1}, {par2}, {par3}, and {par4}) are determined by {which}.
+
+The following table lists the return value and parameters by {which}. CDF, x,
+nu1, nu2, and lambda denotes cumurative distribution function, the value of the
+random variable, the degree of freedoms and the non-centrality parameter of the
+distribution, respectively.
+
+          Return value and parameters
+{which} Return value {par1} {par2} {par3} {par4}
+1       CDF          x      nu1    nu2    lambda
+2       x            CDF    nu1    nu2    lambda
+3       nu1          x      CDF    nu2    lambda
+4       nu2          x      CDF    nu1    lambda
+5       lambda       x      CDF    nu1    nu2
+
+===============================================================================
+[ Parameters ]
+
+{par1}
+
+  The first parameter
+
+{par2}
+
+  The second parameter
+
+{par3}
+
+  The third parameter
+
+{par4}
+
+  The fourth parameter
+
+{which}
+
+  The flag to determine what to be calculated
+
+===============================================================================
+[ Return Values ]
+
+Returns CDF, x, nu1, nu2, or lambda, determined by {which}.
+
+
+vim:ft=help:

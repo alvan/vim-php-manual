@@ -1,0 +1,53 @@
+*ibase_add_user*
+
+(PHP 5, PHP 7)
+
+ibase_add_user — Add a user to a security database
+
+===============================================================================
+[ Description ]
+
+  ibase_add_user ( resource $service_handle , string $user_name , string~
+  $password [, string $first_name [, string $middle_name [, string $last_name~
+  ]]] ) : bool~
+
+===============================================================================
+[ Parameters ]
+
+{service_handle}
+
+  The handle on the database server service.
+
+{user_name}
+
+  The login name of the new database user.
+
+{password}
+
+  The password of the new user.
+
+{first_name}
+
+  The first name of the new database user.
+
+{middle_name}
+
+  The middle name of the new database user.
+
+{last_name}
+
+  The last name of the new database user.
+
+===============================================================================
+[ Return Values ]
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+[ See Also ]
+
+ * |ibase_modify_user| - Modify a user to a security database
+ * |ibase_delete_user| - Delete a user from a security database
+
+
+vim:ft=help:

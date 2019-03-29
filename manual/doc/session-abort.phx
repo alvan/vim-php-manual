@@ -1,0 +1,37 @@
+*session_abort*
+
+(PHP 5 >= 5.6.0, PHP 7)
+
+session_abort — Discard session array changes and finish session
+
+===============================================================================
+[ Description ]
+
+  session_abort ( void ) : bool~
+
+session_abort() finishes session without saving data. Thus the original values
+in session data are kept.
+
+===============================================================================
+[ Return Values ]
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+7.2.0   The return type of this function is bool now. Formerly, it has been 
+        void.
+
+===============================================================================
+[ See Also ]
+
+ * $_SESSION
+ * The session.auto_start configuration directive
+ * |session_start| - Start new or resume existing session
+ * |session_reset| - Re-initialize session array with original values
+ * |session_commit| - Alias of session_write_close
+
+
+vim:ft=help:

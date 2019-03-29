@@ -1,0 +1,27 @@
+*udm_free_agent*
+
+(PHP 4 >= 4.0.5, PHP 5 < 5.1.0, PECL mnogosearch >= 1.0.0)
+
+udm_free_agent — Free mnoGoSearch session
+
+===============================================================================
+[ Description ]
+
+  udm_free_agent ( resource $agent ) : int~
+
+Freeing up memory allocated for agent session.
+
+===============================================================================
+[ Parameters ]
+
+{agent}
+
+  A link to Agent, received after call to |udm_alloc_agent|.
+
+===============================================================================
+[ Return Values ]
+
+Returns TRUE on success or FALSE on failure.
+
+
+vim:ft=help:

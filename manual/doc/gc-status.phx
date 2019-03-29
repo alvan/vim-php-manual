@@ -1,0 +1,69 @@
+*gc_status*
+
+(PHP 7 >= 7.3.0)
+
+gc_status — Gets information about the garbage collector
+
+===============================================================================
+[ Description ]
+
+  gc_status ( void ) : array~
+
+Gets information about the current state of the garbage collector.
+
+===============================================================================
+[ Parameters ]
+
+This function has no parameters.
+
+===============================================================================
+[ Return Values ]
+
+Returns an associative array with the following elements:
+
+ * "runs"
+ * "collected"
+ * "threshold"
+ * "roots"
+
+===============================================================================
+[ Examples ]
+
+Example #1 gc_status() Usage
+
+<?php >
+
+// create object tree that needs gc collection
+$a = new stdClass();
+$a->b = [];
+for ($i = 0; $i < 100000; $i++) {
+    $b = new stdClass();
+    $b->a = $a;
+    $a->b[] = $b;
+}
+unset($a);
+unset($b);
+gc_collect_cycles();
+
+var_dump(gc_status());
+
+The above example will output something similar to:
+
+array(4) {
+  ["runs"]=>
+  int(5)
+  ["collected"]=>
+  int(100002)
+  ["threshold"]=>
+  int(50001)
+  ["roots"]=>
+  int(0)
+}
+
+===============================================================================
+[ See Also ]
+
+ * Garbage Collection
+
+
+vim:ft=help:

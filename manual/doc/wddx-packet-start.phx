@@ -1,0 +1,32 @@
+*wddx_packet_start*
+
+(PHP 4, PHP 5, PHP 7)
+
+wddx_packet_start — Starts a new WDDX packet with structure inside it
+
+Warning
+
+This function was REMOVED in PHP 7.4.0.
+
+===============================================================================
+[ Description ]
+
+  wddx_packet_start ([ string $comment ] ) : resource~
+
+Start a new WDDX packet for incremental addition of variables. It automatically
+creates a structure definition inside the packet to contain the variables.
+
+===============================================================================
+[ Parameters ]
+
+{comment}
+
+  An optional comment string.
+
+===============================================================================
+[ Return Values ]
+
+Returns a packet ID for use in later functions, or FALSE on error.
+
+
+vim:ft=help:

@@ -1,0 +1,53 @@
+*ibase_modify_user*
+
+(PHP 5, PHP 7)
+
+ibase_modify_user — Modify a user to a security database
+
+===============================================================================
+[ Description ]
+
+  ibase_modify_user ( resource $service_handle , string $user_name , string~
+  $password [, string $first_name [, string $middle_name [, string $last_name~
+  ]]] ) : bool~
+
+===============================================================================
+[ Parameters ]
+
+{service_handle}
+
+  The handle on the database server service.
+
+{user_name}
+
+  The login name of the database user to modify.
+
+{password}
+
+  The user's new password.
+
+{first_name}
+
+  The user's new first name.
+
+{middle_name}
+
+  The user's new middle name.
+
+{last_name}
+
+  The user's new last name.
+
+===============================================================================
+[ Return Values ]
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+[ See Also ]
+
+ * |ibase_add_user| - Add a user to a security database
+ * |ibase_delete_user| - Delete a user from a security database
+
+
+vim:ft=help:

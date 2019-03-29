@@ -1,0 +1,85 @@
+*session_set_cookie_params*
+
+(PHP 4, PHP 5, PHP 7)
+
+session_set_cookie_params — Set the session cookie parameters
+
+===============================================================================
+[ Description ]
+
+  session_set_cookie_params ( int $lifetime [, string $path [, string $domain~
+  [, bool $secure = FALSE [, bool $httponly = FALSE ]]]] ) : bool~
+  session_set_cookie_params ( array $options ) : bool~
+
+Set cookie parameters defined in the php.ini file. The effect of this function
+only lasts for the duration of the script. Thus, you need to call 
+session_set_cookie_params() for every request and before |session_start| is
+called.
+
+This function updates the runtime ini values of the corresponding PHP ini
+configuration keys which can be retrieved with the |ini_get|.
+
+===============================================================================
+[ Parameters ]
+
+{lifetime}
+
+  Lifetime of the session cookie, defined in seconds.
+
+{path}
+
+  Path on the domain where the cookie will work. Use a single slash ('/') for
+  all paths on the domain.
+
+{domain}
+
+  Cookie domain, for example 'www.php.net'. To make cookies visible on all
+  subdomains then the domain must be prefixed with a dot like '.php.net'.
+
+{secure}
+
+  If TRUE cookie will only be sent over secure connections.
+
+{httponly}
+
+  If set to TRUE then PHP will attempt to send the httponly flag when setting
+  the session cookie.
+
+{options}
+
+  An associative array which may have any of the keys lifetime, path, domain,
+  secure, httponly and samesite. The values have the same meaning as described
+  for the parameters with the same name. The value of the samesite element
+  should be either Lax or Strict. If any of the allowed options are not given,
+  their default values are the same as the default values of the explicit
+  parameters. If the samesite element is omitted, no SameSite cookie attribute
+  is set.
+
+===============================================================================
+[ Return Values ]
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+7.3.0   An alternative signature supporting an {options} array has been added.
+        This signature supports also setting of the SameSite cookie attribute.
+7.2.0   Returns TRUE on success or FALSE on failure. Formerly the function
+        returned void.
+5.2.0   The {httponly} parameter was added.
+
+===============================================================================
+[ See Also ]
+
+ * session.cookie_lifetime
+ * session.cookie_path
+ * session.cookie_domain
+ * session.cookie_secure
+ * session.cookie_httponly
+ * session.cookie_samesite
+ * |session_get_cookie_params| - Get the session cookie parameters
+
+
+vim:ft=help:

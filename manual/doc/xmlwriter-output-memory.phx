@@ -1,0 +1,45 @@
+*XMLWriter::outputMemory* *xmlwriter_output_memory*
+
+(PHP 5 >= 5.1.2, PHP 7, PECL xmlwriter >= 0.1.0)
+
+XMLWriter::outputMemory -- xmlwriter_output_memory — Returns current buffer
+
+===============================================================================
+[ Description ]
+
+Object oriented style
+
+  XMLWriter::outputMemory ([ bool $flush = TRUE ] ) : string~
+
+Procedural style
+
+  xmlwriter_output_memory ( resource $xmlwriter [, bool $flush = TRUE ] ) :~
+  string~
+
+Returns the current buffer.
+
+===============================================================================
+[ Parameters ]
+
+{ xmlwriter}
+
+  Only for procedural calls. The XMLWriter resource that is being modified.
+  This resource comes from a call to |xmlwriter_open_uri| or 
+  |xmlwriter_open_memory|.
+
+{flush}
+
+  Whether to flush the output buffer or not. Default is TRUE.
+
+===============================================================================
+[ Return Values ]
+
+Returns the current buffer as a string.
+
+===============================================================================
+[ See Also ]
+
+ * |XMLWriter::flush| - Flush current buffer
+
+
+vim:ft=help:

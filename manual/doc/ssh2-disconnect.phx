@@ -1,0 +1,32 @@
+*ssh2_disconnect*
+
+(PECL ssh2 >= 1.0)
+
+ssh2_disconnect — Close a connection to a remote SSH server
+
+===============================================================================
+[ Description ]
+
+  ssh2_disconnect ( resource $session ) : bool~
+
+Close a connection to a remote SSH server.
+
+===============================================================================
+[ Parameters ]
+
+{session}
+
+  An SSH connection link identifier, obtained from a call to |ssh2_connect|.
+
+===============================================================================
+[ Return Values ]
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+[ See Also ]
+
+ * |ssh2_connect| - Connect to an SSH server
+
+
+vim:ft=help:

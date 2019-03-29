@@ -1,0 +1,33 @@
+*curl_share_errno*
+
+(PHP 7 >= 7.1.0)
+
+curl_share_errno — Return the last share curl error number
+
+===============================================================================
+[ Description ]
+
+  curl_share_errno ( resource $sh ) : int~
+
+Return an integer containing the last share curl error number.
+
+===============================================================================
+[ Parameters ]
+
+{sh}
+
+  A cURL share handle returned by |curl_share_init|.
+
+===============================================================================
+[ Return Values ]
+
+Returns an integer containing the last share curl error number, or FALSE on
+failure.
+
+===============================================================================
+[ See Also ]
+
+ * |curl_errno| - Return the last error number
+
+
+vim:ft=help:

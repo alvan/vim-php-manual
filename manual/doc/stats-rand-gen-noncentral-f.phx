@@ -1,0 +1,39 @@
+*stats_rand_gen_noncentral_f*
+
+(PECL stats >= 1.0.0)
+
+stats_rand_gen_noncentral_f — Generates a random deviate from the noncentral F
+distribution
+
+===============================================================================
+[ Description ]
+
+  stats_rand_gen_noncentral_f ( float $dfn , float $dfd , float $xnonc ) :~
+  float~
+
+Returns a random deviate from the non-central F distribution where the degrees
+of freedoms are {dfn} (numerator) and {dfd} (denominator), and the
+non-centrality parameter is {xnonc}.
+
+===============================================================================
+[ Parameters ]
+
+{dfn}
+
+  The degrees of freedom of the numerator
+
+{dfd}
+
+  The degrees of freedom of the denominator
+
+{xnonc}
+
+  The non-centrality parameter
+
+===============================================================================
+[ Return Values ]
+
+A random deviate
+
+
+vim:ft=help:

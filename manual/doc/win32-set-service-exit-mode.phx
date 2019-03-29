@@ -1,0 +1,48 @@
+*win32_set_service_exit_mode*
+
+(PECL win32service >=0.4.0)
+
+win32_set_service_exit_mode — Define or return the exit mode for the current
+running service
+
+===============================================================================
+[ Description ]
+
+  win32_set_service_exit_mode ([ bool $gracefulMode = true ] ) : bool~
+
+If {gracefulMode} parameter is provided, the exit mode is changed. When the
+exit mode is not gracefuly, the exit code used can be set with the 
+|win32_set_service_exit_code| function.
+
+Caution
+
+This function work only in "cli" SAPI. On other SAPI this function is disabled.
+
+===============================================================================
+[ Parameters ]
+
+{gracefulMode}
+
+  TRUE for exit graceful. FALSE for exit with error.
+
+===============================================================================
+[ Return Values ]
+
+Return the current or old exit mode.
+
+===============================================================================
+[ Errors/Exceptions ]
+
+If SAPI is not "cli", this function emits an E_ERROR level error.
+
+===============================================================================
+[ See Also ]
+
+ * |win32_start_service_ctrl_dispatcher| - Registers the script with the SCM,
+  so that it can act as the service with the given name
+ * |win32_set_service_status| - Update the service status
+ * |win32_set_service_exit_code| - Define or return the exit code for the
+  current running service
+
+
+vim:ft=help:

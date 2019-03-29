@@ -1,0 +1,37 @@
+*session_module_name*
+
+(PHP 4, PHP 5, PHP 7)
+
+session_module_name — Get and/or set the current session module
+
+===============================================================================
+[ Description ]
+
+  session_module_name ([ string $module ] ) : string~
+
+session_module_name() gets the name of the current session module, which is
+also known as session.save_handler.
+
+===============================================================================
+[ Parameters ]
+
+{module}
+
+  If {module} is specified, that module will be used instead. Passing "user" to
+  this parameter is forbidden. Instead set_set_save_handler() has to be called
+  to set a user defined session handler.
+
+===============================================================================
+[ Return Values ]
+
+Returns the name of the current session module.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+7.2.0   It is now explicitly forbidden to set the module name to "user".
+        Formerly, this has been silently ignored.
+
+
+vim:ft=help:

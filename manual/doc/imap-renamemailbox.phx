@@ -1,0 +1,53 @@
+*imap_renamemailbox*
+
+(PHP 4, PHP 5, PHP 7)
+
+imap_renamemailbox — Rename an old mailbox to new mailbox
+
+===============================================================================
+[ Description ]
+
+  imap_renamemailbox ( resource $imap_stream , string $old_mbox , string~
+  $new_mbox ) : bool~
+
+This function renames on old mailbox to new mailbox (see |imap_open| for the
+format of {mbox} names).
+
+===============================================================================
+[ Parameters ]
+
+{ imap_stream}
+
+  An IMAP stream returned by |imap_open|.
+
+{old_mbox}
+
+  The old mailbox name, see |imap_open| for more information
+
+  Warning
+
+  Passing untrusted data to this parameter is insecure, unless
+  imap.enable_insecure_rsh is disabled.
+
+{new_mbox}
+
+  The new mailbox name, see |imap_open| for more information
+
+  Warning
+
+  Passing untrusted data to this parameter is insecure, unless
+  imap.enable_insecure_rsh is disabled.
+
+===============================================================================
+[ Return Values ]
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+[ See Also ]
+
+ * |imap_createmailbox| - Create a new mailbox
+ * |imap_deletemailbox| - Delete a mailbox
+
+
+vim:ft=help:

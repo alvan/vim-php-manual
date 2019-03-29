@@ -35,7 +35,7 @@ while (false !== ($src = $dir->read()))
         printf('[%s] %s' . PHP_EOL, date('c'), 'Processing ' . $src);
 
         $tmp = DIR_TMP . $src;
-        $doc = DIR_DOC . preg_replace('/^function\./', '', preg_replace('/html$/', 'txt', $src));
+        $doc = DIR_DOC . preg_replace('/^function\./', '', preg_replace('/html$/', 'phx', $src));
 
         $htm = file_get_contents($dir->path . $src);
         if (preg_match('#<h1[^>]*>([^<]+)</h1>#', $htm, $mas))
@@ -43,6 +43,7 @@ while (false !== ($src = $dir->read()))
         else
             continue;
 
+	$htm = preg_replace ('/<h1 class=[^>]+>([^<]+)<\/h1>/', '*\\1*', $htm);
         $htm = preg_replace_callback('#(<div class="methodsynopsis dc-description">)(.+?)(</div>)#s', function($mas) {
             return $mas[1] . '<br>' . wordwrap(
                 preg_replace('#(?:\s+){2,}#', ' ', trim(str_replace(array("\r", "\n"), '', strip_tags($mas[2])))),
@@ -51,7 +52,7 @@ while (false !== ($src = $dir->read()))
             ) . '~' .  $mas[3];
         }, $htm);
         $htm = preg_replace_callback('#(<h3[^>]*>)(.+?)(</h3>)#', function($mas) {
-            return $mas[1] . str_repeat('=', NUM_COL) . '<br>*' . implode('* *', explode(' ', $mas[2])) . '*' . $mas[3];
+            return $mas[1] . str_repeat('=', NUM_COL) . '<br>[ ' . implode(' ', explode(' ', $mas[2])) . ' ]' . $mas[3];
         }, $htm);
         $htm = preg_replace_callback('#(<strong[^>]+class="command"[^>]*>)(.+?)(</strong>)#', function($mas) {
             return $mas[1] . '`' . implode('` `', explode(' ', $mas[2])) . '`' . $mas[3];

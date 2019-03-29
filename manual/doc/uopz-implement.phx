@@ -1,0 +1,49 @@
+*uopz_implement*
+
+(PECL uopz 1, PECL uopz 2, PECL uopz 5, PECL uopz 6)
+
+uopz_implement — Implements an interface at runtime
+
+===============================================================================
+[ Description ]
+
+  uopz_implement ( string $class , string $interface ) : bool~
+
+Makes {class} implement {interface}
+
+===============================================================================
+[ Parameters ]
+
+{class}
+
+{interface}
+
+===============================================================================
+[ Return Values ]
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+[ Examples ]
+
+Example #1 uopz_implement() example
+
+<?php >
+  interface myInterface {}
+
+  class myClass {}
+
+  uopz_implement(myClass::class, myInterface::class);
+
+  var_dump(class_implements(myClass::class));
+<?>
+
+The above example will output:
+
+array(1) {
+  ["myInterface"]=>
+  string(11) "myInterface"
+}
+
+
+vim:ft=help:

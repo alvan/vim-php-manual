@@ -1,0 +1,65 @@
+*rename*
+
+(PHP 4, PHP 5, PHP 7)
+
+rename — Renames a file or directory
+
+===============================================================================
+[ Description ]
+
+  rename ( string $oldname , string $newname [, resource $context ] ) : bool~
+
+Attempts to rename {oldname} to {newname}, moving it between directories if
+necessary. If renaming a file and {newname} exists, it will be overwritten. If
+renaming a directory and {newname} exists, this function will emit a warning.
+
+===============================================================================
+[ Parameters ]
+
+{oldname}
+
+  The old name.
+
+    Note:
+
+    The wrapper used in {oldname} must match the wrapper used in {newname}.
+
+{newname}
+
+  The new name.
+
+{context}
+
+
+    Note: Context support was added with PHP 5.0.0. For a description of
+    contexts, refer to Streams.
+
+===============================================================================
+[ Return Values ]
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+[ Changelog ]
+
+Version                       Description
+5.3.1   rename() can now rename files across drives in Windows.
+
+===============================================================================
+[ Examples ]
+
+Example #1 Example with rename()
+
+<?php >
+  rename("/tmp/tmp_file.txt", "/home/user/login/docs/my_file.txt");
+<?>
+
+===============================================================================
+[ See Also ]
+
+ * |copy| - Copies file
+ * |unlink| - Deletes a file
+ * |move_uploaded_file| - Moves an uploaded file to a new location
+
+
+vim:ft=help:

@@ -1,0 +1,53 @@
+*jdmonthname*
+
+(PHP 4, PHP 5, PHP 7)
+
+jdmonthname — Returns a month name
+
+===============================================================================
+[ Description ]
+
+  jdmonthname ( int $julianday , int $mode ) : string~
+
+Returns a string containing a month name. {mode} tells this function which
+calendar to convert the Julian Day Count to, and what type of month names are
+to be returned.
+
+                                Calendar modes
+          Mode              Meaning                    Values
+CAL_MONTH_GREGORIAN_SHORT Gregorian - Jan, Feb, Mar, Apr, May, Jun, Jul, Aug,
+                          abbreviated Sep, Oct, Nov, Dec
+                                      January, February, March, April, May,
+CAL_MONTH_GREGORIAN_LONG  Gregorian   June, July, August, September, October,
+                                      November, December
+CAL_MONTH_JULIAN_SHORT    Julian -    Jan, Feb, Mar, Apr, May, Jun, Jul, Aug,
+                          abbreviated Sep, Oct, Nov, Dec
+                                      January, February, March, April, May,
+CAL_MONTH_JULIAN_LONG     Julian      June, July, August, September, October,
+                                      November, December
+                                      Tishri, Heshvan, Kislev, Tevet, Shevat,
+CAL_MONTH_JEWISH          Jewish      AdarI, AdarII, Nisan, Iyyar, Sivan,
+                                      Tammuz, Av, Elul
+                                      Vendemiaire, Brumaire, Frimaire, Nivose,
+CAL_MONTH_FRENCH          French      Pluviose, Ventose, Germinal, Floreal,
+                          Republican  Prairial, Messidor, Thermidor, Fructidor,
+                                      Extra
+
+===============================================================================
+[ Parameters ]
+
+{jday}
+
+  The Julian Day to operate on
+
+{mode}
+
+  The calendar mode (see table above).
+
+===============================================================================
+[ Return Values ]
+
+The month name for the given Julian Day and {mode}.
+
+
+vim:ft=help:

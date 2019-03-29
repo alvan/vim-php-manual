@@ -1,0 +1,35 @@
+*wddx_serialize_value*
+
+(PHP 4, PHP 5, PHP 7)
+
+wddx_serialize_value — Serialize a single value into a WDDX packet
+
+Warning
+
+This function was REMOVED in PHP 7.4.0.
+
+===============================================================================
+[ Description ]
+
+  wddx_serialize_value ( mixed $var [, string $comment ] ) : string~
+
+Creates a WDDX packet from a single given value.
+
+===============================================================================
+[ Parameters ]
+
+{var}
+
+  The value to be serialized
+
+{comment}
+
+  An optional comment string that appears in the packet header.
+
+===============================================================================
+[ Return Values ]
+
+Returns the WDDX packet, or FALSE on error.
+
+
+vim:ft=help:

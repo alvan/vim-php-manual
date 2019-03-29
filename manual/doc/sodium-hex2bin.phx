@@ -1,0 +1,34 @@
+*sodium_hex2bin*
+
+(PHP 7 >= 7.2.0)
+
+sodium_hex2bin — Decodes a hexadecimally encoded binary string
+
+===============================================================================
+[ Description ]
+
+  sodium_hex2bin ( string $hex [, string $ignore ] ) : string~
+
+Decodes a hexadecimally encoded binary string.
+
+Like |sodium_bin2hex|, sodium_hex2bin() is resistant to side-channel attacks
+while |hex2bin| is not.
+
+===============================================================================
+[ Parameters ]
+
+{hex}
+
+  Hexadecimal representation of data.
+
+{ignore}
+
+  Optional string argument for characters to ignore.
+
+===============================================================================
+[ Return Values ]
+
+Returns the binary representation of the given {hex} data.
+
+
+vim:ft=help:

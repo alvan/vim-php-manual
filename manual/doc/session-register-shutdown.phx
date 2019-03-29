@@ -1,0 +1,30 @@
+*session_register_shutdown*
+
+(PHP 5 >= 5.4.0, PHP 7)
+
+session_register_shutdown — Session shutdown function
+
+===============================================================================
+[ Description ]
+
+  session_register_shutdown ( void ) : void~
+
+Registers |session_write_close| as a shutdown function.
+
+===============================================================================
+[ Parameters ]
+
+This function has no parameters.
+
+===============================================================================
+[ Return Values ]
+
+No value is returned.
+
+===============================================================================
+[ Errors/Exceptions ]
+
+Emits E_WARNING if registering the shutdown function fails.
+
+
+vim:ft=help:

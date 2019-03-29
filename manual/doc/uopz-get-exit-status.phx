@@ -1,0 +1,51 @@
+*uopz_get_exit_status*
+
+(PECL uopz 5, PECL uopz 6)
+
+uopz_get_exit_status — Retrieve the last set exit status
+
+===============================================================================
+[ Description ]
+
+  uopz_get_exit_status ( void ) : mixed~
+
+Retrieves the last set exit status, i.e. the value passed to |exit|.
+
+===============================================================================
+[ Parameters ]
+
+This function has no parameters.
+
+===============================================================================
+[ Return Values ]
+
+This function returns the last exit status, or NULL if |exit| has not been
+called.
+
+===============================================================================
+[ Examples ]
+
+Example #1 uopz_get_exit_status() example
+
+<?php >
+exit(123); 
+echo uopz_get_exit_status();?>
+
+The above example will output:
+
+123
+
+===============================================================================
+[ Notes ]
+
+Caution
+
+OPcache optimizes away dead code after unconditional exit.
+
+===============================================================================
+[ See Also ]
+
+ * |uopz_allow_exit| - Allows control over disabled exit opcode
+
+
+vim:ft=help:

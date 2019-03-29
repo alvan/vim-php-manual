@@ -1,0 +1,48 @@
+*sodium_crypto_pwhash_str_verify*
+
+(PHP 7 >= 7.2.0)
+
+sodium_crypto_pwhash_str_verify — Verifies that a password matches a hash
+
+===============================================================================
+[ Description ]
+
+  sodium_crypto_pwhash_str_verify ( string $hash , string $password ) : bool~
+
+Checks that a password hash created using |sodium_crypto_pwhash_str| matches a
+given plain-text password. Note that the parameters are in the opposite order
+to the same parameters in the similar |password_hash| function.
+
+===============================================================================
+[ Parameters ]
+
+{hash}
+
+  A hash created by |password_hash|.
+
+{password}
+
+  The user's password.
+
+===============================================================================
+[ Return Values ]
+
+Returns TRUE if the password and hash match, or FALSE otherwise.
+
+===============================================================================
+[ Notes ]
+
+  Note:
+
+  Hashes are calculated using the Argon2ID algorithm, providing resistance to
+  both GPU and side-channel attacks.
+
+===============================================================================
+[ See Also ]
+
+ * |sodium_crypto_pwhash_str| - Get an ASCII-encoded hash
+ * |password_hash| - Creates a password hash
+ * |password_verify| - Verifies that a password matches a hash
+
+
+vim:ft=help:

@@ -1,0 +1,47 @@
+*MongoDB\Driver\Monitoring\addSubscriber*
+
+(mongodb >=1.3.0)
+
+MongoDB\Driver\Monitoring\addSubscriber — Registers a new monitoring event
+subscriber
+
+===============================================================================
+[ Description ]
+
+  MongoDB\Driver\Monitoring\addSubscriber (~
+  MongoDB\Driver\Monitoring\Subscriber $subscriber ) : void~
+
+Registers a new monitoring event subscriber with the driver. Registered
+subscribers will be notified of monitoring events through specific methods.
+
+  Note: If the object is already registered, this function is a no-op.
+
+===============================================================================
+[ Parameters ]
+
+{subscriber} (MongoDB\Driver\Monitoring\Subscriber)
+
+  A monitoring event subscriber object to register.
+
+===============================================================================
+[ Return Values ]
+
+No value is returned.
+
+===============================================================================
+[ Errors/Exceptions ]
+
+ * Throws MongoDB\Driver\Exception\InvalidArgumentException on argument parsing
+  errors.
+
+===============================================================================
+[ See Also ]
+
+ * MongoDB\Driver\Monitoring\Subscriber
+ * MongoDB\Driver\Monitoring\CommandSubscriber
+ * MongoDB\Driver\Monitoring\removeSubscriber() - Unregisters an existing
+  monitoring event subscriber
+ * Application Performance Monitoring (APM)
+
+
+vim:ft=help:

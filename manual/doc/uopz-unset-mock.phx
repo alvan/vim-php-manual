@@ -1,0 +1,60 @@
+*uopz_unset_mock*
+
+(PECL uopz 5, PECL uopz 6)
+
+uopz_unset_mock — Unset previously set mock
+
+===============================================================================
+[ Description ]
+
+  uopz_unset_mock ( string $class ) : void~
+
+Unsets the previously set mock for {class}.
+
+===============================================================================
+[ Parameters ]
+
+{class}
+
+  The name of the mocked class.
+
+===============================================================================
+[ Errors/Exceptions ]
+
+A RuntimeException is thrown, if no mock was previously set for {class}.
+
+===============================================================================
+[ Examples ]
+
+Example #1 uopz_unset_mock() example
+
+<?php >
+  class A {
+      public static function who() {
+          echo "A";
+      }
+  }
+
+  class mockA {
+      public static function who() {
+          echo "mockA";
+      }
+  }
+
+  uopz_set_mock(A::class, mockA::class);
+  uopz_unset_mock(A::class);
+  A::who();
+<?>
+
+The above example will output:
+
+A
+
+===============================================================================
+[ See Also ]
+
+ * |uopz_set_mock| - Use mock instead of class for new objects
+ * |uopz_get_mock| - Get the current mock for a class
+
+
+vim:ft=help:

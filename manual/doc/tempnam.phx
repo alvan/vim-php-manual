@@ -1,0 +1,67 @@
+*tempnam*
+
+(PHP 4, PHP 5, PHP 7)
+
+tempnam — Create file with unique file name
+
+===============================================================================
+[ Description ]
+
+  tempnam ( string $dir , string $prefix ) : string~
+
+Creates a file with a unique filename, with access permission set to 0600, in
+the specified directory. If the directory does not exist or is not writable, 
+tempnam() may generate a file in the system's temporary directory, and return
+the full path to that file, including its name.
+
+===============================================================================
+[ Parameters ]
+
+{dir}
+
+  The directory where the temporary filename will be created.
+
+{prefix}
+
+  The prefix of the generated temporary filename.
+
+    Note: Windows uses only the first three characters of prefix.
+
+===============================================================================
+[ Return Values ]
+
+Returns the new temporary filename (with path), or FALSE on failure.
+
+===============================================================================
+[ Examples ]
+
+Example #1 tempnam() example
+
+<?php >
+  $tmpfname = tempnam("/tmp", "FOO");
+
+  $handle = fopen($tmpfname, "w");
+  fwrite($handle, "writing to tempfile");
+  fclose($handle);
+
+  // do here something
+
+  unlink($tmpfname);
+<?>
+
+===============================================================================
+[ Notes ]
+
+  Note: If PHP cannot create a file in the specified {dir} parameter, it falls
+  back on the system default. On NTFS this also happens if the specified {dir}
+  contains more than 65534 files.
+
+===============================================================================
+[ See Also ]
+
+ * |tmpfile| - Creates a temporary file
+ * |sys_get_temp_dir| - Returns directory path used for temporary files
+ * |unlink| - Deletes a file
+
+
+vim:ft=help:
