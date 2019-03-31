@@ -1,0 +1,67 @@
+*xml_parse*
+
+(PHP 4, PHP 5, PHP 7)
+
+xml_parse — Start parsing an XML document
+
+===============================================================================
+[ Description ]
+
+  xml_parse ( resource $parser , string $data [, bool $is_final = FALSE ] ) :~
+  int~
+
+xml_parse() parses an XML document. The handlers for the configured events are
+called as many times as necessary.
+
+===============================================================================
+[ Parameters ]
+
+{parser}
+
+  A reference to the XML parser to use.
+
+{data}
+
+  Chunk of data to parse. A document may be parsed piece-wise by calling 
+  xml_parse() several times with new data, as long as the {is_final} parameter
+  is set and TRUE when the last data is parsed.
+
+{is_final}
+
+  If set and TRUE, {data} is the last piece of data sent in this parse.
+
+===============================================================================
+[ Return Values ]
+
+Returns 1 on success or 0 on failure.
+
+For unsuccessful parses, error information can be retrieved with 
+|xml_get_error_code|, |xml_error_string|, |xml_get_current_line_number|, 
+|xml_get_current_column_number| and |xml_get_current_byte_index|.
+
+  Note:
+
+  Some errors (such as entity errors) are reported at the end of the data, thus
+  only if {is_final} is set and TRUE.
+
+===============================================================================
+[ Examples ]
+
+Example #1 Chunked parsing of large XML documents
+
+This example shows how large XML documents can be read and parsed in chunks, so
+that it not necessary to keep the whole document in memory. Error handling is
+omitted for brevity.
+
+<?php >
+$stream = fopen('large.xml', 'r');
+$parser = xml_parser_create();
+// set up the handlers here
+while (($data = fread($stream, 16384))) {
+    xml_parse($parser, $data); // parse the current chunk
+}
+xml_parse($parser, '', true); // finalize parsing
+xml_parser_free($parser);
+fclose($stream);
+
+vim:ft=help:

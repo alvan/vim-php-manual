@@ -1,0 +1,48 @@
+*win32_set_service_exit_code*
+
+(PECL win32service >=0.4.0)
+
+win32_set_service_exit_code — Define or return the exit code for the current
+running service
+
+===============================================================================
+[ Description ]
+
+  win32_set_service_exit_code ([ int $exitCode = 1 ] ) : int~
+
+Change or return the exit code. The exit code is used only if the exit mode is
+not graceful. If the value is not zero, the recovery configuration can be used
+after service fail. See >> Microsoft system error codes for more details
+
+Caution
+
+This function work only in "cli" SAPI. On other SAPI this function is disabled.
+
+===============================================================================
+[ Parameters ]
+
+{exitCode}
+
+  The return code used on exit.
+
+===============================================================================
+[ Return Values ]
+
+Return the current or old exit code.
+
+===============================================================================
+[ Errors/Exceptions ]
+
+If SAPI is not "cli", this function emits an E_ERROR level error.
+
+===============================================================================
+[ See Also ]
+
+ * |win32_start_service_ctrl_dispatcher| - Registers the script with the SCM,
+  so that it can act as the service with the given name
+ * |win32_set_service_status| - Update the service status
+ * |win32_set_service_exit_mode| - Define or return the exit mode for the
+  current running service
+
+
+vim:ft=help:

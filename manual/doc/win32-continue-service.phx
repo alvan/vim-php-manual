@@ -1,0 +1,49 @@
+*win32_continue_service*
+
+(PECL win32service >=0.1.0)
+
+win32_continue_service — Resumes a paused service
+
+===============================================================================
+[ Description ]
+
+  win32_continue_service ( string $servicename [, string $machine ] ) : int~
+
+Resumes a paused, named service. Requires administrative privileges or an
+account with appropriate rights set in the service's ACL.
+
+===============================================================================
+[ Parameters ]
+
+{servicename}
+
+  The short name of the service.
+
+{machine}
+
+  Optional machine name. If omitted, the local machine is used.
+
+===============================================================================
+[ Return Values ]
+
+Returns WIN32_NO_ERROR on success, FALSE if there is a problem with the
+parameters or a Win32 Error Code on failure.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+0.3.0   This function does not longer require an administrator account if ACL
+        is set for another account.
+
+===============================================================================
+[ See Also ]
+
+ * |win32_start_service| - Starts a service
+ * |win32_stop_service| - Stops a service
+ * |win32_pause_service| - Pauses a service
+ * |win32_send_custom_control| - Send a custom control to the service
+ * Win32 Error Codes
+
+
+vim:ft=help:

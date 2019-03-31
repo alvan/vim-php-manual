@@ -1,0 +1,37 @@
+*stats_dens_logistic*
+
+(PECL stats >= 1.0.0)
+
+stats_dens_logistic — Probability density function of the logistic distribution
+
+===============================================================================
+[ Description ]
+
+  stats_dens_logistic ( float $x , float $ave , float $stdev ) : float~
+
+Returns the probability density at {x}, where the random variable follows the
+logistic distribution of which the location parameter is {ave} and the scale
+parameter is {stdev}.
+
+===============================================================================
+[ Parameters ]
+
+{x}
+
+  The value at which the probability density is calculated
+
+{ave}
+
+  The location parameter of the distribution
+
+{stdev}
+
+  The shape parameter of the distribution
+
+===============================================================================
+[ Return Values ]
+
+The probability density at {x} or FALSE for failure.
+
+
+vim:ft=help:

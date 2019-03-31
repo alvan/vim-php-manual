@@ -1,0 +1,38 @@
+*phpdbg_clear*
+
+(PHP 5 >= 5.6.0, PHP 7)
+
+phpdbg_clear — Clears all breakpoints
+
+===============================================================================
+[ Description ]
+
+  phpdbg_clear ( void ) : void~
+
+Clear all breakpoints that have been set, either via one of the phpdbg_break_*
+() functions or interactively in the console.
+
+Warning
+
+This function is currently not documented; only its argument list is available.
+
+===============================================================================
+[ Parameters ]
+
+This function has no parameters.
+
+===============================================================================
+[ Return Values ]
+
+No value is returned.
+
+===============================================================================
+[ See Also ]
+
+ * |phpdbg_break_file| - Inserts a breakpoint at a line in a file
+ * |phpdbg_break_function| - Inserts a breakpoint at entry to a function
+ * |phpdbg_break_method| - Inserts a breakpoint at entry to a method
+ * |phpdbg_break_next| - Inserts a breakpoint at the next opcode
+
+
+vim:ft=help:

@@ -1,0 +1,29 @@
+*phpdbg_exec*
+
+(PHP 5 >= 5.6.0, PHP 7)
+
+phpdbg_exec — Attempts to set the execution context
+
+===============================================================================
+[ Description ]
+
+  phpdbg_exec ([ string $context ] ) : mixed~
+
+Warning
+
+This function is currently not documented; only its argument list is available.
+
+===============================================================================
+[ Parameters ]
+
+{context}
+
+===============================================================================
+[ Return Values ]
+
+If the execution context was set previously it is returned. If the execution
+context was not set previously TRUE is returned. If the request to set the
+context fails, FALSE is returned, and an E_WARNING raised.
+
+
+vim:ft=help:

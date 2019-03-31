@@ -1,0 +1,49 @@
+*sapi_windows_cp_conv*
+
+(PHP 7 >= 7.1.0)
+
+sapi_windows_cp_conv — Convert string from one codepage to another
+
+===============================================================================
+[ Description ]
+
+  sapi_windows_cp_conv ( int|string $in_codepage , int|string $out_codepage ,~
+  string $subject ) : string~
+
+Convert string from one codepage to another.
+
+===============================================================================
+[ Parameters ]
+
+{in_codepage}
+
+  The codepage of the {subject} string. Either the codepage name or identifier.
+
+{out_codepage}
+
+  The codepage to convert the {subject} string to. Either the codepage name or
+  identifier.
+
+{subject}
+
+  The string to convert.
+
+===============================================================================
+[ Return Values ]
+
+The {subject} string converted to {out_codepage}, or NULL on failure.
+
+===============================================================================
+[ Errors/Exceptions ]
+
+This function issues E_WARNING level errors, if invalid codepages are given, or
+if the subject is not valid for {in_codepage}.
+
+===============================================================================
+[ See Also ]
+
+ * |sapi_windows_cp_get| - Get process codepage
+ * |iconv| - Convert string to requested character encoding
+
+
+vim:ft=help:

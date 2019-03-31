@@ -1,0 +1,25 @@
+*inflate_get_status*
+
+(PHP 7 >= 7.2.0)
+
+inflate_get_status — Get decompression status
+
+===============================================================================
+[ Description ]
+
+  inflate_get_status ( resource $resource ) : int~
+
+Usually returns either ZLIB_OK or ZLIB_STREAM_END.
+
+===============================================================================
+[ Parameters ]
+
+{resource}
+
+===============================================================================
+[ Return Values ]
+
+Returns decompression status or FALSE on failure.
+
+
+vim:ft=help:

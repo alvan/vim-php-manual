@@ -1,0 +1,65 @@
+*openssl_csr_get_public_key*
+
+(PHP 5 >= 5.2.0, PHP 7)
+
+openssl_csr_get_public_key — Returns the public key of a CSR
+
+===============================================================================
+[ Description ]
+
+  openssl_csr_get_public_key ( mixed $csr [, bool $use_shortnames = TRUE ] ) :~
+  resource~
+
+openssl_csr_get_public_key() extracts the public key from {csr} and prepares it
+for use by other functions.
+
+===============================================================================
+[ Parameters ]
+
+{csr}
+
+  See CSR parameters for a list of valid values.
+
+{use_shortnames}
+  Warning
+
+  This parameter is ignored
+
+===============================================================================
+[ Return Values ]
+
+Returns a positive key resource identifier on success, or FALSE on error.
+
+===============================================================================
+[ Examples ]
+
+Example #1 openssl_csr_get_public_key() example
+
+<?php >
+  $subject = array(
+      "commonName" => "example.com",
+  );
+  $private_key = openssl_pkey_new(array(
+      "private_key_bits" => 2048,
+      "private_key_type" => OPENSSL_KEYTYPE_RSA,
+  ));
+  $csr = openssl_csr_new($subject, $private_key, array('digest_alg' => 'sha256')
+   );
+  $public_key = openssl_csr_get_public_key($csr);
+  $info = openssl_pkey_get_details($public_key);
+  echo $info['key'];
+<?>
+
+===============================================================================
+[ See Also ]
+
+ * |openssl_csr_get_subject| - Returns the subject of a CSR
+ * |openssl_csr_new| - Generates a CSR
+ * |openssl_pkey_get_details| - Returns an array with the key details
+ * |openssl_pkey_export_to_file| - Gets an exportable representation of a key
+  into a file
+ * |openssl_pkey_export| - Gets an exportable representation of a key into a
+  string
+
+
+vim:ft=help:

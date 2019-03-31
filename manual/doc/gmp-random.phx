@@ -1,0 +1,60 @@
+*gmp_random*
+
+(PHP 4 >= 4.0.4, PHP 5, PHP 7)
+
+gmp_random — Random number
+
+Warning
+
+This function has been DEPRECATED as of PHP 7.2.0. Relying on this function is
+highly discouraged.
+
+===============================================================================
+[ Description ]
+
+  gmp_random ([ int $limiter = 20 ] ) : GMP~
+
+Generate a random number. The number will be between 0 and (2 ** n) - 1, where
+n is the number of bits per limb multiplied by {limiter}. If {limiter} is
+negative, negative numbers are generated.
+
+A limb is an internal GMP mechanism. The number of bits in a limb is not
+static, and can vary from system to system. Generally, the number of bits in a
+limb is either 32 or 64, but this is not guaranteed.
+
+===============================================================================
+[ Parameters ]
+
+{limiter}
+
+  The limiter.
+
+  Either a GMP number resource in PHP 5.5 and earlier, a GMP object in PHP 5.6
+  and later, or a numeric string provided that it is possible to convert the
+  latter to a number.
+
+===============================================================================
+[ Return Values ]
+
+A random GMP number.
+
+===============================================================================
+[ Examples ]
+
+Example #1 gmp_random() example
+
+<?php >
+  $rand1 = gmp_random(1); // random number from 0 to 1 * bits per limb
+  $rand2 = gmp_random(2); // random number from 0 to 2 * bits per limb
+
+  echo gmp_strval($rand1) . "\n";
+  echo gmp_strval($rand2) . "\n";
+<?>
+
+The above example will output:
+
+1915834968
+8642564075890328087
+
+
+vim:ft=help:

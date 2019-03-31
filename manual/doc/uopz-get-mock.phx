@@ -1,0 +1,60 @@
+*uopz_get_mock*
+
+(PECL uopz 5, PECL uopz 6)
+
+uopz_get_mock — Get the current mock for a class
+
+===============================================================================
+[ Description ]
+
+  uopz_get_mock ( string $class ) : mixed~
+
+Returns the current mock for {class}.
+
+===============================================================================
+[ Parameters ]
+
+{class}
+
+  The name of the mocked class.
+
+===============================================================================
+[ Return Values ]
+
+Either a string containing the name of the mock, or an object, or NULL if no
+mock has been set.
+
+===============================================================================
+[ Examples ]
+
+Example #1 uopz_get_mock() example
+
+<?php >
+  class A {
+      public static function who() {
+          echo "A";
+      }
+  }
+
+  class mockA {
+      public static function who() {
+          echo "mockA";
+      }
+  }
+
+  uopz_set_mock(A::class, mockA::class);
+  echo uopz_get_mock(A::class);
+<?>
+
+The above example will output:
+
+mockA
+
+===============================================================================
+[ See Also ]
+
+ * |uopz_set_mock| - Use mock instead of class for new objects
+ * |uopz_unset_mock| - Unset previously set mock
+
+
+vim:ft=help:

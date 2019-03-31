@@ -1,0 +1,34 @@
+*xml_parser_free*
+
+(PHP 4, PHP 5, PHP 7)
+
+xml_parser_free — Free an XML parser
+
+===============================================================================
+[ Description ]
+
+  xml_parser_free ( resource $parser ) : bool~
+
+Frees the given XML {parser}.
+
+Caution
+
+In addition to calling xml_parser_free() when the parsing is finished, as of
+PHP 7.0.0 it is necessary to also explicitly unset the reference to {parser} to
+avoid memory leaks, if the parser resource is referenced from an object, and
+this object references that parser resource.
+
+===============================================================================
+[ Parameters ]
+
+{parser}
+  A reference to the XML parser to free.
+
+===============================================================================
+[ Return Values ]
+
+This function returns FALSE if {parser} does not refer to a valid parser, or
+else it frees the parser and returns TRUE.
+
+
+vim:ft=help:

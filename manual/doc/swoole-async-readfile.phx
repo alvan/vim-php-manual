@@ -1,0 +1,37 @@
+*swoole_async_readfile*
+
+(PHP 5 >= 5.2.0, PHP 7, PECL swoole >= 1.9.0)
+
+swoole_async_readfile — Read a file asynchronously
+
+===============================================================================
+[ Description ]
+
+  swoole_async_readfile ( string $filename , callable $callback ) : bool~
+
+===============================================================================
+[ Parameters ]
+
+{filename}
+
+  The filename of the file being read.
+
+{callback}
+
+  callback ( string $filename , string $content ) : mixed~
+
+  {filename}
+
+    The name of the file.
+
+  {content}
+
+    The content readed from the file.
+
+===============================================================================
+[ Return Values ]
+
+Returns TRUE on success or FALSE on failure.
+
+
+vim:ft=help:

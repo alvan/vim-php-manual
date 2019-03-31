@@ -1,0 +1,49 @@
+*socket_addrinfo_lookup*
+
+(PHP 7 >= 7.2.0)
+
+socket_addrinfo_lookup — Get array with contents of getaddrinfo about the given
+hostname
+
+===============================================================================
+[ Description ]
+
+  socket_addrinfo_lookup ( string $host [, string $service [, array $hints ]]~
+  ) : array~
+
+Lookup different ways we can connect to {host}. The returned array contains a
+set of resources that we can bind to using |socket_addrinfo_bind|.
+
+===============================================================================
+[ Parameters ]
+
+{host}
+
+  Hostname to search.
+
+{service}
+
+  The service to connect to. If service is a name, it is translated to the
+  corresponding port number.
+
+{hints}
+
+  Hints provide criteria for selecting addresses returned. You may specify the
+  hints as defined by getadrinfo.
+
+===============================================================================
+[ Return Values ]
+
+Returns an array of AddrInfo resource handles that can be used with the other
+socket_addrinfo functions.
+
+===============================================================================
+[ See Also ]
+
+ * |socket_addrinfo_bind| - Create and bind to a socket from a given addrinfo
+ * |socket_addrinfo_connect| - Create and connect to a socket from a given
+  addrinfo
+ * |socket_addrinfo_explain| - Get information about addrinfo
+
+
+vim:ft=help:

@@ -1,0 +1,73 @@
+*addslashes*
+
+(PHP 4, PHP 5, PHP 7)
+
+addslashes — Quote string with slashes
+
+===============================================================================
+[ Description ]
+
+  addslashes ( string $str ) : string~
+
+Returns a string with backslashes added before characters that need to be
+escaped. These characters are:
+
+ * single quote (')
+ * double quote (")
+ * backslash (\)
+ * NUL (the NUL byte)
+
+A use case of addslashes() is escaping the aforementioned characters in a
+string that is to be evaluated by PHP:
+<?php >
+  $str = "O'Reilly?";
+  eval("echo '" . addslashes($str) . "';");
+<?>
+
+Prior to PHP 5.4.0, the PHP directive magic_quotes_gpc was on by default and it
+essentially ran addslashes() on all GET, POST and COOKIE data. addslashes()
+must not be used on strings that have already been escaped with
+magic_quotes_gpc, as the strings will be double escaped. |get_magic_quotes_gpc|
+can be used to check if magic_quotes_gpc is on.
+
+The addslashes() is sometimes incorrectly used to try to prevent SQL Injection.
+Instead, database-specific escaping functions and/or prepared statements should
+be used.
+
+===============================================================================
+[ Parameters ]
+
+{str}
+
+  The string to be escaped.
+
+===============================================================================
+[ Return Values ]
+
+Returns the escaped string.
+
+===============================================================================
+[ Examples ]
+
+Example #1 An addslashes() example
+
+<?php >
+  $str = "Is your name O'Reilly?";
+
+  // Outputs: Is your name O\'Reilly?
+  echo addslashes($str);
+<?>
+
+===============================================================================
+[ See Also ]
+
+ * |stripcslashes| - Un-quote string quoted with addcslashes
+ * |stripslashes| - Un-quotes a quoted string
+ * |addcslashes| - Quote string with slashes in a C style
+ * |htmlspecialchars| - Convert special characters to HTML entities
+ * |quotemeta| - Quote meta characters
+ * |get_magic_quotes_gpc| - Gets the current configuration setting of
+  magic_quotes_gpc
+
+
+vim:ft=help:

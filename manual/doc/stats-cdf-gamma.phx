@@ -1,0 +1,55 @@
+*stats_cdf_gamma*
+
+(PECL stats >= 1.0.0)
+
+stats_cdf_gamma — Calculates any one parameter of the gamma distribution given
+values for the others
+
+===============================================================================
+[ Description ]
+
+  stats_cdf_gamma ( float $par1 , float $par2 , float $par3 , int $which ) :~
+  float~
+
+Returns the cumulative distribution function, its inverse, or one of its
+parameters, of the gamma distribution. The kind of the return value and
+parameters ({par1}, {par2}, and {par3}) are determined by {which}.
+
+The following table lists the return value and parameters by {which}. CDF, x,
+k, and theta denotes cumurative distribution function, the value of the random
+variable, and the shape and the scale parameter of the gamma distribution,
+respectively.
+
+       Return value and parameters
+{which} Return value {par1} {par2} {par3}
+1       CDF          x      k      theta
+2       x            CDF    k      theta
+3       k            x      CDF    theta
+4       theta        x      CDF    k
+
+===============================================================================
+[ Parameters ]
+
+{par1}
+
+  The first parameter
+
+{par2}
+
+  The second parameter
+
+{par3}
+
+  The third parameter
+
+{which}
+
+  The flag to determine what to be calculated
+
+===============================================================================
+[ Return Values ]
+
+Returns CDF, x, k, or theta, determined by {which}.
+
+
+vim:ft=help:
