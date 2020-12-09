@@ -7,10 +7,10 @@ md5_file — Calculates the md5 hash of a given file
 ===============================================================================
 [ Description ]
 
-  md5_file ( string $filename [, bool $raw_output = FALSE ] ) : string~
+  md5_file ( string $filename [, bool $binary = FALSE ] ) : string|false~
 
 Calculates the MD5 hash of the file specified by the {filename} parameter using
-the >> RSA Data Security, Inc. MD5 Message-Digest Algorithm, and returns that
+the » RSA Data Security, Inc. MD5 Message-Digest Algorithm, and returns that
 hash. The hash is a 32-character hexadecimal number.
 
 ===============================================================================
@@ -20,7 +20,7 @@ hash. The hash is a 32-character hexadecimal number.
 
   The filename
 
-{raw_output}
+{binary}
 
   When TRUE, returns the digest in raw binary format with a length of 16.
 
@@ -28,13 +28,6 @@ hash. The hash is a 32-character hexadecimal number.
 [ Return Values ]
 
 Returns a string on success, FALSE otherwise.
-
-===============================================================================
-[ Changelog ]
-
-Version                               Description
-5.1.0   Changed the function to use the streams API. It means that you can use
-        it with wrappers, like md5_file('http://example.com/..')
 
 ===============================================================================
 [ Examples ]

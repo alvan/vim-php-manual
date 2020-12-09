@@ -36,8 +36,8 @@ development state.
 {operator}
 
   If the third optional {operator} argument is specified, test for a particular
-  relationship. The possible operators are: <, lt, <=, le, >, gt, >=, ge, ==, =
-  , eq, !=, <>, ne respectively.
+  relationship. The possible operators are: <, lt, <=, le, >, gt, >=, ge, ==,
+  =, eq, !=, <>, ne respectively.
 
   This parameter is case-sensitive, values should be lowercase.
 
@@ -48,7 +48,8 @@ By default, version_compare() returns -1 if the first version is lower than the
 second, 0 if they are equal, and 1 if the second is lower.
 
 When using the optional {operator} argument, the function will return TRUE if
-the relationship is the one specified by the operator, FALSE otherwise.
+the relationship is the one specified by the operator, FALSE otherwise. If an
+unsupported {operator} is given, NULL is returned.
 
 ===============================================================================
 [ Examples ]

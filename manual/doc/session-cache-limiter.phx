@@ -7,7 +7,7 @@ session_cache_limiter — Get and/or set the current cache limiter
 ===============================================================================
 [ Description ]
 
-  session_cache_limiter ([ string $cache_limiter ] ) : string~
+  session_cache_limiter ([ string|null $value = NULL ] ) : string|false~
 
 session_cache_limiter() returns the name of the current cache limiter.
 
@@ -33,10 +33,10 @@ every request (and before |session_start| is called).
 ===============================================================================
 [ Parameters ]
 
-{cache_limiter}
+{value}
 
-  If {cache_limiter} is specified, the name of the current cache limiter is
-  changed to the new value.
+  If {value} is specified and not NULL, the name of the current cache limiter
+  is changed to the new value.
 
                                                             Possible values
         Value                                                           Headers sent
@@ -58,7 +58,14 @@ every request (and before |session_start| is called).
 ===============================================================================
 [ Return Values ]
 
-Returns the name of the current cache limiter.
+Returns the name of the current cache limiter. On failure to change the value,
+FALSE is returned.
+
+===============================================================================
+[ Changelog ]
+
+Version       Description
+8.0.0   {value} is nullable now.
 
 ===============================================================================
 [ Examples ]

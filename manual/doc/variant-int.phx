@@ -7,14 +7,14 @@ variant_int — Returns the integer portion of a variant
 ===============================================================================
 [ Description ]
 
-  variant_int ( mixed $variant ) : mixed~
+  variant_int ( mixed $value ) : variant~
 
 Gets the integer portion of a variant.
 
 ===============================================================================
 [ Parameters ]
 
-{variant}
+{value}
 
   The variant.
 
@@ -24,7 +24,7 @@ Gets the integer portion of a variant.
   function can be either a PHP native type (integer, string, floating point,
   boolean or NULL), or an instance of a COM, VARIANT or DOTNET class. PHP
   native types will be converted to variants using the same rules as found in
-  the constructor for the VARIANT class. COM and DOTNET objects will have the
+  the constructor for the variant class. COM and DOTNET objects will have the
   value of their default property taken and used as the variant value.
 
   The variant arithmetic functions are wrappers around the similarly named
@@ -36,9 +36,14 @@ Gets the integer portion of a variant.
 ===============================================================================
 [ Return Values ]
 
-If {variant} is negative, then the first negative integer greater than or equal
+If {value} is negative, then the first negative integer greater than or equal
 to the variant is returned, otherwise returns the integer portion of the value
-of {variant}.
+of {value}.
+
+===============================================================================
+[ Errors/Exceptions ]
+
+Throws a com_exception on failure.
 
 ===============================================================================
 [ See Also ]

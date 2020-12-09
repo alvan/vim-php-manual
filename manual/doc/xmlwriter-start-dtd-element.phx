@@ -10,22 +10,22 @@ element
 
 Object oriented style
 
-  XMLWriter::startDtdElement ( string $qualifiedName ) : bool~
+  public XMLWriter::startDtdElement ( string $qualifiedName ) : bool~
 
 Procedural style
 
-  xmlwriter_start_dtd_element ( resource $xmlwriter , string $qualifiedName )~
-  : bool~
+  xmlwriter_start_dtd_element ( XMLWriter $writer , string $qualifiedName ) :~
+  bool~
 
 Starts a DTD element.
 
 ===============================================================================
 [ Parameters ]
 
-{ xmlwriter}
+{ writer}
 
-  Only for procedural calls. The XMLWriter resource that is being modified.
-  This resource comes from a call to |xmlwriter_open_uri| or 
+  Only for procedural calls. The XMLWriter instance that is being modified.
+  This object is returned from a call to |xmlwriter_open_uri| or 
   |xmlwriter_open_memory|.
 
 {qualifiedName}
@@ -36,6 +36,13 @@ Starts a DTD element.
 [ Return Values ]
 
 Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {writer} expects an XMLWriter instance now; previously, a resource was
+        expected.
 
 ===============================================================================
 [ See Also ]

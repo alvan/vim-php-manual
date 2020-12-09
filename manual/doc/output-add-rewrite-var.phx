@@ -17,6 +17,8 @@ enabled with session.use_trans_sid.
 This function's behaviour is controlled by the url_rewriter.tags and
 url_rewriter.hosts php.ini parameters.
 
+Note that this function can be successfully called at most once per request.
+
   Note: Calling this function will implicitly start output buffering if it is
   not active already.
 

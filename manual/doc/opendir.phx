@@ -7,7 +7,7 @@ opendir — Open directory handle
 ===============================================================================
 [ Description ]
 
-  opendir ( string $path [, resource $context ] ) : resource~
+  opendir ( string $path [, resource $context ] ) : resource|false~
 
 Opens up a directory handle to be used in subsequent |closedir|, |readdir|, and
 |rewinddir| calls.
@@ -27,20 +27,15 @@ Opens up a directory handle to be used in subsequent |closedir|, |readdir|, and
 ===============================================================================
 [ Return Values ]
 
-Returns a directory handle resource on success, or FALSE on failure.
-
-If {path} is not a valid directory or the directory can not be opened due to
-permission restrictions or filesystem errors, opendir() returns FALSE and
-generates a PHP error of level E_WARNING. You can suppress the error output of 
-opendir() by prepending '@' to the front of the function name.
+Returns a directory handle resource on success, or FALSE on failure
 
 ===============================================================================
-[ Changelog ]
+[ Errors/Exceptions ]
 
-Version                               Description
-5.0.0   {path} supports the ftp:// URL wrapper.
-4.3.0   {path} can also be any URL which supports directory listing, however
-        only the file:// URL wrapper supports this in PHP 4
+Upon failure, an E_WARNING is emitted.
+
+This may happen if {path} is not a valid directory, the directory can not be
+opened due to permission restrictions, or due to filesystem errors.
 
 ===============================================================================
 [ Examples ]

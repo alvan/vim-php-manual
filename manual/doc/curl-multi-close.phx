@@ -7,14 +7,14 @@ curl_multi_close — Close a set of cURL handles
 ===============================================================================
 [ Description ]
 
-  curl_multi_close ( resource $mh ) : void~
+  curl_multi_close ( CurlMultiHandle $multi_handle ) : void~
 
 Closes a set of cURL handles.
 
 ===============================================================================
 [ Parameters ]
 
-{mh}
+{multi_handle}
 
   A cURL multi handle returned by |curl_multi_init|.
 
@@ -22,6 +22,13 @@ Closes a set of cURL handles.
 [ Return Values ]
 
 No value is returned.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {multi_handle} expects a CurlMultiHandle instance now; previously, a 
+        resource was expected.
 
 ===============================================================================
 [ Examples ]

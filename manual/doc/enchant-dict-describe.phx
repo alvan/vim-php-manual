@@ -7,21 +7,30 @@ enchant_dict_describe — Describes an individual dictionary
 ===============================================================================
 [ Description ]
 
-  enchant_dict_describe ( resource $dict ) : mixed~
+  enchant_dict_describe ( EnchantDictionary $dictionary ) : array~
 
 Returns the details of the dictionary.
 
 ===============================================================================
 [ Parameters ]
 
-{dict}
+{dictionary}
 
-  Dictionary resource
+  An Enchant dictionary returned by |enchant_broker_request_dict| or 
+  |enchant_broker_request_pwl_dict|.
 
 ===============================================================================
 [ Return Values ]
 
 Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {dictionary} expects an EnchantDictionary instance now; previoulsy, a
+        resource was expected.
+8.0.0   Prior to this version, the function returned FALSE on failure.
 
 ===============================================================================
 [ Examples ]

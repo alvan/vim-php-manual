@@ -30,7 +30,7 @@ Returns the Internet IP address as a string.
 
 Version                               Description
 7.1.0   The parameter type of {proper_address} has been changed from string to 
-        integer.
+        int.
 
 ===============================================================================
 [ Notes ]
@@ -38,7 +38,7 @@ Version                               Description
   Note:
 
   On 32-bit architectures, casting integer representations of IP addresses from
-  string to integer will not give correct results for numbers which exceed
+  string to int will not give correct results for numbers which exceed
   PHP_INT_MAX.
 
 ===============================================================================

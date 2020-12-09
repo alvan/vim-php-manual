@@ -8,7 +8,7 @@ timestamp
 ===============================================================================
 [ Description ]
 
-  variant_date_to_timestamp ( variant $variant ) : int~
+  variant_date_to_timestamp ( variant $variant ) : int|null~
 
 Converts {variant} from a VT_DATE (or similar) value into a Unix timestamp.
 This allows easier interopability between the Unix-ish parts of PHP and COM.
@@ -23,7 +23,7 @@ This allows easier interopability between the Unix-ish parts of PHP and COM.
 ===============================================================================
 [ Return Values ]
 
-Returns a unix timestamp.
+Returns a unix timestamp, or NULL on failure.
 
 ===============================================================================
 [ See Also ]

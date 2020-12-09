@@ -7,7 +7,8 @@ similar_text — Calculate the similarity between two strings
 ===============================================================================
 [ Description ]
 
-  similar_text ( string $first , string $second [, float &$percent ] ) : int~
+  similar_text ( string $string1 , string $string2 [, float &$percent = NULL ]~
+  ) : int~
 
 This calculates the similarity between two strings as described in Programming
 Classics: Implementing the World's Best Algorithms by Oliver (ISBN
@@ -19,17 +20,17 @@ N is the length of the longest string.
 ===============================================================================
 [ Parameters ]
 
-{first}
+{string1}
 
   The first string.
 
-{second}
+{string2}
 
   The second string.
 
     Note:
 
-    Swapping the {first} and {second} may yield a different result; see the
+    Swapping the {string1} and {string2} may yield a different result; see the
     example below.
 
 {percent}
@@ -52,7 +53,7 @@ recursively. The lengths of all found common substrings are added.
 
 Example #1 similar_text() argument swapping example
 
-This example shows that swapping the {first} and {second} argument may yield
+This example shows that swapping the {string1} and {string2} argument may yield
 different results.
 
 <?php >

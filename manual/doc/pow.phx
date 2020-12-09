@@ -7,7 +7,7 @@ pow — Exponential expression
 ===============================================================================
 [ Description ]
 
-  pow ( number $base , number $exp ) : number~
+  pow ( int|float $base , int|float $exp ) : int|float~
 
 Returns {base} raised to the power of {exp}.
 
@@ -31,7 +31,7 @@ Returns {base} raised to the power of {exp}.
 
 {base} raised to the power of {exp}. If both arguments are non-negative
 integers and the result can be represented as an integer, the result will be
-returned with integer type, otherwise it will be returned as a float.
+returned with int type, otherwise it will be returned as a float.
 
 ===============================================================================
 [ Examples ]

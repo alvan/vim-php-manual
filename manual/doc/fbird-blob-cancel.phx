@@ -1,0 +1,35 @@
+*fbird_blob_cancel*
+
+(PHP 5, PHP 7 < 7.4.0)
+
+fbird_blob_cancel — Cancel creating blob
+
+===============================================================================
+[ Description ]
+
+  fbird_blob_cancel ( resource $blob_handle ) : bool~
+
+This function will discard a BLOB if it has not yet been closed by 
+|fbird_blob_close|.
+
+===============================================================================
+[ Parameters ]
+
+{blob_handle}
+
+  A BLOB handle opened with |fbird_blob_create|.
+
+===============================================================================
+[ Return Values ]
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+[ See Also ]
+
+ * |fbird_blob_close| - Alias of ibase_blob_close
+ * |fbird_blob_create| - Alias of ibase_blob_create
+ * |fbird_blob_import| - Alias of ibase_blob_import
+
+
+vim:ft=help:

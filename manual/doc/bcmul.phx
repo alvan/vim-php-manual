@@ -7,19 +7,18 @@ bcmul — Multiply two arbitrary precision numbers
 ===============================================================================
 [ Description ]
 
-  bcmul ( string $left_operand , string $right_operand [, int $scale = 0 ] ) :~
-  string~
+  bcmul ( string $num1 , string $num2 [, int|null $scale = NULL ] ) : string~
 
-Multiply the {left_operand} by the {right_operand}.
+Multiply the {num1} by the {num2}.
 
 ===============================================================================
 [ Parameters ]
 
-{left_operand}
+{num1}
 
   The left operand, as a string.
 
-{right_operand}
+{num2}
 
   The right operand, as a string.
 
@@ -38,6 +37,7 @@ Returns the result as a string.
 [ Changelog ]
 
 Version                               Description
+8.0.0   {scale} is now nullable.
 7.3.0   bcmul() now returns numbers with the requested scale. Formerly, the
         returned numbers may have omitted trailing decimal zeroes.
 

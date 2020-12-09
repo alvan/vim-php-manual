@@ -7,7 +7,7 @@ ctype_xdigit — Check for character(s) representing a hexadecimal digit
 ===============================================================================
 [ Description ]
 
-  ctype_xdigit ( string $text ) : bool~
+  ctype_xdigit ( mixed $text ) : bool~
 
 Checks if all of the characters in the provided string, {text}, are hexadecimal
 'digits'.
@@ -18,6 +18,14 @@ Checks if all of the characters in the provided string, {text}, are hexadecimal
 {text}
 
   The tested string.
+
+
+    Note:
+
+    If an int between -128 and 255 inclusive is provided, it is interpreted as
+    the ASCII value of a single character (negative values have 256 added in
+    order to allow characters in the Extended ASCII range). Any other integer
+    is interpreted as a string containing the decimal digits of the integer.
 
 ===============================================================================
 [ Return Values ]
@@ -47,16 +55,6 @@ The above example will output:
 The string AB10BC99 consists of all hexadecimal digits.
 The string AR1012 does not consist of all hexadecimal digits.
 The string ab12bc99 consists of all hexadecimal digits.
-
-===============================================================================
-[ Notes ]
-
-  Note:
-
-  If an integer between -128 and 255 inclusive is provided, it is interpreted
-  as the ASCII value of a single character (negative values have 256 added in
-  order to allow characters in the Extended ASCII range). Any other integer is
-  interpreted as a string containing the decimal digits of the integer.
 
 ===============================================================================
 [ See Also ]

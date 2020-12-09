@@ -11,8 +11,8 @@ This function was REMOVED in PHP 7.4.0.
 ===============================================================================
 [ Description ]
 
-  wddx_add_vars ( resource $packet_id , mixed $var_name [, mixed $... ] ) :~
-  bool~
+  wddx_add_vars ( resource $packet_id , mixed $var_name , mixed ...$var_names~
+  ) : bool~
 
 Serializes the passed variables and add the result to the given packet.
 
@@ -30,7 +30,7 @@ This function takes a variable number of parameters.
   Can be either a string naming a variable or an array containing strings
   naming the variables or another array, etc.
 
-{...}
+{var_names}
 
 ===============================================================================
 [ Return Values ]

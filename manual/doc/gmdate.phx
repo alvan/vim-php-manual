@@ -22,8 +22,8 @@ Mean Time (GMT).
 
 {timestamp}
 
-  The optional {timestamp} parameter is an integer Unix timestamp that defaults
-  to the current local time if a {timestamp} is not given. In other words, it
+  The optional {timestamp} parameter is an int Unix timestamp that defaults to
+  the current local time if a {timestamp} is not given. In other words, it
   defaults to the value of |time|.
 
 ===============================================================================
@@ -31,18 +31,6 @@ Mean Time (GMT).
 
 Returns a formatted date string. If a non-numeric value is used for
 {timestamp}, FALSE is returned and an E_WARNING level error is emitted.
-
-===============================================================================
-[ Changelog ]
-
-Version                               Description
-        The valid range of a timestamp is typically from Fri, 13 Dec 1901
-        20:45:54 GMT to Tue, 19 Jan 2038 03:14:07 GMT. (These are the dates
-5.1.0   that correspond to the minimum and maximum values for a 32-bit signed
-        integer). However, before PHP 5.1.0 this range was limited from
-        01-01-1970 to 19-01-2038 on some systems (e.g. Windows).
-5.1.1   There are useful constants of standard date/time formats that can be
-        used to specify the {format} parameter.
 
 ===============================================================================
 [ Examples ]

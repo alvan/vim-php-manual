@@ -7,14 +7,14 @@ curl_share_errno — Return the last share curl error number
 ===============================================================================
 [ Description ]
 
-  curl_share_errno ( resource $sh ) : int~
+  curl_share_errno ( CurlShareHandle $share_handle ) : int~
 
 Return an integer containing the last share curl error number.
 
 ===============================================================================
 [ Parameters ]
 
-{sh}
+{share_handle}
 
   A cURL share handle returned by |curl_share_init|.
 
@@ -23,6 +23,14 @@ Return an integer containing the last share curl error number.
 
 Returns an integer containing the last share curl error number, or FALSE on
 failure.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   The function no longer returns FALSE on failure.
+8.0.0   {share_handle} expects a CurlShareHandle instance now; previously, a 
+        resource was expected.
 
 ===============================================================================
 [ See Also ]

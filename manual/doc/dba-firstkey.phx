@@ -7,7 +7,7 @@ dba_firstkey — Fetch first key
 ===============================================================================
 [ Description ]
 
-  dba_firstkey ( resource $handle ) : string~
+  dba_firstkey ( resource $handle ) : string|false~
 
 dba_firstkey() returns the first key of the database and resets the internal
 key pointer. This permits a linear search through the whole database.

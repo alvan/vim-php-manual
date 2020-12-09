@@ -8,7 +8,7 @@ simplexml_import_dom — Get a SimpleXMLElement object from a DOM node
 [ Description ]
 
   simplexml_import_dom ( DOMNode $node [, string $class_name =~
-  "SimpleXMLElement" ] ) : SimpleXMLElement~
+  "SimpleXMLElement" ] ) : SimpleXMLElement|false~
 
 This function takes a node of a DOM document and makes it into a SimpleXML
 node. This new object can then be used as a native SimpleXML element.

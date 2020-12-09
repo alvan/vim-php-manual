@@ -7,7 +7,7 @@ sprintf — Return a formatted string
 ===============================================================================
 [ Description ]
 
-  sprintf ( string $format [, mixed $... ] ) : string~
+  sprintf ( string $format , mixed ...$values ) : string|false~
 
 Returns a string produced according to the formatting string {format}.
 
@@ -20,8 +20,13 @@ Returns a string produced according to the formatting string {format}.
   (excluding %) that are copied directly to the result and conversion
   specifications, each of which results in fetching its own parameter.
 
-  A conversion specification follows this prototype: %[flags][width]
+  A conversion specification follows this prototype: %[argnum$][flags][width]
   [.precision]specifier.
+
+  Argnum
+
+  An integer followed by a dollar sign $, to specify which number argument to
+  treat in the conversion.
 
                                      Flags
    Flag                                Description
@@ -85,7 +90,7 @@ Returns a string produced according to the formatting string {format}.
             + 1). Otherwise, the conversion is with style e and precision P −
             1.
 
-  G         Like the g specifier but uses E and F.
+  G         Like the g specifier but uses E and f.
   o         The argument is treated as an integer and presented as an octal
             number.
   s         The argument is treated and presented as a string.
@@ -114,7 +119,7 @@ Returns a string produced according to the formatting string {format}.
   integer d, u, c, o, x, X, b
   double  g, G, e, E, f, F
 
-{...}
+{values}
 
 ===============================================================================
 [ Return Values ]

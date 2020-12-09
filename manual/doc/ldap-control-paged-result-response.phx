@@ -4,6 +4,11 @@
 
 ldap_control_paged_result_response — Retrieve the LDAP pagination cookie
 
+Warning
+
+This function has been DEPRECATED as of PHP 7.4.0. Relying on this function is
+highly discouraged.
+
 ===============================================================================
 [ Description ]
 
@@ -35,10 +40,16 @@ Retrieve the pagination information send by the server.
 Returns TRUE on success or FALSE on failure.
 
 ===============================================================================
+[ Changelog ]
+
+Version            Description
+7.4.0   This function has been deprecated.
+
+===============================================================================
 [ See Also ]
 
  * |ldap_control_paged_result| - Send LDAP pagination control
- * >> RFC2696 : LDAP Control Extension for Simple Paged Results Manipulation
+ * » RFC2696 : LDAP Control Extension for Simple Paged Results Manipulation
 
 
 vim:ft=help:

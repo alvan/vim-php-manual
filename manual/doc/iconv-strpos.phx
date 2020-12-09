@@ -8,14 +8,14 @@ iconv_strpos — Finds position of first occurrence of a needle within a haystac
 [ Description ]
 
   iconv_strpos ( string $haystack , string $needle [, int $offset = 0 [,~
-  string $charset = ini_get("iconv.internal_encoding") ]] ) : int~
+  string|null $encoding = NULL ]] ) : int|false~
 
 Finds position of first occurrence of a {needle} within a {haystack}.
 
 In contrast to |strpos|, the return value of iconv_strpos() is the number of
 characters that appear before the needle, rather than the offset in bytes to
 the position where the needle has been found. The characters are counted on the
-basis of the specified character set {charset}.
+basis of the specified character set {encoding}.
 
 ===============================================================================
 [ Parameters ]
@@ -34,10 +34,10 @@ basis of the specified character set {charset}.
   should be performed. If the offset is negative, it is counted from the end of
   the string.
 
-{charset}
+{encoding}
 
-  If {charset} parameter is omitted, {string} are assumed to be encoded in
-  iconv.internal_encoding.
+  If {encoding} parameter is omitted or NULL, {string} are assumed to be
+  encoded in iconv.internal_encoding.
 
 If {haystack} or {needle} is not a string, it is converted to a string and
 applied as the ordinal value of a character.
@@ -60,6 +60,7 @@ function.
 [ Changelog ]
 
 Version                  Description
+8.0.0   {encoding} is nullable now.
 7.1.0   Support for negative {offset}s has been added.
 
 ===============================================================================

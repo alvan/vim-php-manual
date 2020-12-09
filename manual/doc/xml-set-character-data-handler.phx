@@ -7,7 +7,7 @@ xml_set_character_data_handler — Set up character data handler
 ===============================================================================
 [ Description ]
 
-  xml_set_character_data_handler ( resource $parser , callable $handler ) :~
+  xml_set_character_data_handler ( XMLParser $parser , callable $handler ) :~
   bool~
 
 Sets the character data handler function for the XML parser {parser}.
@@ -26,7 +26,7 @@ Sets the character data handler function for the XML parser {parser}.
 
   The function named by {handler} must accept two parameters:
 
-  handler ( resource $parser , string $data )~
+  handler ( XMLParser $parser , string $data )~
 
   {parser}
     The first parameter, parser, is a reference to the XML parser calling the
@@ -48,6 +48,13 @@ Sets the character data handler function for the XML parser {parser}.
 [ Return Values ]
 
 Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {parser} expects an XMLParser instance now; previously, a resource was
+        expected.
 
 
 vim:ft=help:

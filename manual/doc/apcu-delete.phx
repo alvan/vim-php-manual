@@ -7,7 +7,7 @@ apcu_delete — Removes a stored variable from the cache
 ===============================================================================
 [ Description ]
 
-  apcu_delete ( mixed $key ) : bool~
+  apcu_delete ( mixed $key ) : mixed~
 
 Removes a stored variable from the cache.
 
@@ -22,7 +22,8 @@ Removes a stored variable from the cache.
 ===============================================================================
 [ Return Values ]
 
-Returns TRUE on success or FALSE on failure.
+If {key} is an array, an indexed array of the keys is returned. Otherwise TRUE
+is returned on success, or FALSE on failure.
 
 ===============================================================================
 [ Examples ]

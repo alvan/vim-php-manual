@@ -2,7 +2,7 @@
 
 (PHP 4 >= 4.3.0, PHP 5, PHP 7)
 
-odbc_data_source — Returns information about a current connection
+odbc_data_source — Returns information about available DSNs
 
 ===============================================================================
 [ Description ]
@@ -28,7 +28,35 @@ times).
 ===============================================================================
 [ Return Values ]
 
-Returns FALSE on error, and an array upon success.
+Returns FALSE on error, an array upon success, and NULL after fetching the last
+available DSN.
+
+===============================================================================
+[ Examples ]
+
+Example #1 List available DSNs
+
+<?php >
+  $conn = odbc_connect('dsn', 'user', 'pass');
+  $dsn_info = odbc_data_source($conn, SQL_FETCH_FIRST);
+  while ($dsn_info) {
+      print_r($dsn_info);
+      $dsn_info = odbc_data_source($conn, SQL_FETCH_NEXT);
+  }
+<?>
+
+The above example will output something similar to:
+
+Array
+(
+    [server] => dsn
+    [description] => ODBC Driver 17 for SQL Server
+)
+Array
+(
+    [server] => other_dsn
+    [description] => Microsoft Access Driver (*.mdb, *.accdb)
+)
 
 
 vim:ft=help:

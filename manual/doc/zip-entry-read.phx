@@ -32,6 +32,13 @@ Reads from an open directory entry.
 Returns the data read, empty string on end of a file, or FALSE on error.
 
 ===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   This function is deprecated in favor of the Object API, see 
+        ZipArchive::getFromIndex().
+
+===============================================================================
 [ See Also ]
 
  * |zip_entry_open| - Open a directory entry for reading

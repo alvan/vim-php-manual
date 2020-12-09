@@ -33,6 +33,10 @@ data are sealed and can only be used by one specific private key. See
 {method}
 
   The cipher method.
+  Caution
+
+  The default value ('RC4') is considered insecure. It is strongly recommended
+  to explicitly specify a secure cipher method.
 
 {iv}
 
@@ -42,13 +46,6 @@ data are sealed and can only be used by one specific private key. See
 [ Return Values ]
 
 Returns TRUE on success or FALSE on failure.
-
-===============================================================================
-[ Changelog ]
-
-Version         Description
-7.0.0   The {iv} has been added.
-5.3.0   The {method} has been added.
 
 ===============================================================================
 [ Examples ]

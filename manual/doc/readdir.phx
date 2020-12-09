@@ -7,7 +7,7 @@ readdir — Read entry from directory handle
 ===============================================================================
 [ Description ]
 
-  readdir ([ resource $dir_handle ] ) : string~
+  readdir ([ resource $dir_handle ] ) : string|false~
 
 Returns the name of the next entry in the directory. The entries are returned
 in the order in which they are stored by the filesystem.

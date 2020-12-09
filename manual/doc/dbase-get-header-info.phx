@@ -7,17 +7,16 @@ dbase_get_header_info — Gets the header info of a database
 ===============================================================================
 [ Description ]
 
-  dbase_get_header_info ( resource $dbase_identifier ) : array~
+  dbase_get_header_info ( resource $database ) : array~
 
-Returns information on the column structure of the given database link
-identifier.
+Returns information on the column structure of the given database resource.
 
 ===============================================================================
 [ Parameters ]
 
-{dbase_identifier}
+{database}
 
-  The database link identifier, returned by |dbase_open| or |dbase_create|.
+  The database resource, returned by |dbase_open| or |dbase_create|.
 
 ===============================================================================
 [ Return Values ]
@@ -47,8 +46,8 @@ If the database header information cannot be read, FALSE is returned.
 ===============================================================================
 [ Changelog ]
 
-  Version                         Description
-dbase 7.0.0 {dbase_identifier} is now a resource instead of an int.
+  Version                     Description
+dbase 7.0.0 {database} is now a resource instead of an int.
 
 ===============================================================================
 [ Examples ]

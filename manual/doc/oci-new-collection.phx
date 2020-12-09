@@ -8,7 +8,7 @@ oci_new_collection — Allocates new collection object
 [ Description ]
 
   oci_new_collection ( resource $connection , string $tdo [, string $schema =~
-  NULL ] ) : OCI-Collection~
+  NULL ] ) : OCICollection~
 
 Allocates a new collection object.
 
@@ -35,6 +35,11 @@ Returns a new OCICollection object or FALSE on error.
 
 ===============================================================================
 [ Notes ]
+
+  Note:
+
+  The OCICollection class was called OCI-Collection prior to PHP 8 and OCI8
+  3.0.0.
 
   Note:
 

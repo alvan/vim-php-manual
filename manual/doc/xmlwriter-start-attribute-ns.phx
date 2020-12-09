@@ -10,23 +10,23 @@ namespaced attribute
 
 Object oriented style
 
-  XMLWriter::startAttributeNs ( string $prefix , string $name , string $uri )~
-  : bool~
+  public XMLWriter::startAttributeNs ( string|null $prefix , string $name ,~
+  string|null $namespace ) : bool~
 
 Procedural style
 
-  xmlwriter_start_attribute_ns ( resource $xmlwriter , string $prefix , string~
-  $name , string $uri ) : bool~
+  xmlwriter_start_attribute_ns ( XMLWriter $writer , string|null $prefix ,~
+  string $name , string|null $namespace ) : bool~
 
 Starts a namespaced attribute.
 
 ===============================================================================
 [ Parameters ]
 
-{ xmlwriter}
+{ writer}
 
-  Only for procedural calls. The XMLWriter resource that is being modified.
-  This resource comes from a call to |xmlwriter_open_uri| or 
+  Only for procedural calls. The XMLWriter instance that is being modified.
+  This object is returned from a call to |xmlwriter_open_uri| or 
   |xmlwriter_open_memory|.
 
 {prefix}
@@ -37,14 +37,23 @@ Starts a namespaced attribute.
 
   The attribute name.
 
-{uri}
+{namespace}
 
-  The namespace URI.
+  The namespace URI. If {namespace} is NULL, the namespace declaration will be
+  omitted.
 
 ===============================================================================
 [ Return Values ]
 
 Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {writer} expects an XMLWriter instance now; previously, a resource was
+        expected.
+8.0.0   {prefix} is nullable now.
 
 ===============================================================================
 [ See Also ]

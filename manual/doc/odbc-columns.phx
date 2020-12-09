@@ -7,8 +7,8 @@ odbc_columns — Lists the column names in specified tables
 ===============================================================================
 [ Description ]
 
-  odbc_columns ( resource $connection_id [, string $qualifier [, string~
-  $schema [, string $table_name [, string $column_name ]]]] ) : resource~
+  odbc_columns ( resource $connection_id [, string $catalog [, string $schema~
+  [, string $table_name [, string $column_name ]]]] ) : resource|false~
 
 Lists all columns in the requested range.
 
@@ -19,24 +19,25 @@ Lists all columns in the requested range.
 
   The ODBC connection identifier, see |odbc_connect| for details.
 
-{qualifier}
+{catalog}
 
-  The qualifier.
+  The catalog ('qualifier' in ODBC 2 parlance).
 
 {schema}
 
-  The owner.
+  The schema ('owner' in ODBC 2 parlance). This parameter accepts the following
+  search patterns: % to match zero or more characters, and _ to match a single
+  character.
 
 {table_name}
 
-  The table name.
+  The table name. This parameter accepts the following search patterns: % to
+  match zero or more characters, and _ to match a single character.
 
 {column_name}
 
-  The column name.
-
-The {schema}, {table_name}, and {column_name} accept search patterns ('%' to
-match zero or more characters and '_' to match a single character).
+  The column name. This parameter accepts the following search patterns: % to
+  match zero or more characters, and _ to match a single character.
 
 ===============================================================================
 [ Return Values ]
@@ -45,26 +46,75 @@ Returns an ODBC result identifier or FALSE on failure.
 
 The result set has the following columns:
 
- * TABLE_QUALIFIER
+ * TABLE_CAT
  * TABLE_SCHEM
  * TABLE_NAME
  * COLUMN_NAME
  * DATA_TYPE
  * TYPE_NAME
- * PRECISION
- * LENGTH
- * SCALE
- * RADIX
+ * COLUMN_SIZE
+ * BUFFER_LENGTH
+ * DECIMAL_DIGITS
+ * NUM_PREC_RADIX
  * NULLABLE
  * REMARKS
+ * COLUMN_DEF
+ * SQL_DATA_TYPE
+ * SQL_DATETIME_SUB
+ * CHAR_OCTET_LENGTH
+ * ORDINAL_POSITION
+ * IS_NULLABLE
 
-The result set is ordered by TABLE_QUALIFIER, TABLE_SCHEM and TABLE_NAME.
+Drivers can report additional columns.
+
+The result set is ordered by TABLE_CAT, TABLE_SCHEM, TABLE_NAME and
+ORDINAL_POSITION.
+
+===============================================================================
+[ Examples ]
+
+Example #1 List Columns of a Table
+
+<?php >
+  $conn = odbc_connect($dsn, $user, $pass);
+  $columns = odbc_columns($conn, 'TutorialDB', 'dbo', 'test', '%');
+  while (($row = odbc_fetch_array($columns))) {
+      print_r($row);
+      break; // further rows omitted for brevity
+  }
+<?>
+
+The above example will output something similar to:
+
+Array
+(
+    [TABLE_CAT] => TutorialDB
+    [TABLE_SCHEM] => dbo
+    [TABLE_NAME] => TEST
+    [COLUMN_NAME] => id
+    [DATA_TYPE] => 4
+    [TYPE_NAME] => int
+    [COLUMN_SIZE] => 10
+    [BUFFER_LENGTH] => 4
+    [DECIMAL_DIGITS] => 0
+    [NUM_PREC_RADIX] => 10
+    [NULLABLE] => 0
+    [REMARKS] =>
+    [COLUMN_DEF] =>
+    [SQL_DATA_TYPE] => 4
+    [SQL_DATETIME_SUB] =>
+    [CHAR_OCTET_LENGTH] =>
+    [ORDINAL_POSITION] => 1
+    [IS_NULLABLE] => NO
+)
 
 ===============================================================================
 [ See Also ]
 
  * |odbc_columnprivileges| - Lists columns and associated privileges for the
-  given table to retrieve associated privileges
+  given table
+ * |odbc_procedurecolumns| - Retrieve information about parameters to
+  procedures
 
 
 vim:ft=help:

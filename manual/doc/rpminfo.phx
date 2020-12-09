@@ -1,0 +1,65 @@
+*rpminfo*
+
+(PECL rpminfo >= 0.1.0)
+
+rpminfo — Get information from a RPM file
+
+===============================================================================
+[ Description ]
+
+  rpminfo ( string $path [, bool $full = FALSE [, string &$error ]] ) : array~
+
+Retrieve information about a local file, a RPM package.
+
+===============================================================================
+[ Parameters ]
+
+{path}
+
+  Path of the RPM file.
+
+{full}
+
+  If TRUE all information headers for the file are retrieved, else only a
+  minimal set.
+
+{error}
+
+  If provided, will receive the possible error message, and will avoid a
+  runtime warning.
+
+===============================================================================
+[ Return Values ]
+
+An array of information or NULL on error.
+
+===============================================================================
+[ See Also ]
+
+ * |rpmaddtag| - Add tag retrieved in query
+
+===============================================================================
+[ Examples ]
+
+Example #1 A rpminfo() example
+
+<?php >
+  rpmaddtag(RPMTAG_BUILDTIME);
+  $info = rpminfo("./php-pecl-rpminfo-0.4.2-1.el8.remi.7.4.x86_64.rpm");
+  print_r($info);
+<?>
+
+The above example will output:
+
+Array
+(
+    [Name] => php-pecl-rpminfo
+    [Version] => 0.4.2
+    [Release] => 1.el8
+    [Summary] => RPM information
+    [Buildtime] => 1586244821
+    [Arch] => x86_64
+)
+
+
+vim:ft=help:

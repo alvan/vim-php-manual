@@ -5,10 +5,15 @@
 restore_include_path — Restores the value of the include_path configuration
 option
 
+Warning
+
+This function has been DEPRECATED as of PHP 7.4.0. Relying on this function is
+highly discouraged.
+
 ===============================================================================
 [ Description ]
 
-  restore_include_path ( void ) : void~
+  restore_include_path ( ) : void~
 
 Restores the include_path configuration option back to its original master
 value as set in php.ini

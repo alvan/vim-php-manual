@@ -13,8 +13,9 @@ oci_connect — Connect to an Oracle database
 
 Returns a connection identifier needed for most other OCI8 operations.
 
-See Connection Handling for general information on connection management and
-connection pooling.
+For performance, most applications should use persistent connections with 
+|oci_pconnect| instead of oci_connect(). See Connection Handling for general
+information on connection management and connection pooling.
 
 From PHP 5.1.2 (PECL OCI8 1.1) |oci_close| can be used to close the connection.
 
@@ -37,7 +38,7 @@ isolated from each other, use |oci_new_connect| instead.
 
 {connection_string}
 
-  Contains the Oracle instance to connect to. It can be an >> Easy Connect
+  Contains the Oracle instance to connect to. It can be an » Easy Connect
   string, or a Connect Name from the tnsnames.ora file, or the name of a local
   Oracle instance.
 
@@ -48,14 +49,15 @@ isolated from each other, use |oci_new_connect| instead.
   To use the Easy Connect naming method, PHP must be linked with Oracle 10g or
   greater Client libraries. The Easy Connect string for Oracle 10g is of the
   form: [//]host_name[:port][/service_name]. From Oracle 11g, the syntax is: [/
-  /]host_name[:port][/service_name][:server_type][/instance_name]. Service
-  names can be found by running the Oracle utility lsnrctl status on the
-  database server machine.
+  /]host_name[:port][/service_name][:server_type][/instance_name]. Futher
+  options were introduced with Oracle 19c, including timeout and keep-alive
+  settings. Refer to Oracle documentation. Service names can be found by
+  running the Oracle utility lsnrctl status on the database server machine.
 
-  The tnsnames.ora file can be in the Oracle Net search path, which includes
-  $ORACLE_HOME/network/admin and /etc. Alternatively set TNS_ADMIN so that
-  $TNS_ADMIN/tnsnames.ora is read. Make sure the web daemon has read access to
-  the file.
+  The tnsnames.ora file can be in the Oracle Net search path, which includes /
+  your/path/to/instantclient/network/admin, $ORACLE_HOME/network/admin and /
+  etc. Alternatively set TNS_ADMIN so that $TNS_ADMIN/tnsnames.ora is read.
+  Make sure the web daemon has read access to the file.
 
 {character_set}
 
@@ -281,7 +283,7 @@ Example #4 Using multiple calls to oci_connect()
   //    c2 ----selecting
   //    c2 ----done
   //    Dropped table
-  //    c1 is 
+  //    c1 is
   //    c2 is Resource id #5
 
 <?>

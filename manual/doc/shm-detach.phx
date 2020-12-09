@@ -7,23 +7,30 @@ shm_detach — Disconnects from shared memory segment
 ===============================================================================
 [ Description ]
 
-  shm_detach ( resource $shm_identifier ) : bool~
+  shm_detach ( SysvSharedMemory $shm ) : bool~
 
-shm_detach() disconnects from the shared memory given by the {shm_identifier}
-created by |shm_attach|. Remember, that shared memory still exist in the Unix
-system and the data is still present.
+shm_detach() disconnects from the shared memory given by the {shm} created by 
+|shm_attach|. Remember, that shared memory still exist in the Unix system and
+the data is still present.
 
 ===============================================================================
 [ Parameters ]
 
-{shm_identifier}
+{shm}
 
-  A shared memory resource handle as returned by |shm_attach|
+  A shared memory segment obtained from |shm_attach|.
 
 ===============================================================================
 [ Return Values ]
 
-shm_detach() always returns TRUE.
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {shm} expects a SysvSharedMemory instance now; previously, a resource
+        was expected.
 
 ===============================================================================
 [ See Also ]

@@ -9,7 +9,9 @@ imap_utf8 — Converts MIME-encoded text to UTF-8
 
   imap_utf8 ( string $mime_encoded_text ) : string~
 
-Converts the given {mime_encoded_text} to UTF-8.
+Converts the given {mime_encoded_text} to UTF-8, if the declared charset is
+known to libc-client. Otherwise the given text is decoded, but not converted to
+UTF-8.
 
 ===============================================================================
 [ Parameters ]
@@ -17,12 +19,25 @@ Converts the given {mime_encoded_text} to UTF-8.
 {mime_encoded_text}
 
   A MIME encoded string. MIME encoding method and the UTF-8 specification are
-  described in >> RFC2047 and >> RFC2044 respectively.
+  described in » RFC2047 and » RFC2044 respectively.
 
 ===============================================================================
 [ Return Values ]
 
-Returns an UTF-8 encoded string.
+Returns the decoded string, if possible converted to UTF-8.
+
+===============================================================================
+[ Examples ]
+
+Example #1 Basic imap_utf8() Usage
+
+<?php >
+  echo imap_utf8("Johannes =?ISO-8859-1?Q?Schl=FCter?=");
+<?>
+
+The above example will output something similar to:
+
+Johannes Schlüter
 
 ===============================================================================
 [ See Also ]

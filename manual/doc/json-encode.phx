@@ -7,13 +7,13 @@ json_encode — Returns the JSON representation of a value
 ===============================================================================
 [ Description ]
 
-  json_encode ( mixed $value [, int $options = 0 [, int $depth = 512 ]] ) :~
-  string~
+  json_encode ( mixed $value [, int $flags = 0 [, int $depth = 512 ]] ) :~
+  string|false~
 
 Returns a string containing the JSON representation of the supplied {value}.
 
-The encoding is affected by the supplied {options} and additionally the
-encoding of float values depends on the value of serialize_precision.
+The encoding is affected by the supplied {flags} and additionally the encoding
+of float values depends on the value of serialize_precision.
 
 ===============================================================================
 [ Parameters ]
@@ -26,16 +26,17 @@ encoding of float values depends on the value of serialize_precision.
 
     Note:
 
-    PHP implements a superset of JSON as specified in the original >> RFC 7159.
+    PHP implements a superset of JSON as specified in the original » RFC 7159.
 
-{options}
+{flags}
 
-  Bitmask consisting of JSON_HEX_QUOT, JSON_HEX_TAG, JSON_HEX_AMP,
-  JSON_HEX_APOS, JSON_NUMERIC_CHECK, JSON_PRETTY_PRINT, JSON_UNESCAPED_SLASHES,
-  JSON_FORCE_OBJECT, JSON_PRESERVE_ZERO_FRACTION, JSON_UNESCAPED_UNICODE,
-  JSON_PARTIAL_OUTPUT_ON_ERROR, JSON_UNESCAPED_LINE_TERMINATORS,
-  JSON_THROW_ON_ERROR. The behaviour of these constants is described on the
-  JSON constants page.
+  Bitmask consisting of JSON_FORCE_OBJECT, JSON_HEX_QUOT, JSON_HEX_TAG,
+  JSON_HEX_AMP, JSON_HEX_APOS, JSON_INVALID_UTF8_IGNORE,
+  JSON_INVALID_UTF8_SUBSTITUTE, JSON_NUMERIC_CHECK,
+  JSON_PARTIAL_OUTPUT_ON_ERROR, JSON_PRESERVE_ZERO_FRACTION, JSON_PRETTY_PRINT,
+  JSON_UNESCAPED_LINE_TERMINATORS, JSON_UNESCAPED_SLASHES,
+  JSON_UNESCAPED_UNICODE, JSON_THROW_ON_ERROR. The behaviour of these constants
+  is described on the JSON constants page.
 
 {depth}
 
@@ -50,16 +51,12 @@ Returns a JSON encoded string on success or FALSE on failure.
 [ Changelog ]
 
 Version                               Description
+7.3.0   JSON_THROW_ON_ERROR {flags} was added.
+7.2.0   JSON_INVALID_UTF8_IGNORE, and JSON_INVALID_UTF8_SUBSTITUTE {flags} were
+        added.
+7.1.0   JSON_UNESCAPED_LINE_TERMINATORS {flags} was added.
 7.1.0   serialize_precision is used instead of precision when encoding double
         values.
-5.6.6   JSON_PRESERVE_ZERO_FRACTION {option} was added.
-5.5.0   {depth} parameter was added.
-5.5.0   JSON_PARTIAL_OUTPUT_ON_ERROR option was added.
-5.5.0   The return value on failure was changed from null string to FALSE.
-5.4.0   JSON_PRETTY_PRINT, JSON_UNESCAPED_SLASHES, and JSON_UNESCAPED_UNICODE
-        {options} were added.
-5.3.3   JSON_NUMERIC_CHECK {option} was added.
-5.3.0   The {options} parameter was added.
 
 ===============================================================================
 [ Examples ]
@@ -261,10 +258,10 @@ string(2) "12"
   Note:
 
   Like the reference JSON encoder, json_encode() will generate JSON that is a
-  simple value (that is, neither an object nor an array) if given a string, 
-  integer, float or boolean as an input {value}. While most decoders will
-  accept these values as valid JSON, some may not, as the specification is
-  ambiguous on this point.
+  simple value (that is, neither an object nor an array) if given a string, int
+  , float or bool as an input {value}. While most decoders will accept these
+  values as valid JSON, some may not, as the specification is ambiguous on this
+  point.
 
   To summarise, always test that your JSON decoder can handle the output you
   generate from json_encode().

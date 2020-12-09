@@ -9,7 +9,7 @@ parameters, and waits for the result
 [ Description ]
 
   pg_execute ([ resource $connection ], string $stmtname , array $params ) :~
-  resource~
+  resource|false~
 
 Sends a request to execute a prepared statement with given parameters, and
 waits for the result.

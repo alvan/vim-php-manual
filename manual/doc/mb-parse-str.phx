@@ -7,7 +7,7 @@ mb_parse_str — Parse GET/POST/COOKIE data and set global variable
 ===============================================================================
 [ Description ]
 
-  mb_parse_str ( string $encoded_string [, array &$result ] ) : bool~
+  mb_parse_str ( string $encoded_string , array &$result ) : bool~
 
 Parses GET/POST/COOKIE data and sets global variables. Since PHP does not
 provide raw POST/COOKIE data, it can only be used for GET data for now. It
@@ -29,6 +29,13 @@ and set values to the {result} array or global variables.
 [ Return Values ]
 
 Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+[ Changelog ]
+
+Version                             Description
+8.0.0   The second parameter was no longer optional.
+7.2.0   Calling mb_parse_str() without the second parameter was deprecated.
 
 ===============================================================================
 [ See Also ]

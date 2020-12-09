@@ -7,7 +7,7 @@ next — Advance the internal pointer of an array
 ===============================================================================
 [ Description ]
 
-  next ( array &$array ) : mixed~
+  next ( array|object &$array ) : mixed~
 
 next() behaves like |current|, with one difference. It advances the internal
 array pointer one place forward before returning the element value. That means
@@ -50,10 +50,10 @@ Example #1 Example use of next() and friends
 ===============================================================================
 [ Notes ]
 
-  Note: The end of an array is indistinguishable from a boolean FALSE element.
-  To properly traverse an array which may contain FALSE elements, see the 
-  foreach() function. To still use next() and properly check if the end of the
-  array has been reached, verify that the |key| is NULL.
+  Note: The end of an array is indistinguishable from a bool FALSE element. To
+  properly traverse an array which may contain FALSE elements, see the foreach
+  () function. To still use next() and properly check if the end of the array
+  has been reached, verify that the |key| is NULL.
 
 ===============================================================================
 [ See Also ]

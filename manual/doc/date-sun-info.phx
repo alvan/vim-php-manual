@@ -8,14 +8,15 @@ twilight begin/end
 ===============================================================================
 [ Description ]
 
-  date_sun_info ( int $time , float $latitude , float $longitude ) : array~
+  date_sun_info ( int $timestamp , float $latitude , float $longitude ) :~
+  array|false~
 
 ===============================================================================
 [ Parameters ]
 
-{time}
+{timestamp}
 
-  Timestamp.
+  Unix timestamp.
 
 {latitude}
 
@@ -32,11 +33,12 @@ Returns array on success or FALSE on failure. The structure of the array is
 detailed in the following list:
 
 sunrise
-  The time of the sunrise (zenith angle = 90°35').
+  The timestamp of the sunrise (zenith angle = 90°35').
 sunset
-  The time of the sunset (zenith angle = 90°35').
+  The timestamp of the sunset (zenith angle = 90°35').
 transit
-  The time when the sun is at its zenith, i.e. has reached its topmost point.
+  The timestamp when the sun is at its zenith, i.e. has reached its topmost
+  point.
 civil_twilight_begin
   The start of the civil dawn (zenith angle = 96°). It ends at sunrise.
 civil_twilight_end
@@ -57,12 +59,6 @@ astronomical_twilight_end
 The values of the array elements are either UNIX timestamps, FALSE if the sun
 is below the respective zenith for the whole day, or TRUE if the sun is above
 the respective zenith for the whole day.
-
-===============================================================================
-[ Changelog ]
-
-Version                        Description
-5.2.2   The order of {latitude} and {longitude} has been swapped.
 
 ===============================================================================
 [ Examples ]

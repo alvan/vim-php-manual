@@ -8,7 +8,7 @@ file_get_contents — Reads entire file into a string
 [ Description ]
 
   file_get_contents ( string $filename [, bool $use_include_path = FALSE [,~
-  resource $context [, int $offset = 0 [, int $maxlen ]]]] ) : string~
+  resource $context [, int $offset = 0 [, int $maxlen ]]]] ) : string|false~
 
 This function is similar to |file|, except that file_get_contents() returns the
 file in a string, starting at the specified {offset} up to {maxlen} bytes. On
@@ -35,9 +35,9 @@ enhance performance.
 
     Note:
 
-    As of PHP 5 the FILE_USE_INCLUDE_PATH constant can be used to trigger
-    include path search. This is not possible if strict typing is enabled,
-    since FILE_USE_INCLUDE_PATH is an int. Use TRUE instead.
+    The FILE_USE_INCLUDE_PATH constant can be used to trigger include path
+    search. This is not possible if strict typing is enabled, since
+    FILE_USE_INCLUDE_PATH is an int. Use TRUE instead.
 
 {context}
 
@@ -91,9 +91,9 @@ Example #1 Get and output the source of the homepage of a website
 Example #2 Searching within the include_path
 
 <?php >
-  // <= PHP 5
+  // If strict types are enabled i.e. declare(strict_types=1);
   $file = file_get_contents('./people.txt', true);
-  // > PHP 5
+  // Otherwise
   $file = file_get_contents('./people.txt', FILE_USE_INCLUDE_PATH);
 <?>
 
@@ -132,7 +132,6 @@ Example #4 Using stream contexts
 
 Version                  Description
 7.1.0   Support for negative {offset}s has been added.
-5.1.0   Added the {offset} and {maxlen} parameters.
 
 ===============================================================================
 [ Notes ]

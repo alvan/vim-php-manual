@@ -1,13 +1,13 @@
 *ibase_execute*
 
-(PHP 5, PHP 7)
+(PHP 5, PHP 7 < 7.4.0)
 
 ibase_execute — Execute a previously prepared query
 
 ===============================================================================
 [ Description ]
 
-  ibase_execute ( resource $query [, mixed $... ] ) : resource~
+  ibase_execute ( resource $query , mixed ...$values ) : resource~
 
 Execute a query prepared by |ibase_prepare|.
 
@@ -21,7 +21,7 @@ same kind of query several times with only some parameters changing.
 
   An InterBase query prepared by |ibase_prepare|.
 
-{...}
+{values}
 
 ===============================================================================
 [ Return Values ]

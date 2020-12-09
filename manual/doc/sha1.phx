@@ -13,20 +13,20 @@ best practices.
 ===============================================================================
 [ Description ]
 
-  sha1 ( string $str [, bool $raw_output = FALSE ] ) : string~
+  sha1 ( string $string [, bool $binary = FALSE ] ) : string~
 
-Calculates the sha1 hash of {str} using the >> US Secure Hash Algorithm 1.
+Calculates the sha1 hash of {string} using the » US Secure Hash Algorithm 1.
 
 ===============================================================================
 [ Parameters ]
 
-{str}
+{string}
 
   The input string.
 
-{raw_output}
+{binary}
 
-  If the optional {raw_output} is set to TRUE, then the sha1 digest is instead
+  If the optional {binary} is set to TRUE, then the sha1 digest is instead
   returned in raw binary format with a length of 20, otherwise the returned
   value is a 40-character hexadecimal number.
 

@@ -7,7 +7,7 @@ session_name — Get and/or set the current session name
 ===============================================================================
 [ Description ]
 
-  session_name ([ string $name ] ) : string~
+  session_name ([ string|null $name = NULL ] ) : string|false~
 
 session_name() returns the name of the current session. If {name} is given, 
 session_name() will update the session name and return the old session name.
@@ -29,8 +29,8 @@ request startup time. Thus, you need to call session_name() for every request
   The session name references the name of the session, which is used in cookies
   and URLs (e.g. PHPSESSID). It should contain only alphanumeric characters; it
   should be short and descriptive (i.e. for users with enabled cookie
-  warnings). If {name} is specified, the name of the current session is changed
-  to its value.
+  warnings). If {name} is specified and not NULL, the name of the current
+  session is changed to its value.
 
   Warning
 
@@ -41,7 +41,8 @@ request startup time. Thus, you need to call session_name() for every request
 [ Return Values ]
 
 Returns the name of the current session. If {name} is given and function
-updates the session name, name of the old session is returned.
+updates the session name, name of the old session is returned, or FALSE on
+failure.
 
 ===============================================================================
 [ Examples ]
@@ -61,6 +62,7 @@ Example #1 session_name() example
 [ Changelog ]
 
 Version                               Description
+8.0.0   {name} is nullable now.
         session_name() checks session status, previously it only checked cookie
 7.2.0   status. Therefore, older session_name() allows to call session_name()
         after |session_start| which may crash PHP and may result in

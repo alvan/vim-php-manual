@@ -7,21 +7,29 @@ enchant_broker_free_dict — Free a dictionary resource
 ===============================================================================
 [ Description ]
 
-  enchant_broker_free_dict ( resource $dict ) : bool~
+  enchant_broker_free_dict ( EnchantDictionary $dictionary ) : bool~
 
 Free a dictionary resource.
 
 ===============================================================================
 [ Parameters ]
 
-{dict}
+{dictionary}
 
-  Dictionary resource.
+  An Enchant dictionary returned by |enchant_broker_request_dict| or 
+  |enchant_broker_request_pwl_dict|.
 
 ===============================================================================
 [ Return Values ]
 
 Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {dictionary} expects a EnchantDictionary now; previoulsy, a resource
+        was expected.
 
 ===============================================================================
 [ See Also ]

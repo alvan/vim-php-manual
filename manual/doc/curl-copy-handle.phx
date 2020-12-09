@@ -7,21 +7,30 @@ curl_copy_handle — Copy a cURL handle along with all of its preferences
 ===============================================================================
 [ Description ]
 
-  curl_copy_handle ( resource $ch ) : resource~
+  curl_copy_handle ( CurlHandle $handle ) : CurlHandle|false~
 
 Copies a cURL handle keeping the same preferences.
 
 ===============================================================================
 [ Parameters ]
 
-{ch}
+{handle}
 
   A cURL handle returned by |curl_init|.
 
 ===============================================================================
 [ Return Values ]
 
-Returns a new cURL handle.
+Returns a new cURL handle, or FALSE on failure.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {handle} expects a CurlHandle instance now; previously, a resource was
+        expected.
+8.0.0   On success, this function returns a CurlHandle instance now;
+        previously, a resource was returned.
 
 ===============================================================================
 [ Examples ]

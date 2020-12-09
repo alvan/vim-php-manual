@@ -23,6 +23,12 @@ read and parse the whole thing.
 
 {data}
 
+
+    Note:
+
+    The final chunk of {data} is supposed to end with a newline (CRLF);
+    otherwise the last line of the message will not be parsed.
+
 ===============================================================================
 [ Return Values ]
 

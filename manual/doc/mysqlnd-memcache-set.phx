@@ -8,7 +8,7 @@ mysqlnd_memcache_set — Associate a MySQL connection with a Memcache connection
 [ Description ]
 
   mysqlnd_memcache_set ( mixed $mysql_connection [, Memcached~
-  $memcache_connection [, string $pattern [, callback $callback ]]] ) : bool~
+  $memcache_connection [, string $pattern [, callable $callback ]]] ) : bool~
 
 Associate {mysql_connection} with {memcache_connection} using {pattern} as a
 PCRE regular expression, and {callback} as a notification callback or to unset
@@ -49,8 +49,8 @@ results of this automatic configuration can be retrieved using
 {callback}
 
   A callback which will be used whenever a query is being sent to MySQL. The
-  callback will receive a single boolean parameter telling if a query was sent
-  via Memcache.
+  callback will receive a single bool parameter telling if a query was sent via
+  Memcache.
 
 ===============================================================================
 [ Return Values ]

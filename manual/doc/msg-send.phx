@@ -7,20 +7,32 @@ msg_send — Send a message to a message queue
 ===============================================================================
 [ Description ]
 
-  msg_send ( resource $queue , int $msgtype , mixed $message [, bool~
-  $serialize = TRUE [, bool $blocking = TRUE [, int &$errorcode ]]] ) : bool~
+  msg_send ( SysvMessageQueue $queue , int $message_type ,~
+  string|int|float|bool $message [, bool $serialize = TRUE [, bool $blocking =~
+  TRUE [, int &$error_code = NULL ]]] ) : bool~
 
-msg_send() sends a {message} of type {msgtype} (which MUST be greater than 0)
-to the message queue specified by {queue}.
+msg_send() sends a {message} of type {message_type} (which MUST be greater than
+0) to the message queue specified by {queue}.
 
 ===============================================================================
 [ Parameters ]
 
 {queue}
 
-{msgtype}
+  The message queue.
+
+{message_type}
+
+  The type of the message (MUST be greater than 0)
 
 {message}
+
+  The body of the message.
+
+    Note:
+
+    If {serialize} set to FALSE is supplied, MUST be of type: string, int, 
+    float or bool. In other case a warning will be issued.
 
 {serialize}
 
@@ -37,10 +49,13 @@ to the message queue specified by {queue}.
   message to be sent. This is called blocking; you can prevent blocking by
   setting the optional {blocking} parameter to FALSE, in which case msg_send()
   will immediately return FALSE if the message is too big for the queue, and
-  set the optional {errorcode} to MSG_EAGAIN, indicating that you should try to
-  send your message again a little later on.
+  set the optional {error_code} to MSG_EAGAIN, indicating that you should try
+  to send your message again a little later on.
 
-{errorcode}
+{error_code}
+
+  If the function fails, the optional errorcode will be set to the value of the
+  system errno variable.
 
 ===============================================================================
 [ Return Values ]
@@ -50,6 +65,13 @@ Returns TRUE on success or FALSE on failure.
 Upon successful completion the message queue data structure is updated as
 follows: {msg_lspid} is set to the process-ID of the calling process,
 {msg_qnum} is incremented by 1 and {msg_stime} is set to the current time.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {queue} expects a SysvMessageQueue instance now; previously, a resource
+        was expected.
 
 ===============================================================================
 [ See Also ]

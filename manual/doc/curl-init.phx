@@ -7,7 +7,7 @@ curl_init — Initialize a cURL session
 ===============================================================================
 [ Description ]
 
-  curl_init ([ string $url = NULL ] ) : resource~
+  curl_init ([ string|null $url = NULL ] ) : CurlHandle|false~
 
 Initializes a new session and return a cURL handle for use with the 
 |curl_setopt|, |curl_exec|, and |curl_close| functions.
@@ -28,6 +28,14 @@ Initializes a new session and return a cURL handle for use with the
 [ Return Values ]
 
 Returns a cURL handle on success, FALSE on errors.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   On success, this function returns a CurlHandle instance now;
+        previously, a resource was returned.
+8.0.0   {url} is nullable now.
 
 ===============================================================================
 [ Examples ]

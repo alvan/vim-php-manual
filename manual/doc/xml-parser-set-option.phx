@@ -7,8 +7,8 @@ xml_parser_set_option — Set options in an XML parser
 ===============================================================================
 [ Description ]
 
-  xml_parser_set_option ( resource $parser , int $option , mixed $value ) :~
-  bool~
+  xml_parser_set_option ( XMLParser $parser , int $option , string|int $value~
+  ) : bool~
 
 Sets an option in an XML parser.
 
@@ -50,6 +50,13 @@ Sets an option in an XML parser.
 
 This function returns FALSE if {parser} does not refer to a valid parser, or if
 the option could not be set. Else the option is set and TRUE is returned.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {parser} expects an XMLParser instance now; previously, a resource was
+        expected.
 
 
 vim:ft=help:

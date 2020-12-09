@@ -7,7 +7,7 @@ jdtojewish — Converts a Julian day count to a Jewish calendar date
 ===============================================================================
 [ Description ]
 
-  jdtojewish ( int $juliandaycount [, bool $hebrew = FALSE [, int $fl = 0 ]] )~
+  jdtojewish ( int $julian_day [, bool $hebrew = FALSE [, int $flags = 0 ]] )~
   : string~
 
 Converts a Julian Day Count to the Jewish Calendar.
@@ -21,10 +21,10 @@ Converts a Julian Day Count to the Jewish Calendar.
 
 {hebrew}
 
-  If the {hebrew} parameter is set to TRUE, the {fl} parameter is used for
+  If the {hebrew} parameter is set to TRUE, the {flags} parameter is used for
   Hebrew, ISO-8859-8 encoded string based, output format.
 
-{fl}
+{flags}
 
   A bitmask which may consist of CAL_JEWISH_ADD_ALAFIM_GERESH,
   CAL_JEWISH_ADD_ALAFIM and CAL_JEWISH_ADD_GERESHAYIM.

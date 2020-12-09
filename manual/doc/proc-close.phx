@@ -12,9 +12,9 @@ that process
 
 proc_close() is similar to |pclose| except that it only works on processes
 opened by |proc_open|. proc_close() waits for the process to terminate, and
-returns its exit code. If you have open pipes to that process, you should 
-|fclose| them prior to calling this function in order to avoid a deadlock - the
-child process may not be able to exit while the pipes are open.
+returns its exit code. Open pipes to that process are closed when this function
+is called, in order to avoid a deadlock - the child process may not be able to
+exit while the pipes are open.
 
 ===============================================================================
 [ Parameters ]

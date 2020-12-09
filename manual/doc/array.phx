@@ -7,7 +7,7 @@ array — Create an array
 ===============================================================================
 [ Description ]
 
-  array ([ mixed $... ] ) : array~
+  array ( mixed ...$values ) : array~
 
 Creates an array. Read the section on the array type for more information on
 what an array is.
@@ -15,7 +15,7 @@ what an array is.
 ===============================================================================
 [ Parameters ]
 
-{...}
+{values}
 
   Syntax "index => values", separated by commas, define index and values. index
   may be of type string or integer. When index is omitted, an integer index is

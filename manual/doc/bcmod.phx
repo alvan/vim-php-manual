@@ -7,32 +7,33 @@ bcmod — Get modulus of an arbitrary precision number
 ===============================================================================
 [ Description ]
 
-  bcmod ( string $dividend , string $divisor [, int $scale = 0 ] ) : string~
+  bcmod ( string $num1 , string $num2 [, int|null $scale = NULL ] ) : string~
 
-Get the remainder of dividing {dividend} by {divisor}. Unless {divisor} is
-zero, the result has the same sign as {dividend}.
+Get the remainder of dividing {num1} by {num2}. Unless {num2} is zero, the
+result has the same sign as {num1}.
 
 ===============================================================================
 [ Parameters ]
 
-{dividend}
+{num1}
 
   The dividend, as a string.
 
-{divisor}
+{num2}
 
   The divisor, as a string.
 
 ===============================================================================
 [ Return Values ]
 
-Returns the modulus as a string, or NULL if {divisor} is 0.
+Returns the modulus as a string, or NULL if {num2} is 0.
 
 ===============================================================================
 [ Changelog ]
 
 Version                               Description
-7.2.0   {dividend} and {divisor} are no longer truncated to integer, so now the
+8.0.0   {scale} is now nullable.
+7.2.0   {num1} and {num2} are no longer truncated to integer, so now the
         behavior of bcmod() follows |fmod| rather than the % operator.
 7.2.0   The {scale} parameter was added.
 

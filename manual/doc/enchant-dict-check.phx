@@ -7,16 +7,17 @@ enchant_dict_check — Check whether a word is correctly spelled or not
 ===============================================================================
 [ Description ]
 
-  enchant_dict_check ( resource $dict , string $word ) : bool~
+  enchant_dict_check ( EnchantDictionary $dictionary , string $word ) : bool~
 
 If the word is correctly spelled return TRUE, otherwise return FALSE
 
 ===============================================================================
 [ Parameters ]
 
-{dict}
+{dictionary}
 
-  Dictionary resource
+  An Enchant dictionary returned by |enchant_broker_request_dict| or 
+  |enchant_broker_request_pwl_dict|.
 
 {word}
 
@@ -26,6 +27,13 @@ If the word is correctly spelled return TRUE, otherwise return FALSE
 [ Return Values ]
 
 Returns TRUE if the word is spelled correctly, FALSE if not.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {dictionary} expects an EnchantDictionary instance now; previoulsy, a
+        resource was expected.
 
 
 vim:ft=help:

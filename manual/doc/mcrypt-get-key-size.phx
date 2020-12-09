@@ -6,14 +6,14 @@ mcrypt_get_key_size — Gets the key size of the specified cipher
 
 Warning
 
-This function has been DEPRECATED as of PHP 7.1.0. Relying on this function is
-highly discouraged.
+This function has been DEPRECATED as of PHP 7.1.0 and REMOVED as of PHP 7.2.0.
+Relying on this function is highly discouraged.
 
 ===============================================================================
 [ Description ]
 
-  mcrypt_get_key_size ( int $cipher ) : int~
-  mcrypt_get_key_size ( string $cipher , string $mode ) : int~
+  mcrypt_get_key_size ( int $cipher ) : int|false~
+  mcrypt_get_key_size ( string $cipher , string $mode ) : int|false~
 
 The first prototype is when linked against libmcrypt 2.2.x, the second when
 linked against libmcrypt 2.4.x or 2.5.x.

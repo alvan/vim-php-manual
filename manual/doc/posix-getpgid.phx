@@ -7,7 +7,7 @@ posix_getpgid — Get process group id for job control
 ===============================================================================
 [ Description ]
 
-  posix_getpgid ( int $pid ) : int~
+  posix_getpgid ( int $pid ) : int|false~
 
 Returns the process group identifier of the process {pid} or FALSE on failure.
 
@@ -21,7 +21,7 @@ Returns the process group identifier of the process {pid} or FALSE on failure.
 ===============================================================================
 [ Return Values ]
 
-Returns the identifier, as an integer.
+Returns the identifier, as an int.
 
 ===============================================================================
 [ Examples ]

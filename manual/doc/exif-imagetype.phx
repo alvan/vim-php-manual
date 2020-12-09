@@ -7,7 +7,7 @@ exif_imagetype — Determine the type of an image
 ===============================================================================
 [ Description ]
 
-  exif_imagetype ( string $filename ) : int~
+  exif_imagetype ( string $filename ) : int|false~
 
 exif_imagetype() reads the first bytes of an image and checks its signature.
 
@@ -39,7 +39,6 @@ faster.
 
 Version     Description
 7.1.0   Added WebP support.
-5.3.0   Added icon support.
 
 ===============================================================================
 [ Predefined Constants ]

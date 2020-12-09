@@ -1,6 +1,6 @@
 *XMLWriter::startDtdEntity* *xmlwriter_start_dtd_entity*
 
-(PHP 5 >= 5.1.2, PHP 7, PECL xmlwriter >= 0.1.0)
+(PHP 5 >= 5.2.1, PHP 7, PECL xmlwriter >= 0.1.0)
 
 XMLWriter::startDtdEntity -- xmlwriter_start_dtd_entity — Create start DTD
 Entity
@@ -10,34 +10,41 @@ Entity
 
 Object oriented style
 
-  XMLWriter::startDtdEntity ( string $name , bool $isparam ) : bool~
+  public XMLWriter::startDtdEntity ( string $name , bool $isParam ) : bool~
 
 Procedural style
 
-  xmlwriter_start_dtd_entity ( resource $xmlwriter , string $name , bool~
-  $isparam ) : bool~
+  xmlwriter_start_dtd_entity ( XMLWriter $writer , string $name , bool~
+  $isParam ) : bool~
 
 Starts a DTD entity.
 
 ===============================================================================
 [ Parameters ]
 
-{ xmlwriter}
+{ writer}
 
-  Only for procedural calls. The XMLWriter resource that is being modified.
-  This resource comes from a call to |xmlwriter_open_uri| or 
+  Only for procedural calls. The XMLWriter instance that is being modified.
+  This object is returned from a call to |xmlwriter_open_uri| or 
   |xmlwriter_open_memory|.
 
 {name}
 
   The name of the entity.
 
-{isparam}
+{isParam}
 
 ===============================================================================
 [ Return Values ]
 
 Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {writer} expects an XMLWriter instance now; previously, a resource was
+        expected.
 
 ===============================================================================
 [ See Also ]

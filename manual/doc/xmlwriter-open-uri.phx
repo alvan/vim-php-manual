@@ -10,11 +10,11 @@ uri for output
 
 Object oriented style
 
-  XMLWriter::openUri ( string $uri ) : bool~
+  public XMLWriter::openUri ( string $uri ) : bool~
 
 Procedural style
 
-  xmlwriter_open_uri ( string $uri ) : resource~
+  xmlwriter_open_uri ( string $uri ) : XMLWriter|false~
 
 Creates a new XMLWriter using {uri} for the output.
 
@@ -30,8 +30,35 @@ Creates a new XMLWriter using {uri} for the output.
 
 Object oriented style: Returns TRUE on success or FALSE on failure.
 
-Procedural style: Returns a new xmlwriter resource for later use with the
-xmlwriter functions on success, FALSE on error.
+Procedural style: Returns a new XMLWriter instance for later use with the
+xmlwriter functions on success, or FALSE on failure.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   This function returns now an XMLWriter instance on success. Previouly,
+        a resource has been returned in this case.
+
+===============================================================================
+[ Examples ]
+
+Example #1 Direct output of XML
+
+It is possible to directly output XML by using the php://output stream wrapper.
+
+<?php >
+  $out =new XMLWriter();
+  $out->openURI('php://output');
+<?>
+
+===============================================================================
+[ Notes ]
+
+  Note:
+
+  On Windows, files opened with this function are locked until the writer is
+  released.
 
 ===============================================================================
 [ See Also ]

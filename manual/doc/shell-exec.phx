@@ -12,6 +12,12 @@ string
 
 This function is identical to the backtick operator.
 
+  Note:
+
+  On Windows, the underlying pipe is opened in text mode which can cause the
+  function to fail for binary output. Consider to use |popen| instead for such
+  cases.
+
 ===============================================================================
 [ Parameters ]
 
@@ -41,13 +47,6 @@ Example #1 A shell_exec() example
   $output = shell_exec('ls -lart');
   echo "<pre>$output</pre>";
 <?>
-
-===============================================================================
-[ Notes ]
-
-  Note:
-
-  This function is disabled when PHP is running in safe mode.
 
 ===============================================================================
 [ See Also ]

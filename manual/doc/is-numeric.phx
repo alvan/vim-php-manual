@@ -9,10 +9,7 @@ is_numeric — Finds whether a variable is a number or a numeric string
 
   is_numeric ( mixed $var ) : bool~
 
-Finds whether the given variable is numeric. Numeric strings consist of
-optional sign, any number of digits, optional decimal part and optional
-exponential part. Thus +0123.45e6 is a valid numeric value. Hexadecimal (e.g.
-0xf4c3b00c) and binary (e.g. 0b10100111001) notation is not allowed.
+Determines if the given variable is a number or a numeric string.
 
 ===============================================================================
 [ Parameters ]
@@ -39,6 +36,10 @@ Example #1 is_numeric() examples
       02471,
       0b10100111001,
       1337e0,
+      "0x539",
+      "02471",
+      "0b10100111001",
+      "1337e0",
       "not numeric",
       array(),
       9.1,
@@ -61,22 +62,21 @@ The above example will output:
 1337 is numeric
 1337 is numeric
 1337 is numeric
-1337 is numeric
+1337.0 is numeric
+'0x539' is NOT numeric
+'02471' is numeric
+'0b10100111001' is NOT numeric
+'1337e0' is numeric
 'not numeric' is NOT numeric
-array () is NOT numeric
-9.0999999999999996447286321199499070644378662109375 is numeric
+array (
+) is NOT numeric
+9.1 is numeric
 NULL is NOT numeric
-
-===============================================================================
-[ Changelog ]
-
-Version                               Description
-7.0.0   Strings in hexadecimal (e.g. 0xf4c3b00c) notation are no longer
-        regarded as numeric strings, i.e. is_numeric() returns FALSE now.
 
 ===============================================================================
 [ See Also ]
 
+ * Numeric strings
  * |ctype_digit| - Check for numeric character(s)
  * |is_bool| - Finds out whether a variable is a boolean
  * |is_null| - Finds whether a variable is NULL

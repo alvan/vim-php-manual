@@ -7,8 +7,8 @@ enchant_dict_store_replacement — Add a correction for a word
 ===============================================================================
 [ Description ]
 
-  enchant_dict_store_replacement ( resource $dict , string $mis , string $cor~
-  ) : void~
+  enchant_dict_store_replacement ( EnchantDictionary $dictionary , string~
+  $misspelled , string $correct ) : void~
 
 Add a correction for 'mis' using 'cor'. Notes that you replaced @mis with @cor,
 so it's possibly more likely that future occurrences of @mis will be replaced
@@ -17,15 +17,16 @@ with @cor. So it might bump @cor up in the suggestion list.
 ===============================================================================
 [ Parameters ]
 
-{dict}
+{dictionary}
 
-  Dictionary resource
+  An Enchant dictionary returned by |enchant_broker_request_dict| or 
+  |enchant_broker_request_pwl_dict|.
 
-{mis}
+{misspelled}
 
   The work to fix
 
-{cor}
+{correct}
 
   The correct word
 
@@ -33,6 +34,13 @@ with @cor. So it might bump @cor up in the suggestion list.
 [ Return Values ]
 
 Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {dictionary} expects an EnchantDictionary instance now; previoulsy, a
+        resource was expected.
 
 
 vim:ft=help:

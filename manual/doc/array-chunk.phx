@@ -7,11 +7,11 @@ array_chunk — Split an array into chunks
 ===============================================================================
 [ Description ]
 
-  array_chunk ( array $array , int $size [, bool $preserve_keys = FALSE ] ) :~
-  array~
+  array_chunk ( array $array , int $length [, bool $preserve_keys = FALSE ] )~
+  : array~
 
-Chunks an array into arrays with {size} elements. The last chunk may contain
-less than {size} elements.
+Chunks an array into arrays with {length} elements. The last chunk may contain
+less than {length} elements.
 
 ===============================================================================
 [ Parameters ]
@@ -20,7 +20,7 @@ less than {size} elements.
 
   The array to work on
 
-{size}
+{length}
 
   The size of each chunk
 
@@ -33,12 +33,12 @@ less than {size} elements.
 [ Return Values ]
 
 Returns a multidimensional numerically indexed array, starting with zero, with
-each dimension containing {size} elements.
+each dimension containing {length} elements.
 
 ===============================================================================
 [ Errors/Exceptions ]
 
-If {size} is less than 1 E_WARNING will be thrown and NULL returned.
+If {length} is less than 1 E_WARNING will be thrown and NULL returned.
 
 ===============================================================================
 [ Examples ]

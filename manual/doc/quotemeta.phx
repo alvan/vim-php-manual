@@ -7,7 +7,7 @@ quotemeta — Quote meta characters
 ===============================================================================
 [ Description ]
 
-  quotemeta ( string $str ) : string~
+  quotemeta ( string $string ) : string~
 
 Returns a version of str with a backslash character (\) before every character
 that is among these:
@@ -16,7 +16,7 @@ that is among these:
 ===============================================================================
 [ Parameters ]
 
-{str}
+{string}
 
   The input string.
 
@@ -24,7 +24,7 @@ that is among these:
 [ Return Values ]
 
 Returns the string with meta characters quoted, or FALSE if an empty string is
-given as {str}.
+given as {string}.
 
 ===============================================================================
 [ Notes ]

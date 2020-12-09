@@ -8,20 +8,20 @@ length characters
 ===============================================================================
 [ Description ]
 
-  substr_compare ( string $main_str , string $str , int $offset [, int $length~
-  [, bool $case_insensitivity = FALSE ]] ) : int~
+  substr_compare ( string $haystack , string $needle , int $offset [, int|null~
+  $length = NULL [, bool $case_insensitive = FALSE ]] ) : int~
 
-substr_compare() compares {main_str} from position {offset} with {str} up to
+substr_compare() compares {haystack} from position {offset} with {needle} up to
 {length} characters.
 
 ===============================================================================
 [ Parameters ]
 
-{main_str}
+{haystack}
 
   The main string being compared.
 
-{str}
+{needle}
 
   The secondary string being compared.
 
@@ -33,26 +33,27 @@ substr_compare() compares {main_str} from position {offset} with {str} up to
 {length}
 
   The length of the comparison. The default value is the largest of the length
-  of the {str} compared to the length of {main_str} less the {offset}.
+  of the {needle} compared to the length of {haystack} minus the {offset}.
 
-{case_insensitivity}
+{case_insensitive}
 
-  If {case_insensitivity} is TRUE, comparison is case insensitive.
+  If {case_insensitive} is TRUE, comparison is case insensitive.
 
 ===============================================================================
 [ Return Values ]
 
-Returns < 0 if {main_str} from position {offset} is less than {str}, > 0 if it
-is greater than {str}, and 0 if they are equal. If {offset} is equal to or
-greater than the length of {main_str}, or the {length} is set and is less than
-1 (prior to PHP 5.5.11), substr_compare() prints a warning and returns FALSE.
+Returns < 0 if {haystack} from position {offset} is less than {needle}, > 0 if
+it is greater than {needle}, and 0 if they are equal. If {offset} is equal to
+(prior to PHP 7.2.18, 7.3.5) or greater than the length of {haystack}, or the
+{length} is set and is less than 0, substr_compare() prints a warning and
+returns FALSE.
 
 ===============================================================================
 [ Changelog ]
 
-Version                    Description
-5.5.11  {length} may now be 0.
-5.1.0   Added the possibility to use a negative {offset}.
+   Version                         Description
+8.0.0         {length} is nullable now.
+7.2.18, 7.3.5 {offset} may now be equal to the length of {haystack}.
 
 ===============================================================================
 [ Examples ]

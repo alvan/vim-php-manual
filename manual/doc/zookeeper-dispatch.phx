@@ -7,7 +7,7 @@ zookeeper_dispatch — Calls callbacks for pending operations
 ===============================================================================
 [ Description ]
 
-  zookeeper_dispatch ( void ) : void~
+  zookeeper_dispatch ( ) : void~
 
 The zookeeper_dispatch() function calls the callbacks passwd by operations like
 Zookeeper::get() or Zookeeper::exists().
@@ -44,9 +44,6 @@ Dispatch callbacks manually.
       zookeeper_dispatch();
   }
 <?>
-
-===============================================================================
-[ Examples ]
 
 Example #2 zookeeper_dispatch() example #2
 

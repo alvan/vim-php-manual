@@ -8,7 +8,7 @@ error information as needed
 ===============================================================================
 [ Description ]
 
-  libxml_use_internal_errors ([ bool $use_errors = FALSE ] ) : bool~
+  libxml_use_internal_errors ([ bool|null $use_errors = NULL ] ) : bool~
 
 libxml_use_internal_errors() allows you to disable standard libxml errors and
 enable user error handling.
@@ -25,6 +25,12 @@ enable user error handling.
 [ Return Values ]
 
 This function returns the previous value of {use_errors}.
+
+===============================================================================
+[ Changelog ]
+
+Version                           Description
+8.0.0   {use_errors} is nullable now. Previously, its default was FALSE.
 
 ===============================================================================
 [ Examples ]

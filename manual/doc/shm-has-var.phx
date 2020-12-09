@@ -7,18 +7,18 @@ shm_has_var — Check whether a specific entry exists
 ===============================================================================
 [ Description ]
 
-  shm_has_var ( resource $shm_identifier , int $variable_key ) : bool~
+  shm_has_var ( SysvSharedMemory $shm , int $key ) : bool~
 
 Checks whether a specific key exists inside a shared memory segment.
 
 ===============================================================================
 [ Parameters ]
 
-{shm_identifier}
+{shm}
 
-  Shared memory segment, obtained from |shm_attach|.
+  A shared memory segment obtained from |shm_attach|.
 
-{variable_key}
+{key}
 
   The variable key.
 
@@ -26,6 +26,13 @@ Checks whether a specific key exists inside a shared memory segment.
 [ Return Values ]
 
 Returns TRUE if the entry exists, otherwise FALSE
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {shm} expects a SysvSharedMemory instance now; previously, a resource
+        was expected.
 
 ===============================================================================
 [ See Also ]

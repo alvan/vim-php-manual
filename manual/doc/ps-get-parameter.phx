@@ -8,7 +8,7 @@ ps_get_parameter — Gets certain parameters
 [ Description ]
 
   ps_get_parameter ( resource $psdoc , string $name [, float $modifier ] ) :~
-  string~
+  string|false~
 
 Gets several parameters which were directly set by |ps_set_parameter| or
 indirectly by one of the other functions. Parameters are by definition string

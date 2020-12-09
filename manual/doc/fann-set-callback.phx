@@ -7,7 +7,7 @@ fann_set_callback — Sets the callback function for use during training
 ===============================================================================
 [ Description ]
 
-  fann_set_callback ( resource $ann , collable $callback ) : bool~
+  fann_set_callback ( resource $ann , callable $callback ) : bool~
 
 Sets the callback function for use during training. It means that it is called
 from |fann_train_on_data| or |fann_train_on_file|.

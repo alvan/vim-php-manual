@@ -8,7 +8,7 @@ check, compares data and indexes by a callback function
 ===============================================================================
 [ Description ]
 
-  array_udiff_uassoc ( array $array1 , array $array2 [, array $... ], callable~
+  array_udiff_uassoc ( array $array , array ...$arrays , callable~
   $value_compare_func , callable $key_compare_func ) : array~
 
 Computes the difference of arrays with additional index check, compares data
@@ -20,20 +20,19 @@ Note that the keys are used in the comparison unlike |array_diff| and
 ===============================================================================
 [ Parameters ]
 
-{array1}
+{array}
 
   The first array.
 
-{array2}
+{arrays}
 
-  The second array.
+  Arrays to compare against.
 
 {value_compare_func}
 
   The comparison function must return an integer less than, equal to, or
   greater than zero if the first argument is considered to be respectively less
-  than, equal to, or greater than the second. Note that before PHP 7.0.0 this
-  integer had to be in the range from -2147483648 to 2147483647.
+  than, equal to, or greater than the second.
 
 
   callback ( mixed $a, mixed $b ) : int~
@@ -46,8 +45,8 @@ Note that the keys are used in the comparison unlike |array_diff| and
 ===============================================================================
 [ Return Values ]
 
-Returns an array containing all the values from {array1} that are not present
-in any of the other arguments.
+Returns an array containing all the values from {array} that are not present in
+any of the other arguments.
 
 ===============================================================================
 [ Examples ]

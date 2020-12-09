@@ -20,7 +20,8 @@ The structure of the ini file is the same as the php.ini's.
 
 {filename}
 
-  The filename of the ini file being parsed.
+  The filename of the ini file being parsed. If a relative path is used, it is
+  evaluated relative to the current working directory, then the include_path.
 
 {process_sections}
 
@@ -44,23 +45,6 @@ The structure of the ini file is the same as the php.ini's.
 
 The settings are returned as an associative array on success, and FALSE on
 failure.
-
-===============================================================================
-[ Changelog ]
-
-Version                               Description
-7.0.0   Hash marks (#) are no longer recognized as comments.
-5.6.1   Added new INI_SCANNER_TYPED mode.
-        Added optional {scanner_mode} parameter. Single quotes may now be used
-5.3.0   around variable assignments. Hash marks (#) should no longer be used as
-        comments and will throw a deprecation warning if used.
-5.2.7   On syntax error this function will return FALSE rather than an empty
-        array.
-        Keys and section names consisting of numbers are now evaluated as PHP
-5.2.4   integers thus numbers starting by 0 are evaluated as octals and numbers
-        starting by 0x are evaluated as hexadecimals.
-5.0.0   Values enclosed in double quotes can contain new lines.
-4.2.1   This function is now affected by safe mode and open_basedir.
 
 ===============================================================================
 [ Examples ]
@@ -90,9 +74,10 @@ urls[git] = "http://git.php.net"
 
 Example #2 parse_ini_file() example
 
-Constants may also be parsed in the ini file so if you define a constant as an
-ini value before running parse_ini_file(), it will be integrated into the
-results. Only ini values are evaluated. For example:
+Constants (but not "magic constants" like __FILE__) may also be parsed in the
+ini file so if you define a constant as an ini value before running 
+parse_ini_file(), it will be integrated into the results. Only ini values are
+evaluated, and the value must be just the constant. For example:
 
 <?php >
 
@@ -196,6 +181,40 @@ The above example will output something similar to:
 (parsed) magic_quotes_gpc = Yes
 (loaded) magic_quotes_gpc = Yes
 
+Example #4 value interpolation
+
+In addition to evaluating constants, certain characters have special meaning in
+an ini value. Additionally, environment variables and previously defined values
+may be read using ${} syntax.
+
+; | is used for bitwise OR
+three = 2|3
+
+; & is used for bitwise AND
+four = 6&5
+
+; ^ is used for bitwise XOR
+five = 3^6
+
+; ~ is used for bitwise negate
+negative_two = ~1
+
+; () is used for grouping
+seven = (8|7)&(6|5)
+
+; \ is used to escape a value.
+newline_is = "\\n" ; results in the string "\n", not a newline character.
+with quotes = "She said \"Exactly my point\"." ; Results in a string with quote marks in it.
+
+path = ${PATH}
+also_five = ${five}
+
+
+The above example will output something similar to:
+
+(parsed) magic_quotes_gpc = Yes
+(loaded) magic_quotes_gpc = Yes
+
 ===============================================================================
 [ Notes ]
 
@@ -222,6 +241,13 @@ The above example will output something similar to:
   whereas "bar =" is parsed and added with an empty value. For example, MySQL
   has a "no-auto-rehash" setting in my.cnf that does not take a value, so it is
   ignored.
+
+  Note:
+
+  ini files are generally treated as plain text by web servers and thus served
+  to browsers if requested. That means for security you must either keep your
+  ini files outside of your docroot or reconfigure your web server to not serve
+  them. Failure to do either of those may introduce a security risk.
 
 ===============================================================================
 [ See Also ]

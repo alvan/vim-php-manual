@@ -7,7 +7,7 @@ current — Return the current element in an array
 ===============================================================================
 [ Description ]
 
-  current ( array $array ) : mixed~
+  current ( array|object $array ) : mixed~
 
 Every array has an internal pointer to its "current" element, which is
 initialized to the first element inserted into the array.
@@ -65,12 +65,13 @@ Example #1 Example use of current() and friends
 ===============================================================================
 [ Notes ]
 
-  Note: The end of an array and the result of calling current() on an empty
-  array are indistinguishable from a boolean FALSE element. To properly
-  traverse an array which may contain FALSE elements, see the foreach()
-  function. To still use current() and properly check if the value is really an
-  element of the array, the |key| of the current() element should be checked to
-  be strictly different from NULL.
+  Note: The results of calling current() on an empty array and on an array,
+  whose internal pointer points beyond the end of the elements, are
+  indistinguishable from a bool FALSE element. To properly traverse an array
+  which may contain FALSE elements, see the foreach() function. To still use 
+  current() and properly check if the value is really an element of the array,
+  the |key| of the current() element should be checked to be strictly different
+  from NULL.
 
 ===============================================================================
 [ See Also ]

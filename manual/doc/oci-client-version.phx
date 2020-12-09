@@ -7,7 +7,7 @@ oci_client_version — Returns the Oracle client library version
 ===============================================================================
 [ Description ]
 
-  oci_client_version ( void ) : string~
+  oci_client_version ( ) : string~
 
 Returns a string containing the version number of the Oracle C client library
 that PHP is linked with.
@@ -28,7 +28,8 @@ Returns the version number as a string.
 Example #1 oci_client_version() example
 
 <?php >
-      echo "Client Version: " . oci_client_version(); // Client version: 11.2.0.2
+      echo "Client Version: " . oci_client_version(); //
+   Client version: 19.9.0.0.0
 <?>
 
 ===============================================================================

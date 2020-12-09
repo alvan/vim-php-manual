@@ -7,7 +7,7 @@ xml_set_default_handler — Set up default handler
 ===============================================================================
 [ Description ]
 
-  xml_set_default_handler ( resource $parser , callable $handler ) : bool~
+  xml_set_default_handler ( XMLParser $parser , callable $handler ) : bool~
 
 Sets the default handler function for the XML parser {parser}.
 
@@ -25,7 +25,7 @@ Sets the default handler function for the XML parser {parser}.
 
   The function named by {handler} must accept two parameters:
 
-  handler ( resource $parser , string $data )~
+  handler ( XMLParser $parser , string $data )~
 
   {parser}
     The first parameter, parser, is a reference to the XML parser calling the
@@ -40,6 +40,13 @@ Sets the default handler function for the XML parser {parser}.
 
     Note: Instead of a function name, an array containing an object reference
     and a method name can also be supplied.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {parser} expects an XMLParser instance now; previously, a resource was
+        expected.
 
 ===============================================================================
 [ Return Values ]

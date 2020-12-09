@@ -7,7 +7,7 @@ sem_release — Release a semaphore
 ===============================================================================
 [ Description ]
 
-  sem_release ( resource $sem_identifier ) : bool~
+  sem_release ( SysvSemaphore $semaphore ) : bool~
 
 sem_release() releases the semaphore if it is currently acquired by the calling
 process, otherwise a warning is generated.
@@ -17,14 +17,21 @@ After releasing the semaphore, |sem_acquire| may be called to re-acquire it.
 ===============================================================================
 [ Parameters ]
 
-{sem_identifier}
+{semaphore}
 
-  A Semaphore resource handle as returned by |sem_get|.
+  A Semaphore as returned by |sem_get|.
 
 ===============================================================================
 [ Return Values ]
 
 Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {semaphore} expects a SysvSemaphore instance now; previously, a 
+        resource was expected.
 
 ===============================================================================
 [ See Also ]

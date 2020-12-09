@@ -7,11 +7,11 @@ substr_replace — Replace text within a portion of a string
 ===============================================================================
 [ Description ]
 
-  substr_replace ( mixed $string , mixed $replacement , mixed $start [, mixed~
-  $length ] ) : mixed~
+  substr_replace ( array|string $string , array|string $replace , array|int~
+  $offset [, array|int|null $length = NULL ] ) : string|array~
 
-substr_replace() replaces a copy of {string} delimited by the {start} and
-(optionally) {length} parameters with the string given in {replacement}.
+substr_replace() replaces a copy of {string} delimited by the {offset} and
+(optionally) {length} parameters with the string given in {replace}.
 
 ===============================================================================
 [ Parameters ]
@@ -21,22 +21,22 @@ substr_replace() replaces a copy of {string} delimited by the {start} and
   The input string.
 
   An array of strings can be provided, in which case the replacements will
-  occur on each string in turn. In this case, the {replacement}, {start} and
+  occur on each string in turn. In this case, the {replace}, {offset} and
   {length} parameters may be provided either as scalar values to be applied to
   each input string in turn, or as arrays, in which case the corresponding
   array element will be used for each input string.
 
-{replacement}
+{replace}
 
   The replacement string.
 
-{start}
+{offset}
 
-  If {start} is non-negative, the replacing will begin at the {start}'th offset
-  into {string}.
+  If {offset} is non-negative, the replacing will begin at the {offset}'th
+  offset into {string}.
 
-  If {start} is negative, the replacing will begin at the {start}'th character
-  from the end of {string}.
+  If {offset} is negative, the replacing will begin at the {offset}'th
+  character from the end of {string}.
 
 {length}
 
@@ -45,13 +45,19 @@ substr_replace() replaces a copy of {string} delimited by the {start} and
   characters from the end of {string} at which to stop replacing. If it is not
   given, then it will default to strlen( {string} ); i.e. end the replacing at
   the end of {string}. Of course, if {length} is zero then this function will
-  have the effect of inserting {replacement} into {string} at the given {start}
+  have the effect of inserting {replace} into {string} at the given {offset}
   offset.
 
 ===============================================================================
 [ Return Values ]
 
 The result string is returned. If {string} is an array then array is returned.
+
+===============================================================================
+[ Changelog ]
+
+Version        Description
+8.0.0   {length} is nullable now.
 
 ===============================================================================
 [ Examples ]

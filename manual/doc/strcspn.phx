@@ -7,59 +7,65 @@ strcspn — Find length of initial segment not matching mask
 ===============================================================================
 [ Description ]
 
-  strcspn ( string $subject , string $mask [, int $start [, int $length ]] ) :~
-  int~
+  strcspn ( string $string , string $characters [, int $offset = 0 [, int|null~
+  $length = NULL ]] ) : int~
 
-Returns the length of the initial segment of {subject} which does not contain
-any of the characters in {mask}.
+Returns the length of the initial segment of {string} which does not contain
+any of the characters in {characters}.
 
-If {start} and {length} are omitted, then all of {subject} will be examined. If
+If {offset} and {length} are omitted, then all of {string} will be examined. If
 they are included, then the effect will be the same as calling strcspn(substr
 ($subject, $start, $length), $mask) (see |substr| for more information).
 
 ===============================================================================
 [ Parameters ]
 
-{subject}
+{string}
 
   The string to examine.
 
-{mask}
+{characters}
 
   The string containing every disallowed character.
 
-{start}
+{offset}
 
-  The position in {subject} to start searching.
+  The position in {string} to start searching.
 
-  If {start} is given and is non-negative, then strcspn() will begin examining
-  {subject} at the {start}'th position. For instance, in the string 'abcdef',
+  If {offset} is given and is non-negative, then strcspn() will begin examining
+  {string} at the {offset}'th position. For instance, in the string 'abcdef',
   the character at position 0 is 'a', the character at position 2 is 'c', and
   so forth.
 
-  If {start} is given and is negative, then strcspn() will begin examining
-  {subject} at the {start}'th position from the end of {subject}.
+  If {offset} is given and is negative, then strcspn() will begin examining
+  {string} at the {offset}'th position from the end of {string}.
 
 {length}
 
-  The length of the segment from {subject} to examine.
+  The length of the segment from {string} to examine.
 
-  If {length} is given and is non-negative, then {subject} will be examined for
+  If {length} is given and is non-negative, then {string} will be examined for
   {length} characters after the starting position.
 
-  If {length} is given and is negative, then {subject} will be examined from
-  the starting position up to {length} characters from the end of {subject}.
+  If {length} is given and is negative, then {string} will be examined from the
+  starting position up to {length} characters from the end of {string}.
 
 ===============================================================================
 [ Return Values ]
 
-Returns the length of the initial segment of {subject} which consists entirely
-of characters not in {mask}.
+Returns the length of the initial segment of {string} which consists entirely
+of characters not in {characters}.
 
   Note:
 
-  When a {start} parameter is set, the returned length is counted starting from
-  this position, not from the beginning of {subject}.
+  When a {offset} parameter is set, the returned length is counted starting
+  from this position, not from the beginning of {string}.
+
+===============================================================================
+[ Changelog ]
+
+Version        Description
+8.0.0   {length} is nullable now.
 
 ===============================================================================
 [ Examples ]

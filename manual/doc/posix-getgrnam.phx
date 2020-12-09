@@ -7,7 +7,7 @@ posix_getgrnam — Return info about a group by name
 ===============================================================================
 [ Description ]
 
-  posix_getgrnam ( string $name ) : array~
+  posix_getgrnam ( string $name ) : array|false~
 
 Gets information about a group provided its name.
 
@@ -69,7 +69,6 @@ Array
  * |posix_getgrgid| - Return info about a group by group id
  * |filegroup| - Gets file group
  * |stat| - Gives information about a file
- * safe_mode_gid
  * POSIX man page GETGRNAM(3)
 
 

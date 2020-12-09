@@ -8,8 +8,8 @@ table
 ===============================================================================
 [ Description ]
 
-  odbc_columnprivileges ( resource $connection_id , string $qualifier , string~
-  $owner , string $table_name , string $column_name ) : resource~
+  odbc_columnprivileges ( resource $connection_id , string $catalog , string~
+  $schema , string $table_name , string $column_name ) : resource|false~
 
 Lists columns and associated privileges for the given table.
 
@@ -20,24 +20,25 @@ Lists columns and associated privileges for the given table.
 
   The ODBC connection identifier, see |odbc_connect| for details.
 
-{qualifier}
+{catalog}
 
-  The qualifier.
+  The catalog ('qualifier' in ODBC 2 parlance).
 
-{owner}
+{schema}
 
-  The owner.
+  The schema ('owner' in ODBC 2 parlance). This parameter accepts the following
+  search patterns: % to match zero or more characters, and _ to match a single
+  character.
 
 {table_name}
 
-  The table name.
+  The table name. This parameter accepts the following search patterns: % to
+  match zero or more characters, and _ to match a single character.
 
 {column_name}
 
-  The column name.
-
-The {owner}, {table_name}, and {column_name} accept search patterns ('%' to
-match zero or more characters and '_' to match a single character).
+  The column name. This parameter accepts the following search patterns: % to
+  match zero or more characters, and _ to match a single character.
 
 ===============================================================================
 [ Return Values ]
@@ -47,15 +48,47 @@ can be used to fetch a list of columns and associated privileges.
 
 The result set has the following columns:
 
- * TABLE_QUALIFIER
- * TABLE_OWNER
+ * TABLE_CAT
+ * TABLE_SCHEM
  * TABLE_NAME
+ * COLUMN_NAME
  * GRANTOR
  * GRANTEE
  * PRIVILEGE
  * IS_GRANTABLE
 
-The result set is ordered by TABLE_QUALIFIER, TABLE_OWNER and TABLE_NAME.
+Drivers can report additional columns.
+
+The result set is ordered by TABLE_CAT, TABLE_SCHEM, TABLE_NAME, COLUMN_NAME
+and PRIVILEGE.
+
+===============================================================================
+[ Examples ]
+
+Example #1 List Privileges for a Column
+
+<?php >
+  $conn = odbc_connect($dsn, $user, $pass);
+  $privileges = odbc_columnprivileges($conn, 'TutorialDB', 'dbo', 'test', 'id');
+  while (($row = odbc_fetch_array($privileges))) {
+      print_r($row);
+      break; // further rows omitted for brevity
+  }
+<?>
+
+The above example will output something similar to:
+
+Array
+(
+    [TABLE_CAT] => TutorialDB
+    [TABLE_SCHEM] => dbo
+    [TABLE_NAME] => test
+    [COLUMN_NAME] => id
+    [GRANTOR] => dbo
+    [GRANTEE] => dbo
+    [PRIVILEGE] => INSERT
+    [IS_GRANTABLE] => YES
+)
 
 
 vim:ft=help:

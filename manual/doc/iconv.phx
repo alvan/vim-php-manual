@@ -7,23 +7,24 @@ iconv — Convert string to requested character encoding
 ===============================================================================
 [ Description ]
 
-  iconv ( string $in_charset , string $out_charset , string $str ) : string~
+  iconv ( string $from_encoding , string $to_encoding , string $string ) :~
+  string|false~
 
-Performs a character set conversion on the string {str} from {in_charset} to
-{out_charset}.
+Performs a character set conversion on the string {string} from {from_encoding}
+to {to_encoding}.
 
 ===============================================================================
 [ Parameters ]
 
-{in_charset}
+{from_encoding}
 
   The input charset.
 
-{out_charset}
+{to_encoding}
 
   The output charset.
 
-  If you append the string //TRANSLIT to {out_charset} transliteration is
+  If you append the string //TRANSLIT to {to_encoding} transliteration is
   activated. This means that when a character can't be represented in the
   target charset, it can be approximated through one or several similarly
   looking characters. If you append the string //IGNORE, characters that cannot
@@ -35,9 +36,9 @@ Performs a character set conversion on the string {str} from {in_charset} to
   If and how //TRANSLIT works exactly depends on the system's iconv()
   implementation (cf. ICONV_IMPL). Some implementations are known to ignore //
   TRANSLIT, so the conversion is likely to fail for characters which are
-  illegal for the {out_charset}.
+  illegal for the {to_encoding}.
 
-{str}
+{string}
 
   The string to be converted.
 
@@ -45,14 +46,6 @@ Performs a character set conversion on the string {str} from {in_charset} to
 [ Return Values ]
 
 Returns the converted string or FALSE on failure.
-
-===============================================================================
-[ Changelog ]
-
-Version                               Description
-        Since this version, the function returns FALSE on illegal characters,
-5.4.0   unless //IGNORE is specified in output charset. Before, it returned
-        partial output string.
 
 ===============================================================================
 [ Examples ]

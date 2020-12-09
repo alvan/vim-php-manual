@@ -7,10 +7,10 @@ xml_parser_create — Create an XML parser
 ===============================================================================
 [ Description ]
 
-  xml_parser_create ([ string $encoding ] ) : resource~
+  xml_parser_create ([ string|null $encoding = NULL ] ) : XMLParser~
 
-xml_parser_create() creates a new XML parser and returns a resource handle
-referencing it to be used by the other XML functions.
+xml_parser_create() creates a new XML parser and returns a XMLParser instance
+to be used by the other XML functions.
 
 ===============================================================================
 [ Parameters ]
@@ -29,7 +29,15 @@ referencing it to be used by the other XML functions.
 ===============================================================================
 [ Return Values ]
 
-Returns a resource handle for the new XML parser, or FALSE on failure.
+Returns a new XMLParser instance.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   This function returns an XMLParser instance now; previously, a resource
+        was returned, or FALSE on failure.
+8.0.0   {encoding} is nullable now.
 
 ===============================================================================
 [ See Also ]

@@ -7,7 +7,7 @@ register_shutdown_function — Register a function for execution on shutdown
 ===============================================================================
 [ Description ]
 
-  register_shutdown_function ( callable $callback [, mixed $... ] ) : void~
+  register_shutdown_function ( callable $callback , mixed ...$args ) : void~
 
 Registers a {callback} to be executed after script execution finishes or |exit|
 is called.
@@ -27,7 +27,7 @@ registered shutdown functions will be called.
   The shutdown callbacks are executed as the part of the request, so it's
   possible to send output from them and access output buffers.
 
-{...}
+{args}
 
   It is possible to pass parameters to the shutdown function by passing
   additional parameters.

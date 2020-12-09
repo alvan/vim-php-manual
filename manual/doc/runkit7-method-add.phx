@@ -1,0 +1,106 @@
+*runkit7_method_add*
+
+(PECL runkit7 >= Unknown)
+
+runkit7_method_add — Dynamically adds a new method to a given class
+
+===============================================================================
+[ Description ]
+
+  runkit7_method_add ( string $classname , string $methodname , string $args ,~
+  string $code [, int $flags = RUNKIT7_ACC_PUBLIC [, string $doc_comment =~
+  NULL [, string $return_type [, bool $is_strict ]]]] ) : bool~
+  runkit7_method_add ( string $classname , string $methodname , Closure~
+  $closure [, int $flags = RUNKIT7_ACC_PUBLIC [, string $doc_comment = NULL [,~
+  string $return_type [, bool $is_strict ]]]] ) : bool~
+
+===============================================================================
+[ Parameters ]
+
+{classname}
+
+  The class to which this method will be added
+
+{methodname}
+
+  The name of the method to add
+
+{args}
+
+  Comma-delimited list of arguments for the newly-created method
+
+{code}
+
+  The code to be evaluated when {methodname} is called
+
+{closure}
+
+  A closure that defines the method.
+
+{flags}
+
+  The type of method to create, can be RUNKIT7_ACC_PUBLIC,
+  RUNKIT7_ACC_PROTECTED or RUNKIT7_ACC_PRIVATE optionally combined via bitwise
+  OR with RUNKIT7_ACC_STATIC
+
+{doc_comment}
+
+  The doc comment of the method.
+
+{return_type}
+
+  The return type of the method.
+
+{is_strict}
+
+  Whether the method behaves as if it were declared in a file with strict_types
+  =1
+
+===============================================================================
+[ Return Values ]
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+[ Examples ]
+
+Example #1 runkit7_method_add() example
+
+<?php >
+  class Example {
+      function foo() {
+          echo "foo!\n";
+      }
+  }
+
+  // create an Example object
+  $e = new Example();
+
+  // Add a new public method
+  runkit7_method_add(
+      'Example',
+      'add',
+      '$num1, $num2',
+      'return $num1 + $num2;',
+      RUNKIT7_ACC_PUBLIC
+  );
+
+  // add 12 + 4
+  echo $e->add(12, 4);
+<?>
+
+The above example will output:
+
+16
+
+===============================================================================
+[ See Also ]
+
+ * |runkit7_method_copy| - Copies a method from class to another
+ * |runkit7_method_redefine| - Dynamically changes the code of the given method
+ * |runkit7_method_remove| - Dynamically removes the given method
+ * |runkit7_method_rename| - Dynamically changes the name of the given method
+ * |runkit7_function_add| - Add a new function, similar to create_function
+
+
+vim:ft=help:

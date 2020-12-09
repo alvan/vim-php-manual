@@ -7,7 +7,7 @@ eio_event_loop — Polls libeio until all requests proceeded
 ===============================================================================
 [ Description ]
 
-  eio_event_loop ( void ) : bool~
+  eio_event_loop ( ) : bool~
 
 eio_event_loop() polls libeio until all requests proceeded.
 
@@ -54,7 +54,8 @@ eio_chmod_ok
 ===============================================================================
 [ See Also ]
 
- * eio_poll
+ * |eio_poll| - Can be to be called whenever there are pending requests that
+  need finishing
 
 
 vim:ft=help:

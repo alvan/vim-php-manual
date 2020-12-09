@@ -7,10 +7,10 @@ date_sunrise — Returns time of sunrise for a given day and location
 ===============================================================================
 [ Description ]
 
-  date_sunrise ( int $timestamp [, int $format = SUNFUNCS_RET_STRING [, float~
-  $latitude = ini_get("date.default_latitude") [, float $longitude =~
-  ini_get("date.default_longitude") [, float $zenith =~
-  ini_get("date.sunrise_zenith") [, float $gmt_offset = 0 ]]]]] ) :~
+  date_sunrise ( int $timestamp [, int $returnFormat = SUNFUNCS_RET_STRING [,~
+  float $latitude = ini_get("date.default_latitude") [, float~
+  $longitude = ini_get("date.default_longitude") [, float $zenith =~
+  ini_get("date.sunrise_zenith") [, float $utcOffset = 0 ]]]]] ) :~
   mixed~
 
 date_sunrise() returns the sunrise time for a given day (specified as a
@@ -23,13 +23,13 @@ date_sunrise() returns the sunrise time for a given day (specified as a
 
   The {timestamp} of the day from which the sunrise time is taken.
 
-{format}
+{returnFormat}
 
-                              {format} constants
-         constant                       description                  example
-  SUNFUNCS_RET_STRING    returns the result as string              16:46
-  SUNFUNCS_RET_DOUBLE    returns the result as float               16.78243132
-  SUNFUNCS_RET_TIMESTAMP returns the result as integer (timestamp) 1095034606
+                         {returnFormat} constants
+         constant                     description                example
+  SUNFUNCS_RET_STRING    returns the result as string          16:46
+  SUNFUNCS_RET_DOUBLE    returns the result as float           16.78243132
+  SUNFUNCS_RET_TIMESTAMP returns the result as int (timestamp) 1095034606
 
 {latitude}
 
@@ -55,15 +55,15 @@ date_sunrise() returns the sunrise time for a given day (specified as a
   108°   Astronomical twilight: the point at which the sun starts being the
          source of any illumination.
 
-{gmtoffset}
+{utcOffset}
 
-  Specified in hours. The {gmtoffset} is ignored, if {format} is
+  Specified in hours. The {utcOffset} is ignored, if {returnFormat} is
   SUNFUNCS_RET_TIMESTAMP.
 
 ===============================================================================
 [ Return Values ]
 
-Returns the sunrise time in a specified {format} on success or FALSE on
+Returns the sunrise time in a specified {returnFormat} on success or FALSE on
 failure. One potential reason for failure is that the sun does not rise at all,
 which happens inside the polar circles for part of the year.
 
@@ -73,12 +73,6 @@ which happens inside the polar circles for part of the year.
 Every call to a date/time function will generate a E_NOTICE if the time zone is
 not valid, and/or a E_STRICT or E_WARNING message if using the system settings
 or the TZ environment variable. See also |date_default_timezone_set|
-
-===============================================================================
-[ Changelog ]
-
-Version                      Description
-5.1.0   Now issues the E_STRICT and E_NOTICE time zone errors.
 
 ===============================================================================
 [ Examples ]

@@ -7,14 +7,15 @@ curl_share_setopt — Set an option for a cURL share handle
 ===============================================================================
 [ Description ]
 
-  curl_share_setopt ( resource $sh , int $option , string $value ) : bool~
+  curl_share_setopt ( CurlShareHandle $share_handle , int $option , mixed~
+  $value ) : bool~
 
 Sets an option on the given cURL share handle.
 
 ===============================================================================
 [ Parameters ]
 
-{sh}
+{share_handle}
 
   A cURL share handle returned by |curl_share_init|.
 
@@ -40,6 +41,13 @@ Sets an option on the given cURL share handle.
 [ Return Values ]
 
 Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {share_handle} expects a CurlShareHandle instance now; previously, a 
+        resource was expected.
 
 ===============================================================================
 [ Examples ]

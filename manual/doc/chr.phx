@@ -7,10 +7,10 @@ chr — Generate a single-byte string from a number
 ===============================================================================
 [ Description ]
 
-  chr ( int $bytevalue ) : string~
+  chr ( int $codepoint ) : string~
 
 Returns a one-character string containing the character specified by
-interpreting {bytevalue} as an unsigned integer.
+interpreting {codepoint} as an unsigned integer.
 
 This can be used to create a one-character string in a single-byte encoding
 such as ASCII, ISO-8859, or Windows 1252, by passing the position of a desired
@@ -24,7 +24,7 @@ This function complements |ord|.
 ===============================================================================
 [ Parameters ]
 
-{bytevalue}
+{codepoint}
 
   An integer between 0 and 255.
 
@@ -39,6 +39,13 @@ This function complements |ord|.
 [ Return Values ]
 
 A single-character string containing the specified byte.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+7.4.0   The function no longer silently accepts unsupported {codepoint}s, and
+        casts these to 0.
 
 ===============================================================================
 [ Examples ]
@@ -69,7 +76,6 @@ aA
 Example #3 Building a UTF-8 string from individual bytes
 
 <?php >
-  declare(encoding='UTF-8');
   $str = chr(240) . chr(159) . chr(144) . chr(152);
   echo $str;
 <?>
@@ -84,7 +90,7 @@ The above example will output:
 
  * |sprintf| - Return a formatted string with a format string of %c
  * |ord|
- * An >> ASCII-table
+ * An » ASCII-table
  * |mb_chr|
 
 

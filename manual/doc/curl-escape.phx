@@ -7,18 +7,18 @@ curl_escape — URL encodes the given string
 ===============================================================================
 [ Description ]
 
-  curl_escape ( resource $ch , string $str ) : string~
+  curl_escape ( CurlHandle $handle , string $string ) : string|false~
 
-This function URL encodes the given string according to >> RFC 3986.
+This function URL encodes the given string according to » RFC 3986.
 
 ===============================================================================
 [ Parameters ]
 
-{ch}
+{handle}
 
   A cURL handle returned by |curl_init|.
 
-{str}
+{string}
 
   The string to be encoded.
 
@@ -26,6 +26,13 @@ This function URL encodes the given string according to >> RFC 3986.
 [ Return Values ]
 
 Returns escaped string or FALSE on failure.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {handle} expects a CurlHandle instance now; previously, a resource was
+        expected.
 
 ===============================================================================
 [ Examples ]
@@ -58,7 +65,7 @@ Example #1 curl_escape() example
  * |curl_unescape| - Decodes the given URL encoded string
  * |urlencode| - URL-encodes string
  * |rawurlencode| - URL-encode according to RFC 3986
- * >> RFC 3986
+ * » RFC 3986
 
 
 vim:ft=help:

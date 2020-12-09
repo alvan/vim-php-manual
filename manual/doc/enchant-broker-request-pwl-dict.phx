@@ -7,8 +7,8 @@ enchant_broker_request_pwl_dict — Creates a dictionary using a PWL file
 ===============================================================================
 [ Description ]
 
-  enchant_broker_request_pwl_dict ( resource $broker , string $filename ) :~
-  resource~
+  enchant_broker_request_pwl_dict ( EnchantBroker $broker , string $filename )~
+  : EnchantDictionary|false~
 
 Creates a dictionary using a PWL file. A PWL file is personal word file one
 word per line.
@@ -18,7 +18,7 @@ word per line.
 
 {broker}
 
-  Broker resource
+  An Enchant broker returned by |enchant_broker_init|.
 
 {filename}
 
@@ -29,6 +29,15 @@ word per line.
 [ Return Values ]
 
 Returns a dictionary resource on success or FALSE on failure.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {broker} expects an EnchantBroker instance now; previoulsy, a resource
+        was expected.
+8.0.0   On success, this function returns an EnchantDictionary instance now;
+        previoulsy, a resource was retured.
 
 ===============================================================================
 [ See Also ]

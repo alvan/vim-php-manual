@@ -3,7 +3,7 @@
 (PHP 5 >= 5.6.0, PHP 7, PECL OCI8 >= 2.0.0)
 
 oci_get_implicit_resultset — Returns the next child statement resource from a
-parent statement resource that has Oracle Database 12c Implicit Result Sets
+parent statement resource that has Oracle Database Implicit Result Sets
 
 ===============================================================================
 [ Description ]
@@ -12,8 +12,8 @@ parent statement resource that has Oracle Database 12c Implicit Result Sets
 
 Used to fetch consectutive sets of query results after the execution of a
 stored or anonymous Oracle PL/SQL block where that block returns query results
-with Oracle's DBMS_SQL.RETURN_RESULT PL/SQL function. This allows PL/SQL blocks
-to easily return query results.
+with the Oracle Database 12 (or later) DBMS_SQL.RETURN_RESULT PL/SQL function.
+This allows PL/SQL blocks to easily return query results.
 
 The child statement can be used with any of the OCI8 fetching functions: 
 |oci_fetch|, |oci_fetch_all|, |oci_fetch_array|, |oci_fetch_object|, 

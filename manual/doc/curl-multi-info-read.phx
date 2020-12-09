@@ -7,8 +7,8 @@ curl_multi_info_read — Get information about the current transfers
 ===============================================================================
 [ Description ]
 
-  curl_multi_info_read ( resource $mh [, int &$msgs_in_queue = NULL ] ) :~
-  array~
+  curl_multi_info_read ( CurlMultiHandle $multi_handle [, int~
+  &$queued_messages = NULL ] ) : array|false~
 
 Ask the multi handle if there are any messages or information from the
 individual transfers. Messages may include information such as an error code
@@ -16,7 +16,7 @@ from the transfer or just the fact that a transfer is completed.
 
 Repeated calls to this function will return a new result each time, until a
 FALSE is returned as a signal that there is no more to get at this point. The
-integer pointed to with {msgs_in_queue} will contain the number of remaining
+integer pointed to with {queued_messages} will contain the number of remaining
 messages after this function was called.
 
 Warning
@@ -27,11 +27,11 @@ The data the returned resource points to will not survive calling
 ===============================================================================
 [ Parameters ]
 
-{mh}
+{multi_handle}
 
   A cURL multi handle returned by |curl_multi_init|.
 
-{msgs_in_queue}
+{queued_messages}
 
   Number of messages that are still in the queue
 
@@ -47,6 +47,13 @@ msg    The CURLMSG_DONE constant. Other return values are currently not
 result One of the CURLE_* constants. If everything is OK, the CURLE_OK will be
        the result.
 handle Resource of type curl indicates the handle which it concerns.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {multi_handle} expects a CurlMultiHandle instance now; previously, a 
+        resource was expected.
 
 ===============================================================================
 [ Examples ]
@@ -74,8 +81,7 @@ Example #1 A curl_multi_info_read() example
       if ($active) {
           curl_multi_select($mh);
       }
-      $info = curl_multi_info_read($mh);
-      if (false !== $info) {
+      while (false !== ($info = curl_multi_info_read($mh))) {
           var_dump($info);
       }
   } while ($active && $status == CURLM_OK);
@@ -116,12 +122,6 @@ array(3) {
   resource(6) of type (curl)
 }
 bool(false)
-
-===============================================================================
-[ Changelog ]
-
-Version        Description
-5.2.0   {msgs_in_queue} was added.
 
 ===============================================================================
 [ See Also ]

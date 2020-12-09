@@ -15,9 +15,9 @@ pg_field_prtlen() returns the actual printed length (number of characters) of a
 specific value in a PostgreSQL {result}. Row numbering starts at 0. This
 function will return FALSE on an error.
 
-{field_name_or_number} can be passed either as an integer or as a string. If it
-is passed as an integer, PHP recognises it as the field number, otherwise as
-field name.
+{field_name_or_number} can be passed either as an int or as a string. If it is
+passed as an int, PHP recognises it as the field number, otherwise as field
+name.
 
 See the example given at the |pg_field_name| page.
 

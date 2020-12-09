@@ -7,11 +7,11 @@ xml_parser_create_ns — Create an XML parser with namespace support
 ===============================================================================
 [ Description ]
 
-  xml_parser_create_ns ([ string $encoding [, string $separator =~
-  ":" ]] ) : resource~
+  xml_parser_create_ns ([ string|null $encoding = NULL [, string $separator =~
+  ":" ]] ) : XMLParser~
 
 xml_parser_create_ns() creates a new XML parser with XML namespace support and
-returns a resource handle referencing it to be used by the other XML functions.
+returns a XMLParser instance to be used by the other XML functions.
 
 ===============================================================================
 [ Parameters ]
@@ -32,7 +32,15 @@ returns a resource handle referencing it to be used by the other XML functions.
 ===============================================================================
 [ Return Values ]
 
-Returns a resource handle for the new XML parser, or FALSE on failure.
+Returns a new XMLParser instance.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   This function returns an XMLParser instance now; previously, a resource
+        was returned, or FALSE on failure.
+8.0.0   {encoding} is nullable now.
 
 ===============================================================================
 [ See Also ]

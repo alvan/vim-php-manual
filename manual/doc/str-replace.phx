@@ -8,14 +8,14 @@ string
 ===============================================================================
 [ Description ]
 
-  str_replace ( mixed $search , mixed $replace , mixed $subject [, int &$count~
-  ] ) : mixed~
+  str_replace ( array|string $search , array|string $replace , string|array~
+  $subject [, int &$count = NULL ] ) : string|array~
 
 This function returns a string or an array with all occurrences of {search} in
 {subject} replaced with the given {replace} value.
 
 If you don't need fancy replacing rules (like regular expressions), you should
-always use this function instead of |preg_replace|.
+use this function instead of |preg_replace|.
 
 ===============================================================================
 [ Parameters ]

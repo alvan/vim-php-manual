@@ -8,7 +8,7 @@ functions in a script
 ===============================================================================
 [ Description ]
 
-  date_default_timezone_set ( string $timezone_identifier ) : bool~
+  date_default_timezone_set ( string $timezoneID ) : bool~
 
 date_default_timezone_set() sets the default timezone used by all date/time
 functions.
@@ -26,16 +26,16 @@ can also use the INI setting date.timezone to set the default timezone.
 ===============================================================================
 [ Parameters ]
 
-{timezone_identifier}
+{timezoneID}
 
-  The timezone identifier, like UTC or Europe/Lisbon. The list of valid
-  identifiers is available in the List of Supported Timezones.
+  The timezone identifier, like UTC, Africa/Lagos, Asia/Hong_Kong, or Europe/
+  Lisbon. The list of valid identifiers is available in the List of Supported
+  Timezones.
 
 ===============================================================================
 [ Return Values ]
 
-This function returns FALSE if the {timezone_identifier} isn't valid, or TRUE
-otherwise.
+This function returns FALSE if the {timezoneID} isn't valid, or TRUE otherwise.
 
 ===============================================================================
 [ Examples ]
@@ -53,13 +53,6 @@ Example #1 Getting the default timezone
       echo 'Script timezone and ini-set timezone match.';
   }
 <?>
-
-===============================================================================
-[ Changelog ]
-
-Version                              Description
-5.3.0   Now throws E_WARNING rather than E_STRICT.
-5.1.2   The function started to validate the {timezone_identifier} parameter.
 
 ===============================================================================
 [ See Also ]

@@ -7,7 +7,7 @@ opcache_invalidate — Invalidates a cached script
 ===============================================================================
 [ Description ]
 
-  opcache_invalidate ( string $script [, bool $force = FALSE ] ) : bool~
+  opcache_invalidate ( string $filename [, bool $force = FALSE ] ) : bool~
 
 This function invalidates a particular script from the opcode cache. If {force}
 is unset or FALSE, the script will only be invalidated if the modification time
@@ -16,7 +16,7 @@ of the script is newer than the cached opcodes.
 ===============================================================================
 [ Parameters ]
 
-{script}
+{filename}
 
   The path to the script being invalidated.
 
@@ -28,7 +28,7 @@ of the script is newer than the cached opcodes.
 ===============================================================================
 [ Return Values ]
 
-Returns TRUE if the opcode cache for {script} was invalidated or if there was
+Returns TRUE if the opcode cache for {filename} was invalidated or if there was
 nothing to invalidate, or FALSE if the opcode cache is disabled.
 
 ===============================================================================

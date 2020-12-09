@@ -8,7 +8,7 @@ stream_copy_to_stream — Copies data from one stream to another
 [ Description ]
 
   stream_copy_to_stream ( resource $source , resource $dest [, int $maxlength~
-  = -1 [, int $offset = 0 ]] ) : int~
+  = -1 [, int $offset = 0 ]] ) : int|false~
 
 Makes a copy of up to {maxlength} bytes of data from the current position (or
 from the {offset} position, if specified) in {source} to {dest}. If {maxlength}
@@ -37,12 +37,6 @@ is not specified, all remaining content in {source} will be copied.
 [ Return Values ]
 
 Returns the total count of bytes copied, or FALSE on failure.
-
-===============================================================================
-[ Changelog ]
-
-Version         Description
-5.1.0   Added the {offset} parameter
 
 ===============================================================================
 [ Examples ]

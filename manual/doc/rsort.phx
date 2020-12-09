@@ -7,7 +7,7 @@ rsort — Sort an array in reverse order
 ===============================================================================
 [ Description ]
 
-  rsort ( array &$array [, int $sort_flags = SORT_REGULAR ] ) : bool~
+  rsort ( array &$array [, int $flags = SORT_REGULAR ] ) : bool~
 
 This function sorts an array in reverse order (highest to lowest).
 
@@ -23,10 +23,10 @@ This function sorts an array in reverse order (highest to lowest).
 
   The input array.
 
-{sort_flags}
+{flags}
 
-  You may modify the behavior of the sort using the optional parameter
-  {sort_flags}, for details see |sort|.
+  You may modify the behavior of the sort using the optional parameter {flags},
+  for details see |sort|.
 
 ===============================================================================
 [ Return Values ]

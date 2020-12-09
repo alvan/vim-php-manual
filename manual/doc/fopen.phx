@@ -26,7 +26,7 @@ fopen() binds a named resource, specified by {filename}, to a stream.
   If PHP has decided that {filename} specifies a local file, then it will try
   to open a stream on that file. The file must be accessible to PHP, so you
   need to ensure that the file access permissions allow this access. If you
-  have enabled safe mode or open_basedir further restrictions may apply.
+  have enabled open_basedir further restrictions may apply.
 
   If PHP has decided that {filename} specifies a registered protocol, and that
   protocol is registered as a network URL, PHP will check to make sure that
@@ -97,8 +97,8 @@ fopen() binds a named resource, specified by {filename}, to a stream.
     When you write a text file and want to insert a line break, you need to use
     the correct line-ending character(s) for your operating system. Unix based
     systems use \n as the line ending character, Windows based systems use \r\n
-    as the line ending characters and Macintosh based systems use \r as the
-    line ending character.
+    as the line ending characters and Macintosh based systems (Mac OS Classic)
+    used \r as the line ending character.
 
     If you use the wrong line ending characters when writing your files, you
     might find that other applications that open those files will "look funny".
@@ -109,26 +109,19 @@ fopen() binds a named resource, specified by {filename}, to a stream.
     these flags, specify either 'b' or 't' as the last character of the {mode}
     parameter.
 
-    The default translation mode depends on the SAPI and version of PHP that
-    you are using, so you are encouraged to always specify the appropriate flag
-    for portability reasons. You should use the 't' mode if you are working
-    with plain-text files and you use \n to delimit your line endings in your
-    script, but expect your files to be readable with applications such as
-    notepad. You should use the 'b' in all other cases.
+    The default translation mode is 'b'. You can use the 't' mode if you are
+    working with plain-text files and you use \n to delimit your line endings
+    in your script, but expect your files to be readable with applications such
+    as old versions of notepad. You should use the 'b' in all other cases.
 
-    If you do not specify the 'b' flag when working with binary files, you may
+    If you specify the 't' flag when working with binary files, you may
     experience strange problems with your data, including broken image files
     and strange problems with \r\n characters.
 
     Note:
 
-    For portability, it is strongly recommended that you always use the 'b'
-    flag when opening files with fopen().
-
-    Note:
-
-    Again, for portability, it is also strongly recommended that you re-write
-    code that uses or relies upon the 't' mode so that it uses the correct line
+    For portability, it is also strongly recommended that you re-write code
+    that uses or relies upon the 't' mode so that it uses the correct line
     endings and 'b' mode instead.
 
 {use_include_path}
@@ -145,20 +138,18 @@ fopen() binds a named resource, specified by {filename}, to a stream.
 ===============================================================================
 [ Return Values ]
 
-Returns a file pointer resource on success, or FALSE on error.
+Returns a file pointer resource on success, or FALSE on failure
 
 ===============================================================================
 [ Errors/Exceptions ]
 
-If the open fails, an error of level E_WARNING is generated. You may use @ to
-suppress this warning.
+Upon failure, an E_WARNING is emitted.
 
 ===============================================================================
 [ Changelog ]
 
-   Version                Description
-7.0.16, 7.1.2 The 'e' option were added.
-5.2.6         The 'c' and 'c+' options were added
+   Version           Description
+7.0.16, 7.1.2 The 'e' option was added.
 
 ===============================================================================
 [ Examples ]
@@ -185,10 +176,6 @@ include warnings. PHP can detect buggy IIS server software when you open the
 stream using the https:// wrapper and will suppress the warning. When using 
 |fsockopen| to create an ssl:// socket, the developer is responsible for
 detecting and suppressing this warning.
-
-  Note: When safe mode is enabled, PHP checks whether the directory in which
-  the script is operating has the same UID (owner) as the script that is being
-  executed.
 
   Note:
 

@@ -7,7 +7,7 @@ variant_mul — Multiplies the values of the two variants
 ===============================================================================
 [ Description ]
 
-  variant_mul ( mixed $left , mixed $right ) : mixed~
+  variant_mul ( mixed $left , mixed $right ) : variant~
 
 Multiplies {left} by {right}.
 
@@ -31,7 +31,7 @@ Boolean values are converted to -1 for FALSE and 0 for TRUE.
   function can be either a PHP native type (integer, string, floating point,
   boolean or NULL), or an instance of a COM, VARIANT or DOTNET class. PHP
   native types will be converted to variants using the same rules as found in
-  the constructor for the VARIANT class. COM and DOTNET objects will have the
+  the constructor for the variant class. COM and DOTNET objects will have the
   value of their default property taken and used as the variant value.
 
   The variant arithmetic functions are wrappers around the similarly named
@@ -53,6 +53,11 @@ Both expressions are numeric                              Multiplication
 Either expression is NULL                                 NULL is returned
 Both expressions are empty                                Empty string is
                                                           returned
+
+===============================================================================
+[ Errors/Exceptions ]
+
+Throws a com_exception on failure.
 
 ===============================================================================
 [ See Also ]

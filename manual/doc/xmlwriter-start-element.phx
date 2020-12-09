@@ -9,21 +9,21 @@ XMLWriter::startElement -- xmlwriter_start_element — Create start element tag
 
 Object oriented style
 
-  XMLWriter::startElement ( string $name ) : bool~
+  public XMLWriter::startElement ( string $name ) : bool~
 
 Procedural style
 
-  xmlwriter_start_element ( resource $xmlwriter , string $name ) : bool~
+  xmlwriter_start_element ( XMLWriter $writer , string $name ) : bool~
 
 Starts an element.
 
 ===============================================================================
 [ Parameters ]
 
-{ xmlwriter}
+{ writer}
 
-  Only for procedural calls. The XMLWriter resource that is being modified.
-  This resource comes from a call to |xmlwriter_open_uri| or 
+  Only for procedural calls. The XMLWriter instance that is being modified.
+  This object is returned from a call to |xmlwriter_open_uri| or 
   |xmlwriter_open_memory|.
 
 {name}
@@ -34,6 +34,13 @@ Starts an element.
 [ Return Values ]
 
 Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {writer} expects an XMLWriter instance now; previously, a resource was
+        expected.
 
 ===============================================================================
 [ See Also ]

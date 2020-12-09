@@ -7,8 +7,9 @@ preg_replace — Perform a regular expression search and replace
 ===============================================================================
 [ Description ]
 
-  preg_replace ( mixed $pattern , mixed $replacement , mixed $subject [, int~
-  $limit = -1 [, int &$count ]] ) : mixed~
+  preg_replace ( string|array $pattern , string|array $replacement ,~
+  string|array $subject [, int $limit = -1 [, int &$count = NULL ]] ) :~
+  string|array|null~
 
 Searches {subject} for matches to {pattern} and replaces them with
 {replacement}.
@@ -32,20 +33,20 @@ Searches {subject} for matches to {pattern} and replaces them with
   fewer elements in the {replacement} array than in the {pattern} array, any
   extra {pattern}s will be replaced by an empty string.
 
-  {replacement} may contain references of the form \\n or $n, with the latter
+  {replacement} may contain references of the form \n or $n, with the latter
   form being the preferred one. Every such reference will be replaced by the
   text captured by the n'th parenthesized pattern. n can be from 0 to 99, and \
-  \0 or $0 refers to the text matched by the whole pattern. Opening parentheses
+  0 or $0 refers to the text matched by the whole pattern. Opening parentheses
   are counted from left to right (starting from 1) to obtain the number of the
-  capturing subpattern. To use backslash in replacement, it must be doubled ("\
-  \\\" PHP string).
+  capturing subpattern. Note that backslashes in string literals may require to
+  be escaped.
 
   When working with a replacement pattern where a backreference is immediately
   followed by another number (i.e.: placing a literal number immediately after
-  a matched pattern), you cannot use the familiar \\1 notation for your
-  backreference. \\11, for example, would confuse preg_replace() since it does
-  not know whether you want the \\1 backreference followed by a literal 1, or
-  the \\11 backreference followed by nothing. In this case the solution is to
+  a matched pattern), you cannot use the familiar \1 notation for your
+  backreference. \11, for example, would confuse preg_replace() since it does
+  not know whether you want the \1 backreference followed by a literal 1, or
+  the \11 backreference followed by nothing. In this case the solution is to
   use ${1}1. This creates an isolated $1 backreference, leaving the 1 as a
   literal.
 
@@ -86,19 +87,8 @@ will be returned unchanged or NULL if an error occurred.
 [ Errors/Exceptions ]
 
 As of PHP 5.5.0 E_DEPRECATED level error is emitted when passing in the "\e"
-modifier. As of PHP 7.0.0 E_WARNING is emitted in this case and "\e" modifier
-has no effect.
-
-===============================================================================
-[ Changelog ]
-
-Version                               Description
-7.0.0   Support for the /e modifier has been removed. Use 
-        |preg_replace_callback| instead.
-        The /e modifier is deprecated. Use |preg_replace_callback| instead. See
-5.5.0   the PREG_REPLACE_EVAL documentation for additional information about
-        security risks.
-5.1.0   Added the {count} parameter
+modifier. As of PHP 7.0.0 using the "\e" modifier is an error; an E_WARNING is
+emitted in this case.
 
 ===============================================================================
 [ Examples ]

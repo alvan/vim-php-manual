@@ -46,5 +46,9 @@ The above example will output:
 
   Note: This function is not implemented on Windows platforms.
 
+  Note: This function is not available in PHP interpreters built with ZTS (Zend
+  Thread Safety) enabled. To check whether your copy of PHP was built with ZTS
+  enabled, use `php` `-i` or test the built-in constant PHP_ZTS.
+
 
 vim:ft=help:

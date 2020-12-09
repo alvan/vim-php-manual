@@ -7,15 +7,16 @@ shm_attach — Creates or open a shared memory segment
 ===============================================================================
 [ Description ]
 
-  shm_attach ( int $key [, int $memsize [, int $perm = 0666 ]] ) : resource~
+  shm_attach ( int $key [, int|null $size = NULL [, int $permissions = 0666 ]]~
+  ) : SysvSharedMemory|false~
 
 shm_attach() returns an id that can be used to access the System V shared
 memory with the given {key}, the first call creates the shared memory segment
-with {memsize} and the optional perm-bits {perm}.
+with {size} and the optional perm-bits {permissions}.
 
-A second call to shm_attach() for the same {key} will return a different shared
-memory identifier, but both identifiers access the same underlying shared
-memory. {memsize} and {perm} will be ignored.
+A second call to shm_attach() for the same {key} will return a different
+SysvSharedMemory instance, but both instances access the same underlying shared
+memory. {size} and {permissions} will be ignored.
 
 ===============================================================================
 [ Parameters ]
@@ -24,54 +25,27 @@ memory. {memsize} and {perm} will be ignored.
 
   A numeric shared memory segment ID
 
-{memsize}
+{size}
 
   The memory size. If not provided, default to the sysvshm.init_mem in the
   php.ini, otherwise 10000 bytes.
 
-{perm}
+{permissions}
 
   The optional permission bits. Default to 0666.
 
 ===============================================================================
 [ Return Values ]
 
-Returns a shared memory segment identifier.
+Returns a SysvSharedMemory instance on success, or FALSE on failure.
 
 ===============================================================================
 [ Changelog ]
 
-Version                         Description
-5.3.0   This function now returns a resource instead of an integer.
-
-===============================================================================
-[ Notes ]
-
-  Note:
-
-  This function used to return an integer value prior to PHP 5.3.0. To achieve
-  the same value in a portable manner, the return value can be cast to an
-  integer like:
-
-  <?php >
-  // Create a temporary file and return its path
-  $tmp = tempnam('/tmp', 'PHP');
-
-  // Get the file token key
-  $key = ftok($tmp, 'a');
-
-  // Attach the SHM resource, notice the cast afterwards
-  $id = shm_attach($key);
-
-  if ($id === false) {
-      die('Unable to create the shared memory segment');
-  }
-
-  // Cast to integer, since prior to PHP 5.3.0 the resource id 
-  // is returned which can be exposed when casting a resource
-  // to an integer
-  $id = (integer) $id;
-<  ?>
+Version                               Description
+8.0.0   On success, this function returns an SysvSharedMemory instance now;
+        previously, a resource was returned.
+8.0.0   {size} is nullable now.
 
 ===============================================================================
 [ See Also ]

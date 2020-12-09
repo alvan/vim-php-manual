@@ -1,0 +1,90 @@
+*str_contains*
+
+(PHP 8)
+
+str_contains — Determine if a string contains a given substring
+
+===============================================================================
+[ Description ]
+
+  str_contains ( string $haystack , string $needle ) : bool~
+
+Performs a case-sensitive check indicating if {needle} is contained in
+{haystack}.
+
+===============================================================================
+[ Parameters ]
+
+{haystack}
+
+  The string to search in.
+
+{needle}
+
+  The substring to search for in the {haystack}.
+
+===============================================================================
+[ Return Values ]
+
+Returns TRUE if {needle} is in {haystack}, FALSE otherwise.
+
+===============================================================================
+[ Examples ]
+
+Example #1 Using the empty string ''
+
+<?php >
+  if (str_contains('abc', '')) {
+      echo "Checking the existence of the empty string will always return true";
+  }
+<?>
+
+The above example will output:
+
+Checking the existence of the empty string will always return true
+
+Example #2 Showing case-sensitivity
+
+<?php >
+  $string = 'The lazy fox jumped over the fence';
+
+  if (str_contains($string, 'lazy')) {
+      echo "The string 'lazy' was found in the string\n";
+  }
+
+  if (str_contains($string, 'Lazy')) {
+      echo 'The string "Lazy" was found in the string';
+  } else {
+      echo '"Lazy" was not found because the case does not match';
+  }
+
+<?>
+
+The above example will output:
+
+The string 'lazy' was found in the string
+"Lazy" was not found because the case does not match
+
+===============================================================================
+[ Notes ]
+
+  Note: This function is binary-safe.
+
+===============================================================================
+[ See Also ]
+
+ * |str_ends_with| - Checks if a string ends with a given substring
+ * |str_starts_with| - Checks if a string starts with a given substring
+ * |stripos| - Find the position of the first occurrence of a case-insensitive
+  substring in a string
+ * |strrpos| - Find the position of the last occurrence of a substring in a
+  string
+ * |strripos| - Find the position of the last occurrence of a case-insensitive
+  substring in a string
+ * |strstr| - Find the first occurrence of a string
+ * |strpbrk| - Search a string for any of a set of characters
+ * |substr| - Return part of a string
+ * |preg_match| - Perform a regular expression match
+
+
+vim:ft=help:

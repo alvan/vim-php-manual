@@ -7,19 +7,18 @@ bcadd — Add two arbitrary precision numbers
 ===============================================================================
 [ Description ]
 
-  bcadd ( string $left_operand , string $right_operand [, int $scale = 0 ] ) :~
-  string~
+  bcadd ( string $num1 , string $num2 [, int|null $scale = NULL ] ) : string~
 
-Sums {left_operand} and {right_operand}.
+Sums {num1} and {num2}.
 
 ===============================================================================
 [ Parameters ]
 
-{left_operand}
+{num1}
 
   The left operand, as a string.
 
-{right_operand}
+{num2}
 
   The right operand, as a string.
 
@@ -33,6 +32,12 @@ Sums {left_operand} and {right_operand}.
 [ Return Values ]
 
 The sum of the two operands, as a string.
+
+===============================================================================
+[ Changelog ]
+
+Version       Description
+8.0.0   {scale} is now nullable.
 
 ===============================================================================
 [ Examples ]

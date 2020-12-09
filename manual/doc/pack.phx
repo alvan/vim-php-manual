@@ -7,7 +7,7 @@ pack — Pack data into binary string
 ===============================================================================
 [ Description ]
 
-  pack ( string $format [, mixed $... ] ) : string~
+  pack ( string $format , mixed ...$values ) : string|false~
 
 Pack given arguments into a binary string according to {format}.
 
@@ -67,12 +67,12 @@ and unsigned format codes.
   Z    NUL-padded string (new in PHP 5.5)
   @    NUL-fill to absolute position
 
-{...}
+{values}
 
 ===============================================================================
 [ Return Values ]
 
-Returns a binary string containing data.
+Returns a binary string containing data, or FALSE on failure.
 
 ===============================================================================
 [ Changelog ]
@@ -103,23 +103,22 @@ The resulting binary string will be 6 bytes long and contain the byte sequence
 
 Caution
 
-Note that PHP internally stores integer values as signed values of a
+Note that PHP internally stores int values as signed values of a
 machine-dependent size (C type long). Integer literals and operations that
-yield numbers outside the bounds of the integer type will be stored as float.
-When packing these floats as integers, they are first cast into the integer
-type. This may or may not result in the desired byte pattern.
+yield numbers outside the bounds of the int type will be stored as float. When
+packing these floats as integers, they are first cast into the integer type.
+This may or may not result in the desired byte pattern.
 
 The most relevant case is when packing unsigned numbers that would be
-representable with the integer type if it were unsigned. In systems where the 
-integer type has a 32-bit size, the cast usually results in the same byte
-pattern as if the integer were unsigned (although this relies on
-implementation-defined unsigned to signed conversions, as per the C standard).
-In systems where the integer type has 64-bit size, the float most likely does
-not have a mantissa large enough to hold the value without loss of precision.
-If those systems also have a native 64-bit C int type (most UNIX-like systems
-don't), the only way to use the I pack format in the upper range is to create 
-integer negative values with the same byte representation as the desired
-unsigned value.
+representable with the int type if it were unsigned. In systems where the int
+type has a 32-bit size, the cast usually results in the same byte pattern as if
+the int were unsigned (although this relies on implementation-defined unsigned
+to signed conversions, as per the C standard). In systems where the int type
+has 64-bit size, the float most likely does not have a mantissa large enough to
+hold the value without loss of precision. If those systems also have a native
+64-bit C int type (most UNIX-like systems don't), the only way to use the I
+pack format in the upper range is to create int negative values with the same
+byte representation as the desired unsigned value.
 
 ===============================================================================
 [ See Also ]

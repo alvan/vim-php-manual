@@ -7,10 +7,20 @@ setlocale — Set locale information
 ===============================================================================
 [ Description ]
 
-  setlocale ( int $category , string $locale [, string $... ] ) : string~
+  setlocale ( int $category , string $locale , string ...$locales ) : string~
   setlocale ( int $category , array $locale ) : string~
 
 Sets locale information.
+
+Warning
+
+The locale information is maintained per process, not per thread. If you are
+running PHP on a multithreaded server API , you may experience sudden changes
+in locale settings while a script is running, though the script itself never
+called setlocale(). This happens due to other scripts running in different
+threads of the same process at the same time, changing the process-wide locale
+using setlocale(). On Windows, locale information is maintained per thread as
+of PHP 5.6.20 and PHP 7.0.5, respectively.
 
 ===============================================================================
 [ Parameters ]
@@ -43,7 +53,7 @@ Sets locale information.
   useful if a locale is known under different names on different systems or for
   providing a fallback for a possibly not available locale.
 
-{...}
+{locales}
 
   (Optional string or array parameters to try as locale settings until
   success.)
@@ -61,22 +71,13 @@ implemented on your platform, the specified locale does not exist or the
 category name is invalid.
 
 An invalid category name also causes a warning message. Category/locale names
-can be found in >> RFC 1766 and >> ISO 639. Different systems have different
+can be found in » RFC 1766 and » ISO 639. Different systems have different
 naming schemes for locales.
 
   Note:
 
   The return value of setlocale() depends on the system that PHP is running. It
   returns exactly what the system setlocale function returns.
-
-===============================================================================
-[ Changelog ]
-
-Version                               Description
-7.0.0   Support for the {category} parameter passed as a string has been
-        removed. Only LC_* constants can be used as of this version.
-5.3.0   This function now throws an E_DEPRECATED notice if a string is passed
-        to the {category} parameter instead of one of the LC_* constants.
 
 ===============================================================================
 [ Examples ]
@@ -112,21 +113,12 @@ Example #2 setlocale() Examples for Windows
 ===============================================================================
 [ Notes ]
 
-Warning
-
-The locale information is maintained per process, not per thread. If you are
-running PHP on a multithreaded server API like IIS, HHVM or Apache on Windows,
-you may experience sudden changes in locale settings while a script is running,
-though the script itself never called setlocale(). This happens due to other
-scripts running in different threads of the same process at the same time,
-changing the process-wide locale using setlocale().
-
 Tip
 
 Windows users will find useful information about {locale} strings at
-Microsoft's MSDN website. Supported language strings can be found in the >>
- language strings documentation and supported country/region strings in the >>
- country/region strings documentation.
+Microsoft's MSDN website. Supported language strings can be found in the
+» language strings documentation and supported country/region strings in the
+» country/region strings documentation.
 
 
 vim:ft=help:

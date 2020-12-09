@@ -7,15 +7,15 @@ iconv_strrpos — Finds the last occurrence of a needle within a haystack
 ===============================================================================
 [ Description ]
 
-  iconv_strrpos ( string $haystack , string $needle [, string $charset =~
-  ini_get("iconv.internal_encoding") ] ) : int~
+  iconv_strrpos ( string $haystack , string $needle [, string|null $encoding =~
+  NULL ] ) : int|false~
 
 Finds the last occurrence of a {needle} within a {haystack}.
 
 In contrast to |strrpos|, the return value of iconv_strrpos() is the number of
 characters that appear before the needle, rather than the offset in bytes to
 the position where the needle has been found. The characters are counted on the
-basis of the specified character set {charset}.
+basis of the specified character set {encoding}.
 
 ===============================================================================
 [ Parameters ]
@@ -28,10 +28,10 @@ basis of the specified character set {charset}.
 
   The searched substring.
 
-{charset}
+{encoding}
 
-  If {charset} parameter is omitted, {string} are assumed to be encoded in
-  iconv.internal_encoding.
+  If {encoding} parameter is omitted or NULL, {string} are assumed to be
+  encoded in iconv.internal_encoding.
 
 If {haystack} or {needle} is not a string, it is converted to a string and
 applied as the ordinal value of a character.
@@ -49,6 +49,12 @@ This function may return Boolean FALSE, but may also return a non-Boolean value
 which evaluates to FALSE. Please read the section on Booleans for more
 information. Use the === operator for testing the return value of this
 function.
+
+===============================================================================
+[ Changelog ]
+
+Version         Description
+8.0.0   {encoding} is nullable now.
 
 ===============================================================================
 [ See Also ]

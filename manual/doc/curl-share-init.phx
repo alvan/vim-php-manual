@@ -7,7 +7,7 @@ curl_share_init — Initialize a cURL share handle
 ===============================================================================
 [ Description ]
 
-  curl_share_init ( void ) : resource~
+  curl_share_init ( ) : CurlShareHandle~
 
 Allows to share data between cURL handles.
 
@@ -19,7 +19,14 @@ This function has no parameters.
 ===============================================================================
 [ Return Values ]
 
-Returns resource of type "cURL Share Handle".
+Returns a cURL share handle.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   This function returns a CurlShareHandle instance now; previously, a 
+        resource was returned.
 
 ===============================================================================
 [ Examples ]

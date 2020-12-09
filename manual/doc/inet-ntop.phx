@@ -8,7 +8,7 @@ representation
 ===============================================================================
 [ Description ]
 
-  inet_ntop ( string $in_addr ) : string~
+  inet_ntop ( string $in_addr ) : string|false~
 
 This function converts a 32bit IPv4, or 128bit IPv6 address (if PHP was built
 with IPv6 support enabled) into an address family appropriate string
@@ -44,12 +44,6 @@ Example #1 inet_ntop() Example
   /* Outputs: ::1 */
   echo $expanded;
 <?>
-
-===============================================================================
-[ Changelog ]
-
-Version                     Description
-5.3.0   This function is now available on Windows platforms.
 
 ===============================================================================
 [ See Also ]

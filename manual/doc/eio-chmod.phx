@@ -2,7 +2,7 @@
 
 (PECL eio >= 0.0.1dev)
 
-eio_chmod — Change file/direcrory permissions
+eio_chmod — Change file/directory permissions
 
 ===============================================================================
 [ Description ]
@@ -10,7 +10,7 @@ eio_chmod — Change file/direcrory permissions
   eio_chmod ( string $path , int $mode [, int $pri = EIO_PRI_DEFAULT [,~
   callable $callback = NULL [, mixed $data = NULL ]]] ) : resource~
 
-eio_chmod() changes file, or direcrory permissions. The new permissions are
+eio_chmod() changes file, or directory permissions. The new permissions are
 specified by {mode}.
 
 ===============================================================================
@@ -64,7 +64,7 @@ eio_chmod() returns request resource on success or FALSE on error.
 ===============================================================================
 [ See Also ]
 
- * eio_chown
+ * |eio_chown| - Change file/directory permissions
 
 
 vim:ft=help:

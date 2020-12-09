@@ -7,8 +7,8 @@ odbc_statistics — Retrieve statistics about a table
 ===============================================================================
 [ Description ]
 
-  odbc_statistics ( resource $connection_id , string $qualifier , string~
-  $owner , string $table_name , int $unique , int $accuracy ) : resource~
+  odbc_statistics ( resource $connection_id , string $catalog , string $schema~
+  , string $table_name , int $unique , int $accuracy ) : resource|false~
 
 Get statistics about a table and its indexes.
 
@@ -19,13 +19,13 @@ Get statistics about a table and its indexes.
 
   The ODBC connection identifier, see |odbc_connect| for details.
 
-{qualifier}
+{catalog}
 
-  The qualifier.
+  The catalog ('qualifier' in ODBC 2 parlance).
 
-{owner}
+{schema}
 
-  The owner.
+  The schema ('owner' in ODBC 2 parlance).
 
 {table_name}
 
@@ -33,11 +33,12 @@ Get statistics about a table and its indexes.
 
 {unique}
 
-  The unique attribute.
+  The type of the index. One of SQL_INDEX_UNIQUE or SQL_INDEX_ALL.
 
 {accuracy}
 
-  The accuracy.
+  One of SQL_ENSURE or SQL_QUICK. The latter requests that the driver retrieve
+  the CARDINALITY and PAGES only if they are readily available from the server.
 
 ===============================================================================
 [ Return Values ]
@@ -46,22 +47,63 @@ Returns an ODBC result identifier or FALSE on failure.
 
 The result set has the following columns:
 
- * TABLE_QUALIFIER
- * TABLE_OWNER
+ * TABLE_CAT
+ * TABLE_SCHEM
  * TABLE_NAME
  * NON_UNIQUE
  * INDEX_QUALIFIER
  * INDEX_NAME
  * TYPE
- * SEQ_IN_INDEX
+ * ORDINAL_POSITION
  * COLUMN_NAME
- * COLLATION
+ * ASC_OR_DESC
  * CARDINALITY
  * PAGES
  * FILTER_CONDITION
 
+Drivers can report additional columns.
+
 The result set is ordered by NON_UNIQUE, TYPE, INDEX_QUALIFIER, INDEX_NAME and
-SEQ_IN_INDEX.
+ORDINAL_POSITION.
+
+===============================================================================
+[ Examples ]
+
+Example #1 List Statistics of a Table
+
+<?php >
+  $conn = odbc_connect($dsn, $user, $pass);
+  $statistics = odbc_statistics($conn, 'TutorialDB', 'dbo', 'TEST', 
+  SQL_INDEX_UNIQUE, SQL_QUICK);
+  while (($row = odbc_fetch_array($statistics))) {
+      print_r($row);
+      break; // further rows omitted for brevity
+  }
+<?>
+
+The above example will output something similar to:
+
+Array
+(
+    [TABLE_CAT] => TutorialDB
+    [TABLE_SCHEM] => dbo
+    [TABLE_NAME] => TEST
+    [NON_UNIQUE] =>
+    [INDEX_QUALIFIER] =>
+    [INDEX_NAME] =>
+    [TYPE] => 0
+    [ORDINAL_POSITION] =>
+    [COLUMN_NAME] =>
+    [ASC_OR_DESC] =>
+    [CARDINALITY] => 15
+    [PAGES] => 3
+    [FILTER_CONDITION] =>
+)
+
+===============================================================================
+[ See Also ]
+
+ * |odbc_tables| - Get the list of table names stored in a specific data source
 
 
 vim:ft=help:

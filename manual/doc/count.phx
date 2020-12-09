@@ -7,7 +7,7 @@ count — Count all elements in an array, or something in an object
 ===============================================================================
 [ Description ]
 
-  count ( mixed $array_or_countable [, int $mode = COUNT_NORMAL ] ) : int~
+  count ( Countable|array $value [, int $mode = COUNT_NORMAL ] ) : int~
 
 Counts all elements in an array, or something in an object.
 
@@ -21,7 +21,7 @@ arrays are implemented and used in PHP.
 ===============================================================================
 [ Parameters ]
 
-{array_or_countable}
+{value}
 
   An array or Countable object.
 
@@ -40,10 +40,9 @@ arrays are implemented and used in PHP.
 ===============================================================================
 [ Return Values ]
 
-Returns the number of elements in {array_or_countable}. When the parameter is
-neither an array nor an object with implemented Countable interface, 1 will be
-returned. There is one exception, if {array_or_countable} is NULL, 0 will be
-returned.
+Returns the number of elements in {value}. When the parameter is neither an
+array nor an object with implemented Countable interface, 1 will be returned.
+There is one exception, if {value} is NULL, 0 will be returned.
 
 ===============================================================================
 [ Examples ]
@@ -96,7 +95,7 @@ Example #2 Recursive count() example
 
 Version                               Description
 7.2.0   count() will now yield a warning on invalid countable types passed to
-        the {array_or_countable} parameter.
+        the {value} parameter.
 
 ===============================================================================
 [ See Also ]

@@ -7,7 +7,8 @@ deflate_init — Initialize an incremental deflate context
 ===============================================================================
 [ Description ]
 
-  deflate_init ( int $encoding [, array $options = array() ] ) : resource~
+  deflate_init ( int $encoding [, array $options = [] ] ) :~
+  DeflateContext|false~
 
 Initializes an incremental deflate context using the specified {encoding}.
 
@@ -41,7 +42,10 @@ the current system (\x00 = Windows, \x03 = Unix, etc.)
 
   window
 
-    The zlib window size (logarithmic) in range 8..15; defaults to 15.
+    The zlib window size (logarithmic) in range 8..15; defaults to 15. zlib
+    changes a window size of 8 to 9, and as of zlib 1.2.8 fails with a warning,
+    if a window size of 8 is requested for ZLIB_ENCODING_RAW or
+    ZLIB_ENCODING_GZIP.
 
   strategy
 
@@ -64,6 +68,13 @@ failure.
 
 If an invalid option is passed to {options} or the context couldn't be created,
 an error of level E_WARNING is generated.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   On success, this function returns a DeflateContext instance now;
+        previously, a resource was returned.
 
 ===============================================================================
 [ See Also ]

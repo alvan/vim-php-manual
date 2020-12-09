@@ -7,7 +7,7 @@ convert_uuencode — Uuencode a string
 ===============================================================================
 [ Description ]
 
-  convert_uuencode ( string $data ) : string~
+  convert_uuencode ( string $string ) : string~
 
 convert_uuencode() encodes a string using the uuencode algorithm.
 
@@ -21,14 +21,21 @@ characters, making them safe for network transmissions. Uuencoded data is about
 ===============================================================================
 [ Parameters ]
 
-{data}
+{string}
 
   The data to be encoded.
 
 ===============================================================================
 [ Return Values ]
 
-Returns the uuencoded data or FALSE on failure.
+Returns the uuencoded data.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   Prior to this version, trying to convert an empty string returned FALSE
+        for no particular reason.
 
 ===============================================================================
 [ Examples ]

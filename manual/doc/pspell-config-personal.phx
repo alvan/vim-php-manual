@@ -7,7 +7,7 @@ pspell_config_personal — Set a file that contains personal wordlist
 ===============================================================================
 [ Description ]
 
-  pspell_config_personal ( int $dictionary_link , string $file ) : bool~
+  pspell_config_personal ( int $config , string $filename ) : bool~
 
 Set a file that contains personal wordlist. The personal wordlist will be
 loaded and used in addition to the standard one after you call 
@@ -20,9 +20,9 @@ pspell_config_personal() should be used on a config before calling
 ===============================================================================
 [ Parameters ]
 
-{dictionary_link}
+{config}
 
-{file}
+{filename}
 
   The personal wordlist. If the file does not exist, it will be created. The
   file should be writable by whoever PHP runs as (e.g. nobody).

@@ -7,35 +7,36 @@ ltrim — Strip whitespace (or other characters) from the beginning of a string
 ===============================================================================
 [ Description ]
 
-  ltrim ( string $str [, string $character_mask ] ) : string~
+  ltrim ( string $string [, string $characters = " \n\r\t\v\0" ] ) :~
+  string~
 
 Strip whitespace (or other characters) from the beginning of a string.
 
 ===============================================================================
 [ Parameters ]
 
-{str}
+{string}
 
   The input string.
 
-{character_mask}
+{characters}
 
   You can also specify the characters you want to strip, by means of the
-  {character_mask} parameter. Simply list all characters that you want to be
+  {characters} parameter. Simply list all characters that you want to be
   stripped. With .. you can specify a range of characters.
 
 ===============================================================================
 [ Return Values ]
 
 This function returns a string with whitespace stripped from the beginning of
-{str}. Without the second parameter, ltrim() will strip these characters:
+{string}. Without the second parameter, ltrim() will strip these characters:
 
  * " " (ASCII 32 (0x20)), an ordinary space.
  * "\t" (ASCII 9 (0x09)), a tab.
  * "\n" (ASCII 10 (0x0A)), a new line (line feed).
  * "\r" (ASCII 13 (0x0D)), a carriage return.
  * "\0" (ASCII 0 (0x00)), the NUL-byte.
- * "\x0B" (ASCII 11 (0x0B)), a vertical tab.
+ * "\v" (ASCII 11 (0x0B)), a vertical tab.
 
 ===============================================================================
 [ Examples ]

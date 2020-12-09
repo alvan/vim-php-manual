@@ -8,7 +8,7 @@ sodium_crypto_pwhash_str — Get an ASCII-encoded hash
 [ Description ]
 
   sodium_crypto_pwhash_str ( string $password , int $opslimit , int $memlimit~
-  ) : string~
+  ) : string|false~
 
 Uses a CPU- and memory-hard hash algorithm along with a randomly-generated
 salt, and memory and CPU limits to generate an ASCII-encoded hash suitable for
@@ -85,7 +85,7 @@ $argon2id$v=19$m=65536,t=2,p=1$oWIfdaXwWwhVmovOBc2NAQ$EbsZ+JnZyyavkafS0hoc4HdaOB
  * |sodium_crypto_pwhash| - Derive a key from a password
  * |password_hash| - Creates a password hash
  * |password_verify| - Verifies that a password matches a hash
- * >> Libsodium Argon2 docs
+ * » Libsodium Argon2 docs
 
 
 vim:ft=help:

@@ -7,7 +7,7 @@ str_shuffle — Randomly shuffles a string
 ===============================================================================
 [ Description ]
 
-  str_shuffle ( string $str ) : string~
+  str_shuffle ( string $string ) : string~
 
 str_shuffle() shuffles a string. One permutation of all possible is created.
 
@@ -21,7 +21,7 @@ value, consider using |random_int|, |random_bytes|, or
 ===============================================================================
 [ Parameters ]
 
-{str}
+{string}
 
   The input string.
 
@@ -34,8 +34,8 @@ Returns the shuffled string.
 [ Changelog ]
 
 Version                               Description
-        The internal randomization algorithm has been changed to use the >>
-7.1.0    Mersenne Twister Random Number Generator instead of the libc rand
+        The internal randomization algorithm has been changed to use the
+7.1.0   » Mersenne Twister Random Number Generator instead of the libc rand
         function.
 
 ===============================================================================

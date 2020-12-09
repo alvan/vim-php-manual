@@ -7,25 +7,25 @@ str_pad — Pad a string to a certain length with another string
 ===============================================================================
 [ Description ]
 
-  str_pad ( string $input , int $pad_length [, string $pad_string = "~
-  " [, int $pad_type = STR_PAD_RIGHT ]] ) : string~
+  str_pad ( string $string , int $length [, string $pad_string = " "~
+  [, int $pad_type = STR_PAD_RIGHT ]] ) : string~
 
-This function returns the {input} string padded on the left, the right, or both
-sides to the specified padding length. If the optional argument {pad_string} is
-not supplied, the {input} is padded with spaces, otherwise it is padded with
-characters from {pad_string} up to the limit.
+This function returns the {string} string padded on the left, the right, or
+both sides to the specified padding length. If the optional argument
+{pad_string} is not supplied, the {string} is padded with spaces, otherwise it
+is padded with characters from {pad_string} up to the limit.
 
 ===============================================================================
 [ Parameters ]
 
-{input}
+{string}
 
   The input string.
 
-{pad_length}
+{length}
 
-  If the value of {pad_length} is negative, less than, or equal to the length
-  of the input string, no padding takes place, and {input} will be returned.
+  If the value of {length} is negative, less than, or equal to the length of
+  the input string, no padding takes place, and {string} will be returned.
 
 {pad_string}
 

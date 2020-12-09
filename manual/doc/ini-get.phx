@@ -86,7 +86,7 @@ post_max_size in bytes = 8388608
 
   Many ini memory size values, such as upload_max_filesize, are stored in the
   php.ini file in shorthand notation. ini_get() will return the exact string
-  stored in the php.ini file and NOT its integer equivalent. Attempting normal
+  stored in the php.ini file and NOT its int equivalent. Attempting normal
   arithmetic functions on these values will not have otherwise expected
   results. The example above shows one way to convert shorthand notation into
   bytes, much like how the PHP source does it.
@@ -95,13 +95,6 @@ post_max_size in bytes = 8388608
 
   ini_get() can't read "array" ini options such as pdo.dsn.*, and returns FALSE
   in this case.
-
-===============================================================================
-[ Changelog ]
-
-Version                               Description
-5.3.0   Previously, the empty string was returned if the configuration option
-        didn't exist. now, FALSE is returned instead.
 
 ===============================================================================
 [ See Also ]

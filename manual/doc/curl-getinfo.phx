@@ -7,18 +7,18 @@ curl_getinfo — Get information regarding a specific transfer
 ===============================================================================
 [ Description ]
 
-  curl_getinfo ( resource $ch [, int $opt ] ) : mixed~
+  curl_getinfo ( CurlHandle $handle [, int|null $option = NULL ] ) : mixed~
 
 Gets information about the last transfer.
 
 ===============================================================================
 [ Parameters ]
 
-{ch}
+{handle}
 
   A cURL handle returned by |curl_init|.
 
-{opt}
+{option}
 
   This may be one of the following constants:
    + CURLINFO_EFFECTIVE_URL - Last effective URL
@@ -89,12 +89,53 @@ Gets information about the last transfer.
    + CURLINFO_RTSP_CSEQ_RECV - Recently received CSeq
    + CURLINFO_RTSP_SERVER_CSEQ - Next RTSP server CSeq
    + CURLINFO_RTSP_SESSION_ID - RTSP session ID
+   + CURLINFO_CONTENT_LENGTH_DOWNLOAD_T - The content-length of the download.
+    This is the value read from the Content-Type: field. -1 if the size isn't
+    known
+   + CURLINFO_CONTENT_LENGTH_UPLOAD_T - The specified size of the upload. -1 if
+    the size isn't known
+   + CURLINFO_HTTP_VERSION - The version used in the last HTTP connection. The
+    return value will be one of the defined CURL_HTTP_VERSION_* constants or 0
+    if the version can't be determined
+   + CURLINFO_PROTOCOL - The protocol used in the last HTTP connection. The
+    returned value will be exactly one of the CURLPROTO_* values
+   + CURLINFO_PROXY_SSL_VERIFYRESULT - The result of the certificate
+    verification that was requested (using the CURLOPT_PROXY_SSL_VERIFYPEER
+    option). Only used for HTTPS proxies
+   + CURLINFO_SCHEME - The URL scheme used for the most recent connection
+   + CURLINFO_SIZE_DOWNLOAD_T - Total number of bytes that were downloaded. The
+    number is only for the latest transfer and will be reset again for each new
+    transfer
+   + CURLINFO_SIZE_UPLOAD_T - Total number of bytes that were uploaded
+   + CURLINFO_SPEED_DOWNLOAD_T - The average download speed in bytes/second
+    that curl measured for the complete download
+   + CURLINFO_SPEED_UPLOAD_T - The average upload speed in bytes/second that
+    curl measured for the complete upload
+   + CURLINFO_APPCONNECT_TIME_T - Time, in microseconds, it took from the start
+    until the SSL/SSH connect/handshake to the remote host was completed
+   + CURLINFO_CONNECT_TIME_T - Total time taken, in microseconds, from the
+    start until the connection to the remote host (or proxy) was completed
+   + CURLINFO_FILETIME_T - Remote time of the retrieved document (as Unix
+    timestamp), an alternative to CURLINFO_FILETIME to allow systems with 32
+    bit long variables to extract dates outside of the 32bit timestamp range
+   + CURLINFO_NAMELOOKUP_TIME_T - Time in microseconds from the start until the
+    name resolving was completed
+   + CURLINFO_PRETRANSFER_TIME_T - Time taken from the start until the file
+    transfer is just about to begin, in microseconds
+   + CURLINFO_REDIRECT_TIME_T - Total time, in microseconds, it took for all
+    redirection steps include name lookup, connect, pretransfer and transfer
+    before final transaction was started
+   + CURLINFO_STARTTRANSFER_TIME_T - Time, in microseconds, it took from the
+    start until the first byte is received
+   + CURLINFO_TOTAL_TIME_T - Total time in microseconds for the previous
+    transfer, including name resolving, TCP connect etc.
 
 ===============================================================================
 [ Return Values ]
 
-If {opt} is given, returns its value. Otherwise, returns an associative array
-with the following elements (which correspond to {opt}), or FALSE on failure:
+If {option} is given, returns its value. Otherwise, returns an associative
+array with the following elements (which correspond to {option}), or FALSE on
+failure:
 
  * "url"
  * "content_type"
@@ -132,19 +173,18 @@ retrieved individually with the CURLINFO_PRIVATE option.
 [ Changelog ]
 
 Version                               Description
-        Introduced CURLINFO_RESPONSE_CODE, CURLINFO_HTTP_CONNECTCODE,
-        CURLINFO_HTTPAUTH_AVAIL, CURLINFO_PROXYAUTH_AVAIL, CURLINFO_OS_ERRNO,
-        CURLINFO_NUM_CONNECTS, CURLINFO_SSL_ENGINES, CURLINFO_COOKIELIST,
-5.5.0   CURLINFO_FTP_ENTRY_PATH, CURLINFO_APPCONNECT_TIME,
-        CURLINFO_CONDITION_UNMET, CURLINFO_RTSP_CLIENT_CSEQ,
-        CURLINFO_RTSP_CSEQ_RECV, CURLINFO_RTSP_SERVER_CSEQ and
-        CURLINFO_RTSP_SESSION_ID.
-5.4.7   Introduced CURLINFO_PRIMARY_IP, CURLINFO_PRIMARY_PORT,
-        CURLINFO_LOCAL_IP and CURLINFO_LOCAL_PORT.
-5.3.7   Introduced CURLINFO_REDIRECT_URL.
-5.3.0   Introduced CURLINFO_CERTINFO.
-5.2.4   Introduced CURLINFO_PRIVATE.
-5.1.3   Introduced CURLINFO_HEADER_OUT.
+8.0.0   {handle} expects a CurlHandle instance now; previously, a resource was
+        expected.
+8.0.0   {option} is nullable now; previously, the default was 0.
+        Introduced CURLINFO_CONTENT_LENGTH_DOWNLOAD_T,
+        CURLINFO_CONTENT_LENGTH_UPLOAD_T, CURLINFO_HTTP_VERSION,
+        CURLINFO_PROTOCOL, CURLINFO_PROXY_SSL_VERIFYRESULT, CURLINFO_SCHEME,
+        CURLINFO_SIZE_DOWNLOAD_T, CURLINFO_SIZE_UPLOAD_T,
+7.3.0   CURLINFO_SPEED_DOWNLOAD_T, CURLINFO_SPEED_UPLOAD_T,
+        CURLINFO_APPCONNECT_TIME_T, CURLINFO_CONNECT_TIME_T,
+        CURLINFO_FILETIME_T, CURLINFO_NAMELOOKUP_TIME_T,
+        CURLINFO_PRETRANSFER_TIME_T, CURLINFO_REDIRECT_TIME_T,
+        CURLINFO_STARTTRANSFER_TIME_T, CURLINFO_TOTAL_TIME_T.
 
 ===============================================================================
 [ Examples ]
@@ -169,7 +209,7 @@ Example #1 curl_getinfo() example
   curl_close($ch);
 <?>
 
-Example #2 curl_getinfo() example with {opt} parameter
+Example #2 curl_getinfo() example with {option} parameter
 
 <?php >
   // Create a cURL handle

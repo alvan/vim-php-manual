@@ -30,14 +30,10 @@ Gets the length of a string.
 Returns the number of characters in string {str} having character encoding
 {encoding}. A multi-byte character is counted as 1.
 
-Returns FALSE if the given {encoding} is invalid.
+===============================================================================
+[ Errors/Exceptions ]
 
-Warning
-
-This function may return Boolean FALSE, but may also return a non-Boolean value
-which evaluates to FALSE. Please read the section on Booleans for more
-information. Use the === operator for testing the return value of this
-function.
+If the encoding is unknown, an error of level E_WARNING is generated.
 
 ===============================================================================
 [ See Also ]

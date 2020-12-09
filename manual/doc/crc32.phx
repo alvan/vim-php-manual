@@ -7,10 +7,10 @@ crc32 — Calculates the crc32 polynomial of a string
 ===============================================================================
 [ Description ]
 
-  crc32 ( string $str ) : int~
+  crc32 ( string $string ) : int~
 
 Generates the cyclic redundancy checksum polynomial of 32-bit lengths of the
-{str}. This is usually used to validate the integrity of data being
+{string}. This is usually used to validate the integrity of data being
 transmitted.
 
 Warning
@@ -45,14 +45,14 @@ For a more portable solution you may also consider the generic |hash|. hash
 ===============================================================================
 [ Parameters ]
 
-{str}
+{string}
 
   The data.
 
 ===============================================================================
 [ Return Values ]
 
-Returns the crc32 checksum of {str} as an integer.
+Returns the crc32 checksum of {string} as an integer.
 
 ===============================================================================
 [ Examples ]

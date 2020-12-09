@@ -46,6 +46,9 @@ imagefilter() applies the given filter {filtertype} on the {image}.
     of smoothness.
    + IMG_FILTER_PIXELATE: Applies pixelation effect to the image, use {arg1} to
     set the block size and {arg2} to set the pixelation effect mode.
+   + IMG_FILTER_SCATTER: Applies scatter effect to the image, use {arg1} and
+    {arg2} to define the effect strength and additionally {arg3} to only apply
+    the on select pixel colors.
 
 {arg1}
 
@@ -54,16 +57,21 @@ imagefilter() applies the given filter {filtertype} on the {image}.
    + IMG_FILTER_COLORIZE: Value of red component.
    + IMG_FILTER_SMOOTH: Smoothness level.
    + IMG_FILTER_PIXELATE: Block size in pixels.
+   + IMG_FILTER_SCATTER: Effect substraction level. This must not be higher or
+    equal to the addition level set with {arg2}.
 
 {arg2}
 
    + IMG_FILTER_COLORIZE: Value of green component.
    + IMG_FILTER_PIXELATE: Whether to use advanced pixelation effect or not
     (defaults to FALSE).
+   + IMG_FILTER_SCATTER: Effect addition level.
 
 {arg3}
 
    + IMG_FILTER_COLORIZE: Value of blue component.
+   + IMG_FILTER_SCATTER: Optional array indexed color values to apply effect
+    at.
 
 {arg4}
 
@@ -78,9 +86,8 @@ Returns TRUE on success or FALSE on failure.
 ===============================================================================
 [ Changelog ]
 
-Version                     Description
-5.3.0   Pixelation support (IMG_FILTER_PIXELATE) was added.
-5.2.5   Alpha support for IMG_FILTER_COLORIZE was added.
+Version                   Description
+7.4.0   Scatter support (IMG_FILTER_SCATTER) was added.
 
 ===============================================================================
 [ Examples ]
@@ -219,8 +226,29 @@ The above example will output something similar to:
 
 Output of example : imagefilter() pixelate
 
+Example #6 imagefilter() scatter example
+
+<?php >
+  // Load the image
+  $logo = imagecreatefrompng('./php.png');
+
+  // Apply a very soft scatter effect to the image
+  imagefilter($logo, IMG_FILTER_SCATTER, 3, 5);
+
+  // Output the image with the scatter effect
+  header('Content-Type: image/png');
+  imagepng($logo);
+  imagedestroy($logo);
+<?>
+
+The above example will output something similar to:
+
+Output of example : imagefilter() scatter
+
 ===============================================================================
 [ Notes ]
+
+  Note: The result of IMG_FILTER_SCATTER is always random.
 
 ===============================================================================
 [ See Also ]

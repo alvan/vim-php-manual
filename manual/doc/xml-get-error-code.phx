@@ -7,7 +7,7 @@ xml_get_error_code — Get XML parser error code
 ===============================================================================
 [ Description ]
 
-  xml_get_error_code ( resource $parser ) : int~
+  xml_get_error_code ( XMLParser $parser ) : int~
 
 Gets the XML parser error code.
 
@@ -23,6 +23,13 @@ Gets the XML parser error code.
 
 This function returns FALSE if {parser} does not refer to a valid parser, or
 else it returns one of the error codes listed in the error codes section.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {parser} expects an XMLParser instance now; previously, a resource was
+        expected.
 
 ===============================================================================
 [ See Also ]

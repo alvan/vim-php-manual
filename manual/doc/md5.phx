@@ -13,21 +13,21 @@ best practices.
 ===============================================================================
 [ Description ]
 
-  md5 ( string $str [, bool $raw_output = FALSE ] ) : string~
+  md5 ( string $string [, bool $binary = FALSE ] ) : string~
 
-Calculates the MD5 hash of {str} using the >> RSA Data Security, Inc. MD5
+Calculates the MD5 hash of {string} using the » RSA Data Security, Inc. MD5
 Message-Digest Algorithm, and returns that hash.
 
 ===============================================================================
 [ Parameters ]
 
-{str}
+{string}
 
   The string.
 
-{raw_output}
+{binary}
 
-  If the optional {raw_output} is set to TRUE, then the md5 digest is instead
+  If the optional {binary} is set to TRUE, then the md5 digest is instead
   returned in raw binary format with a length of 16.
 
 ===============================================================================

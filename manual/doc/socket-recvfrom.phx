@@ -24,6 +24,8 @@ connection-oriented, {name} is NULL. Additionally, the {port} will contain the
 port of the remote host in the case of an unconnected AF_INET or AF_INET6
 socket.
 
+  Note: This function is binary-safe.
+
 ===============================================================================
 [ Parameters ]
 
@@ -95,12 +97,6 @@ Example #1 socket_recvfrom() example
 
 This example will initiate a UDP socket on port 1223 of 127.0.0.1 and print at
 most 12 characters received from a remote host.
-
-===============================================================================
-[ Changelog ]
-
-Version              Description
-4.3.0   socket_recvfrom() is now binary safe.
 
 ===============================================================================
 [ See Also ]

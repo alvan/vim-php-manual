@@ -7,7 +7,7 @@ msg_remove_queue — Destroy a message queue
 ===============================================================================
 [ Description ]
 
-  msg_remove_queue ( resource $queue ) : bool~
+  msg_remove_queue ( SysvMessageQueue $queue ) : bool~
 
 msg_remove_queue() destroys the message queue specified by the {queue}. Only
 use this function when all processes have finished working with the message
@@ -18,12 +18,19 @@ queue and you need to release the system resources held by it.
 
 {queue}
 
-  Message queue resource handle
+  The message queue.
 
 ===============================================================================
 [ Return Values ]
 
 Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {queue} expects a SysvMessageQueue instance now; previously, a resource
+        was expected.
 
 ===============================================================================
 [ See Also ]

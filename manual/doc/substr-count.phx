@@ -7,8 +7,8 @@ substr_count — Count the number of substring occurrences
 ===============================================================================
 [ Description ]
 
-  substr_count ( string $haystack , string $needle [, int $offset = 0 [, int~
-  $length ]] ) : int~
+  substr_count ( string $haystack , string $needle [, int $offset = 0 [,~
+  int|null $length = NULL ]] ) : int~
 
 substr_count() returns the number of times the {needle} substring occurs in the
 {haystack} string. Please note that {needle} is case sensitive.
@@ -42,15 +42,15 @@ substr_count() returns the number of times the {needle} substring occurs in the
 ===============================================================================
 [ Return Values ]
 
-This function returns an integer.
+This function returns an int.
 
 ===============================================================================
 [ Changelog ]
 
 Version                               Description
+8.0.0   {length} is nullable now.
 7.1.0   Support for negative {offset}s and {length}s has been added. {length}
         may also be 0 now.
-5.1.0   Added the {offset} and the {length} parameters
 
 ===============================================================================
 [ Examples ]

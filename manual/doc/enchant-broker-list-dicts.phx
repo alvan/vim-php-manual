@@ -7,7 +7,7 @@ enchant_broker_list_dicts — Returns a list of available dictionaries
 ===============================================================================
 [ Description ]
 
-  enchant_broker_list_dicts ( resource $broker ) : mixed~
+  enchant_broker_list_dicts ( EnchantBroker $broker ) : array~
 
 Returns a list of available dictionaries with their details.
 
@@ -16,12 +16,20 @@ Returns a list of available dictionaries with their details.
 
 {broker}
 
-  Broker resource
+  An Enchant broker returned by |enchant_broker_init|.
 
 ===============================================================================
 [ Return Values ]
 
-Returns TRUE on success or FALSE on failure.
+Returns an array of available dictionaries with their details.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {broker} expects an EnchantBroker instance now; previoulsy, a resource
+        was expected.
+8.0.0   Prior to this version, the function returned FALSE on failure.
 
 ===============================================================================
 [ Examples ]

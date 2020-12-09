@@ -7,9 +7,9 @@ array_fill — Fill an array with values
 ===============================================================================
 [ Description ]
 
-  array_fill ( int $start_index , int $num , mixed $value ) : array~
+  array_fill ( int $start_index , int $count , mixed $value ) : array~
 
-Fills an array with {num} entries of the value of the {value} parameter, keys
+Fills an array with {count} entries of the value of the {value} parameter, keys
 starting at the {start_index} parameter.
 
 ===============================================================================
@@ -22,7 +22,7 @@ starting at the {start_index} parameter.
   If {start_index} is negative, the first index of the returned array will be
   {start_index} and the following indices will start from zero (see example).
 
-{num}
+{count}
 
   Number of elements to insert. Must be greater than or equal to zero.
 
@@ -38,13 +38,13 @@ Returns the filled array
 ===============================================================================
 [ Errors/Exceptions ]
 
-Throws a E_WARNING if {num} is less than zero.
+Throws a E_WARNING if {count} is less than zero.
 
 ===============================================================================
 [ Changelog ]
 
 Version                               Description
-5.6.0   {num} may now be zero. Previously, {num} was required to be greater
+5.6.0   {count} may now be zero. Previously, {count} was required to be greater
         than zero.
 
 ===============================================================================

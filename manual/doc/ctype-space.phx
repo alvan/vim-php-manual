@@ -7,7 +7,7 @@ ctype_space — Check for whitespace character(s)
 ===============================================================================
 [ Description ]
 
-  ctype_space ( string $text ) : bool~
+  ctype_space ( mixed $text ) : bool~
 
 Checks if all of the characters in the provided string, {text}, creates
 whitespace.
@@ -18,6 +18,14 @@ whitespace.
 {text}
 
   The tested string.
+
+
+    Note:
+
+    If an int between -128 and 255 inclusive is provided, it is interpreted as
+    the ASCII value of a single character (negative values have 256 added in
+    order to allow characters in the Extended ASCII range). Any other integer
+    is interpreted as a string containing the decimal digits of the integer.
 
 ===============================================================================
 [ Return Values ]
@@ -51,16 +59,6 @@ The above example will output:
 The string 'string1' consists of whitespace characters only.
 The string 'string2' contains non-whitespace characters.
 The string 'string3' contains non-whitespace characters.
-
-===============================================================================
-[ Notes ]
-
-  Note:
-
-  If an integer between -128 and 255 inclusive is provided, it is interpreted
-  as the ASCII value of a single character (negative values have 256 added in
-  order to allow characters in the Extended ASCII range). Any other integer is
-  interpreted as a string containing the decimal digits of the integer.
 
 ===============================================================================
 [ See Also ]

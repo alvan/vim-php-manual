@@ -1,6 +1,6 @@
 *ibase_backup*
 
-(PHP 5, PHP 7)
+(PHP 5, PHP 7 < 7.4.0)
 
 ibase_backup — Initiates a backup task in the service manager and returns
 immediately
@@ -10,9 +10,91 @@ immediately
 
   ibase_backup ( resource $service_handle , string $source_db , string~
   $dest_file [, int $options = 0 [, bool $verbose = FALSE ]] ) : mixed~
-Warning
 
-This function is currently not documented; only its argument list is available.
+This function passes the arguments to the (remote) database server. There it
+starts a new backup process. Therefore you won't get any responses.
+
+===============================================================================
+[ Parameters ]
+
+{service_handle}
+
+  A previously opened connection to the database server.
+
+{source_db}
+
+  The absolute file path to the database on the database server. You can also
+  use a database alias.
+
+{dest_file}
+
+  The path to the backup file on the database server.
+
+{options}
+
+  Additional options to pass to the database server for backup. The {options}
+  parameter can be a combination of the following constants:
+  IBASE_BKP_IGNORE_CHECKSUMS, IBASE_BKP_IGNORE_LIMBO, IBASE_BKP_METADATA_ONLY,
+  IBASE_BKP_NO_GARBAGE_COLLECT, IBASE_BKP_OLD_DESCRIPTIONS,
+  IBASE_BKP_NON_TRANSPORTABLE or IBASE_BKP_CONVERT. Read the section about
+  Predefined Constants for further information.
+
+{verbose}
+
+  Since the backup process is done on the database server, you don't have any
+  chance to get its output. This argument is useless.
+
+===============================================================================
+[ Return Values ]
+
+Returns TRUE on success or FALSE on failure.
+
+Since the backup process is done on the (remote) server, this function just
+passes the arguments to it. While the arguments are legal, you won't get FALSE.
+
+===============================================================================
+[ Examples ]
+
+Example #1 ibase_backup() example
+
+<?php >
+
+  // Attach to database server by ip address and port
+  $service = ibase_service_attach ('10.1.11.200/3050', 'sysdba', 'masterkey');
+
+  // Start the backup process on database server
+  // Backup employee database using full path to /srv/backup/employees.fbk
+  // Don't use any special arguments
+  ibase_backup($service, '/srv/firebird/employees.fdb', '/srv/backup/
+  employees.fbk');
+
+  // Free the attached connection
+  ibase_service_detach ($service);
+<?>
+
+Example #2 ibase_backup() example with arguments
+
+<?php >
+
+  // Attach to database server by name and default port
+  $service = ibase_service_attach ('fb-server.contoso.local', 'sysdba', 
+  'masterkey');
+
+  // Start the backup process on database server
+  // Backup employee database using alias to /srv/backup/employees.fbk.
+  // Backup only the metadata. Don't create a transportable backup.
+  ibase_backup($service, 'employees.fdb', '/srv/backup/employees.fbk', 
+  IBASE_BKP_METADATA_ONLY | IBASE_BKP_NON_TRANSPORTABLE);
+
+  // Free the attached connection
+  ibase_service_detach ($service);
+<?>
+
+===============================================================================
+[ See Also ]
+
+ * |ibase_restore| - Initiates a restore task in the service manager and
+  returns immediately
 
 
 vim:ft=help:

@@ -8,7 +8,7 @@ ps_shading_pattern — Creates a pattern based on a shading
 [ Description ]
 
   ps_shading_pattern ( resource $psdoc , int $shadingid , string $optlist ) :~
-  int~
+  int|false~
 
 Creates a pattern based on a shading, which has to be created before with 
 |ps_shading|. Shading patterns can be used like regular patterns.

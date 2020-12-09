@@ -7,7 +7,7 @@ xml_set_end_namespace_decl_handler — Set up end namespace declaration handler
 ===============================================================================
 [ Description ]
 
-  xml_set_end_namespace_decl_handler ( resource $parser , callable $handler )~
+  xml_set_end_namespace_decl_handler ( XMLParser $parser , callable $handler )~
   : bool~
 
 Set a handler to be called when leaving the scope of a namespace declaration.
@@ -36,7 +36,7 @@ called.
   will be if no value is returned), the XML parser will stop parsing and 
   |xml_get_error_code| will return XML_ERROR_EXTERNAL_ENTITY_HANDLING.
 
-  handler ( resource $parser , string $prefix )~
+  handler ( XMLParser $parser , string $prefix )~
 
   {parser}
     The first parameter, parser, is a reference to the XML parser calling the
@@ -55,6 +55,13 @@ called.
 [ Return Values ]
 
 Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {parser} expects an XMLParser instance now; previously, a resource was
+        expected.
 
 ===============================================================================
 [ See Also ]

@@ -8,16 +8,18 @@ spelling-session
 ===============================================================================
 [ Description ]
 
-  enchant_dict_is_in_session ( resource $dict , string $word ) : bool~
+  enchant_dict_is_in_session ( EnchantDictionary $dictionary , string $word )~
+  : bool~
 
 Tells whether or not a word already exists in the current session.
 
 ===============================================================================
 [ Parameters ]
 
-{dict}
+{dictionary}
 
-  Dictionary resource
+  An Enchant dictionary returned by |enchant_broker_request_dict| or 
+  |enchant_broker_request_pwl_dict|.
 
 {word}
 
@@ -27,6 +29,13 @@ Tells whether or not a word already exists in the current session.
 [ Return Values ]
 
 Returns TRUE if the word exists or FALSE
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {dictionary} expects an EnchantDictionary instance now; previoulsy, a
+        resource was expected.
 
 ===============================================================================
 [ See Also ]

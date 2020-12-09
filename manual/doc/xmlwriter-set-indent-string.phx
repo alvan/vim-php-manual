@@ -10,11 +10,11 @@ indenting
 
 Object oriented style
 
-  XMLWriter::setIndentString ( string $indentString ) : bool~
+  public XMLWriter::setIndentString ( string $indentation ) : bool~
 
 Procedural style
 
-  xmlwriter_set_indent_string ( resource $xmlwriter , string $indentString ) :~
+  xmlwriter_set_indent_string ( XMLWriter $writer , string $indentation ) :~
   bool~
 
 Sets the string which will be used to indent each element/attribute of the
@@ -23,13 +23,13 @@ resulting xml.
 ===============================================================================
 [ Parameters ]
 
-{ xmlwriter}
+{ writer}
 
-  Only for procedural calls. The XMLWriter resource that is being modified.
-  This resource comes from a call to |xmlwriter_open_uri| or 
+  Only for procedural calls. The XMLWriter instance that is being modified.
+  This object is returned from a call to |xmlwriter_open_uri| or 
   |xmlwriter_open_memory|.
 
-{indentString}
+{indentation}
 
   The indentation string.
 
@@ -37,6 +37,20 @@ resulting xml.
 [ Return Values ]
 
 Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {writer} expects an XMLWriter instance now; previously, a resource was
+        expected.
+
+===============================================================================
+[ Notes ]
+
+  Note:
+
+  The indent is reset when an xmlwriter is opened.
 
 ===============================================================================
 [ See Also ]

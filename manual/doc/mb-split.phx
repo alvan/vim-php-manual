@@ -7,7 +7,8 @@ mb_split — Split multibyte string using regular expression
 ===============================================================================
 [ Description ]
 
-  mb_split ( string $pattern , string $string [, int $limit = -1 ] ) : array~
+  mb_split ( string $pattern , string $string [, int $limit = -1 ] ) :~
+  array|false~
 
 Split a multibyte {string} using regular expression {pattern} and returns the
 result as an array.
@@ -30,7 +31,7 @@ result as an array.
 ===============================================================================
 [ Return Values ]
 
-The result as an array.
+The result as an array, or FALSE on failure.
 
 ===============================================================================
 [ Notes ]

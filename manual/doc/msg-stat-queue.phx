@@ -7,7 +7,7 @@ msg_stat_queue — Returns information from the message queue data structure
 ===============================================================================
 [ Description ]
 
-  msg_stat_queue ( resource $queue ) : array~
+  msg_stat_queue ( SysvMessageQueue $queue ) : array|false~
 
 msg_stat_queue() returns the message queue meta data for the message queue
 specified by the {queue}. This is useful, for example, to determine which
@@ -18,12 +18,13 @@ process sent the message that was just received.
 
 {queue}
 
-  Message queue resource handle
+  The message queue.
 
 ===============================================================================
 [ Return Values ]
 
-The return value is an array whose keys and values have the following meanings:
+On success, the return value is an array whose keys and values have the
+following meanings:
 
                       Array structure for msg_stat_queue
 msg_perm.uid  The uid of the owner of the queue.
@@ -39,6 +40,15 @@ msg_qbytes    Linux, this value may be read and modified via /proc/sys/kernel/
 msg_lspid     The pid of the process that sent the last message to the queue.
 msg_lrpid     The pid of the process that received the last message from the
               queue.
+
+Returns FALSE on failure.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {queue} expects a SysvMessageQueue instance now; previously, a resource
+        was expected.
 
 ===============================================================================
 [ See Also ]

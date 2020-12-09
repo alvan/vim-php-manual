@@ -7,7 +7,7 @@ arsort — Sort an array in reverse order and maintain index association
 ===============================================================================
 [ Description ]
 
-  arsort ( array &$array [, int $sort_flags = SORT_REGULAR ] ) : bool~
+  arsort ( array &$array [, int $flags = SORT_REGULAR ] ) : bool~
 
 This function sorts an array such that array indices maintain their correlation
 with the array elements they are associated with.
@@ -27,10 +27,10 @@ order is significant.
 
   The input array.
 
-{sort_flags}
+{flags}
 
-  You may modify the behavior of the sort using the optional parameter
-  {sort_flags}, for details see |sort|.
+  You may modify the behavior of the sort using the optional parameter {flags},
+  for details see |sort|.
 
 ===============================================================================
 [ Return Values ]

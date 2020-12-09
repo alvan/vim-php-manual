@@ -10,7 +10,7 @@ pg_escape_identifier — Escape a identifier for insertion into a text field
   pg_escape_identifier ([ resource $connection ], string $data ) : string~
 
 pg_escape_identifier() escapes a identifier (e.g. table, field names) for
-quering the database. It returns an escaped identifier string for PostgreSQL
+querying the database. It returns an escaped identifier string for PostgreSQL
 server. pg_escape_identifier() adds double quotes before and after data. Users
 should not add double quotes. Use of this function is recommended for
 identifier parameters in query. For SQL literals (i.e. parameters except

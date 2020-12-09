@@ -8,7 +8,7 @@ dns_get_record — Fetch DNS Resource Records associated with a hostname
 [ Description ]
 
   dns_get_record ( string $hostname [, int $type = DNS_ANY [, array &$authns~
-  [, array &$addtl [, bool $raw = FALSE ]]]] ) : array~
+  [, array &$addtl [, bool $raw = FALSE ]]]] ) : array|false~
 
 Fetch DNS Resource Records associated with the given {hostname}.
 
@@ -42,6 +42,10 @@ Fetch DNS Resource Records associated with the given {hostname}.
     platforms, DNS_ANY will not always return every record, the slower DNS_ALL
     will collect all records more reliably.
 
+    Note:
+
+    DNS_CAA is not supported on Windows.
+
 {authns}
 
   Passed by reference and, if given, will be populated with Resource Records
@@ -54,8 +58,9 @@ Fetch DNS Resource Records associated with the given {hostname}.
 
 {raw}
 
-  In case of raw mode, we query only the requested type instead of looping type
-  by type before going with the additional info stuff.
+  The {type} will be interpreted as a raw DNS type ID (the DNS_* constants
+  cannot be used). The return value will contain a data key, which needs to be
+  manually parsed.
 
 ===============================================================================
 [ Return Values ]
@@ -90,12 +95,12 @@ PTR    target: Location within the DNS namespace to which this record points.
 TXT    txt: Arbitrary string data associated with this record.
        cpu: IANA number designating the CPU of the machine referenced by this
 HINFO  record. os: IANA number designating the Operating System on the machine
-       referenced by this record. See IANA's >> Operating System Names for the
+       referenced by this record. See IANA's » Operating System Names for the
        meaning of these values.
        flags: A one-byte bitfield; currently only bit 0 is defined, meaning
 CAA    'critical'; other bits are reserved and should be ignored. tag: The CAA
        tag name (alphanumeric ASCII string). value: The CAA tag value (binary
-       string, may use subformats). For additional information see: >> RFC 6844
+       string, may use subformats). For additional information see: » RFC 6844
        mname: FQDN of the machine from which the resource records originated.
        rname: Email address of the administrative contact for this domain.
        serial: Serial # of this revision of the requested domain. refresh:
@@ -115,20 +120,15 @@ A6(PHP masklen: Length (in bits) to inherit from the target specified by
        pri: (Priority) lowest priorities should be used first. weight: Ranking
 SRV    to weight which of commonly prioritized {targets} should be chosen at
        random. target and port: hostname and port where the requested service
-       can be found. For additional information see: >> RFC 2782
+       can be found. For additional information see: » RFC 2782
 NAPTR  order and pref: Equivalent to {pri} and {weight} above. flags, services,
-       regex, and replacement: Parameters as defined by >> RFC 2915.
+       regex, and replacement: Parameters as defined by » RFC 2915.
 
 ===============================================================================
 [ Changelog ]
 
- Version                               Description
-7.0.16,   Added support for CAA record type.
-7.1.2
-5.4.0     Added {raw} parameter.
-5.3.0     This function is now available on Windows platforms.
-5.3.0     Prior to this release, if the {authns} parameter was given, the
-          {addtl} parameter was also required.
+   Version               Description
+7.0.16, 7.1.2 Added support for CAA record type.
 
 ===============================================================================
 [ Examples ]
@@ -305,7 +305,7 @@ Additional = Array
   Note:
 
   For compatibility with versions before PHP 5.3.0 on some operating systems,
-  try the >> PEAR class >> Net_DNS.
+  try the » PEAR class » Net_DNS.
 
 ===============================================================================
 [ See Also ]

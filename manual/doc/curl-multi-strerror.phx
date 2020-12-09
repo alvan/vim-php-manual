@@ -7,16 +7,16 @@ curl_multi_strerror — Return string describing error code
 ===============================================================================
 [ Description ]
 
-  curl_multi_strerror ( int $errornum ) : string~
+  curl_multi_strerror ( int $error_code ) : string|null~
 
 Returns a text error message describing the given CURLM error code.
 
 ===============================================================================
 [ Parameters ]
 
-{errornum}
+{error_code}
 
-  One of the >> CURLM error codes constants.
+  One of the » CURLM error codes constants.
 
 ===============================================================================
 [ Return Values ]
@@ -60,7 +60,7 @@ Example #1 curl_multi_strerror() example
 [ See Also ]
 
  * |curl_strerror| - Return string describing the given error code
- * >> cURL error codes
+ * » cURL error codes
 
 
 vim:ft=help:

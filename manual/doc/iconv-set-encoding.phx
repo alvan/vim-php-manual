@@ -7,10 +7,10 @@ iconv_set_encoding — Set current setting for character encoding conversion
 ===============================================================================
 [ Description ]
 
-  iconv_set_encoding ( string $type , string $charset ) : bool~
+  iconv_set_encoding ( string $type , string $encoding ) : bool~
 
 Changes the value of the internal configuration variable specified by {type} to
-{charset}.
+{encoding}.
 
 ===============================================================================
 [ Parameters ]
@@ -22,7 +22,7 @@ Changes the value of the internal configuration variable specified by {type} to
    + output_encoding
    + internal_encoding
 
-{charset}
+{encoding}
 
   The character set.
 

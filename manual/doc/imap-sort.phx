@@ -9,7 +9,7 @@ imap_sort — Gets and sort messages
 
   imap_sort ( resource $imap_stream , int $criteria , int $reverse [, int~
   $options = 0 [, string $search_criteria = NULL [, string $charset = NULL ]]]~
-  ) : array~
+  ) : array|false~
 
 Gets and sorts message numbers by the given parameters.
 
@@ -52,7 +52,8 @@ Gets and sorts message numbers by the given parameters.
 ===============================================================================
 [ Return Values ]
 
-Returns an array of message numbers sorted by the given parameters.
+Returns an array of message numbers sorted by the given parameters, or FALSE on
+failure.
 
 
 vim:ft=help:

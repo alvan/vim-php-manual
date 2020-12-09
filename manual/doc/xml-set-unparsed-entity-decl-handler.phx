@@ -8,7 +8,7 @@ handler
 ===============================================================================
 [ Description ]
 
-  xml_set_unparsed_entity_decl_handler ( resource $parser , callable $handler~
+  xml_set_unparsed_entity_decl_handler ( XMLParser $parser , callable $handler~
   ) : bool~
 
 Sets the unparsed entity declaration handler function for the XML parser
@@ -20,8 +20,8 @@ declaration with an NDATA declaration, like the following:
 <!ENTITY <parameter>name</parameter> {<parameter>publicId</parameter> | <parameter>systemId</parameter>}
         NDATA <parameter>notationName</parameter>
 
-See >> section 4.2.2 of the XML 1.0 spec for the definition of notation
-declared external entities.
+See » section 4.2.2 of the XML 1.0 spec for the definition of notation declared
+external entities.
 
 ===============================================================================
 [ Parameters ]
@@ -38,7 +38,7 @@ declared external entities.
 
   The function named by {handler} must accept six parameters:
 
-  handler ( resource $parser , string $entity_name , string $base , string~
+  handler ( XMLParser $parser , string $entity_name , string $base , string~
   $system_id , string $public_id , string $notation_name )~
 
   {parser}
@@ -67,6 +67,13 @@ declared external entities.
 [ Return Values ]
 
 Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {parser} expects an XMLParser instance now; previously, a resource was
+        expected.
 
 
 vim:ft=help:

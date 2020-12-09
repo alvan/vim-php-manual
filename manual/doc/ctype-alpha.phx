@@ -7,7 +7,7 @@ ctype_alpha — Check for alphabetic character(s)
 ===============================================================================
 [ Description ]
 
-  ctype_alpha ( string $text ) : bool~
+  ctype_alpha ( mixed $text ) : bool~
 
 Checks if all of the characters in the provided string, {text}, are alphabetic.
 In the standard C locale letters are just [A-Za-z] and ctype_alpha() is
@@ -21,6 +21,14 @@ upper nor lower case.
 {text}
 
   The tested string.
+
+
+    Note:
+
+    If an int between -128 and 255 inclusive is provided, it is interpreted as
+    the ASCII value of a single character (negative values have 256 added in
+    order to allow characters in the Extended ASCII range). Any other integer
+    is interpreted as a string containing the decimal digits of the integer.
 
 ===============================================================================
 [ Return Values ]
@@ -48,16 +56,6 @@ The above example will output:
 
 The string KjgWZC consists of all letters.
 The string arf12 does not consist of all letters.
-
-===============================================================================
-[ Notes ]
-
-  Note:
-
-  If an integer between -128 and 255 inclusive is provided, it is interpreted
-  as the ASCII value of a single character (negative values have 256 added in
-  order to allow characters in the Extended ASCII range). Any other integer is
-  interpreted as a string containing the decimal digits of the integer.
 
 ===============================================================================
 [ See Also ]

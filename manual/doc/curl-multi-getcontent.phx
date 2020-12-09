@@ -8,7 +8,7 @@ CURLOPT_RETURNTRANSFER is set
 ===============================================================================
 [ Description ]
 
-  curl_multi_getcontent ( resource $ch ) : string~
+  curl_multi_getcontent ( CurlHandle $handle ) : string|null~
 
 If CURLOPT_RETURNTRANSFER is an option that is set for a specific handle, then
 this function will return the content of that cURL handle in the form of a
@@ -17,7 +17,7 @@ string.
 ===============================================================================
 [ Parameters ]
 
-{ch}
+{handle}
 
   A cURL handle returned by |curl_init|.
 
@@ -25,6 +25,13 @@ string.
 [ Return Values ]
 
 Return the content of a cURL handle if CURLOPT_RETURNTRANSFER is set.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {handle} expects a CurlHandle instance now; previously, a resource was
+        expected.
 
 ===============================================================================
 [ See Also ]

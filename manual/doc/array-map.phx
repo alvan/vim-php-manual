@@ -7,33 +7,45 @@ array_map — Applies the callback to the elements of the given arrays
 ===============================================================================
 [ Description ]
 
-  array_map ( callable $callback , array $array1 [, array $... ] ) : array~
+  array_map ( callable|null $callback , array $array , array ...$arrays ) :~
+  array~
 
-array_map() returns an array containing all the elements of {array1} after
-applying the {callback} function to each one. The number of parameters that the
-{callback} function accepts should match the number of arrays passed to the 
-array_map()
+array_map() returns an array containing the results of applying the {callback}
+to the corresponding index of {array} (and {arrays} if more arrays are
+provided) used as arguments for the callback. The number of parameters that the
+{callback} function accepts should match the number of arrays passed to 
+array_map().
 
 ===============================================================================
 [ Parameters ]
 
 {callback}
 
-  Callback function to run for each element in each array.
+  A callable to run for each element in each array.
 
-{array1}
+  NULL can be passed as a value to {callback} to perform a zip operation on
+  multiple arrays. If only {array} is provided, array_map() will return the
+  input array.
+
+{array}
 
   An array to run through the {callback} function.
 
-{...}
+{arrays}
 
-  Variable list of array arguments to run through the {callback} function.
+  Supplementary variable list of array arguments to run through the {callback}
+  function.
 
 ===============================================================================
 [ Return Values ]
 
-Returns an array containing all the elements of {array1} after applying the
-{callback} function to each one.
+Returns an array containing the results of applying the {callback} function to
+the corresponding index of {array} (and {arrays} if more arrays are provided)
+used as arguments for the callback.
+
+The returned array will preserve the keys of the array argument if and only if
+exactly one array is passed. If more than one array is passed, the returned
+array will have sequential integer keys.
 
 ===============================================================================
 [ Examples ]
@@ -43,11 +55,11 @@ Example #1 array_map() example
 <?php >
   function cube($n)
   {
-      return($n * $n * $n);
+      return ($n * $n * $n);
   }
 
-  $a = array(1, 2, 3, 4, 5);
-  $b = array_map("cube", $a);
+  $a = [1, 2, 3, 4, 5];
+  $b = array_map('cube', $a);
   print_r($b);
 <?>
 
@@ -86,21 +98,21 @@ Example #3 array_map() - using more arrays
 <?php >
   function show_Spanish($n, $m)
   {
-      return("The number $n is called $m in Spanish");
+      return "The number {$n} is called {$m} in Spanish";
   }
 
   function map_Spanish($n, $m)
   {
-      return(array($n => $m));
+      return [$n => $m];
   }
 
-  $a = array(1, 2, 3, 4, 5);
-  $b = array("uno", "dos", "tres", "cuatro", "cinco");
+  $a = [1, 2, 3, 4, 5];
+  $b = ['uno', 'dos', 'tres', 'cuatro', 'cinco'];
 
-  $c = array_map("show_Spanish", $a, $b);
+  $c = array_map('show_Spanish', $a, $b);
   print_r($c);
 
-  $d = array_map("map_Spanish", $a , $b);
+  $d = array_map('map_Spanish', $a , $b);
   print_r($d);
 <?>
 
@@ -154,12 +166,12 @@ elements to match the length of the longest.
 An interesting use of this function is to construct an array of arrays, which
 can be easily performed by using NULL as the name of the callback function
 
-Example #4 Creating an array of arrays
+Example #4 Performing a zip operation of arrays
 
 <?php >
-  $a = array(1, 2, 3, 4, 5);
-  $b = array("one", "two", "three", "four", "five");
-  $c = array("uno", "dos", "tres", "cuatro", "cinco");
+  $a = [1, 2, 3, 4, 5];
+  $b = ['one', 'two', 'three', 'four', 'five'];
+  $c = ['uno', 'dos', 'tres', 'cuatro', 'cinco'];
 
   $d = array_map(null, $a, $b, $c);
   print_r($d);
@@ -206,22 +218,36 @@ Array
 
 )
 
-The returned array will preserve the keys of the array argument if and only if
-exactly one array is passed. If more than one array is passed, the returned
-array will have sequential integer keys.
-
-Example #5 array_map() - with string keys
+Example #5 NULL {callback} with only {array}
 
 <?php >
-  $arr = array("stringkey" => "value");
+  $array = [1, 2, 3];
+  var_dump(array_map(null, $array));
+<?>
+
+The above example will output:
+
+array(3) {
+  [0]=>
+  int(1)
+  [1]=>
+  int(2)
+  [2]=>
+  int(3)
+}
+
+Example #6 array_map() - with string keys
+
+<?php >
+  $arr = ['stringkey' => 'value'];
   function cb1($a) {
-      return array ($a);
+      return [$a];
   }
   function cb2($a, $b) {
-      return array ($a, $b);
+      return [$a, $b];
   }
-  var_dump(array_map("cb1", $arr));
-  var_dump(array_map("cb2", $arr, $arr));
+  var_dump(array_map('cb1', $arr));
+  var_dump(array_map('cb2', $arr, $arr));
   var_dump(array_map(null,  $arr));
   var_dump(array_map(null, $arr, $arr));
 <?>
@@ -265,7 +291,6 @@ array(1) {
  * |array_reduce| - Iteratively reduce the array to a single value using a
   callback function
  * |array_walk| - Apply a user supplied function to every member of an array
- * information about the callback type
 
 
 vim:ft=help:

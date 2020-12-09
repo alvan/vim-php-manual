@@ -7,16 +7,18 @@ microtime — Return current Unix timestamp with microseconds
 ===============================================================================
 [ Description ]
 
-  microtime ([ bool $get_as_float = FALSE ] ) : mixed~
+  microtime ([ bool $getAsFloat = FALSE ] ) : mixed~
 
 microtime() returns the current Unix timestamp with microseconds. This function
 is only available on operating systems that support the gettimeofday() system
 call.
 
+For performance measurements, using |hrtime| is recommended.
+
 ===============================================================================
 [ Parameters ]
 
-{get_as_float}
+{getAsFloat}
 
   If used and set to TRUE, microtime() will return a float instead of a string,
   as described in the return values section below.
@@ -29,7 +31,7 @@ the number of seconds since the Unix epoch (0:00:00 January 1,1970 GMT), and
 msec measures microseconds that have elapsed since sec and is also expressed in
 seconds.
 
-If {get_as_float} is set to TRUE, then microtime() returns a float, which
+If {getAsFloat} is set to TRUE, then microtime() returns a float, which
 represents the current time in seconds since the Unix epoch accurate to the
 nearest microsecond.
 
@@ -92,6 +94,7 @@ Example #3 microtime() and REQUEST_TIME_FLOAT (as of PHP 5.4.0)
 [ See Also ]
 
  * |time| - Return current Unix timestamp
+ * |hrtime| - Get the system's high resolution time
 
 
 vim:ft=help:

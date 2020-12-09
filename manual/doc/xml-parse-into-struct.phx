@@ -7,8 +7,8 @@ xml_parse_into_struct — Parse XML data into an array structure
 ===============================================================================
 [ Description ]
 
-  xml_parse_into_struct ( resource $parser , string $data , array &$values [,~
-  array &$index ] ) : int~
+  xml_parse_into_struct ( XMLParser $parser , string $data , array &$values [,~
+  array &$index = NULL ] ) : int~
 
 This function parses an XML string into 2 parallel array structures, one
 ({index}) containing pointers to the location of the appropriate values in the
@@ -39,6 +39,13 @@ This function parses an XML string into 2 parallel array structures, one
 
 xml_parse_into_struct() returns 0 for failure and 1 for success. This is not
 the same as FALSE and TRUE, be careful with operators such as ===.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {parser} expects an XMLParser instance now; previously, a resource was
+        expected.
 
 ===============================================================================
 [ Examples ]
@@ -145,7 +152,7 @@ Example #3 parsemoldb.php - parses moldb.xml into an array of molecular objects
       var $code;  // one letter code
       var $type;  // hydrophobic, charged or neutral
       
-      function AminoAcid ($aa) 
+      function __construct ($aa) 
       {
           foreach ($aa as $k=>$v)
               $this->$k = $aa[$k];

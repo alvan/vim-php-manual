@@ -7,9 +7,9 @@ odbc_foreignkeys — Retrieves a list of foreign keys
 ===============================================================================
 [ Description ]
 
-  odbc_foreignkeys ( resource $connection_id , string $pk_qualifier , string~
-  $pk_owner , string $pk_table , string $fk_qualifier , string $fk_owner ,~
-  string $fk_table ) : resource~
+  odbc_foreignkeys ( resource $connection_id , string $pk_catalog , string~
+  $pk_schema , string $pk_table , string $fk_catalog , string $fk_schema ,~
+  string $fk_table ) : resource|false~
 
 Retrieves a list of foreign keys in the specified table or a list of foreign
 keys in other tables that refer to the primary key in the specified table
@@ -21,25 +21,25 @@ keys in other tables that refer to the primary key in the specified table
 
   The ODBC connection identifier, see |odbc_connect| for details.
 
-{pk_qualifier}
+{pk_catalog}
 
-  The primary key qualifier.
+  The catalog ('qualifier' in ODBC 2 parlance) of the primary key table.
 
-{pk_owner}
+{pk_schema}
 
-  The primary key owner.
+  The schema ('owner' in ODBC 2 parlance) of the primary key table.
 
 {pk_table}
 
   The primary key table.
 
-{fk_qualifier}
+{pk_catalog}
 
-  The foreign key qualifier.
+  The catalog ('qualifier' in ODBC 2 parlance) of the foreign key table.
 
-{fk_owner}
+{fk_schema}
 
-  The foreign key owner.
+  The schema ('owner' in ODBC 2 parlance) of the foreign key table.
 
 {fk_table}
 
@@ -52,12 +52,12 @@ Returns an ODBC result identifier or FALSE on failure.
 
 The result set has the following columns:
 
- * PKTABLE_QUALIFIER
- * PKTABLE_OWNER
+ * PKTABLE_CAT
+ * PKTABLE_SCHEM
  * PKTABLE_NAME
  * PKCOLUMN_NAME
- * FKTABLE_QUALIFIER
- * FKTABLE_OWNER
+ * FKTABLE_CAT
+ * FKTABLE_SCHEM
  * FKTABLE_NAME
  * FKCOLUMN_NAME
  * KEY_SEQ
@@ -65,6 +65,14 @@ The result set has the following columns:
  * DELETE_RULE
  * FK_NAME
  * PK_NAME
+ * DEFERRABILITY
+
+Drivers can report additional columns.
+
+If the foreign keys associated with a primary key are requested, the result set
+is ordered by FKTABLE_CAT, FKTABLE_SCHEM, FKTABLE_NAME and KEY_SEQ. If the
+primary keys associated with a foreign key are requested, the result set is
+ordered by PKTABLE_CAT, PKTABLE_SCHEM, PKTABLE_NAME and KEY_SEQ.
 
 If {pk_table} contains a table name, odbc_foreignkeys() returns a result set
 containing the primary key of the specified table and all of the foreign keys
@@ -78,6 +86,12 @@ If both {pk_table} and {fk_table} contain table names, odbc_foreignkeys()
 returns the foreign keys in the table specified in {fk_table} that refer to the
 primary key of the table specified in {pk_table}. This should be one key at
 most.
+
+===============================================================================
+[ See Also ]
+
+ * |odbc_tables| - Get the list of table names stored in a specific data source
+ * |odbc_primarykeys| - Gets the primary keys for a table
 
 
 vim:ft=help:

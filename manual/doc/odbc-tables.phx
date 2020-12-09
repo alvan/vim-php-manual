@@ -7,23 +7,23 @@ odbc_tables — Get the list of table names stored in a specific data source
 ===============================================================================
 [ Description ]
 
-  odbc_tables ( resource $connection_id [, string $qualifier [, string $owner~
-  [, string $name [, string $types ]]]] ) : resource~
+  odbc_tables ( resource $connection_id [, string $catalog [, string $schema~
+  [, string $name [, string $types ]]]] ) : resource|false~
 
 Lists all tables in the requested range.
 
 To support enumeration of qualifiers, owners, and table types, the following
-special semantics for the {qualifier}, {owner}, {name}, and {table_type} are
+special semantics for the {catalog}, {schema}, {name}, and {table_type} are
 available:
 
- * If {qualifier} is a single percent character (%) and {owner} and {name} are
+ * If {catalog} is a single percent character (%) and {schema} and {name} are
   empty strings, then the result set contains a list of valid qualifiers for
   the data source. (All columns except the TABLE_QUALIFIER column contain
   NULLs.)
- * If {owner} is a single percent character (%) and {qualifier} and {name} are
+ * If {schema} is a single percent character (%) and {catalog} and {name} are
   empty strings, then the result set contains a list of valid owners for the
   data source. (All columns except the TABLE_OWNER column contain NULLs.)
- * If {table_type} is a single percent character (%) and {qualifier}, {owner}
+ * If {table_type} is a single percent character (%) and {catalog}, {schema}
   and {name} are empty strings, then the result set contains a list of valid
   table types for the data source. (All columns except the TABLE_TYPE column
   contain NULLs.)
@@ -35,27 +35,28 @@ available:
 
   The ODBC connection identifier, see |odbc_connect| for details.
 
-{qualifier}
+{catalog}
 
-  The qualifier.
+  The catalog ('qualifier' in ODBC 2 parlance).
 
-{owner}
+{schema}
 
-  The owner. Accepts search patterns ('%' to match zero or more characters and
-  '_' to match a single character).
+  The schema ('owner' in ODBC 2 parlance). This parameter accepts the following
+  search patterns: % to match zero or more characters, and _ to match a single
+  character.
 
 {name}
 
-  The name. Accepts search patterns ('%' to match zero or more characters and
-  '_' to match a single character).
+  The name. This parameter accepts the following search patterns: % to match
+  zero or more characters, and _ to match a single character.
 
 {types}
 
   If {table_type} is not an empty string, it must contain a list of
   comma-separated values for the types of interest; each value may be enclosed
-  in single quotes (') or unquoted. For example, "'TABLE','VIEW'" or "TABLE,
-  VIEW". If the data source does not support a specified table type, 
-  odbc_tables() does not return any results for that type.
+  in single quotes (') or unquoted. For example, 'TABLE','VIEW' or TABLE, VIEW.
+  If the data source does not support a specified table type, odbc_tables()
+  does not return any results for that type.
 
 ===============================================================================
 [ Return Values ]
@@ -65,20 +66,51 @@ failure.
 
 The result set has the following columns:
 
- * TABLE_QUALIFIER
- * TABLE_OWNER
+ * TABLE_CAT
+ * TABLE_SCHEM
  * TABLE_NAME
  * TABLE_TYPE
  * REMARKS
 
-The result set is ordered by TABLE_TYPE, TABLE_QUALIFIER, TABLE_OWNER and
-TABLE_NAME.
+Drivers can report additional columns.
+
+The result set is ordered by TABLE_TYPE, TABLE_CAT, TABLE_SCHEM and TABLE_NAME.
+
+===============================================================================
+[ Examples ]
+
+Example #1 List Tables in a Catalog
+
+<?php >
+  $conn = odbc_connect($dsn, $user, $pass);
+  $tables = odbc_tables($conn, 'SalesOrders', 'dbo', '%', 'TABLE');
+  while (($row = odbc_fetch_array($tables))) {
+      print_r($row);
+      break; // further rows omitted for brevity
+  }
+<?>
+
+The above example will output something similar to:
+
+Array
+(
+    [TABLE_CAT] => SalesOrders
+    [TABLE_SCHEM] => dbo
+    [TABLE_NAME] => Orders
+    [TABLE_TYPE] => TABLE
+    [REMARKS] =>
+)
 
 ===============================================================================
 [ See Also ]
 
  * |odbc_tableprivileges| - Lists tables and the privileges associated with
   each table
+ * |odbc_columns| - Lists the column names in specified tables
+ * |odbc_specialcolumns| - Retrieves special columns
+ * |odbc_statistics| - Retrieve statistics about a table
+ * |odbc_procedures| - Get the list of procedures stored in a specific data
+  source
 
 
 vim:ft=help:

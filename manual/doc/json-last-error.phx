@@ -7,10 +7,10 @@ json_last_error — Returns the last error occurred
 ===============================================================================
 [ Description ]
 
-  json_last_error ( void ) : int~
+  json_last_error ( ) : int~
 
 Returns the last error (if any) occurred during the last JSON encoding/
-decoding.
+decoding, which did not specify JSON_THROW_ON_ERROR.
 
 ===============================================================================
 [ Parameters ]
@@ -110,6 +110,23 @@ Example #2 json_last_error() with |json_encode|
 The above example will output:
 
 string(4) "null"
+bool(true)
+
+Example #3 json_last_error() and JSON_THROW_ON_ERROR
+
+<?php >
+  // An invalid UTF8 sequence which causes JSON_ERROR_UTF8
+  json_encode("\xB1\x31");
+
+  // The following does not cause a JSON error
+  json_encode('okay', JSON_THROW_ON_ERROR);
+
+  // The global error state has not been changed by the former json_encode()
+  var_dump(json_last_error() === JSON_ERROR_UTF8);
+<?>
+
+The above example will output:
+
 bool(true)
 
 ===============================================================================

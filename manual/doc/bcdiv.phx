@@ -7,18 +7,18 @@ bcdiv — Divide two arbitrary precision numbers
 ===============================================================================
 [ Description ]
 
-  bcdiv ( string $dividend , string $divisor [, int $scale = 0 ] ) : string~
+  bcdiv ( string $num1 , string $num2 [, int|null $scale = NULL ] ) : string~
 
-Divides the {dividend} by the {divisor}.
+Divides the {num1} by the {num2}.
 
 ===============================================================================
 [ Parameters ]
 
-{dividend}
+{num1}
 
   The dividend, as a string.
 
-{divisor}
+{num2}
 
   The divisor, as a string.
 
@@ -31,7 +31,13 @@ Divides the {dividend} by the {divisor}.
 ===============================================================================
 [ Return Values ]
 
-Returns the result of the division as a string, or NULL if {divisor} is 0.
+Returns the result of the division as a string, or NULL if {num2} is 0.
+
+===============================================================================
+[ Changelog ]
+
+Version       Description
+8.0.0   {scale} is now nullable.
 
 ===============================================================================
 [ Examples ]

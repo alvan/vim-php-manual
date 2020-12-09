@@ -7,8 +7,8 @@ hash_hkdf — Generate a HKDF key derivation of a supplied key input
 ===============================================================================
 [ Description ]
 
-  hash_hkdf ( string $algo , string $ikm [, int $length = 0 [, string $info =~
-  '' [, string $salt = '' ]]] ) : string~
+  hash_hkdf ( string $algo , string $key [, int $length = 0 [, string $info =~
+  "" [, string $salt = "" ]]] ) : string~
 
 ===============================================================================
 [ Parameters ]
@@ -23,7 +23,7 @@ hash_hkdf — Generate a HKDF key derivation of a supplied key input
 
     Non-cryptographic hash functions are not allowed.
 
-{ikm}
+{key}
 
   Input keying material (raw binary). Cannot be empty.
 
@@ -55,7 +55,7 @@ Returns a string containing a raw binary representation of the derived key
 ===============================================================================
 [ Errors/Exceptions ]
 
-An E_WARNING will be raised if {ikm} is empty, {algo} is unknown/
+An E_WARNING will be raised if {key} is empty, {algo} is unknown/
 non-cryptographic, {length} is less than 0 or too large (greater than 255 times
 the size of the hash function).
 
@@ -86,8 +86,8 @@ authentication respectively.
 [ See Also ]
 
  * |hash_pbkdf2| - Generate a PBKDF2 key derivation of a supplied password
- * >> RFC 5869
- * >> userland implementation
+ * » RFC 5869
+ * » userland implementation
 
 
 vim:ft=help:

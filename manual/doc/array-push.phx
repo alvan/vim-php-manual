@@ -7,7 +7,7 @@ array_push — Push one or more elements onto the end of array
 ===============================================================================
 [ Description ]
 
-  array_push ( array &$array [, mixed $... ] ) : int~
+  array_push ( array &$array , mixed ...$values ) : int~
 
 array_push() treats {array} as a stack, and pushes the passed variables onto
 the end of {array}. The length of {array} increases by the number of variables
@@ -31,7 +31,7 @@ repeated for each passed value.
 
   The input array.
 
-{...}
+{values}
 
   The values to push onto the end of the {array}.
 

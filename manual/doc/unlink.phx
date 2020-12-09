@@ -31,6 +31,14 @@ error will be generated on failure.
 Returns TRUE on success or FALSE on failure.
 
 ===============================================================================
+[ Changelog ]
+
+Version                               Description
+        On Windows, it is now possible to unlink() files with handles in use,
+7.3.0   while formerly that would fail. However, it is still not possible to
+        re-create the unlinked file, until all handles to it have been closed.
+
+===============================================================================
 [ Examples ]
 
 Example #1 Basic unlink() usage

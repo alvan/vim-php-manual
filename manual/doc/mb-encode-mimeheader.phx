@@ -7,9 +7,9 @@ mb_encode_mimeheader — Encode string for MIME header
 ===============================================================================
 [ Description ]
 
-  mb_encode_mimeheader ( string $str [, string $charset = determined by~
-  mb_language() [, string $transfer_encoding = "B" [, string~
-  $linefeed = "\r\n" [, int $indent = 0 ]]]] ) : string~
+  mb_encode_mimeheader ( string $str [, string $charset = mb_language() [,~
+  string $transfer_encoding = "B" [, string $linefeed =~
+  "\r\n" [, int $indent = 0 ]]]] ) : string~
 
 Encodes a given string {str} by the MIME header encoding scheme.
 
@@ -24,8 +24,8 @@ Encodes a given string {str} by the MIME header encoding scheme.
 {charset}
 
   {charset} specifies the name of the character set in which {str} is
-  represented in. The default value is determined by the current NLS setting (
-  mbstring.language).
+  represented in. The default value is determined by the current NLS setting
+  (mbstring.language).
 
 {transfer_encoding}
 
@@ -36,7 +36,7 @@ Encodes a given string {str} by the MIME header encoding scheme.
 {linefeed}
 
   {linefeed} specifies the EOL (end-of-line) marker with which 
-  mb_encode_mimeheader() performs line-folding (a >> RFC term, the act of
+  mb_encode_mimeheader() performs line-folding (a » RFC term, the act of
   breaking a line longer than a certain length into multiple lines. The length
   is currently hard-coded to 74 characters). Falls back to "\r\n" (CRLF) if not
   given.

@@ -7,16 +7,16 @@ cal_from_jd — Converts from Julian Day Count to a supported calendar
 ===============================================================================
 [ Description ]
 
-  cal_from_jd ( int $jd , int $calendar ) : array~
+  cal_from_jd ( int $julian_day , int $calendar ) : array~
 
-cal_from_jd() converts the Julian day given in {jd} into a date of the
+cal_from_jd() converts the Julian day given in {julian_day} into a date of the
 specified {calendar}. Supported {calendar} values are CAL_GREGORIAN, CAL_JULIAN
 , CAL_JEWISH and CAL_FRENCH.
 
 ===============================================================================
 [ Parameters ]
 
-{jd}
+{julian_day}
 
   Julian day as integer
 

@@ -7,18 +7,18 @@ curl_unescape — Decodes the given URL encoded string
 ===============================================================================
 [ Description ]
 
-  curl_unescape ( resource $ch , string $str ) : string~
+  curl_unescape ( CurlHandle $handle , string $string ) : string|false~
 
 This function decodes the given URL encoded string.
 
 ===============================================================================
 [ Parameters ]
 
-{ch}
+{handle}
 
   A cURL handle returned by |curl_init|.
 
-{str}
+{string}
 
   The URL encoded string to be decoded.
 
@@ -26,6 +26,13 @@ This function decodes the given URL encoded string.
 [ Return Values ]
 
 Returns decoded string or FALSE on failure.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {handle} expects a CurlHandle instance now; previously, a resource was
+        expected.
 
 ===============================================================================
 [ Examples ]

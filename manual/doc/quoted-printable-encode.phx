@@ -7,9 +7,9 @@ quoted_printable_encode — Convert a 8 bit string to a quoted-printable string
 ===============================================================================
 [ Description ]
 
-  quoted_printable_encode ( string $str ) : string~
+  quoted_printable_encode ( string $string ) : string~
 
-Returns a quoted printable string created according to >> RFC2045, section 6.7.
+Returns a quoted printable string created according to » RFC2045, section 6.7.
 
 This function is similar to |imap_8bit|, except this one does not require the
 IMAP module to work.
@@ -17,7 +17,7 @@ IMAP module to work.
 ===============================================================================
 [ Parameters ]
 
-{str}
+{string}
 
   The input string.
 

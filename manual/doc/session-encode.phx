@@ -7,7 +7,7 @@ session_encode — Encodes the current session data as a session encoded string
 ===============================================================================
 [ Description ]
 
-  session_encode ( void ) : string~
+  session_encode ( ) : string|false~
 
 session_encode() returns a serialized string of the contents of the current
 session data stored in the $_SESSION superglobal.
@@ -19,7 +19,7 @@ session.serialize_handler.
 ===============================================================================
 [ Return Values ]
 
-Returns the contents of the current session encoded.
+Returns the contents of the current session encoded, or FALSE on failure.
 
 ===============================================================================
 [ Notes ]

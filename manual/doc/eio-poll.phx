@@ -8,7 +8,7 @@ finishing
 ===============================================================================
 [ Description ]
 
-  eio_poll ( void ) : int~
+  eio_poll ( ) : int~
 
 eio_poll() can be used to implement special event loop. For this |eio_nreqs|
 could be used to test if there are unprocessed requests.
@@ -61,7 +61,7 @@ int(0)
 ===============================================================================
 [ See Also ]
 
- * eio_nreqs
+ * |eio_nreqs| - Returns number of requests to be processed
 
 
 vim:ft=help:

@@ -48,24 +48,24 @@ The unserialized PHP value.
  * Throws MongoDB\Driver\Exception\UnexpectedValueException if the input did
   not contain exactly one BSON document. Possible reasons include, but are not
   limited to, invalid BSON, extra data (after reading one BSON document), or an
-  unexpected >> libbson error.
+  unexpected » libbson error.
 
 ===============================================================================
 [ Changelog ]
 
 Version                               Description
-        If the input contains an unsupported, deprecated BSON type, the driver
-1.4.0   will now no longer log a warning to the debug log, but instead will
-        create an object representing this type.
+PECL    If the input contains an unsupported, deprecated BSON type, the driver
+mongodb will now no longer log a warning to the debug log, but instead will
+1.4.0   create an object representing this type.
 
         MongoDB\Driver\Exception\UnexpectedValueException is no longer thrown
-        if the input contains an unsupported, deprecated BSON type. Such types
-1.3.2   will be ignored (as they were in versions before 1.3.0), although the
-        driver will now log a warning to the debug log (see: mongodb.debug).
+PECL    if the input contains an unsupported, deprecated BSON type. Such types
+mongodb will be ignored (as they were in versions before 1.3.0), although the
+1.3.2   driver will now log a warning to the debug log (see: mongodb.debug).
 
-        MongoDB\Driver\Exception\UnexpectedValueException is thrown if the
-1.3.0   input contains an unsupported, deprecated BSON type. Previously, such
-        types were ignored.
+PECL    MongoDB\Driver\Exception\UnexpectedValueException is thrown if the
+mongodb input contains an unsupported, deprecated BSON type. Previously, such
+1.3.0   types were ignored.
 
 ===============================================================================
 [ Examples ]
@@ -91,7 +91,7 @@ object(stdClass)#1 (1) {
 [ See Also ]
 
  * MongoDB\BSON\fromPHP() - Returns the BSON representation of a PHP value
- * >> MongoDB BSON
+ * » MongoDB BSON
  * Persisting Data
 
 

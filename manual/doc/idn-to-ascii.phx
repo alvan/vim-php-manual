@@ -10,7 +10,7 @@ idn_to_ascii — Convert domain name to IDNA ASCII form
 Procedural style
 
   idn_to_ascii ( string $domain [, int $options = IDNA_DEFAULT [, int $variant~
-  = INTL_IDNA_VARIANT_UTS46 [, array &$idna_info ]]] ) : string~
+  = INTL_IDNA_VARIANT_UTS46 [, array &$idna_info ]]] ) : string|false~
 
 This function converts a Unicode domain name to an IDNA ASCII-compatible
 format.
@@ -29,8 +29,8 @@ format.
 
 {variant}
 
-  Either INTL_IDNA_VARIANT_2003 for IDNA 2003 or INTL_IDNA_VARIANT_UTS46 for
-  UTS #46.
+  Either INTL_IDNA_VARIANT_2003 (deprecated as of PHP 7.2.0) for IDNA 2003 or
+  INTL_IDNA_VARIANT_UTS46 (only available as of ICU 4.6) for UTS #46.
 
 {idna_info}
 
@@ -50,13 +50,11 @@ The domain name encoded in ASCII-compatible form, or FALSE on failure
 ===============================================================================
 [ Changelog ]
 
-  Version                               Description
-7.4.0       The default value of {variant} is now INTL_IDNA_VARIANT_UTS46
-            instead of the deprecated INTL_IDNA_VARIANT_2003.
-7.2.0       INTL_IDNA_VARIANT_2003 has been deprecated; use
-            INTL_IDNA_VARIANT_UTS46 instead.
-5.4.0/PECL  Added the parameters {variant} and {idna_info}; UTS #46 support
-2.0.0b1     (requires ICU ≥ 4.6).
+Version                               Description
+7.4.0   The default value of {variant} is now INTL_IDNA_VARIANT_UTS46 instead
+        of the deprecated INTL_IDNA_VARIANT_2003.
+7.2.0   INTL_IDNA_VARIANT_2003 has been deprecated; use INTL_IDNA_VARIANT_UTS46
+        instead.
 
 ===============================================================================
 [ Examples ]

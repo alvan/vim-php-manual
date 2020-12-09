@@ -7,8 +7,8 @@ max — Find highest value
 ===============================================================================
 [ Description ]
 
-  max ( array $values ) : mixed~
-  max ( mixed $value1 [, mixed $... ] ) : mixed~
+  max ( array $value_array ) : mixed~
+  max ( mixed $value , mixed ...$values ) : mixed~
 
 If the first and only parameter is an array, max() returns the highest value in
 that array. If at least two parameters are provided, max() returns the biggest
@@ -17,7 +17,7 @@ of these values.
   Note:
 
   Values of different types will be compared using the standard comparison
-  rules. For instance, a non-numeric string will be compared to an integer as
+  rules. For instance, a non-numeric string will be compared to an int as
   though it were 0, but multiple non-numeric string values will be compared
   alphanumerically. The actual value returned will be of the original type with
   no conversion applied.
@@ -30,17 +30,17 @@ produce unpredictable results.
 ===============================================================================
 [ Parameters ]
 
-{values}
+{value_array}
 
   An array containing the values.
 
-{value1}
+{value}
 
   Any comparable value.
 
-{...}
+{values}
 
-  Any comparable value.
+  Any comparable values.
 
 ===============================================================================
 [ Return Values ]

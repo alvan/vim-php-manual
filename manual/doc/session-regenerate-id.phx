@@ -18,9 +18,9 @@ session_regenerate_id() call. Otherwise, old session ID is used.
 
 Warning
 
-Current session_regenerate_id does not handle unstable network well. e.g.
-Mobile and WiFi network. Therefore, you may experience lost session by calling
-session_regenerate_id.
+Currently, session_regenerate_id does not handle an unstable network well, e.g.
+Mobile and WiFi network. Therefore, you may experience a lost session by
+calling session_regenerate_id.
 
 You should not destroy old session data immediately, but should use destroy
 time-stamp and control access to old session ID. Otherwise, concurrent access
@@ -42,13 +42,6 @@ detection and prevention also.
 [ Return Values ]
 
 Returns TRUE on success or FALSE on failure.
-
-===============================================================================
-[ Changelog ]
-
-Version                          Description
-7.0.0   session_regenerate_id() saves old session data before closing.
-5.1.0   Added the {delete_old_session} parameter.
 
 ===============================================================================
 [ Examples ]

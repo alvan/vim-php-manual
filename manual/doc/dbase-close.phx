@@ -7,16 +7,16 @@ dbase_close — Closes a database
 ===============================================================================
 [ Description ]
 
-  dbase_close ( resource $dbase_identifier ) : bool~
+  dbase_close ( resource $database ) : bool~
 
-Closes the given database link identifier.
+Closes the given database resource.
 
 ===============================================================================
 [ Parameters ]
 
-{dbase_identifier}
+{database}
 
-  The database link identifier, returned by |dbase_open| or |dbase_create|.
+  The database resource, returned by |dbase_open| or |dbase_create|.
 
 ===============================================================================
 [ Return Values ]
@@ -26,8 +26,8 @@ Returns TRUE on success or FALSE on failure.
 ===============================================================================
 [ Changelog ]
 
-  Version                         Description
-dbase 7.0.0 {dbase_identifier} is now a resource instead of an int.
+  Version                     Description
+dbase 7.0.0 {database} is now a resource instead of an int.
 
 ===============================================================================
 [ Examples ]

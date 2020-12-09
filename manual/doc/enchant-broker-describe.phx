@@ -7,7 +7,7 @@ enchant_broker_describe — Enumerates the Enchant providers
 ===============================================================================
 [ Description ]
 
-  enchant_broker_describe ( resource $broker ) : array~
+  enchant_broker_describe ( EnchantBroker $broker ) : array~
 
 Enumerates the Enchant providers and tells you some rudimentary information
 about them. The same info is provided through phpinfo().
@@ -17,12 +17,20 @@ about them. The same info is provided through phpinfo().
 
 {broker}
 
-  Broker resource
+  An Enchant broker returned by |enchant_broker_init|.
 
 ===============================================================================
 [ Return Values ]
 
-Returns TRUE on success or FALSE on failure.
+Returns an array of available Enchant providers with their details.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {broker} expects an EnchantBroker instance now; previoulsy, a resource
+        was expected.
+8.0.0   Prior to this version, the function returned FALSE on failure.
 
 ===============================================================================
 [ Examples ]

@@ -7,24 +7,37 @@ jdtounix — Convert Julian Day to Unix timestamp
 ===============================================================================
 [ Description ]
 
-  jdtounix ( int $jday ) : int~
+  jdtounix ( int $julian_day ) : int~
 
 This function will return a Unix timestamp corresponding to the Julian Day
-given in {jday} or FALSE if {jday} is not inside the Unix epoch (Gregorian
-years between 1970 and 2037 or 2440588 <= {jday} <= 2465342 ). The time
-returned is UTC.
+given in {julian_day}. The time returned is UTC.
 
 ===============================================================================
 [ Parameters ]
 
-{jday}
+{julian_day}
 
-  A julian day number between 2440588 and 2465342.
+  A julian day number between 2440588 and 106751993607888 on 64bit systems, or
+  between 2440588 and 2465443 on 32bit systems.
 
 ===============================================================================
 [ Return Values ]
 
-The unix timestamp for the start (midnight, not noon) of the given Julian day.
+The unix timestamp for the start (midnight, not noon) of the given Julian day
+
+===============================================================================
+[ Errors/Exceptions ]
+
+If {julian_day} is outside of the allowed range, a ValueError is thrown.
+
+===============================================================================
+[ Changelog ]
+
+ Version                               Description
+8.0.0     This function no longer returns FALSE on failure, but raises a
+          ValueError instead.
+7.3.24,   The upper limit of {julian_day} has been extended. Previously, it was
+7.4.12    2465342 regardless of the architecture.
 
 ===============================================================================
 [ See Also ]

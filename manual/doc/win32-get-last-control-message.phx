@@ -8,7 +8,7 @@ to this service
 ===============================================================================
 [ Description ]
 
-  win32_get_last_control_message ( void ) : int~
+  win32_get_last_control_message ( ) : int~
 
 Returns the control code that was last sent to this service process. When
 running as a service you should periodically check this to determine if your
@@ -24,20 +24,34 @@ function is disabled.
 
 Returns a control constant which will be one of the Win32Service Service
 Control Message Constants: WIN32_SERVICE_CONTROL_CONTINUE,
-WIN32_SERVICE_CONTROL_INTERROGATE, WIN32_SERVICE_CONTROL_PAUSE,
-WIN32_SERVICE_CONTROL_PRESHUTDOWN, WIN32_SERVICE_CONTROL_SHUTDOWN,
-WIN32_SERVICE_CONTROL_STOP.
+WIN32_SERVICE_CONTROL_DEVICEEVENT, WIN32_SERVICE_CONTROL_HARDWAREPROFILECHANGE,
+WIN32_SERVICE_CONTROL_INTERROGATE, WIN32_SERVICE_CONTROL_NETBINDADD,
+WIN32_SERVICE_CONTROL_NETBINDDISABLE, WIN32_SERVICE_CONTROL_NETBINDENABLE,
+WIN32_SERVICE_CONTROL_NETBINDREMOVE, WIN32_SERVICE_CONTROL_PARAMCHANGE,
+WIN32_SERVICE_CONTROL_PAUSE, WIN32_SERVICE_CONTROL_POWEREVENT,
+WIN32_SERVICE_CONTROL_PRESHUTDOWN, WIN32_SERVICE_CONTROL_SESSIONCHANGE,
+WIN32_SERVICE_CONTROL_SHUTDOWN, WIN32_SERVICE_CONTROL_STOP.
+
+If the value is between 128 and 255, the control code is custom.
 
 ===============================================================================
 [ Errors/Exceptions ]
 
-If SAPI is not "cli", this function emits an E_ERROR level error.
+Prior to version 1.0.0, if the SAPI is not "cli", this function emits an
+E_ERROR level error.
+
+As of version 1.0.0, will throw a Win32ServiceException if SAPI is not "cli"
 
 ===============================================================================
 [ Changelog ]
 
-Version                 Description
-0.2.0   This function works only in the "cli" SAPI.
+     Version                               Description
+PECL win32service Throws a ValueError on invalid data in parameters, previously
+1.0.0             FALSE was returned.
+PECL win32service Throws a Win32ServiceException on error, previously a Win32
+1.0.0             Error Code was returned.
+PECL win32service This function works only in the "cli" SAPI.
+0.2.0
 
 ===============================================================================
 [ See Also ]

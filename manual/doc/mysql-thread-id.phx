@@ -16,7 +16,7 @@ this function include:
 ===============================================================================
 [ Description ]
 
-  mysql_thread_id ([ resource $link_identifier = NULL ] ) : int~
+  mysql_thread_id ([ resource $link_identifier = NULL ] ) : int|false~
 
 Retrieves the current thread ID. If the connection is lost, and a reconnect
 with |mysql_ping| is executed, the thread ID will change. This means only

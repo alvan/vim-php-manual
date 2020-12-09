@@ -7,7 +7,7 @@ fread — Binary-safe file read
 ===============================================================================
 [ Description ]
 
-  fread ( resource $handle , int $length ) : string~
+  fread ( resource $handle , int $length ) : string|false~
 
 fread() reads up to {length} bytes from the file pointer referenced by
 {handle}. Reading stops as soon as one of the following conditions is met:

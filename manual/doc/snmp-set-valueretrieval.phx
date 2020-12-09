@@ -68,19 +68,6 @@ Example #1 Using snmp_set_valueretrieval()
 <?>
 
 ===============================================================================
-[ Changelog ]
-
-Version                               Description
-        Constants SNMP_VALUE_PLAIN or SNMP_VALUE_LIBRARY may be combined with
-        SNMP_VALUE_OBJECT resulting different way of representing contents of
-        {value} array element in return value of GET-function. If no
-5.4.0   SNMP_VALUE_{PLAIN,LIBRARY} constant is accompanying SNMP_VALUE_OBJECT,
-        SNMP_VALUE_LIBRARY is used.
-
-        Prior to 5.4.0 SNMP_VALUE_OBJECT effecively meant SNMP_VALUE_OBJECT|
-        SNMP_VALUE_PLAIN.
-
-===============================================================================
 [ See Also ]
 
  * |snmp_get_valueretrieval| - Return the method how the SNMP values will be

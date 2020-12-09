@@ -20,7 +20,7 @@ specified flags.
 
 By default pg_update() passes raw values. Values must be escaped or
 PGSQL_DML_ESCAPE option must be specified. PGSQL_DML_ESCAPE quotes and escapes
-paramters/identifiers. Therefore, table/column names became case sensitive.
+parameters/identifiers. Therefore, table/column names became case sensitive.
 
 Note that neither escape nor prepared query can protect LIKE query, JSON,
 Array, Regex, etc. These parameters should be handled according to their
@@ -71,7 +71,7 @@ Example #1 pg_update() example
     $data = array('field1'=>'AA', 'field2'=>'BB');
     // This is safe somewhat, since all values are escaped.
     // However PostgreSQL supports JSON/Array. These are not
-    // safe by nither escape nor prepared query.
+    // safe by neither escape nor prepared query.
     $res = pg_update($db, 'post_log', $_POST, $data);
     if ($res) {
         echo "Data is updated: $res\n";

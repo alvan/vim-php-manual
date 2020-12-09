@@ -7,7 +7,7 @@ win32_create_service — Creates a new service entry in the SCM database
 ===============================================================================
 [ Description ]
 
-  win32_create_service ( array $details [, string $machine ] ) : mixed~
+  win32_create_service ( array $details [, string $machine ] ) : void~
 
 Attempts to add a service into the SCM database. Administrative privileges are
 required for this to succeed.
@@ -171,8 +171,39 @@ required for this to succeed.
 ===============================================================================
 [ Return Values ]
 
-Returns WIN32_NO_ERROR on success, FALSE if there is a problem with the
-parameters or a Win32 Error Code on failure.
+No value is returned.
+
+Prior to version 1.0.0, returned WIN32_NO_ERROR on success, FALSE if there is a
+problem with the parameters or a Win32 Error Code on failure.
+
+===============================================================================
+[ Errors/Exceptions ]
+
+A ValueError is thrown if the; value of {service} parameter is empty.
+
+A ValueError is thrown if the; value of {path} parameter is missing or empty.
+
+A ValueError is thrown if the; value of {svc_type} parameter is wrong.
+
+A ValueError is thrown if the; value of {start_type} parameter is wrong.
+
+A ValueError is thrown if the; value of {error_control} parameter is wrong.
+
+A ValueError is thrown if the; value of {base_priority} parameter is wrong.
+
+A ValueError is thrown if the; value of {recovery_delay} parameter is not
+between 0 and PHP_INT_MAX.
+
+A ValueError is thrown if the; value of {recovery_action_1} parameter is wrong.
+
+A ValueError is thrown if the; value of {recovery_action_2} parameter is wrong.
+
+A ValueError is thrown if the; value of {recovery_action_3} parameter is wrong.
+
+A ValueError is thrown if the; value of {recovery_reset_period} parameter is
+not between 0 and PHP_INT_MAX.
+
+A Win32ServiceException is thrown on error.
 
 ===============================================================================
 [ Examples ]
@@ -257,11 +288,20 @@ Create a service with the short name 'dummyphp' and recovery settings.
 ===============================================================================
 [ Changelog ]
 
-Version                               Description
-        The {dependencies}, {recovery_delay}, {recovery_action_1},
-0.4.0   {recovery_action_2}, {recovery_action_3}, {recovery_reset_period},
-        {recovery_enabled}, {recovery_reboot_msg} and {recovery_command}
-        parameters have been added.
+  Version                               Description
+PECL         Throws a ValueError on invalid data in parameters, previously
+win32service FALSE was returned.
+1.0.0
+PECL         Throws a Win32ServiceException on error, previously a Win32 Error
+win32service Code was returned.
+1.0.0
+PECL
+win32service The return type is now void, previously it was mixed.
+1.0.0
+PECL         The {dependencies}, {recovery_delay}, {recovery_action_1},
+win32service {recovery_action_2}, {recovery_action_3}, {recovery_reset_period},
+0.4.0        {recovery_enabled}, {recovery_reboot_msg} and {recovery_command}
+             parameters have been added.
 
 ===============================================================================
 [ See Also ]

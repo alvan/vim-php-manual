@@ -28,8 +28,8 @@ This function has two prototypes.
 
 {sessionhandler}
 
-  An instance of a class implementing SessionHandlerInterface, 
-  SessionIdInterface, and/or SessionUpdateTimestampHandlerInterface, such as
+  An instance of a class implementing SessionHandlerInterface, and optionally 
+  SessionIdInterface and/or SessionUpdateTimestampHandlerInterface, such as
   SessionHandler, to register as the session handler. Since PHP 5.4 only.
 
 {register_shutdown}
@@ -38,21 +38,33 @@ This function has two prototypes.
 
 or
 
-open(string $savePath, string $sessionName)
+{open}
+
+  A callable with the following signature:
+
+  open ( string $savePath , string $sessionName ) : bool~
 
   The open callback works like a constructor in classes and is executed when
   the session is being opened. It is the first callback function executed when
   the session is started automatically or manually with |session_start|. Return
   value is TRUE for success, FALSE for failure.
 
-{close()}
+{close}
+
+  A callable with the following signature:
+
+  close ( ) : bool~
 
   The close callback works like a destructor in classes and is executed after
   the session write callback has been called. It is also invoked when 
   |session_write_close| is called. Return value should be TRUE for success,
   FALSE for failure.
 
-read(string $sessionId)
+{read}
+
+  A callable with the following signature:
+
+  read ( string $sessionId ) : string~
 
   The {read} callback must always return a session encoded (serialized) string,
   or an empty string if there is no data to read.
@@ -68,7 +80,11 @@ read(string $sessionId)
   note it is a different format which is specified in the
   session.serialize_handler ini setting.
 
-write(string $sessionId, string $data)
+{write}
+
+  A callable with the following signature:
+
+  write ( string $sessionId , string $data ) : bool~
 
   The {write} callback is called when the session needs to be saved and closed.
   This callback receives the current session ID a serialized version the
@@ -91,13 +107,21 @@ write(string $sessionId, string $data)
     never be seen in the browser. If debugging output is necessary, it is
     suggested that the debug output be written to a file instead.
 
-destroy($sessionId)
+{destroy}
+
+  A callable with the following signature:
+
+  destroy ( string $sessionId ) : bool~
 
   This callback is executed when a session is destroyed with |session_destroy|
   or with |session_regenerate_id| with the destroy parameter set to TRUE.
   Return value should be TRUE for success, FALSE for failure.
 
-gc($lifetime)
+{gc}
+
+  A callable with the following signature:
+
+  gc ( int $lifetime ) : bool~
 
   The garbage collector callback is invoked internally by PHP periodically in
   order to purge old session data. The frequency is controlled by
@@ -105,25 +129,41 @@ gc($lifetime)
   passed to this callback can be set in session.gc_maxlifetime. Return value
   should be TRUE for success, FALSE for failure.
 
-{create_sid()}
+{create_sid}
+
+  A callable with the following signature:
+
+  create_sid ( ) : string~
 
   This callback is executed when a new session ID is required. No parameters
   are provided, and the return value should be a string that is a valid session
   ID for your handler.
 
+{validate_sid}
+
+  A callable with the following signature:
+
+  validate_sid ( string $key ) : bool~
+
+  This callback is executed when a session is to be started, a session ID is
+  supplied and session.use_strict_mode is enabled. The {key} is the session ID
+  to validate. A session ID is valid, if a session with that ID already exists.
+  The return value should be TRUE for success, FALSE for failure.
+
+{update_timestamp}
+
+  A callable with the following signature:
+
+  update_timestamp ( string $key , string $val ) : bool~
+
+  This callback is executed when a session is updated. {key} is the session ID,
+  {val} is the session data. The return value should be TRUE for success, FALSE
+  for failure.
+
 ===============================================================================
 [ Return Values ]
 
 Returns TRUE on success or FALSE on failure.
-
-===============================================================================
-[ Changelog ]
-
-Version                               Description
-7.0.0   Added the optional {validate_sid} and {update_timestamp} parameters.
-5.5.1   Added the optional {create_sid} parameter.
-5.4.0   Added SessionHandlerInterface for implementing session handlers and
-        SessionHandler to expose internal PHP session handlers.
 
 ===============================================================================
 [ Examples ]
@@ -276,7 +316,7 @@ the script termination. It is possible to close the session earlier with
  * The |register_shutdown_function| - Register a function for execution on
   shutdown
  * The |session_register_shutdown| - Session shutdown function for PHP 5.4.0+
- * Refer to >> save_handler.inc for a full procedural reference implementation
+ * Refer to » save_handler.inc for a full procedural reference implementation
 
 
 vim:ft=help:

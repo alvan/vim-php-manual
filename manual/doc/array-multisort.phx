@@ -8,7 +8,7 @@ array_multisort — Sort multiple or multi-dimensional arrays
 [ Description ]
 
   array_multisort ( array &$array1 [, mixed $array1_sort_order = SORT_ASC [,~
-  mixed $array1_sort_flags = SORT_REGULAR [, mixed $... ]]] ) : bool~
+  mixed $array1_sort_flags = SORT_REGULAR ]], mixed ...$rest ) : bool~
 
 array_multisort() can be used to sort several arrays at once, or a
 multi-dimensional array by one or more dimensions.
@@ -54,7 +54,7 @@ re-indexed.
   This argument can be swapped with {array1_sort_order} or omitted entirely, in
   which case SORT_REGULAR is assumed.
 
-{...}
+{rest}
 
   More arrays, optionally followed by sort order and flags. Only elements
   corresponding to equivalent elements in previous arrays are compared. In
@@ -64,15 +64,6 @@ re-indexed.
 [ Return Values ]
 
 Returns TRUE on success or FALSE on failure.
-
-===============================================================================
-[ Changelog ]
-
-Version                               Description
-5.4.0   The SORT_NATURAL and SORT_FLAG_CASE were added to {array1_sort_flags}
-        as possible sort flags.
-5.3.0   The SORT_LOCALE_STRING was added to {array1_sort_flags} as possible
-        sort flags.
 
 ===============================================================================
 [ Examples ]

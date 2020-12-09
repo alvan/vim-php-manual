@@ -7,7 +7,7 @@ isset — Determine if a variable is declared and is different than NULL
 ===============================================================================
 [ Description ]
 
-  isset ( mixed $var [, mixed $... ] ) : bool~
+  isset ( mixed $var , mixed ...$vars ) : bool~
 
 Determine if a variable is considered set, this means if a variable is declared
 and is different than NULL.
@@ -30,21 +30,15 @@ stops as soon as an unset variable is encountered.
 
   The variable to be checked.
 
-{...}
+{vars}
 
-  Another variable ...
+  Further variables.
 
 ===============================================================================
 [ Return Values ]
 
 Returns TRUE if {var} exists and has any value other than NULL. FALSE
 otherwise.
-
-===============================================================================
-[ Changelog ]
-
-Version                        Description
-5.4.0   Checking non-numeric offsets of strings now returns FALSE.
 
 ===============================================================================
 [ Examples ]

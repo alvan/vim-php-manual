@@ -7,13 +7,13 @@ hash_update_file — Pump data into an active hashing context from a file
 ===============================================================================
 [ Description ]
 
-  hash_update_file ( HashContext $hcontext , string $filename [, resource~
-  $scontext = NULL ] ) : bool~
+  hash_update_file ( HashContext $context , string $filename [, resource|null~
+  $stream_context = NULL ] ) : bool~
 
 ===============================================================================
 [ Parameters ]
 
-{hcontext}
+{context}
 
   Hashing context returned by |hash_init|.
 
@@ -21,7 +21,7 @@ hash_update_file — Pump data into an active hashing context from a file
 
   URL describing location of file to be hashed; Supports fopen wrappers.
 
-{scontext}
+{stream_context}
 
   Stream context as returned by |stream_context_create|.
 
@@ -34,6 +34,7 @@ Returns TRUE on success or FALSE on failure.
 [ Changelog ]
 
 Version               Description
+8.0.0   {stream_context} is now nullable.
 7.2.0   Accept HashContext instead of resource.
 
 ===============================================================================

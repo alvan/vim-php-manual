@@ -9,24 +9,24 @@ finfo_open -- finfo::__construct — Create a new fileinfo resource
 
 Procedural style
 
-  finfo_open ([ int $options = FILEINFO_NONE [, string $magic_file = NULL ]] )~
-  : resource~
+  finfo_open ([ int $flags = FILEINFO_NONE [, string $magic_database =~
+  "" ]] ) : resource|false~
 
 Object oriented style (constructor):
 
-public finfo::__construct ([ int $options = FILEINFO_NONE [, string $magic_file
-= NULL ]] )
+public finfo::__construct ([ int $flags = FILEINFO_NONE [, string
+$magic_database = "" ]] )
 
 This function opens a magic database and returns its resource.
 
 ===============================================================================
 [ Parameters ]
 
-{options}
+{flags}
 
   One or disjunction of more Fileinfo constants.
 
-{magic_file}
+{magic_database}
 
   Name of a magic database file, usually something like /path/to/magic.mime. If
   not specified, the MAGIC environment variable is used. If the environment
@@ -54,9 +54,9 @@ returned.
 
   Note:
 
-  Generally, using the bundled magic database (by leaving {magic_file} and the
-  MAGIC environment variables unset) is the best course of action unless you
-  specifically need a custom magic database.
+  Generally, using the bundled magic database (by leaving {magic_database} and
+  the MAGIC environment variables unset) is the best course of action unless
+  you specifically need a custom magic database.
 
 ===============================================================================
 [ Examples ]

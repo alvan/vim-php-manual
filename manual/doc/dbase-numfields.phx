@@ -7,7 +7,7 @@ dbase_numfields — Gets the number of fields of a database
 ===============================================================================
 [ Description ]
 
-  dbase_numfields ( resource $dbase_identifier ) : int~
+  dbase_numfields ( resource $database ) : int~
 
 Gets the number of fields (columns) in the specified database.
 
@@ -19,9 +19,9 @@ Gets the number of fields (columns) in the specified database.
 ===============================================================================
 [ Parameters ]
 
-{dbase_identifier}
+{database}
 
-  The database link identifier, returned by |dbase_open| or |dbase_create|.
+  The database resource, returned by |dbase_open| or |dbase_create|.
 
 ===============================================================================
 [ Return Values ]
@@ -31,8 +31,8 @@ The number of fields in the database, or FALSE if an error occurs.
 ===============================================================================
 [ Changelog ]
 
-  Version                         Description
-dbase 7.0.0 {dbase_identifier} is now a resource instead of an int.
+  Version                     Description
+dbase 7.0.0 {database} is now a resource instead of an int.
 
 ===============================================================================
 [ Examples ]

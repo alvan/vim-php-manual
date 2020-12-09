@@ -22,7 +22,8 @@ Get or set the flags on a class or function entry at runtime
 
 {function}
 
-  The name of the function
+  The name of the function. If {class} is given and an empty string is passed
+  as {function}, uopz_flags() gets or sets the flags of the class entry.
 
 {flags}
 
@@ -32,6 +33,13 @@ Get or set the flags on a class or function entry at runtime
 [ Return Values ]
 
 If setting, returns old flags, else returns flags
+
+===============================================================================
+[ Errors/Exceptions ]
+
+As of PHP 7.4.0, if the parameter {flags} is passed, uopz_flags() throws a
+RuntimeException, if OPcache is enabled, and the class entry of {class} or the
+function entry of {function} is immutable.
 
 ===============================================================================
 [ Changelog ]
@@ -71,6 +79,22 @@ bool(false)
 int(1234567890)
 bool(true)
 bool(true)
+
+Example #2 "Unfinalize" a Class
+
+<?php >
+  final class MyClass
+  {
+  }
+
+  $flags = uopz_flags(MyClass::class, '');
+  uopz_flags(MyClass::class, '', $flags & ~ZEND_ACC_FINAL);
+  var_dump((new ReflectionClass(MyClass::class)->isFinal());
+<?>
+
+The above example will output:
+
+bool(false)
 
 
 vim:ft=help:

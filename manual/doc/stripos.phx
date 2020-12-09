@@ -8,7 +8,8 @@ substring in a string
 ===============================================================================
 [ Description ]
 
-  stripos ( string $haystack , mixed $needle [, int $offset = 0 ] ) : int~
+  stripos ( string $haystack , string $needle [, int $offset = 0 ] ) :~
+  int|false~
 
 Find the numeric position of the first occurrence of {needle} in the {haystack}
 string.
@@ -26,11 +27,11 @@ Unlike the |strpos|, stripos() is case-insensitive.
 
   Note that the {needle} may be a string of one or more characters.
 
-  If {needle} is not a string, it is converted to an integer and applied as the
-  ordinal value of a character. This behavior is deprecated as of PHP 7.3.0,
-  and relying on it is highly discouraged. Depending on the intended behavior,
-  the {needle} should either be explicitly cast to string, or an explicit call
-  to |chr| should be performed.
+  Prior to PHP 8.0.0, if {needle} is not a string, it is converted to an
+  integer and applied as the ordinal value of a character. This behavior is
+  deprecated as of PHP 7.3.0, and relying on it is highly discouraged.
+  Depending on the intended behavior, the {needle} should either be explicitly
+  cast to string, or an explicit call to |chr| should be performed.
 
 {offset}
 
@@ -57,7 +58,9 @@ function.
 ===============================================================================
 [ Changelog ]
 
-Version                  Description
+Version                    Description
+8.0.0   Passing an int as {needle} is no longer supported.
+7.3.0   Passing an int as {needle} has been deprecated.
 7.1.0   Support for negative {offset}s has been added.
 
 ===============================================================================
@@ -95,6 +98,9 @@ Example #1 stripos() examples
 
  * |mb_stripos| - Finds position of first occurrence of a string within
   another, case insensitive
+ * |str_contains| - Determine if a string contains a given substring
+ * |str_ends_with| - Checks if a string ends with a given substring
+ * |str_starts_with| - Checks if a string starts with a given substring
  * |strpos| - Find the position of the first occurrence of a substring in a
   string
  * |strrpos| - Find the position of the last occurrence of a substring in a

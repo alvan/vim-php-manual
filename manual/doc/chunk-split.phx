@@ -7,25 +7,25 @@ chunk_split — Split a string into smaller chunks
 ===============================================================================
 [ Description ]
 
-  chunk_split ( string $body [, int $chunklen = 76 [, string $end =~
+  chunk_split ( string $string [, int $length = 76 [, string $separator =~
   "\r\n" ]] ) : string~
 
 Can be used to split a string into smaller chunks which is useful for e.g.
-converting |base64_encode| output to match RFC 2045 semantics. It inserts {end}
-every {chunklen} characters.
+converting |base64_encode| output to match RFC 2045 semantics. It inserts
+{separator} every {length} characters.
 
 ===============================================================================
 [ Parameters ]
 
-{body}
+{string}
 
   The string to be chunked.
 
-{chunklen}
+{length}
 
   The chunk length.
 
-{end}
+{separator}
 
   The line ending sequence.
 
@@ -51,7 +51,7 @@ Example #1 chunk_split() example
  * |explode| - Split a string by a string
  * |split| - Split string into array by regular expression
  * |wordwrap| - Wraps a string to a given number of characters
- * >> RFC 2045
+ * » RFC 2045
 
 
 vim:ft=help:

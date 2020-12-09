@@ -8,7 +8,7 @@ public key and local DH key
 ===============================================================================
 [ Description ]
 
-  openssl_dh_compute_key ( string $pub_key , resource $dh_key ) : string~
+  openssl_dh_compute_key ( string $pub_key , resource $dh_key ) : string|false~
 
 The shared secret returned by openssl_dh_compute_key() is often used as an
 encryption key to secretly communicate with a remote party. This is known as

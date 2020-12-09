@@ -7,16 +7,16 @@ curl_share_strerror — Return string describing the given error code
 ===============================================================================
 [ Description ]
 
-  curl_share_strerror ( int $errornum ) : string~
+  curl_share_strerror ( int $error_code ) : string|null~
 
 Returns a text error message describing the given error code.
 
 ===============================================================================
 [ Parameters ]
 
-{errornum}
+{error_code}
 
-  One of the >> cURL error codes constants.
+  One of the » cURL error codes constants.
 
 ===============================================================================
 [ Return Values ]

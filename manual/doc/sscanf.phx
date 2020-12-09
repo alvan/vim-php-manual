@@ -7,10 +7,11 @@ sscanf — Parses input from a string according to a format
 ===============================================================================
 [ Description ]
 
-  sscanf ( string $str , string $format [, mixed &$... ] ) : mixed~
+  sscanf ( string $string , string $format , mixed &...$vars ) :~
+  array|int|null~
 
 The function sscanf() is the input analog of |printf|. sscanf() reads from the
-string {str} and interprets it according to the specified {format}, which is
+string {string} and interprets it according to the specified {format}, which is
 described in the documentation for |sprintf|.
 
 Any whitespace in the format string matches any whitespace in the input string.
@@ -20,14 +21,14 @@ character in the input string.
 ===============================================================================
 [ Parameters ]
 
-{str}
+{string}
 
   The input string being parsed.
 
 {format}
 
-  The interpreted format for {str}, which is described in the documentation for
-  |sprintf| with following differences:
+  The interpreted format for {string}, which is described in the documentation
+  for |sprintf| with following differences:
    + Function is not locale-aware.
    + F, g, G and b are not supported.
    + D stands for decimal number.
@@ -35,7 +36,7 @@ character in the input string.
    + n stands for number of characters processed so far.
    + s stops reading at any whitespace character.
 
-{...}
+{vars}
 
   Optionally pass in variables by reference that will contain the parsed
   values.
@@ -49,7 +50,7 @@ function will return the number of assigned values. The optional parameters
 must be passed by reference.
 
 If there are more substrings expected in the {format} than there are available
-within {str}, -1 will be returned.
+within {string}, NULL will be returned.
 
 ===============================================================================
 [ Examples ]

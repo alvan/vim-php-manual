@@ -27,7 +27,8 @@ Returns all the registered configuration options.
 ===============================================================================
 [ Return Values ]
 
-Returns an associative array with directive name as the array key.
+Returns an associative array with directive name as the array key. Returns
+FALSE and raises an E_WARNING level error if the {extension} doesn't exist.
 
 When {details} is TRUE (default) the array will contain global_value (set in
 php.ini), local_value (perhaps set with |ini_set| or .htaccess), and access
@@ -48,12 +49,6 @@ See the manual section for information on what access levels mean.
   Note:
 
   ini_get_all() ignores "array" ini options such as pdo.dsn.*.
-
-===============================================================================
-[ Changelog ]
-
-Version    Description
-5.3.0   Added {details}.
 
 ===============================================================================
 [ Examples ]

@@ -54,9 +54,6 @@ A formatted version of {number}.
 Version                               Description
 7.2.0   number_format() was changed to not being able to return -0, previously
         -0 could be returned for cases like where {number} would be -0.01.
-        This function now supports multiple bytes in {dec_point} and
-5.4.0   {thousands_sep}. Only the first byte of each separator was used in
-        older versions.
 
 ===============================================================================
 [ Examples ]

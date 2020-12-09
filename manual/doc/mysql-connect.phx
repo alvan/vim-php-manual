@@ -20,7 +20,7 @@ this function include:
   mysql_connect ([ string $server = ini_get("mysql.default_host") [,~
   string $username = ini_get("mysql.default_user") [, string~
   $password = ini_get("mysql.default_password") [, bool $new_link =~
-  FALSE [, int $client_flags = 0 ]]]]] ) : resource~
+  FALSE [, int $client_flags = 0 ]]]]] ) : resource|false~
 
 Opens or reuses a connection to a MySQL server.
 
@@ -149,11 +149,6 @@ Example #3 mysql_connect() example using ":/path/to/socket" syntax
 
   The link to the server will be closed as soon as the execution of the script
   ends, unless it's closed earlier by explicitly calling |mysql_close|.
-
-  Note:
-
-  You can suppress the error message on failure by prepending a @ to the
-  function name.
 
   Note:
 

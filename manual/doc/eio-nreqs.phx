@@ -7,7 +7,7 @@ eio_nreqs — Returns number of requests to be processed
 ===============================================================================
 [ Description ]
 
-  eio_nreqs ( void ) : int~
+  eio_nreqs ( ) : int~
 
 eio_nreqs() could be called in a custom loop calling |eio_poll|.
 
@@ -53,8 +53,9 @@ int(0)
 ===============================================================================
 [ See Also ]
 
- * eio_poll
- * eio_nready
+ * |eio_poll| - Can be to be called whenever there are pending requests that
+  need finishing
+ * |eio_nready| - Returns number of not-yet handled requests
 
 
 vim:ft=help:

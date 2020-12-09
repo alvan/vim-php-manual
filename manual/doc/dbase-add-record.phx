@@ -7,18 +7,18 @@ dbase_add_record — Adds a record to a database
 ===============================================================================
 [ Description ]
 
-  dbase_add_record ( resource $dbase_identifier , array $record ) : bool~
+  dbase_add_record ( resource $database , array $data ) : bool~
 
 Adds the given data to the database.
 
 ===============================================================================
 [ Parameters ]
 
-{dbase_identifier}
+{database}
 
-  The database link identifier, returned by |dbase_open| or |dbase_create|.
+  The database resource, returned by |dbase_open| or |dbase_create|.
 
-{record}
+{data}
 
   An indexed array of data. The number of items must be equal to the number of
   fields in the database, otherwise dbase_add_record() will fail.
@@ -36,8 +36,8 @@ Returns TRUE on success or FALSE on failure.
 ===============================================================================
 [ Changelog ]
 
-  Version                         Description
-dbase 7.0.0 {dbase_identifier} is now a resource instead of an int.
+  Version                     Description
+dbase 7.0.0 {database} is now a resource instead of an int.
 
 ===============================================================================
 [ Examples ]

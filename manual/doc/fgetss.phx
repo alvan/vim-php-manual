@@ -16,7 +16,9 @@ highly discouraged.
   string~
 
 Identical to |fgets|, except that fgetss() attempts to strip any NUL bytes,
-HTML and PHP tags from the text it reads.
+HTML and PHP tags from the text it reads. The function retains the parsing
+state from call to call, and as such is not equivalent to calling |strip_tags|
+on the return value of |fgets|.
 
 ===============================================================================
 [ Parameters ]
@@ -42,6 +44,9 @@ Returns a string of up to {length} - 1 bytes read from the file pointed to by
 {handle}, with all HTML and PHP code stripped.
 
 If an error occurs, returns FALSE.
+
+===============================================================================
+[ Examples ]
 
 Example #1 Reading a PHP file line-by-line
 
@@ -86,6 +91,8 @@ Text outside of the HTML block.
  * |popen| - Opens process file pointer
  * |fsockopen| - Open Internet or Unix domain socket connection
  * |strip_tags| - Strip HTML and PHP tags from a string
+ * SplFileObject::fgetss() - Gets line from file and strip HTML tags
+ * The string.strip_tags filter
 
 
 vim:ft=help:

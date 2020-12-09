@@ -7,7 +7,7 @@ session_create_id — Create new session id
 ===============================================================================
 [ Description ]
 
-  session_create_id ([ string $prefix ] ) : string~
+  session_create_id ([ string $prefix = "" ] ) : string|false~
 
 session_create_id() is used to create new session id for the current session.
 It returns collision free session id.
@@ -32,7 +32,8 @@ Otherwise, you may have permission problems especially with files save handler.
 [ Return Values ]
 
 session_create_id() returns new collision free session id for the current
-session. If it is used without active session, it omits collision check.
+session. If it is used without active session, it omits collision check. On
+failure, FALSE is returned.
 
 ===============================================================================
 [ Examples ]

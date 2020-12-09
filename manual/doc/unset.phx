@@ -7,7 +7,7 @@ unset — Unset a given variable
 ===============================================================================
 [ Description ]
 
-  unset ( mixed $var [, mixed $... ] ) : void~
+  unset ( mixed $var , mixed ...$vars ) : void~
 
 unset() destroys the specified variables.
 
@@ -99,9 +99,9 @@ Before unset: 3, after unset: 23
 
   The variable to be unset.
 
-{...}
+{vars}
 
-  Another variable ...
+  Further variables.
 
 ===============================================================================
 [ Return Values ]
@@ -154,7 +154,7 @@ string(6) "Felipe"
 
   Note:
 
-  It is not possible to unset $this inside an object method since PHP 5.
+  It is not possible to unset $this inside an object method.
 
   Note:
 

@@ -8,7 +8,7 @@ imap_fetchstructure — Read the structure of a particular message
 [ Description ]
 
   imap_fetchstructure ( resource $imap_stream , int $msg_number [, int~
-  $options = 0 ] ) : object~
+  $options = 0 ] ) : object|false~
 
 Fetches all the structured information for a given message.
 
@@ -31,11 +31,10 @@ Fetches all the structured information for a given message.
 ===============================================================================
 [ Return Values ]
 
-Returns an object includes the envelope, internal date, size, flags and body
-structure along with a similar object for each mime attachment. The structure
-of the returned objects is as follows:
+Returns an object with properties listed in the table below, or FALSE on
+failure.
 
-                  Returned Objects for imap_fetchstructure()
+                   Returned Object for imap_fetchstructure()
 type          Primary body type
 encoding      Body transfer encoding
 ifsubtype     TRUE if there is a subtype string

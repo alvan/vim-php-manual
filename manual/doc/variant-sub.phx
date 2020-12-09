@@ -8,7 +8,7 @@ value
 ===============================================================================
 [ Description ]
 
-  variant_sub ( mixed $left , mixed $right ) : mixed~
+  variant_sub ( mixed $left , mixed $right ) : variant~
 
 Subtracts {right} from {left}.
 
@@ -29,7 +29,7 @@ Subtracts {right} from {left}.
   function can be either a PHP native type (integer, string, floating point,
   boolean or NULL), or an instance of a COM, VARIANT or DOTNET class. PHP
   native types will be converted to variants using the same rules as found in
-  the constructor for the VARIANT class. COM and DOTNET objects will have the
+  the constructor for the variant class. COM and DOTNET objects will have the
   value of their default property taken and used as the variant value.
 
   The variant arithmetic functions are wrappers around the similarly named
@@ -51,6 +51,11 @@ Both expressions are numeric                            Subtraction
 Either expression is NULL                               NULL is returned
 Both expressions are empty                              Empty string is
                                                         returned
+
+===============================================================================
+[ Errors/Exceptions ]
+
+Throws a com_exception on failure.
 
 ===============================================================================
 [ See Also ]

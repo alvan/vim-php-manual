@@ -6,14 +6,14 @@ mcrypt_encrypt — Encrypts plaintext with given parameters
 
 Warning
 
-This function has been DEPRECATED as of PHP 7.1.0. Relying on this function is
-highly discouraged.
+This function has been DEPRECATED as of PHP 7.1.0 and REMOVED as of PHP 7.2.0.
+Relying on this function is highly discouraged.
 
 ===============================================================================
 [ Description ]
 
   mcrypt_encrypt ( string $cipher , string $key , string $data , string $mode~
-  [, string $iv ] ) : string~
+  [, string $iv ] ) : string|false~
 
 Encrypts the data and returns it.
 

@@ -7,29 +7,37 @@ bzdecompress — Decompresses bzip2 encoded data
 ===============================================================================
 [ Description ]
 
-  bzdecompress ( string $source [, int $small = 0 ] ) : mixed~
+  bzdecompress ( string $data [, bool $use_less_memory = FALSE ] ) :~
+  string|int|false~
 
 bzdecompress() decompresses the given string containing bzip2 encoded data.
 
 ===============================================================================
 [ Parameters ]
 
-{source}
+{data}
 
   The string to decompress.
 
-{small}
+{use_less_memory}
 
   If TRUE, an alternative decompression algorithm will be used which uses less
   memory (the maximum memory requirement drops to around 2300K) but works at
   roughly half the speed.
 
-  See the >> bzip2 documentation for more information about this feature.
+  See the » bzip2 documentation for more information about this feature.
 
 ===============================================================================
 [ Return Values ]
 
-The decompressed string, or an error number if an error occurred.
+The decompressed string, or FALSE or an error number if an error occurred.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   The type of {use_less_memory} has been changed from int to bool.
+        Previously, the default value was 0.
 
 ===============================================================================
 [ Examples ]

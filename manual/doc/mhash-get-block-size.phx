@@ -7,21 +7,21 @@ mhash_get_block_size — Gets the block size of the specified hash
 ===============================================================================
 [ Description ]
 
-  mhash_get_block_size ( int $hash ) : int~
+  mhash_get_block_size ( int $algo ) : int|false~
 
-Gets the size of a block of the specified {hash}.
+Gets the size of a block of the specified {algo}.
 
 ===============================================================================
 [ Parameters ]
 
-{hash}
+{algo}
 
   The hash ID. One of the MHASH_hashname constants.
 
 ===============================================================================
 [ Return Values ]
 
-Returns the size in bytes or FALSE, if the {hash} does not exist.
+Returns the size in bytes or FALSE, if the {algo} does not exist.
 
 ===============================================================================
 [ Examples ]

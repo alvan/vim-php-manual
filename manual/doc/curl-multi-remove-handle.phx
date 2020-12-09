@@ -7,21 +7,22 @@ curl_multi_remove_handle — Remove a multi handle from a set of cURL handles
 ===============================================================================
 [ Description ]
 
-  curl_multi_remove_handle ( resource $mh , resource $ch ) : int~
+  curl_multi_remove_handle ( CurlMultiHandle $multi_handle , CurlHandle~
+  $handle ) : int~
 
-Removes a given {ch} handle from the given {mh} handle. When the {ch} handle
-has been removed, it is again perfectly legal to run |curl_exec| on this
-handle. Removing the {ch} handle while being used, will effectively halt the
-transfer in progress involving that handle.
+Removes a given {handle} handle from the given {multi_handle} handle. When the
+{handle} handle has been removed, it is again perfectly legal to run |curl_exec
+| on this handle. Removing the {handle} handle while being used, will
+effectively halt the transfer in progress involving that handle.
 
 ===============================================================================
 [ Parameters ]
 
-{mh}
+{multi_handle}
 
   A cURL multi handle returned by |curl_multi_init|.
 
-{ch}
+{handle}
 
   A cURL handle returned by |curl_init|.
 
@@ -29,6 +30,15 @@ transfer in progress involving that handle.
 [ Return Values ]
 
 Returns 0 on success, or one of the CURLM_XXX error codes.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {multi_handle} expects a CurlMultiHandle instance now; previously, a 
+        resource was expected.
+8.0.0   {handle} expects a CurlHandle instance now; previously, a resource was
+        expected.
 
 ===============================================================================
 [ See Also ]

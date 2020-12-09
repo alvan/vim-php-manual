@@ -7,7 +7,7 @@ ctype_print — Check for printable character(s)
 ===============================================================================
 [ Description ]
 
-  ctype_print ( string $text ) : bool~
+  ctype_print ( mixed $text ) : bool~
 
 Checks if all of the characters in the provided string, {text}, are printable.
 
@@ -17,6 +17,14 @@ Checks if all of the characters in the provided string, {text}, are printable.
 {text}
 
   The tested string.
+
+
+    Note:
+
+    If an int between -128 and 255 inclusive is provided, it is interpreted as
+    the ASCII value of a single character (negative values have 256 added in
+    order to allow characters in the Extended ASCII range). Any other integer
+    is interpreted as a string containing the decimal digits of the integer.
 
 ===============================================================================
 [ Return Values ]
@@ -48,16 +56,6 @@ The above example will output:
 The string 'string1' does not consist of all printable characters.
 The string 'string2' consists of all printable characters.
 The string 'string3' consists of all printable characters.
-
-===============================================================================
-[ Notes ]
-
-  Note:
-
-  If an integer between -128 and 255 inclusive is provided, it is interpreted
-  as the ASCII value of a single character (negative values have 256 added in
-  order to allow characters in the Extended ASCII range). Any other integer is
-  interpreted as a string containing the decimal digits of the integer.
 
 ===============================================================================
 [ See Also ]

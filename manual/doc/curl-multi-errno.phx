@@ -7,22 +7,29 @@ curl_multi_errno — Return the last multi curl error number
 ===============================================================================
 [ Description ]
 
-  curl_multi_errno ( resource $mh ) : int~
+  curl_multi_errno ( CurlMultiHandle $multi_handle ) : int~
 
 Return an integer containing the last multi curl error number.
 
 ===============================================================================
 [ Parameters ]
 
-{mh}
+{multi_handle}
 
   A cURL multi handle returned by |curl_multi_init|.
 
 ===============================================================================
 [ Return Values ]
 
-Return an integer containing the last multi curl error number, or FALSE on
-failure.
+Return an integer containing the last multi curl error number.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   The function no longer returns FALSE on failure.
+8.0.0   {multi_handle} expects a CurlMultiHandle instance now; previously, a 
+        resource was expected.
 
 ===============================================================================
 [ See Also ]

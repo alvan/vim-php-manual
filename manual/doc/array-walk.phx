@@ -7,8 +7,8 @@ array_walk — Apply a user supplied function to every member of an array
 ===============================================================================
 [ Description ]
 
-  array_walk ( array &$array , callable $callback [, mixed $userdata = NULL ]~
-  ) : bool~
+  array_walk ( array|object &$array , callable $callback [, mixed $userdata =~
+  NULL ] ) : bool~
 
 Applies the user-defined {callback} function to each element of the {array}
 array.
@@ -116,7 +116,6 @@ c. fruit: apple
   array cursor
  * |call_user_func_array| - Call a callback with an array of parameters
  * |array_map| - Applies the callback to the elements of the given arrays
- * information about the callback type
  * foreach
 
 

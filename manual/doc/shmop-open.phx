@@ -7,7 +7,8 @@ shmop_open — Create or open shared memory block
 ===============================================================================
 [ Description ]
 
-  shmop_open ( int $key , string $flags , int $mode , int $size ) : resource~
+  shmop_open ( int $key , string $mode , int $permissions , int $size ) :~
+  Shmop|false~
 
 shmop_open() can create or open a shared memory block.
 
@@ -18,7 +19,7 @@ shmop_open() can create or open a shared memory block.
 
   System's id for the shared memory block. Can be passed as a decimal or hex.
 
-{flags}
+{mode}
 
   The flags that you can use:
    + "a" for access (sets SHM_RDONLY for shmat) use this flag when you need to
@@ -33,7 +34,7 @@ shmop_open() can create or open a shared memory block.
     exists with the same flag, fail. This is useful for security purposes,
     using this you can prevent race condition exploits.
 
-{mode}
+{permissions}
 
   The permissions that you wish to assign to your memory segment, those are the
   same as permission for a file. Permissions need to be passed in octal form,
@@ -51,14 +52,15 @@ shmop_open() can create or open a shared memory block.
 ===============================================================================
 [ Return Values ]
 
-On success shmop_open() will return an resource that you can use to access the
-shared memory segment you've created. FALSE is returned on failure.
+On success shmop_open() will return a Shmop instance that you can use to access
+the shared memory segment you've created. FALSE is returned on failure.
 
 ===============================================================================
 [ Changelog ]
 
-Version                              Description
-7.0.0   The return type of shmop_open() has been changed from int to resource.
+Version                               Description
+8.0.0   On success, this function returns an Shmop instance now; previously, a 
+        resource was returned.
 
 ===============================================================================
 [ Examples ]

@@ -9,8 +9,7 @@ get_html_translation_table — Returns the translation table used by
 [ Description ]
 
   get_html_translation_table ([ int $table = HTML_SPECIALCHARS [, int $flags =~
-  ENT_COMPAT | ENT_HTML401 [, string $encoding = "UTF-8" ]]] ) :~
-  array~
+  ENT_COMPAT [, string $encoding = "UTF-8" ]]] ) : array~
 
 get_html_translation_table() will return the translation table that is used
 internally for |htmlspecialchars| and |htmlentities|.
@@ -49,9 +48,7 @@ internally for |htmlspecialchars| and |htmlentities|.
 
 {encoding}
 
-  Encoding to use. If omitted, the default value for this argument is
-  ISO-8859-1 in versions of PHP prior to 5.4.0, and UTF-8 from PHP 5.4.0
-  onwards.
+  Encoding to use. If omitted, the default value for this argument is UTF-8.
 
   The following character sets are supported:
 
@@ -95,15 +92,6 @@ internally for |htmlspecialchars| and |htmlentities|.
 
 Returns the translation table as an array, with the original characters as keys
 and entities as values.
-
-===============================================================================
-[ Changelog ]
-
-Version                               Description
-5.4.0   The default value for the {encoding} parameter was changed to UTF-8.
-5.4.0   The constants ENT_HTML401, ENT_XML1, ENT_XHTML and ENT_HTML5 were
-        added.
-5.3.4   The {encoding} parameter was added.
 
 ===============================================================================
 [ Examples ]

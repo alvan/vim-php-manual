@@ -29,11 +29,10 @@ name {link}.
 Returns TRUE on success or FALSE on failure.
 
 ===============================================================================
-[ Changelog ]
+[ Errors/Exceptions ]
 
-Version                               Description
-5.3.0   This function is now available on Windows platforms (Vista, Server 2008
-        or greater).
+The function fails, and issues E_WARNING, if {link} already exists. On Windows,
+the function also fails, and issues E_WARNING, if {target} does not exist.
 
 ===============================================================================
 [ Examples ]
@@ -49,18 +48,12 @@ Example #1 Create a symbolic link
 <?>
 
 ===============================================================================
-[ Notes ]
-
-  Note: Windows users should note that this function will only work if the
-  system you run PHP from is Windows Vista/Windows Server 2008 or newer.
-  Windows versions prior to that do not support symbolic links.
-
-===============================================================================
 [ See Also ]
 
  * |link| - Create a hard link
  * |readlink| - Returns the target of a symbolic link
  * |linkinfo| - Gets information about a link
+ * |unlink| - Deletes a file
 
 
 vim:ft=help:

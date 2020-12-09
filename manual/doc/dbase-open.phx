@@ -7,13 +7,9 @@ dbase_open — Opens a database
 ===============================================================================
 [ Description ]
 
-  dbase_open ( string $filename , int $mode ) : resource~
+  dbase_open ( string $path , int $mode ) : resource|false~
 
 dbase_open() opens a dBase database with the given access mode.
-
-  Note: When safe mode is enabled, PHP checks whether the files or directories
-  being operated upon have the same UID (owner) as the script that is being
-  executed.
 
   Note:
 
@@ -22,9 +18,9 @@ dbase_open() opens a dBase database with the given access mode.
 ===============================================================================
 [ Parameters ]
 
-{filename}
+{path}
 
-  The name of the database. It can be a relative or absolute path to the file
+  The path of the database. It can be a relative or absolute path to the file
   where dBase will store your data.
 
 {mode}
@@ -39,6 +35,11 @@ dbase_open() opens a dBase database with the given access mode.
 
   As of dbase 7.0.0 you can use DBASE_RDONLY and DBASE_RDWR, respectively, to
   specify the {mode}.
+
+===============================================================================
+[ Return Values ]
+
+Returns a database resource on success, or FALSE on failure.
 
 ===============================================================================
 [ Changelog ]
@@ -63,12 +64,6 @@ Example #1 Opening a dBase database file
   }
 
 <?>
-
-===============================================================================
-[ Return Values ]
-
-Returns a database link identifier if the database is successfully opened, or
-FALSE if an error occurred.
 
 ===============================================================================
 [ See Also ]

@@ -8,8 +8,8 @@ index check, compares data and indexes by separate callback functions
 ===============================================================================
 [ Description ]
 
-  array_uintersect_uassoc ( array $array1 , array $array2 [, array $... ],~
-  callable $value_compare_func , callable $key_compare_func ) : array~
+  array_uintersect_uassoc ( array $array1 , array ...$arrays , callable~
+  $value_compare_func , callable $key_compare_func ) : array~
 
 Computes the intersection of arrays with additional index check, compares data
 and indexes by separate callback functions.
@@ -21,16 +21,15 @@ and indexes by separate callback functions.
 
   The first array.
 
-{array2}
+{arrays}
 
-  The second array.
+  Further arrays.
 
 {value_compare_func}
 
   The comparison function must return an integer less than, equal to, or
   greater than zero if the first argument is considered to be respectively less
-  than, equal to, or greater than the second. Note that before PHP 7.0.0 this
-  integer had to be in the range from -2147483648 to 2147483647.
+  than, equal to, or greater than the second.
 
 
   callback ( mixed $a, mixed $b ) : int~

@@ -9,24 +9,24 @@ XMLWriter::setIndent -- xmlwriter_set_indent — Toggle indentation on/off
 
 Object oriented style
 
-  XMLWriter::setIndent ( bool $indent ) : bool~
+  public XMLWriter::setIndent ( bool $enable ) : bool~
 
 Procedural style
 
-  xmlwriter_set_indent ( resource $xmlwriter , bool $indent ) : bool~
+  xmlwriter_set_indent ( XMLWriter $writer , bool $enable ) : bool~
 
 Toggles indentation on or off.
 
 ===============================================================================
 [ Parameters ]
 
-{ xmlwriter}
+{ writer}
 
-  Only for procedural calls. The XMLWriter resource that is being modified.
-  This resource comes from a call to |xmlwriter_open_uri| or 
+  Only for procedural calls. The XMLWriter instance that is being modified.
+  This object is returned from a call to |xmlwriter_open_uri| or 
   |xmlwriter_open_memory|.
 
-{indent}
+{enable}
 
   Whether indentation is enabled.
 
@@ -34,6 +34,48 @@ Toggles indentation on or off.
 [ Return Values ]
 
 Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {writer} expects an XMLWriter instance now; previously, a resource was
+        expected.
+
+===============================================================================
+[ Examples ]
+
+Example #1 XMLWriter::setIndent() and mixed Content
+
+Enabling indentation is not suitable for mixed content, because the indent
+string is also inserted before inline elements.
+
+<?php >
+  $writer = new XMLWriter();
+  $writer->openMemory();
+  $writer->setIndent(2);
+  $writer->startDocument();
+  $writer->startElement('p');
+  $writer->text('before');
+  $writer->writeElement('a', 'element');
+  $writer->text('after');
+  $writer->endElement();
+  $writer->endDocument();
+  echo $writer->outputMemory();
+<?>
+
+The above example will output:
+
+<?xml version="1.0"?>
+<p>before <a>element</a>
+after</p>
+
+===============================================================================
+[ Notes ]
+
+  Note:
+
+  The indent is reset when an xmlwriter is opened.
 
 ===============================================================================
 [ See Also ]

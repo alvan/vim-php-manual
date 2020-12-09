@@ -7,7 +7,8 @@ apcu_inc — Increase a stored number
 ===============================================================================
 [ Description ]
 
-  apcu_inc ( string $key [, int $step = 1 [, bool &$success ]] ) : int~
+  apcu_inc ( string $key [, int $step = 1 [, bool &$success [, int $ttl = 0~
+  ]]] ) : int|false~
 
 Increases a stored number.
 
@@ -27,10 +28,21 @@ Increases a stored number.
   Optionally pass the success or fail boolean value to this referenced
   variable.
 
+{ttl}
+
+  TTL to use if the operation inserts a new value (rather than incrementing an
+  existing one).
+
 ===============================================================================
 [ Return Values ]
 
 Returns the current value of {key}'s value on success, or FALSE on failure
+
+===============================================================================
+[ Changelog ]
+
+Version             Description
+5.1.12  The {ttl} parameter has been added.
 
 ===============================================================================
 [ Examples ]

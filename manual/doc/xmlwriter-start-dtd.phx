@@ -9,23 +9,23 @@ XMLWriter::startDtd -- xmlwriter_start_dtd — Create start DTD tag
 
 Object oriented style
 
-  XMLWriter::startDtd ( string $qualifiedName [, string $publicId [, string~
-  $systemId ]] ) : bool~
+  public XMLWriter::startDtd ( string $qualifiedName [, string|null $publicId~
+  = NULL [, string|null $systemId = NULL ]] ) : bool~
 
 Procedural style
 
-  xmlwriter_start_dtd ( resource $xmlwriter , string $qualifiedName [, string~
-  $publicId [, string $systemId ]] ) : bool~
+  xmlwriter_start_dtd ( XMLWriter $writer , string $qualifiedName [,~
+  string|null $publicId = NULL [, string|null $systemId = NULL ]] ) : bool~
 
 Starts a DTD.
 
 ===============================================================================
 [ Parameters ]
 
-{ xmlwriter}
+{ writer}
 
-  Only for procedural calls. The XMLWriter resource that is being modified.
-  This resource comes from a call to |xmlwriter_open_uri| or 
+  Only for procedural calls. The XMLWriter instance that is being modified.
+  This object is returned from a call to |xmlwriter_open_uri| or 
   |xmlwriter_open_memory|.
 
 {qualifiedName}
@@ -44,6 +44,13 @@ Starts a DTD.
 [ Return Values ]
 
 Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {writer} expects an XMLWriter instance now; previously, a resource was
+        expected.
 
 ===============================================================================
 [ See Also ]

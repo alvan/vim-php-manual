@@ -8,7 +8,8 @@ imap_open — Open an IMAP stream to a mailbox
 [ Description ]
 
   imap_open ( string $mailbox , string $username , string $password [, int~
-  $options = 0 [, int $n_retries = 0 [, array $params = NULL ]]] ) : resource~
+  $options = 0 [, int $n_retries = 0 [, array $params = array() ]]] ) :~
+  resource~
 
 Opens an IMAP stream to a {mailbox}.
 
@@ -110,13 +111,6 @@ some functions and features are only available on IMAP servers.
 [ Return Values ]
 
 Returns an IMAP stream on success or FALSE on error.
-
-===============================================================================
-[ Changelog ]
-
-Version    Description
-5.3.2   {params} added
-5.2.0   {n_retries} added
 
 ===============================================================================
 [ Examples ]

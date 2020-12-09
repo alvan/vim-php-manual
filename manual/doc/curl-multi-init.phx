@@ -7,7 +7,7 @@ curl_multi_init — Returns a new cURL multi handle
 ===============================================================================
 [ Description ]
 
-  curl_multi_init ( void ) : resource~
+  curl_multi_init ( ) : CurlMultiHandle~
 
 Allows the processing of multiple cURL handles asynchronously.
 
@@ -19,7 +19,14 @@ This function has no parameters.
 ===============================================================================
 [ Return Values ]
 
-Returns a cURL multi handle resource on success, FALSE on failure.
+Returns a cURL multi handle on success, FALSE on failure.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   On success, this function returns a CurlMultiHandle instance now;
+        previously, a resource was returned.
 
 ===============================================================================
 [ Examples ]

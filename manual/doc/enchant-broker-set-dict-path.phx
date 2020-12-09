@@ -7,8 +7,8 @@ enchant_broker_set_dict_path — Set the directory path for a given backend
 ===============================================================================
 [ Description ]
 
-  enchant_broker_set_dict_path ( resource $broker , int $dict_type , string~
-  $value ) : bool~
+  enchant_broker_set_dict_path ( EnchantBroker $broker , int $type , string~
+  $path ) : bool~
 
 Set the directory path for a given backend.
 
@@ -17,13 +17,13 @@ Set the directory path for a given backend.
 
 {broker}
 
-  Broker resource.
+  An Enchant broker returned by |enchant_broker_init|.
 
-{dict_type}
+{type}
 
   The type of the dictionaries, i.e. ENCHANT_MYSPELL or ENCHANT_ISPELL.
 
-{value}
+{path}
 
   The path of the dictionary directory.
 
@@ -31,6 +31,13 @@ Set the directory path for a given backend.
 [ Return Values ]
 
 Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {broker} expects an EnchantBroker instance now; previoulsy, a resource
+        was expected.
 
 ===============================================================================
 [ See Also ]

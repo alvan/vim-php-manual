@@ -8,9 +8,9 @@ array recursively
 ===============================================================================
 [ Description ]
 
-  array_replace_recursive ( array $array1 [, array $... ] ) : array~
+  array_replace_recursive ( array $array , array ...$replacements ) : array~
 
-array_replace_recursive() replaces the values of {array1} with the same values
+array_replace_recursive() replaces the values of {array} with the same values
 from all the following arrays. If a key from the first array exists in the
 second array, its value will be replaced by the value from the second array. If
 the key exists in the second array, and not the first, it will be created in
@@ -29,13 +29,13 @@ replace their respective value recursively.
 ===============================================================================
 [ Parameters ]
 
-{array1}
+{array}
 
   The array in which elements are replaced.
 
-{...}
+{replacements}
 
-  Optional. Arrays from which elements will be extracted.
+  Arrays from which elements will be extracted.
 
 ===============================================================================
 [ Return Values ]

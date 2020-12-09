@@ -14,7 +14,7 @@ uopz_set_return — Provide a return value for an existing function
 
 Sets the return value of the {function} to {value}. If {value} is a Closure and
 {execute} is set, the Closure will be executed in place of the original
-function.
+function. It is possible to call the original function from the Closure.
 
   Note:
 

@@ -7,14 +7,15 @@ pspell_new — Load a new dictionary
 ===============================================================================
 [ Description ]
 
-  pspell_new ( string $language [, string $spelling [, string $jargon [,~
-  string $encoding [, int $mode = 0 ]]]] ) : int~
+  pspell_new ( string $language [, string $spelling = "" [, string~
+  $jargon = "" [, string $encoding = "" [, int $mode = 0~
+  ]]]] ) : int|false~
 
 pspell_new() opens up a new dictionary and returns the dictionary link
 identifier for use in other pspell functions.
 
-For more information and examples, check out inline manual pspell website:>>
- http://aspell.net/.
+For more information and examples, check out inline manual pspell website:
+» http://aspell.net/.
 
 ===============================================================================
 [ Parameters ]

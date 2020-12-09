@@ -8,8 +8,9 @@ using callbacks
 ===============================================================================
 [ Description ]
 
-  preg_replace_callback_array ( array $patterns_and_callbacks , mixed $subject~
-  [, int $limit = -1 [, int &$count ]] ) : mixed~
+  preg_replace_callback_array ( array $pattern , string|array $subject [, int~
+  $limit = -1 [, int &$count = NULL [, int $flags = 0 ]]] ) :~
+  string|array|null~
 
 The behavior of this function is similar to |preg_replace_callback|, except
 that callbacks are executed on a per-pattern basis.
@@ -17,9 +18,9 @@ that callbacks are executed on a per-pattern basis.
 ===============================================================================
 [ Parameters ]
 
-{patterns_and_callbacks}
+{pattern}
 
-  An associative array mapping patterns (keys) to callbacks (values).
+  An associative array mapping patterns (keys) to callables (values).
 
 {subject}
 
@@ -35,6 +36,12 @@ that callbacks are executed on a per-pattern basis.
   If specified, this variable will be filled with the number of replacements
   done.
 
+{flags}
+
+  {flags} can be a combination of the PREG_OFFSET_CAPTURE and
+  PREG_UNMATCHED_AS_NULL flags, which influence the format of the matches
+  array. See the description in |preg_match| for more details.
+
 ===============================================================================
 [ Return Values ]
 
@@ -43,6 +50,12 @@ array, or a string otherwise. On errors the return value is NULL
 
 If matches are found, the new subject will be returned, otherwise {subject}
 will be returned unchanged.
+
+===============================================================================
+[ Changelog ]
+
+Version           Description
+7.4.0   The {flags} parameter was added.
 
 ===============================================================================
 [ Examples ]
@@ -80,7 +93,6 @@ The above example will output:
  * |preg_replace| - Perform a regular expression search and replace
  * |preg_last_error| - Returns the error code of the last PCRE regex execution
  * Anonymous functions
- * information about the callback type
 
 
 vim:ft=help:

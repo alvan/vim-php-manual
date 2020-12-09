@@ -1,0 +1,50 @@
+*preg_last_error_msg*
+
+(PHP 8)
+
+preg_last_error_msg — Returns the error message of the last PCRE regex
+execution
+
+===============================================================================
+[ Description ]
+
+  preg_last_error_msg ( ) : string~
+
+Returns the error message of the last PCRE regex execution.
+
+===============================================================================
+[ Parameters ]
+
+This function has no parameters.
+
+===============================================================================
+[ Return Values ]
+
+Returns the error message on success, or "No error" if no error has occurred.
+
+===============================================================================
+[ Examples ]
+
+Example #1 preg_last_error_msg() example
+
+<?php >
+
+  preg_match('/(?:\D+|<\d+>)*[!?]/', 'foobar foobar foobar');
+
+  if (preg_last_error() !== PREG_NO_ERROR) {
+      echo preg_last_error_msg();
+  }
+
+<?>
+
+The above example will output:
+
+Backtrack limit exhausted
+
+===============================================================================
+[ See Also ]
+
+ * |preg_last_error| - Returns the error code of the last PCRE regex execution
+
+
+vim:ft=help:

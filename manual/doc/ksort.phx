@@ -7,7 +7,7 @@ ksort — Sort an array by key
 ===============================================================================
 [ Description ]
 
-  ksort ( array &$array [, int $sort_flags = SORT_REGULAR ] ) : bool~
+  ksort ( array &$array [, int $flags = SORT_REGULAR ] ) : bool~
 
 Sorts an array by key, maintaining key to data correlations. This is useful
 mainly for associative arrays.
@@ -19,10 +19,10 @@ mainly for associative arrays.
 
   The input array.
 
-{sort_flags}
+{flags}
 
-  You may modify the behavior of the sort using the optional parameter
-  {sort_flags}, for details see |sort|.
+  You may modify the behavior of the sort using the optional parameter {flags},
+  for details see |sort|.
 
 ===============================================================================
 [ Return Values ]

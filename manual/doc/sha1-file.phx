@@ -7,9 +7,9 @@ sha1_file — Calculate the sha1 hash of a file
 ===============================================================================
 [ Description ]
 
-  sha1_file ( string $filename [, bool $raw_output = FALSE ] ) : string~
+  sha1_file ( string $filename [, bool $binary = FALSE ] ) : string|false~
 
-Calculates the sha1 hash of the file specified by {filename} using the >> US
+Calculates the sha1 hash of the file specified by {filename} using the » US
 Secure Hash Algorithm 1, and returns that hash. The hash is a 40-character
 hexadecimal number.
 
@@ -20,7 +20,7 @@ hexadecimal number.
 
   The filename of the file to hash.
 
-{raw_output}
+{binary}
 
   When TRUE, returns the digest in raw binary format with a length of 20.
 
@@ -45,13 +45,6 @@ Example #1 sha1_file() example
       echo $ent . ' (SHA1: ' . sha1_file($ent) . ')', PHP_EOL;
   }
 <?>
-
-===============================================================================
-[ Changelog ]
-
-Version                               Description
-5.1.0   Changed the function to use the streams API. It means that you can use
-        it with wrappers, like sha1_file('http://example.com/..')
 
 ===============================================================================
 [ See Also ]

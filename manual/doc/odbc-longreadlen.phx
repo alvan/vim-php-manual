@@ -9,7 +9,8 @@ odbc_longreadlen — Handling of LONG columns
 
   odbc_longreadlen ( resource $result_id , int $length ) : bool~
 
-Enables handling of LONG and LONGVARBINARY columns.
+Controls handling of LONG, LONGVARCHAR and LONGVARBINARY columns. The default
+length can be set using the uodbc.defaultlrl php.ini directive.
 
 ===============================================================================
 [ Parameters ]
@@ -21,7 +22,8 @@ Enables handling of LONG and LONGVARBINARY columns.
 {length}
 
   The number of bytes returned to PHP is controlled by the parameter length. If
-  it is set to 0, Long column data is passed through to the client.
+  it is set to 0, long column data is passed through to the client (i.e.
+  printed) when retrieved with |odbc_result|.
 
 ===============================================================================
 [ Return Values ]

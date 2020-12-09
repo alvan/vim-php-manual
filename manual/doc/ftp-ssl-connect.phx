@@ -18,10 +18,11 @@ will fail in the mentioned cases.
 
   Note: Why this function may not exist
 
-  ftp_ssl_connect() is only available if both the ftp module and the OpenSSL
-  support is built statically into php, this means that on Windows this
-  function will be undefined in the official PHP builds. To make this function
-  available on Windows you must compile your own PHP binaries.
+  Before PHP 7.0.0, ftp_ssl_connect() was only available if both the ftp module
+  and the OpenSSL support have been built statically into php; this means that
+  on Windows this function had been undefined in the official PHP builds. To
+  have this function available on Windows, it had been necessary to compile own
+  PHP binaries.
 
   Note:
 
@@ -51,13 +52,6 @@ will fail in the mentioned cases.
 [ Return Values ]
 
 Returns a SSL-FTP stream on success or FALSE on error.
-
-===============================================================================
-[ Changelog ]
-
-Version                               Description
-5.2.2   The function was changed to return FALSE when it can't use an SSL
-        connection, instead of falling back to a non-SSL one as previously.
 
 ===============================================================================
 [ Examples ]

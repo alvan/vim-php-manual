@@ -39,15 +39,6 @@ is not a directory, then boolean FALSE is returned, and an error of level
 E_WARNING is generated.
 
 ===============================================================================
-[ Changelog ]
-
-Version                               Description
-        {sorting_order} constants were added. Any nonzero value caused
-5.4.0   descending order in previous versions. So for all PHP versions, use 0
-        for ascending order, and 1 for descending order. An option for
-        SCANDIR_SORT_NONE behavior did not exist prior to PHP 5.4.0.
-
-===============================================================================
 [ Examples ]
 
 Example #1 A simple scandir() example

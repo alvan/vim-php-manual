@@ -2,31 +2,38 @@
 
 (PHP 5 >= 5.2.0, PHP 7)
 
-date_parse — Returns associative array with detailed info about given date
+date_parse — Returns associative array with detailed info about given date/time
 
 ===============================================================================
 [ Description ]
 
-  date_parse ( string $date ) : array~
+  date_parse ( string $datetime ) : array|false~
 
 ===============================================================================
 [ Parameters ]
 
-{date}
+{datetime}
 
-  Date in format accepted by |strtotime|.
+  Date/time in format accepted by DateTimeImmutable::__construct().
 
 ===============================================================================
 [ Return Values ]
 
-Returns array with information about the parsed date on success or FALSE on
-failure.
+Returns array with information about the parsed date/time on success or FALSE
+on failure.
 
 ===============================================================================
 [ Errors/Exceptions ]
 
-In case the date format has an error, the element 'errors' will contains the
-error messages.
+In case the date/time format has an error, the element 'errors' will contains
+the error messages.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+7.2.0   The zone element of the returned array represents seconds instead of
+        minutes now, and its sign is inverted. For instance -120 is now 7200.
 
 ===============================================================================
 [ Examples ]

@@ -7,10 +7,10 @@ vfprintf — Write a formatted string to a stream
 ===============================================================================
 [ Description ]
 
-  vfprintf ( resource $handle , string $format , array $args ) : int~
+  vfprintf ( resource $stream , string $format , array $values ) : int~
 
 Write a string produced according to {format} to the stream resource specified
-by {handle}.
+by {stream}.
 
 Operates as |fprintf| but accepts an array of arguments, rather than a variable
 number of arguments.
@@ -18,7 +18,7 @@ number of arguments.
 ===============================================================================
 [ Parameters ]
 
-{handle}
+{stream}
 
 {format}
 
@@ -26,8 +26,13 @@ number of arguments.
   (excluding %) that are copied directly to the result and conversion
   specifications, each of which results in fetching its own parameter.
 
-  A conversion specification follows this prototype: %[flags][width]
+  A conversion specification follows this prototype: %[argnum$][flags][width]
   [.precision]specifier.
+
+  Argnum
+
+  An integer followed by a dollar sign $, to specify which number argument to
+  treat in the conversion.
 
                                      Flags
    Flag                                Description
@@ -91,7 +96,7 @@ number of arguments.
             + 1). Otherwise, the conversion is with style e and precision P −
             1.
 
-  G         Like the g specifier but uses E and F.
+  G         Like the g specifier but uses E and f.
   o         The argument is treated as an integer and presented as an octal
             number.
   s         The argument is treated and presented as a string.
@@ -120,7 +125,7 @@ number of arguments.
   integer d, u, c, o, x, X, b
   double  g, G, e, E, f, F
 
-{args}
+{values}
 
 ===============================================================================
 [ Return Values ]

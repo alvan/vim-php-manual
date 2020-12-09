@@ -58,12 +58,6 @@ Returns TRUE on success or FALSE on failure.
 [ Changelog ]
 
 Version                               Description
-        As of PHP 4.3.0 PCNTL uses ticks as the signal handle callback
-        mechanism, which is much faster than the previous mechanism. This
-4.3.0   change follows the same semantics as using "user ticks". You must use
-        the declare() statement to specify the locations in your program where
-        callbacks are allowed to occur for the signal handler to function
-        properly (as used in the example below).
         As of PHP 7.1.0 the handler callback is given a second argument
 7.1.0   containing the signinfo of the specific signal. This data is only
         supplied if the operating system has the signinfo_t structure. If the
@@ -75,7 +69,7 @@ Version                               Description
 Example #1 pcntl_signal() example
 
 <?php >
-  // tick use required as of PHP 4.3.0
+  // tick use required
   declare(ticks = 1);
 
   // signal handler function
@@ -106,7 +100,7 @@ Example #1 pcntl_signal() example
   pcntl_signal(SIGHUP,  "sig_handler");
   pcntl_signal(SIGUSR1, "sig_handler");
 
-  // or use an object, available as of PHP 4.3.0
+  // or use an object
   // pcntl_signal(SIGUSR1, array($obj, "do_something"));
 
   echo"Generating signal SIGUSR1 to self...\n";

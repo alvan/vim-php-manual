@@ -7,13 +7,13 @@ filter_var — Filters a variable with a specified filter
 ===============================================================================
 [ Description ]
 
-  filter_var ( mixed $variable [, int $filter = FILTER_DEFAULT [, mixed~
-  $options ]] ) : mixed~
+  filter_var ( mixed $value [, int $filter = FILTER_DEFAULT [, array|int~
+  $options = 0 ]] ) : mixed~
 
 ===============================================================================
 [ Parameters ]
 
-{variable}
+{value}
 
   Value to filter. Note that scalar values are converted to string internally
   before they are filtered.
@@ -46,10 +46,10 @@ filter_var — Filters a variable with a specified filter
   );
   $var = filter_var('0755', FILTER_VALIDATE_INT, $options);
 
-  // for filter that only accept flags, you can pass them directly
+  // for filters that only accept flags, you can pass them directly
   $var = filter_var('oops', FILTER_VALIDATE_BOOLEAN, FILTER_NULL_ON_FAILURE);
 
-  // for filter that only accept flags, you can also pass as an array
+  // for filters that only accept flags, you can also pass as an array
   $var = filter_var('oops', FILTER_VALIDATE_BOOLEAN,
                     array('flags' => FILTER_NULL_ON_FAILURE));
 
@@ -100,7 +100,6 @@ bool(false)
   filters it
  * |filter_input_array| - Gets external variables and optionally filters them
  * Types of filters
- * information about the callback type
 
 
 vim:ft=help:

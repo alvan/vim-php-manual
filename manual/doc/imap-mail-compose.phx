@@ -8,7 +8,7 @@ sections
 ===============================================================================
 [ Description ]
 
-  imap_mail_compose ( array $envelope , array $body ) : string~
+  imap_mail_compose ( array $envelope , array $body ) : string|false~
 
 Create a MIME message based on the given {envelope} and {body} sections.
 
@@ -17,24 +17,45 @@ Create a MIME message based on the given {envelope} and {body} sections.
 
 {envelope}
 
-  An associative array of headers fields. Valid keys are: "remail",
+  An associative array of header fields. Valid keys are: "remail",
   "return_path", "date", "from", "reply_to", "in_reply_to", "subject", "to",
-  "cc", "bcc", "message_id" and "custom_headers" (which contains associative
-  array of other headers).
+  "cc", "bcc" and "message_id", which set the respective message headers to the
+  given string. To set additional headers, the key "custom_headers" is
+  supported, which expects an array of those headers, e.g. ["User-Agent: My
+  Mail Client"].
 
 {body}
 
-  An indexed array of bodies
+  An indexed array of bodies. The first body is the main body of the message;
+  only if it has a type of TYPEMULTIPART, further bodies are processed; these
+  bodies constitute the bodies of the parts.
 
-  A body is an associative array which can consist of the following keys:
-  "type", "encoding", "charset", "type.parameters", "subtype", "id",
-  "description", "disposition.type", "disposition", "contents.data", "lines",
-  "bytes" and "md5".
+                             Body Array Structure
+        Key         Type                       Description
+                          The MIME type. One of TYPETEXT (default),
+  type             int    TYPEMULTIPART, TYPEMESSAGE, TYPEAPPLICATION,
+                          TYPEAUDIO, TYPEIMAGE, TYPEMODEL or TYPEOTHER.
+                          The Content-Transfer-Encoding. One of ENC7BIT
+  encoding         int    (default), ENC8BIT, ENCBINARY, ENCBASE64,
+                          ENCQUOTEDPRINTABLE or ENCOTHER.
+  charset          string The charset parameter of the MIME type.
+  type.parameters  array  An associative array of Content-Type parameter names
+                          and their values.
+  subtype          string The MIME subtype, e.g. 'jpeg' for TYPEIMAGE.
+  id               string The Content-ID.
+  description      string The Content-Description.
+  disposition.type string The Content-Disposition, e.g. 'attachment'.
+  disposition      array  An associative array of Content-Disposition parameter
+                          names and values.
+  contents.data    string The payload.
+  lines            int    The size of the payload in lines.
+  bytes            int    The size of the payload in bytes.
+  md5              string The MD5 checksum of the payload.
 
 ===============================================================================
 [ Return Values ]
 
-Returns the MIME message.
+Returns the MIME message as string, or FALSE on failure.
 
 ===============================================================================
 [ Examples ]

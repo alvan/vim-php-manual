@@ -7,7 +7,7 @@ echo — Output one or more strings
 ===============================================================================
 [ Description ]
 
-  echo ( string $arg1 [, string $... ] ) : void~
+  echo ( string $arg , string ...$args ) : void~
 
 Outputs all parameters. No additional newline is appended.
 
@@ -28,11 +28,11 @@ doesn't have a return value.
 ===============================================================================
 [ Parameters ]
 
-{arg1}
+{arg}
 
   The parameter to output.
 
-{...}
+{args}
 
 ===============================================================================
 [ Return Values ]
@@ -79,9 +79,9 @@ passed in, then parentheses will not be required to enforce precedence:
 echo "Sum: ", 1 + 2;
 echo "Hello ", isset($name) ? $name : "John Doe", "!";
 
-With concatenation, the period operator has a higher precedence than both the
-addition and ternary operators, and so parentheses must be used for the correct
-behaviour:
+With concatenation, the period operator has the same precedence as the addition
+operator, and higher precedence than the ternary operator, so parentheses must
+be used for the correct behaviour:
 
 <?php >
 echo 'Sum: ' . (1 + 2);

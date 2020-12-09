@@ -29,13 +29,6 @@ This function will return NULL and generate an error if {handle} is not a
 resource.
 
 ===============================================================================
-[ Changelog ]
-
-Version                               Description
-5.3.0   If {handle} is not a resource this functions returns NULL. Formerly,
-        FALSE has been returned.
-
-===============================================================================
 [ Examples ]
 
 Example #1 get_resource_type() example
@@ -53,6 +46,11 @@ Example #1 get_resource_type() example
   $doc = new_xmldoc("1.0");
   echo get_resource_type($doc->doc) . "\n";
 <?>
+
+===============================================================================
+[ See Also ]
+
+ * |get_resource_id| - Returns an integer identifier for the given resource
 
 
 vim:ft=help:

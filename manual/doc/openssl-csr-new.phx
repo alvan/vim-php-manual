@@ -42,31 +42,31 @@ the information provided by {dn}.
   the table below.
 
                             Configuration overrides
-   {configargs} key   type    openssl.conf              description
-                               equivalent
-                                             Digest method or signature hash,
-  digest_alg         string  default_md      usually one of 
-                                             |openssl_get_md_methods|
-                                             Selects which extensions should be
-  x509_extensions    string  x509_extensions used when creating an x509
-                                             certificate
-  req_extensions     string  req_extensions  Selects which extensions should be
-                                             used when creating a CSR
-  private_key_bits   integer default_bits    Specifies how many bits should be
-                                             used to generate a private key
-                                             Specifies the type of private key
-                                             to create. This can be one of
-                                             OPENSSL_KEYTYPE_DSA,
-  private_key_type   integer none            OPENSSL_KEYTYPE_DH,
-                                             OPENSSL_KEYTYPE_RSA or
-                                             OPENSSL_KEYTYPE_EC. The default
-                                             value is OPENSSL_KEYTYPE_RSA.
-  encrypt_key        boolean encrypt_key     Should an exported key (with
-                                             passphrase) be encrypted?
-  encrypt_key_cipher integer none            One of cipher constants.
-  curve_name         string  none            One of |openssl_get_curve_names|.
-  config             string  N/A             Path to your own alternative
-                                             openssl.conf file.
+   {configargs} key   type   openssl.conf               description
+                              equivalent
+                                            Digest method or signature hash,
+  digest_alg         string default_md      usually one of 
+                                            |openssl_get_md_methods|
+                                            Selects which extensions should be
+  x509_extensions    string x509_extensions used when creating an x509
+                                            certificate
+  req_extensions     string req_extensions  Selects which extensions should be
+                                            used when creating a CSR
+  private_key_bits   int    default_bits    Specifies how many bits should be
+                                            used to generate a private key
+                                            Specifies the type of private key
+                                            to create. This can be one of
+                                            OPENSSL_KEYTYPE_DSA,
+  private_key_type   int    none            OPENSSL_KEYTYPE_DH,
+                                            OPENSSL_KEYTYPE_RSA or
+                                            OPENSSL_KEYTYPE_EC. The default
+                                            value is OPENSSL_KEYTYPE_RSA.
+  encrypt_key        bool   encrypt_key     Should an exported key (with
+                                            passphrase) be encrypted?
+  encrypt_key_cipher int    none            One of cipher constants.
+  curve_name         string none            One of |openssl_get_curve_names|.
+  config             string N/A             Path to your own alternative
+                                            openssl.conf file.
 
 {extraattribs}
 

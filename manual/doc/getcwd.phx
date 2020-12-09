@@ -7,7 +7,7 @@ getcwd — Gets the current working directory
 ===============================================================================
 [ Description ]
 
-  getcwd ( void ) : string~
+  getcwd ( ) : string~
 
 Gets the current working directory.
 
@@ -19,6 +19,13 @@ Returns the current working directory on success, or FALSE on failure.
 On some Unix variants, getcwd() will return FALSE if any one of the parent
 directories does not have the readable or search mode set, even if the current
 directory does. See |chmod| for more information on modes and permissions.
+
+Caution
+
+If the PHP interpreter has been built with ZTS (Zend Thread Safety) enabled,
+the current working directory returned by getcwd() may be different from that
+returned by operating system interfaces. External libraries (invoked through
+FFI) which depend on the current working directory will be affected.
 
 ===============================================================================
 [ Examples ]

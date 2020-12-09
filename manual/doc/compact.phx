@@ -7,7 +7,7 @@ compact — Create array containing variables and their values
 ===============================================================================
 [ Description ]
 
-  compact ( mixed $varname1 [, mixed $... ] ) : array~
+  compact ( array|string $var_name , array|string ...$var_names ) : array~
 
 Creates an array containing variables and their values.
 
@@ -23,7 +23,8 @@ In short, it does the opposite of |extract|.
 ===============================================================================
 [ Parameters ]
 
-{varname1}
+{var_name}
+{var_names}
 
   compact() takes a variable number of parameters. Each parameter can be either
   a string containing the name of the variable, or an array of variable names.
@@ -61,7 +62,7 @@ Example #1 compact() example
 
   $location_vars = array("city", "state");
 
-  $result = compact("event", "nothing_here", $location_vars);
+  $result = compact("event", $location_vars);
   print_r($result);
 <?>
 

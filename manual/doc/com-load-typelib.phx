@@ -7,7 +7,7 @@ com_load_typelib — Loads a Typelib
 ===============================================================================
 [ Description ]
 
-  com_load_typelib ( string $typelib_name [, bool $case_sensitive = TRUE ] ) :~
+  com_load_typelib ( string $typelib [, bool $case_insensitive = TRUE ] ) :~
   bool~
 
 Loads a type-library and registers its constants in the engine, as though they
@@ -24,9 +24,9 @@ possible.
 ===============================================================================
 [ Parameters ]
 
-{typelib_name}
+{typelib}
 
-  {typelib_name} can be one of the following:
+  {typelib} can be one of the following:
    + The filename of a .tlb file or the executable module that contains the
     type library.
 
@@ -41,10 +41,10 @@ possible.
   type library by name is handled by physically enumerating the registry until
   we find a match.
 
-{case_sensitive}
+{case_insensitive}
 
-  The {case_sensitive} behaves inversely to the parameter $case_insensitive in
-  the |define| function.
+  The {case_insensitive} behaves inversely to the parameter $case_insensitive
+  in the |define| function.
 
 ===============================================================================
 [ Return Values ]

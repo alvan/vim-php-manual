@@ -7,7 +7,7 @@ apache_get_modules — Get a list of loaded Apache modules
 ===============================================================================
 [ Description ]
 
-  apache_get_modules ( void ) : array~
+  apache_get_modules ( ) : array~
 
 Get a list of loaded Apache modules.
 
@@ -15,14 +15,6 @@ Get a list of loaded Apache modules.
 [ Return Values ]
 
 An array of loaded Apache modules.
-
-===============================================================================
-[ Changelog ]
-
-Version                               Description
-        Became available when using Apache 1, or the PHP Apache 2 filter API.
-5.0.0   Before this time, it was only available when using the Apache 2 handler
-        API.
 
 ===============================================================================
 [ Examples ]

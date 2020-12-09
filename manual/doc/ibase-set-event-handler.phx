@@ -1,6 +1,6 @@
 *ibase_set_event_handler*
 
-(PHP 5, PHP 7)
+(PHP 5, PHP 7 < 7.4.0)
 
 ibase_set_event_handler — Register a callback function to be called when events
 are posted
@@ -8,10 +8,10 @@ are posted
 ===============================================================================
 [ Description ]
 
-  ibase_set_event_handler ( callable $event_handler , string $event_name1 [,~
-  string $... ] ) : resource~
+  ibase_set_event_handler ( callable $event_handler , string $event_name ,~
+  string ...$even_names ) : resource~
   ibase_set_event_handler ( resource $connection , callable $event_handler ,~
-  string $event_name1 [, string $... ] ) : resource~
+  string $event_name , string ...$event_names ) : resource~
 
 This function registers a PHP user function as event handler for the specified
 events.
@@ -28,11 +28,11 @@ events.
   other return value is ignored. This function accepts up to 15 event
   arguments.
 
-{event_name1}
+{event_name}
 
   An event name.
 
-{...}
+{event_names}
 
   At most 15 events allowed.
 

@@ -7,9 +7,9 @@ token_get_all — Split given source into PHP tokens
 ===============================================================================
 [ Description ]
 
-  token_get_all ( string $source [, int $flags = 0 ] ) : array~
+  token_get_all ( string $code [, int $flags = 0 ] ) : array~
 
-token_get_all() parses the given {source} string into PHP language tokens using
+token_get_all() parses the given {code} string into PHP language tokens using
 the Zend engine's lexical scanner.
 
 For a list of parser tokens, see List of Parser Tokens, or use |token_name| to
@@ -18,7 +18,7 @@ translate a token value into its string representation.
 ===============================================================================
 [ Parameters ]
 
-{source}
+{code}
 
   The PHP source to parse.
 
@@ -35,13 +35,6 @@ An array of token identifiers. Each individual token identifier is either a
 single character (i.e.: ;, ., >, !, etc...), or a three element array
 containing the token index in element 0, the string content of the original
 token in element 1 and the line number in element 2.
-
-===============================================================================
-[ Changelog ]
-
-Version                              Description
-7.0.0   Added the optional {flags} parameter along with the TOKEN_PARSE flag.
-5.2.2   Line numbers are returned in element 2
 
 ===============================================================================
 [ Examples ]

@@ -9,11 +9,11 @@ XMLWriter::outputMemory -- xmlwriter_output_memory — Returns current buffer
 
 Object oriented style
 
-  XMLWriter::outputMemory ([ bool $flush = TRUE ] ) : string~
+  public XMLWriter::outputMemory ([ bool $flush = TRUE ] ) : string~
 
 Procedural style
 
-  xmlwriter_output_memory ( resource $xmlwriter [, bool $flush = TRUE ] ) :~
+  xmlwriter_output_memory ( XMLWriter $writer [, bool $flush = TRUE ] ) :~
   string~
 
 Returns the current buffer.
@@ -21,10 +21,10 @@ Returns the current buffer.
 ===============================================================================
 [ Parameters ]
 
-{ xmlwriter}
+{ writer}
 
-  Only for procedural calls. The XMLWriter resource that is being modified.
-  This resource comes from a call to |xmlwriter_open_uri| or 
+  Only for procedural calls. The XMLWriter instance that is being modified.
+  This object is returned from a call to |xmlwriter_open_uri| or 
   |xmlwriter_open_memory|.
 
 {flush}
@@ -35,6 +35,13 @@ Returns the current buffer.
 [ Return Values ]
 
 Returns the current buffer as a string.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {writer} expects an XMLWriter instance now; previously, a resource was
+        expected.
 
 ===============================================================================
 [ See Also ]

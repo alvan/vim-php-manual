@@ -7,8 +7,8 @@ xml_set_external_entity_ref_handler — Set up external entity reference handler
 ===============================================================================
 [ Description ]
 
-  xml_set_external_entity_ref_handler ( resource $parser , callable $handler )~
-  : bool~
+  xml_set_external_entity_ref_handler ( XMLParser $parser , callable $handler~
+  ) : bool~
 
 Sets the external entity reference handler function for the XML parser
 {parser}.
@@ -31,7 +31,7 @@ Sets the external entity reference handler function for the XML parser
   (which it will be if no value is returned), the XML parser will stop parsing
   and |xml_get_error_code| will return XML_ERROR_EXTERNAL_ENTITY_HANDLING.
 
-  handler ( resource $parser , string $open_entity_names , string $base ,~
+  handler ( XMLParser $parser , string $open_entity_names , string $base ,~
   string $system_id , string $public_id )~
 
   {parser}
@@ -69,7 +69,9 @@ Returns TRUE on success or FALSE on failure.
 [ Changelog ]
 
 Version                               Description
-        The return value of the {handler} is now also heeded if the extension
+8.0.0   {parser} expects an XMLParser instance now; previously, a resource was
+        expected.
+        The return value of the {handler} is no longer ignored if the extension
 7.3.0   has been built against libxml. Formerly, the return value has been
         ignored, and parsing did never stop.
 

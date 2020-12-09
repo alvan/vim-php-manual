@@ -7,7 +7,7 @@ php_sapi_name — Returns the type of interface between web server and PHP
 ===============================================================================
 [ Description ]
 
-  php_sapi_name ( void ) : string~
+  php_sapi_name ( ) : string~
 
 Returns a lowercase string that describes the type of interface (the Server
 API, SAPI) that PHP is using. For example, in CLI PHP this string will be "cli"
@@ -19,10 +19,9 @@ SAPI used. Possible values are listed below.
 
 Returns the interface type, as a lowercase string.
 
-Although not exhaustive, the possible return values include aolserver, apache,
-apache2filter, apache2handler, caudium, cgi (until PHP 5.3), cgi-fcgi, cli,
-cli-server, continuity, embed, fpm-fcgi, isapi, litespeed, milter, nsapi,
-phpdbg, phttpd, pi3web, roxen, thttpd, tux, and webjames.
+Although not exhaustive, the possible return values include apache,
+apache2handler, cgi (until PHP 5.3), cgi-fcgi, cli, cli-server, embed,
+fpm-fcgi, litespeed, nsapi, phpdbg.
 
 ===============================================================================
 [ Examples ]
@@ -50,7 +49,7 @@ This example checks for the substring cgi because it may also be cgi-fcgi.
 Tip *A potential gotcha*
 
 The defined SAPI may not be obvious, because for example instead of apache it
-may be defined as apache2handler or apache2filter.
+may be defined as apache2handler.
 
 ===============================================================================
 [ See Also ]

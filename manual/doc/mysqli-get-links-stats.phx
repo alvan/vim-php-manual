@@ -7,7 +7,7 @@ mysqli_get_links_stats — Return information about open and cached links
 ===============================================================================
 [ Description ]
 
-  mysqli_get_links_stats ( void ) : array~
+  mysqli_get_links_stats ( ) : array~
 
 mysqli_get_links_stats() returns information about open and cached MySQL links.
 
@@ -24,15 +24,15 @@ keyed as follows:
 
 {total}
 
-  An integer indicating the total number of open links in any state.
+  An int indicating the total number of open links in any state.
 
 {active_plinks}
 
-  An integer representing the number of active persistent connections.
+  An int representing the number of active persistent connections.
 
 {cached_plinks}
 
-  An integer representing the number of inactive persistent connections.
+  An int representing the number of inactive persistent connections.
 
 
 vim:ft=help:

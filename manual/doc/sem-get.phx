@@ -7,14 +7,16 @@ sem_get — Get a semaphore id
 ===============================================================================
 [ Description ]
 
-  sem_get ( int $key [, int $max_acquire = 1 [, int $perm = 0666 [, int~
-  $auto_release = 1 ]]] ) : resource~
+  sem_get ( int $key [, int $max_acquire = 1 [, int $permissions = 0666 [,~
+  bool $auto_release = TRUE ]]] ) : SysvSemaphore|false~
 
 sem_get() returns an id that can be used to access the System V semaphore with
 the given {key}.
 
 A second call to sem_get() for the same key will return a different semaphore
 identifier, but both identifiers access the same underlying semaphore.
+
+If {key} is 0, a new private semaphore is created for each call to sem_get().
 
 ===============================================================================
 [ Parameters ]
@@ -26,7 +28,7 @@ identifier, but both identifiers access the same underlying semaphore.
   The number of processes that can acquire the semaphore simultaneously is set
   to {max_acquire}.
 
-{perm}
+{permissions}
 
   The semaphore permissions. Actually this value is set only if the process
   finds it is the only process currently attached to the semaphore.
@@ -40,6 +42,14 @@ identifier, but both identifiers access the same underlying semaphore.
 [ Return Values ]
 
 Returns a positive semaphore identifier on success, or FALSE on error.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   On success, this function returns a SysvSemaphore instance now;
+        previously, a resource was returned.
+8.0.0   The type of {auto_release} has been changed from int to bool.
 
 ===============================================================================
 [ Notes ]

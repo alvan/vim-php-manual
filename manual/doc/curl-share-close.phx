@@ -7,21 +7,28 @@ curl_share_close — Close a cURL share handle
 ===============================================================================
 [ Description ]
 
-  curl_share_close ( resource $sh ) : void~
+  curl_share_close ( CurlShareHandle $share_handle ) : void~
 
 Closes a cURL share handle and frees all resources.
 
 ===============================================================================
 [ Parameters ]
 
-{sh}
+{share_handle}
 
-  A cURL share handle returned by |curl_share_init|
+  A cURL share handle returned by |curl_share_init|.
 
 ===============================================================================
 [ Return Values ]
 
 No value is returned.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {share_handle} expects a CurlShareHandle instance now; previously, a 
+        resource was expected.
 
 ===============================================================================
 [ Examples ]

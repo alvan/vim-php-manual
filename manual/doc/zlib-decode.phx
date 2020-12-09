@@ -7,7 +7,7 @@ zlib_decode — Uncompress any raw/gzip/zlib encoded data
 ===============================================================================
 [ Description ]
 
-  zlib_decode ( string $data [, string $max_decoded_len ] ) : string~
+  zlib_decode ( string $data [, int $max_length = 0 ] ) : string|false~
 
 Uncompress any raw/gzip/zlib encoded data.
 
@@ -20,7 +20,7 @@ This function is currently not documented; only its argument list is available.
 
 {data}
 
-{max_decoded_len}
+{max_length}
 
 ===============================================================================
 [ Return Values ]

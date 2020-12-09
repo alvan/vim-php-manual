@@ -41,7 +41,7 @@ Example #1 imagecreatefromgd2() example
   $im = imagecreatefromgd2('./test.gd2');
 
   // Apply an effect on the image, in this 
-  // case negate the image if PHP 5+
+  // case negate the image
   if(function_exists('imagefilter'))
   {
       imagefilter($im, IMG_FILTER_NEGATE);
@@ -51,6 +51,15 @@ Example #1 imagecreatefromgd2() example
   imagegd2($im, './test_updated.gd2');
   imagedestroy($im);
 <?>
+
+===============================================================================
+[ Notes ]
+
+Warning
+
+The GD and GD2 image formats are proprietary image formats of libgd. They have
+to be regarded obsolete, and should only be used for development and testing
+purposes.
 
 
 vim:ft=help:

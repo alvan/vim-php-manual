@@ -7,7 +7,7 @@ nl_langinfo — Query language and locale information
 ===============================================================================
 [ Description ]
 
-  nl_langinfo ( int $item ) : string~
+  nl_langinfo ( int $item ) : string|false~
 
 nl_langinfo() is used to access individual elements of the locale categories.
 Unlike |localeconv|, which returns all of the elements, nl_langinfo() allows

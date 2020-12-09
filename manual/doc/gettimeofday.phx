@@ -7,7 +7,7 @@ gettimeofday — Get current time
 ===============================================================================
 [ Description ]
 
-  gettimeofday ([ bool $return_float = FALSE ] ) : mixed~
+  gettimeofday ([ bool $returnFloat = FALSE ] ) : mixed~
 
 This is an interface to gettimeofday(2). It returns an associative array
 containing the data returned from the system call.
@@ -15,14 +15,14 @@ containing the data returned from the system call.
 ===============================================================================
 [ Parameters ]
 
-{return_float}
+{returnFloat}
 
   When set to TRUE, a float instead of an array is returned.
 
 ===============================================================================
 [ Return Values ]
 
-By default an array is returned. If {return_float} is set, then a float is
+By default an array is returned. If {returnFloat} is set, then a float is
 returned.
 
 Array keys:
@@ -31,12 +31,6 @@ Array keys:
  * "usec" - microseconds
  * "minuteswest" - minutes west of Greenwich
  * "dsttime" - type of dst correction
-
-===============================================================================
-[ Changelog ]
-
-Version               Description
-5.1.0   The {return_float} parameter was added.
 
 ===============================================================================
 [ Examples ]

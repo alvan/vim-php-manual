@@ -42,14 +42,6 @@ Return part of a string
 Returns the extracted part of $string.
 
 ===============================================================================
-[ Changelog ]
-
-Version                               Description
-        If {length} is given and positive and the argument string is shorter
-5.4     than the specified length, all the rest of the string according to
-        {start} parameter is returned. Previously, FALSE was returned.
-
-===============================================================================
 [ Examples ]
 
 Example #1 grapheme_substr() example
@@ -74,7 +66,7 @@ a%CC%8Abco%CC%88
 
  * |grapheme_extract| - Function to extract a sequence of default grapheme
   clusters from a text buffer, which must be encoded in UTF-8
- * >>  Unicode Text Segmentation: Grapheme Cluster Boundaries
+ * »  Unicode Text Segmentation: Grapheme Cluster Boundaries
 
 
 vim:ft=help:

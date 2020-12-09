@@ -8,34 +8,29 @@ index check, compares indexes by a callback function
 ===============================================================================
 [ Description ]
 
-  array_intersect_uassoc ( array $array1 , array $array2 [, array $... ],~
-  callable $key_compare_func ) : array~
+  array_intersect_uassoc ( array $array , array ...$arrays , callable~
+  $key_compare_func ) : array~
 
-array_intersect_uassoc() returns an array containing all the values of {array1}
+array_intersect_uassoc() returns an array containing all the values of {array}
 that are present in all the arguments. Note that the keys are used in the
 comparison unlike in |array_intersect|.
 
 ===============================================================================
 [ Parameters ]
 
-{array1}
+{array}
 
   Initial array for comparison of the arrays.
 
-{array2}
+{arrays}
 
-  First array to compare keys against.
-
-{...}
-
-  Variable list of array arguments to compare values against.
+  Arrays to compare keys against.
 
 {key_compare_func}
 
   The comparison function must return an integer less than, equal to, or
   greater than zero if the first argument is considered to be respectively less
-  than, equal to, or greater than the second. Note that before PHP 7.0.0 this
-  integer had to be in the range from -2147483648 to 2147483647.
+  than, equal to, or greater than the second.
 
 
   callback ( mixed $a, mixed $b ) : int~
@@ -43,7 +38,7 @@ comparison unlike in |array_intersect|.
 ===============================================================================
 [ Return Values ]
 
-Returns the values of {array1} whose values exist in all of the arguments.
+Returns the values of {array} whose values exist in all of the arguments.
 
 ===============================================================================
 [ Examples ]

@@ -7,30 +7,26 @@ array_intersect — Computes the intersection of arrays
 ===============================================================================
 [ Description ]
 
-  array_intersect ( array $array1 , array $array2 [, array $... ] ) : array~
+  array_intersect ( array $array , array ...$arrays ) : array~
 
-array_intersect() returns an array containing all the values of {array1} that
+array_intersect() returns an array containing all the values of {array} that
 are present in all the arguments. Note that keys are preserved.
 
 ===============================================================================
 [ Parameters ]
 
-{array1}
+{array}
 
   The array with master values to check.
 
-{array2}
+{arrays}
 
-  An array to compare values against.
-
-{...}
-
-  A variable list of arrays to compare.
+  Arrays to compare values against.
 
 ===============================================================================
 [ Return Values ]
 
-Returns an array containing all of the values in {array1} whose values exist in
+Returns an array containing all of the values in {array} whose values exist in
 all of the parameters.
 
 ===============================================================================

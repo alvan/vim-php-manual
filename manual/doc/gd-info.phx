@@ -7,7 +7,7 @@ gd_info — Retrieve information about the currently installed GD library
 ===============================================================================
 [ Description ]
 
-  gd_info ( void ) : array~
+  gd_info ( ) : array~
 
 Gets information about the version and capabilities of the installed GD
 library.
@@ -21,40 +21,27 @@ Returns an associative array.
 Attribute                                Meaning
 GD        string value describing the installed libgd version.
 Version
-FreeType  boolean value. TRUE if FreeType Support is installed.
+FreeType  bool value. TRUE if FreeType Support is installed.
 Support
           string value describing the way in which FreeType was linked.
 FreeType  Expected values are: 'with freetype', 'with TTF library', and 'with
 Linkage   unknown library'. This element will only be defined if FreeType
           Support evaluated to TRUE.
-T1Lib     boolean value. TRUE if T1Lib support is included.
-Support
-GIF Read  boolean value. TRUE if support for reading GIF images is included.
+GIF Read  bool value. TRUE if support for reading GIF images is included.
 Support
 GIF
-Create    boolean value. TRUE if support for creating GIF images is included.
+Create    bool value. TRUE if support for creating GIF images is included.
 Support
-JPEG      boolean value. TRUE if JPEG support is included.
+JPEG      bool value. TRUE if JPEG support is included.
 Support
-PNG       boolean value. TRUE if PNG support is included.
+PNG       bool value. TRUE if PNG support is included.
 Support
-WBMP      boolean value. TRUE if WBMP support is included.
+WBMP      bool value. TRUE if WBMP support is included.
 Support
-XBM       boolean value. TRUE if XBM support is included.
+XBM       bool value. TRUE if XBM support is included.
 Support
-WebP      boolean value. TRUE if WebP support is included.
+WebP      bool value. TRUE if WebP support is included.
 Support
-
-  Note:
-
-  Previous to PHP 5.3.0, the JPEG Support attribute was named JPG Support.
-
-===============================================================================
-[ Changelog ]
-
-Version                  Description
-5.6.12  WebP Support added.
-5.3.0   JPG Support attribute renamed to JPEG Support.
 
 ===============================================================================
 [ Examples ]
@@ -71,8 +58,6 @@ array(10) {
   ["GD Version"]=>
   string(24) "bundled (2.1.0 compatible)"
   ["FreeType Support"]=>
-  bool(false)
-  ["T1Lib Support"]=>
   bool(false)
   ["GIF Read Support"]=>
   bool(true)

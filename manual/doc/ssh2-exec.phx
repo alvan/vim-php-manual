@@ -9,7 +9,7 @@ ssh2_exec — Execute a command on a remote server
 
   ssh2_exec ( resource $session , string $command [, string $pty [, array $env~
   [, int $width = 80 [, int $height = 25 [, int $width_height_type =~
-  SSH2_TERM_UNIT_CHARS ]]]]] ) : resource~
+  SSH2_TERM_UNIT_CHARS ]]]]] ) : resource|false~
 
 Execute a command at the remote end and allocate a channel for it.
 

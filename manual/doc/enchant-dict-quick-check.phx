@@ -8,8 +8,8 @@ suggestions
 ===============================================================================
 [ Description ]
 
-  enchant_dict_quick_check ( resource $dict , string $word [, array~
-  &$suggestions ] ) : bool~
+  enchant_dict_quick_check ( EnchantDictionary $dictionary , string $word [,~
+  array &$suggestions = NULL ] ) : bool~
 
 If the word is correctly spelled return TRUE, otherwise return FALSE, if
 suggestions variable is provided, fill it with spelling alternatives.
@@ -17,9 +17,10 @@ suggestions variable is provided, fill it with spelling alternatives.
 ===============================================================================
 [ Parameters ]
 
-{dict}
+{dictionary}
 
-  Dictionary resource
+  An Enchant dictionary returned by |enchant_broker_request_dict| or 
+  |enchant_broker_request_pwl_dict|.
 
 {word}
 
@@ -34,6 +35,13 @@ suggestions variable is provided, fill it with spelling alternatives.
 [ Return Values ]
 
 Returns TRUE if the word is correctly spelled or FALSE
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {dictionary} expects an EnchantDictionary instance now; previoulsy, a
+        resource was expected.
 
 ===============================================================================
 [ Examples ]

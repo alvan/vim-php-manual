@@ -7,7 +7,7 @@ zip_open — Open a ZIP file archive
 ===============================================================================
 [ Description ]
 
-  zip_open ( string $filename ) : resource~
+  zip_open ( string $filename ) : resource|int|false~
 
 Opens a new zip archive for reading.
 
@@ -22,8 +22,15 @@ Opens a new zip archive for reading.
 [ Return Values ]
 
 Returns a resource handle for later use with |zip_read| and |zip_close| or
-returns the number of error if {filename} does not exist or in case of other
-error.
+returns either FALSE or the number of error if {filename} does not exist or in
+case of other error.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   This function is deprecated in favor of the Object API, see 
+        ZipArchive::open().
 
 ===============================================================================
 [ See Also ]

@@ -9,21 +9,21 @@ XMLWriter::startAttribute -- xmlwriter_start_attribute — Create start attribut
 
 Object oriented style
 
-  XMLWriter::startAttribute ( string $name ) : bool~
+  public XMLWriter::startAttribute ( string $name ) : bool~
 
 Procedural style
 
-  xmlwriter_start_attribute ( resource $xmlwriter , string $name ) : bool~
+  xmlwriter_start_attribute ( XMLWriter $writer , string $name ) : bool~
 
 Starts an attribute.
 
 ===============================================================================
 [ Parameters ]
 
-{ xmlwriter}
+{ writer}
 
-  Only for procedural calls. The XMLWriter resource that is being modified.
-  This resource comes from a call to |xmlwriter_open_uri| or 
+  Only for procedural calls. The XMLWriter instance that is being modified.
+  This object is returned from a call to |xmlwriter_open_uri| or 
   |xmlwriter_open_memory|.
 
 {name}
@@ -34,6 +34,34 @@ Starts an attribute.
 [ Return Values ]
 
 Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {writer} expects an XMLWriter instance now; previously, a resource was
+        expected.
+
+===============================================================================
+[ Examples ]
+
+Example #1 Basic XMLWriter::startAttribute() Usage
+
+<?php >
+$writer = new XMLWriter;
+$writer->openURI('php://output');
+$writer->startDocument('1.0', 'UTF-8');?>
+$writer->startElement('element');
+$writer->startAttribute('attribute');
+$writer->text('value');
+$writer->endAttribute();
+$writer->endElement();
+$writer->endDocument();
+
+The above example will output something similar to:
+
+<?xml version="1.0" encoding="UTF-8"?>
+<element attribute="value"/>
 
 ===============================================================================
 [ See Also ]

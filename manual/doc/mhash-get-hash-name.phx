@@ -7,14 +7,14 @@ mhash_get_hash_name — Gets the name of the specified hash
 ===============================================================================
 [ Description ]
 
-  mhash_get_hash_name ( int $hash ) : string~
+  mhash_get_hash_name ( int $algo ) : string|false~
 
-Gets the name of the specified {hash}.
+Gets the name of the specified {algo}.
 
 ===============================================================================
 [ Parameters ]
 
-{hash}
+{algo}
 
   The hash ID. One of the MHASH_hashname constants.
 

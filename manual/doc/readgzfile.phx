@@ -7,7 +7,7 @@ readgzfile — Output a gz-file
 ===============================================================================
 [ Description ]
 
-  readgzfile ( string $filename [, int $use_include_path = 0 ] ) : int~
+  readgzfile ( string $filename [, int $use_include_path = 0 ] ) : int|false~
 
 Reads a file, decompresses it and writes it to standard output.
 
@@ -30,9 +30,13 @@ case readgzfile() will directly read from the file without decompression.
 ===============================================================================
 [ Return Values ]
 
-Returns the number of (uncompressed) bytes read from the file. If an error
-occurs, FALSE is returned and unless the function was called as @readgzfile, an
-error message is printed.
+Returns the number of (uncompressed) bytes read from the file on success, or
+FALSE on failure
+
+===============================================================================
+[ Errors/Exceptions ]
+
+Upon failure, an E_WARNING is emitted.
 
 ===============================================================================
 [ See Also ]

@@ -10,11 +10,11 @@ memory for string output
 
 Object oriented style
 
-  XMLWriter::openMemory ( void ) : bool~
+  public XMLWriter::openMemory ( ) : bool~
 
 Procedural style
 
-  xmlwriter_open_memory ( void ) : resource~
+  xmlwriter_open_memory ( ) : XMLWriter|false~
 
 Creates a new XMLWriter using memory for string output.
 
@@ -26,8 +26,15 @@ Creates a new XMLWriter using memory for string output.
 
 Object oriented style: Returns TRUE on success or FALSE on failure.
 
-Procedural style: Returns a new xmlwriter resource for later use with the
-xmlwriter functions on success, FALSE on error.
+Procedural style: Returns a new XMLWriter for later use with the xmlwriter
+functions on success, or FALSE on failure.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   This function returns now an XMLWriter instance on success. Previouly,
+        a resource has been returned in this case.
 
 ===============================================================================
 [ See Also ]

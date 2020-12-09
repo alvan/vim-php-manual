@@ -7,7 +7,8 @@ inflate_init — Initialize an incremental inflate context
 ===============================================================================
 [ Description ]
 
-  inflate_init ( int $encoding [, array $options = array() ] ) : resource~
+  inflate_init ( int $encoding [, array $options = [] ] ) :~
+  InflateContext|false~
 
 Initialize an incremental inflate context with the specified {encoding}.
 
@@ -55,6 +56,13 @@ failure.
 
 If an invalid encoding or option is passed to {options}, or the context
 couldn't be created, an error of level E_WARNING is generated.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   On success, this function returns an InflateContext instance now;
+        previously, a resource was returned.
 
 ===============================================================================
 [ See Also ]

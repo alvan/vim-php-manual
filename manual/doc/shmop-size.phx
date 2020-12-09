@@ -7,14 +7,14 @@ shmop_size — Get size of shared memory block
 ===============================================================================
 [ Description ]
 
-  shmop_size ( resource $shmid ) : int~
+  shmop_size ( Shmop $shmop ) : int~
 
 shmop_size() is used to get the size, in bytes of the shared memory block.
 
 ===============================================================================
 [ Parameters ]
 
-{shmid}
+{shmop}
 
   The shared memory block identifier created by |shmop_open|
 
@@ -27,8 +27,9 @@ occupies.
 ===============================================================================
 [ Changelog ]
 
-Version                        Description
-7.0.0   The type of {shmid} has been changed from int to resource.
+Version                               Description
+8.0.0   {shmop} expects a Shmop instance now; previously, a resource was
+        expected.
 
 ===============================================================================
 [ Examples ]

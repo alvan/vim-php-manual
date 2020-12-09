@@ -7,8 +7,8 @@ hash_hmac — Generate a keyed hash value using the HMAC method
 ===============================================================================
 [ Description ]
 
-  hash_hmac ( string $algo , string $data , string $key [, bool $raw_output =~
-  FALSE ] ) : string~
+  hash_hmac ( string $algo , string $data , string $key [, bool $binary =~
+  FALSE ] ) : string|false~
 
 ===============================================================================
 [ Parameters ]
@@ -26,7 +26,7 @@ hash_hmac — Generate a keyed hash value using the HMAC method
 
   Shared secret key used for generating the HMAC variant of the message digest.
 
-{raw_output}
+{binary}
 
   When set to TRUE, outputs raw binary data. FALSE outputs lowercase hexits.
 
@@ -34,8 +34,8 @@ hash_hmac — Generate a keyed hash value using the HMAC method
 [ Return Values ]
 
 Returns a string containing the calculated message digest as lowercase hexits
-unless {raw_output} is set to true in which case the raw binary representation
-of the message digest is returned. Returns FALSE when {algo} is unknown or is a
+unless {binary} is set to true in which case the raw binary representation of
+the message digest is returned. Returns FALSE when {algo} is unknown or is a
 non-cryptographic hash function.
 
 ===============================================================================

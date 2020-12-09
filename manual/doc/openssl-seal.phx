@@ -41,6 +41,10 @@ recipient's public key.
 {method}
 
   The cipher method.
+  Caution
+
+  The default value ('RC4') is considered insecure. It is strongly recommended
+  to explicitly specify a secure cipher method.
 
 {iv}
 
@@ -52,13 +56,6 @@ recipient's public key.
 Returns the length of the sealed data on success, or FALSE on error. If
 successful the sealed data is returned in {sealed_data}, and the envelope keys
 in {env_keys}.
-
-===============================================================================
-[ Changelog ]
-
-Version         Description
-7.0.0   The {iv} has been added.
-5.3.0   The {method} has been added.
 
 ===============================================================================
 [ Examples ]

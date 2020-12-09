@@ -35,7 +35,7 @@ acquired; this may be controlled with the LOCK_NB option documented below.
    + LOCK_UN to release a lock (shared or exclusive).
 
   It is also possible to add LOCK_NB as a bitmask to one of the above
-  operations if you don't want flock() to block while locking.
+  operations, if flock() should not block during the locking attempt.
 
 {wouldblock}
 
@@ -46,15 +46,6 @@ acquired; this may be controlled with the LOCK_NB option documented below.
 [ Return Values ]
 
 Returns TRUE on success or FALSE on failure.
-
-===============================================================================
-[ Changelog ]
-
-Version                               Description
-5.5.22,  Added support for the {wouldblock} parameter on Windows.
-5.6.6
-5.3.2    The automatic unlocking when the file's resource handle is closed was
-         removed. Unlocking now always has to be done manually.
 
 ===============================================================================
 [ Examples ]
@@ -126,9 +117,9 @@ the lock.
 Warning
 
 On some operating systems flock() is implemented at the process level. When
-using a multithreaded server API like ISAPI you may not be able to rely on 
-flock() to protect files against other PHP scripts running in parallel threads
-of the same server instance!
+using a multithreaded server API you may not be able to rely on flock() to
+protect files against other PHP scripts running in parallel threads of the same
+server instance!
 
 flock() is not supported on antiquated filesystems like FAT and its derivates
 and will therefore always return FALSE under these environments.

@@ -7,7 +7,7 @@ xml_parse — Start parsing an XML document
 ===============================================================================
 [ Description ]
 
-  xml_parse ( resource $parser , string $data [, bool $is_final = FALSE ] ) :~
+  xml_parse ( XMLParser $parser , string $data [, bool $is_final = FALSE ] ) :~
   int~
 
 xml_parse() parses an XML document. The handlers for the configured events are
@@ -43,6 +43,13 @@ For unsuccessful parses, error information can be retrieved with
 
   Some errors (such as entity errors) are reported at the end of the data, thus
   only if {is_final} is set and TRUE.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {parser} expects an XMLParser instance now; previously, a resource was
+        expected.
 
 ===============================================================================
 [ Examples ]

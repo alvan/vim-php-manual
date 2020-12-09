@@ -10,7 +10,7 @@ gmmktime — Get Unix timestamp for a GMT date
   gmmktime ([ int $hour = gmdate("H") [, int $minute =~
   gmdate("i") [, int $second = gmdate("s") [, int $month =~
   gmdate("n") [, int $day = gmdate("j") [, int $year =~
-  gmdate("Y") [, int $is_dst = -1 ]]]]]]] ) : int~
+  gmdate("Y") [, int $isDST = -1 ]]]]]]] ) : int~
 
 Identical to |mktime| except the passed parameters represents a GMT date. 
 gmmktime() internally uses |mktime| so only times valid in derived local time
@@ -62,9 +62,9 @@ omitted arguments being set to the current corresponding GMT value.
 
   The year
 
-{is_dst}
+{isDST}
 
-  Parameters always represent a GMT date so {is_dst} doesn't influence the
+  Parameters always represent a GMT date so {isDST} doesn't influence the
   result.
 
     Note:
@@ -74,15 +74,7 @@ omitted arguments being set to the current corresponding GMT value.
 ===============================================================================
 [ Return Values ]
 
-Returns a integer Unix timestamp.
-
-===============================================================================
-[ Changelog ]
-
-Version                               Description
-7.0.0   {is_dst} parameter has been removed.
-5.1.0   As of PHP 5.1.0, the {is_dst} parameter became deprecated. As a result,
-        the new timezone handling features should be used instead.
+Returns a int Unix timestamp.
 
 ===============================================================================
 [ Examples ]

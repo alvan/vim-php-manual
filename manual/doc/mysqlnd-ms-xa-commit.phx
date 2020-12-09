@@ -7,7 +7,7 @@ mysqlnd_ms_xa_commit — Commits a distributed/XA transaction among MySQL server
 ===============================================================================
 [ Description ]
 
-  mysqlnd_ms_xa_commit ( mixed $connection , string $gtrid ) : int~
+  mysqlnd_ms_xa_commit ( mixed $connection , string $gtrid ) : bool~
 
 Commits a global transaction among MySQL servers started by 
 |mysqlnd_ms_xa_begin|.

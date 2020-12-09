@@ -8,14 +8,16 @@ pre-conditions are not met
 ===============================================================================
 [ Description ]
 
-  enchant_dict_suggest ( resource $dict , string $word ) : array~
+  enchant_dict_suggest ( EnchantDictionary $dictionary , string $word ) :~
+  array~
 
 ===============================================================================
 [ Parameters ]
 
-{dict}
+{dictionary}
 
-  Dictionary resource
+  An Enchant dictionary returned by |enchant_broker_request_dict| or 
+  |enchant_broker_request_pwl_dict|.
 
 {word}
 
@@ -25,6 +27,13 @@ pre-conditions are not met
 [ Return Values ]
 
 Will returns an array of suggestions if the word is bad spelled.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {dictionary} expects an EnchantDictionary instance now; previoulsy, a
+        resource was expected.
 
 ===============================================================================
 [ Examples ]

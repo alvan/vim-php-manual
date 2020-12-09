@@ -7,15 +7,15 @@ parse_str — Parses the string into variables
 ===============================================================================
 [ Description ]
 
-  parse_str ( string $encoded_string [, array &$result ] ) : void~
+  parse_str ( string $string , array &$result ) : void~
 
-Parses {encoded_string} as if it were the query string passed via a URL and
-sets variables in the current scope (or in the array if {result} is provided).
+Parses {string} as if it were the query string passed via a URL and sets
+variables in the current scope (or in the array if {result} is provided).
 
 ===============================================================================
 [ Parameters ]
 
-{encoded_string}
+{string}
 
   The input string.
 
@@ -44,6 +44,7 @@ No value is returned.
 [ Changelog ]
 
 Version                               Description
+8.0.0   {result} is no longer optional.
 7.2.0   Usage of parse_str() without a second parameter now emits an
         E_DEPRECATED notice.
 

@@ -2,12 +2,12 @@
 
 (PHP 5 >= 5.3.0, PHP 7, PECL enchant >= 0.1.0 )
 
-enchant_broker_free — Free the broker resource and its dictionnaries
+enchant_broker_free — Free the broker resource and its dictionaries
 
 ===============================================================================
 [ Description ]
 
-  enchant_broker_free ( resource $broker ) : bool~
+  enchant_broker_free ( EnchantBroker $broker ) : bool~
 
 Free a broker resource with all its dictionaries.
 
@@ -16,12 +16,19 @@ Free a broker resource with all its dictionaries.
 
 {broker}
 
-  Broker resource
+  An Enchant broker returned by |enchant_broker_init|.
 
 ===============================================================================
 [ Return Values ]
 
 Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {broker} expects an EnchantBroker instance now; previoulsy, a resource
+        was expected.
 
 ===============================================================================
 [ See Also ]

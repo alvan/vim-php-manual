@@ -7,7 +7,7 @@ curl_reset — Reset all options of a libcurl session handle
 ===============================================================================
 [ Description ]
 
-  curl_reset ( resource $ch ) : void~
+  curl_reset ( CurlHandle $handle ) : void~
 
 This function re-initializes all options set on the given cURL handle to the
 default values.
@@ -15,7 +15,7 @@ default values.
 ===============================================================================
 [ Parameters ]
 
-{ch}
+{handle}
 
   A cURL handle returned by |curl_init|.
 
@@ -23,6 +23,13 @@ default values.
 [ Return Values ]
 
 No value is returned.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {handle} expects a CurlHandle instance now; previously, a resource was
+        expected.
 
 ===============================================================================
 [ Examples ]

@@ -7,14 +7,14 @@ shmop_write — Write data into shared memory block
 ===============================================================================
 [ Description ]
 
-  shmop_write ( resource $shmid , string $data , int $offset ) : int~
+  shmop_write ( Shmop $shmop , string $data , int $offset ) : int~
 
 shmop_write() will write a string into shared memory block.
 
 ===============================================================================
 [ Parameters ]
 
-{shmid}
+{shmop}
 
   The shared memory block identifier created by |shmop_open|
 
@@ -29,13 +29,15 @@ shmop_write() will write a string into shared memory block.
 ===============================================================================
 [ Return Values ]
 
-The size of the written {data}, or FALSE on failure.
+The size of the written {data}.
 
 ===============================================================================
 [ Changelog ]
 
-Version                        Description
-7.0.0   The type of {shmid} has been changed from int to resource.
+Version                               Description
+8.0.0   Prior to PHP 8.0.0, FALSE was returned on failure.
+8.0.0   {shmop} expects a Shmop instance now; previously, a resource was
+        expected.
 
 ===============================================================================
 [ Examples ]

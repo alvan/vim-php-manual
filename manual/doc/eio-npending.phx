@@ -7,7 +7,7 @@ eio_npending — Returns number of finished, but unhandled requests
 ===============================================================================
 [ Description ]
 
-  eio_npending ( void ) : int~
+  eio_npending ( ) : int~
 
 eio_npending() returns number of finished, but unhandled requests
 
@@ -24,9 +24,9 @@ eio_npending() returns number of finished, but unhandled requests.
 ===============================================================================
 [ See Also ]
 
- * eio_nreqs
- * eio_nready
- * eio_nthreads
+ * |eio_nreqs| - Returns number of requests to be processed
+ * |eio_nready| - Returns number of not-yet handled requests
+ * |eio_nthreads| - Returns number of threads currently in use
 
 
 vim:ft=help:

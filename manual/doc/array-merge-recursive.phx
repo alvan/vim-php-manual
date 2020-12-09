@@ -7,7 +7,7 @@ array_merge_recursive — Merge one or more arrays recursively
 ===============================================================================
 [ Description ]
 
-  array_merge_recursive ( array $array1 [, array $... ] ) : array~
+  array_merge_recursive ( array ...$arrays ) : array~
 
 array_merge_recursive() merges the elements of one or more arrays together so
 that the values of one are appended to the end of the previous one. It returns
@@ -23,18 +23,22 @@ appended.
 ===============================================================================
 [ Parameters ]
 
-{array1}
-
-  Initial array to merge.
-
-{...}
+{arrays}
 
   Variable list of arrays to recursively merge.
 
 ===============================================================================
 [ Return Values ]
 
-An array of values resulted from merging the arguments together.
+An array of values resulted from merging the arguments together. If called
+without any arguments, returns an empty array.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+7.4.0   This function can now be called without any parameter. Formerly, at
+        least one parameter has been required.
 
 ===============================================================================
 [ Examples ]

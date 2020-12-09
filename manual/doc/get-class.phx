@@ -44,10 +44,9 @@ error is raised.
 [ Changelog ]
 
 Version                               Description
-7.2.0   NULL was removed as the default value for {object}, and is no longer a
-        valid input.
-5.3.0   NULL became the default value for {object}, so passing NULL to {object}
-        now has the same result as not passing any value.
+        Prior to this version the default value for {object} was NULL and it
+7.2.0   had the same effect as not passing any value. Now NULL has been removed
+        as the default value for {object}, and is no longer a valid input.
 
 ===============================================================================
 [ Examples ]

@@ -8,8 +8,8 @@ contents of a given file
 ===============================================================================
 [ Description ]
 
-  hash_hmac_file ( string $algo , string $filename , string $key [, bool~
-  $raw_output = FALSE ] ) : string~
+  hash_hmac_file ( string $algo , string $data , string $key [, bool $binary =~
+  FALSE ] ) : string|false~
 
 ===============================================================================
 [ Parameters ]
@@ -19,7 +19,7 @@ contents of a given file
   Name of selected hashing algorithm (i.e. "md5", "sha256", "haval160,4",
   etc..) See |hash_hmac_algos| for a list of supported algorithms.
 
-{filename}
+{data}
 
   URL describing location of file to be hashed; Supports fopen wrappers.
 
@@ -27,7 +27,7 @@ contents of a given file
 
   Shared secret key used for generating the HMAC variant of the message digest.
 
-{raw_output}
+{binary}
 
   When set to TRUE, outputs raw binary data. FALSE outputs lowercase hexits.
 
@@ -35,9 +35,9 @@ contents of a given file
 [ Return Values ]
 
 Returns a string containing the calculated message digest as lowercase hexits
-unless {raw_output} is set to true in which case the raw binary representation
-of the message digest is returned. Returns FALSE when {algo} is unknown or is a
-non-cryptographic hash function, or if the file {filename} cannot be read.
+unless {binary} is set to true in which case the raw binary representation of
+the message digest is returned. Returns FALSE when {algo} is unknown or is a
+non-cryptographic hash function, or if the file {data} cannot be read.
 
 ===============================================================================
 [ Changelog ]

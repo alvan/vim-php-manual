@@ -28,6 +28,10 @@ renaming a directory and {newname} exists, this function will emit a warning.
 
   The new name.
 
+
+    Note: On Windows, if {newname} already exists, it must be writable.
+    Otherwise rename() fails and issues E_WARNING.
+
 {context}
 
 
@@ -38,12 +42,6 @@ renaming a directory and {newname} exists, this function will emit a warning.
 [ Return Values ]
 
 Returns TRUE on success or FALSE on failure.
-
-===============================================================================
-[ Changelog ]
-
-Version                       Description
-5.3.1   rename() can now rename files across drives in Windows.
 
 ===============================================================================
 [ Examples ]

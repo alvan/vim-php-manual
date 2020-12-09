@@ -9,7 +9,7 @@ ftp_nb_get — Retrieves a file from the FTP server and writes it to a local fil
 [ Description ]
 
   ftp_nb_get ( resource $ftp_stream , string $local_file , string $remote_file~
-  [, int $mode = FTP_IMAGE [, int $resumepos = 0 ]] ) : int~
+  [, int $mode = FTP_BINARY [, int $resumepos = 0 ]] ) : int~
 
 ftp_nb_get() retrieves a remote file from the FTP server, and saves it into a
 local file.
@@ -59,7 +59,7 @@ Example #1 ftp_nb_get() example
 
 <?php >
 
-  // Initate the download
+  // Initiate the download
   $ret = ftp_nb_get($my_connection, "test", "README", FTP_BINARY);
   while ($ret == FTP_MOREDATA) {
      
@@ -79,7 +79,7 @@ Example #2 Resuming a download with ftp_nb_get()
 
 <?php >
 
-  // Initate 
+  // Initiate 
   $ret = ftp_nb_get($my_connection, "test", "README", FTP_BINARY, 
                         filesize("test"));
   // OR: $ret = ftp_nb_get($my_connection, "test", "README", 

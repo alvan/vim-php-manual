@@ -7,9 +7,9 @@ ord — Convert the first byte of a string to a value between 0 and 255
 ===============================================================================
 [ Description ]
 
-  ord ( string $string ) : int~
+  ord ( string $character ) : int~
 
-Interprets the binary value of the first byte of {string} as an unsigned
+Interprets the binary value of the first byte of {character} as an unsigned
 integer between 0 and 255.
 
 If the string is in a single-byte encoding, such as ASCII, ISO-8859, or Windows
@@ -23,7 +23,7 @@ This function complements |chr|.
 ===============================================================================
 [ Parameters ]
 
-{string}
+{character}
 
   A character.
 
@@ -67,7 +67,7 @@ Byte 3 of $str has value 152
 [ See Also ]
 
  * |chr| - Generate a single-byte string from a number
- * An >> ASCII-table
+ * An » ASCII-table
  * |mb_ord| - Get code point of character
 
 

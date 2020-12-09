@@ -1,0 +1,56 @@
+*get_resource_id*
+
+(PHP 8)
+
+get_resource_id — Returns an integer identifier for the given resource
+
+===============================================================================
+[ Description ]
+
+  get_resource_id ( resource $res ) : int~
+
+This function provides a type-safe way for generating the integer identifier
+for a resource.
+
+===============================================================================
+[ Parameters ]
+
+{res}
+
+  The evaluated resource handle.
+
+===============================================================================
+[ Return Values ]
+
+The int identifier for the given {res}.
+
+This function is essentially an int cast of {res} to make it easier to retrieve
+the resource ID.
+
+===============================================================================
+[ Examples ]
+
+Example #1 get_resource_id() example
+
+<?php >
+  $handle = fopen('./storage/logs/lumen.log', 'rt');
+
+  echo (int) $handle . "\n\n";
+
+  echo get_resource_id($handle);
+
+<?>
+
+The above example will output:
+
+698
+
+698
+
+===============================================================================
+[ See Also ]
+
+ * |get_resource_type| - Returns the resource type
+
+
+vim:ft=help:

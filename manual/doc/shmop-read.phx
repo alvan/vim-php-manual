@@ -7,22 +7,22 @@ shmop_read — Read data from shared memory block
 ===============================================================================
 [ Description ]
 
-  shmop_read ( resource $shmid , int $start , int $count ) : string~
+  shmop_read ( Shmop $shmop , int $offset , int $size ) : string~
 
 shmop_read() will read a string from shared memory block.
 
 ===============================================================================
 [ Parameters ]
 
-{shmid}
+{shmop}
 
   The shared memory block identifier created by |shmop_open|
 
-{start}
+{offset}
 
   Offset from which to start reading
 
-{count}
+{size}
 
   The number of bytes to read. 0 reads shmop_size($shmid) - $start bytes.
 
@@ -34,8 +34,9 @@ Returns the data or FALSE on failure.
 ===============================================================================
 [ Changelog ]
 
-Version                        Description
-7.0.0   The type of {shmid} has been changed from int to resource.
+Version                               Description
+8.0.0   {shmop} expects a Shmop instance now; previously, a resource was
+        expected.
 
 ===============================================================================
 [ Examples ]

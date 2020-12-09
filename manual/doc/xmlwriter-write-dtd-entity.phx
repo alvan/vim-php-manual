@@ -1,6 +1,6 @@
 *XMLWriter::writeDtdEntity* *xmlwriter_write_dtd_entity*
 
-(PHP 5 >= 5.1.2, PHP 7, PECL xmlwriter >= 0.1.0)
+(PHP 5 >= 5.2.1, PHP 7, PECL xmlwriter >= 0.1.0)
 
 XMLWriter::writeDtdEntity -- xmlwriter_write_dtd_entity — Write full DTD Entity
 tag
@@ -10,13 +10,15 @@ tag
 
 Object oriented style
 
-  XMLWriter::writeDtdEntity ( string $name , string $content , bool $pe ,~
-  string $pubid , string $sysid , string $ndataid ) : bool~
+  public XMLWriter::writeDtdEntity ( string $name , string $content [, bool~
+  $isParam = FALSE [, string|null $publicId = NULL [, string|null $systemId =~
+  NULL [, string|null $notationData = NULL ]]]] ) : bool~
 
 Procedural style
 
-  xmlwriter_write_dtd_entity ( resource $xmlwriter , string $name , string~
-  $content , bool $pe , string $pubid , string $sysid , string $ndataid ) :~
+  xmlwriter_write_dtd_entity ( XMLWriter $writer , string $name , string~
+  $content [, bool $isParam = FALSE [, string|null $publicId = NULL [,~
+  string|null $systemId = NULL [, string|null $notationData = NULL ]]]] ) :~
   bool~
 
 Writes a full DTD entity.
@@ -24,10 +26,10 @@ Writes a full DTD entity.
 ===============================================================================
 [ Parameters ]
 
-{ xmlwriter}
+{ writer}
 
-  Only for procedural calls. The XMLWriter resource that is being modified.
-  This resource comes from a call to |xmlwriter_open_uri| or 
+  Only for procedural calls. The XMLWriter instance that is being modified.
+  This object is returned from a call to |xmlwriter_open_uri| or 
   |xmlwriter_open_memory|.
 
 {name}
@@ -42,6 +44,14 @@ Writes a full DTD entity.
 [ Return Values ]
 
 Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {writer} expects an XMLWriter instance now; previously, a resource was
+        expected.
+8.0.0   {publicId}, {systemId} and {notationData} are nullable now.
 
 ===============================================================================
 [ See Also ]

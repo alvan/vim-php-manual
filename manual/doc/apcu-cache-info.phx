@@ -7,7 +7,7 @@ apcu_cache_info — Retrieves cached information from APCu's data store
 ===============================================================================
 [ Description ]
 
-  apcu_cache_info ([ bool $limited = FALSE ] ) : array~
+  apcu_cache_info ([ bool $limited = FALSE ] ) : array|false~
 
 Retrieves cached information and meta-data from APC's data store.
 
@@ -31,9 +31,11 @@ Array of cached data (and meta-data) or FALSE on failure
 ===============================================================================
 [ Changelog ]
 
-Version                             Description
-3.0.11  The {limited} parameter was introduced.
-3.0.16  The "filehits" option for the {cache_type} parameter was introduced.
+    Version                               Description
+PECL apcu       The {limited} parameter was introduced.
+3.0.11
+PECL apcu       The "filehits" option for the {cache_type} parameter was
+3.0.16          introduced.
 
 ===============================================================================
 [ Examples ]

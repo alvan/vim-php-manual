@@ -47,7 +47,7 @@ text.
   In many cases where a font resides in the same directory as the script using
   it the following trick will alleviate any include problems.
   <?php >
-  // Set the enviroment variable for GD
+  // Set the environment variable for GD
   putenv('GDFONTPATH=' . realpath('.'));
 
   // Name the font to be used (note the lack of the .ttf extension)
@@ -131,7 +131,7 @@ Example #1 imagettfbbox() example
 [ Notes ]
 
   Note: This function is only available if PHP is compiled with freetype
-  support (--with-freetype-dir=DIR )
+  support (--with-freetype-dir=DIR)
 
 ===============================================================================
 [ See Also ]

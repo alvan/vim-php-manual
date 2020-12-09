@@ -7,7 +7,7 @@ hash_final — Finalize an incremental hash and return resulting digest
 ===============================================================================
 [ Description ]
 
-  hash_final ( HashContext $context [, bool $raw_output = FALSE ] ) : string~
+  hash_final ( HashContext $context [, bool $binary = FALSE ] ) : string~
 
 ===============================================================================
 [ Parameters ]
@@ -16,7 +16,7 @@ hash_final — Finalize an incremental hash and return resulting digest
 
   Hashing context returned by |hash_init|.
 
-{raw_output}
+{binary}
 
   When set to TRUE, outputs raw binary data. FALSE outputs lowercase hexits.
 
@@ -24,8 +24,8 @@ hash_final — Finalize an incremental hash and return resulting digest
 [ Return Values ]
 
 Returns a string containing the calculated message digest as lowercase hexits
-unless {raw_output} is set to true in which case the raw binary representation
-of the message digest is returned.
+unless {binary} is set to true in which case the raw binary representation of
+the message digest is returned.
 
 ===============================================================================
 [ Changelog ]

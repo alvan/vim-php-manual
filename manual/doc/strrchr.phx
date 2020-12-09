@@ -7,7 +7,7 @@ strrchr — Find the last occurrence of a character in a string
 ===============================================================================
 [ Description ]
 
-  strrchr ( string $haystack , mixed $needle ) : string~
+  strrchr ( string $haystack , string $needle ) : string|false~
 
 This function returns the portion of {haystack} which starts at the last
 occurrence of {needle} and goes until the end of {haystack}.
@@ -24,11 +24,11 @@ occurrence of {needle} and goes until the end of {haystack}.
   If {needle} contains more than one character, only the first is used. This
   behavior is different from that of |strstr|.
 
-  If {needle} is not a string, it is converted to an integer and applied as the
-  ordinal value of a character. This behavior is deprecated as of PHP 7.3.0,
-  and relying on it is highly discouraged. Depending on the intended behavior,
-  the {needle} should either be explicitly cast to string, or an explicit call
-  to |chr| should be performed.
+  Prior to PHP 8.0.0, if {needle} is not a string, it is converted to an
+  integer and applied as the ordinal value of a character. This behavior is
+  deprecated as of PHP 7.3.0, and relying on it is highly discouraged.
+  Depending on the intended behavior, the {needle} should either be explicitly
+  cast to string, or an explicit call to |chr| should be performed.
 
 ===============================================================================
 [ Return Values ]
@@ -38,8 +38,9 @@ This function returns the portion of string, or FALSE if {needle} is not found.
 ===============================================================================
 [ Changelog ]
 
-Version            Description
-4.3.0   This function is now binary safe.
+Version                    Description
+8.0.0   Passing an int as {needle} is no longer supported.
+7.3.0   Passing an int as {needle} has been deprecated.
 
 ===============================================================================
 [ Examples ]

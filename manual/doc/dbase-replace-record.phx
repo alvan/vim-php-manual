@@ -7,19 +7,19 @@ dbase_replace_record — Replaces a record in a database
 ===============================================================================
 [ Description ]
 
-  dbase_replace_record ( resource $dbase_identifier , array $record , int~
-  $record_number ) : bool~
+  dbase_replace_record ( resource $database , array $data , int $number ) :~
+  bool~
 
 Replaces the given record in the database with the given data.
 
 ===============================================================================
 [ Parameters ]
 
-{dbase_identifier}
+{database}
 
-  The database link identifier, returned by |dbase_open| or |dbase_create|.
+  The database resource, returned by |dbase_open| or |dbase_create|.
 
-{record}
+{data}
 
   An indexed array of data. The number of items must be equal to the number of
   fields in the database, otherwise dbase_replace_record() will fail.
@@ -29,7 +29,7 @@ Replaces the given record in the database with the given data.
     If you're using |dbase_get_record| return value for this parameter,
     remember to reset the key named deleted.
 
-{record_number}
+{number}
 
   An integer which spans from 1 to the number of records in the database (as
   returned by |dbase_numrecords|).
@@ -42,8 +42,8 @@ Returns TRUE on success or FALSE on failure.
 ===============================================================================
 [ Changelog ]
 
-  Version                         Description
-dbase 7.0.0 {dbase_identifier} is now a resource instead of an int.
+  Version                     Description
+dbase 7.0.0 {database} is now a resource instead of an int.
 
 ===============================================================================
 [ Examples ]
@@ -80,10 +80,10 @@ Example #1 Updating a record in the database
 
   Note:
 
-  Boolean fields result in an integer element value (0 or 1) when retrieved via
-  |dbase_get_record| or |dbase_get_record_with_names|. If they are written
-  back, this results in the value becoming 0, so care has to be taken to
-  properly adjust the values.
+  Boolean fields result in an int element value (0 or 1) when retrieved via 
+  |dbase_get_record| or |dbase_get_record_with_names|. If they are written back,
+  this results in the value becoming 0, so care has to be taken to properly
+  adjust the values.
 
 ===============================================================================
 [ See Also ]

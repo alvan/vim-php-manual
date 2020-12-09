@@ -7,7 +7,7 @@ abs — Absolute value
 ===============================================================================
 [ Description ]
 
-  abs ( mixed $number ) : number~
+  abs ( mixed $number ) : int|float~
 
 Returns the absolute value of {number}.
 
@@ -22,8 +22,8 @@ Returns the absolute value of {number}.
 [ Return Values ]
 
 The absolute value of {number}. If the argument {number} is of type float, the
-return type is also float, otherwise it is integer (as float usually has a
-bigger value range than integer).
+return type is also float, otherwise it is int (as float usually has a bigger
+value range than int).
 
 ===============================================================================
 [ Examples ]

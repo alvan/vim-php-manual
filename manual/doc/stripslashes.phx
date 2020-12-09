@@ -7,14 +7,9 @@ stripslashes — Un-quotes a quoted string
 ===============================================================================
 [ Description ]
 
-  stripslashes ( string $str ) : string~
+  stripslashes ( string $string ) : string~
 
 Un-quotes a quoted string.
-
-  Note:
-
-  If magic_quotes_sybase is on, no backslashes are stripped off but two
-  apostrophes are replaced by one instead.
 
 An example use of stripslashes() is when the PHP directive magic_quotes_gpc is
 on (it was on by default before PHP 5.4), and you aren't inserting this data
@@ -24,7 +19,7 @@ you're simply outputting data straight from an HTML form.
 ===============================================================================
 [ Parameters ]
 
-{str}
+{string}
 
   The input string.
 

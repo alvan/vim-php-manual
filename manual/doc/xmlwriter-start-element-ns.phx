@@ -10,41 +10,49 @@ namespaced element tag
 
 Object oriented style
 
-  XMLWriter::startElementNs ( string $prefix , string $name , string $uri ) :~
-  bool~
+  public XMLWriter::startElementNs ( string|null $prefix , string $name ,~
+  string|null $namespace ) : bool~
 
 Procedural style
 
-  xmlwriter_start_element_ns ( resource $xmlwriter , string $prefix , string~
-  $name , string $uri ) : bool~
+  xmlwriter_start_element_ns ( XMLWriter $writer , string|null $prefix ,~
+  string $name , string|null $namespace ) : bool~
 
 Starts a namespaced element.
 
 ===============================================================================
 [ Parameters ]
 
-{ xmlwriter}
+{ writer}
 
-  Only for procedural calls. The XMLWriter resource that is being modified.
-  This resource comes from a call to |xmlwriter_open_uri| or 
+  Only for procedural calls. The XMLWriter instance that is being modified.
+  This object is returned from a call to |xmlwriter_open_uri| or 
   |xmlwriter_open_memory|.
 
 {prefix}
 
-  The namespace prefix.
+  The namespace prefix. If {prefix} is NULL, the namespace will be omitted.
 
 {name}
 
   The element name.
 
-{uri}
+{namespace}
 
-  The namespace URI.
+  The namespace URI. If {namespace} is NULL, the namespace declaration will be
+  omitted.
 
 ===============================================================================
 [ Return Values ]
 
 Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {writer} expects an XMLWriter instance now; previously, a resource was
+        expected.
 
 ===============================================================================
 [ See Also ]

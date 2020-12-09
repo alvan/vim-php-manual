@@ -7,8 +7,8 @@ filter_input_array — Gets external variables and optionally filters them
 ===============================================================================
 [ Description ]
 
-  filter_input_array ( int $type [, mixed $definition [, bool $add_empty =~
-  TRUE ]] ) : mixed~
+  filter_input_array ( int $type [, array|int $options = FILTER_DEFAULT [,~
+  bool $add_empty = TRUE ]] ) : array|false|null~
 
 This function is useful for retrieving many values without repetitively calling
 |filter_input|.
@@ -20,7 +20,7 @@ This function is useful for retrieving many values without repetitively calling
 
   One of INPUT_GET, INPUT_POST, INPUT_COOKIE, INPUT_SERVER, or INPUT_ENV.
 
-{definition}
+{options}
 
   An array defining the arguments. A valid key is a string containing a
   variable name and a valid value is either a filter type, or an array
@@ -121,12 +121,6 @@ array(6) {
     int(12)
   }
 }
-
-===============================================================================
-[ Changelog ]
-
-Version         Description
-5.4.0   Added {add_empty} parameter.
 
 ===============================================================================
 [ Notes ]

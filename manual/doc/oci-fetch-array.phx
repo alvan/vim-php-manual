@@ -14,10 +14,10 @@ Returns an array containing the next result-set row of a query. Each array
 entry corresponds to a column of the row. This function is typically called in
 a loop until it returns FALSE, indicating no more rows exist.
 
-If {statement} corresponds to a PL/SQL block returning Oracle Database 12c
-Implicit Result Sets, then rows from all sets are consecutively fetched. If
-{statement} is returned by |oci_get_implicit_resultset|, then only the subset
-of rows for one child query are returned.
+If {statement} corresponds to a PL/SQL block returning Oracle Database Implicit
+Result Sets, then rows from all sets are consecutively fetched. If {statement}
+is returned by |oci_get_implicit_resultset|, then only the subset of rows for
+one child query are returned.
 
 For details on the data type mapping performed by the OCI8 extension, see the
 datatypes supported by the driver
@@ -467,7 +467,7 @@ Example #10 Pagination with oci_fetch_array() using a LIMIT-like query
 
 <?>
 
-Example #11 oci_fetch_array() with Oracle Database 12c Implicit Result Sets
+Example #11 oci_fetch_array() with Oracle Database Implicit Result Sets
 
 <?php >
 
@@ -477,7 +477,7 @@ Example #11 oci_fetch_array() with Oracle Database 12c Implicit Result Sets
       trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
   }
 
-  // Requires OCI8 2.0 and Oracle Database 12c
+  // Requires OCI8 2.0 (or later) and Oracle Database 12c (or later)
   // Also see oci_get_implicit_resultset()
   $sql = 'DECLARE
              c1 SYS_REFCURSOR;

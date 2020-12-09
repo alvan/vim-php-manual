@@ -50,19 +50,14 @@ realpath() returns FALSE on failure, e.g. if the file does not exist.
   The function realpath() will not work for a file which is inside a Phar as
   such path would be a virtual path, not a real one.
 
+  Note:
+
+  On Windows, junctions and symbolic links to directories are only expanded by
+  one level.
+
   Note: Because PHP's integer type is signed and many platforms use 32bit
   integers, some filesystem functions may return unexpected results for files
   which are larger than 2GB.
-
-===============================================================================
-[ Changelog ]
-
-Version                               Description
-        Prior to this release, if only the last {path} component did not exist,
-5.3.0   realpath() would not fail on *BSD systems. realpath() now fails in this
-        case.
-5.2.1   Prior to this version, realpath() returned FALSE if {path} is an empty
-        string or NULL.
 
 ===============================================================================
 [ Examples ]

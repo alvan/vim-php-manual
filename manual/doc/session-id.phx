@@ -7,7 +7,7 @@ session_id — Get and/or set the current session id
 ===============================================================================
 [ Description ]
 
-  session_id ([ string $id ] ) : string~
+  session_id ([ string|null $id = NULL ] ) : string|false~
 
 session_id() is used to get or set the session id for the current session.
 
@@ -19,11 +19,11 @@ as a string suitable for adding to URLs. See also Session handling.
 
 {id}
 
-  If {id} is specified, it will replace the current session id. session_id()
-  needs to be called before |session_start| for that purpose. Depending on the
-  session handler, not all characters are allowed within the session id. For
-  example, the file session handler only allows characters in the range a-z A-Z
-  0-9 , (comma) and - (minus)!
+  If {id} is specified and not NULL, it will replace the current session id. 
+  session_id() needs to be called before |session_start| for that purpose.
+  Depending on the session handler, not all characters are allowed within the
+  session id. For example, the file session handler only allows characters in
+  the range a-z A-Z 0-9 , (comma) and - (minus)!
 
     Note: When using session cookies, specifying an {id} for session_id() will
     always send a new cookie when |session_start| is called, regardless if the
@@ -33,7 +33,14 @@ as a string suitable for adding to URLs. See also Session handling.
 [ Return Values ]
 
 session_id() returns the session id for the current session or the empty string
-("") if there is no current session (no current session id exists).
+("") if there is no current session (no current session id exists). On failure,
+FALSE is returned.
+
+===============================================================================
+[ Changelog ]
+
+Version      Description
+8.0.0   {id} is nullable now.
 
 ===============================================================================
 [ See Also ]

@@ -7,7 +7,7 @@ xml_parser_get_option — Get options from an XML parser
 ===============================================================================
 [ Description ]
 
-  xml_parser_get_option ( resource $parser , int $option ) : mixed~
+  xml_parser_get_option ( XMLParser $parser , int $option ) : string|int~
 
 Gets an option value from an XML parser.
 
@@ -31,9 +31,11 @@ returned.
 ===============================================================================
 [ Changelog ]
 
-     Version                               Description
-7.1.24, 7.2.12,   {options} now supports XML_OPTION_SKIP_TAGSTART and
-7.3.0             XML_OPTION_SKIP_WHITE.
+    Version                               Description
+8.0.0            {parser} expects an XMLParser instance now; previously, a 
+                 resource was expected.
+7.1.24, 7.2.12,  {options} now supports XML_OPTION_SKIP_TAGSTART and
+7.3.0            XML_OPTION_SKIP_WHITE.
 
 
 vim:ft=help:

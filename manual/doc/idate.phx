@@ -47,17 +47,17 @@ parameter.
 
 {timestamp}
 
-  The optional {timestamp} parameter is an integer Unix timestamp that defaults
-  to the current local time if a {timestamp} is not given. In other words, it
+  The optional {timestamp} parameter is an int Unix timestamp that defaults to
+  the current local time if a {timestamp} is not given. In other words, it
   defaults to the value of |time|.
 
 ===============================================================================
 [ Return Values ]
 
-Returns an integer.
+Returns an int.
 
-As idate() always returns an integer and as they can't start with a "0", idate
-() may return fewer digits than you would expect. See the example below.
+As idate() always returns an int and as they can't start with a "0", idate()
+may return fewer digits than you would expect. See the example below.
 
 ===============================================================================
 [ Errors/Exceptions ]
@@ -65,12 +65,6 @@ As idate() always returns an integer and as they can't start with a "0", idate
 Every call to a date/time function will generate a E_NOTICE if the time zone is
 not valid, and/or a E_STRICT or E_WARNING message if using the system settings
 or the TZ environment variable. See also |date_default_timezone_set|
-
-===============================================================================
-[ Changelog ]
-
-Version                      Description
-5.1.0   Now issues the E_STRICT and E_NOTICE time zone errors.
 
 ===============================================================================
 [ Examples ]

@@ -29,7 +29,7 @@ best to parse them correctly.
   Specify one of PHP_URL_SCHEME, PHP_URL_HOST, PHP_URL_PORT, PHP_URL_USER,
   PHP_URL_PASS, PHP_URL_PATH, PHP_URL_QUERY or PHP_URL_FRAGMENT to retrieve
   just a specific URL component as a string (except when PHP_URL_PORT is given,
-  in which case the return value will be an integer).
+  in which case the return value will be an int).
 
 ===============================================================================
 [ Return Values ]
@@ -50,17 +50,8 @@ array are:
  * fragment - after the hashmark #
 
 If the {component} parameter is specified, parse_url() returns a string (or an 
-integer, in the case of PHP_URL_PORT) instead of an array. If the requested
+int, in the case of PHP_URL_PORT) instead of an array. If the requested
 component doesn't exist within the given URL, NULL will be returned.
-
-===============================================================================
-[ Changelog ]
-
-Version                               Description
-5.4.7   Fixed host recognition when scheme is omitted and a leading component
-        separator is present.
-5.3.3   Removed the E_WARNING that was emitted when URL parsing failed.
-5.1.2   Added the {component} parameter.
 
 ===============================================================================
 [ Examples ]
@@ -152,7 +143,7 @@ array(3) {
  * |http_build_query| - Generate URL-encoded query string
  * |dirname| - Returns a parent directory's path
  * |basename| - Returns trailing name component of path
- * >> RFC 3986
+ * » RFC 3986
 
 
 vim:ft=help:

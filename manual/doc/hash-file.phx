@@ -7,8 +7,8 @@ hash_file — Generate a hash value using the contents of a given file
 ===============================================================================
 [ Description ]
 
-  hash_file ( string $algo , string $filename [, bool $raw_output = FALSE ] )~
-  : string~
+  hash_file ( string $algo , string $filename [, bool $binary = FALSE ] ) :~
+  string|false~
 
 ===============================================================================
 [ Parameters ]
@@ -16,13 +16,13 @@ hash_file — Generate a hash value using the contents of a given file
 {algo}
 
   Name of selected hashing algorithm (i.e. "md5", "sha256", "haval160,4",
-  etc..)
+  etc..). For a list of supported algorithms see |hash_algos|.
 
 {filename}
 
   URL describing location of file to be hashed; Supports fopen wrappers.
 
-{raw_output}
+{binary}
 
   When set to TRUE, outputs raw binary data. FALSE outputs lowercase hexits.
 
@@ -30,8 +30,8 @@ hash_file — Generate a hash value using the contents of a given file
 [ Return Values ]
 
 Returns a string containing the calculated message digest as lowercase hexits
-unless {raw_output} is set to true in which case the raw binary representation
-of the message digest is returned.
+unless {binary} is set to true in which case the raw binary representation of
+the message digest is returned.
 
 ===============================================================================
 [ Examples ]

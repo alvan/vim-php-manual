@@ -12,7 +12,7 @@ bcscale — Set or get default scale parameter for all bc math functions
 Sets the default scale parameter for all subsequent calls to bc math functions
 that do not explicitly specify a scale parameter.
 
-  bcscale ( void ) : int~
+  bcscale ([ null $scale = NULL ] ) : int~
 
 Gets the current scale factor.
 
@@ -33,6 +33,7 @@ returned.
 [ Changelog ]
 
 Version                               Description
+8.0.0   {scale} is now nullable.
         bcscale() can now be used to get the current scale factor; when used as
 7.3.0   setter, it now returns the old scale value. Formerly, {scale} was
         mandatory, and bcscale() always returned TRUE.

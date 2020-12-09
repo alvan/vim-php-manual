@@ -7,33 +7,35 @@ strip_tags — Strip HTML and PHP tags from a string
 ===============================================================================
 [ Description ]
 
-  strip_tags ( string $str [, string $allowable_tags ] ) : string~
+  strip_tags ( string $string [, array|string|null $allowed_tags = NULL ] ) :~
+  string~
 
 This function tries to return a string with all NULL bytes, HTML and PHP tags
-stripped from a given {str}. It uses the same tag stripping state machine as
+stripped from a given {string}. It uses the same tag stripping state machine as
 the |fgetss| function.
 
 ===============================================================================
 [ Parameters ]
 
-{str}
+{string}
 
   The input string.
 
-{allowable_tags}
+{allowed_tags}
 
   You can use the optional second parameter to specify tags which should not be
-  stripped.
+  stripped. These are either given as string, or as of PHP 7.4.0, as array.
+  Refer to the example below regarding the format of this parameter.
 
     Note:
 
     HTML comments and PHP tags are also stripped. This is hardcoded and can not
-    be changed with {allowable_tags}.
+    be changed with {allowed_tags}.
 
     Note:
 
     In PHP 5.3.4 and later, self-closing XHTML tags are ignored and only
-    non-self-closing tags should be used in {allowable_tags}. For example, to
+    non-self-closing tags should be used in {allowed_tags}. For example, to
     allow both <br> and <br/>, you should use:
 
     <?php >
@@ -48,9 +50,9 @@ Returns the stripped string.
 ===============================================================================
 [ Changelog ]
 
-Version                            Description
-5.3.4   strip_tags() ignores self-closing XHTML tags in {allowable_tags}.
-5.0.0   strip_tags() is now binary safe.
+Version                      Description
+8.0.0   {allowed_tags} is nullable now.
+7.4.0   The {allowed_tags} now alternatively accepts an array.
 
 ===============================================================================
 [ Examples ]
@@ -65,6 +67,9 @@ Example #1 strip_tags() example
 
   // Allow <p> and <a>
   echo strip_tags($text, '<p><a>');
+
+  // as of PHP 7.4.0 the line above can be written as:
+  // echo strip_tags($text, ['p', 'a']);
 <?>
 
 The above example will output:
@@ -77,20 +82,26 @@ Test paragraph. Other text
 
 Warning
 
+This function should not be used to try to prevent XSS attacks. Use more
+appropriate functions like |htmlspecialchars| or other means depending on the
+context of the output.
+
+Warning
+
 Because strip_tags() does not actually validate the HTML, partial or broken
 tags can result in the removal of more text/data than expected.
 
 Warning
 
 This function does not modify any attributes on the tags that you allow using
-{allowable_tags}, including the style and onmouseover attributes that a
+{allowed_tags}, including the style and onmouseover attributes that a
 mischievous user may abuse when posting text that will be shown to other users.
 
   Note:
 
   Tag names within the input HTML that are greater than 1023 bytes in length
-  will be treated as though they are invalid, regardless of the
-  {allowable_tags} parameter.
+  will be treated as though they are invalid, regardless of the {allowed_tags}
+  parameter.
 
 ===============================================================================
 [ See Also ]

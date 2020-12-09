@@ -7,7 +7,7 @@ forward_static_call — Call a static method
 ===============================================================================
 [ Description ]
 
-  forward_static_call ( callable $function [, mixed $... ] ) : mixed~
+  forward_static_call ( callable $function , mixed ...$args ) : mixed~
 
 Calls a user defined function or method given by the {function} parameter, with
 the following arguments. This function must be called within a method context,
@@ -21,7 +21,7 @@ it can't be used outside a class. It uses the late static binding.
   The function or method to be called. This parameter may be an array, with the
   name of the class, and the method, or a string, with a function name.
 
-{...}
+{args}
 
   Zero or more parameters to be passed to the function.
 
@@ -81,7 +81,6 @@ C other,args
  * |call_user_func| - Call the callback given by the first parameter
  * |is_callable| - Verify that the contents of a variable can be called as a
   function
- * information about the callback type
 
 
 vim:ft=help:

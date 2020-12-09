@@ -25,28 +25,20 @@ Copy the elements of an iterator into an array.
 
   In PHP 5.5 and later, if a key is an array or object, a warning will be
   generated. NULL keys will be converted to an empty string, float keys will be
-  truncated to their integer counterpart, resource keys will generate a warning
-  and be converted to their resource ID, and boolean keys will be converted to
+  truncated to their int counterpart, resource keys will generate a warning and
+  be converted to their resource ID, and bool keys will be converted to
   integers.
 
     Note:
 
     If this parameter is not set or set to TRUE, duplicate keys will be
     overwritten. The last value with a given key will be in the returned array.
-    Set this paramater to FALSE to get all the values in any case.
+    Set this parameter to FALSE to get all the values in any case.
 
 ===============================================================================
 [ Return Values ]
 
 An array containing the elements of the {iterator}.
-
-===============================================================================
-[ Changelog ]
-
-Version                               Description
-5.5.0   iterator_to_array() gained support for key types other than integer and
-        string when the {use_keys} parameter is enabled.
-5.2.1   The {use_keys} parameter was added.
 
 ===============================================================================
 [ Examples ]

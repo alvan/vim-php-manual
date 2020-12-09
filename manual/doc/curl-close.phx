@@ -7,15 +7,15 @@ curl_close — Close a cURL session
 ===============================================================================
 [ Description ]
 
-  curl_close ( resource $ch ) : void~
+  curl_close ( CurlHandle $handle ) : void~
 
-Closes a cURL session and frees all resources. The cURL handle, {ch}, is also
-deleted.
+Closes a cURL session and frees all resources. The cURL handle, {handle}, is
+also deleted.
 
 ===============================================================================
 [ Parameters ]
 
-{ch}
+{handle}
 
   A cURL handle returned by |curl_init|.
 
@@ -23,6 +23,13 @@ deleted.
 [ Return Values ]
 
 No value is returned.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {handle} expects a CurlHandle instance now; previously, a resource was
+        expected.
 
 ===============================================================================
 [ Examples ]

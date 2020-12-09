@@ -19,8 +19,7 @@ Sends an email.
 
   Receiver, or receivers of the mail.
 
-  The formatting of this string must comply with >> RFC 2822. Some examples
-  are:
+  The formatting of this string must comply with » RFC 2822. Some examples are:
    + user@example.com
    + user@example.com, anotheruser@example.com
    + User <user@example.com>
@@ -32,7 +31,7 @@ Sends an email.
 
   Caution
 
-  Subject must satisfy >> RFC 2047.
+  Subject must satisfy » RFC 2047.
 
 {message}
 
@@ -77,14 +76,15 @@ Sends an email.
 
     Failing to do this will result in an error message similar to Warning: mail
     (): "sendmail_from" not set in php.ini or custom "From:" header missing.
-    The From header sets also Return-Path under Windows.
+    The From header sets also Return-Path when sending directly via SMTP
+    (Windows only).
 
     Note:
 
     If messages are not received, try using a LF (\n) only. Some Unix mail
-    transfer agents (most notably >> qmail) replace LF by CRLF automatically
+    transfer agents (most notably » qmail) replace LF by CRLF automatically
     (which leads to doubling CR if CRLF is used). This should be a last resort,
-    as it does not comply with >> RFC 2822.
+    as it does not comply with » RFC 2822.
 
 {additional_parameters} (optional)
 
@@ -123,14 +123,8 @@ it does NOT mean the mail will actually reach the intended destination.
 ===============================================================================
 [ Changelog ]
 
-Version                               Description
-7.2.0    The {additional_headers} parameter now also accepts an array.
-5.4.42,  Header injection protection has been addded for the
-5.5.27   {additional_headers} parameter. This means that multiple consecutive
-         newlines are no longer allowed.
-         The {additional_parameters} parameter is disabled in safe_mode and the
-4.2.3    mail() function will expose a warning message and return FALSE when
-         used.
+Version                          Description
+7.2.0   The {additional_headers} parameter now also accepts an array.
 
 ===============================================================================
 [ Examples ]
@@ -247,17 +241,18 @@ It is also possible to send HTML email with mail().
   Note:
 
   If intending to send HTML or otherwise Complex mails, it is recommended to
-  use the PEAR package >> PEAR::Mail_Mime.
+  use the PEAR package » PEAR::Mail_Mime.
 
 ===============================================================================
 [ Notes ]
 
   Note:
 
-  The Windows implementation of mail() differs in many ways from the Unix
-  implementation. First, it doesn't use a local binary for composing messages
-  but only operates on direct sockets which means a MTA is needed listening on
-  a network socket (which can either on the localhost or a remote machine).
+  The SMTP implementation (Windows only) of mail() differs in many ways from
+  the sendmail implementation. First, it doesn't use a local binary for
+  composing messages but only operates on direct sockets which means a MTA is
+  needed listening on a network socket (which can either on the localhost or a
+  remote machine).
 
   Second, the custom headers like From:, Cc:, Bcc: and Date: are not
   interpreted by the MTA in the first place, but are parsed by PHP.
@@ -272,20 +267,21 @@ It is also possible to send HTML email with mail().
   volumes of email in a loop. This function opens and closes an SMTP socket for
   each email, which is not very efficient.
 
-  For the sending of large amounts of email, see the >> PEAR::Mail, and >>
-   PEAR::Mail_Queue packages.
+  For the sending of large amounts of email, see the » PEAR::Mail, and
+  » PEAR::Mail_Queue packages.
 
   Note:
 
-  The following RFCs may be useful: >> RFC 1896, >> RFC 2045, >> RFC 2046, >>
-   RFC 2047, >> RFC 2048, >> RFC 2049, and >> RFC 2822.
+  The following RFCs may be useful: » RFC 1896, » RFC 2045, » RFC 2046, » RFC
+  2047, » RFC 2048, » RFC 2049, and » RFC 2822.
 
 ===============================================================================
 [ See Also ]
 
+ * |mb_send_mail| - Send encoded mail
  * |imap_mail| - Send an email message
- * >> PEAR::Mail
- * >> PEAR::Mail_Mime
+ * » PEAR::Mail
+ * » PEAR::Mail_Mime
 
 
 vim:ft=help:

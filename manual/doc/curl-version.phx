@@ -7,7 +7,7 @@ curl_version — Gets cURL version information
 ===============================================================================
 [ Description ]
 
-  curl_version ([ int $age = CURLVERSION_NOW ] ) : array~
+  curl_version ( ) : array|false~
 
 Returns information about the cURL version.
 
@@ -21,7 +21,7 @@ Returns information about the cURL version.
 
 Returns an associative array with the following elements:
 
-      Indice                      Value description
+       Key                        Value description
 version_number     cURL 24 bit version number
 version            cURL version number, as a string
 ssl_version_number OpenSSL 24 bit version number

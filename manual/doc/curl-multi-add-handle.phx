@@ -7,18 +7,19 @@ curl_multi_add_handle — Add a normal cURL handle to a cURL multi handle
 ===============================================================================
 [ Description ]
 
-  curl_multi_add_handle ( resource $mh , resource $ch ) : int~
+  curl_multi_add_handle ( CurlMultiHandle $multi_handle , CurlHandle $handle )~
+  : int~
 
-Adds the {ch} handle to the multi handle {mh}
+Adds the {handle} handle to the multi handle {multi_handle}
 
 ===============================================================================
 [ Parameters ]
 
-{mh}
+{multi_handle}
 
   A cURL multi handle returned by |curl_multi_init|.
 
-{ch}
+{handle}
 
   A cURL handle returned by |curl_init|.
 
@@ -26,6 +27,15 @@ Adds the {ch} handle to the multi handle {mh}
 [ Return Values ]
 
 Returns 0 on success, or one of the CURLM_XXX errors code.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {multi_handle} expects a CurlMultiHandle instance now; previously, a 
+        resource was expected.
+8.0.0   {handle} expects a CurlHandle instance now; previously, a resource was
+        expected.
 
 ===============================================================================
 [ Examples ]

@@ -7,7 +7,7 @@ disk_free_space — Returns available space on filesystem or disk partition
 ===============================================================================
 [ Description ]
 
-  disk_free_space ( string $directory ) : float~
+  disk_free_space ( string $directory ) : float|false~
 
 Given a string containing a directory, this function will return the number of
 bytes available on the corresponding filesystem or disk partition.

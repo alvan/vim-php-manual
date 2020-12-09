@@ -1,6 +1,6 @@
 *ibase_restore*
 
-(PHP 5, PHP 7)
+(PHP 5, PHP 7 < 7.4.0)
 
 ibase_restore — Initiates a restore task in the service manager and returns
 immediately
@@ -10,9 +10,91 @@ immediately
 
   ibase_restore ( resource $service_handle , string $source_file , string~
   $dest_db [, int $options = 0 [, bool $verbose = FALSE ]] ) : mixed~
-Warning
 
-This function is currently not documented; only its argument list is available.
+This function passes the arguments to the (remote) database server. There it
+starts a new restore process. Therefore you won't get any responses.
+
+===============================================================================
+[ Parameters ]
+
+{service_handle}
+
+  A previously opened connection to the database server.
+
+{source_file}
+
+  The absolute path on the server where the backup file is located.
+
+{dest_db}
+
+  The path to create the new database on the server. You can also use database
+  alias.
+
+{options}
+
+  Additional options to pass to the database server for restore. The {options}
+  parameter can be a combination of the following constants:
+  IBASE_RES_DEACTIVATE_IDX, IBASE_RES_NO_SHADOW, IBASE_RES_NO_VALIDITY,
+  IBASE_RES_ONE_AT_A_TIME, IBASE_RES_REPLACE, IBASE_RES_CREATE,
+  IBASE_RES_USE_ALL_SPACE, IBASE_PRP_PAGE_BUFFERS, IBASE_PRP_SWEEP_INTERVAL,
+  IBASE_RES_CREATE. Read the section about Predefined Constants for further
+  information.
+
+{verbose}
+
+  Since the restore process is done on the database server, you don't have any
+  chance to get its output. This argument is useless.
+
+===============================================================================
+[ Return Values ]
+
+Returns TRUE on success or FALSE on failure.
+
+Since the restore process is done on the (remote) server, this function just
+passes the arguments to it. While the arguments are legal, you won't get FALSE.
+
+===============================================================================
+[ Examples ]
+
+Example #1 ibase_restore() example
+
+<?php >
+
+  // Attach to database server by ip address and port
+  $service = ibase_service_attach ('10.1.11.200/3050', 'sysdba', 'masterkey');
+
+  // Start the restore process on database server
+  // Restore employee backup to the new emps.fdb database
+  // Don't use any special arguments
+  ibase_restore($service, '/srv/backup/employees.fbk', '/srv/firebird/emps.fdb');
+
+  // Free the attached connection
+  ibase_service_detach ($service);
+<?>
+
+Example #2 ibase_restore() example with arguments
+
+<?php >
+
+  // Attach to database server by name and default port
+  $service = ibase_service_attach ('fb-server.contoso.local', 'sysdba', 
+  'masterkey');
+
+  // Start the restore process on database server
+  // Restore to employee database using alias.
+  // Restore without indixes. Replace existing database.
+  ibase_restore($service, '/srv/backup/employees.fbk', 'employees.fdb', 
+  IBASE_RES_DEACTIVATE_IDX | IBASE_RES_REPLACE);
+
+  // Free the attached connection
+  ibase_service_detach ($service);
+<?>
+
+===============================================================================
+[ See Also ]
+
+ * |ibase_backup| - Initiates a backup task in the service manager and returns
+  immediately
 
 
 vim:ft=help:

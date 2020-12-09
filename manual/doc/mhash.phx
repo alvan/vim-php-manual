@@ -7,14 +7,15 @@ mhash — Computes hash
 ===============================================================================
 [ Description ]
 
-  mhash ( int $hash , string $data [, string $key ] ) : string~
+  mhash ( int $algo , string $data [, string|null $key = NULL ] ) :~
+  string|false~
 
-mhash() applies a hash function specified by {hash} to the {data}.
+mhash() applies a hash function specified by {algo} to the {data}.
 
 ===============================================================================
 [ Parameters ]
 
-{hash}
+{algo}
 
   The hash ID. One of the MHASH_hashname constants.
 
@@ -34,6 +35,12 @@ mhash() applies a hash function specified by {hash} to the {data}.
 
 Returns the resulting hash (also called digest) or HMAC as a string, or FALSE
 on error.
+
+===============================================================================
+[ Changelog ]
+
+Version       Description
+8.0.0   {key} is now nullable.
 
 
 vim:ft=help:

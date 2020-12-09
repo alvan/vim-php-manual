@@ -70,7 +70,7 @@ Writes the given {text} into the image using TrueType fonts.
   In many cases where a font resides in the same directory as the script using
   it the following trick will alleviate any include problems.
   <?php >
-  // Set the enviroment variable for GD
+  // Set the environment variable for GD
   putenv('GDFONTPATH=' . realpath('.'));
 
   // Name the font to be used (note the lack of the .ttf extension)
@@ -103,12 +103,6 @@ box of the text. The order of the points is lower left, lower right, upper
 right, upper left. The points are relative to the text regardless of the angle,
 so "upper left" means in the top left-hand corner when you see the text
 horizontally. Returns FALSE on error.
-
-===============================================================================
-[ Changelog ]
-
-Version                          Description
-5.2.0   It is now possible to specify an hexadecimal entity in {text}.
 
 ===============================================================================
 [ Examples ]
@@ -155,7 +149,7 @@ Output of example : imagettftext()
 [ Notes ]
 
   Note: This function is only available if PHP is compiled with freetype
-  support (--with-freetype-dir=DIR )
+  support (--with-freetype-dir=DIR)
 
 ===============================================================================
 [ See Also ]

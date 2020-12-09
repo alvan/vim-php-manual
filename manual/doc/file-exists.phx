@@ -31,12 +31,6 @@ otherwise.
 
   This function will return FALSE for symlinks pointing to non-existing files.
 
-Warning
-
-This function returns FALSE for files inaccessible due to safe mode
-restrictions. However these files still can be |included| if they are located
-in safe_mode_include_dir.
-
   Note:
 
   The check is done using the real UID/GID instead of the effective one.

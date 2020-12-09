@@ -7,12 +7,12 @@ bindec — Binary to decimal
 ===============================================================================
 [ Description ]
 
-  bindec ( string $binary_string ) : number~
+  bindec ( string $binary_string ) : int|float~
 
 Returns the decimal equivalent of the binary number represented by the
 {binary_string} argument.
 
-bindec() converts a binary number to an integer or, if needed for size reasons,
+bindec() converts a binary number to an int or, if needed for size reasons, 
 float.
 
 bindec() interprets all {binary_string} values as unsigned integers. This is
@@ -24,7 +24,9 @@ rather than as the sign bit.
 
 {binary_string}
 
-  The binary string to convert
+  The binary string to convert. Any invalid characters in {binary_string} are
+  silently ignored. As of PHP 7.4.0 supplying any invalid characters is
+  deprecated.
 
 Warning
 
@@ -35,6 +37,14 @@ results.
 [ Return Values ]
 
 The decimal value of {binary_string}
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+        Passing invalid characters will now generate a deprecation notice. The
+7.4.0   result will still be computed as if the invalid characters did not
+        exist.
 
 ===============================================================================
 [ Examples ]
@@ -156,7 +166,7 @@ NOTE:         interpreted to be the largest unsigned integer
   Note:
 
   The function can convert numbers that are too large to fit into the platforms
-  integer type, larger values are returned as float in that case.
+  int type, larger values are returned as float in that case.
 
 ===============================================================================
 [ See Also ]

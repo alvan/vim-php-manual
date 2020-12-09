@@ -7,7 +7,8 @@ strrpos — Find the position of the last occurrence of a substring in a string
 ===============================================================================
 [ Description ]
 
-  strrpos ( string $haystack , mixed $needle [, int $offset = 0 ] ) : int~
+  strrpos ( string $haystack , string $needle [, int $offset = 0 ] ) :~
+  int|false~
 
 Find the numeric position of the last occurrence of {needle} in the {haystack}
 string.
@@ -21,24 +22,34 @@ string.
 
 {needle}
 
-  If {needle} is not a string, it is converted to an integer and applied as the
-  ordinal value of a character. This behavior is deprecated as of PHP 7.3.0,
-  and relying on it is highly discouraged. Depending on the intended behavior,
-  the {needle} should either be explicitly cast to string, or an explicit call
-  to |chr| should be performed.
+  Prior to PHP 8.0.0, if {needle} is not a string, it is converted to an
+  integer and applied as the ordinal value of a character. This behavior is
+  deprecated as of PHP 7.3.0, and relying on it is highly discouraged.
+  Depending on the intended behavior, the {needle} should either be explicitly
+  cast to string, or an explicit call to |chr| should be performed.
 
 {offset}
 
-  If specified, search will start this number of characters counted from the
-  beginning of the string. If the value is negative, search will instead start
-  from that many characters from the end of the string, searching backwards.
+  If zero or positive, the search is performed left to right skipping the first
+  {offset} bytes of the {haystack}.
+
+  If negative, the search is performed right to left skipping the last {offset}
+  bytes of the {haystack} and searching for the first occurrence of {needle}.
+
+
+    Note:
+
+    This is effectively looking for the last occurrence of {needle} before the
+    last {offset} bytes.
 
 ===============================================================================
 [ Return Values ]
 
 Returns the position where the needle exists relative to the beginning of the
-{haystack} string (independent of search direction or offset). Also note that
-string positions start at 0, and not 1.
+{haystack} string (independent of search direction or offset).
+
+
+  Note: String positions start at 0, and not 1.
 
 Returns FALSE if the needle was not found.
 
@@ -52,8 +63,9 @@ function.
 ===============================================================================
 [ Changelog ]
 
-Version                         Description
-5.0.0   The {needle} may now be a string of more than one character.
+Version                    Description
+8.0.0   Passing an int as {needle} is no longer supported.
+7.3.0   Passing an int as {needle} has been deprecated.
 
 ===============================================================================
 [ Examples ]
@@ -77,14 +89,37 @@ Example #2 Searching with offsets
 <?php >
   $foo = "0123456789a123456789b123456789c";
 
-  var_dump(strrpos($foo, '7', -5));  // Starts looking backwards five positions
-                                     // from the end. Result: int(17)
+  // Looking for '0' from the 0th byte (from the beginning)
+  var_dump(strrpos($foo, '0', 0));
 
-  var_dump(strrpos($foo, '7', 20));  // Starts searching 20 positions into the
-                                     // string. Result: int(27)
+  // Looking for '0' from the 1st byte (after byte "0")
+  var_dump(strrpos($foo, '0', 1));
 
-  var_dump(strrpos($foo, '7', 28));  // Result: bool(false)
+  // Looking for '7' from the 21th byte (after byte 20)
+  var_dump(strrpos($foo, '7', 20));
+
+  // Looking for '7' from the 29th byte (after byte 28)
+  var_dump(strrpos($foo, '7', 28));
+
+  // Looking for '7' right to left from the 5th byte from the end
+  var_dump(strrpos($foo, '7', -5));
+
+  // Looking for 'c' right to left from the 2nd byte from the end
+  var_dump(strrpos($foo, 'c', -2));
+
+  // Looking for '9c' right to left from the 2nd byte from the end
+  var_dump(strrpos($foo, '9c', -2));
 <?>
+
+The above example will output:
+
+int(0)
+bool(false)
+int(27)
+bool(false)
+int(17)
+bool(false)
+int(29)
 
 ===============================================================================
 [ See Also ]

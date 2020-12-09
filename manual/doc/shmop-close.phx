@@ -7,14 +7,14 @@ shmop_close — Close shared memory block
 ===============================================================================
 [ Description ]
 
-  shmop_close ( resource $shmid ) : void~
+  shmop_close ( Shmop $shmop ) : void~
 
 shmop_close() is used to close a shared memory block.
 
 ===============================================================================
 [ Parameters ]
 
-{shmid}
+{shmop}
 
   The shared memory block resource created by |shmop_open|
 
@@ -26,8 +26,9 @@ No value is returned.
 ===============================================================================
 [ Changelog ]
 
-Version                        Description
-7.0.0   The type of {shmid} has been changed from int to resource.
+Version                               Description
+8.0.0   {shmop} expects a Shmop instance now; previously, a resource was
+        expected.
 
 ===============================================================================
 [ Examples ]

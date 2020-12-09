@@ -7,7 +7,7 @@ unixtojd — Convert Unix timestamp to Julian Day
 ===============================================================================
 [ Description ]
 
-  unixtojd ([ int $timestamp = time() ] ) : int~
+  unixtojd ([ int|null $timestamp = NULL ] ) : int|false~
 
 Return the Julian Day for a Unix {timestamp} (seconds since 1.1.1970), or for
 the current day if no {timestamp} is given. Either way, the time is regarded as
@@ -23,7 +23,13 @@ local time (not UTC).
 ===============================================================================
 [ Return Values ]
 
-A julian day number as integer.
+A julian day number as integer, or FALSE on failure.
+
+===============================================================================
+[ Changelog ]
+
+Version         Description
+8.0.0   {timestamp} is nullable now.
 
 ===============================================================================
 [ See Also ]

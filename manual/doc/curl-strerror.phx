@@ -7,16 +7,16 @@ curl_strerror — Return string describing the given error code
 ===============================================================================
 [ Description ]
 
-  curl_strerror ( int $errornum ) : string~
+  curl_strerror ( int $error_code ) : string|null~
 
 Returns a text error message describing the given error code.
 
 ===============================================================================
 [ Parameters ]
 
-{errornum}
+{error_code}
 
-  One of the >> cURL error codes constants.
+  One of the » cURL error codes constants.
 
 ===============================================================================
 [ Return Values ]
@@ -29,7 +29,7 @@ Returns error description or NULL for invalid error code.
 Example #1 |curl_errno| example
 
 <?php >
-  // Create a curl handle with a mispelled protocol in URL
+  // Create a curl handle with a misspelled protocol in URL
   $ch = curl_init("htp://example.com/");
 
   // Send request
@@ -56,7 +56,7 @@ cURL error (1):
  * |curl_errno| - Return the last error number
  * |curl_error| - Return a string containing the last error for the current
   session
- * >> Curl error codes
+ * » Curl error codes
 
 
 vim:ft=help:

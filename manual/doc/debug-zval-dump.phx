@@ -8,7 +8,7 @@ output
 ===============================================================================
 [ Description ]
 
-  debug_zval_dump ( mixed $variable [, mixed $... ] ) : void~
+  debug_zval_dump ( mixed $variable , mixed ...$variables ) : void~
 
 Dumps a string representation of an internal zend value to output.
 
@@ -17,7 +17,11 @@ Dumps a string representation of an internal zend value to output.
 
 {variable}
 
-  The variable being evaluated.
+  The variable to dump.
+
+{variables}
+
+  Further variables to dump.
 
 ===============================================================================
 [ Return Values ]
@@ -103,7 +107,7 @@ The above example will output:
  * |var_dump| - Dumps information about a variable
  * |debug_backtrace| - Generates a backtrace
  * References Explained
- * >> References Explained (by Derick Rethans)
+ * » References Explained (by Derick Rethans)
 
 
 vim:ft=help:

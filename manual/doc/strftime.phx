@@ -19,7 +19,7 @@ support negative timestamps, so your date range may be limited to no earlier
 than the Unix epoch. This means that %e, %T, %R and, %D (and possibly others) -
 as well as dates prior to Jan 1, 1970 - will not work on Windows, some Linux
 distributions, and a few other operating systems. For Windows systems, a
-complete overview of supported conversion specifiers can be found at >> MSDN.
+complete overview of supported conversion specifiers can be found at » MSDN.
 
 ===============================================================================
 [ Parameters ]
@@ -157,8 +157,8 @@ complete overview of supported conversion specifiers can be found at >> MSDN.
 
 {timestamp}
 
-  The optional {timestamp} parameter is an integer Unix timestamp that defaults
-  to the current local time if a {timestamp} is not given. In other words, it
+  The optional {timestamp} parameter is an int Unix timestamp that defaults to
+  the current local time if a {timestamp} is not given. In other words, it
   defaults to the value of |time|.
 
 ===============================================================================
@@ -181,12 +181,6 @@ specifiers are not supported. On Windows, supplying unknown conversion
 specifiers will result in 5 E_WARNING messages and return FALSE. On other
 operating systems you may not get any E_WARNING messages and the output may
 contain the conversion specifiers unconverted.
-
-===============================================================================
-[ Changelog ]
-
-Version                      Description
-5.1.0   Now issues the E_STRICT and E_NOTICE time zone errors.
 
 ===============================================================================
 [ Examples ]
@@ -444,12 +438,12 @@ Unknown format : 'v'
 ===============================================================================
 [ See Also ]
 
- * >> Online strftime() format design tool
+ * » Online strftime() format design tool
  * |setlocale| - Set locale information
  * |mktime| - Get Unix timestamp for a date
  * |strptime| - Parse a time/date generated with strftime
  * |gmstrftime| - Format a GMT/UTC time/date according to locale settings
- * >> Open Group specification of strftime()
+ * » Open Group specification of strftime()
 
 
 vim:ft=help:

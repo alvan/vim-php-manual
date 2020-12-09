@@ -8,10 +8,10 @@ milliseconds
 ===============================================================================
 [ Description ]
 
-  com_message_pump ([ int $timeoutms = 0 ] ) : bool~
+  com_message_pump ([ int $timeout_milliseconds = 0 ] ) : bool~
 
-This function will sleep for up to {timeoutms} milliseconds, or until a message
-arrives in the queue.
+This function will sleep for up to {timeout_milliseconds} milliseconds, or
+until a message arrives in the queue.
 
 The purpose of this function is to route COM calls between apartments and
 handle various synchronization issues. This allows your script to wait
@@ -23,14 +23,14 @@ finished using event bound COM objects.
 ===============================================================================
 [ Parameters ]
 
-{timeoutms}
+{timeout_milliseconds}
 
   The timeout, in milliseconds.
 
-  If you do not specify a value for {timeoutms}, then 0 will be assumed. A 0
-  value means that no waiting will be performed; if there are messages pending
-  they will be dispatched as before; if there are no messages pending, the
-  function will return FALSE immediately without sleeping.
+  If you do not specify a value for {timeout_milliseconds}, then 0 will be
+  assumed. A 0 value means that no waiting will be performed; if there are
+  messages pending they will be dispatched as before; if there are no messages
+  pending, the function will return FALSE immediately without sleeping.
 
 ===============================================================================
 [ Return Values ]

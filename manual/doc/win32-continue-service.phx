@@ -7,7 +7,7 @@ win32_continue_service — Resumes a paused service
 ===============================================================================
 [ Description ]
 
-  win32_continue_service ( string $servicename [, string $machine ] ) : int~
+  win32_continue_service ( string $servicename [, string $machine ] ) : void~
 
 Resumes a paused, named service. Requires administrative privileges or an
 account with appropriate rights set in the service's ACL.
@@ -26,15 +26,34 @@ account with appropriate rights set in the service's ACL.
 ===============================================================================
 [ Return Values ]
 
-Returns WIN32_NO_ERROR on success, FALSE if there is a problem with the
-parameters or a Win32 Error Code on failure.
+No value is returned.
+
+Prior to version 1.0.0, returned WIN32_NO_ERROR on success, FALSE if there is a
+problem with the parameters or a Win32 Error Code on failure.
+
+===============================================================================
+[ Errors/Exceptions ]
+
+A ValueError is thrown if the value of {servicename} parameter is empty.
+
+A Win32ServiceException is thrown on error.
 
 ===============================================================================
 [ Changelog ]
 
-Version                               Description
-0.3.0   This function does not longer require an administrator account if ACL
-        is set for another account.
+    Version                               Description
+PECL            Throws a ValueError on invalid data in parameters, previously
+win32service    FALSE was returned.
+1.0.0
+PECL            Throws a Win32ServiceException on error, previously a Win32
+win32service    Error Code was returned.
+1.0.0
+PECL
+win32service    The return type is now void, previously it was mixed.
+1.0.0
+PECL            This function does not longer require an administrator account
+win32service    if ACL is set for another account.
+0.3.0
 
 ===============================================================================
 [ See Also ]

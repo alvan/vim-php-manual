@@ -7,18 +7,18 @@ dbase_get_record — Gets a record from a database as an indexed array
 ===============================================================================
 [ Description ]
 
-  dbase_get_record ( resource $dbase_identifier , int $record_number ) : array~
+  dbase_get_record ( resource $database , int $number ) : array~
 
 Gets a record from a database as an indexed array.
 
 ===============================================================================
 [ Parameters ]
 
-{dbase_identifier}
+{database}
 
-  The database link identifier, returned by |dbase_open| or |dbase_create|.
+  The database resource, returned by |dbase_open| or |dbase_create|.
 
-{record_number}
+{number}
 
   The index of the record between 1 and dbase_numrecords($dbase_identifier).
 
@@ -41,8 +41,8 @@ On error, dbase_get_record() will return FALSE.
 ===============================================================================
 [ Changelog ]
 
-  Version                         Description
-dbase 7.0.0 {dbase_identifier} is now a resource instead of an int.
+  Version                     Description
+dbase 7.0.0 {database} is now a resource instead of an int.
 
 ===============================================================================
 [ See Also ]

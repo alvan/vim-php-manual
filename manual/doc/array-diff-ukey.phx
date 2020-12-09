@@ -8,10 +8,10 @@ on the keys for comparison
 ===============================================================================
 [ Description ]
 
-  array_diff_ukey ( array $array1 , array $array2 [, array $... ], callable~
+  array_diff_ukey ( array $array , array ...$arrays , callable~
   $key_compare_func ) : array~
 
-Compares the keys from {array1} against the keys from {array2} and returns the
+Compares the keys from {array} against the keys from {arrays} and returns the
 difference. This function is like |array_diff| except the comparison is done on
 the keys instead of the values.
 
@@ -21,24 +21,19 @@ indices comparison, not internal function.
 ===============================================================================
 [ Parameters ]
 
-{array1}
+{array}
 
   The array to compare from
 
-{array2}
+{arrays}
 
-  An array to compare against
-
-{...}
-
-  More arrays to compare against
+  Arrays to compare against
 
 {key_compare_func}
 
   The comparison function must return an integer less than, equal to, or
   greater than zero if the first argument is considered to be respectively less
-  than, equal to, or greater than the second. Note that before PHP 7.0.0 this
-  integer had to be in the range from -2147483648 to 2147483647.
+  than, equal to, or greater than the second.
 
 
   callback ( mixed $a, mixed $b ) : int~
@@ -46,7 +41,7 @@ indices comparison, not internal function.
 ===============================================================================
 [ Return Values ]
 
-Returns an array containing all the entries from {array1} that are not present
+Returns an array containing all the entries from {array} that are not present
 in any of the other arrays.
 
 ===============================================================================

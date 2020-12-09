@@ -8,7 +8,7 @@ functions in a script
 ===============================================================================
 [ Description ]
 
-  date_default_timezone_get ( void ) : string~
+  date_default_timezone_get ( ) : string~
 
 In order of preference, this function returns the default timezone by:
 
@@ -32,14 +32,6 @@ timezone of UTC.
 [ Return Values ]
 
 Returns a string.
-
-===============================================================================
-[ Changelog ]
-
-Version                               Description
-5.4.0   The TZ environment variable is no longer used to guess the timezone.
-5.4.0   The timezone is no longer guessed from information available through
-        the operating system as the guessed timezone can not be relied on.
 
 ===============================================================================
 [ Examples ]

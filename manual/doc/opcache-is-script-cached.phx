@@ -7,7 +7,7 @@ opcache_is_script_cached — Tells whether a script is cached in OPCache
 ===============================================================================
 [ Description ]
 
-  opcache_is_script_cached ( string $file ) : bool~
+  opcache_is_script_cached ( string $filename ) : bool~
 
 This function checks if a PHP script has been cached in OPCache. This can be
 used to more easily detect the "warming" of the cache for a particular script.
@@ -15,14 +15,14 @@ used to more easily detect the "warming" of the cache for a particular script.
 ===============================================================================
 [ Parameters ]
 
-{file}
+{filename}
 
   The path to the PHP script to be checked.
 
 ===============================================================================
 [ Return Values ]
 
-Returns TRUE if {file} is cached in OPCache, FALSE otherwise.
+Returns TRUE if {filename} is cached in OPCache, FALSE otherwise.
 
 ===============================================================================
 [ See Also ]

@@ -8,32 +8,27 @@ index check
 ===============================================================================
 [ Description ]
 
-  array_intersect_assoc ( array $array1 , array $array2 [, array $... ] ) :~
-  array~
+  array_intersect_assoc ( array $array , array ...$arrays ) : array~
 
-array_intersect_assoc() returns an array containing all the values of {array1}
+array_intersect_assoc() returns an array containing all the values of {array}
 that are present in all the arguments. Note that the keys are also used in the
 comparison unlike in |array_intersect|.
 
 ===============================================================================
 [ Parameters ]
 
-{array1}
+{array}
 
   The array with master values to check.
 
-{array2}
+{arrays}
 
-  An array to compare values against.
-
-{...}
-
-  A variable list of arrays to compare.
+  Arrays to compare values against.
 
 ===============================================================================
 [ Return Values ]
 
-Returns an associative array containing all the values in {array1} that are
+Returns an associative array containing all the values in {array} that are
 present in all of the arguments.
 
 ===============================================================================

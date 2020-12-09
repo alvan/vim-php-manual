@@ -8,7 +8,7 @@ dividing them
 ===============================================================================
 [ Description ]
 
-  variant_idiv ( mixed $left , mixed $right ) : mixed~
+  variant_idiv ( mixed $left , mixed $right ) : variant~
 
 Converts {left} and {right} to integer values, and then performs integer
 division.
@@ -30,7 +30,7 @@ division.
   function can be either a PHP native type (integer, string, floating point,
   boolean or NULL), or an instance of a COM, VARIANT or DOTNET class. PHP
   native types will be converted to variants using the same rules as found in
-  the constructor for the VARIANT class. COM and DOTNET objects will have the
+  the constructor for the variant class. COM and DOTNET objects will have the
   value of their default property taken and used as the variant value.
 
   The variant arithmetic functions are wrappers around the similarly named
@@ -54,6 +54,11 @@ Both expressions are numeric                Division
 Either expression is NULL                   NULL is returned
 Both expressions are empty                  A com_exception with code
                                             DISP_E_DIVBYZERO is thrown
+
+===============================================================================
+[ Errors/Exceptions ]
+
+Throws a com_exception on failure.
 
 ===============================================================================
 [ See Also ]

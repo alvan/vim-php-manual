@@ -2,26 +2,29 @@
 
 (PHP 7 >= 7.1.0)
 
-sapi_windows_cp_get — Get process codepage
+sapi_windows_cp_get — Get current codepage
 
 ===============================================================================
 [ Description ]
 
-  sapi_windows_cp_get ( string $kind ) : int~
+  sapi_windows_cp_get ([ string $kind = "" ] ) : int~
 
-Get the identifier of the codepage of the current process.
+Gets the current codepage.
 
 ===============================================================================
 [ Parameters ]
 
 {kind}
 
-  The kind of codepage: either 'ansi' or 'oem'.
+  The kind of operating system codepage to get, either 'ansi' or 'oem'. Any
+  other value refers to the current codepage of the process.
 
 ===============================================================================
 [ Return Values ]
 
-Returns the codepage identifier.
+If {kind} is 'ansi', the current ANSI code page of the operating system is
+returned. If {kind} is 'oem', the current OEM code page of the operating system
+is returned. Otherwise, the current codepage of the process is returned.
 
 ===============================================================================
 [ See Also ]

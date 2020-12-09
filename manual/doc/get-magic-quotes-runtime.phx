@@ -5,10 +5,15 @@
 get_magic_quotes_runtime — Gets the current active configuration setting of
 magic_quotes_runtime
 
+Warning
+
+This function has been DEPRECATED as of PHP 7.4.0. Relying on this function is
+highly discouraged.
+
 ===============================================================================
 [ Description ]
 
-  get_magic_quotes_runtime ( void ) : bool~
+  get_magic_quotes_runtime ( ) : bool~
 
 Returns the current active configuration setting of magic_quotes_runtime.
 
@@ -21,9 +26,8 @@ as of PHP 5.4.0.
 ===============================================================================
 [ Changelog ]
 
-Version                               Description
-5.4.0   Always returns FALSE because the magic quotes feature was removed from
-        PHP.
+Version            Description
+7.4.0   This function has been deprecated.
 
 ===============================================================================
 [ Examples ]
@@ -44,8 +48,7 @@ Example #1 get_magic_quotes_runtime() example
 
  * |get_magic_quotes_gpc| - Gets the current configuration setting of
   magic_quotes_gpc
- * |set_magic_quotes_runtime| - Sets the current active configuration setting
-  of magic_quotes_runtime
+ * set_magic_quotes_runtime()
 
 
 vim:ft=help:

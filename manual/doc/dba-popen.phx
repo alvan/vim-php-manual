@@ -7,8 +7,8 @@ dba_popen — Open database persistently
 ===============================================================================
 [ Description ]
 
-  dba_popen ( string $path , string $mode [, string $handler [, mixed $... ]]~
-  ) : resource~
+  dba_popen ( string $path , string $mode [, string $handler ], mixed ...$args~
+  ) : resource|false~
 
 dba_popen() establishes a persistent database instance for {path} with {mode}
 using {handler}.
@@ -31,6 +31,23 @@ using {handler}.
   The name of the handler which shall be used for accessing {path}. It is
   passed all optional parameters given to dba_popen() and can act on behalf of
   them.
+
+{args}
+
+  Optional string parameters which are passed to the driver.
+
+  The cdb, cdb_make, flatfile, inifile, qdbm and tcadb drivers do not support
+  additional parameters.
+
+  The db1, db2, db3, db4, dbm, gdbm, and ndbm drivers supports a single
+  additional parameter $filemode, which has the same meaning as the $mode
+  parameter of |chmod|, and defaults to 0644.
+
+  The lmdb driver accepts two additional parameters. The first allows to
+  specify the $filemode (see description above), and the second to specify the
+  $mapsize, where the value should be a multiple of the page size of the OS, or
+  zero, to use the default mapsize. The $mapsize parameter is supported as of
+  PHP 7.3.14 and 7.4.2, respectively.
 
 ===============================================================================
 [ Return Values ]

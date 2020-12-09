@@ -24,6 +24,12 @@ Makes {class} implement {interface}
 Returns TRUE on success or FALSE on failure.
 
 ===============================================================================
+[ Errors/Exceptions ]
+
+As of PHP 7.4.0, uopz_implements() throws a RuntimeException, if OPcache is
+enabled, and the class entry of {class} is immutable.
+
+===============================================================================
 [ Examples ]
 
 Example #1 uopz_implement() example

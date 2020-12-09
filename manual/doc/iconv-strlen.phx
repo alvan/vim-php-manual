@@ -7,30 +7,37 @@ iconv_strlen — Returns the character count of string
 ===============================================================================
 [ Description ]
 
-  iconv_strlen ( string $str [, string $charset =~
-  ini_get("iconv.internal_encoding") ] ) : int~
+  iconv_strlen ( string $string [, string|null $encoding = NULL ] ) :~
+  int|false~
 
 In contrast to |strlen|, iconv_strlen() counts the occurrences of characters in
-the given byte sequence {str} on the basis of the specified character set, the
-result of which is not necessarily identical to the length of the string in
+the given byte sequence {string} on the basis of the specified character set,
+the result of which is not necessarily identical to the length of the string in
 byte.
 
 ===============================================================================
 [ Parameters ]
 
-{str}
+{string}
 
   The string.
 
-{charset}
+{encoding}
 
-  If {charset} parameter is omitted, {str} is assumed to be encoded in
-  iconv.internal_encoding.
+  If {encoding} parameter is omitted or NULL, {string} is assumed to be encoded
+  in iconv.internal_encoding.
 
 ===============================================================================
 [ Return Values ]
 
-Returns the character count of {str}, as an integer.
+Returns the character count of {string}, as an integer, or FALSE if an error
+occurs during the encoding.
+
+===============================================================================
+[ Changelog ]
+
+Version         Description
+8.0.0   {encoding} is nullable now.
 
 ===============================================================================
 [ See Also ]

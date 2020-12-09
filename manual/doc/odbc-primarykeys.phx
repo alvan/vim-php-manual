@@ -7,8 +7,8 @@ odbc_primarykeys — Gets the primary keys for a table
 ===============================================================================
 [ Description ]
 
-  odbc_primarykeys ( resource $connection_id , string $qualifier , string~
-  $owner , string $table ) : resource~
+  odbc_primarykeys ( resource $connection_id , string $catalog , string~
+  $schema , string $table ) : resource|false~
 
 Returns a result identifier that can be used to fetch the column names that
 comprise the primary key for a table.
@@ -20,9 +20,13 @@ comprise the primary key for a table.
 
   The ODBC connection identifier, see |odbc_connect| for details.
 
-{qualifier}
+{catalog}
 
-{owner}
+  The catalog ('qualifier' in ODBC 2 parlance).
+
+{schema}
+
+  The schema ('owner' in ODBC 2 parlance).
 
 {table}
 
@@ -33,12 +37,48 @@ Returns an ODBC result identifier or FALSE on failure.
 
 The result set has the following columns:
 
- * TABLE_QUALIFIER
- * TABLE_OWNER
+ * TABLE_CAT
+ * TABLE_SCHEM
  * TABLE_NAME
  * COLUMN_NAME
  * KEY_SEQ
  * PK_NAME
+
+Drivers can report additional columns.
+
+The result set is ordered by TABLE_CAT, TABLE_SCHEM, TABLE_NAME and KEY_SEQ.
+
+===============================================================================
+[ Examples ]
+
+Example #1 List primary Keys of a Column
+
+<?php >
+  $conn = odbc_connect($dsn, $user, $pass);
+  $primarykeys = odbc_primarykeys($conn, 'TutorialDB', 'dbo', 'TEST');
+  while (($row = odbc_fetch_array($primarykeys))) {
+      print_r($row);
+      break; // further rows omitted for brevity
+  }
+<?>
+
+The above example will output something similar to:
+
+Array
+(
+    [TABLE_CAT] => TutorialDB
+    [TABLE_SCHEM] => dbo
+    [TABLE_NAME] => TEST
+    [COLUMN_NAME] => id
+    [KEY_SEQ] => 1
+    [PK_NAME] => PK__TEST__3213E83FE141F843
+)
+
+===============================================================================
+[ See Also ]
+
+ * |odbc_tables| - Get the list of table names stored in a specific data source
+ * |odbc_foreignkeys| - Retrieves a list of foreign keys
 
 
 vim:ft=help:

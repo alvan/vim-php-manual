@@ -7,7 +7,8 @@ strpos — Find the position of the first occurrence of a substring in a string
 ===============================================================================
 [ Description ]
 
-  strpos ( string $haystack , mixed $needle [, int $offset = 0 ] ) : int~
+  strpos ( string $haystack , string $needle [, int $offset = 0 ] ) :~
+  int|false~
 
 Find the numeric position of the first occurrence of {needle} in the {haystack}
 string.
@@ -21,11 +22,11 @@ string.
 
 {needle}
 
-  If {needle} is not a string, it is converted to an integer and applied as the
-  ordinal value of a character. This behavior is deprecated as of PHP 7.3.0,
-  and relying on it is highly discouraged. Depending on the intended behavior,
-  the {needle} should either be explicitly cast to string, or an explicit call
-  to |chr| should be performed.
+  Prior to PHP 8.0.0, if {needle} is not a string, it is converted to an
+  integer and applied as the ordinal value of a character. This behavior is
+  deprecated as of PHP 7.3.0, and relying on it is highly discouraged.
+  Depending on the intended behavior, the {needle} should either be explicitly
+  cast to string, or an explicit call to |chr| should be performed.
 
 {offset}
 
@@ -52,7 +53,9 @@ function.
 ===============================================================================
 [ Changelog ]
 
-Version                  Description
+Version                    Description
+8.0.0   Passing an int as {needle} is no longer supported.
+7.3.0   Passing an int as {needle} has been deprecated.
 7.1.0   Support for negative {offset}s has been added.
 
 ===============================================================================
@@ -83,7 +86,7 @@ Example #2 Using !==
   $pos = strpos($mystring, $findme);
 
   // The !== operator can also be used.  Using != would not work as expected
-  // because the position of 'a' is 0. The statement (0 != false) evaluates 
+  // because the position of 'a' is 0. The statement (0 != false) evaluates
   // to false.
   if ($pos !== false) {
        echo "The string '$findme' was found in the string '$mystring'";
@@ -111,6 +114,9 @@ Example #3 Using an offset
 
  * |stripos| - Find the position of the first occurrence of a case-insensitive
   substring in a string
+ * |str_contains| - Determine if a string contains a given substring
+ * |str_ends_with| - Checks if a string ends with a given substring
+ * |str_starts_with| - Checks if a string starts with a given substring
  * |strrpos| - Find the position of the last occurrence of a substring in a
   string
  * |strripos| - Find the position of the last occurrence of a case-insensitive

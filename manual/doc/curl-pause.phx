@@ -7,7 +7,7 @@ curl_pause — Pause and unpause a connection
 ===============================================================================
 [ Description ]
 
-  curl_pause ( resource $ch , int $bitmask ) : int~
+  curl_pause ( CurlHandle $handle , int $flags ) : int~
 
 Warning
 
@@ -16,11 +16,11 @@ This function is currently not documented; only its argument list is available.
 ===============================================================================
 [ Parameters ]
 
-{ch}
+{handle}
 
   A cURL handle returned by |curl_init|.
 
-{bitmask}
+{flags}
 
   One of CURLPAUSE_* constants.
 
@@ -28,6 +28,13 @@ This function is currently not documented; only its argument list is available.
 [ Return Values ]
 
 Returns an error code (CURLE_OK for no error).
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {handle} expects a CurlHandle instance now; previously, a resource was
+        expected.
 
 
 vim:ft=help:

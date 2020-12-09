@@ -9,22 +9,22 @@ XMLWriter::writeAttribute -- xmlwriter_write_attribute — Write full attribute
 
 Object oriented style
 
-  XMLWriter::writeAttribute ( string $name , string $value ) : bool~
+  public XMLWriter::writeAttribute ( string $name , string $value ) : bool~
 
 Procedural style
 
-  xmlwriter_write_attribute ( resource $xmlwriter , string $name , string~
-  $value ) : bool~
+  xmlwriter_write_attribute ( XMLWriter $writer , string $name , string $value~
+  ) : bool~
 
 Writes a full attribute.
 
 ===============================================================================
 [ Parameters ]
 
-{ xmlwriter}
+{ writer}
 
-  Only for procedural calls. The XMLWriter resource that is being modified.
-  This resource comes from a call to |xmlwriter_open_uri| or 
+  Only for procedural calls. The XMLWriter instance that is being modified.
+  This object is returned from a call to |xmlwriter_open_uri| or 
   |xmlwriter_open_memory|.
 
 {name}
@@ -39,6 +39,39 @@ Writes a full attribute.
 [ Return Values ]
 
 Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {writer} expects an XMLWriter instance now; previously, a resource was
+        expected.
+
+===============================================================================
+[ Examples ]
+
+Example #1 Intermixing Sub-elements and Attributes
+
+If writing sub-elements and attributes is intermixed, any attempt to write
+attributes after the first sub-element will fail and return false.
+
+<?php >
+  $xml = new XMLWriter();
+  $xml->openMemory();
+
+  $xml->startElement('element');
+  $xml->writeAttribute('attr1', '0');
+  $xml->writeElement('subelem', '0');
+  var_dump($xml->writeAttribute('attr2', '0'));
+  $xml->endElement();
+
+  echo $xml->flush();
+<?>
+
+The above example will output:
+
+bool(false)
+<element attr1="0"><subelem>0</subelem></element>
 
 ===============================================================================
 [ See Also ]

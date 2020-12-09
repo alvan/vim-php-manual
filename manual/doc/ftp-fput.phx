@@ -8,7 +8,7 @@ ftp_fput — Uploads from an open file to the FTP server
 [ Description ]
 
   ftp_fput ( resource $ftp_stream , string $remote_file , resource $handle [,~
-  int $mode = FTP_IMAGE [, int $startpos = 0 ]] ) : bool~
+  int $mode = FTP_BINARY [, int $startpos = 0 ]] ) : bool~
 
 ftp_fput() uploads the data from a file pointer to a remote file on the FTP
 server.

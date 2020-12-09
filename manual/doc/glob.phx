@@ -20,10 +20,19 @@ used by common shells.
 
   The pattern. No tilde expansion or parameter substitution is done.
 
+  Special characters:
+   + * - Matches zero or more characters.
+   + ? - Matches exactly one character (any character).
+   + [...] - Matches one character from a group of characters. If the first
+    character is !, matches any character not in the group.
+   + \ - Escapes the following character, except when the GLOB_NOESCAPE flag is
+    used.
+
 {flags}
 
   Valid flags:
-   + GLOB_MARK - Adds a slash to each directory returned
+   + GLOB_MARK - Adds a slash (a backslash on Windows) to each directory
+    returned
    + GLOB_NOSORT - Return files as they appear in the directory (no sorting).
     When this flag is not used, the pathnames are sorted alphabetically
    + GLOB_NOCHECK - Return the search pattern if no files matching it were
@@ -33,6 +42,10 @@ used by common shells.
    + GLOB_ONLYDIR - Return only directory entries which match the pattern
    + GLOB_ERR - Stop on read errors (like unreadable directories), by default
     errors are ignored.
+
+
+    Note: The GLOB_BRACE flag is not available on some non GNU systems, like
+    Solaris.
 
 ===============================================================================
 [ Return Values ]
@@ -44,12 +57,6 @@ file matched or FALSE on error.
 
   On some systems it is impossible to distinguish between empty match and an
   error.
-
-===============================================================================
-[ Changelog ]
-
-Version     Description
-5.1.0   GLOB_ERR was added
 
 ===============================================================================
 [ Examples ]
@@ -75,9 +82,6 @@ quickref.txt size 137820
   must be accessible via the server's filesystem.
 
   Note: This function isn't available on some systems (e.g. old Sun OS).
-
-  Note: The GLOB_BRACE flag is not available on some non GNU systems, like
-  Solaris.
 
 ===============================================================================
 [ See Also ]

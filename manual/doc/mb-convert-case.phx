@@ -22,7 +22,7 @@ Performs case folding on a string, converted in the way specified by {mode}.
 {mode}
 
   The mode of the conversion. It can be one of MB_CASE_UPPER, MB_CASE_LOWER,
-  MB_CASE_TITLE, MB_CASE_FOLD, MB_CASE_LOWER_SIMPLE, MB_CASE_UPPER_SIMPLE,
+  MB_CASE_TITLE, MB_CASE_FOLD, MB_CASE_UPPER_SIMPLE, MB_CASE_LOWER_SIMPLE,
   MB_CASE_TITLE_SIMPLE, MB_CASE_FOLD_SIMPLE.
 
 {encoding}
@@ -44,8 +44,16 @@ properties. Thus the behaviour of this function is not affected by locale
 settings and it can convert any characters that have 'alphabetic' property,
 such as A-umlaut (Ä).
 
-For more information about the Unicode properties, please see >> http://
+For more information about the Unicode properties, please see » http://
 www.unicode.org/unicode/reports/tr21/.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+        Added support for MB_CASE_FOLD, MB_CASE_UPPER_SIMPLE,
+7.3.0   MB_CASE_LOWER_SIMPLE, MB_CASE_TITLE_SIMPLE, and MB_CASE_FOLD_SIMPLE as
+        {mode}.
 
 ===============================================================================
 [ Examples ]

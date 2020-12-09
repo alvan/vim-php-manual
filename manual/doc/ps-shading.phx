@@ -9,7 +9,7 @@ ps_shading — Creates a shading for later use
 
   ps_shading ( resource $psdoc , string $type , float $x0 , float $y0 , float~
   $x1 , float $y1 , float $c1 , float $c2 , float $c3 , float $c4 , string~
-  $optlist ) : int~
+  $optlist ) : int|false~
 
 Creates a shading, which can be used by |ps_shfill| or |ps_shading_pattern|.
 

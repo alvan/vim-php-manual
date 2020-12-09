@@ -7,7 +7,7 @@ gzinflate — Inflate a deflated string
 ===============================================================================
 [ Description ]
 
-  gzinflate ( string $data [, int $length = 0 ] ) : string~
+  gzinflate ( string $data [, int $max_length = 0 ] ) : string|false~
 
 This function inflates a deflated string.
 
@@ -18,7 +18,7 @@ This function inflates a deflated string.
 
   The data compressed by |gzdeflate|.
 
-{length}
+{max_length}
 
   The maximum length of data to decode.
 
@@ -29,7 +29,7 @@ The original uncompressed data or FALSE on error.
 
 The function will return an error if the uncompressed data is more than 32768
 times the length of the compressed input {data} or more than the optional
-parameter {length}.
+parameter {max_length}.
 
 ===============================================================================
 [ Examples ]

@@ -8,31 +8,27 @@ check
 ===============================================================================
 [ Description ]
 
-  array_diff_assoc ( array $array1 , array $array2 [, array $... ] ) : array~
+  array_diff_assoc ( array $array , array ...$arrays ) : array~
 
-Compares {array1} against {array2} and returns the difference. Unlike 
+Compares {array} against {arrays} and returns the difference. Unlike 
 |array_diff| the array keys are also used in the comparison.
 
 ===============================================================================
 [ Parameters ]
 
-{array1}
+{array}
 
   The array to compare from
 
-{array2}
+{arrays}
 
-  An array to compare against
-
-{...}
-
-  More arrays to compare against
+  Arrays to compare against
 
 ===============================================================================
 [ Return Values ]
 
-Returns an array containing all the values from {array1} that are not present
-in any of the other arrays.
+Returns an array containing all the values from {array} that are not present in
+any of the other arrays.
 
 ===============================================================================
 [ Examples ]

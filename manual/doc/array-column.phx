@@ -7,10 +7,10 @@ array_column — Return the values from a single column in the input array
 ===============================================================================
 [ Description ]
 
-  array_column ( array $input , mixed $column_key [, mixed $index_key = NULL ]~
-  ) : array~
+  array_column ( array $array , int|string|null $column_key [, int|string|null~
+  $index_key = NULL ] ) : array~
 
-array_column() returns the values from a single column of the {input},
+array_column() returns the values from a single column of the {array},
 identified by the {column_key}. Optionally, an {index_key} may be provided to
 index the values in the returned array by the values from the {index_key}
 column of the input array.
@@ -18,7 +18,7 @@ column of the input array.
 ===============================================================================
 [ Parameters ]
 
-{input}
+{array}
 
   A multi-dimensional array or an array of objects from which to pull a column
   of values from. If an array of objects is provided, then public properties
@@ -50,7 +50,7 @@ Returns an array of values representing a single column from the input array.
 [ Changelog ]
 
 Version                              Description
-7.0.0   Added the ability for the {input} parameter to be an array of objects.
+7.0.0   Added the ability for the {array} parameter to be an array of objects.
 
 ===============================================================================
 [ Examples ]
@@ -196,7 +196,7 @@ If __isset() is not provided, then an empty array will be returned.
 ===============================================================================
 [ See Also ]
 
- * >> Recommended userland implementation for PHP lower than 5.5
+ * » Recommended userland implementation for PHP lower than 5.5
 
 
 vim:ft=help:

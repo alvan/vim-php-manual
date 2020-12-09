@@ -7,7 +7,7 @@ printf — Output a formatted string
 ===============================================================================
 [ Description ]
 
-  printf ( string $format [, mixed $... ] ) : int~
+  printf ( string $format , mixed ...$values ) : int~
 
 Produces output according to {format}.
 
@@ -20,8 +20,13 @@ Produces output according to {format}.
   (excluding %) that are copied directly to the result and conversion
   specifications, each of which results in fetching its own parameter.
 
-  A conversion specification follows this prototype: %[flags][width]
+  A conversion specification follows this prototype: %[argnum$][flags][width]
   [.precision]specifier.
+
+  Argnum
+
+  An integer followed by a dollar sign $, to specify which number argument to
+  treat in the conversion.
 
                                      Flags
    Flag                                Description
@@ -85,7 +90,7 @@ Produces output according to {format}.
             + 1). Otherwise, the conversion is with style e and precision P −
             1.
 
-  G         Like the g specifier but uses E and F.
+  G         Like the g specifier but uses E and f.
   o         The argument is treated as an integer and presented as an octal
             number.
   s         The argument is treated and presented as a string.
@@ -114,7 +119,7 @@ Produces output according to {format}.
   integer d, u, c, o, x, X, b
   double  g, G, e, E, f, F
 
-{...}
+{values}
 
 ===============================================================================
 [ Return Values ]
@@ -178,8 +183,10 @@ Example #2 printf(): string specifiers
   printf("[%-10s]\n",   $s); // left-justification with spaces
   printf("[%010s]\n",   $s); // zero-padding works on strings too
   printf("[%'#10s]\n",  $s); // use the custom padding character '#'
-  printf("[%10.10s]\n", $t); //
-   left-justification but with a cutoff of 10 characters
+  printf("[%10.9s]\n", $t); //
+   right-justification but with a cutoff of 8 characters
+  printf("[%-10.9s]\n", $t); //
+   left-justification but with a cutoff of 8 characters
 <?>
 
 The above example will output:
@@ -189,13 +196,13 @@ The above example will output:
 [monkey    ]
 [0000monkey]
 [####monkey]
-[many monke]
+[ many monk]
+[many monk ]
 
 ===============================================================================
 [ See Also ]
 
  * |print| - Output a string
- * printf()
  * |sprintf| - Return a formatted string
  * |fprintf| - Write a formatted string to a stream
  * |vprintf| - Output a formatted string

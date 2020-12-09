@@ -7,7 +7,7 @@ prev — Rewind the internal array pointer
 ===============================================================================
 [ Description ]
 
-  prev ( array &$array ) : mixed~
+  prev ( array|object &$array ) : mixed~
 
 Rewind the internal array pointer.
 
@@ -51,7 +51,7 @@ Example #1 Example use of prev() and friends
 ===============================================================================
 [ Notes ]
 
-  Note: The beginning of an array is indistinguishable from a boolean FALSE
+  Note: The beginning of an array is indistinguishable from a bool FALSE
   element. To make the distinction, check that the |key| of the prev() element
   is not NULL.
 

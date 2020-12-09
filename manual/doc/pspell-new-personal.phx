@@ -7,9 +7,9 @@ pspell_new_personal — Load a new dictionary with personal wordlist
 ===============================================================================
 [ Description ]
 
-  pspell_new_personal ( string $personal , string $language [, string~
-  $spelling [, string $jargon [, string $encoding [, int $mode = 0 ]]]] ) :~
-  int~
+  pspell_new_personal ( string $filename , string $language [, string~
+  $spelling = "" [, string $jargon = "" [, string~
+  $encoding = "" [, int $mode = 0 ]]]] ) : int|false~
 
 pspell_new_personal() opens up a new dictionary with a personal wordlist. The
 wordlist can be modified and saved with |pspell_save_wordlist|, if desired.
@@ -19,13 +19,13 @@ personal wordlist file with |pspell_config_personal|, set the file for
 replacement pairs with |pspell_config_repl|, and open a new dictionary with 
 |pspell_new_config|.
 
-For more information and examples, check out inline manual pspell website:>>
- http://aspell.net/.
+For more information and examples, check out inline manual pspell website:
+» http://aspell.net/.
 
 ===============================================================================
 [ Parameters ]
 
-{personal}
+{filename}
 
   The file where words added to the personal list will be stored. It should be
   an absolute filename beginning with '/' because otherwise it will be relative

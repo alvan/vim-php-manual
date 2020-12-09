@@ -8,19 +8,18 @@ array
 ===============================================================================
 [ Description ]
 
-  dbase_get_record_with_names ( resource $dbase_identifier , int~
-  $record_number ) : array~
+  dbase_get_record_with_names ( resource $database , int $number ) : array~
 
 Gets a record from a dBase database as an associative array.
 
 ===============================================================================
 [ Parameters ]
 
-{dbase_identifier}
+{database}
 
-  The database link identifier, returned by |dbase_open| or |dbase_create|.
+  The database resource, returned by |dbase_open| or |dbase_create|.
 
-{record_number}
+{_number}
 
   The index of the record between 1 and dbase_numrecords($dbase_identifier).
 
@@ -44,8 +43,8 @@ On error, dbase_get_record_with_names() will return FALSE.
 ===============================================================================
 [ Changelog ]
 
-  Version                         Description
-dbase 7.0.0 {dbase_identifier} is now a resource instead of an int.
+  Version                     Description
+dbase 7.0.0 {database} is now a resource instead of an int.
 
 ===============================================================================
 [ Examples ]

@@ -10,21 +10,21 @@ AttList
 
 Object oriented style
 
-  XMLWriter::startDtdAttlist ( string $name ) : bool~
+  public XMLWriter::startDtdAttlist ( string $name ) : bool~
 
 Procedural style
 
-  xmlwriter_start_dtd_attlist ( resource $xmlwriter , string $name ) : bool~
+  xmlwriter_start_dtd_attlist ( XMLWriter $writer , string $name ) : bool~
 
 Starts a DTD attribute list.
 
 ===============================================================================
 [ Parameters ]
 
-{ xmlwriter}
+{ writer}
 
-  Only for procedural calls. The XMLWriter resource that is being modified.
-  This resource comes from a call to |xmlwriter_open_uri| or 
+  Only for procedural calls. The XMLWriter instance that is being modified.
+  This object is returned from a call to |xmlwriter_open_uri| or 
   |xmlwriter_open_memory|.
 
 {name}
@@ -35,6 +35,13 @@ Starts a DTD attribute list.
 [ Return Values ]
 
 Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {writer} expects an XMLWriter instance now; previously, a resource was
+        expected.
 
 ===============================================================================
 [ See Also ]

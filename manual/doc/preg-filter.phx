@@ -7,8 +7,9 @@ preg_filter — Perform a regular expression search and replace
 ===============================================================================
 [ Description ]
 
-  preg_filter ( mixed $pattern , mixed $replacement , mixed $subject [, int~
-  $limit = -1 [, int &$count ]] ) : mixed~
+  preg_filter ( string|array $pattern , string|array $replacement ,~
+  string|array $subject [, int $limit = -1 [, int &$count = NULL ]] ) :~
+  string|array|null~
 
 preg_filter() is identical to |preg_replace| except it only returns the
 (possibly transformed) subjects where there was a match. For details about how

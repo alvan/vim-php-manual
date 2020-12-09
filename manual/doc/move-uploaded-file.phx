@@ -64,11 +64,11 @@ Example #1 Uploading multiple files
 
   Note:
 
-  move_uploaded_file() is both safe mode and open_basedir aware. However,
-  restrictions are placed only on the {destination} path as to allow the moving
-  of uploaded files in which {filename} may conflict with such restrictions. 
-  move_uploaded_file() ensures the safety of this operation by allowing only
-  those files uploaded through PHP to be moved.
+  move_uploaded_file() is open_basedir aware. However, restrictions are placed
+  only on the {destination} path as to allow the moving of uploaded files in
+  which {filename} may conflict with such restrictions. move_uploaded_file()
+  ensures the safety of this operation by allowing only those files uploaded
+  through PHP to be moved.
 
 Warning
 

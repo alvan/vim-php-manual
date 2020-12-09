@@ -7,7 +7,7 @@ variant_and — Performs a bitwise AND operation between two variants
 ===============================================================================
 [ Description ]
 
-  variant_and ( mixed $left , mixed $right ) : mixed~
+  variant_and ( mixed $left , mixed $right ) : variant~
 
 Performs a bitwise AND operation. Note that this is slightly different from a
 regular AND operation.
@@ -29,7 +29,7 @@ regular AND operation.
   function can be either a PHP native type (integer, string, floating point,
   boolean or NULL), or an instance of a COM, VARIANT or DOTNET class. PHP
   native types will be converted to variants using the same rules as found in
-  the constructor for the VARIANT class. COM and DOTNET objects will have the
+  the constructor for the variant class. COM and DOTNET objects will have the
   value of their default property taken and used as the variant value.
 
   The variant arithmetic functions are wrappers around the similarly named
@@ -52,6 +52,11 @@ FALSE        NULL          FALSE
 NULL         TRUE          NULL
 NULL         FALSE         FALSE
 NULL         NULL          NULL
+
+===============================================================================
+[ Errors/Exceptions ]
+
+Throws a com_exception on failure.
 
 ===============================================================================
 [ See Also ]

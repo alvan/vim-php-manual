@@ -4,6 +4,11 @@
 
 money_format — Formats a number as a currency string
 
+Warning
+
+This function has been DEPRECATED as of PHP 7.4.0. Relying on this function is
+highly discouraged.
+
 ===============================================================================
 [ Description ]
 
@@ -95,8 +100,8 @@ converts only one number at a time.
     A period followed by the number of digits (p) after the decimal character.
     If the value of p is 0 (zero), the decimal character and the digits to its
     right will be omitted. If no right precision is included, the default will
-    dictated by the current local in use. The amount being formatted is rounded
-    to the specified number of digits prior to formatting.
+    dictated by the current locale in use. The amount being formatted is
+    rounded to the specified number of digits prior to formatting.
 
   Conversion characters
 
@@ -124,6 +129,13 @@ converts only one number at a time.
 Returns the formatted string. Characters before and after the formatting string
 will be returned unchanged. Non-numeric {number} causes returning NULL and
 emitting E_WARNING.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+7.4.0   This function has been deprecated. Instead, use 
+        NumberFormatter::formatCurrency().
 
 ===============================================================================
 [ Notes ]

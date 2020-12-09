@@ -1,0 +1,34 @@
+*rpmaddtag*
+
+(PECL rpminfo >= 0.5.0)
+
+rpmaddtag — Add tag retrieved in query
+
+===============================================================================
+[ Description ]
+
+  rpmaddtag ( int $tag ) : bool~
+
+Add an additional retrieved tag in subsequent queries.
+
+===============================================================================
+[ Parameters ]
+
+{tag}
+
+  One of RPMTAG_* constant, see the rpminfo constants page.
+
+===============================================================================
+[ Return Values ]
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+[ See Also ]
+
+ * |rpminfo| - Get information from a RPM file
+ * |rpmdbinfo| - Get information from installed RPM
+ * |rpmdbsearch| - Search RPM packages
+
+
+vim:ft=help:

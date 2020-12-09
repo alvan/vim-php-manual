@@ -8,7 +8,7 @@ win32_query_service_status — Queries the status of a service
 [ Description ]
 
   win32_query_service_status ( string $servicename [, string $machine ] ) :~
-  mixed~
+  array~
 
 Queries the current status for a service, returning an array of information.
 
@@ -26,8 +26,10 @@ Queries the current status for a service, returning an array of information.
 ===============================================================================
 [ Return Values ]
 
-Returns an array consisting of the following information on success, FALSE if
-there is a problem with the parameters or a Win32 Error Code on failure.
+Returns an array consisting of the following information on success
+
+Prior version 1.0.0, FALSE if there is a problem with the parameters or a Win32
+Error Code on failure.
 
 {ServiceType}
 
@@ -74,6 +76,22 @@ there is a problem with the parameters or a Win32 Error Code on failure.
 {ServiceFlags}
 
   The dwServiceFlags. See Win32Service Service Service Flag Constants.
+
+===============================================================================
+[ Errors/Exceptions ]
+
+A ValueError is thrown if the; value of {servicename} parameter is empty.
+
+===============================================================================
+[ Changelog ]
+
+     Version                               Description
+PECL win32service Throws a ValueError on invalid data in parameters, previously
+1.0.0             FALSE was returned.
+PECL win32service Throws a Win32ServiceException on error, previously a Win32
+1.0.0             Error Code was returned.
+PECL win32service The return type is now array, previously it was mixed.
+1.0.0
 
 ===============================================================================
 [ See Also ]

@@ -7,8 +7,8 @@ preg_match — Perform a regular expression match
 ===============================================================================
 [ Description ]
 
-  preg_match ( string $pattern , string $subject [, array &$matches [, int~
-  $flags = 0 [, int $offset = 0 ]]] ) : int~
+  preg_match ( string $pattern , string $subject [, array &$matches = NULL [,~
+  int $flags = 0 [, int $offset = 0 ]]] ) : int|false~
 
 Searches {subject} for a match to the regular expression given in {pattern}.
 
@@ -176,11 +176,8 @@ function.
 ===============================================================================
 [ Changelog ]
 
-Version                               Description
+Version                              Description
 7.2.0   The PREG_UNMATCHED_AS_NULL is now supported for the $flags parameter.
-5.3.6   Returns FALSE if {offset} is higher than {subject} length.
-5.2.2   Named subpatterns now accept the syntax (?<name>) and (?'name') as well
-        as (?P<name>). Previous versions accepted only (?P<name>).
 
 ===============================================================================
 [ Examples ]
@@ -276,6 +273,8 @@ another string. Use |strpos| instead as it will be faster.
  * |preg_replace| - Perform a regular expression search and replace
  * |preg_split| - Split string by a regular expression
  * |preg_last_error| - Returns the error code of the last PCRE regex execution
+ * |preg_last_error_msg| - Returns the error message of the last PCRE regex
+  execution
 
 
 vim:ft=help:

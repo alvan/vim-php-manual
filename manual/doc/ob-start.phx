@@ -103,26 +103,6 @@ output is being filtered sequentially through each of them in nesting order.
 Returns TRUE on success or FALSE on failure.
 
 ===============================================================================
-[ Changelog ]
-
-Version                               Description
-        In case ob_start() is used inside an output buffer callback, this
-7.0.0   function will no longer issue an E_ERROR but instead an
-        E_RECOVERABLE_ERROR, allowing custom error handlers to catch such
-        errors.
-        The third parameter of ob_start() changed from a boolean parameter
-        called {erase} (which, if set to FALSE, would prevent the output buffer
-        from being deleted until the script finished executing) to an integer
-5.4.0   parameter called {flags}. Unfortunately, this results in an API
-        compatibility break for code written prior to PHP 5.4.0 that uses the
-        third parameter. See the flags example for an example of how to handle
-        this with code that needs to be compatible with both.
-5.4.0   A chunk size of 1 now results in chunks of 1 byte being sent to the
-        output buffer.
-4.3.2   This function was changed to return FALSE in case the passed
-        {output_callback} can not be executed.
-
-===============================================================================
 [ Examples ]
 
 Example #1 User defined callback function example

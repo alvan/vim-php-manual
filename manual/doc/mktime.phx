@@ -10,7 +10,7 @@ mktime — Get Unix timestamp for a date
   mktime ([ int $hour = date("H") [, int $minute =~
   date("i") [, int $second = date("s") [, int $month =~
   date("n") [, int $day = date("j") [, int $year =~
-  date("Y") [, int $is_dst = -1 ]]]]]]] ) : int~
+  date("Y") [, int $isDST = -1 ]]]]]]] ) : int~
 
 Returns the Unix timestamp corresponding to the arguments given. This timestamp
 is a long integer containing the number of seconds between the Unix Epoch
@@ -74,14 +74,14 @@ omitted will be set to the current value according to the local date and time.
   somewhere between 1901 and 2038. However, before PHP 5.1.0 this range was
   limited from 1970 to 2038 on some systems (e.g. Windows).
 
-{is_dst}
+{isDST}
 
   This parameter can be set to 1 if the time is during daylight savings time
   (DST), 0 if it is not, or -1 (the default) if it is unknown whether the time
   is within daylight savings time or not. If it's unknown, PHP tries to figure
   it out itself. This can cause unexpected (but not incorrect) results. Some
   times are invalid if DST is enabled on the system PHP is running on or
-  {is_dst} is set to 1. If DST is enabled in e.g. 2:00, all times between 2:00
+  {isDST} is set to 1. If DST is enabled in e.g. 2:00, all times between 2:00
   and 3:00 are invalid and mktime() returns an undefined (usually negative)
   value. Some systems (e.g. Solaris 8) enable DST at midnight so time 0:30 of
   the day when DST is enabled is evaluated as 23:30 of the previous day.
@@ -99,7 +99,7 @@ omitted will be set to the current value according to the local date and time.
 [ Return Values ]
 
 mktime() returns the Unix timestamp of the arguments given. If the arguments
-are invalid, the function returns FALSE (before PHP 5.1 it returned -1).
+are invalid, the function returns FALSE.
 
 ===============================================================================
 [ Errors/Exceptions ]
@@ -107,20 +107,6 @@ are invalid, the function returns FALSE (before PHP 5.1 it returned -1).
 Every call to a date/time function will generate a E_NOTICE if the time zone is
 not valid, and/or a E_STRICT or E_WARNING message if using the system settings
 or the TZ environment variable. See also |date_default_timezone_set|
-
-===============================================================================
-[ Changelog ]
-
-Version                               Description
-7.0.0   {is_dst} parameter has been removed.
-5.3.0   mktime() now throws E_DEPRECATED notice if the {is_dst} parameter is
-        used.
-        The {is_dst} parameter became deprecated. Made the function return
-5.1.0   FALSE on error, instead of -1. Fixed the function to accept the year,
-        month and day to be all passed as zero.
-5.1.0   When called with no arguments, mktime() throws E_STRICT notice. Use the
-        |time| function instead.
-5.1.0   Now issues the E_STRICT and E_NOTICE time zone errors.
 
 ===============================================================================
 [ Examples ]

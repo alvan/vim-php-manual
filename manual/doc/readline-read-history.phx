@@ -7,7 +7,7 @@ readline_read_history — Reads the history
 ===============================================================================
 [ Description ]
 
-  readline_read_history ([ string $filename ] ) : bool~
+  readline_read_history ([ string|null $filename = NULL ] ) : bool~
 
 This function reads a command history from a file.
 
@@ -22,6 +22,12 @@ This function reads a command history from a file.
 [ Return Values ]
 
 Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+[ Changelog ]
+
+Version         Description
+8.0.0   {filename} is nullable now.
 
 
 vim:ft=help:

@@ -7,14 +7,15 @@ bcpow — Raise an arbitrary precision number to another
 ===============================================================================
 [ Description ]
 
-  bcpow ( string $base , string $exponent [, int $scale = 0 ] ) : string~
+  bcpow ( string $num , string $exponent [, int|null $scale = NULL ] ) :~
+  string~
 
-Raise {base} to the power {exponent}.
+Raise {num} to the power {exponent}.
 
 ===============================================================================
 [ Parameters ]
 
-{base}
+{num}
 
   The base, as a string.
 

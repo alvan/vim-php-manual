@@ -44,12 +44,6 @@ Caution
 However, if libgd fails to output the image, this function returns TRUE.
 
 ===============================================================================
-[ Changelog ]
-
-Version                     Description
-5.4.0   Added support for passing a stream resource to {to}.
-
-===============================================================================
 [ Examples ]
 
 Example #1 Outputting a GD2 image
@@ -91,6 +85,12 @@ Example #2 Saving a GD2 image
 
   The GD2 format is commonly used to allow fast loading of parts of images.
   Note that the GD2 format is only usable in GD2-compatible applications.
+
+Warning
+
+The GD and GD2 image formats are proprietary image formats of libgd. They have
+to be regarded obsolete, and should only be used for development and testing
+purposes.
 
 ===============================================================================
 [ See Also ]

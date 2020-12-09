@@ -7,31 +7,27 @@ array_diff — Computes the difference of arrays
 ===============================================================================
 [ Description ]
 
-  array_diff ( array $array1 , array $array2 [, array $... ] ) : array~
+  array_diff ( array $array , array ...$arrays ) : array~
 
-Compares {array1} against one or more other arrays and returns the values in
-{array1} that are not present in any of the other arrays.
+Compares {array} against one or more other arrays and returns the values in
+{array} that are not present in any of the other arrays.
 
 ===============================================================================
 [ Parameters ]
 
-{array1}
+{array}
 
   The array to compare from
 
-{array2}
+{arrays}
 
-  An array to compare against
-
-{...}
-
-  More arrays to compare against
+  Arrays to compare against
 
 ===============================================================================
 [ Return Values ]
 
-Returns an array containing all the entries from {array1} that are not present
-in any of the other arrays.
+Returns an array containing all the entries from {array} that are not present
+in any of the other arrays. Keys in the {array} array are preserved.
 
 ===============================================================================
 [ Examples ]
@@ -54,13 +50,42 @@ Array
     [1] => blue
 )
 
+Example #2 array_diff() example with non-matching types
+
+Two elements are considered equal if and only if (string) $elem1 === (string)
+$elem2. That is, when the string representation is the same.
+
+<?php >
+  // This will generate a Notice that an array cannot be cast to a string.
+  $source = [1, 2, 3, 4];
+  $filter = [3, 4, [5], 6];
+  $result = array_diff($source, $filter);
+
+  // Whereas this is fine, since the objects can cast to a string.
+  class S {
+    private $v;
+
+    public function __construct(string $v) {
+      $this->v = $v;
+    }
+
+    public function __toString() {
+      return $this->v;
+    }
+  }
+
+  $source = [new S('a'), new S('b'), new S('c')];
+  $filter = [new S('b'), new S('c'), new S('d')];
+
+  $result = array_diff($source, $filter);
+
+  // $result now contains one instance of S('a');
+<?>
+
+To use an alternate comparison function, see |array_udiff|.
+
 ===============================================================================
 [ Notes ]
-
-  Note:
-
-  Two elements are considered equal if and only if (string) $elem1 === (string)
-  $elem2. In other words: when the string representation is the same.
 
   Note:
 
@@ -72,6 +97,8 @@ Array
 
  * |array_diff_assoc| - Computes the difference of arrays with additional index
   check
+ * |array_udiff| - Computes the difference of arrays by using a callback
+  function for data comparison
  * |array_intersect| - Computes the intersection of arrays
  * |array_intersect_assoc| - Computes the intersection of arrays with
   additional index check

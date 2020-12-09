@@ -31,8 +31,8 @@ statement after the one that caused an error.
 
 The following error types cannot be handled with a user defined function:
 E_ERROR, E_PARSE, E_CORE_ERROR, E_CORE_WARNING, E_COMPILE_ERROR,
-E_COMPILE_WARNING, and most of E_STRICT raised in the file where 
-set_error_handler() is called.
+E_COMPILE_WARNING independent of where they were raised, and most of E_STRICT
+raised in the file where set_error_handler() is called.
 
 If errors occur before the script is executed (e.g. on file uploads) the custom
 error handler cannot be called since it is not registered at that time.
@@ -96,8 +96,6 @@ the method name.
 Version                               Description
 7.2.0   {errcontext} became deprecated. Usage of this parameter now emits an
         E_DEPRECATED notice.
-5.5.0   {error_handler} now accepts NULL.
-5.2.0   The error handler must return FALSE to populate $php_errormsg.
 
 ===============================================================================
 [ Examples ]
@@ -117,6 +115,9 @@ errors and handling them with a user defined function:
           return false;
       }
 
+      // $errstr may need to be escaped:
+      $errstr = htmlspecialchars($errstr);
+
       switch ($errno) {
       case E_USER_ERROR:
           echo "<b>My ERROR</b> [$errno] $errstr<br />\n";
@@ -124,7 +125,6 @@ errors and handling them with a user defined function:
           echo ", PHP " . PHP_VERSION . " (" . PHP_OS . ")<br />\n";
           echo "Aborting...<br />\n";
           exit(1);
-          break;
 
       case E_USER_WARNING:
           echo "<b>My WARNING</b> [$errno] $errstr<br />\n";
@@ -239,7 +239,6 @@ Aborting...<br />
  * |restore_error_handler| - Restores the previous error handler function
  * |trigger_error| - Generates a user-level error/warning/notice message
  * error level constants
- * information about the callback type
 
 
 vim:ft=help:

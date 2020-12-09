@@ -27,7 +27,7 @@ Server Authentication, include "UID" and "PWD" in the connection options array.
   An associative array that specifies options for connecting to the server. If
   values for the UID and PWD keys are not specified, the connection will be
   attempted using Windows Authentication. For a complete list of supported
-  keys, see >> SQLSRV Connection Options.
+  keys, see » SQLSRV Connection Options.
 
 ===============================================================================
 [ Return Values ]
@@ -95,7 +95,7 @@ Example #3 Connect on a specified port.
 By default, the sqlsrv_connect() uses connection pooling to improve connection
 performance. To turn off connection pooling (i.e. force a new connection on
 each call), set the "ConnectionPooling" option in the $connectionOptions array
-to 0 (or FALSE). For more information, see >> SQLSRV Connection Pooling.
+to 0 (or FALSE). For more information, see » SQLSRV Connection Pooling.
 
 The SQLSRV extension does not have a dedicated function for changing which
 database is connected to. The target database is specified in the

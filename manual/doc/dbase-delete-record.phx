@@ -7,8 +7,7 @@ dbase_delete_record — Deletes a record from a database
 ===============================================================================
 [ Description ]
 
-  dbase_delete_record ( resource $dbase_identifier , int $record_number ) :~
-  bool~
+  dbase_delete_record ( resource $database , int $number ) : bool~
 
 Marks the given record to be deleted from the database.
 
@@ -20,11 +19,11 @@ Marks the given record to be deleted from the database.
 ===============================================================================
 [ Parameters ]
 
-{dbase_identifier}
+{database}
 
-  The database link identifier, returned by |dbase_open| or |dbase_create|.
+  The database resource, returned by |dbase_open| or |dbase_create|.
 
-{record_number}
+{number}
 
   An integer which spans from 1 to the number of records in the database (as
   returned by |dbase_numrecords|).
@@ -37,8 +36,8 @@ Returns TRUE on success or FALSE on failure.
 ===============================================================================
 [ Changelog ]
 
-  Version                         Description
-dbase 7.0.0 {dbase_identifier} is now a resource instead of an int.
+  Version                     Description
+dbase 7.0.0 {database} is now a resource instead of an int.
 
 ===============================================================================
 [ See Also ]

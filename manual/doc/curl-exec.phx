@@ -7,7 +7,7 @@ curl_exec — Perform a cURL session
 ===============================================================================
 [ Description ]
 
-  curl_exec ( resource $ch ) : mixed~
+  curl_exec ( CurlHandle $handle ) : string|bool~
 
 Execute the given cURL session.
 
@@ -17,7 +17,7 @@ options for the session are set.
 ===============================================================================
 [ Parameters ]
 
-{ch}
+{handle}
 
   A cURL handle returned by |curl_init|.
 
@@ -39,6 +39,13 @@ function.
 
   Note that response status codes which indicate errors (such as 404 Not found)
   are not regarded as failure. |curl_getinfo| can be used to check for these.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {handle} expects a CurlHandle instance now; previously, a resource was
+        expected.
 
 ===============================================================================
 [ Examples ]

@@ -7,7 +7,7 @@ array_product — Calculate the product of values in an array
 ===============================================================================
 [ Description ]
 
-  array_product ( array $array ) : number~
+  array_product ( array $array ) : int|float~
 
 array_product() returns the product of values in an array.
 
@@ -22,13 +22,6 @@ array_product() returns the product of values in an array.
 [ Return Values ]
 
 Returns the product as an integer or float.
-
-===============================================================================
-[ Changelog ]
-
-Version                               Description
-5.3.6   The product of an empty array is now 1, when before this function would
-        return 0 for an empty array.
 
 ===============================================================================
 [ Examples ]

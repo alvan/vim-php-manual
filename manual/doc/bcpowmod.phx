@@ -8,16 +8,16 @@ specified modulus
 ===============================================================================
 [ Description ]
 
-  bcpowmod ( string $base , string $exponent , string $modulus [, int $scale =~
-  0 ] ) : string~
+  bcpowmod ( string $num , string $exponent , string $modulus [, int|null~
+  $scale = NULL ] ) : string~
 
-Use the fast-exponentiation method to raise {base} to the power {exponent} with
+Use the fast-exponentiation method to raise {num} to the power {exponent} with
 respect to the modulus {modulus}.
 
 ===============================================================================
 [ Parameters ]
 
-{base}
+{num}
 
   The base, as an integral string (i.e. the scale has to be zero).
 
@@ -39,7 +39,7 @@ respect to the modulus {modulus}.
 ===============================================================================
 [ Return Values ]
 
-Returns the result as a string, or NULL if {modulus} is 0 or {exponent} is
+Returns the result as a string, or FALSE if {modulus} is 0 or {exponent} is
 negative.
 
 ===============================================================================
@@ -49,6 +49,12 @@ negative.
 
   Because this method uses the modulus operation, numbers which are not
   positive integers may give unexpected results.
+
+===============================================================================
+[ Changelog ]
+
+Version       Description
+8.0.0   {scale} is now nullable.
 
 ===============================================================================
 [ Examples ]

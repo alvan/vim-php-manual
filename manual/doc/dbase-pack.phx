@@ -7,7 +7,7 @@ dbase_pack — Packs a database
 ===============================================================================
 [ Description ]
 
-  dbase_pack ( resource $dbase_identifier ) : bool~
+  dbase_pack ( resource $database ) : bool~
 
 Packs the specified database by permanently deleting all records marked for
 deletion using |dbase_delete_record|. Note that the file will be truncated
@@ -16,9 +16,9 @@ after successful packing (contrary to dBASE III's PACK command).
 ===============================================================================
 [ Parameters ]
 
-{dbase_identifier}
+{database}
 
-  The database link identifier, returned by |dbase_open| or |dbase_create|.
+  The database resource, returned by |dbase_open| or |dbase_create|.
 
 ===============================================================================
 [ Return Values ]
@@ -28,8 +28,8 @@ Returns TRUE on success or FALSE on failure.
 ===============================================================================
 [ Changelog ]
 
-  Version                         Description
-dbase 7.0.0 {dbase_identifier} is now a resource instead of an int.
+  Version                     Description
+dbase 7.0.0 {database} is now a resource instead of an int.
 
 ===============================================================================
 [ Examples ]

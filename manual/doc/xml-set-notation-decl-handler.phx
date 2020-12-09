@@ -7,7 +7,7 @@ xml_set_notation_decl_handler — Set up notation declaration handler
 ===============================================================================
 [ Description ]
 
-  xml_set_notation_decl_handler ( resource $parser , callable $handler ) :~
+  xml_set_notation_decl_handler ( XMLParser $parser , callable $handler ) :~
   bool~
 
 Sets the notation declaration handler function for the XML parser {parser}.
@@ -18,7 +18,7 @@ format:
 <!NOTATION <parameter>name</parameter>
 { <parameter>systemId</parameter> | <parameter>publicId</parameter>?>
 
-See >> section 4.7 of the XML 1.0 spec for the definition of notation
+See » section 4.7 of the XML 1.0 spec for the definition of notation
 declarations.
 
 ===============================================================================
@@ -36,7 +36,7 @@ declarations.
 
   The function named by {handler} must accept five parameters:
 
-  handler ( resource $parser , string $notation_name , string $base , string~
+  handler ( XMLParser $parser , string $notation_name , string $base , string~
   $system_id , string $public_id )~
 
   {parser}
@@ -63,6 +63,13 @@ declarations.
 [ Return Values ]
 
 Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {parser} expects an XMLParser instance now; previously, a resource was
+        expected.
 
 
 vim:ft=help:

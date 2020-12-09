@@ -7,7 +7,7 @@ session_start — Start new or resume existing session
 ===============================================================================
 [ Description ]
 
-  session_start ([ array $options = array() ] ) : bool~
+  session_start ([ array $options = [] ] ) : bool~
 
 session_start() creates a session or resumes the current one based on a session
 identifier passed via a GET or POST request, or passed via a cookie.
@@ -56,9 +56,6 @@ FALSE.
 Version                               Description
 7.1.0   session_start() now returns FALSE and no longer initializes $_SESSION
         when it failed to start the session.
-7.0.0   The {options} parameter was added.
-5.3.0   If a session fails to start, then FALSE is returned. Previously TRUE
-        was returned.
 
 ===============================================================================
 [ Examples ]
@@ -133,8 +130,8 @@ session_start([
 
   Note:
 
-  To use cookie-based sessions, session_start() must be called before outputing
-  anything to the browser.
+  To use cookie-based sessions, session_start() must be called before
+  outputting anything to the browser.
 
   Note:
 

@@ -7,7 +7,7 @@ call_user_func — Call the callback given by the first parameter
 ===============================================================================
 [ Description ]
 
-  call_user_func ( callable $callback [, mixed $... ] ) : mixed~
+  call_user_func ( callable $callback , mixed ...$args ) : mixed~
 
 Calls the {callback} given by the first parameter and passes the remaining
 parameters as arguments.
@@ -19,7 +19,7 @@ parameters as arguments.
 
   The callable to be called.
 
-{...}
+{args}
 
   Zero or more parameters to be passed to the callback.
 
@@ -55,16 +55,6 @@ parameters as arguments.
 [ Return Values ]
 
 Returns the return value of the callback.
-
-===============================================================================
-[ Changelog ]
-
-Version                               Description
-        The interpretation of object oriented keywords like parent and self has
-5.3.0   changed. Previously, calling them using the double colon syntax would
-        emit an E_STRICT warning because they were interpreted as static.
-5.3.0   If the called function expects a parameter to be passed by reference,
-        an E_WARNING is now issued.
 
 ===============================================================================
 [ Examples ]
@@ -161,7 +151,6 @@ The above example will output:
  * |call_user_func_array| - Call a callback with an array of parameters
  * |is_callable| - Verify that the contents of a variable can be called as a
   function
- * information about the callback type
  * ReflectionFunction::invoke() - Invokes function
  * ReflectionMethod::invoke() - Invoke
 

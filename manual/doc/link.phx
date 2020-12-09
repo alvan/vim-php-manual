@@ -28,11 +28,10 @@ link() creates a hard link.
 Returns TRUE on success or FALSE on failure.
 
 ===============================================================================
-[ Changelog ]
+[ Errors/Exceptions ]
 
-Version                               Description
-5.3.0   This function is now available on Windows platforms (Vista, Server 2008
-        or greater).
+The function fails, and issues E_WARNING, if {link} already exists, or if
+{target} does not exist.
 
 ===============================================================================
 [ Examples ]
@@ -61,6 +60,7 @@ Example #1 Creating a simple hard link
  * |symlink| - Creates a symbolic link
  * |readlink| - Returns the target of a symbolic link
  * |linkinfo| - Gets information about a link
+ * |unlink| - Deletes a file
 
 
 vim:ft=help:

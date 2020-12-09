@@ -7,7 +7,7 @@ gzread — Binary-safe gz-file read
 ===============================================================================
 [ Description ]
 
-  gzread ( resource $zp , int $length ) : string~
+  gzread ( resource $stream , int $length ) : string|false~
 
 gzread() reads up to {length} bytes from the given gz-file pointer. Reading
 stops when {length} (uncompressed) bytes have been read or EOF is reached,
@@ -16,7 +16,7 @@ whichever comes first.
 ===============================================================================
 [ Parameters ]
 
-{zp}
+{stream}
 
   The gz-file pointer. It must be valid, and must point to a file successfully
   opened by |gzopen|.
@@ -28,7 +28,13 @@ whichever comes first.
 ===============================================================================
 [ Return Values ]
 
-The data that have been read.
+The data that have been read, or FALSE on failure.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+7.4.0   This functions returns FALSE on failure now; previously 0 was returned.
 
 ===============================================================================
 [ Examples ]

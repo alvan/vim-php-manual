@@ -7,7 +7,7 @@ pg_query — Execute a query
 ===============================================================================
 [ Description ]
 
-  pg_query ([ resource $connection ], string $query ) : resource~
+  pg_query ([ resource $connection ], string $query ) : resource|false~
 
 pg_query() executes the {query} on the specified database {connection}. 
 |pg_query_params| should be preferred in most cases.

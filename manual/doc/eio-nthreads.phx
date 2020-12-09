@@ -7,7 +7,7 @@ eio_nthreads — Returns number of threads currently in use
 ===============================================================================
 [ Description ]
 
-  eio_nthreads ( void ) : int~
+  eio_nthreads ( ) : int~
 
 ===============================================================================
 [ Parameters ]
@@ -22,9 +22,12 @@ eio_nthreads() returns number of threads currently in use.
 ===============================================================================
 [ See Also ]
 
- * eio_npending
- * eio_nready
- * eio_nreqs
+ * |eio_npending| - Returns number of finished, but unhandled requests
+ * |eio_nready| - Returns number of not-yet handled requests
+ * |eio_nreqs| - Returns number of requests to be processed
+ * |eio_set_max_idle| - Set maximum number of idle threads
+ * |eio_set_max_parallel| - Set maximum parallel threads
+ * |eio_set_min_parallel| - Set minimum parallel thread number
 
 
 vim:ft=help:

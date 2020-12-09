@@ -2,12 +2,12 @@
 
 (PHP 4 >= 4.2.0, PHP 5, PHP 7)
 
-session_cache_expire — Return current cache expire
+session_cache_expire — Get and/or set current cache expire
 
 ===============================================================================
 [ Description ]
 
-  session_cache_expire ([ string $new_cache_expire ] ) : int~
+  session_cache_expire ([ int|null $value = NULL ] ) : int|false~
 
 session_cache_expire() returns the current setting of session.cache_expire.
 
@@ -19,19 +19,26 @@ called).
 ===============================================================================
 [ Parameters ]
 
-{new_cache_expire}
+{value}
 
-  If {new_cache_expire} is given, the current cache expire is replaced with
-  {new_cache_expire}.
+  If {value} is given and not NULL, the current cache expire is replaced with
+  {value}.
 
-    Note: Setting {new_cache_expire} is of value only, if session.cache_limiter
-    is set to a value different from nocache.
+    Note: Setting {value} is of value only, if session.cache_limiter is set to
+    a value different from nocache.
 
 ===============================================================================
 [ Return Values ]
 
 Returns the current setting of session.cache_expire. The value returned should
-be read in minutes, defaults to 180.
+be read in minutes, defaults to 180. On failure to change the value, FALSE is
+returned.
+
+===============================================================================
+[ Changelog ]
+
+Version       Description
+8.0.0   {value} is nullable now.
 
 ===============================================================================
 [ Examples ]

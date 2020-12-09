@@ -1,6 +1,6 @@
 *ibase_service_attach*
 
-(PHP 5, PHP 7)
+(PHP 5, PHP 7 < 7.4.0)
 
 ibase_service_attach — Connect to the service manager
 
@@ -8,10 +8,100 @@ ibase_service_attach — Connect to the service manager
 [ Description ]
 
   ibase_service_attach ( string $host , string $dba_username , string~
-  $dba_password ) : resource~
-Warning
+  $dba_password ) : resource|false~
 
-This function is currently not documented; only its argument list is available.
+===============================================================================
+[ Parameters ]
+
+{host}
+
+  The name or ip address of the database host. You can define the port by
+  adding '/' and port number. If no port is specified, port 3050 will be used.
+
+{dba_username}
+
+  The name of any valid user.
+
+{dba_password}
+
+  The user's password.
+
+===============================================================================
+[ Return Values ]
+
+Returns a Interbase / Firebird link identifier on success or FALSE on failure.
+
+===============================================================================
+[ Examples ]
+
+Example #1 ibase_service_attach() example
+
+<?php >
+      // Attach to the remote Firebird server by ip address
+      if (($service = ibase_service_attach('10.1.1.199', 'sysdba', 'masterkey'))
+   != FALSE) {
+          
+          // Successfully attached. 
+          // Fetch server version (something like 'LI-V3.0.4.33054 Firebird 3.0')
+          $server_version  = ibase_server_info($service, IBASE_SVC_SERVER_VERSION
+  );
+
+          // Fetch server implementation (something like 'Firebird/Linux/AMD/
+  Intel/x64')
+          $server_implementation = ibase_server_info($service, 
+  IBASE_SVC_IMPLEMENTATION);
+
+          // Detach from server (disconnect)
+          ibase_service_detach($service);
+
+          // Output the info
+          echo "Server version: " . $server_version . "<br/>";
+          echo "Server implementation: " . $server_implementation;
+      }
+      else {
+          // Output message on error
+          $conn_error = ibase_errmsg();
+          die($conn_error);
+      }
+
+<?>
+
+Example #2 ibase_service_attach() example using hostname/port syntax
+
+<?php >
+      // Attach to the remote Firebird server by name. Use Port 3050.
+      if (($service = ibase_service_attach('FB-SRV-01.contoso.local/3050', 
+  'sysdba', 'masterkey')) != FALSE) {
+          
+          // Successfully attached. 
+          // Fetch server version (something like 'LI-V3.0.4.33054 Firebird 3.0')
+          $server_version  = ibase_server_info($service, IBASE_SVC_SERVER_VERSION
+  );
+
+          // Fetch server implementation (something like 'Firebird/Linux/AMD/
+  Intel/x64')
+          $server_implementation = ibase_server_info($service, 
+  IBASE_SVC_IMPLEMENTATION);
+
+          // Detach from server (disconnect)
+          ibase_service_detach($service);
+
+          // Output the info
+          echo "Server version: " . $server_version . "<br/>";
+          echo "Server implementation: " . $server_implementation;
+      }
+      else {
+          // Output message on error
+          $conn_error = ibase_errmsg();
+          die($conn_error);
+      }
+
+<?>
+
+===============================================================================
+[ See Also ]
+
+ * |ibase_service_detach| - Disconnect from the service manager
 
 
 vim:ft=help:

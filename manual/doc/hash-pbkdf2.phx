@@ -8,7 +8,7 @@ hash_pbkdf2 — Generate a PBKDF2 key derivation of a supplied password
 [ Description ]
 
   hash_pbkdf2 ( string $algo , string $password , string $salt , int~
-  $iterations [, int $length = 0 [, bool $raw_output = FALSE ]] ) : string~
+  $iterations [, int $length = 0 [, bool $binary = FALSE ]] ) : string~
 
 ===============================================================================
 [ Parameters ]
@@ -32,23 +32,23 @@ hash_pbkdf2 — Generate a PBKDF2 key derivation of a supplied password
 
 {length}
 
-  The length of the output string. If {raw_output} is TRUE this corresponds to
-  the byte-length of the derived key, if {raw_output} is FALSE this corresponds
-  to twice the byte-length of the derived key (as every byte of the key is
+  The length of the output string. If {binary} is TRUE this corresponds to the
+  byte-length of the derived key, if {binary} is FALSE this corresponds to
+  twice the byte-length of the derived key (as every byte of the key is
   returned as two hexits).
 
   If 0 is passed, the entire output of the supplied algorithm is used.
 
-{raw_output}
+{binary}
 
   When set to TRUE, outputs raw binary data. FALSE outputs lowercase hexits.
 
 ===============================================================================
 [ Return Values ]
 
-Returns a string containing the derived key as lowercase hexits unless
-{raw_output} is set to TRUE in which case the raw binary representation of the
-derived key is returned.
+Returns a string containing the derived key as lowercase hexits unless {binary}
+is set to TRUE in which case the raw binary representation of the derived key
+is returned.
 
 ===============================================================================
 [ Errors/Exceptions ]

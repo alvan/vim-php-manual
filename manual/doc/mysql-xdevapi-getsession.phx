@@ -47,7 +47,7 @@ Connects to the MySQL server.
     that contains different options, including:
 
      o The auth (authentication mechanism) attribute as it relates to encrypted
-      connections. For additional information, see >> Command Options for
+      connections. For additional information, see » Command Options for
       Encrypted Connections. The following 'auth' values are supported: plain,
       mysql41, external, and sha256_mem.
 
@@ -65,6 +65,27 @@ Connects to the MySQL server.
       connect-timeout URI option has precedence over these environment
       variables.
 
+     o The optional compression attribute accepts these values: preferred
+      (client negotiates with server to find a supported algorithm; connection
+      is uncompressed if a mutually supported algorithm is not found), required
+      (like "preferred", but connection is terminated if a mutually supported
+      algorithm is not found), or disabled (connection is uncompressed).
+      Defaults to preferred.
+
+      This option was added in version 8.0.20.
+
+     o The optional compression-algorithms attribute defines the desired
+      compression algorithms (and their preferred usage order): zstd_stream
+      (alias: zstd), lz4_message (alias: lz4), or deflate_stream (aliases:
+      deflate or zlib). By default, the order used (depending on system
+      availability) is lz4_message, zstd_stream, then deflate_stream. For
+      example, passing in compression-algorithms=[lz4,zstd_stream] uses lz4 if
+      it's available, otherwise zstd_stream is used. If both are unavailable
+      then behavior depends on the compression value e.g., if compression=
+      required then it'll fail with an error.
+
+      This option was added in version 8.0.22.
+
   Example #1 URI examples
 
   mysqlx://foobar
@@ -79,9 +100,11 @@ Connects to the MySQL server.
   mysqlx://foobar?ssl-ca=(/path/to/ca.pem)&ssl-crl=(/path/to/crl.pem)
   mysqlx://foo:bar@[localhost:33060, 127.0.0.1:33061]?ssl-mode=disabled
   mysqlx://foo:bar@localhost:33160/?connect-timeout=0
-  mysqlx://foo:bar@localhost:33160/?connect-timeout=10
+  mysqlx://foo:bar@localhost:33160/?connect-timeout=10&compression=required
+  mysqlx://foo:bar@localhost:33160/?connect-timeout=10&compression=required&
+  compression-algorithms=[lz4,zstd_stream]
 
-  For related information, see MySQL Shell's >> Connecting using a URI String.
+  For related information, see MySQL Shell's » Connecting using a URI String.
 
 ===============================================================================
 [ Return Values ]

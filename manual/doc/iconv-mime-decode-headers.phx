@@ -7,15 +7,15 @@ iconv_mime_decode_headers — Decodes multiple MIME header fields at once
 ===============================================================================
 [ Description ]
 
-  iconv_mime_decode_headers ( string $encoded_headers [, int $mode = 0 [,~
-  string $charset = ini_get("iconv.internal_encoding") ]] ) : array~
+  iconv_mime_decode_headers ( string $headers [, int $mode = 0 [, string|null~
+  $encoding = NULL ]] ) : array|false~
 
 Decodes multiple MIME header fields at once.
 
 ===============================================================================
 [ Parameters ]
 
-{encoded_headers}
+{headers}
 
   The encoded headers, as a string.
 
@@ -29,7 +29,7 @@ Decodes multiple MIME header fields at once.
   Value              Constant                           Description
                                             If set, the given header is decoded
                                             in full conformance with the
-                                            standards defined in >> RFC2047.
+                                            standards defined in » RFC2047.
   1     ICONV_MIME_DECODE_STRICT            This option is disabled by default
                                             because there are a lot of broken
                                             mail user agents that don't follow
@@ -40,22 +40,28 @@ Decodes multiple MIME header fields at once.
                                             errors and continue to process a
                                             given header.
 
-{charset}
+{encoding}
 
-  The optional {charset} parameter specifies the character set to represent the
-  result by. If omitted, iconv.internal_encoding will be used.
+  The optional {encoding} parameter specifies the character set to represent
+  the result by. If omitted or NULL, iconv.internal_encoding will be used.
 
 ===============================================================================
 [ Return Values ]
 
 Returns an associative array that holds a whole set of MIME header fields
-specified by {encoded_headers} on success, or FALSE if an error occurs during
-the decoding.
+specified by {headers} on success, or FALSE if an error occurs during the
+decoding.
 
 Each key of the return value represents an individual field name and the
 corresponding element represents a field value. If more than one field of the
 same name are present, iconv_mime_decode_headers() automatically incorporates
 them into a numerically indexed array in the order of occurrence.
+
+===============================================================================
+[ Changelog ]
+
+Version         Description
+8.0.0   {encoding} is nullable now.
 
 ===============================================================================
 [ Examples ]

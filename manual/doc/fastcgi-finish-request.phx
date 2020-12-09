@@ -7,7 +7,7 @@ fastcgi_finish_request — Flushes all response data to the client
 ===============================================================================
 [ Description ]
 
-  fastcgi_finish_request ( void ) : bool~
+  fastcgi_finish_request ( ) : bool~
 
 This function flushes all response data to the client and finishes the request.
 This allows for time consuming tasks to be performed without leaving the

@@ -9,9 +9,9 @@ fputcsv — Format line as CSV and write to file pointer
 
   fputcsv ( resource $handle , array $fields [, string $delimiter =~
   "," [, string $enclosure = '"' [, string~
-  $escape_char = "\\" ]]] ) : int~
+  $escape_char = "\\" ]]] ) : int|false~
 
-fputcsv() formats a line (passed as a {fields} array) as CSV and write it
+fputcsv() formats a line (passed as a {fields} array) as CSV and writes it
 (terminated by a newline) to the specified file {handle}.
 
 ===============================================================================

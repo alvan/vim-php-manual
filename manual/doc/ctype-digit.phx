@@ -7,7 +7,7 @@ ctype_digit — Check for numeric character(s)
 ===============================================================================
 [ Description ]
 
-  ctype_digit ( string $text ) : bool~
+  ctype_digit ( mixed $text ) : bool~
 
 Checks if all of the characters in the provided string, {text}, are numerical.
 
@@ -18,18 +18,19 @@ Checks if all of the characters in the provided string, {text}, are numerical.
 
   The tested string.
 
+
+    Note:
+
+    If an int between -128 and 255 inclusive is provided, it is interpreted as
+    the ASCII value of a single character (negative values have 256 added in
+    order to allow characters in the Extended ASCII range). Any other integer
+    is interpreted as a string containing the decimal digits of the integer.
+
 ===============================================================================
 [ Return Values ]
 
 Returns TRUE if every character in the string {text} is a decimal digit, FALSE
 otherwise.
-
-===============================================================================
-[ Changelog ]
-
-Version                               Description
-5.1.0   Before PHP 5.1.0, this function returned TRUE when {text} was an empty
-        string.
 
 ===============================================================================
 [ Examples ]
@@ -66,23 +67,6 @@ Example #2 A ctype_digit() example comparing strings with integers
   is_numeric($numeric_string);   // true
   is_numeric($integer);          // true
 <?>
-
-===============================================================================
-[ Notes ]
-
-  Note:
-
-  This function expects a string to be useful, so for example passing in an 
-  integer may not return the expected result. However, also note that HTML
-  forms will result in numeric strings and not integers. See also the types
-  section of the manual.
-
-  Note:
-
-  If an integer between -128 and 255 inclusive is provided, it is interpreted
-  as the ASCII value of a single character (negative values have 256 added in
-  order to allow characters in the Extended ASCII range). Any other integer is
-  interpreted as a string containing the decimal digits of the integer.
 
 ===============================================================================
 [ See Also ]

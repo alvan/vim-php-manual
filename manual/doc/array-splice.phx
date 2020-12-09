@@ -7,14 +7,16 @@ array_splice — Remove a portion of the array and replace it with something els
 ===============================================================================
 [ Description ]
 
-  array_splice ( array &$input , int $offset [, int $length = count($input) [,~
-  mixed $replacement = array() ]] ) : array~
+  array_splice ( array &$array , int $offset [, int|null $length = NULL [,~
+  mixed $replacement = [] ]] ) : array~
 
-Removes the elements designated by {offset} and {length} from the {input}
+Removes the elements designated by {offset} and {length} from the {array}
 array, and replaces them with the elements of the {replacement} array, if
 supplied.
 
-Note that numeric keys in {input} are not preserved.
+  Note:
+
+  Numerical keys in {array} are not preserved.
 
   Note: If {replacement} is not an array, it will be typecast to one (i.e.
   (array) $replacement). This may result in unexpected behavior when using an
@@ -23,25 +25,35 @@ Note that numeric keys in {input} are not preserved.
 ===============================================================================
 [ Parameters ]
 
-{input}
+{array}
 
   The input array.
 
 {offset}
 
-  If {offset} is positive then the start of removed portion is at that offset
-  from the beginning of the {input} array. If {offset} is negative then it
-  starts that far from the end of the {input} array.
+  If {offset} is positive then the start of the removed portion is at that
+  offset from the beginning of the {array} array.
+
+  If {offset} is negative then the start of the removed portion is at that
+  offset from the end of the {array} array.
 
 {length}
 
   If {length} is omitted, removes everything from {offset} to the end of the
-  array. If {length} is specified and is positive, then that many elements will
-  be removed. If {length} is specified and is negative then the end of the
-  removed portion will be that many elements from the end of the array. If
-  {length} is specified and is zero, no elements will be removed. Tip: to
-  remove everything from {offset} to the end of the array when {replacement} is
-  also specified, use count($input) for {length}.
+  array.
+
+  If {length} is specified and is positive, then that many elements will be
+  removed.
+
+  If {length} is specified and is negative, then the end of the removed portion
+  will be that many elements from the end of the array.
+
+  If {length} is specified and is zero, no elements will be removed.
+
+  Tip
+
+  To remove everything from {offset} to the end of the array when {replacement}
+  is also specified, use count($input) for {length}.
 
 {replacement}
 
@@ -50,15 +62,26 @@ Note that numeric keys in {input} are not preserved.
 
   If {offset} and {length} are such that nothing is removed, then the elements
   from the {replacement} array are inserted in the place specified by the
-  {offset}. Note that keys in replacement array are not preserved.
+  {offset}.
 
-  If {replacement} is just one element it is not necessary to put array()
-  around it, unless the element is an array itself, an object or NULL.
+    Note:
+
+    Keys in the {replacement} array are not preserved.
+
+  If {replacement} is just one element it is not necessary to put array() or
+  square brackets around it, unless the element is an array itself, an object
+  or NULL.
 
 ===============================================================================
 [ Return Values ]
 
 Returns an array consisting of the extracted elements.
+
+===============================================================================
+[ Changelog ]
+
+Version        Description
+8.0.0   {length} is nullable now.
 
 ===============================================================================
 [ Examples ]
@@ -68,30 +91,57 @@ Example #1 array_splice() examples
 <?php >
   $input = array("red", "green", "blue", "yellow");
   array_splice($input, 2);
-  // $input is now array("red", "green")
+  var_dump($input);
 
   $input = array("red", "green", "blue", "yellow");
   array_splice($input, 1, -1);
-  // $input is now array("red", "yellow")
+  var_dump($input);
 
   $input = array("red", "green", "blue", "yellow");
   array_splice($input, 1, count($input), "orange");
-  // $input is now array("red", "orange")
+  var_dump($input);
 
   $input = array("red", "green", "blue", "yellow");
   array_splice($input, -1, 1, array("black", "maroon"));
-  // $input is now array("red", "green",
-  //          "blue", "black", "maroon")
-
-  $input = array("red", "green", "blue", "yellow");
-  array_splice($input, 3, 0, "purple");
-  // $input is now array("red", "green",
-  //          "blue", "purple", "yellow");
+  var_dump($input);
 <?>
 
-Example #2 array_splice() examples
+The above example will output:
 
-The following statements change the values of $input the same way:
+array(2) {
+  [0]=>
+  string(3) "red"
+  [1]=>
+  string(5) "green"
+}
+array(2) {
+  [0]=>
+  string(3) "red"
+  [1]=>
+  string(6) "yellow"
+}
+array(2) {
+  [0]=>
+  string(3) "red"
+  [1]=>
+  string(6) "orange"
+}
+array(5) {
+  [0]=>
+  string(3) "red"
+  [1]=>
+  string(5) "green"
+  [2]=>
+  string(4) "blue"
+  [3]=>
+  string(5) "black"
+  [4]=>
+  string(6) "maroon"
+}
+
+Example #2 Equivalent statements to various array_splice() examples
+
+The following statements are equivalent:
 
 <?php >
 
@@ -120,9 +170,9 @@ The following statements change the values of $input the same way:
 ===============================================================================
 [ See Also ]
 
+ * |array_merge| - Merge one or more arrays
  * |array_slice| - Extract a slice of the array
  * |unset| - Unset a given variable
- * |array_merge| - Merge one or more arrays
 
 
 vim:ft=help:

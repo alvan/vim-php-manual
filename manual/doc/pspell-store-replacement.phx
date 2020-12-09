@@ -7,8 +7,8 @@ pspell_store_replacement — Store a replacement pair for a word
 ===============================================================================
 [ Description ]
 
-  pspell_store_replacement ( int $dictionary_link , string $misspelled ,~
-  string $correct ) : bool~
+  pspell_store_replacement ( int $dictionary , string $misspelled , string~
+  $correct ) : bool~
 
 pspell_store_replacement() stores a replacement pair for a word, so that
 replacement can be returned by |pspell_suggest| later. In order to be able to
@@ -21,7 +21,7 @@ to be written to disk.
 ===============================================================================
 [ Parameters ]
 
-{dictionary_link}
+{dictionary}
 
   A dictionary link identifier, opened with |pspell_new_personal|
 

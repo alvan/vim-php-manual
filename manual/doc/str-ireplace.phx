@@ -7,8 +7,8 @@ str_ireplace — Case-insensitive version of |str_replace|
 ===============================================================================
 [ Description ]
 
-  str_ireplace ( mixed $search , mixed $replace , mixed $subject [, int~
-  &$count ] ) : mixed~
+  str_ireplace ( array|string $search , array|string $replace , string|array~
+  $subject [, int &$count = NULL ] ) : string|array~
 
 This function returns a string or an array with all occurrences of {search} in
 {subject} (ignoring case) replaced with the given {replace} value. If you don't

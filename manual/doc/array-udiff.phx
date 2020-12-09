@@ -8,8 +8,8 @@ for data comparison
 ===============================================================================
 [ Description ]
 
-  array_udiff ( array $array1 , array $array2 [, array $... ], callable~
-  $value_compare_func ) : array~
+  array_udiff ( array $array , array ...$arrays , callable $value_compare_func~
+  ) : array~
 
 Computes the difference of arrays by using a callback function for data
 comparison. This is unlike |array_diff| which uses an internal function for
@@ -18,13 +18,13 @@ comparing the data.
 ===============================================================================
 [ Parameters ]
 
-{array1}
+{array}
 
   The first array.
 
-{array2}
+{arrays}
 
-  The second array.
+  Arrays to compare against.
 
 {value_compare_func}
 
@@ -32,8 +32,7 @@ comparing the data.
 
   The comparison function must return an integer less than, equal to, or
   greater than zero if the first argument is considered to be respectively less
-  than, equal to, or greater than the second. Note that before PHP 7.0.0 this
-  integer had to be in the range from -2147483648 to 2147483647.
+  than, equal to, or greater than the second.
 
 
   callback ( mixed $a, mixed $b ) : int~
@@ -41,7 +40,7 @@ comparing the data.
 ===============================================================================
 [ Return Values ]
 
-Returns an array containing all the values of {array1} that are not present in
+Returns an array containing all the values of {array} that are not present in
 any of the other arguments.
 
 ===============================================================================

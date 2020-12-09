@@ -1,6 +1,6 @@
 include
 
-(PHP 4, PHP 5, PHP 7)
+(PHP 4, PHP 5, PHP 7, PHP 8)
 
 The include statement includes and evaluates the specified file.
 
@@ -9,9 +9,13 @@ The documentation below also applies to |require|.
 Files are included based on the file path given or, if none is given, the
 include_path specified. If the file isn't found in the include_path, include
 will finally check in the calling script's own directory and the current
-working directory before failing. The include construct will emit a warning if
-it cannot find a file; this is different behavior from |require|, which will
-emit a fatal error.
+working directory before failing. The include construct will emit an E_WARNING
+if it cannot find a file; this is different behavior from |require|, which will
+emit an E_ERROR.
+
+Note that both include and require raise additional E_WARNINGs, if the file
+cannot be accessed, before raising the final E_WARNING or E_ERROR,
+respectively.
 
 If a path is defined — whether absolute (starting with a drive letter or \ on
 Windows, or / on Unix/Linux systems) or relative to the current directory
@@ -110,12 +114,6 @@ Example #3 include through HTTP
 
   // Works.
   include 'http://www.example.com/file.php?foo=1&bar=2';
-
-  $foo = 1;
-  $bar = 2;
-  include 'file.txt';  // Works.
-  include 'file.php';  // Works.
-
 <?>
 
 Warning *Security warning*
@@ -195,10 +193,9 @@ E_WARNING is issued.
 
 If there are functions defined in the included file, they can be used in the
 main file independent if they are before |return| or after. If the file is
-included twice, PHP 5 issues fatal error because functions were already
-declared, while PHP 4 doesn't complain about functions defined after |return|.
-It is recommended to use |include_once| instead of checking if the file was
-already included and conditionally return inside the included file.
+included twice, PHP will raise a fatal error because the functions were already
+declared. It is recommended to use |include_once| instead of checking if the
+file was already included and conditionally return inside the included file.
 
 Another way to "include" a PHP file into a variable is to capture the output by
 using the Output Control Functions with include. For example:

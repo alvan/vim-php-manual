@@ -28,7 +28,7 @@ numbers section in the manual for more specific information and limitations.
 {number}
 
   The number to convert. Any invalid characters in {number} are silently
-  ignored.
+  ignored. As of PHP 7.4.0 supplying any invalid characters is deprecated.
 
 {frombase}
 
@@ -42,6 +42,14 @@ numbers section in the manual for more specific information and limitations.
 [ Return Values ]
 
 {number} converted to base {tobase}
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+        Passing invalid characters will now generate a deprecation notice. The
+7.4.0   result will still be computed as if the invalid characters did not
+        exist.
 
 ===============================================================================
 [ Examples ]

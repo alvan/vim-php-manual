@@ -7,13 +7,13 @@ mhash_keygen_s2k — Generates a key
 ===============================================================================
 [ Description ]
 
-  mhash_keygen_s2k ( int $hash , string $password , string $salt , int $bytes~
-  ) : string~
+  mhash_keygen_s2k ( int $algo , string $password , string $salt , int $length~
+  ) : string|false~
 
-Generates a key according to the given {hash}, using an user provided
+Generates a key according to the given {algo}, using an user provided
 {password}.
 
-This is the Salted S2K algorithm as specified in the OpenPGP document (>> RFC
+This is the Salted S2K algorithm as specified in the OpenPGP document (» RFC
 2440).
 
 Keep in mind that user supplied passwords are not really suitable to be used as
@@ -25,7 +25,7 @@ function) to the user supplied key.
 ===============================================================================
 [ Parameters ]
 
-{hash}
+{algo}
 
   The hash ID used to create the key. One of the MHASH_hashname constants.
 
@@ -40,7 +40,7 @@ function) to the user supplied key.
   it is a good idea to append the key to it. Salt has a fixed length of 8 bytes
   and will be padded with zeros if you supply less bytes.
 
-{bytes}
+{length}
 
   The key length, in bytes.
 

@@ -26,18 +26,6 @@ scope, with their default value. The resulting array elements are in the form
 of varname => value. In case of an error, it returns FALSE.
 
 ===============================================================================
-[ Changelog ]
-
-Version                               Description
-5.0.3   get_class_vars() will only return the properties that can be accessed
-        from the current scope.
-        Calling get_class_vars() will now expose all the properties as an
-5.0.2   array, unlike previous behaviour where protected and private properties
-        were prefixed with nul bytes.
-5.0.1   Calling get_class_vars() will expose all properties, as when converting
-        an object to a class.
-
-===============================================================================
 [ Examples ]
 
 Example #1 get_class_vars() example

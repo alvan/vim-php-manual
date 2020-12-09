@@ -9,23 +9,24 @@ XMLWriter::startDocument -- xmlwriter_start_document — Create document tag
 
 Object oriented style
 
-  XMLWriter::startDocument ([ string $version = 1.0 [, string $encoding = NULL~
-  [, string $standalone ]]] ) : bool~
+  public XMLWriter::startDocument ([ string|null $version = "1.0" [,~
+  string|null $encoding = NULL [, string|null $standalone = NULL ]]] ) : bool~
 
 Procedural style
 
-  xmlwriter_start_document ( resource $xmlwriter [, string $version = 1.0 [,~
-  string $encoding = NULL [, string $standalone ]]] ) : bool~
+  xmlwriter_start_document ( XMLWriter $writer [, string|null $version =~
+  "1.0" [, string|null $encoding = NULL [, string|null $standalone =~
+  NULL ]]] ) : bool~
 
 Starts a document.
 
 ===============================================================================
 [ Parameters ]
 
-{ xmlwriter}
+{ writer}
 
-  Only for procedural calls. The XMLWriter resource that is being modified.
-  This resource comes from a call to |xmlwriter_open_uri| or 
+  Only for procedural calls. The XMLWriter instance that is being modified.
+  This object is returned from a call to |xmlwriter_open_uri| or 
   |xmlwriter_open_memory|.
 
 {version}
@@ -44,6 +45,13 @@ Starts a document.
 [ Return Values ]
 
 Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {writer} expects an XMLWriter instance now; previously, a resource was
+        expected.
 
 ===============================================================================
 [ See Also ]

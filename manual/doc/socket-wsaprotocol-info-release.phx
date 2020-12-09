@@ -1,0 +1,36 @@
+*socket_wsaprotocol_info_release*
+
+(PHP 7 >= 7.3.0)
+
+socket_wsaprotocol_info_release — Releases an exported WSAPROTOCOL_INFO
+Structure
+
+===============================================================================
+[ Description ]
+
+  socket_wsaprotocol_info_release ( string $info_id ) : bool~
+
+Releases the shared memory corresponding to the given {info_id}.
+
+  Note: This function is available only on Windows.
+
+===============================================================================
+[ Parameters ]
+
+{info_id}
+
+  The ID which has been returned by a former call to 
+  |socket_wsaprotocol_info_export|.
+
+===============================================================================
+[ Return Values ]
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+[ See Also ]
+
+ * |socket_wsaprotocol_info_export| - Exports the WSAPROTOCOL_INFO Structure
+
+
+vim:ft=help:

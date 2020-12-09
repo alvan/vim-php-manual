@@ -7,7 +7,7 @@ func_get_args — Returns an array comprising a function's argument list
 ===============================================================================
 [ Description ]
 
-  func_get_args ( void ) : array~
+  func_get_args ( ) : array~
 
 Gets an array of the function's argument list.
 
@@ -19,15 +19,6 @@ This function may be used in conjunction with |func_get_arg| and |func_num_args
 
 Returns an array in which each element is a copy of the corresponding member of
 the current user-defined function's argument list.
-
-===============================================================================
-[ Changelog ]
-
-Version                               Description
-5.3.0   This function can now be used in parameter lists.
-        If this function is called from the outermost scope of a file which has
-5.3.0   been included by calling |include| or |require| from within a function
-        in the calling file, it now generates a warning and returns FALSE.
 
 ===============================================================================
 [ Errors/Exceptions ]

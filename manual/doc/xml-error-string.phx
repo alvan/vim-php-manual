@@ -7,22 +7,22 @@ xml_error_string — Get XML parser error string
 ===============================================================================
 [ Description ]
 
-  xml_error_string ( int $code ) : string~
+  xml_error_string ( int $error_code ) : string|null~
 
-Gets the XML parser error string associated with the given {code}.
+Gets the XML parser error string associated with the given {error_code}.
 
 ===============================================================================
 [ Parameters ]
 
-{code}
+{error_code}
 
   An error code from |xml_get_error_code|.
 
 ===============================================================================
 [ Return Values ]
 
-Returns a string with a textual description of the error {code}, or FALSE if no
-description was found.
+Returns a string with a textual description of the error {error_code}, or FALSE
+if no description was found.
 
 ===============================================================================
 [ See Also ]

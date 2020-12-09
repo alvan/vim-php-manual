@@ -30,14 +30,14 @@ If no error is found, oci_error() returns FALSE. Otherwise, oci_error() returns
 the error information as an associative array.
 
                          oci_error() Array Description
- Array   Type                             Description
+ Array   Type                            Description
   key
-code    integer The Oracle error number.
-message string  The Oracle error text.
-offset  integer The byte position of an error in the SQL statement. If there
-                was no statement, this is 0
-sqltext string  The SQL statement text. If there was no statement, this is an
-                empty string.
+code    int    The Oracle error number.
+message string The Oracle error text.
+offset  int    The byte position of an error in the SQL statement. If there was
+               no statement, this is 0
+sqltext string The SQL statement text. If there was no statement, this is an
+               empty string.
 
 ===============================================================================
 [ Examples ]

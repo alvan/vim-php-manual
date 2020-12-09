@@ -7,9 +7,11 @@ apache_request_headers — Fetch all HTTP request headers
 ===============================================================================
 [ Description ]
 
-  apache_request_headers ( void ) : array~
+  apache_request_headers ( ) : array~
 
-Fetches all HTTP request headers from the current request.
+Fetches all HTTP request headers from the current request. Works in the Apache,
+FastCGI, CLI, FPM and NSAPI server module in Netscape/iPlanet/SunONE
+webservers.
 
 ===============================================================================
 [ Return Values ]
@@ -20,12 +22,8 @@ on failure.
 ===============================================================================
 [ Changelog ]
 
-Version                               Description
+Version                   Description
 7.3.0   This function became available in the FPM SAPI.
-5.5.7   This function became available in the CLI server.
-        This function became available under FastCGI. Previously, it was
-5.4.0   supported when PHP was installed as an Apache module or by the NSAPI
-        server module in Netscape/iPlanet/SunONE webservers.
 
 ===============================================================================
 [ Examples ]

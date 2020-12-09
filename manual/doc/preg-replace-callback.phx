@@ -8,8 +8,9 @@ callback
 ===============================================================================
 [ Description ]
 
-  preg_replace_callback ( mixed $pattern , callable $callback , mixed $subject~
-  [, int $limit = -1 [, int &$count ]] ) : mixed~
+  preg_replace_callback ( string|array $pattern , callable $callback ,~
+  string|array $subject [, int $limit = -1 [, int &$count = NULL [, int $flags~
+  = 0 ]]] ) : string|array|null~
 
 The behavior of this function is almost identical to |preg_replace|, except for
 the fact that instead of {replacement} parameter, one should specify a
@@ -72,6 +73,12 @@ the fact that instead of {replacement} parameter, one should specify a
   If specified, this variable will be filled with the number of replacements
   done.
 
+{flags}
+
+  {flags} can be a combination of the PREG_OFFSET_CAPTURE and
+  PREG_UNMATCHED_AS_NULL flags, which influence the format of the matches
+  array. See the description in |preg_match| for more details.
+
 ===============================================================================
 [ Return Values ]
 
@@ -85,7 +92,7 @@ will be returned unchanged.
 [ Changelog ]
 
 Version           Description
-5.1.0   The {count} parameter was added
+7.4.0   The {flags} parameter was added.
 
 ===============================================================================
 [ Examples ]
@@ -150,7 +157,6 @@ encapsulated BB code
  * |preg_replace| - Perform a regular expression search and replace
  * |preg_last_error| - Returns the error code of the last PCRE regex execution
  * Anonymous functions
- * information about the callback type
 
 
 vim:ft=help:

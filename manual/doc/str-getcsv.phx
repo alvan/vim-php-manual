@@ -7,8 +7,8 @@ str_getcsv — Parse a CSV string into an array
 ===============================================================================
 [ Description ]
 
-  str_getcsv ( string $input [, string $delimiter = "," [, string~
-  $enclosure = '"' [, string $escape = "\\" ]]] ) :~
+  str_getcsv ( string $string [, string $separator = "," [, string~
+  $enclosure = "\"" [, string $escape = '\\' ]]] ) :~
   array~
 
 Parses a string input for fields in CSV format and returns an array containing
@@ -23,11 +23,11 @@ the fields read.
 ===============================================================================
 [ Parameters ]
 
-{input}
+{string}
 
   The string to parse.
 
-{delimiter}
+{separator}
 
   Set the field delimiter (one character only).
 

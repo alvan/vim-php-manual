@@ -11,6 +11,10 @@ assert_options — Set/get the various assert flags
 
 Set the various |assert| control options or just query their current settings.
 
+  Note: As of PHP 7.0.0, the use of assert_options() is discouraged in favor of
+  setting and getting the php.ini directives zend.assertions and
+  assert.exception with |ini_set| and |ini_get|, respectively.
+
 ===============================================================================
 [ Parameters ]
 
@@ -33,6 +37,23 @@ Set the various |assert| control options or just query their current settings.
 
   An optional new value for the option.
 
+  The callback function set via ASSERT_CALLBACK or assert.callback should have
+  the following signature:
+
+  assert_callback ( string $file , int $line , string $assertion [, string~
+  $description ] ) : void~
+
+  {file}
+    The file where |assert| has been called.
+  {line}
+    The line where |assert| has been called.
+  {assertion}
+    The assertion that has been passed to |assert|, converted to a string.
+  {description}
+    The description that has been passed to |assert|.
+
+Passing an empty string as {value} resets the assert callback.
+
 ===============================================================================
 [ Return Values ]
 
@@ -46,9 +67,10 @@ Example #1 assert_options() example
 <?php >
   // This is our function to handle 
   // assert failures
-  function assert_failure()
+  function assert_failure($file, $line, $assertion, $message)
   {
-      echo 'Assert failed';
+      echo "The assertion $assertion in $file on line $line has failed: $message"
+  ;
   }
 
   // This is our test function

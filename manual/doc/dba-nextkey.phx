@@ -7,7 +7,7 @@ dba_nextkey — Fetch next key
 ===============================================================================
 [ Description ]
 
-  dba_nextkey ( resource $handle ) : string~
+  dba_nextkey ( resource $handle ) : string|false~
 
 dba_nextkey() returns the next key of the database and advances the internal
 key pointer.

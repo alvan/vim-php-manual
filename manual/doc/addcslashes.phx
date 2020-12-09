@@ -7,22 +7,22 @@ addcslashes — Quote string with slashes in a C style
 ===============================================================================
 [ Description ]
 
-  addcslashes ( string $str , string $charlist ) : string~
+  addcslashes ( string $string , string $characters ) : string~
 
 Returns a string with backslashes before characters that are listed in
-{charlist} parameter.
+{characters} parameter.
 
 ===============================================================================
 [ Parameters ]
 
-{str}
+{string}
 
   The string to be escaped.
 
-{charlist}
+{characters}
 
-  A list of characters to be escaped. If {charlist} contains characters \n, \r
-  etc., they are converted in C-like style, while other non-alphanumeric
+  A list of characters to be escaped. If {characters} contains characters \n, \
+  r etc., they are converted in C-like style, while other non-alphanumeric
   characters with ASCII codes lower than 32 and higher than 126 converted to
   octal representation.
 
@@ -49,7 +49,7 @@ Returns a string with backslashes before characters that are listed in
   predefined escape sequences in C. Many of these sequences are also defined in
   other C-derived languages, including PHP, meaning that you may not get the
   desired result if you use the output of addcslashes() to generate code in
-  those languages with these characters defined in {charlist}.
+  those languages with these characters defined in {characters}.
 
 ===============================================================================
 [ Return Values ]
@@ -57,15 +57,9 @@ Returns a string with backslashes before characters that are listed in
 Returns the escaped string.
 
 ===============================================================================
-[ Changelog ]
-
-Version                Description
-5.2.5   The escape sequences \v and \f were added.
-
-===============================================================================
 [ Examples ]
 
-{charlist} like "\0..\37", which would escape all characters with ASCII code
+{characters} like "\0..\37", which would escape all characters with ASCII code
 between 0 and 31.
 
 Example #1 addcslashes() example

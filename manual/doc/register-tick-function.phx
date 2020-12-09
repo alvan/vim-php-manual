@@ -7,7 +7,7 @@ register_tick_function — Register a function for execution on each tick
 ===============================================================================
 [ Description ]
 
-  register_tick_function ( callable $function [, mixed $... ] ) : bool~
+  register_tick_function ( callable $function , mixed ...$args ) : bool~
 
 Registers the given {function} to be executed when a tick is called.
 
@@ -18,7 +18,7 @@ Registers the given {function} to be executed when a tick is called.
 
   The function to register.
 
-{...}
+{args}
 
 ===============================================================================
 [ Return Values ]
@@ -40,12 +40,6 @@ Example #1 register_tick_function() example
   $object = new my_class();
   register_tick_function(array(&$object, 'my_method'), true);
 <?>
-
-===============================================================================
-[ Changelog ]
-
-Version                       Description
-5.3.0   Ticks are now supported on threaded web server modules.
 
 ===============================================================================
 [ Notes ]

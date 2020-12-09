@@ -10,38 +10,39 @@ namespaced attribute
 
 Object oriented style
 
-  XMLWriter::writeAttributeNs ( string $prefix , string $name , string $uri ,~
-  string $content ) : bool~
+  public XMLWriter::writeAttributeNs ( string|null $prefix , string $name ,~
+  string|null $namespace , string $value ) : bool~
 
 Procedural style
 
-  xmlwriter_write_attribute_ns ( resource $xmlwriter , string $prefix , string~
-  $name , string $uri , string $content ) : bool~
+  xmlwriter_write_attribute_ns ( XMLWriter $writer , string|null $prefix ,~
+  string $name , string|null $namespace , string $value ) : bool~
 
 Writes a full namespaced attribute.
 
 ===============================================================================
 [ Parameters ]
 
-{ xmlwriter}
+{ writer}
 
-  Only for procedural calls. The XMLWriter resource that is being modified.
-  This resource comes from a call to |xmlwriter_open_uri| or 
+  Only for procedural calls. The XMLWriter instance that is being modified.
+  This object is returned from a call to |xmlwriter_open_uri| or 
   |xmlwriter_open_memory|.
 
 {prefix}
 
-  The namespace prefix.
+  The namespace prefix. If {prefix} is NULL, the namespace will be omitted.
 
 {name}
 
   The attribute name.
 
-{uri}
+{namespace}
 
-  The namespace URI.
+  The namespace URI. If {namespace} is NULL, the namespace declaration will be
+  omitted.
 
-{content}
+{value}
 
   The attribute value.
 
@@ -49,6 +50,13 @@ Writes a full namespaced attribute.
 [ Return Values ]
 
 Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {writer} expects an XMLWriter instance now; previously, a resource was
+        expected.
 
 ===============================================================================
 [ See Also ]

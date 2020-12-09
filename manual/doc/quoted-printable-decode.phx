@@ -7,10 +7,10 @@ quoted_printable_decode — Convert a quoted-printable string to an 8 bit string
 ===============================================================================
 [ Description ]
 
-  quoted_printable_decode ( string $str ) : string~
+  quoted_printable_decode ( string $string ) : string~
 
 This function returns an 8-bit binary string corresponding to the decoded
-quoted printable string (according to >> RFC2045, section 6.7, not >> RFC2821,
+quoted printable string (according to » RFC2045, section 6.7, not » RFC2821,
 section 4.5.2, so additional periods are not stripped from the beginning of
 line).
 
@@ -20,7 +20,7 @@ IMAP module to work.
 ===============================================================================
 [ Parameters ]
 
-{str}
+{string}
 
   The input string.
 

@@ -7,16 +7,12 @@ dbase_create — Creates a database
 ===============================================================================
 [ Description ]
 
-  dbase_create ( string $filename , array $fields [, int $type =~
-  DBASE_TYPE_DBASE ] ) : resource~
+  dbase_create ( string $path , array $fields [, int $type = DBASE_TYPE_DBASE~
+  ] ) : resource~
 
 dbase_create() creates a dBase database with the given definition. If the file
 already exists, it is not truncated. |dbase_pack| can be called to force
 truncation.
-
-  Note: When safe mode is enabled, PHP checks whether the files or directories
-  being operated upon have the same UID (owner) as the script that is being
-  executed.
 
   Note:
 
@@ -25,9 +21,9 @@ truncation.
 ===============================================================================
 [ Parameters ]
 
-{filename}
+{path}
 
-  The name of the database. It can be a relative or absolute path to the file
+  The path of the database. It can be a relative or absolute path to the file
   where dBase will store your data.
 
 {fields}
@@ -49,8 +45,8 @@ truncation.
 ===============================================================================
 [ Return Values ]
 
-Returns a database link identifier if the database is successfully created, or
-FALSE if an error occurred.
+Returns a database resource if the database is successfully created, or FALSE
+if an error occurred.
 
 ===============================================================================
 [ Changelog ]

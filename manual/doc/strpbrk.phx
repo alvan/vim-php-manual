@@ -7,18 +7,18 @@ strpbrk — Search a string for any of a set of characters
 ===============================================================================
 [ Description ]
 
-  strpbrk ( string $haystack , string $char_list ) : string~
+  strpbrk ( string $string , string $characters ) : string|false~
 
-strpbrk() searches the {haystack} string for a {char_list}.
+strpbrk() searches the {string} string for a {characters}.
 
 ===============================================================================
 [ Parameters ]
 
-{haystack}
+{string}
 
-  The string where {char_list} is looked for.
+  The string where {characters} is looked for.
 
-{char_list}
+{characters}
 
   This parameter is case sensitive.
 

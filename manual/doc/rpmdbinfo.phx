@@ -1,0 +1,63 @@
+*rpmdbinfo*
+
+(PECL rpminfo >= 0.2.0)
+
+rpmdbinfo — Get information from installed RPM
+
+===============================================================================
+[ Description ]
+
+  rpmdbinfo ( string $nevr [, bool $full = FALSE ] ) : array~
+
+Retrieve information about an installed package, from the system RPM database.
+
+===============================================================================
+[ Parameters ]
+
+{nevr}
+
+  Name with optional epoch, version and release.
+
+{full}
+
+  If TRUE all information headers for the file are retrieved, else only a
+  minimal set.
+
+===============================================================================
+[ Return Values ]
+
+An array of array of information or NULL on error.
+
+===============================================================================
+[ See Also ]
+
+ * |rpmaddtag| - Add tag retrieved in query
+
+===============================================================================
+[ Examples ]
+
+Example #1 A rpmdbinfo() example
+
+<?php >
+  rpmaddtag(RPMTAG_INSTALLTIME);
+  $info = rpmdbinfo("php-pecl-rpminfo");
+  print_r($info);
+<?>
+
+The above example will output:
+
+Array
+(
+    [0] => Array
+        (
+            [Name] => php-pecl-rpminfo
+            [Version] => 0.4.2
+            [Release] => 1.fc31
+            [Summary] => RPM information
+            [Installtime] => 1586244687
+            [Arch] => x86_64
+        )
+)
+
+
+vim:ft=help:

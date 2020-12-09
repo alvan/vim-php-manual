@@ -7,9 +7,10 @@ session_set_cookie_params — Set the session cookie parameters
 ===============================================================================
 [ Description ]
 
-  session_set_cookie_params ( int $lifetime [, string $path [, string $domain~
-  [, bool $secure = FALSE [, bool $httponly = FALSE ]]]] ) : bool~
-  session_set_cookie_params ( array $options ) : bool~
+  session_set_cookie_params ( int $lifetime_or_options [, string|null $path =~
+  NULL [, string|null $domain = NULL [, bool|null $secure = NULL [, bool|null~
+  $httponly = NULL ]]]] ) : bool~
+  session_set_cookie_params ( array $lifetime_or_options ) : bool~
 
 Set cookie parameters defined in the php.ini file. The effect of this function
 only lasts for the duration of the script. Thus, you need to call 
@@ -22,9 +23,18 @@ configuration keys which can be retrieved with the |ini_get|.
 ===============================================================================
 [ Parameters ]
 
-{lifetime}
+{lifetime_or_options}
 
-  Lifetime of the session cookie, defined in seconds.
+  When using the first signature, lifetime of the session cookie, defined in
+  seconds.
+
+  When using the second signature, an associative array which may have any of
+  the keys lifetime, path, domain, secure, httponly and samesite. The values
+  have the same meaning as described for the parameters with the same name. The
+  value of the samesite element should be either Lax or Strict. If any of the
+  allowed options are not given, their default values are the same as the
+  default values of the explicit parameters. If the samesite element is
+  omitted, no SameSite cookie attribute is set.
 
 {path}
 
@@ -45,16 +55,6 @@ configuration keys which can be retrieved with the |ini_get|.
   If set to TRUE then PHP will attempt to send the httponly flag when setting
   the session cookie.
 
-{options}
-
-  An associative array which may have any of the keys lifetime, path, domain,
-  secure, httponly and samesite. The values have the same meaning as described
-  for the parameters with the same name. The value of the samesite element
-  should be either Lax or Strict. If any of the allowed options are not given,
-  their default values are the same as the default values of the explicit
-  parameters. If the samesite element is omitted, no SameSite cookie attribute
-  is set.
-
 ===============================================================================
 [ Return Values ]
 
@@ -64,11 +64,12 @@ Returns TRUE on success or FALSE on failure.
 [ Changelog ]
 
 Version                               Description
-7.3.0   An alternative signature supporting an {options} array has been added.
-        This signature supports also setting of the SameSite cookie attribute.
+8.0.0   {path}, {domain}, {secure} and {httponly} are nullable now.
+        An alternative signature supporting an {lifetime_or_options} array has
+7.3.0   been added. This signature supports also setting of the SameSite cookie
+        attribute.
 7.2.0   Returns TRUE on success or FALSE on failure. Formerly the function
         returned void.
-5.2.0   The {httponly} parameter was added.
 
 ===============================================================================
 [ See Also ]

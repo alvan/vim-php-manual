@@ -7,7 +7,7 @@ mime_content_type — Detect MIME Content-type for a file
 ===============================================================================
 [ Description ]
 
-  mime_content_type ( string $filename ) : string~
+  mime_content_type ( resource|string $filename ) : string|false~
 
 Returns the MIME content type for a file as determined by using information
 from the magic.mime file.

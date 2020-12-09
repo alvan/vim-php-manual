@@ -30,7 +30,7 @@ Example #1 ftp_nb_continue() example
 
 <?php >
 
-  // Initate the download
+  // Initiate the download
   $ret = ftp_nb_get($my_connection, "test", "README", FTP_BINARY);
   while ($ret == FTP_MOREDATA) {
 

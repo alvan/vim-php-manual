@@ -7,7 +7,7 @@ reset — Set the internal pointer of an array to its first element
 ===============================================================================
 [ Description ]
 
-  reset ( array &$array ) : mixed~
+  reset ( array|object &$array ) : mixed~
 
 reset() rewinds {array}'s internal pointer to the first element and returns the
 value of the first array element.
@@ -58,7 +58,7 @@ Example #1 reset() example
 [ Notes ]
 
   Note: The return value for an empty array is indistinguishable from the
-  return value in case of an array which has a boolean FALSE first element. To
+  return value in case of an array which has a bool FALSE first element. To
   properly check the value of the first element of an array which may contain
   FALSE elements, first check the |count| of the array, or check that |key| is
   not NULL, after calling reset().

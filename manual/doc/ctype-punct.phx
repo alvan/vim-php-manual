@@ -8,7 +8,7 @@ alphanumeric character
 ===============================================================================
 [ Description ]
 
-  ctype_punct ( string $text ) : bool~
+  ctype_punct ( mixed $text ) : bool~
 
 Checks if all of the characters in the provided string, {text}, are punctuation
 character.
@@ -19,6 +19,14 @@ character.
 {text}
 
   The tested string.
+
+
+    Note:
+
+    If an int between -128 and 255 inclusive is provided, it is interpreted as
+    the ASCII value of a single character (negative values have 256 added in
+    order to allow characters in the Extended ASCII range). Any other integer
+    is interpreted as a string containing the decimal digits of the integer.
 
 ===============================================================================
 [ Return Values ]
@@ -47,16 +55,6 @@ The above example will output:
 The string ABasdk!@!$# does not consist of all punctuation.
 The string !@ # $ does not consist of all punctuation.
 The string *&$() consists of all punctuation.
-
-===============================================================================
-[ Notes ]
-
-  Note:
-
-  If an integer between -128 and 255 inclusive is provided, it is interpreted
-  as the ASCII value of a single character (negative values have 256 added in
-  order to allow characters in the Extended ASCII range). Any other integer is
-  interpreted as a string containing the decimal digits of the integer.
 
 ===============================================================================
 [ See Also ]

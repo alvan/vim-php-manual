@@ -7,22 +7,23 @@ mb_convert_encoding — Convert character encoding
 ===============================================================================
 [ Description ]
 
-  mb_convert_encoding ( string $str , string $to_encoding [, mixed~
-  $from_encoding = mb_internal_encoding() ] ) : string~
+  mb_convert_encoding ( mixed $val , string $to_encoding [, mixed~
+  $from_encoding = mb_internal_encoding() ] ) : mixed~
 
-Converts the character encoding of string {str} to {to_encoding} from
-optionally {from_encoding}.
+Converts the character encoding of {val} to {to_encoding} from optionally
+{from_encoding}. If {val} is an array, all its string values will be converted
+recursively.
 
 ===============================================================================
 [ Parameters ]
 
-{str}
+{val}
 
-  The string being encoded.
+  The string or array being encoded.
 
 {to_encoding}
 
-  The type of encoding that {str} is being converted to.
+  The type of encoding that {val} is being converted to.
 
 {from_encoding}
 
@@ -35,7 +36,7 @@ optionally {from_encoding}.
 ===============================================================================
 [ Return Values ]
 
-The encoded string.
+The encoded string or array.
 
 ===============================================================================
 [ Examples ]
@@ -62,6 +63,13 @@ Example #1 mb_convert_encoding() example
 [ See Also ]
 
  * |mb_detect_order| - Set/Get character encoding detection order
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+7.2.0   This function now also accepts an array as {val}. Formerly, only string
+        s have been supported.
 
 
 vim:ft=help:

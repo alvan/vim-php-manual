@@ -10,7 +10,7 @@ stream_socket_accept — Accept a connection on a socket created by
 
   stream_socket_accept ( resource $server_socket [, float $timeout =~
   ini_get("default_socket_timeout") [, string &$peername ]] ) :~
-  resource~
+  resource|false~
 
 Accept a connection on a socket previously created by |stream_socket_server|.
 

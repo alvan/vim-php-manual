@@ -7,8 +7,8 @@ strstr — Find the first occurrence of a string
 ===============================================================================
 [ Description ]
 
-  strstr ( string $haystack , mixed $needle [, bool $before_needle = FALSE ] )~
-  : string~
+  strstr ( string $haystack , string $needle [, bool $before_needle = FALSE ]~
+  ) : string|false~
 
 Returns part of {haystack} string starting from and including the first
 occurrence of {needle} to the end of {haystack}.
@@ -33,11 +33,11 @@ occurrence of {needle} to the end of {haystack}.
 
 {needle}
 
-  If {needle} is not a string, it is converted to an integer and applied as the
-  ordinal value of a character. This behavior is deprecated as of PHP 7.3.0,
-  and relying on it is highly discouraged. Depending on the intended behavior,
-  the {needle} should either be explicitly cast to string, or an explicit call
-  to |chr| should be performed.
+  Prior to PHP 8.0.0, if {needle} is not a string, it is converted to an
+  integer and applied as the ordinal value of a character. This behavior is
+  deprecated as of PHP 7.3.0, and relying on it is highly discouraged.
+  Depending on the intended behavior, the {needle} should either be explicitly
+  cast to string, or an explicit call to |chr| should be performed.
 
 {before_needle}
 
@@ -52,9 +52,9 @@ Returns the portion of string, or FALSE if {needle} is not found.
 ===============================================================================
 [ Changelog ]
 
-Version                  Description
-5.3.0   Added the optional parameter {before_needle}.
-4.3.0   strstr() was made binary safe.
+Version                    Description
+8.0.0   Passing an int as {needle} is no longer supported.
+7.3.0   Passing an int as {needle} has been deprecated.
 
 ===============================================================================
 [ Examples ]

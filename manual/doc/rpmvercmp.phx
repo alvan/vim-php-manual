@@ -1,0 +1,32 @@
+*rpmvercmp*
+
+(PECL rpminfo >= 0.1.0)
+
+rpmvercmp — RPM version comparison
+
+===============================================================================
+[ Description ]
+
+  rpmvercmp ( string $evr1 , string $evr2 ) : int~
+
+Compare 2 RPM versions.
+
+===============================================================================
+[ Parameters ]
+
+{evr1}
+
+  First epoch:version-release string
+
+{evr2}
+
+  Second epoch:version-release string
+
+===============================================================================
+[ Return Values ]
+
+Returns < 0 if evr1 is less than evr2, > 0 if evr1 is greater than evr2, and 0
+if they are equal.
+
+
+vim:ft=help:

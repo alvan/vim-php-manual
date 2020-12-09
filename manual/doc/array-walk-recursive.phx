@@ -8,8 +8,8 @@ array
 ===============================================================================
 [ Description ]
 
-  array_walk_recursive ( array &$array , callable $callback [, mixed $userdata~
-  = NULL ] ) : bool~
+  array_walk_recursive ( array|object &$array , callable $callback [, mixed~
+  $userdata = NULL ] ) : bool~
 
 Applies the user-defined {callback} function to each element of the {array}.
 This function will recurse into deeper arrays.
@@ -72,7 +72,6 @@ array will not be passed to the function.
 [ See Also ]
 
  * |array_walk| - Apply a user supplied function to every member of an array
- * information about the callback type
 
 
 vim:ft=help:

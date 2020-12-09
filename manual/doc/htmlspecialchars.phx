@@ -7,9 +7,8 @@ htmlspecialchars — Convert special characters to HTML entities
 ===============================================================================
 [ Description ]
 
-  htmlspecialchars ( string $string [, int $flags = ENT_COMPAT | ENT_HTML401~
-  [, string $encoding = ini_get("default_charset") [, bool~
-  $double_encode = TRUE ]]] ) : string~
+  htmlspecialchars ( string $string [, int $flags = ENT_COMPAT [, string|null~
+  $encoding = NULL [, bool $double_encode = TRUE ]]] ) : string~
 
 Certain characters have special significance in HTML, and should be represented
 by HTML entities if they are to preserve their meanings. This function returns
@@ -58,7 +57,7 @@ than)
   ENT_NOQUOTES   Will leave both double and single quotes unconverted.
                  Silently discard invalid code unit sequences instead of
   ENT_IGNORE     returning an empty string. Using this flag is discouraged as
-                 it >> may have security implications.
+                 it » may have security implications.
                  Replace invalid code unit sequences with a Unicode Replacement
   ENT_SUBSTITUTE Character U+FFFD (UTF-8) or &#xFFFD; (otherwise) instead of
                  returning an empty string.
@@ -76,15 +75,12 @@ than)
 
   An optional argument defining the encoding used when converting characters.
 
-  If omitted, the default value of the {encoding} varies depending on the PHP
-  version in use. In PHP 5.6 and later, the default_charset configuration
-  option is used as the default value. PHP 5.4 and 5.5 will use UTF-8 as the
-  default. Earlier versions of PHP use ISO-8859-1.
+  If omitted, {encoding} defaults to the value of the default_charset
+  configuration option.
 
   Although this argument is technically optional, you are highly encouraged to
-  specify the correct value for your code if you are using PHP 5.5 or earlier,
-  or if your default_charset configuration option may be set incorrectly for
-  the given input.
+  specify the correct value for your code if the default_charset configuration
+  option may be set incorrectly for the given input.
 
   For the purposes of this function, the encodings ISO-8859-1, ISO-8859-15,
   UTF-8, cp866, cp1251, cp1252, and KOI8-R are effectively equivalent, provided
@@ -141,18 +137,6 @@ The converted string.
 If the input {string} contains an invalid code unit sequence within the given
 {encoding} an empty string will be returned, unless either the ENT_IGNORE or
 ENT_SUBSTITUTE flags are set.
-
-===============================================================================
-[ Changelog ]
-
-Version                               Description
-5.6.0   The default value for the {encoding} parameter was changed to be the
-        value of the default_charset configuration option.
-5.4.0   The default value for the {encoding} parameter was changed to UTF-8.
-5.4.0   The constants ENT_SUBSTITUTE, ENT_DISALLOWED, ENT_HTML401, ENT_XML1,
-        ENT_XHTML and ENT_HTML5 were added.
-5.3.0   The constant ENT_IGNORE was added.
-5.2.3   The {double_encode} parameter was added.
 
 ===============================================================================
 [ Examples ]

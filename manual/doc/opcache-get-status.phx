@@ -7,14 +7,14 @@ opcache_get_status — Get status information about the cache
 ===============================================================================
 [ Description ]
 
-  opcache_get_status ([ bool $get_scripts = TRUE ] ) : array~
+  opcache_get_status ([ bool $include_scripts = TRUE ] ) : array|false~
 
 This function returns state information about the cache instance
 
 ===============================================================================
 [ Parameters ]
 
-{get_scripts}
+{include_scripts}
 
   Include script specific state information
 

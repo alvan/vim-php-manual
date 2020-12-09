@@ -1,0 +1,33 @@
+*imagegetinterpolation*
+
+(PHP 8)
+
+imagegetinterpolation — Get the interpolation method
+
+===============================================================================
+[ Description ]
+
+  imagegetinterpolation ( GdImage $image ) : int~
+
+Gets the currently set interpolation method of the {image}.
+
+===============================================================================
+[ Parameters ]
+
+{ image}
+
+  An image resource, returned by one of the image creation functions, such as 
+  |imagecreatetruecolor|.
+
+===============================================================================
+[ Return Values ]
+
+Returns the interpolation method.
+
+===============================================================================
+[ See Also ]
+
+ * |imagesetinterpolation| - Set the interpolation method
+
+
+vim:ft=help:

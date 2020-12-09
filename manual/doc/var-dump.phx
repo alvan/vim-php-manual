@@ -7,7 +7,7 @@ var_dump — Dumps information about a variable
 ===============================================================================
 [ Description ]
 
-  var_dump ( mixed $expression [, mixed $... ] ) : void~
+  var_dump ( mixed $expression , mixed ...$expressions ) : void~
 
 This function displays structured information about one or more expressions
 that includes its type and value. Arrays and objects are explored recursively
@@ -28,7 +28,11 @@ and save it in a string (for example).
 
 {expression}
 
-  The variable you want to dump.
+  The expression to dump.
+
+{expressions}
+
+  Further expressions to dump.
 
 ===============================================================================
 [ Return Values ]

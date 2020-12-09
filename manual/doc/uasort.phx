@@ -8,7 +8,7 @@ index association
 ===============================================================================
 [ Description ]
 
-  uasort ( array &$array , callable $value_compare_func ) : bool~
+  uasort ( array &$array , callable $callback ) : bool~
 
 This function sorts an array such that array indices maintain their correlation
 with the array elements they are associated with, using a user-defined
@@ -29,7 +29,7 @@ order is significant.
 
   The input array.
 
-{value_compare_func}
+{callback}
 
   See |usort| and |uksort| for examples of user-defined comparison functions.
 

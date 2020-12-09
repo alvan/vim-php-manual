@@ -1,0 +1,51 @@
+*scoutapm_list_instrumented_functions*
+
+(PECL scoutapm >= 1.0.2)
+
+scoutapm_list_instrumented_functions — List functions scoutapm will instrument.
+
+===============================================================================
+[ Description ]
+
+  scoutapm_list_instrumented_functions ( ) : array~
+
+Returns a list of the functions the extension will instrument.
+
+===============================================================================
+[ Parameters ]
+
+This function has no parameters.
+
+===============================================================================
+[ Return Values ]
+
+scoutapm_list_instrumented_functions() returns an array containing a list of
+all functions that the scoutapm extension is able to instrument in the current
+installation.
+
+===============================================================================
+[ Examples ]
+
+Example #1 Fetch the list of functions scoutapm will instrument
+
+<?php >
+  print_r(scoutapm_list_instrumented_functions());
+<?>
+
+The above example will output something similar to:
+
+Array
+(
+    [0] => file_get_contents
+    [1] => file_put_contents
+    [2] => fopen
+    [3] => fread
+    [4] => fwrite
+    [5] => pdo->exec
+    [6] => pdo->query
+    [7] => pdo->prepare
+    [8] => pdostatement->execute
+)
+
+
+vim:ft=help:

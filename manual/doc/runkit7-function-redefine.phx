@@ -1,0 +1,92 @@
+*runkit7_function_redefine*
+
+(PECL runkit7 >= Unknown)
+
+runkit7_function_redefine — Replace a function definition with a new
+implementation
+
+===============================================================================
+[ Description ]
+
+  runkit7_function_redefine ( string $funcname , string $arglist , string~
+  $code [, bool $return_by_reference = NULL [, string $doc_comment = NULL [,~
+  string $return_type [, string $is_strict ]]]] ) : bool~
+  runkit7_function_redefine ( string $funcname , Closure $closure [, string~
+  $doc_comment = NULL [, string $return_type [, string $is_strict ]]] ) : bool~
+
+
+  Note: By default, only userspace functions may be removed, renamed, or
+  modified. In order to override internal functions, you must enable the
+  runkit.internal_override setting in php.ini.
+
+===============================================================================
+[ Parameters ]
+
+{funcname}
+
+  Name of function to redefine
+
+{arglist}
+
+  New list of arguments to be accepted by function
+
+{code}
+
+  New code implementation
+
+{closure}
+
+  A closure that defines the function.
+
+{return_by_reference}
+
+  Whether the function should return by reference.
+
+{doc_comment}
+
+  The doc comment of the function.
+
+{return_type}
+
+  The return type of the function.
+
+{is_strict}
+
+  Whether the function behaves as if it was declared in a file with
+  strict_types=1
+
+===============================================================================
+[ Return Values ]
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+[ Examples ]
+
+Example #1 A runkit7_function_redefine() example
+
+<?php >
+  function testme() {
+    echo "Original Testme Implementation\n";
+  }
+  testme();
+  runkit7_function_redefine('testme','','echo "New Testme Implementation\n";');
+  testme();
+<?>
+
+The above example will output:
+
+Original Testme Implementation
+New Testme Implementation
+
+===============================================================================
+[ See Also ]
+
+ * |runkit7_function_add| - Add a new function, similar to create_function
+ * |runkit7_function_copy| - Copy a function to a new function name
+ * |runkit7_function_rename| - Change a function's name
+ * |runkit7_function_remove| - Remove a function definition
+ * |runkit7_method_redefine| - Dynamically changes the code of the given method
+
+
+vim:ft=help:

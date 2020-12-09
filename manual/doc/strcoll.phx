@@ -7,7 +7,7 @@ strcoll — Locale based string comparison
 ===============================================================================
 [ Description ]
 
-  strcoll ( string $str1 , string $str2 ) : int~
+  strcoll ( string $string1 , string $string2 ) : int~
 
 Note that this comparison is case sensitive, and unlike |strcmp| this function
 is not binary safe.
@@ -18,25 +18,19 @@ locale is C or POSIX, this function is equivalent to |strcmp|.
 ===============================================================================
 [ Parameters ]
 
-{str1}
+{string1}
 
   The first string.
 
-{str2}
+{string2}
 
   The second string.
 
 ===============================================================================
 [ Return Values ]
 
-Returns < 0 if {str1} is less than {str2}; > 0 if {str1} is greater than
-{str2}, and 0 if they are equal.
-
-===============================================================================
-[ Changelog ]
-
-Version            Description
-4.2.3   This function now works on win32.
+Returns < 0 if {string1} is less than {string2}; > 0 if {string1} is greater
+than {string2}, and 0 if they are equal.
 
 ===============================================================================
 [ See Also ]

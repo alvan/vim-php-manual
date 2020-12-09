@@ -7,7 +7,7 @@ win32_delete_service — Deletes a service entry from the SCM database
 ===============================================================================
 [ Description ]
 
-  win32_delete_service ( string $servicename [, string $machine ] ) : mixed~
+  win32_delete_service ( string $servicename [, string $machine ] ) : void~
 
 Attempts to delete a service from the SCM database. Administrative privileges
 are required for this to succeed.
@@ -32,8 +32,17 @@ with that name will also fail.
 ===============================================================================
 [ Return Values ]
 
-Returns WIN32_NO_ERROR on success, FALSE if there is a problem with the
-parameters or a Win32 Error Code on failure.
+No value is returned.
+
+Prior to version 1.0.0, returned WIN32_NO_ERROR on success, FALSE if there is a
+problem with the parameters or a Win32 Error Code on failure.
+
+===============================================================================
+[ Errors/Exceptions ]
+
+A ValueError is thrown if the; value of {servicename} parameter is empty.
+
+A Win32ServiceException is thrown on error.
 
 ===============================================================================
 [ Examples ]
@@ -45,6 +54,17 @@ Deletes the dummyphp service.
 <?php >
   win32_delete_service('dummyphp');
 <?>
+
+===============================================================================
+[ Changelog ]
+
+     Version                               Description
+PECL win32service Throws a ValueError on invalid data in parameters, previously
+1.0.0             FALSE was returned.
+PECL win32service Throws a Win32ServiceException on error, previously a Win32
+1.0.0             Error Code was returned.
+PECL win32service The return type is now void, previously it was mixed.
+1.0.0
 
 ===============================================================================
 [ See Also ]

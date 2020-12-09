@@ -135,9 +135,9 @@ by the {optname} parameter for the specified {socket}.
                                                     specifying either an
                                                     interface number (type int)
   MCAST_JOIN_GROUP         Joins a multicast group. or a string with the
-                           (added in PHP 5.4)       interface name, like "eth0"
-                                                    . 0 can be specified to
-                                                    indicate the interface
+                           (added in PHP 5.4)       interface name, like
+                                                    "eth0". 0 can be specified
+                                                    to indicate the interface
                                                     should be selected using
                                                     routing rules. (can only be
                                                     used in |socket_set_option|
@@ -171,7 +171,7 @@ by the {optname} parameter for the specified {socket}.
                            Stop receiving packets
                            destined to a specific   array with the same format
   MCAST_LEAVE_SOURCE_GROUP multicast group whose    as MCAST_BLOCK_SOURCE. (can
-                           soure address matches a  only be used in |
+                           source address matches a only be used in |
                            specific value. (added   socket_set_option|)
                            in PHP 5.4)
                                                     Either int specifying the

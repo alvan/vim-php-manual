@@ -10,11 +10,11 @@ address into a long integer
 
   ip2long ( string $ip_address ) : int~
 
-The function ip2long() generates an long integer representation of IPv4
-Internet network address from its Internet standard format (dotted string)
+The function ip2long() generates a long integer representation of IPv4 Internet
+network address from its Internet standard format (dotted string)
 representation.
 
-ip2long() will also work with non-complete IP addresses. Read >> http://
+ip2long() will also work with non-complete IP addresses. Read » http://
 publibn.boulder.ibm.com/doc_link/en_US/a_doc_lib/libs/commtrf2/inet_addr.htm
 for more info.
 
@@ -29,17 +29,6 @@ for more info.
 [ Return Values ]
 
 Returns the long integer or FALSE if {ip_address} is invalid.
-
-===============================================================================
-[ Changelog ]
-
-Version                               Description
-        Prior to this version, on Windows ip2long() would sometimes return a
-5.5.0   valid number even if passed a value which was not an (IPv4) Internet
-        Protocol dotted address.
-        Prior to this version, ip2long() would sometimes return a valid number
-5.2.10  even if passed a value which was not an (IPv4) Internet Protocol dotted
-        address.
 
 ===============================================================================
 [ Examples ]
@@ -78,7 +67,7 @@ function:
 
   Note:
 
-  Because PHP's integer type is signed, and many IP addresses will result in
+  Because PHP's int type is signed, and many IP addresses will result in
   negative integers on 32-bit architectures, you need to use the "%u" formatter
   of |sprintf| or |printf| to get the string representation of the unsigned IP
   address.

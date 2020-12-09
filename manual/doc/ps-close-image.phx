@@ -7,7 +7,7 @@ ps_close_image — Closes image and frees memory
 ===============================================================================
 [ Description ]
 
-  ps_close_image ( resource $psdoc , int $imageid ) : void~
+  ps_close_image ( resource $psdoc , int $imageid ) : void|false~
 
 Closes an image and frees its resources. Once an image is closed it cannot be
 used anymore.

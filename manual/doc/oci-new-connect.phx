@@ -31,7 +31,7 @@ between two sets of queries.
 
 {connection_string}
 
-  Contains the Oracle instance to connect to. It can be an >> Easy Connect
+  Contains the Oracle instance to connect to. It can be an » Easy Connect
   string, or a Connect Name from the tnsnames.ora file, or the name of a local
   Oracle instance.
 
@@ -42,14 +42,15 @@ between two sets of queries.
   To use the Easy Connect naming method, PHP must be linked with Oracle 10g or
   greater Client libraries. The Easy Connect string for Oracle 10g is of the
   form: [//]host_name[:port][/service_name]. From Oracle 11g, the syntax is: [/
-  /]host_name[:port][/service_name][:server_type][/instance_name]. Service
-  names can be found by running the Oracle utility lsnrctl status on the
-  database server machine.
+  /]host_name[:port][/service_name][:server_type][/instance_name]. Futher
+  options were introduced with Oracle 19c, including timeout and keep-alive
+  settings. Refer to Oracle documentation. Service names can be found by
+  running the Oracle utility lsnrctl status on the database server machine.
 
-  The tnsnames.ora file can be in the Oracle Net search path, which includes
-  $ORACLE_HOME/network/admin and /etc. Alternatively set TNS_ADMIN so that
-  $TNS_ADMIN/tnsnames.ora is read. Make sure the web daemon has read access to
-  the file.
+  The tnsnames.ora file can be in the Oracle Net search path, which includes /
+  your/path/to/instantclient/network/admin, $ORACLE_HOME/network/admin and /
+  etc. Alternatively set TNS_ADMIN so that $TNS_ADMIN/tnsnames.ora is read.
+  Make sure the web daemon has read access to the file.
 
 {character_set}
 

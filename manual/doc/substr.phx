@@ -7,9 +7,10 @@ substr — Return part of a string
 ===============================================================================
 [ Description ]
 
-  substr ( string $string , int $start [, int $length ] ) : string~
+  substr ( string $string , int $offset [, int|null $length = NULL ] ) :~
+  string~
 
-Returns the portion of {string} specified by the {start} and {length}
+Returns the portion of {string} specified by the {offset} and {length}
 parameters.
 
 ===============================================================================
@@ -17,21 +18,21 @@ parameters.
 
 {string}
 
-  The input string. Must be one character or longer.
+  The input string.
 
-{start}
+{offset}
 
-  If {start} is non-negative, the returned string will start at the {start}'th
-  position in {string}, counting from zero. For instance, in the string 'abcdef
-  ', the character at position 0 is 'a', the character at position 2 is 'c',
-  and so forth.
+  If {offset} is non-negative, the returned string will start at the {offset}
+  'th position in {string}, counting from zero. For instance, in the string
+  'abcdef', the character at position 0 is 'a', the character at position 2 is
+  'c', and so forth.
 
-  If {start} is negative, the returned string will start at the {start}'th
+  If {offset} is negative, the returned string will start at the {offset}'th
   character from the end of {string}.
 
-  If {string} is less than {start} characters long, FALSE will be returned.
+  If {string} is less than {offset} characters long, FALSE will be returned.
 
-  Example #1 Using a negative {start}
+  Example #1 Using a negative {offset}
 
   <?php >
   $rest = substr("abcdef", -1);    // returns "f"
@@ -42,18 +43,18 @@ parameters.
 {length}
 
   If {length} is given and is positive, the string returned will contain at
-  most {length} characters beginning from {start} (depending on the length of
+  most {length} characters beginning from {offset} (depending on the length of
   {string}).
 
   If {length} is given and is negative, then that many characters will be
   omitted from the end of {string} (after the start position has been
-  calculated when a {start} is negative). If {start} denotes the position of
+  calculated when a {offset} is negative). If {offset} denotes the position of
   this truncation or beyond, FALSE will be returned.
 
   If {length} is given and is 0, FALSE or NULL, an empty string will be
   returned.
 
-  If {length} is omitted, the substring starting from {start} until the end of
+  If {length} is omitted, the substring starting from {offset} until the end of
   the string will be returned.
 
   Example #2 Using a negative {length}
@@ -74,12 +75,9 @@ string.
 ===============================================================================
 [ Changelog ]
 
-Version                               Description
-7.0.0   If {string} is equal to {start} characters long, an empty string will
-        be returned. Prior to this version, FALSE was returned in this case.
-5.2.2 - If the {start} parameter indicates the position of a negative
-5.2.6   truncation or beyond, false is returned. Other versions get the string
-        from start.
+Version                            Description
+8.0.0   {length} is nullable now.
+8.0.0   The function returns an empty where it previously returned FALSE.
 
 ===============================================================================
 [ Examples ]

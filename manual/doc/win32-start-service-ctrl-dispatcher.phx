@@ -9,7 +9,7 @@ that it can act as the service with the given name
 [ Description ]
 
   win32_start_service_ctrl_dispatcher ( string $name [, bool $gracefulMode =~
-  true ] ) : mixed~
+  true ] ) : void~
 
 When launched via the Service Control Manager, a service process is required to
 "check-in" with it to establish service monitoring and communication
@@ -45,13 +45,18 @@ function is disabled.
 ===============================================================================
 [ Return Values ]
 
-Returns TRUE on success, FALSE if there is a problem with the parameters or a
-Win32 Error Code on failure.
+No value is returned.
+
+Prior to version 1.0.0, returned WIN32_NO_ERROR on success, FALSE if there is a
+problem with the parameters or a Win32 Error Code on failure.
 
 ===============================================================================
 [ Errors/Exceptions ]
 
-If SAPI is not "cli", this function emits an E_ERROR level error.
+Prior to version 1.0.0, if the SAPI is not "cli", this function emits an
+E_ERROR level error.
+
+As of version 1.0.0, will throw a Win32ServiceException if SAPI is not "cli"
 
 ===============================================================================
 [ Examples ]
@@ -80,9 +85,17 @@ Check if the service is runnig under the SCM.
 ===============================================================================
 [ Changelog ]
 
-Version                 Description
-0.4.0   The parameter {gracefulMode} has been added.
-0.2.0   This function works only in the "cli" SAPI.
+     Version                               Description
+PECL win32service Throws a ValueError on invalid data in parameters, previously
+1.0.0             FALSE was returned.
+PECL win32service Throws a Win32ServiceException on error, previously a Win32
+1.0.0             Error Code was returned.
+PECL win32service The return type is now void, previously it was mixed.
+1.0.0
+PECL win32service The parameter {gracefulMode} has been added.
+0.4.0
+PECL win32service This function works only in the "cli" SAPI.
+0.2.0
 
 ===============================================================================
 [ See Also ]

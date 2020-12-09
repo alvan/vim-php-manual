@@ -7,14 +7,14 @@ bcsqrt — Get the square root of an arbitrary precision number
 ===============================================================================
 [ Description ]
 
-  bcsqrt ( string $operand [, int $scale = 0 ] ) : string~
+  bcsqrt ( string $num [, int|null $scale = NULL ] ) : string~
 
-Return the square root of the {operand}.
+Return the square root of the {num}.
 
 ===============================================================================
 [ Parameters ]
 
-{operand}
+{num}
 
   The operand, as a string.
 
@@ -27,7 +27,13 @@ Return the square root of the {operand}.
 ===============================================================================
 [ Return Values ]
 
-Returns the square root as a string, or NULL if {operand} is negative.
+Returns the square root as a string, or NULL if {num} is negative.
+
+===============================================================================
+[ Changelog ]
+
+Version       Description
+8.0.0   {scale} is now nullable.
 
 ===============================================================================
 [ Examples ]

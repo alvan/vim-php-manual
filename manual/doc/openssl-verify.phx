@@ -45,12 +45,6 @@ public key corresponding to the private key used for signing.
 Returns 1 if the signature is correct, 0 if it is incorrect, and -1 on error.
 
 ===============================================================================
-[ Changelog ]
-
-Version               Description
-5.2.0   The {signature_alg} parameter was added.
-
-===============================================================================
 [ Examples ]
 
 Example #1 openssl_verify() example
@@ -90,10 +84,10 @@ Example #2 openssl_verify() example
   $public_key_res = openssl_pkey_get_public($details['key']);
 
   //create signature
-  openssl_sign($data, $signature, $private_key_res, "sha1WithRSAEncryption");
+  openssl_sign($data, $signature, $private_key_res, "sha256WithRSAEncryption");
 
   //verify signature
-  $ok = openssl_verify($data, $signature, $public_key_res, OPENSSL_ALGO_SHA1);
+  $ok = openssl_verify($data, $signature, $public_key_res, OPENSSL_ALGO_SHA256);
   if ($ok == 1) {
       echo "valid";
   } elseif ($ok == 0) {

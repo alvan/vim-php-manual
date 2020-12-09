@@ -10,7 +10,9 @@ stat — Gives information about a file
   stat ( string $filename ) : array~
 
 Gathers the statistics of the file named by {filename}. If {filename} is a
-symbolic link, statistics are from the file itself, not the symlink.
+symbolic link, statistics are from the file itself, not the symlink. Prior to
+PHP 7.4.0, on Windows NTS builds the size, atime, mtime and ctime statistics
+have been from the symlink, in this case.
 
 |lstat| is identical to stat() except it would instead be based off the
 symlinks status.
@@ -27,8 +29,8 @@ symlinks status.
 
                stat() and |fstat| result format
 Numeric Associative                Description
-0       dev         device number
-1       ino         inode number *
+0       dev         device number ***
+1       ino         inode number ****
 2       mode        inode protection mode
 3       nlink       number of links
 4       uid         userid of owner *
@@ -46,6 +48,31 @@ Numeric Associative                Description
 ** Only valid on systems supporting the st_blksize type - other systems (e.g.
 Windows) return -1.
 
+*** On Windows, as of PHP 7.4.0, this is the serial number of the volume that
+contains the file, which is a 64-bit unsigned integer, so may overflow.
+Previously, it was the numeric representation of the drive letter (e.g. 2 for
+C:) for stat(), and 0 for |lstat|.
+
+**** On Windows, as of PHP 7.4.0, this is the identifier associated with the
+file, which is a 64-bit unsigned integer, so may overflow. Previously, it was
+always 0.
+
+The value of mode contains information read by several functions. When written
+in octal, starting from the right, the first three digits are returned by 
+|chmod|. The next digit is ignored by PHP. The next two digits indicate the file
+type:
+
+      mode file types
+mode in octal    Meaning
+0120000        link
+0100000        regular file
+0060000        block device
+0040000        directory
+0010000        fifo
+
+So for example a regular file could be 0100644 and a directory could be 0040755
+.
+
 In case of error, stat() returns FALSE.
 
   Note: Because PHP's integer type is signed and many platforms use 32bit
@@ -56,6 +83,17 @@ In case of error, stat() returns FALSE.
 [ Errors/Exceptions ]
 
 Upon failure, an E_WARNING is emitted.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+        On Windows, the device number is now the serial number of the volume
+7.4.0   that contains the file, and the inode number is the identifier
+        associated with the file.
+        The size, atime, mtime and ctime statistics of symlinks are always
+7.4.0   those of the target. This was previously not the case for NTS builds on
+        Windows.
 
 ===============================================================================
 [ Examples ]

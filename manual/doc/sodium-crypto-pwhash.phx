@@ -8,7 +8,7 @@ sodium_crypto_pwhash — Derive a key from a password
 [ Description ]
 
   sodium_crypto_pwhash ( int $length , string $password , string $salt , int~
-  $opslimit , int $memlimit [, int $alg ] ) : string~
+  $opslimit , int $memlimit [, int $alg ] ) : string|false~
 
 This function provides low-level access to libsodium's crypto_pwhash key
 derivation function. Unless you have specific reason to use this function, you
@@ -19,7 +19,7 @@ should use |sodium_crypto_pwhash_str| or |password_hash| functions instead.
 
 {length}
 
-  integer; The length of the password hash to generate, in bytes.
+  int; The length of the password hash to generate, in bytes.
 
 {password}
 
@@ -53,7 +53,7 @@ should use |sodium_crypto_pwhash_str| or |password_hash| functions instead.
 
 {alg}
 
-  integer A number indicating the hash algorithm to use. By default
+  int A number indicating the hash algorithm to use. By default
   SODIUM_CRYPTO_PWHASH_ALG_DEFAULT (the currently recommended algorithm, which
   can change from one version of libsodium to another), or explicitly using
   SODIUM_CRYPTO_PWHASH_ALG_ARGON2ID13, representing the Argon2id algorithm

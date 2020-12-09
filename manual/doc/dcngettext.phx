@@ -7,8 +7,8 @@ dcngettext — Plural version of dcgettext
 ===============================================================================
 [ Description ]
 
-  dcngettext ( string $domain , string $msgid1 , string $msgid2 , int $n , int~
-  $category ) : string~
+  dcngettext ( string $domain , string $singular , string $plural , int $count~
+  , int $category ) : string~
 
 This function allows you to override the current domain for a single plural
 message lookup.
@@ -20,11 +20,11 @@ message lookup.
 
   The domain
 
-{msgid1}
+{singular}
 
-{msgid2}
+{plural}
 
-{n}
+{count}
 
 {category}
 

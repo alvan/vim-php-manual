@@ -7,7 +7,7 @@ ctype_upper — Check for uppercase character(s)
 ===============================================================================
 [ Description ]
 
-  ctype_upper ( string $text ) : bool~
+  ctype_upper ( mixed $text ) : bool~
 
 Checks if all of the characters in the provided string, {text}, are uppercase
 characters.
@@ -18,6 +18,14 @@ characters.
 {text}
 
   The tested string.
+
+
+    Note:
+
+    If an int between -128 and 255 inclusive is provided, it is interpreted as
+    the ASCII value of a single character (negative values have 256 added in
+    order to allow characters in the Extended ASCII range). Any other integer
+    is interpreted as a string containing the decimal digits of the integer.
 
 ===============================================================================
 [ Return Values ]
@@ -47,16 +55,6 @@ The above example will output:
 The string AKLWC139 does not consist of all uppercase letters.
 The string LMNSDO consists of all uppercase letters.
 The string akwSKWsm does not consist of all uppercase letters.
-
-===============================================================================
-[ Notes ]
-
-  Note:
-
-  If an integer between -128 and 255 inclusive is provided, it is interpreted
-  as the ASCII value of a single character (negative values have 256 added in
-  order to allow characters in the Extended ASCII range). Any other integer is
-  interpreted as a string containing the decimal digits of the integer.
 
 ===============================================================================
 [ See Also ]

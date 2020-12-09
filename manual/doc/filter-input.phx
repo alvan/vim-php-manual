@@ -8,8 +8,8 @@ it
 ===============================================================================
 [ Description ]
 
-  filter_input ( int $type , string $variable_name [, int $filter =~
-  FILTER_DEFAULT [, mixed $options ]] ) : mixed~
+  filter_input ( int $type , string $var_name [, int $filter = FILTER_DEFAULT~
+  [, array|int $options = 0 ]] ) : mixed~
 
 ===============================================================================
 [ Parameters ]
@@ -18,7 +18,7 @@ it
 
   One of INPUT_GET, INPUT_POST, INPUT_COOKIE, INPUT_SERVER, or INPUT_ENV.
 
-{variable_name}
+{var_name}
 
   Name of a variable to get.
 
@@ -39,9 +39,8 @@ it
 [ Return Values ]
 
 Value of the requested variable on success, FALSE if the filter fails, or NULL
-if the {variable_name} variable is not set. If the flag FILTER_NULL_ON_FAILURE
-is used, it returns FALSE if the variable is not set and NULL if the filter
-fails.
+if the {var_name} variable is not set. If the flag FILTER_NULL_ON_FAILURE is
+used, it returns FALSE if the variable is not set and NULL if the filter fails.
 
 ===============================================================================
 [ Examples ]

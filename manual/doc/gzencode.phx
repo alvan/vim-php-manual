@@ -7,13 +7,13 @@ gzencode — Create a gzip compressed string
 ===============================================================================
 [ Description ]
 
-  gzencode ( string $data [, int $level = -1 [, int $encoding_mode =~
-  FORCE_GZIP ]] ) : string~
+  gzencode ( string $data [, int $level = -1 [, int $encoding =~
+  ZLIB_ENCODING_GZIP ]] ) : string|false~
 
 This function returns a compressed version of the input {data} compatible with
 the output of the `gzip` program.
 
-For more information on the GZIP file format, see the document: >> GZIP file
+For more information on the GZIP file format, see the document: » GZIP file
 format specification version 4.3 (RFC 1952).
 
 ===============================================================================
@@ -29,7 +29,7 @@ format specification version 4.3 (RFC 1952).
   maximum compression. If not given, the default compression level will be the
   default compression level of the zlib library.
 
-{encoding_mode}
+{encoding}
 
   The encoding mode. Can be FORCE_GZIP (the default) or FORCE_DEFLATE.
 
@@ -44,12 +44,6 @@ format specification version 4.3 (RFC 1952).
 [ Return Values ]
 
 The encoded string, or FALSE if an error occurred.
-
-===============================================================================
-[ Changelog ]
-
-Version                      Description
-5.4.0   FORCE_DEFLATE now generates RFC 1950 compliant output.
 
 ===============================================================================
 [ Examples ]
@@ -75,7 +69,7 @@ Example #1 Creating a gzip file
  * |gzinflate| - Inflate a deflated string
  * |gzuncompress| - Uncompress a compressed string
  * |gzcompress| - Compress a string
- * >>  ZLIB Compressed Data Format Specification (RFC 1950)
+ * »  ZLIB Compressed Data Format Specification (RFC 1950)
 
 
 vim:ft=help:

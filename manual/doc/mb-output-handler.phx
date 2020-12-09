@@ -31,17 +31,6 @@ HTTP output character encoding.
 The converted string.
 
 ===============================================================================
-[ Changelog ]
-
-Version                               Description
-        This handler now adds the charset HTTP header when the following
-        conditions are met:
-4.1.0
-         * Content-Type has not been set, using |header|.
-         * The default MIME type begins with text/.
-         * The mbstring.http_input setting is something other than pass.
-
-===============================================================================
 [ Examples ]
 
 Example #1 mb_output_handler() example

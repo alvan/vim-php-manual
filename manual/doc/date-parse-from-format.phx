@@ -8,9 +8,9 @@ specified format
 ===============================================================================
 [ Description ]
 
-  date_parse_from_format ( string $format , string $date ) : array~
+  date_parse_from_format ( string $format , string $datetime ) : array~
 
-Returns associative array with detailed info about given date.
+Returns associative array with detailed info about given date/time.
 
 ===============================================================================
 [ Parameters ]
@@ -19,14 +19,14 @@ Returns associative array with detailed info about given date.
 
   Format accepted by DateTime::createFromFormat().
 
-{date}
+{datetime}
 
-  String representing the date.
+  String representing the date/time.
 
 ===============================================================================
 [ Return Values ]
 
-Returns associative array with detailed info about given date.
+Returns associative array with detailed info about given date/time.
 
 ===============================================================================
 [ Changelog ]

@@ -7,20 +7,18 @@ bccomp — Compare two arbitrary precision numbers
 ===============================================================================
 [ Description ]
 
-  bccomp ( string $left_operand , string $right_operand [, int $scale = 0 ] )~
-  : int~
+  bccomp ( string $num1 , string $num2 [, int|null $scale = NULL ] ) : int~
 
-Compares the {left_operand} to the {right_operand} and returns the result as an
-integer.
+Compares the {num1} to the {num2} and returns the result as an integer.
 
 ===============================================================================
 [ Parameters ]
 
-{left_operand}
+{num1}
 
   The left operand, as a string.
 
-{right_operand}
+{num2}
 
   The right operand, as a string.
 
@@ -32,8 +30,14 @@ integer.
 ===============================================================================
 [ Return Values ]
 
-Returns 0 if the two operands are equal, 1 if the {left_operand} is larger than
-the {right_operand}, -1 otherwise.
+Returns 0 if the two operands are equal, 1 if the {num1} is larger than the
+{num2}, -1 otherwise.
+
+===============================================================================
+[ Changelog ]
+
+Version       Description
+8.0.0   {scale} is now nullable.
 
 ===============================================================================
 [ Examples ]

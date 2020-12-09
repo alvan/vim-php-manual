@@ -7,7 +7,7 @@ array_merge — Merge one or more arrays
 ===============================================================================
 [ Description ]
 
-  array_merge ( array $array1 [, array $... ] ) : array~
+  array_merge ( array ...$arrays ) : array~
 
 Merges the elements of one or more arrays together so that the values of one
 are appended to the end of the previous one. It returns the resulting array.
@@ -23,18 +23,22 @@ incrementing keys starting from zero in the result array.
 ===============================================================================
 [ Parameters ]
 
-{array1}
-
-  Initial array to merge.
-
-{...}
+{arrays}
 
   Variable list of arrays to merge.
 
 ===============================================================================
 [ Return Values ]
 
-Returns the resulting array.
+Returns the resulting array. If called without any arguments, returns an empty 
+array.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+7.4.0   This function can now be called without any parameter. Formerly, at
+        least one parameter has been required.
 
 ===============================================================================
 [ Examples ]

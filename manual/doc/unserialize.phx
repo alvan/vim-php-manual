@@ -33,8 +33,8 @@ you.
   The serialized string.
 
   If the variable being unserialized is an object, after successfully
-  reconstructing the object PHP will automatically attempt to call the __wakeup
-  () member function (if it exists).
+  reconstructing the object PHP will automatically attempt to call the
+  __unserialize() or __wakeup() methods (if one exists).
 
     Note: unserialize_callback_func directive
 
@@ -63,18 +63,23 @@ you.
 ===============================================================================
 [ Return Values ]
 
-The converted value is returned, and can be a boolean, integer, float, string, 
-array or object.
+The converted value is returned, and can be a bool, int, float, string, array
+or object.
 
 In case the passed string is not unserializeable, FALSE is returned and
 E_NOTICE is issued.
+
+===============================================================================
+[ Errors/Exceptions ]
+
+Objects may throw Throwables in their unserialization handlers.
 
 ===============================================================================
 [ Changelog ]
 
 Version                               Description
         The allowed_classes element of {options}) is now strictly typed, i.e.
-7.1.0   if anything other than an array or a boolean is given, unserialize()
+7.1.0   if anything other than an array or a bool is given, unserialize()
         returns FALSE and issues an E_WARNING.
 7.0.0   The {options} parameter has been added.
 5.6.0   Manipulating the serialised data by replacing C: with O: to force
@@ -116,8 +121,8 @@ Example #2 unserialize_callback_func example
 
   function mycallback($classname) 
   {
-      // just include a file containing your classdefinition
-      // you get $classname to figure out which classdefinition is required
+      // just include a file containing your class definition
+      // you get $classname to figure out which class definition is required
   }
 <?>
 
@@ -140,6 +145,8 @@ serialized FALSE value. It is possible to catch this special case by comparing
  * Autoloading Classes
  * unserialize_callback_func
  * __wakeup()
+ * __serialize()
+ * __unserialize()
 
 
 vim:ft=help:

@@ -7,19 +7,18 @@ bcsub — Subtract one arbitrary precision number from another
 ===============================================================================
 [ Description ]
 
-  bcsub ( string $left_operand , string $right_operand [, int $scale = 0 ] ) :~
-  string~
+  bcsub ( string $num1 , string $num2 [, int|null $scale = NULL ] ) : string~
 
-Subtracts the {right_operand} from the {left_operand}.
+Subtracts the {num2} from the {num1}.
 
 ===============================================================================
 [ Parameters ]
 
-{left_operand}
+{num1}
 
   The left operand, as a string.
 
-{right_operand}
+{num2}
 
   The right operand, as a string.
 
@@ -33,6 +32,12 @@ Subtracts the {right_operand} from the {left_operand}.
 [ Return Values ]
 
 The result of the subtraction, as a string.
+
+===============================================================================
+[ Changelog ]
+
+Version       Description
+8.0.0   {scale} is now nullable.
 
 ===============================================================================
 [ Examples ]

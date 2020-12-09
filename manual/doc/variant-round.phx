@@ -7,14 +7,14 @@ variant_round — Rounds a variant to the specified number of decimal places
 ===============================================================================
 [ Description ]
 
-  variant_round ( mixed $variant , int $decimals ) : mixed~
+  variant_round ( mixed $value , int $decimals ) : variant|null~
 
-Returns the value of {variant} rounded to {decimals} decimal places.
+Returns the value of {value} rounded to {decimals} decimal places.
 
 ===============================================================================
 [ Parameters ]
 
-{variant}
+{value}
 
   The variant.
 
@@ -28,7 +28,7 @@ Returns the value of {variant} rounded to {decimals} decimal places.
   function can be either a PHP native type (integer, string, floating point,
   boolean or NULL), or an instance of a COM, VARIANT or DOTNET class. PHP
   native types will be converted to variants using the same rules as found in
-  the constructor for the VARIANT class. COM and DOTNET objects will have the
+  the constructor for the variant class. COM and DOTNET objects will have the
   value of their default property taken and used as the variant value.
 
   The variant arithmetic functions are wrappers around the similarly named
@@ -40,7 +40,7 @@ Returns the value of {variant} rounded to {decimals} decimal places.
 ===============================================================================
 [ Return Values ]
 
-Returns the rounded value.
+Returns the rounded value, or NULL on failure.
 
 ===============================================================================
 [ See Also ]

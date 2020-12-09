@@ -7,14 +7,14 @@ gzeof — Test for EOF on a gz-file pointer
 ===============================================================================
 [ Description ]
 
-  gzeof ( resource $zp ) : int~
+  gzeof ( resource $stream ) : bool~
 
 Tests the given GZ file pointer for EOF.
 
 ===============================================================================
 [ Parameters ]
 
-{zp}
+{stream}
 
   The gz-file pointer. It must be valid, and must point to a file successfully
   opened by |gzopen|.

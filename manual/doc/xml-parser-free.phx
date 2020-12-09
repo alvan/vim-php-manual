@@ -7,15 +7,15 @@ xml_parser_free — Free an XML parser
 ===============================================================================
 [ Description ]
 
-  xml_parser_free ( resource $parser ) : bool~
+  xml_parser_free ( XMLParser $parser ) : bool~
 
 Frees the given XML {parser}.
 
 Caution
 
-In addition to calling xml_parser_free() when the parsing is finished, as of
-PHP 7.0.0 it is necessary to also explicitly unset the reference to {parser} to
-avoid memory leaks, if the parser resource is referenced from an object, and
+In addition to calling xml_parser_free() when the parsing is finished, prior to
+PHP 8.0.0, it was necessary to also explicitly unset the reference to {parser}
+to avoid memory leaks, if the parser resource is referenced from an object, and
 this object references that parser resource.
 
 ===============================================================================
@@ -27,8 +27,14 @@ this object references that parser resource.
 ===============================================================================
 [ Return Values ]
 
-This function returns FALSE if {parser} does not refer to a valid parser, or
-else it frees the parser and returns TRUE.
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {parser} expects an XMLParser instance now; previously, a resource was
+        expected.
 
 
 vim:ft=help:

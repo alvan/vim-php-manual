@@ -7,8 +7,8 @@ dngettext — Plural version of dgettext
 ===============================================================================
 [ Description ]
 
-  dngettext ( string $domain , string $msgid1 , string $msgid2 , int $n ) :~
-  string~
+  dngettext ( string $domain , string $singular , string $plural , int $count~
+  ) : string~
 
 The dngettext() function allows you to override the current {domain} for a
 single plural message lookup.
@@ -20,11 +20,11 @@ single plural message lookup.
 
   The domain
 
-{msgid1}
+{singular}
 
-{msgid2}
+{plural}
 
-{n}
+{count}
 
 ===============================================================================
 [ Return Values ]

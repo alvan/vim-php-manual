@@ -8,7 +8,7 @@ handler
 ===============================================================================
 [ Description ]
 
-  xml_set_start_namespace_decl_handler ( resource $parser , callable $handler~
+  xml_set_start_namespace_decl_handler ( XMLParser $parser , callable $handler~
   ) : bool~
 
 Set a handler to be called when a namespace is declared. Namespace declarations
@@ -32,7 +32,7 @@ before the start tag handler for each namespace declared in that start tag.
   (which it will be if no value is returned), the XML parser will stop parsing
   and |xml_get_error_code| will return XML_ERROR_EXTERNAL_ENTITY_HANDLING.
 
-  handler ( resource $parser , string $prefix , string $uri )~
+  handler ( XMLParser $parser , string $prefix , string $uri )~
 
   {parser}
     The first parameter, parser, is a reference to the XML parser calling the
@@ -53,6 +53,13 @@ before the start tag handler for each namespace declared in that start tag.
 [ Return Values ]
 
 Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {parser} expects an XMLParser instance now; previously, a resource was
+        expected.
 
 ===============================================================================
 [ See Also ]

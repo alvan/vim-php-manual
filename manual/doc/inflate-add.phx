@@ -7,8 +7,8 @@ inflate_add — Incrementally inflate encoded data
 ===============================================================================
 [ Description ]
 
-  inflate_add ( resource $context , string $encoded_data [, int $flush_mode =~
-  ZLIB_SYNC_FLUSH ] ) : string~
+  inflate_add ( InflateContext $context , string $data [, int $flush_mode =~
+  ZLIB_SYNC_FLUSH ] ) : string|false~
 
 Incrementally inflates encoded data in the specified {context}.
 
@@ -22,7 +22,7 @@ available.
 
   A context created with |inflate_init|.
 
-{encoded_data}
+{data}
 
   A chunk of compressed data.
 
@@ -31,8 +31,8 @@ available.
   One of ZLIB_BLOCK, ZLIB_NO_FLUSH, ZLIB_PARTIAL_FLUSH, ZLIB_SYNC_FLUSH
   (default), ZLIB_FULL_FLUSH, ZLIB_FINISH. Normally you will want to set
   ZLIB_NO_FLUSH to maximize compression, and ZLIB_FINISH to terminate with the
-  last chunk of data. See the >> zlib manual for a detailed description of
-  these constants.
+  last chunk of data. See the » zlib manual for a detailed description of these
+  constants.
 
 ===============================================================================
 [ Return Values ]
@@ -45,6 +45,13 @@ Returns a chunk of uncompressed data, or FALSE on failure.
 If invalid parameters are given, inflating the data requires a preset
 dictionary, but none is specified, the compressed stream is corrupt or has an
 invalid checksum, an error of level E_WARNING is generated.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {context} expects an InflateContext instance now; previously, a 
+        resource was expected.
 
 ===============================================================================
 [ See Also ]

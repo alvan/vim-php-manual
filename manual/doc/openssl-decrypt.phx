@@ -9,7 +9,7 @@ openssl_decrypt — Decrypts data
 
   openssl_decrypt ( string $data , string $method , string $key [, int~
   $options = 0 [, string $iv = "" [, string $tag = "" [,~
-  string $aad = "" ]]]] ) : string~
+  string $aad = "" ]]]] ) : string|false~
 
 Takes a raw or base64 encoded string and decrypts it using a given method and
 key.
@@ -43,6 +43,14 @@ key.
   The authentication tag in AEAD cipher mode. If it is incorrect, the
   authentication fails and the function returns FALSE.
 
+  Caution
+
+  The length of the {tag} is not checked by the function. It is the caller's
+  responsibility to ensure that the length of the tag matches the length of the
+  tag retrieved when |openssl_encrypt| has been called. Otherwise the
+  decryption may succeed if the given tag only matches the start of the proper
+  tag.
+
 {aad}
 
   Additional authentication data.
@@ -65,8 +73,6 @@ parameter.
 [ Changelog ]
 
 Version                Description
-5.3.3   The {iv} parameter was added.
-5.4.0   The {raw_output} was changed to {options}.
 7.1.0   The {tag} and {aad} parameters were added.
 
 ===============================================================================

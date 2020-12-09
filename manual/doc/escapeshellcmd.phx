@@ -15,8 +15,8 @@ to make sure that any data coming from user input is escaped before this data
 is passed to the |exec| or |system| functions, or to the backtick operator.
 
 Following characters are preceded by a backslash: &#;`|*?~<>^()[]{}$\, \x0A and
-\xFF. ' and " are escaped only if they are not paired. In Windows, all these
-characters plus % and ! are replaced by a space instead.
+\xFF. ' and " are escaped only if they are not paired. On Windows, all these
+characters plus % and ! are preceded by a caret (^).
 
 ===============================================================================
 [ Parameters ]
@@ -49,12 +49,6 @@ Warning
 escapeshellcmd() should be used on the whole command string, and it still
 allows the attacker to pass arbitrary number of arguments. For escaping a
 single argument |escapeshellarg| should be used instead.
-
-===============================================================================
-[ Changelog ]
-
-       Version                        Description
-5.4.43, 5.5.27, 5.6.11 Exclamation marks are replaced by spaces.
 
 ===============================================================================
 [ See Also ]

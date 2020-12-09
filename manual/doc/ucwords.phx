@@ -7,37 +7,31 @@ ucwords — Uppercase the first character of each word in a string
 ===============================================================================
 [ Description ]
 
-  ucwords ( string $str [, string $delimiters = " \t\r\n\f\v" ] ) :~
-  string~
+  ucwords ( string $string [, string $separators = " \t\r\n\f\v" ] )~
+  : string~
 
-Returns a string with the first character of each word in {str} capitalized, if
-that character is alphabetic.
+Returns a string with the first character of each word in {string} capitalized,
+if that character is alphabetic.
 
 The definition of a word is any string of characters that is immediately after
-any character listed in the {delimiters} parameter (By default these are:
+any character listed in the {separators} parameter (By default these are:
 space, form-feed, newline, carriage return, horizontal tab, and vertical tab).
 
 ===============================================================================
 [ Parameters ]
 
-{str}
+{string}
 
   The input string.
 
-{delimiters}
+{separators}
 
-  The optional {delimiters} contains the word separator characters.
+  The optional {separators} contains the word separator characters.
 
 ===============================================================================
 [ Return Values ]
 
 Returns the modified string.
-
-===============================================================================
-[ Changelog ]
-
-   Version                Description
-5.4.32, 5.5.16 Added the {delimiters} parameter.
 
 ===============================================================================
 [ Examples ]
@@ -62,8 +56,22 @@ Example #2 ucwords() example with custom delimiter
   $baz = ucwords($foo, "|");        // Hello|World!
 <?>
 
+Example #3 ucwords() example with additional delimiters
+
+<?php >
+  $foo = "mike o'hara";
+  $bar = ucwords($foo);                 // Mike O'hara
+
+  $baz = ucwords($foo, " \t\r\n\f\v'"); // Mike O'Hara
+<?>
+
 ===============================================================================
 [ Notes ]
+
+  Note: This function is locale-aware and will handle input according to the
+  currently set locale. However, it only works on single-byte character sets.
+  If you need to use multibyte characters (most non-western-European languages)
+  look at the multibyte or intl extensions instead.
 
   Note: This function is binary-safe.
 

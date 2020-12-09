@@ -7,15 +7,15 @@ wordwrap — Wraps a string to a given number of characters
 ===============================================================================
 [ Description ]
 
-  wordwrap ( string $str [, int $width = 75 [, string $break = "\n"~
-  [, bool $cut = FALSE ]]] ) : string~
+  wordwrap ( string $string [, int $width = 75 [, string $break =~
+  "\n" [, bool $cut_long_words = FALSE ]]] ) : string~
 
 Wraps a string to a given number of characters using a string break character.
 
 ===============================================================================
 [ Parameters ]
 
-{str}
+{string}
 
   The input string.
 
@@ -27,12 +27,13 @@ Wraps a string to a given number of characters using a string break character.
 
   The line is broken using the optional {break} parameter.
 
-{cut}
+{cut_long_words}
 
-  If the {cut} is set to TRUE, the string is always wrapped at or before the
-  specified {width}. So if you have a word that is larger than the given width,
-  it is broken apart. (See second example). When FALSE the function does not
-  split the word even if the {width} is smaller than the word width.
+  If the {cut_long_words} is set to TRUE, the string is always wrapped at or
+  before the specified {width}. So if you have a word that is larger than the
+  given width, it is broken apart. (See second example). When FALSE the
+  function does not split the word even if the {width} is smaller than the word
+  width.
 
 ===============================================================================
 [ Return Values ]

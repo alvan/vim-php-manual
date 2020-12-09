@@ -9,21 +9,21 @@ XMLWriter::writeRaw -- xmlwriter_write_raw — Write a raw XML text
 
 Object oriented style
 
-  XMLWriter::writeRaw ( string $content ) : bool~
+  public XMLWriter::writeRaw ( string $content ) : bool~
 
 Procedural style
 
-  xmlwriter_write_raw ( resource $xmlwriter , string $content ) : bool~
+  xmlwriter_write_raw ( XMLWriter $writer , string $content ) : bool~
 
 Writes a raw xml text.
 
 ===============================================================================
 [ Parameters ]
 
-{ xmlwriter}
+{ writer}
 
-  Only for procedural calls. The XMLWriter resource that is being modified.
-  This resource comes from a call to |xmlwriter_open_uri| or 
+  Only for procedural calls. The XMLWriter instance that is being modified.
+  This object is returned from a call to |xmlwriter_open_uri| or 
   |xmlwriter_open_memory|.
 
 {content}
@@ -34,6 +34,13 @@ Writes a raw xml text.
 [ Return Values ]
 
 Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {writer} expects an XMLWriter instance now; previously, a resource was
+        expected.
 
 ===============================================================================
 [ See Also ]

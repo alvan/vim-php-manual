@@ -8,33 +8,28 @@ function on the keys for comparison
 ===============================================================================
 [ Description ]
 
-  array_intersect_ukey ( array $array1 , array $array2 [, array $... ],~
-  callable $key_compare_func ) : array~
+  array_intersect_ukey ( array $array , array ...$arrays , callable~
+  $key_compare_func ) : array~
 
-array_intersect_ukey() returns an array containing all the values of {array1}
+array_intersect_ukey() returns an array containing all the values of {array}
 which have matching keys that are present in all the arguments.
 
 ===============================================================================
 [ Parameters ]
 
-{array1}
+{array}
 
   Initial array for comparison of the arrays.
 
-{array2}
+{arrays}
 
-  First array to compare keys against.
-
-{...}
-
-  Variable list of array arguments to compare keys against.
+  Arrays to compare keys against.
 
 {key_compare_func}
 
   The comparison function must return an integer less than, equal to, or
   greater than zero if the first argument is considered to be respectively less
-  than, equal to, or greater than the second. Note that before PHP 7.0.0 this
-  integer had to be in the range from -2147483648 to 2147483647.
+  than, equal to, or greater than the second.
 
 
   callback ( mixed $a, mixed $b ) : int~
@@ -42,7 +37,7 @@ which have matching keys that are present in all the arguments.
 ===============================================================================
 [ Return Values ]
 
-Returns the values of {array1} whose keys exist in all the arguments.
+Returns the values of {array} whose keys exist in all the arguments.
 
 ===============================================================================
 [ Examples ]
@@ -78,7 +73,7 @@ array(2) {
 In our example you see that only the keys 'blue' and 'green' are present in
 both arrays and thus returned. Also notice that the values for the keys 'blue'
 and 'green' differ between the two arrays. A match still occurs because only
-the keys are checked. The values returned are those of {array1}.
+the keys are checked. The values returned are those of {array}.
 
 ===============================================================================
 [ See Also ]

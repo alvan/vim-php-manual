@@ -7,9 +7,9 @@ metaphone — Calculate the metaphone key of a string
 ===============================================================================
 [ Description ]
 
-  metaphone ( string $str [, int $phonemes = 0 ] ) : string~
+  metaphone ( string $string [, int $max_phonemes = 0 ] ) : string~
 
-Calculates the metaphone key of {str}.
+Calculates the metaphone key of {string}.
 
 Similar to |soundex| metaphone creates the same key for similar sounding words.
 It's more accurate than |soundex| as it knows the basic rules of English
@@ -22,19 +22,27 @@ Wesley, 1995].
 ===============================================================================
 [ Parameters ]
 
-{str}
+{string}
 
   The input string.
 
-{phonemes}
+{max_phonemes}
 
-  This parameter restricts the returned metaphone key to {phonemes} characters
-  in length. The default value of 0 means no restriction.
+  This parameter restricts the returned metaphone key to {max_phonemes}
+  characters in length. However, the resulting phonemes are always transcribed
+  completely, so the resulting string length may be slightly longer than
+  {max_phonemes}. The default value of 0 means no restriction.
 
 ===============================================================================
 [ Return Values ]
 
-Returns the metaphone key as a string, or FALSE on failure.
+Returns the metaphone key as a string.
+
+===============================================================================
+[ Changelog ]
+
+Version               Description
+8.0.0   The function returned FALSE on failure.
 
 ===============================================================================
 [ Examples ]
@@ -46,22 +54,36 @@ Example #1 metaphone() basic example
   var_dump(metaphone('programmer'));
 <?>
 
-The above example will output something similar to:
+The above example will output:
 
 string(7) "PRKRMNK"
 string(6) "PRKRMR"
 
-Example #2 Using the {phonemes} parameter
+Example #2 Using the {max_phonemes} parameter
 
 <?php >
   var_dump(metaphone('programming', 5));
   var_dump(metaphone('programmer', 5));
 <?>
 
-The above example will output something similar to:
+The above example will output:
 
 string(5) "PRKRM"
 string(5) "PRKRM"
+
+Example #3 Using the {max_phonemes} parameter
+
+In this example, metaphone() is advised to produce a string of five characters,
+but that would require to split the final phoneme ('x' is supposed to be
+transcribed to 'KS'), so the function returns a string with six characters.
+
+<?php >
+  var_dump(metaphone('Asterix', 5));
+<?>
+
+The above example will output:
+
+string(6) "ASTRKS"
 
 
 vim:ft=help:

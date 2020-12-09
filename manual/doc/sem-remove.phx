@@ -7,7 +7,7 @@ sem_remove — Remove a semaphore
 ===============================================================================
 [ Description ]
 
-  sem_remove ( resource $sem_identifier ) : bool~
+  sem_remove ( SysvSemaphore $semaphore ) : bool~
 
 sem_remove() removes the given semaphore.
 
@@ -16,14 +16,21 @@ After removing the semaphore, it is no longer accessible.
 ===============================================================================
 [ Parameters ]
 
-{sem_identifier}
+{semaphore}
 
-  A semaphore resource identifier as returned by |sem_get|.
+  A semaphore as returned by |sem_get|.
 
 ===============================================================================
 [ Return Values ]
 
 Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {semaphore} expects a SysvSemaphore instance now; previously, a 
+        resource was expected.
 
 ===============================================================================
 [ See Also ]

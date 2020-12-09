@@ -7,19 +7,26 @@ inflate_get_status — Get decompression status
 ===============================================================================
 [ Description ]
 
-  inflate_get_status ( resource $resource ) : int~
+  inflate_get_status ( InflateContext $context ) : int~
 
 Usually returns either ZLIB_OK or ZLIB_STREAM_END.
 
 ===============================================================================
 [ Parameters ]
 
-{resource}
+{context}
 
 ===============================================================================
 [ Return Values ]
 
 Returns decompression status or FALSE on failure.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {context} expects an InflateContext instance now; previously, a 
+        resource was expected.
 
 
 vim:ft=help:

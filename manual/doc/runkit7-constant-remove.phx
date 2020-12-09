@@ -1,0 +1,34 @@
+*runkit7_constant_remove*
+
+(PECL runkit7 >= Unknown)
+
+runkit7_constant_remove — Remove/Delete an already defined constant
+
+===============================================================================
+[ Description ]
+
+  runkit7_constant_remove ( string $constname ) : bool~
+
+===============================================================================
+[ Parameters ]
+
+{constname}
+
+  Name of the constant to remove. Either the name of a global constant, or
+  classname::constname indicating a class constant.
+
+===============================================================================
+[ Return Values ]
+
+Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+[ See Also ]
+
+ * |define| - Defines a named constant
+ * |runkit7_constant_add| - Similar to define(), but allows defining in class
+  definitions as well
+ * |runkit7_constant_redefine| - Redefine an already defined constant
+
+
+vim:ft=help:

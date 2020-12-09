@@ -60,7 +60,7 @@ available:
   hashing algorithmeter and must be in range 04-31, values outside this range
   will cause crypt() to fail. Versions of PHP before 5.3.7 only support "$2a$"
   as the salt prefix: PHP 5.3.7 introduced the new prefixes to fix a security
-  weakness in the Blowfish implementation. Please refer to >> this document for
+  weakness in the Blowfish implementation. Please refer to » this document for
   full details of the security fix, but to summarise, developers targeting only
   PHP 5.3.7 and later should use "$2y$" in preference to "$2a$".
  * CRYPT_SHA256 - SHA-256 hash with a sixteen character salt prefixed with $5$.
@@ -110,28 +110,6 @@ Warning
 When validating passwords, a string comparison function that isn't vulnerable
 to timing attacks should be used to compare the output of crypt() to the
 previously known hash. PHP 5.6 onwards provides |hash_equals| for this purpose.
-
-===============================================================================
-[ Changelog ]
-
-Version                               Description
-        When the failure string "*0" is given as the {salt}, "*1" will now be
-5.6.5   returned for consistency with other crypt implementations. Prior to
-        this version, PHP 5.6 would incorrectly return a DES hash.
-5.6.0   Raise E_NOTICE security warning if {salt} is omitted.
-        When the failure string "*0" is given as the {salt}, "*1" will now be
-5.5.21  returned for consistency with other crypt implementations. Prior to
-        this version, PHP 5.5 (and earlier branches) would incorrectly return a
-        DES hash.
-5.3.7   Added $2x$ and $2y$ Blowfish modes to deal with potential high-bit
-        attacks.
-5.3.2   Added SHA-256 and SHA-512 crypt based on Ulrich Drepper's >>
-         implementation.
-5.3.2   Fixed Blowfish behaviour on invalid rounds to return "failure" string
-        ("*0" or "*1"), instead of falling back to DES.
-        PHP now contains its own implementation for the MD5 crypt, Standard
-5.3.0   DES, Extended DES and the Blowfish algorithms and will use that if the
-        system lacks of support for one or more of the algorithms.
 
 ===============================================================================
 [ Examples ]

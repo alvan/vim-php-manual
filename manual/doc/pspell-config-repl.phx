@@ -7,7 +7,7 @@ pspell_config_repl — Set a file that contains replacement pairs
 ===============================================================================
 [ Description ]
 
-  pspell_config_repl ( int $dictionary_link , string $file ) : bool~
+  pspell_config_repl ( int $config , string $filename ) : bool~
 
 Set a file that contains replacement pairs.
 
@@ -22,9 +22,9 @@ pspell_config_repl() should be used on a config before calling
 ===============================================================================
 [ Parameters ]
 
-{dictionary_link}
+{config}
 
-{file}
+{filename}
 
   The file should be writable by whoever PHP runs as (e.g. nobody).
 

@@ -9,7 +9,7 @@ is not fully connected
 [ Description ]
 
   fann_create_sparse ( float $connection_rate , int $num_layers , int~
-  $num_neurons1 , int $num_neurons2 [, int $... ] ) : resource~
+  $num_neurons1 , int $num_neurons2 , int ...$num_neuronsN ) : resource~
 
 Creates a standard backpropagation neural network, which is not fully
 connected.
@@ -36,7 +36,7 @@ connected.
 
   Number of neurons in the second layer.
 
-{...}
+{num_neuronsN}
 
   Number of neurons in other layers.
 

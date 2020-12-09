@@ -7,7 +7,7 @@ nl2br — Inserts HTML line breaks before all newlines in a string
 ===============================================================================
 [ Description ]
 
-  nl2br ( string $string [, bool $is_xhtml = TRUE ] ) : string~
+  nl2br ( string $string [, bool $use_xhtml = TRUE ] ) : string~
 
 Returns {string} with <br /> or <br> inserted before all newlines (\r\n, \n\r,
 \n and \r).
@@ -19,7 +19,7 @@ Returns {string} with <br /> or <br> inserted before all newlines (\r\n, \n\r,
 
   The input string.
 
-{is_xhtml}
+{use_xhtml}
 
   Whether to use XHTML compatible line breaks or not.
 
@@ -42,7 +42,7 @@ The above example will output:
 foo isn't<br />
  bar
 
-Example #2 Generating valid HTML markup using the {is_xhtml} parameter
+Example #2 Generating valid HTML markup using the {use_xhtml} parameter
 
 <?php >
   echo nl2br("Welcome\r\nThis is my HTML document", false);
@@ -66,13 +66,6 @@ This<br />
 is<br />
 a<br />
 string<br />
-
-===============================================================================
-[ Changelog ]
-
-Version                               Description
-5.3.0   Added the optional {is_xhtml} parameter. Before this version '<br />'
-        was always inserted.
 
 ===============================================================================
 [ See Also ]

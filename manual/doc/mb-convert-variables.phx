@@ -8,10 +8,10 @@ mb_convert_variables — Convert character code in variable(s)
 [ Description ]
 
   mb_convert_variables ( string $to_encoding , mixed $from_encoding , mixed~
-  &$vars [, mixed &$... ] ) : string~
+  &$var , mixed &...$vars ) : string~
 
-Converts character encoding of variables {vars} in encoding {from_encoding} to
-encoding {to_encoding}.
+Converts character encoding of variables {var} and {vars} in encoding
+{from_encoding} to encoding {to_encoding}.
 
 mb_convert_variables() join strings in Array or Object to detect encoding,
 since encoding detection tends to fail for short strings. Therefore, it is
@@ -30,15 +30,15 @@ impossible to mix encoding in single array or object.
   to detect encoding from {from-coding}. When {from_encoding} is omitted,
   detect_order is used.
 
-{vars}
+{var}
 
-  {vars} is the reference to the variable being converted. String, Array and
+  {var} is the reference to the variable being converted. String, Array and
   Object are accepted. mb_convert_variables() assumes all parameters have the
   same encoding.
 
-{...}
+{vars}
 
-  Additional {vars}.
+  Additional {var}s.
 
 ===============================================================================
 [ Return Values ]

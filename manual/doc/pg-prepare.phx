@@ -9,7 +9,7 @@ parameters, and waits for completion
 [ Description ]
 
   pg_prepare ([ resource $connection ], string $stmtname , string $query ) :~
-  resource~
+  resource|false~
 
 pg_prepare() creates a prepared statement for later execution with |pg_execute|
 or |pg_send_execute|. This feature allows commands that will be used repeatedly

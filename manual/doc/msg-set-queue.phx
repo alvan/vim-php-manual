@@ -7,7 +7,7 @@ msg_set_queue — Set information in the message queue data structure
 ===============================================================================
 [ Description ]
 
-  msg_set_queue ( resource $queue , array $data ) : bool~
+  msg_set_queue ( SysvMessageQueue $queue , array $data ) : bool~
 
 msg_set_queue() allows you to change the values of the msg_perm.uid,
 msg_perm.gid, msg_perm.mode and msg_qbytes fields of the underlying message
@@ -23,7 +23,7 @@ required to raise the msg_qbytes values above the system defined limit.
 
 {queue}
 
-  Message queue resource handle
+  The message queue.
 
 {data}
 
@@ -34,6 +34,13 @@ required to raise the msg_qbytes values above the system defined limit.
 [ Return Values ]
 
 Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {queue} expects a SysvMessageQueue instance now; previously, a resource
+        was expected.
 
 ===============================================================================
 [ See Also ]

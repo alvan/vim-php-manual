@@ -8,12 +8,18 @@ timestamp
 ===============================================================================
 [ Description ]
 
-  strtotime ( string $time [, int $now = time() ] ) : int~
+  strtotime ( string $datetime [, int $now = time() ] ) : int~
 
 The function expects to be given a string containing an English date format and
 will try to parse that format into a Unix timestamp (the number of seconds
 since January 1 1970 00:00:00 UTC), relative to the timestamp given in {now},
 or the current time if {now} is not supplied.
+
+Warning
+
+The Unix timestamp that this function returns does not contain information
+about time zones. In order to do calculations with date/time information, you
+should use the more capable DateTimeImmutable.
 
 Each parameter of this function uses the default time zone unless a time zone
 is specified in that parameter. Be careful not to use different time zones in
@@ -23,7 +29,7 @@ various ways to define the default time zone.
 ===============================================================================
 [ Parameters ]
 
-{time}
+{datetime}
 
   A date/time string. Valid formats are explained in Date and Time Formats.
 
@@ -34,8 +40,7 @@ various ways to define the default time zone.
 ===============================================================================
 [ Return Values ]
 
-Returns a timestamp on success, FALSE otherwise. Previous to PHP 5.1.0, this
-function would return -1 on failure.
+Returns a timestamp on success, FALSE otherwise.
 
 ===============================================================================
 [ Errors/Exceptions ]
@@ -43,28 +48,6 @@ function would return -1 on failure.
 Every call to a date/time function will generate a E_NOTICE if the time zone is
 not valid, and/or a E_STRICT or E_WARNING message if using the system settings
 or the TZ environment variable. See also |date_default_timezone_set|
-
-===============================================================================
-[ Changelog ]
-
-Version                               Description
-        Prior to PHP 5.3.0, relative time formats supplied to the {time}
-5.3.0   argument of strtotime() such as this week, previous week, last week,
-        and next week were interpreted to mean a 7 day period relative to the
-        current date/time, rather than a week period of Monday through Sunday.
-5.3.0   Prior to PHP 5.3.0, 24:00 was not a valid format and strtotime()
-        returned FALSE.
-        In PHP 5 prior to 5.2.7, requesting a given occurrence of a given
-5.2.7   weekday in a month where that weekday was the first day of the month
-        would incorrectly add one week to the returned timestamp. This has been
-        corrected in 5.2.7 and later versions.
-5.1.0   Now returns FALSE on failure, instead of -1.
-5.1.0   Now issues the E_STRICT and E_NOTICE time zone errors.
-
-        In PHP 5 up to 5.0.2, "now" and other relative times are wrongly
-5.0.2   computed from today's midnight. This differs from other versions where
-        it is correctly computed from current time.
-5.0.0   Microseconds began to be allowed, but they are ignored.
 
 ===============================================================================
 [ Examples ]

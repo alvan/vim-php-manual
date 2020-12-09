@@ -8,7 +8,7 @@ openssl_csr_get_subject — Returns the subject of a CSR
 [ Description ]
 
   openssl_csr_get_subject ( mixed $csr [, bool $use_shortnames = TRUE ] ) :~
-  array~
+  array|false~
 
 openssl_csr_get_subject() returns subject distinguished name information
 encoded in the {csr} including fields commonName (CN), organizationName (O),
@@ -31,7 +31,7 @@ countryName (C) etc.
 ===============================================================================
 [ Return Values ]
 
-Returns TRUE on success or FALSE on failure.
+Returns an associative array with subject description, or FALSE on failure.
 
 ===============================================================================
 [ Examples ]

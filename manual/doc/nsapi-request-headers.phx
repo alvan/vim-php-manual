@@ -7,16 +7,15 @@ nsapi_request_headers — Fetch all HTTP request headers
 ===============================================================================
 [ Description ]
 
-  nsapi_request_headers ( void ) : array~
+  nsapi_request_headers ( ) : array~
 
 nsapi_request_headers() gets all the HTTP headers in the current request. This
 is only supported when PHP runs as a NSAPI module.
 
   Note:
 
-  Prior to PHP 4.3.3, |getallheaders| was only available for the Apache
-  servers. After PHP 4.3.3, |getallheaders| is an alias for 
-  nsapi_request_headers() if you use the NSAPI module.
+  |getallheaders| is an alias for nsapi_request_headers() if you use the NSAPI
+  module.
 
   Note:
 

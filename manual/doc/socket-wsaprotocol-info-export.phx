@@ -1,0 +1,43 @@
+*socket_wsaprotocol_info_export*
+
+(PHP 7 >= 7.3.0)
+
+socket_wsaprotocol_info_export — Exports the WSAPROTOCOL_INFO Structure
+
+===============================================================================
+[ Description ]
+
+  socket_wsaprotocol_info_export ( resource $socket , int $target_pid ) :~
+  string|false~
+
+Exports the WSAPROTOCOL_INFO structure into shared memory and returns an
+identifier to be used with |socket_wsaprotocol_info_import|. The exported ID is
+only valid for the given {target_pid}.
+
+  Note: This function is available only on Windows.
+
+===============================================================================
+[ Parameters ]
+
+{socket}
+
+  A valid socket resource.
+
+{target_pid}
+
+  The ID of the process which will import the socket.
+
+===============================================================================
+[ Return Values ]
+
+Returns an identifier to be used for the import, or FALSE on failure
+
+===============================================================================
+[ See Also ]
+
+ * |socket_wsaprotocol_info_import| - Imports a Socket from another Process
+ * |socket_wsaprotocol_info_release| - Releases an exported WSAPROTOCOL_INFO
+  Structure
+
+
+vim:ft=help:

@@ -52,10 +52,10 @@ PHP-FPM in PHP 7.0.0.
 [ Return Values ]
 
 Returns TRUE on success or FALSE on failure. If the functionality of loading
-modules is not available or has been disabled (either by setting enable_dl off
-or by enabling safe mode in php.ini) an E_ERROR is emitted and execution is
-stopped. If dl() fails because the specified library couldn't be loaded, in
-addition to FALSE an E_WARNING message is emitted.
+modules is not available or has been disabled (by setting enable_dl off in
+php.ini) an E_ERROR is emitted and execution is stopped. If dl() fails because
+the specified library couldn't be loaded, in addition to FALSE an E_WARNING
+message is emitted.
 
 ===============================================================================
 [ Examples ]
@@ -80,16 +80,6 @@ Example #1 dl() examples
 <?>
 
 ===============================================================================
-[ Changelog ]
-
-Version                               Description
-7.0.0   dl() is disabled in PHP-FPM.
-5.3.9   dl() is enabled in PHP-FPM, albeit discouraged.
-        dl() is now disabled in some SAPIs due to stability issues. The only
-5.3.0   SAPIs that allow dl() are CLI and Embed. Use the Extension Loading
-        Directives instead.
-
-===============================================================================
 [ Notes ]
 
   Note:
@@ -100,8 +90,6 @@ Version                               Description
   Note:
 
   dl() is case sensitive on Unix platforms.
-
-  Note: This function is disabled when PHP is running in safe mode.
 
 ===============================================================================
 [ See Also ]

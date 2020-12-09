@@ -8,7 +8,7 @@ Generator
 ===============================================================================
 [ Description ]
 
-  mt_rand ( void ) : int~
+  mt_rand ( ) : int~
   mt_rand ( int $min , int $max ) : int~
 Caution
 
@@ -20,8 +20,8 @@ value, consider using |random_int|, |random_bytes|, or
 Many random number generators of older libcs have dubious or unknown
 characteristics and are slow. The mt_rand() function is a drop-in replacement
 for the older |rand|. It uses a random number generator with known
-characteristics using the >> Mersenne Twister, which will produce random
-numbers four times faster than what the average libc rand() provides.
+characteristics using the » Mersenne Twister, which will produce random numbers
+four times faster than what the average libc rand() provides.
 
 If called without the optional {min}, {max} arguments mt_rand() returns a
 pseudo-random value between 0 and |mt_getrandmax|. If you want a random number
@@ -55,7 +55,6 @@ Version                               Description
         mt_rand() has been updated to use the fixed, correct, version of the
 7.1.0   Mersenne Twister algorithm. To fall back to the old behaviour, use 
         |mt_srand| with MT_RAND_PHP as the second parameter.
-5.3.4   Issues an E_WARNING and returns FALSE if {max} < {min}.
 
 ===============================================================================
 [ Examples ]

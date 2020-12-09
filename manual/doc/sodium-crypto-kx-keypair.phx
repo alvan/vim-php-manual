@@ -7,10 +7,10 @@ sodium_crypto_kx_keypair — Creates a new sodium keypair
 ===============================================================================
 [ Description ]
 
-  sodium_crypto_kx_keypair ( void ) : string~
+  sodium_crypto_kx_keypair ( ) : string~
 
-Create a new sodium keypair consisting of the the secret key (32 bytes)
-followed by the public key (32 bytes). The keys can be retrieved by calling 
+Create a new sodium keypair consisting of the secret key (32 bytes) followed by
+the public key (32 bytes). The keys can be retrieved by calling 
 |sodium_crypto_kx_secretkey| and |sodium_crypto_kx_publickey|, respectively.
 
 ===============================================================================

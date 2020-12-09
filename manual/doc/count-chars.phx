@@ -7,7 +7,7 @@ count_chars — Return information about characters used in a string
 ===============================================================================
 [ Description ]
 
-  count_chars ( string $string [, int $mode = 0 ] ) : mixed~
+  count_chars ( string $string [, int $mode = 0 ] ) : array|string~
 
 Counts the number of occurrences of every byte-value (0..255) in {string} and
 returns it in various ways.
@@ -36,6 +36,12 @@ Depending on {mode} count_chars() returns one of the following:
   listed.
  * 3 - a string containing all unique characters is returned.
  * 4 - a string containing all not used characters is returned.
+
+===============================================================================
+[ Changelog ]
+
+Version                          Description
+8.0.0   Prior to this version, the function returned FALSE on failure.
 
 ===============================================================================
 [ Examples ]

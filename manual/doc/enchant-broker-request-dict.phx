@@ -7,7 +7,8 @@ enchant_broker_request_dict — Create a new dictionary using a tag
 ===============================================================================
 [ Description ]
 
-  enchant_broker_request_dict ( resource $broker , string $tag ) : resource~
+  enchant_broker_request_dict ( EnchantBroker $broker , string $tag ) :~
+  EnchantDictionary|false~
 
 create a new dictionary using tag, the non-empty language tag you wish to
 request a dictionary for ("en_US", "de_DE", ...)
@@ -17,7 +18,7 @@ request a dictionary for ("en_US", "de_DE", ...)
 
 {broker}
 
-  Broker resource
+  An Enchant broker returned by |enchant_broker_init|.
 
 {tag}
 
@@ -27,6 +28,15 @@ request a dictionary for ("en_US", "de_DE", ...)
 [ Return Values ]
 
 Returns a dictionary resource on success or FALSE on failure.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {broker} expects an EnchantBroker instance now; previoulsy, a resource
+        was expected.
+8.0.0   On success, this function returns an EnchantDictionary instance now;
+        previoulsy, a resource was retured.
 
 ===============================================================================
 [ Examples ]

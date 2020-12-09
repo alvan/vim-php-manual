@@ -7,8 +7,8 @@ odbc_specialcolumns — Retrieves special columns
 ===============================================================================
 [ Description ]
 
-  odbc_specialcolumns ( resource $connection_id , int $type , string~
-  $qualifier , string $table , int $scope , int $nullable ) : resource~
+  odbc_specialcolumns ( resource $connection_id , int $type , string $catalog~
+  , string $schema , string $table , int $scope , int $nullable ) : resource~
 
 Retrieves either the optimal set of columns that uniquely identifies a row in
 the table, or columns that are automatically updated when any value in the row
@@ -27,9 +27,13 @@ is updated by a transaction.
   argument is SQL_ROWVER, odbc_specialcolumns() returns the column or columns
   in the specified table, if any, that are automatically updated by the data
   source when any value in the row is updated by any transaction.
-{qualifier}
+{catalog}
 
-  The qualifier.
+  The catalog ('qualifier' in ODBC 2 parlance).
+
+{schema}
+
+  The schema ('owner' in ODBC 2 parlance).
 
 {table}
 
@@ -37,11 +41,13 @@ is updated by a transaction.
 
 {scope}
 
-  The scope, which orders the result set.
+  The scope, which orders the result set. One of SQL_SCOPE_CURROW,
+  SQL_SCOPE_TRANSACTION or SQL_SCOPE_SESSION.
 
 {nullable}
 
-  The nullable option.
+  Determines whether to return special columns that can have a NULL value. One
+  of SQL_NO_NULLS or SQL_NULLABLE .
 
 ===============================================================================
 [ Return Values ]
@@ -54,10 +60,19 @@ The result set has the following columns:
  * COLUMN_NAME
  * DATA_TYPE
  * TYPE_NAME
- * PRECISION
- * LENGTH
- * SCALE
+ * COLUMN_SIZE
+ * BUFFER_LENGTH
+ * DECIMAL_DIGITS
  * PSEUDO_COLUMN
+
+Drivers can report additional columns.
+
+The result set is ordered by SCOPE.
+
+===============================================================================
+[ See Also ]
+
+ * |odbc_tables| - Get the list of table names stored in a specific data source
 
 
 vim:ft=help:

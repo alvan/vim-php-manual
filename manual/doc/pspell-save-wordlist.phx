@@ -7,7 +7,7 @@ pspell_save_wordlist — Save the personal wordlist to a file
 ===============================================================================
 [ Description ]
 
-  pspell_save_wordlist ( int $dictionary_link ) : bool~
+  pspell_save_wordlist ( int $dictionary ) : bool~
 
 pspell_save_wordlist() saves the personal wordlist from the current session.
 The location of files to be saved specified with |pspell_config_personal| and
@@ -16,7 +16,7 @@ The location of files to be saved specified with |pspell_config_personal| and
 ===============================================================================
 [ Parameters ]
 
-{dictionary_link}
+{dictionary}
 
   A dictionary link identifier opened with |pspell_new_personal|.
 

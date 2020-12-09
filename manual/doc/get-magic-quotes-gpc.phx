@@ -5,10 +5,15 @@
 get_magic_quotes_gpc — Gets the current configuration setting of
 magic_quotes_gpc
 
+Warning
+
+This function has been DEPRECATED as of PHP 7.4.0. Relying on this function is
+highly discouraged.
+
 ===============================================================================
 [ Description ]
 
-  get_magic_quotes_gpc ( void ) : bool~
+  get_magic_quotes_gpc ( ) : bool~
 
 Returns the current configuration setting of magic_quotes_gpc
 
@@ -25,9 +30,8 @@ of PHP 5.4.0.
 ===============================================================================
 [ Changelog ]
 
-Version                               Description
-5.4.0   Always returns FALSE because the magic quotes feature was removed from
-        PHP.
+Version            Description
+7.4.0   This function has been deprecated.
 
 ===============================================================================
 [ Examples ]
@@ -53,16 +57,6 @@ Example #1 get_magic_quotes_gpc() example
   echo $lastname; // O\'reilly
   $sql = "INSERT INTO lastnames (lastname) VALUES ('$lastname')";
 <?>
-
-===============================================================================
-[ Notes ]
-
-  Note:
-
-  If the directive magic_quotes_sybase is ON it will completely override
-  magic_quotes_gpc. So even when get_magic_quotes_gpc() returns TRUE neither
-  double quotes, backslashes or NUL's will be escaped. Only single quotes will
-  be escaped. In this case they'll look like: ''
 
 ===============================================================================
 [ See Also ]

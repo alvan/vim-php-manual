@@ -8,7 +8,7 @@ along with the wordlist
 ===============================================================================
 [ Description ]
 
-  pspell_config_save_repl ( int $dictionary_link , bool $flag ) : bool~
+  pspell_config_save_repl ( int $config , bool $save ) : bool~
 
 pspell_config_save_repl() determines whether |pspell_save_wordlist| will save
 the replacement pairs along with the wordlist. Usually there is no need to use
@@ -22,9 +22,9 @@ pspell_config_save_repl() should be used on a config before calling
 ===============================================================================
 [ Parameters ]
 
-{dictionary_link}
+{config}
 
-{flag}
+{save}
 
   TRUE if replacement pairs should be saved, FALSE otherwise.
 

@@ -20,7 +20,7 @@ Seeds the random number generator with {seed} or with a random value if no
 
 {seed}
 
-  An arbitrary integer seed value.
+  An arbitrary int seed value.
 
 {mode}
 
@@ -47,11 +47,6 @@ Version                               Description
         |mt_rand| has been updated to use the fixed, correct, version of the
 7.1.0   Mersenne Twister algorithm. To fall back to the old behaviour, use 
         mt_srand() with MT_RAND_PHP as the second parameter.
-        The Mersenne Twister implementation in PHP now uses a new seeding
-        algorithm by Richard Wagner. Identical seeds no longer produce the same
-5.2.1   sequence of values they did in previous versions. This behavior is not
-        expected to change again, but it is considered unsafe to rely upon it
-        nonetheless.
 
 ===============================================================================
 [ Examples ]

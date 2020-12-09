@@ -8,9 +8,10 @@ COM object
 ===============================================================================
 [ Description ]
 
-  com_get_active_object ( string $progid [, int $code_page ] ) : variant~
+  com_get_active_object ( string $prog_id [, int|null $codepage = NULL ] ) :~
+  variant~
 
-com_get_active_object() is similar to creating a new instance of a COM object,
+com_get_active_object() is similar to creating a new instance of a com object,
 except that it will only return an object to your script if the object is
 already running. OLE applications use something known as the "Running Object
 Table" to allow well-known applications to be launched only once; this function
@@ -20,14 +21,14 @@ instance.
 ===============================================================================
 [ Parameters ]
 
-{progid}
+{prog_id}
 
-  {progid} must be either the ProgID or CLSID for the object that you want to
+  {prog_id} must be either the ProgID or CLSID for the object that you want to
   access (for example Word.Application).
 
-{code_page}
+{codepage}
 
-  Acts in precisely the same way that it does for the COM class.
+  Acts in precisely the same way that it does for the com class.
 
 ===============================================================================
 [ Return Values ]
@@ -44,14 +45,20 @@ error code will be MK_E_UNAVAILABLE; you can use the getCode method of the
 exception object to check the exception code.
 
 ===============================================================================
+[ Changelog ]
+
+Version         Description
+8.0.0   {codepage} is nullable now.
+
+===============================================================================
 [ Notes ]
 
 Warning
 
 Using com_get_active_object() in a web server context is not always a smart
 idea. Most COM/OLE applications are not designed to handle more than one client
-concurrently, even (or especially!) Microsoft Office. You should read >>
- Considerations for Server-Side Automation of Office for more information on
+concurrently, even (or especially!) Microsoft Office. You should read
+» Considerations for Server-Side Automation of Office for more information on
 the general issues involved.
 
 

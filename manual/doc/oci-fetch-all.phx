@@ -9,7 +9,7 @@ oci_fetch_all — Fetches multiple rows from a query into a two-dimensional arra
 
   oci_fetch_all ( resource $statement , array &$output [, int $skip = 0 [, int~
   $maxrows = -1 [, int $flags = OCI_FETCHSTATEMENT_BY_COLUMN + OCI_ASSOC ]]] )~
-  : int~
+  : int|false~
 
 Fetches multiple rows from a query into a two-dimensional array. By default,
 all rows are returned.

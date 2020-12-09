@@ -8,11 +8,11 @@ gzcompress — Compress a string
 [ Description ]
 
   gzcompress ( string $data [, int $level = -1 [, int $encoding =~
-  ZLIB_ENCODING_DEFLATE ]] ) : string~
+  ZLIB_ENCODING_DEFLATE ]] ) : string|false~
 
 This function compresses the given string using the ZLIB data format.
 
-For details on the ZLIB compression algorithm see the document ">> ZLIB
+For details on the ZLIB compression algorithm see the document "» ZLIB
 Compressed Data Format Specification version 3.3" (RFC 1950).
 
   Note:
@@ -53,12 +53,6 @@ Example #1 gzcompress() example
   $compressed = gzcompress('Compress me', 9);
   echo $compressed;
 <?>
-
-===============================================================================
-[ Changelog ]
-
-Version         Description
-5.4.0   Added {encoding} parameter.
 
 ===============================================================================
 [ See Also ]

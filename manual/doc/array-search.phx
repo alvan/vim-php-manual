@@ -9,9 +9,9 @@ corresponding key if successful
 [ Description ]
 
   array_search ( mixed $needle , array $haystack [, bool $strict = FALSE ] ) :~
-  mixed~
+  int|string|false~
 
-Searches {haystack} for {needle}.
+Searches for {needle} in {haystack}.
 
 ===============================================================================
 [ Parameters ]
@@ -50,13 +50,6 @@ This function may return Boolean FALSE, but may also return a non-Boolean value
 which evaluates to FALSE. Please read the section on Booleans for more
 information. Use the === operator for testing the return value of this
 function.
-
-===============================================================================
-[ Changelog ]
-
-Version                               Description
-5.3.0   As with all internal PHP functions as of 5.3.0, array_search() returns
-        NULL if invalid parameters are passed to it.
 
 ===============================================================================
 [ Examples ]

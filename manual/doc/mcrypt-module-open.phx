@@ -6,8 +6,8 @@ mcrypt_module_open — Opens the module of the algorithm and the mode to be used
 
 Warning
 
-This function has been DEPRECATED as of PHP 7.1.0. Relying on this function is
-highly discouraged.
+This function has been DEPRECATED as of PHP 7.1.0 and REMOVED as of PHP 7.2.0.
+Relying on this function is highly discouraged.
 
 ===============================================================================
 [ Description ]
@@ -44,9 +44,9 @@ the MCRYPT_ciphername constants. The module is closed by calling
 {mode_directory}
 
   The {mode_directory} parameter is used to locate the encryption module. When
-  you supply a directory name, it is used. When you set it to an empty string (
-  ""), the value set by the mcrypt.modes_dir php.ini directive is used. When it
-  is not set, the default directory that is used is the one that was
+  you supply a directory name, it is used. When you set it to an empty string
+  (""), the value set by the mcrypt.modes_dir php.ini directive is used. When
+  it is not set, the default directory that is used is the one that was
   compiled-in into libmcrypt (usually /usr/local/lib/libmcrypt).
 
 ===============================================================================

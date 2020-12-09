@@ -38,11 +38,9 @@ function except in that it acts on streams.
     Note:
 
     When stream_select() returns, the arrays {read}, {write} and {except} are
-    modified to indicate which stream resource(s) actually changed status.
+    modified to indicate which stream resource(s) actually changed status. The
+    original keys of the arrays are preserved.
 
-  You do not need to pass every array to stream_select(). You can leave it out
-  and use an empty array or NULL instead. Also do not forget that those arrays
-  are passed by reference and will be modified after stream_select() returns.
 {tv_sec}
 
   The {tv_sec} and {tv_usec} together form the timeout parameter, {tv_sec}
@@ -140,13 +138,13 @@ or $stream2. Since the timeout value is 0 it will return immediately:
 
   Some streams (like zlib) cannot be selected by this function.
 
-  Note:
-
-  Windows compatibility: stream_select() used on a pipe returned from 
-  |proc_open| may cause data loss under Windows 98.
+  Note: Windows compatibility
 
   Use of stream_select() on file descriptors returned by |proc_open| will fail
   and return FALSE under Windows.
+
+  STDIN from a console changes status as soon as any input events are
+  available, but reading from the stream may still block.
 
 ===============================================================================
 [ See Also ]

@@ -7,7 +7,7 @@ unpack — Unpack data from binary string
 ===============================================================================
 [ Description ]
 
-  unpack ( string $format , string $data [, int $offset = 0 ] ) : array~
+  unpack ( string $format , string $data [, int $offset = 0 ] ) : array|false~
 
 Unpacks from a binary string into an array according to the given {format}.
 
@@ -34,7 +34,8 @@ number behind the given name.
 ===============================================================================
 [ Return Values ]
 
-Returns an associative array containing unpacked elements of binary string.
+Returns an associative array containing unpacked elements of binary string, or
+FALSE on failure.
 
 ===============================================================================
 [ Changelog ]

@@ -26,8 +26,8 @@ that row.
 
 {row_number} starts at 0. The {row_number} should be a value in the range from
 0 to |mysql_num_rows| - 1. However if the result set is empty (|mysql_num_rows|
-== 0), a seek to 0 will fail with a E_WARNING and mysql_data_seek() will return
-FALSE.
+== 0), a seek to 0 will fail with an E_WARNING and mysql_data_seek() will
+return FALSE.
 
 ===============================================================================
 [ Parameters ]

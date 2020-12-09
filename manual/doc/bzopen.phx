@@ -7,7 +7,7 @@ bzopen — Opens a bzip2 compressed file
 ===============================================================================
 [ Description ]
 
-  bzopen ( mixed $file , string $mode ) : resource~
+  bzopen ( string|resource $file , string $mode ) : resource|false~
 
 bzopen() opens a bzip2 (.bz2) file for reading or writing.
 

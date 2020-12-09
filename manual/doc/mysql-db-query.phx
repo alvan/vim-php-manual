@@ -19,7 +19,7 @@ include:
 [ Description ]
 
   mysql_db_query ( string $database , string $query [, resource~
-  $link_identifier = NULL ] ) : resource~
+  $link_identifier = NULL ] ) : resource|bool~
 
 mysql_db_query() selects a database, and executes a query on it.
 
@@ -49,12 +49,6 @@ mysql_db_query() selects a database, and executes a query on it.
 Returns a positive MySQL result resource to the query result, or FALSE on
 error. The function also returns TRUE/FALSE for INSERT/UPDATE/DELETE queries to
 indicate success/failure.
-
-===============================================================================
-[ Changelog ]
-
-Version                   Description
-5.3.0   This function now throws an E_DEPRECATED notice.
 
 ===============================================================================
 [ Examples ]

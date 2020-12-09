@@ -7,14 +7,14 @@ curl_error — Return a string containing the last error for the current session
 ===============================================================================
 [ Description ]
 
-  curl_error ( resource $ch ) : string~
+  curl_error ( CurlHandle $handle ) : string~
 
 Returns a clear text error message for the last cURL operation.
 
 ===============================================================================
 [ Parameters ]
 
-{ch}
+{handle}
 
   A cURL handle returned by |curl_init|.
 
@@ -22,6 +22,13 @@ Returns a clear text error message for the last cURL operation.
 [ Return Values ]
 
 Returns the error message or '' (the empty string) if no error occurred.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {handle} expects a CurlHandle instance now; previously, a resource was
+        expected.
 
 ===============================================================================
 [ Examples ]
@@ -50,7 +57,7 @@ Example #1 curl_error() example
 [ See Also ]
 
  * |curl_errno| - Return the last error number
- * >> Curl error codes
+ * » Curl error codes
 
 
 vim:ft=help:

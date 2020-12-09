@@ -9,7 +9,7 @@ openssl_encrypt — Encrypts data
 
   openssl_encrypt ( string $data , string $method , string $key [, int~
   $options = 0 [, string $iv = "" [, string &$tag = NULL [, string~
-  $aad = "" [, int $tag_length = 16 ]]]]] ) : string~
+  $aad = "" [, int $tag_length = 16 ]]]]] ) : string|false~
 
 Encrypts given data with given method and key, returns a raw or base64 encoded
 string
@@ -72,8 +72,6 @@ parameter.
 
 Version                       Description
 7.1.0   The {tag}, {aad} and {tag_length} parameters were added.
-5.4.0   The {raw_output} was changed to {options}.
-5.3.3   The {iv} parameter was added.
 
 ===============================================================================
 [ Examples ]

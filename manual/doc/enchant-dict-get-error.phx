@@ -7,21 +7,29 @@ enchant_dict_get_error — Returns the last error of the current spelling-sessio
 ===============================================================================
 [ Description ]
 
-  enchant_dict_get_error ( resource $dict ) : string~
+  enchant_dict_get_error ( EnchantDictionary $dictionary ) : string|false~
 
 Returns the last error of the current spelling-session
 
 ===============================================================================
 [ Parameters ]
 
-{dict}
+{dictionary}
 
-  Dictinaray resource
+  An Enchant dictionary returned by |enchant_broker_request_dict| or 
+  |enchant_broker_request_pwl_dict|.
 
 ===============================================================================
 [ Return Values ]
 
 Returns the error message as string or FALSE if no error occurred.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {dictionary} expects an EnchantDictionary instance now; previoulsy, a
+        resource was expected.
 
 
 vim:ft=help:

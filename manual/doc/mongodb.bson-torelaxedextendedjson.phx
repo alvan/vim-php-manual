@@ -10,7 +10,7 @@ representation of a BSON value
 
   MongoDB\BSON\toRelaxedExtendedJSON ( string $bson ) : string~
 
-Converts a BSON string to its >> Relaxed Extended JSON representation. The
+Converts a BSON string to its » Relaxed Extended JSON representation. The
 relaxed format prefers use of JSON type primitives at the expense of type
 fidelity and is most suited for producing output that can be easily consumed by
 web APIs and humans.
@@ -33,7 +33,7 @@ The converted JSON value.
  * Throws MongoDB\Driver\Exception\UnexpectedValueException if the input did
   not contain exactly one BSON document. Possible reasons include, but are not
   limited to, invalid BSON, extra data (after reading one BSON document), or an
-  unexpected >> libbson error.
+  unexpected » libbson error.
 
 ===============================================================================
 [ Examples ]
@@ -105,8 +105,8 @@ The above example will output:
  * MongoDB\BSON\fromJSON() - Returns the BSON representation of a JSON value
  * MongoDB\BSON\toCanonicalExtendedJSON() - Returns the Canonical Extended JSON
   representation of a BSON value
- * >> Extended JSON
- * >> MongoDB BSON
+ * » Extended JSON
+ * » MongoDB BSON
 
 
 vim:ft=help:

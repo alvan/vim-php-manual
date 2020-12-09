@@ -8,31 +8,26 @@ comparison
 ===============================================================================
 [ Description ]
 
-  array_intersect_key ( array $array1 , array $array2 [, array $... ] ) :~
-  array~
+  array_intersect_key ( array $array , array ...$arrays ) : array~
 
-array_intersect_key() returns an array containing all the entries of {array1}
+array_intersect_key() returns an array containing all the entries of {array}
 which have keys that are present in all the arguments.
 
 ===============================================================================
 [ Parameters ]
 
-{array1}
+{array}
 
   The array with master keys to check.
 
-{array2}
+{arrays}
 
-  An array to compare keys against.
-
-{...}
-
-  A variable list of arrays to compare.
+  Arrays to compare keys against.
 
 ===============================================================================
 [ Return Values ]
 
-Returns an associative array containing all the entries of {array1} which have
+Returns an associative array containing all the entries of {array} which have
 keys that are present in all arguments.
 
 ===============================================================================
@@ -59,7 +54,7 @@ array(2) {
 In our example you see that only the keys 'blue' and 'green' are present in
 both arrays and thus returned. Also notice that the values for the keys 'blue'
 and 'green' differ between the two arrays. A match still occurs because only
-the keys are checked. The values returned are those of {array1}.
+the keys are checked. The values returned are those of {array}.
 
 The two keys from the key => value pairs are considered equal only if (string)
 $key1 === (string) $key2 . In other words a strict type check is executed so

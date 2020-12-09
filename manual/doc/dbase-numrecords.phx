@@ -7,9 +7,13 @@ dbase_numrecords — Gets the number of records in a database
 ===============================================================================
 [ Description ]
 
-  dbase_numrecords ( resource $dbase_identifier ) : int~
+  dbase_numrecords ( resource $database ) : int~
 
 Gets the number of records (rows) in the specified database.
+
+  Note:
+
+  Records which are marked as deleted are counted as well.
 
   Note:
 
@@ -19,9 +23,9 @@ Gets the number of records (rows) in the specified database.
 ===============================================================================
 [ Parameters ]
 
-{dbase_identifier}
+{database}
 
-  The database link identifier, returned by |dbase_open| or |dbase_create|.
+  The database resource, returned by |dbase_open| or |dbase_create|.
 
 ===============================================================================
 [ Return Values ]
@@ -31,8 +35,8 @@ The number of records in the database, or FALSE if an error occurs.
 ===============================================================================
 [ Changelog ]
 
-  Version                         Description
-dbase 7.0.0 {dbase_identifier} is now a resource instead of an int.
+  Version                     Description
+dbase 7.0.0 {database} is now a resource instead of an int.
 
 ===============================================================================
 [ Examples ]
@@ -47,7 +51,12 @@ Example #1 Looping over all the records of the database
   if ($db) {
     $record_numbers = dbase_numrecords($db);
     for ($i = 1; $i <= $record_numbers; $i++) {
-        // do something here, for each record
+        $record = dbase_get_record($db, $i);
+        if (!$record['deleted']) {
+            // do something with the $record
+        } else {
+            // do something with the deleted $record or ignore it
+        }
     }
   }
 

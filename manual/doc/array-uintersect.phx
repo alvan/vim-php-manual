@@ -8,7 +8,7 @@ callback function
 ===============================================================================
 [ Description ]
 
-  array_uintersect ( array $array1 , array $array2 [, array $... ], callable~
+  array_uintersect ( array $array , array ...$arrays , callable~
   $value_compare_func ) : array~
 
 Computes the intersection of arrays, compares data by a callback function.
@@ -16,20 +16,19 @@ Computes the intersection of arrays, compares data by a callback function.
 ===============================================================================
 [ Parameters ]
 
-{array1}
+{array}
 
   The first array.
 
-{array2}
+{arrays}
 
-  The second array.
+  Arrays to compare against.
 
 {value_compare_func}
 
   The comparison function must return an integer less than, equal to, or
   greater than zero if the first argument is considered to be respectively less
-  than, equal to, or greater than the second. Note that before PHP 7.0.0 this
-  integer had to be in the range from -2147483648 to 2147483647.
+  than, equal to, or greater than the second.
 
 
   callback ( mixed $a, mixed $b ) : int~
@@ -37,7 +36,7 @@ Computes the intersection of arrays, compares data by a callback function.
 ===============================================================================
 [ Return Values ]
 
-Returns an array containing all the values of {array1} that are present in all
+Returns an array containing all the values of {array} that are present in all
 the arguments.
 
 ===============================================================================

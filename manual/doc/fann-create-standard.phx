@@ -9,7 +9,7 @@ neural network
 [ Description ]
 
   fann_create_standard ( int $num_layers , int $num_neurons1 , int~
-  $num_neurons2 [, int $... ] ) : resource~
+  $num_neurons2 , int ...$num_neuronsN ) : resource~
 
 Creates a standard fully connected backpropagation neural network.
 
@@ -34,7 +34,7 @@ To destroy a neural network use the |fann_destroy| function.
 
   Number of neurons in the second layer.
 
-{...}
+{num_neuronsN}
 
   Number of neurons in other layers.
 

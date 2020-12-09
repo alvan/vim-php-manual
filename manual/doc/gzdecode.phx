@@ -7,7 +7,7 @@ gzdecode — Decodes a gzip compressed string
 ===============================================================================
 [ Description ]
 
-  gzdecode ( string $data [, int $length ] ) : string~
+  gzdecode ( string $data [, int $max_length = 0 ] ) : string|false~
 
 This function returns a decoded version of the input {data}.
 
@@ -18,7 +18,7 @@ This function returns a decoded version of the input {data}.
 
   The data to decode, encoded by |gzencode|.
 
-{length}
+{max_length}
 
   The maximum length of data to decode.
 

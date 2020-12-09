@@ -7,7 +7,7 @@ getallheaders — Fetch all HTTP request headers
 ===============================================================================
 [ Description ]
 
-  getallheaders ( void ) : array~
+  getallheaders ( ) : array~
 
 Fetches all HTTP headers from the current request.
 
@@ -24,12 +24,8 @@ on failure.
 ===============================================================================
 [ Changelog ]
 
-Version                               Description
+Version                   Description
 7.3.0   This function became available in the FPM SAPI.
-5.5.7   This function became available in the CLI server.
-        This function became available under FastCGI. Previously, it was
-5.4.0   supported when PHP was installed as an Apache module or by the NSAPI
-        server module in Netscape/iPlanet/SunONE webservers.
 
 ===============================================================================
 [ Examples ]

@@ -9,21 +9,21 @@ XMLWriter::startPi -- xmlwriter_start_pi — Create start PI tag
 
 Object oriented style
 
-  XMLWriter::startPi ( string $target ) : bool~
+  public XMLWriter::startPi ( string $target ) : bool~
 
 Procedural style
 
-  xmlwriter_start_pi ( resource $xmlwriter , string $target ) : bool~
+  xmlwriter_start_pi ( XMLWriter $writer , string $target ) : bool~
 
 Starts a processing instruction tag.
 
 ===============================================================================
 [ Parameters ]
 
-{ xmlwriter}
+{ writer}
 
-  Only for procedural calls. The XMLWriter resource that is being modified.
-  This resource comes from a call to |xmlwriter_open_uri| or 
+  Only for procedural calls. The XMLWriter instance that is being modified.
+  This object is returned from a call to |xmlwriter_open_uri| or 
   |xmlwriter_open_memory|.
 
 {target}
@@ -34,6 +34,13 @@ Starts a processing instruction tag.
 [ Return Values ]
 
 Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {writer} expects an XMLWriter instance now; previously, a resource was
+        expected.
 
 ===============================================================================
 [ See Also ]

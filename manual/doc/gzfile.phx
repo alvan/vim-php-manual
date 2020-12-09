@@ -7,7 +7,7 @@ gzfile — Read entire gz-file into an array
 ===============================================================================
 [ Description ]
 
-  gzfile ( string $filename [, int $use_include_path = 0 ] ) : array~
+  gzfile ( string $filename [, int $use_include_path = 0 ] ) : array|false~
 
 This function is identical to |readgzfile|, except that it returns the file in
 an array.
@@ -28,7 +28,7 @@ an array.
 [ Return Values ]
 
 An array containing the file, one line per cell, empty lines included, and with
-newlines still attached.
+newlines still attached, or FALSE on failure.
 
 ===============================================================================
 [ Examples ]

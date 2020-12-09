@@ -7,7 +7,7 @@ ngettext — Plural version of gettext
 ===============================================================================
 [ Description ]
 
-  ngettext ( string $msgid1 , string $msgid2 , int $n ) : string~
+  ngettext ( string $singular , string $plural , int $count ) : string~
 
 The plural version of |gettext|. Some languages have more than one form for
 plural messages dependent on the count.
@@ -15,15 +15,15 @@ plural messages dependent on the count.
 ===============================================================================
 [ Parameters ]
 
-{msgid1}
+{singular}
 
   The singular message ID.
 
-{msgid2}
+{plural}
 
   The plural message ID.
 
-{n}
+{count}
 
   The number (e.g. item count) to determine the translation for the respective
   grammatical number.
@@ -31,8 +31,8 @@ plural messages dependent on the count.
 ===============================================================================
 [ Return Values ]
 
-Returns correct plural form of message identified by {msgid1} and {msgid2} for
-count {n}.
+Returns correct plural form of message identified by {singular} and {plural}
+for count {count}.
 
 ===============================================================================
 [ Examples ]

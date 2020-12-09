@@ -16,10 +16,6 @@ filesystem as its data source.
 To use the large object interface, it is necessary to enclose it within a
 transaction block.
 
-  Note: When safe mode is enabled, PHP checks whether the files or directories
-  being operated upon have the same UID (owner) as the script that is being
-  executed.
-
   Note:
 
   This function used to be called pg_loimport().
@@ -49,12 +45,6 @@ transaction block.
 [ Return Values ]
 
 The OID of the newly created large object, or FALSE on failure.
-
-===============================================================================
-[ Changelog ]
-
-Version             Description
-5.3.0   The optional {object_id} was added.
 
 ===============================================================================
 [ Examples ]

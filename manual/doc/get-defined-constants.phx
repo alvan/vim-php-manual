@@ -73,18 +73,6 @@ Returns an array of constant name => constant value array, optionally groupped
 by extension name registering the constant.
 
 ===============================================================================
-[ Changelog ]
-
-Version                               Description
-5.3.1   Windows only: Core constants are categorized under Core, previously
-        mhash.
-5.3.0   Core constants are categorized under Core, previously internal. On
-        Windows, the Core Constants are categorized under mhash.
-        The {categorize} parameter now operates appropriately. Previously, the
-5.2.11  {categorize} parameter was interpreted as !is_null($categorize), making
-        any value other than NULL force the constants to be categorized.
-
-===============================================================================
 [ Examples ]
 
 Example #1 get_defined_constants() Example

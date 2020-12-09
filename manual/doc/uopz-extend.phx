@@ -28,6 +28,13 @@ Makes {class} extend {parent}
 Returns TRUE on success or FALSE on failure.
 
 ===============================================================================
+[ Errors/Exceptions ]
+
+As of PHP 7.4.0, uopz_extends() throws a RuntimeException, if OPcache is
+enabled, and the class entry of either {class} or {parent} (if it is a trait)
+is immutable.
+
+===============================================================================
 [ Examples ]
 
 Example #1 uopz_extend() example

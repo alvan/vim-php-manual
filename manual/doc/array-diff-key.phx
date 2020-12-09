@@ -7,31 +7,27 @@ array_diff_key — Computes the difference of arrays using keys for comparison
 ===============================================================================
 [ Description ]
 
-  array_diff_key ( array $array1 , array $array2 [, array $... ] ) : array~
+  array_diff_key ( array $array , array ...$arrays ) : array~
 
-Compares the keys from {array1} against the keys from {array2} and returns the
+Compares the keys from {array} against the keys from {arrays} and returns the
 difference. This function is like |array_diff| except the comparison is done on
 the keys instead of the values.
 
 ===============================================================================
 [ Parameters ]
 
-{array1}
+{array}
 
   The array to compare from
 
-{array2}
+{arrays}
 
-  An array to compare against
-
-{...}
-
-  More arrays to compare against
+  Arrays to compare against
 
 ===============================================================================
 [ Return Values ]
 
-Returns an array containing all the entries from {array1} whose keys are absent
+Returns an array containing all the entries from {array} whose keys are absent
 from all of the other arrays.
 
 ===============================================================================

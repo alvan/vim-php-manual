@@ -53,9 +53,14 @@ The above example will output something similar to:
 ===============================================================================
 [ Notes ]
 
-  Note: When safe mode is enabled, PHP checks whether the directory in which
-  the script is operating has the same UID (owner) as the script that is being
-  executed.
+Caution
+
+If the PHP interpreter has been built with ZTS (Zend Thread Safety) enabled,
+any changes to the current directory made through chdir() will be invisible to
+the operating system. All built-in PHP functions will still respect the change
+in current directory; but external library functions called using FFI will not.
+You can tell whether your copy of PHP was built with ZTS enabled using `php`
+`-i` or the built-in constant PHP_ZTS.
 
 ===============================================================================
 [ See Also ]

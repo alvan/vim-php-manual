@@ -7,7 +7,7 @@ usort — Sort an array by values using a user-defined comparison function
 ===============================================================================
 [ Description ]
 
-  usort ( array &$array , callable $value_compare_func ) : bool~
+  usort ( array &$array , callable $callback ) : bool~
 
 This function will sort an array by its values using a user-supplied comparison
 function. If the array you wish to sort needs to be sorted by some non-trivial
@@ -29,19 +29,18 @@ criteria, you should use this function.
 
   The input array.
 
-{value_compare_func}
+{callback}
 
   The comparison function must return an integer less than, equal to, or
   greater than zero if the first argument is considered to be respectively less
-  than, equal to, or greater than the second. Note that before PHP 7.0.0 this
-  integer had to be in the range from -2147483648 to 2147483647.
+  than, equal to, or greater than the second.
 
 
   callback ( mixed $a, mixed $b ) : int~
   Caution
 
   Returning non-integer values from the comparison function, such as float,
-  will result in an internal cast to integer of the callback's return value. So
+  will result in an internal cast to int of the callback's return value. So
   values such as 0.99 and 0.1 will both be cast to an integer value of 0, which
   will compare such values as equal.
 

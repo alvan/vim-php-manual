@@ -1,0 +1,35 @@
+*socket_wsaprotocol_info_import*
+
+(PHP 7 >= 7.3.0)
+
+socket_wsaprotocol_info_import — Imports a Socket from another Process
+
+===============================================================================
+[ Description ]
+
+  socket_wsaprotocol_info_import ( string $info_id ) : resource|false~
+
+Imports a socket which has formerly been exported from another process.
+
+  Note: This function is available only on Windows.
+
+===============================================================================
+[ Parameters ]
+
+{info_id}
+
+  The ID which has been returned by a former call to 
+  |socket_wsaprotocol_info_export|.
+
+===============================================================================
+[ Return Values ]
+
+Returns the socket resource, or FALSE on failure
+
+===============================================================================
+[ See Also ]
+
+ * |socket_wsaprotocol_info_export| - Exports the WSAPROTOCOL_INFO Structure
+
+
+vim:ft=help:

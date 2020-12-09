@@ -8,7 +8,7 @@ ps_begin_pattern — Start a new pattern
 [ Description ]
 
   ps_begin_pattern ( resource $psdoc , float $width , float $height , float~
-  $xstep , float $ystep , int $painttype ) : int~
+  $xstep , float $ystep , int $painttype ) : int|false~
 
 Starts a new pattern. A pattern is like a page containing e.g. a drawing which
 can be used for filling areas. It is used like a color by calling |ps_setcolor|

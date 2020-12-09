@@ -7,7 +7,7 @@ xml_set_object — Use XML Parser within an object
 ===============================================================================
 [ Description ]
 
-  xml_set_object ( resource $parser , object &$object ) : bool~
+  xml_set_object ( XMLParser $parser , object $object ) : bool~
 
 This function allows to use {parser} inside {object}. All callback functions
 could be set with |xml_set_element_handler| etc and assumed to be methods of
@@ -28,6 +28,13 @@ could be set with |xml_set_element_handler| etc and assumed to be methods of
 [ Return Values ]
 
 Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {parser} expects an XMLParser instance now; previously, a resource was
+        expected.
 
 ===============================================================================
 [ Examples ]

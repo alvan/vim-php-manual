@@ -8,7 +8,7 @@ readfile — Outputs a file
 [ Description ]
 
   readfile ( string $filename [, bool $use_include_path = FALSE [, resource~
-  $context ]] ) : int~
+  $context ]] ) : int|false~
 
 Reads a file and writes it to the output buffer.
 
@@ -31,9 +31,12 @@ Reads a file and writes it to the output buffer.
 ===============================================================================
 [ Return Values ]
 
-Returns the number of bytes read from the file. If an error occurs, FALSE is
-returned and unless the function was called as @readfile(), an error message is
-printed.
+Returns the number of bytes read from the file on success, or FALSE on failure
+
+===============================================================================
+[ Errors/Exceptions ]
+
+Upon failure, an E_WARNING is emitted.
 
 ===============================================================================
 [ Examples ]
@@ -77,8 +80,8 @@ the Supported Protocols and Wrappers for links to information about what
 abilities the various wrappers have, notes on their usage, and information on
 any predefined variables they may provide.
 
-  Note: Context support was added with PHP 5.0.0. For a description of contexts
-  , refer to Streams.
+  Note: Context support was added with PHP 5.0.0. For a description of
+  contexts, refer to Streams.
 
 ===============================================================================
 [ See Also ]

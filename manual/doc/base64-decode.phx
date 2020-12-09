@@ -7,7 +7,7 @@ base64_decode — Decodes data encoded with MIME base64
 ===============================================================================
 [ Description ]
 
-  base64_decode ( string $data [, bool $strict = FALSE ] ) : string~
+  base64_decode ( string $data [, bool $strict = FALSE ] ) : string|false~
 
 Decodes a base64 encoded {data}.
 
@@ -30,12 +30,6 @@ Decodes a base64 encoded {data}.
 Returns the decoded data or FALSE on failure. The returned data may be binary.
 
 ===============================================================================
-[ Changelog ]
-
-Version   Description
-5.2.0   {strict} added
-
-===============================================================================
 [ Examples ]
 
 Example #1 base64_decode() example
@@ -53,7 +47,7 @@ This is an encoded string
 [ See Also ]
 
  * |base64_encode| - Encodes data with MIME base64
- * >> RFC 2045 section 6.8
+ * » RFC 2045 section 6.8
 
 
 vim:ft=help:

@@ -9,7 +9,7 @@ simplexml_load_string — Interprets a string of XML into an object
 
   simplexml_load_string ( string $data [, string $class_name =~
   "SimpleXMLElement" [, int $options = 0 [, string $ns =~
-  "" [, bool $is_prefix = FALSE ]]]] ) : SimpleXMLElement~
+  "" [, bool $is_prefix = FALSE ]]]] ) : SimpleXMLElement|false~
 
 Takes a well-formed XML string and returns it as an object.
 
@@ -61,6 +61,12 @@ Tip
 
 Use |libxml_use_internal_errors| to suppress all XML errors, and 
 |libxml_get_errors| to iterate over them afterwards.
+
+===============================================================================
+[ Changelog ]
+
+Version                  Description
+5.2.0   The optional parameter {is_prefix} was added.
 
 ===============================================================================
 [ Examples ]

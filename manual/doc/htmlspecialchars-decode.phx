@@ -7,8 +7,8 @@ htmlspecialchars_decode — Convert special HTML entities back to characters
 ===============================================================================
 [ Description ]
 
-  htmlspecialchars_decode ( string $string [, int $flags = ENT_COMPAT |~
-  ENT_HTML401 ] ) : string~
+  htmlspecialchars_decode ( string $string [, int $flags = ENT_COMPAT ] ) :~
+  string~
 
 This function is the opposite of |htmlspecialchars|. It converts special HTML
 entities back to characters.
@@ -43,13 +43,6 @@ The converted entities are: &amp;, &quot; (when ENT_NOQUOTES is not set), &#
 [ Return Values ]
 
 Returns the decoded string.
-
-===============================================================================
-[ Changelog ]
-
-Version                               Description
-5.4.0   The constants ENT_HTML401, ENT_XML1, ENT_XHTML and ENT_HTML5 were
-        added.
 
 ===============================================================================
 [ Examples ]

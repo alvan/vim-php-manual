@@ -7,8 +7,8 @@ json_decode — Decodes a JSON string
 ===============================================================================
 [ Description ]
 
-  json_decode ( string $json [, bool $assoc = FALSE [, int $depth = 512 [, int~
-  $options = 0 ]]] ) : mixed~
+  json_decode ( string $json [, bool|null $associative = NULL [, int $depth =~
+  512 [, int $flags = 0 ]]] ) : mixed~
 
 Takes a JSON encoded string and converts it into a PHP variable.
 
@@ -23,20 +23,24 @@ Takes a JSON encoded string and converts it into a PHP variable.
 
     Note:
 
-    PHP implements a superset of JSON as specified in the original >> RFC 7159.
+    PHP implements a superset of JSON as specified in the original » RFC 7159.
 
-{assoc}
+{associative}
 
-  When TRUE, returned objects will be converted into associative arrays.
+  When TRUE, JSON objects will be returned as associative arrays; when FALSE,
+  JSON objects will be returned as objects. When NULL, JSON objects will be
+  returned as associative arrays or objects depending on whether
+  JSON_OBJECT_AS_ARRAY is set in the {flags}.
 
 {depth}
 
   User specified recursion depth.
 
-{options}
+{flags}
 
-  Bitmask of JSON_BIGINT_AS_STRING, JSON_OBJECT_AS_ARRAY, JSON_THROW_ON_ERROR.
-  The behaviour of these constants is described on the JSON constants page.
+  Bitmask of JSON_BIGINT_AS_STRING, JSON_INVALID_UTF8_IGNORE,
+  JSON_INVALID_UTF8_SUBSTITUTE, JSON_OBJECT_AS_ARRAY, JSON_THROW_ON_ERROR. The
+  behaviour of these constants is described on the JSON constants page.
 
 ===============================================================================
 [ Return Values ]
@@ -45,6 +49,17 @@ Returns the value encoded in {json} in appropriate PHP type. Values true, false
 and null are returned as TRUE, FALSE and NULL respectively. NULL is returned if
 the {json} cannot be decoded or if the encoded data is deeper than the
 recursion limit.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+7.3.0   JSON_THROW_ON_ERROR {flags} was added.
+7.2.0   {associative} is nullable now.
+7.2.0   JSON_INVALID_UTF8_IGNORE, and JSON_INVALID_UTF8_SUBSTITUTE {flags} were
+        added.
+7.1.0   An empty JSON key ("") can be encoded to the empty object property
+        instead of using a key with value _empty_.
 
 ===============================================================================
 [ Examples ]
@@ -206,24 +221,6 @@ object(stdClass)#1 (1) {
 
   In the event of a failure to decode, |json_last_error| can be used to
   determine the exact nature of the error.
-
-===============================================================================
-[ Changelog ]
-
-Version                               Description
-7.1.0   An empty JSON key ("") can be encoded to the empty object property
-        instead of using a key with value _empty_.
-7.0.0   Rejected RFC 7159 incompatible number formats - top level (07, 0xff,
-        .1, -.1) and all levels ([1.], [1.e1])
-7.0.0   An empty PHP string or value that after casting to string is an empty
-        string (NULL, FALSE) results in JSON syntax error.
-5.6.0   Invalid non-lowercased variants of the true, false and null literals
-        are no longer accepted as valid input, and will generate warnings.
-5.4.0   The {options} parameter was added.
-5.3.0   Added the optional {depth}. The default recursion depth was increased
-        from 128 to 512
-5.2.3   The nesting limit was increased from 20 to 128
-5.2.1   Added support for JSON decoding of basic types.
 
 ===============================================================================
 [ See Also ]

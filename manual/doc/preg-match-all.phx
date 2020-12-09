@@ -7,8 +7,8 @@ preg_match_all — Perform a global regular expression match
 ===============================================================================
 [ Description ]
 
-  preg_match_all ( string $pattern , string $subject [, array &$matches [, int~
-  $flags = PREG_PATTERN_ORDER [, int $offset = 0 ]]] ) : int~
+  preg_match_all ( string $pattern , string $subject [, array &$matches = NULL~
+  [, int $flags = PREG_PATTERN_ORDER [, int $offset = 0 ]]] ) : int|false|null~
 
 Searches {subject} for all matches to the regular expression given in {pattern}
 and puts them in {matches} in the order specified by {flags}.
@@ -101,10 +101,10 @@ end of the last match.
   PREG_OFFSET_CAPTURE
 
     If this flag is passed, for every occurring match the appendant string
-    offset will also be returned. Note that this changes the value of {matches}
-    into an array of arrays where every element is an array consisting of the
-    matched string at offset 0 and its string offset into {subject} at offset 1
-    .
+    offset (in bytes) will also be returned. Note that this changes the value
+    of {matches} into an array of arrays where every element is an array
+    consisting of the matched string at offset 0 and its string offset into
+    {subject} at offset 1.
     <?php >
     preg_match_all('/(foo)(bar)(baz)/', 'foobarbaz', $matches, 
     PREG_OFFSET_CAPTURE);
@@ -185,12 +185,8 @@ an error occurred.
 ===============================================================================
 [ Changelog ]
 
-Version                               Description
+Version                              Description
 7.2.0   The PREG_UNMATCHED_AS_NULL is now supported for the $flags parameter.
-5.4.0   The {matches} parameter became optional.
-5.3.6   Returns FALSE if {offset} is higher than {subject} length.
-5.2.2   Named subpatterns now accept the syntax (?<name>) and (?'name') as well
-        as (?P<name>). Previous versions accepted only (?P<name>).
 
 ===============================================================================
 [ Examples ]

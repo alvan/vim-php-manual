@@ -48,13 +48,6 @@ Communication).
 Returns TRUE on success or FALSE on failure.
 
 ===============================================================================
-[ Changelog ]
-
-Version                              Description
-5.3.0   This function is now re-enabled on Windows platforms.
-4.3.0   This function was due to a bug made unavailable on Windows platforms.
-
-===============================================================================
 [ Examples ]
 
 Example #1 socket_create_pair() example
@@ -70,7 +63,7 @@ Example #1 socket_create_pair() example
       echo "socket_create_pair failed. Reason: ".socket_strerror(
   socket_last_error());
   }
-  /* Send and Recieve Data */
+  /* Send and Receive Data */
   if (socket_write($sockets[0], "ABCdef123\n", strlen("ABCdef123\n")) === false) 
   {
       echo "socket_write() failed. Reason: ".socket_strerror(socket_last_error(
@@ -110,7 +103,7 @@ Example #2 socket_create_pair() IPC example
   socket_last_error($ary[1]));
       }
       if (socket_read($ary[1], strlen($strtwo), PHP_BINARY_READ) == $strtwo) {
-          echo "Recieved $strtwo\n";
+          echo "Received $strtwo\n";
       }
       socket_close($ary[1]);
   } else {
@@ -121,7 +114,7 @@ Example #2 socket_create_pair() IPC example
   socket_last_error($ary[0]));
       }
       if (socket_read($ary[0], strlen($strone), PHP_BINARY_READ) == $strone) {
-          echo "Recieved $strone\n";
+          echo "Received $strone\n";
       }
       socket_close($ary[0]);
   }

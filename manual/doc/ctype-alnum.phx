@@ -7,7 +7,7 @@ ctype_alnum — Check for alphanumeric character(s)
 ===============================================================================
 [ Description ]
 
-  ctype_alnum ( string $text ) : bool~
+  ctype_alnum ( mixed $text ) : bool~
 
 Checks if all of the characters in the provided string, {text}, are
 alphanumeric.
@@ -18,6 +18,14 @@ alphanumeric.
 {text}
 
   The tested string.
+
+
+    Note:
+
+    If an int between -128 and 255 inclusive is provided, it is interpreted as
+    the ASCII value of a single character (negative values have 256 added in
+    order to allow characters in the Extended ASCII range). Any other integer
+    is interpreted as a string containing the decimal digits of the integer.
 
 ===============================================================================
 [ Return Values ]
@@ -46,16 +54,6 @@ The above example will output:
 
 The string AbCd1zyZ9 consists of all letters or digits.
 The string foo!#$bar does not consist of all letters or digits.
-
-===============================================================================
-[ Notes ]
-
-  Note:
-
-  If an integer between -128 and 255 inclusive is provided, it is interpreted
-  as the ASCII value of a single character (negative values have 256 added in
-  order to allow characters in the Extended ASCII range). Any other integer is
-  interpreted as a string containing the decimal digits of the integer.
 
 ===============================================================================
 [ See Also ]

@@ -7,7 +7,7 @@ com_create_guid — Generate a globally unique identifier (GUID)
 ===============================================================================
 [ Description ]
 
-  com_create_guid ( void ) : string~
+  com_create_guid ( ) : string|false~
 
 Generates a Globally Unique Identifier (GUID).
 
@@ -17,7 +17,7 @@ convention is to enclose a GUID in curly braces.
 ===============================================================================
 [ Return Values ]
 
-Returns the GUID as a string.
+Returns the GUID as a string, or FALSE on failure.
 
 ===============================================================================
 [ See Also ]

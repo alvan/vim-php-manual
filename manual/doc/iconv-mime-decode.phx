@@ -7,15 +7,15 @@ iconv_mime_decode — Decodes a MIME header field
 ===============================================================================
 [ Description ]
 
-  iconv_mime_decode ( string $encoded_header [, int $mode = 0 [, string~
-  $charset = ini_get("iconv.internal_encoding") ]] ) : string~
+  iconv_mime_decode ( string $string [, int $mode = 0 [, string|null $encoding~
+  = NULL ]] ) : string|false~
 
 Decodes a MIME header field.
 
 ===============================================================================
 [ Parameters ]
 
-{encoded_header}
+{string}
 
   The encoded header, as a string.
 
@@ -29,7 +29,7 @@ Decodes a MIME header field.
   Value              Constant                           Description
                                             If set, the given header is decoded
                                             in full conformance with the
-                                            standards defined in >> RFC2047.
+                                            standards defined in » RFC2047.
   1     ICONV_MIME_DECODE_STRICT            This option is disabled by default
                                             because there are a lot of broken
                                             mail user agents that don't follow
@@ -40,16 +40,22 @@ Decodes a MIME header field.
                                             errors and continue to process a
                                             given header.
 
-{charset}
+{encoding}
 
-  The optional {charset} parameter specifies the character set to represent the
-  result by. If omitted, iconv.internal_encoding will be used.
+  The optional {encoding} parameter specifies the character set to represent
+  the result by. If omitted or NULL, iconv.internal_encoding will be used.
 
 ===============================================================================
 [ Return Values ]
 
 Returns a decoded MIME field on success, or FALSE if an error occurs during the
 decoding.
+
+===============================================================================
+[ Changelog ]
+
+Version         Description
+8.0.0   {encoding} is nullable now.
 
 ===============================================================================
 [ Examples ]

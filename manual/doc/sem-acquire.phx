@@ -7,7 +7,8 @@ sem_acquire — Acquire a semaphore
 ===============================================================================
 [ Description ]
 
-  sem_acquire ( resource $sem_identifier [, bool $nowait = FALSE ] ) : bool~
+  sem_acquire ( SysvSemaphore $semaphore [, bool $non_blocking = FALSE ] ) :~
+  bool~
 
 sem_acquire() by default blocks (if necessary) until the semaphore can be
 acquired. A process attempting to acquire a semaphore which it has already
@@ -21,11 +22,11 @@ generated.
 ===============================================================================
 [ Parameters ]
 
-{sem_identifier}
+{semaphore}
 
-  {sem_identifier} is a semaphore resource, obtained from |sem_get|.
+  {semaphore} is a semaphore obtained from |sem_get|.
 
-{nowait}
+{non_blocking}
 
   Specifies if the process shouldn't wait for the semaphore to be acquired. If
   set to true, the call will return false immediately if a semaphore cannot be
@@ -39,8 +40,9 @@ Returns TRUE on success or FALSE on failure.
 ===============================================================================
 [ Changelog ]
 
-Version           Description
-5.6.1   The $nowait parameter was added.
+Version                               Description
+8.0.0   {semaphore} expects a SysvSemaphore instance now; previously, a 
+        resource was expected.
 
 ===============================================================================
 [ See Also ]

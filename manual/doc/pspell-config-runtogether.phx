@@ -7,7 +7,7 @@ pspell_config_runtogether — Consider run-together words as valid compounds
 ===============================================================================
 [ Description ]
 
-  pspell_config_runtogether ( int $dictionary_link , bool $flag ) : bool~
+  pspell_config_runtogether ( int $config , bool $allow ) : bool~
 
 This function determines whether run-together words will be treated as legal
 compounds. That is, "thecat" will be a legal compound, although there should be
@@ -20,9 +20,9 @@ pspell_config_runtogether() should be used on a config before calling
 ===============================================================================
 [ Parameters ]
 
-{dictionary_link}
+{config}
 
-{flag}
+{allow}
 
   TRUE if run-together words should be treated as legal compounds, FALSE
   otherwise.

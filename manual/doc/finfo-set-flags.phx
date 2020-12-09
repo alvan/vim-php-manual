@@ -9,11 +9,11 @@ finfo_set_flags -- finfo::set_flags — Set libmagic configuration options
 
 Procedural style
 
-  finfo_set_flags ( resource $finfo , int $options ) : bool~
+  finfo_set_flags ( resource $finfo , int $flags ) : bool~
 
 Object oriented style
 
-  public finfo::set_flags ( int $options ) : bool~
+  public finfo::set_flags ( int $flags ) : bool~
 
 This function sets various Fileinfo options. Options can be set also directly
 in |finfo_open| or other Fileinfo functions.
@@ -25,7 +25,7 @@ in |finfo_open| or other Fileinfo functions.
 
   Fileinfo resource returned by |finfo_open|.
 
-{options}
+{flags}
 
   One or disjunction of more Fileinfo constants.
 

@@ -7,12 +7,15 @@ array_filter — Filters elements of an array using a callback function
 ===============================================================================
 [ Description ]
 
-  array_filter ( array $array [, callable $callback [, int $flag = 0 ]] ) :~
-  array~
+  array_filter ( array $array [, callable|null $callback = NULL [, int $mode =~
+  0 ]] ) : array~
 
 Iterates over each value in the {array} passing them to the {callback}
-function. If the {callback} function returns true, the current value from
-{array} is returned into the result array. Array keys are preserved.
+function. If the {callback} function returns TRUE, the current value from
+{array} is returned into the result array.
+
+Array keys are preserved, and may result in gaps if the {array} was indexed.
+The result array can be reindexed using the |array_values| function.
 
 ===============================================================================
 [ Parameters ]
@@ -25,10 +28,10 @@ function. If the {callback} function returns true, the current value from
 
   The callback function to use
 
-  If no {callback} is supplied, all entries of {array} equal to FALSE (see
-  converting to boolean) will be removed.
+  If no {callback} is supplied, all empty entries of {array} will be removed.
+  See |empty| for how PHP defines empty in this case.
 
-{flag}
+{mode}
 
   Flag determining what arguments are sent to {callback}:
    + ARRAY_FILTER_USE_KEY - pass key as the only argument to {callback} instead
@@ -47,7 +50,8 @@ Returns the filtered array.
 [ Changelog ]
 
 Version                               Description
-5.6.0   Added optional {flag} parameter and constants ARRAY_FILTER_USE_KEY and
+8.0.0   {callback} is nullable now.
+5.6.0   Added optional {mode} parameter and constants ARRAY_FILTER_USE_KEY and
         ARRAY_FILTER_USE_BOTH
 
 ===============================================================================
@@ -59,17 +63,17 @@ Example #1 array_filter() example
   function odd($var)
   {
       // returns whether the input integer is odd
-      return($var & 1);
+      return $var & 1;
   }
 
   function even($var)
   {
       // returns whether the input integer is even
-      return(!($var & 1));
+      return !($var & 1);
   }
 
-  $array1 = array("a"=>1, "b"=>2, "c"=>3, "d"=>4, "e"=>5);
-  $array2 = array(6, 7, 8, 9, 10, 11, 12);
+  $array1 = ['a' => 1, 'b' => 2, 'c' => 3, 'd' => 4, 'e' => 5];
+  $array2 = [6, 7, 8, 9, 10, 11, 12];
 
   echo "Odd :\n";
   print_r(array_filter($array1, "odd"));
@@ -99,13 +103,15 @@ Example #2 array_filter() without {callback}
 
 <?php >
 
-  $entry = array(
-               0 => 'foo',
-               1 => false,
-               2 => -1,
-               3 => null,
-               4 => ''
-            );
+  $entry = [
+      0 => 'foo',
+      1 => false,
+      2 => -1,
+      3 => null,
+      4 => '',
+      5 => '0',
+      6 => 0,
+  ];
 
   print_r(array_filter($entry));
 <?>
@@ -118,7 +124,7 @@ Array
     [2] => -1
 )
 
-Example #3 array_filter() with {flag}
+Example #3 array_filter() with {mode}
 
 <?php >
 

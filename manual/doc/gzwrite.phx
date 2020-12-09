@@ -7,38 +7,47 @@ gzwrite — Binary-safe gz-file write
 ===============================================================================
 [ Description ]
 
-  gzwrite ( resource $zp , string $string [, int $length ] ) : int~
+  gzwrite ( resource $stream , string $data [, int|null $length = NULL ] ) :~
+  int|false~
 
-gzwrite() writes the contents of {string} to the given gz-file.
+gzwrite() writes the contents of {data} to the given gz-file.
 
 ===============================================================================
 [ Parameters ]
 
-{zp}
+{stream}
 
   The gz-file pointer. It must be valid, and must point to a file successfully
   opened by |gzopen|.
 
-{string}
+{data}
 
   The string to write.
 
 {length}
 
   The number of uncompressed bytes to write. If supplied, writing will stop
-  after {length} (uncompressed) bytes have been written or the end of {string}
-  is reached, whichever comes first.
+  after {length} (uncompressed) bytes have been written or the end of {data} is
+  reached, whichever comes first.
 
     Note:
 
     Note that if the {length} argument is given, then the magic_quotes_runtime
     configuration option will be ignored and no slashes will be stripped from
-    {string}.
+    {data}.
 
 ===============================================================================
 [ Return Values ]
 
-Returns the number of (uncompressed) bytes written to the given gz-file stream.
+Returns the number of (uncompressed) bytes written to the given gz-file stream,
+or FALSE on failure.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {length} is nullable now; previously, the default was 0.
+7.4.0   This functions returns FALSE on failure now; previously 0 was returned.
 
 ===============================================================================
 [ Examples ]

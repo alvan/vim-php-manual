@@ -8,7 +8,7 @@ session
 ===============================================================================
 [ Description ]
 
-  session_register ( mixed $name [, mixed $... ] ) : bool~
+  session_register ( mixed $name , mixed ...$names ) : bool~
 
 session_register() accepts a variable number of arguments, any of which can be
 either a string holding the name of a variable or an array consisting of
@@ -42,7 +42,7 @@ This function has been DEPRECATED as of PHP 5.3.0 and REMOVED as of PHP 5.4.0.
   A string holding the name of a variable or an array consisting of variable
   names or other arrays.
 
-{...}
+{names}
 
 ===============================================================================
 [ Return Values ]

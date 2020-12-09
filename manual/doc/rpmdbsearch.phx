@@ -1,0 +1,73 @@
+*rpmdbsearch*
+
+(PECL rpminfo >= 0.3.0)
+
+rpmdbsearch — Search RPM packages
+
+===============================================================================
+[ Description ]
+
+  rpmdbsearch ( string $pattern [, int $rpmtag = RPMTAG_NAME [, int $rpmmire =~
+  -1 [, bool $full = FALSE ]]] ) : array~
+
+Search packages in the system RPM database.
+
+===============================================================================
+[ Parameters ]
+
+{pattern}
+
+  Value to search for.
+
+{rpmtag}
+
+  Search criterion, one of RPMTAG_* constant, see the rpminfo constants page.
+
+{rpmmire}
+
+  Pattern type, one of RPMMIRE_* constant, see the rpminfo constants page. When
+  < 0 the criterion must equals the value, and database index is used if
+  possible.
+
+{full}
+
+  If TRUE all information headers for the file are retrieved, else only a
+  minimal set.
+
+===============================================================================
+[ Return Values ]
+
+An array of array of information or NULL on error.
+
+===============================================================================
+[ See Also ]
+
+ * |rpmaddtag| - Add tag retrieved in query
+
+===============================================================================
+[ Examples ]
+
+Example #1 Searching for the package owning a file
+
+<?php >
+  $info = rpmdbsearch("/usr/bin/php", RPMTAG_INSTFILENAMES);
+  print_r($info);
+<?>
+
+The above example will output:
+
+Array
+(
+    [0] => Array
+        (
+            [Name] => php-cli
+            [Version] => 7.4.4
+            [Release] => 1.fc32
+            [Summary] => Command-line interface for PHP
+            [Arch] => x86_64
+        )
+
+)
+
+
+vim:ft=help:

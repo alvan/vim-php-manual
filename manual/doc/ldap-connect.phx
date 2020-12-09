@@ -7,6 +7,12 @@ ldap_connect — Connect to an LDAP server
 ===============================================================================
 [ Description ]
 
+  ldap_connect ([ string $ldap_uri = NULL ] ) : resource~
+Warning
+
+The following signature is still supported for backwards compatibility, but is
+considered deprecated and should not be used anymore!
+
   ldap_connect ([ string $host = NULL [, int $port = 389 ]] ) : resource~
 
 Creates an LDAP link identifier and checks whether the given {host} and {port}
@@ -19,33 +25,35 @@ are plausible.
 ===============================================================================
 [ Parameters ]
 
-{host}
+{ldap_uri}
 
-  This field supports using a hostname or, with OpenLDAP 2.x.x and later, a
-  full LDAP URI of the form ldap://hostname:port or ldaps://hostname:port for
+  A full LDAP URI of the form ldap://hostname:port or ldaps://hostname:port for
   SSL encryption.
 
   You can also provide multiple LDAP-URIs separated by a space as one string
 
   Note that hostname:port is not a supported LDAP URI as the schema is missing.
 
+{host}
+
+  The hostname to connect to.
+
 {port}
 
-  The port to connect to. Not used when using LDAP URIs.
+  The port to connect to.
 
 ===============================================================================
 [ Return Values ]
 
-Returns a positive LDAP link identifier when the provided hostname/port
-combination or LDAP URI seems plausible. It's a syntactic check of the provided
-parameters but the server(s) will not be contacted! If the syntactic check
-fails it returns FALSE. When OpenLDAP 2.x.x is used, ldap_connect() will always
-return a resource as it does not actually connect but just initializes the
-connecting parameters. The actual connect happens with the next calls to ldap_*
-funcs, usually with |ldap_bind|.
+Returns a positive LDAP link identifier when the provided LDAP URI seems
+plausible. It's a syntactic check of the provided parameter but the server(s)
+will not be contacted! If the syntactic check fails it returns FALSE. 
+ldap_connect() will otherwise return a resource as it does not actually connect
+but just initializes the connecting parameters. The actual connect happens with
+the next calls to ldap_* funcs, usually with |ldap_bind|.
 
-If no arguments are specified then the link identifier of the already opened
-link will be returned.
+If no argument is specified then the link identifier of the already opened link
+will be returned.
 
 ===============================================================================
 [ Examples ]
@@ -55,12 +63,11 @@ Example #1 Example of connecting to LDAP server.
 <?php >
 
   // LDAP variables
-  $ldaphost = "ldap.example.com";  // your ldap servers
-  $ldapport = 389;                 // your ldap server's port number
+  $ldapuri = "ldap://ldap.example.com:389";  // your ldap-uri
 
   // Connecting to LDAP
-  $ldapconn = ldap_connect($ldaphost, $ldapport)
-            or die("Could not connect to $ldaphost");
+  $ldapconn = ldap_connect($ldapuri)
+            or die("That LDAP-URI was not parseable");
 
 <?>
 
@@ -74,7 +81,7 @@ Example #2 Example of connecting securely to LDAP server.
 
   // Connecting to LDAP
   $ldapconn = ldap_connect($ldaphost)
-            or die("Could not connect to {$ldaphost}");
+            or die("That LDAP-URI was not parseable");
 
 <?>
 

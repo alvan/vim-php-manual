@@ -12,7 +12,7 @@ array_shift — Shift an element off the beginning of array
 array_shift() shifts the first value of the {array} off and returns it,
 shortening the {array} by one element and moving everything down. All numerical
 array keys will be modified to start counting from zero while literal keys
-won't be touched.
+won't be affected.
 
   Note: This function will |reset| the array pointer of the input array after
   use.

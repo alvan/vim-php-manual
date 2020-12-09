@@ -7,7 +7,7 @@ xml_get_current_column_number — Get current column number for an XML parser
 ===============================================================================
 [ Description ]
 
-  xml_get_current_column_number ( resource $parser ) : int~
+  xml_get_current_column_number ( XMLParser $parser ) : int~
 
 Gets the current column number of the given XML parser.
 
@@ -24,6 +24,13 @@ Gets the current column number of the given XML parser.
 This function returns FALSE if {parser} does not refer to a valid parser, or
 else it returns which column on the current line (as given by 
 |xml_get_current_line_number|) the parser is currently at.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {parser} expects an XMLParser instance now; previously, a resource was
+        expected.
 
 ===============================================================================
 [ See Also ]

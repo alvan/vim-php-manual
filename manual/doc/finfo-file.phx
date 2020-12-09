@@ -9,13 +9,13 @@ finfo_file -- finfo::file — Return information about a file
 
 Procedural style
 
-  finfo_file ( resource $finfo , string $file_name = NULL [, int $options =~
-  FILEINFO_NONE [, resource $context = NULL ]] ) : string~
+  finfo_file ( resource $finfo , string $filename [, int $flags =~
+  FILEINFO_NONE [, resource|null $context = NULL ]] ) : string|false~
 
 Object oriented style
 
-  public finfo::file ( string $file_name = NULL [, int $options =~
-  FILEINFO_NONE [, resource $context = NULL ]] ) : string~
+  public finfo::file ( string $filename [, int $flags = FILEINFO_NONE [,~
+  resource|null $context = NULL ]] ) : string|false~
 
 This function is used to get information about a file.
 
@@ -26,11 +26,11 @@ This function is used to get information about a file.
 
   Fileinfo resource returned by |finfo_open|.
 
-{file_name}
+{filename}
 
   Name of a file to be checked.
 
-{options}
+{flags}
 
   One or disjunction of more Fileinfo constants.
 
@@ -41,8 +41,14 @@ This function is used to get information about a file.
 ===============================================================================
 [ Return Values ]
 
-Returns a textual description of the contents of the {file_name} argument, or
+Returns a textual description of the contents of the {filename} argument, or
 FALSE if an error occurred.
+
+===============================================================================
+[ Changelog ]
+
+Version        Description
+8.0.0   {context} is nullable now.
 
 ===============================================================================
 [ Examples ]

@@ -7,8 +7,8 @@ variant_cmp — Compares two variants
 ===============================================================================
 [ Description ]
 
-  variant_cmp ( mixed $left , mixed $right [, int $lcid [, int $flags ]] ) :~
-  int~
+  variant_cmp ( mixed $left , mixed $right [, int $locale_id =~
+  LOCALE_SYSTEM_DEFAULT [, int $flags = 0 ]] ) : int~
 
 Compares {left} with {right}.
 
@@ -25,7 +25,7 @@ This function will only compare scalar values, not arrays or variant records.
 
   The right operand.
 
-{lcid}
+{locale_id}
 
   A valid Locale Identifier to use when comparing strings (this affects string
   collation).
@@ -50,7 +50,7 @@ This function will only compare scalar values, not arrays or variant records.
   function can be either a PHP native type (integer, string, floating point,
   boolean or NULL), or an instance of a COM, VARIANT or DOTNET class. PHP
   native types will be converted to variants using the same rules as found in
-  the constructor for the VARIANT class. COM and DOTNET objects will have the
+  the constructor for the variant class. COM and DOTNET objects will have the
   value of their default property taken and used as the variant value.
 
   The variant arithmetic functions are wrappers around the similarly named

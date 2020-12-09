@@ -7,7 +7,7 @@ posix_geteuid — Return the effective user ID of the current process
 ===============================================================================
 [ Description ]
 
-  posix_geteuid ( void ) : int~
+  posix_geteuid ( ) : int~
 
 Return the numeric effective user ID of the current process. See also 
 |posix_getpwuid| for information on how to convert this into a useable username.
@@ -15,7 +15,7 @@ Return the numeric effective user ID of the current process. See also
 ===============================================================================
 [ Return Values ]
 
-Returns the user id, as an integer
+Returns the user id, as an int
 
 ===============================================================================
 [ Examples ]

@@ -42,26 +42,16 @@ follows:
 
                Possible returned elements from debug_backtrace()
   Name    Type                            Description
-function string  The current function name. See also __FUNCTION__.
-line     integer The current line number. See also __LINE__.
-file     string  The current file name. See also __FILE__.
-class    string  The current class name. See also __CLASS__
-object   object  The current object.
-                 The current call type. If a method call, "->" is returned. If
-type     string  a static method call, "::" is returned. If a function call,
-                 nothing is returned.
-args     array   If inside a function, this lists the functions arguments. If
-                 inside an included file, this lists the included file name(s).
-
-===============================================================================
-[ Changelog ]
-
-Version                               Description
-5.4.0   Added the optional parameter {limit}.
-5.3.6   The parameter {provide_object} changed to {options} and additional
-        option DEBUG_BACKTRACE_IGNORE_ARGS is added.
-5.2.5   Added the optional parameter {provide_object}.
-5.1.1   Added the current object as a possible return element.
+function string The current function name. See also __FUNCTION__.
+line     int    The current line number. See also __LINE__.
+file     string The current file name. See also __FILE__.
+class    string The current class name. See also __CLASS__
+object   object The current object.
+                The current call type. If a method call, "->" is returned. If a
+type     string static method call, "::" is returned. If a function call,
+                nothing is returned.
+args     array  If inside a function, this lists the functions arguments. If
+                inside an included file, this lists the included file name(s).
 
 ===============================================================================
 [ Examples ]

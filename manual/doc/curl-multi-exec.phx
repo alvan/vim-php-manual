@@ -7,7 +7,8 @@ curl_multi_exec — Run the sub-connections of the current cURL handle
 ===============================================================================
 [ Description ]
 
-  curl_multi_exec ( resource $mh , int &$still_running ) : int~
+  curl_multi_exec ( CurlMultiHandle $multi_handle , int &$still_running ) :~
+  int~
 
 Processes each of the handles in the stack. This method can be called whether
 or not a handle needs to read or write data.
@@ -15,7 +16,7 @@ or not a handle needs to read or write data.
 ===============================================================================
 [ Parameters ]
 
-{mh}
+{multi_handle}
 
   A cURL multi handle returned by |curl_multi_init|.
 
@@ -35,6 +36,13 @@ A cURL code defined in the cURL Predefined Constants.
   returns CURLM_OK.
 
 ===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {multi_handle} expects a CurlMultiHandle instance now; previously, a 
+        resource was expected.
+
+===============================================================================
 [ Examples ]
 
 Example #1 curl_multi_exec() example
@@ -48,7 +56,7 @@ process them asynchronously.
   $ch2 = curl_init();
 
   // set URL and other appropriate options
-  curl_setopt($ch1, CURLOPT_URL, "http://lxr.php.net/");
+  curl_setopt($ch1, CURLOPT_URL, "http://example.com/");
   curl_setopt($ch1, CURLOPT_HEADER, 0);
   curl_setopt($ch2, CURLOPT_URL, "http://www.php.net/");
   curl_setopt($ch2, CURLOPT_HEADER, 0);

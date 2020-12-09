@@ -35,15 +35,6 @@ Returns the old error_reporting level or the current level if no {level}
 parameter is given.
 
 ===============================================================================
-[ Changelog ]
-
-Version                  Description
-5.4.0   E_STRICT became part of E_ALL.
-5.3.0   E_DEPRECATED and E_USER_DEPRECATED introduced.
-5.2.0   E_RECOVERABLE_ERROR introduced.
-5.0.0   E_STRICT introduced (not part of E_ALL).
-
-===============================================================================
 [ Examples ]
 
 Example #1 error_reporting() examples
@@ -63,7 +54,7 @@ Example #1 error_reporting() examples
   // Report all errors except E_NOTICE
   error_reporting(E_ALL & ~E_NOTICE);
 
-  // Report all PHP errors (see changelog)
+  // Report all PHP errors
   error_reporting(E_ALL);
 
   // Report all PHP errors

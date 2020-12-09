@@ -8,7 +8,7 @@ connection
 ===============================================================================
 [ Description ]
 
-  pg_socket ( resource $connection ) : resource~
+  pg_socket ( resource $connection ) : resource|false~
 
 pg_socket() returns a read only resource corresponding to the socket underlying
 the given PostgreSQL connection.

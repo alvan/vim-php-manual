@@ -7,7 +7,7 @@ ps_hyphenate — Hyphenates a word
 ===============================================================================
 [ Description ]
 
-  ps_hyphenate ( resource $psdoc , string $text ) : array~
+  ps_hyphenate ( resource $psdoc , string $text ) : array|false~
 
 Hyphenates the passed word. ps_hyphenate() evaluates the value hyphenminchars
 (set by |ps_set_value|) and the parameter hyphendict (set by |ps_set_parameter|

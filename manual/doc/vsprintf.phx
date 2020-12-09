@@ -7,7 +7,7 @@ vsprintf — Return a formatted string
 ===============================================================================
 [ Description ]
 
-  vsprintf ( string $format , array $args ) : string~
+  vsprintf ( string $format , array $args ) : string|false~
 
 Operates as |sprintf| but accepts an array of arguments, rather than a variable
 number of arguments.
@@ -21,8 +21,13 @@ number of arguments.
   (excluding %) that are copied directly to the result and conversion
   specifications, each of which results in fetching its own parameter.
 
-  A conversion specification follows this prototype: %[flags][width]
+  A conversion specification follows this prototype: %[argnum$][flags][width]
   [.precision]specifier.
+
+  Argnum
+
+  An integer followed by a dollar sign $, to specify which number argument to
+  treat in the conversion.
 
                                      Flags
    Flag                                Description
@@ -86,7 +91,7 @@ number of arguments.
             + 1). Otherwise, the conversion is with style e and precision P −
             1.
 
-  G         Like the g specifier but uses E and F.
+  G         Like the g specifier but uses E and f.
   o         The argument is treated as an integer and presented as an octal
             number.
   s         The argument is treated and presented as a string.

@@ -7,14 +7,12 @@ imagexbm — Output an XBM image to browser or file
 ===============================================================================
 [ Description ]
 
-  imagexbm ( resource $image [, string $filename = NULL [, int $foreground ]]~
-  ) : bool~
+  imagexbm ( resource $image , mixed $filename [, int $foreground ] ) : bool~
 
 Outputs or save an XBM version of the given {image}.
 
   Note: imagexbm() doesn't apply any padding, so the image width has to be a
-  multiple of 8. This restriction does no longer apply as of PHP 5.6.24 and
-  7.0.9, respectively.
+  multiple of 8. This restriction does no longer apply as of PHP 7.0.9.
 
 ===============================================================================
 [ Parameters ]
@@ -26,8 +24,8 @@ Outputs or save an XBM version of the given {image}.
 
 {filename}
 
-  The path to save the file to. If not set or NULL, the raw image stream will
-  be outputted directly.
+  The path to save the file to, given as string. If NULL, the raw image stream
+  will be output directly.
 
   The {filename} (without the .xbm extension) is also used for the C
   identifiers of the XBM, whereby non alphanumeric characters of the current
@@ -48,6 +46,12 @@ Returns TRUE on success or FALSE on failure.
 Caution
 
 However, if libgd fails to output the image, this function returns TRUE.
+
+===============================================================================
+[ Changelog ]
+
+Version                        Description
+8.0.0   The fourth parameter, which was unused, has been removed.
 
 ===============================================================================
 [ Examples ]

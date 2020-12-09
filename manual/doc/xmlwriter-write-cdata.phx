@@ -9,21 +9,21 @@ XMLWriter::writeCdata -- xmlwriter_write_cdata — Write full CDATA tag
 
 Object oriented style
 
-  XMLWriter::writeCdata ( string $content ) : bool~
+  public XMLWriter::writeCdata ( string $content ) : bool~
 
 Procedural style
 
-  xmlwriter_write_cdata ( resource $xmlwriter , string $content ) : bool~
+  xmlwriter_write_cdata ( XMLWriter $writer , string $content ) : bool~
 
 Writes a full CDATA.
 
 ===============================================================================
 [ Parameters ]
 
-{ xmlwriter}
+{ writer}
 
-  Only for procedural calls. The XMLWriter resource that is being modified.
-  This resource comes from a call to |xmlwriter_open_uri| or 
+  Only for procedural calls. The XMLWriter instance that is being modified.
+  This object is returned from a call to |xmlwriter_open_uri| or 
   |xmlwriter_open_memory|.
 
 {content}
@@ -34,6 +34,46 @@ Writes a full CDATA.
 [ Return Values ]
 
 Returns TRUE on success or FALSE on failure.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {writer} expects an XMLWriter instance now; previously, a resource was
+        expected.
+
+===============================================================================
+[ Examples ]
+
+Example #1 Basic xmlwriter_write_cdata() Usage
+
+<?php >
+  // set up the document
+  $xml = new XmlWriter();
+  $xml->openMemory();
+  $xml->setIndent(true);
+  $xml->startDocument('1.0', 'UTF-8');
+  $xml->startElement('mydoc');
+  $xml->startElement('myele');
+
+  // CData output
+  $xml->startElement('mycdataelement');
+  $xml->writeCData("text for inclusion as CData");
+  $xml->endElement();
+
+  // end the document and output
+  $xml->endElement();
+  $xml->endElement();
+  echo $xml->outputMemory(true);
+<?>
+
+The above example will output:
+
+<mydoc>
+ <myele>
+  <mycdataelement><![CDATA[text for inclusion as CData]​]></mycdataelement>
+ </myele>
+</mydoc>
 
 ===============================================================================
 [ See Also ]

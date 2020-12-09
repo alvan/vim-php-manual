@@ -7,7 +7,7 @@ vprintf — Output a formatted string
 ===============================================================================
 [ Description ]
 
-  vprintf ( string $format , array $args ) : int~
+  vprintf ( string $format , array $values ) : int~
 
 Display array values as a formatted string according to {format} (which is
 described in the documentation for |sprintf|).
@@ -24,8 +24,13 @@ number of arguments.
   (excluding %) that are copied directly to the result and conversion
   specifications, each of which results in fetching its own parameter.
 
-  A conversion specification follows this prototype: %[flags][width]
+  A conversion specification follows this prototype: %[argnum$][flags][width]
   [.precision]specifier.
+
+  Argnum
+
+  An integer followed by a dollar sign $, to specify which number argument to
+  treat in the conversion.
 
                                      Flags
    Flag                                Description
@@ -89,7 +94,7 @@ number of arguments.
             + 1). Otherwise, the conversion is with style e and precision P −
             1.
 
-  G         Like the g specifier but uses E and F.
+  G         Like the g specifier but uses E and f.
   o         The argument is treated as an integer and presented as an octal
             number.
   s         The argument is treated and presented as a string.
@@ -118,7 +123,7 @@ number of arguments.
   integer d, u, c, o, x, X, b
   double  g, G, e, E, f, F
 
-{args}
+{values}
 
 ===============================================================================
 [ Return Values ]

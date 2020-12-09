@@ -60,53 +60,53 @@ calls) and returns either the names or an array in {result} argument of
 eio_readdir() returns request resource on success, or FALSE on error. Sets
 {result} argument of {callback} function according to {flags}:
 
-EIO_READDIR_DENTS (integer)
+EIO_READDIR_DENTS (int)
   eio_readdir() flag. If specified, the result argument of the callback becomes
   an array with the following keys: 'names' - array of directory names 'dents'
   - array of struct eio_dirent-like arrays having the following keys each:
   'name' - the directory name; 'type' - one of EIO_DT_* constants; 'inode' -
   the inode number, if available, otherwise unspecified;
-EIO_READDIR_DIRS_FIRST (integer)
+EIO_READDIR_DIRS_FIRST (int)
   When this flag is specified, the names will be returned in an order where
   likely directories come first, in optimal stat order.
-EIO_READDIR_STAT_ORDER (integer)
+EIO_READDIR_STAT_ORDER (int)
   When this flag is specified, then the names will be returned in an order
   suitable for stat'ing each one. When planning to |stat| all files in the
   given directory, the returned order will likely be fastest.
-EIO_READDIR_FOUND_UNKNOWN (integer)
+EIO_READDIR_FOUND_UNKNOWN (int)
 
 Node types:
 
-EIO_DT_UNKNOWN (integer)
+EIO_DT_UNKNOWN (int)
   Unknown node type(very common). Further |stat| needed.
-EIO_DT_FIFO (integer)
+EIO_DT_FIFO (int)
   FIFO node type
-EIO_DT_CHR (integer)
+EIO_DT_CHR (int)
   Node type
-EIO_DT_MPC (integer)
+EIO_DT_MPC (int)
   Multiplexed char device (v7+coherent) node type
-EIO_DT_DIR (integer)
+EIO_DT_DIR (int)
   Directory node type
-EIO_DT_NAM (integer)
+EIO_DT_NAM (int)
   Xenix special named file node type
-EIO_DT_BLK (integer)
+EIO_DT_BLK (int)
   Node type
-EIO_DT_MPB (integer)
+EIO_DT_MPB (int)
   Multiplexed block device (v7+coherent)
-EIO_DT_REG (integer)
+EIO_DT_REG (int)
   Node type
-EIO_DT_NWK (integer)
-EIO_DT_CMP (integer)
+EIO_DT_NWK (int)
+EIO_DT_CMP (int)
   HP-UX network special node type
-EIO_DT_LNK (integer)
+EIO_DT_LNK (int)
   Link node type
-EIO_DT_SOCK (integer)
+EIO_DT_SOCK (int)
   Socket node type
-EIO_DT_DOOR (integer)
+EIO_DT_DOOR (int)
   Solaris door node type
-EIO_DT_WHT (integer)
+EIO_DT_WHT (int)
   Node type
-EIO_DT_MAX (integer)
+EIO_DT_MAX (int)
   Highest node type value
 
 ===============================================================================

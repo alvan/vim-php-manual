@@ -7,7 +7,8 @@ bzwrite — Binary safe bzip2 file write
 ===============================================================================
 [ Description ]
 
-  bzwrite ( resource $bz , string $data [, int $length ] ) : int~
+  bzwrite ( resource $bz , string $data [, int|null $length = NULL ] ) :~
+  int|false~
 
 bzwrite() writes a string into the given bzip2 file stream.
 
@@ -32,6 +33,12 @@ bzwrite() writes a string into the given bzip2 file stream.
 [ Return Values ]
 
 Returns the number of bytes written, or FALSE on error.
+
+===============================================================================
+[ Changelog ]
+
+Version        Description
+8.0.0   {length} is nullable now.
 
 ===============================================================================
 [ Examples ]

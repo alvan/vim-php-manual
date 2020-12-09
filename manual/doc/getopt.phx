@@ -7,7 +7,8 @@ getopt — Gets options from the command line argument list
 ===============================================================================
 [ Description ]
 
-  getopt ( string $options [, array $longopts [, int &$optind ]] ) : array~
+  getopt ( string $options [, array $longopts [, int &$optind ]] ) :~
+  array|false~
 
 Parses options passed to the script.
 
@@ -61,13 +62,8 @@ failure.
 ===============================================================================
 [ Changelog ]
 
-Version                               Description
+Version          Description
 7.1.0   Added the {optind} parameter.
-5.3.0   Added support for "=" as argument/value separator.
-5.3.0   Added support for optional values (specified with "::").
-5.3.0   Parameter {longopts} is available on all systems.
-5.3.0   This function is no longer system dependent, and now works on Windows,
-        too.
 
 ===============================================================================
 [ Examples ]

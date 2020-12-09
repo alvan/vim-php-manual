@@ -45,24 +45,13 @@ phpinfo() is also a valuable debugging tool as it contains all EGPCS
                            available in $_ENV.
   INFO_VARIABLES     32    Shows all predefined variables from EGPCS
                            (Environment, GET, POST, Cookie, Server).
-  INFO_LICENSE       64    PHP License information. See also the >> license FAQ
-                           .
+  INFO_LICENSE       64    PHP License information. See also the » license FAQ.
   INFO_ALL           -1    Shows all of the above.
 
 ===============================================================================
 [ Return Values ]
 
 Returns TRUE on success or FALSE on failure.
-
-===============================================================================
-[ Changelog ]
-
-Version                               Description
-        Logo GUIDs were replaced with data URIs, and so turning off expose_php
-5.5.0   now has no effect on the result of phpinfo(). Credits are also now
-        embedded within the output itself instead of linked.
-5.2.2   The "Loaded Configuration File" information was added, when before only
-        "Configuration File (php.ini) Path" existed.
 
 ===============================================================================
 [ Examples ]
@@ -98,7 +87,7 @@ Example #1 phpinfo() Example
 
  * |phpversion| - Gets the current PHP version
  * |phpcredits| - Prints out the credits for PHP
- * |php_logo_guid| - Gets the logo guid
+ * php_logo_guid()
  * |ini_get| - Gets the value of a configuration option
  * |ini_set| - Sets the value of a configuration option
  * |get_loaded_extensions| - Returns an array with the names of all modules

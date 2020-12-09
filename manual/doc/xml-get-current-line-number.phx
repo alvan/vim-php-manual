@@ -7,7 +7,7 @@ xml_get_current_line_number — Get current line number for an XML parser
 ===============================================================================
 [ Description ]
 
-  xml_get_current_line_number ( resource $parser ) : int~
+  xml_get_current_line_number ( XMLParser $parser ) : int~
 
 Gets the current line number for the given XML parser.
 
@@ -23,6 +23,13 @@ Gets the current line number for the given XML parser.
 
 This function returns FALSE if {parser} does not refer to a valid parser, or
 else it returns which line the parser is currently at in its data buffer.
+
+===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   {parser} expects an XMLParser instance now; previously, a resource was
+        expected.
 
 ===============================================================================
 [ See Also ]

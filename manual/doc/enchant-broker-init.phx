@@ -7,7 +7,7 @@ enchant_broker_init — Create a new broker object capable of requesting
 ===============================================================================
 [ Description ]
 
-  enchant_broker_init ( void ) : resource~
+  enchant_broker_init ( ) : EnchantBroker|false~
 
 ===============================================================================
 [ Parameters ]
@@ -18,9 +18,16 @@ enchant_broker_init — Create a new broker object capable of requesting
 Returns a broker resource on success or FALSE.
 
 ===============================================================================
+[ Changelog ]
+
+Version                               Description
+8.0.0   On success, this function returns an EnchantBroker instance now;
+        previoulsy, a resource was retured.
+
+===============================================================================
 [ See Also ]
 
- * |enchant_broker_free| - Free the broker resource and its dictionnaries
+ * |enchant_broker_free| - Free the broker resource and its dictionaries
 
 
 vim:ft=help:
